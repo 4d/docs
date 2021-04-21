@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="en"><head><meta name="docsearch:version" content="18 v19 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transporter Class · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Description"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Transporter Class · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Description"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R6</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/ja/API/Transporter.html">日本語</a></li><li><a href="/docs/de/API/Transporter.html">Deutsch</a></li><li><a href="/docs/es/API/Transporter.html">Español</a></li><li><a href="/docs/fr/API/Transporter.html">Français</a></li><li><a href="/docs/pt/API/Transporter.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/Transporter.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Transporter Class</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h2>
+<h2><a class="anchor" aria-hidden="true" id="acceptunsecureconnection"></a><a href="#acceptunsecureconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.acceptUnsecureConnection</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.acceptUnsecureConnection</strong> : Boolean</p>
+<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.acceptUnsecureConnection</code> property contains <strong>True</strong> if 4D is allowed to establish an unencrypted connection when encrypted connection is not possible.</p>
+<p>It contains <strong>False</strong> if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.</p>
+<p>Available secured ports are:</p>
+<ul>
+<li><p>SMTP</p>
+<ul>
+<li>465: SMTPS</li>
+<li>587 or 25: SMTP with STARTTLS upgrade if supported by the server.</li>
+</ul></li>
+<li><p>IMAP</p>
+<ul>
+<li>143: IMAP non-encrypted port</li>
+<li>993: IMAP with STARTTLS upgrade if supported by the server</li>
+</ul></li>
+<li><p>POP3</p>
+<ul>
+<li>110: POP3 non-encrypted port</li>
+<li>995: POP3 with STARTTLS upgrade if supported by the server.</li>
+</ul></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="authenticationmode"></a><a href="#authenticationmode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.authenticationMode</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.authenticationMode</code> property contains the authentication mode used to open the session on the mail server.</p>
+<p>By default, the most secured mode supported by the server is used.</p>
+<p>Possible values are:</p>
+<table>
+<thead>
+<tr><th>Value</th><th>Constants</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>CRAM-MD5</td><td><code>IMAP authentication CRAM MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
+<tr><td>LOGIN</td><td><code>IMAP authentication login</code></td><td>Authentication using LOGIN protocol</td></tr>
+<tr><td>OAUTH2</td><td><code>IMAP authentication OAUTH2</code></td><td>Authentication using OAuth2 protocol</td></tr>
+<tr><td>PLAIN</td><td><code>IMAP authentication plain</code></td><td>Authentication using PLAIN protocol</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="authenticationmode-1"></a><a href="#authenticationmode-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.authenticationMode</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.authenticationMode</code> property contains the authentication mode used to open the session on the mail server.</p>
+<p>By default, the most secured mode supported by the server is used.</p>
+<p>Possible values are:</p>
+<table>
+<thead>
+<tr><th>Value</th><th>Constants</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>APOP</td><td><code>POP3 authentication APOP</code></td><td>Authentication using APOP protocol (POP3 only)</td></tr>
+<tr><td>CRAM-MD5</td><td><code>POP3 authentication CRAM-MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
+<tr><td>LOGIN</td><td><code>POP3 authentication login</code></td><td>Authentication using LOGIN protocol</td></tr>
+<tr><td>OAUTH2</td><td><code>POP3 authentication OAUTH2</code></td><td>Authentication using OAuth2 protocol</td></tr>
+<tr><td>PLAIN</td><td><code>POP3 authentication plain</code></td><td>Authentication using PLAIN protocol</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="authenticationmode-2"></a><a href="#authenticationmode-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.authenticationMode</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.authenticationMode</code> property contains the authentication mode used to open the session on the mail server.</p>
+<p>By default, the most secured mode supported by the server is used.</p>
+<p>Possible values are:</p>
+<table>
+<thead>
+<tr><th>Value</th><th>Constants</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>CRAM-MD5</td><td><code>SMTP authentication CRAM MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
+<tr><td>LOGIN</td><td><code>SMTP authentication login</code></td><td>Authentication using LOGIN protocol</td></tr>
+<tr><td>OAUTH2</td><td><code>SMTP authentication OAUTH2</code></td><td>Authentication using OAuth2 protocol</td></tr>
+<tr><td>PLAIN</td><td><code>SMTP authentication plain</code></td><td>Authentication using PLAIN protocol</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="bodycharset"></a><a href="#bodycharset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.bodyCharset</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Support for UTF8 base64</td></tr>
+<tr><td>v17 R5</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.bodyCharset</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.bodyCharset</code> property contains   the charset and encoding used for the body part of the email.</p>
+<ul>
+<li>subject,</li>
+<li>attachment filename(s),</li>
+<li>email name.</li>
+</ul>
+<p><strong>Possible values:</strong></p>
+<table>
+<thead>
+<tr><th>Constant</th><th>Value</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><em>headerCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; Quoted-printable if possible, otherwise UTF-8 &amp; Quoted-printable</li><li><em>bodyCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; 7-bit if possible, otherwise UTF-8 &amp; Quoted-printable</li></ul></td></tr>
+<tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><em>headerCharset</em>: ISO-8859-1 &amp; Quoted-printable</li><li><em>bodyCharset</em>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr>
+<tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><em>headerCharset</em> &amp; <em>bodyCharset</em>: US-ASCII if possible, otherwise UTF-8 &amp; Quoted-printable (<strong>default value</strong>)</td></tr>
+<tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><em>headerCharset</em> &amp; <em>bodyCharset</em>: US-ASCII if possible, otherwise UTF-8 &amp; base64</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="connectiontimeout"></a><a href="#connectiontimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.connectionTimeOut</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.connectionTimeOut</strong> : Integer</p>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.connectionTimeOut</code> property contains the maximum wait time (in seconds) allowed to establish a connection to the server. By default, if the property has not been set in the server object (used to create the transporter object with <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, or <code>IMAP New transporter</code>), the value is 30.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="headercharset"></a><a href="#headercharset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.headerCharset</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.headerCharset</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.headerCharset</code> property contains  the charset and encoding used for the email header. The header includes the following parts of the email:</p>
+<ul>
+<li>subject,</li>
+<li>attachment filename(s),</li>
+<li>email name.</li>
+</ul>
+<p><strong>Possible values:</strong></p>
+<table>
+<thead>
+<tr><th>Constant</th><th>Value</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><em>headerCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; Quoted-printable if possible, otherwise UTF-8 &amp; Quoted-printable</li><li><em>bodyCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; 7-bit if possible, otherwise UTF-8 &amp; Quoted-printable</li></ul></td></tr>
+<tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><em>headerCharset</em>: ISO-8859-1 &amp; Quoted-printable</li><li><em>bodyCharset</em>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr>
+<tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><em>headerCharset</em> &amp; <em>bodyCharset</em>: US-ASCII if possible, otherwise UTF-8 &amp; Quoted-printable (default value)</td></tr>
+<tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><em>headerCharset</em> &amp; <em>bodyCharset</em>: US-ASCII if possible, otherwise UTF-8 &amp; base64</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="host"></a><a href="#host" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.host</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.host</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.host</code> property contains the name or the IP address of the host server. Used for mail transactions (SMTP, POP3, IMAP).</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="logfile"></a><a href="#logfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.logFile</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.logFile</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.logFile</code> property contains the path of the extended log file defined (if any) for the mail connection. It can be relative (to the current Logs folder) or absolute.</p>
+<p>Unlike regular log files (enabled via the <code>SET DATABASE PARAMETER</code> command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:</p>
+<ul>
+<li><strong>SMTP connections</strong> - <a href="/docs/en/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DSMTPLog.txt</a></li>
+<li><strong>POP3 connections</strong> - <a href="/docs/en/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DPOP3Log.txt</a></li>
+<li><strong>IMAP connections</strong> - <a href="/docs/en/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DIMAPLog.txt</a></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="port"></a><a href="#port" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.port</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.port</strong> : Integer</p>
+<h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.port</code> property contains  the port number used for mail transactions. By default, if the <em>port</em> property has not been set in the <em>server</em> object (used to create the transporter object with <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, <code>IMAP New transporter</code>), the port used is:</p>
+<ul>
+<li><strong>SMTP</strong> - 587</li>
+<li><strong>POP3</strong> - 995</li>
+<li><strong>IMAP</strong> - 993</li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="sendtimeout"></a><a href="#sendtimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sendTimeOut</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.sendTimeOut</strong> : Integer</p>
+<h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.sendTimeOut</code> property contains  the maximum wait time (in seconds) of a call to <code>.send( )</code> before a timeout occurs. By default, if the <code>.sendTimeOut</code> property has not been set in the <code>server</code> object, the value 100 is used.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.user</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.user</strong> : Text</p>
+<h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.user</code> property contains  the user name used for authentication on the mail server.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="checkconnection"></a><a href="#checkconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.checkConnection()</h2>
+<p><details><summary>History</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R4</td><td>Added</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.checkConnection()</strong> : Object</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Result</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the transporter object connection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-13"></a><a href="#description-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.checkConnection()</code> function  checks the connection using information stored in the transporter object, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.</p>
+<h4><a class="anchor" aria-hidden="true" id="returned-object"></a><a href="#returned-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returned object</h4>
+<p>The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:</p>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td></td><td>boolean</td><td>True if the check is successful, False otherwise</td></tr>
+<tr><td>status</td><td></td><td>number</td><td>(SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing)</td></tr>
+<tr><td>statusText</td><td></td><td>text</td><td>Status message returned by the mail server, or last error returned in the 4D error stack</td></tr>
+<tr><td>errors</td><td></td><td>collection</td><td>4D error stack (not returned if a mail server response is received)</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>number</td><td>4D error code</td></tr>
+<tr><td></td><td>[ ].message</td><td>text</td><td>Description of the 4D error</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>text</td><td>Signature of the internal component which returned the error</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#acceptunsecureconnection">.acceptUnsecureConnection</a></li><li><a href="#authenticationmode">.authenticationMode</a></li><li><a href="#authenticationmode-1">.authenticationMode</a></li><li><a href="#authenticationmode-2">.authenticationMode</a></li><li><a href="#bodycharset">.bodyCharset</a></li><li><a href="#connectiontimeout">.connectionTimeOut</a></li><li><a href="#headercharset">.headerCharset</a></li><li><a href="#host">.host</a></li><li><a href="#logfile">.logFile</a></li><li><a href="#port">.port</a></li><li><a href="#sendtimeout">.sendTimeOut</a></li><li><a href="#user">.user</a></li><li><a href="#checkconnection">.checkConnection()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en"]}
+              });
+            </script></body></html>
