@@ -80,7 +80,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-### Summary
+### 概要
 
 
 |                                                                                                                                                                                         |
@@ -107,16 +107,16 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF signalClass.New signal.Params -->
-| 参照          | タイプ       |    | 説明                                     |
-| ----------- | --------- |:--:| -------------------------------------- |
-| description | テキスト      | -> | Description for the signal             |
-| 戻り値         | 4D.Signal | <- | Native object encapsulating the signal |
+| 参照          | タイプ       |    | 説明                   |
+| ----------- | --------- |:--:| -------------------- |
+| description | テキスト      | -> | シグナルの詳細              |
+| 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト |
 <!-- END REF -->
 
 
 #### 説明
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
+`New signal` コマンドは、 <!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
 
 A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
 
@@ -130,7 +130,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **戻り値**
 
-A new [`4D.Signal` object](#signal-object).
+新規の [`4D.Signal` オブジェクト](#signal-object)。
 
 #### 例題
 
@@ -180,7 +180,7 @@ The ***doSomething*** method could be like:
 
 #### 説明
 
-The `.description` property <!-- REF #signalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
+`.description` プロパティは、 <!-- REF #signalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
@@ -205,9 +205,9 @@ This property is **read-write**.
 
 #### 説明
 
-The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+`.signaled` プロパティは、 <!-- REF #signalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -226,15 +226,15 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #signalClass.trigger().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.trigger( )` function <!-- REF #signalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+`.trigger( )` 関数は、 <!-- REF #signalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
 
 If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
 
@@ -255,16 +255,16 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #signalClass.wait().Params -->
-| 参照      | タイプ |    | 説明                                             |
-| ------- | --- | -- | ---------------------------------------------- |
-| timeout | 実数  | -> | Maximum waiting time for the signal in seconds |
-| 戻り値     | ブール | <- | State of the `.signaled` property              |
+| 参照      | タイプ |    | 説明                   |
+| ------- | --- | -- | -------------------- |
+| timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
+| 戻り値     | ブール | <- | `.signaled` プロパティの状態 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.wait( )` function <!-- REF #signalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+`.wait( )` 関数は、 <!-- REF #signalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 > **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.

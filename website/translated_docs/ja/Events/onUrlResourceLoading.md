@@ -3,7 +3,7 @@ id: onUrlResourceLoading
 title: On URL Resource Loading
 ---
 
-| Code | Can be called by                          | Definition                               |
+| Code | Can be called by                          | 定義                                       |
 | ---- | ----------------------------------------- | ---------------------------------------- |
 | 48   | [Webエリア](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
 

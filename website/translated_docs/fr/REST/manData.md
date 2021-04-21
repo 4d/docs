@@ -62,7 +62,7 @@ En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le 
 
 Par exemple, pour obtenir le salaire le plus élevé :
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
 Pour calculer toutes les valeurs et retourner un objet JSON :
 

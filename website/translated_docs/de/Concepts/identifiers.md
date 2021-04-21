@@ -103,7 +103,7 @@ ON EVENT CALL("HANDLE EVENTS")
 
 
 
-## Tables and Fields
+## Tabellen und Felder
 
 Eine Tabelle kennzeichnen Sie durch eckige Klammern um den Tabellennamen: \ [...]. Ein Feld kennzeichnen Sie durch Angabe der dazugehörigen Tabelle, gefolgt von dem Feldnamen.
 

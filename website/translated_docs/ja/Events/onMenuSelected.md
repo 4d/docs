@@ -3,7 +3,7 @@ id: onMenuSelected
 title: On Menu Selected
 ---
 
-| Code | Can be called by | Definition                                             |
+| Code | Can be called by | 定義                                                     |
 | ---- | ---------------- | ------------------------------------------------------ |
 | 18   | フォーム             | A menu item has been chosen in the associated menu bar |
 

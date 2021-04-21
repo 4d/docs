@@ -38,7 +38,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ## Klassen verwalten
 
-### Definition einer Klasse
+### Eine Klasse definieren
 
 Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
 
@@ -152,7 +152,7 @@ Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie 
 
 Ein Objekt class kann zusätzlich auf ein Objekt [`constructor`](#class-constructor) verweisen (optional).
 
-Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt class ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 ### Vererbung
 
@@ -288,7 +288,7 @@ Eine Function Class Constructor, die [Parameter](#parameter) zulässt, lässt si
 
 Rufen Sie die Function [`new()`](API/classClass.md#new) auf, wird der Class Constructor mit den Parametern aufgerufen, die optional in `new()` übergeben wurden.
 
-Für eine Function Class Constructor gibt der Befehl `Current method name`  "*\<ClassName>.constructor*" zurück, zum Beispiel "MyClass.constructor".
+Für eine Function Class Constructor gibt der Befehl `Current method name` "*\<ClassName>:constructor*" zurück, z.B. "MyClass:constructor".
 
 
 

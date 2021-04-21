@@ -107,7 +107,6 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-<!-- REF formulaClass.Formula.Desc -->
 ## Formula
 
 <details><summary>Historique</summary>
@@ -117,10 +116,10 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 | v17 R3  | Ajoutées                         |
 </details>
 
-<!-- REF formulaClass.Formula.Syntax -->
+<!-- REF #_command_.Formula.Syntax -->
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
-<!-- REF formulaClass.Formula.Params -->
+<!-- REF #_command_.Formula.Params -->
 | Paramètres | Type        |    | Description                               |
 | ---------- | ----------- |:--:| ----------------------------------------- |
 | formulaExp | Expression  | -> | Formula to be returned as object          |
@@ -130,13 +129,13 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 #### Description
 
-The `Formula` command <!-- REF formulaClass.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
 Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as "shared by components and host database". When called, the formula object is evaluated within the context of the database or component that created it.
 
 The returned formula can be called with:
 
-*   [`.call( )`](#call) or [`.apply( )`](#apply) methods, or
+*   [`.call()`](#call) or [`.apply()`](#apply) methods, or
 *   object notation syntax (see [formula object](#formula-object)).
 
 ```4d
@@ -241,11 +240,8 @@ Calling a formula using object notation:
 ```
 
 
-<!-- END REF -->
 
 
-
-<!-- REF formulaClass.Formula from string.Desc -->
 ## Formula from string
 
 <details><summary>Historique</summary>
@@ -255,10 +251,10 @@ Calling a formula using object notation:
 | v17 R3  | Ajoutées                                               |
 </details>
 
-<!-- REF formulaClass.Formula from string.Syntax -->
+<!-- REF #_command_.Formula from string.Syntax -->
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
-<!-- REF formulaClass.Formula from string.Params -->
+<!-- REF #_command_.Formula from string.Params -->
 | Paramètres    | Type        |    | Description                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
 | formulaString | Texte       | -> | Text formula to be returned as object   |
@@ -268,7 +264,7 @@ Calling a formula using object notation:
 
 #### Description
 
-The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
 This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). In this context, using syntax with tokens is highly advised.
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
@@ -298,7 +294,6 @@ The following code will create a dialog accepting a formula in text format:
 
 
 
-<!-- END REF -->
 
 
 

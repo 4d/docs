@@ -115,7 +115,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
-Attachment objects are defined through the `MAIL New attachment` command.
+Attachment objects are defined through the [`MAIL New attachment`](https://doc.4d.com/4dv18/help/command/en/page1644.html) command.
 
 
 
@@ -349,6 +349,13 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
     </td>
   </tr>
 </table>
+
+Reserved keywords:
+* $draft - Indicates a message is a draft
+* $seen - Indicates a message has been read
+* $flagged - Indicates a message needs special attention (e.g., Urgent)
+* $answered - Indicates a message has been replied to
+* $deleted - Indicates a message to delete
 
 #### Beispiel
 

@@ -5,11 +5,17 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
-      "Admin/building": {
-        "title": "Building a project package"
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
       },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "Class"
@@ -61,6 +67,9 @@
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
+      },
+      "API/sessionClass": {
+        "title": "Session"
       },
       "API/signalClass": {
         "title": "Signal"
@@ -670,6 +679,9 @@
       "Project/overview": {
         "title": "Überblick"
       },
+      "ReleaseNotes/whatsNew": {
+        "title": "What's New"
+      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -772,13 +784,47 @@
       "Users/overview": {
         "title": "Überblick"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "Überblick"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "Administration"
+      },
+      "WebServer/webServerConfig": {
+        "title": "Configuration"
+      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
       }
     },
     "links": {
-      "v18 R5 BETA": "v18 R5 BETA",
-      "v18 R4": "v18 R4",
+      "What's New": "What's New",
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
       "v18": "v18"
     },
     "categories": {
@@ -792,6 +838,7 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
+      "Web Development": "Web Development",
       "REST Server": "REST Server",
       "Client/Server": "Client/Server",
       "Forms": "Formulare",
@@ -817,20 +864,26 @@
     "Form Object Properties|no description given": "Form Object Properties",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
+    "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
     "Web applications|no description given": "Web applications",
     "Mobile applications|no description given": "Mobile applications",
     "Desktop applications|no description given": "Desktop applications",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"

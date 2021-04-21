@@ -45,7 +45,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 クラスを命名する際には、次のルールに留意してください:
 
 - [クラス名](identifiers.md#クラス) は [プロパティ名の命名規則](identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
-- 大文字と小文字が区別されること
+- クラス名の大文字・小文字は区別されます。
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと
 
 たとえば、"Polygon" という名前のクラスを定義するには、次のファイルを作成する必要があります:
@@ -339,7 +339,7 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクターが定義されていると、 [`new()`](API/classClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
 
-クラスコンストラクター関数の場合には、 `Current method name` コマンドは次を返します: "*\<ClassName>.constructor*" (例:  "MyClass.constructor")。
+クラスコンストラクター関数の場合には、 `Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例:  "MyClass:constructor")。
 
 
 

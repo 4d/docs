@@ -58,7 +58,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added|
 </details>
 
-<!-- REF fileClass.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
@@ -110,6 +110,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 |HTTP debug log file|9|Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder. |
 |HTTP log file|8|Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.|
 |Last backup file|2|Last backup file, named \<applicationName>[bkpNum].4BK, stored at a custom location.|
+|Last journal integration log file|22|Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred|
 |Repair log file|7|Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.|
 |Request log file|10|Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
 |SMTP log file|15|Log file created by the `SET DATABASE PARAMETER(SMTP Log)` command. Stored in the Logs folder. |
@@ -122,6 +123,22 @@ If the target *fileConstant* does not exist, a null object is returned. No error
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
 
 
+## 4D.File.new()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added
+</details>
+
+<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+
+
+#### Description
+
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -499,6 +516,7 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 <!-- REF file.setText().Desc --> 
 ## .setText()
+
 
 <details><summary>History</summary>
 |Version|Changes|

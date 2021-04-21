@@ -335,7 +335,7 @@ Si la partie serveur et/ou la partie cliente de votre application exécutable es
 - fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont utilisés pour les connexions SSL ainsi que par les commandes de cryptage des données,
 - Dossier racine Web (DossierWeb) par défaut.
 
-Des éléments doivent être installés :
+Des éléments doivent être installée :
 *   **Sous Windows**
     *   **Application serveur** : dans le sous-dossier *Client Server executable\ \<ApplicationName>Server\Server Database*.
     *   **Application cliente** : dans le sous-dossier *Client Server executable\ \<ApplicationName>Client*.

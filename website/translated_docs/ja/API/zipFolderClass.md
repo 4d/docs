@@ -4,10 +4,10 @@ title: ZIPFolder
 ---
 
 
-The following properties and functions from the [Folder](folderClass.md) class are available to `ZIPFolder` objects:
+[Folder](folderClass.md) クラスの次のプロパティや関数は `ZIPFolder` オブジェクトにおいて利用可能です:
 
 
-| Available [Folder](folderClass.md) APIs for ZIPFolder                                            | 説明                                                                                                                                |
+| ZIPFolder で利用可能な [Folder](folderClass.md) API                                                    | 説明                                                                                                                                |
 | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto)                   |                                                                                                                                   |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](folderClass.md#creationdate)         | Date may be different for the `root` folder from a folder within the archive                                                      |

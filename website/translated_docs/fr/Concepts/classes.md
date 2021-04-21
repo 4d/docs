@@ -111,7 +111,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
 | classStore | object | <- | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Il retourne toutes les classes utilisateurs [définies](#class-definition)>dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -286,13 +286,13 @@ Class Constructor({$parameterName : type; ...})
 
 Une fonction class constructor, qui peut accepter des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
 
-In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Dans ce cas, lorsque vous appelez la fonction [`new()`](API/classClass.md#new), le class constructor est appelé avec les paramètres éventuellement passés à la fonction `new()`.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+Pour une fonction de class constructor, la commande `Current method name` retourne : "*\<ClassName>: constructor*", par exemple "MyClass:constructor".
 
 
 
-#### Example:
+#### Exemple :
 
 ```4d
 // Class: MyClass
@@ -302,8 +302,8 @@ Class Constructor ($name : Text)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -314,14 +314,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 // Class: ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. La classe enfant hérite de toutes les fonctions de la classe parente.
+Le mot clé `Class extends` est utilisé dans la déclaration de classe pour créer une classe utilisateur qui est un enfant d'une autre classe utilisateur. La classe enfant hérite de toutes les fonctions de la classe parente.
 
 L'extension de classe doit suivre les règles suivantes :
 

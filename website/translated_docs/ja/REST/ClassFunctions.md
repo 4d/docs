@@ -18,7 +18,7 @@ POST リクエストのボディに関数に渡す引数を含めます: `["Agua
 $city:=ds.City.getCity("Aguada")
 ```
 
-> RESTリクエストで直接呼び出せるのは `exposed` キーワードが付いた関数のみです。 [公開vs非公開関数](ordaClasses.md#公開vs非公開関数) の章を参照ください。
+> RESTリクエストで直接呼び出せるのは `exposed` キーワードが付いた関数のみです。 [公開vs非公開関数](ORDA/ordaClasses.md#公開vs非公開関数) の章を参照ください。
 
 ## 関数の呼び出し
 
