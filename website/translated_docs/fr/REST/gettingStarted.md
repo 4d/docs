@@ -64,7 +64,7 @@ Le serveur REST répond :
 }
 ```
 
-Cela signifie que le datastore contient le dataclass Employees. You can see the dataclass attributes by typing:
+Cela signifie que le datastore contient le dataclass Employees. Vous pouvez voir les attributs de la dataclass en tapant :
 
 ```
 /rest/$catalog/Employees
