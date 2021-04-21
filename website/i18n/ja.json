@@ -129,7 +129,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "Classes"
+        "title": "クラス"
       },
       "Concepts/components": {
         "title": "Components"
@@ -186,7 +186,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -874,7 +874,7 @@
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
       "Client/Server": "クライアント/サーバー",
-      "Forms": "Forms",
+      "Forms": "フォーム",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
@@ -890,7 +890,7 @@
     "Project Management|in index page Getting started": "プロジェクト管理",
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "Forms",
+    "Forms|no description given": "フォーム",
     "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
