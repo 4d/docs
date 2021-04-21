@@ -51,7 +51,7 @@
         "title": "Email"
       },
       "API/EntityClass": {
-        "title": "Entity"
+        "title": "エンティティ"
       },
       "API/EntitySelectionClass": {
         "title": "EntitySelection"
@@ -129,10 +129,10 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "クラス"
+        "title": "Classes"
       },
       "Concepts/components": {
-        "title": "コンポーネント"
+        "title": "Components"
       },
       "Concepts/data-types": {
         "title": "データタイプの概要"
@@ -186,7 +186,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "メソッド"
+        "title": "Methods"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -874,7 +874,7 @@
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
       "Client/Server": "クライアント/サーバー",
-      "Forms": "フォーム",
+      "Forms": "Forms",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
@@ -890,7 +890,7 @@
     "Project Management|in index page Getting started": "プロジェクト管理",
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "フォーム",
+    "Forms|no description given": "Forms",
     "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
