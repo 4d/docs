@@ -63,7 +63,7 @@ High resolution pictures with the @nx convention can be used in the following ob
 
 
 
-### DPI (macOs and Windows)
+### DPI (macOS and Windows)
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
@@ -75,6 +75,18 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
 
+## Dark mode pictures (macOS only)
+
+You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
+
+A dark mode picture is defined in the following way:
+
+- dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
+- dark mode picture is stored next to the standard version.
+
+At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
+
+![](assets/en/FormEditor/darkicon.png)
 
 
 

@@ -1,14 +1,20 @@
 ---
-id: emails
+id: EmailObjectClass
 title: Email
 ---
 
-4Dにおけるメールの作成・送信・受信は `Email` オブジェクトの操作よっておこなわれます。 このオブジェクトは以下のコマンドと関数によって使用されます:
+4Dにおけるメールの作成・送信・受信は `Email` オブジェクトの操作よっておこなわれます。
 
-- SMTP - [`.send()`](smtpTransporterClass.md#send) 関数は SMTP 経由でメールを送信します。
-- POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) 関数は POP3サーバーからメールを受信します。
-- IMAP - [`.getMail()`](imapTransporterClass.md#getmail) および [`.getMails()`](imapTransporterClass.md#getmails) 関数は IMAPサーバーからメールを受信します。
-- `MAIL Convert from MIME` および `MAIL Convert to MIME` コマンドでメールを変換します。
+*transporter* クラス関数を使ってメールを取得する際に、 `Email` オブジェクトが作成されます。
+
+- IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) および [`.getMails()`](IMAPTransporterClass.md#getmails) 関数は IMAPサーバーからメールを受信します。
+- POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) 関数は POP3サーバーからメールを受信します。
+
+> また、[`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4Dコマンドを使って新規かつ空の `Email` オブジェクトを作成してから、[Email オブジェクトプロパティ](#email-オブジェクト) を設定していくことも可能です。
+
+`Email` オブジェクトは SMTP [`.send()`](SMTPTransporterClass.md#send) 関数を使って送信します。
+
+[`MAIL Convert from MIME`](#mail-convert-from-mime) および [`MAIL Convert to MIME`](#mail-convert-to-mime) コマンドは、MIME コンテンツから `Email` オブジェクトに、またはその逆の変換をおこなうのに使用できます。
 
 
 ### Email オブジェクト
@@ -19,28 +25,28 @@ Email オブジェクトは次のプロパティを提供します:
 
 |                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #emailObjectClass.attachments.Syntax -->](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.attachments.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.bcc.Syntax -->](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bcc.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.bodyStructure.Syntax -->](#bodyStructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bodyStructure.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.bodyValues.Syntax -->](#bodyValues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bodyValues.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.cc.Syntax -->](#cc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.cc.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.comments.Syntax -->](#comments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.comments.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.from.Syntax -->](#from)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.from.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.headers.Syntax -->](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.headers.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.htmlBody.Syntax -->](#htmlBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.htmlBody.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.id.Syntax -->](#id)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.id.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.inReplyTo.Syntax -->](#inReplyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.inReplyTo.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.keywords.Syntax -->](#keywords)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.keywords.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.messageId.Syntax -->](#messageId)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.messageId.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.receivedAt.Syntax -->](#receivedAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.receivedAt.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.references.Syntax -->](#references)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.references.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.replyTo.Syntax -->](#replyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.replyTo.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.sendAt.Syntax -->](#sendAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.sendAt.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.sender.Syntax -->](#sender)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.sender.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.size.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.subject.Syntax -->](#subject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.subject.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.textBody.Syntax -->](#textBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.textBody.Summary -->|
-| [<!-- INCLUDE #emailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.to.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.attachments.Syntax -->](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.attachments.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.bcc.Syntax -->](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bcc.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.bodyStructure.Syntax -->](#bodystructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyStructure.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.bodyValues.Syntax -->](#bodyvalues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyValues.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.cc.Syntax -->](#cc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.cc.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.comments.Syntax -->](#comments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.comments.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.from.Syntax -->](#from)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.from.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.headers.Syntax -->](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.headers.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.htmlBody.Syntax -->](#htmlbody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.htmlBody.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.id.Syntax -->](#id)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.id.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.inReplyTo.Syntax -->](#inreplyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.inReplyTo.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.keywords.Syntax -->](#keywords)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.keywords.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.messageId.Syntax -->](#messageid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.messageId.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.receivedAt.Syntax -->](#receivedat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.receivedAt.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.references.Syntax -->](#references)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.references.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.replyTo.Syntax -->](#replyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.replyTo.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.sendAt.Syntax -->](#sendat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sendAt.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.sender.Syntax -->](#sender)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sender.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.size.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.subject.Syntax -->](#subject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.subject.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.textBody.Syntax -->](#textbody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.textBody.Summary -->|
+| [<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
 
 
 ### メールアドレス
@@ -66,11 +72,11 @@ Email オブジェクトは次のプロパティを提供します:
 
 アドレスオブジェクトのコレクション
 
-## メール本文の扱い
+### メール本文の扱い
 
-[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](smtpTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。 プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。 メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
+[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。 プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。 メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
 
-[Email オブジェクト](email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](smtpTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
+[Email オブジェクト](email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
 
 #### bodyStructure および bodyValues オブジェクトの例
 
@@ -105,7 +111,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 ## .attachments
 
-<!-- REF #emailObjectClass.attachments.Syntax -->
+<!-- REF #EmailObjectClass.attachments.Syntax -->
 **.attachments** : Collection<!-- END REF -->
 
 
@@ -113,35 +119,35 @@ Email オブジェクトは次のプロパティを提供します:
 
 
 
-`.attachments` プロパティは、 <!-- REF #emailObjectClass.attachments.Summary -->*attachment* オブジェクトのコレクション<!-- END REF -->を格納します。
+`.attachments` プロパティは、 <!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクション<!-- END REF -->を格納します。
 
-attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv18/help/command/ja/page1644.html) コマンドによって定義されます。
-
-
+MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
 
 
-## .bcc 
 
-<!-- REF #emailObjectClass.bcc.Syntax -->
+
+## .bcc
+
+<!-- REF #EmailObjectClass.bcc.Syntax -->
 **.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.bcc` プロパティは、 <!-- REF #emailObjectClass.bcc.Summary -->非表示 (BCC: Blind Carbon Copy) のメール受信者 [アドレス](#email-addresses)<!-- END REF -->を格納します。
+`.bcc` プロパティは、 <!-- REF #EmailObjectClass.bcc.Summary -->非表示 (BCC: Blind Carbon Copy) のメール受信者 [アドレス](#email-addresses)<!-- END REF -->を格納します。
 
 
 
 
 ## .bodyStructure
 
-<!-- REF #emailObjectClass.bodyStructure.Syntax -->
+<!-- REF #EmailObjectClass.bodyStructure.Syntax -->
 **.bodyStructure** : Object<!-- END REF -->
 
 
 #### 説明
 
-`.bodyStructure` プロパティは、 <!-- REF #emailObjectClass.bodyStructure.Summary -->(任意) メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクト<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->(任意) メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクト<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
@@ -162,13 +168,13 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .bodyValues
 
-<!-- REF #emailObjectClass.bodyValues.Syntax -->
+<!-- REF #EmailObjectClass.bodyValues.Syntax -->
 **.bodyValues** : Object<!-- END REF -->
 
 
 #### 説明
 
-`.bodyValues` プロパティは、 <!-- REF #emailObjectClass.bodyValues.Summary -->(任意) `bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyValues` プロパティは、 <!-- REF #EmailObjectClass.bodyValues.Summary -->(任意) `bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
@@ -180,15 +186,15 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 
 
-## .cc 
+## .cc
 
-<!-- REF #emailObjectClass.cc.Syntax -->
+<!-- REF #EmailObjectClass.cc.Syntax -->
 **.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.cc` プロパティは、 <!-- REF #emailObjectClass.cc.Summary -->追加 (CC: Carbon Copy) のメール受信者 [アドレス](#email-addresses)<!-- END REF -->を格納します。
+`.cc` プロパティは、 <!-- REF #EmailObjectClass.cc.Summary -->追加 (CC: Carbon Copy) のメール受信者 [アドレス](#email-addresses)<!-- END REF -->を格納します。
 
 
 
@@ -197,13 +203,13 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .comments
 
-<!-- REF #emailObjectClass.comments.Syntax -->
+<!-- REF #EmailObjectClass.comments.Syntax -->
 **.comments** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.comments` プロパティは、 <!-- REF #emailObjectClass.comments.Summary -->追加のコメントのヘッダー<!-- END REF -->を格納します。
+`.comments` プロパティは、 <!-- REF #EmailObjectClass.comments.Summary -->追加のコメントのヘッダー<!-- END REF -->を格納します。
 
 コメントはメッセージのヘッダーセクション内にのみ表示されます (つまり本文部分には触れないということです)。
 
@@ -212,15 +218,15 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 
 
-## .from 
+## .from
 
-<!-- REF #emailObjectClass.from.Syntax -->
+<!-- REF #EmailObjectClass.from.Syntax -->
 **.from** : Text<br>**.from** : Object<br>**.from** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.from` プロパティは、 <!-- REF #emailObjectClass.from.Summary -->メールの送信元 [アドレス](#email-addresses)<!-- END REF -->を格納します。
+`.from` プロパティは、 <!-- REF #EmailObjectClass.from.Summary -->メールの送信元 [アドレス](#email-addresses)<!-- END REF -->を格納します。
 
 
 送信されるメールには、それぞれ [sender](#sender) および **from** アドレスの両方がついています:
@@ -235,13 +241,13 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .headers
 
-<!-- REF #emailObjectClass.headers.Syntax -->
+<!-- REF #EmailObjectClass.headers.Syntax -->
 **.headers** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.headers` プロパティは、 <!-- REF #emailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクション<!-- END REF -->を格納します。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
+`.headers` プロパティは、 <!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクション<!-- END REF -->を格納します。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
 
 > メールレベルですでにプロパティとして設定されている "from" または "cc" などのヘッダーを `EmailHeader` オブジェクトプロパティが定義している場合、`EmailHeader` プロパティは無視されます。
 
@@ -260,13 +266,13 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .htmlBody
 
-<!-- REF #emailObjectClass.htmlBody.Syntax -->
+<!-- REF #EmailObjectClass.htmlBody.Syntax -->
 **.htmlBody** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.htmlBody` プロパティは、 <!-- REF #emailObjectClass.htmlBody.Summary -->(任意、SMTPのみ) HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.htmlBody` プロパティは、 <!-- REF #EmailObjectClass.htmlBody.Summary -->(任意、SMTPのみ) HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 
 
@@ -276,15 +282,15 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .id
 
-<!-- REF #emailObjectClass.id.Syntax -->
+<!-- REF #EmailObjectClass.id.Syntax -->
 **.id** : Text<!-- END REF -->
 
 
 #### 説明
 
-[IMAP transporter](imapTransporterClass.md) のみ。
+[IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.id` プロパティは、 <!-- REF #emailObjectClass.id.Summary -->IMAP サーバーからの固有ID<!-- END REF -->を格納します。
+`.id` プロパティは、 <!-- REF #EmailObjectClass.id.Summary -->IMAP サーバーからの固有ID<!-- END REF -->を格納します。
 
 
 
@@ -293,13 +299,13 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .inReplyTo
 
-<!-- REF #emailObjectClass.inReplyTo.Syntax -->
+<!-- REF #EmailObjectClass.inReplyTo.Syntax -->
 **.inReplyTo** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.inReplyTo` プロパティは、 <!-- REF #emailObjectClass.inReplyTo.Summary -->カレントメッセージが返信している、元のメッセージのメッセージID<!-- END REF -->を格納します。
+`.inReplyTo` プロパティは、 <!-- REF #EmailObjectClass.inReplyTo.Summary -->カレントメッセージが返信している、元のメッセージのメッセージID<!-- END REF -->を格納します。
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
@@ -310,45 +316,19 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .keywords
 
-<!-- REF #emailObjectClass.keywords.Syntax -->
+<!-- REF #EmailObjectClass.keywords.Syntax -->
 **.keywords** : Object<!-- END REF -->
 
 
 #### 説明
 
-`.keywords` プロパティは、 <!-- REF #emailObjectClass.keywords.Summary -->各プロパティ名がキーワードであり、各値が true であるキーワードセットのオブジェクト<!-- END REF -->を格納します。
+`.keywords` プロパティは、 <!-- REF #EmailObjectClass.keywords.Summary -->各プロパティ名がキーワードであり、各値が true であるキーワードセットのオブジェクト<!-- END REF -->を格納します。
 
 このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      プロパティ
-    </th>
-    
-    <th>
-      タイプ
-    </th>
-    
-    <th>
-      結果
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      .\<keyword\>
-    </td>
-    
-    <td>
-      boolean
-    </td>
-    
-    <td>
-      設定するキーワード (値は true でなければなりません)。
-    </td>
-  </tr>
-</table>
+| プロパティ          | タイプ     | 結果                              |
+| -------------- | ------- | ------------------------------- |
+| .\<keyword\> | boolean | 設定するキーワード (値は true でなければなりません)。 |
 
 予約されたキーワード:
 * $draft - メッセージが下書きであることを表します
@@ -360,7 +340,6 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 #### 例題
 
 ```
- var $mail : Object
  $mail.keywords["$flagged"]:=True
  $mail.keywords["4d"]:=True
 ```
@@ -370,29 +349,29 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .messageId
 
-<!-- REF #emailObjectClass.messageId.Syntax -->
+<!-- REF #EmailObjectClass.messageId.Syntax -->
 **.messageId** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.messageId` プロパティは、 <!-- REF #emailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id")<!-- END REF -->を格納します。
+`.messageId` プロパティは、 <!-- REF #EmailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id")<!-- END REF -->を格納します。
 
 通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。 この固有ID は特にフォーラムや公開メーリングリストで使用されています。 一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
 
 
 
-## .receivedAt 
+## .receivedAt
 
-<!-- REF #emailObjectClass.receivedAt.Syntax -->
+<!-- REF #EmailObjectClass.receivedAt.Syntax -->
 **.receivedAt** : Text<!-- END REF -->
 
 
 #### 説明
 
-[IMAP transporter](imapTransporterClass.md) のみ。
+[IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.receivedAt` プロパティは、 <!-- REF #emailObjectClass.receivedAt.Summary -->IMAPサーバーにメールが到着した時間の、ISO 8601 UTC フォーマットでのタイムスタンプ (例: 2020-09-13T16:11:53Z)<!-- END REF -->を格納します。
+`.receivedAt` プロパティは、 <!-- REF #EmailObjectClass.receivedAt.Summary -->IMAPサーバーにメールが到着した時間の、ISO 8601 UTC フォーマットでのタイムスタンプ (例: 2020-09-13T16:11:53Z)<!-- END REF -->を格納します。
 
 
 
@@ -401,28 +380,28 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .references
 
-<!-- REF #emailObjectClass.references.Syntax -->
+<!-- REF #EmailObjectClass.references.Syntax -->
 **.references** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.references` プロパティは、 <!-- REF #emailObjectClass.references.Summary -->返信チェーン内メッセージの、全メッセージID のコレクション<!-- END REF -->を格納します。
+`.references` プロパティは、 <!-- REF #EmailObjectClass.references.Summary -->返信チェーン内メッセージの、全メッセージID のコレクション<!-- END REF -->を格納します。
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
 
 
 
-## .replyTo 
+## .replyTo
 
-<!-- REF #emailObjectClass.replyTo.Syntax -->
+<!-- REF #EmailObjectClass.replyTo.Syntax -->
 **.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.replyTo` プロパティは、 <!-- REF #emailObjectClass.replyTo.Summary -->返信用 [アドレス](#email-addresses)<!-- END REF -->を格納します。
+`.replyTo` プロパティは、 <!-- REF #EmailObjectClass.replyTo.Summary -->返信用 [アドレス](#email-addresses)<!-- END REF -->を格納します。
 
 
 
@@ -430,26 +409,26 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .sendAt
 
-<!-- REF #emailObjectClass.sendAt.Syntax -->
+<!-- REF #EmailObjectClass.sendAt.Syntax -->
 **.sendAt** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.sendAt` プロパティは、 <!-- REF #emailObjectClass.sendAt.Summary -->メールのタイムスタンプ (ISO 8601 UTCフォーマット)<!-- END REF -->を格納します。
+`.sendAt` プロパティは、 <!-- REF #EmailObjectClass.sendAt.Summary -->メールのタイムスタンプ (ISO 8601 UTCフォーマット)<!-- END REF -->を格納します。
 
 
 
 
-## .sender 
+## .sender
 
-<!-- REF #emailObjectClass.sender.Syntax -->
+<!-- REF #EmailObjectClass.sender.Syntax -->
 **.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.sender` プロパティは、 <!-- REF #emailObjectClass.sender.Summary -->メールのソース [アドレス](#email-addresses)<!-- END REF -->を格納します。
+`.sender` プロパティは、 <!-- REF #EmailObjectClass.sender.Summary -->メールのソース [アドレス](#email-addresses)<!-- END REF -->を格納します。
 
 
 送信されるメールには、それぞれ **sender** および **[from](#from)** アドレスの両方がついています:
@@ -462,30 +441,30 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 
 
-## .size 
+## .size
 
-<!-- REF #emailObjectClass.size.Syntax -->
+<!-- REF #EmailObjectClass.size.Syntax -->
 **.size** : Integer<!-- END REF -->
 
 
 #### 説明
 
-[IMAP transporter](imapTransporterClass.md) のみ。
+[IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.size` プロパティは、 <!-- REF #emailObjectClass.size.Summary -->IMAPサーバーから返された Email オブジェクトのサイズ (バイト単位)<!-- END REF -->を格納します。
+`.size` プロパティは、 <!-- REF #EmailObjectClass.size.Summary -->IMAPサーバーから返された Email オブジェクトのサイズ (バイト単位)<!-- END REF -->を格納します。
 
 
 
 
 ## .subject
 
-<!-- REF #emailObjectClass.subject.Syntax -->
+<!-- REF #EmailObjectClass.subject.Syntax -->
 **.subject** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.subject` プロパティは、 <!-- REF #emailObjectClass.subject.Summary -->メールの件名<!-- END REF -->を格納します。
+`.subject` プロパティは、 <!-- REF #EmailObjectClass.subject.Summary -->メールの件名<!-- END REF -->を格納します。
 
 
 
@@ -493,24 +472,191 @@ attachment オブジェクトは [`MAIL New attachment`](https://doc.4d.com/4dv1
 
 ## .textBody
 
-<!-- REF #emailObjectClass.textBody.Syntax -->
+<!-- REF #EmailObjectClass.textBody.Syntax -->
 **.textBody** : Text<!-- END REF -->
 
 
 #### 説明
 
-`.textBody` プロパティは、 <!-- REF #emailObjectClass.textBody.Summary -->(任意、SMTPのみ) 標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.textBody` プロパティは、 <!-- REF #EmailObjectClass.textBody.Summary -->(任意、SMTPのみ) 標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 
 
-## .to 
+## .to
 
-<!-- REF #emailObjectClass.to.Syntax -->
+<!-- REF #EmailObjectClass.to.Syntax -->
 **.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
 
 
 #### 説明
 
-`.to` プロパティは、 <!-- REF #emailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF -->を格納します。 
+`.to` プロパティは、 <!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF -->を格納します。
+
+
+## MAIL Convert from MIME
+
+<details><summary>履歴</summary>
+| バージョン | 内容 |
+| ----- | -- |
+| v18   | 追加 |
+</details>
+
+<!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
+**MAIL Convert from MIME**( *mime* : Blob ) : Object<br>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+
+<!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
+| 参照   | タイプ       |    | 説明           |
+| ---- | --------- |:--:| ------------ |
+| mime | BLOB、テキスト | -> | MIME形式のメール   |
+| 戻り値  | オブジェクト    | <- | Email オブジェクト |
+<!-- END REF -->
+
+#### 説明
+
+`MAIL Convert from MIME` コマンドは、 <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->。
+> 戻り値の Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
+
+*mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
+
+#### 返されるオブジェクト
+
+Email オブジェクト。
+
+#### 例題 1
+
+テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。
+
+```4d
+C_BLOB($mime)
+C_OBJECT($mail;$server;$transporter;$status)
+
+$mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
+
+$mail:=[#current_title_incode]($mime)
+$mail.to:="smith@mail.com"
+$mail.subject:="Hello world"
+
+$server:=New object
+$server.host:="smtp.gmail.com"
+$server.port:=465
+$server.user:="test@gmail.com"
+$server.password:="XXXX"
+
+$transporter:=SMTP New transporter($server)
+$status:=$transporter.send($mail)
+```
+
+#### 例題 2
+
+この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:
+
+```4d
+C_TEXT($mime)
+C_OBJECT($email;$server;$transporter;$status)
+
+// 4D Write Pro ドキュメントを MIME に書き出します
+WP EXPORT VARIABLE(WParea;$mime;wk mime html)
+
+// 4D Write Pro MIME 変数をメールオブジェクトに変換します
+$email:=MAIL Convert from MIME($mime)
+
+// Email オブジェクトのヘッダーを設定します
+$email.subject:="4D Write Pro HTML body"
+$email.from:="YourEmail@gmail.com"
+$email.to:="RecipientEmail@mail.com"
+
+$server:=New object
+$server.host:="smtp.gmail.com"
+$server.port:=465
+$server.user:="YourEmail@gmail.com"
+$server.password:="XXXX"
+
+$transporter:=SMTP New transporter($server)
+$status:=$transporter.send($email)
+```
+
+
+
+
+
+## MAIL Convert to MIME
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+| v17 R5 | 変更 |
+</details>
+
+<!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
+**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
+
+<!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
+| 参照      | タイプ    |    | 説明                      |
+| ------- | ------ |:--:| ----------------------- |
+| mail    | オブジェクト | -> | Email オブジェクト            |
+| options | オブジェクト | -> | 文字セットとエンコーディングのメールオプション |
+| 戻り値     | テキスト   | <- | MIME に変換された Emailオブジェクト |
+<!-- END REF -->
+
+#### 説明
+
+`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。 このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
+
+*mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
+> Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
+
+*options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定を指定することができます。 次のプロパティを利用することができます:
+
+| プロパティ         | タイプ  | 説明                                                                                                                                     |
+| ------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| headerCharset | テキスト | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<p><p><table><tr><th>定数</th><th>結果</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table> |
+| bodyCharset   | テキスト | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)                                                           |
+
+*options* 引数が省略された場合、ヘッダーおよび本文においては mail mode UTF8 設定が使用されます。
+
+
+#### 例題
+
+```4d
+C_OBJECT($mail)
+C_TEXT($mime)
+$mail:=New object
+
+// メール作成
+$mail.from:="tsales@massmarket.com"
+$mail.subject:="Terrific Sale! This week only!"
+$mail.textBody:="Text format email"
+$mail.htmlBody:="<html><body>HTML format email</body></html>"
+$mail.to:=New collection
+$mail.to.push(New object ("email";"noreply@4d.com"))
+$mail.to.push(New object ("email";"test@4d.com"))
+
+// Email オブジェクトを MIME に変換します
+$mime:=[#current_title_incode]($mail)
+
+// $mime の中身:
+// MIME-Version: 1.0
+// Date: Thu, 11 Oct 2018 15:42:25 GMT
+// Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>
+// Sender: tsales@massmarket.com
+// From: tsales@massmarket.com
+// To: noreply@4d.com
+// To: test@4d.com
+// Content-Type: multipart/alternative; boundary="E0AE5773D5E95245BBBD80DD0687E218"
+// Subject: Terrific Sale! This week only!
+//
+// --E0AE5773D5E95245BBBD80DD0687E218
+// Content-Type: text/plain; charset="UTF-8"
+// Content-Transfer-Encoding: quoted-printable
+//
+// Text format email
+// --E0AE5773D5E95245BBBD80DD0687E218
+// Content-Type: text/html; charset="UTF-8"
+// Content-Transfer-Encoding: quoted-printable
+//
+// <html><body>HTML format email</body></html>
+// --E0AE5773D5E95245BBBD80DD0687E218--
+```
 
 <style> h2 { background: #d9ebff;}</style>

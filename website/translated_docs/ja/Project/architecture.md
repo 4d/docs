@@ -33,7 +33,7 @@ title: プロジェクトのアーキテクチャー
     + Classes
     + DatabaseMethods
     + Methods
-    + フォーム
+    + Forms
     + TableForms
     + Triggers
 - DerivedData
@@ -121,7 +121,7 @@ title: プロジェクトのアーキテクチャー
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
 - Methods
-- フォーム
+- Forms
 - TableForms
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
@@ -131,6 +131,11 @@ title: プロジェクトのアーキテクチャー
 
 DerivedData フォルダーには、処理を最適化するため 4D が内部的に使用するキャッシュデーターが格納されます。 これらは必要に応じて自動的に生成・再生成されます。 このフォルダーは無視してかまいません。
 
+## Libraries フォルダー
+
+> このフォルダーは macOS でのみ使用されます。
+
+Libraries フォルダーには、macOS 上で [Apple Silicon用にコンパイル](compiler.md#siliconコンパイラ) された結果のファイルが格納されます。
 
 ## Resources フォルダー
 
@@ -198,15 +203,16 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ブレークポイントやウィンドウの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
 
-| 内容                         | 説明                                 | 形式   |
-| -------------------------- | ---------------------------------- | ---- |
-| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定             | JSON |
-| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション           | JSON |
-| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション           | JSON |
-| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
-| debuggerCatches.json       | キャッチコマンドリスト                        | JSON |
-| recentTables.json          | 最近開かれたテーブルのリスト                     | JSON |
-| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置             | XML  |
+| 内容                         | 説明                                  | 形式     |
+| -------------------------- | ----------------------------------- | ------ |
+| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定              | JSON   |
+| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション            | JSON   |
+| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション            | JSON   |
+| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序  | JSON   |
+| debuggerCatches.json       | キャッチコマンドリスト                         | JSON   |
+| recentTables.json          | 最近開かれたテーブルのリスト                      | JSON   |
+| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置              | XML    |
+| CompilerIntermediateFiles  | Apple Silicon用にコンパイルした結果生成される中間ファイル | Folder |
 
 
 ## Components フォルダー

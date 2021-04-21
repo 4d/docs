@@ -1,5 +1,5 @@
 ---
-id: signalClass
+id: SignalClass
 title: Signal
 ---
 
@@ -85,15 +85,15 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #signalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.description.Summary -->|
-| [<!-- INCLUDE #signalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.signaled.Summary --> |
-| [<!-- INCLUDE #signalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.trigger().Summary --> |
-| [<!-- INCLUDE #signalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.wait().Summary --> |
+| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary -->|
+| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary --> |
+| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary --> |
+| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary --> |
 
 
 
 
-<!-- REF signalClass.New signal.Desc -->
+<!-- REF SignalClass.New signal.Desc -->
 ## New signal
 
 
@@ -106,7 +106,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 <!-- REF #_command_.New signal.Syntax -->
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-<!-- REF signalClass.New signal.Params -->
+<!-- REF SignalClass.New signal.Params -->
 | 参照          | タイプ       |    | 説明                   |
 | ----------- | --------- |:--:| -------------------- |
 | description | テキスト      | -> | シグナルの詳細              |
@@ -166,7 +166,7 @@ The ***doSomething*** method could be like:
 <!-- END REF -->
 
 
-<!-- REF signalClass.description.Desc -->
+<!-- REF SignalClass.description.Desc -->
 ## .description
 
 <details><summary>履歴</summary>
@@ -175,12 +175,12 @@ The ***doSomething*** method could be like:
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.description.Syntax -->
+<!-- REF #SignalClass.description.Syntax -->
 **.description** : Text<!-- END REF -->
 
 #### 説明
 
-`.description` プロパティは、 <!-- REF #signalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
+`.description` プロパティは、 <!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
@@ -190,7 +190,7 @@ This property is **read-write**.
 
 
 
-<!-- REF signalClass.signaled.Desc -->
+<!-- REF SignalClass.signaled.Desc -->
 ## .signaled
 
 <details><summary>履歴</summary>
@@ -200,12 +200,12 @@ This property is **read-write**.
 
 </details>
 
-<!-- REF #signalClass.signaled.Syntax -->
+<!-- REF #SignalClass.signaled.Syntax -->
 **.signaled** : Boolean<!-- END REF -->
 
 #### 説明
 
-`.signaled` プロパティは、 <!-- REF #signalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 このプロパティは **読み取り専用** です。 
 
@@ -213,7 +213,7 @@ This property is **read-write**.
 
 
 
-<!-- REF signalClass.trigger().Desc -->
+<!-- REF SignalClass.trigger().Desc -->
 ## .trigger()
 
 <details><summary>履歴</summary>
@@ -222,10 +222,10 @@ This property is **read-write**.
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->
 **.trigger( )**<!-- END REF -->
 
-<!-- REF #signalClass.trigger().Params -->
+<!-- REF #SignalClass.trigger().Params -->
 | 参照 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
@@ -234,7 +234,7 @@ This property is **read-write**.
 
 #### 説明
 
-`.trigger( )` 関数は、 <!-- REF #signalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
+`.trigger( )` 関数は、 <!-- REF #SignalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
 
 If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
 
@@ -242,7 +242,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 
 
-<!-- REF signalClass.wait().Desc -->
+<!-- REF SignalClass.wait().Desc -->
 ## .wait()
 
 <details><summary>履歴</summary>
@@ -251,10 +251,10 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-<!-- REF #signalClass.wait().Params -->
+<!-- REF #SignalClass.wait().Params -->
 | 参照      | タイプ |    | 説明                   |
 | ------- | --- | -- | -------------------- |
 | timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
@@ -264,7 +264,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 #### 説明
 
-`.wait( )` 関数は、 <!-- REF #signalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
+`.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 > **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.

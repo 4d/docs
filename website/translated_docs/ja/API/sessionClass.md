@@ -1,6 +1,6 @@
 ---
-id: sessionClass
-title: セッション
+id: SessionClass
+title: Session
 ---
 
 [プロジェクトにおいて、スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、[`Session`](#session) コマンドによって Session オブジェクトが返されます。 Webクライアント (ブラウザーなど) のセッションを制御するため、4D Webサーバーは自動的に Sessionオブジェクトを作成・管理します。 このオブジェクトは、ユーザーセッションへのインターフェースを Web開発者に対して提供し、アクセス権の管理や、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などを可能にします。
@@ -12,13 +12,13 @@ title: セッション
 
 |                                                                                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #sessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.clearPrivileges().Summary -->|
-| [<!-- INCLUDE #sessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.expirationDate.Summary -->|
-| [<!-- INCLUDE #sessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.hasPrivilege().Summary -->|
-| [<!-- INCLUDE #sessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.idleTimeout.Summary -->|
-| [<!-- INCLUDE #sessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.isGuest().Summary -->|
-| [<!-- INCLUDE #sessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.setPrivileges().Summary -->|
-| [<!-- INCLUDE #sessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.userName.Summary -->|
+| [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
+| [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.expirationDate.Summary -->|
+| [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
+| [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
+| [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
+| [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
+| [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
 
@@ -80,7 +80,7 @@ IP:port/4DACTION/action_Session
 
 
 
-<!-- REF sessionClass.clearPrivileges().Desc -->
+<!-- REF SessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
 
 <details><summary>履歴</summary>
@@ -90,10 +90,10 @@ IP:port/4DACTION/action_Session
 
 </details>
 
-<!-- REF #sessionClass.clearPrivileges().Syntax -->
+<!-- REF #SessionClass.clearPrivileges().Syntax -->
 **.clearPrivileges()**<!-- END REF -->
 
-<!-- REF #sessionClass.clearPrivileges().Params -->
+<!-- REF #SessionClass.clearPrivileges().Params -->
 | 参照 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
@@ -102,7 +102,7 @@ IP:port/4DACTION/action_Session
 
 #### 説明
 
-`.clearPrivileges()` 関数は、 <!-- REF #sessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。
+`.clearPrivileges()` 関数は、 <!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。
 
 
 #### 例題
@@ -119,7 +119,7 @@ $isGuest:=Session.isGuest() //$isGuest は true
 
 
 
-<!-- REF sessionClass.expirationDate.Desc -->
+<!-- REF SessionClass.expirationDate.Desc -->
 ## .expirationDate
 
 <details><summary>履歴</summary>
@@ -129,12 +129,12 @@ $isGuest:=Session.isGuest() //$isGuest は true
 
 </details>
 
-<!-- REF #sessionClass.expirationDate.Syntax -->
+<!-- REF #SessionClass.expirationDate.Syntax -->
 **.expirationDate** : Text<!-- END REF -->
 
 #### 説明
 
-`.expirationDate` プロパティは、 <!-- REF #sessionClass.expirationDate.Summary -->セッションcookie の有効期限<!-- END REF -->を返します。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+`.expirationDate` プロパティは、 <!-- REF #SessionClass.expirationDate.Summary -->セッションcookie の有効期限<!-- END REF -->を返します。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 このプロパティは **読み取り専用** です。 [`.idleTimeout`](#idletimeout) プロパティ値が変更された場合、有効期限は自動的に再計算されます。
 
@@ -150,7 +150,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 
 
-<!-- REF sessionClass.hasPrivilege().Desc -->
+<!-- REF SessionClass.hasPrivilege().Desc -->
 ## .hasPrivilege()
 
 <details><summary>履歴</summary>
@@ -159,10 +159,10 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #sessionClass.hasPrivilege().Syntax -->
+<!-- REF #SessionClass.hasPrivilege().Syntax -->
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
-<!-- REF #sessionClass.hasPrivilege().Params -->
+<!-- REF #SessionClass.hasPrivilege().Params -->
 | 参照        | タイプ  |    | 説明                                                |
 | --------- | ---- |:--:| ------------------------------------------------- |
 | privilege | テキスト | <- | 確認するアクセス権の名称                                      |
@@ -172,7 +172,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 #### 説明
 
-`.hasPrivilege()` 関数は、 <!-- REF #sessionClass.hasPrivilege().Summary -->対象セッションに *privilege* のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
+`.hasPrivilege()` 関数は、 <!-- REF #SessionClass.hasPrivilege().Summary -->対象セッションに *privilege* のアクセス権が紐づいていれば true、でなければ false を返します<!-- END REF -->。
 
 
 #### 例題
@@ -190,7 +190,7 @@ End if
 
 <!-- END REF -->
 
-<!-- REF sessionClass.idleTimeout.Desc -->
+<!-- REF SessionClass.idleTimeout.Desc -->
 ## .idleTimeout
 
 <details><summary>履歴</summary>
@@ -200,12 +200,12 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.idleTimeout.Syntax -->
+<!-- REF #SessionClass.idleTimeout.Syntax -->
 **.idleTimeout** : Integer<!-- END REF -->
 
 #### 説明
 
-`.idleTimeout` プロパティは、 <!-- REF #sessionClass.idleTimeout.Summary -->対象セッションが 4D によって終了されるまでの、非アクティブタイムアウト時間 (分単位)<!-- END REF -->を格納します。
+`.idleTimeout` プロパティは、 <!-- REF #SessionClass.idleTimeout.Summary -->対象セッションが 4D によって終了されるまでの、非アクティブタイムアウト時間 (分単位)<!-- END REF -->を格納します。
 
 プロパティ未設定時のデフォルト値は 60 (1時間) です。
 
@@ -232,7 +232,7 @@ End if
 <!-- END REF -->
 
 
-<!-- REF sessionClass.isGuest().Desc -->
+<!-- REF SessionClass.isGuest().Desc -->
 ## .isGuest()
 
 <details><summary>履歴</summary>
@@ -242,10 +242,10 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.isGuest().Syntax -->
+<!-- REF #SessionClass.isGuest().Syntax -->
 **.isGuest()** : Boolean<!-- END REF -->
 
-<!-- REF #sessionClass.isGuest().Params -->
+<!-- REF #SessionClass.isGuest().Params -->
 | 参照  | タイプ |    | 説明                            |
 | --- | --- |:--:| ----------------------------- |
 | 戻り値 | ブール | <- | ゲストセッションの場合は true、それ以外は false |
@@ -253,7 +253,7 @@ End if
 
 #### 説明
 
-`.isGuest()` 関数は、 <!-- REF #sessionClass.isGuest().Summary -->アクセス権のないゲストセッションの場合は true を返します<!-- END REF -->。
+`.isGuest()` 関数は、 <!-- REF #SessionClass.isGuest().Summary -->アクセス権のないゲストセッションの場合は true を返します<!-- END REF -->。
 
 
 #### 例題
@@ -270,7 +270,7 @@ End if
 <!-- END REF -->
 
 
-<!-- REF sessionClass.setPrivileges().Desc -->
+<!-- REF SessionClass.setPrivileges().Desc -->
 ## .setPrivileges()
 
 <details><summary>履歴</summary>
@@ -280,10 +280,10 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.setPrivileges().Syntax -->
+<!-- REF #SessionClass.setPrivileges().Syntax -->
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
-<!-- REF #sessionClass.setPrivileges().Params -->
+<!-- REF #SessionClass.setPrivileges().Params -->
 | 参照         | タイプ    |    | 説明                                          |
 | ---------- | ------ |:--:| ------------------------------------------- |
 | privilege  | テキスト   | -> | アクセス権の名称                                    |
@@ -293,7 +293,7 @@ End if
 
 #### 説明
 
-`.setPrivileges()` 関数は、 <!-- REF #sessionClass.setPrivileges().Summary -->引数として渡したアクセス権をセッションと紐づけます<!-- END REF -->。
+`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権をセッションと紐づけます<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -335,7 +335,7 @@ End if
 
 <!-- END REF -->
 
-<!-- REF sessionClass.storage.Desc -->
+<!-- REF SessionClass.storage.Desc -->
 ## .storage
 
 <details><summary>履歴</summary>
@@ -345,12 +345,12 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.storage.Syntax -->
+<!-- REF #SessionClass.storage.Syntax -->
 **.storage** : Object<!-- END REF -->
 
 #### 説明
 
-`.storage` プロパティは、 <!-- REF #sessionClass.storage.Summary -->Webクライアントのリクエストに対して提供されうる情報を保存するのに使用可能な共有オブジェクト<!-- END REF -->を格納します。
+`.storage` プロパティは、 <!-- REF #SessionClass.storage.Summary -->Webクライアントのリクエストに対して提供されうる情報を保存するのに使用可能な共有オブジェクト<!-- END REF -->を格納します。
 
 `Session` オブジェクトの作成時には、`.storage` プロパティは空です。 共有オブジェクトのため、このプロパティはサーバー上の `Storage` オブジェクトにおいて利用可能です。
 
@@ -375,7 +375,7 @@ End if
 
 
 
-<!-- REF sessionClass.userName.Desc -->
+<!-- REF SessionClass.userName.Desc -->
 ## .userName
 
 <details><summary>履歴</summary>
@@ -385,12 +385,12 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.userName.Syntax -->
+<!-- REF #SessionClass.userName.Syntax -->
 **.userName** : Text<!-- END REF -->
 
 #### 説明
 
-`.userName` プロパティは、 <!-- REF #sessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
+`.userName` プロパティは、 <!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 このプロパティはデフォルトでは空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
 
