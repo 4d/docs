@@ -6,8 +6,8 @@ title: プロジェクトのアーキテクチャー
 4D プロジェクトは、一つの親アプリケーションフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
 - MyProject
-    - `コンポーネント`
-    - `データ`
+    - `Components`
+    - `Data`
         - `Logs`
         - `Settings`
     - `Documentation`
@@ -28,19 +28,19 @@ title: プロジェクトのアーキテクチャー
 
 典型的な Project フォルダーの構造です:
 
-- `<applicationName>.4DProject` file
+- `<applicationName>.4DProject` ファイル
 - `Sources`
-    + `クラス`
+    + `Classes`
     + `DatabaseMethods`
-    + `メソッド`
-    + `フォーム`
+    + `Methods`
+    + `Forms`
     + `TableForms`
     + `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (あれば)
 
 
-### `<applicationName>.4DProject` file
+### `<applicationName>.4DProject` ファイル
 
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
@@ -120,8 +120,8 @@ title: プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- `メソッド`
-- `フォーム`
+- `Methods`
+- `Forms`
 - `TableForms`
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
@@ -149,7 +149,7 @@ Resources フォルダーには、追加のカスタムプロジェクトリソ�
 (*) .4db バイナリデータベースから変換されたプロジェクトの場合のみ
 
 
-## `データ`
+## `Data`
 
 Data フォルダーには、データファイルのほか、データに関わるするファイルやフォルダーがすべて格納されています。
 
@@ -215,7 +215,7 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 | CompilerIntermediateFiles  | Apple Silicon用にコンパイルした結果生成される中間ファイル | Folder |
 
 
-## `コンポーネント`
+## `Components`
 
 アプリケーションプロジェクトが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
