@@ -64,7 +64,7 @@ const siteConfig = {
     indexName: '4d',
     algoliaOptions: {
       facetFilters: ['language:LANGUAGE', 'version:VERSION'],
-    },
+    }, // Optional, if provided by Algolia
 	lineheight: '30px'
   },
 
