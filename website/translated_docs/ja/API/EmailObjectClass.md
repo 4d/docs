@@ -57,7 +57,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 - 単一のメールアドレス: "somebody@domain.com"
 - 単一の表示名+メールアドレス: "Somebody <somebody@domain.com>"
-- 複数のメールアドレス: Somebody <somebody@domain.com>,me@home.org"
+- 複数のメールアドレス: "Somebody <somebody@domain.com>,me@home.org"
 
 #### オブジェクト
 
