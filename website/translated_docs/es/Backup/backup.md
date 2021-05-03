@@ -67,9 +67,9 @@ En todos los casos, tenga en cuenta que el estado de la última copia de segurid
 
 - **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
 - **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la base y de los archivos adjuntos accesibles) y devuelve un error.
-- **Copia de seguridad imposible** (disco lleno o protegido contra escritura, disco ausente, fallo de disco, transacción incompleta, base no lanzada en el momento de la copia de seguridad automática programada, etc.): si se trata de un primer error, 4D hará un segundo intento de realizar la copia de seguridad. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **Copia de seguridad imposible** (disco lleno o protegido contra escritura, disco ausente, fallo de disco, transacción incompleta, base no lanzada en el momento de la copia de seguridad automática programada, etc.): si se trata de un primer error, 4D hará un segundo intento de realizar la copia de seguridad. La espera entre los dos intentos se define en la página **Backup/Backup y Restauración** de las Propiedades de la base. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
 
-## Backup Journal
+## Historial de copias de seguridad (Backup Journal)
 
 To make following up and verifying database backups easier, the backup module writes a summary of each operation performed in a special file, which is similar to an activity journal. Like an on-board manual, all database operations (backups, restores, log file integrations) are logged in this file whether they were scheduled or performed manually. The date and time that these operations occurred are also noted in the journal.
 
