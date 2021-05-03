@@ -4,12 +4,12 @@ title: Backup
 ---
 
 
-## Starting a backup
+## Começando um backup
 
 A backup can be started in three ways:
 
 - Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
-- Automatically, using the scheduler that can be set in the Database Settings,
+- Automaticamente, usando o agendamento  que pode ser estabelecido em Configurações de Banco de Dados
 - Programmatically, using the `BACKUP` command.
 
 > 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
@@ -21,19 +21,19 @@ A backup can be started in three ways:
 
 - You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
 
-The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
+O botão **Propriedades de Banco de Dados...** faz com que seja exibida a página Backup/Configuration  das Configurações do Banco de Dados.
 
  2. Click **Backup** to start the backup using current parameters.
 
 
-### Scheduled automatic backup
+### Backup automático periódico
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Database Settings**.
+Scheduled backups are started automatically. São configurados na página **Backup/Scheduler** em **Database Settings**.
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 
-### BACKUP command
+### Comando BACKUP
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
