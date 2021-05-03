@@ -23,14 +23,14 @@ The **Database properties...** button causes the Backup/Configuration page of th
  2. Click **Backup** to start the backup using current parameters.
 
 
-## Scheduled automatic backup
+## Backup automático periódico
 
 Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 
-## BACKUP command
+## Comando BACKUP
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
