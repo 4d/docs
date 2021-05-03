@@ -88,8 +88,7 @@ class Index extends React.Component {
 				  [${subContents.langRef}](https://doc.4d.com/4Dv18R6/4D/18-R6/4D-Language-Reference.100-5197421.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
-				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
+                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
