@@ -220,7 +220,8 @@ OK="Search"
  End while
  WEB SEND FILE("results.htm") //Send the list to the results.htm form
   //which contains a reference to the variable vLIST,
-  //for example   //...
+  //for example <!--4DHTML vLIST-->
+  //...
 End if
 ```
 

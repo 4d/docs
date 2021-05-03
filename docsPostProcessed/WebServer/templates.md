@@ -3,14 +3,14 @@ id: templates
 title: Template pages
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (``) into the HTML source code.
+4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing. 
 
 For example, if you write in an HTML page:
 
 ```html
-<P>Welcome to !</P>
+<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
@@ -39,19 +39,23 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 <HTML>
 ...
 <BODY>
-   (Method call)
-   (If condition)
-      (Subpage insertion)
-   (End if)
+<!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
+<!--#4DIF (myvar=1)-->   (If condition)
+   <!--#4DINCLUDE banner1.html-->   (Subpage insertion)
+<!--#4DENDIF-->   (End if)
+<!--#4DIF (myvar=2)-->
 
-    
-   (loop on the current selection)
-   (If [TABLE]ValNum>10)
-      (subpage insertion)
-   (Else)
-   <B>Value: </B><BR>
+   <!--#4DINCLUDE banner2.html-->
+<!--#4DENDIF-->
+ 
+<!--#4DLOOP [TABLE]-->   (loop on the current selection)
+<!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
+   <!--#4DINCLUDE subpage.html-->   (subpage insertion)
+<!--#4DELSE-->   (Else)
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><BR>
       (Field display)
-   (End for)
+<!--#4DENDIF-->
+<!--#4DENDLOOP-->   (End for)
 </BODY>
 </HTML>
 ```
@@ -73,7 +77,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 |`WEB SEND FILE`|X|-|Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server|
 |`WEB SEND TEXT`|X|-|No conversion necessary|
 |`WEB SEND BLOB`|X, if BLOB is of the “text/html” type|-|Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server|
-|Inclusion by the `` tag|X|X|Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server|
+|Inclusion by the `<!--#4DINCLUDE-->` tag|X|X|Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server|
 |`PROCESS 4D TAGS`|X|X|Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility|
 
 (*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
@@ -89,4 +93,4 @@ Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4D
 
 In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
 
-In addition, according to the [principle of recursion](Tags/tags.md#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `` tag in the page. If text of the "\" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
+In addition, according to the [principle of recursion](Tags/tags.md#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
