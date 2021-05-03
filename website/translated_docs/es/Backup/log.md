@@ -3,9 +3,9 @@ id: log
 title: Log file (.journal)
 ---
 
-A continuously-used database is always record changes, additions or deletions. Performing regular backups of data is important but does not allow (in case of incident) restoring data entered since the last backup. To respond to this need, 4D now offers a specific tool: the log file. This file allows ensuring permanent security of database data.
+Una base de uso continuo siempre registra cambios, adiciones o supresiones. Performing regular backups of data is important but does not allow (in case of incident) restoring data entered since the last backup. To respond to this need, 4D now offers a specific tool: the log file. Este archivo permite garantizar la seguridad permanente de los datos de la base.
 
-In addition, 4D works continuously with a data cache in memory. Any changes made to the data of the database are stored temporarily in the cache before being written to the hard disk. This accelerates the operation of applications; in fact, accessing memory is faster than accessing the hard disk. If an incident occurs in the database before the data stored in the cache could be written to the disk, you must include the current log file in order to restore the database entirely.
+In addition, 4D works continuously with a data cache in memory. Todos los cambios realizados en los datos de la base se almacenan temporalmente en la caché antes de escribirse en el disco duro. This accelerates the operation of applications; in fact, accessing memory is faster than accessing the hard disk. Si se produce un incidente en la base antes de que los datos almacenados en la caché puedan escribirse en el disco, deberá incluir el archivo de historial actual para poder restaurar la base por completo.
 
 Finally, 4D has functions that analyze the contents of the log file, making it possible to rollback the operations carried out on the data of the database. These functions area available in the MSC: refer to the [Activity analysis](MSC/analysis.md) page and the [Rollback](MSC/rollback.md) page.
 
