@@ -34,46 +34,46 @@ The following illustration sums up how the log file works:
 The current log file is automatically saved with the current data file. This mechanism has two distinct advantages:
 
 - Its avoids saturating the disk volume where the log file is stored. Without a backup, the log file would get bigger and bigger with use, and would eventually use all available disk space. For each data file backup, 4D or 4D Server closes the current log file and immediately starts a new, empty file, thereby avoiding the risk of saturation. The old log file is then archived and eventually destroyed depending on the mechanism for managing the backup sets.
-- It keeps log files corresponding to backups in order to be able to parse or repair a database at a later point in time. The integration of a log file can only be done in the database to which it corresponds. It is important, in order to be able to properly integrate a log file into a backup, to have backups and log files archived simultaneously.
+- Conservar los archivos de historial correspondientes a las copias de seguridad para poder analizar o reparar una base en un momento posterior. La integración de un archivo de historial sólo puede hacerse en la base a la que corresponde. It is important, in order to be able to properly integrate a log file into a backup, to have backups and log files archived simultaneously.
 
 
 ## Creating the log file
 
-By default, any database created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named *data.journal* and is placed in the Data folder.
+Por defecto, toda base creada con 4D utiliza un archivo de historial (opción definida en la página **General** de las Preferencias). The log file is named *data.journal* and is placed in the Data folder.
 
-You can find out if your database uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Database Settings. If you deselected this option, or if you use a database without a log file and wish to set up a backup strategy with a log file, you will have to create one.
+You can find out if your database uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Database Settings. Si deselecciona esta opción, o si utiliza una base sin archivo de historial y desea configurar una estrategia de copia de seguridad con un archivo de historial, tendrá que crear uno.
 
 To create a log file:
 
-1. On the **Backup/Configuration** page of the Database Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. En la página **Copia de seguridad/Configuración** de las Propiedades de la base, marque la opción **Utilizar el archivo de historial**. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
 
-2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
+2. Keep the default name or rename it, and then select the file location. Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene la base. Si se pierde el disco duro de la base de datos, aún puede recuperar su archivo de historial.
 
 3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
-4. Validate the Database Settings dialog box.
+4. Valide la caja de diálogo de las Propiedades de la base.
 
-In order for you to be able to create a log file directly, the database must be in one of the following situations:
+Para poder crear un archivo de historial directamente, la base de datos debe estar en una de las siguientes situaciones:
 
 - The data file is blank,
-- You just performed a backup of the database and no changes have yet been made to the data.
+- Acaba de realizar una copia de seguridad de la base y aún no se han realizado cambios en los datos.
 
-In all other cases, when you validate the Database Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database. This precaution is indispensable because, in order to restore a database after any incidents, you will need a copy of the database into which the operations recorded in the log file will be integrated.
+En todos los demás casos, al validar el cuadro de diálogo de las Propiedades de la base, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. If you click **OK**, the backup begins immediately, then the log file is activated. Si hace clic en **Cancelar**, la solicitud se guarda pero la creación del archivo de historial se pospone y en realidad sólo se creará después de la siguiente copia de seguridad de la base de datos. Esta precaución es indispensable porque, para restaurar una base de datos después de algún incidente, necesitará una copia de la base en la que se integrarán las operaciones registradas en el archivo de historial.
 
-Without having to do anything else, all operations performed on the data are logged in this file and it will be used in the future when the database is opened.
+Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos se registran en este archivo y se utilizarán en el futuro cuando se abra la base.
 
 You must create another log file if you create a new data file. You must set or create another log file if you open another data file that is not linked to a log file (or if the log file is missing).
 
 
 ## Stopping a log file
 
-If you would like to stop logging operations to the current log file, simply deselect the **Use Log** option on the **Backup/Configuration** page of the Database Settings.
+Si desea dejar de registrar las operaciones en el archivo de historial actual, sólo tiene que anular la selección de la opción **Utilizar el archivo de historial** en la página **Copia de seguridad/Configuración** de las Propiedades de la base.
 
 4D then displays an alert message to remind you that this action prevents you from taking advantage of the security that the log file provides:
 
 ![](assets/en/Backup/backup06.png)
 
-If you click **Stop**, the current log file is immediately closed (the Database Settings dialog box does not need to be validated afterwards).
+Si hace clic en el botón **Parar**, el archivo de historial actual se cierra inmediatamente (la caja de dialogo de las Propiedades de la base no necesita ser validada después).
 
 If you wish to close the current log file because it is too large, you might consider performing a data file backup, which will cause the log file to be backed up as well.
 
