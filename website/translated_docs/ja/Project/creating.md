@@ -27,7 +27,6 @@ title: プロジェクトを開発する
 
 これで、プロジェクトの開発を始めることができます。
 
-
 ## プロジェクトを開く
 
 既存のプロジェクトを 4D で開くには:
@@ -37,7 +36,7 @@ title: プロジェクトを開発する
 2. プロジェクトの `.4dproject` ファイルを選択し、**開く** をクリックします。<p> デフォルトで、プロジェクトはカレントデータファイルとともに開かれます。 ほかにも、次のファイルタイプを選択できます:
 
     - *圧縮されたプロジェクトファイル*: `.4dz` 拡張子 - 運用プロジェクト
-    - *ショートカットファイル*: `.4dlink` 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)
+    - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
     - *バイナリファイル*: `.4db` または `.4dc` 拡張子 - 従来の 4D データベース形式
 
 ### オプション
@@ -50,12 +49,9 @@ title: プロジェクトを開発する
 
 - **データファイル** - プロジェクトで使用するデータファイルを指定できます。 デフォルトでは、**現在のデータファイル** オプションが選択されています。
 
-
-
-
 ## プロジェクトを開く (その他の方法)
 
-4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法が 2つあります:
+4D offers several ways to open projects directly and bypass the Open dialog:
 
 - メニューを使用:
     -   *メニューバー* - **ファイル** > **最近使用したデータベースを開く / {project name}**
@@ -63,6 +59,41 @@ title: プロジェクトを開発する
 
 - 4D 環境設定を使用:
     -   4D 環境設定の **開始時** オプションに **最後に使用したデータベースを開く** を指定します。
+
+- using a `.4DLink` file.
+
+### Opening a Project with a 4DLink file
+
+You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. これをおこなうには 2つの方法があります:
+
+- double-click or drag and drop the `.4DLink` file onto the 4D application
+- go to **File** > **Open Recent Projects** and select a project
+
+![open-recent-projects](assets/en/Project/4DLinkfiles.png)
+
+A .4DLink file of "remote project" type can be copied and used on several machines.
+> It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
+
+## About 4DLink Files
+
+Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
+
+`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
+
+4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
+
+- Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+
+XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
+
+That folder is divided into two subfolders:
+- the **Local** folder contains the `.4DLink` files that can be used to open local projects
+- the **Remote** folder contains the `.4DLink` files of recent remote projects
+
+`.4DLink` files can also be created with an XML editor.
+
+4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 
 
 ## ファイルの保存
