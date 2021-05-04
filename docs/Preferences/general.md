@@ -94,8 +94,8 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 This area configures access to the 4D HTML documentation displayed in your current browser:
 
-*	When you click on a 4D class function or a command in the Method editor and hit the **F1** key.
-*	When you double-click on a 4D command in the **Commands Page** of the Explorer;
+*	When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
+*	When you double-click on a 4D command in the **Commands Page** of the Explorer.
 
 
 ### Documentation language  
@@ -104,7 +104,7 @@ Language of the HTML documentation to display. You can select a documentation in
 
 ### Look in the local folder first  
 
-> This option is only taken into account for *classic* command documentation access. 
+> This option is only taken into account for command documentation access (excluding class functions). 
 
 Sets where 4D will look for documentation pages.
 
@@ -113,7 +113,7 @@ Sets where 4D will look for documentation pages.
 
 ### Local folder  
 
-> This option is only taken into account for *classic* command documentation access. 
+> This option is only taken into account for command documentation access (excluding class functions). 
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red. 
 
