@@ -87,30 +87,35 @@ When creating a new data file, 4D uses the language previously set in this menu.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 
-## Documentation location
+## Documentation Location
 
-This area configures access to the 4D HTML documentation displayed in the current browser:
+This area configures access to the 4D HTML documentation displayed in your current browser:
 
-*   When the user double-clicks on a command on the **Commands Page** of the Explorer;
-*   When the user clicks on a command name in the Method editor and hits the **F1** key.
-
-You can choose to access the 4D online documentation site directly or to access a static version that is stored locally.
-
-### Local folder
-
-Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
-
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
+*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
 
 
-### Web Site
+### Documentation language
 
-URL access to the on-line documentation for the version on 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
 
 ### Look in the local folder first
 
-This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
+> This option is only taken into account for command documentation access (excluding class functions).
 
-*   When it is checked, 4D first looks for the page in the local folder. If it is found, 4D displays the page in the current browser. If not, 4D will automatically look for it in the on-line documentation of the Web site. This makes it possible to access the documentation even when you are offline.
-*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+Sets where 4D will look for documentation pages.
+
+*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If not, 4D automatically looks for it in the on-line documentation Web site. This makes it possible to access the documentation even when you are offline.
+*   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+
+### Local folder
+
+> This option is only taken into account for command documentation access (excluding class functions).
+
+Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+
+You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+
+
+
 
