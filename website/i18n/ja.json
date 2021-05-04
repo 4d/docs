@@ -51,7 +51,7 @@
         "title": "Email"
       },
       "API/EntityClass": {
-        "title": "Entity"
+        "title": "エンティティ"
       },
       "API/EntitySelectionClass": {
         "title": "EntitySelection"
@@ -855,8 +855,8 @@
       }
     },
     "links": {
-      "v18 R6 BETA": "v18 R6 BETA",
-      "v18 R5": "v18 R5",
+      "v19 BETA": "v19 BETA",
+      "v18 R6": "v18 R6",
       "v18": "v18"
     },
     "categories": {
