@@ -3,14 +3,14 @@ id: restore
 title: Restore
 ---
 
-4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
+4D le permite restaurar conjuntos enteros de datos de una base en caso de que se presente un incidente, independientemente de la causa del mismo. Two primary categories of incidents can occur:
 
-- The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
-    - If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
+- La parada inesperada de la base mientras está en uso. This incident can occur because of a power outage, system element failure, etc. En este caso, dependiendo del estado actual de la caché de datos en el momento del incidente, la restauración de la base puede requerir diferentes operaciones:
+    - Si la caché estaba vacía, la base se abre normalmente. Se registraron todos los cambios realizados en la base. This case does not require any particular operation.
     - If the cache contains operations, the data file is intact but it requires integrating the current log file.
     - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
 
-- The loss of database file(s). This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. To find out if a database was damaged following an incident, simply relaunch the database using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the database in the exact state it was in before the incident.
+- La pérdida de uno o más archivos de la base. Este incidente puede producirse por sectores defectuosos en el disco que contiene la base, un virus, un error de manipulación, etc. The last backup must be restored and then the current log file must be integrated. To find out if a database was damaged following an incident, simply relaunch the database using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the database in the exact state it was in before the incident.
 
 > 4D can launch procedures automatically to recover databases following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Database Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
 > If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the database using the "rollback" function in the log file. This function is available on the [Rollback](MSC/rollback.md) page of the MSC.
