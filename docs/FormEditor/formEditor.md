@@ -29,7 +29,7 @@ You can show or hide several interface elements on the current page of the form:
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
 - the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default. 
-- the current [form type](properties_Form.md#form-type):
+- the current [form type](properties_FormProperties.md#form-type):
 	- Markers and marker labels are always displayed by default on list forms
 	- Paper is displayed by default on "for printing" forms. 
 
@@ -201,6 +201,7 @@ The "Duplicate Many" dialog box appears when you select one or more object(s) an
 
 *	If you wish to create a matrix of variables, select the **Number Variables** option and select the direction in which the variables are to be numbered, either by line(s) or by column(s).
 This option is active only when the selected object is a variable. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
+
 
 ### Moving objects  
 
