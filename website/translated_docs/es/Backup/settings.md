@@ -3,7 +3,7 @@ id: settings
 title: Backup Settings
 ---
 
-Backup settings are defined through three pages in the Database Settings dialog box. You can set:
+Los parámetros de copia de seguridad se definen a través de tres páginas en la caja de diálogo Propiedades de la base. You can set:
 
 - the scheduler for automatic backups
 - the files to include in every backup
@@ -13,15 +13,15 @@ Backup settings are defined through three pages in the Database Settings dialog 
 
 ## Scheduler
 
-You can automate the backup of databases opened with 4D or 4D Server (even when no client machines are connected). This involves setting a backup frequency (in hours, days, weeks or months); for each session, 4D automatically starts a backup using the current backup settings.
+Puede automatizar la copia de seguridad de las bases abiertas con 4D o 4D Server (incluso cuando no hay máquinas cliente conectadas). This involves setting a backup frequency (in hours, days, weeks or months); for each session, 4D automatically starts a backup using the current backup settings.
 
-If this application was not launched at the theoretical moment of the backup, the next time 4D is launched, it considers the backup as having failed and proceeds as set in the Database Settings (refer to [Handling backup issues](backup.md#handling-backup-issues)).
+Si esta aplicación no se inició en el momento teórico de la copia de seguridad, la próxima vez que se inicie 4D, considerará que la copia de seguridad ha fallado y procederá según lo establecido en la Configuración de la base (consulte [Manejo de problemas de la copia de seguridad](backup.md#handling-backup-issues)).
 
-The scheduler backup settings are defined on the **Backup/Scheduler** page of the Database Settings:
+Los parámetros n de la copia de seguridad del programador se definen en la página **Backup/Periodicidad** de las Propiedades de la base:
 
 ![](assets/en/Backup/backup02.png)
 
-The options found on this tab let you set and configure scheduled automatic backups of the database. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
+Las opciones que se encuentran en esta pestaña le permiten establecer y configurar las copias de seguridad automáticas programadas de la base. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
 
 - **Never**: The scheduled backup feature is disabled.
 - **Every Hour**: Programs an automatic backup every hour, starting with the next hour.
@@ -36,7 +36,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 ## Configuration
 
-The Backup/Configuration page of the Database Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each database opened by the 4D application.
+La página Copia de seguridad/Configuración de las Propiedades de la base permite designar los archivos de copia de seguridad y su ubicación, así como la del archivo de historial. Estos parámetros son específicos de cada base de datos abierta por la aplicación 4D.
 
 ![](assets/en/Backup/backup03.png)
 
@@ -45,12 +45,12 @@ The Backup/Configuration page of the Database Settings lets you set the backup f
 ### Content
 This area allows you to set which files and/or folders to copy during the next backup.
 
-- **Data**: Database data file. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
-- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
+- **Archivo de datos**: archivo de datos de la base. Cuando esta opción está seleccionada, el archivo de historial actual de la base, si existe, se respalda al mismo tiempo que los datos.
+- **Archivo de estructura**: carpetas y archivos de la base. En el caso de bases compiladas, esta opción permite hacer una copia de seguridad del archivo .4dz.
 - **User Structure File (only for binary database)**: *deprecated feature*
-- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
+- **Archivos adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la base. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
     - **Delete**: Removes the selected file from the list of attached files.
-    - **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. You can select any folder or volume connected to the machine, with the exception of the folder containing the database files.
+    - **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la base.
     - **Add file...**: Displays a dialog box that allows you to select a file to add to the backup.
 
 
@@ -64,11 +64,11 @@ To modify the location where these files are stored, click the **...** button. A
 
 ### Log management
 
-The **Use Log** option, when checked, indicates that the database uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the database without a log file.
+La opción **Utilizar el archivo de historial**, cuando está marcada, indica que la base utiliza un archivo de historial. Its pathname is specified below the option. Cuando esta opción está marcada, no es posible abrir la base sin un archivo de historial.
 
-By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
+Por defecto, toda base creada con 4D utiliza un archivo de historial (opción seleccionada en la **página General** de las **Preferencias**). The log file is named *data.journal* and is placed in the Data folder.
 
-> Activating a new log file requires the data of the database to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the database.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la base. When you check this option, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la base.
 
 
 ## Backup & Restore
@@ -80,10 +80,10 @@ Modifying backup and restore options is optional. Their default values correspon
 ### General settings
 
 - **Keep only the last X backup files**: This parameter activates and configures the mechanism used to delete the oldest backup files, which avoids the risk of saturating the disk drive. This feature works as follows: Once the current backup is complete, 4D deletes the oldest archive if it is found in the same location as the archive being backed up and has the same name (you can request that the oldest archive be deleted before the backup in order to save space). If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets. To disable the mechanism, simply deselect the option.
-> This parameter concerns both database and log file backups.
+> Este parámetro se refiere tanto a las copias de seguridad de la base como de los archivos de registro.
 
-- **Backup only if the data file has been modified**: When this option is checked, 4D starts scheduled backups only if data has been added, changed or deleted in the database since the last backup. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. No error is generated; however the backup journal notes that the backup has been postponed. This option also allows saving machine time for the backup of databases principally used for viewing purposes. Please note that enabling this option does not take any modifications made to the project files or attached files into account.
-> This parameter concerns both database and log file backups.
+- **Copia de seguridad sólo si el archivo de datos ha sido modificado**: cuando se marca esta opción, 4D inicia las copias de seguridad programadas sólo si se han añadido, modificado o eliminado datos en la base desde la última copia de seguridad. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. No error is generated; however the backup journal notes that the backup has been postponed. Esta opción también permite ahorrar tiempo de máquina para la copia de seguridad de las bases utilizadas principalmente para su visualización. Please note that enabling this option does not take any modifications made to the project files or attached files into account.
+> Este parámetro se refiere tanto a las copias de seguridad de la base como de los archivos de registro.
 
 - **Delete oldest backup file before/after backup**: This option is only used if the "Keep only the last X backup files" option is checked. It specifies whether 4D should start by deleting the oldest archive before starting the backup (**before** option) or whether the deletion should take place once the backup is completed (**after** option). In order for this mechanism to work, the oldest archive must not have been renamed or moved.
 
