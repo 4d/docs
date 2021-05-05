@@ -288,7 +288,7 @@ This syntax iterates on each *property* of the *object*. The code portion locate
 
 The *property* parameter is a text variable automatically filled with the name of the currently processed property.
 
-The properties of the object are processed according to their creation order. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+The properties of the object are processed according to their creation order. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
 #### Example with the properties of an object
 
