@@ -62,7 +62,7 @@ Compara el siguiente ejemplo con el ejemplo del bucle `While...End while`. Tenga
 
 ## For...End for
 
-The formal syntax of the `For...End for` control flow structure is:
+La sintaxis de la estructura condicional `For...End for` es:
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -70,15 +70,15 @@ The formal syntax of the `For...End for` control flow structure is:
  End for
 ```
 
-The `For...End for` loop is a loop controlled by a counter variable:
+El bucle `For...End for` es un bucle controlado por un contador:
 
 - The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
 - Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
 - When the counter variable passes the *End_Expression* value, the loop stops.
 
-**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. If these expressions are variables, changing one of these variables within the loop will not affect the loop.
+**Importante:** las expresiones numéricas *Start_Expression*, *End_Expression* y *Increment_Expression* se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
+**Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable *Counter_Variable* dentro del bucle; esto afectará al bucle.
 
 - Usually *Start_Expression* is less than *End_Expression*.
 - If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
@@ -131,7 +131,7 @@ Most of the `For...End for` loops you will write in your projects will look like
 
 ### Decrementing variable counter
 
-In some cases, you may want to have a loop whose counter variable is decreasing rather than increasing. To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. The following examples do the same thing as the previous examples, but in reverse order:
+En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar *Start_Expression* mayor que *End_Expression* y *Increment_Expression* debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
 
 5. The following example executes 100 iterations:
 
@@ -176,7 +176,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 ### Incrementing the counter variable by more than one
 
-If you need to, you can use an *Increment_Expression* (positive or negative) whose absolute value is greater than one.
+Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) cuyo valor absoluto sea mayor que uno.
 
 9. The following loop addresses only the even elements of the array anArray:
 
@@ -190,14 +190,14 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
 
 ### Comparing looping structures
 
-Let's go back to the first `For...End for` example. The following example executes 100 iterations:
+Volvamos al primer ejemplo de `For...End for`. The following example executes 100 iterations:
 ```4d
  For(vCounter;1;100)
   //Do something
  End for
 ```
 
-It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 ```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
@@ -206,7 +206,7 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
  End while
 ```
 
-Here is the equivalent `Repeat...Until` loop:
+Aquí está el bucle equivalente `Repeat...Until`:
 ```4d
  $i:=1 //Initialize the counter
  Repeat
@@ -214,11 +214,11 @@ Here is the equivalent `Repeat...Until` loop:
     $i:=$i+1 //Need to increment the counter
  Until($i=100) //Loop 100 times
 ```
-**Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
+**Consejo:** el bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
 ### Optimizing the execution of the For...End for loops
 
-You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
+Puede utilizar variables reales y enteras, así como contadores interproceso, de proceso y de variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
 
 10. Here is an example:
 
@@ -231,9 +231,9 @@ You can use Real and Long Integer variables as well as interprocess, process, an
 
 ### Nested For...End for looping structures
 
-You can nest as many control structures as you (reasonably) need. This includes nesting `For...End for` loops. To avoid mistakes, make sure to use different counter variables for each looping structure.
+Puede anidar tantas estructuras de control como necesite (razonablemente). Esto incluye la anidación de bucles `For...End for`. Para evitar errores, asegúrese de utilizar diferentes variables de contador para cada estructura de bucle.
 
-Here are two examples:
+He aquí dos ejemplos:
 
 11. The following example goes through all the elements of a two-dimensional array:
 
@@ -272,7 +272,7 @@ Here are two examples:
 
 ## For each...End for each
 
-The formal syntax of the `For each...End for each` control flow structure is:
+La sintaxis de la estructura condicional `For each...End for each` es:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -280,13 +280,13 @@ The formal syntax of the `For each...End for each` control flow structure is:
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
+La estructura `For each...End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each...End for each` puede iterar a través de tres tipos de *Expression*:
 
 - collections: loop through each element of the collection,
 - entity selections: loop through each entity,
 - objects: loop through each object property.
 
-The following table compares the three types of `For each...End for each`:
+La siguiente tabla compara los tres tipos de `For each...End for each`:
 
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
@@ -304,11 +304,11 @@ The following table compares the three types of `For each...End for each`:
 
 ### Loop through collections
 
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Por defecto, el número de bucles se basa en el número de elementos de la colección.
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
+La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
-At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
@@ -316,7 +316,7 @@ At each loop iteration, the _Current_Item_ variable is automatically filled with
 
 #### Example
 
-You want to compute some statistics for a collection of numbers:
+Usted quiere calcular algunas estadísticas para una colección de números:
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
