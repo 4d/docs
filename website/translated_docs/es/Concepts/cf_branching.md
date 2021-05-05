@@ -155,9 +155,9 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
  End if
 ```
 
-Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.
+Recuerde que con una estructura `Case of...Else...End case`, sólo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
 
-Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
+En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse de que las declaraciones de condición que están más abajo en el esquema jerárquico aparezcan primero en la secuencia de pruebas. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por ejemplo, el siguiente código nunca verá detectada su última condición:
 
 ```4d
  Case of
@@ -168,7 +168,7 @@ Consequently, when you want to implement hierarchical tests, you should make sur
  End case
 ```
 
-In the code above, the presence of the second condition is not detected since the test "vResult=1" branches off the code before any further testing. For the code to operate properly, you can write it as follows:
+En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba "vResult=1" ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:
 
 ```4d
  Case of
@@ -179,9 +179,9 @@ In the code above, the presence of the second condition is not detected since th
  End case
 ```
 
-Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
+Además, si quiere implementar pruebas jerárquicas, puede considerar el uso de código jerárquico.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:
+**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:
 ```4d
  Case of
     :(Boolean_Expression)
