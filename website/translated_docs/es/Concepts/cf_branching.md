@@ -5,7 +5,7 @@ title: Branching structures
 
 ## If...Else...End if
 
-The formal syntax of the `If...Else...End if` control flow structure is:
+La sintaxis de la estructura condicional `If...Else...End if` es:
 
 ```4d
  If(Boolean_Expression)
@@ -15,14 +15,14 @@ The formal syntax of the `If...Else...End if` control flow structure is:
  End if
 ```
 
-Note that the `Else` part is optional; you can write:
+Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 ```4d
  If(Boolean_Expression)
     statement(s)
  End if
 ```
 
-The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. When the Boolean expression is TRUE, the statements immediately following the test are executed. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
+La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
 
 Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
 
@@ -93,7 +93,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
  End case
 ```
 
-Note that the `Else` part is optional; you can write:
+Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 ```4d
  Case of
     :(Boolean_Expression)
