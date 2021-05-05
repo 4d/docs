@@ -35,7 +35,7 @@ You can also click on the **[...]** button to specify a different location.
 
 ## Manually restoring a backup (MSC)
 
-You can manually restore an archive of the current database using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
+Puede restaurar manualmente un archivo de la base de datos actual utilizando la página [Restauración](MSC/restore.md) del Centro de Mantenimiento y Seguridad (CMS).
 
 
 ## Manually integrating the log
