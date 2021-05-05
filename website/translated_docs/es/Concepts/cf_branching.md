@@ -22,9 +22,9 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
  End if
 ```
 
-La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
+La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. Si la expresión booleana es FALSE, se ejecutan las instrucciones que siguen a la línea Else. El `Else` es opcional; si se omite Else, la ejecución continúa con la primera instrucción (si la hay) que sigue al `End if`.
 
-Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
+Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Considere en particular la siguiente prueba:
 
 ```4d
  If(MethodA & MethodB)
@@ -32,7 +32,7 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
  End if
 ```
 
-he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+la expresión es TRUE sólo si ambos métodos son TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)
@@ -42,7 +42,7 @@ he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ 
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
 
 ### Example
 
@@ -56,7 +56,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  End if
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Consejo:** la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:
 
 ```4d
  If(Boolean_Expression)
@@ -75,7 +75,7 @@ or:
 
 ## Case of...Else...End case
 
-The formal syntax of the `Case of...Else...End case` control flow structure is:
+La sintaxis de la estructura condicional `Case of...Else...End case` es:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -108,21 +108,21 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
        statement(s)
  End case
 ```
-As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+Al igual que la estructura `If...Else...End if`, la estructura `Case of...Else...End case` también permite a su método elegir entre acciones alternativas. A diferencia de la estructura `If...Else...End`, la estructura `Case of...Else...End case` puede probar un número razonablemente ilimitado de expresiones booleanas y realizar una acción dependiendo de cuál sea TRUE.
 
-Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
+Cada expresión booleana va precedida de dos puntos (`:`). Esta combinación de los dos puntos y la expresión booleana se llama un caso. Por ejemplo, la siguiente línea es un caso:
 
 ```4d
 :(bValidate=1)
 ```
 
-Only the statements following the first TRUE case (and up to the next case) will be executed. If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
+Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el siguiente). Si ninguno de los casos es TRUE, no se ejecutará ninguna de las instrucciones (si no se incluye la parte `Else`).
 
-You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the `Else` will be executed.
+Puede incluir una instrucción Else después del último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al `Else`.
 
 ### Example
 
-This example tests a numeric variable and displays an alert box with a word in it:
+Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con una palabra:
 
 ```4d
  Case of
@@ -137,7 +137,7 @@ This example tests a numeric variable and displays an alert box with a word in i
  End case
 ```
 
-For comparison, here is the `If...Else...End if` version of the same method:
+Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
  If(vResult=1) //Test if the number is 1
@@ -181,7 +181,7 @@ In the code above, the presence of the second condition is not detected since th
 
 Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
 
-**Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Tip:** Branching can be performed without statements to be executed in one case or another. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:
 ```4d
  Case of
     :(Boolean_Expression)
