@@ -35,7 +35,7 @@ Backups are automatically performed at the times defined on this page without an
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
 
-## Managing the backup processing
+## Gerenciar o processo de  backup
 
 Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
 
