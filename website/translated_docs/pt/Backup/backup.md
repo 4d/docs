@@ -59,15 +59,15 @@ Conversely, if only the data file is being backed up, access to the structure is
 - Com a versão 4D monousuário, o banco de dados é trancado tanto para leitura quanto escrita, todos os processos são congelados. No actions can be performed.
 - Com 4D Server, o banco de dados está bloqueado só para escrita; as máquinas clientes podem ver os dados. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Além disso, um método parcialmente executado pode causar inconsistências lógicas no banco de dados. > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
-### Handling backup issues
+### Gestão dos problemas das cópias de segurança
 
 It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**.
+Em todos os casos,  lembre que o estado da última copia de segurança (correta ou com falha) se armazena na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server, assim como no banco de dados **Backup journal.txt**.
 
 - **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
-- **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of database files and accessible attached files) and returns an error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **Arquivo anexo não encontrado**: quando não encontrar um arquivo adjunto, 4D realiza uma cópia de segurança parcial (cópia de segurança dos arquivos do banco de dados e dos arquivos adjuntos acessíveis) e devolve um erro.
+- **Backup impossível** (disco está cheio ou é protegido contra escrita, disco não encontrado, falha de disco, transação incompleta, banco de dados não lançado no momento do backup automático programado, etc): se essa é a primeira vez do erro, 4D vai fazer uma segunda tentativa de realizar o backup The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
 
 ## Backup Journal
 
