@@ -5,34 +5,34 @@ title: Objects
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
 
-- A property name is always a text, for example "Name".
+- El nombre de una propiedad es siempre un texto, por ejemplo "Name".
 
 - A property value can be of the following type:
     - number (Real, Integer, etc.)
-    - text
+    - texto
     - null
     - Boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
-    - collection
+    - objeto (los objetos pueden estar anidados en varios niveles)
+    - imagen(*)
+    - colección
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(*)Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos imagen imprimen "[objeto Imagen]".
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Atención:** recuerde que los nombres de atributos diferencian entre mayúsculas y minúsculas.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Las variables, campos o expresiones de tipo objeto se gestionan mediante los comandos disponibles en el tema **Objetos (Lenguaje)** o a través de la notación de objetos (ver [Básicos de sintaxis](Concepts/dt_object.md#syntax-basics)). Tenga en cuenta que se pueden utilizar comandos específicos del tema Búsquedas, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
 
-Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
+Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Cuando la notación de objetos está activada en su base (ver más abajo), puede utilizar estos valores siempre que se esperen expresiones 4D:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
+- en código 4D, ya sea escrito en los métodos (editor de métodos) o externalizado (fórmulas, archivos de etiquetas procesados por PROCESS 4D TAGS o el servidor web, archivos de exportación, documentos 4D Write Pro...),
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
 ## Initialization
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+Los objetos deben haber sido inicializados, por ejemplo utilizando el comando `New object`, de lo contrario al intentar leer o modificar sus propiedades se generará un error de sintaxis.
 
 Example:
 ```4d
@@ -42,7 +42,7 @@ Example:
 
 ### Regular or shared object
 
-You can create two types of objects:
+Puede crear dos tipos de objetos:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
 - shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
@@ -50,11 +50,11 @@ You can create two types of objects:
 
 ## Syntax basics
 
-Object notation can be used to access object property values through a chain of tokens.
+La notación de objetos puede utilizarse para acceder a los valores de las propiedades de objetos a través de una cadena de tokens.
 
 ### Object properties
 
-With object notation, object properties can be accessed in two ways:
+Con la notación de objetos, se puede acceder a las propiedades de los objetos de dos maneras:
 
 - using a "dot" symbol: > object.propertyName
 
@@ -78,7 +78,7 @@ Since an object property value can be an object or a collection, object notation
 ```4d
  $vAge:=employee.children[2].age
 ```
-Object notation is available on any language element that can contains or returns an object, i.e:
+La notación de objetos está disponible en cualquier elemento del lenguaje que pueda contener o devolver un objeto, es decir:
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
 
