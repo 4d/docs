@@ -28,7 +28,7 @@ You can show or hide several interface elements on the current page of the form:
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
 - the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
-- the current [form type](properties_Form.md#form-type):
+- the current [form type](properties_FormProperties.md#form-type):
     - Markers and marker labels are always displayed by default on list forms
     - Paper is displayed by default on "for printing" forms.
 
@@ -195,6 +195,7 @@ La boîte de dialogue “Dupliquer plusieurs” apparaît lorsque vous sélectio
 *   Pour les lignes et les colonnes, définissez le décalage que vous souhaitez appliquer à chaque nouveau duplicata.<p>La valeur saisie doit être exprimée en points et sera appliquée relativement à l’origine de l’objet dupliqué.<p>Par exemple, si vous souhaitez laisser un intervalle vertical de 20 points entre chaque objet, et que la hauteur de l’objet source est de 50 points, saisissez 70 dans la zone “Intervalle” de Colonne.
 
 *   Si vous souhaitez créer une matrice de variables, cochez l’option **Numéroter les variables** et sélectionnez le sens dans lequel la numérotation des variables doit s’effectuer. Cette option n’est active que si l’objet sélectionné est une variable. Pour plus d’informations sur cette option, reportez-vous à la section **Dupliquer sur matrice** du *Manuel de développement*.
+
 
 ### Déplacer des objets
 

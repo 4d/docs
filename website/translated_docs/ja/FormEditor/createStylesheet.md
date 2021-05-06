@@ -239,7 +239,7 @@ text[text|=Hello]
     - `event`
     - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (リストタイプ)
 
-フォームオブジェクトの属性は、それらの [JSON名](FormObjets/properties_Reference.md)を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。
+Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
 #### 属性マッピング
 

@@ -35,7 +35,7 @@ Backups are automatically performed at the times defined on this page without an
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
 
-## Managing the backup processing
+## Gerenciar o processo de  backup
 
 Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
 
@@ -56,7 +56,7 @@ Conversely, if only the data file is being backed up, access to the structure is
 - With the 4D single-user version, the application is locked for both read and write; all processes are frozen. No actions can be performed.
 - With 4D Server, the application is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the application is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the data. > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
-### Handling backup issues
+### Gestão dos problemas das cópias de segurança
 
 It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
 
