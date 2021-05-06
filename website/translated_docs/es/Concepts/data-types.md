@@ -7,7 +7,7 @@ In 4D, data are handled according to their type in two places: database fields a
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-| Data Types                                 | Database support(1) | Language support     | Variable declaration         |
+| Data Types                                 | Database support(1) | Language support     | Declaración de variables     |
 | ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
 | [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
 | [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
@@ -71,10 +71,10 @@ The following table lists the basic data types, the data types to which they can
 
 | Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
 | -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Time    | Bool       |
-| Number (2)           | String    |           |         |         | Bool       |
-| Date                 | String    |           |         |         | Bool       |
-| Time                 | String    |           |         |         | Bool       |
+| String (1)           |           | Num       | Fecha   | Hora    | Bool       |
+| Number (2)           | Cadena    |           |         |         | Bool       |
+| Date                 | Cadena    |           |         |         | Bool       |
+| Hora                 | Cadena    |           |         |         | Bool       |
 | Boolean              |           | Num       |         |         |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.

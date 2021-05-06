@@ -4,24 +4,24 @@ title: Looping structures
 ---
 
 ## While...End while
-The formal syntax of the `While...End while` control flow structure is:
+La sintaxis de la estructura condicional `While...End while` es:
 ```4d
  While(Boolean_Expression)
     statement(s)
  End while
 ```
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.
+Un bucle `While...End while` ejecuta las instrucciones dentro del bucle mientras la expresión booleana sea TRUE. Comprueba la expresión booleana al inicio del bucle y no entra en el bucle si la expresión es FALSE.
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
+Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
 
-The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because _NeverStop_ is always TRUE:
+El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. El siguiente bucle continúa para siempre porque _NeverStop_ es siempre TRUE:
 ```4d
  NeverStop:=True
  While(NeverStop)
  End while
 ```
 
-If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the [Error handling](error-handling.md) page.
+Si se encuentra en una situación de este tipo, en la que un método se ejecuta de forma incontrolada, puede utilizar las funciones de rastreo para detener el bucle y localizar el problema. Para más información sobre el seguimiento de un método, consulte la página [Gestión de errores](error-handling.md).
 
 ### Example
 
@@ -32,22 +32,22 @@ If you find yourself in such a situation, where a method is executing uncontroll
  End while //The loop always ends with End while
 ```
 
-In this example, the `OK` system variable is set by the `CONFIRM` command before the loop starts. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Otherwise, the `OK` system variable is set to 0 and the loop is skipped. Once the loop starts, the `ADD RECORD` command keeps the loop going because it sets the `OK` system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the `OK` system variable is set to 0 and the loop stops.
+En este ejemplo, el valor de la variable sistema `OK` es definido por el comando `CONFIRM` antes de que se inicie el bucle. Si el usuario hace clic en el botón **OK** de la caja de diálogo de confirmación, la variable del sistema `OK` toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema `OK` toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando `ADD RECORD` permite continuar la ejecución del bucle porque se define la variable sistema `OK` en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema `OK` toma el valor 0 y el bucle se detiene.
 
 ## Repeat...Until
 
-The formal syntax of the `Repeat...Until` control flow structure is:
+La sintaxis de la estructura condicional `Repeat...Until` es:
 ```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
 ```
-A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
 ### Example
-Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
+Compara el siguiente ejemplo con el ejemplo del bucle `While...End while`. Tenga en cuenta que la expresión booleana no necesita ser inicializada-no hay un comando `CONFIRM` para inicializar la variable `OK`.
 
 ```4d
  Repeat
@@ -56,7 +56,7 @@ Compare the following example with the example for the `While...End while` loop.
 ```
 
 ## For...End for
-The formal syntax of the `For...End for` control flow structure is:
+La sintaxis de la estructura condicional `For...End for` es:
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -64,15 +64,15 @@ The formal syntax of the `For...End for` control flow structure is:
  End for
 ```
 
-The `For...End for` loop is a loop controlled by a counter variable:
+El bucle `For...End for` es un bucle controlado por un contador:
 
 - The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
 - Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
 - When the counter variable passes the *End_Expression* value, the loop stops.
 
-**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. If these expressions are variables, changing one of these variables within the loop will not affect the loop.
+**Importante:** las expresiones numéricas *Start_Expression*, *End_Expression* y *Increment_Expression* se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
+**Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable *Counter_Variable* dentro del bucle; esto afectará al bucle.
 
 - Usually *Start_Expression* is less than *End_Expression*.
 - If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
@@ -120,11 +120,11 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples.
+La mayoría de los bucles `For...End for` que escribirá en sus bases se parecerán a los que se presentan en estos ejemplos.
 
 ### Decrementing variable counter
 
-In some cases, you may want to have a loop whose counter variable is decreasing rather than increasing. To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. The following examples do the same thing as the previous examples, but in reverse order:
+En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar *Start_Expression* mayor que *End_Expression* y *Increment_Expression* debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
 
 5. The following example executes 100 iterations:
 
@@ -169,7 +169,7 @@ In some cases, you may want to have a loop whose counter variable is decreasing 
 
 ### Incrementing the counter variable by more than one
 
-If you need to, you can use an *Increment_Expression* (positive or negative) whose absolute value is greater than one.
+Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) cuyo valor absoluto sea mayor que uno.
 
 9. The following loop addresses only the even elements of the array anArray:
 
@@ -183,14 +183,14 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
 
 ### Comparing looping structures
 
-Let's go back to the first `For...End for` example. The following example executes 100 iterations:
+Volvamos al primer ejemplo de `For...End for`. The following example executes 100 iterations:
 ```4d
  For(vCounter;1;100)
   //Do something
  End for
 ```
 
-It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 ```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
@@ -199,7 +199,7 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
  End while
 ```
 
-Here is the equivalent `Repeat...Until` loop:
+Aquí está el bucle equivalente `Repeat...Until`:
 ```4d
  $i:=1 //Initialize the counter
  Repeat
@@ -207,11 +207,11 @@ Here is the equivalent `Repeat...Until` loop:
     $i:=$i+1 //Need to increment the counter
  Until($i=100) //Loop 100 times
 ```
-**Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
+**Consejo:** el bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
 ### Optimizing the execution of the For...End for loops
 
-You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
+Puede utilizar variables reales y enteras, así como contadores interproceso, de proceso y de variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
 
 10. Here is an example:
 
@@ -224,9 +224,9 @@ You can use Real and Long Integer variables as well as interprocess, process, an
 
 ### Nested For...End for looping structures
 
-You can nest as many control structures as you (reasonably) need. This includes nesting `For...End for` loops. To avoid mistakes, make sure to use different counter variables for each looping structure.
+Puede anidar tantas estructuras de control como necesite (razonablemente). Esto incluye la anidación de bucles `For...End for`. Para evitar errores, asegúrese de utilizar diferentes variables de contador para cada estructura de bucle.
 
-Here are two examples:
+He aquí dos ejemplos:
 
 11. The following example goes through all the elements of a two-dimensional array:
 
@@ -264,7 +264,7 @@ Here are two examples:
 ```
 
 ## For each...End for each
-The formal syntax of the `For each...End for each` control flow structure is:
+La sintaxis de la estructura condicional `For each...End for each` es:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -272,13 +272,13 @@ The formal syntax of the `For each...End for each` control flow structure is:
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
+La estructura `For each...End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each...End for each` puede iterar a través de tres tipos de *Expression*:
 
 - collections: loop through each element of the collection,
 - entity selections: loop through each entity,
 - objects: loop through each object property.
 
-The following table compares the three types of `For each...End for each`:
+La siguiente tabla compara los tres tipos de `For each...End for each`:
 
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
@@ -296,11 +296,11 @@ The following table compares the three types of `For each...End for each`:
 
 ### Loop through collections
 
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Por defecto, el número de bucles se basa en el número de elementos de la colección.
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
+La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
-At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
@@ -308,7 +308,7 @@ At each loop iteration, the _Current_Item_ variable is automatically filled with
 
 #### Example
 
-You want to compute some statistics for a collection of numbers:
+Usted quiere calcular algunas estadísticas para una colección de números:
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -332,17 +332,17 @@ You want to compute some statistics for a collection of numbers:
 
 ### Loop through entity selections
 
-When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección.
 
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
+El número de bucles se basa en el número de entidades de la selección de entidades. En cada iteración del bucle, el parámetro *Current_Item* se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
+Tenga en cuenta que cualquier modificación aplicada en la entidad actual debe ser guardada explícitamente utilizando `entity.save( )`.
 
 #### Example
 
-You want to raise the salary of all British employees in an entity selection:
+Quiere aumentar el salario de todos los empleados británicos en una selección de entidades:
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -353,13 +353,13 @@ You want to raise the salary of all British employees in an entity selection:
 
 ### Loop through object properties
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Cuando se utiliza `For each...End for each` con una *Expression* de tipo Object, el parámetro *Current_Item* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+Las propiedades del objeto se procesan de acuerdo con su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
 #### Example
 
-You want to switch the names to uppercase in the following object:
+Quiere pasar los nombres a mayúsculas en el siguiente objeto:
 ```4d
 {
     "firstname": "gregory",
@@ -384,14 +384,14 @@ You can write:
 ```
 ### begin / end parameters
 
-You can define bounds to the iteration using the optional begin and end parameters.
+Puede definir los límites de la iteración utilizando los parámetros opcionales inicio y fin.
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**Nota:**los parámetros *inicio* y *fin* sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).
 
 - In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
 - In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
+Si se omite *fin* o si es mayor que el número de elementos de <em x-id="3" <Expression</em>, se iteran los elementos desde *inicio* hasta el último (incluido). Si los parámetros *inicio* y *fin* son valores positivos, representan posiciones reales de elementos en *Expression*. Si *comienzo* es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de *Expression*). Si el valor calculado es negativo, *inicio* toma el valor 0. **Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar. Si *fin* es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
 
 For example:
 - a collection contains 10 elements (numbered from 0 to 9)
@@ -415,9 +415,9 @@ For example:
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 ### Until and While conditions
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+Puede controlar la ejecución de `For each...End for each` añadiendo una condición `Until` o una condición `While` al bucle. Cuando una instrucción `Until(condición)` está asociada al bucle, la iteración se detendrá tan pronto como la condición se evalúe como `True`, mientras que cuando se trata de una instrucción `While(condición)`, la iteración se detendrá cuando la condición se evalúe por primera vez como `False`.
 
-You can pass either keyword depending on your needs:
+Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
 
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.

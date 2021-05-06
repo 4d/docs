@@ -152,7 +152,7 @@ Doing the same thing with arrays would be prohibitive for the following reasons:
 
 - In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.
 - Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.
-- Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- De nuevo, dado que un array se mantiene siempre en memoria en su totalidad, cada vez que se inicia la base y se sale de ella, los cuatro arrays tendrían que cargarse y luego guardarse en el disco, aunque los datos no se utilicen ni se modifiquen durante la sesión de trabajo.
 
 **Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
 

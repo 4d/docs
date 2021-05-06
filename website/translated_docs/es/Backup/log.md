@@ -41,7 +41,7 @@ The current log file is automatically saved with the current data file. This mec
 
 Por defecto, toda base creada con 4D utiliza un archivo de historial (opción definida en la página **General** de las Preferencias). The log file is named *data.journal* and is placed in the Data folder.
 
-You can find out if your database uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Database Settings. Si deselecciona esta opción, o si utiliza una base sin archivo de historial y desea configurar una estrategia de copia de seguridad con un archivo de historial, tendrá que crear uno.
+Puede averiguar si su base utiliza un archivo de historial en cualquier momento: sólo tiene que comprobar si la opción **Utilizar el archivo de historial** está seleccionada en la página **Backup/Configuración** de las Propiedades de la base. Si deselecciona esta opción, o si utiliza una base sin archivo de historial y desea configurar una estrategia de copia de seguridad con un archivo de historial, tendrá que crear uno.
 
 To create a log file:
 
