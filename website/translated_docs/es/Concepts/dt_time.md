@@ -3,19 +3,19 @@ id: time
 title: Time
 ---
 
-- A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
-- Times are in 24-hour format.
-- A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+- Las variables, campos o expresiones de tipo Hora pueden estar comprendidas entre 00:00:00 y 596,000:00:00.
+- Las horas están en formato de 24 horas.
+- Un valor de tiempo puede ser tratado como un número. El número devuelto de una hora es el número de segundos desde la medianoche (00:00:00) que representa esa hora.
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Nota:** en el manual de referencia del lenguaje 4D, los parámetros de tipo Hora en las descripciones de los comandos se llaman Hora, excepto cuando se indique lo contrario.
 
 ## Time literals
 
-A time literal constant is enclosed by question marks (?...?).
+Una constante hora está rodeada de signos de interrogación (?...?).
 
-A time literal constant is ordered hour:minute:second, with a colon (:) setting off each part. Times are specified in 24-hour format.
+Una constante hora se ordena hora:minuto:segundo, con dos puntos (:) para separar cada parte. Las horas se especifican en formato de 24 horas.
 
-Here are some examples of time literals:
+Estos son algunos ejemplos de constantes de tipo hora:
 
 ```4d
 ?00:00:00? ` midnight
@@ -23,9 +23,9 @@ Here are some examples of time literals:
 ?13:01:59? ` 1 pm, 1 minute, and 59 seconds
 ```
 
-A null time is specified by ?00:00:00?
+Una hora nula se escribe ?00:00:00?
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
+**Consejo:** el Editor de métodos incluye un acceso directo para introducir una hora nula. Para escribir una hora nula, introduzca el carácter de interrogante (?) y pulse Intro.
 
 ## Time operators
 
@@ -55,9 +55,9 @@ A null time is specified by ?00:00:00?
 
 ### Example 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
+Para obtener una expresión de tipo hora a partir de una expresión que combina una expresión de hora con un número, utilice los comandos `Time` y `Time string`.
 
-You can combine expressions of the time and number types using the `Time` or `Current time` functions:
+Puede combinar expresiones de los tipos hora y número utilizando las funciones `Time` o `Current time`:
 
 ```4d
     //The following line assigns to $vlSeconds the number of seconds   
@@ -67,7 +67,7 @@ $vlSeconds:=Current time+3600
 $vhSoon:=Time(Current time+3600)
 ```
 
-The second line could be written in a simpler way:
+La segunda línea podría escribirse de forma más sencilla:
 
 ```4d
   // The following line assigns to $vHSoon the time it will be in one hour
@@ -76,7 +76,7 @@ The second line could be written in a simpler way:
 
 ### Example 2
 
-The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
+El operador Modulo puede utilizarse, más concretamente, para sumar tiempos que tengan en cuenta el formato de 24 horas:
 
 ```4d
 $t1:=?23:00:00? // It is 23:00 p.m.
