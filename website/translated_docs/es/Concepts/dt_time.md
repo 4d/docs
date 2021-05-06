@@ -3,11 +3,11 @@ id: time
 title: Time
 ---
 
-A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
+Las variables, campos o expresiones de tipo Hora pueden estar comprendidas entre 00:00:00 y 596,000:00:00.
 
-Times are in 24-hour format.
+Las horas están en formato de 24 horas.
 
-A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+Un valor de tiempo puede ser tratado como un número. El número devuelto de una hora es el número de segundos desde la medianoche (00:00:00) que representa esa hora.
 
 **Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
