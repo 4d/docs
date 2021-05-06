@@ -19,45 +19,45 @@ The component management mechanisms in 4D require the implementation of the foll
 
 - **Base matriz**: base de datos 4D utilizada para desarrollar el componente. La base matriz es una base estándar sin atributos específicos. Una base matricial forma un único componente. La base matriz debe copiarse, compilada o no, en la carpeta Components de la aplicación 4D o en la base que utilizará el componente (base local).
 - **Base local**: base en la que se instala y utiliza un componente.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
+- **Componente**: base matricial, compilada o no, copiada en la carpeta Components de la aplicación 4D o de la base local y cuyo contenido se utiliza en las bases locales.
 
-It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
+Hay que tener en cuenta que una base puede ser a la vez "matriz" y "local", es decir, que una base matriz puede utilizar a su vez uno o varios componentes. However, a component cannot use “sub-components” itself.
 
 
 ### Protection of components: compilation
 
-By default, all the project methods of a matrix database installed as a component are potentially visible from the host database. In particular:
+Por defecto, todos los métodos proyecto de una base matriz instalada como componente son potencialmente visibles desde la base local. In particular:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host database. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
-- The other project methods of the matrix database do not appear in the Explorer but they too can be viewed in the debugger of the host database.
+- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
+- Los otros métodos proyecto de la base matriz no aparecen en el Explorador, pero también pueden verse en el depurador de la base local.
 
-To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). When a compiled matrix database is installed as a component:
+Para proteger eficazmente los métodos proyecto de un componente, basta con compilar la base matriz y entregarla en forma de archivo .4dc (base compilada que no contiene el código interpretado). Cuando se instala una base matricial compilada como componente:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
-- The other project methods of the matrix database will never appear.
+- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. However, their contents will not appear in the preview area nor in the debugger.
+- Los otros métodos proyecto de la base matriz nunca aparecerán.
 
 
 ## Sharing of project methods
-All the project methods of a matrix database are by definition included in the component (the database is the component), which means that they can be called and executed by the component.
+Todos los métodos proyecto de una base matricial son por definición incluidos en el componente (la base es el componente), lo que significa que pueden ser llamados y ejecutados por el componente.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host database. In the matrix database, you must explicitly designate the methods that you want to share with the host database. These project methods can be called in the code of the host database (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
+Por otro lado, por defecto estos métodos proyecto no serán visibles, ni podrán ser llamados por la base local. En la base matriz, debe designar explícitamente los métodos que desea compartir con la base local. Estos métodos proyecto se pueden llamar en el código de la base local (pero no se pueden modificar en el editor de métodos de la base local). These methods form **entry points** in the component.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In certain cases, you may need to allow a component to access the project methods of your host database. To do this, you must explicitly designate the project methods of the host database that you want to make accessible to the components.
+**Nota:** por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan a la base local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su base local. Para ello, debe designar explícitamente los métodos proyecto de la base local que desea hacer accesibles a los componentes.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
 ## Passing variables
 
-The local, process and interprocess variables are not shared between components and host databases. The only way to access component variables from the host database and vice versa is using pointers.
+Las variables locales, proceso e interproceso no se comparten entre los componentes y las bases locales. La única forma de acceder a las variables del componente desde la base local y viceversa es utilizando punteros.
 
 Example using an array:
 
 ```4d
-//In the host database:
-     ARRAY INTEGER(MyArray;10)
-     AMethod(->MyArray)
+//En la base local:
+     ARRAY INTEGER( MyArray;10)
+     AMethod(-> MyArray)
 
-//In the component, the AMethod project method contains:
+//En el componente, el método proyecto AMethod contiene:
      APPEND TO ARRAY($1->;2)
 ```
 
@@ -71,15 +71,15 @@ Examples using variables:
 ```
 
 
-When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:
+Cuando se utilizan punteros para que los componentes y la base local se comuniquen, hay que tener en cuenta las siguientes particularidades:
 
-- The `Get pointer` command will not return a pointer to a variable of the host database if it is called from a component and vice versa.
+- El comando `Get pointer` no devolverá un puntero a una variable de la base local si se llama desde un componente y viceversa.
 
-- The component architecture allows the coexistence, within the same interpreted database, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled database). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host database.
+- La arquitectura de componentes permite la coexistencia, dentro de la misma base interpretada, de componentes interpretados y compilados (a la inversa, en una base compilada sólo pueden utilizarse componentes compilados). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en la misma base local.
  - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
  - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host database (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en la base local (u otro componente). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -92,9 +92,9 @@ In this case, it is necessary to use the comparison of pointers:
      If(myptr1=myptr2) //This test returns False
 ```
 
-## Access to tables of the host database
+## Acceso a las tablas de la base local
 
-Although components cannot use tables, pointers can permit host databases and components to communicate with each other. For example, here is a method that could be called from a component:
+Aunque los componentes no pueden utilizar tablas, los punteros pueden permitir que las bases locales y los componentes se comuniquen entre sí. For example, here is a method that could be called from a component:
 
 ```4d
 // calling a component method
@@ -104,9 +104,9 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Within the component, the code of the `methCreateRec` method:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host database
-C_POINTER($2) //Pointer on a field in host database
-C_TEXT($3) // Value to insert
+C_POINTER($1) //Puntero en una tabla de la base local
+C_POINTER($2) //Indicador en un campo de la base local
+C_TEXT($3) // Valor a insertar
 
 $tablepointer:=$1
 $fieldpointer:=$2
@@ -120,13 +120,13 @@ SAVE RECORD($tablepointer->)
 
 Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host database (a component does not have its own users and groups).
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos de la base local (un componente no tiene sus propios usuarios y grupos).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the database. When these commands are called from a component, they are applied to the host database.
+Los comandos `SET DATABASE PARAMETER` y `Get database parameter` son una excepción: su alcance es global a la base. Cuando estos comandos se llaman desde un componente, se aplican a la base local.
 
 Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
+El comando `COMPONENT LIST` puede utilizarse para obtener la lista de componentes que carga la base local.
 
 
 ### Unusable commands
@@ -154,24 +154,24 @@ The following commands are not compatible for use within a component because the
 **Notes:**
 
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component database. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
+- Los comandos SQL de definición de datos (`CREATE TABLE`, `DROP TABLE`, etc.) no pueden utilizarse en la base del componente. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
 
 ## Error handling
 
-An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running database. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host database is not called, and vice versa.
+Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la base en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` de la base local, y viceversa.
 
 ## Use of forms
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix database can be used by the component.
-- A component can call table forms of the host database. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Todos los formularios proyecto presentes en la base matriz pueden ser utilizados por el componente.
+- Un componente puede llamar a formularios tabla de la base local. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
+**Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual de la base local, en el contexto de ésta. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
+- Puede publicar formularios de componentes como subformularios en las bases locales. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
 
 ## Use of tables and fields
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix database. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. An external database is a 4D database that is independent from the main 4D database, but that you can work with from the main 4D database. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
+Un componente no puede utilizar las tablas y campos definidos en la estructura 4D de la base matriz. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. Una base externa es una base 4D independiente de la base 4D principal, pero con la que se puede trabajar desde la base 4D principal. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
 
 ### Example
 
@@ -207,7 +207,7 @@ Creating the external database:
 Writing in the external database:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host database through pointers
+ $Ptr_1:=$2 // recupera datos de la base local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -229,7 +229,7 @@ Writing in the external database:
 Reading from an external database:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host database through pointers
+ $Ptr_1:=$2 // accede a los datos de la base local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -254,10 +254,10 @@ Components can use resources. In conformity with the resource management princip
 
 Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
 
-In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+En una base de datos local que contiene uno o más componentes, cada componente, así como las bases de datos locales, tiene su propia "cadena de recursos." Los recursos están divididos entre las diferentes bases de datos: no es posible acceder a los recursos del componente A desde el componente B o la base de datos local.
 
 ## On-line help for components
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
+A specific mechanism has been implemented in order to allow developers to add on-line help to their components. El principio es el mismo que el previsto para las bases de datos 4D:
 
 - The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
 - The help file must be put next to the structure file of the component and have the same name as the structure file,
