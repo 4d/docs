@@ -3,12 +3,12 @@ id: components
 title: Components
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different databases. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D databases.
+Un componente 4D es un conjunto de métodos y formularios 4D que representan una o varias funcionalidades que pueden instalarse en diferentes bases. Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en bases 4D.
 
 Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
 
 - A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
-- To install a component in a database, you simply need to copy it into the "Components" folder of the database, placed next to the structure file or next to the 4D executable application.
+- Para instalar un componente en una base, basta con copiarlo en la carpeta "Componentes" de la base, situada junto al archivo de estructura o junto a la aplicación 4D ejecutable.
 - A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
 - You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
 
@@ -17,8 +17,8 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 
 The component management mechanisms in 4D require the implementation of the following terms and concepts:
 
-- **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. A matrix database forms a single component. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
-- **Host Database**: Database in which a component is installed and used.
+- **Base matriz**: base de datos 4D utilizada para desarrollar el componente. La base matriz es una base estándar sin atributos específicos. Una base matricial forma un único componente. La base matriz debe copiarse, compilada o no, en la carpeta Components de la aplicación 4D o en la base que utilizará el componente (base local).
+- **Base local**: base en la que se instala y utiliza un componente.
 - **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
 
 It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
