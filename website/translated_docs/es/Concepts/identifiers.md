@@ -16,23 +16,23 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 - No se permiten comas, barras inclinadas, comillas ni dos puntos.
 - Los caracteres reservados para su uso como operadores, como * y +, no están permitidos.
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc.), palabras clave (If, For, etc.) y constantes.
-- Any trailing spaces are ignored.
+- Los espacios finales se ignoran.
 
-### Additional rules for object property and ORDA names
-- Space characters are not allowed.
-- Puntos (".") and brackets ("[ ]") are not allowed.
-- Names are case sensitive.
+### Reglas adicionales para las propiedades de los objetos y los nombres ORDA
+- Los caracteres de espacio no están permitidos.
+- Puntos (".") y los corchetes ("[ ]") no están permitidos.
+- Los nombres son sensibles a las mayúsculas y minúsculas.
 
-### Additional rules for SQL
-- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+### Reglas adicionales para SQL
+- Sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz
+- Los nombres no deben incluir ninguna palabra clave SQL (comando, atributo, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Nota:** el área "SQL" del Inspector en el editor de estructuras indica automáticamente cualquier carácter no autorizado en el nombre de una tabla o campo.
 
 
 ## Tables
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+Una tabla se designa colocando su nombre entre paréntesis: [...]. Un nombre de tabla puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -41,7 +41,7 @@ FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
 ```
 
-## Fields
+## Campos
 
 You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
 
@@ -380,7 +380,7 @@ Be sure to use unique names for the different elements in your database. If a pa
 
 4D identifies names used in procedures in the following order:
 
-1. Fields
+1. Campos
 2. Commands
 3. Methods
 4. Plug-in routines
