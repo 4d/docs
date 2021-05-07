@@ -292,11 +292,10 @@ This feature requires that you click on the **[...]** button and designate the l
 
 |Current platform|Required file|Description|
 |---|---|---|
-|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the 4D Volume Desktop application for Windows. Press **Shift** while clicking on [....] to select a .4darchive file previously built on Windows|
+|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the 4D Volume Desktop application for Windows. Press **Shift** while clicking on [...] to select a .4darchive file previously built on Windows|
 |Windows|macOS client update archive|Select a signed `.4darchive` file previously built on macOS|
 
 You can build specific `.4darchive` files on the concurrent platform by selecting only the [**Build client application**](#build-client-application). 
-	
 	
 	
 #### Displaying update notification    
