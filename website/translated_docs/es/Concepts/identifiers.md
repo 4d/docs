@@ -67,7 +67,7 @@ If(<>vtName#"")
 
 ## Variables proceso
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+Una variable de proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). A process variable name can contain up to 31 characters.
 
 Examples:
 ```4d
@@ -76,29 +76,29 @@ If(bValidate=1)
 vsCurrentName:=""
 ```
 
-## Local Variables
+## Variables locales
 
-You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
+Una variable local se designa colocando un signo de dólar ($) antes del nombre de la variable. Un nombre de variable local puede contener hasta 31 caracteres, sin incluir el signo del dólar.
 
 Examples:
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
-$vsMyString:="Hello there"
+$vsMyString:="Hola"
 ```
 
 ## Arrays
 
-You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
+Un array se designa escribiendo su nombre, que es el nombre que se pasa a un comando de declaración de array (como ARRAY LONGINT) cuando se crea el array. Los arrays son variables, y desde el punto de vista del alcance, al igual que las variables, hay tres tipos diferentes de arrays:
 
-- Interprocess arrays,
-- Process arrays,
-- Local arrays.
+- Arrays interproceso,
+- Arrays proceso,
+- Arrays locales.
 
-### Interprocess Arrays
-The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Arrays interproceso
+El nombre de un array interproceso va precedido de los símbolos (<>) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess array name can contain up to 31 characters, not including the <> symbols.
+Un nombre de array interproceso puede contener hasta 31 caracteres, sin incluir los símbolos <>.
 
 Examples:
 ```4d
@@ -107,8 +107,8 @@ SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
-### Process Arrays
-You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
+### Arrays proceso
+Una array proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). Un nombre de array proceso puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -117,8 +117,8 @@ SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
 ```
 
-### Local Arrays
-The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
+### Arrays locales
+El nombre de un array local va precedido del signo de dólar ($). Un nombre de array local puede contener hasta 31 caracteres, sin incluir el signo del dólar.
 
 Examples:
 ```4d
@@ -127,29 +127,29 @@ SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elements of arrays
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+### Elementos de arrays
+La referencia a un elemento de un array local, proceso o interproceso se realiza mediante llaves ("{ }"). El elemento al que se hace referencia se indica con una expresión numérica.
 
 Examples:
 ```4d  
-    //Addressing an element of an interprocess array
+    //El elemento al que se hace referencia se indica con una expresión numérica.
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Addressing an element of a process array
+    //Direccionar un elemento de un array proceso
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Addressing an element of a local array
+    //Direccionar un elemento de un array local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
+### Elementos de arrays de dos dimensiones
+La referencia a un elemento de un array de dos dimensiones se realiza utilizando las llaves ({…}) dos veces. El elemento al que se hace referencia se denota mediante dos expresiones numéricas en dos pares de llaves.
 
 Examples:
 ```4d
