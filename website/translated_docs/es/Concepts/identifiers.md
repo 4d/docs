@@ -43,7 +43,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
+Para designar un campo hay que especificar primero la tabla a la que pertenece. El nombre del campo va inmediatamente después del nombre de la tabla. Un nombre de campo puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -52,11 +52,11 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprocess Variables
+## Variables interproceso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+Una variable interproceso se designa precediendo el nombre de la variable con los símbolos (<>): un signo "menor que" seguido de un signo "mayor que".
 
-The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
+El nombre de una variable interproceso puede tener hasta 31 caracteres, sin incluir los símbolos <>.
 
 Examples:
 ```4d
@@ -65,7 +65,7 @@ Examples:
 If(<>vtName#"")
 ```
 
-## Process Variables
+## Variables proceso
 
 You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
 
