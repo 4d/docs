@@ -3,24 +3,24 @@ id: identifiers
 title: Identifiers
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+Esta sección describe las convenciones y reglas para nombrar los distintos elementos del lenguaje 4D (variables, tablas, objetos, formularios, etc.).
 
 
-## Basic Rules
+## Reglas básicas
 
-The following rules apply for all 4D frameworks.
+Las siguientes reglas se aplican a todas las estructuras de 4D.
 
-- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Commas, slashes, quotation marks, and colons are not allowed.
-- Characters reserved for use as operators, such as * and +, are not allowed.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
+- Un nombre debe comenzar por un carácter alfabético, un guión bajo o un dólar ("$") (tenga en cuenta que un signo de dólar puede denotar un elemento local, ver).
+- A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
+- Puntos (".") y corchetes ("[ ]") no están permitidos en los nombres de tablas, campos, métodos o variables.
+- No se permiten comas, barras inclinadas, comillas ni dos puntos.
+- Los caracteres reservados para su uso como operadores, como * y +, no están permitidos.
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc.), palabras clave (If, For, etc.) y constantes.
 - Any trailing spaces are ignored.
 
 ### Additional rules for object property and ORDA names
 - Space characters are not allowed.
-- Periods (".") and brackets ("[ ]") are not allowed.
+- Puntos (".") and brackets ("[ ]") are not allowed.
 - Names are case sensitive.
 
 ### Additional rules for SQL
