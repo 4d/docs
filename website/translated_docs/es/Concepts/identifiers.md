@@ -3,36 +3,36 @@ id: identifiers
 title: Identifiers
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+Esta sección describe las convenciones y reglas para nombrar los distintos elementos del lenguaje 4D (variables, tablas, objetos, formularios, etc.).
 
 
-## Basic Rules
+## Reglas básicas
 
-The following rules apply for all 4D frameworks.
+Las siguientes reglas se aplican a todas las estructuras de 4D.
 
-- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Commas, slashes, quotation marks, and colons are not allowed.
-- Characters reserved for use as operators, such as * and +, are not allowed.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
-- Any trailing spaces are ignored.
+- Un nombre debe comenzar por un carácter alfabético, un guión bajo o un dólar ("$") (tenga en cuenta que un signo de dólar puede denotar un elemento local, ver).
+- A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
+- Puntos (".") y corchetes ("[ ]") no están permitidos en los nombres de tablas, campos, métodos o variables.
+- No se permiten comas, barras inclinadas, comillas ni dos puntos.
+- Los caracteres reservados para su uso como operadores, como * y +, no están permitidos.
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc.), palabras clave (If, For, etc.) y constantes.
+- Los espacios finales se ignoran.
 
-### Additional rules for object property and ORDA names
-- Space characters are not allowed.
-- Periods (".") and brackets ("[ ]") are not allowed.
-- Names are case sensitive.
+### Reglas adicionales para las propiedades de los objetos y los nombres ORDA
+- Los caracteres de espacio no están permitidos.
+- Puntos (".") y los corchetes ("[ ]") no están permitidos.
+- Los nombres son sensibles a las mayúsculas y minúsculas.
 
-### Additional rules for SQL
-- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+### Reglas adicionales para SQL
+- Sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz
+- Los nombres no deben incluir ninguna palabra clave SQL (comando, atributo, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Nota:** el área "SQL" del Inspector en el editor de estructuras indica automáticamente cualquier carácter no autorizado en el nombre de una tabla o campo.
 
 
 ## Tables
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+Una tabla se designa colocando su nombre entre paréntesis: [...]. Un nombre de tabla puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -41,9 +41,9 @@ FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
 ```
 
-## Fields
+## Campos
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
+Para designar un campo hay que especificar primero la tabla a la que pertenece. El nombre del campo va inmediatamente después del nombre de la tabla. Un nombre de campo puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -52,11 +52,11 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprocess Variables
+## Variables interproceso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+Una variable interproceso se designa precediendo el nombre de la variable con los símbolos (<>): un signo "menor que" seguido de un signo "mayor que".
 
-The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
+El nombre de una variable interproceso puede tener hasta 31 caracteres, sin incluir los símbolos <>.
 
 Examples:
 ```4d
@@ -65,9 +65,9 @@ Examples:
 If(<>vtName#"")
 ```
 
-## Process Variables
+## Variables proceso
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+Una variable de proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). A process variable name can contain up to 31 characters.
 
 Examples:
 ```4d
@@ -76,29 +76,29 @@ If(bValidate=1)
 vsCurrentName:=""
 ```
 
-## Local Variables
+## Variables locales
 
-You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
+Una variable local se designa colocando un signo de dólar ($) antes del nombre de la variable. Un nombre de variable local puede contener hasta 31 caracteres, sin incluir el signo del dólar.
 
 Examples:
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
-$vsMyString:="Hello there"
+$vsMyString:="Hola"
 ```
 
 ## Arrays
 
-You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
+Un array se designa escribiendo su nombre, que es el nombre que se pasa a un comando de declaración de array (como ARRAY LONGINT) cuando se crea el array. Los arrays son variables, y desde el punto de vista del alcance, al igual que las variables, hay tres tipos diferentes de arrays:
 
-- Interprocess arrays,
-- Process arrays,
-- Local arrays.
+- Arrays interproceso,
+- Arrays proceso,
+- Arrays locales.
 
-### Interprocess Arrays
-The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Arrays interproceso
+El nombre de un array interproceso va precedido de los símbolos (<>) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess array name can contain up to 31 characters, not including the <> symbols.
+Un nombre de array interproceso puede contener hasta 31 caracteres, sin incluir los símbolos <>.
 
 Examples:
 ```4d
@@ -107,8 +107,8 @@ SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
-### Process Arrays
-You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
+### Arrays proceso
+Una array proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). Un nombre de array proceso puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -117,8 +117,8 @@ SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
 ```
 
-### Local Arrays
-The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
+### Arrays locales
+El nombre de un array local va precedido del signo de dólar ($). Un nombre de array local puede contener hasta 31 caracteres, sin incluir el signo del dólar.
 
 Examples:
 ```4d
@@ -127,29 +127,29 @@ SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elements of arrays
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+### Elementos de arrays
+La referencia a un elemento de un array local, proceso o interproceso se realiza mediante llaves ("{ }"). El elemento al que se hace referencia se indica con una expresión numérica.
 
 Examples:
 ```4d  
-    //Addressing an element of an interprocess array
+    //El elemento al que se hace referencia se indica con una expresión numérica.
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Addressing an element of a process array
+    //Direccionar un elemento de un array proceso
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Addressing an element of a local array
+    //Direccionar un elemento de un array local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
+### Elementos de arrays de dos dimensiones
+La referencia a un elemento de un array de dos dimensiones se realiza utilizando las llaves ({…}) dos veces. El elemento al que se hace referencia se denota mediante dos expresiones numéricas en dos pares de llaves.
 
 Examples:
 ```4d
@@ -380,7 +380,7 @@ Be sure to use unique names for the different elements in your database. If a pa
 
 4D identifies names used in procedures in the following order:
 
-1. Fields
+1. Campos
 2. Commands
 3. Methods
 4. Plug-in routines
