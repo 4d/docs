@@ -219,12 +219,14 @@ A client/server application comes from the combination of three items:
 
 Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine). 
 
+> If you want to deploy a client/server application in an heterogeneous environment (client applications running on Intel/AMD and Apple Silicon machines), it is recommended to [compile the project for all processors](Project/compiler.md#compilation-target) on a macOS machine, so that all client applications will run natively. 
+
 Also, the client/server application is customized and its handling simplified:
 
 - To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. 
 Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
-- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
+- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application). You only need to create and distribute an initial version of the client application, subsequent updates are handled using the automatic update mechanism.
 - It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D]((https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
 
@@ -263,22 +265,26 @@ You can check this option:
 
 #### 4D Volume Desktop Location
 
-You must designate the location on your disk of the 4D Volume Desktop application to be used.
+Designates the location on your disk of the 4D Volume Desktop application to be used to build the client part of your application. 
 
 > The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D v19, you must select a 4D Volume Desktop v19.
 
 The 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for the "concurrent" platform, you must carry out an additional build operation using a 4D application running on that platform. 
 
-> On macOS, this additional build operation is only necessary for the initial version of the client application since subsequent Windows client updates can be handled from macOS using the automatic update mechanism (see below). 
-
 If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
 #### Copy of client applications inside the server application
 
-The options of this area set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated. These options are only enabled when the **Build client application** option is checked.
+The options of this area set up the mechanism for updating the client part(s) of your client/server applications using the network each time a new version of the application is generated. These options are only enabled when the **Build client application** option is checked. 
 
-- **Allow automatic update of Windows client application** - Check this option so that your client applications on the Windows platform can take advantage of the automatic update mechanism. 
-- **Allow automatic update of Macintosh client application** - Check this option so that your client applications on the Macintosh platform can take advantage of the automatic update mechanism. 
+- **Allow automatic update of Windows client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Windows platform in case of update. 
+- **Allow automatic update of Macintosh client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Macintosh platform in case of update. 
+
+The `.4darchive` is copied at the following location:
+
+```
+<ApplicationName>_Build/Client Server executable/Upgrade4DClient/
+```
 
 #### Selecting client archive for the concurrent platform
 
@@ -294,7 +300,7 @@ This feature requires that you click on the **[...]** button and designate the l
 |macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...]|
 |Windows|macOS client update archive|Select a signed `.4darchive` file previously built on macOS|
 
-You can build specific `.4darchive` files on the concurrent platform by selecting only the [**Build client application**](#build-client-application). 
+You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option. 
 
 	
 #### Displaying update notification    
