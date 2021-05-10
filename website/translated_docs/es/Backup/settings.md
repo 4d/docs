@@ -34,6 +34,9 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
     - **Every X week(s) day at x**: Allows programming backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must enter the day(s) of the week and the time when the backup should start. You can select several days of the week, if desired. For example, you can use this option to set two weekly backups: one on Wednesday and one on Friday.
     - **Every X month(s), Xth Day at x**: Allows programming backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup should start.
 
+> Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
+
+
 ## Configuration
 
 La página Copia de seguridad/Configuración de las Propiedades de la base permite designar los archivos de copia de seguridad y su ubicación, así como la del archivo de historial. Estos parámetros son específicos de cada base de datos abierta por la aplicación 4D.
@@ -68,7 +71,7 @@ La opción **Utilizar el archivo de historial**, cuando está marcada, indica qu
 
 Por defecto, toda base creada con 4D utiliza un archivo de historial (opción seleccionada en la **página General** de las **Preferencias**). The log file is named *data.journal* and is placed in the Data folder.
 
-> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la base. When you check this option, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la base.
+> Activating a new log file requires the data of the database to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the database.
 
 
 ## Backup & Restore
@@ -92,7 +95,7 @@ Modifying backup and restore options is optional. Their default values correspon
     - **Retry after X second(s), minute(s) or hour(s)**: When this option is checked, a new backup attempt is executed after the wait period. This mechanism allows anticipating certain circumstances that may block the backup. You can set a wait period in seconds, minutes or hours using the corresponding menu. If the new attempt also fails, an error is generated and the failure is noted in the status area of the last backup and in the backup journal file.
     - **Cancel the operation after X attempts**: This parameter is used to set the maximum number of failed backup attempts. If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully. This parameter is useful in order to avoid a case where an extended problem (requiring human intervention) that prevented a backup from being carried out would have led to the application repeatedly attempting the backup to the detriment of its overall performance. By default, this parameter is not checked.
 
-> 4D considera que una copia de seguridad ha fallado si la base no se ha puesto en marcha en el momento en que la copia de seguridad automática programada debía llevarse a cabo.
+> 4D considers a backup as failed if the database was not launched at the time when the scheduled automatic backup was set to be carried out.
 
 ### Archive
 These options apply to main backup files and to log backup files.
