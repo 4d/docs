@@ -313,78 +313,78 @@ Desde el punto de vista del alcance, hay dos tipos de selecciones temporales:
 ### Selecciones temporales interproceso
 Una selección temporal es una selección temporal interproceso si su nombre va precedido de los símbolos (<>) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess named selection name can contain up to 255 characters, not including the <> symbols.
+El nombre de una selección temporal interproceso puede contener hasta 255 caracteres, sin incluir los símbolos <>.
 
-### Process Named Selections
-You denote a process named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $). A named selection name can contain up to 255 characters.
+### Selecciones temporales proceso
+Una selección temporal proceso se designa mediante una expresión de cadena que representa su nombre (que no puede comenzar con los símbolos <> ni con el signo de dólar $). El nombre de una selección temporal puede contener hasta 255 caracteres.
 
 Examples:
 ```4d
-    //Interprocess Named Selection
+    //Selección temporal interproceso
 USE NAMED SELECTION([Customers];"<>ByZipcode")
-    //Process Named Selection
+    //Selección temporal proceso
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
-## Processes
+## Procesos
 
-In the single-user version, or in Client/Server on the Client side, there are two types of processes:
+En modo monopuesto, o en Cliente/Servidor del lado del Cliente, hay dos tipos de procesos:
 
-- Global processes
-- Local processes.
+- Procesos globales
+- Procesos locales.
 
-### Global Processes
-You denote a global process by using a string expression that represents its name (which cannot start with the dollar sign $). A process name can contain up to 255 characters.
+### Procesos globales
+Un proceso global se designa mediante una expresión de tipo cadena que representa su nombre (que no puede comenzar con el signo de dólar $). El nombre de un proceso puede contener hasta 255 caracteres.
 
-### Local Processes
-You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
+### Procesos locales
+Se denota un proceso local si el nombre del proceso está precedido por el signo del dólar ($). El nombre de un proceso puede contener hasta 255 caracteres, sin incluir el signo del dólar.
 
 Examples:
 ```4d
-    //Starting the global process "Add Customers"
+    //Lanzar el proceso global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    //Starting the local process "$Follow Mouse Moves"
+    //Iniciar el proceso local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
-## Summary of Naming Conventions
+## Resumen de las convenciones de escritura en 4D
 
-The following table summarizes 4D naming conventions.
+La siguiente tabla resume las convenciones de denominación de 4D.
 
-| Identifier                   | Max. Length | Example                    |
-| ---------------------------- | ----------- | -------------------------- |
-| Table                        | 31          | [Invoices]                 |
-| Field                        | 31          | [Employees]Last Name       |
-| Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
-| Process Variable/Array       | 31          | vsCurrentName              |
-| Local Variable/Array         | $ + 31      | $vlLocalCounter            |
-| Object attribute             | 255         | $o.myAttribute             |
-| Form                         | 31          | "My Custom Web Input"      |
-| Form object                  | 255         | "MyButton"                 |
-| Project method               | 31          | M_ADD_CUSTOMERS          |
-| Plug-in Routine              | 31          | PDF SET ROTATION           |
-| Interprocess Set             | <> + 255    | "<>Records to be Archived" |
-| Process Set                  | 255         | "Current selected records" |
-| Client Set                   | $ + 255     | "$Previous Subjects"       |
-| Named Selection              | 255         | "Employees A to Z"         |
-| Interprocess Named Selection | <> + 255    | "<>Employees Z to A"       |
-| Local Process                | $ + 255     | "$Follow Events"           |
-| Global Process               | 255         | "*P_INVOICES_MODULE*"    |
-| Semaphore                    | 255         | "mysemaphore"              |
+| Identificador                   | Longitud Max. | Example                    |
+| ------------------------------- | ------------- | -------------------------- |
+| Table                           | 31            | [Invoices]                 |
+| Field                           | 31            | [Employees]Last Name       |
+| Variable/array interproceso     | <> + 31       | <>vlNextProcessID          |
+| Variable/Array proceso          | 31            | vsCurrentName              |
+| Variable/Array local            | $ + 31        | $vlLocalCounter            |
+| Propiedades de objetos          | 255           | $o.myAttribute             |
+| Form                            | 31            | "My Custom Web Input"      |
+| Objetos de formulario           | 255           | "MyButton"                 |
+| Project method                  | 31            | M_ADD_CUSTOMERS          |
+| Comando de plug-in              | 31            | PDF SET ROTATION           |
+| Conjuntos interproceso          | <> + 255      | "<>Records to be Archived" |
+| Conjuntos proceso               | 255           | "Current selected records" |
+| Conjunto cliente                | $ + 255       | "$Previous Subjects"       |
+| Named Selection                 | 255           | "Employees A to Z"         |
+| Selección temporal interproceso | <> + 255      | "<>Employees Z to A"       |
+| Proceso local                   | $ + 255       | "$Follow Events"           |
+| Proceso global                  | 255           | "*P_INVOICES_MODULE*"    |
+| Semáforo                        | 255           | "mysemaphore"              |
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+**Nota:** si se utilizan caracteres no romanos en los nombres de los identificadores, su longitud máxima puede ser menor.
 
-## Resolving Naming Conflicts
+## Resolución de conflictos de nombres
 
-Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
+Asegúrese de utilizar nombres únicos para los diferentes elementos de su base. Si un objeto particular tiene el mismo nombre que otro objeto de diferente tipo (por ejemplo, si un campo se llama Persona y una variable también se llama Persona), 4D utiliza un sistema de prioridad.
 
-4D identifies names used in procedures in the following order:
+4D identifica los nombres utilizados en los métodos en función del siguiente orden de prioridad:
 
 1. Campos
 2. Commands
 3. Methods
-4. Plug-in routines
-5. Predefined constants
+4. Comandos de plug-in
+5. Constantes predefinidas
 6. Variables.
 
-For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+Por ejemplo, 4D tiene un comando integrado llamado `Date`. Si llama a un método *Date*, 4D lo reconocerá como el comando integrado `Date`, y no como su método. Esto le impediría llamar a su método. Sin embargo, si llama a un campo “Date”, 4D intentará utilizar su campo en lugar del comando `Date`.
