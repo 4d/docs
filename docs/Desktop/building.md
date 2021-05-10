@@ -21,7 +21,7 @@ The application builder allows you to:
 
 Building a project package can be carried out using:
 
-- either the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command, 
+- either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command, 
 - or the [Build Application window](#application-builder). 
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
@@ -259,20 +259,19 @@ Checking this option generates the client part of your application during the bu
 You can check this option:
 
 - along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
-- without selecting the **Build server application** option, usually to build the update 
-archive file to be selected from the "concurrent" platform. 
+- without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part. 
 
 #### 4D Volume Desktop Location
 
 You must designate the location on your disk of the 4D Volume Desktop application to be used.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v19, you must select a 4D Volume Desktop v19.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D v19, you must select a 4D Volume Desktop v19.
 
 The 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for the "concurrent" platform, you must carry out an additional build operation using a 4D application running on that platform. 
 
 > On macOS, this additional build operation is only necessary for the initial version of the client application since subsequent Windows client updates can be handled from macOS using the automatic update mechanism (see below). 
 
-If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
 #### Copy of client applications inside the server application
 
@@ -288,15 +287,15 @@ You can check the **Allow automatic update...** option for client applications r
 - the **Build server application** option is checked,
 - the **Allow automatic update...** option for client applications running on the current platform is checked.
 
-This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current platform:
+This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-|Current platform|Required file|Description|
+|Current server platform|Required file|Details|
 |---|---|---|
-|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the 4D Volume Desktop application for Windows. Press **Shift** while clicking on [...] to select a .4darchive file previously built on Windows|
+|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...]|
 |Windows|macOS client update archive|Select a signed `.4darchive` file previously built on macOS|
 
 You can build specific `.4darchive` files on the concurrent platform by selecting only the [**Build client application**](#build-client-application). 
-	
+
 	
 #### Displaying update notification    
 
