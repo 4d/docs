@@ -153,25 +153,25 @@ La referencia a un elemento de un array de dos dimensiones se realiza utilizando
 
 Examples:
 ```4d
-    //Addressing an element of a two-dimensional interprocess array
+    //Direccionamiento de un elemento de un array interproceso de dos dimensiones 
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional process array
+    //Direccionar un elemento de una array proceso de dos dimensiones
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional local array
+    //Direccionar un elemento de un array local de dos dimensiones
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
-## Object attributes
+## Atributos de objetos
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
+Cuando la notación objeto está activada, se designa un atributo de objeto (también llamado propiedad de objeto) colocando un punto (".") entre el nombre del objeto (o del atributo) y el nombre del atributo. Un nombre de atributo puede contener hasta 255 caracteres y es sensible a las mayúsculas y minúsculas.
 
 Examples:
 ```4d
@@ -179,9 +179,9 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Nota:** se aplican reglas adicionales a los nombres de atributos de objetos (deben ajustarse a la especificación ECMAScript). Para más información, consulte [Identificadores de propiedades de objetos](Concepts/dt_object.md#object-property-identifiers).
 
-## Forms
+## Formularios
 
 You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
 
