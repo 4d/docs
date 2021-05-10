@@ -67,7 +67,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 ```
 
 
-## Project methods
+## Métodos proyecto
 
 The name of a project method name contain up to 31 characters.
 
@@ -84,18 +84,18 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
  > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
 
 Examples:
 
 ```4d
-    //This command expects a method (function) or formula
+    //Este comando espera un método (función) o una fórmula
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    //Este comando espera un método (procedimiento) o una instrucción
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    //Pero este comando espera un nombre de método
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
