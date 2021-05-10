@@ -10,9 +10,9 @@ title: Interpreted and Compiled modes
 
 The advantages of the compilation are:
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
+- **Velocidad**: su base de datos se ejecuta de 3 a 1.000 veces más rápido.
+- **Verificación del código**: su aplicación de base de datos se analiza para comprobar la coherencia del código. Both logical and syntactical conflicts are detected.
+- **Protección:**: una vez compilada su base, puede eliminar el código interpretado. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
 - **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes.
 
