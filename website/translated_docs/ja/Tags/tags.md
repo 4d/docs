@@ -1,153 +1,105 @@
 ---
 id: tags
-title: Transformation tags
+title: 変換タグ
 ---
 
-4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
+4Dでは、参照を 4D変数や式に挿入したり、様々な処理をソーステキスト ("テンプレート") に対して実行したりするための変換タグのセットを用意しています。 これらのタグは、ソーステキストが実行されてアウトプットテキストが生成されたときに解釈されます。
 
-This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
+4D Webサーバーにおいて [Web テンプレートページ](WebServer/templates.md) をビルドするにあたって、この原理が使用されます。
 
-These tags are generally be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+これらのタグは原則として HTMLコメント (`<--#Tag Contents-->`) として挿入されます。しかしながら、 [xml に準じた代替シンタックス](#4dtext-4dhtml-4deval-の代替シンタックス) も一部利用可能です。
 
-It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
+複数タイプのタグを混用することも可能です。 たとえば、以下の HTML構造は、問題なく実行可能です:
 
 ```html
 <HTML>
 ...
-<BODY>
-<!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
-<!--#4DIF (myvar=1)-->   (If condition)
-   <!--#4DINCLUDE banner1.html-->   (Subpage insertion)
-<!--#4DENDIF-->   (End if)
-<!--#4DIF (mtvar=2)-->
-   <!--#4DINCLUDE banner2.html-->
-<!--#4DENDIF-->
-
-<!--#4DLOOP [TABLE]-->   (Loop on the current selection)
-<!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
-   <!--#4DINCLUDE subpage.html-->   (Subpage insertion)
-<!--#4DELSE-->   (Else)
-   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><BR>   (Field display)
-<!--#4DENDIF-->
-<!--#4DENDLOOP-->   ](End for)
+<BODY><!--#4DSCRIPT/PRE_PROCESS-->(メソッド呼び出し)<!--#4DIF (myvar=1)-->(If 条件)<!--#4DINCLUDE banner1.html-->(サブページ挿入)<!--#4DENDIF-->(End if)<!--#4DIF (mtvar=2)--><!--#4DINCLUDE banner2.html--><!--#4DENDIF--><!--#4DLOOP [TABLE]-->(カレントセレクションでのループ)<!--#4DIF ([TABLE]ValNum>10)-->(If [TABLE]ValNum>10)<!--#4DINCLUDE subpage.html-->(サブページの挿入)<!--#4DELSE-->(Else)
+   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)<!--#4DENDIF--><!--#4DENDLOOP-->](End for)
 </BODY>
 </HTML>
 ```
 
 
 
-## Principles for using tags
+## タグ利用の原則
 
-### Parsing
+### 解析
 
-Parsing the contents of a *template* source is done in two contexts:
+*テンプレート* ソースの解析は、2つのコンテキストでおこなわれます:
 
-- Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
+- `PROCESS 4D TAGS` コマンド使用時: このコマンドは *テンプレート* に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
 
-- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
-
-
-### Recursive processing
-
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
-
-```html
-<!--#4DHTML [Mail]Letter_type-->
-```
-
-If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.
-
-This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
+- 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析させるには、終わりを ".shtm" または ".shtml" とする必要があります (例: http://www.server.com/dir/page.shtm)。
 
 
-### Identifiers with tokens
+### 再起的処理
 
-To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
+4Dタグは繰り返し解釈されます。4D は常に変換の結果を解釈しようとし、新しい変換が起きた際にはそれに伴う新しい解釈が実行され、取得結果の変換が必要がなくなるまで繰り返されます。 たとえば、以下のようなステートメントがあった場合:
 
-### Using the "." as decimal separator
+```html<!--#4DHTML [Mail]Letter_type-->```
 
-4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Regional settings are ignored. This feature facilitates code maintenance and compatibility between 4D languages and versions.
+もし `[Mail]Letter_type` テキストフィールド自体にもタグ (たとえば`<!--#4DSCRIPT/m_Gender-->`) が含まれていた場合、このタグは 4DHTMLタグの解釈の後に、それに伴って評価されます。
+
+この強力な原則は、テキスト変換に関連するほとんどの需要を満たすことができます。 しかしながら、Webコンテキストにおいて、これは場合によって悪意のあるコードの侵入を許す可能性があるという点に注意が必要です。これを防ぐ方法については [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) を参照ください。
+
+
+### トークンを使用した識別子
+
+4D のバージョンや言語設定に左右されずに、タグ経由の式の評価が正しくおこなわれることを確実にするため、バージョン間で名前が変わりうる要素 (コマンド、テーブル、フィールド、定数) については、トークンシンタックスを使用することが推奨されます。 たとえば、`Current time` コマンドを挿入するには、"`Current time:C178`"と入力します。
+
+### "." を小数点として使用
+
+`4DTEXT`、`4DHTML`、および `4DEVAL` の 4Dタグで数値表現を評価する際、4D は常にピリオド文字 (.) を小数点として使用します。 リージョン設定は無視されます。 この機能により、4Dの言語設定とバージョンが異なっていてもメンテナンスが容易となり互換性が保たれます。
 
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### シンタックス: `<!--#4DBASE folderPath-->`
 
-The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
+`<!--#4DBASE -->` タグは `<!--#4DINCLUDE-->` タグで使用されるワーキングディレクトリを指定します。
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ページ内であとに続くすべての `<!--#4DINCLUDE-->` 呼び出しのディレクトリを変更します (次の `<!--#4DBASE -->` があるまで)。 組み込まれたファイル内で `<!--#4DBASE -->`フォルダーが変更されると、親のファイルから元となる値を取得します。
 
-The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (/). The designated folder must be located inside the Web folder.
+*folderPath* 引数には現在のページに対する相対パスを指定し、パスは "/" で終わっていなければなりません。 また、指定フォルダーは Webフォルダー内になければなりません。
 
-Pass the "WEBFOLDER" keyword to restore the default path (relative to the page).
+"WEBFOLDER" キーワードを渡すと、(そのページに対して相対の) デフォルトパスに戻されます。
 
-The following code, which must specify a relative path for each call:
+以下のように、各呼び出しごとに相対パスを指定したコードは:
 
-```html
-<!--#4DINCLUDE subpage.html--> 
-<!--#4DINCLUDE folder/subpage1.html-->
-<!--#4DINCLUDE folder/subpage2.html-->
-<!--#4DINCLUDE folder/subpage3.html-->
-<!--#4DINCLUDE ../folder/subpage.html-->
-```
-... is equivalent to:
+```html<!--#4DINCLUDE subpage.html--><!--#4DINCLUDE folder/subpage1.html--><!--#4DINCLUDE folder/subpage2.html--><!--#4DINCLUDE folder/subpage3.html--><!--#4DINCLUDE ../folder/subpage.html-->```
+以下のコードと同一です:
+
+```html<!--#4DINCLUDE subpage.html--><!--#4DBASE folder/--><!--#4DINCLUDE subpage1.html--><!--#4DINCLUDE subpage2.html--><!--#4DINCLUDE subpage3.html--><!--#4DBASE ../folder/--><!--#4DINCLUDE subpage.html--><!--#4DBASE WEBFOLDER-->```
+
+たとえば、ホームページのディレクトリを設定する場合:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
-<!--#4DBASE folder/-->
-<!--#4DINCLUDE subpage1.html-->
-<!--#4DINCLUDE subpage2.html-->
-<!--#4DINCLUDE subpage3.html-->
-<!--#4DBASE ../folder/-->
-<!--#4DINCLUDE subpage.html-->
-<!--#4DBASE WEBFOLDER-->
-```
+/* Index.html */<!--#4DIF LangFR=True--><!--#4DBASE FR/--><!--#4DELSE--><!--#4DBASE US/--><!--#4DENDIF--><!--#4DINCLUDE head.html--><!--#4DINCLUDE body.html--><!--#4DINCLUDE footer.html-->```
 
-For example, to set a directory for the home page:
-
-```html
-/* Index.html */
-<!--#4DIF LangFR=True-->
-    <!--#4DBASE FR/-->
-<!--#4DELSE-->
-    <!--#4DBASE US/-->
-<!--#4DENDIF-->
-<!--#4DINCLUDE head.html-->
-<!--#4DINCLUDE body.html-->
-<!--#4DINCLUDE footer.html-->
-```
-
-In the "head.html" file, the current folder is modified through `<!--#4DBASE -->`, without this changing its value in "Index.html":
+上で組み込まれる "head.html" ファイル内でカレントフォルダーが `<!--#4DBASE -->` を使用して変更されても、"index.html" 内では変更されません:
 
 ```html
 /* Head.htm */
-/* the working directory here is relative to the included file (FR/ or US/) */
-<!--#4DBASE Styles/-->
-<!--#4DINCLUDE main.css-->
-<!--#4DINCLUDE product.css-->
-<!--#4DBASE Scripts/-->
-<!--#4DINCLUDE main.js-->
-<!--#4DINCLUDE product.js-->
-```
+/* ここでのワーキングディレクトリはインクルードされるファイルに対して相対的 (FR/ または US/) */<!--#4DBASE Styles/--><!--#4DINCLUDE main.css--><!--#4DINCLUDE product.css--><!--#4DBASE Scripts/--><!--#4DINCLUDE main.js--><!--#4DINCLUDE product.js-->```
 
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### シンタックス: `<!--#4DCODE codeLines-->`
 
-The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
+`4DCODE` タグを使用すると、複数行の4Dコードのブロックをテンプレートに挿入できます。
 
-When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. The code block itself can contain carriage returns, line feeds, or both; it will be interpreted sequentially by 4D.
+"`<!--#4DCODE`" シークエンスとそれに続くスペース、CRまたはLF文字が検知されると、4D は次の "`-->`"シークエンスまでのコードを解釈します。 コードブロック自体はキャリッジリターンもラインフィードも、あるいはその両方も含むことができ、4D によってシーケンシャルに解釈されます。
 
-For example, you can write in a template:
+たとえば、以下のようにテンプレートに書くことができます:
 
-```html
-<!--#4DCODE
-//PARAMETERS initialization
+```html<!--#4DCODE
+// パラメーターの初期化
 C_OBJECT:C1216($graphParameters)
 OB SET:C1220($graphParameters;"graphType";1)
 $graphType:=1
-//...your code here
+//...ここにコードを書きます
 If(OB Is defined:C1231($graphParameters;"graphType"))
     $graphType:=OB GET:C1224($graphParameters;"graphType")
     If($graphType=7)
@@ -158,19 +110,18 @@ If(OB Is defined:C1231($graphParameters;"graphType"))
         End if
     End if
 End if
--->
-```
+-->```
 
 
-Here are the 4DCODE tag features:
+4DCODE タグの機能は以下の通りです:
 
-- The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
-- Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
-- The text in between `<!--#4DCODE` and `-->` is split into lines accepting any line-ending convention (cr, lf, or crlf).
-- The text is tokenized within the context of the database that called `PROCESS 4D TAGS`. This is important for recognition of project methods for example. The [Available through tags and 4D URLs (4DACTION ...)](WebServer/allowProject.md) method property is not taken into account.
-- Even if the text always uses English-US, it is recommended to use the token syntax (:Cxxx) for command and constant names to protect against potential problems due to commands or constants being renamed from one version of 4D to another.
+- `TRACE` コマンドがサポートされています。これは 4Dデバッガーを起動するので、テンプレートコードをデバッグすることができます。
+- エラーは標準のエラーダイアログを表示します。これを使って、ユーザーはコードの実行を中止したりデバッグモードに入ったりすることができます。
+- `<!--#4DCODE` と `-->` の間のテキストは改行され、どのような改行コードでも受け取ります (cr、lf、または crlf)。
+- テキストは `PROCESS 4D TAGS` を呼び出したデータベースのコンテキストにてトークナイズされます。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
+- テキストが常に English-US設定であったとしても、4Dのバージョン間においてコマンドや定数名が改名されることによる問題を避けるため、コマンド名や定数名はトークンシンタックスを使用することが推奨されいます。
 
-> The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
+> 4DCODE タグがあらゆる 4Dランゲージコマンドおよびプロジェクトメソッドを呼び出せるという事実は、とくにデータベースが HTTP経由で使用可能な場合等に、セキュリティ上の問題になり得ます。 しかしながら、タグはサーバー側のコードをテンプレートファイルから実行するため、タグそのものはセキュリティ上の問題になりません。 このようなコンテキストにおいては、あらゆる Webサーバーと同様に、セキュリティは主にサーバーファイルへのリモートアクセスレベルにおいて管理されています。
 
 
 ## 4DEACH and 4DENDEACH
@@ -210,14 +161,9 @@ The number of loops is based on the number of elements of the collection. At eac
 ```html
     <table class="table">    
 
-        <tr><th>Name</th></tr>
-        
-          <!--#4DEACH $name in getNames-->
-        <tr>
+        <tr><th>Name</th></tr><!--#4DEACH $name in getNames--><tr>
             <td><!--#4DTEXT $name--></td>
-        </tr>
-          <!--#4DENDEACH-->
-    </table>
+        </tr><!--#4DENDEACH--></table>
 ```
 
 #### Example with a collection of objects
@@ -225,20 +171,13 @@ The number of loops is based on the number of elements of the collection. At eac
 *getSalesPersons* returns a collection of objects.
 
 ```html
-    <table class="table">    
-         <!--#4DCODE 
+    <table class="table"><!--#4DCODE 
             $salePersons:=getSalesPersons
-          -->          
-       <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
-
-          <!--#4DEACH $salesPerson in $salePersons-->
-        <tr>
+          --><tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr><!--#4DEACH $salesPerson in $salePersons--><tr>
             <td><!--#4DTEXT $salesPerson.ID--></td>
             <td><!--#4DTEXT $salesPerson.firstname--></td>
             <td><!--#4DTEXT $salesPerson.lastname--></td>
-        </tr>
-          <!--#4DENDEACH-->
-    </table>
+        </tr><!--#4DENDEACH--></table>
 ```
 
 
@@ -256,16 +195,11 @@ The number of loops is based on the number of entities of the entity selection. 
 ```html
     <table class="table">     
 
-        <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr>
-
-          <!--#4DEACH $customer in ds.Customers.all()-->
-        <tr>
+        <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr><!--#4DEACH $customer in ds.Customers.all()--><tr>
             <td><!--#4DTEXT $customer.ID--></td>
             <td><!--#4DTEXT $customer.name--></td>
             <td><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
-        </tr>
-          <!--#4DENDEACH-->
-    </table>
+        </tr><!--#4DENDEACH--></table>
 ```
 
 #### Example with `PROCESS 4D TAGS`
@@ -295,20 +229,12 @@ The properties of the object are processed according to their creation order. �
 *getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
 
 ```html
-    <table class="table">    
-          <!--#4DCODE
+    <table class="table"><!--#4DCODE
            $gamers:=getGamers
-          -->          
-
-        <tr><th>Gamers</th><th>Scores</th></tr>
-
-          <!--#4DEACH $key in $gamers-->
-        <tr>
+          --><tr><th>Gamers</th><th>Scores</th></tr><!--#4DEACH $key in $gamers--><tr>
             <td ><!--#4DTEXT $key--></td>
             <td ><!--#4DTEXT $gamers[$key]--></td>
-        </tr>
-          <!--#4DENDEACH-->
-    </table>
+        </tr><!--#4DENDEACH--></table>
 ```
 
 
@@ -350,7 +276,7 @@ For example, here are the processing results of the 4D text variable myvar with 
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
 
-In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
+In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar-->: ## error # error code`.
 
 > For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
@@ -367,69 +293,32 @@ The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in seve
 
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.
+Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a<!--#4DELSE-->tag after the last<!--#4DELSEIF-->. If all the conditions are false, the statements following the<!--#4DELSE-->are executed.
 
 The two following codes are equivalent.
 
 Code using 4DELSE only:
 
-```html
-<!--#4DIF Condition1-->
-  /* Condition1 is true*/
-<!--#4DELSE-->
-    <!--#4DIF Condition2-->
-        /* Condition2 is true*/
-    <!--#4DELSE-->
-        <!--#4DIF Condition3-->
-            /* Condition3 is true */
-        <!--#4DELSE-->
-            /*None of the conditions are true*/
+```html<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 is true*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/*None of the conditions are true*/<!--#4DENDIF-->
         <!--#4DENDIF-->
     <!--#4DENDIF-->
-<!--#4DENDIF-->
 ```
 
 Similar code using the `4DELSEIF` tag:
 
-```
-<!--#4DIF Condition1-->
-     /* Condition1 is true*/
-<!--#4DELSEIF Condition2-->
-     /* Condition2 is true*/
-<!--#4DELSEIF Condition3-->
-    /* Condition3 is true */
-<!--#4DELSE-->
-    /* None of the conditions are true*/
-<!--#4DENDIF-->
-```
+```<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSEIF Condition2-->/* Condition2 is true*/<!--#4DELSEIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/* None of the conditions are true*/<!--#4DENDIF-->```
 
 This example of code inserted in a static HTML page displays a different label according the `vname#""` expression result:
 
 ```html
 <BODY>
-...
-<!--#4DIF (vname#"")-->
-Names starting with <!--#4DTEXT vname-->.
-<!--#4DELSE-->
-No name has been found.
-<!--#4DENDIF-->
-...
+...<!--#4DIF (vname#"")-->Names starting with<!--#4DTEXT vname-->.<!--#4DELSE-->No name has been found.<!--#4DENDIF-->...
 </BODY>
 ```
 
 This example inserts different pages depending on which user is connected:
 
-```html
-<!--#4DIF LoggedIn=False-->
-    <!--#4DINCLUDE Login.htm -->
-<!--#4DELSEIF User="Admin" -->
-    <!--#4DINCLUDE AdminPanel.htm -->
-<!--#4DELSEIF User="Manager" -->
-    <!--#4DINCLUDE SalesDashboard.htm -->
-<!--#4DELSE-->
-    <!--#4DINCLUDE ItemList.htm -->
-<!--#4DENDIF-->
-```
+```html<!--#4DIF LoggedIn=False--><!--#4DINCLUDE Login.htm --><!--#4DELSEIF User="Admin" --><!--#4DINCLUDE AdminPanel.htm --><!--#4DELSEIF User="Manager" --><!--#4DINCLUDE SalesDashboard.htm --><!--#4DELSE--><!--#4DINCLUDE ItemList.htm --><!--#4DENDIF-->```
 
 
 ## 4DINCLUDE
@@ -454,11 +343,7 @@ In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document c
 
 例:
 
-```html
-<!--#4DINCLUDE subpage.html-->
-<!--#4DINCLUDE folder/subpage.html-->
-<!--#4DINCLUDE ../folder/subpage.html-->
-```
+```html<!--#4DINCLUDE subpage.html--><!--#4DINCLUDE folder/subpage.html--><!--#4DINCLUDE ../folder/subpage.html-->```
 
 
 
@@ -480,11 +365,7 @@ This syntax makes a loop for each record from the table current selection in the
 
 The following code:
 
-```html
-<!--#4DLOOP [People]-->
-<!--#4DTEXT [People]Name--> <!--#4DTEXT [People]Surname--><BR>
-<!--#4DENDLOOP-->
-```
+```html<!--#4DLOOP [People]--><!--#4DTEXT [People]Name--><!--#4DTEXT [People]Surname--><BR><!--#4DENDLOOP-->```
 
 ... could be expressed in 4D language in the following way:
 
@@ -504,11 +385,7 @@ This syntax makes a loop for each array item. The array current item is increase
 
 The following code example:
 
-```html
-<!--#4DLOOP arr_names-->
-<!--#4DTEXT arr_names{arr_names}--><BR>
-<!--#4DENDLOOP-->
-```
+```html<!--#4DLOOP arr_names--><!--#4DTEXT arr_names{arr_names}--><BR><!--#4DENDLOOP-->```
 
 ... could be expressed in 4D language in the following way:
 
@@ -529,11 +406,7 @@ For security reasons, within a Web process, the `On Web Authentication` database
 
 The following code example:
 
-```html
-<!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <BR> 
-<!--#4DENDLOOP-->
-```
+```html<!--#4DLOOP my_method--><!--#4DTEXT var--><BR><!--#4DENDLOOP-->```
 
 ... could be expressed in 4D language in the following way:
 
@@ -573,13 +446,7 @@ With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* retu
 
 For example, the following code:
 
-```html
-<!--#4DEVAL $i:=0-->
-<!--#4DLOOP ($i<4)-->
-<!--#4DEVAL $i-->
-<!--#4DEVAL $i:=$i+1-->
-<!--#4DENDLOOP-->
-```
+```html<!--#4DEVAL $i:=0--><!--#4DLOOP ($i<4)--><!--#4DEVAL $i--><!--#4DEVAL $i:=$i+1--><!--#4DENDLOOP-->```
 
 ...produces the following result:
 
@@ -604,7 +471,7 @@ This syntax is useful when you pass an array pointer as a parameter to the `PROC
  $array{2}:="world"
  $input:="<!--#4DEVAL $1-->"
  $input:=$input+"<!--#4DLOOP $2-->"
- $input:=$input+"<!--#4DEVAL $2->{$2->}--> "
+ $input:=$input+"<!--#4DEVAL $2->{$2->}-->"
  $input:=$input+"<!--#4DENDLOOP-->"
  PROCESS 4D TAGS($input;$output;"elements = ";->$array)
   // $output = "elements = hello world "
@@ -632,7 +499,7 @@ The `4DSCRIPT` tag allows you to execute 4D methods when processing the template
 
 The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
-For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+For example, let’s say that you insert the following comment `“Today is<!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
 The `MYMETH` method is as follows:
 
@@ -657,7 +524,7 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
 
 ```html
-<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P>Welcome to<!--#4DTEXT vtSiteName-->!</P>
 ```
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
@@ -666,7 +533,7 @@ You can also insert 4D expressions. You can for example directly insert the cont
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
-In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
+In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar-->: ## error # error code`.
 
 - You must use process variables.
 - You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
@@ -678,7 +545,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 
 
 
-## Alternative syntax for 4DTEXT, 4DHTML, 4DEVAL
+## 4dtext, 4dhtml, 4deval の代替シンタックス
 
 Several existing 4D transformation tags can be expressed using a $-based syntax:
 
@@ -702,9 +569,7 @@ $4DEVAL(UserName)
 
 instead of:
 
-```html
-<!--#4DEVAL(UserName)-->
-```
+```html<!--#4DEVAL(UserName)-->```
 
 The main advantage of this syntax is that it allows you to write XML-compliant templates. Some 4D developers need to create and validate XML-based templates using standard XML parser tools. Since the "<" character is invalid in an XML attribute value, it was not possible to use the "`<!-- -->`" syntax of 4D tags without breaking the document syntax. On the other hand, escaping the "<" character will prevent 4D from interpreting the tags correctly.
 
@@ -729,21 +594,21 @@ The following examples show the result of processing depending on the syntax and
 ```4d
   // example 1
  myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DHTML myName-->"
+ input:="My name is:<!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
   //4D will quit!
 ```
 ```4d
   // example 2
  myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+ input:="My name is:<!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: <!--#4DHTML QUIT 4D-->"
+  //output is "My name is:<!--#4DHTML QUIT 4D-->"
 ```
 ```4d
   // example 3
  myName:="$4DEVAL(QUIT 4D)" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+ input:="My name is:<!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
   //output is "My name is: $4DEVAL(QUIT 4D)"
 ```
