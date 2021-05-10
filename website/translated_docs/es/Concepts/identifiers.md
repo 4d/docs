@@ -230,56 +230,56 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Project methods can accept parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
+Los métodos proyecto pueden aceptar parámetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Además, se pueden direccionar múltiples parámetros consecutivos (y últimos) con la sintaxis ${n} donde n, expresión numérica, es el número del parámetro.
 
-Inside a function, the $0 local variable contains the value to be returned.
+Dentro de una función, la variable local $0 contiene el valor a devolver.
 
 Examples:
 ```4d
-    //Within DROP SPACES $1 is a pointer to the field [People]Name
+    //Dentro de DROP SPACES $1 es un puntero al campo [People]Name
 DROP SPACES(->[People]Name)
 
-    //Within Calc creator:
-    //- $1 is numeric and equal to 1
-    //- $2 is numeric and equal to 5
-    //- $3 is text or string and equal to "Nice"
-    //- The result value is assigned to $0
-$vsResult:=Calc creator(1;5;"Nice")
+    //Dentro de Calc creator:
+    //- $1 es numérico e igual a 1
+    //- $2 es numérico e igual a 5
+    //- $3 es texto o cadena e igual a "Nice"
+    //- El valor del resultado se asigna a $0
+$vsResult:=Calc creator(1;5; "Nice")
 
-    //Within Dump:
-    //- The three parameters are text or string
-    //- They can be addressed as $1, $2 or $3
-    //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
-    //- The result value is assigned to $0
+    //Dentro de Dump:
+    //- Los tres parámetros son texto o cadena
+    //- Se pueden direccionar como $1, $2 o $3
+    //- También se pueden direccionar como, por ejemplo, ${$vlParam} donde $vlParam es 1, 2 o 3
+    //- El valor resultante se asigna a $0
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Commands
+## Comandos de plug-in
 
-You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
+Para designar un comando de plug-in se utiliza su nombre, tal y como lo define el plug-in. El nombre de un comando plug-in puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
-## Sets
+## Conjuntos
 
-From the scope point of view, there are two types of sets:
+Desde el punto de vista del alcance, hay dos tipos de conjuntos:
 
-- Interprocess sets
-- Process sets
+- Conjuntos interproceso
+- Conjuntos proceso
 
-4D Server also includes:
+4D Server también incluye:
 
-- Client sets
+- Conjuntos clientes
 
-### Interprocess Sets
-A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Conjuntos interproceso
+Un conjunto es un conjunto interproceso cuando el nombre del conjunto está precedido por los símbolos (<>) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess set name can contain up to 255 characters, not including the <> symbols.
+Un nombre de conjunto interproceso puede contener hasta 255 caracteres, sin incluir los símbolos <>.
 
-### Process Sets
+### Conjuntos proceso
 You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
 
 ### Client Sets
