@@ -183,7 +183,7 @@ $value:=$clientObj.data.address.city
 
 ## Formularios
 
-You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
+Un formulario se designa mediante una expresión de tipo cadena que representa su nombre. Un nombre de formulario puede contener hasta 31 caracteres.
 
 Examples:
 ```4d
@@ -192,22 +192,22 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Form objects
+## Objetos de formularios
 
-You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
+Se designa un objeto de formulario pasando su nombre como una cadena, precedida por el parámetro *. Un nombre de objeto de formulario puede contener hasta 255 caracteres.
 
 Example:
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
+**Nota:** no confunda los objetos de formulario (botones, list boxes, variables editables, etc.) y los objetos del lenguaje 4D. Los objetos del lenguaje 4D se crean y manipulan a través de la notación de objetos o de comandos dedicados.
 
-## Project methods
+## Métodos proyecto
 
-You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
+Un método proyecto (procedimiento o función) se designa utilizando su nombre. Un nombre de método puede contener hasta 31 caracteres.
 
-**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
+**Nota:** un método proyecto que no devuelve un resultado también se llama un procedimiento. Un método proyecto que devuelve un resultado también se denomina función.
 
 Examples:
 ```4d
@@ -216,17 +216,17 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método es una función, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir una base para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:
+**Nota:** cuando llame a un método, sólo tiene que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como todos los comandos del Plug-In, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método. Example:
 
 Examples:
 ```4d
-    //This command expects a method (function) or formula
+    //Este comando espera un método (función) o una fórmula
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    //Este comando espera un método (procedimiento) o una instrucción
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    //Pero este comando espera un nombre de método
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
