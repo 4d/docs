@@ -280,38 +280,38 @@ Un conjunto es un conjunto interproceso cuando el nombre del conjunto está prec
 Un nombre de conjunto interproceso puede contener hasta 255 caracteres, sin incluir los símbolos <>.
 
 ### Conjuntos proceso
-You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
+Para designar un conjunto proceso se utiliza una expresión de tipo cadena que representa su nombre (que no puede comenzar con los símbolos <> o el signo de dólar $). El nombre de un conjunto proceso puede contener hasta 255 caracteres.
 
-### Client Sets
-The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
+### Conjuntos clientes
+El nombre de un conjunto cliente debe ser precedido del signo de dólar ($). Un nombre de conjunto cliente puede contener hasta 255 caracteres, sin incluir el signo del dólar.
 
-**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
+**Nota:** los conjuntos son mantenidos por el equipo servidor. En algunos casos, por eficiencia o por motivos especiales, es posible que necesite trabajar con conjuntos localmente en los equipos clientes. Para ello, utilice los conjuntos clientes.
 
 Examples:
 ```4d
-    //Interprocess sets
+    //Conjuntos interprocesos
 USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Process sets
+    //Conjuntos procesos
 USE SET("Deleted Records")
 CREATE SET([Customers];"Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Client sets
+    //Conjuntos clientes
 USE SET("$Deleted Records")
 CREATE SET([Customers];"$Customer Orders")
 If(Records in set("$Selection"+String($i))>0)
 ```
 
-## Named Selections
+## Selecciones temporales
 
-From the scope point of view, there are two types of named selections:
+Desde el punto de vista del alcance, hay dos tipos de selecciones temporales:
 
-- Interprocess named selections
-- Process named selections.
+- Selecciones temporales interproceso
+- Selecciones temporales proceso.
 
-### Interprocess Named Selections
-A named selection is an interprocess named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Selecciones temporales interproceso
+Una selección temporal es una selección temporal interproceso si su nombre va precedido de los símbolos (<>) - un signo "menor que" seguido de un signo "mayor que".
 
 An interprocess named selection name can contain up to 255 characters, not including the <> symbols.
 
