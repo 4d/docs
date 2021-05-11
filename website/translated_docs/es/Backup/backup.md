@@ -1,6 +1,6 @@
 ---
 id: backup
-title: Backup
+title: Copia de seguridad
 ---
 
 
