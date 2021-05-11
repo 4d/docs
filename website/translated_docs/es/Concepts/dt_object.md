@@ -11,7 +11,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - texto
     - null
-    - Boolean
+    - Booleano
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - objeto (los objetos pueden estar anidados en varios niveles)
