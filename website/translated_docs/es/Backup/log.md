@@ -1,6 +1,6 @@
 ---
 id: log
-title: Log file (.journal)
+title: Archivo de historial (.journal)
 ---
 
 Una base de uso continuo siempre registra cambios, adiciones o supresiones. Performing regular backups of data is important but does not allow (in case of incident) restoring data entered since the last backup. To respond to this need, 4D now offers a specific tool: the log file. Este archivo permite garantizar la seguridad permanente de los datos de la base.
