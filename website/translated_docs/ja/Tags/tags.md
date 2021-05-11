@@ -316,30 +316,30 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 </BODY>
 ```
 
-This example inserts different pages depending on which user is connected:
+この例題は接続したユーザーによって異なるページを返します:
 
 ```html<!--#4DIF LoggedIn=False--><!--#4DINCLUDE Login.htm --><!--#4DELSEIF User="Admin" --><!--#4DINCLUDE AdminPanel.htm --><!--#4DELSEIF User="Manager" --><!--#4DINCLUDE SalesDashboard.htm --><!--#4DELSE--><!--#4DINCLUDE ItemList.htm --><!--#4DENDIF-->```
 
 
 ## 4DINCLUDE
 
-#### Syntax: `<!--#4DINCLUDE path-->`
+#### シンタックス: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.
+このタグは主に、ある (*path* で指定された) HTMLページを別の HTMLページに含めるためにデザインされました。 デフォルトで、HTMLページのボディー部、つまり `<body>` と`</body>` タグの間の内容だけが統合されます (bodyタグは含まれません)。 これにより、ヘッダーに含まれるメタタグ関連の衝突が回避されます。
 
-However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. It is up to you to verify the consistency of the meta tags.
+しかし、指定された HTMLページ中に `<body>` `</body>` タグがない場合、ページ全体が統合されます。 この場合、メタタグの整合性を管理するのは開発者の役割です。
 
-The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or loops (`<!--#4DLOOP-->`). It is very convenient to include banners according to a criteria or randomly. When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the `4DINCLUDE` call.
+`<!--#4DINCLUDE -->` コメントは、テスト (`<!--#4DIF-->`) やループ (`<!--#4DLOOP-->`) と使用するととても便利です。 条件に基づきあるいはランダムにバナーなどを挿入する便利な方法です。 このタグを使用してページをインクルードするとき、拡張子にかかわらず、4Dは呼び出されたページを解析してから、内容を `4DINCLUDE` 呼び出し元のページに挿入します。
 
-An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
+`<!--#4DINCLUDE -->` コメントで挿入されたページは、URLで呼ばれたページや `WEB SEND FILE` コマンドで送信されたページと同じように、Webサーバーキャッシュにロードされます。
 
-In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..) を使用します (HTMLシンタックス)。 `PROCESS 4D TAGS` コマンドで `4DINCLUDE` タグを使用する場合のデフォルトフォルダーはプロジェクトフォルダーです。
 
-> You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
+> `4DINCLUDE` タグで使用されるデフォルトフォルダーは [`<!--#4DBASE -->`](#4dbase) タグを使って変更できます。
 
-The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the *mydoc2.html* body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in *mydoc1.html*. Furthermore, 4D verifies that inclusions are not recursive.
+ページ内で使用できる `<!--#4DINCLUDE path-->` 数に制限はありません。 しかし `<!--#4DINCLUDE path-->` の呼び出しは 1レベルのみ有効です。 つまり、たとえば *mydoc1.html* ページに `<!--#4DINCLUDE mydoc2.html-->` によって挿入される *mydoc2.html* がある場合、そのボディ内でさらに `<!--#4DINCLUDE mydoc3.html-->` を使うことはできません。 さらに、4Dはインクルードが再帰的かどうかを確認します。
 
-In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
+エラーの場合、"`<!--#4DINCLUDE path-->` : ドキュメントを開けません" というテキストが挿入されます。
 
 例:
 
@@ -347,9 +347,9 @@ In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document c
 
 
 
-## 4DLOOP and 4DENDLOOP
+## 4DLOOP と 4DENDLOOP
 
-#### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
+#### シンタックス: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
 This comment allows repetition of a portion of code as long as the condition is fulfilled. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
 
