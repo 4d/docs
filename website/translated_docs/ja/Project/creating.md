@@ -36,7 +36,7 @@ title: プロジェクトを開発する
 2. プロジェクトの `.4dproject` ファイルを選択し、**開く** をクリックします。<p> デフォルトで、プロジェクトはカレントデータファイルとともに開かれます。 ほかにも、次のファイルタイプを選択できます:
 
     - *圧縮されたプロジェクトファイル*: `.4dz` 拡張子 - 運用プロジェクト
-    - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+    - *ショートカットファイル*: `.4DLink` 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)
     - *バイナリファイル*: `.4db` または `.4dc` 拡張子 - 従来の 4D データベース形式
 
 ### オプション
@@ -51,7 +51,7 @@ title: プロジェクトを開発する
 
 ## プロジェクトを開く (その他の方法)
 
-4D offers several ways to open projects directly and bypass the Open dialog:
+4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法がいくつかあります:
 
 - メニューを使用:
     -   *メニューバー* - **ファイル** > **最近使用したデータベースを開く / {project name}**
@@ -60,7 +60,7 @@ title: プロジェクトを開発する
 - 4D 環境設定を使用:
     -   4D 環境設定の **開始時** オプションに **最後に使用したデータベースを開く** を指定します。
 
-- using a `.4DLink` file.
+- `.4DLink` ファイルを使用
 
 ### Opening a Project with a 4DLink file
 

@@ -124,38 +124,38 @@ End if
 > 4DCODE タグがあらゆる 4Dランゲージコマンドおよびプロジェクトメソッドを呼び出せるという事実は、とくにデータベースが HTTP経由で使用可能な場合等に、セキュリティ上の問題になり得ます。 しかしながら、タグはサーバー側のコードをテンプレートファイルから実行するため、タグそのものはセキュリティ上の問題になりません。 このようなコンテキストにおいては、あらゆる Webサーバーと同様に、セキュリティは主にサーバーファイルへのリモートアクセスレベルにおいて管理されています。
 
 
-## 4DEACH and 4DENDEACH
+## 4DEACH と 4DENDEACH
 
-#### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
+#### シンタックス: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
-The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the *expression*. The item is set to a *variable* whose type depends on the *expression* type.
+`<!--#4DEACH-->` コメントは、*expression* に含まれるすべての要素に対して処理を繰り返します。 各要素は *variable* に代入され、その型は *expression* の型に依存します。
 
-The `<!--#4DEACH-->` comment can iterate through three expression types:
+`<!--#4DEACH-->` コメントは 3種類の *expression* を対象に反復処理をおこなうことができます:
 
-- [collections](#--4deach-item-in-collection--): loop through each element of the collection,
-- [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
-- [objects](#--4deach-property-in-object--): loop through each object property.
+- [コレクション](#--4deach-item-in-collection--): コレクションの各要素をループします
+- [エンティティセレクション](#--4deach-entity-in-entityselection--): エンティティセレクションの各エンティティをループします
+- [オブジェクト](#--4deach-property-in-object--): オブジェクトの各プロパティをループします
 
-The number of iterations is evaluated at startup and will not change during the processing. ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
+ループの数は開始時に評価され、処理中に変化することはありません。 ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
 
 
 ### `<!--#4DEACH item in collection-->`
 
-This syntax iterates on each *item* of the *collection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
+このシンタックスは、コレクションの各要素を対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、各コレクション要素について繰り返されます。
 
-The *item* parameter is a variable of the same type as the collection elements.
+*item* はコレクション要素と同じ型の変数です。
 
-The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
+コレクションの **要素はすべて同じ型** でなくてはなりません。そうでない場合には、*item* 変数に別の型の値が代入されたときにエラーが生成されます。
 
-The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. このとき、以下の点に注意する必要があります:
+ループの回数はコレクションの要素数に基づいています。 各繰り返しにおいて、*item* 変数には、コレクションの合致する要素が自動的に代入されます。 このとき、以下の点に注意する必要があります:
 
-- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). 変数がスカラー型である場合、変数のみが変更されます。
-- The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
+- *item* 変数がオブジェクト型あるいはコレクション型であった場合 (つまり *expression* がオブジェクトのコレクション、あるいはコレクションのコレクションであった場合)、この変数を変更すると自動的にコレクションの対応する要素も変更されます (オブジェクトとコレクションは同じ参照を共有しているからです)。 変数がスカラー型である場合、変数のみが変更されます。
+- *item* 変数には、コレクションの先頭要素の型が設定されます。 コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
+- コレクションが Null値の要素を格納していたとき、*item* 変数の型が Null値をサポートしない型 (倍長整数変数など) であった場合にはエラーが生成されます。
 
-#### Example with a collection of scalar values
+#### 例題: スカラー値のコレクション
 
-*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getNames* は文字列のコレクションを返すメソッドです。 このメソッドは [公開オプション: 4DタグとURL](WebServer/allowProject.md) が有効になっています。
 
 
 ```html
@@ -166,9 +166,9 @@ The number of loops is based on the number of elements of the collection. At eac
         </tr><!--#4DENDEACH--></table>
 ```
 
-#### Example with a collection of objects
+#### 例題: オブジェクトのコレクション
 
-*getSalesPersons* returns a collection of objects.
+*getSalesPersons* はオブジェクトのコレクションを返すメソッドです。
 
 ```html
     <table class="table"><!--#4DCODE 
@@ -183,14 +183,14 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+このシンタックスは、エンティティセレクションの各エンティティを対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、エンティティセレクションの各エンティティについて繰り返されます。
 
-The *entity* parameter is an object variable of the entity selection class.
+*entity* は Entityクラスのオブジェクト変数です。
 
 
-The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+ループの回数はエンティティセレクション内のエンティティの数に基づきます。 各繰り返しにおいて、*entity* オブジェクト変数には、エンティティセレクションの合致するエンティティが自動的に代入されます。
 
-#### Example with a html table
+#### 例題: html のテーブル
 
 ```html
     <table class="table">     
@@ -202,7 +202,7 @@ The number of loops is based on the number of entities of the entity selection. 
         </tr><!--#4DENDEACH--></table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### 例題: `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -218,15 +218,15 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ### `<!--#4DEACH property in object-->`
 
-This syntax iterates on each *property* of the *object*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
+このシンタックスは、オブジェクトの各プロパティを対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、各オブジェクトプロパティについて繰り返されます。
 
-The *property* parameter is a text variable automatically filled with the name of the currently processed property.
+*property* は現在処理中のプロパティ名が自動代入されたテキスト変数です。
 
-The properties of the object are processed according to their creation order. ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
+オブジェクトのプロパティは作成順に処理されていきます。 ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
 
-#### Example with the properties of an object
+#### 例題: オブジェクトのプロパティ
 
-*getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
+*getGamers* は、ゲームスコアを管理するために ("Mary"; 10; "Ann"; 20; "John"; 40) のようなオブジェクトを返すプロジェクトメソッドです。
 
 ```html
     <table class="table"><!--#4DCODE
@@ -242,73 +242,73 @@ The properties of the object are processed according to their creation order. �
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
-#### Alternative syntax: `$4DEVAL(expression)`
+#### シンタックス: `<!--#4DEVAL expression-->`
+#### 代替シンタックス: `$4DEVAL(expression)`
 
-The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
+`4DEVAL` タグを使用すると、4Dの変数や式を評価できます。 [`4DHTML`](#4dhtml) タグのように、`4DEVAL` タグはテキストを返す際にHTML特殊文字をエスケープしません。 しかしながら、[`4DHTML`](#4dhtml) や [`4DTEXT`](#4dtext) と異なり、`4DEVAL` は有効な 4D宣言であればどれでも実行することができます (値を返さない代入や式も含まれます)。
 
-For example, you can execute:
+たとえば、以下の様なコードを実行することができます:
 
 ```
- $input:="<!--#4DEVAL a:=42-->" //assignment
- $input:=$input+"<!--#4DEVAL a+1-->" //calculation
+ $input:="<!--#4DEVAL a:=42-->" // 代入
+ $input:=$input+"<!--#4DEVAL a+1-->" // 計算
  PROCESS 4D TAGS($input;$output)
-  //$output = "43"
+  // $output = "43"
 ```
 
-In case of an error during interpretation, the text inserted will be in the form: `<!--#4DEVAL expr-->: ## error # error code`.
+解釈エラーの場合、"`<!--#4DEVAL expr-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> セキュリティ上の理由から、[悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐために、アプリケーション外から導入されたデータを処理するときには [`4DTEXT`](#4dtext) タグの使用が推奨されます。
 
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
-#### Alternative syntax: `$4DHTML(expression)`
+#### シンタックス: `<!--#4DHTML expression-->`
+#### 代替シンタックス: `$4DHTML(expression)`
 
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
+`4DTEXT` タグ同様、このタグを使用すると、4Dの変数や値を返す式を HTML式として挿入できます。 一方 `4DTEXT` タグとは異なり、このタグはHTML特殊文字(例: ">")をエスケープしません。
 
-For example, here are the processing results of the 4D text variable myvar with the available tags:
+たとえば、4Dタグを使用して 4Dのテキスト変数 myvar を処理した結果は以下の様になります:
 
-| myvar Value          | Tags                         | 戻り値                 |
+| myvar の値             | タグ                           | 戻り値                 |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
 
-In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar-->: ## error # error code`.
+解釈エラーの場合、"`<!--#4DHTML myvar-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> セキュリティ上の理由から、[悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐために、アプリケーション外から導入されたデータを処理するときには [`4DTEXT`](#4dtext) タグの使用が推奨されます。
 
 
-## 4DIF, 4DELSE, 4DELSEIF and 4DENDIF
+## 4DIF, 4DELSE, 4DELSEIF と 4DENDIF
 
-#### Syntax: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
+#### シンタックス: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
-Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
+`<!--#4DELSEIF-->` (任意), `<!--#4DELSE-->` (任意) および `<!--#4DENDIF-->` コメントと共に使用することで、`<!--#4DIF expression-->` コメントはコードの一部に条件分岐を実行させることを可能にします。
 
-The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
+*expression* はブール値を返す有効な 4D式です。 式は括弧の中に記述され、4Dのシンタックスルールに準拠していなければなりません。
 
-The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
+`<!--#4DIF expression-->` ... `<!--#4DENDIF-->` は複数レベルでネストできます。 4Dと同じく、それぞれの `<!--#4DIF expression-->` には対応する `<!--#4DENDIF-->` がなければなりません。
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 同様に、`<!--#4DIF -->` が同じ数の `<!--#4DENDIF-->` で閉じられていない場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに "`<!--#4DIF expression-->`: 4DENDIFが必要です" というテキストが挿入されます。
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a<!--#4DELSE-->tag after the last<!--#4DELSEIF-->. If all the conditions are false, the statements following the<!--#4DELSE-->are executed.
+`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 `<!--#4DELSE-->`タグは、最後の `<!--#4DELSEIF-->` の後に記述できます。 それまでの条件がすべて `false` の場合、`<!--#4DELSE-->`ブロックの文が実行されます。
 
-The two following codes are equivalent.
+以下の2つのコードは同等です。
 
-Code using 4DELSE only:
+`4DELSE` のみを使用する場合:
 
-```html<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 is true*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/*None of the conditions are true*/<!--#4DENDIF-->
+```html<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/*いずれの条件も true でない場合*/<!--#4DENDIF-->
         <!--#4DENDIF-->
     <!--#4DENDIF-->
 ```
 
-Similar code using the `4DELSEIF` tag:
+同じ内容を `4DELSEIF` タグを使用して記述した場合:
 
-```<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSEIF Condition2-->/* Condition2 is true*/<!--#4DELSEIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/* None of the conditions are true*/<!--#4DENDIF-->```
+```<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSEIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSEIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/* いずれの条件も true でない場合*/<!--#4DENDIF-->```
 
-This example of code inserted in a static HTML page displays a different label according the `vname#""` expression result:
+スタティックな HTMLページに書かれたこの例題のコードは、`vname#""` 式の結果に応じ、異なるラベルを表示します:
 
 ```html
 <BODY>
@@ -316,30 +316,30 @@ This example of code inserted in a static HTML page displays a different label a
 </BODY>
 ```
 
-This example inserts different pages depending on which user is connected:
+この例題は接続したユーザーによって異なるページを返します:
 
 ```html<!--#4DIF LoggedIn=False--><!--#4DINCLUDE Login.htm --><!--#4DELSEIF User="Admin" --><!--#4DINCLUDE AdminPanel.htm --><!--#4DELSEIF User="Manager" --><!--#4DINCLUDE SalesDashboard.htm --><!--#4DELSE--><!--#4DINCLUDE ItemList.htm --><!--#4DENDIF-->```
 
 
 ## 4DINCLUDE
 
-#### Syntax: `<!--#4DINCLUDE path-->`
+#### シンタックス: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.
+このタグは主に、ある (*path* で指定された) HTMLページを別の HTMLページに含めるためにデザインされました。 デフォルトで、HTMLページのボディー部、つまり `<body>` と`</body>` タグの間の内容だけが統合されます (bodyタグは含まれません)。 これにより、ヘッダーに含まれるメタタグ関連の衝突が回避されます。
 
-However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. It is up to you to verify the consistency of the meta tags.
+しかし、指定された HTMLページ中に `<body>` `</body>` タグがない場合、ページ全体が統合されます。 この場合、メタタグの整合性を管理するのは開発者の役割です。
 
-The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or loops (`<!--#4DLOOP-->`). It is very convenient to include banners according to a criteria or randomly. When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the `4DINCLUDE` call.
+`<!--#4DINCLUDE -->` コメントは、テスト (`<!--#4DIF-->`) やループ (`<!--#4DLOOP-->`) と使用するととても便利です。 条件に基づきあるいはランダムにバナーなどを挿入する便利な方法です。 このタグを使用してページをインクルードするとき、拡張子にかかわらず、4Dは呼び出されたページを解析してから、内容を `4DINCLUDE` 呼び出し元のページに挿入します。
 
-An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
+`<!--#4DINCLUDE -->` コメントで挿入されたページは、URLで呼ばれたページや `WEB SEND FILE` コマンドで送信されたページと同じように、Webサーバーキャッシュにロードされます。
 
-In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..) を使用します (HTMLシンタックス)。 `PROCESS 4D TAGS` コマンドで `4DINCLUDE` タグを使用する場合のデフォルトフォルダーはプロジェクトフォルダーです。
 
-> You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
+> `4DINCLUDE` タグで使用されるデフォルトフォルダーは [`<!--#4DBASE -->`](#4dbase) タグを使って変更できます。
 
-The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the *mydoc2.html* body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in *mydoc1.html*. Furthermore, 4D verifies that inclusions are not recursive.
+ページ内で使用できる `<!--#4DINCLUDE path-->` 数に制限はありません。 しかし `<!--#4DINCLUDE path-->` の呼び出しは 1レベルのみ有効です。 つまり、たとえば *mydoc1.html* ページに `<!--#4DINCLUDE mydoc2.html-->` によって挿入される *mydoc2.html* がある場合、そのボディ内でさらに `<!--#4DINCLUDE mydoc3.html-->` を使うことはできません。 さらに、4Dはインクルードが再帰的かどうかを確認します。
 
-In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
+エラーの場合、"`<!--#4DINCLUDE path-->` : ドキュメントを開けません" というテキストが挿入されます。
 
 例:
 
@@ -347,9 +347,9 @@ In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document c
 
 
 
-## 4DLOOP and 4DENDLOOP
+## 4DLOOP と 4DENDLOOP
 
-#### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
+#### シンタックス: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
 This comment allows repetition of a portion of code as long as the condition is fulfilled. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
 
