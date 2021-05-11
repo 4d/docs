@@ -1,6 +1,6 @@
 ---
 id: components
-title: Components
+title: Componentes
 ---
 
 Un componente 4D es un conjunto de métodos y formularios 4D que representan una o varias funcionalidades que pueden instalarse en diferentes bases. Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en bases 4D.
@@ -156,7 +156,7 @@ The following commands are not compatible for use within a component because the
 - The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
 - Los comandos SQL de definición de datos (`CREATE TABLE`, `DROP TABLE`, etc.) no pueden utilizarse en la base del componente. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
 
-## Error handling
+## Gestión de errores
 
 Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la base en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` de la base local, y viceversa.
 
