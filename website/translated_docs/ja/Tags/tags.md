@@ -124,15 +124,15 @@ End if
 > 4DCODE タグがあらゆる 4Dランゲージコマンドおよびプロジェクトメソッドを呼び出せるという事実は、とくにデータベースが HTTP経由で使用可能な場合等に、セキュリティ上の問題になり得ます。 しかしながら、タグはサーバー側のコードをテンプレートファイルから実行するため、タグそのものはセキュリティ上の問題になりません。 このようなコンテキストにおいては、あらゆる Webサーバーと同様に、セキュリティは主にサーバーファイルへのリモートアクセスレベルにおいて管理されています。
 
 
-## 4DEACH and 4DENDEACH
+## 4DEACH と 4DENDEACH
 
-#### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
+#### シンタックス: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
-The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the *expression*. The item is set to a *variable* whose type depends on the *expression* type.
+`<!--#4DEACH-->` コメントは、*expression* に含まれるすべての要素に対して処理を繰り返します。 各要素は *variable* に代入され、その型は *expression* の型に依存します。
 
-The `<!--#4DEACH-->` comment can iterate through three expression types:
+`<!--#4DEACH-->` コメントは 3種類の *expression* を対象に反復処理をおこなうことができます:
 
-- [collections](#--4deach-item-in-collection--): loop through each element of the collection,
+- [コレクション](#--4deach-item-in-collection--): コレクションの各要素をループします
 - [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
 - [objects](#--4deach-property-in-object--): loop through each object property.
 
