@@ -10,7 +10,7 @@ List boxes are complex active objects that allow displaying and entering data as
 
 A list box contains one or more columns whose contents are automatically synchronized. The number of columns is, in theory, unlimited (it depends on the machine resources).
 
-## Overview
+## Generalidades
 
 ### Basic user features
 
@@ -886,7 +886,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
-| Boolean    | check box                                                  | N/A                     |
+| Booleano   | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | event      | N/A                                                        | N/A                     |
 
