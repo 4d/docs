@@ -256,34 +256,34 @@ TEXT TO DOCUMENT("customers.txt"; $output)
   // $output = "43"
 ```
 
-解釈エラーの場合、"`<!--#4DEVAL expr-->: ## エラー # エラーコード`" のように表示されます。
+解釈エラーの場合、"`<!--#4DEVAL expr-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> セキュリティ上の理由から、[悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐために、アプリケーション外から導入されたデータを処理するときには [`4DTEXT`](#4dtext) タグの使用が推奨されます。
 
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
-#### Alternative syntax: `$4DHTML(expression)`
+#### シンタックス: `<!--#4DHTML expression-->`
+#### 代替シンタックス: `$4DHTML(expression)`
 
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
+`4DTEXT` タグ同様、このタグを使用すると、4Dの変数や値を返す式を HTML式として挿入できます。 一方 `4DTEXT` タグとは異なり、このタグはHTML特殊文字(例: ">")をエスケープしません。
 
-For example, here are the processing results of the 4D text variable myvar with the available tags:
+たとえば、4Dタグを使用して 4Dのテキスト変数 myvar を処理した結果は以下の様になります:
 
-| myvar Value          | Tags                         | 戻り値                 |
+| myvar の値             | タグ                           | 戻り値                 |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
 
-In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar-->: ## error # error code`.
+解釈エラーの場合、"`<!--#4DHTML myvar-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> セキュリティ上の理由から、[悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐために、アプリケーション外から導入されたデータを処理するときには [`4DTEXT`](#4dtext) タグの使用が推奨されます。
 
 
-## 4DIF, 4DELSE, 4DELSEIF and 4DENDIF
+## 4DIF, 4DELSE, 4DELSEIF と 4DENDIF
 
-#### Syntax: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
+#### シンタックス: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
 Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
 
