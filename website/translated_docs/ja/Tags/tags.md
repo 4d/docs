@@ -285,13 +285,13 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 #### シンタックス: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
-Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
+`<!--#4DELSEIF-->` (任意), `<!--#4DELSE-->` (任意) および `<!--#4DENDIF-->` コメントと共に使用することで、`<!--#4DIF expression-->` コメントはコードの一部に条件分岐を実行させることを可能にします。
 
-The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
+*expression* はブール値を返す有効な 4D式です。 式は括弧の中に記述され、4Dのシンタックスルールに準拠していなければなりません。
 
-The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
+`<!--#4DIF expression-->` ... `<!--#4DENDIF-->` は複数レベルでネストできます。 4Dと同じく、それぞれの `<!--#4DIF expression-->` には対応する `<!--#4DENDIF-->` がなければなりません。
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
 Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a<!--#4DELSE-->tag after the last<!--#4DELSEIF-->. If all the conditions are false, the statements following the<!--#4DELSE-->are executed.
 
