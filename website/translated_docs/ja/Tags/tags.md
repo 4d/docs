@@ -291,24 +291,24 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` は複数レベルでネストできます。 4Dと同じく、それぞれの `<!--#4DIF expression-->` には対応する `<!--#4DENDIF-->` がなければなりません。
 
-解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 同様に、`<!--#4DIF -->` が同じ数の `<!--#4DENDIF-->` で閉じられていない場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに "`<!--#4DIF expression-->`: 4DENDIFが必要です" というテキストが挿入されます。
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a<!--#4DELSE-->tag after the last<!--#4DELSEIF-->. If all the conditions are false, the statements following the<!--#4DELSE-->are executed.
+`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 `<!--#4DELSE-->`タグは、最後の `<!--#4DELSEIF-->` の後に記述できます。 それまでの条件がすべて `false` の場合、`<!--#4DELSE-->`ブロックの文が実行されます。
 
-The two following codes are equivalent.
+以下の2つのコードは同等です。
 
-Code using 4DELSE only:
+`4DELSE` のみを使用する場合:
 
-```html<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 is true*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/*None of the conditions are true*/<!--#4DENDIF-->
+```html<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/*いずれの条件も true でない場合*/<!--#4DENDIF-->
         <!--#4DENDIF-->
     <!--#4DENDIF-->
 ```
 
-Similar code using the `4DELSEIF` tag:
+同じ内容を `4DELSEIF` タグを使用して記述した場合:
 
-```<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSEIF Condition2-->/* Condition2 is true*/<!--#4DELSEIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/* None of the conditions are true*/<!--#4DENDIF-->```
+```<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSEIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSEIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/* いずれの条件も true でない場合*/<!--#4DENDIF-->```
 
-This example of code inserted in a static HTML page displays a different label according the `vname#""` expression result:
+スタティックな HTMLページに書かれたこの例題のコードは、`vname#""` 式の結果に応じ、異なるラベルを表示します:
 
 ```html
 <BODY>
