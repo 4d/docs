@@ -1,6 +1,6 @@
 ---
 id: control-flow
-title: Control flow overview
+title: Condiciones y bucles
 ---
 
 Regardless of the simplicity or complexity of a method, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:
