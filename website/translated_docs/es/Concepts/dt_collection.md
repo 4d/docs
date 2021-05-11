@@ -1,6 +1,6 @@
 ---
 id: collection
-title: Collection
+title: Colección
 ---
 
 Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
