@@ -1,6 +1,6 @@
 ---
 id: identifiers
-title: Identifiers
+title: Identificadores
 ---
 
 This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
@@ -14,7 +14,7 @@ This section describes the conventions and rules for naming various elements in 
 Array names follow the same rules as [variables](#variables).
 
 
-## Classes
+## Clases
 
 The name of a class can contain up to 31 characters.
 
@@ -54,7 +54,7 @@ $value:=$clientObj.data.address.city
 
 See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
 
-## Parameters
+## Parámetros
 
 Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
 
