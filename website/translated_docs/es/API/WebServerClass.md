@@ -118,9 +118,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Type       |    | Description                                    |
-| --------- | ---------- | -- | ---------------------------------------------- |
-| Result    | Collection | <- | Collection of the available Web server objects |
+| Parameter | Type      |    | Description                                    |
+| --------- | --------- | -- | ---------------------------------------------- |
+| Result    | Colección | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
@@ -784,8 +784,8 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 | Parameter | Type   |    | Description                           |
 | --------- | ------ | -- | ------------------------------------- |
-| settings  | Object | -> | Web server settings to set at startup |
-| Result    | Object | <- | Status of the web server startup      |
+| settings  | Objeto | -> | Web server settings to set at startup |
+| Result    | Objeto | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
@@ -802,13 +802,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Type       | Description                                                          |
-| -------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
-| success  |                         | Boolean    | True if the web server was correctly started, False otherwise        |
-| errors   |                         | Collection | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Number     | 4D error code                                                        |
-|          | \[].message            | Text       | Description of the 4D error                                          |
-|          | \[].componentSignature | Text       | Signature of the internal component which returned the error         |
+| Property |                         | Type      | Description                                                          |
+| -------- | ----------------------- | --------- | -------------------------------------------------------------------- |
+| success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
+| errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
+|          | \[].errCode            | Number    | 4D error code                                                        |
+|          | \[].message            | Text      | Description of the 4D error                                          |
+|          | \[].componentSignature | Text      | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Example
