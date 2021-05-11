@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Overview
+title: Generalidades
 ---
 
 4D incluye un módulo completo de copia de seguridad y restauración de la base de datos.
