@@ -121,7 +121,7 @@ The */4DWEBTEST* URL is designed to check the web server status. When this URL i
 
 | HTTP Field | Description                          | Example                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Fecha      | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
 | User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
