@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Backup Settings
+title: Parámetros de la copia de seguridad
 ---
 
 Backup settings are defined through three pages in the Settings dialog box. You can set:
