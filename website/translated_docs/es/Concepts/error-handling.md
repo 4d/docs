@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Gestión de errores
 ---
 
 Error handling is the process of anticipating and responding to errors that might occur in your application. 4D provides a comprehensive support for catching and reporting errors at runtime, as well as for investigating their conditions.
