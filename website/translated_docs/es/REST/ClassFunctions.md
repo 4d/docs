@@ -42,7 +42,7 @@ Functions are called on the corresponding object on the server datastore.
 > The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
-## Parameters
+## Parámetros
 
 
 
@@ -77,8 +77,8 @@ Entities passed in parameters are referenced on the server through their key (*i
 | Properties               | Type                                 | Description                                                                |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Boolean                              | Mandatory - True to indicate to the server that the parameter is an entity |
+| __DATACLASS              | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
@@ -100,11 +100,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | String  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Boolean | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | Type     | Description                                                                          |
+| ------------------------ | -------- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed    | Optional - Values to modify                                                          |
+| __DATASET                | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
