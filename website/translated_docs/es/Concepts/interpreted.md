@@ -1,6 +1,6 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: Modos interpretado y compilado
 ---
 
 4D applications can work in **interpreted** or **compiled** mode:
@@ -12,8 +12,8 @@ The advantages of the compilation are:
 
 - **Velocidad**: su base de datos se ejecuta de 3 a 1.000 veces más rápido.
 - **Verificación del código**: su aplicación de base de datos se analiza para comprobar la coherencia del código. Both logical and syntactical conflicts are detected.
-- **Protección:**: una vez compilada su base, puede eliminar el código interpretado. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
+- **Protección:**: una vez compilada su base, puede eliminar el código interpretado. Entonces, la base compilada es funcionalmente idéntica a la original, excepto que la estructura y los métodos no pueden ser vistos o modificados, deliberada o inadvertidamente.
+- **Aplicaciones independientes con doble clic**: las bases compiladas también pueden transformarse en aplicaciones independientes (archivos.EXE) con su propio icono.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes.
 
 ## Differences between interpreted and compiled code
@@ -32,9 +32,9 @@ Although application will work the same way in interpreted and compiled modes, t
 
 ## Using Compiler Directives with the Interpreter
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+Las bases no compiladas no requieren directivas del compilador. El intérprete digita automáticamente cada variable en función de cómo se utilice en cada declaración, y una variable puede volver a escribirse libremente en toda la base.
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
+Debido a esta flexibilidad, es posible que una base de tenga un rendimiento diferente en modo interpretado y compilado.
 
 For example, if you write:
 
@@ -42,7 +42,7 @@ For example, if you write:
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+y en otra parte de la base, se escribe:
 ```4d
 MyInt:=3.1416
 ```
@@ -51,7 +51,7 @@ In this example, `MyInt` is assigned the same value (3) in both the interpreted 
 
 The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+El orden en el que aparecen las dos declaraciones es irrelevante para el compilador, porque primero busca en toda la base las directivas del compilador. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. Por esta razón, es importante diseñar su base de datos de manera que las directivas del compilador se ejecuten antes de cualquier declaración que contenga las variables declaradas.
 
 
 ## Using pointers to avoid retyping
