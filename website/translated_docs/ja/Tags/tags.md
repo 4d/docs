@@ -133,29 +133,29 @@ End if
 `<!--#4DEACH-->` コメントは 3種類の *expression* を対象に反復処理をおこなうことができます:
 
 - [コレクション](#--4deach-item-in-collection--): コレクションの各要素をループします
-- [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
-- [objects](#--4deach-property-in-object--): loop through each object property.
+- [エンティティセレクション](#--4deach-entity-in-entityselection--): エンティティセレクションの各エンティティをループします
+- [オブジェクト](#--4deach-property-in-object--): オブジェクトの各プロパティをループします
 
-The number of iterations is evaluated at startup and will not change during the processing. ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
+ループの数は開始時に評価され、処理中に変化することはありません。 ループ中に項目を追加・削除することは、繰り返しの不足・重複を引き起こすことがあるため、一般的には推奨されません。
 
 
 ### `<!--#4DEACH item in collection-->`
 
-This syntax iterates on each *item* of the *collection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
+このシンタックスは、コレクションの各要素を対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、各コレクション要素について繰り返されます。
 
-The *item* parameter is a variable of the same type as the collection elements.
+*item* はコレクション要素と同じ型の変数です。
 
-The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
+コレクションの **要素はすべて同じ型** でなくてはなりません。そうでない場合には、*item* 変数に別の型の値が代入されたときにエラーが生成されます。
 
-The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. このとき、以下の点に注意する必要があります:
+ループの回数はコレクションの要素数に基づいています。 各繰り返しにおいて、*item* 変数には、コレクションの合致する要素が自動的に代入されます。 このとき、以下の点に注意する必要があります:
 
-- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). 変数がスカラー型である場合、変数のみが変更されます。
-- The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
+- *item* 変数がオブジェクト型あるいはコレクション型であった場合 (つまり *expression* がオブジェクトのコレクション、あるいはコレクションのコレクションであった場合)、この変数を変更すると自動的にコレクションの対応する要素も変更されます (オブジェクトとコレクションは同じ参照を共有しているからです)。 変数がスカラー型である場合、変数のみが変更されます。
+- *item* 変数には、コレクションの先頭要素の型が設定されます。 コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
+- コレクションが Null値の要素を格納していたとき、*item* 変数の型が Null値をサポートしない型 (倍長整数変数など) であった場合にはエラーが生成されます。
 
-#### Example with a collection of scalar values
+#### 例題: スカラー値のコレクション
 
-*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getNames* は文字列のコレクションを返すメソッドです。 このメソッドは [公開オプション: 4DタグとURL](WebServer/allowProject.md) が有効になっています。
 
 
 ```html
@@ -166,9 +166,9 @@ The number of loops is based on the number of elements of the collection. At eac
         </tr><!--#4DENDEACH--></table>
 ```
 
-#### Example with a collection of objects
+#### 例題: オブジェクトのコレクション
 
-*getSalesPersons* returns a collection of objects.
+*getSalesPersons* はオブジェクトのコレクションを返すメソッドです。
 
 ```html
     <table class="table"><!--#4DCODE 
@@ -183,14 +183,14 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+このシンタックスは、エンティティセレクションの各エンティティを対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、エンティティセレクションの各エンティティについて繰り返されます。
 
-The *entity* parameter is an object variable of the entity selection class.
+*entity* は Entityクラスのオブジェクト変数です。
 
 
-The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+ループの回数はエンティティセレクション内のエンティティの数に基づきます。 各繰り返しにおいて、*entity* オブジェクト変数には、エンティティセレクションの合致するエンティティが自動的に代入されます。
 
-#### Example with a html table
+#### 例題: html のテーブル
 
 ```html
     <table class="table">     
@@ -202,7 +202,7 @@ The number of loops is based on the number of entities of the entity selection. 
         </tr><!--#4DENDEACH--></table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### 例題: `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -218,15 +218,15 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ### `<!--#4DEACH property in object-->`
 
-This syntax iterates on each *property* of the *object*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
+このシンタックスは、オブジェクトの各プロパティを対象に反復処理をおこないます。 `<!--#4DEACH -->` と `<!--#4DENDEACH-->` の間に書かれたコードが、各オブジェクトプロパティについて繰り返されます。
 
-The *property* parameter is a text variable automatically filled with the name of the currently processed property.
+*property* は現在処理中のプロパティ名が自動代入されたテキスト変数です。
 
-The properties of the object are processed according to their creation order. ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
+オブジェクトのプロパティは作成順に処理されていきます。 ループ中、プロパティをオブジェクトに追加/削除することが可能ですが、その場合でも残りのループ回数は、オブジェクトの元のプロパティ数に基づいているため、変化しません。
 
-#### Example with the properties of an object
+#### 例題: オブジェクトのプロパティ
 
-*getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
+*getGamers* は、ゲームスコアを管理するために ("Mary"; 10; "Ann"; 20; "John"; 40) のようなオブジェクトを返すプロジェクトメソッドです。
 
 ```html
     <table class="table"><!--#4DCODE
@@ -242,21 +242,21 @@ The properties of the object are processed according to their creation order. �
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
-#### Alternative syntax: `$4DEVAL(expression)`
+#### シンタックス: `<!--#4DEVAL expression-->`
+#### 代替シンタックス: `$4DEVAL(expression)`
 
-The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
+`4DEVAL` タグを使用すると、4Dの変数や式を評価できます。 [`4DHTML`](#4dhtml) タグのように、`4DEVAL` タグはテキストを返す際にHTML特殊文字をエスケープしません。 しかしながら、[`4DHTML`](#4dhtml) や [`4DTEXT`](#4dtext) と異なり、`4DEVAL` は有効な 4D宣言であればどれでも実行することができます (値を返さない代入や式も含まれます)。
 
-For example, you can execute:
+たとえば、以下の様なコードを実行することができます:
 
 ```
- $input:="<!--#4DEVAL a:=42-->" //assignment
- $input:=$input+"<!--#4DEVAL a+1-->" //calculation
+ $input:="<!--#4DEVAL a:=42-->" // 代入
+ $input:=$input+"<!--#4DEVAL a+1-->" // 計算
  PROCESS 4D TAGS($input;$output)
-  //$output = "43"
+  // $output = "43"
 ```
 
-In case of an error during interpretation, the text inserted will be in the form: `<!--#4DEVAL expr-->: ## error # error code`.
+解釈エラーの場合、"`<!--#4DEVAL expr-->: ## エラー # エラーコード`" のように表示されます。
 
 > For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
