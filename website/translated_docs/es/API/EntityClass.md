@@ -137,11 +137,11 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parameter           | Type       |    | Description                                    |
-| ------------------- | ---------- |:--:| ---------------------------------------------- |
-| entityToCompare     | 4D.Entity  | -> | Entity to be compared with the original entity |
-| attributesToCompare | Collection | -> | Name of attributes to be compared              |
-| Result              | Collection | <- | Differences between the entities               |
+| Parameter           | Type      |    | Description                                    |
+| ------------------- | --------- |:--:| ---------------------------------------------- |
+| entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
+| attributesToCompare | Colección | -> | Name of attributes to be compared              |
+| Result              | Colección | <- | Differences between the entities               |
 <!-- END REF -->
 
 
@@ -157,7 +157,7 @@ The differences are returned as a collection of objects whose properties are:
 
 | Property name | Type                            | Description                                 |
 | ------------- | ------------------------------- | ------------------------------------------- |
-| attributeName | String                          | Name of the attribute                       |
+| attributeName | Cadena                          | Name of the attribute                       |
 | value         | any - Depends on attribute type | Value of the attribute in the entity        |
 | otherValue    | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 
@@ -344,7 +344,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 | Parameter | Type    |    | Description                                                                     |
 | --------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Result    | Object  | <- | Result of drop operation                                                        |
+| Result    | Objeto  | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### Description
@@ -490,7 +490,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF #EntityClass.fromObject().Params -->
 | Parameter | Type   |    | Description                          |
 | --------- | ------ |:--:| ------------------------------------ |
-| filler    | Object | -> | Object from which to fill the entity |
+| filler    | Objeto | -> | Object from which to fill the entity |
 <!-- END REF -->
 
 #### Description
@@ -811,9 +811,9 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parameter | Type    |    | Description                                                               |
-| --------- | ------- |:--:| ------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Parameter | Type     |    | Description                                                               |
+| --------- | -------- |:--:| ------------------------------------------------------------------------- |
+| Result    | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### Description
@@ -896,7 +896,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 | Parameter | Type    |    | Description                                                          |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Result    | Object  | <- | Result of lock operation                                             |
+| Result    | Objeto  | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### Description
@@ -1092,7 +1092,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF #EntityClass.reload().Params -->
 | Parameter | Type   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Object | <- | Status object |
+| Result    | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1156,7 +1156,7 @@ The object returned by `.reload( )` contains the following properties:
 | Parameter | Type    |    | Description                                       |
 | --------- | ------- |:--:| ------------------------------------------------- |
 | mode      | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
-| Result    | Object  | <- | Result of save operation                          |
+| Result    | Objeto  | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### Description
@@ -1288,12 +1288,12 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parameter    | Type       |    | Description                                                                                             |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Attribute(s) to extract (comma-separated string)                                                        |
-| filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                   |
-| options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Result       | Object     | <- | Object built from the entity                                                                            |
+| Parameter    | Type      |    | Description                                                                                             |
+| ------------ | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
+| filterString | Text      | -> | Attribute(s) to extract (comma-separated string)                                                        |
+| filterCol    | Colección | -> | Collection of attribute(s) to extract                                                                   |
+| options      | Integer   | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
+| Result       | Objeto    | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
 #### Description
@@ -1575,9 +1575,9 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| Parameter | Type    |    | Description                                                                           |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Parameter | Type     |    | Description                                                                           |
+| --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
+| Result    | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### Description
@@ -1619,9 +1619,9 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parameter | Type       |    | Description                                      |
-| --------- | ---------- |:--:| ------------------------------------------------ |
-| Result    | Collection | <- | Names of touched attributes, or empty collection |
+| Parameter | Type      |    | Description                                      |
+| --------- | --------- |:--:| ------------------------------------------------ |
+| Result    | Colección | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
 
 #### Description
@@ -1697,7 +1697,7 @@ In this case:
 <!-- REF #EntityClass.unlock().Params -->
 | Parameter | Type   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Object | <- | Status object |
+| Result    | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1721,9 +1721,9 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Property | Type    | Description                                                                                                                                                                                        |
-| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success  | Boolean | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
+| Property | Type     | Description                                                                                                                                                                                        |
+| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success  | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
 #### Example
 
