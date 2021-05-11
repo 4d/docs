@@ -118,7 +118,7 @@ Using the main datastore on the 4D database:
 <!-- REF #_command_.Open datastore.Params -->
 | Parameter      | Type         |    | Description                                                               |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
-| connectionInfo | Object       | -> | Connection properties used to reach the remote datastore                  |
+| connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | Text         | -> | Id to assign to the opened datastore on the local application (mandatory) |
 | Result         | cs.DataStore | <- | Datastore object                                                          |
 <!-- END REF -->
@@ -148,14 +148,14 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Property    | Type    | Description                                                                                                                                                                                                                                                            |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text    | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Text    | User name                                                                                                                                                                                                                                                              |
-| password    | Text    | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | Longint | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Boolean | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Text    | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| Property    | Type     | Description                                                                                                                                                                                                                                                            |
+| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | Text     | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
+| user        | Text     | User name                                                                                                                                                                                                                                                              |
+| password    | Text     | User password                                                                                                                                                                                                                                                          |
+| idleTimeout | Longint  | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
+| tls         | Booleano | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
+| type        | Text     | Must be "4D Server"                                                                                                                                                                                                                                                    |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -299,7 +299,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parameter | Type   |    | Description                                                                 |
 | --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| Result    | Object | <- | Information about the encryption of the current datastore and of each table |
+| Result    | Objeto | <- | Information about the encryption of the current datastore and of each table |
 <!-- END REF -->
 
 
@@ -313,16 +313,16 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 The returned object contains the following properties:
 
-| Property    |             |               | Type    | Description                                                                        |
-| ----------- | ----------- | ------------- | ------- | ---------------------------------------------------------------------------------- |
-| isEncrypted |             |               | Boolean | True if the data file is encrypted                                                 |
-| keyProvided |             |               | Boolean | True if the encryption key matching the encrypted data file is provided(*).        |
-| tables      |             |               | Object  | Object containing as many properties as there are encryptable or encrypted tables. |
-|             | *tableName* |               | Object  | Encryptable or Encrypted table                                                     |
-|             |             | name          | Text    | Name of the table                                                                  |
-|             |             | num           | Number  | Table number                                                                       |
-|             |             | isEncryptable | Boolean | True if the table is declared encryptable in the structure file                    |
-|             |             | isEncrypted   | Boolean | True if the records of the table are encrypted in the data file                    |
+| Property    |             |               | Type     | Description                                                                        |
+| ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
+| isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
+| keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
+| tables      |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
+|             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
+|             |             | name          | Text     | Name of the table                                                                  |
+|             |             | num           | Number   | Table number                                                                       |
+|             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
+|             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
 
 (*) The encryption key can be provided:
 
@@ -373,7 +373,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parameter | Type   |    | Description          |
 | --------- | ------ |:--:| -------------------- |
-| Result    | Object | <- | Datastore properties |
+| Result    | Objeto | <- | Datastore properties |
 <!-- END REF -->
 
 #### Description
@@ -441,9 +441,9 @@ On a remote datastore:
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parameter | Type       |    | Description                                                  |
-| --------- | ---------- |:--:| ------------------------------------------------------------ |
-| Result    | Collection | <- | Collection of objects, where each object describes a request |
+| Parameter | Type      |    | Description                                                  |
+| --------- | --------- |:--:| ------------------------------------------------------------ |
+| Result    | Colección | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
 
 
@@ -480,9 +480,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parameter | Type    |    | Description                                                                    |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------ |
-| Result    | Boolean | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
+| Parameter | Type     |    | Description                                                                    |
+| --------- | -------- |:--:| ------------------------------------------------------------------------------ |
+| Result    | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
 <!-- END REF -->
 
 
@@ -552,8 +552,8 @@ When this function is not called, new entity selections can be shareable, depend
 | Parameter     | Type   |    | Description                           |
 | ------------- | ------ | -- | ------------------------------------- |
 | curPassPhrase | Text   | -> | Current encryption passphrase         |
-| curDataKey    | Object | -> | Current data encryption key           |
-| Result        | Object | <- | Result of the encryption key matching |
+| curDataKey    | Objeto | -> | Current data encryption key           |
+| Result        | Objeto | <- | Result of the encryption key matching |
 <!-- END REF -->
 
 
@@ -577,16 +577,16 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 
 The result of the command is described in the returned object:
 
-| Property   |                          | Type       | Description                                                                     |
-| ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| success    |                          | Boolean    | True if the provided encryption key matches the encrypted data, False otherwise |
-|            |                          |            | Properties below are returned only if success is *FALSE*                        |
-| status     |                          | Number     | Error code (4 if the provided encryption key is wrong)                          |
-| statusText |                          | Text       | Error message                                                                   |
-| errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
-|            | \[ ].componentSignature | Text       | Internal component name                                                         |
-|            | \[ ].errCode            | Number     | Error number                                                                    |
-|            | \[ ].message            | Text       | Error message                                                                   |
+| Property   |                          | Type      | Description                                                                     |
+| ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------- |
+| success    |                          | Booleano  | True if the provided encryption key matches the encrypted data, False otherwise |
+|            |                          |           | Properties below are returned only if success is *FALSE*                        |
+| status     |                          | Number    | Error code (4 if the provided encryption key is wrong)                          |
+| statusText |                          | Text      | Error message                                                                   |
+| errors     |                          | Colección | Stack of errors. The first error has the highest index                          |
+|            | \[ ].componentSignature | Text      | Internal component name                                                         |
+|            | \[ ].errCode            | Number    | Error number                                                                    |
+|            | \[ ].message            | Text      | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 
@@ -626,9 +626,9 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parameter | Type    |    | Description                                                                                          |
-| --------- | ------- | -- | ---------------------------------------------------------------------------------------------------- |
-| status    | Boolean | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
+| Parameter | Type     |    | Description                                                                                          |
+| --------- | -------- | -- | ---------------------------------------------------------------------------------------------------- |
+| status    | Booleano | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
 <!-- END REF -->
 
 
