@@ -163,21 +163,21 @@ A 4D expression to be associated with a column. You can enter:
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
-    *   String
+    *   Cadena
     *   Numeric
-    *   Date
-    *   Time
-    *   Picture
+    *   Fecha
+    *   Hora
+    *   Imagen
     *   Boolean  
       You can use fields from the Master Table or from other tables.
 
 -   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
   The following expression types are supported:
-    *   String
+    *   Cadena
     *   Numeric
-    *   Date
-    *   Picture
-    *   Boolean
+    *   Fecha
+    *   Imagen
+    *   Booleano
 
     For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   

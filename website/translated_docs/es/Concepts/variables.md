@@ -64,17 +64,17 @@ The following table lists all supported `varType` values:
 | varType        | Contents                              |
 | -------------- | ------------------------------------- |
 | Text           | Text value                            |
-| Date           | Date value                            |
-| Time           | Time value                            |
-| Boolean        | Boolean value                         |
+| Fecha          | Date value                            |
+| Hora           | Time value                            |
+| Booleano       | Boolean value                         |
 | Integer        | Long integer value                    |
 | Real           | Real value                            |
-| Pointer        | Pointer value                         |
-| Picture        | Picture value                         |
+| Puntero        | Pointer value                         |
+| Imagen         | Picture value                         |
 | Blob           | BLOB value                            |
-| Collection     | Collection value                      |
+| Colección      | Collection value                      |
 | Variant        | Variant value                         |
-| Object         | Object with default class (4D.Object) |
+| Objeto         | Object with default class (4D.Object) |
 | 4D.*className* | Object of the 4D class name           |
 | cs.*className* | Object of the user class name         |
 

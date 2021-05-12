@@ -109,107 +109,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      属性
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-      タイプ
-    </th>
-    
-    <th>
-      説明
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      macros
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      定義されたマクロのリスト
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-      \<macroName>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      マクロ定義
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      class
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      マクロクラス名
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      \<customProperty>
-    </td>
-    
-    <td>
-      any
-    </td>
-    
-    <td>
-      (任意) コンストラクターによって取得するカスタム値
-    </td>
-  </tr>
-</table>
+| 属性     |                     |                          | タイプ    | 説明                         |
+| ------ | ------------------- | ------------------------ | ------ | -------------------------- |
+| macros |                     |                          | object | 定義されたマクロのリスト               |
+|        | `<macroName>` |                          | object | マクロ定義                      |
+|        |                     | class                    | string | マクロクラス名                    |
+|        |                     | `<customProperty>` | any    | (任意) コンストラクターによって取得するカスタム値 |
 
 カスタムプロパティはマクロの [constructor](#class-constructor) 関数に受け渡されます。
 

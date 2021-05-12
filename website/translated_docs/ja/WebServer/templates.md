@@ -65,7 +65,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 
 For optimization reasons, the parsing of the HTML source code is not carried out by the 4D Web server when HTML pages are called using simple URLs that are suffixed with “.HTML” or “.HTM”.
 
-Parsing of the contents of template pages sent by 4D web server takes place when `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB) or `WEB SEND TEXT` commands are called, as well as when sending pages called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to "force" the parsing of HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, `http://www.server.com/dir/page.shtm`). An example of the use of this type of page is given in the description of the `WEB GET STATISTICS` command. XML pages (.xml, .xsl) are also supported and always parsed by 4D.
+Parsing of the contents of template pages sent by 4D web server takes place when `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB) or `WEB SEND TEXT` commands are called, as well as when sending pages called using URLs. URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 In order to "force" the parsing of HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, `http://www.server.com/dir/page.shtm`). An example of the use of this type of page is given in the description of the `WEB GET STATISTICS` command. XML pages (.xml, .xsl) are also supported and always parsed by 4D.
 
 You can also carry out parsing outside of the Web context when you use the `PROCESS 4D TAGS` command.
 
@@ -83,23 +83,23 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 (*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
 
 
-### Recursive processing
+### 再起的処理
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
+4Dタグは繰り返し解釈されます。4D は常に変換の結果を解釈しようとし、新しい変換が起きた際にはそれに伴う新しい解釈が実行され、取得結果の変換が必要がなくなるまで繰り返されます。 たとえば、以下のようなステートメントがあった場合:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
 ```
 
-If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.
+もし `[Mail]Letter_type` テキストフィールド自体にもタグ (たとえば`<!--#4DSCRIPT/m_Gender-->`) が含まれていた場合、このタグは 4DHTMLタグの解釈の後に、それに伴って評価されます。
 
-This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted. For more information about this point, refer to the following section.
+この強力な原則は、テキスト変換に関連するほとんどの需要を満たすことができます。 Note, however, that in some cases this can also allow malicious code to be inserted. For more information about this point, refer to the following section.
 
 
-## Prevention of malicious code insertion
+## 悪意あるコードの侵入を防止
 
-4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
+4D変換タグは様々なタイプのデータを引数として受け入れます: テキスト、変数、メソッド、コマンド名、…。 これらのデータが自分で書いたコードから提供される場合、その受け渡しを自分でコントロールできるので、悪意あるコードの侵入のリスクは無いと言っていいでしょう。 しかしながら、 データベースのコード扱うデータは多くの場合、外部ソース (ユーザー入力、読み込み、等) から導入されたものです。
 
-In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
+この場合、`4DEVAL` や `4DSCRIPT` などの変換タグは **使用しない** のが賢明です。なぜならこれらのタグはこういったデータが格納された変数を直接評価するからです。
 
-In addition, according to the [principle of recursion](#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "&lt;!--#4DEVAL QUIT 4D--&gt;" which will not be transformed.
+In addition, according to the [principle of recursion](#recursive-processing), malicious code may itself include transformation tags. この場合、`4DTEXT` タグを使用しなくてはなりません。 例として、"Name" という名前の Webフォームフィールドがあり、ユーザーがそこに名前を入力する場合を考えます。 この名前は `<!--#4DHTML vName-->` タグを使用してページ内に表示されます。 もし "`<!--#4DEVAL QUIT 4D-->`" というテキストが名前の代わりに入力されたとしたら、このタグを解釈するとアプリケーションは終了してしまいます。 このリスクを避けるには、`4DTEXT` タグを使用することで対応できます。 このタグは特殊 HTML文字をエスケープするため、挿入された悪意ある再起的コードが解釈されることはありません。 To refer to the previous example, the "Name" field will contain, in this case, "&lt;!--#4DEVAL QUIT 4D--&gt;" which will not be transformed.

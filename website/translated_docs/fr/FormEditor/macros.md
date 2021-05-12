@@ -109,107 +109,12 @@ La structure du fichier `formMacros.json` est la suivante :
 
 Voici la description du contenu du fichier JSON :
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      Attribut
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-      Type
-    </th>
-    
-    <th>
-      Description
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      macros
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      liste des macros définis
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-      \<macroName>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      définition de la macro
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      class
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      nom de classe de la macro
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      \<customProperty>
-    </td>
-    
-    <td>
-      any
-    </td>
-    
-    <td>
-      (optionnel) valeur personnalisée à récupérer dans le constructeur
-    </td>
-  </tr>
-</table>
+| Attribut |                     |                          | Type   | Description                                                       |
+| -------- | ------------------- | ------------------------ | ------ | ----------------------------------------------------------------- |
+| macros   |                     |                          | object | liste des macros définis                                          |
+|          | `<macroName>` |                          | object | définition de la macro                                            |
+|          |                     | class                    | string | nom de classe de la macro                                         |
+|          |                     | `<customProperty>` | any    | (optionnel) valeur personnalisée à récupérer dans le constructeur |
 
 Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à la fonction [constructeur](#class-constructor) de la macro.
 

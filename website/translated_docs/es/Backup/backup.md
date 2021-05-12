@@ -1,6 +1,6 @@
 ---
 id: backup
-title: Backup
+title: Copia de seguridad
 ---
 
 A backup can be started in three ways:
@@ -11,7 +11,7 @@ A backup can be started in three ways:
 
 > 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
 
-## Manual backup
+## Copia de seguridad manual
 
 1. Select the **Backup...** command in the 4D **File** menu.   
    The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
@@ -23,19 +23,19 @@ The **Database properties...** button causes the Backup/Configuration page of th
  2. Click **Backup** to start the backup using current parameters.
 
 
-## Scheduled automatic backup
+## Backup automático periódico
 
 Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 
-## BACKUP command
+## Comando BACKUP
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
 
-## Managing the backup processing
+## Cómo funciona la copia de seguridad
 
 Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
 
@@ -56,7 +56,7 @@ Conversely, if only the data file is being backed up, access to the structure is
 - With the 4D single-user version, the application is locked for both read and write; all processes are frozen. No actions can be performed.
 - With 4D Server, the application is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the application is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the data. > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
-### Handling backup issues
+### Gestión de los problemas de las copias de seguridad
 
 It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
 
@@ -66,7 +66,7 @@ In all cases, keep in mind that the status of the last backup (successful or fai
 - **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of application files and accessible attached files) and returns an error.
 - **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
 
-## Backup Journal
+## Historial de copias de seguridad (Backup Journal)
 
 To make following up and verifying backups easier, the backup module writes a summary of each operation performed in a special file, which is similar to an activity journal. Like an on-board manual, all database operations (backups, restores, log file integrations) are logged in this file whether they were scheduled or performed manually. The date and time that these operations occurred are also noted in the journal.
 

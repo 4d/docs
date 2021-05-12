@@ -1,6 +1,6 @@
 ---
 id: restore
-title: Restore
+title: Restaurar
 ---
 
 4D allows you to restore entire sets of application data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:

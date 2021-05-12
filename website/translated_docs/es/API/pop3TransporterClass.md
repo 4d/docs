@@ -107,7 +107,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Parameter | Type               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Object             | -> | Mail server information                             |
+| server    | Objeto             | -> | Mail server information                             |
 | Result    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -218,7 +218,7 @@ Executing this method does not actually remove any email. The flagged email will
 <!-- REF #pop3TransporterClass.getBoxInfo().Params -->
 | Parameter | Type   |    | Description    |
 | --------- | ------ |:--:| -------------- |
-| Result    | Object | <- | boxInfo object |
+| Result    | Objeto | <- | boxInfo object |
 <!-- END REF -->
 
 
@@ -271,7 +271,7 @@ The `boxInfo` object returned contains the following properties:
 | Parameter | Type    |    | Description                                      |
 | --------- | ------- |:--:| ------------------------------------------------ |
 | msgNumber | Integer | -> | Number of the message in the list                |
-| Result    | Object  | <- | [Email object](emailObjectClass.md#email-object) |
+| Result    | Objeto  | <- | [Email object](emailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -331,7 +331,7 @@ You want to know the sender of the first mail of the mailbox:
 | Parameter | Type    |    | Description                       |
 | --------- | ------- |:--:| --------------------------------- |
 | msgNumber | Integer | -> | Number of the message in the list |
-| Result    | Object  | <- | mailInfo object                   |
+| Result    | Objeto  | <- | mailInfo object                   |
 <!-- END REF -->
 
 
@@ -391,9 +391,9 @@ The method returns **Null** if:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Params -->
-| Parameter | Type       |    | Description                      |
-| --------- | ---------- |:--:| -------------------------------- |
-| Result    | Collection | <- | Collection of `mailInfo` objects |
+| Parameter | Type      |    | Description                      |
+| --------- | --------- |:--:| -------------------------------- |
+| Result    | Colección | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
 
 

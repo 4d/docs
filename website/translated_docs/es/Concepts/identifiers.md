@@ -1,6 +1,6 @@
 ---
 id: identifiers
-title: Identifiers
+title: Identificadores
 ---
 
 This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
@@ -14,7 +14,7 @@ This section describes the conventions and rules for naming various elements in 
 Array names follow the same rules as [variables](#variables).
 
 
-## Classes
+## Clases
 
 The name of a class can contain up to 31 characters.
 
@@ -54,7 +54,7 @@ $value:=$clientObj.data.address.city
 
 See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
 
-## Parameters
+## Parámetros
 
 Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
 
@@ -67,7 +67,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 ```
 
 
-## Project methods
+## Métodos proyecto
 
 The name of a project method name contain up to 31 characters.
 
@@ -84,18 +84,18 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
  > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
 
 Examples:
 
 ```4d
-    //This command expects a method (function) or formula
+    //Este comando espera un método (función) o una fórmula
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    //Este comando espera un método (procedimiento) o una instrucción
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    //Pero este comando espera un nombre de método
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
@@ -110,7 +110,7 @@ You designate a table by placing its name between brackets: \[...]. You designat
 A table name and field name can contain up to 31 characters.
 
 - A table or field name must begin with a letter, an underscore, or a dollar ("$")
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
+- A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
 - Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
 

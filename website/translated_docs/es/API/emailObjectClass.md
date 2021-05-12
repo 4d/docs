@@ -53,7 +53,7 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 - single display name+email: "Somebody <somebody@domain.com>"
 - several emails: "Somebody <somebody@domain.com>,me@home.org"
 
-#### Object
+#### Objeto
 
 An object with two properties:
 
@@ -62,7 +62,7 @@ An object with two properties:
 | name     | Text | Display name (can be null) |
 | email    | Text | Email address              |
 
-#### Collection
+#### Colección
 
 A collection of address objects.
 

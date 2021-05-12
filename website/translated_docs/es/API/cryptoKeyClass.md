@@ -60,7 +60,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | Parameter | Type         |    | Description                                                            |
 | --------- | ------------ | -- | ---------------------------------------------------------------------- |
-| settings  | Object       | -> | Settings to generate or load a key pair                                |
+| settings  | Objeto       | -> | Settings to generate or load a key pair                                |
 | result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
@@ -120,8 +120,8 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Text   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options   | Object | -> | Decoding options                                                              |
-| Result    | Object | <- | Status                                                                        |
+| options   | Objeto | -> | Decoding options                                                              |
+| Result    | Objeto | <- | Status                                                                        |
 <!-- END REF -->
 
 
@@ -169,7 +169,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Text   | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
-| options   | Object | -> | Encoding options                                                              |
+| options   | Objeto | -> | Encoding options                                                              |
 | Result    | Text   | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
 <!-- END REF -->
 
@@ -282,7 +282,7 @@ The returned value is the public key.
 | Parameter | Type   |    | Description                                                                     |
 | --------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message   | Text   | -> | Message string to sign                                                          |
-| options   | Object | -> | Signing options                                                                 |
+| options   | Objeto | -> | Signing options                                                                 |
 | Result    | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
@@ -355,8 +355,8 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
 | message   | Text   | -> | Message string that was used to produce the signature                                             |
 | signature | Text   | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options   | Object | -> | Signing options                                                                                   |
-| Result    | Object | <- | Status of the verification                                                                        |
+| options   | Objeto | -> | Signing options                                                                                   |
+| Result    | Objeto | <- | Status of the verification                                                                        |
 <!-- END REF -->
 
 The `.verify()` function <!-- REF #cryptokey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `cryptoKey` object keys and provided *options*.

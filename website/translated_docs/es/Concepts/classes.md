@@ -1,10 +1,10 @@
 ---
 id: classes
-title: Classes
+title: Clases
 ---
 
 
-## Overview
+## Generalidades
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
 
@@ -53,7 +53,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 - Project folder
     + Project
         * Sources
-            - Classes
+            - Clases
                 + Polygon.4dm
 
 ### Deleting a class

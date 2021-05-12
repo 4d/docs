@@ -163,9 +163,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #fileClass.create().Params -->
-| Parameter | Type    |    | Description                                                |
-| --------- | ------- | -- | ---------------------------------------------------------- |
-| Result    | Boolean | <- | True if the file was created successfully, false otherwise |
+| Parameter | Type     |    | Description                                                |
+| --------- | -------- | -- | ---------------------------------------------------------- |
+| Result    | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Description

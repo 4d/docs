@@ -310,11 +310,11 @@ The following code will create a dialog accepting a formula in text format:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #formulaClass.apply().Params -->
-| Parameter     | Type       |    | Description                                                             |
-| ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
-| thisObj       | Object     | -> | Object to be returned by the This command in the formula                |
-| formulaParams | Collection | -> | Collection of values to be passed as $1...$n when `formula` is executed |
-| Result        | any        | <- | Value from formula execution                                            |
+| Parameter     | Type      |    | Description                                                             |
+| ------------- | --------- |:--:| ----------------------------------------------------------------------- |
+| thisObj       | Objeto    | -> | Object to be returned by the This command in the formula                |
+| formulaParams | Colección | -> | Collection of values to be passed as $1...$n when `formula` is executed |
+| Result        | any       | <- | Value from formula execution                                            |
 <!-- END REF -->
 
 
@@ -373,7 +373,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- REF #formulaClass.call().Params -->
 | Parameter | Type   |    | Description                                               |
 | --------- | ------ | -- | --------------------------------------------------------- |
-| thisObj   | Object | -> | Object to be returned by the This command in the formula  |
+| thisObj   | Objeto | -> | Object to be returned by the This command in the formula  |
 | params    | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
 | Result    | any    | <- | Value from formula execution                              |
 <!-- END REF -->
