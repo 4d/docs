@@ -68,32 +68,32 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Concepts/cf_branching.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Branching structures</h1></header><article><div><span><p>A branching structure allows methods to test a condition and take alternative paths, depending on the result.</p>
 <h2><a class="anchor" aria-hidden="true" id="ifelseend-if"></a><a href="#ifelseend-if" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>If...Else...End if</h2>
-<p>The formal syntax of the <code>If...Else...End if</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>If...Else...End if</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(Boolean_Expression)
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>Note that the <code>Else</code> part is optional; you can write:</p>
+<p>Tenga en cuenta que la parte <code>Else</code> es opcional; puede escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(Boolean_Expression)
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>The <code>If...Else...End if</code> structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. When the Boolean expression is TRUE, the statements immediately following the test are executed. If the Boolean expression is FALSE, the statements following the Else statement are executed. The <code>Else</code> statement is optional; if you omit Else, execution continues with the first statement (if any) following the <code>End if</code>.</p>
-<p>Note that the Boolean expression is always fully evaluated. Consider in particular the following test:</p>
+<p>La estructura <code>If...Else...End if</code> permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. Si la expresión booleana es FALSE, se ejecutan las instrucciones que siguen a la línea Else. El <code>Else</code> es opcional; si se omite Else, la ejecución continúa con la primera instrucción (si la hay) que sigue al <code>End if</code>.</p>
+<p>Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Considere en particular la siguiente prueba:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(MethodA &amp; MethodB)
     ...<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>he expression is TRUE only if both methods are TRUE. However, even if <em>MethodA</em> returns FALSE, 4D will still evaluate <em>MethodB</em>, which is a useless waste of time. In this case, it is more interesting to use a structure like:</p>
+<p>la expresión es TRUE sólo si ambos métodos son TRUE. Sin embargo, incluso si <em>MethodA</em> devuelve FALSE, 4D seguirá evaluando <em>MethodB</em>, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(MethodA)<span class="hljs-keyword">
     If</span>(MethodB)
        ...<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>The result is similar and <em>MethodB</em> is evaluated only if necessary.</p>
+<p>El resultado es similar y <em>MethodB</em> se evalúa sólo si es necesario.</p>
 <h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Ask the user to enter a name</span>
  <span class="hljs-variable">$Find</span>:=<span class="hljs-function">Request</span>(Type a name)<span class="hljs-keyword">
@@ -103,7 +103,7 @@
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"You did not enter a name."</span>)<span class="hljs-keyword">
  End if</span> 
 </code></pre>
-<p><strong>Tip:</strong> Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:</p>
+<p><strong>Consejo:</strong> la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(Boolean_Expression)<span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
@@ -116,7 +116,7 @@
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="case-ofelseend-case"></a><a href="#case-ofelseend-case" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Case of...Else...End case</h2>
-<p>The formal syntax of the <code>Case of...Else...End case</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>Case of...Else...End case</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(Boolean_Expression)
 <span class="hljs-function">       statement</span>(s)
@@ -132,7 +132,7 @@
 <span class="hljs-function">       statement</span>(s)<span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>Note that the <code>Else</code> part is optional; you can write:</p>
+<p>Tenga en cuenta que la parte <code>Else</code> es opcional; puede escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(Boolean_Expression)
 <span class="hljs-function">       statement</span>(s)
@@ -146,14 +146,14 @@
 <span class="hljs-function">       statement</span>(s)<span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>As with the <code>If...Else...End if</code> structure, the <code>Case of...Else...End case</code> structure also lets your method choose between alternative actions. Unlike the <code>If...Else...End</code> if structure, the <code>Case of...Else...End case</code> structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.</p>
-<p>Each Boolean expression is prefaced by a colon (<code>:</code>). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:</p>
+<p>Al igual que la estructura <code>If...Else...End if</code>, la estructura <code>Case of...Else...End case</code> también permite a su método elegir entre acciones alternativas. A diferencia de la estructura <code>If...Else...End</code>, la estructura <code>Case of...Else...End case</code> puede probar un número razonablemente ilimitado de expresiones booleanas y realizar una acción dependiendo de cuál sea TRUE.</p>
+<p>Cada expresión booleana va precedida de dos puntos (<code>:</code>). Esta combinación de los dos puntos y la expresión booleana se llama un caso. Por ejemplo, la siguiente línea es un caso:</p>
 <pre><code class="hljs css language-4d">:(bValidate=<span class="hljs-number">1</span>)
 </code></pre>
-<p>Only the statements following the first TRUE case (and up to the next case) will be executed. If none of the cases are TRUE, none of the statements will be executed (if no <code>Else</code> part is included).</p>
-<p>You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the <code>Else</code> will be executed.</p>
+<p>Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el siguiente). Si ninguno de los casos es TRUE, no se ejecutará ninguna de las instrucciones (si no se incluye la parte <code>Else</code>).</p>
+<p>Puede incluir una instrucción Else después del último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al <code>Else</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
-<p>This example tests a numeric variable and displays an alert box with a word in it:</p>
+<p>Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con una palabra:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(vResult=<span class="hljs-number">1</span>) <span class="hljs-comment">//Test if the number is 1</span>
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"One."</span>) <span class="hljs-comment">//If it is 1, display an alert</span>
@@ -165,7 +165,7 @@
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"It was not one, two, or three."</span>)<span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>For comparison, here is the <code>If...Else...End if</code> version of the same method:</p>
+<p>Para comparar, aquí está la versión <code>If...Else...End if</code> del mismo método:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(vResult=<span class="hljs-number">1</span>) <span class="hljs-comment">//Test if the number is 1</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"One."</span>) <span class="hljs-comment">//If it is 1, display an alert</span><span class="hljs-keyword">
  Else</span><span class="hljs-keyword">
@@ -180,8 +180,8 @@
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>Remember that with a <code>Case of...Else...End case</code> structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.</p>
-<p>Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&amp;condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:</p>
+<p>Recuerde que con una estructura <code>Case of...Else...End case</code>, sólo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.</p>
+<p>En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse de que las declaraciones de condición que están más abajo en el esquema jerárquico aparezcan primero en la secuencia de pruebas. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) &amp; (vCondition#2) y se estructura el método de la siguiente manera: Por ejemplo, el siguiente código nunca verá detectada su última condición:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(vResult=<span class="hljs-number">1</span>)
        ... <span class="hljs-comment">//statement(s)</span>
@@ -189,7 +189,7 @@
        ... <span class="hljs-comment">//statement(s)</span><span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>In the code above, the presence of the second condition is not detected since the test &quot;vResult=1&quot; branches off the code before any further testing. For the code to operate properly, you can write it as follows:</p>
+<p>En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba &quot;vResult=1&quot; ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :((vResult=<span class="hljs-number">1</span>) &amp; (vCondition#<span class="hljs-number">2</span>)) <span class="hljs-comment">//this case will be detected first</span>
        ... <span class="hljs-comment">//statement(s)</span>
@@ -197,8 +197,8 @@
        ... <span class="hljs-comment">//statement(s)</span><span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>Also, if you want to implement hierarchical testing, you may consider using hierarchical code.</p>
-<p><strong>Tip:</strong> Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:</p>
+<p>Además, si quiere implementar pruebas jerárquicas, puede considerar el uso de código jerárquico.</p>
+<p><strong>Consejo:</strong> la ramificación puede realizarse sin que las instrucciones se ejecuten en un caso u otro. Al desarrollar un algoritmo o una aplicación especializada, nada le impide escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(Boolean_Expression)
     :(Boolean_Expression)

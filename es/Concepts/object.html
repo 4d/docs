@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Concepts/dt_object.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Object</h1></header><article><div><span><p>Variables, fields or expressions of the Object type can contain various types of data. The structure of &quot;native&quot; 4D objects is based on the classic principle of &quot;property/value&quot; pairs. The syntax of these objects is based on JSON notation:</p>
 <ul>
-<li><p>A property name is always a text, for example &quot;Name&quot;. It must follow <a href="/docs/es/Concepts/identifiers.html#object-properties">specific rules</a>.</p></li>
+<li><p>El nombre de una propiedad es siempre un texto, por ejemplo &quot;Name&quot;. It must follow <a href="/docs/es/Concepts/identifiers.html#object-properties">specific rules</a>.</p></li>
 <li><p>A property value can be of the following type:</p>
 <ul>
 <li>number (Real, Integer, etc.)</li>
@@ -84,30 +84,30 @@
 </ul>
 <p>(1)ORDA objects such as <a href="/docs/es/ORDA/dsmapping.html#entity">entities</a> or <a href="/docs/es/ORDA/dsmapping.html#entity-selection">entity selections</a> cannot be stored in <strong>object fields</strong>; however, they are fully supported in <strong>object variables</strong> in memory.</p>
 <p>(2)When exposed as text in the debugger or exported to JSON, picture object properties print &quot;[object Picture]&quot;.</p>
-<p><strong>Warning:</strong> Keep in mind that attribute names differentiate between upper and lower case.</p>
+<p><strong>Atención:</strong> recuerde que los nombres de atributos diferencian entre mayúsculas y minúsculas.</p>
 <p>You manage Object type variables, fields or expressions using the <a href="/docs/es/Concepts/object.html#syntax-basics">object notation</a> or the classic commands available in the <strong>Objects (Language)</strong> theme. Note that specific commands of the <strong>Queries</strong> theme such as <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code>, or <code>ORDER BY ATTRIBUTE</code> can be used to carry out processing on object fields.</p>
-<p>Each property value accessed through the object notation is considered an expression. You can use such values wherever 4D expressions are expected:</p>
+<p>Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. You can use such values wherever 4D expressions are expected:</p>
 <ul>
 <li>in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by <code>PROCESS 4D TAGS</code> or the Web Server, export files, 4D Write Pro documents...),</li>
 <li>in the Expression areas of the Debugger and the Runtime explorer,</li>
 <li>in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="initialization"></a><a href="#initialization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialization</h2>
-<p>Objects must have been initialized, for example using the <code>New object</code> command, otherwise trying to read or modify their properties will generate a syntax error.</p>
+<p>Los objetos deben haber sido inicializados, por ejemplo utilizando el comando <code>New object</code>, de lo contrario al intentar leer o modificar sus propiedades se generará un error de sintaxis.</p>
 <p>Example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$obVar</span>) <span class="hljs-comment">//creation of an object type 4D variable</span>
  <span class="hljs-variable">$obVar</span>:=New object <span class="hljs-comment">//initialization of the object and assignment to the 4D variable</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="regular-or-shared-object"></a><a href="#regular-or-shared-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Regular or shared object</h3>
-<p>You can create two types of objects:</p>
+<p>Puede crear dos tipos de objetos:</p>
 <ul>
 <li>regular (non-shared) objects, using the <code>New object</code> command. These objects can be edited without any specific access control but cannot be shared between processes.</li>
 <li>shared objects, using the <code>New shared object</code> command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by <code>Use...End use</code> structures. For more information, refer to the <a href="/docs/es/Concepts/shared.html">Shared objects and collections</a> section.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="syntax-basics"></a><a href="#syntax-basics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax basics</h2>
-<p>Object notation can be used to access object property values through a chain of tokens.</p>
+<p>La notación de objetos puede utilizarse para acceder a los valores de las propiedades de objetos a través de una cadena de tokens.</p>
 <h3><a class="anchor" aria-hidden="true" id="object-properties"></a><a href="#object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object properties</h3>
-<p>With object notation, object properties can be accessed in two ways:</p>
+<p>Con la notación de objetos, se puede acceder a las propiedades de los objetos de dos maneras:</p>
 <ul>
 <li>using a &quot;dot&quot; symbol: &gt; object.propertyName</li>
 </ul>
@@ -127,7 +127,7 @@
 <p>Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
 </code></pre>
-<p>Object notation is available on any language element that can contains or returns an object, i.e:</p>
+<p>La notación de objetos está disponible en cualquier elemento del lenguaje que pueda contener o devolver un objeto, es decir:</p>
 <ul>
 <li><strong>Objects</strong> themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:</li>
 </ul>
@@ -158,8 +158,8 @@
 <pre><code class="hljs css language-4d">     myColl.length <span class="hljs-comment">//size of the collection</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="pointers"></a><a href="#pointers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers</h3>
-<p><strong>Preliminary Note:</strong> Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.</p>
-<p>Using object notation with pointers is very similar to using object notation directly with objects, except that the &quot;dot&quot; symbol must be omitted.</p>
+<p><strong>Nota preliminar:</strong> dado que los objetos se pasan siempre por referencia, no suele ser necesario utilizar punteros. Al pasar el objeto, internamente 4D utiliza automáticamente un mecanismo similar a un puntero, minimizando la necesidad de memoria y permitiendo modificar el parámetro y devolver las modificaciones. Como resultado, no es necesario utilizar punteros. Sin embargo, en caso de querer utilizar punteros, se puede acceder a los valores de las propiedades mediante punteros.</p>
+<p>El uso de la notación de objetos con punteros es muy similar al uso de la notación de objetos directamente con objetos, excepto que el símbolo &quot;punto&quot; debe omitirse.</p>
 <ul>
 <li>Direct access:</li>
 </ul>
@@ -181,13 +181,13 @@
  x:=vPtr-&gt;a <span class="hljs-comment">//x=10</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="null-value"></a><a href="#null-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Null value</h3>
-<p>When using the object notation, the <strong>null</strong> value is supported though the <strong>Null</strong> command. This command can be used to assign or compare the null value to object properties or collection elements, for example:</p>
+<p>Cuando se utiliza la notación de objetos, se soporta el valor <strong>null</strong> con el comando <strong>Null</strong>. Este comando puede utilizarse para asignar o comparar el valor nulo a propiedades de objetos o a elementos de colecciones, por ejemplo:</p>
 <pre><code class="hljs css language-4d"> myObject.address.zip:=<span class="hljs-literal">Null</span><span class="hljs-keyword">
  If</span>(myColl[<span class="hljs-number">2</span>]=<span class="hljs-literal">Null</span>)
 </code></pre>
-<p>For more information, please refer to the <code>Null</code> command description.</p>
+<p>Para más información, consulte la descripción del comando <code>Null</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="undefined-value"></a><a href="#undefined-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Undefined value</h3>
-<p>Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:</p>
+<p>La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores. Esto no ocurre en los siguientes casos:</p>
 <ul>
 <li>Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling <code>CLEAR VARIABLE</code> with them:</li>
 </ul>
@@ -241,14 +241,14 @@
 <ul>
 <li>Assigning an undefined value to a non existing object property does nothing.</li>
 </ul>
-<p>When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: <code>String</code>, <code>Num</code>, <code>Date</code>, <code>Time</code>, <code>Bool</code>. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:</p>
+<p>Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: <code>String</code>, <code>Num</code>, <code>Date</code>, <code>Time</code>, <code>Bool</code>. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. For example:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myString</span>:=<span class="hljs-function">Lowercase</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$o</span>.a.b)) <span class="hljs-comment">//make sure you get a string value even if undefined</span>
   <span class="hljs-comment">//to avoid errors in the code</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
-<p>Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.</p>
+<p>La utilización de la notación de objetos simplifica el código 4D en el manejo de los mismos. Sin embargo, tenga en cuenta que la notación basada en comandos sigue siendo totalmente soportada.</p>
 <ul>
-<li>Writing and reading objects (this example compares object notation and command notation):</li>
+<li>Escritura y lectura de propiedades de objetos (este ejemplo compara la notación de objetos y la notación de comandos):</li>
 </ul>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Using the object notation</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$myObj</span>) <span class="hljs-comment">//declares a 4D variable object</span>
@@ -267,7 +267,7 @@
  <span class="hljs-variable">$age</span>:=<span class="hljs-variable">$myObj3</span>.age <span class="hljs-comment">//10</span>
 </code></pre>
 <ul>
-<li>Create a property and assign values, including objects:</li>
+<li>Creación de propiedades y asignación de valores, incluyendo objetos:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$Emp</span>)
  <span class="hljs-variable">$Emp</span>:=New object
@@ -277,13 +277,13 @@
   <span class="hljs-comment">//creates the phone property and sets its value to an object</span>
 </code></pre>
 <ul>
-<li>Get a value in a sub-object is very simple using the object notation:</li>
+<li>Obtener un valor en un subobjeto es muy sencillo utilizando la notación de objetos:</li>
 </ul>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vCity</span>:=<span class="hljs-variable">$Emp</span>.city <span class="hljs-comment">//"Paris"</span>
  <span class="hljs-variable">$vPhone</span>:=<span class="hljs-variable">$Emp</span>.phone.home <span class="hljs-comment">//"0011223344"</span>
 </code></pre>
 <ul>
-<li>You can access properties as strings using the [ ] operator</li>
+<li>Puede acceder a las propiedades como cadenas utilizando el operador [ ]</li>
 </ul>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$Emp</span>[<span class="hljs-string">"city"</span>]:=<span class="hljs-string">"Berlin"</span> <span class="hljs-comment">//modifies the city property</span>
   <span class="hljs-comment">//this can be useful for creating properties through variables</span>

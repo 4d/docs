@@ -68,54 +68,54 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Concepts/cf_looping.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Looping structures</h1></header><article><div><span><p>Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.</p>
 <h2><a class="anchor" aria-hidden="true" id="whileend-while"></a><a href="#whileend-while" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>While...End while</h2>
-<p>The formal syntax of the <code>While...End while</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>While...End while</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> While</span>(Boolean_Expression)
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End while</span>
 </code></pre>
-<p>A <code>While...End while</code> loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.</p>
-<p>It is common to initialize the value tested in the Boolean expression immediately before entering the <code>While...End while</code> loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and <code>While...End while</code> executes the loop.</p>
-<p>The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because <em>NeverStop</em> is always TRUE:</p>
+<p>Un bucle <code>While...End while</code> ejecuta las instrucciones dentro del bucle mientras la expresión booleana sea TRUE. Comprueba la expresión booleana al inicio del bucle y no entra en el bucle si la expresión es FALSE.</p>
+<p>Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle <code>While...End while</code>. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y <code>While...End while</code> ejecute el bucle.</p>
+<p>El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. El siguiente bucle continúa para siempre porque <em>NeverStop</em> es siempre TRUE:</p>
 <pre><code class="hljs css language-4d"> NeverStop:=<span class="hljs-literal">True</span><span class="hljs-keyword">
  While</span>(NeverStop)<span class="hljs-keyword">
  End while</span>
 </code></pre>
-<p>If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the <a href="/docs/es/Concepts/error-handling.html">Error handling</a> page.</p>
+<p>Si se encuentra en una situación de este tipo, en la que un método se ejecuta de forma incontrolada, puede utilizar las funciones de rastreo para detener el bucle y localizar el problema. Para más información sobre el seguimiento de un método, consulte la página <a href="/docs/es/Concepts/error-handling.html">Gestión de errores</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">//The user wants to add a record?</span><span class="hljs-keyword">
  While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//Loop as long as the user wants to</span>
 <span class="hljs-function">    ADD RECORD</span>([aTable]) <span class="hljs-comment">//Add a new record</span><span class="hljs-keyword">
  End while</span> <span class="hljs-comment">//The loop always ends with End while</span>
 </code></pre>
-<p>In this example, the <code>OK</code> system variable is set by the <code>CONFIRM</code> command before the loop starts. If the user clicks the <strong>OK</strong> button in the confirmation dialog box, the <code>OK</code> system variable is set to 1 and the loop starts. Otherwise, the <code>OK</code> system variable is set to 0 and the loop is skipped. Once the loop starts, the <code>ADD RECORD</code> command keeps the loop going because it sets the <code>OK</code> system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the <code>OK</code> system variable is set to 0 and the loop stops.</p>
+<p>En este ejemplo, el valor de la variable sistema <code>OK</code> es definido por el comando <code>CONFIRM</code> antes de que se inicie el bucle. Si el usuario hace clic en el botón <strong>OK</strong> de la caja de diálogo de confirmación, la variable del sistema <code>OK</code> toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema <code>OK</code> toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando <code>ADD RECORD</code> permite continuar la ejecución del bucle porque se define la variable sistema <code>OK</code> en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema <code>OK</code> toma el valor 0 y el bucle se detiene.</p>
 <h2><a class="anchor" aria-hidden="true" id="repeatuntil"></a><a href="#repeatuntil" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Repeat...Until</h2>
-<p>The formal syntax of the <code>Repeat...Until</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>Repeat...Until</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  Until</span>(Boolean_Expression)
 </code></pre>
-<p>A <code>Repeat...Until</code> loop is similar to a <a href="flow-control#whileend-while">While...End while</a> loop, except that it tests the Boolean expression after the loop rather than before. Thus, a <code>Repeat...Until</code> loop always executes the loop once, whereas if the Boolean expression is initially False, a <code>While...End while</code> loop does not execute the loop at all.</p>
-<p>The other difference with a <code>Repeat...Until</code> loop is that the loop continues until the Boolean expression is TRUE.</p>
+<p>Un bucle <code>Repeat...Until</code> es similar a un bucle <a href="flow-control#whileend-while">While...End while</a>, excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle <code>Repeat...Until</code> siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle <code>While...End while</code> no ejecuta el bucle en absoluto.</p>
+<p>La otra diferencia con un bucle <code>Repeat...Until</code> es que el bucle continúa hasta que la expresión booleana sea TRUE.</p>
 <h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
-<p>Compare the following example with the example for the <code>While...End while</code> loop. Note that the Boolean expression does not need to be initialized—there is no <code>CONFIRM</code> command to initialize the <code>OK</code> variable.</p>
+<p>Compara el siguiente ejemplo con el ejemplo del bucle <code>While...End while</code>. Tenga en cuenta que la expresión booleana no necesita ser inicializada-no hay un comando <code>CONFIRM</code> para inicializar la variable <code>OK</code>.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
 <span class="hljs-function">    ADD RECORD</span>([aTable])<span class="hljs-keyword">
  Until</span>(OK=<span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="forend-for"></a><a href="#forend-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For...End for</h2>
-<p>The formal syntax of the <code>For...End for</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>For...End for</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End for</span>
 </code></pre>
-<p>The <code>For...End for</code> loop is a loop controlled by a counter variable:</p>
+<p>El bucle <code>For...End for</code> es un bucle controlado por un contador:</p>
 <ul>
 <li>The counter variable <em>Counter_Variable</em> is a numeric variable (Real or Long Integer) that the <code>For...End for</code> loop initializes to the value specified by <em>Start_Expression</em>.</li>
 <li>Each time the loop is executed, the counter variable is incremented by the value specified in the optional value <em>Increment_Expression</em>. If you do not specify <em>Increment_Expression</em>, the counter variable is incremented by one (1), which is the default.</li>
 <li>When the counter variable passes the <em>End_Expression</em> value, the loop stops.</li>
 </ul>
-<p><strong>Important:</strong> The numeric expressions <em>Start_Expression</em>, <em>End_Expression</em> and <em>Increment_Expression</em> are evaluated once at the beginning of the loop. If these expressions are variables, changing one of these variables within the loop will not affect the loop.</p>
-<p><strong>Tip:</strong> However, for special purposes, you can change the value of the counter variable <em>Counter_Variable</em> within the loop; this will affect the loop.</p>
+<p><strong>Importante:</strong> las expresiones numéricas <em>Start_Expression</em>, <em>End_Expression</em> y <em>Increment_Expression</em> se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.</p>
+<p><strong>Consejo:</strong> Sin embargo, para fines especiales, puede cambiar el valor de la variable <em>Counter_Variable</em> dentro del bucle; esto afectará al bucle.</p>
 <ul>
 <li>Usually <em>Start_Expression</em> is less than <em>End_Expression</em>.</li>
 <li>If <em>Start_Expression</em> and <em>End_Expression</em> are equal, the loop will execute only once.</li>
@@ -161,7 +161,7 @@
 </code></pre>
 <p>Most of the <code>For...End for</code> loops you will write in your projects will look like the ones listed in these examples.</p>
 <h3><a class="anchor" aria-hidden="true" id="decrementing-variable-counter"></a><a href="#decrementing-variable-counter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decrementing variable counter</h3>
-<p>In some cases, you may want to have a loop whose counter variable is decreasing rather than increasing. To do so, you must specify <em>Start_Expression</em> greater than <em>End_Expression</em> and a negative <em>Increment_Expression</em>. The following examples do the same thing as the previous examples, but in reverse order:</p>
+<p>En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar <em>Start_Expression</em> mayor que <em>End_Expression</em> y <em>Increment_Expression</em> debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:</p>
 <ol start="5">
 <li>The following example executes 100 iterations:</li>
 </ol>
@@ -200,7 +200,7 @@
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="incrementing-the-counter-variable-by-more-than-one"></a><a href="#incrementing-the-counter-variable-by-more-than-one" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incrementing the counter variable by more than one</h3>
-<p>If you need to, you can use an <em>Increment_Expression</em> (positive or negative) whose absolute value is greater than one.</p>
+<p>Si lo requiere, puede utilizar una <em>Increment_Expression</em> (positiva o negativa) cuyo valor absoluto sea mayor que uno.</p>
 <ol start="9">
 <li>The following loop addresses only the even elements of the array anArray:</li>
 </ol>
@@ -210,28 +210,28 @@
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="comparing-looping-structures"></a><a href="#comparing-looping-structures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparing looping structures</h3>
-<p>Let's go back to the first <code>For...End for</code> example. The following example executes 100 iterations:</p>
+<p>Volvamos al primer ejemplo de <code>For...End for</code>. The following example executes 100 iterations:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
   <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
-<p>It is interesting to see how the <code>While...End while</code> loop and <code>Repeat...Until</code> loop would perform the same action. Here is the equivalent <code>While...End while</code> loop:</p>
+<p>Es interesante ver cómo el bucle <code>While...End while</code> y el bucle <code>Repeat...Until</code> realizarían la misma acción. Aquí está el bucle equivalente <code>While...End while</code>:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
  While</span>(<span class="hljs-variable">$i</span>&lt;=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 times</span>
   <span class="hljs-comment">//Do something</span>
     <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
  End while</span>
 </code></pre>
-<p>Here is the equivalent <code>Repeat...Until</code> loop:</p>
+<p>Aquí está el bucle equivalente <code>Repeat...Until</code>:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
  Repeat</span>
   <span class="hljs-comment">//Do something</span>
     <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
  Until</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 times</span>
 </code></pre>
-<p><strong>Tip:</strong> The <code>For...End for</code> loop is usually faster than the <code>While...End while</code> and <code>Repeat...Until</code> loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the <code>For...End for</code> loop whenever possible.</p>
+<p><strong>Consejo:</strong> el bucle <code>For...End for</code> suele ser más rápido que los bucles <code>While...End while</code> y <code>Repeat...Until</code>, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle <code>For...End for</code> siempre que sea posible.</p>
 <h3><a class="anchor" aria-hidden="true" id="optimizing-the-execution-of-the-forend-for-loops"></a><a href="#optimizing-the-execution-of-the-forend-for-loops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optimizing the execution of the For...End for loops</h3>
-<p>You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.</p>
+<p>Puede utilizar variables reales y enteras, así como contadores interproceso, de proceso y de variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.</p>
 <ol start="10">
 <li>Here is an example:</li>
 </ol>
@@ -241,8 +241,8 @@
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nested-forend-for-looping-structures"></a><a href="#nested-forend-for-looping-structures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nested For...End for looping structures</h3>
-<p>You can nest as many control structures as you (reasonably) need. This includes nesting <code>For...End for</code> loops. To avoid mistakes, make sure to use different counter variables for each looping structure.</p>
-<p>Here are two examples:</p>
+<p>Puede anidar tantas estructuras de control como necesite (razonablemente). Esto incluye la anidación de bucles <code>For...End for</code>. Para evitar errores, asegúrese de utilizar diferentes variables de contador para cada estructura de bucle.</p>
+<p>He aquí dos ejemplos:</p>
 <ol start="11">
 <li>The following example goes through all the elements of a two-dimensional array:</li>
 </ol>
@@ -277,18 +277,18 @@
  End for</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="for-eachend-for-each"></a><a href="#for-eachend-for-each" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each...End for each</h2>
-<p>The formal syntax of the <code>For each...End for each</code> control flow structure is:</p>
+<p>La sintaxis de la estructura condicional <code>For each...End for each</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(Current_Item;Expression{;begin{;end}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Boolean_Expression)}
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End for each</span>
 </code></pre>
-<p>The <code>For each...End for each</code> structure iterates a specified <em>Current_item</em> over all values of the <em>Expression</em>. The <em>Current_item</em> type depends on the <em>Expression</em> type. The <code>For each...End for each</code> loop can iterate through three <em>Expression</em> types:</p>
+<p>La estructura <code>For each...End for each</code> ejecuta un <em>Current_item</em> especificado sobre todos los valores de <em>Expression</em>. El tipo <em>Current_item</em> depende del tipo <em>Expression</em>. El bucle <code>For each...End for each</code> puede iterar a través de tres tipos de <em>Expression</em>:</p>
 <ul>
 <li>collections: loop through each element of the collection,</li>
 <li>entity selections: loop through each entity,</li>
 <li>objects: loop through each object property.</li>
 </ul>
-<p>The following table compares the three types of <code>For each...End for each</code>:</p>
+<p>La siguiente tabla compara los tres tipos de <code>For each...End for each</code>:</p>
 <table>
 <thead>
 <tr><th></th><th>Loop through collections</th><th>Loop through entity selections</th><th>Loop through objects</th></tr>
@@ -311,16 +311,16 @@
 </ul></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="loop-through-collections"></a><a href="#loop-through-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through collections</h3>
-<p>When <code>For each...End for each</code> is used with an <em>Expression</em> of the <em>Collection</em> type, the <em>Current_Item</em> parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.</p>
-<p>The collection must contain only elements of the same type, otherwise an error will be returned as soon as the <em>Current_Item</em> variable is assigned the first mismatched value type.</p>
-<p>At each loop iteration, the <em>Current_Item</em> variable is automatically filled with the matching element of the collection. The following points must be taken into account:</p>
+<p>Cuando <code>For each...End for each</code> se utiliza con una <em>Expression</em> del tipo <em>Collection</em>, el parámetro <em>Current_Item</em> es una variable del mismo tipo que los elementos de la colección. Por defecto, el número de bucles se basa en el número de elementos de la colección.</p>
+<p>La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable <em>Current_Item</em> se le asigne el primer tipo de valor diferente.</p>
+<p>En cada iteración del bucle, la variable <em>Current_Item</em> se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:</p>
 <ul>
 <li>If the <em>Current_Item</em> variable is of the object type or collection type (i.e. if <em>Expression</em> is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.</li>
 <li>The <em>Current_Item</em> variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.</li>
 <li>If the collection contains elements with a <strong>Null</strong> value, an error will be generated if the <em>Current_Item</em> variable type does not support <strong>Null</strong> values (such as longint variables).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<p>You want to compute some statistics for a collection of numbers:</p>
+<p>Usted quiere calcular algunas estadísticas para una colección de números:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$nums</span>)
  <span class="hljs-variable">$nums</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">5001</span>;<span class="hljs-number">6665</span>;<span class="hljs-number">33</span>;<span class="hljs-number">1</span>;<span class="hljs-number">42</span>;<span class="hljs-number">7850</span>)
 <span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$vEven</span>;<span class="hljs-variable">$vOdd</span>;<span class="hljs-variable">$vUnder</span>;<span class="hljs-variable">$vOver</span>)<span class="hljs-keyword">
@@ -341,12 +341,12 @@
   <span class="hljs-comment">//$vUnder=4,$vOver=2</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="loop-through-entity-selections"></a><a href="#loop-through-entity-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through entity selections</h3>
-<p>When <code>For each...End for each</code> is used with an <em>Expression</em> of the <em>Entity selection</em> type, the <em>Current_Item</em> parameter is the entity that is currently processed.</p>
-<p>The number of loops is based on the number of entities in the entity selection. On each loop iteration, the <em>Current_Item</em> parameter is automatically filled with the entity of the entity selection that is currently processed.</p>
-<p><strong>Note:</strong> If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.</p>
-<p>Keep in mind that any modifications applied on the current entity must be saved explicitly using <code>entity.save( )</code>.</p>
+<p>Cuando <code>For each...End for each</code> se utiliza con una <em>Expression</em> del tipo <em>Collection</em>, el parámetro <em>Current_Item</em> es una variable del mismo tipo que los elementos de la colección.</p>
+<p>El número de bucles se basa en el número de entidades de la selección de entidades. En cada iteración del bucle, el parámetro <em>Current_Item</em> se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.</p>
+<p><strong>Nota:</strong> si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.</p>
+<p>Tenga en cuenta que cualquier modificación aplicada en la entidad actual debe ser guardada explícitamente utilizando <code>entity.save( )</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<p>You want to raise the salary of all British employees in an entity selection:</p>
+<p>Quiere aumentar el salario de todos los empleados británicos en una selección de entidades:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(emp)<span class="hljs-keyword">
  For each</span>(emp;ds.Employees.<span class="hljs-function">query</span>(<span class="hljs-string">"country='UK'"</span>))
     emp.salary:=emp.salary*<span class="hljs-number">1</span>,<span class="hljs-number">03</span>
@@ -354,10 +354,10 @@
  End for each</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="loop-through-object-properties"></a><a href="#loop-through-object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through object properties</h3>
-<p>When <code>For each...End for each</code> is used with an <em>Expression</em> of the Object type, the <em>Current_Item</em> parameter is a text variable automatically filled with the name of the currently processed property.</p>
-<p>The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.</p>
+<p>Cuando se utiliza <code>For each...End for each</code> con una <em>Expression</em> de tipo Object, el parámetro <em>Current_Item</em> es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.</p>
+<p>Las propiedades del objeto se procesan de acuerdo con su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<p>You want to switch the names to uppercase in the following object:</p>
+<p>Quiere pasar los nombres a mayúsculas en el siguiente objeto:</p>
 <pre><code class="hljs css language-4d">{
     <span class="hljs-string">"firstname"</span>: <span class="hljs-string">"gregory"</span>,
     <span class="hljs-string">"lastname"</span>: <span class="hljs-string">"badikora"</span>,
@@ -378,13 +378,13 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="begin--end-parameters"></a><a href="#begin--end-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>begin / end parameters</h3>
-<p>You can define bounds to the iteration using the optional begin and end parameters.</p>
-<p><strong>Note:</strong> The <em>begin</em> and <em>end</em> parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).</p>
+<p>Puede definir los límites de la iteración utilizando los parámetros opcionales inicio y fin.</p>
+<p><strong>Nota:</strong>los parámetros <em>inicio</em> y <em>fin</em> sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).</p>
 <ul>
 <li>In the <em>begin</em> parameter, pass the element position in <em>Expression</em> at which to start the iteration (<em>begin</em> is included).</li>
 <li>In the <em>end</em> parameter, you can also pass the element position in <em>Expression</em> at which to stop the iteration (<em>end</em> is excluded).</li>
 </ul>
-<p>If <em>end</em> is omitted or if <em>end</em> is greater than the number of elements in <em>Expression</em>, elements are iterated from <em>begin</em> until the last one (included). If the <em>begin</em> and <em>end</em> parameters are positive values, they represent actual positions of elements in <em>Expression</em>. If <em>begin</em> is a negative value, it is recalculed as <code>begin:=begin+Expression size</code> (it is considered as the offset from the end of <em>Expression</em>). If the calculated value is negative, <em>begin</em> is set to 0. <strong>Note:</strong> Even if begin is negative, the iteration is still performed in the standard order. If <em>end</em> is a negative value, it is recalculed as <code>end:=end+Expression size</code></p>
+<p>Si se omite <em>fin</em> o si es mayor que el número de elementos de &lt;em x-id=&quot;3&quot; &lt;Expression</em>, se iteran los elementos desde <em>inicio</em> hasta el último (incluido). Si los parámetros <em>inicio</em> y <em>fin</em> son valores positivos, representan posiciones reales de elementos en <em>Expression</em>. Si <em>comienzo</em> es un valor negativo, se recalcula como <code>comienzo:=comienzo+tamaño de la expresión</code> (se considera como el desplazamiento desde el final de <em>Expression</em>). Si el valor calculado es negativo, <em>inicio</em> toma el valor 0. <strong>Nota:</strong> aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar. Si <em>fin</em> es un valor negativo, se recalcula como <code>fin:=fin+tamaño de la expresión</code></p>
 <p>For example:</p>
 <ul>
 <li>a collection contains 10 elements (numbered from 0 to 9)</li>
@@ -406,8 +406,8 @@
   <span class="hljs-comment">//$col2=[1,2,3,"a","b","c","d"]</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="until-and-while-conditions"></a><a href="#until-and-while-conditions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Until and While conditions</h3>
-<p>You can control the <code>For each...End for each</code> execution by adding an <code>Until</code> or a <code>While</code> condition to the loop. When an <code>Until(condition)</code> statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to <code>True</code>, whereas when is case of a <code>While(condition)</code> statement, the iteration will stop when the condition is first evaluated to <code>False</code>.</p>
-<p>You can pass either keyword depending on your needs:</p>
+<p>Puede controlar la ejecución de <code>For each...End for each</code> añadiendo una condición <code>Until</code> o una condición <code>While</code> al bucle. Cuando una instrucción <code>Until(condición)</code> está asociada al bucle, la iteración se detendrá tan pronto como la condición se evalúe como <code>True</code>, mientras que cuando se trata de una instrucción <code>While(condición)</code>, la iteración se detendrá cuando la condición se evalúe por primera vez como <code>False</code>.</p>
+<p>Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:</p>
 <ul>
 <li>The <code>Until</code> condition is tested at the end of each iteration, so if the <em>Expression</em> is not empty or null, the loop will be executed at least once.</li>
 <li>The <code>While</code> condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.</li>

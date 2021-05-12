@@ -94,7 +94,7 @@ The standard Open dialog appears.</p></li>
 By default, the project is opened with its current data file. Other file types are suggested:</p>
 <ul>
 <li><em>Packed project files</em>: <code>.4dz</code> extension  - deployment projects</li>
-<li><em>Shortcut files</em>: <code>.4dlink</code> extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)</li>
+<li><em>Shortcut files</em>: <code>.4DLink</code> extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)</li>
 <li><em>Binary files</em>: <code>.4db</code> or <code>.4dc</code> extension - legacy 4D database formats</li>
 </ul></li>
 </ol>
@@ -109,7 +109,7 @@ By default, the project is opened with its current data file. Other file types a
 <li><p><strong>Data file</strong> - specifies the data file to be used with the project. By default, the <strong>Current data file</strong> option is selected.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="project-opening-shortcuts"></a><a href="#project-opening-shortcuts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project opening shortcuts</h2>
-<p>4D offers two ways to let you open projects directly and bypass the Open dialog:</p>
+<p>4D offers several ways to open projects directly and bypass the Open dialog:</p>
 <ul>
 <li><p>via menu options:</p>
 <ul>
@@ -120,7 +120,35 @@ By default, the project is opened with its current data file. Other file types a
 <ul>
 <li>Set the <strong>At startup</strong> general preference to <strong>Open last used project</strong>.</li>
 </ul></li>
+<li><p>using a <code>.4DLink</code> file.</p></li>
 </ul>
+<h3><a class="anchor" aria-hidden="true" id="opening-a-project-with-a-4dlink-file"></a><a href="#opening-a-project-with-a-4dlink-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opening a Project with a 4DLink file</h3>
+<p>You can use a <a href="#about-4DLink-files"><code>.4DLink</code> file</a> to launch the 4D application and open the target 4D project. There are two ways to do this:</p>
+<ul>
+<li>double-click or drag and drop the <code>.4DLink</code> file onto the 4D application</li>
+<li>go to <strong>File</strong> &gt; <strong>Open Recent Projects</strong> and select a project</li>
+</ul>
+<p><img src="/docs/assets/en/Project/4DLinkfiles.png" alt="open-recent-projects"></p>
+<p>A .4DLink file of &quot;remote project&quot; type can be copied and used on several machines.</p>
+<blockquote>
+<p>It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="about-4dlink-files"></a><a href="#about-4dlink-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About 4DLink Files</h2>
+<p>Files with the <code>.4DLink</code> extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.</p>
+<p><code>.4DLink</code> files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.</p>
+<p>4D automatically generates a <code>.4DLink</code> file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:</p>
+<ul>
+<li>Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\</li>
+<li>OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/</li>
+</ul>
+<p>XX represents the version number of the application. For example, &quot;Favorites v19&quot; for 4D v19.</p>
+<p>That folder is divided into two subfolders:</p>
+<ul>
+<li>the <strong>Local</strong> folder contains the <code>.4DLink</code> files that can be used to open local projects</li>
+<li>the <strong>Remote</strong> folder contains the <code>.4DLink</code> files of recent remote projects</li>
+</ul>
+<p><code>.4DLink</code> files can also be created with an XML editor.</p>
+<p>4D provides a DTD describing the XML keys that can be used to build a <code>.4DLink</code> file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.</p>
 <h2><a class="anchor" aria-hidden="true" id="file-saving"></a><a href="#file-saving" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File saving</h2>
 <p>When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a <strong>Save</strong> menu item, or when the editor's window loses or gets the focus.</p>
 <p>Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window <em>and</em> in a text editor, saving both modifications will result in a conflict.</p>
@@ -137,7 +165,7 @@ By default, the project is opened with its current data file. Other file types a
 </ul></li>
 </ul>
 <p>This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/Project/overview.html"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/en/Project/architecture.html"><span>Architecture of a project</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-a-project">Creating a project</a></li><li><a href="#opening-a-project">Opening a project</a><ul class="toc-headings"><li><a href="#options">Options</a></li></ul></li><li><a href="#project-opening-shortcuts">Project opening shortcuts</a></li><li><a href="#file-saving">File saving</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/Project/overview.html"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/en/Project/architecture.html"><span>Architecture of a project</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-a-project">Creating a project</a></li><li><a href="#opening-a-project">Opening a project</a><ul class="toc-headings"><li><a href="#options">Options</a></li></ul></li><li><a href="#project-opening-shortcuts">Project opening shortcuts</a><ul class="toc-headings"><li><a href="#opening-a-project-with-a-4dlink-file">Opening a Project with a 4DLink file</a></li></ul></li><li><a href="#about-4dlink-files">About 4DLink Files</a></li><li><a href="#file-saving">File saving</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
