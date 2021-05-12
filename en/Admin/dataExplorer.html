@@ -78,7 +78,7 @@
 <li><strong>authentication</strong>: access to the Data Explorer is granted when the <a href="/docs/en/Admin/webAdmin.html#authentication-and-session">session user is authenticated</a> and has the &quot;WebAdmin&quot; privilege. When the Data Explorer is accessed through the <strong>Data Explorer</strong> menu item (see below), an automatic authentication is provided.</li>
 </ul>
 <blockquote>
-<p>The Data Explorer access can be disabled using the <a href="API/DataStoreClass.md#setadminprotection"><code>.setAdminProtection()</code></a> function.</p>
+<p>The Data Explorer access can be disabled using the <a href="/docs/en/API/DataStoreClass.html#setadminprotection"><code>.setAdminProtection()</code></a> function.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="opening-the-data-explorer"></a><a href="#opening-the-data-explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opening the Data Explorer</h2>
 <p>The Data Explorer page is automatically available when <a href="/docs/en/Admin/webAdmin.html#starting-the-webadmin-web-server">the <code>WebAdmin</code> web server is started</a>.</p>
@@ -188,7 +188,7 @@ All attribute types are displayed, including pictures and objects (expressed in 
 <p>You can enter advanced queries that are not available as attribute queries. For example, if you want to find entities with <em>firstname</em> attribute containing &quot;Jim&quot; but not &quot;Jimmy&quot;, you can write:</p>
 <pre><code class="hljs"><span class="hljs-attr">firstname</span>==<span class="hljs-string">"Jim"</span>
 </code></pre>
-<p>You can use any ORDA query expression as <a href="API/DataClassClass.md#query">documented with the <code>query()</code> function</a>, with the following limitations or differences:</p>
+<p>You can use any ORDA query expression as <a href="/docs/en/API/DataClassClass.html#query">documented with the <code>query()</code> function</a>, with the following limitations or differences:</p>
 <ul>
 <li>For security, you cannot execute formulas using <code>eval()</code>.</li>
 <li>Placeholders cannot be used; you have to write a <em>queryString</em> with values.</li>
@@ -197,7 +197,7 @@ All attribute types are displayed, including pictures and objects (expressed in 
 <p>For example, with the Employee dataclass, you can write:</p>
 <pre><code class="hljs"><span class="hljs-attr">firstname</span> = <span class="hljs-string">"Marie Sophie"</span> AND manager.lastname = <span class="hljs-string">"@th"</span>
 </code></pre>
-<p>You can click on the <code>v</code> icon to display both <a href="API/DataClassClass.md#queryplan"><code>queryPlan</code></a> and <a href="API/DataClassClass.md#querypath"><code>queryPath</code></a>. In the area, you can hover over the subquery blocks to have detailed information per subquery:</p>
+<p>You can click on the <code>v</code> icon to display both <a href="/docs/en/API/DataClassClass.html#queryplan"><code>queryPlan</code></a> and <a href="/docs/en/API/DataClassClass.html#querypath"><code>queryPath</code></a>. In the area, you can hover over the subquery blocks to have detailed information per subquery:</p>
 <p><img src="/docs/assets/en/Admin/dataExplorer12.png" alt="alt-text"></p>
 <p>Right-click in the query area to display the previous valid queries:</p>
 <p><img src="/docs/assets/en/Admin/dataExplorer11.png" alt="alt-text"></p>

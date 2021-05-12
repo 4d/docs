@@ -114,7 +114,7 @@
 <blockquote>
 <p>データクラス属性は [ ] を使用したシンタックスを使用することでもアクセス可能です。</p>
 </blockquote>
-<p>この属性値タイプは属性の種類 (<a href="DataClassAttributeClass.md#kind"></a>.kind; リレーションまたはストレージ) によります。</p>
+<p>この属性値タイプは属性の種類 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind"></a>.kind; リレーションまたはストレージ) によります。</p>
 <ul>
 <li><em>attributeName</em> で指定した属性がストレージ型の場合: <code>.attributeName</code>は <em>attributeName</em> と同じ型の値を返します。</li>
 <li><em>attributeName</em> で指定した属性がリレートエンティティ型の場合: <code>.attributeName</code> はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: &quot;myEntity.employer.employees[0].lastname&quot;</li>
@@ -199,7 +199,7 @@
 </tbody>
 </table>
 <p>コレクションに含まれるのは異なる値を持っていた属性のみです。 差異が見つからない場合、<code>diff()</code> は空のコレクションを返します。</p>
-<p>この関数は、種類 (<a href="DataClassAttributeClass.md#kind">kind</a>) が <strong>storage</strong> あるいは <strong>relatedEntity</strong> であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em>attributeName</em> プロパティに返されます (リレーション名についての <em>value</em> および <em>otherValue</em> は空になります)。</p>
+<p>この関数は、種類 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a>) が <strong>storage</strong> あるいは <strong>relatedEntity</strong> であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em>attributeName</em> プロパティに返されます (リレーション名についての <em>value</em> および <em>otherValue</em> は空になります)。</p>
 <p>比較するどちらかのエンティティが <strong>Null</strong> である場合、エラーが生成されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$diff1</span>; <span class="hljs-variable">$diff2 </span>: Collection
@@ -1143,8 +1143,8 @@
 <p><em>filterString</em> 引数が空の文字列、あるいは &quot;*&quot; の場合、以下のいずれかが返されます:</p>
 <ul>
 <li>すべてのストレージエンティティ属性</li>
-<li>リレートエンティティ型の属性 (<a href="DataClassAttributeClass.md#kind">kind</a> が <code>relatedEntity</code>) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。</li>
-<li>リレートエンティティズ型の属性 (<a href="DataClassAttributeClass.md#kind">kind</a> が <code>relatedEntities</code>): 属性は返されません。</li>
+<li>リレートエンティティ型の属性 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>relatedEntity</code>) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。</li>
+<li>リレートエンティティズ型の属性 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>relatedEntities</code>): 属性は返されません。</li>
 </ul>
 <p>最初の引数として、取得するエンティティ属性を渡します。 以下のものを渡すことができます:</p>
 <ul>
@@ -1364,7 +1364,7 @@
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.touched()</code> 関数は、 エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします。</p>
 <p>属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。</p>
-<p>この関数は、(<a href="DataClassClass.md#new"><code>.new( )</code></a> で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、<code>.touched()</code> 関数は true を返します。 たとえば、プライマリーキーを計算するために <a href="#getkey"><code>.getKey()</code></a> を呼び出した場合、<code>.touched()</code> メソッドは true を返します。</p>
+<p>この関数は、(<a href="/docs/ja/API/DataClassClass.html#new"><code>.new( )</code></a> で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、<code>.touched()</code> 関数は true を返します。 たとえば、プライマリーキーを計算するために <a href="#getkey"><code>.getKey()</code></a> を呼び出した場合、<code>.touched()</code> メソッドは true を返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-15"></a><a href="#例題-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>エンティティを保存する必要があるかどうかをチェックします:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
@@ -1397,7 +1397,7 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.touchedAttributes()</code> 関数は、 メモリに読み込み後に変更されたエンティティの属性名を返します。</p>
-<p>この関数は、種類 (<a href="DataClassAttributeClass.md#kind">kind</a>) が <code>storage</code> あるいは <code>relatedEntity</code> である属性に適用されます。</p>
+<p>この関数は、種類 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a>) が <code>storage</code> あるいは <code>relatedEntity</code> である属性に適用されます。</p>
 <p>リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。</p>
 <p>エンティティ属性がいずれも更新されていなかった場合、関数は空のコレクションを返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-6"></a><a href="#例題-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>

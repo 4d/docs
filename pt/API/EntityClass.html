@@ -114,7 +114,7 @@
 <blockquote>
 <p>Dataclass attributes can also be reached using the alternate syntax with [ ].</p>
 </blockquote>
-<p>The attribute value type depends on the attribute <a href="DataClassAttributeClass.md#kind">kind</a> (relation or storage):</p>
+<p>The attribute value type depends on the attribute <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> (relation or storage):</p>
 <ul>
 <li>If <em>attributeName</em> kind is <strong>storage</strong>: <code>.attributeName</code> returns a value of the same type as <em>attributeName</em>.</li>
 <li>If <em>attributeName</em> kind is <strong>relatedEntity</strong>: <code>.attributeName</code> returns the related entity. Values of the related entity are directly available through cascading properties, for example &quot;myEntity.employer.employees[0].lastname&quot;.</li>
@@ -199,7 +199,7 @@
 </tbody>
 </table>
 <p>Only attributes with different values are included in the collection. If no differences are found, <code>.diff()</code> returns an empty collection.</p>
-<p>The function applies for properties whose <a href="DataClassAttributeClass.md#kind">kind</a> is <strong>storage</strong> or <strong>relatedEntity</strong>. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as <em>attributeName</em> properties (<em>value</em> and <em>otherValue</em> are empty for the related entity name).</p>
+<p>The function applies for properties whose <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> is <strong>storage</strong> or <strong>relatedEntity</strong>. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as <em>attributeName</em> properties (<em>value</em> and <em>otherValue</em> are empty for the related entity name).</p>
 <p>If one of the compared entities is <strong>Null</strong>, an error is raised.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-1-1"></a><a href="#example-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$diff1</span>; <span class="hljs-variable">$diff2 </span>: Collection
@@ -1143,21 +1143,21 @@
 <p>If no filter is specified, or if the <em>filterString</em> parameter contains an empty string or &quot;*&quot;, the returned object will contain:</p>
 <ul>
 <li>all storage entity attributes</li>
-<li>attributes of the <code>relatedEntity</code> <a href="DataClassAttributeClass.md#kind">kind</a>: you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.</li>
-<li>attributes of the <code>relatedEntities</code> <a href="DataClassAttributeClass.md#kind">kind</a>: attribute is not returned.</li>
+<li>attributes of the <code>relatedEntity</code> <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a>: you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.</li>
+<li>attributes of the <code>relatedEntities</code> <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a>: attribute is not returned.</li>
 </ul>
 <p>In the first parameter, you pass the entity attribute(s) to extract. You can pass:</p>
 <ul>
 <li><em>filterString</em>: a string with property paths separated with commas: &quot;propertyPath1, propertyPath2, ...&quot;, or</li>
 <li><em>filterCol</em>: a collection of strings: [&quot;propertyPath1&quot;,&quot;propertyPath2&quot;;...]</li>
 </ul>
-<p>If a filter is specified for attributes of the relatedEntity <a href="DataClassAttributeClass.md#kind">kind</a>:</p>
+<p>If a filter is specified for attributes of the relatedEntity <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a>:</p>
 <ul>
 <li>propertyPath = &quot;relatedEntity&quot; -&gt; it is extracted with simple form: an object with property __KEY (primary key).</li>
 <li>propertyPath = &quot;relatedEntity.*&quot; -&gt; all the properties are extracted</li>
 <li>propertyPath = &quot;relatedEntity.propertyName1; relatedEntity.propertyName2; ...&quot; -&gt; only those properties are extracted</li>
 </ul>
-<p>If a filter is specified for attributes of the relatedEntities <a href="DataClassAttributeClass.md#kind">kind</a>:</p>
+<p>If a filter is specified for attributes of the relatedEntities <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a>:</p>
 <ul>
 <li>propertyPath = &quot;relatedEntities.*&quot; -&gt; all the properties are extracted</li>
 <li>propertyPath = &quot;relatedEntities.propertyName1; relatedEntities.propertyName2; ...&quot; -&gt; only those properties are extracted</li>
@@ -1364,7 +1364,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description-19"></a><a href="#description-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.touched()</code> function tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved.</p>
 <p>If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.</p>
-<p>This function returns False for a new entity that has just been created (with <a href="DataClassClass.md#new"><code>.new( )</code></a>). Note however that if you use a function which calculates an attribute of the entity, the <code>.touched()</code> function will then return True. For example, if you call <a href="#getkey"><code>.getKey()</code></a> to calculate the primary key, <code>.touched()</code> returns True.</p>
+<p>This function returns False for a new entity that has just been created (with <a href="/docs/pt/API/DataClassClass.html#new"><code>.new( )</code></a>). Note however that if you use a function which calculates an attribute of the entity, the <code>.touched()</code> function will then return True. For example, if you call <a href="#getkey"><code>.getKey()</code></a> to calculate the primary key, <code>.touched()</code> returns True.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-15"></a><a href="#example-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>In this example, we check to see if it is necessary to save the entity:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
@@ -1397,7 +1397,7 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-20"></a><a href="#description-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.touchedAttributes()</code> function returns the names of the attributes that have been modified since the entity was loaded into memory.</p>
-<p>This applies for attributes of the <a href="DataClassAttributeClass.md#kind">kind</a> <code>storage</code> or <code>relatedEntity</code>.</p>
+<p>This applies for attributes of the <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> <code>storage</code> or <code>relatedEntity</code>.</p>
 <p>In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.</p>
 <p>If no entity attribute has been touched, the method returns an empty collection.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-1-6"></a><a href="#example-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>

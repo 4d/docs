@@ -67,7 +67,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/EntitySelectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">EntitySelection</h1></header><article><div><span><p>An entity selection is an object containing one or more reference(s) to <a href="/docs/en/ORDA/dsmapping.html#entity">entities</a> belonging to the same <a href="/docs/en/ORDA/dsmapping.html#dataclass">Dataclass</a>. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.</p>
-<p>Entity selections can be created from existing selections using various functions of the <a href="DataClassClass.md"><code>DataClass</code> class</a> such as <a href="DataClassClass.md#all"><code>.all()</code></a> or <a href="DataClassClass.md#query"><code>.query()</code></a>, or functions of the <code>EntityClass</code> class itself, such as <a href="#and"><code>.and()</code></a> or <a href="#orderby"><code>orderBy()</code></a>. You can also create blank entity selections using the <a href="DataClassClass.md#newselection"><code>dataClass.newSelection()</code></a> function or the <a href="#create-new-selection"><code>Create new selection</code></a> command.</p>
+<p>Entity selections can be created from existing selections using various functions of the <a href="/docs/en/API/DataClassClass.html"><code>DataClass</code> class</a> such as <a href="/docs/en/API/DataClassClass.html#all"><code>.all()</code></a> or <a href="/docs/en/API/DataClassClass.html#query"><code>.query()</code></a>, or functions of the <code>EntityClass</code> class itself, such as <a href="#and"><code>.and()</code></a> or <a href="#orderby"><code>orderBy()</code></a>. You can also create blank entity selections using the <a href="/docs/en/API/DataClassClass.html#newselection"><code>dataClass.newSelection()</code></a> function or the <a href="#create-new-selection"><code>Create new selection</code></a> command.</p>
 <h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
 <table>
 <thead>
@@ -120,7 +120,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>Create entity selection</code> command builds and returns a new, <a href="/docs/en/ORDA/entities.html#shareable-or-alterable-entity-selections">alterable</a> entity selection related to the dataclass matching the given <em>dsTable</em>, according to the current selection of this table.</p>
 <p>If the current selection is sorted, an <a href="/docs/en/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered</a> entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.</p>
-<p>If the <em>dsTable</em> is not exposed in <a href="API/DataStoreClass.md#ds"><code>ds</code></a>, an error is returned. This command cannot be used with a Remote datastore.</p>
+<p>If the <em>dsTable</em> is not exposed in <a href="/docs/en/API/DataStoreClass.html#ds"><code>ds</code></a>, an error is returned. This command cannot be used with a Remote datastore.</p>
 <p>In the optional <em>settings</em> parameter, you can pass an object containing the following property:</p>
 <table>
 <thead>
@@ -138,7 +138,7 @@
 <span class="hljs-comment">// on all entities related to the Employee dataclass</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also"></a><a href="#see-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
-<p><a href="DataClassClass.md#newselection"><code>dataClass.newSelection()</code></a></p>
+<p><a href="/docs/en/API/DataClassClass.html#newselection"><code>dataClass.newSelection()</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="91index93"></a><a href="#91index93" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>[<em>index</em>]</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -191,7 +191,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>Any dataclass attribute can be used as a property of an entity selection to return a &quot;projection&quot; of values for the attribute in the entity selection. Projected values can be a collection or a new entity selection, depending on the <a href="DataClassAttributeClass.md#kind">kind</a> (<code>storage</code> or <code>relation</code>) of the attribute.</p>
+<p>Any dataclass attribute can be used as a property of an entity selection to return a &quot;projection&quot; of values for the attribute in the entity selection. Projected values can be a collection or a new entity selection, depending on the <a href="/docs/en/API/DataClassAttributeClass.html#kind">kind</a> (<code>storage</code> or <code>relation</code>) of the attribute.</p>
 <ul>
 <li>If <em>attributeName</em> kind is <code>storage</code>:
 <code>.attributeName</code> returns a collection of values of the same type as <em>attributeName</em>.</li>
@@ -255,7 +255,7 @@
 <blockquote>
 <p>This function modifies the original entity selection.</p>
 </blockquote>
-<p><strong>Warning:</strong> The entity selection must be <em>alterable</em>, i.e. it has been created for example by <a href="DataClassClass.md#newselection"><code>.newSelection()</code></a> or <code>Create entity selection</code>, otherwise <code>.add()</code> will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the <a href="/docs/en/ORDA/entities.html#shareable-or-alterable-entity-selections">Shareable or alterable entity selections</a> section.</p>
+<p><strong>Warning:</strong> The entity selection must be <em>alterable</em>, i.e. it has been created for example by <a href="/docs/en/API/DataClassClass.html#newselection"><code>.newSelection()</code></a> or <code>Create entity selection</code>, otherwise <code>.add()</code> will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the <a href="/docs/en/ORDA/entities.html#shareable-or-alterable-entity-selections">Shareable or alterable entity selections</a> section.</p>
 <ul>
 <li>If the entity selection is ordered, <em>entity</em> is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.</li>
 <li>If the entity selection is unordered, <em>entity</em> is added anywhere in the selection, with no specific order.</li>
@@ -642,15 +642,15 @@
 <p>With this syntax, <code>.extract()</code> populates the returned collection with the <em>attributePath</em> values of the entity selection.</p>
 <p>By default, entities for which <em>attributePath</em> is <em>null</em> or undefined are ignored in the resulting collection. You can pass the <code>ck keep null</code> constant in the <em>option</em> parameter to include these values as <strong>null</strong> elements in the returned collection.</p>
 <ul>
-<li>Dataclass attributes with <a href="DataClassAttributeClass.md#kind">.kind</a> = &quot;relatedEntity&quot; are extracted as a collection of entities (duplications are kept).</li>
-<li>Dataclass attributes with <a href="DataClassAttributeClass.md#kind">.kind</a> = &quot;relatedEntities&quot; are extracted as a collection of entity selections.</li>
+<li>Dataclass attributes with <a href="/docs/en/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntity&quot; are extracted as a collection of entities (duplications are kept).</li>
+<li>Dataclass attributes with <a href="/docs/en/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntities&quot; are extracted as a collection of entity selections.</li>
 </ul>
 <p><strong>.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection</strong></p>
 <p>With this syntax, <code>.extract()</code> populates the returned collection with the <em>attributePath</em> properties. Each element of the returned collection is an object with <em>targetPath</em> properties filled with the corresponding <em>attributePath</em> properties. Null values are kept (<em>option</em> parameter is ignored with this syntax).</p>
 <p>If several <em>attributePath</em> are given, a <em>targetPath</em> must be given for each. Only valid pairs [<em>attributePath</em>, <em>targetPath</em>] are extracted.</p>
 <ul>
-<li>Dataclass attributes with <a href="DataClassAttributeClass.md#kind">.kind</a> = &quot;relatedEntity&quot; are extracted as an entity.</li>
-<li>Dataclass attributes with <a href="DataClassAttributeClass.md#kind">.kind</a> = &quot;relatedEntities&quot; are extracted as an entity selection.</li>
+<li>Dataclass attributes with <a href="/docs/en/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntity&quot; are extracted as an entity.</li>
+<li>Dataclass attributes with <a href="/docs/en/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntities&quot; are extracted as an entity selection.</li>
 </ul>
 <blockquote>
 <p>Entities of a collection of entities accessed by [ ] are not reloaded from the database.</p>
@@ -1282,7 +1282,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p>This function does not modify the original entity selection.</p>
 </blockquote>
 <p>If no matching entities are found, an empty <code>EntitySelection</code> is returned.</p>
-<p>For detailed information on how to build a query using <em>queryString</em>, <em>value</em>, and <em>querySettings</em> parameters, please refer to the DataClass <a href="DataClassClass.md#query"><code>.query()</code></a> function description.</p>
+<p>For detailed information on how to build a query using <em>queryString</em>, <em>value</em>, and <em>querySettings</em> parameters, please refer to the DataClass <a href="/docs/en/API/DataClassClass.html#query"><code>.query()</code></a> function description.</p>
 <blockquote>
 <p>By default if you omit the <strong>order by</strong> statement in the <em>queryString</em>, the returned entity selection is <a href="/docs/en/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">not ordered</a>. Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).</p>
 </blockquote>
@@ -1292,9 +1292,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  Form.emps:=<span class="hljs-variable">$entitySelectionTemp</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"manager.lastName = :1"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-2-6"></a><a href="#example-2-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
-<p>More examples of queries can be found in the DataClass <a href="DataClassClass.md#query"><code>.query()</code></a> page.</p>
+<p>More examples of queries can be found in the DataClass <a href="/docs/en/API/DataClassClass.html#query"><code>.query()</code></a> page.</p>
 <h4><a class="anchor" aria-hidden="true" id="see-also-1"></a><a href="#see-also-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
-<p><a href="DataClassClass.md#query"><code>.query()</code></a> for dataclass</p>
+<p><a href="/docs/en/API/DataClassClass.html#query"><code>.query()</code></a> for dataclass</p>
 <h2><a class="anchor" aria-hidden="true" id="querypath"></a><a href="#querypath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPath</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1503,7 +1503,7 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-30"></a><a href="#description-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.toCollection()</code> function creates and returns a collection where each element is an object containing a set of properties and values corresponding to the attribute names and values for the entity selection.</p>
-<p>If no filter parameter is passed or the first parameter contains an empty string or &quot;*&quot;, all the attributes are extracted. Attributes with <a href="DataClassAttributeClass.md#kind">kind</a> property as &quot;relatedEntity&quot; are extracted with the simple form: an object with property __KEY (primary key). Attributes with kind property as &quot;relatedEntities&quot; are not extracted.</p>
+<p>If no filter parameter is passed or the first parameter contains an empty string or &quot;*&quot;, all the attributes are extracted. Attributes with <a href="/docs/en/API/DataClassAttributeClass.html#kind">kind</a> property as &quot;relatedEntity&quot; are extracted with the simple form: an object with property __KEY (primary key). Attributes with kind property as &quot;relatedEntities&quot; are not extracted.</p>
 <p>Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:</p>
 <ul>
 <li><em>filterString</em> --a string with property paths separated with commas: &quot;propertyPath1, propertyPath2, ...&quot;.</li>

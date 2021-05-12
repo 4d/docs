@@ -188,9 +188,9 @@
 <h2><a class="anchor" aria-hidden="true" id="creating-an-entity-selection"></a><a href="#creating-an-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating an entity selection</h2>
 <p>You can create an object of type <a href="/docs/es/ORDA/dsmapping.html#entity-selection">entity selection</a> as follows:</p>
 <ul>
-<li>Querying the entities <a href="API/DataClassClass.md#query">in a dataclass</a> or in an <a href="/docs/es/API/EntitySelectionClass.html#query">existing entity selection</a>;</li>
-<li>Using the <a href="API/DataClassClass.md#all"><code>.all()</code></a> dataclass function to select all the entities in a dataclass;</li>
-<li>Using the <code>Create entity selection</code> command or the <a href="API/DataClassClass.md#newselection"><code>.newSelection()</code></a> dataclass function to create a blank entity selection;</li>
+<li>Querying the entities <a href="/docs/es/API/DataClassClass.html#query">in a dataclass</a> or in an <a href="/docs/es/API/EntitySelectionClass.html#query">existing entity selection</a>;</li>
+<li>Using the <a href="/docs/es/API/DataClassClass.html#all"><code>.all()</code></a> dataclass function to select all the entities in a dataclass;</li>
+<li>Using the <code>Create entity selection</code> command or the <a href="/docs/es/API/DataClassClass.html#newselection"><code>.newSelection()</code></a> dataclass function to create a blank entity selection;</li>
 <li>Using the <a href="/docs/es/API/EntitySelectionClass.html#copy"><code>.copy()</code></a> function to duplicate an existing entity selection;</li>
 <li>Using one of the various functions from the <a href="/docs/es/API/EntitySelectionClass.html">Entity selection class</a> that returns a new entity selection, such as <a href="/docs/es/API/EntitySelectionClass.html#or"><code>.or()</code></a>;</li>
 <li>Using a relation attribute of type &quot;related entities&quot; (see below).</li>
@@ -217,7 +217,7 @@
 <p>The <strong>shareable</strong> or <strong>alterable</strong> nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the <a href="/docs/es/API/EntitySelectionClass.html#isalterable">.isAlterable()</a> function or the <code>OB Is shared</code> command.</p>
 <p>A new entity selection is <strong>shareable</strong> in the following cases:</p>
 <ul>
-<li>the new entity selection results from an ORDA class function applied to a dataClass: <a href="API/DataClassClass.md#all">dataClass.all()</a>, <a href="API/DataClassClass.md#fromcollection">dataClass.fromCollection()</a>, <a href="API/DataClassClass.md#query">dataClass.query()</a>,</li>
+<li>the new entity selection results from an ORDA class function applied to a dataClass: <a href="/docs/es/API/DataClassClass.html#all">dataClass.all()</a>, <a href="/docs/es/API/DataClassClass.html#fromcollection">dataClass.fromCollection()</a>, <a href="/docs/es/API/DataClassClass.html#query">dataClass.query()</a>,</li>
 <li>the new entity selection is based upon a relation <a href="/docs/es/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. &quot;company.employees&quot;) when <em>attributeName</em> is a one-to-many related attribute but the entity does not belong to an entity selection.</li>
 <li>the new entity selection is explicitely copied as shareable with <a href="/docs/es/API/EntitySelectionClass.html#copy">entitySelection.copy()</a> or <code>OB Copy</code> (i.e. with the <code>ck shared</code> option).</li>
 </ul>
@@ -227,7 +227,7 @@
 </code></pre>
 <p>A new entity selection is <strong>alterable</strong> in the following cases:</p>
 <ul>
-<li>the new entity selection created blank using the <a href="API/DataClassClass.md#newselection">dataClass.newSelection()</a> function or <code>Create entity selection</code> command,</li>
+<li>the new entity selection created blank using the <a href="/docs/es/API/DataClassClass.html#newselection">dataClass.newSelection()</a> function or <code>Create entity selection</code> command,</li>
 <li>the new entity selection is explicitely copied as alterable with <a href="/docs/es/API/EntitySelectionClass.html#copy">entitySelection.copy()</a> or <code>OB Copy</code> (i.e. without the <code>ck shared</code> option).</li>
 </ul>
 <p>Example:</p>
