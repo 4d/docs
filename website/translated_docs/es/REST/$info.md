@@ -8,27 +8,27 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 ## Description
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Type       | Description                                                                         |
-| -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Number     | 4D Server's cache size.                                                             |
-| usedCache      | Number     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Number     | Number of entity selections.                                                        |
-| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
-| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
+| Property       | Type      | Description                                                                         |
+| -------------- | --------- | ----------------------------------------------------------------------------------- |
+| cacheSize      | Number    | 4D Server's cache size.                                                             |
+| usedCache      | Number    | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Number    | Number of entity selections.                                                        |
+| entitySet      | Colección | A collection in which each object contains information about each entity selection. |
+| ProgressInfo   | Colección | A collection containing information about progress indicator information.           |
+| sessionInfo    | Colección | A collection in which each object contains information about each user session.     |
 
 ### entitySet
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                         |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| dataClass     | String  | Name of the dataclass.                                                                                                                                                                                                                                              |
-| selectionSize | Number  | Number of entities in the entity selection.                                                                                                                                                                                                                         |
-| sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Date    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Date    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| Property      | Type     | Description                                                                                                                                                                                                                                                         |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | Cadena   | A UUID that references the entity set.                                                                                                                                                                                                                              |
+| dataClass     | Cadena   | Name of the dataclass.                                                                                                                                                                                                                                              |
+| selectionSize | Number   | Number of entities in the entity selection.                                                                                                                                                                                                                         |
+| sorted        | Booleano | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
+| refreshed     | Fecha    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
+| expires       | Fecha    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
 
 For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 > 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
@@ -40,10 +40,10 @@ For each user session, the following information is returned in the *sessionInfo
 
 | Property   | Type   | Description                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
-| sessionID  | String | A UUID that references the session.                          |
-| userName   | String | The name of the user who runs the session.                   |
+| sessionID  | Cadena | A UUID that references the session.                          |
+| userName   | Cadena | The name of the user who runs the session.                   |
 | lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration | Date   | The current expiration date and time of the user session.    |
+| expiration | Fecha  | The current expiration date and time of the user session.    |
 
 ## Example
 

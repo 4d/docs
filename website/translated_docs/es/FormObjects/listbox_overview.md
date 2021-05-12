@@ -3,7 +3,7 @@ id: listboxOverview
 title: List Box
 ---
 
-## Overview
+## Generalidades
 
 List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event managemet, customized appearance, moving of columns, etc.
 
@@ -795,7 +795,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
-| Boolean    | check box                                                  | N/A                     |
+| Booleano   | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | event      | N/A                                                        | N/A                     |
 

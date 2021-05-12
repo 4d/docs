@@ -1,6 +1,6 @@
 ---
 id: collection
-title: Collection
+title: Colección
 ---
 
 Las colecciones son listas ordenadas de valores de tipos similares o diferentes (texto, número, objeto, booleano, colección o null).

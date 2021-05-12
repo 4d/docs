@@ -1,6 +1,6 @@
 ---
 id: identifiers
-title: Identifiers
+title: Identificadores
 ---
 
 Esta sección describe las convenciones y reglas para nombrar los distintos elementos del lenguaje 4D (variables, tablas, objetos, formularios, etc.).
@@ -382,7 +382,7 @@ Asegúrese de utilizar nombres únicos para los diferentes elementos de su base.
 
 1. Campos
 2. Commands
-3. Methods
+3. Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
 6. Variables.

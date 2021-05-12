@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Backup Settings
+title: Parámetros de la copia de seguridad
 ---
 
 Los parámetros de copia de seguridad se definen a través de tres páginas en la caja de diálogo Propiedades de la base. You can set:
@@ -71,7 +71,7 @@ La opción **Utilizar el archivo de historial**, cuando está marcada, indica qu
 
 Por defecto, toda base creada con 4D utiliza un archivo de historial (opción seleccionada en la **página General** de las **Preferencias**). The log file is named *data.journal* and is placed in the Data folder.
 
-> Activating a new log file requires the data of the database to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the database.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la base. When you check this option, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la base.
 
 
 ## Backup & Restore
@@ -95,7 +95,7 @@ Modifying backup and restore options is optional. Their default values correspon
     - **Retry after X second(s), minute(s) or hour(s)**: When this option is checked, a new backup attempt is executed after the wait period. This mechanism allows anticipating certain circumstances that may block the backup. You can set a wait period in seconds, minutes or hours using the corresponding menu. If the new attempt also fails, an error is generated and the failure is noted in the status area of the last backup and in the backup journal file.
     - **Cancel the operation after X attempts**: This parameter is used to set the maximum number of failed backup attempts. If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully. This parameter is useful in order to avoid a case where an extended problem (requiring human intervention) that prevented a backup from being carried out would have led to the application repeatedly attempting the backup to the detriment of its overall performance. By default, this parameter is not checked.
 
-> 4D considers a backup as failed if the database was not launched at the time when the scheduled automatic backup was set to be carried out.
+> 4D considera que una copia de seguridad ha fallado si la base no se ha puesto en marcha en el momento en que la copia de seguridad automática programada debía llevarse a cabo.
 
 ### Archive
 These options apply to main backup files and to log backup files.
