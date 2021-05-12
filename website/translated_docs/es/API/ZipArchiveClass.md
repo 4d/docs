@@ -53,10 +53,10 @@ End if
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
-| zipStructure    | Object    | -> | File or Folder object to compress                    |
+| zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
 | options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Result          | Object    | <- | Status object                                        |
+| Result          | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
 
@@ -150,11 +150,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Type    | Description                                                                                                                             |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| statusText | Text    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Integer | Status code                                                                                                                             |
-| success    | Boolean | True if archive created successfully, else false                                                                                        |
+| Property   | Type     | Description                                                                                                                             |
+| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| statusText | Text     | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
+| status     | Integer  | Status code                                                                                                                             |
+| success    | Booleano | True if archive created successfully, else false                                                                                        |
 
 
 

@@ -59,7 +59,7 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 - single display name+email: "Somebody <somebody@domain.com>"
 - several emails: "Somebody <somebody@domain.com>,me@home.org"
 
-#### Object
+#### Objeto
 
 An object with two properties:
 
@@ -68,7 +68,7 @@ An object with two properties:
 | name     | Text | Display name (can be null) |
 | email    | Text | Email address              |
 
-#### Collection
+#### Colección
 
 A collection of address objects.
 
@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Parameter | Type       |    | Description   |
 | --------- | ---------- |:--:| ------------- |
 | mime      | Blob, Text | -> | Email in MIME |
-| Result    | Object     | <- | Email object  |
+| Result    | Objeto     | <- | Email object  |
 <!-- END REF -->
 
 #### Description
@@ -594,8 +594,8 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parameter | Type   |    | Description                       |
 | --------- | ------ |:--:| --------------------------------- |
-| mail      | Object | -> | Email object                      |
-| options   | Object | -> | Charset and encoding mail options |
+| mail      | Objeto | -> | Email object                      |
+| options   | Objeto | -> | Charset and encoding mail options |
 | Result    | Text   | <- | Email object converted to MIME    |
 <!-- END REF -->
 

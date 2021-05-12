@@ -1,6 +1,6 @@
 ---
 id: looping
-title: Looping structures
+title: Estructuras repetitivas (bucles)
 ---
 
 Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
@@ -291,7 +291,7 @@ La siguiente tabla compara los tres tipos de `For each...End for each`:
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
 | Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
+| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Objeto                      |
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
 | Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
 

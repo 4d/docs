@@ -351,23 +351,23 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 #### シンタックス: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
-This comment allows repetition of a portion of code as long as the condition is fulfilled. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
+このコメントを使用して、条件を満たす間、コードの一部を繰り返すことができます。 繰り返し部のコードは `<!--#4DLOOP-->` と `<!--#4DENDLOOP-->` で挟まれます。
 
-The `<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
+`<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` ブロックはネストできます。 4Dと同じく、それぞれの `<!--#4DLOOP condition-->` には対応する `<!--#4DENDLOOP-->` がなければなりません。
 
-There are five kinds of conditions:
+5種類の条件を使用できます:
 
 ### `<!--#4DLOOP [table]-->`
 
-This syntax makes a loop for each record from the table current selection in the current process. The code portion located between the two comments is repeated for each current selection record.
+このシンタックスは、カレントプロセスのカレントセレクションに基づき、指定したテーブルのレコード毎にループします。 カレントセレクションレコード毎に、2つのコメントの間のコードは繰り返されます。
 
-> When the `4DLOOP` tag is used with a table, records are loaded in "Read only" mode.
+> テーブルを条件として `4DLOOP` タグが使用されると、レコードが "読み取り専用" モードでロードされます。
 
-The following code:
+以下のコードは:
 
 ```html<!--#4DLOOP [People]--><!--#4DTEXT [People]Name--><!--#4DTEXT [People]Surname--><BR><!--#4DENDLOOP-->```
 
-... could be expressed in 4D language in the following way:
+4Dランゲージで表すと以下のとおりです:
 
 ```4d
  FIRST RECORD([People])
@@ -379,15 +379,15 @@ The following code:
 
 ### `<!--#4DLOOP array-->`
 
-This syntax makes a loop for each array item. The array current item is increased when each code portion is repeated.
+このシンタックスは、配列項目ごとにループします。 2つのコメントの間のコードが繰り返されるたびに、配列のカレント項目がインクリメントされます。
 
-> This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
+> このシンタックスで二次元配列を使用することはできません。 この場合には、代わりにメソッドを条件としたループをネストして使用します。
 
-The following code example:
+以下のコードは:
 
 ```html<!--#4DLOOP arr_names--><!--#4DTEXT arr_names{arr_names}--><BR><!--#4DENDLOOP-->```
 
-... could be expressed in 4D language in the following way:
+4Dランゲージで表すと以下のとおりです:
 
 ```4d
  For($Elem;1;Size of array(arr_names))
@@ -398,17 +398,17 @@ The following code example:
 
 ### `<!--#4DLOOP method-->`
 
-This syntax makes a loop as long as the method returns `True`. The method takes a Long Integer parameter type. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
+このシンタックスでは、メソッドが `true` を返す間ループがおこなわれます。 メソッドは、倍長整数タイプの引数を受け取ります。 まずメソッドは引数 0 を渡されます。これは (必要に応じて) 初期化ステージとして使用できます。その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。
 
-For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
+セキュリティのため、Webプロセス内では、`On Web Authentication` データベースメソッドが初期化ステージ (引数に0が渡されて実行される) の前に一度呼び出されます。 認証に成功すると、初期化に進みます。
 
-`C_BOOLEAN($0)` and `C_LONGINT($1)` MUST be declared within the method for compilation purposes.
+コンパイルのため、`C_BOOLEAN($0)` と `C_LONGINT($1)` が必ず宣言されていなければなりません。
 
-The following code example:
+以下のコードは:
 
 ```html<!--#4DLOOP my_method--><!--#4DTEXT var--><BR><!--#4DENDLOOP-->```
 
-... could be expressed in 4D language in the following way:
+4Dランゲージで表すと以下のとおりです:
 
 ```4d
  If(AuthenticationWebOK)
@@ -422,7 +422,7 @@ The following code example:
  End if
 ```
 
-The `my_method` method can be as follows:
+`my_method` は以下のようになります:
 
 ```4d
  C_LONGINT($1)
@@ -442,13 +442,13 @@ The `my_method` method can be as follows:
 
 ### `<!--#4DLOOP expression-->`
 
-With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
+このシンタックスでは、`4DLOOP` タグは *expression* に指定した式が `true` を返す間ループがおこなわれます。 式は有効なブール式であればよく、無限ループを防ぐために、ループごとに評価される変数部分を含んでいる必要があります。
 
-For example, the following code:
+たとえば、以下のコードは:
 
 ```html<!--#4DEVAL $i:=0--><!--#4DLOOP ($i<4)--><!--#4DEVAL $i--><!--#4DEVAL $i:=$i+1--><!--#4DENDLOOP-->```
 
-...produces the following result:
+以下の結果を生成します:
 
 ```
 0
@@ -459,9 +459,9 @@ For example, the following code:
 
 ### `<!--#4DLOOP pointerArray-->`
 
-In this case, the `4DLOOP` tag works like it does with an array: it makes a loop for each element of the array referenced by the pointer. The current array element is increased each time the portion of code is repeated.
+この場合、`4DLOOP` タグは配列のときと同じように振るまいます: ポインターによって参照された配列の要素ごとにループを繰り返します。 カレントの配列要素は、コードが繰り返される度に増加していきます。
 
-This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
+このシンタックスは `PROCESS 4D TAGS` コマンドに対して配列ポインターを渡した場合に有用です。
 
 例:
 
@@ -477,17 +477,17 @@ This syntax is useful when you pass an array pointer as a parameter to the `PROC
   // $output = "elements = hello world "
 ```
 
-In case of an interpretation error, the text "`<!--#4DLOOP expression-->`: description" is inserted instead of the contents located between `<!--#4DLOOP -->` and `<!--#4DENDLOOP-->`.
+解釈エラーの場合、`<!--#4DLOOP -->` と `<!--#4DENDLOOP-->` の間のコンテンツの代わりに "`<!--#4DLOOP expression-->`: エラーの説明” というテキストが挿入されます。
 
-The following messages can be displayed:
+以下のメッセージが表示されます:
 
-- Unexpected expression type (standard error);
-- Incorrect table name (error on the table name);
-- An array was expected (the variable is not an array or is a two dimension array);
-- The method does not exist;
-- Syntax error (when the method is executing);
-- Access error (you do not have the appropriate access privileges to access the table or the method).
-- 4DENDLOOP expected (the `<!--#4DENDLOOP-->` number does not match the `<!--#4DLOOP -->`).
+- 予期しない式のタイプ (標準のエラー);
+- テーブル名が正しくありません (テーブル名のエラー);
+- 配列が必要です (変数が配列でないか、二次元配列が指定された);
+- メソッドが存在しません;
+- シンタックスエラー (メソッド実行時);
+- アクセス権エラー (テーブルやメソッドにアクセスする権限がない);
+- 4DENDLOOP が必要です (`<!--#4DLOOP -->` が対応する `<!--#4DENDLOOP-->` で閉じられていない)。
 
 ## 4DSCRIPT/
 

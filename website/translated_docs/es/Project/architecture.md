@@ -6,7 +6,7 @@ title: Architecture of a project
 A 4D project is made of several folders and files, stored within a single parent application folder (package folder). For example:
 
 - MyProject
-    - `Components`
+    - `Componentes`
     - `Data`
         - `Logs`
         - `Settings`
@@ -30,9 +30,9 @@ The Project folder typically contains the following hierarchy:
 
 - `<applicationName>.4DProject` file
 - `Sources`
-    + `Classes`
+    + `Clases`
     + `DatabaseMethods`
-    + `Methods`
+    + `Métodos`
     + `Forms`
     + `TableForms`
     + `Triggers`
@@ -72,13 +72,13 @@ Project development file, used to designate and launch the project. This file ca
 | ------------------------ | --------------------------------------------------------------------- | ------ |
 | *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | text   |
 
-#### `Methods`
+#### `Métodos`
 
 | Contents         | Description                                                 | Format |
 | ---------------- | ----------------------------------------------------------- | ------ |
 | *methodName*.4dm | Project methods defined in the project. One file per method | text   |
 
-#### `Classes`
+#### `Clases`
 
 | Contents        | Description                                                                                                                        | Format |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -120,7 +120,7 @@ Project development file, used to designate and launch the project. This file ca
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- `Methods`
+- `Métodos`
 - `Forms`
 - `TableForms`
 
@@ -215,7 +215,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
 
 
-## `Components`
+## `Componentes`
 
 This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 

@@ -31,9 +31,9 @@ Here is a description of the properties returned for each dataclass in your proj
 
 | Property | Type   | Description                                                                       |
 | -------- | ------ | --------------------------------------------------------------------------------- |
-| name     | String | Name of the dataclass.                                                            |
-| uri      | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
+| name     | Cadena | Name of the dataclass.                                                            |
+| uri      | Cadena | A URI allowing you to obtain information about the |dataclass and its attributes. |
+| dataURI  | Cadena | A URI that allows you to view the data in the dataclass.                          |
 
 
 ### Example
@@ -203,29 +203,29 @@ The following properties are returned for an exposed dataclass:
 
 | Property       | Type   | Description                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
-| name           | String | Name of the dataclass                                                                        |
-| collectionName | String | Name of an entity selection on the dataclass                                                 |
+| name           | Cadena | Name of the dataclass                                                                        |
+| collectionName | Cadena | Name of an entity selection on the dataclass                                                 |
 | tableNumber    | Number | Table number in the 4D database                                                              |
-| scope          | String | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | String | A URI to the data in the dataclass                                                           |
+| scope          | Cadena | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
+| dataURI        | Cadena | A URI to the data in the dataclass                                                           |
 
 
 ### Attribute(s)
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Type    | Description                                                                                                                                           |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | Attribute name.                                                                                                                                       |
-| kind        | String  | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | Number  | Position of the field in the database table).                                                                                                         |
-| scope       | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
-| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | Boolean | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
-| path        | String  | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                         |
-| foreignKey  | String  | For a relatedEntity attribute, name of the related attribute.                                                                                         |
-| inverseName | String  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
+| Property    | Type     | Description                                                                                                                                           |
+| ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Cadena   | Attribute name.                                                                                                                                       |
+| kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                            |
+| fieldPos    | Number   | Position of the field in the database table).                                                                                                         |
+| scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
+| indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
+| type        | Cadena   | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
+| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
+| path        | Cadena   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                         |
+| foreignKey  | Cadena   | For a relatedEntity attribute, name of the related attribute.                                                                                         |
+| inverseName | Cadena   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
 
 
 ### Primary Key

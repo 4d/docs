@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Type    |    | Description                                                |
-| --------- | ------- | -- | ---------------------------------------------------------- |
-| Result    | Boolean | <- | True if the file was created successfully, false otherwise |
+| Parameter | Type     |    | Description                                                |
+| --------- | -------- | -- | ---------------------------------------------------------- |
+| Result    | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Description
@@ -335,7 +335,7 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parameter | Type   |    | Description                                      |
 | --------- | ------ | -- | ------------------------------------------------ |
-| Result    | Object | <- | Contents of .exe version resource or .plist file |
+| Result    | Objeto | <- | Contents of .exe version resource or .plist file |
 <!-- END REF -->
 
 
@@ -566,7 +566,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 | Parameter | Type   |    | Description                                                 |
 | --------- | ------ | -- | ----------------------------------------------------------- |
-| info      | Object | -> | Properties to write in .exe version resource or .plist file |
+| info      | Objeto | -> | Properties to write in .exe version resource or .plist file |
 <!-- END REF -->
 
 

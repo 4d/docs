@@ -1,6 +1,6 @@
 ---
 id: about
-title: About the 4D Language
+title: Acerca del lenguaje 4D
 ---
 
 The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for web, mobile, or desktop applications. You can use the 4D language for many different tasks—from performing simple calculations to creating complex custom user interfaces. For example, you can:

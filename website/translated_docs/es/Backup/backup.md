@@ -1,6 +1,6 @@
 ---
 id: backup
-title: Backup
+title: Copia de seguridad
 ---
 
 A backup can be started in three ways:

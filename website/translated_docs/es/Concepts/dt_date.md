@@ -1,6 +1,6 @@
 ---
 id: date
-title: Date
+title: Fecha
 ---
 
 Las variables, campos o expresiones de tipo fecha pueden estar comprendidas entre 1/1/100 y 31/12/32.767.
@@ -30,20 +30,20 @@ Una fecha nula es especificada por _!00-00-00!_.
 
 ## Date operators
 
-| Operation                | Syntax         | Returns | Expression                   | Value        |
-| ------------------------ | -------------- | ------- | ---------------------------- | ------------ |
-| Date difference          | Date – Date    | Number  | !2017-01-20! - !2017-01-01!  | 19           |
-| Day addition             | Date + Number  | Date    | !2017-01-20! + 9             | !2017-01-29! |
-| Day subtraction          | Date – Number  | Date    | !2017-01-20! - 9             | !2017-01-11! |
-| Equality                 | Date = Date    | Boolean | !2017-01-01! =!2017-01-01!   | True         |
-|                          |                |         | !2017-01-20! = !2017-01-01!  | False        |
-| Inequality               | Date # Date    | Boolean | !2017-01-20! # !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! # !2017-01-20!  | False        |
-| Greater than             | Date > Date    | Boolean | !2017-01-20! > !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! > !2017-01-20!  | False        |
-| Less than                | Date < Date    | Boolean | !2017-01-01! < !2017-01-20!  | True         |
-|                          |                |         | !2017-01-20! < !2017-01-20!  | False        |
-| Greater than or equal to | Date >= Date   | Boolean | !2017-01-20! >=!2017-01-01!  | True         |
-|                          |                |         | !2017-01-01!>=!2017-01-20!   | False        |
-| Less than or equal to    | Date \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | True         |
-|                          |                |         | !2017-01-20!\<=!2017-01-01! | False        |
+| Operation                | Syntax         | Returns  | Expression                   | Value        |
+| ------------------------ | -------------- | -------- | ---------------------------- | ------------ |
+| Date difference          | Date – Date    | Number   | !2017-01-20! - !2017-01-01!  | 19           |
+| Day addition             | Date + Number  | Fecha    | !2017-01-20! + 9             | !2017-01-29! |
+| Day subtraction          | Date – Number  | Fecha    | !2017-01-20! - 9             | !2017-01-11! |
+| Equality                 | Date = Date    | Booleano | !2017-01-01! =!2017-01-01!   | True         |
+|                          |                |          | !2017-01-20! = !2017-01-01!  | False        |
+| Inequality               | Date # Date    | Booleano | !2017-01-20! # !2017-01-01!  | True         |
+|                          |                |          | !2017-01-20! # !2017-01-20!  | False        |
+| Greater than             | Date > Date    | Booleano | !2017-01-20! > !2017-01-01!  | True         |
+|                          |                |          | !2017-01-20! > !2017-01-20!  | False        |
+| Less than                | Date < Date    | Booleano | !2017-01-01! < !2017-01-20!  | True         |
+|                          |                |          | !2017-01-20! < !2017-01-20!  | False        |
+| Greater than or equal to | Date >= Date   | Booleano | !2017-01-20! >=!2017-01-01!  | True         |
+|                          |                |          | !2017-01-01!>=!2017-01-20!   | False        |
+| Less than or equal to    | Date \<= Date | Booleano | !2017-01-01!\<=!2017-01-20! | True         |
+|                          |                |          | !2017-01-20!\<=!2017-01-01! | False        |

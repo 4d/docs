@@ -42,8 +42,8 @@ Create another entity set based on previously created entity sets
 
 | Parameter        | Type   | Description                                                    |
 | ---------------- | ------ | -------------------------------------------------------------- |
-| $operator        | String | One of the logical operators to test with the other entity set |
-| $otherCollection | String | Entity set ID                                                  |
+| $operator        | Cadena | One of the logical operators to test with the other entity set |
+| $otherCollection | Cadena | Entity set ID                                                  |
 
 
 
