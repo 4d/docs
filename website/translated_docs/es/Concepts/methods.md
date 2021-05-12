@@ -1,14 +1,14 @@
 ---
 id: methods
-title: Methods
+title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+A method is basically a piece of code that executes one or several actions. En el lenguaje 4D, hay dos categorías de métodos:
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
-    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
+- **Los métodos integrados**, que son suministrados por 4D o por desarrolladores externos y que sólo pueden ser llamados en su código. Los métodos integrados incluyen:
+    - Comandos y funciones de 4D API, como `ALERT` o `Current date`.
+    - Los métodos asociados a las colecciones o a los objetos nativos, como `collection.orderBy()` o `entity.save()`.
     - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
 
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.

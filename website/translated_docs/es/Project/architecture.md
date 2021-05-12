@@ -6,7 +6,7 @@ title: Architecture of a 4D project
 A 4D project is made of several folders and files, stored within a single parent database folder (package folder). For example:
 
 - MyProject
-    - Components
+    - Componentes
     - Data
         - Logs
         - Settings
@@ -30,9 +30,9 @@ The Project folder typically contains the following hierarchy:
 
 - *databaseName*.4DProject file
 - Sources
-    + Classes
+    + Clases
     + DatabaseMethods
-    + Methods
+    + Métodos
     + Forms
     + TableForms
     + Triggers
@@ -120,7 +120,7 @@ Project development file, used to designate and launch the project. This file ca
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- Methods
+- Métodos
 - Forms
 - TableForms
 

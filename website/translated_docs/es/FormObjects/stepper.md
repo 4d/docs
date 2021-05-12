@@ -3,7 +3,7 @@ id: stepper
 title: Stepper
 ---
 
-## Overview
+## Generalidades
 
 A stepper lets the user scroll through numeric values, durations (times) or dates by predefined steps by clicking on the arrow buttons.
 

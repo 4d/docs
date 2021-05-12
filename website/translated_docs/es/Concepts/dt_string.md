@@ -1,6 +1,6 @@
 ---
 id: string
-title: String
+title: Cadena
 ---
 
 String is a generic term that stands for:
@@ -35,25 +35,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+| Operation                | Syntax           | Returns  | Expression              | Value    |
+| ------------------------ | ---------------- | -------- | ----------------------- | -------- |
+| Concatenation            | String + String  | Cadena   | "abc" + "def"           | "abcdef" |
+| Repetition               | String * Number  | Cadena   | "ab" * 3                | "ababab" |
+| Equality                 | String = String  | Booleano | "abc" = "abc"           | True     |
+|                          |                  |          | "abc" = "abd"           | False    |
+| Inequality               | String # String  | Booleano | "abc" # "abd"           | True     |
+|                          |                  |          | "abc" # "abc"           | False    |
+| Greater than             | String > String  | Booleano | "abd" > "abc"           | True     |
+|                          |                  |          | "abc" > "abc"           | False    |
+| Less than                | String < String  | Booleano | "abc" < "abd"           | True     |
+|                          |                  |          | "abc" < "abc"           | False    |
+| Greater than or equal to | String >= String | Booleano | "abd" >= "abc"          | True     |
+|                          |                  |          | "abc" >= "abd"          | False    |
+| Less than or equal to    | String <= String | Booleano | "abc" <= "abd"          | True     |
+|                          |                  |          | "abd" <= "abc"          | False    |
+| Contains keyword         | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
+|                          |                  |          | "Alpha Bravo" % "ravo"  | False    |
+|                          | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -137,7 +137,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. Para más información sobre las normas aplicadas, consulte la siguiente dirección: http://www.unicode.org/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
 ## Character Reference Symbols
 The character reference symbols: [[...]]

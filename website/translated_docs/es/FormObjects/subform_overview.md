@@ -3,7 +3,7 @@ id: subformOverview
 title: Subform
 ---
 
-## Overview
+## Generalidades
 
 A subform is a form included in another form.
 
