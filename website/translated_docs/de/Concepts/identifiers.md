@@ -14,7 +14,7 @@ Dieser Abschnitt beschreibt die Konventionen und Regeln zum Bezeichnen verschied
 Für Namen von Arrays gelten dieselben Regeln wie für [Variablen](#variablen).
 
 
-## Klassen
+## Classes
 
 Ein Klassenname kann bis zu 31 Zeichen enthalten.
 

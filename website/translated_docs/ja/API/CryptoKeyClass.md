@@ -343,4 +343,6 @@ utf8 形式の *message* 文字列。<!-- END REF --><!-- REF CryptoKey.size -->
 | プロパティ   | タイプ        | 説明                                                |
 | ------- | ---------- | ------------------------------------------------- |
 | success | boolean    | 署名がメッセージと合致すれば true                               |
-| errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |<!-- END REF --><style> h2 { background: #d9ebff;}</style>
+| errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |<!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

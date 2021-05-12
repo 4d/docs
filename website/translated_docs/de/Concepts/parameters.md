@@ -344,14 +344,14 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-```
+````
 
 
 
 
-## Objekteigenschaften als benannte Parameter verwenden
+## Objekteigenschaften als benannte Parameter verwenden 
 
-Bei Objekten als Parameter können Sie auch **Parameter mit Namen** verwalten. Dieser Programmierstil ist einfach, flexibel und leicht lesbar.
+Bei Objekten als Parameter können Sie auch **benannte Parameter** verwalten. Dieser Programmierstil ist einfach, flexibel und leicht lesbar. 
 
 Wir verwenden zum Beispiel die Methode `CreatePerson`:
 

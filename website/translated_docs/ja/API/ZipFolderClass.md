@@ -33,4 +33,5 @@ The following properties and functions from the [Folder](FolderClass.md) class a
 | [<!-- INCLUDE #directory.path.Syntax -->](FolderClass.md#path)                         | Returns a path relative to the archive                                                                                            |
 | [<!-- INCLUDE #directory.platformPath.Syntax -->](FolderClass.md#platformpath)         |                                                                                                                                   |
 
+
 <style> h2 { background: #d9ebff;}</style>
