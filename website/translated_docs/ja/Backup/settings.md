@@ -34,7 +34,7 @@ title: バックアップ設定
     - **X 週ごと**: 週単位でバックアップの間隔をスケジュールできます。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する曜日と時刻を設定しなければなりません。 複数の曜日を選択することもできます。 たとえば、毎週水曜日と金曜日にバックアップをするようプログラムできます。
     - **X 月ごと**: 月単位でバックアップの間隔をスケジュールできます。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する日付と時刻を設定しなければなりません。
 
-> Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
+> 夏時間と標準時の切り替えがある場合にはスケジューラーが一時的に影響され、次のバックアップ実行が 1時間ずれる場合があります。 このずれは一回限りであり、その後のバックアップはスケジュール時間どおりに実行されます。
 
 
 ## バックアップ設定
