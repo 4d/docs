@@ -78,7 +78,7 @@ vsCurrentName:=""
 
 ## Variáveis locais
 
-Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável.  A local variable name can contain up to 31 characters, not including the dollar sign.
+Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável.  Um nome de variável local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
 Examples:
 ```4d
@@ -89,16 +89,16 @@ $vsMyString:="Hello there"
 
 ## Arrays
 
-You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
+Um array se designa escrevendo seu nome, que é o nome que se passa a um comando de declaração de array (como ARRAY LONGINT) quando criar o array. Arrays são variáveis, e desde o ponto de vista do escopo,da mesma forma que as variáveis, têm três tipos diferentes de arrays:
 
-- Interprocess arrays,
-- Process arrays,
-- Local arrays.
+- Arrays interprocesso,
+- Arrays processo,
+- Arrays local.
 
-### Interprocess Arrays
-The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Arrays interprocesso
+O nome do array interprocesso é precedido pelos símbolos (<>) - um sinal "menor que" seguido por um sinal "maior que".
 
-An interprocess array name can contain up to 31 characters, not including the <> symbols.
+Um nome de array interprocesso pode conter até 31 caracteres, sem incluir os símbolos <>.
 
 Examples:
 ```4d
@@ -107,8 +107,8 @@ SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
-### Process Arrays
-You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
+### Arrays proceso
+Um array processo se designa com seu nome (que não pode começar com os símbolos <> nem com $). Um nome de array processo pode conter até 31 caracteres.
 
 Examples:
 ```4d
@@ -117,8 +117,8 @@ SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
 ```
 
-### Local Arrays
-The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
+### Arrays locais
+O nome de um array local vai precedido do sinal de dólar ($). Um nome de array local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
 Examples:
 ```4d
@@ -127,51 +127,51 @@ SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elements of arrays
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+### Elementos de arrays
+A referência a um elemento de um array local, processo ou interprocesso se realiza mediante chaves ("{ }"). O elemento ao qual faz referência se indica com uma expressão numérica.
 
 Examples:
 ```4d  
-    //Addressing an element of an interprocess array
+    //O elemento ao que se faz referência se indica com uma expressão numérica.
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Addressing an element of a process array
+    //Direcionar um elemento de um array processo
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Addressing an element of a local array
+    //Direcionar um elemento de um array local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
+### Elementos de arrays de duas dimensões
+A referência a um elemento de um array de duas dimensões se realiza utilizando as chaves ({…}) duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
 
 Examples:
 ```4d
-    //Addressing an element of a two-dimensional interprocess array
+    //Direcionamento de um elemento de um array interprocesso de duas dimensões 
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional process array
+    //Direcionar um elemento de uma array processo de duas dimensões
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
-    //Addressing an element of a two-dimensional local array
+    //Direcionar um elemento de um array local de duas dimensões
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
-## Object attributes
+## Atributos de objetos
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
+Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".") entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
 
 Examples:
 ```4d
@@ -179,11 +179,11 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Nota:** são aplicadas regras adicionais aos nomes de atributos de objetos (devem ser ajustados à especificação ECMAScript). Para saber mais, consulte [Identificadores de propriedades de objetos](Concepts/dt_object.md#object-property-identifiers).
 
-## Forms
+## Formulários
 
-You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
+Um formulário se designa mediante uma expressão de tipo string que representa seu nome. Um nome de formulário pode conter até 31 caracteres.
 
 Examples:
 ```4d
@@ -192,22 +192,22 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Form objects
+## Objetos de formulários
 
-You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
+Se designar um objeto de formulário passando seu nome como uma string, precedida pelo parâmetro *. Um nome de objeto de formulário pode conter até 255 caracteres.
 
 Example:
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
+**Nota:** não confunda os objetos de formulário (botões, list boxes, variáveis editáveis, etc.) e os objetos da linguagem 4D. Os objetos da linguagem 4D são criados e manipulados através da notação de objetos ou de comandos dedicados.
 
-## Project methods
+## Métodos projeto
 
-You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
+Um método projeto (procedimento ou função) se designa utilizando seu nome. Um nome de método pode conter até 31 caracteres.
 
-**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
+**Nota:** um método projeto que não devolve um resultado também se chama um procedimento. Um método projeto que devolve um resultado também se denomina função.
 
 Examples:
 ```4d
@@ -216,7 +216,7 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
 **Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:
 
