@@ -1,6 +1,6 @@
 ---
 id: properties
-title: Menu item properties
+title: Propiedades de los menús
 ---
 
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
@@ -40,13 +40,13 @@ You can associate a custom parameter with each menu item. A menu item parameter 
 
 Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
 
-## Action
+## Acción
 
 Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
 
 If you do not assign a method or a standard action to a menu command, choosing that menu command causes 4D to exit the Application environment and go to the Design environment. If only the Application environment is available, this means quitting to the Desktop.
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the 4D database (add record, select all, etc.).
+Las acciones estándar permiten realizar diversas operaciones cotidianas vinculadas a las funciones del sistema (copiar, salir, etc.) o a las de la base 4D (añadir registro, seleccionar todo, etc.).
 
 You can assign both a standard action and a project method to a menu command. In this case, the standard action is never executed; however, 4D uses this action to enable/disable the menu command according to the current context and to associate a specific operation with it according to the platform. When a menu command is deactivated, the associated project method cannot be executed.
 
@@ -167,7 +167,7 @@ You can associate an icon with a menu item. It will displayed directly in the me
 
 ![](assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the database resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. Si selecciona un archivo imagen que no está almacenado en la carpeta Recursos de la base, se copiará automáticamente en esa carpeta. Once set, the item icon appears in the preview area:
 
 ![](assets/en/Menus/iconpreview.png)
 
