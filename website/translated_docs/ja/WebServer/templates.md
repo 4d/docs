@@ -10,7 +10,7 @@ When these pages are sent by the HTTP server, they are parsed and the tags they 
 For example, if you write in an HTML page:
 
 ```html
-<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P> <!--#4DTEXT vtSiteName-->へようこそ！</P>
 ```
 
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
