@@ -3,9 +3,9 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Can be called by                         | Definition                                                                           |
-| ---- | ---------------------------------------- | ------------------------------------------------------------------------------------ |
-| 39   | [Button](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
+| Code | Can be called by                        | Definition                                                                           |
+| ---- | --------------------------------------- | ------------------------------------------------------------------------------------ |
+| 39   | [Botón](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
 
 
 ## Description
@@ -20,7 +20,7 @@ This event can be generated for the following button styles:
 - [OS X Gradient](FormObjects/button_overview.md#os-x-gradient)
 - [OS X Textured](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
-- [Help](FormObjects/button_overview.md#help)
+- [Ayuda](FormObjects/button_overview.md#help)
 - [Circle](FormObjects/button_overview.md#circle)
 - [Custom](FormObjects/button_overview.md#custom)
 
