@@ -196,7 +196,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 Se designa un objeto de formulario pasando su nombre como una cadena, precedida por el parámetro *. Un nombre de objeto de formulario puede contener hasta 255 caracteres.
 
-Example:
+Ejemplo:
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
@@ -218,7 +218,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método es una función, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir una base para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
 
-**Nota:** cuando llame a un método, sólo tiene que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como todos los comandos del Plug-In, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método. Example:
+**Nota:** cuando llame a un método, sólo tiene que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como todos los comandos del Plug-In, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método. Ejemplo:
 
 Examples:
 ```4d
