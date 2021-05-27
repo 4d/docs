@@ -110,7 +110,7 @@ You designate a table by placing its name between brackets: \[...]. You designat
 A table name and field name can contain up to 31 characters.
 
 - A table or field name must begin with a letter, an underscore, or a dollar ("$")
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
+- Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
 - Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
 
