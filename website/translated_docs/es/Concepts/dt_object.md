@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objects
+title: Objetos
 ---
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
@@ -34,7 +34,7 @@ Cada valor de propiedad al que se accede a través de la notación de objeto se 
 
 Los objetos deben haber sido inicializados, por ejemplo utilizando el comando `New object`, de lo contrario al intentar leer o modificar sus propiedades se generará un error de sintaxis.
 
-Example:
+Ejemplo:
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -58,7 +58,7 @@ Con la notación de objetos, se puede acceder a las propiedades de los objetos d
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+Ejemplo:
 ```4d
      employee.name:="Smith"
 ```
@@ -89,13 +89,13 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. Ejemplo:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. Ejemplo:
 
 ```4d
       // MyMethod1
@@ -123,7 +123,7 @@ El uso de la notación de objetos con punteros es muy similar al uso de la notac
 - Access by name:
 > pointerOnObject->["propertyName"]
 
-Example:
+Ejemplo:
 
 ```4d
  C_OBJECT(vObj)
