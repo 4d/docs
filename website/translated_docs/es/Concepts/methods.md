@@ -9,29 +9,29 @@ A method is basically a piece of code that executes one or several actions. En e
 - **Los métodos integrados**, que son suministrados por 4D o por desarrolladores externos y que sólo pueden ser llamados en su código. Los métodos integrados incluyen:
     - Comandos y funciones de 4D API, como `ALERT` o `Current date`.
     - Los métodos asociados a las colecciones o a los objetos nativos, como `collection.orderBy()` o `entity.save()`.
-    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+    - Los comandos de los plug-ins o componentes, suministrados por 4D o por desarrolladores de terceros, comos `SVG_New_arc`.
 
-    Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
+    Los métodos integrados se detallan en el manual *Lenguaje 4D* o en los manuales dedicados a los plug-ins o componentes.
 
-- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
+- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
+**Nota:** 4D también ofrece métodos específicos que se ejecutan automáticamente en función de los eventos de la base o de los eventos formulario. Ver [Métodos especializados](#specialized-methods).
 
 
-## Calling Project Methods
+## Métodos proyecto
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
-- Subroutine and function
-- Method attached to object
+- Subrutina y función
+- Método asociado a un objeto
 - Menu method
 - Process method
 - Event or Error catching method
 
-### Subroutines and functions
+### Subrutinas y funciones
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
 
-When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
+Cuando crea un método proyecto, éste pasa a formar parte del lenguaje de la base en la que lo crea. Entonces puede llamar al método proyecto desde otros métodos proyecto, o desde [métodos predefinidos](#predefined-methods) de la misma manera que llama a los comandos integrados de 4D. A project method used in this way is called a subroutine.
 
 You use subroutines to:
 
@@ -40,7 +40,7 @@ You use subroutines to:
 - Facilitate changes to your methods
 - Modularize your code
 
-For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
+Por ejemplo, supongamos que tiene una base de clientes. Al personalizar la base, se da cuenta de que hay algunas tareas que realiza reiteradamente, como la búsqueda de un cliente y la modificación de su registro. The code to do this might look like this:
 
 ```4d
   // Look for a customer
@@ -51,30 +51,30 @@ For example, let’s say you have a database of customers. As you customize the 
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your custom database where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. Si hay diez lugares en su base personalizada donde necesita hacer esto, tendrá que escribir el código diez veces. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
 
-If the previously described code was a method called `MODIFY CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
+Si el código descrito anteriormente fuera un método llamado `MODIFICAR CLIENTE`, se ejecutaría simplemente utilizando el nombre del método en otro método. For example, to modify a customer’s record and then print the record, you would write this method:
 
 ```4d
  MODIFY CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+This capability simplifies your methods dramatically. En el ejemplo, no es necesario saber cómo funciona el método `MODIFICAR CLIENTE`, sólo lo que hace. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
 
-If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
+Si necesita cambiar su método de búsqueda de clientes en esta base de ejemplo, tendrá que cambiar sólo un método, no diez. This is the next reason to use subroutines—to facilitate changes to your methods.
 
-Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account database:
+Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Considere el siguiente código de una base de de cuentas corrientes:
 
 ```4d
- FIND CLEARED CHECKS ` Find the cleared checks
- RECONCILE ACCOUNT ` Reconcile the account
- PRINT CHECK BOOK REPORT ` Print a checkbook report
+ FIND CLEARED CHECKS ` Buscar los cheques emitidos
+ RECONCILE ACCOUNT ` Reconciliar la cuenta
+ PRINT CHECK BOOK REPORT ` Imprimir un informe de la chequera
 ```
 
-Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Incluso para alguien que no conozca la base, está claro lo que hace este código. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
-### Methods attached to objects
+### Métodos asociados a los objetos
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
@@ -126,7 +126,7 @@ Then the method acts like a new, calculated attribute that can be added to other
 ```4d
 C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //añadir el método  
 
 $result:=$o.fullName()
 //$result = "Jim Wesson"
@@ -141,11 +141,11 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
+A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. Este proceso es uno de los principales aspectos de la personalización de una base de datos. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted personaliza su base.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
-Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
+Automating sequences of activities is a very powerful capability of the programming language. Utilizando los menús personalizados, se pueden automatizar las secuencias de tareas y, por lo tanto, ofrecer más orientación a los usuarios de la base.
 
 
 ### Process Methods
@@ -157,7 +157,7 @@ An **event catching method** runs in a separate process as the process method fo
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
 
-## Recursive Project Methods
+## Métodos proyecto recursivos
 
 Project methods can call themselves. For example:
 
@@ -234,9 +234,9 @@ Some typical uses of recursion in 4D are:
 **Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
 
 
-## Specialized Methods
+## Métodos especializados
 
-In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
+Además de los **métodos proyecto**, 4D soporta varios tipos de métodos específicos, que se llaman automáticamente en función de los eventos:
 
 | Type                             | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
 | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
