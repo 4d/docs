@@ -1310,6 +1310,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Exemple
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -2125,9 +2126,9 @@ The *queryString* parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-Pour obtenir des informations détaillées sur la création d'une requête à l'aide des paramètres value et *querySettings*, reportez-vous à la description de la fonction **dataClass** `.query()`.
+For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
 
-
+> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Exemple 1
 
@@ -2229,7 +2230,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 
 La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la méthode callback *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique<!-- END REF -->.
-> Cette fonction ne modifie pas la collection d'origine.
+> This function does not modify the original collection.
 
 Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif). *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
 
@@ -2317,7 +2318,7 @@ Avec la méthode ***Flatten*** suivante :
 #### Description
 
 La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
-> Cette fonction modifie la collection d'origine.
+> This function modifies the original collection.
 
 Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
 > **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
@@ -2402,6 +2403,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->
