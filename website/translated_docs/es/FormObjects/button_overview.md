@@ -1,6 +1,6 @@
 ---
 id: buttonOverview
-title: Button
+title: Botón
 ---
 
 A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
@@ -46,16 +46,16 @@ By default, the Regular style has a light gray background with a label in the ce
 #### JSON Example:
 
 ```4d
-    "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+    "miBotón": {
+        "tipo": "button", //define el tipo de objeto
+        "style": "regular", //define el estilo del botón
+        "defaultButton": "true" //define el botón como opción por defecto
+        "text": "OK", //texto que aparecerá en el botón
+        "action": "Cancel", //acción a realizar
+        "left": 60, //posición izquierda en el formulario  
+        "top": 160, //posición superior en el formulario
+        "width": 100, //ancho del botón
+        "height": 20 //altura del botón
         }
 ```
 
@@ -212,7 +212,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 ### OS X Textured
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+El estilo del botón OS X Textured es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia diferente. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
 By default, the OS X Textured style appears as:
 
@@ -270,7 +270,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 
 
-### Help
+### Ayuda
 
 
 The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.
@@ -362,4 +362,4 @@ Additional specific properties are available, depending on the [button style](#b
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
 - [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
-- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [Posición del título/imagen](properties_TextAndPicture.md#title-picture-position) - [Con menú emergente](properties_TextAndPicture.md#with-pop-up-menu) (Barra de herramientas, Bisel, Bisel redondeado, OS X Gradient, OS X Textured, Office XP, Círculo, Personalizado)
