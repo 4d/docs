@@ -175,13 +175,13 @@ Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) 
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
-  //Do something with the element #2,#4...#2n
+  //Hacer algo con el elemento #2,#4...#2n
     anArray{$vlElem}:=...
  End for
 ```
 
 
-### Comparing looping structures
+### Comparación de estructuras de bucle
 
 Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 iteraciones:
 ```4d
@@ -351,7 +351,7 @@ Quiere aumentar el salario de todos los empleados británicos en una selección 
  End for each
 ```
 
-### Loop through object properties
+### Bucles en las propiedades de objetos
 
 Cuando se utiliza `For each...End for each` con una *Expression* de tipo Object, el parámetro *Current_Item* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
@@ -382,7 +382,7 @@ You can write:
     "age": 20
 }
 ```
-### begin / end parameters
+### Parámetros begin / end
 
 Puede definir los límites de la iteración utilizando los parámetros opcionales inicio y fin.
 
