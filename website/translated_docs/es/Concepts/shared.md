@@ -1,6 +1,6 @@
 ---
 id: shared
-title: Shared objects and collections
+title: Objetos y colecciones compartidos
 ---
 
 ## Generalidades
@@ -15,9 +15,9 @@ Shared objects and shared collections can be stored in variables declared with s
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections.
+Un catálogo único y global devuelto por el comando `Storage` está siempre disponible en toda la base y sus componentes, y puede utilizarse para almacenar todos los objetos y colecciones compartidos.
 
-## Using shared objects or collections
+## Utilización de objetos o colecciones compartidos
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
 ### Modification
@@ -35,11 +35,11 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while the last `End use` unlocks all objects and collections. Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+A shared object/collection can only be modified by one process at a time. `Use` bloquea el objeto/colección compartido para otros hilos, mientras que el último `End use` desbloquea todos los objetos y colecciones. Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
 
 Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
 
-- Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
+- Al llamar a `Use` en un objeto/colección compartido de un grupo se bloquearán las propiedades/elementos de todos los objetos/colecciones compartidos que pertenezcan al mismo grupo.
 - A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
 - Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked.
 
@@ -79,8 +79,8 @@ Shared objects and shared collections are designed to allow communication betwee
 - The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
 - If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
 - If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
-- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
-- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
+- La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos que comparten el mismo identificador de bloqueo.
+- Several **Use...End use** structures can be nested in the 4D code. En ese caso, todos los bloqueos se apilan y las propiedades/elementos se liberarán sólo cuando se ejecute la última llamada de End use.
 
 **Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
 
