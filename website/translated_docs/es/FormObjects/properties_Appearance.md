@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title: Appearance
+title: Apariencia
 ---
 
 ---
@@ -121,7 +121,7 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -140,7 +140,7 @@ Displays/hides both background images and background color.
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show footers
@@ -157,7 +157,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -177,7 +177,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 ## Show headers
@@ -194,7 +194,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -213,7 +213,7 @@ Displays/hides invisible characters
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -231,7 +231,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -252,7 +252,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show page frame
@@ -269,7 +269,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -298,7 +298,7 @@ With the Show references property on, the reference is displayed:
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show vertical ruler
@@ -315,7 +315,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -351,7 +351,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 
 #### See also
@@ -413,7 +413,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Zoom
@@ -430,6 +430,6 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
