@@ -44,7 +44,7 @@ If you assign an element's index that surpasses the last existing element of the
 
 Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
-Example:
+Ejemplo:
 ```4d
  C_COLLECTION($colVar) //creación de una variable 4D de tipo colección
  $colVar:=Nueva colección //inicialización de la colección y asignación a la variable 4D
