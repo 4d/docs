@@ -10,7 +10,7 @@ Although they are usually equivalent, some data types available at the database 
 | Data Types                                 | Database support(1) | Language support     | Declaración de variables     |
 | ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
 | [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
+| [Texto](Concepts/dt_string.md)             | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
 | [Fecha](Concepts/dt_date.md)               | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
 | [Hora](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
 | [Booleano](Concepts/dt_boolean.md)         | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
@@ -56,7 +56,7 @@ The following table illustrates these default values:
 | Imagen    | picture size=0                                                                      | picture size=0          | picture size=0               |
 | Real      | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
 | Puntero   | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text      | ""                                                                                  | ""                      | ""                           |
+| Texto     | ""                                                                                  | ""                      | ""                           |
 | Blob      | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
 | Objeto    | null                                                                                | null                    | null                         |
 | Colección | null                                                                                | null                    | null                         |
