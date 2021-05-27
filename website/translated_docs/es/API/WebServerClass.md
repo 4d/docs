@@ -8,7 +8,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 
 
-### Web Server object
+### Objeto servidor web
 
 Web server objects are instantiated with the [`WEB Server`](#web-server) command.
 
@@ -807,8 +807,8 @@ The function returns an object describing the Web server launch status. This obj
 | success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
 | errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
 |          | \[].errCode            | Number    | 4D error code                                                        |
-|          | \[].message            | Text      | Description of the 4D error                                          |
-|          | \[].componentSignature | Text      | Signature of the internal component which returned the error         |
+|          | \[].message            | Texto     | Description of the 4D error                                          |
+|          | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Example
