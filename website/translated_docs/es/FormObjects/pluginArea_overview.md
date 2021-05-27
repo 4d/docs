@@ -1,13 +1,13 @@
 ---
 id: pluginAreaOverview
-title: Plug-in Area
+title: Área de plug-in
 ---
 
 ## Generalidades
 
 A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications. A plug-in can perform a simple task such as displaying a digital clock on a form, or a complex task such as providing full-featured word processing, spreadsheet, or graphics capabilities.
 
-When opening a database, 4D creates an internal list of the plug-ins [installed in your database](#installing-plug-ins). Once you have inserted a Plug-in Area in a form, you can assign a plug-in to the area directly in the Type list in the Property List:
+Al abrir una base de datos, 4D crea una lista interna de los plug-ins [instalados en la base](#installing-plug-ins). Una vez que haya insertado un área de plug-in en un formulario, puede asignar un plug-in al área directamente en la lista de tipos de la lista de propiedades:
 
 ![](assets/en/FormObjects/pluginArea.png)
 
@@ -16,7 +16,7 @@ When opening a database, 4D creates an internal list of the plug-ins [installed 
 If you draw a plug-in area that is too small, 4D will display it as a button whose title is the name of the variable associated with the area. During execution, the user can click on this button in order to open a specific window displaying the plug-in.
 
 
-### Advanced properties
+### Propiedades avanzadas
 
 If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
 
