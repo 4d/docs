@@ -627,7 +627,7 @@ The following generic code duplicates any entity:
 | Parameter | Type    |    | Description                                                                             |
 | --------- | ------- |:--:| --------------------------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Result    | Text    | <- | Value of the text primary key of the entity                                             |
+| Result    | Texto   | <- | Value of the text primary key of the entity                                             |
 | Result    | Integer | <- | Value of the numeric primary key of the entity                                          |
 
 <!-- END REF -->
@@ -1290,7 +1290,7 @@ Updating an entity with `dk auto merge` option:
 <!-- REF #EntityClass.toObject().Params -->
 | Parameter    | Type      |    | Description                                                                                             |
 | ------------ | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | Text      | -> | Attribute(s) to extract (comma-separated string)                                                        |
+| filterString | Texto     | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | Colección | -> | Collection of attribute(s) to extract                                                                   |
 | options      | Integer   | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
 | Result       | Objeto    | <- | Object built from the entity                                                                            |
