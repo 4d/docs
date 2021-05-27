@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: Subformulario
 ---
 
 ---
@@ -16,7 +16,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -39,7 +39,7 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Double-click on empty row
@@ -57,7 +57,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### See also
 [Double click on row](#double-click-on-row)
@@ -85,7 +85,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 #### See also
@@ -108,7 +108,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -126,7 +126,7 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 
@@ -143,7 +143,7 @@ Specifies the table that the list subform belongs to (if any).
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Selection Mode
@@ -166,4 +166,4 @@ Designates the option for allowing users to select rows:
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
