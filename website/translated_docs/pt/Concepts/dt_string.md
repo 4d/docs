@@ -137,7 +137,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. Para saber mais sobre as regras aplicadas, veja o endereço: http://www.unicode.org/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
 ## Character Reference Symbols
 The character reference symbols: [[...]]
