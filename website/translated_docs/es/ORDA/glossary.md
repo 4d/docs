@@ -1,6 +1,6 @@
 ---
 id: glossary
-title: Glossary
+title: Glosario
 ---
 
 ## Main concepts at a glance
