@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objetos
 ---
 
 ---
@@ -55,12 +55,12 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                     | Saved value                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Value of associated variable (0, 1, 2)                                                 |
-| [Drop-down List](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)          | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)               | Number of selected tab                                                                 |
+| Objeto                                        | Saved value                                                                            |
+| --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [Check Box](checkbox_overview.md)             | Value of associated variable (0, 1, 2)                                                 |
+| [Lista desplegable](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Botón radio](radio_overview.md)              | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Tab control](tabControl.md)                  | Number of selected tab                                                                 |
 
 
 #### JSON Grammar
@@ -231,7 +231,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Data Source
+## Fuente de datos
 
 Specify the type of list box.
 
@@ -271,7 +271,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
 
 
 
@@ -290,7 +290,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[Botón radio](radio_overview.md)
 
 
 
@@ -334,17 +334,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Fecha | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ----- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   | X    | X     | X    | X    |      | Same as column type |
-| Maximum               | X   | X    | X     | X    | X    |      | Same as column type |
-| Sum                   | X   |      |       | X    | X    |      | Same as column type |
-| Count                 | X   | X    | X     | X    | X    | X    | Longint             |
-| Average               | X   |      |       | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |       | X    |      |      | Real                |
-| Variance(*)           | X   |      |       | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |       | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X     | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
+| Minimum               | X   | X     | X     | X    | X    |      | Same as column type |
+| Maximum               | X   | X     | X     | X    | X    |      | Same as column type |
+| Sum                   | X   |       |       | X    | X    |      | Same as column type |
+| Count                 | X   | X     | X     | X    | X    | X    | Longint             |
+| Average               | X   |       |       | X    |      |      | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
+| Variance(*)           | X   |       |       | X    |      |      | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
