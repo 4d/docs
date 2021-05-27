@@ -3,36 +3,36 @@ id: identifiers
 title: Identifiers
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+Esta seção descreve as convenções e regras para nomear os vários elementos da linguagem 4D (variáveis, tabelas, objetos, formulários, etc)
 
 
-## Basic Rules
+## Regras básicas
 
-The following rules apply for all 4D frameworks.
+As regras abaixo são aplicadas à todas as estruturas de 4D.
 
-- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
-- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Commas, slashes, quotation marks, and colons are not allowed.
-- Characters reserved for use as operators, such as * and +, are not allowed.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
-- Any trailing spaces are ignored.
+- Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
+- Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
+- Pontos (".") e colchetes ("[ ]") não estão permitidos nos nomes de tabelas, campos, métodos ou variáveis.
+- Não são permitidos vírgulas, barras inclinadas, aspas nem dois pontos.
+- Os caracteres reservados para seu uso como oepradores como * e + não estão permitidos.
+- Não use nomes reservados, ou seja, nomes de comando 4D (`Date`, `Time`, etc), palavras chaves (If, For, etc.), e constantes.
+- Os espaços finais são ignorados.
 
-### Additional rules for object property and ORDA names
-- Space characters are not allowed.
-- Periods (".") and brackets ("[ ]") are not allowed.
-- Names are case sensitive.
+### Regras adicionais para as propriedades dos objetos e os nomes ORDA
+- Os caracteres de espaço não estão permitidos.
+- Pontos (".") e os colchetes ("[ ]") não estão permitidos.
+- Os nomes são sensíveis às maiúsculas e minúsculas.
 
-### Additional rules for SQL
-- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+### Regras adicionais para SQL
+- Só são aceitos os caracteres _0123456789abcdefghijklmnopqrstuvwxyz
+- Nomes não devem incluir palavras chave SQL (comando, atributo, etc).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Nota:** a área "SQL" do Inspector no editor de estruturas indica automaticamente qualquer caractere não autorizado no nome de uma tabela ou campo.
 
 
 ## Tables
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+Uma tabela se designa colocando seu nome entre parênteses: [...]. Um nome de tabela pode conter até 31 caracteres.
 
 Examples:
 ```4d
@@ -41,9 +41,9 @@ FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
 ```
 
-## Fields
+## Campos
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
+Para designar um campo, primeiro se especifica a tabela a qual pertence. O nome do campo segue imediatamene o nome da tabela. Um nome campo pode conter até 31 caracteres.
 
 Examples:
 ```4d
@@ -52,11 +52,11 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprocess Variables
+## Variáveis interprocesso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+Pode estabelecer uma variável interprocesso ao preceder o nome da variável com os símbolos (<>) — um sinal “menor que” seguido por um sinal “maior que”.
 
-The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
+O nome de uma variável interprocesso pode ser de até 31 caracteres, sem incluir os símbolos <>.
 
 Examples:
 ```4d
@@ -65,9 +65,9 @@ Examples:
 If(<>vtName#"")
 ```
 
-## Process Variables
+## Variáveis processo
 
-You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+Uma variável de processo é determinada com seu nome (que não possa começar com os símbolos <> nem $). A process variable name can contain up to 31 characters.
 
 Examples:
 ```4d
@@ -76,9 +76,9 @@ If(bValidate=1)
 vsCurrentName:=""
 ```
 
-## Local Variables
+## Variáveis locais
 
-You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
+Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável.  A local variable name can contain up to 31 characters, not including the dollar sign.
 
 Examples:
 ```4d
@@ -380,7 +380,7 @@ Be sure to use unique names for the different elements in your database. If a pa
 
 4D identifies names used in procedures in the following order:
 
-1. Fields
+1. Campos
 2. Commands
 3. Methods
 4. Plug-in routines
