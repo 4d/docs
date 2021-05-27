@@ -1,6 +1,6 @@
 ---
 id: ordaClasses
-title: Data Model Classes
+title: Clases del modelo de datos
 ---
 
 
