@@ -97,7 +97,7 @@ In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can 
 
 Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
-### License Management
+### Gestión de licencias
 
 After you log in, you can click on **License list** at the top right of the page:
 

@@ -145,7 +145,7 @@ Beispiele:
 ```4d
 For($vlRecord;1;100) //local variable
 $vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales 
+var $vName; $vJob : Text //local variables 
 If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```

@@ -1,6 +1,6 @@
 ---
 id: print
-title: Print
+title: Imprimir
 ---
 
 

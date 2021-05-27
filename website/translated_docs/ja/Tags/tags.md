@@ -15,7 +15,7 @@ title: 変換タグ
 <HTML>
 ...
 <BODY><!--#4DSCRIPT/PRE_PROCESS-->(メソッド呼び出し)<!--#4DIF (myvar=1)-->(If 条件)<!--#4DINCLUDE banner1.html-->(サブページ挿入)<!--#4DENDIF-->(End if)<!--#4DIF (mtvar=2)--><!--#4DINCLUDE banner2.html--><!--#4DENDIF--><!--#4DLOOP [TABLE]-->(カレントセレクションでのループ)<!--#4DIF ([TABLE]ValNum>10)-->(If [TABLE]ValNum>10)<!--#4DINCLUDE subpage.html-->(サブページの挿入)<!--#4DELSE-->(Else)
-   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)<!--#4DENDIF--><!--#4DENDLOOP-->](End for)
+   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)<!--#4DENDIF--><!--#4DENDLOOP-->(End for)
 </BODY>
 </HTML>
 ```
@@ -491,54 +491,52 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ## 4DSCRIPT/
 
-#### Syntax: `<!--#4DSCRIPT/MethodName/MyParam-->`
+#### シンタックス: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
+`4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
+> タグが Webプロセスのコンテキストにおいて呼び出された場合、Webページがロードされると、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出します。 このメソッドが `true` を返すと、4Dはメソッドを実行します。
 
-The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
+メソッドは `$0` にテキストを返す必要があります。 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。
 
-For example, let’s say that you insert the following comment `“Today is<!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+たとえば、次のコメントをテンプレートWebページに挿入したとしましょう: `"今日の日付は<!--#4DSCRIPT/MYMETH/MYPARAM-->"` 。 ページをロードする際、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出し、そして `MYMETH` メソッドの `$1` に文字列 “/MYPARAM” を引数として渡して呼び出します。 メソッドは `$0` にテキストを返します (たとえば “21/12/31”)。`"今日の日付は <!--#4DSCRIPT/MYMETH/MYPARAM-->”` というコメントの結果は ”今日の日付は 21/12/31” となります。
 
-The `MYMETH` method is as follows:
+`MYMETH` メソッドは以下のとおりです:
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) //These parameters must always be declared
+ C_TEXT($0;$1) // これらのパラメーターは常に宣言する必要があります
  $0:=String(Current date)
 ```
 
-> A method called by `4DSCRIPT` must not call interface elements (`DIALOG`, `ALERT`, etc.).
+> `4DSCRIPT` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
-As 4D executes methods in their order of appearance, it is absolutely possible to call a method that sets the value of many variables that are referenced further in the document, whichever mode you are using. You can insert as many `<!--#4DSCRIPT...-->` comments as you want in a template.
+4Dはメソッドを見つけた順に実行するため、ドキュメントの後の方で参照される変数の値を設定するメソッドを呼び出すことも可能です。モードは関係ありません。 テンプレートには必要なだけ`<<!--#4DSCRIPT...--></code> コメントを記述できます。</p>
 
+<h2 spaces-before="0">4DTEXT</h2>
 
-
-## 4DTEXT
-
-#### Syntax: `<!--#4DTEXT expression-->`
-#### Alternative syntax: `$4DTEXT(expression)`
+<h4 spaces-before="0">シンタックス: <code><!--#4DTEXT expression-->`</h4>
+#### 代替シンタックス: `$4DTEXT(expression)`
 
 
-The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
+タグ `<!--#4DTEXT VarName-->` を使用して 4D変数や値を返す式への参照を挿入できます。 たとえば、(HTMLページ内にて) 以下のように記述すると:
 
 ```html
-<P>Welcome to<!--#4DTEXT vtSiteName-->!</P>
+<P> <!--#4DTEXT vtSiteName-->へようこそ！</P>
 ```
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+4D変数 `vtSiteName` の値が HTMLページに送信時に挿入されます。 値はテキストとして挿入されます。">"のようなHTMLの特殊文字は、自動的にエスケープされます。
 
-You can also insert 4D expressions. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.
+4DTEXT タグを使用して、4D式も挿入できます。 たとえば、フィールドの値を直接挿入できるほか (`<!--#4DTEXT [tableName]fieldName-->`) 、配列要素の値も挿入できますし (`<!--#4DTEXT tabarr{1}-->`) 、値を返すメソッドも使用できます (`<!--#4DTEXT mymethod-->`)。 式の変換には、変数の場合と同じルールが適用されます。 さらに、式は 4Dのシンタックスルールに適合していなければなりません。
 
-> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> セキュリティ上の理由から、[悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐために、アプリケーション外から導入されたデータを処理するときには、このタグの使用が推奨されます。
 
-In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar-->: ## error # error code`.
+解釈エラーの場合、"`<!--#4DTEXT myvar--> : ## エラー # エラーコード`" というテキストが挿入されます。
 
-- You must use process variables.
-- You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
-- It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
-- You will usually work with Text variables. However, you can also use BLOB variables. You just need to generate BLOBs in `Text without length` mode.
+- プロセス変数を使用する必要があります。
+- ピクチャーフィールドの内容を表示できます。 しかし、ピクチャー配列の要素を表示することはできません。
+- 4D式を使用して、オブジェクトフィールドの中身を表示させることができます。 たとえば、次の様に記述します: `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
+- 通常はテキスト変数を使用します。 しかし、BLOB変数を使用することもできます。 この場合、長さ情報なしのテキストBLOBを使用します。
 
 
 
@@ -547,19 +545,19 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 
 ## 4dtext, 4dhtml, 4deval の代替シンタックス
 
-Several existing 4D transformation tags can be expressed using a $-based syntax:
+いくつかの既存の 4D変換タグは、$-ベースのシンタックスを使用して表現することができます:
 
 #### $4dtag (expression)
-can be used instead of
+という表記を次の代わりに使用することができます:
 #### `<!--#4dtag expression-->`
 
-This alternative syntax is available only for tags used to return processed values:
+この代替シンタックスは、処理後の値を返すタグにおいてのみ使用可能です:
 
 - [4DTEXT](#4dtext)
 - [4DHTML](#4dhtml)
 - [4DEVAL](#4deval)
 
-(Other tags, such as 4DIF or 4DSCRIPT, must be written with the regular syntax).
+(その他のタグ、たとえば 4DIF や 4DSCRIPT などでは、通常のシンタックスを使用しなければなりません)。
 
 たとえば:
 
@@ -567,53 +565,55 @@ This alternative syntax is available only for tags used to return processed valu
 $4DEVAL(UserName)
 ```
 
-instead of:
+は次の代わりになります:
 
-```html<!--#4DEVAL(UserName)-->```
+```html
+<!--#4DEVAL(UserName)-->
+```
 
-The main advantage of this syntax is that it allows you to write XML-compliant templates. Some 4D developers need to create and validate XML-based templates using standard XML parser tools. Since the "<" character is invalid in an XML attribute value, it was not possible to use the "`<!-- -->`" syntax of 4D tags without breaking the document syntax. On the other hand, escaping the "<" character will prevent 4D from interpreting the tags correctly.
+このシンタックスの主な利点は、XML準拠のテンプレートが書けることです。 一部の 4Dデベロッパーは、XML準拠のテンプレートを標準の XMLパーサーツールで作成・評価する必要があります。 "<" 文字は XML属性値としては無効なため、ドキュメントのシンタックスを破らずに4Dタグの "`<!-- -->`" シンタックスを使用することはできませんでした。 その一方で、"<" 文字をエスケープしてしまうと、4Dがタグを正常に解釈できなくなってしまいます。
 
-For example, the following code would cause an XML parsing error because of the first "<" character in the attribute value:
+たとえば、以下のコードは属性値の最初の "<" 文字のために XMLパースエラーを引き起こします:
 
 ```xml
 <line x1="<!--#4DEVAL $x-->" y1="<!--#4DEVAL $graphY1-->"/>
 ```
 
-Using the $ syntax, the following code is validated by the parser:
+$シンタックスを使用すると、パーサーによって以下のコードが評価されます:
 
 ```xml
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
+ここで、`$4dtag` と `<--#4dtag-->` は厳密には同じではないという点に注意が必要です。`<--#4dtag-->` とは異なり、`$4dtag` は 4Dタグを [繰り返し解釈](#再起的処理) することはありません。 `$` タグは常に一度だけ解釈され、その結果は標準テキストとして読まれます。
 
-The reason for this difference is to prevent malicious code injection. As [explained below](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
+この違いの理由は、悪意あるコードの侵入を防ぐためにあります。 [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) の章で説明されているように、ユーザーテキストを使用する場合に不要なタグの再解釈を避けるには、`4DHTML` タグではなく `4DTEXT` タグの使用が強く推奨されます。`4DTEXT` を使用した場合、"<" などの特殊記号はエスケープされるため、`<!--#4dtag expression-->` シンタックスを使用している 4Dタグはすべて元の意味を失います。 しかしながら、`4DTEXT` は `$` 記号をエスケープしないため、悪意あるコードの侵入を防ぐために `$4dtag (expression)` シンタックスにおける再帰的処理はサポートしないことになりました。
 
-The following examples show the result of processing depending on the syntax and tag used:
+以下の例では、使用されるシンタックスとタグによる処理の結果の違いを表しています:
 
 ```4d
-  // example 1
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is:<!--#4DHTML myName-->"
+  // 例 1
+ myName:="<!--#4DHTML QUIT 4D-->" // 悪意あるコードの侵入
+ input:="My name is: <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D will quit!
+  // 4D は終了していまいます
 ```
 ```4d
-  // example 2
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is:<!--#4DTEXT myName-->"
+  // 例 2
+ myName:="<!--#4DHTML QUIT 4D-->" // 悪意あるコードの侵入
+ input:="My name is: <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is:<!--#4DHTML QUIT 4D-->"
+  // 結果は "My name is: <!--#4DHTML QUIT 4D-->"
 ```
 ```4d
-  // example 3
- myName:="$4DEVAL(QUIT 4D)" //malicious injection
- input:="My name is:<!--#4DTEXT myName-->"
+  // 例 3
+ myName:="$4DEVAL(QUIT 4D)" // 悪意あるコードの侵入
+ input:="My name is: <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: $4DEVAL(QUIT 4D)"
+  // 結果は "My name is: $4DEVAL(QUIT 4D)"
 ```
 
-Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or parenthesis. For example, suppose that you need to evaluate the following complex (unrealistic) string:
+`$4dtag` シンタックスは、引用符や括弧の開閉ペアをサポートしているという点に注意してください。 たとえば、以下の (非現実的な) 文字列を評価しなければならない場合:
 
 ```
 String(1) + "\"(hello)\""
@@ -624,7 +624,7 @@ String(1) + "\"(hello)\""
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"
  PROCESS 4D TAGS(input;output)
- -->output is 1"(hello)"
+ --> 結果は: 1"(hello)"
 ```
 
 

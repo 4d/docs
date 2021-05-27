@@ -6,13 +6,13 @@
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "Interface de ligne de commande"
       },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
       "Admin/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "Description des fichiers historiques"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -909,8 +909,8 @@
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
-    "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Description of log files|no description given": "Description des fichiers historiques",
+    "Command Line Interface|no description given": "Interface de ligne de commande",
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",

@@ -63,7 +63,7 @@ The following table lists all supported `varType` values:
 
 | varType                | Contents                              |
 | ---------------------- | ------------------------------------- |
-| `Text`                 | Text value                            |
+| `Texto`                | Text value                            |
 | `Fecha`                | Date value                            |
 | `Hora`                 | Time value                            |
 | `Booleano`             | Boolean value                         |

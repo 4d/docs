@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: Texto
 ---
 
 ---
@@ -17,7 +17,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 ## Bold
@@ -227,7 +227,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+Ejemplo:
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
@@ -746,7 +746,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a>
+  <a href="input_overview.md">Entrada</a>
 </p>
 
 

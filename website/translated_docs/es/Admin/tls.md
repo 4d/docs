@@ -59,7 +59,7 @@ To get a digital certificate:
 
 The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
 
-## Installation and activation
+## Instalación y activación
 
 ### `key.pem` and `cert.pem` files
 

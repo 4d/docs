@@ -24,10 +24,10 @@
         "title": "Web Administration"
       },
       "API/ClassClass": {
-        "title": "クラス"
+        "title": "Class"
       },
       "API/CollectionClass": {
-        "title": "コレクション"
+        "title": "Collection"
       },
       "API/CryptoKeyClass": {
         "title": "CryptoKey"
@@ -36,7 +36,7 @@
         "title": "DataClassAttribute"
       },
       "API/DataClassClass": {
-        "title": "データクラス"
+        "title": "DataClass"
       },
       "API/DataStoreClass": {
         "title": "DataStore"
@@ -51,7 +51,7 @@
         "title": "Email"
       },
       "API/EntityClass": {
-        "title": "エンティティ"
+        "title": "Entity"
       },
       "API/EntitySelectionClass": {
         "title": "EntitySelection"
@@ -656,7 +656,7 @@
         "sidebar_label": "検査ページ"
       },
       "Notes/updates": {
-        "title": "Documentation updates"
+        "title": "ドキュメンテーション更新情報"
       },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
@@ -701,7 +701,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/compiler": {
-        "title": "Compilation"
+        "title": "コンパイル"
       },
       "Project/creating": {
         "title": "プロジェクトを開発する"
@@ -918,7 +918,7 @@
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
-    "Documentation updates|no description given": "Documentation updates",
+    "Documentation updates|no description given": "ドキュメンテーション更新情報",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

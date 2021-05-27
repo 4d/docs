@@ -28,14 +28,14 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
-| $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
+| Parámetros | Type  |    | Description                                  |
+| ---------- | ----- |:--:| -------------------------------------------- |
+| $1         | Texto | <- | URL                                          |
+| $2         | Texto | <- | HTTP headers + HTTP body (up to 32 kb limit) |
+| $3         | Texto | <- | IP address of the web client (browser)       |
+| $4         | Texto | <- | IP address of the server                     |
+| $5         | Texto | <- | User name                                    |
+| $6         | Texto | <- | Password                                     |
 
 
 You must declare these parameters as shown below:
@@ -108,10 +108,10 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br> **/4DACTION/******MethodName/Param*
 
-| Parámetros | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| MethodName | Text | -> | Name of the 4D project method to be executed |
-| Param      | Text | -> | Text parameter to pass to the project method |
+| Parámetros | Type  |    | Description                                  |
+| ---------- | ----- |:--:| -------------------------------------------- |
+| MethodName | Texto | -> | Name of the 4D project method to be executed |
+| Param      | Texto | -> | Text parameter to pass to the project method |
 
 **Usage:** URL or Form action.
 

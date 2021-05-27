@@ -25,8 +25,8 @@ Ein Leerdatum wird als _!00-00-00!_ angegeben.
 
 **Hinweise:**
 
-- Haben Sie die Option "Verwende regionale Systemeinstellungen" markiert (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden.
-- Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/). Wir empfehlen diese Option nicht zu verwenden, weil sie die Weitergabe des Codes (z. B. in Version Control Systeme) behindert.
+- Zur Wahrung der Kompatibilität akzeptiert 4D die Eingabe einer zweistelligen Jahreszahl. Eine zweistellige Jahreszahl bedeutet 20. oder 21. Jahrhundert, je nachdem ob sie größer oder kleiner als 30 ist, außer die Einstellung wurde mit dem Befehl.`SET DEFAULT CENTURY` geändert.
+- Haben Sie die Option "Verwende regionale Systemeinstellungen" markiert (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/). Wir empfehlen diese Option nicht zu verwenden, weil sie die Weitergabe des Codes (z. B. in Version Control Systeme) behindert.
 
 ## Datumsoperatoren
 

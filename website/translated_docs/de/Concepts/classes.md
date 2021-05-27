@@ -240,12 +240,12 @@ Function add($x : Variant; $y : Integer): Integer
 > Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
 > 
 > ```4d
-Function add($x : Integer)
-  var $2; $value : Integer
-  var $0 : Text
-  $value:=$x+$2
-  $0:=String($value)
-```
+> Function add($x : Integer)
+>   var $2; $value : Integer
+>   var $0 : Text
+>   $value:=$x+$2
+>   $0:=String($value)
+> ```
 
 
 
@@ -436,7 +436,7 @@ Function getArea()
 
 #### Beispiel 2
 
-Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. You created the `Rectangle` class with a function:
+Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. Sie haben die Klasse  `Rectangle` mit einer Funktion erstellt:
 
 ```4d
 //Class: Rectangle
@@ -446,12 +446,12 @@ Function nbSides()
     $0:="I have 4 sides"
 ```
 
-You also created the `Square` class with a function calling the superclass function:
+Sie haben auch die Klasse `Square` mit einer Function erstellt, welche die Superclass Function aufruft:
 
 ```4d
 //Class: Square
 
-Class extends Rectangle
+Class erweitert Rectangle
 
 Function description()
     var $0 : Text
@@ -475,7 +475,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 | --------- | ------ | -- | -------------- |
 | Result    | object | <- | Current object |
 
-The `This` keyword returns a reference to the currently processed object. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
+Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
 
 In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. Es lässt sich während der Ausführung nicht per Zuweisung setzen und kann bei jedem Aufrufen der Funktion anders sein.
 
@@ -524,23 +524,23 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In diesem Beispiel hat das der Variable $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von seiner Klasse. Since *f* is called as a method of $o, its `This` refers to $o.
+In diesem Beispiel hat das der Variable $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von seiner Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
-## Class commands
+## Befehle für Klassen
 
-Several commands of the 4D language allows you to handle class features.
+Einige Befehle der 4D Programmiersprache eignen sich zum Verwalten von Features für Klassen.
 
 
-### `OB Class`
+### OB Class
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` gibt die Klasse des Objekts zurück, das im Parameter übergeben ist.
 
 
-### `OB Instance of`
+### OB Instance of
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.

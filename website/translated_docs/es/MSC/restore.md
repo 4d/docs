@@ -1,7 +1,7 @@
 ---
-id: restore
-title: Restore Page
-sidebar_label: Restore Page
+id: restaurar
+title: Página Restauración
+sidebar_label: Página Restauración
 ---
 
 You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
@@ -21,13 +21,13 @@ When you select a backup in this list, the right part of the window displays the
 
 The **Restore** button launches the manual restoration of the selected element(s).
 
-## Successive integration of several data log files
+## Integración sucesiva de varios archivos de historial de datos
 
 The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 backups, you can restore the first backup then integrate the journal (data log) archives one by one. This means that you can, for example, recover a data file even when the last backup files are missing.
 
 When this option is checked, 4D displays the standard Open file dialog box after the restore, which can be used to select journal file to be integrated. The Open file dialog box is displayed again after each integration until it is cancelled.
 
-## Restoring an encrypted database
+## Restauración de una base encriptada
 
 Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Matching encryption keys must always be provided.
 

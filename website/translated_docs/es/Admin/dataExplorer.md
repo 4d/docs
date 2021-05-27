@@ -47,7 +47,7 @@ To connect to the Data Explorer web page:
 
 In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
 
-### Requirements
+### Requisitos
 
 The Data Explorer supports the following web browsers:
 
@@ -140,7 +140,7 @@ When you click on a boolean attribute area, you can filter on **true**/**false**
 - **null** indicates that the attribute value was not defined
 - **not null** indicates that the attribute value is defined (thus true or false).
 
-#### Text
+#### Texto
 
 Text filters are not diacritic (a = A).
 

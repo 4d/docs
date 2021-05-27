@@ -311,7 +311,7 @@ The Silicon compiler generates native compiled code for Apple Silicon processors
 Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder), folder of the project.
 
 
-#### Requirements
+#### Requisitos
 
 - **Apple machine**: The Silicon compiler can only be run from an Apple machine.
 - **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).

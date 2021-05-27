@@ -35,7 +35,7 @@ Wozu brauchen wir also eine 4D Sprache? Hier sind einige Anwendungsbereiche:
 - Anwendungen erstellen: eigene, leicht-bedienbare Anwendungen einrichten, die eigenständig laufen.
 - Den in 4D integrierten Web Server weiter ausbauen: Dynamische Webseiten, die mit Ihren Daten gefüllt sind, erstellen und aktualisieren.
 
-Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Anwendung. 4D bietet leistungsstarke "generische" Editoren. Darüberhinaus können Sie mit der Sprache Ihre Anwendung in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
+Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Anwendung. 4D bietet leistungsstarke "generische" Editoren. Außerdem können Sie mit der Sprache Ihre Anwendung in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
 
 ## Kontrolle über Ihre Daten
 
@@ -43,7 +43,7 @@ Mit der 4D Sprache können Sie die vollständige Kontrolle über Ihre Daten auf 
 
 Die Befehle der 4D Sprache bieten Zugriff auf die standardmäßigen Editoren zur Datenverwaltung. Verwenden Sie zum Beispiel den Befehl `QUERY`, erhalten Sie den Sucheditor (Er lässt sich auch in der Designumgebung über den Befehl Suchen im Menü Datensätze aufrufen). Mit dem Programmierbefehl können Sie nach spezifischen Daten suchen. So findet die Anweisung `QUERY`([People];[People]Last Name="Smith") in Ihrer Datenbank alle Personen mit dem Nachnamen Smith.
 
-Die 4D Programmiersprache ist sehr leistungsstark — ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
+Die 4D Programmiersprache ist sehr leistungsstark — ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömmlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
 
 Die Sprache ist so konzipiert, dass Sie fast jede Aufgabe problemlos erfüllen können. Operationen wie einen Datensatz hinzufügen, Datensätze sortieren, nach Daten suchen, u. ä. werden mit einfachen und direkten Befehlen spezifiziert. Die Sprache kann aber genauso serielle Schnittstellen steuern, Dokumente auf der Festplatte lesen, komplexe Übertragungsprozesse kontrollieren u. v. m.
 

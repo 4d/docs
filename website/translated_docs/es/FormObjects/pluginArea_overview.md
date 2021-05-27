@@ -1,6 +1,6 @@
 ---
 id: pluginAreaOverview
-title: Plug-in Area
+title: Área de plug-in
 ---
 
 
@@ -15,7 +15,7 @@ When opening an application, 4D creates an internal list of the plug-ins [instal
 If you draw a plug-in area that is too small, 4D will display it as a button whose title is the name of the variable associated with the area. During execution, the user can click on this button in order to open a specific window displaying the plug-in.
 
 
-## Advanced properties
+## Propiedades avanzadas
 
 If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
 

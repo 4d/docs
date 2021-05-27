@@ -1,6 +1,6 @@
 ---
 id: action
-title: Action
+title: Acción
 ---
 
 
