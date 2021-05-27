@@ -1,7 +1,7 @@
 ---
 id: compact
-title: Compact Page
-sidebar_label: Compact Page
+title: Página compactado
+sidebar_label: Página compactado
 ---
 
 You use this page to access the data file compacting functions.
