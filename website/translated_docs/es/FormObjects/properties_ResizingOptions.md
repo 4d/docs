@@ -1,6 +1,6 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Opciones de redimensionamiento
 ---
 
 ---
@@ -117,7 +117,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### Objects Supported
 
-[Splitter](splitterTabControlOverview#splitters)
+[Separador](splitterTabControlOverview#splitters)
 
 
 
