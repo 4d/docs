@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Entrada
 ---
 
 ---
@@ -217,7 +217,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 
@@ -308,7 +308,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Botón radio](radio_overview.md)
 
 
 

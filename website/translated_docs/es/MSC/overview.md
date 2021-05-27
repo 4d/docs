@@ -1,5 +1,5 @@
 ---
-id: overview
+id: generalidades
 title: Generalidades
 sidebar_label: Generalidades
 ---
@@ -8,27 +8,27 @@ The Maintenance and Security Center (MSC) window contains all the tools needed f
 
 **Note:** The MSC window is not available from a 4D remote connection.
 
-There are several ways to open the MSC window. The way it is accessed also determines the way the database is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the database is not opened by 4D, only its reference is provided to the MSC. In standard mode, the database is opened by 4D.
+There are several ways to open the MSC window. El modo de acceso también determina el modo de apertura de la base: en modo "mantenimiento" o en modo "estándar". En modo mantenimiento, la base no es abierta por 4D, sólo se provee su referencia al CSM. En modo estándar, la base es abierta por 4D.
 
 
 ## Display in maintenance mode
 
-In maintenance mode, only the MSC window is displayed (the database is not opened by the 4D application). This means that databases that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the database to be opened in maintenance mode (see [Feature availability](#feature-availability)).
+En modo mantenimiento, sólo se muestra la ventana del CSM (la base no es abierta por la aplicación 4D). Esto significa que las bases que están demasiado dañadas para ser abiertas en modo estándar por 4D pueden, sin embargo, ser accedidas. Además, algunas operaciones (compactación, reparación, etc.) requieren que la base se abra en modo de mantenimiento (ver [Disponibilidad de las funcionalidades](#feature-availability)).
 
 You can open the MSC in maintenance mode from two locations:
 
-- **From the standard database opening dialog box** The standard Open database dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
-- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (database not open)  
+- **La caja de diálogo estándar de apertura**. La caja de diálogo estándar de apertura de bases de datos incluye la opción **Centro de seguridad de mantenimiento** del menú asociado al botón **Abrir**: ![](assets/en/MSC/MSC_standardOpen.png)
+- Menú **Ayuda/Centro de seguridad y de mantenimiento** o botón **CSM** en la barra de herramientas (base de datos no abierta)  
   ![](assets/en/MSC/mscicon.png)   
-  When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. The database will not be opened by 4D.
+  Cuando se llama a esta función, aparece un diálogo estándar de apertura de archivos para poder indicar la base a examinar. La base de datos no será abierta por 4D.
 
 ## Display in standard mode
 
-In standard mode, a database is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+En modo estándar, una base de datos es abierta. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
 
 - Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
   ![](assets/en/MSC/mscicon.png)
-- Use the “msc” standard action that it is possible to associated with a menu command or a form object (see "Standard actions" section).
+- Utilizar la acción estándar "CSM" que es posible asociar a un comando de menú o a un objeto de formulario (ver sección "Acciones estándar").
 
 - Use the `OPEN SECURITY CENTER` language command.
 
@@ -36,6 +36,6 @@ In standard mode, a database is open. In this mode, certain maintenance function
 
 Certain MSC functions are not available depending on the MSC opening mode:
 
-- Backup function is only available when the database is open (the MSC must have been opened in standard mode).
-- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the database is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- La función de copia de seguridad sólo está disponible cuando la base está abierta (el CSM debe haber sido abierto en modo estándar).
+- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). Si se intentan estas funciones mientras la base está abierta en modo estándar, un cuadro de diálogo le advierte que implica que la aplicación se cierre y se reinicie en modo mantenimiento.
 - In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible.

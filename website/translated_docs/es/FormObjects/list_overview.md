@@ -1,6 +1,6 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: Lista jerárquica
 ---
 
 ## Generalidades
@@ -12,7 +12,7 @@ Hierarchical lists are form objects that can be used to display data as lists wi
 Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
 
 
-## Hierarchical list data source
+## Fuente de datos de lista jerárquica
 
 The contents of a hierarchical list form object can be initialized in one of the following ways:
 
@@ -22,7 +22,7 @@ The contents of a hierarchical list form object can be initialized in one of the
 In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
 
 
-## ListRef and object name
+## RefList y nombre de objeto
 
 A hierarchical list is both a **language object** existing in memory and a **form object**.
 
@@ -30,7 +30,7 @@ The **language object** is referenced by an unique internal ID of the Longint ty
 
 The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
 
-You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. For example, if you have associated the $mylist [variable](properties_Object.md#variable-or-expression) to the form object, you can write:
+You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. Por ejemplo, si has asociado la $mylist [variable](properties_Object.md#variable-or-expression) al objeto formulario, puede escribir:
 
 ```4d
 $mylist:=New list
@@ -80,7 +80,7 @@ As with other object property management commands, it is possible to use the “
     - `Selected list items`
 
 
-## Generic commands to use with hierarchical lists
+## Comandos genéricos utilizables con listas jerárquicas
 
 It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. You can pass to these commands either the object name of the hierarchical list (using the * parameter), or its variable name (containing the ListRef value):
 
@@ -96,7 +96,7 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 
 > Reminder: Except `OBJECT SET SCROLL POSITION`, these commands modify all the representations of the same list, even if you only specify a list via its object name.
 
-## Priority of property commands
+## Prioridad de los comandos de propiedad
 
 Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. When all three of these means are used to set list properties, the following order of priority is applied:
 
@@ -107,7 +107,7 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 
-## Management of items by position or by reference
+## Gestión de los elementos por posición o por referencia
 
 You can usually work in two ways with the contents of hierarchical lists: by position or by reference.
 
@@ -143,7 +143,7 @@ In most cases, when using hierarchical lists for user interface purposes and whe
 Basically, you need to deal with item reference numbers when you want direct access to any item of the list programmatically and not necessarily the one currently selected in the list.
 
 
-## Modifiable element
+## Elemento modificable
 
 You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item.
 
@@ -154,4 +154,4 @@ You can control whether hierarchical list items can be modified by the user by u
 
 ## Supported Properties
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable-and-droppable) - [Droppable](properties_Action.md#draggable-and-droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Multi-selectable](properties_Action.md#multi-selectable) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrita](properties_Text.md#bold) - [Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Lista de opciones](properties_DataSource. md#choice-list) - [Clase](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable-and-droppable) - [Soltable](properties_Action.md#draggable-and-droppable) - [Editable](properties_Entry. md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Color de relleno](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focusable](properties_Entry.md#focusable) - [Fuente](properties_Text. md#font) - [Color de la fuente](properties_Text.md#font-color) - [Tamaño de la fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Ocultar rectángulo de enfoque](properties_Appearance. md#hide-focus-rectangle) - [Barra de desplazamiento horizontal](properties_Appearance.md#horizontal-scroll-bar) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text. md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Multi-seleccionable](properties_Action.md#multi-selectable) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing. md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text. md#underline) - [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar) - [Tamaño vertical](properties_ResizingOptions. md#vertical-sizing) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)

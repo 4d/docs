@@ -1,6 +1,6 @@
 ---
 id: stylesheets
-title: Style sheets
+title: Hojas de estilo
 ---
 
 ## Generalidades
@@ -13,7 +13,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
-### Style Sheet Files
+### Archivos hojas de estilo
 
 4D accepts three, specific style sheet files:
 
@@ -26,9 +26,9 @@ In addition to harmonizing an application's interface, style sheets provide thre
 These files are stored in the project's "/SOURCES" folder.
 
 
-### Style Sheet Architecture
+### Arquitectura de las hojas de estilo
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+Aunque adaptadas para satisfacer las necesidades específicas de los formularios 4D, las hojas de estilo de las bases proyecto suelen seguir la sintaxis y la gramática CSS2.
 
 Every style rule in a style sheet contains two parts:
 
@@ -38,10 +38,10 @@ Every style rule in a style sheet contains two parts:
 
 
 
-## Style Sheet Selectors
+## Selectores de hojas de estilo
 
 
-### Object Type
+### Tipo de objeto
 
 Corresponding to the CSS element selector, the object type defines the type of object to style.
 
@@ -116,7 +116,7 @@ class: "okButtons important"
 ```
 
 
-### All Objects
+### Todos los objetos
 
 Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
 
@@ -131,7 +131,7 @@ In the following example, all objects will have a gray fill:
 ```
 
 
-### Specific Attribute
+### Atributos específicos
 
 Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
 
@@ -187,7 +187,7 @@ text[text|=Hello]
 ```
 
 
-## Style Sheet Declarations
+## Declaraciones de hojas de estilo
 
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
     - "method"
@@ -198,7 +198,7 @@ The majority of form object attributes can be defined within a style sheet, exce
 
 Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
 
-### Attribute Mapping
+### Mapa de atributos
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
@@ -217,7 +217,7 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 > 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
 
 
-### Specific Attribute Values
+### Valores de atributos específicos
 
 - For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
@@ -229,7 +229,7 @@ icon: url("edit.png"); /* relative path to the form file */
 - For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
 
     - css color name: `fill: red;`
-    - hexa value: `fill: #FF0000;`
+    - valor hexadécimal: `fill: #FF0000;`
     - the `rgb()` function: `fill:rgb(255,0,0)`
 
 - If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
@@ -237,12 +237,12 @@ icon: url("edit.png"); /* relative path to the form file */
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
 
-## Priority Order
+## Orden de prioridad
 
 4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
 
 
-### JSON vs Style Sheet
+### JSON vs Hoja de estilo
 
 If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
 
@@ -263,7 +263,7 @@ To override this behavior, the style value must be followed with an `!important`
 
 
 
-### Multiple Style Sheets
+### Hojas de estilo múltiples
 
 At runtime, 4D automatically prioritizes style sheets in the following order:
 
@@ -304,7 +304,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 
 
-## Creating or Editing Style Sheets
+## Creación o modificación de hojas de estilo
 
 You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
 

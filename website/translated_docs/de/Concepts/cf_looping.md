@@ -272,7 +272,7 @@ Die formale Syntax der Abfragefolge `For each..End for each` lautet:
  End for each
 ```
 
-Die Struktur `For each...End for each` durchläuft den angegebenen Eintrag *Current_item* für alle Werte von *Expression*. Der Typ *Current_item* richtet sich nach der Art von *Expression*. Die Schleife `For each...End for each` kann drei Arten durchlaufen:
+Die Struktur `For each...End for each` durchläuft den angegebenen Eintrag *Current_item* für alle Werte von *Expression*. Der Typ *Current_item* richtet sich nach der Art von *Expression*. Die Schleife `For each...End for each` kann drei Arten von *Ausdrücken* durchlaufen:
 
 - Collections: Schleife durch jedes Element der Collection
 - Entity-Selections: Schleife durch jede Entity
@@ -291,7 +291,7 @@ Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
 - Standardmäßig werden die angegebenen _Anweisungen_ für jeden Wert in *Expression* ausgeführt. Es ist jedoch möglich, die Schleife durch Testen einer Bedingung entweder am Anfang (`While`) oder am Ende der Schleife (`Until`) zu verlassen.
 - Über die optionalen Parameter *begin* und *end* lassen sich in Collections und Entity-Selections Grenzen für die Schleife definieren.
 - Die Schleife `For each...End for each` lässt sich für eine **shared collection** oder ein **shared object** verwenden. Muss Ihr Code ein oder mehrere Elemente der Collection oder Objekteigenschaften ändern, müssen Sie `Use...End use` verwenden. Sie können `Use...End use` je nach Bedarf wie folgt aufrufen:
-    - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsman geändert werden sollen, oder
+    - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsam geändert werden sollen, oder
     - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist.
 
 ### Schleife durch Collections

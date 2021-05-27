@@ -1,56 +1,56 @@
 ---
 id: installation
-title: Installation and activation
+title: Instalación y activación
 ---
 
-Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
+Welcome to 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 
 ## Required configuration
 
-Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
+Consulte la [página de descarga del producto](https://us.4d.com/product-download) en el sitio web de 4D para conocer la configuración mínima de Mac / Windows para su serie 4D.
 
-All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
+Todos los detalles están disponibles en la [página Recursos](https://us.4d.com/resources/feature-release) del sitio web de 4D.
 
 
 ## Installation on disk
 
-4D products are installed from the 4D Web site:
+Los productos 4D se instalan desde el sitio web de 4D:
 
-1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
-2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+1. Utilizando su navegador, conéctese al sitio web de 4D y vaya a la página de [Descargas](https://us.4d.com/product-download/Feature-Release).
+2. Haga clic en el enlace de descarga que corresponde a su producto y siga las instrucciones que aparecen en pantalla.
 
 
-## Activation of a product
+## Activación de un producto
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. You also need to activate any additional licenses you obtain.
+Once installed on your disk, you must activate your 4D products in order to be able to use them. También debe activar las licencias adicionales que obtenga.
 
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D utilizado en modo local con una base interpretada sin acceso al entorno Diseño.
 
-**Important:** You must have an Internet connection and an e-mail account in order to activate your products.
+**Importante:** debe tener una conexión a Internet y una cuenta de correo electrónico para activar sus productos.
 
-### Activate 4D
+### Activación de 4D
 
-1. Launch the 4D application.
-2. Select the **License Manager...** command from the **Help** menu.
-
-![](assets/en/getStart/helpMenu.png)
-
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
-
-> When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
-
-### Activate 4D Server
-
-1. Launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+1. Lance la aplicación 4D.
+2. Seleccione el comando **Gestión de licencias...** del menú **Ayuda**.
 
 ![](assets/en/getStart/helpMenu.png)
 
+Se muestra la caja de diálogo **Gestión de licencias** (la página de Activación Instantánea está seleccionada por defecto). Ver la siguiente sección.
 
-## 4D Activation mode
+> Cuando abre/crea una aplicación local interpretada con 4D Developer Edition, se implementa un mecanismo de auto-activación. En este caso, una caja de diálogo le informa que va a ser conectado a nuestra base de clientes y que sus licencias serán activadas (deberá introducir la contraseña de su cuenta 4D).
+
+### Activación de 4D Server
+
+1. Lance la aplicación 4D Server. The dialog box for choosing the [activation mode](#activation-mode) appears.
+
+![](assets/en/getStart/helpMenu.png)
+
+
+## Modo de activación de 4D
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
@@ -127,7 +127,7 @@ In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can 
 
 Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
-### License Management
+### Gestión de licencias
 
 After you log in, you can click on **License list** at the top right of the page:
 
@@ -178,5 +178,5 @@ For the UK:
 - Telephone: 01625 536178
 
 
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+Encuentre la comunidad de desarrolladores de 4D en línea aquí: [https://discuss.4d.com](https://discuss.4d.com).
 

@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Usuarios y sesiones
 ---
 
 

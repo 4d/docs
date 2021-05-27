@@ -1,6 +1,6 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: Botón Imagen
 ---
 
 ## Generalidades
@@ -28,7 +28,7 @@ Picture buttons can be used in two ways:
 Clicking the object changes the picture.
 
 
-## Using picture buttons
+## Utilizar los botones imagen
 
 You can implement a picture button in the following manner:
 
@@ -45,7 +45,7 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
 
 
-## Animation
+## Animación
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 

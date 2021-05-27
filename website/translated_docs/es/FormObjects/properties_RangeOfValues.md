@@ -1,6 +1,6 @@
 ---
 id: propertiesRangeOfValues
-title: Range of Values
+title: Rango de valores
 ---
 
 ---
@@ -35,7 +35,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 

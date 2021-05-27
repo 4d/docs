@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Action
+title: Acción
 ---
 
 
@@ -98,9 +98,9 @@ Several types of method references are supported:
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- una ruta de acceso al archivo del método personalizado que incluya la extensión .4dm, por ejemplo:  
+  `../../CustomMethods/myMethod.4dm` También puede utilizar un sistema de archivos:  
+  `/RESOURCES/Buttons/bOK.4dm` En este caso, 4D no ofrece soporte automático para las operaciones con objetos.
 
 
 #### JSON Grammar
@@ -112,7 +112,7 @@ Several types of method references are supported:
 
 #### Objects Supported
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview. md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview. md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview. md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview. md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview. md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview. md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper. md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
 
 
 
@@ -150,7 +150,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md)
+[Lista jerárquica](list_overview.md)
 
 
 

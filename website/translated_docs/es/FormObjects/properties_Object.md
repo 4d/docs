@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objetos
 ---
 
 ---
@@ -126,7 +126,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
 
 However, this property has a typing function in the following specific cases:
 
@@ -194,7 +194,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Data Source
+## Fuente de datos
 
 Specify the type of list box.
 
@@ -234,7 +234,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
 
 
 
@@ -253,7 +253,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[Botón radio](radio_overview.md)
 
 
 
@@ -271,7 +271,7 @@ To insert a \ in the label, enter "&#92;&#92;".
 
 By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
-For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Para la traducción de la base de datos, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 #### JSON Grammar
 
@@ -297,17 +297,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Fecha | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ----- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   |      | X     | X    | X    |      | Same as column type |
-| Maximum               | X   |      | X     | X    | X    |      | Same as column type |
-| Sum                   | X   |      | X     |      | X    |      | Same as column type |
-| Count                 | X   | X    | X     | X    | X    | X    | Longint             |
-| Average               | X   |      |       | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |       | X    |      |      | Real                |
-| Variance(*)           | X   |      |       | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |       | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X     | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
+| Minimum               | X   |       | X     | X    | X    |      | Same as column type |
+| Maximum               | X   |       | X     | X    | X    |      | Same as column type |
+| Sum                   | X   |       | X     |      | X    |      | Same as column type |
+| Count                 | X   | X     | X     | X    | X    | X    | Longint             |
+| Average               | X   |       |       | X    |      |      | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
+| Variance(*)           | X   |       |       | X    |      |      | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 

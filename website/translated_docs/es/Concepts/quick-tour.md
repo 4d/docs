@@ -36,23 +36,23 @@ You MUST distinguish the assignment operator := from the other operators. Rather
 
 ## Variables
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using a `C_XXX` command. For example, to create a variable of the date type, you can write:
+The 4D language is strongly typed, although some flexibility is allowed in many cases. Se crea una variable digitada utilizando un comando `C_XXX`. For example, to create a variable of the date type, you can write:
 
 ```4d
-C_DATE(MyDate) //Date type for MyDate variable
+C_DATE(MyDate) //Tipo fecha para la variable MyDate
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+Aunque no se suele recomendar, se pueden crear variables simplemente utilizándolas; no es necesario definirlas formalmente como se hace con los campos. For example, if you want a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” Esta línea crea la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable creada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y entonces cambia el tipo dinámicamente. Una variable digitada con `C_XXX` no puede cambiar de tipo. En modo compilado, el tipo no puede cambiarse nunca, independientemente de cómo se haya creado la variable.
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Ejemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -106,7 +106,7 @@ CONFIRM("Do you really want to close this account?";"Yes";"No")
 
 A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
 
-The following example goes through all the characters of the text vtSomeText:
+El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
@@ -287,7 +287,7 @@ Both styles of comments can be used simultaneously.
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Ejemplo:
 
 ```4d
 //This is a comment
@@ -302,7 +302,7 @@ For($vCounter;1;100) //Starting loop
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Example:
+- **Inline comments** can be inserted anywhere in the code. Ejemplo:
 
 ```4d
 For /* inline comment */ ($vCounter;1;100)
@@ -310,14 +310,14 @@ For /* inline comment */ ($vCounter;1;100)
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Ejemplo:
 
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
+comentarios  
     /*
-    other comments
+    otros comentarios
     */
 */
 ...

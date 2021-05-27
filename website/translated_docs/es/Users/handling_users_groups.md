@@ -1,6 +1,6 @@
 ---
 id: editing
-title: Managing 4D users and groups
+title: Gestión de usuarios y grupos 4D
 ---
 
 ## Designer and Administrator

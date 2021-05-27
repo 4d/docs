@@ -9,11 +9,11 @@ When you set up your 4D database, you specify the names and types of fields that
 
 Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Creating Variables
+## Creación de variables
 
-You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
+Las variables se crean declarándolas mediante uno de los comandos de los temas "Compilador" o "Arrays".
 
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Nota:**los arrays son un tipo particular de variables. Un array es una serie ordenada de variables del mismo tipo. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 For example, if you want to define a text variable, you write:
 
@@ -21,13 +21,13 @@ For example, if you want to define a text variable, you write:
  C_TEXT(myText)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
+**Note:** aunque no se suele recomendar, se pueden crear variables simplemente utilizándolas; no es necesario definirlas formalmente como se hace con los campos. Por ejemplo, si desea crear una variable que contenga la fecha actual más 30 días, puede escribir:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
+ MyDate:=Current date+30 //MyDate se crea y obtiene la fecha actual más 30 días
 ```
 
-Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
+Una vez creada, puede utilizar una variable en el lugar que necesite en su base de datos. Por ejemplo, podría necesitar almacenar la variable texto en un campo del mismo tipo:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -37,19 +37,19 @@ The following are some basic variable declarations:
 
 ```4d
 
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
+ C_BLOB(vxMyBlob) // La variable proceso vxMyBlob se declara como una variable de tipo BLOB
+ C_DATE($vdCurDate) // La variable local $vdCurDate se declara como una variable de tipo Fecha
+ C_LONGINT(vg1;vg2;vg3) // Las 3 variables de proceso vg1, vg2 y vg3 se declaran como variables de tipo Entero largo
+ C_OBJECT($vObj) // La variable local $vObj se declara como una variable de tipo Objeto
+ C_COLLECTION($vCol) // La variable local $vCol se declara como una variable de tipo Colección
+ ARRAY LONGINT(alAnArray;10) //La variable del proceso alAnArray se declara como un array Entero largo de 10 elementos
 ```
 
 ## Assigning Data
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is the primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+El operador de asignación es la principal forma de crear una variable y de introducir datos en ella. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
 
 ```4d
 MyNumber:=3
@@ -87,7 +87,7 @@ You may want to use a local variable to:
 
 The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
 
-When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+Cuando se trabaja en una base con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
 Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
 
@@ -120,7 +120,7 @@ For more information, see the chapter **Processes** and the description of these
 
 ### Interprocess variables
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.
+Las variables interproceso están disponibles en toda la base y son compartidas por todos los procesos cooperativos. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
 

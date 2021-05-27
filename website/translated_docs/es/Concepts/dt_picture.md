@@ -29,7 +29,7 @@ Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pict
 
 ## Picture operators
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
+| Operation                 | Syntax                 | Returns | Acción                                                                                                                                                             |
 | ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Horizontal concatenation  | Pict1 + Pict2          | Imagen  | Add Pict2 to the right of Pict1                                                                                                                                    |
 | Vertical concatenation    | Pict1 / Pict2          | Imagen  | Add Pict2 to the bottom of Pict1                                                                                                                                   |
