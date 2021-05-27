@@ -94,7 +94,7 @@ title: Directory クラス
 
 #### 説明
 
-`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子<!-- END REF -->を返します (あれば)。 An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子<!-- END REF -->を返します (あれば)。 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -337,7 +337,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 `.original` プロパティは、 <!-- REF #directory.original.Summary -->対象フォルダーと同じフォルダーオブジェクト<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。
-> This property is available on folders to allow generic code to process folders or files.
+> このプロパティは、フォルダーやファイルを処理する汎用的なコードを書くために使用できます。
 
 <!-- END REF -->
 
@@ -359,9 +359,9 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクト<!-- END REF -->を返します。 If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクト<!-- END REF -->を返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
-If the folder does not have a parent (root), the null value is returned.
+親フォルダーが存在しない場合 (root) は、このプロパティは null値を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -385,7 +385,7 @@ If the folder does not have a parent (root), the null value is returned.
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダーの POSIXパス<!-- END REF -->を返します。 If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダーの POSIXパス<!-- END REF -->を返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。 
 
@@ -447,11 +447,11 @@ If the folder does not have a parent (root), the null value is returned.
 
 `.copyTo()` 関数は、 <!-- REF #directory.copyTo().Summary -->`Folder` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします<!-- END REF -->。
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+*destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-By default, the folder is copied with the name of the original folder. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+デフォルトで、フォルダーは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
-If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+*destinationFolder* 引数が指定するフォルダー内に同じ名前のフォルダーが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
 | 定数             | 結果 | 説明                 |
 | -------------- | -- | ------------------ |
@@ -464,7 +464,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 
 #### 例題
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
+ユーザーのドキュメントフォルダーにあるピクチャーフォルダーを、データベースフォルダー内にコピーします。
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -500,7 +500,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 `.file()` 関数は、 <!-- REF #directory.file().Summary -->`Folder` オブジェクト内に `File` オブジェクトを作成し、その参照を返します<!-- END REF -->。
 
-In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.
+*path* には、返すべきファイルの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
 **戻り値**
 
@@ -539,9 +539,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 #### 説明
 
 `.files()` 関数は、 <!-- REF #directory.files().Summary -->フォルダーに格納されている `File` オブジェクトのコレクションを返します<!-- END REF -->。
-> Aliases or symbolic links are not resolved.
+> エイリアスまたはシンボリックリンクは解決されません。
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+*options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
 | 定数                    | 結果 | 説明                                          |
 | --------------------- | -- | ------------------------------------------- |
@@ -554,20 +554,20 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 #### 例題 1
 
-You want to know if there are invisible files in the Database folder:
+データベースフォルダー内に非表示ファイルがないかどうかを調べます:
 
 ```4d
  var $all; $noInvisible : Collection
  $all:=Folder(fk database folder).files()
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
-    ALERT("Database folder contains hidden files.")
+    ALERT("データベースフォルダーには非表示のファイルが存在します。")
  End if
 ```
 
 #### 例題 2
 
-You want to get all files that are not invisible in the Documents folder:
+ドキュメントフォルダー内にある、非表示でないファイルをすべて取得します:
 
 ```4d
  var $recursive : Collection
@@ -601,7 +601,7 @@ You want to get all files that are not invisible in the Documents folder:
 
 `.folder()` 関数は、 <!-- REF #directory.folder().Summary -->親の `Folder` オブジェクト内に新しい `Folder` オブジェクトを作成し、その参照を返します<!-- END REF -->。
 
-In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
+*path* には、返すべきフォルダーの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
 **戻り値**
 
@@ -641,7 +641,7 @@ In *path*, pass a relative POSIX path to designate the folder to return. The pat
 
 `.folders()` 関数は、 <!-- REF #directory.folders().Summary -->親フォルダーに格納されている `Folder` オブジェクトのコレクションを返します<!-- END REF -->。
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+*options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるフォルダーのみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
 | 定数                    | 結果 | 説明                                          |
 | --------------------- | -- | ------------------------------------------- |
@@ -654,7 +654,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 #### 例題
 
-You want the collection of all folders and subfolders of the database folder:
+データベースフォルダー内にあるすべてのフォルダーおよびサブフォルダーのコレクションを取得します:
 
 ```4d
  var $allFolders : Collection
@@ -681,7 +681,7 @@ You want the collection of all folders and subfolders of the database folder:
 | 参照   | タイプ   |    | 説明                       |
 | ---- | ----- | -- | ------------------------ |
 | size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
-| 戻り値  | ピクチャー | <- | Icon                     |
+| 戻り値  | ピクチャー | <- | アイコン                     |
 <!-- END REF -->
 
 
@@ -689,9 +689,9 @@ You want the collection of all folders and subfolders of the database folder:
 
 `.getIcon()` 関数は、 <!-- REF #directory.getIcon().Summary -->フォルダーのアイコンを返します<!-- END REF -->。
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
+任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
-If the folder does not exist on disk, a default blank icon is returned.
+フォルダーがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。
 
 **戻り値**
 
