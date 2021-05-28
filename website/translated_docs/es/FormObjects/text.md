@@ -1,6 +1,6 @@
 ---
 id: text
-title: Text
+title: Texto
 ---
 
 
@@ -23,7 +23,7 @@ A text object allows you to display static written content (*e.g.*, instructions
 ```
 
 
-## Rotation
+## Rotación
 
 4D lets you rotate text areas in your forms using the [Orientation](properties_Text.md#orientation) property.
 

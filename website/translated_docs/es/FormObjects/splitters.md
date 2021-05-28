@@ -1,6 +1,6 @@
 ---
 id: splitters
-title: Splitter
+title: Separador
 ---
 
 
@@ -39,7 +39,7 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
 
 [Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Interaction with the properties of neighboring objects
+## Interacción con las propiedades de los objetos vecinos
 
 In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
 
@@ -52,7 +52,7 @@ In a form, splitters interact with the objects that are around them according to
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 > An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
 
-## Managing splitters programmatically
+## Gestión programada de los separadores
 
 
 You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.

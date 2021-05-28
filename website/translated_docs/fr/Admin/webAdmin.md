@@ -131,7 +131,7 @@ When running a 4D or 4D Server application headless, you can set and use the def
 
 To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
 
-Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the [Command line interface](cli.md) to support this feature.
+Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
 
 > The access key is not stored in clear in the `.4DSettings` file.
 

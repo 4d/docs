@@ -30,10 +30,10 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Example
 
 ```4d
- CONFIRM("Add a new record?") //The user wants to add a record?
- While(OK=1) //Loop as long as the user wants to
-    ADD RECORD([aTable]) //Add a new record
- End while //The loop always ends with End while
+ CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro?
+ While(OK=1) //Bucle mientras el usuario quiera
+    ADD RECORD([aTable]) /Añadir un nuevo registro
+ End while //El bucle siempre termina con End while
 ```
 
 En este ejemplo, el valor de la variable sistema `OK` es definido por el comando `CONFIRM` antes de que se inicie el bucle. Si el usuario hace clic en el botón **OK** de la caja de diálogo de confirmación, la variable del sistema `OK` toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema `OK` toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando `ADD RECORD` permite continuar la ejecución del bucle porque se define la variable sistema `OK` en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema `OK` toma el valor 0 y el bucle se detiene.
@@ -72,113 +72,113 @@ La sintaxis de la estructura condicional `For...End for` es:
 
 El bucle `For...End for` es un bucle controlado por un contador:
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
-- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
-- When the counter variable passes the *End_Expression* value, the loop stops.
+- La variable contador *Counter_Variable* es una variable numérica (Real o Entero largo) inicializada por `For...End for` con el valor especificado por *Start_Expression*.
+- Cada vez que se ejecuta el bucle, la variable del contador se incrementa en el valor especificado en el valor opcional *Increment_Expression*. Si no se especifica *Increment_Expression*, la variable del contador se incrementa en uno (1), que es el valor predeterminado.
+- Cuando la variable del contador pasa el valor *End_Expression*, el bucle se detiene.
 
 **Importante:** las expresiones numéricas *Start_Expression*, *End_Expression* y *Increment_Expression* se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.
 
 **Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable *Counter_Variable* dentro del bucle; esto afectará al bucle.
 
-- Usually *Start_Expression* is less than *End_Expression*.
-- If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
-- If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. See the examples.
+- Normalmente *Start_Expression* es menor que *End_Expression*.
+- Si *Start_Expression* y *End_Expression* son iguales, el bucle se ejecutará sólo una vez.
+- Si *Start_Expression* es mayor que *End_Expression*, el bucle no se ejecutará en absoluto a menos que se especifique una *Increment_Expression* negativa. Ver los ejemplos.
 
-### Basic examples
+### Ejemplos básicos
 
-1. The following example executes 100 iterations:
+1. El siguiente ejemplo ejecuta 100 iteraciones:
 
 ```4d
  For(vCounter;1;100)
-  //Do something
+  //Hacer algo
  End for
 ```
 
-2. The following example goes through all elements of the array anArray:
+2. El siguiente ejemplo recorre todos los elementos del array anArray:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
-  //Do something with the element
+  //Hacer algo con el elemento
     anArray{$vlElem}:=...
  End for
 ```
 
-3. The following example goes through all the characters of the text vtSomeText:
+3. El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
  For($vlChar;1;Length(vtSomeText))
-  //Do something with the character if it is a TAB
+  //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
  End for
 ```
 
-4. The following example goes through the selected records for the table [aTable]:
+4. El siguiente ejemplo recorre los registros seleccionados para la tabla [aTable]:
 
 ```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
-  //Do something with the record
+  //Hacer algo con el registro
     SEND RECORD([aTable])
   //...
-  //Go to the next record
+  //Ir al siguiente registro
     NEXT RECORD([aTable])
  End for
 ```
 
 Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
-### Decrementing variable counter
+### Disminuir la variable contador
 
 En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar *Start_Expression* mayor que *End_Expression* y *Increment_Expression* debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
 
-5. The following example executes 100 iterations:
+5. El siguiente ejemplo ejecuta 100 iteraciones:
 
 ```4d
  For(vCounter;100;1;-1)
-  //Do something
+  //Hacer algo
  End for
 ```
 
-6. The following example goes through all elements of the array anArray:
+6. El siguiente ejemplo recorre todos los elementos del array anArray:
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  //Do something with the element
+  //Hacer algo con el elemento
     anArray{$vlElem}:=...
  End for
 ```
 
-7. The following example goes through all the characters of the text vtSomeText:
+7. El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
-  //Do something with the character if it is a TAB
+  //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
  End for
 ```
 
-8. The following example goes through the selected records for the table [aTable]:
+8. El siguiente ejemplo recorre los registros seleccionados para la tabla [aTable]:
 
 ```4d
  LAST RECORD([aTable])
- For($vlRecord;Records in selection([aTable]);1;-1)
-  //Do something with the record
+ For($vlRecord;1;Records in selection([aTable]))
+  //Hacer algo con el registro
     SEND RECORD([aTable])
   //...
-  //Go to the previous record
+  //Ir al registro anterior
     PREVIOUS RECORD([aTable])
  End for
 ```
 
-### Incrementing the counter variable by more than one
+### Incrementar la variable del contador en más de uno
 
 Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) cuyo valor absoluto sea mayor que uno.
 
-9. The following loop addresses only the even elements of the array anArray:
+9. El siguiente bucle aborda sólo los elementos pares del array anArray:
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
@@ -190,10 +190,10 @@ Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) 
 
 ### Comparing looping structures
 
-Volvamos al primer ejemplo de `For...End for`. The following example executes 100 iterations:
+Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 iteraciones:
 ```4d
  For(vCounter;1;100)
-  //Do something
+  //Hacer algo
  End for
 ```
 

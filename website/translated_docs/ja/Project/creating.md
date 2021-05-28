@@ -62,38 +62,38 @@ title: プロジェクトを開発する
 
 - `.4DLink` ファイルを使用
 
-### Opening a Project with a 4DLink file
+### 4DLinkファイルを使ってプロジェクトを開く
 
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. これをおこなうには 2つの方法があります:
+4Dアプリケーションを起動し、ターゲットの 4Dプロジェクトを開くのに [`.4DLink` ファイル](#4DLinkファイルについて) が利用できます。 これをおこなうには 2つの方法があります:
 
-- double-click or drag and drop the `.4DLink` file onto the 4D application
-- go to **File** > **Open Recent Projects** and select a project
+- `.4DLink` をダブルクリック、あるいは 4Dアプリケーションにドラッグ&ドロップする
+- **ファイル** ＞ **最近使用したプロジェクトを開く** のサブメニューを開き、プロジェクトを選択する
 
-![open-recent-projects](assets/en/Project/4DLinkfiles.png)
+![最近使用したファイルを開く](assets/en/Project/4DLinkfiles.png)
 
-A .4DLink file of "remote project" type can be copied and used on several machines.
-> It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
+"リモートプロジェクト" タイプの .4DLinkファイルは、他のマシンにコピーして使用することができます。
+> 4D と 4D Server の接続ダイアログで 4DLinkファイルを選択することもできます (ローカルプロジェクトの開始のみ)。
 
-## About 4DLink Files
+## 4DLinkファイルについて
 
-Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
+`.4DLink` 拡張子が付いたファイルは XMLファイルで、ローカルまたはリモート4Dプロジェクトの開始を簡略化・自動化するための設定を格納します。
 
-`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
+`.4DLink` ファイルは、4Dプロジェクトのアドレスや接続識別子を保存し、プロジェクトを開くための操作を短縮します。
 
-4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
+ローカルプロジェクトを初めて開くとき、またはサーバーに初めて接続するとき、4D は `.4DLink` ファイルを自動生成します。 このファイルは、次の場所にあるローカル環境設定フォルダーに置かれます:
 
-- Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- Windows 7 以上: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 - OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
+XX はアプリケーションのバージョン番号を意味します。 たとえば、4D v19 なら "Favorites v19" となります。
 
-That folder is divided into two subfolders:
-- the **Local** folder contains the `.4DLink` files that can be used to open local projects
-- the **Remote** folder contains the `.4DLink` files of recent remote projects
+このフォルダーには、2つのサブフォルダーがあります:
+- **Local** フォルダーには、ローカルプロジェクトの開始に使用できる `.4DLink` ファイルが格納されます。
+- **Remote** フォルダーには、最近のリモートプロジェクトの `4DLink` ファイルが置かれます。
 
-`.4DLink` files can also be created with an XML editor.
+`.4DLink` ファイルは XMLエディターで作成することもできます。
 
-4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
+`.4DLink` ファイルを構築するために使用できる XMLキーを定義した DTD が4D より提供されます。 この DTD は database_link.dtd という名前で、4Dアプリケーションの \Resources\DTD\ サブフォルダーにあります。
 
 
 ## ファイルの保存

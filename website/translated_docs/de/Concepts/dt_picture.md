@@ -29,17 +29,17 @@ Die meisten [4D Befehle zur Bildverwaltung](https://doc.4d.com/4Dv18/4D/18/Bilde
 
 ## Bildoperatoren
 
-| Operation                    | Syntax             | Ergibt | Aktion                                                                                                                                                               |
-| ---------------------------- | ------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Horizontal Aneinanderfügen   | Bild1 + Bild2      | Bild   | Fügt Bild2 rechts von Bild1 an                                                                                                                                       |
-| Vertikal Aneinanderfügen     | Bild1 / Bild2      | Bild   | Fügt Bild2 unter Bild1 an                                                                                                                                            |
-| Exklusives Aufeinandersetzen | Bild1 & Bild2      | Bild   | Setzt Bild2 vor Bild1 (Bild2 ist vorne) Liefert dasselbe Ergebnis wie `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                                          |
-| Inklusives Aufeinandersetzen | Bild1 &#124; Bild2 | Bild   | Setzt Bild2 auf Bild1 und gibt Ergebnisbild zurück, wenn beide Bilder dieselbe Größe haben Liefert dasselbe Ergebnis wie `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal Verschieben       | Bild + Zahl        | Bild   | Verschiebt Bild horizontal um n Pixel                                                                                                                                |
-| Vertikal Verschieben         | Bild / Zahl        | Bild   | Verschiebt Bild vertikal um n Pixel                                                                                                                                  |
-| Zoomen                       | Bild * Zahl        | Bild   | Verändert Bildgröße gemäß Faktor n                                                                                                                                   |
-| Horizontal Skalieren         | Bild *+ Zahl       | Bild   | Skaliert Bild horizontal gemäß Faktor n                                                                                                                              |
-| Vertikal Skalieren           | Bild *&#124; Zahl  | Bild   | Skaliert Bild vertikal gemäß Faktor n                                                                                                                                |
+| Operation                    | Syntax             | Ergibt | Aktion                                                                                                                                                                |
+| ---------------------------- | ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Horizontal Aneinanderfügen   | Bild1 + Bild2      | Bild   | Fügt Bild2 rechts von Bild1 an                                                                                                                                        |
+| Vertikal Aneinanderfügen     | Bild1 / Bild2      | Bild   | Fügt Bild2 unter Bild1 an                                                                                                                                             |
+| Exklusives Aufeinandersetzen | Bild1 & Bild2      | Bild   | Setzt Bild2 vor Bild1 (Bild2 ist vorne) Liefert dasselbe Ergebnis wie `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                                           |
+| Inklusives Aufeinandersetzen | Bild1 &#124; Bild2 | Bild   | Setzt Bild2 auf Bild1 und gibt Ergebnisbild zurück, wenn beide Bilder dieselbe Größe haben. Liefert dasselbe Ergebnis wie `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal Verschieben       | Bild + Zahl        | Bild   | Verschiebt Bild horizontal um n Pixel                                                                                                                                 |
+| Vertikal Verschieben         | Bild / Zahl        | Bild   | Verschiebt Bild vertikal um n Pixel                                                                                                                                   |
+| Zoomen                       | Bild * Zahl        | Bild   | Verändert Bildgröße gemäß Faktor n                                                                                                                                    |
+| Horizontal Skalieren         | Bild *+ Zahl       | Bild   | Skaliert Bild horizontal gemäß Faktor n                                                                                                                               |
+| Vertikal Skalieren           | Bild *&#124; Zahl  | Bild   | Skaliert Bild vertikal gemäß Faktor n                                                                                                                                 |
 
 **Hinweise:**
 

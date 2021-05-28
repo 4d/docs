@@ -24,7 +24,7 @@ A class name must be compliant with standard [property naming rules](#object-pro
 
 
 
-## Functions
+## Funciones
 
 Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
 

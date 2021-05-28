@@ -46,7 +46,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 ```
 > This statement also starts the [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt) log file.
 
-#### Headers
+#### Encabezados
 
 This file starts with the following headers:
 
@@ -96,7 +96,7 @@ SET DATABASE PARAMETER(Client Log Recording;1) //remote side
 ```
 > This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
 
-#### Headers
+#### Encabezados
 
 This file starts with the following headers:
 

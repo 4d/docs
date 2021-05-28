@@ -1,6 +1,6 @@
 ---
 id: webServerConfig
-title: Configuration
+title: Configuración
 ---
 
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
@@ -64,7 +64,7 @@ Defines the set of characters to be used by the 4D web server. The default value
 
 | Can be set with  | Name                                               | Comments |
 | ---------------- | -------------------------------------------------- | -------- |
-| webServer object | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text     |
+| webServer object | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Texto    |
 
 Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
 
@@ -139,7 +139,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 | Can be set with     | Name                                                       | Comments                              |
 | ------------------- | ---------------------------------------------------------- | ------------------------------------- |
-| webServer object    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text                                  |
+| webServer object    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Texto                                 |
 | `WEB SET HOME PAGE` |                                                            | Can be different for each web process |
 | Settings dialog box | Configuration page/Default Home Page                       |                                       |
 

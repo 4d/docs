@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Action
+title: Acción
 ---
 
 
@@ -98,9 +98,9 @@ Several types of method references are supported:
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- una ruta de acceso al archivo del método personalizado que incluya la extensión .4dm, por ejemplo:  
+  `../../CustomMethods/myMethod.4dm` También puede utilizar un sistema de archivos:  
+  `/RESOURCES/Buttons/bOK.4dm` En este caso, 4D no ofrece soporte automático para las operaciones con objetos.
 
 
 #### JSON Grammar
@@ -150,7 +150,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md)
+[Lista jerárquica](list_overview.md)
 
 
 

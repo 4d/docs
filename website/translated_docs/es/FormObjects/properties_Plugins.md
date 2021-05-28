@@ -21,5 +21,5 @@ Because the Advanced properties feature is under the control of the author of th
 
 #### Objects Supported
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
 

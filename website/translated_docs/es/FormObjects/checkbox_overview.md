@@ -12,7 +12,7 @@ Check boxes are controlled by methods or [standard actions](#using-a-standard-ac
 A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 
-## Using check boxes
+## Utilizar casillas de selección
 
 A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
 
@@ -36,7 +36,7 @@ The variable associated with the check box returns the value 2 when the check bo
 > In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
 
 
-## Using a standard action
+## Utilizar una acción estándar
 
 You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area.
 
@@ -75,7 +75,7 @@ Only actions that can represent a true/false status ("checkable" actions) are su
 
 For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
 
-## Check box button styles
+## Estilos de botones casillas de selección
 
 Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
 

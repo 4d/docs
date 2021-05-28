@@ -4,7 +4,7 @@ title: Seite Reparieren
 sidebar_label: Seite Reparieren
 ---
 
-Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschädigung. Diese Funktionen verwenden Sie in der Regel nur auf Anforderung von 4D, wenn beim Öffnen der Anwendung Unregelmäßigkeiten auftreten oder nach einer [Überprüfung](verify.md).
+Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschädigung. Generally, you will only use these functions under the supervision of 4D technical teams, when anomalies have been detected while opening the application or following a [verification](verify.md).
 
 **Warnung:** Die Originaldatei wird bei jedem Repariervorgang dupliziert, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 > Reparieren ist nur im Wartungsmodus verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erhalten Sie die Meldung, dass die Anwendung geschlossen und im Wartungsmodus neu gestartet wird.

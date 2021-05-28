@@ -67,7 +67,7 @@ El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
     statement(s)
  End if
 ```
-or:
+o:
 
 ```4d
  If(Boolean_Expression)
@@ -166,7 +166,7 @@ En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse
  Case of
     :(vResult=1)
        ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
+    :((vResult=1) & (vCondition#2)) //este caso nunca será detectado
        ... //statement(s)
  End case
 ```
@@ -175,7 +175,7 @@ En el código anterior, la presencia de la segunda condición no se detecta, ya 
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
+    :((vResult=1) & (vCondition#2)) //este caso será detectado primero
        ... //statement(s)
     :(vResult=1)
        ... //statement(s)
@@ -198,7 +198,7 @@ Además, si quiere implementar pruebas jerárquicas, puede considerar el uso de 
  End case
 ```
 
-or:
+o:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -212,7 +212,7 @@ or:
  End case
 ```
 
-or:
+o:
 ```4d
  Case of
     Else

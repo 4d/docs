@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Área Web
 ---
 
 ---
@@ -22,7 +22,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 ---
@@ -38,7 +38,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -69,7 +69,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -87,7 +87,7 @@ This option allows choosing between two rendering engines for the Web area, depe
 The Blink engine has the following limitations:
 
 - [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
+- Cuando se activa soltar URLs mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), la primera soltada debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área.
 
 #### JSON Grammar
 
@@ -97,4 +97,4 @@ The Blink engine has the following limitations:
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)

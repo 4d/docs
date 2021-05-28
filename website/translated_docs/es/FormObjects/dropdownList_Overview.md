@@ -1,6 +1,6 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: Lista desplegable
 ---
 
 Drop-down lists are form objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action.
@@ -70,7 +70,7 @@ Form.myDrop.index //3
 
 
 
-### Using an array
+### Utilizar un array
 
 An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list can display an array as a list of values when you click on it.
 
@@ -123,7 +123,7 @@ If you need to save the user’s choice into a field, you would use an assignmen
 You must select each event that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
 
 
-### Using a choice list
+### Utilizar una lista de selección
 
 If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). This makes it easier to manage listed fields/variables.
 
@@ -155,7 +155,7 @@ You can assign the hierarchical choice list to the drop-down list object using t
 You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 
-### Using a standard action
+### Utilizar una acción estándar
 
 You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). This feature is supported in the following contexts:
 

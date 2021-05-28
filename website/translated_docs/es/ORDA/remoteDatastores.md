@@ -1,6 +1,6 @@
 ---
 id: datastores
-title: Using a remote datastore
+title: Utilizar un almacén de datos remoto
 ---
 
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:

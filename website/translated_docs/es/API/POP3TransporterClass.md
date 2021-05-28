@@ -346,7 +346,7 @@ The `mailInfo` object returned contains the following properties:
 | Property | Type   | Description              |
 | -------- | ------ | ------------------------ |
 | size     | Number | Message size in bytes    |
-| id       | Text   | Unique ID of the message |
+| id       | Texto  | Unique ID of the message |
 
 The method returns **Null** if:
 
@@ -407,7 +407,7 @@ Each `mailInfo` object in the returned collection contains the following propert
 | ------------ | ------ | ------------------------------------------------------------------ |
 | \[ ].size   | Number | Message size in bytes                                              |
 | \[ ].number | Number | Message number                                                     |
-| \[ ].id     | Text   | Unique ID of the message (useful if you store the message locally) |
+| \[ ].id     | Texto  | Unique ID of the message (useful if you store the message locally) |
 
 If the mailbox does not contain a message, an empty collection is returned.
 

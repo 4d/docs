@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Architecture of a project
+title: Arquitectura de un proyecto
 ---
 
 A 4D project is made of several folders and files, stored within a single parent application folder (package folder). For example:
@@ -33,7 +33,7 @@ The Project folder typically contains the following hierarchy:
     + `Clases`
     + `DatabaseMethods`
     + `Métodos`
-    + `Forms`
+    + `Formularios`
     + `TableForms`
     + `Triggers`
 - `DerivedData`
@@ -85,7 +85,7 @@ Project development file, used to designate and launch the project. This file ca
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text   |
 
 
-#### `Forms`
+#### `Formularios`
 
 | Contents                                  | Description                                | Format  |
 | ----------------------------------------- | ------------------------------------------ | ------- |
@@ -121,7 +121,7 @@ Project development file, used to designate and launch the project. This file ca
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
 - `Métodos`
-- `Forms`
+- `Formularios`
 - `TableForms`
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
@@ -201,7 +201,7 @@ This folder contains **user settings files** used for application administration
 
 ## `userPreferences.<userName>`
 
-This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
+Esta carpeta contiene archivos que memorizan las configuraciones del usuario, por ejemplo, el punto de ruptura o las posiciones de las ventanas. You can just ignore this folder. It contains for example:
 
 | Contents                   | Description                                                 | Format |
 | -------------------------- | ----------------------------------------------------------- | ------ |

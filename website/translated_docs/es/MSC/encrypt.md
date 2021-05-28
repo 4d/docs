@@ -1,7 +1,7 @@
 ---
 id: encrypt
-title: Encrypt Page
-sidebar_label: Encrypt Page
+title: Página de cifrado
+sidebar_label: Página de cifrado
 ---
 
 You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.

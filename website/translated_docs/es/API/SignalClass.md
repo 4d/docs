@@ -109,7 +109,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 <!-- REF SignalClass.New signal.Params -->
 | Parameter   | Type      |    | Description                            |
 | ----------- | --------- |:--:| -------------------------------------- |
-| description | Text      | -> | Description for the signal             |
+| description | Texto     | -> | Description for the signal             |
 | Result      | 4D.Signal | <- | Native object encapsulating the signal |
 <!-- END REF -->
 

@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Authentication
+title: Autenticación
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
@@ -96,12 +96,12 @@ The `On Web Authentication` database method is NOT called:
 
 | Parámetros | Type     |    | Description                                       |
 | ---------- | -------- |:--:| ------------------------------------------------- |
-| $1         | Text     | <- | URL                                               |
-| $2         | Text     | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text     | <- | IP address of the web client (browser)            |
-| $4         | Text     | <- | IP address of the server                          |
-| $5         | Text     | <- | User name                                         |
-| $6         | Text     | <- | Password                                          |
+| $1         | Texto    | <- | URL                                               |
+| $2         | Texto    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
+| $3         | Texto    | <- | IP address of the web client (browser)            |
+| $4         | Texto    | <- | IP address of the server                          |
+| $5         | Texto    | <- | User name                                         |
+| $6         | Texto    | <- | Password                                          |
 | $0         | Booleano | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:

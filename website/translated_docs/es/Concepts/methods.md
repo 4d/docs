@@ -24,7 +24,7 @@ In the 4D Language, there are several categories of methods. The category depend
 > The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
 
-## Calling Project Methods
+## Métodos proyecto
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
@@ -171,7 +171,7 @@ An **event catching method** runs in a separate process as the process method fo
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
 
-## Recursive Project Methods
+## Métodos proyecto recursivos
 
 Project methods can call themselves. For example:
 

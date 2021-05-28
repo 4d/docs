@@ -3,80 +3,80 @@ id: SignalClass
 title: Signal
 ---
 
-Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
+シグナルは、マルチプロセスアプリケーションにおいてプロセス間でのやり取りを管理し衝突を避けるために 4Dランゲージが提供するツールです。 シグナルは、1つ以上のプロセスが実行を一時停止し、特定のタスクが完了するまで待つようにする仕組みです。 どのプロセスもシグナルを待機またはリリースすることができます。
 
-> Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
+> プロセス間のやり取りを管理するには、セマフォーも使用できます。 セマフォーは、2つ以上のプロセスが同じリソース (ファイル、レコードなど) を同時に変更しないようにするための仕組みです。 セマフォーを解除できるのは、それを設定したプロセスのみです。
 
 
-### Signal Object
+### Signal オブジェクト
 
-A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
+シグナルは、ワーカーやプロセスを呼び出す/作成するコマンドに対して引数として渡す必要のある共有オブジェクトです。
 
-A `4D.Signal` object contains the following built-in methods and properties:
+`4D.Signal` オブジェクトは次のビルトインされたメソッドおよびプロパティを持ちます:
 
 - [`.wait()`](#wait)
 - [`.trigger()`](#trigger)
 - [`.signaled`](#signaled)
-- [`.description`](#description).
+- [`.description`](#description)
 
-Any worker/process calling the `.wait()` method will suspend its execution until the `.signaled` property is true. While waiting for a signal, the calling process does not use any CPU. This can be very interesting for performance in multiprocess applications. The `.signaled` property becomes true when any worker/process calls the `.trigger()` method.
+シグナルの `.wait()` メソッドを呼び出したワーカーやプロセスは、`.signaled` プロパティが true になるまで実行を停止します。 シグナルを待っている間、呼び出したプロセスは CPU を消費しません。 これはマルチプロセスアプリケーションのパフォーマンスを鑑みると有意義な仕組みです。 `.signaled` プロパティは、いずれかのワーカーまたはプロセスがシグナルの `.trigger()` メソッドを呼び出した時点で true になります。
 
-Note that to avoid blocking situations, the `.wait()` can also return after a defined timeout has been reached.
+また、コードのブロックを避けるため、`.wait()` 呼び出しの際に定義したタイムアウト時間に達することでも待機状態を脱することができます。
 
-Signal objects are created with the [New signal](#new-signal) command.
+Signal オブジェクトは、[New signal](#new-signal) コマンドによって作成されます。
 
 
-### Working with signals
+### シグナルの使い方
 
-In 4D, you create a new signal object by calling the [`New signal`](#new-signal) command. Once created, this signal must be passed as a parameter to the `New process` or `CALL WORKER` commands so that they can modify it when they have finished the task you want to wait for.
+4D では、[`New signal`](#new-signal) コマンドを呼び出すことで新規 Signal オブジェクトを作成します。 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
 
-- `signal.wait()` must be called from the worker/process that needs another worker/process to finish a task in order to continue.
-- `signal.trigger()` must be called from the worker/process that finished its execution in order to release all others.
+- `signal.wait()` は、他のワーカー/プロセスのタスクが完了するまで待機するワーカー/プロセスから呼び出す必要があります。
+- `signal.trigger()` は、他のワーカー/プロセスを待機状態から解放するために、タスク実行を終えたワーカー/プロセスが呼び出す必要があります。
 
 
 ![](assets/en/API/signal.png)
 
-Once a signal has been released using a `signal.trigger()` call, it cannot be reused again. If you want to set another signal, you need to call the `New signal` command again.
+`signal.trigger()` の呼び出しによって解放されたシグナルは 、再利用することができません。 別のシグナルを設定するには、`New signal` コマンドをあらためて呼び出す必要があります。
 
-Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
+Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) であるため、呼び出されたワーカー/プロセスから結果を返すために使用することもできます。この場合、`Use...End use` 構文内で値を書き込む必要があります。
 
 ### 例題
 
 ```4d
  var $signal : 4D.Signal
 
-  // Creation of a signal
+  // シグナルを作成します
  $signal:=New signal
 
-  // call main process and execute OpenForm method
+  // メインプロセスを呼び出し、OpenForm メソッドを実行します
  CALL WORKER(1;"OpenForm";$signal)
-  // do another calculation
+  // 他の計算をします
  ...
-  // Waiting for the end of the process
+  // プロセスの終了を待機します
  $signaled:=$signal.wait()
 
-  // Processing of the results
+  // 結果を処理します
  $calc:=$signal.result+...
 ```
 
-***OpenForm*** method :
+***OpenForm*** メソッド:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)  
  var $form : Object
  $form:=New object("value";0)
 
-  // Open the form
+  // フォームを開きます
  $win:=Open form window("Information";Movable form dialog box)
  DIALOG("Information";$form)
  CLOSE WINDOW($win)
 
-  // Add a new attribute to your $signal shared object to pass your result to the other process:
+  // $signal 共有オブジェクトに新しい属性を追加することで、他のプロセスに返り値を受け渡します:
  Use($signal)
     $signal.result:=$form.value
  End use
 
-  // Trigger the signal to the waiting process
+  // 待機プロセスに向けてシグナルをトリガーします
  $signal.trigger()
 ```
 
@@ -118,14 +118,14 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 `New signal` コマンドは、 <!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
 
-A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
+シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。そのため、以下のようなことが可能になります:
 
-*   the called worker/process can update the signal object after specific processing has completed
-*   the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources.
+*   呼び出されたワーカー/プロセスは特定の処理が完了した後に Signal オブジェクトを更新することができます。
+*   呼び出し元のワーカー/プロセスは CPUリソースを消費することなく、実行を停止してシグナルが更新されるまで待つことができます。
 
-Optionally, in the *description* parameter you can pass a custom text describing the signal. This text can also be defined after signal creation.
+任意で *description* 引数に、シグナルの詳細を説明するカスタムテキストを渡すことができます。 テキストは、シグナルの作成後に定義することも可能です。
 
-Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
+Signal オブジェクトは共有オブジェクトのため、`Use...End use` 構文を使用することで、[`.description`](#description) プロパティのほか、ユーザー独自のプロパティを管理するのに使用することもできます。
 
 
 **戻り値**
@@ -134,33 +134,33 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 #### 例題
 
-Here is a typical example of a worker that sets a signal:
+以下は、シグナルを設定するワーカーの典型的な例です:
 
 ```4d
  var $signal : 4D.Signal
  $signal:=New signal("This is my first signal")
 
  CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //wait for 1 second max
+ $signaled:=$signal.wait(1) // 最大で1秒待機します
 
  If($signaled)
-    ALERT("myworker finished the work. Result: "+$signal.myresult)
+    ALERT("myworker はタスクを終了しました。 結果: "+$signal.myresult)
  Else
-    ALERT("myworker has not finished in less than 1s")
+    ALERT("myworker は 1秒以内にタスクを終了できませんでした。")
  End if
 ```
 
 
-The ***doSomething*** method could be like:
+以下は、***doSomething*** メソッドの一例です:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
-  //any processing
+  // 何らかの処理
   //...
  Use($signal)
-    $signal.myresult:=$processingResult  //return the result
+    $signal.myresult:=$processingResult  // 結果を返します
  End use
- $signal.trigger() // The work is finished
+ $signal.trigger() // 処理が完了しました
 ```
 
 <!-- END REF -->
@@ -182,9 +182,9 @@ The ***doSomething*** method could be like:
 
 `.description` プロパティは、 <!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
 
-`.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
+`.description` は、Signal オブジェクトの作成時、あるいはその他のタイミングでも設定することができます。 ただし、`Signal` オブジェクトは共有オブジェクトであるため、`.description` プロパティに書き込む際には必ず `Use...End use` 構文を使わなくてはならない点に留意が必要です。
 
-This property is **read-write**. 
+**読み書き可能** プロパティです。 
 
 <!-- END REF -->
 
@@ -205,7 +205,7 @@ This property is **read-write**.
 
 #### 説明
 
-`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
 
 このプロパティは **読み取り専用** です。 
 
@@ -236,7 +236,7 @@ This property is **read-write**.
 
 `.trigger( )` 関数は、 <!-- REF #SignalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
 
-If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
+Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は何もしません。
 
 <!-- END REF -->
 
@@ -266,13 +266,13 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 `.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
-> **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
+コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
+> **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は即座に戻り値を返します。
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
-> The state of a process that waits for a signal is `Waiting for internal flag`.
+この関数は `.signaled` プロパティの値を返します。 この値を評価することで、待機が終了したのは `.trigger()` が呼び出されたためか (`.signaled` プロパティは **true**)、それともタイムアウト時間が経過したためか (`.signaled` プロパティは **false**) を知ることができます。
+> Signal オブジェクトを待機しているプロセスの状態は `Waiting for internal flag` です。
 
 
 <!-- END REF -->
