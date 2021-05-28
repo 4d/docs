@@ -1,23 +1,23 @@
 ---
-id: boolean
+id: booleano
 title: Booleano
 ---
 
-A boolean field, variable or expression can be either TRUE or FALSE.
+Un campo, variable o expresión booleana puede ser TRUE o FALSE.
 
-## Boolean functions
+## Funciones booleanas
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
+4D ofrece las funciones booleanas `True`, `False` y `Not` en el tema dedicado **Booleanos**. Para más información, consulte las descripciones de estos comandos
 
-### Example
+### Ejemplo
 
-This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
+Este ejemplo define una variable booleana basada en el valor de un botón. Devuelve True en myBoolean si el botón myButton fue presionado y False si el botón no fue presionado. Cuando se hace clic en un botón, la variable del botón toma el valor 1.
 
 ```4d
- If(myButton=1) //If the button was clicked
-    myBoolean:=True //myBoolean is set to True
- Else //If the button was not clicked,
-    myBoolean:=False //myBoolean is set to False
+ If(myButton=1) //Si se ha presionado el botón
+    myBoolean:=True //myBoolean toma el valor True
+ Else //Si el botón no fue pulsado
+    myBoolean:=False //myBoolean toma el valor False
  End if
 ```
 
