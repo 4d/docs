@@ -216,70 +216,70 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use maiúsculas para nomear seus métodos, entretanto, se um método for uma função, coloque em maiúsculas o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:
+**Nota:** quando chamar a um método, só tem que escrever seu nome. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos de Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Example:
 
 Examples:
 ```4d
-    //This command expects a method (function) or formula
+    //Este comando espera um método (função) ou uma fórmula
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    //Este comando espera um método (procedimento) ou uma instrução
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    //Mas este comando espera um nome de método
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Project methods can accept parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
+Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
 
-Inside a function, the $0 local variable contains the value to be returned.
+Dentro de uma função, a variável local $0 contém o valor a devolver.
 
 Examples:
 ```4d
-    //Within DROP SPACES $1 is a pointer to the field [People]Name
+    //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name
 DROP SPACES(->[People]Name)
 
-    //Within Calc creator:
-    //- $1 is numeric and equal to 1
-    //- $2 is numeric and equal to 5
-    //- $3 is text or string and equal to "Nice"
-    //- The result value is assigned to $0
-$vsResult:=Calc creator(1;5;"Nice")
+    //Dentro de Calc creator:
+    //- $1 é numérico e igual a 1
+    //- $2 é numérico e igual a 5
+    //- $3 é texto ou string e igual a "Nice"
+    //- O valor del resultado se atribui a $0
+$vsResult:=Calc creator(1;5; "Nice")
 
-    //Within Dump:
-    //- The three parameters are text or string
-    //- They can be addressed as $1, $2 or $3
-    //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
-    //- The result value is assigned to $0
+    //Dentro de Dump:
+    //- os tres parâmetros são texto ou string
+    //- Se pode direcionar como $1, $2 ou $3
+    //- Também  podem ser direcionados como, por exemplo, ${$vlParam} onde $vlParam é 1, 2 ou 3
+    //- O valor resultante se atribui a $0
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Commands
+## Comandos de plug-in
 
-You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
+Para designar um comando de plug-in se utiliza seu nome, tal e como o define o plug-in. O nome de um comando plug-in pode conter até 31 caracteres.
 
 Examples:
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
-## Sets
+## Conjuntos
 
-From the scope point of view, there are two types of sets:
+Desde o ponto de vista do escopo, há dois tipos de conjuntos:
 
-- Interprocess sets
-- Process sets
+- Conjuntos interprocesso
+- Conjuntos processo
 
-4D Server also includes:
+4D Server também inclui:
 
-- Client sets
+- Conjuntos clientes
 
-### Interprocess Sets
-A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+### Conjuntos interprocesso
+Um conjunto é um conjunto interprocesso quando o nome do conjunto está precedido pelos símbolos (<>) - um sinal "menor que" seguido de um sinal "maior que".
 
-An interprocess set name can contain up to 255 characters, not including the <> symbols.
+Um nome de conjunto interprocesso pode conter até 255 caracteres, sem incluir os símbolos <>.
 
-### Process Sets
+### Conjuntos proceso
 You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
 
 ### Client Sets
