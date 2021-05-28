@@ -209,7 +209,7 @@ Available media feature expressions:
 
 > Color schemes are only supported on macOS.
 
-##### Example
+##### Ejemplo
 
 This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
 
