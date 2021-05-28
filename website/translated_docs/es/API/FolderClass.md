@@ -7,7 +7,7 @@ title: Folder
 
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
-### Example
+### Ejemplo
 
 The following example creates a "JohnSmith" folder:
 
@@ -63,8 +63,8 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | Parameter      | Type      |    | Description                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Texto     | -> | Folder path                                     |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
+| folderConstant | Entero    | -> | 4D folder constant                              |
+| pathType       | Entero    | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
 | Result         | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
@@ -212,7 +212,7 @@ End if
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
+| aliasType         | Entero    | -> | Type of the alias link                       |
 | Result            | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
@@ -236,7 +236,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
-#### Example
+#### Ejemplo
 
 You want to create an alias to an archive folder in your database folder:
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Type    |    | Description            |
-| --------- | ------- | -- | ---------------------- |
-| option    | Integer | -> | Folder deletion option |
+| Parameter | Type   |    | Description            |
+| --------- | ------ | -- | ---------------------- |
+| option    | Entero | -> | Folder deletion option |
 <!-- END REF -->
 
 
@@ -404,7 +404,7 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 The moved `Folder` object.
 
-#### Example
+#### Ejemplo
 
 You want to move and rename a folder:
 
@@ -473,7 +473,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 The renamed `Folder` object.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
