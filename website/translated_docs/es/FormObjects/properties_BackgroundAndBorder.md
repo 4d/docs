@@ -115,7 +115,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| hideExtraBlankRows | boolean   | true, false     |
+| hideExtraBlankRows | booleano  | true, false     |
 
 #### Objects Supported
 
