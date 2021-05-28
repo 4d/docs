@@ -438,7 +438,7 @@ This property is **read-only**.
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
-| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
+| overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
 | Result            | 4D.Folder | <- | Copied file or folder                       |
 <!-- END REF -->
 
@@ -462,7 +462,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 
 The copied `Folder` object.
 
-#### Example
+#### Ejemplo
 
 You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
@@ -506,7 +506,7 @@ In *path*, pass a relative POSIX path to designate the file to return. The path 
 
 A `File` object or null if *path* is invalid.
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $myPDF : 4D.File
@@ -532,7 +532,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.files().Params -->
 | Parameter | Type      |    | Description                         |
 | --------- | --------- | -- | ----------------------------------- |
-| options   | Integer   | -> | File list options                   |
+| options   | Entero    | -> | File list options                   |
 | Result    | Colección | <- | Collection of children file objects |
 <!-- END REF -->
 
@@ -607,7 +607,7 @@ In *path*, pass a relative POSIX path to designate the folder to return. The pat
 
 A `Folder` object or null if *path* is invalid.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $mypicts : 4D.Folder
@@ -633,7 +633,7 @@ A `Folder` object or null if *path* is invalid.
 <!-- REF #directory.folders().Params -->
 | Parameter | Type      |    | Description                           |
 | --------- | --------- | -- | ------------------------------------- |
-| options   | Integer   | -> | Folder list options                   |
+| options   | Entero    | -> | Folder list options                   |
 | Result    | Colección | <- | Collection of children folder objects |
 <!-- END REF -->
 
@@ -652,7 +652,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 Collection of `Folder` objects.
 
-#### Example
+#### Ejemplo
 
 You want the collection of all folders and subfolders of the database folder:
 
@@ -678,10 +678,10 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Parameter | Type    |    | Description                                   |
-| --------- | ------- | -- | --------------------------------------------- |
-| size      | Integer | -> | Side length for the returned picture (pixels) |
-| Result    | Imagen  | <- | Icon                                          |
+| Parameter | Type   |    | Description                                   |
+| --------- | ------ | -- | --------------------------------------------- |
+| size      | Entero | -> | Side length for the returned picture (pixels) |
+| Result    | Imagen | <- | Icon                                          |
 <!-- END REF -->
 
 
