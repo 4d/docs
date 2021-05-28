@@ -227,7 +227,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $emp : cs.Employee
@@ -274,7 +274,7 @@ The `.cancelTransaction()` function cancels any changes made to the data during 
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
 
 
-#### Example
+#### Ejemplo
 
 See example for the [`.startTransaction()`](#starttransaction) function.
 
@@ -330,7 +330,7 @@ The returned object contains the following properties:
 *   at the root of a connected device before opening the datastore,
 *   with the `Discover data key` command.
 
-#### Example
+#### Ejemplo
 
 You want to know the number of encrypted tables in the current data file:
 
@@ -382,12 +382,12 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Property   | Type    | Description                                                                                                                                                     |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
-| networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID    | text    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | object  | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| Property   | Type     | Description                                                                                                                                                     |
+| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
+| networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
+| localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
+| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -460,7 +460,7 @@ Collection of stacked request objects. The most recent request has index 0.
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
 
 
-#### Example
+#### Ejemplo
 
 See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
@@ -592,7 +592,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $keyStatus : Object
@@ -641,7 +641,7 @@ By default when the function is not called, access to data is always granted on 
 In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted.
 
 
-#### Example
+#### Ejemplo
 
 You create a *protectDataFile* project method to call before deployments for example:
 
@@ -673,7 +673,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 | Parameter | Type    |    | Description                          |
 | --------- | ------- | -- | ------------------------------------ |
 | file      | 4D.File | -> | File object                          |
-| reqNum    | Integer | -> | Number of requests to keep in memory |
+| reqNum    | Entero  | -> | Number of requests to keep in memory |
 <!-- END REF -->
 
 
@@ -761,7 +761,7 @@ The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().S
 You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -828,7 +828,7 @@ The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summa
 This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
 
 
-#### Example
+#### Ejemplo
 
 See examples for [`.startRequestLog()`](#startrequestlog).
 
@@ -865,7 +865,7 @@ The function saves the changes to the data on the datastore that occurred during
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
 
 
-#### Example
+#### Ejemplo
 
 See example for [`.startTransaction()`](#starttransaction).
 
