@@ -20,7 +20,7 @@ In the steps collection, there is an object with the following properties defini
 | recordsfounds | Number    | Number of records found                                                     |
 | steps         | Colección | An collection with an object defining the subsequent step of the query path |
 
-## Example
+## Ejemplo
 
 If you passed the following query:
 
