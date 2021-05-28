@@ -178,7 +178,7 @@ The `On Web Connection` database method is only executed if the connection has b
 > * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 
 
-### Example
+### Ejemplo
 
 Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
 
