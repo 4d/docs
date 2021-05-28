@@ -130,7 +130,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Ejemplo
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -172,7 +172,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Ejemplo
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 
