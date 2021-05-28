@@ -110,10 +110,10 @@ Considering the following table properties:
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
-| Parameter | Type               |    | Description                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| settings  | Objeto             | -> | Build option: context                               |
-| Result    | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
+| Parameter  | Type               |    | Description                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| parámetros | Objeto             | -> | Build option: context                               |
+| Result     | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
 
@@ -127,7 +127,7 @@ If no corresponding entity is found, an empty entity selection is returned.
 
 Lazy loading is applied.
 
-**settings**
+**parámetros**
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
@@ -136,7 +136,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $allEmp : cs.EmployeeSelection
@@ -163,11 +163,11 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parameter | Type               |    | Description                                      |
-| --------- | ------------------ |:--:| ------------------------------------------------ |
-| objectCol | Colección          | -> | Collection of objects to be mapped with entities |
-| settings  | Objeto             | -> | Build option: context                            |
-| Result    | 4D.EntitySelection | <- | Entity selection filled from the collection      |
+| Parameter  | Type               |    | Description                                      |
+| ---------- | ------------------ |:--:| ------------------------------------------------ |
+| objectCol  | Colección          | -> | Collection of objects to be mapped with entities |
+| parámetros | Objeto             | -> | Build option: context                            |
+| Result     | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
 
@@ -204,7 +204,7 @@ The nested objects featuring related entities must contain a "\_\_KEY" property 
 
 If a \_\_STAMP attribute is given, a check is performed with the stamp in the datastore and an error can be returned ("Given stamp does not match current one for record# XX of table XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
 
-**settings**
+**parámetros**
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | Parameter  | Type            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | Objeto          | -> | Build option: context                       |
+| parámetros | Objeto          | -> | Build option: context                       |
 | Result     | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -378,7 +378,7 @@ If no entity is found with *primaryKey*, a **Null** entity is returned.
 
 Lazy loading is applied, which means that related data is loaded from disk only when it is required.
 
-**settings**
+**parámetros**
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
@@ -454,7 +454,7 @@ The datastore can be:
 *   a remote datastore, opened using the `Open datastore` command.
 
 
-#### Example
+#### Ejemplo
 
 The ***SearchDuplicate*** project method searches for duplicated values in any dataclass.
 
@@ -504,11 +504,11 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 **Returned object**
 
-| Property    | Type    | Description                              |
-| ----------- | ------- | ---------------------------------------- |
-| name        | Texto   | Name of the dataclass                    |
-| primaryKey  | Texto   | Name of the primary key of the dataclass |
-| tableNumber | Integer | Internal 4D table number                 |
+| Property    | Type   | Description                              |
+| ----------- | ------ | ---------------------------------------- |
+| name        | Texto  | Name of the dataclass                    |
+| primaryKey  | Texto  | Name of the primary key of the dataclass |
+| tableNumber | Entero | Internal 4D table number                 |
 
 
 
@@ -579,7 +579,7 @@ The entity object is created in memory and is not saved in the database until th
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
 
-#### Example
+#### Ejemplo
 
 This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
 
@@ -610,7 +610,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- REF #DataClassClass.newSelection().Params -->
 | Parameter | Type               |    | Description                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder | Integer            | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
+| keepOrder | Entero             | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | Result    | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
 <!-- END REF -->
 
@@ -627,7 +627,7 @@ If you want to create an ordered entity selection, pass the `dk keep ordered` se
 When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d 
@@ -757,7 +757,7 @@ Two types of placeholders can be used: **indexed placeholders** and **named plac
 | -          | Indexed placeholders                                                                                                                                                                                    | Named placeholders                                                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Definition | Parameters are inserted as :paramIndex (for example :1, :2...) in queryString and their corresponding values are provided by the sequence of value parameter(s). You can use up to 128 value parameters | Parameters are inserted as :paramName (for example :myparam) and their values are provided in the attributes and/or parameters objects in the querySettings parameter |
-| Example    | $r:=class.query(":1=:2";"city";"Chicago")                                                                                                                                                               | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o)                              |
+| Ejemplo    | $r:=class.query(":1=:2";"city";"Chicago")                                                                                                                                                               | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o)                              |
 
 You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
