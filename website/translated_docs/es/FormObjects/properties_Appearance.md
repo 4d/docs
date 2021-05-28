@@ -85,7 +85,7 @@ Available values:
 
 | Property List | JSON value  | Description                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
@@ -367,7 +367,7 @@ Available values:
 
 | Property List | JSON value  | Description                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
