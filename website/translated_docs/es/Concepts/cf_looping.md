@@ -208,48 +208,48 @@ Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until
 
 Aquí está el bucle equivalente `Repeat...Until`:
 ```4d
- $i:=1 //Initialize the counter
+ $i:=1 //Inicializar el contador
  Repeat
-  //Do something
-    $i:=$i+1 //Need to increment the counter
- Until($i=100) //Loop 100 times
+  //Hacer algo
+    $i:=$i+1 //Necesita incrementar el contador
+ Until($i=100) //Bucle 100 veces
 ```
 **Consejo:** el bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
-### Optimizing the execution of the For...End for loops
+### Optimizar la ejecución de los bucles For...End for
 
 Puede utilizar variables reales y enteras, así como contadores interproceso, de proceso y de variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
 
-10. Here is an example:
+10. Aquí un ejemplo:
 
 ```4d
- C_LONGINT($vlCounter) //use local Long Integer variables
+ C_LONGINT($vlCounter) //Utilización de variables locales de tipo Entero largo
  For($vlCounter;1;10000)
-  //Do something
+  //Hacer algo
  End for
 ```
 
-### Nested For...End for looping structures
+### Estructuras For... End anidadas
 
 Puede anidar tantas estructuras de control como necesite (razonablemente). Esto incluye la anidación de bucles `For...End for`. Para evitar errores, asegúrese de utilizar diferentes variables de contador para cada estructura de bucle.
 
 He aquí dos ejemplos:
 
-11. The following example goes through all the elements of a two-dimensional array:
+11. El siguiente ejemplo recorre todos los elementos de un array de dos dimensiones:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
   //...
-  //Do something with the row
+  //Hacer algo con la línea
   //...
     For($vlSubElem;1;Size of array(anArray{$vlElem}))
-  //Do something with the element
+  //Hacer algo con el elemento
        anArray{$vlElem}{$vlSubElem}:=...
     End for
  End for
 ```
 
-12. The following example builds an array of pointers to all the date fields present in the database:
+12. El siguiente ejemplo construye un array de punteros a todos los campos de fecha presentes en la base:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -276,33 +276,33 @@ La sintaxis de la estructura condicional `For each...End for each` es:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
-    statement(s)
+    instrucción(es)
  End for each
 ```
 
 La estructura `For each...End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each...End for each` puede iterar a través de tres tipos de *Expression*:
 
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
+- colecciones: bucle en cada elemento de la colección,
+- selecciones de entidades: bucle en cada entidad,
+- objetos: bucle en cada propiedad del objeto.
 
 La siguiente tabla compara los tres tipos de `For each...End for each`:
 
-|                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
-| --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Objeto                      |
-| Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
+|                                   | Bucle en las colecciones                                  | Bucle en las selecciones de entidades | Bucle en los objetos             |
+| --------------------------------- | --------------------------------------------------------- | ------------------------------------- | -------------------------------- |
+| Tipo Current_Item                 | Variable del mismo tipo que los elementos de la colección | Entity                                | Variable texto                   |
+| Tipos de expresiones              | Colección (con elementos del mismo tipo)                  | Entity selection                      | Objeto                           |
+| Número de bucles (por defecto)    | Número de elementos de la colección                       | Número de entidades en la selección   | Número de propiedades del objeto |
+| Soporte de parámetros begin / end | Sí                                                        | Sí                                    | No                               |
 
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
+- El número de bucles se evalúa al inicio y no cambiará durante el proceso. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
+- Por defecto, la(s) _instrucciónes_ adjuntas se ejecutan para cada valor de *Expresión*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
+- Los parámetros opcionales *begin* y *end* pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
 - The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
     - before entering the loop, if items should be modified together for integrity reasons, or
     - within the loop when only some elements/properties need to be modified and no integrity management is required.
 
-### Loop through collections
+### Bucle en las colecciones
 
 Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Por defecto, el número de bucles se basa en el número de elementos de la colección.
 
@@ -338,7 +338,7 @@ Usted quiere calcular algunas estadísticas para una colección de números:
   //$vUnder=4,$vOver=2
 ```
 
-### Loop through entity selections
+### Bucle en las selecciones de entidades
 
 Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección.
 
