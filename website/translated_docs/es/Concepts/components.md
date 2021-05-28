@@ -261,4 +261,4 @@ Se ha implementado un mecanismo específico para que los desarrolladores puedan 
 
 - La ayuda del componente debe suministrarse como un archivo con el sufijo .htm, .html o (sólo en Windows) .chm,
 - El archivo de ayuda debe colocarse junto al archivo de estructura del componente y tener el mismo nombre que el archivo de estructura,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file. 
+- Este archivo se carga automáticamente en el menú de ayuda de la aplicación con el título "Ayuda para..." seguido del nombre del archivo de ayuda. 
