@@ -175,16 +175,16 @@ Un componente no puede utilizar las tablas y campos definidos en la estructura 4
 
 ### Example
 
-The following code is included in a component and performs three basic actions with an external database:
+El siguiente código se incluye en un componente y realiza tres acciones básicas con una base de datos externa:
 
-- creates the external database if it does not already exist,
-- adds data to the external database,
-- reads data from the external database.
+- creación de la base de datos externa si aún no existe,
+- añade datos a la base de datos externa,
+- lectura de datos desde la base de datos externa.
 
-Creating the external database:
+Creación de la base de datos externa:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) almacena los datos en un directorio autorizado
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
@@ -204,7 +204,7 @@ Creating the external database:
  End SQL
 ```
 
-Writing in the external database:
+Escritura en la base de datos externa:
 
 ```4d
  $Ptr_1:=$2 // recupera datos de la base local a través de punteros
@@ -226,7 +226,7 @@ Writing in the external database:
  End SQL
 ```
 
-Reading from an external database:
+Lectura en una base de datos externa:
 
 ```4d
  $Ptr_1:=$2 // accede a los datos de la base local a través de punteros
@@ -248,17 +248,17 @@ Reading from an external database:
  End SQL
 ```
 
-## Use of resources
+## Utilización de recursos
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+Los componentes pueden utilizar recursos. De acuerdo con el principio de gestión de recursos, si el componente es de arquitectura .4dbase (arquitectura recomendada), la carpeta Resources debe colocarse dentro de esta carpeta.
 
-Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
+Los mecanismos automáticos son operacionales: los archivos XLIFF encontrados en la carpeta Resources de un componente serán cargados por este componente.
 
 En una base de datos local que contiene uno o más componentes, cada componente, así como las bases de datos locales, tiene su propia "cadena de recursos." Los recursos están divididos entre las diferentes bases de datos: no es posible acceder a los recursos del componente A desde el componente B o la base de datos local.
 
-## On-line help for components
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. El principio es el mismo que el previsto para las bases de datos 4D:
+## Ayuda en línea para los componentes
+Se ha implementado un mecanismo específico para que los desarrolladores puedan añadir ayuda en línea a sus componentes. El principio es el mismo que el previsto para las bases de datos 4D:
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file.
+- La ayuda del componente debe suministrarse como un archivo con el sufijo .htm, .html o (sólo en Windows) .chm,
+- El archivo de ayuda debe colocarse junto al archivo de estructura del componente y tener el mismo nombre que el archivo de estructura,
+- Este archivo se carga automáticamente en el menú de ayuda de la aplicación con el título "Ayuda para..." seguido del nombre del archivo de ayuda.
