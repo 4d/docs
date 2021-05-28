@@ -28,7 +28,7 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 
 `Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
 
-Additional properties are returned when the event occurs on specific objects. In particular:
+Additional properties are returned when the event occurs on specific objects. En particular:
 
 - [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#additional-properties) such as `columnName` or `isRowSelected`.
 - [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
@@ -53,44 +53,44 @@ The following table summarizes how object and form methods are called for each e
 
 | Event                    | Object Methods                      | Form Method | Which Objects          |
 | ------------------------ | ----------------------------------- | ----------- | ---------------------- |
-| On Load                  | Yes                                 | Yes         | All objects            |
-| On Unload                | Yes                                 | Yes         | All objects            |
-| On Validate              | Yes                                 | Yes         | All objects            |
-| On Clicked               | Yes                                 | Yes         | Involved object only   |
-| On Double Clicked        | Yes                                 | Yes         | Involved object only   |
-| On Before Keystroke      | Yes                                 | Yes         | Involved object only   |
-| On After Keystroke       | Yes                                 | Yes         | Involved object only   |
-| On After Edit            | Yes                                 | Yes         | Involved object only   |
-| On Getting Focus         | Yes                                 | Yes         | Involved object only   |
-| On Losing Focus          | Yes                                 | Yes         | Involved object only   |
-| On Activate              | Never                               | Yes         | None                   |
-| On Deactivate            | Never                               | Yes         | None                   |
-| On Outside Call          | Never                               | Yes         | None                   |
-| On Page Change           | Never                               | Yes         | None                   |
-| On Begin Drag Over       | Yes                                 | Yes         | Involved object only   |
-| On Drop                  | Yes                                 | Yes         | Involved object only   |
-| On Drag Over             | Yes                                 | Never       | Involved object only   |
-| On Mouse Enter           | Yes                                 | Yes         | All objects            |
-| On Mouse Move            | Yes                                 | Yes         | All objects            |
-| On Mouse Leave           | Yes                                 | Yes         | All objects            |
-| On Mouse Up              | Yes                                 | Never       | Involved object only   |
-| On Menu Selected         | Never                               | Yes         | None                   |
-| On Bound variable change | Never                               | Yes         | None                   |
-| On Data Change           | Yes                                 | Yes         | Involved object only   |
-| On Plug in Area          | Yes                                 | Yes         | Involved object only   |
-| On Header                | Yes                                 | Yes         | All objects            |
-| On Printing Detail       | Yes                                 | Yes         | All objects            |
-| On Printing Break        | Yes                                 | Yes         | All objects            |
-| On Printing Footer       | Yes                                 | Yes         | All objects            |
-| On Close Box             | Never                               | Yes         | None                   |
-| On Display Detail        | Yes                                 | Yes         | All objects            |
-| On Open Detail           | Yes (List box)                      | Yes         | None except List boxes |
-| On Close Detail          | Yes (List box)                      | Yes         | None except List boxes |
-| On Resize                | Never                               | Yes         | None                   |
-| On Selection Change      | Yes                                 | Yes         | Involved object only   |
-| On Load Record           | Never                               | Yes         | None                   |
-| On Timer                 | Never                               | Yes         | None                   |
-| On Scroll                | Yes                                 | Never       | Involved object only   |
+| On Load                  | Sí                                  | Sí          | All objects            |
+| On Unload                | Sí                                  | Sí          | All objects            |
+| On Validate              | Sí                                  | Sí          | All objects            |
+| On Clicked               | Sí                                  | Sí          | Involved object only   |
+| On Double Clicked        | Sí                                  | Sí          | Involved object only   |
+| On Before Keystroke      | Sí                                  | Sí          | Involved object only   |
+| On After Keystroke       | Sí                                  | Sí          | Involved object only   |
+| On After Edit            | Sí                                  | Sí          | Involved object only   |
+| On Getting Focus         | Sí                                  | Sí          | Involved object only   |
+| On Losing Focus          | Sí                                  | Sí          | Involved object only   |
+| On Activate              | Never                               | Sí          | None                   |
+| On Deactivate            | Never                               | Sí          | None                   |
+| On Outside Call          | Never                               | Sí          | None                   |
+| On Page Change           | Never                               | Sí          | None                   |
+| On Begin Drag Over       | Sí                                  | Sí          | Involved object only   |
+| On Drop                  | Sí                                  | Sí          | Involved object only   |
+| On Drag Over             | Sí                                  | Never       | Involved object only   |
+| On Mouse Enter           | Sí                                  | Sí          | All objects            |
+| On Mouse Move            | Sí                                  | Sí          | All objects            |
+| On Mouse Leave           | Sí                                  | Sí          | All objects            |
+| On Mouse Up              | Sí                                  | Never       | Involved object only   |
+| On Menu Selected         | Never                               | Sí          | None                   |
+| On Bound variable change | Never                               | Sí          | None                   |
+| On Data Change           | Sí                                  | Sí          | Involved object only   |
+| On Plug in Area          | Sí                                  | Sí          | Involved object only   |
+| On Header                | Sí                                  | Sí          | All objects            |
+| On Printing Detail       | Sí                                  | Sí          | All objects            |
+| On Printing Break        | Sí                                  | Sí          | All objects            |
+| On Printing Footer       | Sí                                  | Sí          | All objects            |
+| On Close Box             | Never                               | Sí          | None                   |
+| On Display Detail        | Sí                                  | Sí          | All objects            |
+| On Open Detail           | Yes (List box)                      | Sí          | None except List boxes |
+| On Close Detail          | Yes (List box)                      | Sí          | None except List boxes |
+| On Resize                | Never                               | Sí          | None                   |
+| On Selection Change      | Sí                                  | Sí          | Involved object only   |
+| On Load Record           | Never                               | Sí          | None                   |
+| On Timer                 | Never                               | Sí          | None                   |
+| On Scroll                | Sí                                  | Never       | Involved object only   |
 | On Before Data Entry     | Yes (List box)                      | Never       | Involved object only   |
 | On Column Moved          | Yes (List box)                      | Never       | Involved object only   |
 | On Row Moved             | Yes (List box)                      | Never       | Involved object only   |
@@ -98,7 +98,7 @@ The following table summarizes how object and form methods are called for each e
 | On Header Click          | Yes (List box and 4D View Pro Area) | Never       | Involved object only   |
 | On Footer Click          | Yes (List box)                      | Never       | Involved object only   |
 | On After Sort            | Yes (List box)                      | Never       | Involved object only   |
-| On Long Click            | Yes (Button)                        | Yes         | Involved object only   |
+| On Long Click            | Yes (Button)                        | Sí          | Involved object only   |
 | On Alternative Click     | Yes (Button and List box)           | Never       | Involved object only   |
 | On Expand                | Yes (Hier. list and list box)       | Never       | Involved object only   |
 | On Collapse              | Yes (Hier. list and list box)       | Never       | Involved object only   |
