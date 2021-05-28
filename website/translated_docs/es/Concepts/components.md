@@ -5,12 +5,12 @@ title: Componentes
 
 A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
 
-Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+La creación e instalación de componentes 4D se realiza directamente desde 4D. Básicamente, los componentes se gestionan como [plug-ins](Concepts/plug-ins.md) según los siguientes principios:
 
-- A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
-- To install a component in an application project, you simply need to copy it into the "Components" folder of the project, at the same level as the Project folder.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
-- You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
+- Un componente consiste en un archivo de estructura clásica (compilado o no) con la arquitectura estándar o en forma de paquete (ver Extensión .4dbase).
+- Para instalar un componente en un proyecto aplicación, basta con copiarlo en la carpeta "Components" del proyecto, al mismo nivel que la carpeta Proyecto.
+- Un componente puede llamar a la mayoría de los elementos de 4D: métodos proyecto, formularios proyecto, barras de menú, listas de selección, imágenes de la librería, etc. No puede llamar a los métodos base ni a los triggers.
+- No se pueden utilizar tablas o archivos de datos estándar en los componentes 4D. Sin embargo, un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
 
 
 ## Definiciones
@@ -85,28 +85,28 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
      RESOLVE POINTER(myptr2;vVarName2;vtablenum2;vfieldnum2)
      If(vVarName1=vVarName2)
-      //This test returns True even though the variables are different
+      //Esta prueba devuelve True aunque las variables sean diferentes
 ```
-In this case, it is necessary to use the comparison of pointers:
+En este caso, es necesario utilizar la comparación de punteros:
 ```4d
-     If(myptr1=myptr2) //This test returns False
+     If(myptr1=myptr2) //Esta prueba devuelve False
 ```
 
-## Access to tables of the host project
+## Acceso a las tablas del proyecto local
 
-Although components cannot use tables, pointers can permit host projects and components to communicate with each other. For example, here is a method that could be called from a component:
+Aunque los componentes no pueden utilizar tablas, los punteros pueden permitir que los proyectos locales y los componentes se comuniquen entre sí. Por ejemplo, este es un método que podría ser llamado desde un componente:
 
 ```4d
-// calling a component method
+// llamar a un método componente
 methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 ```
 
-Within the component, the code of the `methCreateRec` method:
+Dentro del componente, el código del método `methCreateRec`:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host project
-C_POINTER($2) //Pointer on a field in host project
-C_TEXT($3) // Value to insert
+C_POINTER($1) //Puntero a una tabla del proyecto local
+C_POINTER($2) //Puntero a un campo del proyecto local
+C_TEXT($3) // Valor a insertar
 
 $tablepointer:=$1
 $fieldpointer:=$2
@@ -116,22 +116,22 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
-## Scope of language commands
+## Alcance de los comandos del lenguaje
 
-Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
+A excepción de los [comandos no utilizables](#comandos-inutilizables), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
+Cuando se llaman comandos desde un componente, se ejecutan en el contexto del componente, excepto el comando `EXECUTE METHOD` que utiliza el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
+Los comandos `SET DATABASE PARAMETER` y `Get database parameter` son una excepción: su alcance es global a la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
 
-Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
+Además, se han especificado medidas específicas para los comandos `Structure file` y `Get 4D folder` cuando se utilizan en el marco de los componentes.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
+El comando `COMPONENT LIST` puede utilizarse para obtener la lista de componentes cargados por el proyecto local.
 
 
-### Unusable commands
+### Comandos no utilizables
 
-The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+Los siguientes comandos no son compatibles para su uso dentro de un componente porque modifican el archivo de estructura - que está abierto en sólo lectura. Su ejecución en un componente generará el error -10511, "El comando NomComando no puede ser llamado desde un componente":
 
 - `ON EVENT CALL`
 - `Method called on event`
@@ -151,10 +151,10 @@ The following commands are not compatible for use within a component because the
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notas:**
 
-- The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
+- El comando `Current form table` devuelve `Nil` cuando se llama en el contexto de un formulario proyecto. Por consiguiente, no puede utilizarse en un componente.
+- Los comandos SQL de definición de datos (`CREATE TABLE`, `DROP TABLE`, etc.) no pueden utilizarse en el proyecto componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
 
 ## Gestión de errores
 
@@ -173,7 +173,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Una base externa es un proyecto 4D independiente del proyecto 4D principal, pero con la que se puede trabajar desde el proyecto 4D principal. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
-### Example
+### Ejemplo
 
 El siguiente código se incluye en un componente y realiza tres acciones básicas con una base de datos externa:
 
