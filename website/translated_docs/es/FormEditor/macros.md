@@ -213,7 +213,7 @@ Here is the description of the JSON file contents:
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
-### Example
+### Ejemplo
 
 ```js
 {
@@ -267,7 +267,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 
 
-#### Example
+#### Ejemplo
 
 In the `formMacros.json` file:
 
@@ -359,7 +359,7 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
 
 
-#### Example
+#### Ejemplo
 
 You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
@@ -404,7 +404,7 @@ When executing a macro, if 4D encounters an error which prevents the macro from 
 - deleting or modifying a script whose file is read-only.
 - creating two objects with the same internal ID.
 
-#### Example
+#### Ejemplo
 
 In a macro class definition, you can write the following generic error code:
 
