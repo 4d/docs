@@ -15,7 +15,7 @@ En el lenguaje 4D y para los atributos de los campos de los objetos, los valores
 - collection elements
 - variables of the object, collection, pointer, picture, or variant type.
 
-## Undefined
+## Indefinido
 
 Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Una función (un método proyecto que devuelve un resultado) puede devolver un valor indefinido si, dentro del método, se asigna al resultado de la función ($0) una expresión indefinida (una expresión calculada con al menos una variable indefinida). Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo). Una variable variant tiene **indefinido** como valor por defecto.
 
