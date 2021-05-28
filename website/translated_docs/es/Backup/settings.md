@@ -102,9 +102,9 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 - **Tamaño del segmento (Mb)** 4D le permite segmentar los archivos, es decir, cortarlos en tamaños más pequeños. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). Durante la restauración, 4D fusionará automáticamente los segmentos. Cada segmento se llama MiBaseDeDatos[xxxx-yyyy].4BK, donde xxxx es el número de copia de seguridad e yyyy es el número de segmento. Por ejemplo, los tres segmentos de la copia de seguridad de la base MiBbase se llaman MiBase[0006-0001].4BK, MiBase[0006-0002].4BK y MiBase[0006-0003].4BK. El menú **Tamaño del segmento** es un combo box que permite establecer el tamaño en MB de cada segmento de la copia de seguridad. Puede elegir uno de los tamaños preestablecidos o introducir un tamaño específico entre 0 y 2048. Si se pasa 0, no se produce ninguna segmentación (esto equivale a pasar **Ninguna**).
 
-- **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
-    - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
-    - **Fast** (default): This option is a compromise between backup speed and archive size.
+- **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
+    - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.
+    - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
     - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
 
 - **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
@@ -112,9 +112,9 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
     - **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
 
 
-### Automatic Restore
+### Restauración automática
 
-- **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la base, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la base. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
+- **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la base, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la base. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 > En el caso de una restauración automática, sólo se restaura el archivo de datos. Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una restauración manual.
 
 - **Integrar el último archivo de historial si la base está incompleta**: cuando se marca esta opción, el programa integra automáticamente el archivo de historial al abrir o restaurar la base de datos.
