@@ -45,7 +45,7 @@ For each user session, the following information is returned in the *sessionInfo
 | lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
 | expiration | Fecha  | The current expiration date and time of the user session.    |
 
-## Example
+## Ejemplo
 
 Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
 
