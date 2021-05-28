@@ -47,15 +47,15 @@ la expresión es TRUE sólo si ambos métodos son TRUE. Sin embargo, incluso si 
 
 El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
 
-### Example
+### Ejemplo
 
 ```4d
-  // Ask the user to enter a name
+  // Pedir al usuario que introduzca un nombre
  $Find:=Request(Type a name)
- If(OK=1)
+ Si(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("You did not enter a name.")
+    ALERT("No ha introducido un nombre.")
  End if 
 ```
 
@@ -123,7 +123,7 @@ Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el
 
 Puede incluir una instrucción Else después del último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al `Else`.
 
-### Example
+### Ejemplo
 
 Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con una palabra:
 
