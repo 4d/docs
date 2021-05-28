@@ -88,7 +88,7 @@ In the *server* parameter, pass an object containing the following properties:
 The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  $server:=New object
@@ -155,7 +155,7 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 
 For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $pw : Text
