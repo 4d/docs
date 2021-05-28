@@ -351,7 +351,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 La siguiente tabla resume las convenciones de denominación de 4D.
 
-| Identificador                   | Longitud Max. | Example                    |
+| Identificador                   | Longitud Max. | Ejemplo                    |
 | ------------------------------- | ------------- | -------------------------- |
 | Table                           | 31            | [Invoices]                 |
 | Field                           | 31            | [Employees]Last Name       |
