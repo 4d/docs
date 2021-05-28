@@ -3,29 +3,29 @@ id: data-types
 title: Tipos de datos
 ---
 
-In 4D, data are handled according to their type in two places: database fields and the 4D language.
+En 4D, los datos se manejan según su tipo en dos lugares: los campos de la base y el lenguaje 4D.
 
-Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
+Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no están disponibles directamente en el lenguaje y se convierten automáticamente. Por el contrario, algunos tipos de datos sólo pueden manejarse a través del lenguaje. La siguiente tabla lista todos los tipos de datos disponibles y cómo se soportan/declaran:
 
-| Data Types                                 | Database support(1) | Language support     | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
-| ------------------------------------------ | ------------------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| [Alphanumeric](dt_string.md)               | Sí                  | Converted to text    | -                                                       | -                                                                |
-| [Texto](Concepts/dt_string.md)             | Sí                  | Sí                   | `Texto`                                                 | `C_TEXT`, `ARRAY TEXT`                                           |
-| [Fecha](Concepts/dt_date.md)               | Sí                  | Sí                   | `Fecha`                                                 | `C_DATE`, `ARRAY DATE`                                           |
-| [Hora](Concepts/dt_time.md)                | Sí                  | Sí                   | `Hora`                                                  | `C_TIME`, `ARRAY TIME`                                           |
-| [Booleano](Concepts/dt_boolean.md)         | Sí                  | Sí                   | `Booleano`                                              | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
-| [Integer](Concepts/dt_number.md)           | Sí                  | Converted to longint | `Integer`                                               | `ARRAY INTEGER`                                                  |
-| [Longint](Concepts/dt_number.md)           | Sí                  | Sí                   | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                     |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                                                       | -                                                                |
-| [Real](Concepts/dt_number.md)              | Sí                  | Sí                   | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                           |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Sí                   | -                                                       | -                                                                |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Sí                   | -                                                       | -                                                                |
-| [Puntero](Concepts/dt_pointer.md)          | -                   | Sí                   | `Puntero`                                               | `C_POINTER`, `ARRAY POINTER`                                     |
-| [Imagen](Concepts/dt_picture.md)           | Sí                  | Sí                   | `Imagen`                                                | `C_PICTURE`, `ARRAY PICTURE`                                     |
-| [BLOB](Concepts/dt_blob.md)                | Sí                  | Sí                   | `Blob`                                                  | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Objeto](Concepts/dt_object.md)            | Sí                  | Sí                   | `Objeto`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
-| [Colección](Concepts/dt_collection.md)     | -                   | Sí                   | `Colección`                                             | `C_COLLECTION`                                                   |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Sí                   | `Variant`                                               | `C_VARIANT`                                                      |
+| Tipos de datos                                | Soporte para la base (1) | Soporte para el lenguaje   | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
+| --------------------------------------------- | ------------------------ | -------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
+| [Alfanumérico](dt_string.md)                  | Sí                       | Convertido en texto        | -                                                       | -                                                                |
+| [Texto](Concepts/dt_string.md)                | Sí                       | Sí                         | `Texto`                                                 | `C_TEXT`, `ARRAY TEXT`                                           |
+| [Fecha](Concepts/dt_date.md)                  | Sí                       | Sí                         | `Fecha`                                                 | `C_DATE`, `ARRAY DATE`                                           |
+| [Hora](Concepts/dt_time.md)                   | Sí                       | Sí                         | `Hora`                                                  | `C_TIME`, `ARRAY TIME`                                           |
+| [Booleano](Concepts/dt_boolean.md)            | Sí                       | Sí                         | `Booleano`                                              | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
+| [Integer](Concepts/dt_number.md)              | Sí                       | Convertido en entero largo | `Integer`                                               | `ARRAY INTEGER`                                                  |
+| [Entero largo](Concepts/dt_number.md)         | Sí                       | Sí                         | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                     |
+| [Entero largo 64 bits](Concepts/dt_number.md) | Sí (SQL)                 | Convertido en real         | -                                                       | -                                                                |
+| [Real](Concepts/dt_number.md)                 | Sí                       | Sí                         | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                           |
+| [Indefinido](Concepts/dt_null_undefined.md)   | -                        | Sí                         | -                                                       | -                                                                |
+| [Null](Concepts/dt_null_undefined.md)         | -                        | Sí                         | -                                                       | -                                                                |
+| [Puntero](Concepts/dt_pointer.md)             | -                        | Sí                         | `Puntero`                                               | `C_POINTER`, `ARRAY POINTER`                                     |
+| [Imagen](Concepts/dt_picture.md)              | Sí                       | Sí                         | `Imagen`                                                | `C_PICTURE`, `ARRAY PICTURE`                                     |
+| [BLOB](Concepts/dt_blob.md)                   | Sí                       | Sí                         | `Blob`                                                  | `C_BLOB`, `ARRAY BLOB`                                           |
+| [Objeto](Concepts/dt_object.md)               | Sí                       | Sí                         | `Objeto`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
+| [Colección](Concepts/dt_collection.md)        | -                        | Sí                         | `Colección`                                             | `C_COLLECTION`                                                   |
+| [Variant](Concepts/dt_variant.md)(2)          | -                        | Sí                         | `Variant`                                               | `C_VARIANT`                                                      |
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 The following table illustrates these default values:
 
-| Type      | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| --------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen   | False                                                                               | True                    | True (varies)                |
-| Fecha     | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint   | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Hora      | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Imagen    | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real      | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Puntero   | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Texto     | ""                                                                                  | ""                      | ""                           |
-| Blob      | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Objeto    | null                                                                                | null                    | null                         |
-| Colección | null                                                                                | null                    | null                         |
-| Variant   | undefined                                                                           | undefined               | undefined                    |
+| Type         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
+| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
+| Booleen      | False                                                                               | True                    | True (varies)                |
+| Fecha        | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
+| Entero largo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
+| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| Imagen       | picture size=0                                                                      | picture size=0          | picture size=0               |
+| Real         | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
+| Puntero      | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| Texto        | ""                                                                                  | ""                      | ""                           |
+| Blob         | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
+| Objeto       | null                                                                                | null                    | null                         |
+| Colección    | null                                                                                | null                    | null                         |
+| Variant      | undefined                                                                           | undefined               | undefined                    |
 
 
 ## Converting data types
@@ -72,13 +72,13 @@ The following table lists the basic data types, the data types to which they can
 | Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
 | -------------------- | --------- | --------- | ------- | ------- | ---------- |
 | String (1)           |           | `Num`     | `Fecha` | `Hora`  | `Bool`     |
-| Number (2)           | `Cadena`  |           |         |         | `Bool`     |
+| Número (2)           | `Cadena`  |           |         |         | `Bool`     |
 | Fecha                | `Cadena`  |           |         |         | `Bool`     |
 | Hora                 | `Cadena`  |           |         |         | `Bool`     |
 | Booleano             |           | `Num`     |         |         |            |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.
 
-(2) Time values can be treated as numbers.
+(2) Los valores de tipo Hora pueden tratarse como números.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Nota:** además de las conversiones de datos listadas en esta tabla, se pueden obtener conversiones de datos más sofisticadas combinando operadores y otros comandos.
