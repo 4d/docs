@@ -8,7 +8,7 @@ The `CryptoKey` class in the 4D language encapsulates an asymetric encryption ke
 
 This class is available from the `4D` class store.
 
-### Example
+### Ejemplo
 
 The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
 
@@ -59,10 +59,10 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parameter | Type         |    | Description                                                            |
-| --------- | ------------ | -- | ---------------------------------------------------------------------- |
-| settings  | Objeto       | -> | Settings to generate or load a key pair                                |
-| result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| Parameter  | Type         |    | Description                                                            |
+| ---------- | ------------ | -- | ---------------------------------------------------------------------- |
+| parámetros | Objeto       | -> | Settings to generate or load a key pair                                |
+| result     | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
 |
@@ -70,7 +70,7 @@ ASSERT($status.success)
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
-#### *settings*
+#### *parámetros*
 
 | Property        | Type    | Description                                    |
 | --------------- | ------- | ---------------------------------------------- |
@@ -145,7 +145,7 @@ The function returns a status object with `success` property set to `true` if th
 
 | Property | Type       | Description                                                         |
 | -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
+| success  | booleano   | True if the message has been successfully decrypted                 |
 | result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
 
@@ -293,12 +293,12 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *options*
 
-| Property          | Type    | Description                                                                                                                         |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
-| encodingEncrypted | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm  |
-| encoding          | text    | ERepresentation to be used for result signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                  |
+| Property          | Type     | Description                                                                                                                         |
+| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
+| encodingEncrypted | text     | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
+| pss               | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm  |
+| encoding          | text     | ERepresentation to be used for result signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                  |
 
 
 #### *Result*
@@ -367,11 +367,11 @@ The `CryptoKey` must contain a valid **public** key.
 
 #### *options*
 
-| Property | Type    | Description                                                                                                                                      |
-| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash     | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
-| encoding | text    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+| Property | Type     | Description                                                                                                                                      |
+| -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash     | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
+| pss      | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
+| encoding | text     | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 
 
 #### *Result*
@@ -382,7 +382,7 @@ In case the signature couldn't be verified because it was not signed with the sa
 
 | Property | Type       | Description                                                 |
 | -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
+| success  | booleano   | True if the signature matches the message                   |
 | errors   | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 
