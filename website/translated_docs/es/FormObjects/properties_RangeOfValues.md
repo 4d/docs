@@ -13,7 +13,7 @@ The default value can only be used if the [data source type](properties_Object.m
 - number/integer
 - date
 - time
-- boolean
+- booleano
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
