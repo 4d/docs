@@ -14,7 +14,7 @@ A collection is initialized with:
 | [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-### Example
+### Ejemplo
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
@@ -187,7 +187,7 @@ You can pass any number of values of the following supported types:
 
 *   number (real, longint...). Number values are always stored as reals.
 *   text
-*   boolean
+*   booleano
 *   date
 *   time (stored as number of milliseconds - real)
 *   null
@@ -197,7 +197,7 @@ You can pass any number of values of the following supported types:
 
 (*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
 
-#### Example
+#### Ejemplo
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -294,7 +294,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 The `.clear()` function <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
 > This function modifies the original collection.
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $col : Collection
@@ -326,7 +326,7 @@ $vSize:=$col.length //$vSize=0
 | Parameter | Type      |    | Description                                                                   |
 | --------- | --------- |:--:| ----------------------------------------------------------------------------- |
 | col2      | Colección | -> | Collection to combine                                                         |
-| index     | Integer   | -> | Position to which insert elements to combine in collection (default=length+1) |
+| index     | Entero    | -> | Position to which insert elements to combine in collection (default=length+1) |
 | Result    | Colección | <- | Original collection containing combined element(s)                            |
 <!-- END REF -->
 
@@ -344,7 +344,7 @@ By default, *col2* elements are added at the end of the orginal collection. You 
 *   If the calculated value is negative, *index* is set to 0.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $c; $fruits : Collection
@@ -387,7 +387,7 @@ The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new 
 If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $c : Collection
@@ -420,7 +420,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 <!-- REF #collection.copy().Params -->
 | Parameter    | Type      |    | Description                                                                                              |
 | ------------ | --------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| option       | Integer   | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
+| option       | Entero    | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
 | groupWithCol | Colección | -> | Shared collection to be grouped with the resulting collection                                            |
 | groupWithObj | Objeto    | -> | Shared object to be grouped with the resulting collection                                                |
 | Result       | Colección | <- | Deep copy of the original collection                                                                     |
@@ -556,7 +556,7 @@ The `.count()` function <!-- REF #collection.count().Summary -->returns the numb
 
 If the collection contains objects, you can pass the *propertyPath* parameter. In this case, only elements that contain the *propertyPath* are taken into account.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $col : Collection
@@ -674,7 +674,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 <!-- REF #collection.distinct().Params -->
 | Parameter    | Type      |    | Description                                                      |
 | ------------ | --------- |:--:| ---------------------------------------------------------------- |
-| option       | Integer   | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
+| option       | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
 | propertyPath | Texto     | -> | Path of attribute whose distinct values you want to get          |
 | Result       | Colección | <- | New collection with only distinct values                         |
 <!-- END REF -->
@@ -693,7 +693,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $c; $c2 : Collection
@@ -729,7 +729,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 | Parameter   | Type      |    | Description                                                      |
 | ----------- | --------- |:--:| ---------------------------------------------------------------- |
 | collection2 | Colección | -> | Collection to compare                                            |
-| option      | Integer   | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
+| option      | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
 | Result      | Booleano  | <- | True if collections are identical, false otherwise               |
 <!-- END REF -->
 
@@ -741,7 +741,7 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->compares the col
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 > Elements with **Null** values are not equal to Undefined elements.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $c; $c2 : Collection
@@ -784,7 +784,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 <!-- REF #collection.every().Params -->
 | Parameter  | Type     |    | Description                                       |
 | ---------- | -------- |:--:| ------------------------------------------------- |
-| startFrom  | Integer  | -> | Index to start the test at                        |
+| startFrom  | Entero   | -> | Index to start the test at                        |
 | methodName | Texto    | -> | Name of the method to call for the test           |
 | param      | Mixed    | -> | Parameter(s) to pass to methodName                |
 | Result     | Booleano | <- | True if all elements successfully passed the test |
@@ -883,7 +883,7 @@ End if
 | ------------ | --------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
 | propertyPath | Texto     | -> | Object property path whose values must be extracted to the new collection                                                          |
 | targetpath   | Texto     | -> | Target property path or property name                                                                                              |
-| option       | Integer   | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
+| option       | Entero    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
 | Result       | Colección | <- | New collection containing extracted values                                                                                         |
 <!-- END REF -->
 
@@ -958,8 +958,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | Parameter | Type                                            |    | Description                            |
 | --------- | ----------------------------------------------- |:--:| -------------------------------------- |
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
-| startFrom | Integer                                         | -> | Start index (included)                 |
-| end       | Integer                                         | -> | End index (not included)               |
+| startFrom | Entero                                          | -> | Start index (included)                 |
+| end       | Entero                                          | -> | End index (not included)               |
 | Result    | collection                                      | <- | Original collection with filled values |
 <!-- END REF -->
 
@@ -980,7 +980,7 @@ In case of inconsistency, the following rules apply:
 *   If *end* < *startFrom* (passed or calculated values), the method does nothing.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $c : Collection
@@ -1105,12 +1105,12 @@ The code for ***TypeLookUp*** is:
 
 
 <!-- REF #collection.find().Params -->
-| Parameter  | Type    |    | Description                                  |
-| ---------- | ------- |:--:| -------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the search at                 |
-| methodName | Texto   | -> | Name of the function to call for the find    |
-| param      | any     | -> | Parameter(s) to pass to *methodName*         |
-| Result     | any     | <- | First value found, or Undefined if not found |
+| Parameter  | Type   |    | Description                                  |
+| ---------- | ------ |:--:| -------------------------------------------- |
+| startFrom  | Entero | -> | Index to start the search at                 |
+| methodName | Texto  | -> | Name of the function to call for the find    |
+| param      | any    | -> | Parameter(s) to pass to *methodName*         |
+| Result     | any    | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
 
@@ -1204,12 +1204,12 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parameter  | Type    |    | Description                                    |
-| ---------- | ------- |:--:| ---------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the search at                   |
-| methodName | Texto   | -> | Name of the function to call for the find      |
-| param      | any     | -> | Parameter(s) to pass to *methodName*           |
-| Result     | Integer | <- | Index of first value found, or -1 if not found |
+| Parameter  | Type   |    | Description                                    |
+| ---------- | ------ |:--:| ---------------------------------------------- |
+| startFrom  | Entero | -> | Index to start the search at                   |
+| methodName | Texto  | -> | Name of the function to call for the find      |
+| param      | any    | -> | Parameter(s) to pass to *methodName*           |
+| Result     | Entero | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
 
 
@@ -1237,7 +1237,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Ejemplo
 
 You want to find the position of the first city name within a collection:
 
@@ -1285,8 +1285,8 @@ The code for ***FindCity*** method is:
 | Parameter | Type       |    | Description                                                                  |
 | --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                       |
-| startFrom | Integer    | -> | Index to start the search at                                                 |
-| Result    | Integer    | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| startFrom | Entero     | -> | Index to start the search at                                                 |
+| Result    | Entero     | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1309,7 +1309,7 @@ Optionally, you can pass the index of collection from which to start the search 
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1363,7 +1363,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1399,7 +1399,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 <!-- REF #collection.insert().Params -->
 | Parameter | Type      |    | Description                                     |
 | --------- | --------- |:--:| ----------------------------------------------- |
-| index     | Integer   | -> | Where to insert the element                     |
+| index     | Entero    | -> | Where to insert the element                     |
 | element   | any       | -> | Element to insert in the collection             |
 | Result    | Colección | <- | Original collection containing inserted element |
 <!-- END REF -->
@@ -1419,7 +1419,7 @@ In *index*, pass the position where you want the element to be inserted in the c
 
 Any type of element accepted by a collection can be inserted, even another collection.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $col : Collection
@@ -1448,11 +1448,11 @@ Any type of element accepted by a collection can be inserted, even another colle
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| Parameter | Type    |    | Description                                                              |
-| --------- | ------- |:--:| ------------------------------------------------------------------------ |
-| delimiter | Texto   | -> | Separator to use between elements                                        |
-| option    | Integer | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
-| Result    | Texto   | <- | String containing all elements of the collection, separated by delimiter |
+| Parameter | Type   |    | Description                                                              |
+| --------- | ------ |:--:| ------------------------------------------------------------------------ |
+| delimiter | Texto  | -> | Separator to use between elements                                        |
+| option    | Entero | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
+| Result    | Texto  | <- | String containing all elements of the collection, separated by delimiter |
 <!-- END REF -->
 
 
@@ -1463,7 +1463,7 @@ The `.join()` function <!-- REF #collection.join().Summary -->converts all eleme
 
 By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1495,8 +1495,8 @@ By default, null or empty elements of the collection are returned in the resulti
 | Parameter | Type       |    | Description                                                             |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection            |
-| startFrom | Integer    | -> | Index to start the search at                                            |
-| Result    | Integer    | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| startFrom | Entero     | -> | Index to start the search at                                            |
+| Result    | Entero     | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1519,7 +1519,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 *   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
 *   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1558,7 +1558,7 @@ The `.length` property <!-- REF #collection.length.Summary -->returns the number
 
 The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1614,7 +1614,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *   *$1.result* (any type): new transformed value to add to the resulting collection
 *   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1670,7 +1670,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.max()` returns *Undefined*.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1720,7 +1720,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.min()` returns *Undefined*.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1757,7 +1757,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 | ----------- | --------- |:--:| ------------------------------------------------- |
 | pathStrings | Texto     | -> | Property path(s) on which to order the collection |
 | pathObjects | Colección | -> | Collection of criteria objects                    |
-| ascOrDesc   | Integer   | -> | `ck ascending` or `ck descending` (scalar values) |
+| ascOrDesc   | Entero    | -> | `ck ascending` or `ck descending` (scalar values) |
 | Result      | Colección | <- | Ordered copy of the collection (shallow copy)     |
 <!-- END REF -->
 
@@ -2013,7 +2013,7 @@ The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last ele
 
 When applied to an empty collection, `.pop()` returns ***undefined***.
 
-#### Example
+#### Ejemplo
 
 `.pop()`, used in conjunction with [`.push()`](#push), can be used to implement a first-in, last-out stack feature:
 
@@ -2266,7 +2266,7 @@ With the following ***Multiply*** method:
  End if
 ```
 
-#### Example
+#### Ejemplo
 
 This example allows reducing several collection elements to a single one:
 
@@ -2310,8 +2310,8 @@ With the following ***Flatten*** method:
 <!-- REF #collection.remove().Params -->
 | Parameter | Type      |    | Description                                           |
 | --------- | --------- |:--:| ----------------------------------------------------- |
-| index     | Integer   | -> | Element at which to start removal                     |
-| howMany   | Integer   | -> | Number of elements to remove, or 1 element if omitted |
+| index     | Entero    | -> | Element at which to start removal                     |
+| howMany   | Entero    | -> | Number of elements to remove, or 1 element if omitted |
 | Result    | Colección | <- | Original collection without removed element(s)        |
 <!-- END REF -->
 
@@ -2335,7 +2335,7 @@ In *howMany*, pass the number of elements to remove from *index*. If *howMany* i
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2372,7 +2372,7 @@ If you try to remove an element from an empty collection, the method does nothin
 <!-- REF #collection.resize().Params -->
 | Parameter    | Type                                            |    | Description                        |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
-| size         | Integer                                         | -> | New size of the collection         |
+| size         | Entero                                          | -> | New size of the collection         |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
 | Result       | Colección                                       | <- | Resized original collection        |
 <!-- END REF -->
@@ -2388,7 +2388,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2438,7 +2438,7 @@ By default, new elements are filled will **null** values. You can specify the va
 The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2479,7 +2479,7 @@ The `.shift()` function <!-- REF #collection.shift().Summary -->removes the firs
 
 If the collection is empty, this method does nothing.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2512,8 +2512,8 @@ If the collection is empty, this method does nothing.
 <!-- REF #collection.slice().Params -->
 | Parameter | Type      |    | Description                                              |
 | --------- | --------- |:--:| -------------------------------------------------------- |
-| startFrom | Integer   | -> | Index to start the search at (included)                  |
-| end       | Integer   | -> | End index (not included)                                 |
+| startFrom | Entero    | -> | Index to start the search at (included)                  |
+| end       | Entero    | -> | End index (not included)                                 |
 | Result    | Colección | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->
 
@@ -2530,7 +2530,7 @@ The returned collection contains the element specified by *startFrom* and all su
 *   If *end* < 0 , it is recalculated as *end:=end+length*.
 *   If *end < startFrom* (passed or calculated values), the method does nothing.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2564,7 +2564,7 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- REF #collection.some().Params -->
 | Parameter  | Type     |    | Description                                               |
 | ---------- | -------- |:--:| --------------------------------------------------------- |
-| startFrom  | Integer  | -> | Index to start the test at                                |
+| startFrom  | Entero   | -> | Index to start the test at                                |
 | methodName | Texto    | -> | Name of the method to call for the test                   |
 | param      | Mixed    | -> | Parameter(s) to pass to *methodName*                      |
 | Result     | Booleano | <- | True if at least one element successfully passed the test |
@@ -2598,7 +2598,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -2807,7 +2807,7 @@ The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
