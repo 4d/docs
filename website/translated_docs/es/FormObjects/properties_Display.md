@@ -418,7 +418,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 | Name    | Data Type | Possible Values |
 | ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+| display | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -455,7 +455,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 | Name       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
+| threeState | booleano  | true, false     |
 
 #### Objects Supported
 
