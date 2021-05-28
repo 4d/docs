@@ -222,7 +222,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 *   "relatedEntities": 1 -> N relation attribute (reference to an entity selection)
 
 
-#### Example
+#### Ejemplo
 
 Given the following table and relation:
 
@@ -286,7 +286,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $attName : Text
@@ -317,7 +317,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
 
-#### Example
+#### Ejemplo
 
 Given the following tables and relations:
 
