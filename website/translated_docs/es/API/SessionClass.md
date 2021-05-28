@@ -56,7 +56,7 @@ When scalable sessions are enabled, the `Session` object is available from any w
 - project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls.
 
 
-#### Example
+#### Ejemplo
 
 You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". You call the method by entering the following URL in your browser:
 
@@ -105,7 +105,7 @@ IP:port/4DACTION/action_Session
 The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. As a result, the session automatically becomes a Guest session.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 //Invalidate a session
@@ -138,7 +138,7 @@ The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Su
 
 This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $expiration : Text
@@ -175,7 +175,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
 
 
-#### Example
+#### Ejemplo
 
 You want to check if the "WebAdmin" privilege is associated to the session:
 
@@ -216,7 +216,7 @@ When this property is set, the [`.expirationDate`](#expirationdate) property is 
 
 This property is **read write**.
 
-#### Example
+#### Ejemplo
 
 ```4d
 If (Session.isGuest())
@@ -256,7 +256,7 @@ End if
 The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
 
-#### Example
+#### Ejemplo
 
 In the `On Web Connection` database method:
 
@@ -288,7 +288,7 @@ End if
 | ---------- | --------- |:--:| ---------------------------------------------------------- |
 | privilege  | Texto     | -> | Privilege name                                             |
 | privileges | Colección | -> | Collection of privilege names                              |
-| settings   | Objeto    | -> | Object with a "privileges" property (string or collection) |
+| parámetros | Objeto    | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
 
 #### Description
@@ -314,7 +314,7 @@ By default when no privilege is associated to the session, the session is a [Gue
 
 The [`userName`](#username) property is available at session object level (read-only).
 
-#### Example
+#### Ejemplo
 
 In a custom authentication method, you set the "WebAdmin" privilege to the user:
 
@@ -356,7 +356,7 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 
 This property is **read only** itself but it returns a read-write object.
 
-#### Example
+#### Ejemplo
 
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
 
