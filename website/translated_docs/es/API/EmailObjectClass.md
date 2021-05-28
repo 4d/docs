@@ -178,10 +178,10 @@ The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Su
 
 The `.bodyValues` object contains the following properties:
 
-| Property                   | Type    | Value                                                                                                                                       |
-| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| Property                   | Type     | Value                                                                                                                                       |
+| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text     | Value of the body part                                                                                                                      |
+| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
 
@@ -326,9 +326,9 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Property       | Type    | Value                               |
-| -------------- | ------- | ----------------------------------- |
-| .\<keyword\> | boolean | Keyword to set (value must be true) |
+| Property       | Type     | Value                               |
+| -------------- | -------- | ----------------------------------- |
+| .\<keyword\> | booleano | Keyword to set (value must be true) |
 
 Reserved keywords:
 * $draft - Indicates a message is a draft
@@ -337,7 +337,7 @@ Reserved keywords:
 * $answered - Indicates a message has been replied to
 * $deleted - Indicates a message to delete
 
-#### Example
+#### Ejemplo
 
 ```
  $mail.keywords["$flagged"]:=True
@@ -616,7 +616,7 @@ In *options*, you can set a specific charset and encoding configuration for the 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 C_OBJECT($mail)
