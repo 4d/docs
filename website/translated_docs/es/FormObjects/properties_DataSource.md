@@ -27,7 +27,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| automaticInsertion | booleano  | true, false     |
 
 #### Objects Supported
 
