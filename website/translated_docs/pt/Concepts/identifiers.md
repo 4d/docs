@@ -91,11 +91,11 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 Examples:
 
 ```4d
-    //This command expects a method (function) or formula
+    //Este comando espera um método (função) ou uma fórmula
 QUERY BY FORMULA([aTable];Special query)
-    //This command expects a method (procedure) or statement
+    //Este comando espera um método (procedimento) ou uma instrução
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //But this command expects a method name
+    //Mas este comando espera um nome de método
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
