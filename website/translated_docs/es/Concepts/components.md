@@ -13,44 +13,44 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 - You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
 
 
-## Definitions
+## Definiciones
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+Los mecanismos de gestión de componentes en 4D requieren la aplicación de los siguientes términos y conceptos:
 
 - **Base matriz**: base de datos 4D utilizada para desarrollar el componente. La base matriz es una base estándar sin atributos específicos. Una base matricial forma un único componente. La base matriz debe copiarse, compilada o no, en la carpeta Components de la aplicación 4D o en la base que utilizará el componente (base local).
 - **Base local**: base en la que se instala y utiliza un componente.
 - **Componente**: base matricial, compilada o no, copiada en la carpeta Components de la aplicación 4D o de la base local y cuyo contenido se utiliza en las bases locales.
 
-Hay que tener en cuenta que una base puede ser a la vez "matriz" y "local", es decir, que una base matriz puede utilizar a su vez uno o varios componentes. However, a component cannot use “sub-components” itself.
+Hay que tener en cuenta que una base puede ser a la vez "matriz" y "local", es decir, que una base matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar "subcomponentes" por sí mismo.
 
 
-### Protection of components: compilation
+### Protección de los componentes: compilación
 
-Por defecto, todos los métodos proyecto de una base matriz instalada como componente son potencialmente visibles desde la base local. In particular:
+Por defecto, todos los métodos proyecto de una base matriz instalada como componente son potencialmente visibles desde la base local. En particular:
 
-- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
+- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. Sin embargo, no es posible abrirlos en el editor de métodos ni modificarlos.
 - Los otros métodos proyecto de la base matriz no aparecen en el Explorador, pero también pueden verse en el depurador de la base local.
 
 Para proteger eficazmente los métodos proyecto de un componente, basta con compilar la base matriz y entregarla en forma de archivo .4dc (base compilada que no contiene el código interpretado). Cuando se instala una base matricial compilada como componente:
 
-- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. However, their contents will not appear in the preview area nor in the debugger.
+- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos de la base local. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto de la base matriz nunca aparecerán.
 
 
-## Sharing of project methods
+## Compartir métodos proyecto
 Todos los métodos proyecto de una base matricial son por definición incluidos en el componente (la base es el componente), lo que significa que pueden ser llamados y ejecutados por el componente.
 
-Por otro lado, por defecto estos métodos proyecto no serán visibles, ni podrán ser llamados por la base local. En la base matriz, debe designar explícitamente los métodos que desea compartir con la base local. Estos métodos proyecto se pueden llamar en el código de la base local (pero no se pueden modificar en el editor de métodos de la base local). These methods form **entry points** in the component.
+Por otro lado, por defecto estos métodos proyecto no serán visibles, ni podrán ser llamados por la base local. En la base matriz, debe designar explícitamente los métodos que desea compartir con la base local. Estos métodos proyecto se pueden llamar en el código de la base local (pero no se pueden modificar en el editor de métodos de la base local). Estos métodos forman los **puntos de entrada** en el componente.
 
 **Nota:** por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan a la base local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su base local. Para ello, debe designar explícitamente los métodos proyecto de la base local que desea hacer accesibles a los componentes.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-## Passing variables
+## Paso de variables
 
 Las variables locales, proceso e interproceso no se comparten entre los componentes y las bases locales. La única forma de acceder a las variables del componente desde la base local y viceversa es utilizando punteros.
 
-Example using an array:
+Ejemplo utilizando un array:
 
 ```4d
 //En la base local:
@@ -61,7 +61,7 @@ Example using an array:
      APPEND TO ARRAY($1->;2)
 ```
 
-Examples using variables:
+Ejemplos utilizando variables:
 
 ```4d
  C_TEXT(myvariable)
@@ -75,11 +75,11 @@ Cuando se utilizan punteros para que los componentes y la base local se comuniqu
 
 - El comando `Get pointer` no devolverá un puntero a una variable de la base local si se llama desde un componente y viceversa.
 
-- La arquitectura de componentes permite la coexistencia, dentro de la misma base interpretada, de componentes interpretados y compilados (a la inversa, en una base compilada sólo pueden utilizarse componentes compilados). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en la misma base local.
- - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
- - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
+- La arquitectura de componentes permite la coexistencia, dentro de la misma base interpretada, de componentes interpretados y compilados (a la inversa, en una base compilada sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado. Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en la misma base local.
+ - Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
+ - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en la base local (u otro componente). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en la base local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -167,11 +167,11 @@ Un [método de gestión de errores](Concepts/error-handling.md) instalado por el
 
 **Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual de la base local, en el contexto de ésta. Consequently, if the form includes variables, the component will not have access to it.
 
-- Puede publicar formularios de componentes como subformularios en las bases locales. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
+- Puede publicar formularios de componentes como subformularios en las bases locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
-## Use of tables and fields
+## Uso de tablas y campos
 
-Un componente no puede utilizar las tablas y campos definidos en la estructura 4D de la base matriz. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. Una base externa es una base 4D independiente de la base 4D principal, pero con la que se puede trabajar desde la base 4D principal. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
+Un componente no puede utilizar las tablas y campos definidos en la estructura 4D de la base matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Una base externa es una base 4D independiente de la base 4D principal, pero con la que se puede trabajar desde la base 4D principal. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
 ### Example
 
