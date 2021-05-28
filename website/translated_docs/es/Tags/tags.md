@@ -184,7 +184,7 @@ The `<!--#4DEACH-->` comment can iterate through three expression types:
 - [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
 - [objects](#--4deach-property-in-object--): loop through each object property.
 
-The number of iterations is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
+The number of iterations is evaluated at startup and will not change during the processing. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
 
 
 ### `<!--#4DEACH item in collection-->`
