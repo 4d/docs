@@ -242,22 +242,22 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Type    | Description                                                           |
-| ---------------- | ------- | --------------------------------------------------------------------- |
-| area             | text    | List box object area ("header", "footer", "cell")                     |
-| areaName         | text    | Name of the area                                                      |
-| column           | longint | Column number                                                         |
-| columnName       | text    | Name of the column                                                    |
-| footerName       | text    | Name of the footer                                                    |
-| headerName       | text    | Name of the header                                                    |
-| horizontalScroll | longint | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | boolean | True if row is selected, else False                                   |
-| newPosition      | longint | New position of the column or row                                     |
-| newSize          | longint | New size (in pixels) of the column or row                             |
-| oldPosition      | longint | Previous position of the column or row                                |
-| oldSize          | longint | Previous size (in pixels) of the column or row                        |
-| row              | longint | Row number                                                            |
-| verticalScroll   | longint | Positive if scroll is towards the bottom, negative if towards the top |
+| Property         | Type     | Description                                                           |
+| ---------------- | -------- | --------------------------------------------------------------------- |
+| area             | text     | List box object area ("header", "footer", "cell")                     |
+| areaName         | text     | Name of the area                                                      |
+| column           | longint  | Column number                                                         |
+| columnName       | text     | Name of the column                                                    |
+| footerName       | text     | Name of the footer                                                    |
+| headerName       | text     | Name of the header                                                    |
+| horizontalScroll | longint  | Positive if scroll is towards the right, negative if towards the left |
+| isRowSelected    | booleano | True if row is selected, else False                                   |
+| newPosition      | longint  | New position of the column or row                                     |
+| newSize          | longint  | New size (in pixels) of the column or row                             |
+| oldPosition      | longint  | Previous position of the column or row                                |
+| oldSize          | longint  | Previous size (in pixels) of the column or row                        |
+| row              | longint  | Row number                                                            |
+| verticalScroll   | longint  | Positive if scroll is towards the bottom, negative if towards the top |
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
 
@@ -469,7 +469,7 @@ Note that list box arrays used for defining the appearance of selected rows must
 - `On Activate` (form property)
 - `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
 
-##### Example
+##### Ejemplo
 
 You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 
@@ -868,7 +868,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | check box                                      | drop-down menu (required list)                                                                 |
+| booleano  | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | text                                                                                           |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
@@ -896,25 +896,25 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | text | real | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *Description*                           |      |      |         |         |       |       |
-| value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
-| behavior              | "threeStates" value                     |      |      | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
-| choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x    | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x       |         |       |       |
-| unitList              | array of X elements                     | x    | x    | x       |         |       |       |
-| unitReference         | index of selected element               | x    | x    | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x    | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x    | x       | x       | x     |       |
+|                       | valueType                               | text | real | integer | booleano | color | event |
+| --------------------- | --------------------------------------- | ---- | ---- | ------- | -------- | ----- | ----- |
+| *Attributes*          | *Description*                           |      |      |         |          |       |       |
+| value                 | cell value (input or output)            | x    | x    | x       |          |       |       |
+| min                   | minimum value                           |      | x    | x       |          |       |       |
+| max                   | maximum value                           |      | x    | x       |          |       |       |
+| behavior              | "threeStates" value                     |      |      | x       |          |       |       |
+| requiredList          | drop-down list defined in object        | x    | x    | x       |          |       |       |
+| choiceList            | combo box defined in object             | x    | x    | x       |          |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |          |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |          |       |       |
+| saveAs                | "reference" or "value"                  | x    | x    | x       |          |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |          |       |       |
+| choiceListName        | 4D list name, display combo box         | x    | x    | x       |          |       |       |
+| unitList              | array of X elements                     | x    | x    | x       |          |       |       |
+| unitReference         | index of selected element               | x    | x    | x       |          |       |       |
+| unitsListReference    | 4D list ref for units                   | x    | x    | x       |          |       |       |
+| unitsListName         | 4D list name for units                  | x    | x    | x       |          |       |       |
+| alternateButton       | add an alternate button                 | x    | x    | x       | x        | x     |       |
 
 #### value
 
