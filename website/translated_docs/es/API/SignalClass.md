@@ -40,7 +40,7 @@ Once a signal has been released using a `signal.trigger()` call, it cannot be re
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
-### Example
+### Ejemplo
 
 ```4d
  var $signal : 4D.Signal
@@ -132,7 +132,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 A new [`4D.Signal` object](#signal-object).
 
-#### Example
+#### Ejemplo
 
 Here is a typical example of a worker that sets a signal:
 
