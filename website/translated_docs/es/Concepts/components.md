@@ -13,55 +13,55 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 - You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
 
 
-## Definitions
+## Definiciones
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+Los mecanismos de gestión de componentes en 4D requieren la aplicación de los siguientes términos y conceptos:
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. The matrix project is intended to be copied, compiled or not, into the Components folder of the project that will be using the component (host application project).
-- **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project, compiled or not, copied into the Components folder of the host application and whose contents are used in the host applications.
+- **Base proyecto**: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente. El proyecto matriz debe copiarse, compilado o no, en la carpeta Components de la aplicación 4D o en el proyecto que utilizará el componente (proyecto aplicación local).
+- **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
+- **Componente**: proyecto matricial, compilado o no, copiado en la carpeta Components de la aplicación local y cuyo contenido se utiliza en las aplicaciones locales.
 
-It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. However, a component cannot use “sub-components” itself.
-
-
-### Protection of components: compilation
-
-By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. In particular:
-
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it is not possible to open them in the Method editor nor to modify them.
-- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
-
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
-
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area nor in the debugger.
-- The other project methods of the matrix project will never appear.
+Hay que tener en cuenta que un proyecto puede ser a la vez "matriz" y "local", es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar "subcomponentes" por sí mismo.
 
 
-## Sharing of project methods
-All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
+### Protección de los componentes: compilación
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host projects. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
+Por defecto, todos los métodos proyecto de un proyecto matriz instalado como componente son potencialmente visibles desde el proyecto local. En particular:
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate the project methods of the host project that you want to make accessible to the components.
+- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. Sin embargo, no es posible abrirlos en el editor de métodos ni modificarlos.
+- Los otros métodos proyecto del proyecto matriz no aparecen en el Explorador, pero también pueden verse en el depurador del proyecto local.
+
+Para proteger eficazmente los métodos proyecto de un componente, basta con compilar el proyecto de la matriz y entregarlo en forma de archivo .4dz. Cuando se instala un proyecto matricial compilado como un componente:
+
+- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
+- Los otros métodos proyecto del proyecto matriz nunca aparecerán.
+
+
+## Compartir métodos proyecto
+Todos los métodos proyecto de un proyecto matricial son por definición incluidos en el componente (el proyecto es el componente), lo que significa que pueden ser llamados y ejecutados por el componente.
+
+Por otro lado, por defecto estos métodos proyecto no serán visibles, ni podrán ser llamados por los proyectos locales. En el proyecto matriz, debe designar explícitamente los métodos que desea compartir con el proyecto local. Estos métodos proyecto se pueden llamar en el código del proyecto local (pero no se pueden modificar en el editor de métodos de la base local). Estos métodos forman los **puntos de entrada** en el componente.
+
+**Nota:** por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. Para ello, debe designar explícitamente los métodos proyecto del proyecto local que desea hacer accesibles a los componentes.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-## Passing variables
+## Paso de variables
 
-The local, process and interprocess variables are not shared between components and host projects. The only way to access component variables from the host project and vice versa is using pointers.
+Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. La única forma de acceder a las variables del componente desde el proyecto local y viceversa es utilizando punteros.
 
-Example using an array:
+Ejemplo utilizando un array:
 
 ```4d
-//In the host project:
-     ARRAY INTEGER(MyArray;10)
-     AMethod(->MyArray)
+//En el proyecto local:
+     ARRAY INTEGER( MyArray;10)
+     AMethod(-> MyArray)
 
-//In the component, the AMethod project method contains:
+//En el componente, el método proyecto AMethod contiene:
      APPEND TO ARRAY($1->;2)
 ```
 
-Examples using variables:
+Ejemplos utilizando variables:
 
 ```4d
  C_TEXT(myvariable)
@@ -71,15 +71,15 @@ Examples using variables:
 ```
 
 
-When you use pointers to allow components and the host project to communicate, you need to take the following specificities into account:
+Cuando se utilizan punteros para que los componentes y el proyecto local se comuniquen, hay que tener en cuenta las siguientes particularidades:
 
-- The `Get pointer` command will not return a pointer to a variable of the host project if it is called from a component and vice versa.
+- El comando `Get pointer` no devolverá un puntero a una variable del proyecto local si se llama desde un componente y viceversa.
 
-- The component architecture allows the coexistence, within the same interpreted project, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled project). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host project.
- - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
- - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
+- La arquitectura de componentes permite la coexistencia, dentro del mismo proyecto interpretado, de componentes interpretados y compilados (a la inversa, en un proyecto compilado sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado. Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.
+ - Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
+ - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -167,24 +167,24 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host projects. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
+- Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
-## Use of tables and fields
+## Uso de tablas y campos
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix project. However, you can create and use external databases, and then use their tables and fields according to your needs. You can create and manage external databases using SQL. An external database is a 4D project that is independent from the main 4D project, but that you can work with from the main 4D project. Using an external database means temporarily designating this database as the current database, in other words, as the target database for the SQL queries executed by 4D. You create external databases using the SQL `CREATE DATABASE` command.
+Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Una base externa es un proyecto 4D independiente del proyecto 4D principal, pero con la que se puede trabajar desde el proyecto 4D principal. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
 ### Example
 
-The following code is included in a component and performs three basic actions with an external database:
+El siguiente código se incluye en un componente y realiza tres acciones básicas con una base de datos externa:
 
-- creates the external database if it does not already exist,
-- adds data to the external database,
-- reads data from the external database.
+- creación de la base de datos externa si aún no existe,
+- añade datos a la base de datos externa,
+- lectura de datos desde la base de datos externa.
 
-Creating the external database:
+Creación de la base de datos externa:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) almacena los datos en un directorio autorizado
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
@@ -204,10 +204,10 @@ Creating the external database:
  End SQL
 ```
 
-Writing in the external database:
+Escritura en la base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host project through pointers
+ $Ptr_1:=$2 // recupera datos del proyecto local mediante punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -226,10 +226,10 @@ Writing in the external database:
  End SQL
 ```
 
-Reading from an external database:
+Lectura en una base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // accede a los datos del proyecto local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -248,17 +248,17 @@ Reading from an external database:
  End SQL
 ```
 
-## Use of resources
+## Utilización de recursos
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+Los componentes pueden utilizar recursos. De acuerdo con el principio de gestión de recursos, si el componente es de arquitectura .4dbase (arquitectura recomendada), la carpeta Resources debe colocarse dentro de esta carpeta.
 
-Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
+Los mecanismos automáticos son operacionales: los archivos XLIFF encontrados en la carpeta Resources de un componente serán cargados por este componente.
 
-In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
+En un proyecto local que contiene uno o más componentes, cada componente, así como los proyectos locales, tiene su propia "cadena de recursos." Los recursos están divididos entre las diferentes proyectos: no es posible acceder a los recursos del componente A desde el componente B o desde el proyecto local.
 
-## On-line help for components
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D projects:
+## Ayuda en línea para los componentes
+Se ha implementado un mecanismo específico para que los desarrolladores puedan añadir ayuda en línea a sus componentes. El principio es el mismo que el previsto para los proyectos 4D:
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
+- La ayuda del componente debe suministrarse como un archivo con el sufijo .htm, .html o (sólo en Windows) .chm,
+- El archivo de ayuda debe colocarse junto al archivo de estructura del componente y tener el mismo nombre que el archivo de estructura,
 - This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file. 
