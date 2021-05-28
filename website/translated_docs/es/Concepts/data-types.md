@@ -14,7 +14,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Fecha](Concepts/dt_date.md)                  | Sí                       | Sí                         | `C_DATE`, `ARRAY DATE`       |
 | [Hora](Concepts/dt_time.md)                   | Sí                       | Sí                         | `C_TIME`, `ARRAY TIME`       |
 | [Booleano](Concepts/dt_boolean.md)            | Sí                       | Sí                         | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)              | Sí                       | Convertido en entero largo | `ARRAY INTEGER`              |
+| [Entero](Concepts/dt_number.md)               | Sí                       | Convertido en entero largo | `ARRAY INTEGER`              |
 | [Entero largo](Concepts/dt_number.md)         | Sí                       | Sí                         | `C_LONGINT`, `ARRAY LONGINT` |
 | [Entero largo 64 bits](Concepts/dt_number.md) | Sí (SQL)                 | Convertido en real         | -                            |
 | [Real](Concepts/dt_number.md)                 | Sí                       | Sí                         | `C_REAL`, `ARRAY REAL`       |
