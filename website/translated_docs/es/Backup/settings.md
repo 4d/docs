@@ -104,9 +104,9 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 - **Tamaño del segmento (Mb)** 4D le permite segmentar los archivos, es decir, cortarlos en tamaños más pequeños. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). Durante la restauración, 4D fusionará automáticamente los segmentos. Cada segmento se llama MyApplication[xxxx-yyyy].4BK, donde xxxx es el número de copia de seguridad e yyyy es el número de segmento. Por ejemplo, los tres segmentos de la copia de seguridad de la base MyApplication se llaman MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK y MyApplication[0006-0003].4BK. El menú **Tamaño del segmento** es un combo box que permite establecer el tamaño en MB de cada segmento de la copia de seguridad. Puede elegir uno de los tamaños preestablecidos o introducir un tamaño específico entre 0 y 2048. Si se pasa 0, no se produce ninguna segmentación (esto equivale a pasar **Ninguna**).
 
-- **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
-    - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
-    - **Fast** (default): This option is a compromise between backup speed and archive size.
+- **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
+    - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.
+    - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
     - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
 
 - **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
@@ -114,11 +114,11 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
     - **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
 
 
-### Automatic Restore
+### Restauración automática
 
-- **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
+- **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
-- **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the application.
+- **Integrar el último archivo de historial si la base está incompleta**: cuando se marca esta opción, el programa integra automáticamente el archivo de historial al abrir o restaurar la aplicación.
     - Durante la apertura de una aplicación, el archivo de historial actual se integra automáticamente si 4D detecta que hay operaciones almacenadas en el archivo de historial que no están presentes en los datos. Esta situación se produce, por ejemplo, si se produce un corte de energía cuando hay operaciones en la caché de datos que aún no se han escrito en el disco.
     - Al restaurar la aplicación, si el archivo de historial actual o un archivo de copia de seguridad del historial que tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no se encuentran en el archivo de datos, el programa las integra automáticamente.
 

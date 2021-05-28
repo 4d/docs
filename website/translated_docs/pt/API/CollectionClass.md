@@ -1311,6 +1311,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Example
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -2126,9 +2127,9 @@ The *queryString* parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using , value and *querySettings* parameters, please refer to the **dataClass** `.query()` function description.
+For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
 
-
+> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Example 1
 
@@ -2399,6 +2400,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->

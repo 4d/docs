@@ -129,13 +129,13 @@ Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con 
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
+    :(vResult=1) //Probar si el número es 1
+       ALERT("One.") //Si es 1, mostrar una alerta
+    :(vResult=2) //Probar si el número es 2
+       ALERT("Two.") //Si es 2, mostrar una alerta
+    :(vResult=3) //Probar si el número es 3
+       ALERT("Three.") //Si es 3, mostrar una alerta
+    Else //Si no es 1, 2 o 3, mostrar una alerta
        ALERT("It was not one, two, or three.")
  End case
 ```
@@ -143,16 +143,16 @@ Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con 
 Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+ If(vResult=1) //Probar si el número es 1
+    ALERT("One.") //Si es 1, mostrar una alerta
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Probar si el número es 2
+       ALERT("Two.") //Si es 2, mostrar una alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
+       If(vResult=3) //Probar si el número es 3
+          ALERT("Three.") //Si es 3, mostrar una alerta
+    Else //Si no es 1, 2 o 3, mostrar una alerta
+       ALERT("It was not one, two, or three.")
        End if
     End if
  End if
