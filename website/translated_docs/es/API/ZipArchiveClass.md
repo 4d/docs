@@ -10,7 +10,7 @@ A 4D ZIP archive is a `File` or `Folder` object containing one or more files or 
 - 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 
-### Example
+### Ejemplo
 
 To retrieve and view the contents of a ZIP file object:
 
@@ -55,7 +55,7 @@ End if
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
 | zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
-| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| options         | Entero    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Result          | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
@@ -153,7 +153,7 @@ The returned status object contains the following properties:
 | Property   | Type     | Description                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Integer  | Status code                                                                                                                             |
+| status     | Entero   | Status code                                                                                                                             |
 | success    | Booleano | True if archive created successfully, else false                                                                                        |
 
 
@@ -304,7 +304,7 @@ The returned `4D.ZipArchive` object contains a single [`root`](#root) property w
 
 
 
-#### Example
+#### Ejemplo
 
 To retrieve and view the contents of a ZIP file object:
 
