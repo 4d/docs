@@ -50,11 +50,11 @@ Entity selections can be created from existing selections using various function
 **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
-| Parameter | Type               |    | Description                                                                                 |
-| --------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| dsTable   | Table              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings  | Objeto             | -> | Build option: context                                                                       |
-| Result    | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
+| Parameter  | Type               |    | Description                                                                                 |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
+| dsTable    | Table              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
+| parámetros | Objeto             | -> | Build option: context                                                                       |
+| Result     | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
 <!-- END REF -->
 
 
@@ -73,7 +73,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 | context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $employees : cs.EmployeeSelection
@@ -125,7 +125,7 @@ Note that the corresponding entity is reloaded from the datastore.
  $entity.save() //OK
 ```
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -392,7 +392,7 @@ An error is returned if:
 *   *attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
-#### Example
+#### Ejemplo
 
 We want to obtain a list of employees whose salary is higher than the average salary:
 
@@ -435,7 +435,7 @@ In *entity*, specify the entity to search for in the entity selection. If entity
 
 If *entity* and the entity selection do not belong to the same dataclass, an error is raised.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -485,7 +485,7 @@ An error is returned if:
 *   *attributePath* is a related attribute,
 *   *attributePath* is not found in the entity selection dataclass.
 
-#### Example
+#### Ejemplo
 
 We want to find out the total number of employees for a company without counting any whose job title has not been specified:
 
@@ -516,7 +516,7 @@ We want to find out the total number of employees for a company without counting
 <!-- REF #EntitySelectionClass.copy().Params -->
 | Parameter | Type               |    | Description                                      |
 | --------- | ------------------ |:--:| ------------------------------------------------ |
-| option    | Integer            | -> | `ck shared`: return a shareable entity selection |
+| option    | Entero             | -> | `ck shared`: return a shareable entity selection |
 | Result    | 4D.EntitySelection | <- | Copy of the entity selection                     |
 <!-- END REF -->
 
@@ -530,7 +530,7 @@ By default, if the *option* parameter is omitted, the function returns a new, al
 
 > For information on the shareable property of entity selections, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
-#### Example
+#### Ejemplo
 
 You create a new, empty entity selection of products when the form is loaded:
 
@@ -580,7 +580,7 @@ Then this entity selection is updated with products and you want to share the pr
 | Parameter     | Type      |    | Description                                                      |
 | ------------- | --------- |:--:| ---------------------------------------------------------------- |
 | attributePath | Texto     | -> | Path of attribute whose distinct values you want to get          |
-| option        | Integer   | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
+| option        | Entero    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
 | Result        | Colección | <- | Collection with only distinct values                             |
 <!-- END REF -->
 
@@ -641,7 +641,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 <!-- REF #EntitySelectionClass.drop().Params -->
 | Parameter | Type               |    | Description                                                                                      |
 | --------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------ |
-| mode      | Integer            | -> | `dk stop dropping on first error`: stops method execution on first non-droppable entity          |
+| mode      | Entero             | -> | `dk stop dropping on first error`: stops method execution on first non-droppable entity          |
 | Result    | 4D.EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies) |
 <!-- END REF -->
 
@@ -652,7 +652,7 @@ The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->removes 
 
 If a locked entity is encountered during the execution of `.drop()`, it is not removed. By default, the method processes all entities of the entity selection and returns non-droppable entities in the entity selection. If you want the method to stop execution at the first encountered non-droppable entity, pass the `dk stop dropping on first error` constant in the *mode* parameter.
 
-#### Example
+#### Ejemplo
 
 Example without the `dk stop dropping on first error` option:
 
@@ -704,7 +704,7 @@ Example with the `dk stop dropping on first error` option:
 | ------------- | --------- |:--:| --------------------------------------------------------------------------------------- |
 | attributePath | Texto     | -> | Attribute path whose values must be extracted to the new collection                     |
 | targetPath    | Texto     | -> | Target attribute path or attribute name                                                 |
-| option        | Integer   | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
+| option        | Entero    | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
 | Result        | Colección | <- | Collection containing extracted values                                                  |
 <!-- END REF -->
 
@@ -744,7 +744,7 @@ If several *attributePath* are given, a *targetPath* must be given for each. Onl
 > Entities of a collection of entities accessed by \[ ] are not reloaded from the database.
 
 
-#### Example
+#### Ejemplo
 
 Given the following table and relation:
 
@@ -829,7 +829,7 @@ There is, however, a difference between both statements when the selection is em
  $entity:=$entitySel[0]  //generates an error
 ```
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -871,7 +871,7 @@ The `.getDataClass()` function <!-- REF #EntitySelectionClass.getDataClass().Sum
 
 This function is mainly useful in the context of generic code.
 
-#### Example
+#### Ejemplo
 
 The following generic code duplicates all entities of the entity selection:
 
@@ -921,7 +921,7 @@ The `.isAlterable()` function <!-- REF #EntitySelectionClass.isAlterable().Summa
 
 For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-#### Example
+#### Ejemplo
 
 You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
 
@@ -965,7 +965,7 @@ The `.isOrdered()` function <!-- REF #EntitySelectionClass.isOrdered().Summary -
 For more information, please refer to [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1023,7 +1023,7 @@ The result of this function is similar to:
 If the entity selection is empty, the function returns Null.
 
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1060,7 +1060,7 @@ The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns 
 Entity selections always have a `.length` property.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $vSize : Integer
@@ -1109,7 +1109,7 @@ An error is returned if:
 
 
 
-#### Example
+#### Ejemplo
 
 We want to find the highest salary among all the female employees:
 
@@ -1159,7 +1159,7 @@ An error is returned if:
 *   *attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
-#### Example
+#### Ejemplo
 
 In this example, we want to find the lowest salary among all the female employees:
 
@@ -1350,7 +1350,7 @@ By default, attributes are sorted in ascending order ("descending" is false).
 You can add as many objects in the criteria collection as necessary.
 > Null values are evaluated as less than other values.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -1392,8 +1392,8 @@ You can add as many objects in the criteria collection as necessary.
 | ------------- | ------------------ |:--:| ------------------------------------------- |
 | formulaString | Texto              | -> | Formula string                              |
 | formulaObj    | Objeto             | -> | Formula object                              |
-| sortOrder     | Integer            | -> | `dk ascending` (default) or `dk descending` |
-| settings      | Objeto             | -> | Parameter(s) for the formula                |
+| sortOrder     | Entero             | -> | `dk ascending` (default) or `dk descending` |
+| parámetros    | Objeto             | -> | Parameter(s) for the formula                |
 | Result        | 4D.EntitySelection | <- | New ordered entity selection                |
 <!-- END REF -->
 
@@ -1696,8 +1696,8 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- REF #EntitySelectionClass.slice().Params -->
 | Parameter | Type               |    | Description                                                    |
 | --------- | ------------------ |:--:| -------------------------------------------------------------- |
-| startFrom | Integer            | -> | Index to start the operation at (included)                     |
-| end       | Integer            | -> | End index (not included)                                       |
+| startFrom | Entero             | -> | Index to start the operation at (included)                     |
+| end       | Entero             | -> | End index (not included)                                       |
 | Result    | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy) |
 <!-- END REF -->
 
@@ -1777,7 +1777,7 @@ An error is returned if:
 
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 var $sel : cs.EmployeeSelection
@@ -1808,9 +1808,9 @@ $sum:=$sel.sum("salary")
 | ------------ | --------- |:--:| ------------------------------------------------------------------------------------ |
 | filterString | Texto     | -> | String with entity attribute path(s) to extract                                      |
 | filterCol    | Colección | -> | Collection of entity attribute path(s) to extract                                    |
-| options      | Integer   | -> | `dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp |
-| begin        | Integer   | -> | Designates the starting index                                                        |
-| howMany      | Integer   | -> | Number of entities to extract                                                        |
+| options      | Entero    | -> | `dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp |
+| begin        | Entero    | -> | Designates the starting index                                                        |
+| howMany      | Entero    | -> | Number of entities to extract                                                        |
 | Result       | Colección | <- | Collection of objects containing attributes and values of entity selection           |
 <!-- END REF -->
 
