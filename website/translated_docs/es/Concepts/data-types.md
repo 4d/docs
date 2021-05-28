@@ -9,23 +9,23 @@ Although they are usually equivalent, some data types available at the database 
 
 | Data Types                                 | Database support(1) | Language support     | Declaración de variables     |
 | ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Texto](Concepts/dt_string.md)             | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
-| [Fecha](Concepts/dt_date.md)               | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
-| [Hora](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
-| [Booleano](Concepts/dt_boolean.md)         | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `ARRAY INTEGER`              |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
+| [Alphanumeric](dt_string.md)               | Sí                  | Converted to text    | -                            |
+| [Texto](Concepts/dt_string.md)             | Sí                  | Sí                   | `C_TEXT`, `ARRAY TEXT`       |
+| [Fecha](Concepts/dt_date.md)               | Sí                  | Sí                   | `C_DATE`, `ARRAY DATE`       |
+| [Hora](Concepts/dt_time.md)                | Sí                  | Sí                   | `C_TIME`, `ARRAY TIME`       |
+| [Booleano](Concepts/dt_boolean.md)         | Sí                  | Sí                   | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [Integer](Concepts/dt_number.md)           | Sí                  | Converted to longint | `ARRAY INTEGER`              |
+| [Longint](Concepts/dt_number.md)           | Sí                  | Sí                   | `C_LONGINT`, `ARRAY LONGINT` |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                            |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                            |
-| [Puntero](Concepts/dt_pointer.md)          | -                   | Yes                  | `C_POINTER`, `ARRAY POINTER` |
-| [Imagen](Concepts/dt_picture.md)           | Yes                 | Yes                  | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
-| [Objeto](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Colección](Concepts/dt_collection.md)     | -                   | Yes                  | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `C_VARIANT`                  |
+| [Real](Concepts/dt_number.md)              | Sí                  | Sí                   | `C_REAL`, `ARRAY REAL`       |
+| [Undefined](Concepts/dt_null_undefined.md) | -                   | Sí                   | -                            |
+| [Null](Concepts/dt_null_undefined.md)      | -                   | Sí                   | -                            |
+| [Puntero](Concepts/dt_pointer.md)          | -                   | Sí                   | `C_POINTER`, `ARRAY POINTER` |
+| [Imagen](Concepts/dt_picture.md)           | Sí                  | Sí                   | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)                | Sí                  | Sí                   | `C_BLOB`, `ARRAY BLOB`       |
+| [Objeto](Concepts/dt_object.md)            | Sí                  | Sí                   | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Colección](Concepts/dt_collection.md)     | -                   | Sí                   | `C_COLLECTION`               |
+| [Variant](Concepts/dt_variant.md)(2)       | -                   | Sí                   | `C_VARIANT`                  |
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
