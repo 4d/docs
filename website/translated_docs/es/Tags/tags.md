@@ -13,7 +13,6 @@ It is possible to mix several types of tags. For example, the following HTML str
 
 ```html
 <HTML>
-...
 <BODY>
 <!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
 <!--#4DIF (myvar=1)-->   (If condition)

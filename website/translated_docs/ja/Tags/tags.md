@@ -13,9 +13,8 @@ title: 変換タグ
 
 ```html
 <HTML>
-...
-<BODY><!--#4DSCRIPT/PRE_PROCESS-->(メソッド呼び出し)<!--#4DIF (myvar=1)-->(If 条件)<!--#4DINCLUDE banner1.html-->(サブページ挿入)<!--#4DENDIF-->(End if)<!--#4DIF (mtvar=2)--><!--#4DINCLUDE banner2.html--><!--#4DENDIF--><!--#4DLOOP [TABLE]-->(カレントセレクションでのループ)<!--#4DIF ([TABLE]ValNum>10)-->(If [TABLE]ValNum>10)<!--#4DINCLUDE subpage.html-->(サブページの挿入)<!--#4DELSE-->(Else)
-   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)<!--#4DENDIF--><!--#4DENDLOOP-->(End for)
+<BODY><!--#4DSCRIPT/PRE_PROCESS-->(Method call)<!--#4DIF (myvar=1)-->(If condition)<!--#4DINCLUDE banner1.html-->(Subpage insertion)<!--#4DENDIF-->(End if)<!--#4DIF (mtvar=2)--><!--#4DINCLUDE banner2.html--><!--#4DENDIF--><!--#4DLOOP [TABLE]-->(Loop on the current selection)<!--#4DIF ([TABLE]ValNum>10)-->(If [TABLE]ValNum>10)<!--#4DINCLUDE subpage.html-->(Subpage insertion)<!--#4DELSE-->(Else)
+   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (Field display)<!--#4DENDIF--><!--#4DENDLOOP-->](End for)
 </BODY>
 </HTML>
 ```
