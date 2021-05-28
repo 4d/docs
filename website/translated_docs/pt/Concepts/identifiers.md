@@ -280,10 +280,10 @@ Um conjunto é um conjunto interprocesso quando o nome do conjunto está precedi
 Um nome de conjunto interprocesso pode conter até 255 caracteres, sem incluir os símbolos <>.
 
 ### Conjuntos proceso
-You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
+Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos <> ou o sinal de dólar $). O nome de um conjunto processo pode conter até 255 caracteres.
 
-### Client Sets
-The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
+### Conjuntos clientes
+O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
 **Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
 
