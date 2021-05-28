@@ -27,7 +27,7 @@ El valor de la expresión booleana debe poder ser modificado por un elemento den
 
 Si se encuentra en una situación de este tipo, en la que un método se ejecuta de forma incontrolada, puede utilizar las funciones de rastreo para detener el bucle y localizar el problema. Para más información sobre el seguimiento de un método, consulte la página [Gestión de errores](error-handling.md).
 
-### Example
+### Ejemplo
 
 ```4d
  CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro?
@@ -50,7 +50,7 @@ Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
-### Example
+### Ejemplo
 
 Compara el siguiente ejemplo con el ejemplo del bucle `While...End while`. Tenga en cuenta que la expresión booleana no necesita ser inicializada-no hay un comando `CONFIRM` para inicializar la variable `OK`.
 
@@ -314,7 +314,7 @@ En cada iteración del bucle, la variable _Current_Item_ se llena automáticamen
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
-#### Example
+#### Ejemplo
 
 Usted quiere calcular algunas estadísticas para una colección de números:
 ```4d
@@ -348,7 +348,7 @@ El número de bucles se basa en el número de entidades de la selección de enti
 
 Tenga en cuenta que cualquier modificación aplicada en la entidad actual debe ser guardada explícitamente utilizando `entity.save( )`.
 
-#### Example
+#### Ejemplo
 
 Quiere aumentar el salario de todos los empleados británicos en una selección de entidades:
 ```4d
@@ -365,7 +365,7 @@ Cuando se utiliza `For each...End for each` con una *Expression* de tipo Object,
 
 Las propiedades del objeto se procesan de acuerdo con su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
-#### Example
+#### Ejemplo
 
 Quiere pasar los nombres a mayúsculas en el siguiente objeto:
 ```4d
@@ -406,7 +406,7 @@ For example:
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
 - end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
 
-#### Example
+#### Ejemplo
 
 ```4d
  C_COLLECTION($col;$col2)
@@ -432,7 +432,7 @@ Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
-#### Example
+#### Ejemplo
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
