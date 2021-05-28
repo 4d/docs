@@ -137,7 +137,7 @@ $0:=Uppercase($1)
 ```
 
 
-## Data Types
+## Tipos de datos
 
 In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
 
