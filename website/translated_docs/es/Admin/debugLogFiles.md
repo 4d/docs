@@ -319,7 +319,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Field name     | Description                                                   | Example                                                 |
+| Field name     | Description                                                   | Ejemplo                                                 |
 | -------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
 | sequenceNumber | Unique and sequential operation number in the logging session | 104                                                     |
 | url            | Client ORDA request URL                                       | "rest/Persons(30001)"                                   |
