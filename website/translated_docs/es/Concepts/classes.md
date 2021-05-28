@@ -113,7 +113,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 The `cs` command returns the user class store for the current project or component. The `cs` command returns the user class store for the current project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
-#### Example
+#### Ejemplo
 
 You want to create a new instance of an object of `myClass`:
 
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 
 The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
-#### Example
+#### Ejemplo
 
 You want to create a new key in the `CryptoKey` class:
 
