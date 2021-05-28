@@ -67,7 +67,7 @@ The following table lists all supported `varType` values:
 | `Fecha`                | Date value                            |
 | `Hora`                 | Time value                            |
 | `Booleano`             | Boolean value                         |
-| `Integer`              | Long integer value                    |
+| `Entero`               | Long integer value                    |
 | `Real`                 | Real value                            |
 | `Puntero`              | Pointer value                         |
 | `Imagen`               | Picture value                         |
