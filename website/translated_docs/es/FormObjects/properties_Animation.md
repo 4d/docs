@@ -13,7 +13,7 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 | Name                 | Data Type | Possible Values |
 | -------------------- | --------- | --------------- |
-| loopBackToFirstFrame | boolean   | true, false     |
+| loopBackToFirstFrame | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -31,7 +31,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 | Name                   | Data Type | Possible Values |
 | ---------------------- | --------- | --------------- |
-| switchBackWhenReleased | boolean   | true, false     |
+| switchBackWhenReleased | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -50,7 +50,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| switchContinuously | boolean   | true, false     |
+| switchContinuously | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -87,7 +87,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| switchWhenRollover | boolean   | true, false     |
+| switchWhenRollover | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -108,7 +108,7 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 | Name                   | Data Type | Possible Values |
 |:---------------------- | --------- | --------------- |
-| useLastFrameAsDisabled | boolean   | true, false     |
+| useLastFrameAsDisabled | booleano  | true, false     |
 
 
 #### Objects Supported
