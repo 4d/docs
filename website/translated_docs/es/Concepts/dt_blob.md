@@ -7,7 +7,7 @@ title: BLOB
 - Un BLOB se carga en la memoria en su totalidad. Una variable BLOB se mantiene y existe sólo en la memoria. Un campo BLOB se carga en memoria desde el disco, como el resto del registro al que pertenece.
 - Al igual que los otros tipos de campo que pueden retener una gran cantidad de datos (como el tipo de campo Imagen), los campos BLOB no se duplican en la memoria cuando se modifica un registro. Por consiguiente, el resultado devuelto por los comandos `Old` y `Modified` no es significativo cuando se aplica a un campo BLOB.
 
-## Parameter passing, Pointers and function results
+## Paso de parámetros, punteros y resultados de funciones
 
 Los BLOBs en 4D pueden pasarse como parámetros a los comandos 4D o a las rutinas de los plugins que esperan parámetros BLOB. Los BLOBS también pueden ser pasados como parámetros a un método de usuario o ser devueltos como resultado de una función.
 
