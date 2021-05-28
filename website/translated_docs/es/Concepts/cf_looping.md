@@ -192,10 +192,10 @@ Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 
 
 Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 ```4d
- $i:=1 //Initialize the counter
- While($i<=100) //Loop 100 times
-  //Do something
-    $i:=$i+1 //Need to increment the counter
+ $i:=1 //Inicializar el contador
+ While($i<=100) //Bucle 100 veces
+  //Hacer algo
+    $i:=$i+1 //Necesita incrementar el contador
  End while
 ```
 
