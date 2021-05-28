@@ -509,6 +509,7 @@ The mapping between the object and the entity is done on the attribute names:
 
 *	If a property of the object does not exist in the dataclass, it is ignored.
 *	Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
+*	The primary key can be given as is or with a "__KEY" property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null. 
 
 *filler* can handle a related entity under the following conditions:
 
