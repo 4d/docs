@@ -270,7 +270,7 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
 
-#### Example
+#### Ejemplo
 
 The following code will create a dialog accepting a formula in text format:
 
@@ -428,7 +428,7 @@ The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the so
 
 This property is **read-only**.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $of : 4D.Function
