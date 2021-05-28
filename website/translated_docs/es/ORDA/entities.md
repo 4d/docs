@@ -426,7 +426,7 @@ The following methods automatically associate the optimization context of the so
 
 
 
-**Example**
+**Ejemplo**
 
 Given the following code:
 
