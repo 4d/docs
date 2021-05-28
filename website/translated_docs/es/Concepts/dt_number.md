@@ -136,7 +136,7 @@ The following table lists the bitwise operators and their effects:
 
 ### Examples
 
-| Operation              | Example                         | Result     |
+| Operation              | Ejemplo                         | Result     |
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
