@@ -36,7 +36,7 @@ For detailed information about the session implementation, please refer to the [
 
 
 <!-- REF #_command_.Session.Params -->
-| Parameter | Type       |    | Description    |
+| Parameter | Tipo       |    | Description    |
 | --------- | ---------- |:--:| -------------- |
 | Result    | 4D.Session | <- | Session object |
 <!-- END REF -->
@@ -94,7 +94,7 @@ IP:port/4DACTION/action_Session
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -163,7 +163,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parameter | Type     |    | Description                                      |
+| Parameter | Tipo     |    | Description                                      |
 | --------- | -------- |:--:| ------------------------------------------------ |
 | privilege | Texto    | <- | Name of the privilege to verify                  |
 | Result    | Booleano | <- | True if session has *privilege*, False otherwise |
@@ -246,7 +246,7 @@ End if
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parameter | Type     |    | Description                                     |
+| Parameter | Tipo     |    | Description                                     |
 | --------- | -------- |:--:| ----------------------------------------------- |
 | Result    | Booleano | <- | True if session is a Guest one, False otherwise |
 <!-- END REF -->
@@ -284,7 +284,7 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parameter  | Type      |    | Description                                                |
+| Parameter  | Tipo      |    | Description                                                |
 | ---------- | --------- |:--:| ---------------------------------------------------------- |
 | privilege  | Texto     | -> | Privilege name                                             |
 | privileges | Colección | -> | Collection of privilege names                              |
@@ -301,7 +301,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 - In the *settings* parameter, pass an object containing the following properties:
 
-| Property   | Type               | Description                                        |
+| Property   | Tipo               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
 | userName   | Texto              | User name to associate to the session (optional)   |
