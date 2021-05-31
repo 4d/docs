@@ -122,7 +122,7 @@ Here is the description of the JSON file contents:
     </th>
     
     <th>
-      Type
+      Tipo
     </th>
     
     <th>
@@ -255,7 +255,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Parameter | Type   | Description                                              |
+| Parameter | Tipo   | Description                                              |
 | --------- | ------ | -------------------------------------------------------- |
 | $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
@@ -296,7 +296,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| Parameter | Type   | Description                                      |
+| Parameter | Tipo   | Description                                      |
 | --------- | ------ | ------------------------------------------------ |
 | $editor   | Objeto | Form properties                                  |
 | $result   | Objeto | Form properties modified by the macro (optional) |
@@ -309,7 +309,7 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties of the `$editor` object:
 
-| Property                  | Type      | Description                                                                       |
+| Property                  | Tipo      | Description                                                                       |
 | ------------------------- | --------- | --------------------------------------------------------------------------------- |
 | $editor.form              | Objeto    | The entire form                                                                   |
 | $editor.file              | File      | File object of the form file                                                      |
@@ -323,7 +323,7 @@ Here are the properties of the `$editor` object:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Type      | Description                                                 |
+| Property          | Tipo      | Description                                                 |
 | ----------------- | --------- | ----------------------------------------------------------- |
 | currentPage       | Objeto    | currentPage including objects modified by the macro, if any |
 | currentSelection  | Colección | currentSelection if modified by the macro                   |
@@ -343,7 +343,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Type | Description |
+| Property | Tipo | Description |
 | -------- | ---- | ----------- |
 |          |      |             |
  source|String|method code|
@@ -388,7 +388,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type      | Description                              |
+| Parameter    |                       | Tipo      | Description                              |
 | ------------ | --------------------- | --------- | ---------------------------------------- |
 | $editor      |                       | Objeto    | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | Objeto    | Object returned by [onInvoke](#oninvoke) |
