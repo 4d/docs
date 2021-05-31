@@ -13,7 +13,7 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Type          | To Reference            | To Use                   | To Assign                |
+| Tipo          | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
