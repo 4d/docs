@@ -1,14 +1,14 @@
 ---
-id: classes
+id: clases
 title: Clases
 ---
 
 
 ## Generalidades
 
-The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
+El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Cada objeto es una instancia de su clase. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
 
 > The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
@@ -68,13 +68,13 @@ To delete an existing class, you can:
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
-#### File menu and toolbar
+#### Menú Archivo y barra de herramientas
 
 You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
 
 You can also use the **Ctrl+Shift+Alt+k** shortcut.
 
-#### Explorer
+#### Explorador
 
 In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
 
@@ -84,7 +84,7 @@ To create a new class, you can:
 - select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
 - select **New > Class...** from the contexual menu of the Explorer's Home page.
 
-#### Class code support
+#### Soporte del código de clase
 
 In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
 
