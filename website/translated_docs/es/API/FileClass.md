@@ -66,7 +66,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Type    |    | Description                                     |
+| Parameter    | Tipo    |    | Description                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
 | fileConstant | Entero  | -> | 4D file constant                                |
@@ -166,7 +166,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Type     |    | Description                                                |
+| Parameter | Tipo     |    | Description                                                |
 | --------- | -------- | -- | ---------------------------------------------------------- |
 | Result    | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
@@ -210,7 +210,7 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                  |
+| Parameter         | Tipo      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
@@ -276,7 +276,7 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -333,7 +333,7 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter | Type   |    | Description                                      |
+| Parameter | Tipo   |    | Description                                      |
 | --------- | ------ | -- | ------------------------------------------------ |
 | Result    | Objeto | <- | Contents of .exe version resource or .plist file |
 <!-- END REF -->
@@ -353,7 +353,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 All property values are Text.
 
-| Property         | Type  |
+| Property         | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -453,7 +453,7 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                  |
+| Parameter         | Tipo      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | Texto     | -> | Full name for the moved file |
@@ -521,7 +521,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parameter | Type    |    | Description                |
+| Parameter | Tipo    |    | Description                |
 | --------- | ------- | -- | -------------------------- |
 | newName   | Texto   | -> | New full name for the file |
 | Result    | 4D.File | <- | Renamed file               |
@@ -564,7 +564,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Type   |    | Description                                                 |
+| Parameter | Tipo   |    | Description                                                 |
 | --------- | ------ | -- | ----------------------------------------------------------- |
 | info      | Objeto | -> | Properties to write in .exe version resource or .plist file |
 <!-- END REF -->
@@ -584,7 +584,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe file. Available properties are (any other property will be ignored):
 
-| Property         | Type  |
+| Property         | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -649,7 +649,7 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parameter | Type |    | Description               |
+| Parameter | Tipo |    | Description               |
 | --------- | ---- | -- | ------------------------- |
 | content   | BLOB | -> | New contents for the file |
 <!-- END REF -->
@@ -688,7 +688,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Type   |    | Description                                                |
+| Parameter   | Tipo   |    | Description                                                |
 | ----------- | ------ | -- | ---------------------------------------------------------- |
 | text        | Texto  | -> | Text to store in the file                                  |
 | charSetName | Texto  | -> | Name of character set                                      |
