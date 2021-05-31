@@ -40,7 +40,7 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Type   | Description                                                    |
+| Parameter        | Tipo   | Description                                                    |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | Cadena | One of the logical operators to test with the other entity set |
 | $otherCollection | Cadena | Entity set ID                                                  |
