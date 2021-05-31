@@ -92,7 +92,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| Parameter | Type      |    | Description                       |
+| Parameter | Tipo      |    | Description                       |
 | --------- | --------- |:--:| --------------------------------- |
 | Result    | 4D.Entity | <- | New entity referencing the record |
 <!-- END REF -->
@@ -137,7 +137,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parameter           | Type      |    | Description                                    |
+| Parameter           | Tipo      |    | Description                                    |
 | ------------------- | --------- |:--:| ---------------------------------------------- |
 | entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
 | attributesToCompare | Colección | -> | Name of attributes to be compared              |
@@ -155,7 +155,7 @@ In *attributesToCompare*, you can designate specific attributes to compare. If p
 
 The differences are returned as a collection of objects whose properties are:
 
-| Property name | Type                            | Description                                 |
+| Property name | Tipo                            | Description                                 |
 | ------------- | ------------------------------- | ------------------------------------------- |
 | attributeName | Cadena                          | Name of the attribute                       |
 | value         | any - Depends on attribute type | Value of the attribute in the entity        |
@@ -341,7 +341,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.drop().Params -->
-| Parameter | Type   |    | Description                                                                     |
+| Parameter | Tipo   |    | Description                                                                     |
 | --------- | ------ |:--:| ------------------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
 | Result    | Objeto | <- | Result of drop operation                                                        |
@@ -361,7 +361,7 @@ Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode
 
 The object returned by `.drop( )` contains the following properties:
 
-| Property      |                     | Type                  | Description                                                                                                           |
+| Property      |                     | Tipo                  | Description                                                                                                           |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
@@ -449,7 +449,7 @@ Example with `dk force drop if stamp changed` option:
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.first().Params -->
-| Parameter | Type      |    | Description                                                          |
+| Parameter | Tipo      |    | Description                                                          |
 | --------- | --------- |:--:| -------------------------------------------------------------------- |
 | Result    | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
@@ -488,7 +488,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parameter | Type   |    | Description                          |
+| Parameter | Tipo   |    | Description                          |
 | --------- | ------ |:--:| ------------------------------------ |
 | filler    | Objeto | -> | Object from which to fill the entity |
 <!-- END REF -->
@@ -578,7 +578,7 @@ You could also use a related entity given as an object:
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parameter | Type         |    | Description                                  |
+| Parameter | Tipo         |    | Description                                  |
 | --------- | ------------ |:--:| -------------------------------------------- |
 | Result    | 4D.DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
@@ -625,7 +625,7 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
-| Parameter | Type   |    | Description                                                                             |
+| Parameter | Tipo   |    | Description                                                                             |
 | --------- | ------ |:--:| --------------------------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
 | Result    | Texto  | <- | Value of the text primary key of the entity                                             |
@@ -669,7 +669,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parameter | Type               |    | Description                                                      |
+| Parameter | Tipo               |    | Description                                                      |
 | --------- | ------------------ |:--:| ---------------------------------------------------------------- |
 | Result    | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
@@ -713,7 +713,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parameter | Type   |    | Description                                             |
+| Parameter | Tipo   |    | Description                                             |
 | --------- | ------ |:--:| ------------------------------------------------------- |
 | Result    | Entero | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
@@ -762,7 +762,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parameter       | Type               |    | Description                                                        |
+| Parameter       | Tipo               |    | Description                                                        |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
 | Result          | Entero             | <- | Position of the entity in an entity selection                      |
@@ -812,7 +812,7 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parameter | Type     |    | Description                                                               |
+| Parameter | Tipo     |    | Description                                                               |
 | --------- | -------- |:--:| ------------------------------------------------------------------------- |
 | Result    | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
@@ -853,7 +853,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.last().Params -->
-| Parameter | Type      |    | Description                                                         |
+| Parameter | Tipo      |    | Description                                                         |
 | --------- | --------- |:--:| ------------------------------------------------------------------- |
 | Result    | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
@@ -894,7 +894,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
-| Parameter | Type   |    | Description                                                          |
+| Parameter | Tipo   |    | Description                                                          |
 | --------- | ------ |:--:| -------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
 | Result    | Objeto | <- | Result of lock operation                                             |
@@ -919,7 +919,7 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 The object returned by `.lock( )` contains the following properties:
 
-| Property         |                     | Type                  | Description                                                                                                         |
+| Property         |                     | Tipo                  | Description                                                                                                         |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | success          |                     | booleano              | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
@@ -1007,7 +1007,7 @@ Example with `dk reload if stamp changed` option:
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.next().Params -->
-| Parameter | Type      |    | Description                                                          |
+| Parameter | Tipo      |    | Description                                                          |
 | --------- | --------- |:--:| -------------------------------------------------------------------- |
 | Result    | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
@@ -1049,7 +1049,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.previous().Params -->
-| Parameter | Type      |    | Description                                                              |
+| Parameter | Tipo      |    | Description                                                              |
 | --------- | --------- |:--:| ------------------------------------------------------------------------ |
 | Result    | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
@@ -1091,7 +1091,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.reload().Params -->
-| Parameter | Type   |    | Description   |
+| Parameter | Tipo   |    | Description   |
 | --------- | ------ |:--:| ------------- |
 | Result    | Objeto | <- | Status object |
 <!-- END REF -->
@@ -1104,7 +1104,7 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 The object returned by `.reload( )` contains the following properties:
 
-| Property         | Type     | Description                                                                                                                                           |
+| Property         | Tipo     | Description                                                                                                                                           |
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number   | Error code, see below                                                                                                                                 |
@@ -1154,7 +1154,7 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| Parameter | Type   |    | Description                                       |
+| Parameter | Tipo   |    | Description                                       |
 | --------- | ------ |:--:| ------------------------------------------------- |
 | mode      | Entero | -> | `dk auto merge`: Enables the automatic merge mode |
 | Result    | Objeto | <- | Result of save operation                          |
@@ -1177,7 +1177,7 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Property     |                    | Type                  | Description                                                                                                             |
+| Property     |                    | Tipo                  | Description                                                                                                             |
 | ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | success      |                    | booleano              | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
@@ -1289,7 +1289,7 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parameter    | Type      |    | Description                                                                                             |
+| Parameter    | Tipo      |    | Description                                                                                             |
 | ------------ | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
 | filterString | Texto     | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | Colección | -> | Collection of attribute(s) to extract                                                                   |
@@ -1576,7 +1576,7 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| Parameter | Type     |    | Description                                                                           |
+| Parameter | Tipo     |    | Description                                                                           |
 | --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
 | Result    | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
@@ -1620,7 +1620,7 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parameter | Type      |    | Description                                      |
+| Parameter | Tipo      |    | Description                                      |
 | --------- | --------- |:--:| ------------------------------------------------ |
 | Result    | Colección | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
@@ -1696,7 +1696,7 @@ In this case:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parameter | Type   |    | Description   |
+| Parameter | Tipo   |    | Description   |
 | --------- | ------ |:--:| ------------- |
 | Result    | Objeto | <- | Status object |
 <!-- END REF -->
@@ -1722,7 +1722,7 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Property | Type     | Description                                                                                                                                                                                        |
+| Property | Tipo     | Description                                                                                                                                                                                        |
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success  | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
