@@ -397,14 +397,14 @@ Puede definir los límites de la iteración utilizando los parámetros opcionale
 **Nota:**los parámetros *inicio* y *fin* sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).
 
 - En el parámetro *begin*, pase la posición del elemento en *Expression* en la que se iniciará la iteración (se incluye *begin*).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- En el parámetro *end*, también se puede pasar la posición del elemento en *Expression* en la que se debe detener la iteración (se excluye *end*).
 
 Si se omite *fin* o si es mayor que el número de elementos de <em x-id="3" <Expression</em>, se iteran los elementos desde *inicio* hasta el último (incluido). Si los parámetros *inicio* y *fin* son valores positivos, representan posiciones reales de elementos en *Expression*. Si *comienzo* es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de *Expression*). Si el valor calculado es negativo, *inicio* toma el valor 0. **Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar. Si *fin* es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
 
 For example:
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- una colección contiene 10 elementos (numerados de 0 a 9)
+- begin=-4 > -> begin=-4+10=6 >-> la iteración comienza en el sexto elemento (#5)
+- end=-2 -> end=-2+10=8 -> la iteración se detiene antes del 8º elemento (#7), es decir, en el 7º elemento.
 
 #### Ejemplo
 
@@ -423,14 +423,14 @@ For example:
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 
-### Until and While conditions
+### Condiciones Until y While
 
 Puede controlar la ejecución de `For each...End for each` añadiendo una condición `Until` o una condición `While` al bucle. Cuando una instrucción `Until(condición)` está asociada al bucle, la iteración se detendrá tan pronto como la condición se evalúe como `True`, mientras que cuando se trata de una instrucción `While(condición)`, la iteración se detendrá cuando la condición se evalúe por primera vez como `False`.
 
 Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- La condición `Until` se comprueba al final de cada iteración, por lo que si *Expression* no está vacía o es nula, el bucle se ejecutará al menos una vez.
+- La condición `While` se prueba al principio de cada iteración, por lo que según el resultado de la condición, el bucle puede no ejecutarse en absoluto.
 
 #### Ejemplo
 
@@ -438,13 +438,13 @@ Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
+ For each($num;$colNum)While($total<30) //probada al inicio
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
 
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ For each($num;$colNum)Until($total>30) //probada al final
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
