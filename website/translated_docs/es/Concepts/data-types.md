@@ -27,40 +27,40 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Colección](Concepts/dt_collection.md)        | -                        | Sí                         | `Colección`                                             | `C_COLLECTION`                                                   |
 | [Variant](Concepts/dt_variant.md)(2)          | -                        | Sí                         | `Variant`                                               | `C_VARIANT`                                                      |
 
-(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) Tenga en cuenta que ORDA maneja los campos de la base a través de objetos (entidades) y por lo tanto, sólo soporta los tipos de datos disponibles para estos objetos. Para más información, consulte la descripción del tipo de datos [Objeto](Concepts/dt_object.md).
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) La variante no es en realidad un tipo de *datos* sino un tipo de *variable* que puede contener un valor de cualquier otro tipo de datos.
 
-## Default values
+## Valores por defecto
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+Cuando las variables se introducen mediante una directiva del compilador, reciben un valor por defecto, que mantendrán durante la sesión mientras no hayan sido asignadas.
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
+El valor por defecto depende del tipo y la categoría de la variable, su contexto de ejecución (interpretada o compilada), así como, para el modo compilado, las opciones de compilación definidas en la página Compilador de las Propiedades de la base:
 
-- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set:
-    - in interpreted mode: to zero
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
-        - "to zero": to zero (see above),
-        - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
+- Las variables proceso e interproceso se ponen siempre "en cero" (lo que significa, según el caso, "0", una cadena vacía, un Blob vacío, un puntero Nil, una fecha en blanco (00-00-00), etc.)
+- Se establecen las variables locales:
+    - en modo interpretado: en cero
+    - en modo compilado, dependiendo de la opción **Inicializar variables locales** de las Propiedades de la base:
+        - "en cero": en cero (ver arriba),
+        - "a un valor aleatorio": 0x72677267 para números y horas, siempre True para booleanos, igual que "en cero" para los demás,
+        - "no": no hay inicialización, lo que significa que lo que está en la RAM se utiliza para las variables, como los valores utilizados antes para otras variables. **Nota:** 4D recomienda utilizar "en cero".
 
-The following table illustrates these default values:
+La siguiente tabla ilustra estos valores por defecto:
 
-| Type         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen      | False                                                                               | True                    | True (varies)                |
-| Fecha        | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Entero largo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Imagen       | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real         | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Puntero      | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Texto        | ""                                                                                  | ""                      | ""                           |
-| Blob         | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Objeto       | null                                                                                | null                    | null                         |
-| Colección    | null                                                                                | null                    | null                         |
-| Variant      | undefined                                                                           | undefined               | undefined                    |
+| Tipo         | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"         |
+| ------------ | --------------------------------------------------------------------------------------- | --------------------------- | ---------------------------- |
+| Booleano     | False                                                                                   | True                        | True (varía)                 |
+| Fecha        | 00-00-00                                                                                | 00-00-00                    | 00-00-00                     |
+| Entero largo | 0                                                                                       | 1919382119                  | 909540880 (varía)            |
+| Hora         | 00:00:00                                                                                | 533161:41:59                | 249345:34:24 (varies)        |
+| Imagen       | picture size=0                                                                          | picture size=0              | picture size=0               |
+| Real         | 0                                                                                       | 1.250753659382e+243         | 1.972748538022e-217 (varies) |
+| Puntero      | Nil=true                                                                                | Nil=true                    | Nil=true                     |
+| Texto        | ""                                                                                      | ""                          | ""                           |
+| Blob         | Blob size=0                                                                             | Blob size=0                 | Blob size=0                  |
+| Objeto       | null                                                                                    | null                        | null                         |
+| Colección    | null                                                                                    | null                        | null                         |
+| Variant      | undefined                                                                               | undefined                   | undefined                    |
 
 
 ## Converting data types
