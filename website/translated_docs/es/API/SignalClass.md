@@ -107,7 +107,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| Parameter   | Type      |    | Description                            |
+| Parameter   | Tipo      |    | Description                            |
 | ----------- | --------- |:--:| -------------------------------------- |
 | description | Texto     | -> | Description for the signal             |
 | Result      | 4D.Signal | <- | Native object encapsulating the signal |
@@ -226,7 +226,7 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -255,7 +255,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| Parameter | Type     |    | Description                                    |
+| Parameter | Tipo     |    | Description                                    |
 | --------- | -------- | -- | ---------------------------------------------- |
 | timeout   | Real     | -> | Maximum waiting time for the signal in seconds |
 | Result    | Booleano | <- | State of the `.signaled` property              |
