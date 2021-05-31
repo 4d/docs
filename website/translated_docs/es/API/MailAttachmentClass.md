@@ -28,7 +28,7 @@ Attachment objects provide the following read-only properties and functions:
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Tipo              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
@@ -165,7 +165,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Tipo              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
@@ -212,7 +212,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 **.getContent()** : Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type |    | Description               |
+| Parameter | Tipo |    | Description               |
 | --------- | ---- |:--:| ------------------------- |
 | Result    | Blob | <- | Content of the attachment |
 <!-- END REF -->
