@@ -107,7 +107,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 #### cs -> classStore
 
-| Parameter  | Type   |    | Description                                   |
+| Parameter  | Tipo   |    | Description                                   |
 | ---------- | ------ | -- | --------------------------------------------- |
 | classStore | object | <- | User class store for the project or component |
 
@@ -125,7 +125,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | Type   |    | Description    |
+| Parameter  | Tipo   |    | Description    |
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
