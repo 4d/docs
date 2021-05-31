@@ -42,7 +42,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
-| Parameter | Type         |    | Description                                |
+| Parameter | Tipo         |    | Description                                |
 | --------- | ------------ | -- | ------------------------------------------ |
 | localID   | Texto        | -> | Local ID of the remote datastore to return |
 | Result    | cs.DataStore | <- | Reference to the datastore                 |
@@ -116,7 +116,7 @@ Using the main datastore on the 4D database:
 **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parameter      | Type         |    | Description                                                               |
+| Parameter      | Tipo         |    | Description                                                               |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
@@ -148,7 +148,7 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Property    | Type         | Description                                                                                                                                                                                                                                                            |
+| Property    | Tipo         | Description                                                                                                                                                                                                                                                            |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname    | Texto        | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
 | user        | Texto        | User name                                                                                                                                                                                                                                                              |
@@ -259,7 +259,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 **.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -297,7 +297,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parameter | Type   |    | Description                                                                 |
+| Parameter | Tipo   |    | Description                                                                 |
 | --------- | ------ |:--:| --------------------------------------------------------------------------- |
 | Result    | Objeto | <- | Information about the encryption of the current datastore and of each table |
 <!-- END REF -->
@@ -313,7 +313,7 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 The returned object contains the following properties:
 
-| Property    |             |               | Type     | Description                                                                        |
+| Property    |             |               | Tipo     | Description                                                                        |
 | ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
 | keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
@@ -371,7 +371,7 @@ You want to know the number of encrypted tables in the current data file:
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parameter | Type   |    | Description          |
+| Parameter | Tipo   |    | Description          |
 | --------- | ------ |:--:| -------------------- |
 | Result    | Objeto | <- | Datastore properties |
 <!-- END REF -->
@@ -382,12 +382,12 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Property   | Type     | Description                                                                                                                                                     |
+| Property   | Tipo     | Description                                                                                                                                                     |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
 | networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
 | localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Tipo</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -441,7 +441,7 @@ On a remote datastore:
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parameter | Type      |    | Description                                                  |
+| Parameter | Tipo      |    | Description                                                  |
 | --------- | --------- |:--:| ------------------------------------------------------------ |
 | Result    | Colección | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
@@ -480,7 +480,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parameter | Type     |    | Description                                                                    |
+| Parameter | Tipo     |    | Description                                                                    |
 | --------- | -------- |:--:| ------------------------------------------------------------------------------ |
 | Result    | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
 <!-- END REF -->
@@ -514,7 +514,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 **.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -549,7 +549,7 @@ When this function is not called, new entity selections can be shareable, depend
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Parameter     | Type   |    | Description                           |
+| Parameter     | Tipo   |    | Description                           |
 | ------------- | ------ | -- | ------------------------------------- |
 | curPassPhrase | Texto  | -> | Current encryption passphrase         |
 | curDataKey    | Objeto | -> | Current data encryption key           |
@@ -577,7 +577,7 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 
 The result of the command is described in the returned object:
 
-| Property   |                          | Type      | Description                                                                     |
+| Property   |                          | Tipo      | Description                                                                     |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------- |
 | success    |                          | Booleano  | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |           | Properties below are returned only if success is *FALSE*                        |
@@ -626,7 +626,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parameter | Type     |    | Description                                                                                          |
+| Parameter | Tipo     |    | Description                                                                                          |
 | --------- | -------- | -- | ---------------------------------------------------------------------------------------------------- |
 | status    | Booleano | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
 <!-- END REF -->
@@ -670,7 +670,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parameter | Type    |    | Description                          |
+| Parameter | Tipo    |    | Description                          |
 | --------- | ------- | -- | ------------------------------------ |
 | file      | 4D.File | -> | File object                          |
 | reqNum    | Entero  | -> | Number of requests to keep in memory |
@@ -747,7 +747,7 @@ You want to log ORDA client requests in memory:
 **.startTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -815,7 +815,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 **.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -850,7 +850,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 **.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
