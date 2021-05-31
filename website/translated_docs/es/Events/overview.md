@@ -21,7 +21,7 @@ End if
 
 Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
 
-| Property | Type | Description |
+| Property | Tipo | Description |
 | -------- | ---- | ----------- |
 |          |      |             |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
