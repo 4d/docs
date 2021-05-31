@@ -110,7 +110,7 @@ Considering the following table properties:
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
-| Parameter  | Type               |    | Description                                         |
+| Parameter  | Tipo               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | parámetros | Objeto             | -> | Build option: context                               |
 | Result     | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
@@ -131,7 +131,7 @@ Lazy loading is applied.
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                          |
+| Property | Tipo  | Description                                                                                                                                                                                                                                                                                          |
 | -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
@@ -163,7 +163,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parameter  | Type               |    | Description                                      |
+| Parameter  | Tipo               |    | Description                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol  | Colección          | -> | Collection of objects to be mapped with entities |
 | parámetros | Objeto             | -> | Build option: context                            |
@@ -208,7 +208,7 @@ If a \_\_STAMP attribute is given, a check is performed with the stamp in the da
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                          |
+| Property | Tipo  | Description                                                                                                                                                                                                                                                                                          |
 | -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
@@ -361,7 +361,7 @@ In this example, the first entity will be created and saved but the second will 
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parameter  | Type            |    | Description                                 |
+| Parameter  | Tipo            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
 | parámetros | Objeto          | -> | Build option: context                       |
@@ -382,7 +382,7 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                         |
+| Property | Tipo  | Description                                                                                                                                                                                                                                                                                         |
 | -------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context  | Texto | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
@@ -438,7 +438,7 @@ This example illustrates the use of the *context* property:
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parameter | Type         |    | Description                |
+| Parameter | Tipo         |    | Description                |
 | --------- | ------------ |:--:| -------------------------- |
 | Result    | cs.DataStore | <- | Datastore of the dataclass |
 <!-- END REF -->
@@ -492,7 +492,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parameter | Type   |    | Description                  |
+| Parameter | Tipo   |    | Description                  |
 | --------- | ------ | -- | ---------------------------- |
 | Result    | Objeto | <- | Information on the dataclass |
 <!-- END REF -->
@@ -504,7 +504,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 **Returned object**
 
-| Property    | Type   | Description                              |
+| Property    | Tipo   | Description                              |
 | ----------- | ------ | ---------------------------------------- |
 | name        | Texto  | Name of the dataclass                    |
 | primaryKey  | Texto  | Name of the primary key of the dataclass |
@@ -565,7 +565,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
-| Parameter | Type      |    | Description                       |
+| Parameter | Tipo      |    | Description                       |
 | --------- | --------- | -- | --------------------------------- |
 | Result    | 4D.Entity | <- | New entity matching the Dataclass |
 <!-- END REF -->
@@ -608,7 +608,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| Parameter | Type               |    | Description                                                                                                                                   |
+| Parameter | Tipo               |    | Description                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | Entero             | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | Result    | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
@@ -656,7 +656,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
-| Parameter     | Type               |    | Description                                                                                                                 |
+| Parameter     | Tipo               |    | Description                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texto              | -> | Search criteria as string                                                                                                   |
 | formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
@@ -893,10 +893,10 @@ Additional examples are provided in example 3.
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
-| Property      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Property      | Tipo     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
-| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Type</th><th>Description</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Description</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 | args          | Objeto   | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | allowFormulas | Booleano | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | context       | Texto    | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
