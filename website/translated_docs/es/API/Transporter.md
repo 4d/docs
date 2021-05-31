@@ -364,7 +364,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parameter | Type   |    | Description                                 |
+| Parameter | Tipo   |    | Description                                 |
 | --------- | ------ |:--:| ------------------------------------------- |
 | Result    | Objeto | <- | Status of the transporter object connection |
 <!-- END REF -->
@@ -379,7 +379,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Property   |                          | Type       | Description                                                                                                  |
+| Property   |                          | Tipo       | Description                                                                                                  |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | booleano   | True if the check is successful, False otherwise                                                             |
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
