@@ -20,7 +20,7 @@ This event is generated when the width of a column in the list box is modified b
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Type     | Description                                                         |
+| Property    | Tipo     | Description                                                         |
 | ----------- | -------- | ------------------------------------------------------------------- |
 | code        | longint  | On Column Resize                                                    |
 | description | text     | "On Column Resize"                                                  |
