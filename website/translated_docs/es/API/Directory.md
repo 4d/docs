@@ -434,7 +434,7 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| Parameter         | Type      |    | Description                                 |
+| Parameter         | Tipo      |    | Description                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
@@ -490,7 +490,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 **.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
-| Parameter | Type    |    | Description                          |
+| Parameter | Tipo    |    | Description                          |
 | --------- | ------- | -- | ------------------------------------ |
 | path      | Texto   | -> | Relative POSIX file pathname         |
 | Result    | 4D.File | <- | `File` object (null if invalid path) |
@@ -530,7 +530,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Parameter | Type      |    | Description                         |
+| Parameter | Tipo      |    | Description                         |
 | --------- | --------- | -- | ----------------------------------- |
 | options   | Entero    | -> | File list options                   |
 | Result    | Colección | <- | Collection of children file objects |
@@ -591,7 +591,7 @@ You want to get all files that are not invisible in the Documents folder:
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| Parameter | Type      |    | Description                                    |
+| Parameter | Tipo      |    | Description                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
 | path      | Texto     | -> | Relative POSIX file pathname                   |
 | Result    | 4D.Folder | <- | Created folder object (null if invalid *path*) |
@@ -631,7 +631,7 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Parameter | Type      |    | Description                           |
+| Parameter | Tipo      |    | Description                           |
 | --------- | --------- | -- | ------------------------------------- |
 | options   | Entero    | -> | Folder list options                   |
 | Result    | Colección | <- | Collection of children folder objects |
@@ -678,7 +678,7 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Parameter | Type   |    | Description                                   |
+| Parameter | Tipo   |    | Description                                   |
 | --------- | ------ | -- | --------------------------------------------- |
 | size      | Entero | -> | Side length for the returned picture (pixels) |
 | Result    | Imagen | <- | Icon                                          |
