@@ -9,7 +9,7 @@ Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 ## Description
 $queryplan returns the query plan as it was passed to 4D Server.
 
-| Property | Type   | Description                                                                                 |
+| Property | Tipo   | Description                                                                                 |
 | -------- | ------ | ------------------------------------------------------------------------------------------- |
 | item     | Cadena | Actual query executed                                                                       |
 | subquery | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
