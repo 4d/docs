@@ -25,7 +25,7 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Type    | Description                                                                                                                         |
+| Property    | Tipo    | Description                                                                                                                         |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | code        | longint | 42                                                                                                                                  |
 | description | text    | "On Header Click"                                                                                                                   |
