@@ -120,7 +120,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
-| Parameter  | Type        |    | Description                               |
+| Parameter  | Tipo        |    | Description                               |
 | ---------- | ----------- |:--:| ----------------------------------------- |
 | formulaExp | Expression  | -> | Formula to be returned as object          |
 | Result     | 4D.Function | <- | Native function encapsulating the formula |
@@ -255,7 +255,7 @@ Calling a formula using object notation:
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
-| Parameter     | Type        |    | Description                             |
+| Parameter     | Tipo        |    | Description                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
 | formulaString | Texto       | -> | Text formula to be returned as object   |
 | Result        | 4D.Function | <- | Native object encapsulating the formula |
@@ -310,7 +310,7 @@ The following code will create a dialog accepting a formula in text format:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| Parameter     | Type      |    | Description                                                             |
+| Parameter     | Tipo      |    | Description                                                             |
 | ------------- | --------- |:--:| ----------------------------------------------------------------------- |
 | thisObj       | Objeto    | -> | Object to be returned by the This command in the formula                |
 | formulaParams | Colección | -> | Collection of values to be passed as $1...$n when `formula` is executed |
@@ -371,7 +371,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Parameter | Type   |    | Description                                               |
+| Parameter | Tipo   |    | Description                                               |
 | --------- | ------ | -- | --------------------------------------------------------- |
 | thisObj   | Objeto | -> | Object to be returned by the This command in the formula  |
 | params    | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
