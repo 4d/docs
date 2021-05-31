@@ -60,7 +60,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Type      |    | Description                                     |
+| Parameter      | Tipo      |    | Description                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Texto     | -> | Folder path                                     |
 | folderConstant | Entero    | -> | 4D folder constant                              |
@@ -147,7 +147,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Type     |    | Description                                                  |
+| Parameter | Tipo     |    | Description                                                  |
 | --------- | -------- | -- | ------------------------------------------------------------ |
 | Result    | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
@@ -208,7 +208,7 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                  |
+| Parameter         | Tipo      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
@@ -270,7 +270,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Type   |    | Description            |
+| Parameter | Tipo   |    | Description            |
 | --------- | ------ | -- | ---------------------- |
 | option    | Entero | -> | Folder deletion option |
 <!-- END REF -->
@@ -384,7 +384,7 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                    |
+| Parameter         | Tipo      |    | Description                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
@@ -454,7 +454,7 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Type      |    | Description                  |
+| Parameter | Tipo      |    | Description                  |
 | --------- | --------- | -- | ---------------------------- |
 | newName   | Texto     | -> | New full name for the folder |
 | Result    | 4D.Folder | <- | Renamed folder               |
