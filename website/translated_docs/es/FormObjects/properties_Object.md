@@ -4,7 +4,7 @@ title: Objetos
 ---
 
 ---
-## Type
+## Tipo
 
  `MANDATORY SETTING`
 
