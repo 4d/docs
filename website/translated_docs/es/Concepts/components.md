@@ -1,5 +1,5 @@
 ---
-id: components
+id: componentes
 title: Componentes
 ---
 
@@ -160,12 +160,12 @@ Los siguientes comandos no son compatibles para su uso dentro de un componente p
 
 Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la base en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` de la base local, y viceversa.
 
-## Use of forms
+## Utilización de formularios
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Todos los formularios proyecto presentes en la base matriz pueden ser utilizados por el componente.
-- Un componente puede llamar a formularios tabla de la base local. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Todos los formularios proyecto presentes en la base matriz pueden ser utilizados por el componente.
+- Un componente puede llamar a formularios tabla de la base local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.
 
-**Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual de la base local, en el contexto de ésta. Consequently, if the form includes variables, the component will not have access to it.
+**Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual de la base local, en el contexto de ésta. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.
 
 - Puede publicar formularios de componentes como subformularios en las bases locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
