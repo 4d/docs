@@ -465,7 +465,7 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Parameter         | Type      |    | Description                                 |
+| Parameter         | Tipo      |    | Description                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
@@ -520,7 +520,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parameter | Type |    | Description  |
+| Parameter | Tipo |    | Description  |
 | --------- | ---- | -- | ------------ |
 | Result    | Blob | <- | File content |
 <!-- END REF -->
@@ -563,7 +563,7 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parameter | Type   |    | Description                                   |
+| Parameter | Tipo   |    | Description                                   |
 | --------- | ------ | -- | --------------------------------------------- |
 | size      | Entero | -> | Side length for the returned picture (pixels) |
 | Result    | Imagen | <- | Icon                                          |
@@ -602,7 +602,7 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parameter   | Type   |    | Description                     |
+| Parameter   | Tipo   |    | Description                     |
 | ----------- | ------ | -- | ------------------------------- |
 | charSetName | Texto  | -> | Name of character set           |
 | charSetNum  | Entero | -> | Number of character set         |
