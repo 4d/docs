@@ -34,7 +34,7 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| Property      | Type      | Description                                                                                                                                                                                     |
+| Property      | Tipo      | Description                                                                                                                                                                                     |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | Cadena    | Name of the dataclass.                                                                                                                                                                          |
 | __COUNT       | Number    | Number of entities in the dataclass.                                                                                                                                                            |
@@ -44,7 +44,7 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| Property    | Type   | Description                                                                                                |
+| Property    | Tipo   | Description                                                                                                |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | Cadena | Value of the primary key defined for the dataclass.                                                        |
 | __TIMESTAMP | Fecha  | Timestamp of the last modification of the entity                                                           |
