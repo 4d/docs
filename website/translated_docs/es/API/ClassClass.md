@@ -55,7 +55,7 @@ This property is **read-only**.
 **.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
-| Parameter | Type     |    | Description                                      |
+| Parameter | Tipo     |    | Description                                      |
 | --------- | -------- |:--:| ------------------------------------------------ |
 | param     | any      | -> | Parameter(s) to pass to the constructor function |
 | Result    | 4D.Class | <- | New object of the class                          |
