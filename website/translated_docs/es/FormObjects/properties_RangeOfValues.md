@@ -11,7 +11,7 @@ You can assign a default value to be entered in an input object. This property i
 The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
 - text/string
 - number/integer
-- date
+- fecha
 - time
 - booleano
 
