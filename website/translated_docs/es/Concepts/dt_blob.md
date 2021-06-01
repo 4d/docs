@@ -15,7 +15,7 @@ Los BLOBs en 4D pueden pasarse como parámetros a los comandos 4D o a las rutina
 
 Para pasar un BLOB a sus propios métodos, también puede definir un puntero al BLOB y pasar el puntero como parámetro.
 
-**Examples:**
+**Ejemplos:**
 ```4d
   ` Declarar una variable de tipo BLOB
  C_BLOB(anyBlobVar)
