@@ -3,7 +3,7 @@ id: DataClassAttributeClass
 title: DataClassAttribute
 ---
 
-Dataclass attributes are available as properties of their respective classes. For example:
+Dataclass attributes are available as properties of their respective classes. Por ejemplo:
 
 ```4d
  nameAttribute:=ds.Company.name //reference to class attribute
