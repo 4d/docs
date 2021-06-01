@@ -1,5 +1,5 @@
 ---
-id: object
+id: objeto
 title: Objeto
 ---
 
@@ -16,7 +16,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - date (date type or ISO date format string)
     - object(1) (objects can be nested on several levels)
     - picture(2)
-    - collection
+    - colección
 
 (1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
 
@@ -32,7 +32,7 @@ Cada valor de propiedad al que se accede a través de la notación de objeto se 
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization
+## Inicialización
 
 Los objetos deben haber sido inicializados, por ejemplo utilizando el comando `New object`, de lo contrario al intentar leer o modificar sus propiedades se generará un error de sintaxis.
 
@@ -67,7 +67,7 @@ Ejemplo:
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+Ejemplos:
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -82,7 +82,7 @@ Since an object property value can be an object or a collection, object notation
 ```
 La notación de objetos está disponible en cualquier elemento del lenguaje que pueda contener o devolver un objeto, es decir:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Ejemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -210,7 +210,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
 
 - Assigning an undefined value to a non existing object property does nothing.
 
-Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. For example:
+Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
 
 ```4d
  $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
@@ -218,7 +218,7 @@ Cuando se esperan expresiones de un tipo determinado en su código 4D, puede ase
 ```
 
 
-## Examples
+## Ejemplos
 
 La utilización de la notación de objetos simplifica el código 4D en el manejo de los mismos. Sin embargo, tenga en cuenta que la notación basada en comandos sigue siendo totalmente soportada.
 
