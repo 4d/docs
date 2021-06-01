@@ -42,7 +42,7 @@ For security reasons, all encryption maintenance operations require that the cur
 - If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](assets/en/MSC/MSC_encrypt7.png)
 
 At this step, you have two options:
-- enter the current passphrase(2) and click **OK**. OR
+- enter the current passphrase(2) and click **OK**. O
 - connect a device such as a USB key and click the **Scan devices** button.
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
