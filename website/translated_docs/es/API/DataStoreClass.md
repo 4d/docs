@@ -320,7 +320,7 @@ The returned object contains the following properties:
 | tables      |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
 |             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
 |             |             | name          | Texto    | Name of the table                                                                  |
-|             |             | num           | Number   | Table number                                                                       |
+|             |             | num           | Número   | Table number                                                                       |
 |             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
 |             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
 
@@ -387,7 +387,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 | type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
 | networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
 | localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Tipo</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Tipo</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -581,11 +581,11 @@ The result of the command is described in the returned object:
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------- |
 | success    |                          | Booleano  | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |           | Properties below are returned only if success is *FALSE*                        |
-| status     |                          | Number    | Error code (4 if the provided encryption key is wrong)                          |
+| status     |                          | Número    | Error code (4 if the provided encryption key is wrong)                          |
 | statusText |                          | Texto     | Error message                                                                   |
 | errors     |                          | Colección | Stack of errors. The first error has the highest index                          |
 |            | \[ ].componentSignature | Texto     | Internal component name                                                         |
-|            | \[ ].errCode            | Number    | Error number                                                                    |
+|            | \[ ].errCode            | Número    | Error number                                                                    |
 |            | \[ ].message            | Texto     | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
