@@ -4,7 +4,7 @@ title: Methods
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+A method is basically a piece of code that executes one or several actions. Na linguagem 4D, há duas categorias de métodos:
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
     - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
