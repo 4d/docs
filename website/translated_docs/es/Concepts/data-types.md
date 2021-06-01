@@ -47,35 +47,35 @@ El valor por defecto depende del tipo y la categoría de la variable, su context
 
 La siguiente tabla ilustra estos valores por defecto:
 
-| Tipo         | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"         |
-| ------------ | --------------------------------------------------------------------------------------- | --------------------------- | ---------------------------- |
-| Booleano     | False                                                                                   | True                        | True (varía)                 |
-| Fecha        | 00-00-00                                                                                | 00-00-00                    | 00-00-00                     |
-| Entero largo | 0                                                                                       | 1919382119                  | 909540880 (varía)            |
-| Hora         | 00:00:00                                                                                | 533161:41:59                | 249345:34:24 (varies)        |
-| Imagen       | picture size=0                                                                          | picture size=0              | picture size=0               |
-| Real         | 0                                                                                       | 1.250753659382e+243         | 1.972748538022e-217 (varies) |
-| Puntero      | Nil=true                                                                                | Nil=true                    | Nil=true                     |
-| Texto        | ""                                                                                      | ""                          | ""                           |
-| Blob         | Blob size=0                                                                             | Blob size=0                 | Blob size=0                  |
-| Objeto       | null                                                                                    | null                        | null                         |
-| Colección    | null                                                                                    | null                        | null                         |
-| Variant      | undefined                                                                               | undefined                   | undefined                    |
+| Tipo         | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"        |
+| ------------ | --------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
+| Booleano     | False                                                                                   | True                        | True (varía)                |
+| Fecha        | 00-00-00                                                                                | 00-00-00                    | 00-00-00                    |
+| Entero largo | 0                                                                                       | 1919382119                  | 909540880 (varía)           |
+| Hora         | 00:00:00                                                                                | 533161:41:59                | 249345:34:24 (varía)        |
+| Imagen       | picture size=0                                                                          | picture size=0              | picture size=0              |
+| Real         | 0                                                                                       | 1.250753659382e+243         | 1.972748538022e-217 (varía) |
+| Puntero      | Nil=true                                                                                | Nil=true                    | Nil=true                    |
+| Texto        | ""                                                                                      | ""                          | ""                          |
+| Blob         | Tamaño Blob=0                                                                           | Tamaño Blob=0               | Tamaño Blob=0               |
+| Objeto       | null                                                                                    | null                        | null                        |
+| Colección    | null                                                                                    | null                        | null                        |
+| Variant      | indefinido                                                                              | indefinido                  | indefinido                  |
 
 
-## Converting data types
+## Convertir los tipos de datos
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+El lenguaje 4D contiene operadores y comandos para convertir entre tipos de datos, cuando dichas conversiones tienen sentido. El lenguaje 4D aplica la verificación de tipos de datos. Por ejemplo, no se puede escribir: "abc"+0.5+!12/25/96!-?00:30:45?. Esto generará errores de sintaxis.
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los que se pueden convertir y los comandos utilizados para hacerlo:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Fecha   | Hora    | Bool       |
-| Número (2)           | Cadena    |           |         |         | Bool       |
-| Fecha                | Cadena    |           |         |         | Bool       |
-| Hora                 | Cadena    |           |         |         | Bool       |
-| Booleano             |           | Num       |         |         |            |
+| Tipos a convertir | en Cadena | en Número | en Fecha | en Hora | en Booleano |
+| ----------------- | --------- | --------- | -------- | ------- | ----------- |
+| String (1)        |           | Num       | Fecha    | Hora    | Bool        |
+| Número (2)        | Cadena    |           |          |         | Bool        |
+| Fecha             | Cadena    |           |          |         | Bool        |
+| Hora              | Cadena    |           |          |         | Bool        |
+| Booleano          |           | Num       |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.
 
