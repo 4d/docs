@@ -1,5 +1,5 @@
 ---
-id: collection
+id: colección
 title: Colección
 ---
 
@@ -7,20 +7,20 @@ Collections are ordered lists of values of similar or mixed types (text, number,
 
 Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
 
-To access a collection element, you need to pass the element number inside square brackets:
+Para acceder a un elemento de la colección, hay que pasar el número del elemento entre corchetes:
 
 ```4d
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. Examples:
+You can pass any valid 4D expression which returns a positive integer in *expression*. Ejemplos:
 
 ```4d
- myCollection[5]  //access to 6th element of the collection
+ myCollection[5]  //acceso al 6º elemento de la colección
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Atención:** los elementos de la colección están numerados desde 0.
 
 You can assign a value to a collection element or get a collection element value:
 
@@ -29,7 +29,7 @@ You can assign a value to a collection element or get a collection element value
  $myVar:=myCol[0]
 ```
 
-If you assign an element's index that surpasses the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a null value:
+Si se asigna un índice de elemento que sobrepasa el último elemento existente de la colección, la colección se redimensiona automáticamente y a todos los nuevos elementos intermedios se les asigna un valor nulo:
 
 ```4d
  var myCol : Collection
@@ -40,9 +40,9 @@ If you assign an element's index that surpasses the last existing element of the
   //myCol[4]=null
 ```
 
-## Initialization
+## Inicialización
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Las colecciones deben haber sido inicializadas, por ejemplo utilizando el comando `New collection`, de lo contrario al intentar leer o modificar sus elementos se generará un error de sintaxis.
 
 Ejemplo:
 
@@ -51,12 +51,12 @@ Ejemplo:
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
 ```
 
-### Regular or shared collection
+### Colección estándar o compartida
 
-You can create two types of collections:
+Puede crear dos tipos de colecciones:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. These collections can be edited without any specific access control but cannot be shared between processes.
-- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
 
 For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
@@ -64,11 +64,11 @@ For more information, refer to the [Shared objects and collections](Concepts/sha
 
 4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
 
-For example:
+Por ejemplo:
 
 ```4d
-$newCol:=$col.copy() //deep copy of $col to $newCol
-$col.push(10;100) //add 10 and 100 to the collection
+$newCol:=$col.copy() //copia de $col a $newCol
+$col.push(10;100) //añade de 10 y 100 a la colección
 ```
 
 Some functions return the original collection after modification, so that you can run the calls in a sequence:
@@ -79,17 +79,17 @@ Some functions return the original collection after modification, so that you ca
 ```
 
 
-### propertyPath parameter
+### parámetro rutaPropiedad
 
 
-Several functions accept a _propertyPath_ as parameter. This parameter stands for:
+Several functions accept a _propertyPath_ as parameter. Este parámetro significa:
 
-- either an object property name, for example "lastName"
-- or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
+- o bien un nombre de propiedad del objeto, por ejemplo "apellido"
+- o una ruta de propiedades del objeto, es decir, una secuencia jerárquica de subpropiedades vinculadas con caracteres de punto, por ejemplo "empleado.hijos.nombre".
 
 **Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
 ```4d
- $vmin:=$col.min("My.special.property") //undefined
+ $vmin:=$col.min("My.special.property") //indefinido
  $vmin:=$col.min(["My.special.property"]) //error
 ```
