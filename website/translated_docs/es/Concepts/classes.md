@@ -109,7 +109,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 | Parameter  | Tipo   |    | Description                                   |
 | ---------- | ------ | -- | --------------------------------------------- |
-| classStore | object | <- | User class store for the project or component |
+| classStore | objeto | <- | User class store for the project or component |
 
 The `cs` command returns the user class store for the current project or component. The `cs` command returns the user class store for the current project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -127,7 +127,7 @@ $instance:=cs.myClass.new()
 
 | Parameter  | Tipo   |    | Description    |
 | ---------- | ------ | -- | -------------- |
-| classStore | object | <- | 4D class store |
+| classStore | objeto | <- | 4D class store |
 
 The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
@@ -172,7 +172,7 @@ Specific 4D keywords can be used in class definitions:
 
 ### `Function`
 
-#### Syntax
+#### Sintaxis
 
 ```4d
 Function <name>({$parameterName : type; ...}){->$parameterName : type}
@@ -185,13 +185,13 @@ In the class definition file, function declarations use the `Function` keyword, 
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
-Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). For example:
+Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Por ejemplo:
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-Within a class function, the `This` command is used as the object instance. For example:
+Within a class function, the `This` command is used as the object instance. Por ejemplo:
 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)
