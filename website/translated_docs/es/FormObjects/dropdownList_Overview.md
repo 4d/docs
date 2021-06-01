@@ -78,7 +78,7 @@ To initialize the array associated to the drop-down list, you can:
 
 * Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
-* Before the object is displayed, execute code that assigns values to the array elements. For example:
+* Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:
 
 ```4d
   ARRAY TEXT(aCities;6) 
@@ -92,7 +92,7 @@ To initialize the array associated to the drop-down list, you can:
 
 In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
-*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. For example:
+*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. Por ejemplo:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
