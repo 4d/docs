@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Ejemplo              | Description                                                                      |
+| Sintaxis                                      | Ejemplo              | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -205,7 +205,7 @@ The following properties are returned for an exposed dataclass:
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
 | name           | Cadena | Name of the dataclass                                                                        |
 | collectionName | Cadena | Name of an entity selection on the dataclass                                                 |
-| tableNumber    | Number | Table number in the 4D database                                                              |
+| tableNumber    | Número | Table number in the 4D database                                                              |
 | scope          | Cadena | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
 | dataURI        | Cadena | A URI to the data in the dataclass                                                           |
 
@@ -218,7 +218,7 @@ Here are the properties for each exposed attribute that are returned:
 | ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | Cadena   | Attribute name.                                                                                                                                       |
 | kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | Number   | Position of the field in the database table).                                                                                                         |
+| fieldPos    | Número   | Position of the field in the database table).                                                                                                         |
 | scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
 | indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
 | type        | Cadena   | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
