@@ -26,7 +26,7 @@ Functions must always be called using REST **POST** requests (a GET request will
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Syntax                                                                      |
+| Class function                                                     | Sintaxis                                                                    |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
