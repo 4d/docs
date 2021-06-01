@@ -70,7 +70,7 @@ You can pass one or more optional *param* parameters, which will be passed to th
 
 If `.new()` is called on a non-existing class, an error is returned.
 
-#### Examples
+#### Ejemplos
 
 To create a new instance of the Person class:
 
@@ -125,7 +125,7 @@ A superclass of a user class is declared in a class by using the [`Class extends
 
 This property is **read-only**.
 
-#### Examples
+#### Ejemplos
 
 ```4d
 $sup:=4D.File.superclass //Document
