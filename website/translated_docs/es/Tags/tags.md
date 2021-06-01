@@ -451,7 +451,7 @@ The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the 
 
 In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
 
-Examples:
+Ejemplos:
 
 ```html
 <!--#4DINCLUDE subpage.html-->
