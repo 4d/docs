@@ -349,7 +349,7 @@ local Function getYoungest
 - **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
 
 
-### Examples
+### Ejemplos
 
 #### Calculating age
 
