@@ -369,7 +369,7 @@ The object returned by `.drop( )` contains the following properties:
 | statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
 |               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
 | LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
-| lockInfo      |                     | object                | Information about the lock origin                                                                                     |
+| lockInfo      |                     | objeto                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
 |               | user_name           | text                  | Session user name on the machine                                                                                      |
 |               | user4d_id           | text                  | User name in the 4D database directory                                                                                |
@@ -384,7 +384,7 @@ The object returned by `.drop( )` contains the following properties:
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                |
+| Constant                                  | Valor | Comment                                                                                                                                                                                                                                |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li><p>**Associated statusText**: "Entity does not exist anymore" |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br>**Associated statusText**: "Already locked"                                                                                                                                       |
@@ -929,7 +929,7 @@ The object returned by `.lock( )` contains the following properties:
 | statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
 |                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
 | lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
-| lockInfo         |                     | object                | Information about the lock origin                                                                                   |
+| lockInfo         |                     | objeto                | Information about the lock origin                                                                                   |
 |                  | task_id             | number                | Process ID                                                                                                          |
 |                  | user_name           | text                  | Session user name on the machine                                                                                    |
 |                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
@@ -946,7 +946,7 @@ The object returned by `.lock( )` contains the following properties:
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                                 |
+| Constant                                  | Valor | Comment                                                                                                                                                                                                                                                 |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when dk force drop if stamp changed option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity does not exist anymore"                                           |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"                                                                                                            |
@@ -1112,7 +1112,7 @@ The object returned by `.reload( )` contains the following properties:
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                   |
+| Constant                                  | Valor | Comment                                                                                                                                                                                                                   |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>***Associated statusText***: "Entity does not exist anymore" |
 | `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br>***Associated statusText***: "Other error"                                                                           |
@@ -1187,7 +1187,7 @@ The object returned by `.save()` contains the following properties:
 | statusText   |                    | text                  | Description of the error, [see below](#status-and-statustext)                                                           |
 |              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
 | lockKindText |                    | text                  | "Locked by record"                                                                                                      |
-| lockInfo     |                    | object                | Information about the lock origin                                                                                       |
+| lockInfo     |                    | objeto                | Information about the lock origin                                                                                       |
 |              | task_id            | number                | Process id                                                                                                              |
 |              | user_name          | text                  | Session user name on the machine                                                                                        |
 |              | user4d_id          | text                  | User name in the 4D database directory                                                                                  |
@@ -1204,7 +1204,7 @@ The object returned by `.save()` contains the following properties:
 
 The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                                           |
+| Constant                                  | Valor | Comment                                                                                                                                                                                                                                                           |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status automerge failed`              | 6     | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.<p><p>**Associated statusText**: "Auto merge failed"                                                        |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                            |
@@ -1708,7 +1708,7 @@ The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the p
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
-> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
+> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
