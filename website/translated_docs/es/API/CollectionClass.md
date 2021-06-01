@@ -94,7 +94,7 @@ You must assign the returned reference to a 4D variable of the Collection type.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
-Otherwise, you can add or modify elements subsequently through assignment. For example:
+Otherwise, you can add or modify elements subsequently through assignment. Por ejemplo:
 
 ```4d
  myCol[10]:="My new element"
@@ -188,7 +188,7 @@ You can pass any number of values of the following supported types:
 *   number (real, longint...). Number values are always stored as reals.
 *   text
 *   booleano
-*   date
+*   fecha
 *   time (stored as number of milliseconds - real)
 *   null
 *   shared object(*)
@@ -960,7 +960,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
 | startFrom | Entero                                          | -> | Start index (included)                 |
 | end       | Entero                                          | -> | End index (not included)               |
-| Result    | collection                                      | <- | Original collection with filled values |
+| Result    | colección                                       | <- | Original collection with filled values |
 <!-- END REF -->
 
 
@@ -1784,7 +1784,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
 
-    | Constant      | Tipo         | Value | Comment                                           |
+    | Constant      | Tipo         | Valor | Comment                                           |
     | ------------- | ------------ | ----- | ------------------------------------------------- |
     | ck ascending  | Entero largo | 0     | Elements are ordered in ascending order (default) |
     | ck descending | Entero largo | 1     | Elements are ordered in descending order          |
