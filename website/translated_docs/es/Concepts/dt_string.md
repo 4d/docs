@@ -35,25 +35,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns  | Expression              | Value    |
-| ------------------------ | ---------------- | -------- | ----------------------- | -------- |
-| Concatenation            | String + String  | Cadena   | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | Cadena   | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Booleano | "abc" = "abc"           | True     |
-|                          |                  |          | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Booleano | "abc" # "abd"           | True     |
-|                          |                  |          | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Booleano | "abd" > "abc"           | True     |
-|                          |                  |          | "abc" > "abc"           | False    |
-| Less than                | String < String  | Booleano | "abc" < "abd"           | True     |
-|                          |                  |          | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Booleano | "abd" >= "abc"          | True     |
-|                          |                  |          | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Booleano | "abc" <= "abd"          | True     |
-|                          |                  |          | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
+| Operación         | Sintaxis         | Devuelve | Expresión               | Valor    |
+| ----------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concatenation     | String + String  | Cadena   | "abc" + "def"           | "abcdef" |
+| Repetition        | String * Number  | Cadena   | "ab" * 3                | "ababab" |
+| Igual             | String = String  | Booleano | "abc" = "abc"           | True     |
+|                   |                  |          | "abc" = "abd"           | False    |
+| Desigualdad       | String # String  | Booleano | "abc" # "abd"           | True     |
+|                   |                  |          | "abc" # "abc"           | False    |
+| Mayor que         | String > String  | Booleano | "abd" > "abc"           | True     |
+|                   |                  |          | "abc" > "abc"           | False    |
+| Menor que         | String < String  | Booleano | "abc" < "abd"           | True     |
+|                   |                  |          | "abc" < "abc"           | False    |
+| Mayor o igual que | String >= String | Booleano | "abd" >= "abc"          | True     |
+|                   |                  |          | "abc" >= "abd"          | False    |
+| Menor o igual que | String <= String | Booleano | "abc" <= "abd"          | True     |
+|                   |                  |          | "abd" <= "abc"          | False    |
+| Contains keyword  | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
+|                   |                  |          | "Alpha Bravo" % "ravo"  | False    |
+|                   | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -152,7 +152,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por ejemplo:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"
