@@ -143,11 +143,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
-| Property | Tipo       | Description                                                         |
-| -------- | ---------- | ------------------------------------------------------------------- |
-| success  | booleano   | True if the message has been successfully decrypted                 |
-| result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors   | collection | If `success` is `false`, may contain a collection of errors         |
+| Property | Tipo      | Description                                                         |
+| -------- | --------- | ------------------------------------------------------------------- |
+| success  | booleano  | True if the message has been successfully decrypted                 |
+| result   | text      | Message decrypted and decoded using the `options.encodingDecrypted` |
+| errors   | colección | If `success` is `false`, may contain a collection of errors         |
 
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
@@ -380,10 +380,10 @@ The function returns a status object with `success` property set to `true` if `m
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
-| Property | Tipo       | Description                                                 |
-| -------- | ---------- | ----------------------------------------------------------- |
-| success  | booleano   | True if the signature matches the message                   |
-| errors   | collection | If `success` is `false`, may contain a collection of errors |
+| Property | Tipo      | Description                                                 |
+| -------- | --------- | ----------------------------------------------------------- |
+| success  | booleano  | True if the signature matches the message                   |
+| errors   | colección | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
