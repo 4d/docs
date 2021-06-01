@@ -109,7 +109,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por ejemplo:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -988,7 +988,7 @@ When a "choiceList" or a "requiredList" attribute is present inside the object, 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
 > The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
 
-Examples:
+Ejemplos:
 
 *   You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
@@ -1027,7 +1027,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Examples:
+Ejemplos:
 
 *   You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
