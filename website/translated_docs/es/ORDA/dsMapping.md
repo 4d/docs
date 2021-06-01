@@ -135,7 +135,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 ### Attribute
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+Dataclass properties are attribute objects describing the underlying fields or relations. Por ejemplo:
 
 ```4d 
  $nameAttribute:=ds.Company.name //reference to class attribute
