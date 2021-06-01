@@ -211,7 +211,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
     6:56 AM
 
-### Examples
+### Ejemplos
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
