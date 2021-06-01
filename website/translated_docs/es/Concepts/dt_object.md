@@ -1,5 +1,5 @@
 ---
-id: object
+id: objeto
 title: Objetos
 ---
 
