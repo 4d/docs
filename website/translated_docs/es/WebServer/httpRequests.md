@@ -24,7 +24,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
-### Syntax
+### Sintaxis
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
