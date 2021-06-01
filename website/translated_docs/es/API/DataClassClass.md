@@ -706,10 +706,10 @@ where:
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
     | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
     |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
-    | Less than                            | <           |                                                                                                                |
-    | Greater than                         | >           |                                                                                                                |
-    | Less than or equal to                | <=          |                                                                                                                |
-    | Greater than or equal to             | >=          |                                                                                                                |
+    | Menor que                            | <           |                                                                                                                |
+    | Mayor que                            | >           |                                                                                                                |
+    | Menor o igual que                    | <=          |                                                                                                                |
+    | Mayor o igual que                    | >=          |                                                                                                                |
     | Included in                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
     | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
     | Contains keyword                     | %           | Keywords can be used in attributes of string or picture type                                                   |
@@ -725,14 +725,14 @@ where:
     | Conjunction | Symbol(s)               |
     | ----------- | ----------------------- |
     | AND         | &, &&, and              |
-    | OR          | &#124;,&#124;&#124;, or |
+    | O           | &#124;,&#124;&#124;, or |
 
 *   **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Using quotes**
 
-When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. For example:
+When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por ejemplo:
 
 ```4d
 "employee.name = 'smith' AND employee.firstname = 'john'"
@@ -786,7 +786,7 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
 
 2.  It prevents having to worry about formatting or character issues, especially when handling *attributePath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
 
-3.  It allows the use of variables or expressions in query arguments. Examples:
+3.  It allows the use of variables or expressions in query arguments. Ejemplos:
 
     ```4d
     $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
