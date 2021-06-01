@@ -50,7 +50,7 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 - [sequentially numbered variables](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
+Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Por ejemplo:
 
 ```4d
 Function add($x : Integer)
@@ -68,7 +68,7 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 - For class functions, parameters are declared along with the `Function` keyword.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
-Examples:
+Ejemplos:
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
@@ -116,13 +116,13 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 
 ### Returned value
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. For example:
+You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). For example:
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -132,7 +132,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Supported data types
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  For example:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -273,7 +273,7 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. For example:
+When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
@@ -292,7 +292,7 @@ When using the sequential variable syntax, you need to make sure all parameters 
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-La utilización de comandos tales como `New process` con métodos proceso que aceptan parámetros también requiere que los parámetros se declaren explícitamente en el método llamado. For example:
+La utilización de comandos tales como `New process` con métodos proceso que aceptan parámetros también requiere que los parámetros se declaren explícitamente en el método llamado. Por ejemplo:
 
 ```4d
 C_TEXT($string)
@@ -332,7 +332,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Por ejemplo:
 
 ```4d
  C_LONGINT($0)
@@ -465,7 +465,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 ## Values or references
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. For example:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Por ejemplo:
 
 ```4d
     //Esta es una parte del código del método MY_METHOD
