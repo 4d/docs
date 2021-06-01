@@ -21,26 +21,26 @@ Este ejemplo define una variable booleana basada en el valor de un botón. Devue
  End if
 ```
 
-The previous example can be simplified into one line.
+El ejemplo anterior puede simplificarse en una línea.
 
 ```4d
 myBoolean:=(myButton=1)
 ```
 
-## Logical operators
+## Operadores lógicos
 
-4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
+4D soporta dos operadores lógicos que trabajan sobre expresiones booleanas: la conjunción (AND) y la disyunción inclusiva (OR). Un AND lógico devuelve TRUE si ambas expresiones son TRUE. Un OR lógico devuelve TRUE si al menos una de las expresiones es TRUE. La siguiente tabla muestra los operadores lógicos:
 
-| Operation | Syntax                    | Returns  | Expression                   | Value |
+| Operación | Sintaxis                  | Devuelve | Expresión                    | Valor |
 | --------- | ------------------------- | -------- | ---------------------------- | ----- |
-| AND       | Boolean & Boolean         | Booleano | ("A" = "A") & (15 # 3)       | True  |
+| AND       | Booleano & Booleano       | Booleano | ("A" = "A") & (15 # 3)       | True  |
 |           |                           |          | ("A" = "B") & (15 # 3)       | False |
 |           |                           |          | ("A" = "B") & (15 = 3)       | False |
-| OR        | Booleano  &#124; Booleano | Booleano | ("A" = "A") &#124; (15 # 3)  | True  |
+| O         | Booleano  &#124; Booleano | Booleano | ("A" = "A") &#124; (15 # 3)  | True  |
 |           |                           |          | ("A" = "B") &#124;  (15 # 3) | True  |
 |           |                           |          | ("A" = "B") &#124;  (15 = 3) | False |
 
-The following is the truth table for the AND logical operator:
+La siguiente es la tabla de verdad del operador lógico AND:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
@@ -49,7 +49,7 @@ The following is the truth table for the AND logical operator:
 | False | True  | False         |
 | False | False | False         |
 
-The following is the truth table for the OR logical operator:
+La siguiente es la tabla de verdad del operador lógico OR:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
@@ -58,7 +58,7 @@ The following is the truth table for the OR logical operator:
 | False | True  | True               |
 | False | False | False              |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Consejo:** si necesita calcular la conjunción exclusiva entre Expr1 y Expr2, escriba:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
