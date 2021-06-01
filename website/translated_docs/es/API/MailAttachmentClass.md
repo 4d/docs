@@ -82,7 +82,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
-| Constant                    | Value        | Comment                                                                                                                                                                                              |
+| Constant                    | Valor        | Comment                                                                                                                                                                                              |
 | --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
 | mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
