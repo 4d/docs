@@ -142,9 +142,9 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| Name   | Data Type | Possible Values                                                  |
+| ------ | --------- | ---------------------------------------------------------------- |
+| values | colección | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 #### Objects Supported
 
@@ -154,7 +154,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 
 ---
-## Expression
+## Expresión
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
