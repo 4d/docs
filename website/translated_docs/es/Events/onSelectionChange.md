@@ -22,8 +22,8 @@ The current selection of rows or columns is modified. In this context, the [even
 | description   | text    | "On Selection Change"          |
 | objectName    | text    | 4D View Pro area name          |
 | sheetName     | text    | Name of the sheet of the event |
-| oldSelections | object  | Cell range before change       |
-| newSelections | object  | Cell range after change        |
+| oldSelections | objeto  | Cell range before change       |
+| newSelections | objeto  | Cell range after change        |
 
 #### Ejemplo
 
