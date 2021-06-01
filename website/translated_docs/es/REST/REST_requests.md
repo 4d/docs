@@ -15,7 +15,7 @@ The following structures are supported for REST requests:
 
 While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Por ejemplo:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
