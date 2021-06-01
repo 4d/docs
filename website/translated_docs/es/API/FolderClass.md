@@ -82,7 +82,7 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Value | Comment                                                                                 |
+| Constant         | Valor | Comment                                                                                 |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -91,7 +91,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Constant                   | Value | Comment                                                                                             |
+| Constant                   | Valor | Comment                                                                                             |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
 | fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
@@ -225,7 +225,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Value | Comment                    |
+| Constant           | Valor | Comment                    |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -283,7 +283,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constant               | Value | Comment                                          |
+| Constant               | Valor | Comment                                          |
 | ---------------------- | ----- | ------------------------------------------------ |
 | `Delete only if empty` | 0     | Deletes folder only when it is empty             |
 | `Delete with contents` | 1     | Deletes folder along with everything it contains |
