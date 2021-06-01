@@ -7,7 +7,7 @@ This parameter allows you to define the operation to execute with the returned e
 
 ## Available syntaxes
 
-| Syntax                                          | Ejemplo                                                                                         | Description                                                                                                |
+| Sintaxis                                        | Ejemplo                                                                                         | Description                                                                                                |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Deletes the current entity, entity collection, or entity selection                                         |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request |
