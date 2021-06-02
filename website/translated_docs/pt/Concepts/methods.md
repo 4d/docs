@@ -171,7 +171,7 @@ An **event catching method** runs in a separate process as the process method fo
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
 
-## Recursive Project Methods
+## Métodos projeto recursivos
 
 Project methods can call themselves. For example:
 
