@@ -91,30 +91,30 @@ O resultado da função, `$0`, é uma variável local dentro da subrotina. Pode 
 
 Mesmo não sendo obrigatório em [modo interpretado](Concepts/interpreted.md), deve declarar cada parâmetro nos métodos chamados para evitar problemas.
 
-In the following example, the `OneMethodAmongOthers` project method declares three parameters:
+No exemplo abaixo, o método de projeto `OneMethodAmongOthers` declara três parâmetros:
 
 ```4d
-  // OneMethodAmongOthers Project Method
+  // Método projeto OneMethodAmongOthers
   // OneMethodAmongOthers ( Real ; Date { ; Long } )
   // OneMethodAmongOthers ( Amount ; Date { ; Ratio } )
 
- C_REAL($1) // 1st parameter is of type Real
- C_DATE($2) // 2nd parameter is of type Date
- C_LONGINT($3) // 3rd parameter is of type Long Integer
+ C_REAL($1) // O primeiro parâmetro é de tipo Real
+ C_DATE($2) // O segundo parâmetro é de tipo Data
+ C_LONGINT($3) // O terceiro parâmetro é de tipo Inteiro longo
 ```
 
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+No exemplo abaixo, o método projeto `Capitalize`  aceita um parâmetro texto e devolve um resultado texto:
 
 ```4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
+  // Método projeto Maiúsculas
+  // Maiúsculas( Texto ) -> Texto
+  // Maiúsculas( Cadena fuente ) -> String com a primeira letra em maiúscula
 
  C_TEXT($0;$1)
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
+A utilização de comandos tais como `New process` com métodos processo que aceitem parâmetros também requer que os parâmetros se declarem explicitamente no método chamado. For example:
 
 ```4d
 C_TEXT($string)
@@ -124,7 +124,7 @@ C_OBJECT($obj)
 $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+Este código pode ser executado em modo compilado só se "foo_method" declarar seus parâmetros:
 
 ```4d
 //foo_method
@@ -134,24 +134,24 @@ C_OBJECT($3)
 ...
 ```
 
-**Note:** For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+**Nota:** em modo compilado, pode agrupar todos os parámetros das variáveis locais dos métodos projeto em um método específico com um nome que comece por "Compiler". Dentro deste método, pode pré-declarar os parâmetros de cada método, por exemplo:
 ```4d
  C_REAL(OneMethodAmongOthers;$1)
 ```
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+Ver a página [Modos interpretado e compilado](Concepts/interpreted.md) para mais informação.
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+A declaração de parâmetros também é obrigatóiria nos contextos abaixo (esses contextos não são compatíveis com declarações em um método "Compiler"):
 
-- Database methods For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- Métodos de banco de dados Por exemplo, o método banco `On Web Connection` recebe seis parâmetros, de $1 a $6, del tipo Texto. At the beginning of the database method, you must write (even if all parameters are not used):
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers O parâmetro $0 (Inteiro longo), que é o resultado de um trigger, será digitado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Form objects that accept the `On Drag Over` form event The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Objetos formulário que aceitam o evento formulário `On Drag Over` O parâmetro $0 (Inteiro longo), que é o resultado do evento formulário `On Drag Over`, será digitado pelo compilador se o parâmetro não tiver sido declarado explícita mente. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
