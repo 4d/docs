@@ -4,92 +4,92 @@ title: Parameters
 ---
 
 
-## Using parameters
+## Utilização de parâmetros
 
-You'll often find that you need to pass data to your methods. This is easily done with parameters.
+Frequentemente será preciso passar dados para seus métodos. This is easily done with parameters.
 
-**Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Os parâmetros** (ou **argumentos**) são peças de dados que um método necessita para realizar sua tarefa. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
 ```4d
 ALERT("Hello")
 ```
 
-Parameters are passed to methods in the same way. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
+Os parâmetros são passados aos métodos da mesma maneira. Por exemplo, se um método projeto chamado DO SOMETHING aceitar três parâmetros, uma chamada ao método poderia ter a seguinte forma:
 
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
+Os parâmetros estão separados por ponto e vírgula (;). Seu valor é avaliado no momento da chamada.
 
-In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. The numbering of the local variables represents the order of the parameters.
+Na subrotina (o método chamado), o valor de cada parâmetro se copia automaticamente em variáveis locais numeradas sequencialmente: $1, $2, $3, etc. A numeração das variáveis locais representam a ordem dos parâmetros.
 
 ```4d
-  //Code of the method DO SOMETHING
-  //Assuming all parameters are of the text type
+  //Código do método DO SOMETHING
+  //Assumindo que todos os parâmetros são de tipo texto
  C_TEXT($1;$2;$3)
  ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the WithThis parameter
-  //$2 contains the AndThat parameter
-  //$3 contains the ThisWay parameter
+  //$1 contém o parâmetro WithThis
+  //$2 contém o parâmetro AndThat
+  //$3 contém o parâmetro ThisWay
 ```
 
-Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+Dentro da subrotina, pode utilizar os parâmetros $1, $2... da mesma maneira que utilizaria qualquer outra variável local. Entretanto, no caso de usar comandos que modifiquem o valor da variável passada como parâmetro (por exemplo `Find in field`), os parâmetros $1, $2, etc. não podem ser utilizardos diretamente. Primeiro deve copiá-los nas variáveis locais padrão (por exemplo: `$myvar:=$1`).
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
-//pass the !05/05/10! date as parameter to the SetCalendarDate  
-// in the context of a subform
+//passe a data !05/05/10! como parâmetro del SetCalendarDate  
+// no contexto de um subformulário
 ```
 
-**Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+**Nota:** para uma boa execução do código, é necessário ter certeza de que todos os parâmetros `$1`, `$2`... estejam corretamente declarados dentro dos métodos chamados (ver [Declaração de parâmetros](#declaring-parameters) mais abaixo).
 
 
-### Supported expressions
+### Expressões compatíveis
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
+Pode utilizar toda [expressão](Concepts/quick-tour.md#expression-types) como parâmetro, exceto:
 
 - tables
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+As expressões de tabelas ou arrays só podem ser passadas [como referência utilizando um ponteiro](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 
-## Functions
+## Funções
 
-Data can be returned from methods. A method that returns a value is called a function.
+Os dados podem ser devolvidos pelos métodos. Um método que devolve um valor se chama uma função.
 
-4D or 4D Plug-in commands that return a value are also called functions.
+Os comandos de 4D ou 4D Plug-in que devolvem um valor também são chamados funções.
 
-For example, the following line is a statement that uses the built-in function, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Por exemplo, a linha abaixo é uma sentença que usa a função integrada, `Length`, para devolver a longitude de uma string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. The value to be returned is put into the local variable `$0`.
+Any subroutine can return a value. O valor a devolver é posto na variável local `$0`.
 
-For example, the following function, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+Por exemplo, a função abaixo, chamada `Uppercase4`, devolve uma string com os quatro  primeiros caracteres da string que foram passados em maiúsculas:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 function:
+Abaixo está um exemplo que utiliza a função Uppercase4:
 
 ```4d
 NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *NewPhrase* gets “THIS is good.”
+Neste exemplo, a variável *NewPhrase* recebe “THIS is good.”
 
-The function result, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, in the previous `DO SOMETHING` example, `$0` was first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+O resultado da função, `$0`, é uma variável local dentro da subrotina. Pode ser usado como tal dentro da subrotina. Por exemplo, no exemplo anterior `DO SOMETHING`,  `$0` atribuiu o primeiro o valor de `$1`, e depois se usou como parâmetro do comando `ALERT`. Dentro de la subrotina, pode utilizar `$0` da mesma maneira que utilizaria qualquer outra variável local. É 4D quem devolve o valor de `$0` (como estiver quando a subrotina terminar) ao método chamado.
 
 
-## Declaring parameters
+## Declaração de parâmetros
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods to prevent any trouble.
+Mesmo não sendo obrigatório em [modo interpretado](Concepts/interpreted.md), deve declarar cada parâmetro nos métodos chamados para evitar problemas.
 
 In the following example, the `OneMethodAmongOthers` project method declares three parameters:
 
