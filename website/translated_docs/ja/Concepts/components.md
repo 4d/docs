@@ -23,32 +23,45 @@ title: コンポーネント
 
 プロジェクトは "マトリクス" にも "ホスト" にもなりえます。言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 
-
 ### コンポーネントの保護: コンパイル
 
 コンポーネントとしてインストールされたマトリクスプロジェクトのプロジェクトメソッドは、ホストプロジェクトからデフォルトでアクセス可能です。 特に:
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 しかし、それらをメソッドエディター上で開いたり編集したりすることはできません。
+- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 However, it's not possible to open them in the Method editor or modify them.
 - マトリクスプロジェクトの他のプロジェクトメソッドはエクスプローラーに現れません。しかし、ホストプロジェクトのデバッガーには内容が表示されます。
 
 コンポーネントのプロジェクトメソッドを効果的に保護するには、マトリクスプロジェクトをコンパイルして、インタプリターコードを含まない .4dz ファイルとして提供します。 コンパイルされたマトリクスプロジェクトがコンポーネントとしてインストールされると:
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
+- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 However, their contents will not appear in the preview area and in the debugger.
 - マトリクスプロジェクトの他のプロジェクトメソッドは一切表示されません。
 
 
 ## プロジェクトメソッドの共有
 マトリクスプロジェクトのすべてのプロジェクトメソッドは 、コンポーネントに含まれます。つまり、マトリクスプロジェクトをコンポーネント化しても、これらのプロジェクトメソッドは同コンポーネントにて呼び出して実行することができます。
 
-他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 プロジェクトメソッドをホストプロジェクトと共有するには、 マトリクスプロジェクト側でそのメソッドをそのように明示的に設定しなければなりません。 設定することで、それらのプロジェクトメソッドはホストプロジェクトにて呼び出すことができるようになります (しかしホストプロジェクトのメソッドエディターで編集することはできません)。 これらのメソッドはコンポーネントの **エントリーポイント** となります。
+On the other hand, by default these project methods will not be visible, and they can't be called in the host project. プロジェクトメソッドをホストプロジェクトと共有するには、 マトリクスプロジェクト側でそのメソッドをそのように明示的に設定しなければなりません。 These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). これらのメソッドはコンポーネントの **エントリーポイント** となります。
 
-**注:** セキュリティのため、デフォルトでは、コンポーネントはホストプロジェクトのプロジェクトメソッドを実行することはできません。 特定の場合に、ホストプロジェクトのプロジェクトメソッドにコンポーネントがアクセスできるようにする必要があるかもしれません。 そうするには、ホストプロジェクトのプロジェクトメソッド側で、コンポーネントからのアクセスを可能にするよう明示的に指定しなければなりません。
+Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. 特定の場合に、ホストプロジェクトのプロジェクトメソッドにコンポーネントがアクセスできるようにする必要があるかもしれません。 To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. たとえば:
+
+```4d 
+// Host Method
+component_method("host_method_name")
+```
+
+
+```4d
+// component_method
+ C_TEXT($1)
+ EXECUTE METHOD($1)
+```
+
 ## 変数の渡し方
 
-ローカル、プロセス、インタープロセス変数は、コンポーネントとホストプロジェクト間で共有されません。 ホストプロジェクトからコンポーネントの変数、またはその逆にアクセスする唯一の方法はポインターを使用することです。
+ローカル、プロセス、インタープロセス変数は、コンポーネントとホストプロジェクト間で共有されません。 The only way to modify component variables from the host project and vice versa is using pointers.
 
 配列を使用した例:
 
@@ -64,10 +77,23 @@ title: コンポーネント
 変数を使用した例:
 
 ```4d
- C_TEXT(myvariable)
- component_method1(->myvariable)
- C_POINTER($p)
- $p:=component_method2(...)
+C_TEXT(myvariable)
+component_method1(->myvariable)
+```
+
+```4d
+C_POINTER($p)
+$p:=component_method2(...)
+```
+
+Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+
+```4d
+//In the host database
+C_TEXT($input_t)
+$input_t:="DoSomething"
+component_method($input_t)
+// component_method gets "DoSomething" in $1 (but not the $input_t variable)
 ```
 
 
@@ -94,7 +120,7 @@ title: コンポーネント
 
 ## ホストプロジェクトのテーブルへのアクセス
 
-コンポーネントでテーブルを使用することはできませんが、ホストプロジェクトとコンポーネントはポインターを使用して通信を行うことができます。 たとえば、以下はコンポーネントで実行可能なメソッドです:
+Although components cannot use tables, pointers can allow host projects and components to communicate with each other. たとえば、以下はコンポーネントで実行可能なメソッドです:
 
 ```4d
 // コンポーネントメソッドの呼び出し
@@ -116,11 +142,13 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
+> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+
 ## ランゲージコマンドのスコープ
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし `EXECUTE METHOD` コマンドは除きます。このコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
 `SET DATABASE PARAMETER` と `Get database parameter` コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
@@ -165,9 +193,11 @@ SAVE RECORD($tablepointer->)
 - 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 マトリクスプロジェクトのすべてのプロジェクトフォームをコンポーネントで使用することができます。
 - コンポーネントはホストプロジェクトのテーブルフォームを使用できます。 この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
 
-**注:** コンポーネントが `ADD RECORD` コマンドを使用すると、ホストプロジェクトのコンテキストで、ホストプロジェクトのカレントの入力フォームが表示されます。 したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
+> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
 
 - コンポーネントフォームをホストプロジェクト内でサブフォームとして公開することができます。 これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 ## テーブルやフィールドの利用
 
