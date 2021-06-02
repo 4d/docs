@@ -5,38 +5,72 @@ title: Components
 
 A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications. 
 
+## Presentation
+
+### Definitions 
+
+- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. 
+- **Host Project**: Application project in which a component is installed and used.
+- **Component**: Matrix project, compiled or not, copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.  
+
+### Principles
+
 Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles: 
 
-- A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
-- To install a component in an application project, you simply need to copy it into the "Components" folder of the project, at the same level as the Project folder.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. It cannot call database methods and triggers.
+- A component consists of a regular 4D project file.   
+- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+- A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. However, a component cannot use “sub-components” itself.
+- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, and so on. It cannot call database methods and triggers.
 - You cannot use standard tables or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands. 
+- A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used. 
 
 
-## Definitions  
+ 
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+## Scope of language commands 
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. The matrix project is intended to be copied, compiled or not, into the Components folder of the project that will be using the component (host application project).
-- **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project, compiled or not, copied into the Components folder of the host application and whose contents are used in the host applications.  
+Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language. 
 
-It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. However, a component cannot use “sub-components” itself. 
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups). 
 
-### Protection of components: compilation  
+The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project. 
 
-By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. In particular:
+Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it's not possible to open them in the Method editor or modify them.
-- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project. 
+The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
 
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
-- The other project methods of the matrix project will never appear. 
+### Unusable commands
+
+The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+
+- `ON EVENT CALL`
+- `Method called on event`
+- `SET PICTURE TO LIBRARY`
+- `REMOVE PICTURE FROM LIBRARY`
+- `SAVE LIST`
+- `ARRAY TO LIST`
+- `EDIT FORM`
+- `CREATE USER FORM`
+- `DELETE USER FORM`
+- `CHANGE PASSWORD`
+- `EDIT ACCESS`
+- `Set group properties`
+- `Set user properties`
+- `DELETE USER`
+- `CHANGE LICENSES`
+- `BLOB TO USERS`
+- `SET PLUGIN ACCESS`
+
+**Notes:**
+
+- The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
+
 
 
 ## Sharing of project methods 
+
 All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component. 
 
 On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). These methods form **entry points** in the component. 
@@ -58,6 +92,11 @@ component_method("host_method_name")
  C_TEXT($1)
  EXECUTE METHOD($1)
 ```
+
+> An interpreted host database that contains interpreted components can be compiled or syntax checked if it does not call methods of the interpreted component. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.   
+> Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+
+
 
 ## Passing variables  
 
@@ -119,6 +158,11 @@ In this case, it is necessary to use the comparison of pointers:
      If(myptr1=myptr2) //This test returns False
 ```
 
+## Error handling
+
+An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running application. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host project is not called, and vice versa.
+
+
 ## Access to tables of the host project
 
 Although components cannot use tables, pointers can allow host projects and components to communicate with each other. For example, here is a method that could be called from a component:
@@ -144,61 +188,6 @@ SAVE RECORD($tablepointer->)
 ```
 
 > In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
-
-## Scope of language commands 
-
-Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language. 
-
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups). 
-
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project. 
-
-Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
-
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
-
-
-### Unusable commands
-
-The following commands are not compatible for use within a component because they modify the structure file — which is open in read-only. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
-
-- `ON EVENT CALL`
-- `Method called on event`
-- `SET PICTURE TO LIBRARY`
-- `REMOVE PICTURE FROM LIBRARY`
-- `SAVE LIST`
-- `ARRAY TO LIST`
-- `EDIT FORM`
-- `CREATE USER FORM`
-- `DELETE USER FORM`
-- `CHANGE PASSWORD`
-- `EDIT ACCESS`
-- `Set group properties`
-- `Set user properties`
-- `DELETE USER`
-- `CHANGE LICENSES`
-- `BLOB TO USERS`
-- `SET PLUGIN ACCESS`
-
-**Notes:**
-
-- The `Current form table` command returns `Nil` when it is called in the context of a project form. Consequently, it cannot be used in a component.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
-
-## Error handling
-
-An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running application. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host project is not called, and vice versa.
-
-## Use of forms 
-
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix project can be used by the component. 
-- A component can call table forms of the host project. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
-
-> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Consequently, if the form includes variables, the component will not have access to it.
-
-- You can publish component forms as subforms in the host projects. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. 
-
-> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error. 
 
 ## Use of tables and fields
 
@@ -279,17 +268,48 @@ Reading from an external database:
  End SQL
 ```
 
+
+## Use of forms 
+
+- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Any project forms present in the matrix project can be used by the component. 
+- A component can call table forms of the host project. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+
+> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Consequently, if the form includes variables, the component will not have access to it.
+
+- You can publish component forms as subforms in the host projects. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components. 
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error. 
+
+
 ## Use of resources
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder. 
+Components can use resources located in the Resources folder of the component. 
 
 Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component. 
 
 In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
 
-## On-line help for components 
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D projects:
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file. 
+## Executing initialization code
+
+A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database. 
+
+Executing initialization or closing code is done by means of the `On Host Database Event` database method.
+
+> For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the **Execute "On Host Database Event" method of the components** option on the Security page the Settings.
+
+
+## Protection of components: compilation  
+
+By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. In particular:
+
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it's not possible to open them in the Method editor or modify them.
+- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project. 
+
+To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
+
+- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
+- The other project methods of the matrix project will never appear. 
+
+
+
