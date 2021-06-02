@@ -8,7 +8,7 @@ The `CryptoKey` class in the 4D language encapsulates an asymetric encryption ke
 
 This class is available from the `4D` class store.
 
-### Example
+### Ejemplo
 
 The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
 
@@ -59,10 +59,10 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parameter | Type         |    | Description                                                            |
-| --------- | ------------ | -- | ---------------------------------------------------------------------- |
-| settings  | Objeto       | -> | Settings to generate or load a key pair                                |
-| result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| Parameter  | Tipo         |    | Description                                                            |
+| ---------- | ------------ | -- | ---------------------------------------------------------------------- |
+| parámetros | Objeto       | -> | Settings to generate or load a key pair                                |
+| result     | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
 |
@@ -70,9 +70,9 @@ ASSERT($status.success)
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
-#### *settings*
+#### *parámetros*
 
-| Property        | Type    | Description                                    |
+| Property        | Tipo    | Description                                    |
 | --------------- | ------- | ---------------------------------------------- |
 | [curve](#curve) | text    | Name of ECDSA curve                            |
 | [pem](#pem)     | text    | PEM definition of an encryption key to load    |
@@ -118,7 +118,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| Parameter | Type   |    | Description                                                                   |
+| Parameter | Tipo   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
 | options   | Objeto | -> | Decoding options                                                              |
@@ -132,7 +132,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### *options*
 
-| Property          | Type | Description                                                                                                                                  |
+| Property          | Tipo | Description                                                                                                                                  |
 | ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                       |
 | encodingEncrypted | text | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "Base64". |
@@ -143,11 +143,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
-| Property | Type       | Description                                                         |
-| -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
-| result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors   | collection | If `success` is `false`, may contain a collection of errors         |
+| Property | Tipo      | Description                                                         |
+| -------- | --------- | ------------------------------------------------------------------- |
+| success  | booleano  | True if the message has been successfully decrypted                 |
+| result   | text      | Message decrypted and decoded using the `options.encodingDecrypted` |
+| errors   | colección | If `success` is `false`, may contain a collection of errors         |
 
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
@@ -167,7 +167,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parameter | Type   |    | Description                                                                   |
+| Parameter | Tipo   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
 | options   | Objeto | -> | Encoding options                                                              |
@@ -180,7 +180,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 ##### *options*
 
-| Property          | Type | Description                                                                                                                                               |
+| Property          | Tipo | Description                                                                                                                                               |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
 | encodingEncrypted | text | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
@@ -209,7 +209,7 @@ The returned value is an encrypted message.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parameter | Type  |    | Description               |
+| Parameter | Tipo  |    | Description               |
 | --------- | ----- | -- | ------------------------- |
 | Result    | Texto | <- | Private key in PEM format |
 <!-- END REF -->
@@ -236,7 +236,7 @@ The returned value is the private key.
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parameter | Type  |    | Description              |
+| Parameter | Tipo  |    | Description              |
 | --------- | ----- | -- | ------------------------ |
 | Result    | Texto | <- | Public key in PEM format |
 <!-- END REF -->
@@ -280,7 +280,7 @@ The returned value is the public key.
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parameter | Type   |    | Description                                                                     |
+| Parameter | Tipo   |    | Description                                                                     |
 | --------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to sign                                                          |
 | options   | Objeto | -> | Signing options                                                                 |
@@ -293,12 +293,12 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *options*
 
-| Property          | Type    | Description                                                                                                                         |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
-| encodingEncrypted | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm  |
-| encoding          | text    | ERepresentation to be used for result signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                  |
+| Property          | Tipo     | Description                                                                                                                         |
+| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
+| encodingEncrypted | text     | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
+| pss               | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm  |
+| encoding          | text     | ERepresentation to be used for result signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                  |
 
 
 #### *Result*
@@ -352,7 +352,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
-| Parameter | Type   |    | Description                                                                                       |
+| Parameter | Tipo   |    | Description                                                                                       |
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string that was used to produce the signature                                             |
 | signature | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
@@ -367,11 +367,11 @@ The `CryptoKey` must contain a valid **public** key.
 
 #### *options*
 
-| Property | Type    | Description                                                                                                                                      |
-| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash     | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
-| encoding | text    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+| Property | Tipo     | Description                                                                                                                                      |
+| -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash     | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
+| pss      | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
+| encoding | text     | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 
 
 #### *Result*
@@ -380,10 +380,10 @@ The function returns a status object with `success` property set to `true` if `m
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
-| Property | Type       | Description                                                 |
-| -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
-| errors   | collection | If `success` is `false`, may contain a collection of errors |
+| Property | Tipo      | Description                                                 |
+| -------- | --------- | ----------------------------------------------------------- |
+| success  | booleano  | True if the signature matches the message                   |
+| errors   | colección | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -64,7 +64,7 @@ Or using the [.call()](#call) function:
 
 #### Parameters to a single method
 
-For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. For example:
+For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. Por ejemplo:
 
 ```4d
  var $f : 4D.Function
@@ -120,9 +120,9 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
-| Parameter  | Type        |    | Description                               |
+| Parameter  | Tipo        |    | Description                               |
 | ---------- | ----------- |:--:| ----------------------------------------- |
-| formulaExp | Expression  | -> | Formula to be returned as object          |
+| formulaExp | Expresión   | -> | Formula to be returned as object          |
 | Result     | 4D.Function | <- | Native function encapsulating the formula |
 <!-- END REF -->
 
@@ -255,7 +255,7 @@ Calling a formula using object notation:
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
-| Parameter     | Type        |    | Description                             |
+| Parameter     | Tipo        |    | Description                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
 | formulaString | Texto       | -> | Text formula to be returned as object   |
 | Result        | 4D.Function | <- | Native object encapsulating the formula |
@@ -270,7 +270,7 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
 
-#### Example
+#### Ejemplo
 
 The following code will create a dialog accepting a formula in text format:
 
@@ -310,7 +310,7 @@ The following code will create a dialog accepting a formula in text format:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| Parameter     | Type      |    | Description                                                             |
+| Parameter     | Tipo      |    | Description                                                             |
 | ------------- | --------- |:--:| ----------------------------------------------------------------------- |
 | thisObj       | Objeto    | -> | Object to be returned by the This command in the formula                |
 | formulaParams | Colección | -> | Collection of values to be passed as $1...$n when `formula` is executed |
@@ -371,7 +371,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Parameter | Type   |    | Description                                               |
+| Parameter | Tipo   |    | Description                                               |
 | --------- | ------ | -- | --------------------------------------------------------- |
 | thisObj   | Objeto | -> | Object to be returned by the This command in the formula  |
 | params    | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
@@ -428,7 +428,7 @@ The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the so
 
 This property is **read-only**.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $of : 4D.Function

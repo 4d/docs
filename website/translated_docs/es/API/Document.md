@@ -239,7 +239,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 
 This property is **read-only**.
 
-**Example**
+**Ejemplo**
 
 ```4d
  $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -465,11 +465,11 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Parameter         | Type      |    | Description                                 |
+| Parameter         | Tipo      |    | Description                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
-| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
+| overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
 | Result            | 4D.File   | <- | Copied file                                 |
 <!-- END REF -->
 
@@ -484,7 +484,7 @@ By default, the file is copied with the name of the original file. If you want t
 
 If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constant       | Value | Comment                             |
+| Constant       | Valor | Comment                             |
 | -------------- | ----- | ----------------------------------- |
 | `fk overwrite` | 4     | Overwrite existing elements, if any |
 
@@ -493,7 +493,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 The copied `File` object.
 
-#### Example
+#### Ejemplo
 
 You want to copy a picture *file* from the user's document folder to the application folder:
 
@@ -520,7 +520,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parameter | Type |    | Description  |
+| Parameter | Tipo |    | Description  |
 | --------- | ---- | -- | ------------ |
 | Result    | Blob | <- | File content |
 <!-- END REF -->
@@ -534,7 +534,7 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 A `Blob`.
 
-#### Example
+#### Ejemplo
 
 To save a document's contents in a `BLOB` field:
 
@@ -563,10 +563,10 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parameter | Type    |    | Description                                   |
-| --------- | ------- | -- | --------------------------------------------- |
-| size      | Integer | -> | Side length for the returned picture (pixels) |
-| Result    | Imagen  | <- | Icon                                          |
+| Parameter | Tipo   |    | Description                                   |
+| --------- | ------ | -- | --------------------------------------------- |
+| size      | Entero | -> | Side length for the returned picture (pixels) |
+| Result    | Imagen | <- | Icon                                          |
 <!-- END REF -->
 
 
@@ -602,12 +602,12 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parameter   | Type    |    | Description                     |
-| ----------- | ------- | -- | ------------------------------- |
-| charSetName | Texto   | -> | Name of character set           |
-| charSetNum  | Integer | -> | Number of character set         |
-| breakMode   | Integer | -> | Processing mode for line breaks |
-| Result      | Texto   | <- | Text from the document          |
+| Parameter   | Tipo   |    | Description                     |
+| ----------- | ------ | -- | ------------------------------- |
+| charSetName | Texto  | -> | Name of character set           |
+| charSetNum  | Entero | -> | Number of character set         |
+| breakMode   | Entero | -> | Processing mode for line breaks |
+| Result      | Texto  | <- | Text from the document          |
 <!-- END REF -->
 
 
@@ -625,7 +625,7 @@ If the document contains a Byte Order Mark (BOM), 4D uses the character set that
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
 
-| Constant                      | Value | Comment                                                                                                                                                             |
+| Constant                      | Valor | Comment                                                                                                                                                             |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | No processing                                                                                                                                                       |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |
@@ -639,7 +639,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 Text of the file.
 
-#### Example
+#### Ejemplo
 
 Given the following text document (fields are separated by tabs):
 

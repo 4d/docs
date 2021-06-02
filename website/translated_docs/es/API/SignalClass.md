@@ -40,7 +40,7 @@ Once a signal has been released using a `signal.trigger()` call, it cannot be re
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
-### Example
+### Ejemplo
 
 ```4d
  var $signal : 4D.Signal
@@ -107,7 +107,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| Parameter   | Type      |    | Description                            |
+| Parameter   | Tipo      |    | Description                            |
 | ----------- | --------- |:--:| -------------------------------------- |
 | description | Texto     | -> | Description for the signal             |
 | Result      | 4D.Signal | <- | Native object encapsulating the signal |
@@ -132,7 +132,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 A new [`4D.Signal` object](#signal-object).
 
-#### Example
+#### Ejemplo
 
 Here is a typical example of a worker that sets a signal:
 
@@ -226,7 +226,7 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -255,7 +255,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| Parameter | Type     |    | Description                                    |
+| Parameter | Tipo     |    | Description                                    |
 | --------- | -------- | -- | ---------------------------------------------- |
 | timeout   | Real     | -> | Maximum waiting time for the signal in seconds |
 | Result    | Booleano | <- | State of the `.signaled` property              |

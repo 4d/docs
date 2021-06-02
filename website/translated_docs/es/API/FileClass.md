@@ -5,7 +5,7 @@ title: File
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
-### Example
+### Ejemplo
 
 The following example creates a preferences file in the project folder:
 
@@ -66,11 +66,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Type    |    | Description                                     |
+| Parameter    | Tipo    |    | Description                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
-| fileConstant | Integer | -> | 4D file constant                                |
-| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
+| fileConstant | Entero  | -> | 4D file constant                                |
+| pathType     | Entero  | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
 | Result       | 4D.File | <- | New file object                                 |
 <!-- END REF -->
@@ -88,7 +88,7 @@ In the *path* parameter, pass a file path string. You can use a custom string or
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Value | Comment                                                                                 |
+| Constant         | Valor | Comment                                                                                 |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -97,7 +97,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
 
-| Constant                          | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Constant                          | Valor | Comment                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19    | Backup history file (see Configuration and trace files). Stored in the backup destination folder.                                                                                                                                                                                                                                                                                                        |
 | Backup log file                   | 13    | Current backup journal file. Stored in the application Logs folder.                                                                                                                                                                                                                                                                                                                                      |
@@ -166,7 +166,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Type     |    | Description                                                |
+| Parameter | Tipo     |    | Description                                                |
 | --------- | -------- | -- | ---------------------------------------------------------- |
 | Result    | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
@@ -182,7 +182,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
 
-#### Example
+#### Ejemplo
 
 Creation of a preferences file in the database folder:
 
@@ -210,11 +210,11 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                  |
+| Parameter         | Tipo      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
+| aliasType         | Entero    | -> | Type of the alias link                       |
 | Result            | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
@@ -227,7 +227,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Value | Comment                    |
+| Constant           | Valor | Comment                    |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -239,7 +239,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
-#### Example
+#### Ejemplo
 
 You want to create an alias to a file in your database folder:
 
@@ -276,7 +276,7 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
@@ -291,7 +291,7 @@ If the file is currently open, an error is generated.
 If the file does not exist on disk, the function does nothing (no error is generated).
 > **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
-#### Example
+#### Ejemplo
 
 You want to delete a specific file in the database folder:
 
@@ -333,7 +333,7 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter | Type   |    | Description                                      |
+| Parameter | Tipo   |    | Description                                      |
 | --------- | ------ | -- | ------------------------------------------------ |
 | Result    | Objeto | <- | Contents of .exe version resource or .plist file |
 <!-- END REF -->
@@ -353,7 +353,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 All property values are Text.
 
-| Property         | Type  |
+| Property         | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -368,7 +368,7 @@ All property values are Text.
 
 The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
-#### Example
+#### Ejemplo
 
 ```4d
     // display copyright info of application .exe file (windows)
@@ -453,7 +453,7 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                  |
+| Parameter         | Tipo      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | Texto     | -> | Full name for the moved file |
@@ -474,7 +474,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 The moved `File` object.
 
-#### Example
+#### Ejemplo
 
 
 ```4d
@@ -521,7 +521,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parameter | Type    |    | Description                |
+| Parameter | Tipo    |    | Description                |
 | --------- | ------- | -- | -------------------------- |
 | newName   | Texto   | -> | New full name for the file |
 | Result    | 4D.File | <- | Renamed file               |
@@ -540,7 +540,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 The renamed `File` object.
 
-#### Example
+#### Ejemplo
 
 You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
@@ -564,7 +564,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Type   |    | Description                                                 |
+| Parameter | Tipo   |    | Description                                                 |
 | --------- | ------ | -- | ----------------------------------------------------------- |
 | info      | Objeto | -> | Properties to write in .exe version resource or .plist file |
 <!-- END REF -->
@@ -584,7 +584,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe file. Available properties are (any other property will be ignored):
 
-| Property         | Type  |
+| Property         | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -606,7 +606,7 @@ If a key set in the *info* parameter is already defined in the .plist file, its 
 
 > To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
 
-#### Example
+#### Ejemplo
 
 ```4d
   // set copyright and version of a .exe file (Windows)
@@ -649,7 +649,7 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parameter | Type |    | Description               |
+| Parameter | Tipo |    | Description               |
 | --------- | ---- | -- | ------------------------- |
 | content   | BLOB | -> | New contents for the file |
 <!-- END REF -->
@@ -660,7 +660,7 @@ $infoPlistFile.setAppInfo($info)
 The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
-#### Example
+#### Ejemplo
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
@@ -688,12 +688,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Type    |    | Description                                                |
-| ----------- | ------- | -- | ---------------------------------------------------------- |
-| text        | Texto   | -> | Text to store in the file                                  |
-| charSetName | Texto   | -> | Name of character set                                      |
-| charSetNum  | Integer | -> | Number of character set                                    |
-| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
+| Parameter   | Tipo   |    | Description                                                |
+| ----------- | ------ | -- | ---------------------------------------------------------- |
+| text        | Texto  | -> | Text to store in the file                                  |
+| charSetName | Texto  | -> | Name of character set                                      |
+| charSetNum  | Entero | -> | Number of character set                                    |
+| breakMode   | Entero | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 
@@ -716,7 +716,7 @@ If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the 
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 
-| Constant                      | Value | Comment                                                                                                                                                        |
+| Constant                      | Valor | Comment                                                                                                                                                        |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | No processing                                                                                                                                                  |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |
@@ -728,7 +728,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 
 
-#### Example
+#### Ejemplo
 
 ```4d
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)

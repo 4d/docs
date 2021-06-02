@@ -4,7 +4,7 @@ title: Objetos
 ---
 
 ---
-## Type
+## Tipo
 
  `MANDATORY SETTING`
 
@@ -67,7 +67,7 @@ Here is the list of objects whose value can be saved:
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| memorizeValue | boolean   | true, false     |
+| memorizeValue | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -122,7 +122,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por ejemplo:
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
@@ -339,7 +339,7 @@ There are several types of calculations available. The following table shows whi
 | Minimum               | X   | X     | X     | X    | X    |      | Same as column type |
 | Maximum               | X   | X     | X     | X    | X    |      | Same as column type |
 | Sum                   | X   |       |       | X    | X    |      | Same as column type |
-| Count                 | X   | X     | X     | X    | X    | X    | Longint             |
+| Count                 | X   | X     | X     | X    | X    | X    | Entero largo        |
 | Average               | X   |       |       | X    |      |      | Real                |
 | Standard deviation(*) | X   |       |       | X    |      |      | Real                |
 | Variance(*)           | X   |       |       | X    |      |      | Real                |

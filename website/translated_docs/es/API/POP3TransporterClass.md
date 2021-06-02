@@ -44,9 +44,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF POP3TransporterClass.POP3 New transporter.Params -->
-| Parameter | Type               |    | Description                                         |
+| Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | object             | -> | Mail server information                             |
+| server    | objeto             | -> | Mail server information                             |
 | Result    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -76,7 +76,7 @@ In the *server* parameter, pass an object containing the following properties:
 The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
 > The POP3 connection is automatically closed when the transporter object is destroyed.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $server : Object
@@ -105,7 +105,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 **4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| Parameter | Type               |    | Description                                         |
+| Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | server    | Objeto             | -> | Mail server information                             |
 | Result    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
@@ -126,7 +126,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $pw :  Text
@@ -169,9 +169,9 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 **.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.delete().Params -->
-| Parameter | Type    |    | Description                     |
-| --------- | ------- |:--:| ------------------------------- |
-| msgNumber | Integer | -> | Number of the message to delete |
+| Parameter | Tipo   |    | Description                     |
+| --------- | ------ |:--:| ------------------------------- |
+| msgNumber | Entero | -> | Number of the message to delete |
 <!-- END REF -->
 
 
@@ -184,7 +184,7 @@ In the *msgNumber* parameter, pass the number of the email to delete. This numbe
 Executing this method does not actually remove any email. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. The flag could be also be removed using the `.undeleteAll()` method.
 > If the current session unexpectedly terminates and the connection is closed (e.g., timeout, network failure, etc.), an error message is generated and messages marked for deletion will remain on the POP3 server.
 
-##### Example
+##### Ejemplo
 
 ```4d
  $mailInfoList:=$POP3_transporter.getMailInfoList()
@@ -216,7 +216,7 @@ Executing this method does not actually remove any email. The flagged email will
 **.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Parameter | Type   |    | Description    |
+| Parameter | Tipo   |    | Description    |
 | --------- | ------ |:--:| -------------- |
 | Result    | Objeto | <- | boxInfo object |
 <!-- END REF -->
@@ -228,14 +228,14 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
 The `boxInfo` object returned contains the following properties:
 
-| Property  | Type   | Description                       |
+| Property  | Tipo   | Description                       |
 | --------- | ------ | --------------------------------- |
-| mailCount | Number | Number of messages in the mailbox |
-| size      | Number | Message size in bytes             |
+| mailCount | Número | Number of messages in the mailbox |
+| size      | Número | Message size in bytes             |
 
 
 
-##### Example
+##### Ejemplo
 
 ```4d
  var $server; $boxinfo : Object
@@ -268,10 +268,10 @@ The `boxInfo` object returned contains the following properties:
 **.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parameter | Type    |    | Description                                      |
-| --------- | ------- |:--:| ------------------------------------------------ |
-| msgNumber | Integer | -> | Number of the message in the list                |
-| Result    | Objeto  | <- | [Email object](EmailObjectClass.md#email-object) |
+| Parameter | Tipo   |    | Description                                      |
+| --------- | ------ |:--:| ------------------------------------------------ |
+| msgNumber | Entero | -> | Number of the message in the list                |
+| Result    | Objeto | <- | [Email object](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -292,7 +292,7 @@ The method returns Null if:
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
 
 
-##### Example
+##### Ejemplo
 
 You want to know the sender of the first mail of the mailbox:
 
@@ -328,10 +328,10 @@ You want to know the sender of the first mail of the mailbox:
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parameter | Type    |    | Description                       |
-| --------- | ------- |:--:| --------------------------------- |
-| msgNumber | Integer | -> | Number of the message in the list |
-| Result    | Objeto  | <- | mailInfo object                   |
+| Parameter | Tipo   |    | Description                       |
+| --------- | ------ |:--:| --------------------------------- |
+| msgNumber | Entero | -> | Number of the message in the list |
+| Result    | Objeto | <- | mailInfo object                   |
 <!-- END REF -->
 
 
@@ -343,9 +343,9 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The `mailInfo` object returned contains the following properties:
 
-| Property | Type   | Description              |
+| Property | Tipo   | Description              |
 | -------- | ------ | ------------------------ |
-| size     | Number | Message size in bytes    |
+| size     | Número | Message size in bytes    |
 | id       | Texto  | Unique ID of the message |
 
 The method returns **Null** if:
@@ -354,7 +354,7 @@ The method returns **Null** if:
 *   the message was marked for deletion using `.delete( )`.
 
 
-##### Example
+##### Ejemplo
 
 
 ```4d
@@ -391,7 +391,7 @@ The method returns **Null** if:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Parameter | Type      |    | Description                      |
+| Parameter | Tipo      |    | Description                      |
 | --------- | --------- |:--:| -------------------------------- |
 | Result    | Colección | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
@@ -403,10 +403,10 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
 
 Each `mailInfo` object in the returned collection contains the following properties:
 
-| Property     | Type   | Description                                                        |
+| Property     | Tipo   | Description                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
-| \[ ].size   | Number | Message size in bytes                                              |
-| \[ ].number | Number | Message number                                                     |
+| \[ ].size   | Número | Message size in bytes                                              |
+| \[ ].number | Número | Message number                                                     |
 | \[ ].id     | Texto  | Unique ID of the message (useful if you store the message locally) |
 
 If the mailbox does not contain a message, an empty collection is returned.
@@ -420,7 +420,7 @@ If the mailbox does not contain a message, an empty collection is returned.
 The *id* however is a unique number assigned to the message when it was received by the server. This number is calculated using the time and date that the message is received and is a value assigned by your POP3 server. Unfortunately, POP3 servers do not use the *id* as the primary reference to their messages. Throughout the POP3 sessions you will need to specify the *number* as the reference to messages on the server. Developers may need to take some care if developing solutions which bring references to messages into a database but leave the body of the message on the server.
 
 
-##### Example
+##### Ejemplo
 
 You want to know the total number and size of emails in the mailbox:
 
@@ -460,10 +460,10 @@ You want to know the total number and size of emails in the mailbox:
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| Parameter | Type    |    | Description                                           |
-| --------- | ------- |:--:| ----------------------------------------------------- |
-| msgNumber | Integer | -> | Number of the message in the list                     |
-| Result    | Blob    | <- | Blob of the MIME string returned from the mail server |
+| Parameter | Tipo   |    | Description                                           |
+| --------- | ------ |:--:| ----------------------------------------------------- |
+| msgNumber | Entero | -> | Number of the message in the list                     |
+| Result    | Blob   | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 
 
@@ -484,7 +484,7 @@ The method returns an empty BLOB if:
 `.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
 
 
-##### Example
+##### Ejemplo
 
 You want to know the total number and size of emails in the mailbox:
 
@@ -538,7 +538,7 @@ You want to know the total number and size of emails in the mailbox:
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Description                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->

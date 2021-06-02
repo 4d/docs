@@ -126,7 +126,7 @@ Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, o
 
 Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-| Value | Constant    | Description                    |
+| Valor | Constant    | Description                    |
 | ----- | ----------- | ------------------------------ |
 | 0     | wdl disable | Web HTTP debug log is disabled |
 
@@ -180,7 +180,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 | Can be set with     | Name                                               | Comments |
 | ------------------- | -------------------------------------------------- | -------- |
-| webServer object    | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean  |
+| webServer object    | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | booleano |
 | `WEB SET OPTION`    | `Web HTTP enabled`                                 |          |
 | Settings dialog box | Configuration page/Enable HTTP                     |          |
 
@@ -191,7 +191,7 @@ Indicates whether or not the web server will accept non-secure connections.
 
 | Can be set with     | Name                                                 | Comments |
 | ------------------- | ---------------------------------------------------- | -------- |
-| webServer object    | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean  |
+| webServer object    | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | booleano |
 | `WEB SET OPTION`    | `Web HTTPS enabled`                                  |          |
 | Settings dialog box | Configuration page/Enable HTTPS                      |          |
 
@@ -380,7 +380,7 @@ Starts or stops the recording of requests received by the 4D web server in the *
 
 This setting allows you to select the format of this file. Available values are:
 
-| Value | Format name          | Description                                                                                                                                                                                                              |
+| Valor | Format name          | Description                                                                                                                                                                                                              |
 | ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0     | No Log File          | Default                                                                                                                                                                                                                  |
 | 1     | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
@@ -488,7 +488,7 @@ To do so, put the ROBOTS.TXT file at the server's root. This file must be struct
    Disallow: <URL> or <beginning of the URL>
 ```
 
-For example:
+Por ejemplo:
 
 ```4d
    User-Agent: *

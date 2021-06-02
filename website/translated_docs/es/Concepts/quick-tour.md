@@ -66,7 +66,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. Por ejemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -137,7 +137,7 @@ $0:=Uppercase($1)
 ```
 
 
-## Data Types
+## Tipos de datos
 
 In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
 
@@ -157,7 +157,7 @@ The data types are fully defined in the section [Data Types](Concepts/data-types
 
 ## Objects and collections
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
+You can handle 4D language objects and collections using the object notation to get or to set their values. Por ejemplo:
 
 ```4d
 employee.name:="Smith"
@@ -231,7 +231,7 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. For example:
+A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por ejemplo:
 
 ```4d  
 //in the Square.4dm file
@@ -251,7 +251,7 @@ This.name:="Square"
 ## Operators
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-| Operator | Operation      | Example            |
+| Operador | Operación      | Ejemplo            |
 | -------- | -------------- | ------------------ |
 | +        | Addition       | 1 + 2 results in 3 |
 | –        | Subtraction    | 3 – 2 results in 1 |
@@ -262,9 +262,9 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type       | Operation     | Example                                                                                              |
+| Data Type       | Operación     | Ejemplo                                                                                              |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
+| Número          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | Cadena          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -287,15 +287,15 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Expression types
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Type               | Description                                                                                                                                                                     |
+| Expresión                | Tipo               | Description                                                                                                                                                                     |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | Cadena             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | Cadena             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
 | “Mr. ” + [People]Name    | Cadena             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
 | Uppercase("smith")       | Cadena             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
+| 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
+| 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| myButton                 | Número             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
 | !1997-01-25!             | Fecha              | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Fecha              | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
 | ?8:05:30?                | Hora               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
@@ -314,7 +314,7 @@ You refer to an expression by the data type it returns. There are several expres
 
 ### Assignable vs non-assignable expressions
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
+An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. Por ejemplo:
 
 ```4d  
 //$myVar variable is assignable, you can write:  

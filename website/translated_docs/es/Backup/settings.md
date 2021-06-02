@@ -1,5 +1,5 @@
 ---
-id: settings
+id: parámetros
 title: Parámetros de la copia de seguridad
 ---
 

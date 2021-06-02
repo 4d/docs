@@ -23,7 +23,7 @@ Other "unpredictable" errors include disk write error, network failure, or in ge
 
 In 4D, all errors can be catched and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
+This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. Por ejemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Installs the error-handling method
@@ -70,7 +70,7 @@ Within the custom error method, you have access to several information that will
 - the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 
-#### Example
+#### Ejemplo
 
 Here is a simple error-handling system:
 

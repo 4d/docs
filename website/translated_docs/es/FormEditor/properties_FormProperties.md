@@ -34,9 +34,9 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON Grammar
 
-| Name  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| Name  | Data Type | Possible Values                                                          |
+| ----- | --------- | ------------------------------------------------------------------------ |
+| pages | colección | Collection of pages (each page is an object, page 0 is the first element |
 
 ---
 
@@ -129,7 +129,7 @@ Only project forms can be specified as published subforms.
 
 | Name   | Data Type | Possible Values |
 | ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
+| shared | booleano  | true, false     |
 
 
 ---
@@ -148,7 +148,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 | Name             | Data Type | Possible Values |
 | ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
+| memorizeGeometry | booleano  | true, false     |
 
 #### See also
 [**Save Value**](FormObjects/properties_Object.md#save-value)

@@ -95,7 +95,7 @@ End if
 ```
 
 
-## Example
+## Ejemplo
 
 In a CRM application, each salesperson manages their own client portfolio. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
 

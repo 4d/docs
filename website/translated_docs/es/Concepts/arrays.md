@@ -155,26 +155,26 @@ Hacer lo mismo con arrays sería prohibido por las siguientes razones:
 - Como un array se mantiene siempre en memoria en su totalidad, habría que mantener toda la información de los códigos postales en memoria durante toda la sesión de trabajo, aunque los datos no estén siempre en uso.
 - De nuevo, dado que un array se mantiene siempre en memoria en su totalidad, cada vez que se inicia la aplicación y se sale de ella, los cuatro arrays tendrían que cargarse y luego guardarse en el disco, aunque los datos no se utilicen ni se modifiquen durante la sesión de trabajo.
 
-**Conclusión:** los arrays están pensados para mantener cantidades razonables de datos durante un corto periodo de tiempo. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
+**Conclusión:** los arrays están pensados para mantener cantidades razonables de datos durante un corto periodo de tiempo. Por otro lado, como los arrays se mantienen en memoria, son fáciles de manejar y rápidos de manipular.
 
-However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:
+Sin embargo, en algunas circunstancias, puede ser necesario trabajar con arrays que contengan cientos o miles de elementos. La siguiente tabla muestra las fórmulas utilizadas para calcular la cantidad de memoria utilizada para cada tipo de array:
 
-| Array Type      | Formula for determining Memory Usage in Bytes                        |
-| --------------- | -------------------------------------------------------------------- |
-| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Booleano        | (31+number of elements)\8                                           |
-| Fecha           | (1+number of elements) * 6                                           |
-| Integer         | (1+number of elements) * 2                                           |
-| Long Integer    | (1+number of elements) * 4                                           |
-| Objeto          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Imagen          | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Puntero         | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| Real            | (1+number of elements) * 8                                           |
-| Texto           | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| Hora            | (1+number of elements) * 4                                           |
-| Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
+| Tipo de array   | Fórmula para determinar el uso de la memoria en bytes                    |
+| --------------- | ------------------------------------------------------------------------ |
+| Blob            | (1+número de elementos) * 12 + Suma del tamaño de cada blob              |
+| Booleano        | (31+número de elementos)\N8                                             |
+| Fecha           | (1+número de elementos) * 6                                              |
+| Entero          | (1+número de elementos) * 2                                              |
+| Entero largo    | (1+número de elementos) * 4                                              |
+| Objeto          | (1+número de elementos) * 8 + Suma del tamaño de cada objeto             |
+| Imagen          | (1+número de elementos) * 8 + Suma del tamaño de cada imagen             |
+| Puntero         | (1+número de elementos) * 8 + Suma del tamaño de cada puntero            |
+| Real            | (1+número de elementos) * 8                                              |
+| Texto           | (1+número de elementos) * 20 + (suma de la longitud de cada texto) * 2 |
+| Hora            | (1+número de elementos) * 4                                              |
+| Dos dimensiones | (1+número de elementos) * 16 + Suma del tamaño de cada array             |
 
-**Notes:**
+**Notas:**
 
-- The size of a text in memory is calculated using this formula: ((Length + 1) * 2)
-- A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.
+- El tamaño de un texto en memoria se calcula con esta fórmula ((Longitud + 1) * 2)
+- Se requieren algunos bytes adicionales para llevar la cuenta del elemento seleccionado, el número de elementos y el propio array.

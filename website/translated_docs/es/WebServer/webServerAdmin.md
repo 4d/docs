@@ -119,7 +119,7 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Description                          | Example                                                                                                                         |
+| HTTP Field | Description                          | Ejemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Fecha      | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
@@ -189,7 +189,7 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Field          | ELF | WLF | Value                                  |
+| Field          | ELF | WLF | Valor                                  |
 | -------------- | --- | --- | -------------------------------------- |
 | BYTES_RECEIVED |     | X   | Number of bytes received by the server |
  BYTES_SENT| X|  X|  Number of bytes sent by the server to the client| C_DNS|  X|  X   |IP address of the DNS (ELF: field identical to the C_IP field)| C_IP|   X|  X|  IP address of the client (for example 192.100.100.10)| CONNECTION_ID|      |X| Connection ID number| CS(COOKIE)| X|  X|  Information about cookies contained in the HTTP request| CS(HOST)|   X|  X|  Host field of the HTTP request| CS(REFERER)|    X|  X|  URL of the page pointing to the requested document| CS(USER_AGENT)| X|  X|  Information about the software and operating system of the client| CS_SIP| X|  X|  IP address of the server| CS_URI| X|  X|  URI on which the request is made| CS_URI_QUERY|   X|  X|  Request query parameters| CS_URI_STEM|    X|  X|  Part of request without query parameters| DATE|   X|  X|  DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year| METHOD| X|  X|  HTTP method used for the request sent to the server| PATH_ARGS|  |   X|  CGI parameters: string located after the “$” character| STATUS| X|  X|  Reply provided by the server| TIME|   X|  X|  HH: hour, MM: minutes, SS: seconds| TRANSFER_TIME|  X|  X|  Time requested by server to generate the reply| USER|   X|  X|  User name if authenticated; otherwise - (minus sign).<p>If the user name contains spaces, they are replaced by _ (underlines)| URL |   |X| URL requested by the client|

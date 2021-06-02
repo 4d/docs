@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Example              | Description                                                                      |
+| Sintaxis                                      | Ejemplo              | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -29,14 +29,14 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Property | Type   | Description                                                                       |
+| Property | Tipo   | Description                                                                       |
 | -------- | ------ | --------------------------------------------------------------------------------- |
 | name     | Cadena | Name of the dataclass.                                                            |
 | uri      | Cadena | A URI allowing you to obtain information about the |dataclass and its attributes. |
 | dataURI  | Cadena | A URI that allows you to view the data in the dataclass.                          |
 
 
-### Example
+### Ejemplo
 
 `GET  /rest/$catalog`
 
@@ -71,7 +71,7 @@ Calling `$catalog/$all` allows you to receive detailed information about the att
 For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### Ejemplo
 
 `GET  /rest/$catalog/$all`
 
@@ -201,11 +201,11 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Type   | Description                                                                                  |
+| Property       | Tipo   | Description                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
 | name           | Cadena | Name of the dataclass                                                                        |
 | collectionName | Cadena | Name of an entity selection on the dataclass                                                 |
-| tableNumber    | Number | Table number in the 4D database                                                              |
+| tableNumber    | Número | Table number in the 4D database                                                              |
 | scope          | Cadena | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
 | dataURI        | Cadena | A URI to the data in the dataclass                                                           |
 
@@ -214,11 +214,11 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Type     | Description                                                                                                                                           |
+| Property    | Tipo     | Description                                                                                                                                           |
 | ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | Cadena   | Attribute name.                                                                                                                                       |
 | kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | Number   | Position of the field in the database table).                                                                                                         |
+| fieldPos    | Número   | Position of the field in the database table).                                                                                                         |
 | scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
 | indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
 | type        | Cadena   | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
@@ -233,7 +233,7 @@ Here are the properties for each exposed attribute that are returned:
 The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
 
 
-### Example
+### Ejemplo
 You can retrieve the information regarding a specific dataclass.
 
 `GET  /rest/$catalog/Employee`

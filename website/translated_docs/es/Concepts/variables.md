@@ -40,7 +40,7 @@ To declare a variable of any type with the `var` keyword, use the following synt
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
-For example:
+Por ejemplo:
 
 ```4d
 var $myText : Text  //a text variable
@@ -67,7 +67,7 @@ The following table lists all supported `varType` values:
 | `Fecha`                | Date value                            |
 | `Hora`                 | Time value                            |
 | `Booleano`             | Boolean value                         |
-| `Integer`              | Long integer value                    |
+| `Entero`               | Long integer value                    |
 | `Real`                 | Real value                            |
 | `Puntero`              | Pointer value                         |
 | `Imagen`               | Picture value                         |
@@ -78,7 +78,7 @@ The following table lists all supported `varType` values:
 | `4D.<className>` | Object of the 4D class name           |
 | `cs.<className>` | Object of the user class name         |
 
-#### Examples
+#### Ejemplos
 
 - To declare local and process basic variables:
 
@@ -137,7 +137,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Por ejemplo:
 
 ```4d
 MyNumber:=3
@@ -179,7 +179,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aquí un ejemplo:
 
 ```4d
  $vsID:=Request("Please enter your ID:")

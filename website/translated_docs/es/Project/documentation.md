@@ -196,7 +196,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 
 
-## Example
+## Ejemplo
 
 In the `WP SwitchToolbar.md` file, you can write:
 

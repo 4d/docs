@@ -12,7 +12,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 | Name        | Data Type | Possible Values |
 | ----------- | --------- | --------------- |
-| showFooters | boolean   | true, false     |
+| showFooters | booleano  | true, false     |
 
 #### Objects Supported
 

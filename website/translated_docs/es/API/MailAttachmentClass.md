@@ -28,7 +28,7 @@ Attachment objects provide the following read-only properties and functions:
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Tipo              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
@@ -82,7 +82,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
-| Constant                    | Value        | Comment                                                                                                                                                                                              |
+| Constant                    | Valor        | Comment                                                                                                                                                                                              |
 | --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
 | mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
@@ -165,7 +165,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Tipo              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
@@ -212,7 +212,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 **.getContent()** : Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type |    | Description               |
+| Parameter | Tipo |    | Description               |
 | --------- | ---- |:--:| ------------------------- |
 | Result    | Blob | <- | Content of the attachment |
 <!-- END REF -->

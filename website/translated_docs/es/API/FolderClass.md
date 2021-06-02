@@ -7,7 +7,7 @@ title: Folder
 
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
-### Example
+### Ejemplo
 
 The following example creates a "JohnSmith" folder:
 
@@ -60,11 +60,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Type      |    | Description                                     |
+| Parameter      | Tipo      |    | Description                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Texto     | -> | Folder path                                     |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
+| folderConstant | Entero    | -> | 4D folder constant                              |
+| pathType       | Entero    | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
 | Result         | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
@@ -82,7 +82,7 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Value | Comment                                                                                 |
+| Constant         | Valor | Comment                                                                                 |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -91,7 +91,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Constant                   | Value | Comment                                                                                             |
+| Constant                   | Valor | Comment                                                                                             |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
 | fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
@@ -147,7 +147,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Type     |    | Description                                                  |
+| Parameter | Tipo     |    | Description                                                  |
 | --------- | -------- | -- | ------------------------------------------------------------ |
 | Result    | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
@@ -208,11 +208,11 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                  |
+| Parameter         | Tipo      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
+| aliasType         | Entero    | -> | Type of the alias link                       |
 | Result            | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
@@ -225,7 +225,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Value | Comment                    |
+| Constant           | Valor | Comment                    |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -236,7 +236,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
-#### Example
+#### Ejemplo
 
 You want to create an alias to an archive folder in your database folder:
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Type    |    | Description            |
-| --------- | ------- | -- | ---------------------- |
-| option    | Integer | -> | Folder deletion option |
+| Parameter | Tipo   |    | Description            |
+| --------- | ------ | -- | ---------------------- |
+| option    | Entero | -> | Folder deletion option |
 <!-- END REF -->
 
 
@@ -283,7 +283,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constant               | Value | Comment                                          |
+| Constant               | Valor | Comment                                          |
 | ---------------------- | ----- | ------------------------------------------------ |
 | `Delete only if empty` | 0     | Deletes folder only when it is empty             |
 | `Delete with contents` | 1     | Deletes folder along with everything it contains |
@@ -384,7 +384,7 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                    |
+| Parameter         | Tipo      |    | Description                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
@@ -404,7 +404,7 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 The moved `Folder` object.
 
-#### Example
+#### Ejemplo
 
 You want to move and rename a folder:
 
@@ -454,7 +454,7 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Type      |    | Description                  |
+| Parameter | Tipo      |    | Description                  |
 | --------- | --------- | -- | ---------------------------- |
 | newName   | Texto     | -> | New full name for the folder |
 | Result    | 4D.Folder | <- | Renamed folder               |
@@ -473,7 +473,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 The renamed `Folder` object.
 
-#### Example
+#### Ejemplo
 
 
 ```4d

@@ -24,11 +24,11 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
-### Syntax
+### Sintaxis
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Type  |    | Description                                  |
+| Parámetros | Tipo  |    | Description                                  |
 | ---------- | ----- |:--:| -------------------------------------------- |
 | $1         | Texto | <- | URL                                          |
 | $2         | Texto | <- | HTTP headers + HTTP body (up to 32 kb limit) |
@@ -108,7 +108,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br> **/4DACTION/******MethodName/Param*
 
-| Parámetros | Type  |    | Description                                  |
+| Parámetros | Tipo  |    | Description                                  |
 | ---------- | ----- |:--:| -------------------------------------------- |
 | MethodName | Texto | -> | Name of the 4D project method to be executed |
 | Param      | Texto | -> | Text parameter to pass to the project method |
@@ -130,7 +130,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Ejemplo
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -172,7 +172,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Ejemplo
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 

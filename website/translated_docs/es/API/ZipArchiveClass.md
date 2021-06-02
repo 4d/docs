@@ -10,7 +10,7 @@ A 4D ZIP archive is a `File` or `Folder` object containing one or more files or 
 - 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 
-### Example
+### Ejemplo
 
 To retrieve and view the contents of a ZIP file object:
 
@@ -49,13 +49,13 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parameter       | Type      |    | Description                                          |
+| Parameter       | Tipo      |    | Description                                          |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
 | zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
-| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| options         | Entero    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Result          | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
@@ -77,7 +77,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
     </td>
     
     <td>
-      Type
+      Tipo
     </td>
     
     <td>
@@ -150,10 +150,10 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Type     | Description                                                                                                                             |
+| Property   | Tipo     | Description                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Integer  | Status code                                                                                                                             |
+| status     | Entero   | Status code                                                                                                                             |
 | success    | Booleano | True if archive created successfully, else false                                                                                        |
 
 
@@ -276,7 +276,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parameter | Type          |    | Description                 |
+| Parameter | Tipo          |    | Description                 |
 | --------- | ------------- |:--:| --------------------------- |
 | zipFile   | 4D.File       | -> | Zip archive file            |
 | password  | Texto         | -> | ZIP archive password if any |
@@ -304,7 +304,7 @@ The returned `4D.ZipArchive` object contains a single [`root`](#root) property w
 
 
 
-#### Example
+#### Ejemplo
 
 To retrieve and view the contents of a ZIP file object:
 

@@ -32,7 +32,7 @@ The first time you connect to a 4D Server project via a remote 4D, you will usua
 
 To connect remotely to a 4D Server project:
 
-1. Select **Connect to 4D Server** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
+1. Select **Connect to 4D Server** in the Welcome Wizard dialog, <p>O<p> Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
 
 The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
 

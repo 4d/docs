@@ -138,14 +138,14 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Description                                                                                             |
+| Sintaxis                  | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
 | [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
-#### Examples
+#### Ejemplos
 
 All objects with the `borderStyle` attribute will have purple lines:
 
@@ -209,7 +209,7 @@ Available media feature expressions:
 
 > Color schemes are only supported on macOS.
 
-##### Example
+##### Ejemplo
 
 This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
 
@@ -275,7 +275,7 @@ icon: url("edit.png"); /* relative path to the form file */
     - Hexa value: `fill: #FF0000;`
     - the `rgb()` function: `fill:rgb(255,0,0)`
 
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
+- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Por ejemplo:
     - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
