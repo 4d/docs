@@ -23,32 +23,45 @@ Los mecanismos de gestión de componentes en 4D requieren la aplicación de los 
 
 Hay que tener en cuenta que un proyecto puede ser a la vez "matriz" y "local", es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar "subcomponentes" por sí mismo.
 
-
 ### Protección de los componentes: compilación
 
 Por defecto, todos los métodos proyecto de un proyecto matriz instalado como componente son potencialmente visibles desde el proyecto local. En particular:
 
-- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. Sin embargo, no es posible abrirlos en el editor de métodos ni modificarlos.
+- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. However, it's not possible to open them in the Method editor or modify them.
 - Los otros métodos proyecto del proyecto matriz no aparecen en el Explorador, pero también pueden verse en el depurador del proyecto local.
 
 Para proteger eficazmente los métodos proyecto de un componente, basta con compilar el proyecto de la matriz y entregarlo en forma de archivo .4dz. Cuando se instala un proyecto matricial compilado como un componente:
 
-- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
+- Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. However, their contents will not appear in the preview area and in the debugger.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
 
 ## Compartir métodos proyecto
 Todos los métodos proyecto de un proyecto matricial son por definición incluidos en el componente (el proyecto es el componente), lo que significa que pueden ser llamados y ejecutados por el componente.
 
-Por otro lado, por defecto estos métodos proyecto no serán visibles, ni podrán ser llamados por los proyectos locales. En el proyecto matriz, debe designar explícitamente los métodos que desea compartir con el proyecto local. Estos métodos proyecto se pueden llamar en el código del proyecto local (pero no se pueden modificar en el editor de métodos de la base local). Estos métodos forman los **puntos de entrada** en el componente.
+On the other hand, by default these project methods will not be visible, and they can't be called in the host project. En el proyecto matriz, debe designar explícitamente los métodos que desea compartir con el proyecto local. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). Estos métodos forman los **puntos de entrada** en el componente.
 
-**Nota:** por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. Para ello, debe designar explícitamente los métodos proyecto del proyecto local que desea hacer accesibles a los componentes.
+Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Por ejemplo:
+
+```4d 
+// Host Method
+component_method("host_method_name")
+```
+
+
+```4d
+// component_method
+ C_TEXT($1)
+ EXECUTE METHOD($1)
+```
+
 ## Paso de variables
 
-Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. La única forma de acceder a las variables del componente desde el proyecto local y viceversa es utilizando punteros.
+Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. The only way to modify component variables from the host project and vice versa is using pointers.
 
 Ejemplo utilizando un array:
 
@@ -64,10 +77,23 @@ Ejemplo utilizando un array:
 Ejemplos utilizando variables:
 
 ```4d
- C_TEXT(myvariable)
- component_method1(->myvariable)
- C_POINTER($p)
- $p:=component_method2(...)
+C_TEXT(myvariable)
+component_method1(->myvariable)
+```
+
+```4d
+C_POINTER($p)
+$p:=component_method2(...)
+```
+
+Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+
+```4d
+//In the host database
+C_TEXT($input_t)
+$input_t:="DoSomething"
+component_method($input_t)
+// component_method gets "DoSomething" in $1 (but not the $input_t variable)
 ```
 
 
@@ -94,7 +120,7 @@ En este caso, es necesario utilizar la comparación de punteros:
 
 ## Acceso a las tablas del proyecto local
 
-Aunque los componentes no pueden utilizar tablas, los punteros pueden permitir que los proyectos locales y los componentes se comuniquen entre sí. Por ejemplo, este es un método que podría ser llamado desde un componente:
+Although components cannot use tables, pointers can allow host projects and components to communicate with each other. Por ejemplo, este es un método que podría ser llamado desde un componente:
 
 ```4d
 // llamar a un método componente
@@ -116,11 +142,13 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
+> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+
 ## Alcance de los comandos del lenguaje
 
 A excepción de los [comandos no utilizables](#comandos-inutilizables), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-Cuando se llaman comandos desde un componente, se ejecutan en el contexto del componente, excepto el comando `EXECUTE METHOD` que utiliza el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 
 Los comandos `SET DATABASE PARAMETER` y `Get database parameter` son una excepción: su alcance es global a la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
 
@@ -165,9 +193,11 @@ Un [método de gestión de errores](Concepts/error-handling.md) instalado por el
 - Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Todos los formularios proyecto presentes en el proyecto matriz pueden ser utilizados por el componente.
 - Un componente puede llamar a formularios tabla del proyecto local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.
 
-**Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual del proyecto local, en el contexto del proyecto local. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.
+> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.
 
 - Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 ## Uso de tablas y campos
 
