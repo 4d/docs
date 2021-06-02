@@ -23,32 +23,45 @@ Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bed
 
 Beachten Sie, dass ein Projekt sowohl vom Typ “Matrix” als auch “Host” sein kann, d. h. ein Matrix Projekt kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
 
-
 ### Komponenten durch Kompilieren schützen
 
 Standardmäßig sind alle Projektmethoden eines Matrix Projekts, das als Komponente installiert ist, potentiell vom Host Projekt aus sichtbar. Das bedeutet im einzelnen:
 
-- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. However, it's not possible to open them in the Method editor or modify them.
 - Andere Projektmethoden des Matrix Projekts erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger des Host Projekts sichtbar.
 
 Um die Projektmethoden einer Komponente wirksam zu schützen, kompilieren Sie einfach das Matrix Projekt und liefern es als .4dz-Datei. Wird ein kompiliertes Matrix Projekt als Komponente installiert, gilt folgendes:
 
-- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. However, their contents will not appear in the preview area and in the debugger.
 - Die anderen Projektmethoden des Matrix Projekts erscheinen nie.
 
 
 ## Projektmethoden gemeinsam nutzen
 Per Definition werden alle Projektmethoden in die Komponente integriert (das Projekt ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in Host Projekten auch nicht aufrufen. Im Matrix Projekt müssen Sie die Methoden, die Sie mit dem Host Projekt teilen wollen, explizit angeben. Diese Projektmethoden lassen sich im Code des Host Projekts aufrufen. Sie lassen sich jedoch im Methodeneditor des Host Projekts nicht verändern. Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
+On the other hand, by default these project methods will not be visible, and they can't be called in the host project. Im Matrix Projekt müssen Sie die Methoden, die Sie mit dem Host Projekt teilen wollen, explizit angeben. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
 
-**Hinweis:** Aus Sicherheitsgründen kann die Komponente standardmäßig keine Projektmethoden ausführen, die zum Host Projekt gehören. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihres Host Projekts zugreifen kann. Dazu müssen Sie die Projektmethode explizit dem Host Projekt zuweisen, das Sie für die Komponenten zugänglich machen wollen.
+Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihres Host Projekts zugreifen kann. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Beispiel:
+
+```4d 
+// Host Method
+component_method("host_method_name")
+```
+
+
+```4d
+// component_method
+ C_TEXT($1)
+ EXECUTE METHOD($1)
+```
+
 ## Variablen übergeben
 
-Lokale, Prozess- und Interprozess Variablen werden nicht von Komponenten und Host Projekten gemeinsam genutzt. Die einzige Möglichkeit, aus dem Host Projekt auf Variablen von Komponenten zuzugreifen und umgekehrt, sind Zeiger.
+Lokale, Prozess- und Interprozess Variablen werden nicht von Komponenten und Host Projekten gemeinsam genutzt. The only way to modify component variables from the host project and vice versa is using pointers.
 
 Beispiel mit Array:
 
@@ -64,10 +77,23 @@ Beispiel mit Array:
 Beispiele mit Variablen:
 
 ```4d
- C_TEXT(myvariable)
- component_method1(->myvariable)
- C_POINTER($p)
- $p:=component_method2(...)
+C_TEXT(myvariable)
+component_method1(->myvariable)
+```
+
+```4d
+C_POINTER($p)
+$p:=component_method2(...)
+```
+
+Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+
+```4d
+//In the host database
+C_TEXT($input_t)
+$input_t:="DoSomething"
+component_method($input_t)
+// component_method gets "DoSomething" in $1 (but not the $input_t variable)
 ```
 
 
@@ -94,7 +120,7 @@ In diesem Fall müssen Sie die Zeiger miteinander vergleichen:
 
 ## Auf Tabellen des Host Projekts zugreifen
 
-Auch wenn Komponenten keine Tabellen verwenden können, können Host Projekte und Komponenten über Zeiger miteinander kommunizieren. Hier sehen Sie beispielsweise eine Methode, die sich in einer Komponente aufrufen lässt:
+Although components cannot use tables, pointers can allow host projects and components to communicate with each other. Hier sehen Sie beispielsweise eine Methode, die sich in einer Komponente aufrufen lässt:
 
 ```4d
 // calling a component method
@@ -116,11 +142,13 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
+> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+
 ## Reichweite der Befehle der Programmiersprache
 
 Eine Komponente kann jeden Befehl der 4D Programmiersprache verwenden, außer er gehört zur Liste [nicht verwendbare Befehle](#unusable-commands).
 
-Von einer Komponente aufgerufene Befehle laufen im Kontext dieser Komponente, außer für den Befehl `EXECUTE METHOD`. Dieser verwendet den Kontext der durch den Befehl angegebenen Methode. Eine Komponente kann auch die Lesebefehle des Kapitels “Benutzer und Gruppen” verwenden. Die Befehle lesen jedoch die Benutzer und Gruppen des Host Projekts, da eine Komponente keine eigenen Benutzer und Gruppen hat.
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Eine Komponente kann auch die Lesebefehle des Kapitels “Benutzer und Gruppen” verwenden. Die Befehle lesen jedoch die Benutzer und Gruppen des Host Projekts, da eine Komponente keine eigenen Benutzer und Gruppen hat.
 
 Die Befehle `SET DATABASE PARAMETER` und `Get database parameter` bilden hier eine Ausnahme. Sie gelten global für die Anwendung. Ruft eine Komponente diese Befehle auf, werden sie auf das Host Anwendungsprojekt angewendet.
 
@@ -165,9 +193,11 @@ Eine [Fehlerverwaltungsmethode](Concepts/error-handling.md), die über den Befeh
 - In einer Komponente lassen sich nur "Projektformulare" (d. h. sie sind keiner bestimmten Tabelle zugeordnet) verwenden. Eine Komponente kann alle Projektformulare des Matrix Projekts verwenden.
 - Eine Komponente kann Tabellenformulare des Host Projekts aufrufen. Beachten Sie, dass Sie dann Zeiger anstelle von Tabellennamen zwischen eckigen Klammern [] verwenden müssen, um Formulare im Code der Komponente anzugeben.
 
-**Hinweis:** Verwendet eine Komponente den Befehl `ADD RECORD`, wird das aktuelle Eingabeformular des Host Projekts angezeigt. Folglich hat die Komponente keinen Zugriff auf Variablen, die im Formular enthalten sind.
+> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Folglich hat die Komponente keinen Zugriff auf Variablen, die im Formular enthalten sind.
 
 - Sie können Formulare von Komponenten als Unterformulare in Host Projekten veröffentlichen. Das bedeutet vorallem, dass Sie Komponenten mit grafischen Objekten entwickeln können. Zum Beispiel nutzen Widgets, die 4D liefert, Unterformulare in Komponenten.
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 ## Tabellen und Felder verwenden
 
