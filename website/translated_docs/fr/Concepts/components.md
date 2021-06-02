@@ -23,32 +23,45 @@ Les mécanismes de gestion des composants dans 4D nécessitent la mise en oeuvre
 
 It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
 
-
 ### Protection des composants : la compilation
 
 By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. En particulier :
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. However, it's not possible to open them in the Method editor or modify them.
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 
 To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
+- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
 - The other project methods of the matrix project will never appear.
 
 
 ## Partage des méthodes projet
 All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host projects. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). Ces méthodes constituent les **points d’entrée** dans le composant.
+On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). Ces méthodes constituent les **points d’entrée** dans le composant.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate the project methods of the host project that you want to make accessible to the components.
+Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Par exemple :
+
+```4d 
+// Host Method
+component_method("host_method_name")
+```
+
+
+```4d
+// component_method
+ C_TEXT($1)
+ EXECUTE METHOD($1)
+```
+
 ## Passage de variables
 
-The local, process and interprocess variables are not shared between components and host projects. The only way to access component variables from the host project and vice versa is using pointers.
+The local, process and interprocess variables are not shared between components and host projects. The only way to modify component variables from the host project and vice versa is using pointers.
 
 Exemple utilisant un tableau :
 
@@ -64,10 +77,23 @@ Exemple utilisant un tableau :
 Exemples utilisant des variables :
 
 ```4d
- C_TEXT(myvariable)
- component_method1(->myvariable)
- C_POINTER($p)
- $p:=component_method2(...)
+C_TEXT(myvariable)
+component_method1(->myvariable)
+```
+
+```4d
+C_POINTER($p)
+$p:=component_method2(...)
+```
+
+Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+
+```4d
+//In the host database
+C_TEXT($input_t)
+$input_t:="DoSomething"
+component_method($input_t)
+// component_method gets "DoSomething" in $1 (but not the $input_t variable)
 ```
 
 
@@ -94,7 +120,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Accès aux tables du projet hôte
 
-Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent au projet hôte et au composant de communiquer dans ce cas. Par exemple, voici une méthode pouvant être appelée depuis un composant :
+Although components cannot use tables, pointers can allow host projects and components to communicate with each other. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
 ```4d
 // appeler une méthode composant
@@ -116,11 +142,13 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
+> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+
 ## Portée des commandes du langage
 
 Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTE METHOD` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
 Les commandes `EXECUTE METHOD` et `Get database parameter` constituent aussi une exception à ce principe : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
@@ -165,9 +193,11 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans le projet matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
-**Note :** Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant du projet hôte sera affiché, dans le contexte du projet hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
+> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
 - Vous pouvez publier des formulaires de composants comme sous-formulaires dans les projets hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 ## Utilisation de tables et de champs
 
