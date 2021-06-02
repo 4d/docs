@@ -13,7 +13,7 @@ Being able to refer to something without knowing its exact identity is very usef
 
 You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
 
-| Type          | To Reference            | To Use                   | To Assign                |
+| Tipo          | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
@@ -77,12 +77,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Syntax            | Returns  | Expression    | Value |
-| ---------- | ----------------- | -------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
-|            |                   |          | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
-|            |                   |          | vPtrA # vPtrB | False |
+| Operación   | Sintaxis          | Devuelve | Expresión     | Valor |
+| ----------- | ----------------- | -------- | ------------- | ----- |
+| Igual       | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+|             |                   |          | vPtrA = vPtrC | False |
+| Desigualdad | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
+|             |                   |          | vPtrA # vPtrB | False |
 
 ## Main usages
 ### Pointers to tables

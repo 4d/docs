@@ -8,11 +8,11 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 ## Description
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Type      | Description                                                                         |
+| Property       | Tipo      | Description                                                                         |
 | -------------- | --------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Number    | 4D Server's cache size.                                                             |
-| usedCache      | Number    | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Number    | Number of entity selections.                                                        |
+| cacheSize      | Número    | 4D Server's cache size.                                                             |
+| usedCache      | Número    | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Número    | Number of entity selections.                                                        |
 | entitySet      | Colección | A collection in which each object contains information about each entity selection. |
 | ProgressInfo   | Colección | A collection containing information about progress indicator information.           |
 | sessionInfo    | Colección | A collection in which each object contains information about each user session.     |
@@ -21,11 +21,11 @@ When you call this request for your project, you retrieve information in the fol
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Property      | Type     | Description                                                                                                                                                                                                                                                         |
+| Property      | Tipo     | Description                                                                                                                                                                                                                                                         |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | Cadena   | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | dataClass     | Cadena   | Name of the dataclass.                                                                                                                                                                                                                                              |
-| selectionSize | Number   | Number of entities in the entity selection.                                                                                                                                                                                                                         |
+| selectionSize | Número   | Number of entities in the entity selection.                                                                                                                                                                                                                         |
 | sorted        | Booleano | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
 | refreshed     | Fecha    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
 | expires       | Fecha    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
@@ -38,14 +38,14 @@ For information about how to create an entity selection, refer to `$method=entit
 
 For each user session, the following information is returned in the *sessionInfo* collection:
 
-| Property   | Type   | Description                                                  |
+| Property   | Tipo   | Description                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | Cadena | A UUID that references the session.                          |
 | userName   | Cadena | The name of the user who runs the session.                   |
-| lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
+| lifeTime   | Número | The lifetime of a user session in seconds (3600 by default). |
 | expiration | Fecha  | The current expiration date and time of the user session.    |
 
-## Example
+## Ejemplo
 
 Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
 

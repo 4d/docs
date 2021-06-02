@@ -3,7 +3,7 @@ id: architecture
 title: Arquitectura de un proyecto 4D
 ---
 
-Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una única carpeta padre de la base (carpeta paquete). For example:
+Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una única carpeta padre de la base (carpeta paquete). Por ejemplo:
 
 - MyProject
     - Componentes

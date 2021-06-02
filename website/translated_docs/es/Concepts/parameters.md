@@ -114,7 +114,7 @@ En el siguiente ejemplo, el método `Capitalize` proyecto acepta un parámetro t
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-La utilización de comandos tales como `New process` con métodos proceso que aceptan parámetros también requiere que los parámetros se declaren explícitamente en el método llamado. For example:
+La utilización de comandos tales como `New process` con métodos proceso que aceptan parámetros también requiere que los parámetros se declaren explícitamente en el método llamado. Por ejemplo:
 
 ```4d
 C_TEXT($string)
@@ -151,7 +151,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 - Triggers El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Objetos formulario que aceptan el evento formulario `On Drag Over` El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Objetos formulario que aceptan el evento formulario `On Drag Over` El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Por ejemplo:
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
@@ -166,7 +166,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Values or references
 
-Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales $1, $2... de la subrutina (ver [Utilización de los parámetros](#using-parameters)). Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Como su alcance es local, si el valor de un parámetro se modifica en la subrutina, no cambia el valor en el método que llama. For example:
+Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales $1, $2... de la subrutina (ver [Utilización de los parámetros](#using-parameters)). Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Como su alcance es local, si el valor de un parámetro se modifica en la subrutina, no cambia el valor en el método que llama. Por ejemplo:
 
 ```4d
     //Esta es una parte del código del método MY_METHOD

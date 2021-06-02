@@ -49,7 +49,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-El operador de asignación es la principal forma de crear una variable y de introducir datos en ella. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+El operador de asignación es la principal forma de crear una variable y de introducir datos en ella. You write the name of the variable that you want to create on the left side of the assignment operator. Por ejemplo:
 
 ```4d
 MyNumber:=3
@@ -89,7 +89,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 Cuando se trabaja en una base con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aquí un ejemplo:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
