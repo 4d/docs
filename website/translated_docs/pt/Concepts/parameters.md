@@ -208,14 +208,14 @@ Tables or array expressions can only be passed [as reference using a pointer](dt
 
 ### Parameter indirection
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Ao utilizar o comando `Count parameters` pode endereçar esses parâmetros com um loop `For...End for` e a sintaxe de indireção de parâmetros.
 
 > Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+No exemplo abaixo, o método projeto `SEND PACKETS` aceita um parâmetro de tempo seguido de um número variável de parâmetros de texto:
 
 ```4d
-  //SEND PACKETS Project Method
+  //Método projeto SEND PACKETS
   //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
   //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
 
@@ -228,20 +228,20 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
+A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros. Dentro do método, um endereço de indireçao é formatado: ${$i}, onde $i for uma variável numérica. ${$i} se denomina **parâmetro genérico**.
 
-For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
+Por exemplo, considere uma função que some os valores e devolva a soma formatada segundo um formato que se passa como parâmetro. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
-This function is called in the following manner:
+Essa função é chamada da maneira abaixo:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
 
 ```
 
-In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
+Neste caso, o método que chama obterá a string "182,70", que é a soma dos números, com o formato especificado. Os parâmetros da função devem ser passados na ordem correta: primeiro o formato e depois os valores.
 
-Here is the function, named `MySum`:
+Aqui está a função, chamada `MySum`:
 ```4d
  $Sum:=0
  For($i;2;Count parameters)
@@ -250,7 +250,7 @@ Here is the function, named `MySum`:
  $0:=String($Sum;$1)
 ```
 
-This function can now be called in various ways:
+Esta função pode ser chamada agora de várias formas:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
@@ -258,7 +258,7 @@ This function can now be called in various ways:
 ```
 
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+Da mesma forma que com outras variáveis locais, não é obrigatório declarar os parâmetros genéricos mediante uma diretiva de compilador. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
 ```4d
  C_LONGINT(${4})
@@ -421,20 +421,20 @@ Dentro da subrotina, pode utilizar os parâmetros $1, $2... da mesma maneira que
 
 ## Optional parameters
 
-No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. You can call it in the following ways:
+No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. Pode fazer a chamada de duas maneiras:
 
 ```4d
-ALERT("Are you sure?";"Yes I am") //2 parameters
-ALERT("Time is over") //1 parameter
+ALERT("Are you sure?";"Yes I am") //2 parâmetros
+ALERT("Time is over") //1 parâmetro
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. O problema com os parâmetros opcionais é como manejar o caso em que alguns deles estejam faltando no método chamado, nunca deveria produzir um erro. Uma boa prática é atribuir valores padrão aos parâmetros não utilizados.
 
 > When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
-Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
+Utilizando o comando `Count parameters` desde dentro do método chamado, pode detectar o número real de parâmetros e realizar diferentes operações dependendo do que tenha recebido.
 
-The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
+O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um documento no disco ou em uma área de 4D Write Pro:
 
 ```4d
 // APPEND TEXT Project Method
@@ -452,12 +452,12 @@ The following example displays a text message and can insert the text into a doc
     End if
  End if
 ```
-After this project method has been added to your application, you can write:
+Depois de adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d  
-APPEND TEXT(vtSomeText) //Will only display the  message
-APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path
-APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
+APPEND TEXT(vtSomeText) //Só mostrará a mensagem
+APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path
+APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
 
