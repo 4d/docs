@@ -5,43 +5,77 @@ title: コンポーネント
 
 4D のコンポーネントとは、他のアプリケーションにインストール可能な、1つ以上の機能を持つ 4D メソッドやフォームの一式です。 たとえば、メールの送受信をおこない、それらを 4D アプリケーションに格納するための機能を持ったコンポーネントを作成できます。
 
+## Presentation
+
+### 定義
+
+- **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。
+- **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
+- **コンポーネント**: ホストアプリケーションによって使用される目的で、同アプリケーションの [`Components`](Project/architecture.md) フォルダーにコピーされたマトリクスプロジェクト (コンパイル済みまたは非コンパイル)。
+
+### Principles
+
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます。 4D では、コンポーネントは [プラグイン](Concepts/plug-ins.md) のように扱われ、以下の原則が適用されます:
 
-- コンポーネントは、標準のアーキテクチャーまたはパッケージ (.4dbase 拡張子) の形をしたストラクチャーファイル ( コンパイルまたは非コンパイル) で構成されます。
-- アプリケーションプロジェクトにコンポーネントをインストールするには、プロジェクトの Project フォルダーと同階層の "Components" フォルダーにコンポーネントをコピーします。
-- コンポーネントは次の 4D の要素を呼び出すことができます: プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リスト、ライブラリピクチャーなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
+- A component consists of a regular 4D project file.
+- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+- プロジェクトは "マトリクス" にも "ホスト" にもなりえます。言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
+- コンポーネントは次の 4D の要素を呼び出すことができます: プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内で標準のテーブルやデータファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
+- A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
 
 
-## 定義
 
-4D のコンポーネント管理メカニズムでは、以下の用語とコンセプトを使います:
 
-- **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。 マトリクスプロジェクトは、コンポーネントを使用するプロジェクト (ホストアプリケーションプロジェクト) の Components フォルダーにコピーして使います。コンパイルされていてもいなくてもかまいません。
-- **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
-- **コンポーネント**: ホストアプリケーションによって使用される目的で、同アプリケーションの Components フォルダーにコピーされたマトリクスプロジェクト (コンパイル済みまたは非コンパイル)。
+## ランゲージコマンドのスコープ
 
-プロジェクトは "マトリクス" にも "ホスト" にもなりえます。言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
+[使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-### コンポーネントの保護: コンパイル
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし `EXECUTE METHOD` および `EXECUTE FORMULA` コマンドは除きます。このコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-コンポーネントとしてインストールされたマトリクスプロジェクトのプロジェクトメソッドは、ホストプロジェクトからデフォルトでアクセス可能です。 特に:
+`SET DATABASE PARAMETER` と `Get database parameter` コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 However, it's not possible to open them in the Method editor or modify them.
-- マトリクスプロジェクトの他のプロジェクトメソッドはエクスプローラーに現れません。しかし、ホストプロジェクトのデバッガーには内容が表示されます。
+さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-コンポーネントのプロジェクトメソッドを効果的に保護するには、マトリクスプロジェクトをコンパイルして、インタプリターコードを含まない .4dz ファイルとして提供します。 コンパイルされたマトリクスプロジェクトがコンポーネントとしてインストールされると:
+`COMPONENT LIST` コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 However, their contents will not appear in the preview area and in the debugger.
-- マトリクスプロジェクトの他のプロジェクトメソッドは一切表示されません。
+
+### 使用できないコマンド
+
+(読み取り専用モードで開かれるため) ストラクチャーファイルを更新する以下のコマンドは、コンポーネントで使用することができません。 コンポーネント中で以下のコマンドを実行すると、-10511, "CommandName コマンドをコンポーネントでコールすることはできません" のエラーが生成されます:
+
+- `ON EVENT CALL`
+- `Method called on event`
+- `SET PICTURE TO LIBRARY`
+- `REMOVE PICTURE FROM LIBRARY`
+- `SAVE LIST`
+- `ARRAY TO LIST`
+- `EDIT FORM`
+- `CREATE USER FORM`
+- `DELETE USER FORM`
+- `CHANGE PASSWORD`
+- `EDIT ACCESS`
+- `Set group properties`
+- `Set user properties`
+- `DELETE USER`
+- `CHANGE LICENSES`
+- `BLOB TO USERS`
+- `SET PLUGIN ACCESS`
+
+**注:**
+
+- `Current form table` コマンドは、プロジェクトフォームのコンテキストで呼び出されると `Nil` を返します。 ゆえにこのコマンドをコンポーネントで使用することはできません。
+- SQLデータ定義言語のコマンド (`CREATE TABLE`、`DROP TABLE`等) をコンポーネントのフレームワークで使用することはできません。 ただし、外部データベースの場合は使用することができます (`CREATE DATABASE` SQL コマンド参照)。
+
 
 
 ## プロジェクトメソッドの共有
+
 マトリクスプロジェクトのすべてのプロジェクトメソッドは 、コンポーネントに含まれます。つまり、マトリクスプロジェクトをコンポーネント化しても、これらのプロジェクトメソッドは同コンポーネントにて呼び出して実行することができます。
 
-On the other hand, by default these project methods will not be visible, and they can't be called in the host project. プロジェクトメソッドをホストプロジェクトと共有するには、 マトリクスプロジェクト側でそのメソッドをそのように明示的に設定しなければなりません。 These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). これらのメソッドはコンポーネントの **エントリーポイント** となります。
+他方、デフォルトでは、これらのプロジェクトメソッドはホストプロジェクトに表示されず、呼び出すこともできません。 プロジェクトメソッドをホストプロジェクトと共有するには、 マトリクスプロジェクト側でそのメソッドをそのように明示的に設定しなければなりません。 設定することで、それらのプロジェクトメソッドはホストプロジェクトにて呼び出すことができるようになります (しかしホストプロジェクトのメソッドエディターで編集することはできません)。 これらのメソッドはコンポーネントの **エントリーポイント** となります。
 
-Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. 特定の場合に、ホストプロジェクトのプロジェクトメソッドにコンポーネントがアクセスできるようにする必要があるかもしれません。 To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
+セキュリティのため、デフォルトでは、コンポーネントはホストプロジェクトのプロジェクトメソッドを実行することはできません。 特定の場合に、ホストプロジェクトのプロジェクトメソッドにコンポーネントがアクセスできるようにする必要があるかもしれません。 To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
@@ -59,9 +93,14 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
+> An interpreted host database that contains interpreted components can be compiled or syntax checked if it does not call methods of the interpreted component. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.   
+> Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+
+
+
 ## 変数の渡し方
 
-ローカル、プロセス、インタープロセス変数は、コンポーネントとホストプロジェクト間で共有されません。 The only way to modify component variables from the host project and vice versa is using pointers.
+ローカル、プロセス、インタープロセス変数は、コンポーネントとホストプロジェクト間で共有されません。 ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
 
 配列を使用した例:
 
@@ -118,9 +157,14 @@ component_method($input_t)
      If(myptr1=myptr2) // このテストはFalse を返します
 ```
 
+## エラー処理
+
+`ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のプロジェクトに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+
+
 ## ホストプロジェクトのテーブルへのアクセス
 
-Although components cannot use tables, pointers can allow host projects and components to communicate with each other. たとえば、以下はコンポーネントで実行可能なメソッドです:
+コンポーネントでテーブルを使用することはできませんが、ホストプロジェクトとコンポーネントはポインターを使用して通信をおこなうことができます。 たとえば、以下はコンポーネントで実行可能なメソッドです:
 
 ```4d
 // コンポーネントメソッドの呼び出し
@@ -143,61 +187,6 @@ SAVE RECORD($tablepointer->)
 ```
 
 > In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
-
-## ランゲージコマンドのスコープ
-
-[使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
-
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
-
-`SET DATABASE PARAMETER` と `Get database parameter` コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
-
-さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
-
-`COMPONENT LIST` コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
-
-
-### 使用できないコマンド
-
-(読み取り専用モードで開かれるため) ストラクチャーファイルを更新する以下のコマンドは、コンポーネントで使用することができません。 コンポーネント中で以下のコマンドを実行すると、-10511, "CommandName コマンドをコンポーネントでコールすることはできません" のエラーが生成されます:
-
-- `ON EVENT CALL`
-- `Method called on event`
-- `SET PICTURE TO LIBRARY`
-- `REMOVE PICTURE FROM LIBRARY`
-- `SAVE LIST`
-- `ARRAY TO LIST`
-- `EDIT FORM`
-- `CREATE USER FORM`
-- `DELETE USER FORM`
-- `CHANGE PASSWORD`
-- `EDIT ACCESS`
-- `Set group properties`
-- `Set user properties`
-- `DELETE USER`
-- `CHANGE LICENSES`
-- `BLOB TO USERS`
-- `SET PLUGIN ACCESS`
-
-**注:**
-
-- `Current form table` コマンドは、プロジェクトフォームのコンテキストで呼び出されると `Nil` を返します。 ゆえにこのコマンドをコンポーネントで使用することはできません。
-- SQLデータ定義言語のコマンド (`CREATE TABLE`、`DROP TABLE`等) をコンポーネントのフレームワークで使用することはできません。 ただし、外部データベースの場合は使用することができます (`CREATE DATABASE` SQL コマンド参照)。
-
-## エラー処理
-
-`ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のプロジェクトに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
-
-## フォームの使用
-
-- 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 マトリクスプロジェクトのすべてのプロジェクトフォームをコンポーネントで使用することができます。
-- コンポーネントはホストプロジェクトのテーブルフォームを使用できます。 この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
-
-> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
-
-- コンポーネントフォームをホストプロジェクト内でサブフォームとして公開することができます。 これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。
-
-> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 ## テーブルやフィールドの利用
 
@@ -278,17 +267,48 @@ When commands are called from a component, they are executed in the context of t
  End SQL
 ```
 
+
+## フォームの使用
+
+- 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 マトリクスプロジェクトのすべてのプロジェクトフォームをコンポーネントで使用することができます。
+- コンポーネントはホストプロジェクトのテーブルフォームを使用できます。 この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
+
+> コンポーネントが `ADD RECORD` コマンドを使用すると、ホストプロジェクトのコンテキストで、ホストプロジェクトのカレントの入力フォームが表示されます。 したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
+
+- コンポーネントフォームをホストプロジェクト内でサブフォームとして公開することができます。 これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。
+
+> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
+
+
 ## リソースの使用
 
-コンポーネントはリソースを使用することができます。 リソース管理の原則に従い、コンポーネントが .4dbase 形式の場合 (推奨されるアーキテクチャー)、Resources フォルダーは .4dbase フォルダーの中に置かれます。
+Components can use resources located in the Resources folder of the component.
 
 これによって自動メカニズムが有効となり、コンポーネントの Resources フォルダー内で見つかった XLIFF ファイルは、 同コンポーネントによってロードされます。
 
 1つ以上のコンポーネントを含むホストプロジェクトでは、ホストプロジェクトと同様にそれぞれのコンポーネントも固有のリソースチェーンを持っています。 リソースは異なるプロジェクト間で分離されます。コンポーネントA のリソースにコンポーネントB やホストプロジェクトからアクセスすることはできません。
 
-## コンポーネントのオンラインヘルプ
-コンポーネントにオンラインヘルプを追加できるように、専用のメカニズムが実装されています。 原理は 4D プロジェクトに提供されているものと同じです:
 
-- コンポーネントヘルプは拡張子が .htm, .html または (Windows のみ) .chm で提供されます。
-- ヘルプファイルはコンポーネントのストラクチャーファイルと同階層に置かれ、ストラクチャーと同じ名前でなくてはなりません。
-- このファイルは自動的にアプリケーションのヘルプメニューに、" ヘルプ: ヘルプファイル名" のタイトルでロードされます。 
+## Executing initialization code
+
+A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database.
+
+Executing initialization or closing code is done by means of the `On Host Database Event` database method.
+
+> For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the **Execute "On Host Database Event" method of the components** option on the Security page the Settings.
+
+
+## コンポーネントの保護: コンパイル
+
+コンポーネントとしてインストールされたマトリクスプロジェクトのプロジェクトメソッドは、ホストプロジェクトからデフォルトでアクセス可能です。 特に:
+
+- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 しかし、それらをメソッドエディター上で開いたり編集したりすることはできません。
+- マトリクスプロジェクトの他のプロジェクトメソッドはエクスプローラーに現れません。しかし、ホストプロジェクトのデバッガーには内容が表示されます。
+
+コンポーネントのプロジェクトメソッドを効果的に保護するには、マトリクスプロジェクトをコンパイルして、インタプリターコードを含まない .4dz ファイルとして提供します。 コンパイルされたマトリクスプロジェクトがコンポーネントとしてインストールされると:
+
+- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストプロジェクトのメソッドから呼び出し可能です。 しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
+- マトリクスプロジェクトの他のプロジェクトメソッドは一切表示されません。 
+
+
+
