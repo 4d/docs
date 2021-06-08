@@ -28,10 +28,10 @@ The object returned by the `FORM Event` command contains:
 | Property    | Tipo    | Description                                                                                         |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | texto   | "On After Edit"                                                                                     |
+| objectName  | texto   | 4D View Pro area name                                                                               |
+| sheetName   | texto   | Name of the sheet of the event                                                                      |
+| action      | texto   | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
@@ -74,7 +74,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | Property | Tipo   | Description         |
 | -------- | ------ | ------------------- |
 | range    | objeto | Cell range          |
-| formula  | text   | The formula entered |
+| formula  | texto  | The formula entered |
 
 #### action = clipboardPasted
 
