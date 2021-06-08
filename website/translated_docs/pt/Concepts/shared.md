@@ -16,7 +16,7 @@ In order to modify a shared object/collection, the **Use...End use** structure m
 
 A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
-## Using shared objects or collections
+## Utilização de objetos ou coleções compartidos
 
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
