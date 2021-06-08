@@ -47,7 +47,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | server    | objeto             | -> | Mail server information                             |
-| Result    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 
@@ -71,7 +71,7 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
 
 
-#### Result
+#### Resultado
 
 The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
 > The POP3 connection is automatically closed when the transporter object is destroyed.
@@ -108,7 +108,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 | Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | server    | Objeto             | -> | Mail server information                             |
-| Result    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 #### Description
@@ -218,7 +218,7 @@ Executing this method does not actually remove any email. The flagged email will
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Parameter | Tipo   |    | Description    |
 | --------- | ------ |:--:| -------------- |
-| Result    | Objeto | <- | boxInfo object |
+| Resultado | Objeto | <- | boxInfo object |
 <!-- END REF -->
 
 
@@ -271,7 +271,7 @@ The `boxInfo` object returned contains the following properties:
 | Parameter | Tipo   |    | Description                                      |
 | --------- | ------ |:--:| ------------------------------------------------ |
 | msgNumber | Entero | -> | Number of the message in the list                |
-| Result    | Objeto | <- | [Email object](EmailObjectClass.md#email-object) |
+| Resultado | Objeto | <- | [Email object](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -331,7 +331,7 @@ You want to know the sender of the first mail of the mailbox:
 | Parameter | Tipo   |    | Description                       |
 | --------- | ------ |:--:| --------------------------------- |
 | msgNumber | Entero | -> | Number of the message in the list |
-| Result    | Objeto | <- | mailInfo object                   |
+| Resultado | Objeto | <- | mailInfo object                   |
 <!-- END REF -->
 
 
@@ -393,7 +393,7 @@ The method returns **Null** if:
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 | Parameter | Tipo      |    | Description                      |
 | --------- | --------- |:--:| -------------------------------- |
-| Result    | Colección | <- | Collection of `mailInfo` objects |
+| Resultado | Colección | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
 
 
@@ -463,7 +463,7 @@ You want to know the total number and size of emails in the mailbox:
 | Parameter | Tipo   |    | Description                                           |
 | --------- | ------ |:--:| ----------------------------------------------------- |
 | msgNumber | Entero | -> | Number of the message in the list                     |
-| Result    | Blob   | <- | Blob of the MIME string returned from the mail server |
+| Resultado | Blob   | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 
 
