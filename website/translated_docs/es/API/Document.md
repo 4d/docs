@@ -470,7 +470,7 @@ This property is **read-only**.
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
 | overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
-| Result            | 4D.File   | <- | Copied file                                 |
+| Resultado         | 4D.File   | <- | Copied file                                 |
 <!-- END REF -->
 
 
@@ -522,7 +522,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 | Parameter | Tipo |    | Description  |
 | --------- | ---- | -- | ------------ |
-| Result    | Blob | <- | File content |
+| Resultado | Blob | <- | File content |
 <!-- END REF -->
 
 
@@ -566,7 +566,7 @@ To save a document's contents in a `BLOB` field:
 | Parameter | Tipo   |    | Description                                   |
 | --------- | ------ | -- | --------------------------------------------- |
 | size      | Entero | -> | Side length for the returned picture (pixels) |
-| Result    | Imagen | <- | Icon                                          |
+| Resultado | Imagen | <- | Icon                                          |
 <!-- END REF -->
 
 
@@ -607,7 +607,7 @@ File icon [picture](../Concepts/picture.html).
 | charSetName | Texto  | -> | Name of character set           |
 | charSetNum  | Entero | -> | Number of character set         |
 | breakMode   | Entero | -> | Processing mode for line breaks |
-| Result      | Texto  | <- | Text from the document          |
+| Resultado   | Texto  | <- | Text from the document          |
 <!-- END REF -->
 
 
