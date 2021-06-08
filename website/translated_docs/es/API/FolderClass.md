@@ -66,7 +66,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | folderConstant | Entero    | -> | 4D folder constant                              |
 | pathType       | Entero    | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
-| Result         | 4D.Folder | <- | New folder object                               |
+| Resultado      | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
 
 
@@ -149,7 +149,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!--REF #FolderClass.create().Params -->
 | Parameter | Tipo     |    | Description                                                  |
 | --------- | -------- | -- | ------------------------------------------------------------ |
-| Result    | Booleano | <- | True if the folder was created successfully, false otherwise |
+| Resultado | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
@@ -213,7 +213,7 @@ End if
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
 | aliasType         | Entero    | -> | Type of the alias link                       |
-| Result            | 4D.File   | <- | Alias or shortcut reference                  |
+| Resultado         | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 
@@ -388,7 +388,7 @@ When `Delete with contents` is passed:
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
-| Result            | 4D.Folder | <- | Moved folder                   |
+| Resultado         | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
 
 
@@ -457,7 +457,7 @@ You want to move and rename a folder:
 | Parameter | Tipo      |    | Description                  |
 | --------- | --------- | -- | ---------------------------- |
 | newName   | Texto     | -> | New full name for the folder |
-| Result    | 4D.Folder | <- | Renamed folder               |
+| Resultado | 4D.Folder | <- | Renamed folder               |
 <!-- END REF -->
 
 
