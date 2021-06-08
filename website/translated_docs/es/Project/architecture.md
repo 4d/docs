@@ -70,19 +70,19 @@ Project development file, used to designate and launch the project. This file ca
 
 | Contents                 | Description                                                           | Format |
 | ------------------------ | --------------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | text   |
+| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | texto  |
 
 #### `Métodos`
 
 | Contents         | Description                                                 | Format |
 | ---------------- | ----------------------------------------------------------- | ------ |
-| *methodName*.4dm | Project methods defined in the project. One file per method | text   |
+| *methodName*.4dm | Project methods defined in the project. One file per method | texto  |
 
 #### `Clases`
 
 | Contents        | Description                                                                                                                        | Format |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text   |
+| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | texto  |
 
 
 #### `Formularios`
@@ -90,9 +90,9 @@ Project development file, used to designate and launch the project. This file ca
 | Contents                                  | Description                                | Format  |
 | ----------------------------------------- | ------------------------------------------ | ------- |
 | *formName*/form.4DForm                    | Project form description                   | json    |
-| *formName*/method.4dm                     | Project form method                        | text    |
+| *formName*/method.4dm                     | Project form method                        | texto   |
 | *formName*/Images/*pictureName*           | Project form static picture                | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | text    |
+| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | texto   |
 
 #### `TableForms`
 
@@ -100,18 +100,18 @@ Project development file, used to designate and launch the project. This file ca
 | ---------------------------------------------------- | ------------------------------------------------------ | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                | text    |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | text    |
+| *n*/Input/*formName*/method.4dm                      | Input table form method                                | texto   |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | texto   |
 | *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json    |
 | *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | picture |
-| *n*/Output/*formName*/method.4dm                     | Output table form method                               | text    |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | text    |
+| *n*/Output/*formName*/method.4dm                     | Output table form method                               | texto   |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | texto   |
 
 #### `Triggers`
 
 | Contents      | Description                                                                                | Format |
 | ------------- | ------------------------------------------------------------------------------------------ | ------ |
-| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | text   |
+| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | texto  |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
