@@ -38,7 +38,7 @@ For detailed information about the session implementation, please refer to the [
 <!-- REF #_command_.Session.Params -->
 | Parameter | Tipo       |    | Description    |
 | --------- | ---------- |:--:| -------------- |
-| Result    | 4D.Session | <- | Session object |
+| Resultado | 4D.Session | <- | Session object |
 <!-- END REF -->
 
 
@@ -166,7 +166,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 | Parameter | Tipo     |    | Description                                      |
 | --------- | -------- |:--:| ------------------------------------------------ |
 | privilege | Texto    | <- | Name of the privilege to verify                  |
-| Result    | Booleano | <- | True if session has *privilege*, False otherwise |
+| Resultado | Booleano | <- | True if session has *privilege*, False otherwise |
 <!-- END REF -->
 
 
@@ -248,7 +248,7 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 | Parameter | Tipo     |    | Description                                     |
 | --------- | -------- |:--:| ----------------------------------------------- |
-| Result    | Booleano | <- | True if session is a Guest one, False otherwise |
+| Resultado | Booleano | <- | True if session is a Guest one, False otherwise |
 <!-- END REF -->
 
 #### Description
