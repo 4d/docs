@@ -128,7 +128,7 @@ $myClass.query("name = smith")
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
 
 *   number
-*   text
+*   texto
 *   null
 *   booleano
 *   fecha
