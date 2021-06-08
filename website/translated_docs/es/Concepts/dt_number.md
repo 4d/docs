@@ -9,16 +9,16 @@ Número es un término genérico que significa:
 - Los campos, variables o expresiones de tipo Entero largo. El rango para el tipo de datos Entero largo (4 bytes) es -2^31..(2^31)-1.
 - Los campos, variables o expresiones de tipo Entero. El rango para el tipo de datos Entero (2 bytes) es -32.768..32.767 (2^15..(2^15)-1).
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+**Nota:** los valores de los campos enteros se convierten automáticamente en enteros largos cuando se utilizan en el lenguaje 4D.
 
-You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
+Puede asignar cualquier tipo de dato numérico a otro; 4D realiza la conversión, truncando o redondeando si es necesario. Sin embargo, cuando los valores están fuera del rango, la conversión no devolverá un valor válido. Se pueden mezclar los tipos de datos numéricos en las expresiones.
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+**Nota:** en el manual de referencia del lenguaje 4D, sin importar el tipo de datos real, los parámetros de tipo Real, Entero y Entero largo en las descripciones de los comandos se indican como número, salvo que se indique lo contrario.
 
 
-## Number literals
+## Constantes literales numéricas
 
-A numeric literal constant is written as a real number. Here are some examples of numeric constants:
+Una constante literal numérica se escribe como un número real. Estos son algunos ejemplos de constantes numéricas:
 
 ```4d
 27
@@ -26,9 +26,9 @@ A numeric literal constant is written as a real number. Here are some examples o
 0.0076
 ```
 
-> The default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
+> El separador decimal por defecto es el punto (.), independientemente del lenguaje del sistema. Si ha marcado la opción "Utilizar la configuración regional del sistema" en la página de Métodos de las Preferencias, debe utilizar el separador definido en su sistema.
 
-Negative numbers are specified with the minus sign (-). Por ejemplo:
+Los números negativos se especifican con el signo menos (-). Por ejemplo:
 
 ```4d
 -27
@@ -36,17 +36,17 @@ Negative numbers are specified with the minus sign (-). Por ejemplo:
 -0.0076
 ```
 
-## Number operators
+## Operadores numéricos
 
 | Operación         | Sintaxis         | Devuelve | Expresión | Valor |
 | ----------------- | ---------------- | -------- | --------- | ----- |
-| Addition          | Number + Number  | Número   | 2 + 3     | 5     |
-| Subtraction       | Number - Number  | Número   | 3 – 2     | 1     |
-| Multiplication    | Number * Number  | Número   | 5 * 2     | 10    |
-| Division          | Number / Number  | Número   | 5 / 2     | 2.5   |
-| Longint division  | Number \ Number | Número   | 5 \ 2    | 2     |
-| Modulo            | Number % Number  | Número   | 5 % 2     | 1     |
-| Exponentiation    | Number ^ Number  | Número   | 2 ^ 3     | 8     |
+| Adición           | Número + Número  | Número   | 2 + 3     | 5     |
+| Resta             | Número - Número  | Número   | 3 – 2     | 1     |
+| Multiplicación    | Número * Número  | Número   | 5 * 2     | 10    |
+| División          | Número / Número  | Número   | 5 / 2     | 2.5   |
+| División entera   | Número \ Número | Número   | 5 \ 2    | 2     |
+| Módulo            | Número % Número  | Número   | 5 % 2     | 1     |
+| Exponenciación    | Número ^ Número  | Número   | 2 ^ 3     | 8     |
 | Igual             | Número = Número  | Booleano | 10 = 10   | True  |
 |                   |                  |          | 10 = 11   | False |
 | Desigualdad       | Número # Número  | Booleano | 10 #11    | True  |
@@ -129,14 +129,14 @@ The following table lists the bitwise operators and their effects:
 | O (inclusive)   | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
 | O (exclusivo)   | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
 | Left Bit Shift  | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0. <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                   |
-| Right Bit Shift | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                      |
-| Bit Set         | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Bit Clear       | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Bit Test        | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
+| Right Bit Shift | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. Los bits de la derecha se pierden y los nuevos bits de la izquierda se ponen en 0.<p>**Nota:** teniendo en cuenta sólo los valores positivos, desplazar a la derecha N bits es lo mismo que dividir por 2^N.                                                   |
+| Bit Set         | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                                                                    |
+| Bit Clear       | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                                                                    |
+| Bit Test        | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                                                                                                     |
 
 ### Ejemplos
 
-| Operación       | Ejemplo                         | Result     |
+| Operación       | Ejemplo                         | Resultado  |
 | --------------- | ------------------------------- | ---------- |
 | Y               | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | O (inclusive)   | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
