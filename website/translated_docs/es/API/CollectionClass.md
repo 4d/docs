@@ -79,7 +79,7 @@ A collection is initialized with:
 | Parameter | Tipo                                                                    |    | Description           |
 | --------- | ----------------------------------------------------------------------- |:--:| --------------------- |
 | value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| Result    | Colección                                                               | <- | New collection        |
+| Resultado | Colección                                                               | <- | New collection        |
 <!-- END REF -->
 
 
@@ -163,7 +163,7 @@ You create a new collection and then add a new element:
 | Parameter | Tipo                                                                |    | Description                  |
 | --------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
 | value     | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| Result    | Colección                                                           | <- | New shared collection        |
+| Resultado | Colección                                                           | <- | New shared collection        |
 <!-- END REF -->
 
 
@@ -186,7 +186,7 @@ If the new element index is beyond the last existing element of the shared colle
 You can pass any number of values of the following supported types:
 
 *   number (real, longint...). Number values are always stored as reals.
-*   text
+*   texto
 *   booleano
 *   fecha
 *   time (stored as number of milliseconds - real)
@@ -225,7 +225,7 @@ You can pass any number of values of the following supported types:
 | Parameter    | Tipo            |    | Description                                     |
 | ------------ | --------------- |:--:| ----------------------------------------------- |
 | propertyPath | Texto           | -> | Object property path to be used for calculation |
-| Result       | Real, Undefined | <- | Arithmetic mean (average) of collection values  |
+| Resultado    | Real, Undefined | <- | Arithmetic mean (average) of collection values  |
 <!-- END REF -->
 
 
@@ -285,7 +285,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- REF #collection.clear().Params -->
 | Parameter | Tipo      |    | Description                                   |
 | --------- | --------- |:--:| --------------------------------------------- |
-| Result    | Colección | <- | Original collection with all elements removed |
+| Resultado | Colección | <- | Original collection with all elements removed |
 <!-- END REF -->
 
 
@@ -327,7 +327,7 @@ $vSize:=$col.length //$vSize=0
 | --------- | --------- |:--:| ----------------------------------------------------------------------------- |
 | col2      | Colección | -> | Collection to combine                                                         |
 | index     | Entero    | -> | Position to which insert elements to combine in collection (default=length+1) |
-| Result    | Colección | <- | Original collection containing combined element(s)                            |
+| Resultado | Colección | <- | Original collection containing combined element(s)                            |
 <!-- END REF -->
 
 
@@ -375,7 +375,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 | Parameter | Tipo                                                           |    | Description                                                                                                       |
 | --------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
 | value     | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
-| Result    | Colección                                                      | <- | New collection with value(s) added to the original collection                                                     |
+| Resultado | Colección                                                      | <- | New collection with value(s) added to the original collection                                                     |
 <!-- END REF -->
 
 
@@ -423,7 +423,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | option       | Entero    | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
 | groupWithCol | Colección | -> | Shared collection to be grouped with the resulting collection                                            |
 | groupWithObj | Objeto    | -> | Shared object to be grouped with the resulting collection                                                |
-| Result       | Colección | <- | Deep copy of the original collection                                                                     |
+| Resultado    | Colección | <- | Deep copy of the original collection                                                                     |
 <!-- END REF -->
 
 
@@ -546,7 +546,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 | Parameter    | Tipo  |    | Description                                     |
 | ------------ | ----- |:--:| ----------------------------------------------- |
 | propertyPath | Texto | -> | Object property path to be used for calculation |
-| Result       | Real  | <- | Number of elements in the collection            |
+| Resultado    | Real  | <- | Number of elements in the collection            |
 <!-- END REF -->
 
 
@@ -595,7 +595,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                  |
 | propertyPath | Texto                                           | -> | Object property path to be used for calculation |
-| Result       | Real                                            | <- | Number of occurrences of the value              |
+| Resultado    | Real                                            | <- | Number of occurrences of the value              |
 <!-- END REF -->
 
 
@@ -676,7 +676,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 | ------------ | --------- |:--:| ---------------------------------------------------------------- |
 | option       | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
 | propertyPath | Texto     | -> | Path of attribute whose distinct values you want to get          |
-| Result       | Colección | <- | New collection with only distinct values                         |
+| Resultado    | Colección | <- | New collection with only distinct values                         |
 <!-- END REF -->
 
 
@@ -730,7 +730,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 | ----------- | --------- |:--:| ---------------------------------------------------------------- |
 | collection2 | Colección | -> | Collection to compare                                            |
 | option      | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Result      | Booleano  | <- | True if collections are identical, false otherwise               |
+| Resultado   | Booleano  | <- | True if collections are identical, false otherwise               |
 <!-- END REF -->
 
 
@@ -787,7 +787,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 | startFrom  | Entero   | -> | Index to start the test at                        |
 | methodName | Texto    | -> | Name of the method to call for the test           |
 | param      | Mixed    | -> | Parameter(s) to pass to methodName                |
-| Result     | Booleano | <- | True if all elements successfully passed the test |
+| Resultado  | Booleano | <- | True if all elements successfully passed the test |
 <!-- END REF -->
 
 
@@ -884,7 +884,7 @@ End if
 | propertyPath | Texto     | -> | Object property path whose values must be extracted to the new collection                                                          |
 | targetpath   | Texto     | -> | Target property path or property name                                                                                              |
 | option       | Entero    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
-| Result       | Colección | <- | New collection containing extracted values                                                                                         |
+| Resultado    | Colección | <- | New collection containing extracted values                                                                                         |
 <!-- END REF -->
 
 
@@ -960,7 +960,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
 | startFrom | Entero                                          | -> | Start index (included)                 |
 | end       | Entero                                          | -> | End index (not included)               |
-| Result    | colección                                       | <- | Original collection with filled values |
+| Resultado | colección                                       | <- | Original collection with filled values |
 <!-- END REF -->
 
 
@@ -1015,7 +1015,7 @@ In case of inconsistency, the following rules apply:
 | ---------- | --------- |:--:| ---------------------------------------------------------- |
 | methodName | Texto     | -> | Name of the function to call to filter the collection      |
 | param      | Mixed     | -> | Parameter(s) to pass to *methodName*                       |
-| Result     | Colección | <- | New collection containing filtered elements (shallow copy) |
+| Resultado  | Colección | <- | New collection containing filtered elements (shallow copy) |
 <!-- END REF -->
 
 
@@ -1110,7 +1110,7 @@ The code for ***TypeLookUp*** is:
 | startFrom  | Entero | -> | Index to start the search at                 |
 | methodName | Texto  | -> | Name of the function to call for the find    |
 | param      | any    | -> | Parameter(s) to pass to *methodName*         |
-| Result     | any    | <- | First value found, or Undefined if not found |
+| Resultado  | any    | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
 
@@ -1209,7 +1209,7 @@ The code for ***FindCity*** is:
 | startFrom  | Entero | -> | Index to start the search at                   |
 | methodName | Texto  | -> | Name of the function to call for the find      |
 | param      | any    | -> | Parameter(s) to pass to *methodName*           |
-| Result     | Entero | <- | Index of first value found, or -1 if not found |
+| Resultado  | Entero | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
 
 
@@ -1286,7 +1286,7 @@ The code for ***FindCity*** method is:
 | --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                       |
 | startFrom | Entero     | -> | Index to start the search at                                                 |
-| Result    | Entero     | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| Resultado | Entero     | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1346,7 +1346,7 @@ Optionally, you can pass the index of collection from which to start the search 
 | ----------- | --------- |:--:| -------------------------------------------------------- |
 | queryString | Texto     | -> | Search criteria                                          |
 | value       | any       | -> | Value(s) to compare when using placeholder(s)            |
-| Result      | Colección | <- | Element index(es) matching queryString in the collection |
+| Resultado   | Colección | <- | Element index(es) matching queryString in the collection |
 <!-- END REF -->
 
 
@@ -1401,7 +1401,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 | --------- | --------- |:--:| ----------------------------------------------- |
 | index     | Entero    | -> | Where to insert the element                     |
 | element   | any       | -> | Element to insert in the collection             |
-| Result    | Colección | <- | Original collection containing inserted element |
+| Resultado | Colección | <- | Original collection containing inserted element |
 <!-- END REF -->
 
 
@@ -1452,7 +1452,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 | --------- | ------ |:--:| ------------------------------------------------------------------------ |
 | delimiter | Texto  | -> | Separator to use between elements                                        |
 | option    | Entero | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
-| Result    | Texto  | <- | String containing all elements of the collection, separated by delimiter |
+| Resultado | Texto  | <- | String containing all elements of the collection, separated by delimiter |
 <!-- END REF -->
 
 
@@ -1496,7 +1496,7 @@ By default, null or empty elements of the collection are returned in the resulti
 | --------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection            |
 | startFrom | Entero     | -> | Index to start the search at                                            |
-| Result    | Entero     | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| Resultado | Entero     | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1591,7 +1591,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 | ---------- | --------- |:--:| -------------------------------------------------------- |
 | methodName | Texto     | -> | Name of method used to transform the collection elements |
 | param      | any       | -> | Parameter(s) for the method                              |
-| Result     | Colección | <- | Collection of transformed values                         |
+| Resultado  | Colección | <- | Collection of transformed values                         |
 <!-- END REF -->
 
 
@@ -1655,7 +1655,7 @@ Here is the ***Percentage*** method:
 | Parameter    | Tipo                                            |    | Description                                    |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
 | propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
+| Resultado    | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
 <!-- END REF -->
 
 
@@ -1705,7 +1705,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 | Parameter    | Tipo                                            |    | Description                                    |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
 | propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
+| Resultado    | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
 <!-- END REF -->
 
 
@@ -1758,7 +1758,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 | pathStrings | Texto     | -> | Property path(s) on which to order the collection |
 | pathObjects | Colección | -> | Collection of criteria objects                    |
 | ascOrDesc   | Entero    | -> | `ck ascending` or `ck descending` (scalar values) |
-| Result      | Colección | <- | Ordered copy of the collection (shallow copy)     |
+| Resultado   | Colección | <- | Ordered copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -1895,7 +1895,7 @@ Ordering with a property path:
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | methodName | Texto      | -> | Name of method used to specify the sorting order |
 | extraParam | expression | -> | Parameter(s) for the method                      |
-| Result     | Colección  | <- | Sorted copy of the collection (shallow copy)     |
+| Resultado  | Colección  | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2002,7 +2002,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF #collection.pop().Params -->
 | Parameter | Tipo |    | Description                |
 | --------- | ---- |:--:| -------------------------- |
-| Result    | any  | <- | Last element of collection |
+| Resultado | any  | <- | Last element of collection |
 <!-- END REF -->
 
 
@@ -2050,7 +2050,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 | Parameter | Tipo      |    | Description                                   |
 | --------- | --------- |:--:| --------------------------------------------- |
 | element   | Mixed     | -> | Element(s) to add to the collection           |
-| Result    | Colección | <- | Original collection containing added elements |
+| Resultado | Colección | <- | Original collection containing added elements |
 <!-- END REF -->
 
 
@@ -2112,7 +2112,7 @@ You want to sort the resutling collection:
 | queryString   | Texto     | -> | Search criteria                                   |
 | value         | Mixed     | -> | Value(s) to compare when using placeholder(s)     |
 | querySettings | Objeto    | -> | Query options: parameters, attributes             |
-| Result        | Colección | <- | Element(s) matching queryString in the collection |
+| Resultado     | Colección | <- | Element(s) matching queryString in the collection |
 <!-- END REF -->
 
 
@@ -2223,7 +2223,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 | methodName | Texto                                           | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
 | param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                 |
-| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
+| Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
 <!-- END REF -->
 
 
@@ -2312,7 +2312,7 @@ With the following ***Flatten*** method:
 | --------- | --------- |:--:| ----------------------------------------------------- |
 | index     | Entero    | -> | Element at which to start removal                     |
 | howMany   | Entero    | -> | Number of elements to remove, or 1 element if omitted |
-| Result    | Colección | <- | Original collection without removed element(s)        |
+| Resultado | Colección | <- | Original collection without removed element(s)        |
 <!-- END REF -->
 
 
@@ -2374,7 +2374,7 @@ If you try to remove an element from an empty collection, the method does nothin
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
 | size         | Entero                                          | -> | New size of the collection         |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
-| Result       | Colección                                       | <- | Resized original collection        |
+| Resultado    | Colección                                       | <- | Resized original collection        |
 <!-- END REF -->
 
 
@@ -2429,7 +2429,7 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- REF #collection.reverse().Params -->
 | Parameter | Tipo      |    | Description                     |
 | --------- | --------- |:--:| ------------------------------- |
-| Result    | Colección | <- | Inverted copy of the collection |
+| Resultado | Colección | <- | Inverted copy of the collection |
 <!-- END REF -->
 
 
@@ -2468,7 +2468,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- REF #collection.shift().Params -->
 | Parameter | Tipo |    | Description                 |
 | --------- | ---- |:--:| --------------------------- |
-| Result    | any  | <- | First element of collection |
+| Resultado | any  | <- | First element of collection |
 <!-- END REF -->
 
 
@@ -2514,7 +2514,7 @@ If the collection is empty, this method does nothing.
 | --------- | --------- |:--:| -------------------------------------------------------- |
 | startFrom | Entero    | -> | Index to start the search at (included)                  |
 | end       | Entero    | -> | End index (not included)                                 |
-| Result    | Colección | <- | New collection containing sliced elements (shallow copy) |
+| Resultado | Colección | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->
 
 
@@ -2567,7 +2567,7 @@ The returned collection contains the element specified by *startFrom* and all su
 | startFrom  | Entero   | -> | Index to start the test at                                |
 | methodName | Texto    | -> | Name of the method to call for the test                   |
 | param      | Mixed    | -> | Parameter(s) to pass to *methodName*                      |
-| Result     | Booleano | <- | True if at least one element successfully passed the test |
+| Resultado  | Booleano | <- | True if at least one element successfully passed the test |
 <!-- END REF -->
 
 
@@ -2647,7 +2647,7 @@ With the following *NumberGreaterThan0* method:
 | ---------- | --------- |:--:| ------------------------------------------------ |
 | methodName | Texto     | -> | Name of method used to specify the sorting order |
 | extraParam | any       | -> | Parameter(s) for the method                      |
-| Result     | Colección | <- | Original collection sorted                       |
+| Resultado  | Colección | <- | Original collection sorted                       |
 <!-- END REF -->
 
 
@@ -2733,7 +2733,7 @@ If the collection contains elements of different types, they are first grouped b
 | Parameter    | Tipo  |    | Description                                     |
 | ------------ | ----- |:--:| ----------------------------------------------- |
 | propertyPath | Texto | -> | Object property path to be used for calculation |
-| Result       | Real  | <- | Sum of collection values                        |
+| Resultado    | Real  | <- | Sum of collection values                        |
 <!-- END REF -->
 
 
@@ -2795,7 +2795,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 | Parameter | Tipo                                   |    | Description                                           |
 | --------- | -------------------------------------- |:--:| ----------------------------------------------------- |
 | value     | Text, Number, Object, Collection, Date | -> | Value(s) to insert at the beginning of the collection |
-| Result    | Real                                   | <- | Collection containing added element(s)                |
+| Resultado | Real                                   | <- | Collection containing added element(s)                |
 <!-- END REF -->
 
 
