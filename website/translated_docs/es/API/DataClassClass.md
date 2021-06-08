@@ -113,7 +113,7 @@ Considering the following table properties:
 | Parameter  | Tipo               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | parámetros | Objeto             | -> | Build option: context                               |
-| Result     | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
+| Resultado  | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
 
@@ -167,7 +167,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol  | Colección          | -> | Collection of objects to be mapped with entities |
 | parámetros | Objeto             | -> | Build option: context                            |
-| Result     | 4D.EntitySelection | <- | Entity selection filled from the collection      |
+| Resultado  | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
 
@@ -365,7 +365,7 @@ In this example, the first entity will be created and saved but the second will 
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
 | parámetros | Objeto          | -> | Build option: context                       |
-| Result     | 4D.Entity       | <- | Entity matching the designated primary key  |
+| Resultado  | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
 #### Description
@@ -440,7 +440,7 @@ This example illustrates the use of the *context* property:
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Parameter | Tipo         |    | Description                |
 | --------- | ------------ |:--:| -------------------------- |
-| Result    | cs.DataStore | <- | Datastore of the dataclass |
+| Resultado | cs.DataStore | <- | Datastore of the dataclass |
 <!-- END REF -->
 
 
@@ -494,7 +494,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 | Parameter | Tipo   |    | Description                  |
 | --------- | ------ | -- | ---------------------------- |
-| Result    | Objeto | <- | Information on the dataclass |
+| Resultado | Objeto | <- | Information on the dataclass |
 <!-- END REF -->
 
 
@@ -567,7 +567,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 <!-- REF #DataClassClass.new().Params -->
 | Parameter | Tipo      |    | Description                       |
 | --------- | --------- | -- | --------------------------------- |
-| Result    | 4D.Entity | <- | New entity matching the Dataclass |
+| Resultado | 4D.Entity | <- | New entity matching the Dataclass |
 <!-- END REF -->
 
 
@@ -611,7 +611,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 | Parameter | Tipo               |    | Description                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | Entero             | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-| Result    | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
+| Resultado | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
 <!-- END REF -->
 
 
@@ -662,7 +662,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
 | querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
-| Result        | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
+| Resultado     | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
 <!-- END REF -->
 
 
