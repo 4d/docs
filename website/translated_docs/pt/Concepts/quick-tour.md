@@ -48,7 +48,7 @@ Mesmo geralmente não sendo recomendado, é possível criar variáveis simplesme
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável e a atribuiu com o tipo de data (temporário) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e então muda o tipo dinamicamente. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável e a atribuiu com o tipo de data (temporário) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e então muda o tipo dinamicamente. Uma variável digitada com `C_XXX` não pode mudar de tipo. Em modo compilado, o tipo não pode ser modificado nunca, independentemente de como tenha criado a variável.
 
 ## Commands
 
@@ -315,9 +315,9 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
+comentarios  
     /*
-    other comments
+    outros comentarios
     */
 */
 ...
