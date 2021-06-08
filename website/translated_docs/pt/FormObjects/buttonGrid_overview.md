@@ -10,7 +10,7 @@ A button grid is a transparent object that is placed on top of a graphic. The gr
 You can use a button grid object to determine where the user clicks on the graphic. The object method would use the `On Clicked` event and take appropriate action depending on the location of the click.
 
 
-## Creating button grids
+## Criando grades de botões
 
 To create the button grid, add a background graphic to the form and place a button grid on top of it. Specify the number of [rows](properties_Crop.md#rows) and [columns](properties_Crop.md#columns).
 
@@ -18,7 +18,7 @@ In 4D, a button grid is used as a color palette:
 
 ![](assets/en/FormObjects/button_buttonGrid.png)
 
-## Using button grids
+## Usar grades de botões
 
 The buttons on the grid are numbered from top left to bottom right. In the above example, the grid is 16 columns across by 16 rows down. The button in the top-left position returns 1 when clicked. If the red button at the far right of the second row is selected, the button grid returns 32. If no element is selected, the value is 0
 
