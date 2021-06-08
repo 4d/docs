@@ -27,5 +27,5 @@ Several types of method references are supported:
 
 | Name   | Data Type | Possible Values                                                  |
 | ------ | --------- | ---------------------------------------------------------------- |
-| method | text      | Form method standard or custom file path, or project method name |
+| method | texto     | Form method standard or custom file path, or project method name |
 
