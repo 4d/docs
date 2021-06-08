@@ -48,7 +48,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 | Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | server    | Objeto             | -> | Mail server information                             |
-| Result    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 
@@ -83,7 +83,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 
 
-#### Result
+#### Resultado
 
 The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
 
@@ -128,7 +128,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 | Parameter | Tipo               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | server    | Objeto             | -> | Mail server information                             |
-| Result    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Description
@@ -251,7 +251,7 @@ The SMTP connection is automatically closed:
 | Parameter | Tipo   |    | Description                                       |
 | --------- | ------ |:--:| ------------------------------------------------- |
 | mail      | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Result    | Objeto | <- | SMTP status                                       |
+| Resultado | Objeto | <- | SMTP status                                       |
 <!-- END REF -->
 
 
