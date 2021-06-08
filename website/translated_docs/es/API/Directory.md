@@ -439,7 +439,7 @@ This property is **read-only**.
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | Texto     | -> | Name for the copy                           |
 | overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
-| Result            | 4D.Folder | <- | Copied file or folder                       |
+| Resultado         | 4D.Folder | <- | Copied file or folder                       |
 <!-- END REF -->
 
 
@@ -493,7 +493,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | Parameter | Tipo    |    | Description                          |
 | --------- | ------- | -- | ------------------------------------ |
 | path      | Texto   | -> | Relative POSIX file pathname         |
-| Result    | 4D.File | <- | `File` object (null if invalid path) |
+| Resultado | 4D.File | <- | `File` object (null if invalid path) |
 <!-- END REF -->
 
 #### Description
@@ -533,7 +533,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | Parameter | Tipo      |    | Description                         |
 | --------- | --------- | -- | ----------------------------------- |
 | options   | Entero    | -> | File list options                   |
-| Result    | Colección | <- | Collection of children file objects |
+| Resultado | Colección | <- | Collection of children file objects |
 <!-- END REF -->
 
 #### Description
@@ -594,7 +594,7 @@ You want to get all files that are not invisible in the Documents folder:
 | Parameter | Tipo      |    | Description                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
 | path      | Texto     | -> | Relative POSIX file pathname                   |
-| Result    | 4D.Folder | <- | Created folder object (null if invalid *path*) |
+| Resultado | 4D.Folder | <- | Created folder object (null if invalid *path*) |
 <!-- END REF -->
 
 #### Description
@@ -634,7 +634,7 @@ A `Folder` object or null if *path* is invalid.
 | Parameter | Tipo      |    | Description                           |
 | --------- | --------- | -- | ------------------------------------- |
 | options   | Entero    | -> | Folder list options                   |
-| Result    | Colección | <- | Collection of children folder objects |
+| Resultado | Colección | <- | Collection of children folder objects |
 <!-- END REF -->
 
 #### Description
@@ -681,7 +681,7 @@ You want the collection of all folders and subfolders of the database folder:
 | Parameter | Tipo   |    | Description                                   |
 | --------- | ------ | -- | --------------------------------------------- |
 | size      | Entero | -> | Side length for the returned picture (pixels) |
-| Result    | Imagen | <- | Icon                                          |
+| Resultado | Imagen | <- | Icon                                          |
 <!-- END REF -->
 
 
