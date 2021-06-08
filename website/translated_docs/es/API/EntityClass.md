@@ -94,7 +94,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 <!-- REF #EntityClass.clone().Params -->
 | Parameter | Tipo      |    | Description                       |
 | --------- | --------- |:--:| --------------------------------- |
-| Result    | 4D.Entity | <- | New entity referencing the record |
+| Resultado | 4D.Entity | <- | New entity referencing the record |
 <!-- END REF -->
 
 
@@ -141,7 +141,7 @@ This function can only be used with entities already saved in the database. It c
 | ------------------- | --------- |:--:| ---------------------------------------------- |
 | entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
 | attributesToCompare | Colección | -> | Name of attributes to be compared              |
-| Result              | Colección | <- | Differences between the entities               |
+| Resultado           | Colección | <- | Differences between the entities               |
 <!-- END REF -->
 
 
@@ -344,7 +344,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 | Parameter | Tipo   |    | Description                                                                     |
 | --------- | ------ |:--:| ------------------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Result    | Objeto | <- | Result of drop operation                                                        |
+| Resultado | Objeto | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### Description
@@ -357,7 +357,7 @@ By default, if the *mode* parameter is omitted, the function will return an erro
 
 Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode* parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).
 
-**Result**
+**Resultado**
 
 The object returned by `.drop( )` contains the following properties:
 
@@ -366,20 +366,20 @@ The object returned by `.drop( )` contains the following properties:
 | success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
 | status(*)     |                     | number                | Error code, see below                                                                                                 |
-| statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
+| statusText(*) |                     | texto                 | Description of the error, see below                                                                                   |
 |               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
-| LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
+| LockKindText  |                     | texto                 | "Locked by record"                                                                                                    |
 | lockInfo      |                     | objeto                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
-|               | user_name           | text                  | Session user name on the machine                                                                                      |
-|               | user4d_id           | text                  | User name in the 4D database directory                                                                                |
-|               | host_name           | text                  | Machine name                                                                                                          |
-|               | task_name           | text                  | Process name                                                                                                          |
-|               | client_version      | text                  |                                                                                                                       |
+|               | user_name           | texto                 | Session user name on the machine                                                                                      |
+|               | user4d_id           | texto                 | User name in the 4D database directory                                                                                |
+|               | host_name           | texto                 | Machine name                                                                                                          |
+|               | task_name           | texto                 | Process name                                                                                                          |
+|               | client_version      | texto                 |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
-|               | message             | text                  | Error message                                                                                                         |
-|               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
+|               | message             | texto                 | Error message                                                                                                         |
+|               | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                          |
 |               | errCode             | number                | Error code                                                                                                            |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
@@ -451,7 +451,7 @@ Example with `dk force drop if stamp changed` option:
 <!-- REF #EntityClass.first().Params -->
 | Parameter | Tipo      |    | Description                                                          |
 | --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
+| Resultado | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Description
@@ -580,7 +580,7 @@ You could also use a related entity given as an object:
 <!-- REF #EntityClass.getDataClass().Params -->
 | Parameter | Tipo         |    | Description                                  |
 | --------- | ------------ |:--:| -------------------------------------------- |
-| Result    | 4D.DataClass | <- | DataClass object to which the entity belongs |
+| Resultado | 4D.DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
 
 #### Description
@@ -628,8 +628,8 @@ The following generic code duplicates any entity:
 | Parameter | Tipo   |    | Description                                                                             |
 | --------- | ------ |:--:| --------------------------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Result    | Texto  | <- | Value of the text primary key of the entity                                             |
-| Result    | Entero | <- | Value of the numeric primary key of the entity                                          |
+| Resultado | Texto  | <- | Value of the text primary key of the entity                                             |
+| Resultado | Entero | <- | Value of the numeric primary key of the entity                                          |
 
 <!-- END REF -->
 
@@ -671,7 +671,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- REF #EntityClass.getSelection().Params -->
 | Parameter | Tipo               |    | Description                                                      |
 | --------- | ------------------ |:--:| ---------------------------------------------------------------- |
-| Result    | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
+| Resultado | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
 
 #### Description
@@ -715,7 +715,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- REF #EntityClass.getStamp().Params -->
 | Parameter | Tipo   |    | Description                                             |
 | --------- | ------ |:--:| ------------------------------------------------------- |
-| Result    | Entero | <- | Stamp of the entity (0 if entity has just been created) |
+| Resultado | Entero | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
 
 #### Description
@@ -765,7 +765,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 | Parameter       | Tipo               |    | Description                                                        |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
-| Result          | Entero             | <- | Position of the entity in an entity selection                      |
+| Resultado       | Entero             | <- | Position of the entity in an entity selection                      |
 <!-- END REF -->
 
 #### Description
@@ -814,7 +814,7 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- REF #EntityClass.isNew().Params -->
 | Parameter | Tipo     |    | Description                                                               |
 | --------- | -------- |:--:| ------------------------------------------------------------------------- |
-| Result    | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Resultado | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### Description
@@ -855,7 +855,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 <!-- REF #EntityClass.last().Params -->
 | Parameter | Tipo      |    | Description                                                         |
 | --------- | --------- |:--:| ------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
+| Resultado | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Description
@@ -897,7 +897,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 | Parameter | Tipo   |    | Description                                                          |
 | --------- | ------ |:--:| -------------------------------------------------------------------- |
 | mode      | Entero | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Result    | Objeto | <- | Result of lock operation                                             |
+| Resultado | Objeto | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### Description
@@ -915,7 +915,7 @@ By default, if the *mode* parameter is omitted, the function will return an erro
 
 Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).
 
-**Result**
+**Resultado**
 
 The object returned by `.lock( )` contains the following properties:
 
@@ -926,21 +926,21 @@ The object returned by `.lock( )` contains the following properties:
 | **wasReloaded**  |                     | booleano              | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
 | status(\*)     |                     | number                | Error code, see below                                                                                               |
-| statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
+| statusText(\*) |                     | texto                 | Description of the error, see below                                                                                 |
 |                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
-| lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
+| lockKindText     |                     | texto                 | "Locked by record"                                                                                                  |
 | lockInfo         |                     | objeto                | Information about the lock origin                                                                                   |
 |                  | task_id             | number                | Process ID                                                                                                          |
-|                  | user_name           | text                  | Session user name on the machine                                                                                    |
-|                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
+|                  | user_name           | texto                 | Session user name on the machine                                                                                    |
+|                  | user4d_alias        | texto                 | Name or alias of the 4D user                                                                                        |
 |                  | user4d_id           | number                | User id in the 4D database directory                                                                                |
-|                  | host_name           | text                  | Machine name                                                                                                        |
-|                  | task_name           | text                  | Process name                                                                                                        |
-|                  | client_version      | text                  |                                                                                                                     |
+|                  | host_name           | texto                 | Machine name                                                                                                        |
+|                  | task_name           | texto                 | Process name                                                                                                        |
+|                  | client_version      | texto                 |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
-|                  | message             | text                  | Error message                                                                                                       |
-|                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
+|                  | message             | texto                 | Error message                                                                                                       |
+|                  | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                        |
 |                  | errCode             | number                | Error code                                                                                                          |
 
 
@@ -1009,7 +1009,7 @@ Example with `dk reload if stamp changed` option:
 <!-- REF #EntityClass.next().Params -->
 | Parameter | Tipo      |    | Description                                                          |
 | --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
+| Resultado | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Description
@@ -1051,7 +1051,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- REF #EntityClass.previous().Params -->
 | Parameter | Tipo      |    | Description                                                              |
 | --------- | --------- |:--:| ------------------------------------------------------------------------ |
-| Result    | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
+| Resultado | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Description
@@ -1093,14 +1093,14 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF #EntityClass.reload().Params -->
 | Parameter | Tipo   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Objeto | <- | Status object |
+| Resultado | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
 
 The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
 
-**Result**
+**Resultado**
 
 The object returned by `.reload( )` contains the following properties:
 
@@ -1108,7 +1108,7 @@ The object returned by `.reload( )` contains the following properties:
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number   | Error code, see below                                                                                                                                 |
-| statusText(\*) | text     | Description of the error, see below                                                                                                                   |
+| statusText(\*) | texto    | Description of the error, see below                                                                                                                   |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
@@ -1157,7 +1157,7 @@ The object returned by `.reload( )` contains the following properties:
 | Parameter | Tipo   |    | Description                                       |
 | --------- | ------ |:--:| ------------------------------------------------- |
 | mode      | Entero | -> | `dk auto merge`: Enables the automatic merge mode |
-| Result    | Objeto | <- | Result of save operation                          |
+| Resultado | Objeto | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### Description
@@ -1173,7 +1173,7 @@ By default, if the *mode* parameter is omitted, the method will return an error 
 Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. The resulting data saved in the entity will be the combination (the "merge") of all non-concurrent modifications (if modifications were applied to the same attribute, the save fails and an error is returned, even with the auto merge mode).
 > The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
 
-**Result**
+**Resultado**
 
 The object returned by `.save()` contains the following properties:
 
@@ -1184,20 +1184,20 @@ The object returned by `.save()` contains the following properties:
 | autoMerged   |                    | booleano              | True if an auto merge was done, False otherwise.                                                                        |
 |              |                    |                       | ***Available only in case of error***:                                                                                  |
 | status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
-| statusText   |                    | text                  | Description of the error, [see below](#status-and-statustext)                                                           |
+| statusText   |                    | texto                 | Description of the error, [see below](#status-and-statustext)                                                           |
 |              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
-| lockKindText |                    | text                  | "Locked by record"                                                                                                      |
+| lockKindText |                    | texto                 | "Locked by record"                                                                                                      |
 | lockInfo     |                    | objeto                | Information about the lock origin                                                                                       |
 |              | task_id            | number                | Process id                                                                                                              |
-|              | user_name          | text                  | Session user name on the machine                                                                                        |
-|              | user4d_id          | text                  | User name in the 4D database directory                                                                                  |
-|              | host_name          | text                  | Machine name                                                                                                            |
-|              | task_name          | text                  | Process name                                                                                                            |
-|              | client_version     | text                  |                                                                                                                         |
+|              | user_name          | texto                 | Session user name on the machine                                                                                        |
+|              | user4d_id          | texto                 | User name in the 4D database directory                                                                                  |
+|              | host_name          | texto                 | Machine name                                                                                                            |
+|              | task_name          | texto                 | Process name                                                                                                            |
+|              | client_version     | texto                 |                                                                                                                         |
 |              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                    | collection of objects |                                                                                                                         |
-|              | message            | text                  | Error message                                                                                                           |
-|              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | message            | texto                 | Error message                                                                                                           |
+|              | componentSignature | texto                 | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
 |              | errCode            | number                | Error code                                                                                                              |
 
 ##### status and statusText
@@ -1294,7 +1294,7 @@ Updating an entity with `dk auto merge` option:
 | filterString | Texto     | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | Colección | -> | Collection of attribute(s) to extract                                                                   |
 | options      | Entero    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Result       | Objeto    | <- | Object built from the entity                                                                            |
+| Resultado    | Objeto    | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
 #### Description
@@ -1578,7 +1578,7 @@ Returns:
 <!-- REF #EntityClass.touched().Params -->
 | Parameter | Tipo     |    | Description                                                                           |
 | --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
-| Result    | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Resultado | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### Description
@@ -1622,7 +1622,7 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- REF #EntityClass.touchedAttributes().Params -->
 | Parameter | Tipo      |    | Description                                      |
 | --------- | --------- |:--:| ------------------------------------------------ |
-| Result    | Colección | <- | Names of touched attributes, or empty collection |
+| Resultado | Colección | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
 
 #### Description
@@ -1698,7 +1698,7 @@ In this case:
 <!-- REF #EntityClass.unlock().Params -->
 | Parameter | Tipo   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Objeto | <- | Status object |
+| Resultado | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1718,7 +1718,7 @@ A record is automatically unlocked when it is no longer referenced by any entiti
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**Resultado**
 
 The object returned by `.unlock()` contains the following property:
 
