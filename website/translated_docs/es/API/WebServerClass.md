@@ -75,7 +75,7 @@ They provide the following properties and functions:
 | Parameter | Tipo         |    | Description                                                    |
 | --------- | ------------ | -- | -------------------------------------------------------------- |
 | option    | Entero       | -> | Web server to get (default if omitted = `Web server database`) |
-| Result    | 4D.WebServer | <- | Web server object                                              |
+| Resultado | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -120,7 +120,7 @@ From your component, you want to know if the Web server of the host database is 
 
 | Parameter | Tipo      |    | Description                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
-| Result    | Colección | <- | Collection of the available Web server objects |
+| Resultado | Colección | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
@@ -785,7 +785,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 | Parameter  | Tipo   |    | Description                           |
 | ---------- | ------ | -- | ------------------------------------- |
 | parámetros | Objeto | -> | Web server settings to set at startup |
-| Result     | Objeto | <- | Status of the web server startup      |
+| Resultado  | Objeto | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
