@@ -132,7 +132,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -162,7 +162,7 @@ You can then run this request:
 
 Body of the request: ["Aguada"]
 
-#### Result
+#### Resultado
 
 The result is an entity:
 ```
@@ -206,7 +206,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -232,7 +232,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -264,7 +264,7 @@ Once you have created an entityset, you can run this request:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -295,7 +295,7 @@ You can then run this request:
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -350,7 +350,7 @@ Body of the request:
 Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -387,7 +387,7 @@ Body of the request:
 
 Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
 
-#### Result
+#### Resultado
 
 ``` 
 {
@@ -423,7 +423,7 @@ Body of the request:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -477,7 +477,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -544,7 +544,7 @@ Body of the request:
 
 ```
 
-#### Result
+#### Resultado
 
 The entities with primary keys 1 and 2 have been updated.
 
