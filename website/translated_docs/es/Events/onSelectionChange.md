@@ -19,9 +19,9 @@ The current selection of rows or columns is modified. In this context, the [even
 | Property      | Tipo    | Description                    |
 | ------------- | ------- | ------------------------------ |
 | code          | longint | 31                             |
-| description   | text    | "On Selection Change"          |
-| objectName    | text    | 4D View Pro area name          |
-| sheetName     | text    | Name of the sheet of the event |
+| description   | texto   | "On Selection Change"          |
+| objectName    | texto   | 4D View Pro area name          |
+| sheetName     | texto   | Name of the sheet of the event |
 | oldSelections | objeto  | Cell range before change       |
 | newSelections | objeto  | Cell range after change        |
 
