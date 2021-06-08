@@ -56,7 +56,7 @@ End if
 | zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
 | options         | Entero    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Result          | Objeto    | <- | Status object                                        |
+| Resultado       | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
 
@@ -280,7 +280,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 | --------- | ------------- |:--:| --------------------------- |
 | zipFile   | 4D.File       | -> | Zip archive file            |
 | password  | Texto         | -> | ZIP archive password if any |
-| Result    | 4D.ZipArchive | <- | Archive object              |
+| Resultado | 4D.ZipArchive | <- | Archive object              |
 <!-- END REF -->
 
 
