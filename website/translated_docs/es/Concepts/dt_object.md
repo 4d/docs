@@ -3,17 +3,17 @@ id: objeto
 title: Objeto
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
+Las variables, campos o expresiones de tipo objeto pueden contener datos de diversos tipos. La estructura de los objetos "nativos" 4D se basa en el principio clásico de los pares "propiedad/valor". La sintaxis de estos objetos se basa en la notación JSON:
 
 - El nombre de una propiedad es siempre un texto, por ejemplo "Name". It must follow [specific rules](identifiers.md#object-properties).
 
-- A property value can be of the following type:
-    - number (Real, Integer, etc.)
-    - text
+- Un valor de propiedad puede ser del tipo siguiente:
+    - número (Real, Entero, etc.)
+    - texto
     - null
     - booleano
-    - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
-    - date (date type or ISO date format string)
+    - puntero (almacenado como tal, evaluado con el comando `JSON Stringify` o al copiar),
+    - fecha (tipo fecha o cadena en formato fecha ISO)
     - object(1) (objects can be nested on several levels)
     - picture(2)
     - colección
@@ -29,8 +29,8 @@ You manage Object type variables, fields or expressions using the [object notati
 Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. You can use such values wherever 4D expressions are expected:
 
 - in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
-- in the Expression areas of the Debugger and the Runtime explorer,
-- in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
+- en las áreas de expresiones del depurador y del explorador de ejecución,
+- en la lista de propiedades del editor de formularios para los objetos formulario: campo Variable o Expresión, así como diversas expresiones de list box y columnas (fuente de datos, color de fondo, estilo o color de fuente).
 
 ## Inicialización
 
