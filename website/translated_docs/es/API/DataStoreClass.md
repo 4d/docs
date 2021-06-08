@@ -45,7 +45,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 | Parameter | Tipo         |    | Description                                |
 | --------- | ------------ | -- | ------------------------------------------ |
 | localID   | Texto        | -> | Local ID of the remote datastore to return |
-| Result    | cs.DataStore | <- | Reference to the datastore                 |
+| Resultado | cs.DataStore | <- | Reference to the datastore                 |
 <!-- END REF -->
 
 
@@ -120,7 +120,7 @@ Using the main datastore on the 4D database:
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
-| Result         | cs.DataStore | <- | Datastore object                                                          |
+| Resultado      | cs.DataStore | <- | Datastore object                                                          |
 <!-- END REF -->
 
 
@@ -299,7 +299,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parameter | Tipo   |    | Description                                                                 |
 | --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| Result    | Objeto | <- | Information about the encryption of the current datastore and of each table |
+| Resultado | Objeto | <- | Information about the encryption of the current datastore and of each table |
 <!-- END REF -->
 
 
@@ -373,7 +373,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parameter | Tipo   |    | Description          |
 | --------- | ------ |:--:| -------------------- |
-| Result    | Objeto | <- | Datastore properties |
+| Resultado | Objeto | <- | Datastore properties |
 <!-- END REF -->
 
 #### Description
@@ -386,8 +386,8 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
 | networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Tipo</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| localID    | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
+| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Tipo</th><th>Description</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -443,7 +443,7 @@ On a remote datastore:
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Parameter | Tipo      |    | Description                                                  |
 | --------- | --------- |:--:| ------------------------------------------------------------ |
-| Result    | Colección | <- | Collection of objects, where each object describes a request |
+| Resultado | Colección | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
 
 
@@ -482,7 +482,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Parameter | Tipo     |    | Description                                                                    |
 | --------- | -------- |:--:| ------------------------------------------------------------------------------ |
-| Result    | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
+| Resultado | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
 <!-- END REF -->
 
 
@@ -553,7 +553,7 @@ When this function is not called, new entity selections can be shareable, depend
 | ------------- | ------ | -- | ------------------------------------- |
 | curPassPhrase | Texto  | -> | Current encryption passphrase         |
 | curDataKey    | Objeto | -> | Current data encryption key           |
-| Result        | Objeto | <- | Result of the encryption key matching |
+| Resultado     | Objeto | <- | Result of the encryption key matching |
 <!-- END REF -->
 
 
@@ -573,7 +573,7 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 *   all data loaded from encryptable tables is decrypted in memory
 
 
-**Result**
+**Resultado**
 
 The result of the command is described in the returned object:
 
