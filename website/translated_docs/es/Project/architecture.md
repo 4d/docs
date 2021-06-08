@@ -52,7 +52,7 @@ Project development file, used to designate and launch the project. This file ca
 
 ### Sources folder
 
-| Contents                | Description                                                                                                                                                                                                                                                                                                                                                                                                         | Format |
+| Contents                | Descripción                                                                                                                                                                                                                                                                                                                                                                                                         | Format |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                                         | XML    |
 | folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
@@ -68,26 +68,26 @@ Project development file, used to designate and launch the project. This file ca
 
 #### DatabaseMethods folder
 
-| Contents                 | Description                                                     | Format |
+| Contents                 | Descripción                                                     | Format |
 | ------------------------ | --------------------------------------------------------------- | ------ |
 | *databaseMethodName*.4dm | Métodos base definidos en la base. One file per database method | texto  |
 
 #### Methods folder
 
-| Contents         | Description                                                | Format |
+| Contents         | Descripción                                                | Format |
 | ---------------- | ---------------------------------------------------------- | ------ |
 | *methodName*.4dm | Métodos proyecto definidos en la base. One file per method | texto  |
 
 #### Classes folder
 
-| Contents        | Description                                                                                                                        | Format |
+| Contents        | Descripción                                                                                                                        | Format |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | texto  |
 
 
 #### Forms folder
 
-| Contents                                  | Description                                | Format  |
+| Contents                                  | Descripción                                | Format  |
 | ----------------------------------------- | ------------------------------------------ | ------- |
 | *formName*/form.4DForm                    | Project form description                   | json    |
 | *formName*/method.4dm                     | Project form method                        | texto   |
@@ -96,7 +96,7 @@ Project development file, used to designate and launch the project. This file ca
 
 #### TableForms folder
 
-| Contents                                             | Description                                            | Format  |
+| Contents                                             | Descripción                                            | Format  |
 | ---------------------------------------------------- | ------------------------------------------------------ | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
@@ -109,7 +109,7 @@ Project development file, used to designate and launch the project. This file ca
 
 #### Triggers folder
 
-| Contents      | Description                                                                              | Format |
+| Contents      | Descripción                                                                              | Format |
 | ------------- | ---------------------------------------------------------------------------------------- | ------ |
 | table_*n*.4dm | Métodos trigger definidos en la base. One trigger file per table (n is the table number) | texto  |
 
@@ -136,7 +136,7 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 La carpeta Resources contiene todos los archivos y carpetas de recursos personalizados de la base. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
-| Contents              | Description                                                                                                                                           | Format  |
+| Contents              | Descripción                                                                                                                                           | Format  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *item*                | Database resource files and folders                                                                                                                   | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
@@ -148,7 +148,7 @@ La carpeta Resources contiene todos los archivos y carpetas de recursos personal
 
 The data folder contains the data file and all files and folders relating to the data.
 
-| Contents     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Format |
+| Contents     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                    | binary |
 | data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. | binary |
@@ -162,7 +162,7 @@ Esta carpeta contiene **archivos de configuración de datos** utilizados para la
 
 > Estos parámetros tienen prioridad sobre los **[archivos de propiedades usuario](#settings-folder-1)** y los archivos de **propiedades estructura**.
 
-| Contents            | Description                                                                                                                                                                                                                                                                       | Format |
+| Contents            | Descripción                                                                                                                                                                                                                                                                       | Format |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Parámetros de copia de seguridad de la base de datos, utilizados para definir las [opciones de copia de seguridad](Backup/settings.md)) cuando la base se lanza con este archivo de datos. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
 | settings.4DSettings | Propiedades personalizadas de la base para este archivo de datos                                                                                                                                                                                                                  | XML    |
@@ -188,7 +188,7 @@ Esta carpeta contiene **archivos de propiedades usuario** utilizados para la adm
 
 > Si existe un archivo de propiedades de datos [en una carpeta de datos ](#settings-folder), de la carpeta Datos, tiene prioridad sobre el archivo de propiedades del usuario.
 
-| Contents            | Description                                                                                                                                                                                                                                                                                                                          | Format |
+| Contents            | Descripción                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
 | directory.json      | Descripción de los grupos y usuarios de 4D para la base de datos, así como sus derechos de acceso                                                                                                                                                                                                                                    | JSON   |
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
@@ -200,7 +200,7 @@ Esta carpeta contiene **archivos de propiedades usuario** utilizados para la adm
 
 Esta carpeta contiene archivos que memorizan las configuraciones del usuario, por ejemplo, el punto de ruptura o las posiciones de las ventanas. You can just ignore this folder. It contains for example:
 
-| Contents                   | Description                                            | Format |
+| Contents                   | Descripción                                            | Format |
 | -------------------------- | ------------------------------------------------------ | ------ |
 | methodPreferences.json     | Current user method editor preferences                 | JSON   |
 | methodWindowPositions.json | Current user window positions for methods              | JSON   |
