@@ -74,7 +74,7 @@ Allows setting a standard style for the object border.
 
 | Name        | Data Type | Possible Values                                                   |
 | ----------- | --------- | ----------------------------------------------------------------- |
-| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | texto     | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### Objects Supported
 
@@ -222,7 +222,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | Name | Data Type | Possible Values |
 | ---- | --------- | --------------- |
-| fill | text      | "transparent"   |
+| fill | texto     | "transparent"   |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
