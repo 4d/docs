@@ -36,7 +36,7 @@ Attachment objects provide the following read-only properties and functions:
 | cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object                                                    |
+| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
 <!-- END REF -->
 
 
@@ -173,7 +173,7 @@ $transporter.send($email)
 | cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object                                                    |
+| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
 <!-- END REF -->
 
 #### Description
@@ -214,7 +214,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | Parameter | Tipo |    | Description               |
 | --------- | ---- |:--:| ------------------------- |
-| Result    | Blob | <- | Content of the attachment |
+| Resultado | Blob | <- | Content of the attachment |
 <!-- END REF -->
 
 
