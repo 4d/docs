@@ -58,7 +58,7 @@ This property is **read-only**.
 | Parameter | Tipo     |    | Description                                      |
 | --------- | -------- |:--:| ------------------------------------------------ |
 | param     | any      | -> | Parameter(s) to pass to the constructor function |
-| Result    | 4D.Class | <- | New object of the class                          |
+| Resultado | 4D.Class | <- | New object of the class                          |
 <!-- END REF -->
 
 
