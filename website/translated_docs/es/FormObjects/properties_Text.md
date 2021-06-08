@@ -31,7 +31,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | Property   | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| fontWeight | texto     | "normal", "bold" |
 
 #### Objects Supported
 
@@ -453,7 +453,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Result
+      Resultado
     </th>
   </tr>
   
