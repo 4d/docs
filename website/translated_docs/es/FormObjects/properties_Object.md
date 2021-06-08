@@ -275,9 +275,9 @@ Para la traducción de la base de datos, puede introducir una referencia XLIFF e
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| Name  | Data Type | Possible Values |
+| ----- | --------- | --------------- |
+| texto | string    | any text        |
 
 #### Objects Supported
 
