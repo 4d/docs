@@ -180,7 +180,7 @@ The `.bodyValues` object contains the following properties:
 
 | Property                   | Tipo     | Valor                                                                                                                                       |
 | -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text     | Value of the body part                                                                                                                      |
+| *partID*.value             | texto    | Value of the body part                                                                                                                      |
 | *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
@@ -253,10 +253,10 @@ The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary --
 
 Every object of the headers collection can contain the following properties:
 
-| Property | Tipo | Valor                                                                                                                                                                |
-| -------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].name  | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
-| [].value | text | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
+| Property | Tipo  | Valor                                                                                                                                                                |
+| -------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [].name  | texto | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
+| [].value | texto | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
 
 
 
@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Parameter | Tipo       |    | Description   |
 | --------- | ---------- |:--:| ------------- |
 | mime      | Blob, Text | -> | Email in MIME |
-| Result    | Objeto     | <- | Email object  |
+| Resultado | Objeto     | <- | Email object  |
 <!-- END REF -->
 
 #### Description
@@ -596,7 +596,7 @@ $status:=$transporter.send($email)
 | --------- | ------ |:--:| --------------------------------- |
 | mail      | Objeto | -> | Email object                      |
 | options   | Objeto | -> | Charset and encoding mail options |
-| Result    | Texto  | <- | Email object converted to MIME    |
+| Resultado | Texto  | <- | Email object converted to MIME    |
 <!-- END REF -->
 
 #### Description
