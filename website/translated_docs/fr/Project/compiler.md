@@ -256,7 +256,7 @@ An error file may contain three types of messages:
     - The data type of a process variable could not be determined.
     - Two different kinds of objects have the same name. General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Warnings**: Warnings are not errors. In the compiler window, warnings appear in italics. They do not prevent the project from being compiled, but simply point out potential code errors. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 
 
