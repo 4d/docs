@@ -38,39 +38,39 @@ Los objetos deben haber sido inicializados, por ejemplo utilizando el comando `N
 
 Ejemplo:
 ```4d
- C_OBJECT($obVar) //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ C_OBJECT($obVar) //creación de una variable 4D de tipo objeto
+ $obVar:=New object //inicialización del objeto y asignación a la variable 4D
 ```
 
-### Regular or shared object
+### Objeto estándar o compartido
 
 Puede crear dos tipos de objetos:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- objetos estándar (no compartidos), utilizando el comando `New object`. Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- objetos compartidos, utilizando el comando `New shared object`. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. Para más información, consulte la sección [Objetos y colecciones compartidos](Concepts/shared.md).
 
 
-## Syntax basics
+## Principios de la sintaxis
 
 La notación de objetos puede utilizarse para acceder a los valores de las propiedades de objetos a través de una cadena de tokens.
 
-### Object properties
+### Propiedades de los objetos
 
 Con la notación de objetos, se puede acceder a las propiedades de los objetos de dos maneras:
 
-- using a "dot" symbol: > object.propertyName
+- utilizando un símbolo "punto": > object.propertyName
 
 Ejemplo:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- utilizando una cadena entre corchetes: > object["propertyName"]
 
 Ejemplos:
 ```4d
      $vName:=employee["name"]
-     //or also:
+     //o también:
      $property:="name"
      $vName:=employee[$property]
 
@@ -82,23 +82,23 @@ Since an object property value can be an object or a collection, object notation
 ```
 La notación de objetos está disponible en cualquier elemento del lenguaje que pueda contener o devolver un objeto, es decir:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Ejemplos:
+- con los **Objetos** mismos (almacenados en variables, campos, propiedades de objetos, arrays de objetos o elementos de colecciones). Ejemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
-     $addr:=[Emp]data_obj.address //field
-     $city:=$addr.city //property of an object
-     $pop:=$aObjCountries{2}.population //object array
-     $val:=$myCollection[3].subvalue //collection element
+     $addr:=[Emp]data_obj.address //campo
+     $city:=$addr.city //propiedad de un objeto
+     $pop:=$aObjCountries{2}.population //array de objetos
+     $val:=$myCollection[3].subvalue //elemento de colección
 ```
-- **4D commands** that return objects. Ejemplo:
+- **comandos 4D** que devuelven objetos. Ejemplo:
 
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Ejemplo:
+- **Métodos proyecto** que devuelven objetos. Ejemplo:
 
 ```4d
       // MyMethod1
@@ -109,22 +109,22 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **Collections** Ejemplo:
 
 ```4d
-     myColl.length //size of the collection
+     myColl.length //tamaño de la colección
 ```
 
-### Pointers
+### Punteros
 
 **Nota preliminar:** dado que los objetos se pasan siempre por referencia, no suele ser necesario utilizar punteros. Al pasar el objeto, internamente 4D utiliza automáticamente un mecanismo similar a un puntero, minimizando la necesidad de memoria y permitiendo modificar el parámetro y devolver las modificaciones. Como resultado, no es necesario utilizar punteros. Sin embargo, en caso de querer utilizar punteros, se puede acceder a los valores de las propiedades mediante punteros.
 
 El uso de la notación de objetos con punteros es muy similar al uso de la notación de objetos directamente con objetos, excepto que el símbolo "punto" debe omitirse.
 
-- Direct access:
+- Acceso directo:
 > pointerOnObject->propertyName
 
-- Access by name:
+- Acceso por nombre:
 > pointerOnObject->["propertyName"]
 
 Ejemplo:
@@ -138,7 +138,7 @@ Ejemplo:
  x:=vPtr->a //x=10
 ```
 
-### Null value
+### Valor Null
 
 Cuando se utiliza la notación de objetos, se soporta el valor **null** con el comando **Null**. Este comando puede utilizarse para asignar o comparar el valor nulo a propiedades de objetos o a elementos de colecciones, por ejemplo:
 
@@ -149,28 +149,28 @@ Cuando se utiliza la notación de objetos, se soporta el valor **null** con el c
 
 Para más información, consulte la descripción del comando `Null`.
 
-### Undefined value
+### Valor indefinido
 
 La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores. Esto no ocurre en los siguientes casos:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- La lectura de una propiedad de un objeto o valor indefinido devuelve un indefinido; la asignación de un valor indefinido a variables (excepto arrays) tiene el mismo efecto que llamar `CLEAR VARIABLE` con ellas:
 
 ```4d
      C_OBJECT($o)
      C_LONGINT($val)
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o. es indefinido (no hay error), y la asignación de este valor borra la variable
       //$val=0
 ```
 
-- Reading the **length** property of an undefined collection produces 0:
+- La lectura de la propiedad **length** de una colección indefinida produce 0:
 
 ```4d
-     C_COLLECTION($c) //variable created but no collection is defined
+     C_COLLECTION($c) //variable creada pero no se ha definido ninguna colección
      $size:=$c.length //$size = 0
 ```
 
-- An undefined value passed as parameter to a project method is automatically converted to 0 or "" according to the declared parameter type.
+- Un valor indefinido pasado como parámetro a un método proyecto se convierte automáticamente en 0 o "" según el tipo de parámetro declarado.
 
 ```4d
      C_OBJECT($o)
