@@ -33,15 +33,15 @@ Una hora nula se escribe ?00:00:00?
 
 | Operación         | Sintaxis       | Devuelve | Expresión               | Valor      |
 | ----------------- | -------------- | -------- | ----------------------- | ---------- |
-| Addition          | Time + Time    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction       | Time – Time    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition          | Time + Number  | Número   | ?02:03:04? + 65         | 7449       |
-| Subtraction       | Time – Number  | Número   | ?02:03:04? – 65         | 7319       |
-| Multiplication    | Time * Number  | Número   | ?02:03:04? * 2          | 14768      |
-| Division          | Time / Number  | Número   | ?02:03:04? / 2          | 3692       |
-| Longint division  | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
-| Modulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
+| Adición           | Time + Time    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Resta             | Time – Time    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Adición           | Time + Number  | Número   | ?02:03:04? + 65         | 7449       |
+| Resta             | Time – Number  | Número   | ?02:03:04? – 65         | 7319       |
+| Multiplicación    | Time * Number  | Número   | ?02:03:04? * 2          | 14768      |
+| División          | Time / Number  | Número   | ?02:03:04? / 2          | 3692       |
+| División entera   | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
+| Módulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Módulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
 | Igual             | Time = Time    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                   |                |          | ?01:02:03? = ?01:02:04? | False      |
 | Desigualdad       | Time # Time    | Booleano | ?01:02:03? # ?01:02:04? | True       |

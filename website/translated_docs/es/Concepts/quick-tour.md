@@ -253,10 +253,10 @@ When you use the language, it is rare that you will simply want a piece of data.
 
 | Operador | Operación      | Ejemplo            |
 | -------- | -------------- | ------------------ |
-| +        | Addition       | 1 + 2 results in 3 |
-| –        | Subtraction    | 3 – 2 results in 1 |
-| *        | Multiplication | 2 * 3 results in 6 |
-| /        | Division       | 6 / 2 results in 3 |
+| +        | Adición        | 1 + 2 results in 3 |
+| –        | Resta          | 3 – 2 results in 1 |
+| *        | Multiplicación | 2 * 3 results in 6 |
+| /        | División       | 6 / 2 results in 3 |
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
@@ -264,7 +264,7 @@ The same symbols are often used for different operations, depending on the data 
 
 | Data Type       | Operación     | Ejemplo                                                                                              |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Número          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
+| Número          | Adición       | 1 + 2 adds the numbers and results in 3                                                              |
 | Cadena          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -287,7 +287,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Expression types
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expresión                | Tipo               | Description                                                                                                                                                                     |
+| Expresión                | Tipo               | Descripción                                                                                                                                                                     |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | Cadena             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | Cadena             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |

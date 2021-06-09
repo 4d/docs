@@ -18,7 +18,7 @@ Two main locations can be used for static picture path:
 
 |  Name   | Data Type | Possible Values                             |
 |:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+| picture |   texto   | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported

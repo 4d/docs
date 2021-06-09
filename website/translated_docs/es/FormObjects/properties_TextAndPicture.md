@@ -34,7 +34,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 | Name  | Data Type | Possible Values                                                                                                                                                    |
 |:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |   texto   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
@@ -168,7 +168,7 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Description                                                                                                                                      | Ejemplo                                                        |
+| Option       | Descripción                                                                                                                                      | Ejemplo                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |

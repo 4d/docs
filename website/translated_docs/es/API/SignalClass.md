@@ -107,14 +107,14 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| Parameter   | Tipo      |    | Description                            |
+| Parameter   | Tipo      |    | Descripción                            |
 | ----------- | --------- |:--:| -------------------------------------- |
 | description | Texto     | -> | Description for the signal             |
-| Result      | 4D.Signal | <- | Native object encapsulating the signal |
+| Resultado   | 4D.Signal | <- | Native object encapsulating the signal |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
@@ -178,7 +178,7 @@ The ***doSomething*** method could be like:
 <!-- REF #SignalClass.description.Syntax -->
 **.description** : Text<!-- END REF -->
 
-#### Description
+#### Descripción
 
 The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
 
@@ -203,7 +203,7 @@ This property is **read-write**.
 <!-- REF #SignalClass.signaled.Syntax -->
 **.signaled** : Boolean<!-- END REF -->
 
-#### Description
+#### Descripción
 
 The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
@@ -226,13 +226,13 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parameter | Tipo |  | Description                     |
+| Parameter | Tipo |  | Descripción                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
@@ -255,14 +255,14 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| Parameter | Tipo     |    | Description                                    |
+| Parameter | Tipo     |    | Descripción                                    |
 | --------- | -------- | -- | ---------------------------------------------- |
 | timeout   | Real     | -> | Maximum waiting time for the signal in seconds |
-| Result    | Booleano | <- | State of the `.signaled` property              |
+| Resultado | Booleano | <- | State of the `.signaled` property              |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 

@@ -58,7 +58,7 @@ This file starts with the following headers:
 
 For each request, the following fields are logged:
 
-| Field name                                 | Description                                                                                                                                                                                                      |
+| Field name                                 | Descripción                                                                                                                                                                                                      |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sequence_number                            | Unique and sequential operation number in the logging session                                                                                                                                                    |
 | time                                       | Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                   |
@@ -109,7 +109,7 @@ This file starts with the following headers:
 
 For each process, the following fields are logged:
 
-| Field name                        | Description                                                    |
+| Field name                        | Descripción                                                    |
 | --------------------------------- | -------------------------------------------------------------- |
 | sequence_number                   | Unique and sequential operation number in the logging session  |
 | time                              | Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm" |
@@ -140,7 +140,7 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 
 The following fields are logged for both Request and Response:
 
-| Field name     | Description                                                   |
+| Field name     | Descripción                                                   |
 | -------------- | ------------------------------------------------------------- |
 | SocketID       | ID of socket used for communication                           |
 | PeerIP         | IPv4 address of host (client)                                 |
@@ -165,7 +165,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2)
 
 The following fields are logged for each event:
 
-| Column # | Description                                                                                                   |
+| Column # | Descripción                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------- |
 | 1        | Unique and sequential operation number in the logging session                                                 |
 | 2        | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                    |
@@ -190,7 +190,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Column # | Field name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Column # | Field name                      | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | -------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1        | sequence_number                 | Unique and sequential operation number in the logging session                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 2        | time                            | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -216,7 +216,7 @@ How to start this log:
 
 The following fields are logged for each event:
 
-| Field Name         | Description                                                   |
+| Field Name         | Descripción                                                   |
 | ------------------ | ------------------------------------------------------------- |
 | sequenceNumber     | Unique and sequential operation number in the logging session |
 | timestamp          | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)    |
@@ -282,7 +282,7 @@ The log files can be produced in two versions:
 
 For each request, the following fields are logged:
 
-| Column # | Description                                                   |
+| Column # | Descripción                                                   |
 | -------- | ------------------------------------------------------------- |
 | 1        | Unique and sequential operation number in the logging session |
 | 2        | Date and time in RFC3339 format (yyyy-mm-ddThh:mm:ss.ms)      |
@@ -319,7 +319,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Field name     | Description                                                   | Ejemplo                                                 |
+| Field name     | Descripción                                                   | Ejemplo                                                 |
 | -------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
 | sequenceNumber | Unique and sequential operation number in the logging session | 104                                                     |
 | url            | Client ORDA request URL                                       | "rest/Persons(30001)"                                   |

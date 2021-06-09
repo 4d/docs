@@ -31,7 +31,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | Property   | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| fontWeight | texto     | "normal", "bold" |
 
 #### Objects Supported
 
@@ -304,7 +304,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Tipo     | Description                                                                                                                                                                                                                                                                                                                                                                |
+| Property name       | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
 | fill                | string   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
@@ -453,7 +453,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Result
+      Resultado
     </th>
   </tr>
   
