@@ -60,7 +60,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Tipo      |    | Description                                     |
+| Parameter      | Tipo      |    | Descripción                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Texto     | -> | Folder path                                     |
 | folderConstant | Entero    | -> | 4D folder constant                              |
@@ -70,7 +70,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -121,7 +121,7 @@ If the command is called from a component, pass the optional * parameter to get 
 <!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
 
@@ -147,14 +147,14 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Tipo     |    | Description                                                  |
+| Parameter | Tipo     |    | Descripción                                                  |
 | --------- | -------- | -- | ------------------------------------------------------------ |
 | Resultado | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
 
-#### Description
+#### Descripción
 
 The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
@@ -208,7 +208,7 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Tipo      |    | Description                                  |
+| Parameter         | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
@@ -217,7 +217,7 @@ End if
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
@@ -270,14 +270,14 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Tipo   |    | Description            |
+| Parameter | Tipo   |    | Descripción            |
 | --------- | ------ | -- | ---------------------- |
 | option    | Entero | -> | Folder deletion option |
 <!-- END REF -->
 
 
 
-#### Description
+#### Descripción
 
 The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
 
@@ -384,7 +384,7 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Tipo      |    | Description                    |
+| Parameter         | Tipo      |    | Descripción                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
@@ -392,7 +392,7 @@ When `Delete with contents` is passed:
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
@@ -454,7 +454,7 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Tipo      |    | Description                  |
+| Parameter | Tipo      |    | Descripción                  |
 | --------- | --------- | -- | ---------------------------- |
 | newName   | Texto     | -> | New full name for the folder |
 | Resultado | 4D.Folder | <- | Renamed folder               |
@@ -462,7 +462,7 @@ You want to move and rename a folder:
 
 
 
-#### Description
+#### Descripción
 
 The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
