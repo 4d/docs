@@ -72,7 +72,7 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Tipo         |    | Description                                                    |
+| Parameter | Tipo         |    | Descripción                                                    |
 | --------- | ------------ | -- | -------------------------------------------------------------- |
 | option    | Entero       | -> | Web server to get (default if omitted = `Web server database`) |
 | Resultado | 4D.WebServer | <- | Web server object                                              |
@@ -118,7 +118,7 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Tipo      |    | Description                                    |
+| Parameter | Tipo      |    | Descripción                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
 | Resultado | Colección | <- | Collection of the available Web server objects |
 
@@ -739,7 +739,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
-| Constant            | Valor    | Description                                                                                                                         |
+| Constant            | Valor    | Descripción                                                                                                                         |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
 | Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
@@ -782,7 +782,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parameter  | Tipo   |    | Description                           |
+| Parameter  | Tipo   |    | Descripción                           |
 | ---------- | ------ | -- | ------------------------------------- |
 | parámetros | Objeto | -> | Web server settings to set at startup |
 | Resultado  | Objeto | <- | Status of the web server startup      |
@@ -802,7 +802,7 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Tipo      | Description                                                          |
+| Property |                         | Tipo      | Descripción                                                          |
 | -------- | ----------------------- | --------- | -------------------------------------------------------------------- |
 | success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
 | errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
@@ -844,7 +844,7 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| Parameter | Tipo |  | Description                     |
+| Parameter | Tipo |  | Descripción                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 
