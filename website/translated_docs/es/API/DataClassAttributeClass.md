@@ -49,7 +49,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 **.autoFilled** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
 
@@ -79,7 +79,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.fieldNumber** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
 
@@ -106,7 +106,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.fieldType** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see [`.kind`](#kind)).
 
@@ -136,7 +136,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 **.indexed** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
 
@@ -162,7 +162,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.inverseName** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
 
@@ -188,7 +188,7 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 **.keyWordIndexed** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.keyWordIndexed` property <!-- REF DataClassAttributeClass.keyWordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
 
@@ -213,7 +213,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 **.kind** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
 
@@ -255,7 +255,7 @@ Given the following table and relation:
 **.mandatory** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
 
@@ -282,7 +282,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 **.name** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
 
@@ -312,7 +312,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 **.relatedDataClass** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 > This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
@@ -348,7 +348,7 @@ Given the following tables and relations:
 **.type** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
 
@@ -381,7 +381,7 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 **.unique** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
 
