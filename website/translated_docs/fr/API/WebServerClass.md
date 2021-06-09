@@ -81,7 +81,7 @@ They provide the following properties and functions:
 
 The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
 | Constant                       | Valeur | Commentaire                                              |
 | ------------------------------ | ------ | -------------------------------------------------------- |
@@ -231,7 +231,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 **.CORSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir `CORSSettings` ci-dessous). Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur «403 - forbidden».
+The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir `CORSSettings` ci-dessous). Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées.
 
 Par défaut : False (désactivé)
 
@@ -345,7 +345,7 @@ Valeurs possibles :
 *   1 à 9 (où 1 correspond à la compression la plus rapide et 9 la plus élevée).
 *   -1 = définir un compromis entre la vitesse et le taux de compression.
 
-Par défaut = 1 (compression plus rapide).
+Valeurs possibles :
 
 <!-- END REF -->
 
@@ -547,9 +547,9 @@ The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) r
 
 The <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. Lorsque ce nombre (moins un) est atteint, 4D ne crée aucun autre process et retourne le statut HTTP 503 - Service Unavailable to all new requests.
 
-Valeurs possibles : 10 - 32000
+Valeurs possibles : 500000 - 2147483648
 
-Par défaut = 100
+Valeurs possibles : 10 - 32000
 
 <!-- END REF -->
 
@@ -563,7 +563,7 @@ Par défaut = 100
 **.maxRequestSize** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passer la valeur maximale (2147483648) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
+The <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passer la valeur maximale (2147483648) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses.
 
 Valeurs possibles : 500000 - 2147483648
 
