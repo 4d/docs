@@ -3,7 +3,7 @@ id: Transporter
 title: Transporter Class
 ---
 
-## Description
+## Descripción
 
 
 <!-- REF transporter.acceptUnsecureConnection.Desc -->
@@ -19,7 +19,7 @@ title: Transporter Class
 **.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
@@ -54,7 +54,7 @@ Available secured ports are:
 <!-- REF #transporter.authenticationMode.Syntax -->
 **.authenticationMode** : Text<!-- END REF -->
 
-#### Description
+#### Descripción
 
 The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
 
@@ -85,7 +85,7 @@ Possible values are:
 
 **.authenticationMode** : Text
 
-#### Description
+#### Descripción
 
 The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
@@ -117,7 +117,7 @@ Possible values are:
 
 **.authenticationMode** : Text
 
-#### Description
+#### Descripción
 
 The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
@@ -150,7 +150,7 @@ Possible values are:
 **.bodyCharset** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
@@ -186,7 +186,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 
 
-#### Description
+#### Descripción
 
 The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
@@ -208,7 +208,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 **.headerCharset** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
 
@@ -243,7 +243,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 **.host** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
@@ -264,7 +264,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 **.logFile** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
 
@@ -295,7 +295,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 **.port** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
@@ -323,7 +323,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 **.sendTimeOut** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descripción
 The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
 
 <!-- END REF -->
@@ -344,7 +344,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 **.user** : Text<!-- END REF -->
 
 
-#### Description
+#### Descripción
 The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->. 
 
 <!-- END REF -->
@@ -364,13 +364,13 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parameter | Tipo   |    | Description                                 |
+| Parameter | Tipo   |    | Descripción                                 |
 | --------- | ------ |:--:| ------------------------------------------- |
 | Resultado | Objeto | <- | Status of the transporter object connection |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
@@ -379,7 +379,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Property   |                          | Tipo      | Description                                                                                                  |
+| Property   |                          | Tipo      | Descripción                                                                                                  |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | booleano  | True if the check is successful, False otherwise                                                             |
 | status     |                          | number    | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
