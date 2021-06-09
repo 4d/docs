@@ -74,7 +74,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Properties               | Tipo                                 | Description                                                                |
+| Properties               | Tipo                                 | Descripción                                                                |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
 | __DATACLASS              | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
@@ -100,7 +100,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | Tipo     | Description                                                                          |
+| Properties               | Tipo     | Descripción                                                                          |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------ |
 | Attributes of the entity | mixed    | Optional - Values to modify                                                          |
 | __DATASET                | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
