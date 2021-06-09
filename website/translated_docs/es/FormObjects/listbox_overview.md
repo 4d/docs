@@ -774,11 +774,11 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | check box                                      | drop-down menu (required list)                                                                 |
-| color     | background color                               | text                                                                                           |
+| color     | background color                               | texto                                                                                          |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
@@ -790,7 +790,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
-| text       | same as defined in object                                  | any (no control)        |
+| texto      | same as defined in object                                  | any (no control)        |
 | real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" and "-"           |
@@ -805,25 +805,25 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | text | real | integer | booleano | color | event |
-| --------------------- | --------------------------------------- | ---- | ---- | ------- | -------- | ----- | ----- |
-| *Attributes*          | *Description*                           |      |      |         |          |       |       |
-| value                 | cell value (input or output)            | x    | x    | x       |          |       |       |
-| min                   | minimum value                           |      | x    | x       |          |       |       |
-| max                   | maximum value                           |      | x    | x       |          |       |       |
-| behavior              | "threeStates" value                     |      |      | x       |          |       |       |
-| requiredList          | drop-down list defined in object        | x    | x    | x       |          |       |       |
-| choiceList            | combo box defined in object             | x    | x    | x       |          |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |          |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |          |       |       |
-| saveAs                | "reference" or "value"                  | x    | x    | x       |          |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |          |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x       |          |       |       |
-| unitList              | array of X elements                     | x    | x    | x       |          |       |       |
-| unitReference         | index of selected element               | x    | x    | x       |          |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x       |          |       |       |
-| unitsListName         | 4D list name for units                  | x    | x    | x       |          |       |       |
-| alternateButton       | add an alternate button                 | x    | x    | x       | x        | x     |       |
+|                       | valueType                               | texto | real | integer | booleano | color | event |
+| --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ----- |
+| *Attributes*          | *Descripción*                           |       |      |         |          |       |       |
+| value                 | cell value (input or output)            | x     | x    | x       |          |       |       |
+| min                   | minimum value                           |       | x    | x       |          |       |       |
+| max                   | maximum value                           |       | x    | x       |          |       |       |
+| behavior              | "threeStates" value                     |       |      | x       |          |       |       |
+| requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |       |
+| choiceList            | combo box defined in object             | x     | x    | x       |          |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |          |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |          |       |       |
+| saveAs                | "reference" or "value"                  | x     | x    | x       |          |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |          |       |       |
+| choiceListName        | 4D list name, display combo box         | x     | x    | x       |          |       |       |
+| unitList              | array of X elements                     | x     | x    | x       |          |       |       |
+| unitReference         | index of selected element               | x     | x    | x       |          |       |       |
+| unitsListReference    | 4D list ref for units                   | x     | x    | x       |          |       |       |
+| unitsListName         | 4D list name for units                  | x     | x    | x       |          |       |       |
+| alternateButton       | add an alternate button                 | x     | x    | x       | x        | x     |       |
 
 #### value
 
@@ -871,7 +871,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                                  |
+| Attribute | Available value(s) | valueType(s) | Descripción                                                                                                                                                                                  |
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 

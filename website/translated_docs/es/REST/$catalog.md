@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Sintaxis                                      | Ejemplo              | Description                                                                      |
+| Sintaxis                                      | Ejemplo              | Descripción                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -20,7 +20,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 
-### Description
+### Descripción
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
@@ -29,7 +29,7 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Property | Tipo   | Description                                                                       |
+| Property | Tipo   | Descripción                                                                       |
 | -------- | ------ | --------------------------------------------------------------------------------- |
 | name     | Cadena | Name of the dataclass.                                                            |
 | uri      | Cadena | A URI allowing you to obtain information about the |dataclass and its attributes. |
@@ -64,7 +64,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 Returns information about all of your project's dataclasses and their attributes
 
-### Description
+### Descripción
 
 Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
 
@@ -185,7 +185,7 @@ For more information about what is returned for each dataclass and its attribute
 
 Returns information about a dataclass and its attributes
 
-### Description
+### Descripción
 
 Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
@@ -201,7 +201,7 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Tipo   | Description                                                                                  |
+| Property       | Tipo   | Descripción                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
 | name           | Cadena | Name of the dataclass                                                                        |
 | collectionName | Cadena | Name of an entity selection on the dataclass                                                 |
@@ -214,7 +214,7 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Tipo     | Description                                                                                                                                           |
+| Property    | Tipo     | Descripción                                                                                                                                           |
 | ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | Cadena   | Attribute name.                                                                                                                                       |
 | kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                            |
