@@ -8,7 +8,7 @@ title: On Header Click
 | 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 
 
-## Description
+## Descripción
 
 ### List Box
 
@@ -25,7 +25,7 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Tipo    | Description                                                                                                                         |
+| Property    | Tipo    | Descripción                                                                                                                         |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | code        | longint | 42                                                                                                                                  |
 | description | texto   | "On Header Click"                                                                                                                   |
