@@ -174,14 +174,14 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
 
 ```4d
      C_OBJECT($o)
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) //pasa un parámetro indefinido
 
-      //In mymethod method
-     C_TEXT($1) //parameter type is text
-      // $1 contains ""
+      //En el método mymethod
+     C_TEXT($1) //Parámetro de tipo texto
+      // $1 contiene ""
 ```
 
-- A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:
+- Una expresión de condición se convierte automáticamente en falsa cuando se evalúa a indefinido con las palabras clave If y Case of:
 
 ```4d
      C_OBJECT($o)
@@ -192,15 +192,15 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
- - Object, collection, pointer: Null
- - Picture: Empty picture
- - Boolean: False
- - String: ""
- - Number: 0
- - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
- - Time: 0 (number of ms)
- - Undefined, Null: no change
+- La asignación de un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor, dependiendo de su tipo:
+ - Objeto, colección, puntero: Null
+ - Imagen: imagen vacía
+ - Booleano: False
+ - Cadena: ""
+ - Número: 0
+ - Fecha: !00-00-00! si la opción "Utilizar el tipo fecha en lugar del formato fecha ISO en los objetos" está activada, de lo contrario ""
+ - Hora: 0 (número de ms)
+ - Indefinido, Null: sin cambios
 
 ```4d
      C_OBJECT($o)
@@ -208,13 +208,13 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
      $o.a:=$o.b //$o.a=0
 ```
 
-- Assigning an undefined value to a non existing object property does nothing.
+- La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Lowercase(String($o.a.b)) //asegurarse de obtener un valor de cadena aunque sea indefinido
+  //para evitar errores en el código
 ```
 
 
@@ -225,18 +225,18 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 - Escritura y lectura de propiedades de objetos (este ejemplo compara la notación de objetos y la notación de comandos):
 
 ```4d
-  // Using the object notation
- C_OBJECT($myObj) //declares a 4D variable object
- $myObj:=New object //creates an object and assigns to the variable
+  // Utilizando la notación de objeto
+ C_OBJECT($myObj) //declaración de una variable objeto 4D
+ $myObj:=New object //crea un objeto y lo asigna a la variable
  $myObj.age:=56
  $age:=$myObj.age //56
 
-  // Using the command notation
- C_OBJECT($myObj2) //declares a 4D variable object
- OB SET($myObj2;"age";42) //creates an object and adds the age property
+  // Usando la notación por comando
+ C_OBJECT($myObj2) //declara una variable objeto 4D
+ OB SET($myObj2;"age";42) //crea un objeto y añade la propiedad age
  $age:=OB Get($myObj2;"age") //42
 
-  // Of course, both notations can be mixed
+  // Por supuesto, se pueden mezclar ambas notaciones
  C_OBJECT($myObj3)
  OB SET($myObj3;"age";10)
  $age:=$myObj3.age //10
@@ -247,10 +247,10 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 ```4d
  C_OBJECT($Emp)
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
+ $Emp.city:="London" //crea la propiedad city con el valor "London"
+ $Emp.city:="Paris" //modifica la propiedad city
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+  //crea la propiedad phone y define su valor para un objeto
 ```
 
 - Obtener un valor en un subobjeto es muy sencillo utilizando la notación de objetos:
@@ -262,12 +262,12 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 - Puede acceder a las propiedades como cadenas utilizando el operador [ ]
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" //modifica la propiedad city
+  //esto puede ser útil para crear propiedades a través de variables
  C_TEXT($addr)
  $addr:="address"
  For($i;1;4)
-    $Emp[$addr+String($i)]:=""
+    $Emp[$addr+String($i)]:="
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // crea 4 propiedades vacías "dirección1...dirección4" en el objeto $Emp
 ```
