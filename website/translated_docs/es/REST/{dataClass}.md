@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 ## Available syntaxes
 
-| Sintaxis                                                                           | Ejemplo                                  | Description                                                                     |
+| Sintaxis                                                                           | Ejemplo                                  | Descripción                                                                     |
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Returns all the data (by default the first 100 entities) for the dataclass      |
 | [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Returns the data for the specific entity defined by the dataclass's primary key |
@@ -28,13 +28,13 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
 
-### Description
+### Descripción
 
 When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Here is a description of the data returned:
 
-| Property      | Tipo      | Description                                                                                                                                                                                     |
+| Property      | Tipo      | Descripción                                                                                                                                                                                     |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | Cadena    | Name of the dataclass.                                                                                                                                                                          |
 | __COUNT       | Número    | Number of entities in the dataclass.                                                                                                                                                            |
@@ -44,7 +44,7 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| Property    | Tipo   | Description                                                                                                |
+| Property    | Tipo   | Descripción                                                                                                |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | Cadena | Value of the primary key defined for the dataclass.                                                        |
 | __TIMESTAMP | Fecha  | Timestamp of the last modification of the entity                                                           |
@@ -146,7 +146,7 @@ Return all the data for a specific dataclass.
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
-### Description
+### Descripción
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
@@ -195,7 +195,7 @@ The following request returns all the public data in the Company dataclass whose
 
 Returns the data for one entity in which the attribute's value is defined
 
-### Description
+### Descripción
 
 By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
 
