@@ -8,11 +8,11 @@ title: On Row Resize
 | 60   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The height of a row is modified by a user with the mouse |
 
 
-## Description
+## Descripción
 
 This event is generated when the height of a row is modified by a user in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Tipo     | Description                                                      |
+| Property    | Tipo     | Descripción                                                      |
 | ----------- | -------- | ---------------------------------------------------------------- |
 | code        | longint  | 60                                                               |
 | description | texto    | "On Row Resize"                                                  |
