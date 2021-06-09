@@ -49,7 +49,7 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parameter       | Tipo      |    | Description                                          |
+| Parameter       | Tipo      |    | Descripción                                          |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
@@ -60,7 +60,7 @@ End if
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
@@ -81,7 +81,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
     </td>
     
     <td>
-      Description
+      Descripción
     </td>
   </tr>
   
@@ -150,7 +150,7 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Tipo     | Description                                                                                                                             |
+| Property   | Tipo     | Descripción                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
 | status     | Entero   | Status code                                                                                                                             |
@@ -276,7 +276,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parameter | Tipo          |    | Description                 |
+| Parameter | Tipo          |    | Descripción                 |
 | --------- | ------------- |:--:| --------------------------- |
 | zipFile   | 4D.File       | -> | Zip archive file            |
 | password  | Texto         | -> | ZIP archive password if any |
@@ -284,7 +284,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
@@ -366,7 +366,7 @@ To extract from the root folder:
 **.root** : 4D.ZipFolder<!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
