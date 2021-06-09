@@ -87,25 +87,25 @@ Project development file, used to designate and launch the project. This file ca
 
 #### `Formularios`
 
-| Contents                                  | Descripción                                | Format  |
-| ----------------------------------------- | ------------------------------------------ | ------- |
-| *formName*/form.4DForm                    | Project form description                   | json    |
-| *formName*/method.4dm                     | Project form method                        | texto   |
-| *formName*/Images/*pictureName*           | Project form static picture                | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | texto   |
+| Contents                                  | Descripción                                | Format |
+| ----------------------------------------- | ------------------------------------------ | ------ |
+| *formName*/form.4DForm                    | Project form description                   | json   |
+| *formName*/method.4dm                     | Project form method                        | texto  |
+| *formName*/Images/*pictureName*           | Project form static picture                | imagen |
+| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | texto  |
 
 #### `TableForms`
 
-| Contents                                             | Descripción                                            | Format  |
-| ---------------------------------------------------- | ------------------------------------------------------ | ------- |
-| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                | texto   |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | texto   |
-| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json    |
-| *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | picture |
-| *n*/Output/*formName*/method.4dm                     | Output table form method                               | texto   |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | texto   |
+| Contents                                             | Descripción                                            | Format |
+| ---------------------------------------------------- | ------------------------------------------------------ | ------ |
+| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json   |
+| *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | imagen |
+| *n*/Input/*formName*/method.4dm                      | Input table form method                                | texto  |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | texto  |
+| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json   |
+| *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | imagen |
+| *n*/Output/*formName*/method.4dm                     | Output table form method                               | texto  |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | texto  |
 
 #### `Triggers`
 
@@ -144,7 +144,7 @@ The Resources folder contains any custom project resource files and folders. In 
 | Contents              | Descripción                                                                                                                                           | Format  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *item*                | Project resource files and folders                                                                                                                    | various |
-| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
+| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | imagen  |
 
 (*) only if the project was exported from a .4db binary database.
 
