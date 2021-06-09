@@ -73,9 +73,9 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
 
-On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). Ces méthodes constituent les **points d’entrée** dans le composant.
+On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. Ces méthodes constituent les **points d’entrée** dans le composant.
 
-Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
+Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. In certain cases, you may need to allow a component to access the project methods of your host project.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
@@ -100,7 +100,7 @@ component_method("host_method_name")
 
 ## Passage de variables
 
-The local, process and interprocess variables are not shared between components and host projects. The only way to modify component variables from the host project and vice versa is using pointers.
+The local, process and interprocess variables are not shared between components and host projects. The local, process and interprocess variables are not shared between components and host projects.
 
 Exemple utilisant un tableau :
 

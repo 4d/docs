@@ -109,107 +109,12 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      Attribute
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-      Tipo
-    </th>
-    
-    <th>
-      Descripción
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      macros
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      objeto
-    </td>
-    
-    <td>
-      list of defined macros
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-      \<macroName>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      objeto
-    </td>
-    
-    <td>
-      macro definition
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      class
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      macro class name
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      \<customProperty>
-    </td>
-    
-    <td>
-      any
-    </td>
-    
-    <td>
-      (optional) custom value to retrieve in the constructor
-    </td>
-  </tr>
-</table>
+| Attribute |                     |                          | Tipo   | Descripción                                            |
+| --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
+| macros    |                     |                          | objeto | list of defined macros                                 |
+|           | `<macroName>` |                          | objeto | macro definition                                       |
+|           |                     | class                    | string | macro class name                                       |
+|           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
