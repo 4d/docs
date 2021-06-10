@@ -40,7 +40,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 | Name       | Data Type | Possible Values                                                                      |
 | ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| textFormat | cadena    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
 #### Objects Supported
 
@@ -89,7 +89,7 @@ The table below shows choices available:
 
 | Name       | Data Type | Possible Values                                                                                                                                                                  |
 | ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| dateFormat | cadena    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -249,7 +249,7 @@ The following table shows how different formats affect the display of numbers. T
 
 | Name         | Data Type | Possible Values                                                |
 | ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
+| numberFormat | cadena    | Numbers (including a decimal point or minus sign if necessary) |
 
 #### Objects Supported
 
@@ -313,7 +313,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 | Name          | Data Type | Possible Values                                                                                       |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| pictureFormat | cadena    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
 #### Objects Supported
 
@@ -349,7 +349,7 @@ The table below shows the Time field display formats and gives examples:
 
 | Name       | Data Type | Possible Values                                                                                                                                                                                          |
 | ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| timeFormat | cadena    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -373,7 +373,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 | Name          | Data Type | Possible Values                                                          |
 | ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| booleanFormat | cadena    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
 #### Objects Supported
@@ -396,7 +396,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 | Name        | Data Type | Possible Values                                                                                                                                                 |
 | ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+| controlType | cadena    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
 #### Objects Supported
 
@@ -477,7 +477,7 @@ In that cases, the title of the check box can be entered using this property.
 
 | Name         | Data Type | Possible Values                    |
 | ------------ | --------- | ---------------------------------- |
-| controlTitle | string    | Any custom label for the check box |
+| controlTitle | cadena    | Any custom label for the check box |
 
 #### Objects Supported
 
@@ -516,7 +516,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 | Name         | Data Type | Possible Values        |
 | ------------ | --------- | ---------------------- |
-| truncateMode | string    | "withEllipsis", "none" |
+| truncateMode | cadena    | "withEllipsis", "none" |
 
 
 
@@ -541,7 +541,7 @@ You can handle the Visible property for most form objects. This property simplif
 
 | Name       | Data Type | Possible Values     |
 | ---------- | --------- | ------------------- |
-| visibility | string    | "visible", "hidden" |
+| visibility | cadena    | "visible", "hidden" |
 
 #### Objects Supported
 
@@ -601,7 +601,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 | Name     | Data Type | Possible Values                                    |
 | -------- | --------- | -------------------------------------------------- |
-| wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
+| wordwrap | cadena    | "automatic" (excluding list box), "normal", "none" |
 
 #### Objects Supported
 
