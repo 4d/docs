@@ -1,27 +1,27 @@
 ---
-id: string
+id: cadena
 title: Cadena
 ---
 
-String is a generic term that stands for:
+Cadena es un término genérico utilizado para:
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- Los campos o variables de tipo texto: un campo, variable o expresión de tipo texto puede contener de 0 a 2 GB de texto.
+- Campos alfanuméricos: un campo alfanumérico puede contener de 0 a 255 caracteres (límite fijado al definir el campo).
 
-## String literals
+## Constantes literales de tipo cadena
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+Una constante literal de tipo cadena se encierra entre comillas dobles y rectas ("..."). Estos son algunos ejemplos:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Añadir registros"
+"No se han encontrado registros."
+"Factura"
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+Una cadena vacía se especifica con dos comillas sin nada entre ellas ("").
 
-### Escape sequences
-The following escape sequences can be used within strings:
+### Secuencias de escape
+Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 | Escape sequence | Character replaced   |
 | --------------- | -------------------- |
