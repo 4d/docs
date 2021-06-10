@@ -171,7 +171,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 Projection of storage values:
 
@@ -192,7 +192,7 @@ The resulting collection is a collection of strings, for example:
 ]
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Projection of related entity:
 
@@ -258,7 +258,7 @@ The modified entity selection is returned by the function, so that function call
 
 An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -270,7 +270,7 @@ An error occurs if *entity* and the entity selection are not related to the same
  $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Calls to the function can be chained:
 
@@ -323,7 +323,7 @@ If the original entity selection or the *entitySelection* parameter is empty, or
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -340,7 +340,7 @@ If the original entity selection and the parameter are not related to the same d
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 We want to have a selection of employees named "Jones" who live in New York:
 
@@ -1209,7 +1209,7 @@ If *entitySelection* is empty or if *entity* is Null, a new reference to the ori
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
@@ -1225,7 +1225,7 @@ If the original entity selection and the parameter are not related to the same d
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 We want to have a selection of female employees named "Jones" who live in New York :
 
@@ -1275,7 +1275,7 @@ If *entitySelection* is empty or if *entity* is Null, a new reference to the ori
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
@@ -1284,7 +1284,7 @@ If the original entity selection and the parameter are not related to the same d
  $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
@@ -1421,7 +1421,7 @@ Within the *formulaString* or *formulaObj*, the processed entity and thus its at
 
 You can pass parameter(s) to the formula using the `args` property (object) of the `settings` parameter: the formula receives the `settings.args` object in $1.
 
-#### Example 1
+#### Ejemplo 1
 
 Sorting students using a formula provided as text:
 
@@ -1444,7 +1444,7 @@ Same sort order but using a formula object:
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 A formula is given as a formula object with parameters; `settings.args` object is received as $1 in the ***computeAverage*** method.
 
@@ -1531,7 +1531,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -1541,7 +1541,7 @@ For detailed information on how to build a query using *queryString*, *value*, a
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
 
@@ -1626,7 +1626,7 @@ The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->im
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
-#### Example 1
+#### Ejemplo 1
 
 In this example, classic and ORDA code modify the same data simultaneously:
 
@@ -1654,7 +1654,7 @@ In this example, classic and ORDA code modify the same data simultaneously:
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 A list box displays the Form.students entity selection and several clients work on it.
 
@@ -1715,7 +1715,7 @@ The returned entity selection contains the entities specified by *startFrom* and
 
 If the entity selection contains entities that were dropped in the meantime, they are also returned.
 
-#### Example 1
+#### Ejemplo 1
 
 You want to get a selection of the first 9 entities of the entity selection:
 
@@ -1726,7 +1726,7 @@ $sliced:=$sel.slice(0;9) //
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 Assuming we have ds.Employee.all().length = 10
 
@@ -1854,7 +1854,7 @@ An empty collection is returned if:
 *   *begin* is greater than the length of the entity selection.
 
 
-#### Example 1
+#### Ejemplo 1
 
 The following structure will be used throughout all examples of this section:
 
@@ -1915,7 +1915,7 @@ Returns:
 ]
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Example with options:
 
