@@ -28,7 +28,7 @@ The print options are:
 
 |    Name    | Data Type | Possible Values                                     |
 |:----------:|:---------:| --------------------------------------------------- |
-| printFrame |  string   | "fixed", "variable", (subform only) "fixedMultiple" |
+| printFrame |  cadena   | "fixed", "variable", (subform only) "fixedMultiple" |
 
 
 #### Objects Supported
