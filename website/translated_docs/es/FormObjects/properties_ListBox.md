@@ -35,7 +35,7 @@ The specified form is displayed:
 
 | Name       | Data Type | Possible Values                                                                                                                                                                                       |
 | ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+| detailForm | cadena    | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
 #### Objects Supported
 
@@ -65,7 +65,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 | Name                   | Data Type | Possible Values                     |
 | ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| doubleClickInRowAction | cadena    | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
@@ -89,7 +89,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 | Name         | Data Type | Possible Values |
 | ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+| highlightSet | cadena    | Name of the set |
 
 #### Objects Supported
 
@@ -220,7 +220,7 @@ Note that setting properties for an element overrides any other values for this 
 
 | Name             | Data Type | Possible Values        |
 | ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| rowControlSource | cadena    | Row control array name |
 
 #### Objects Supported
 
@@ -242,7 +242,7 @@ Designates the option for allowing users to select rows:
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| selectionMode | cadena    | "multiple", "single", "none" |
 
 #### Objects Supported
 
