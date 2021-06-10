@@ -32,7 +32,7 @@ Function names must be compliant with standard [property naming rules](#object-p
 
 
 
-## Object properties
+## Propiedades de los objetos
 
 The name of an object property (also called object *attribute*) can contain up to 255 characters.
 

@@ -277,7 +277,7 @@ Lectura en una base de datos externa:
 
 - Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
-> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
+> En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 
 
 ## Utilización de recursos

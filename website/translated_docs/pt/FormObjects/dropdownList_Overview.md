@@ -155,7 +155,7 @@ You can assign the hierarchical choice list to the drop-down list object using t
 You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 
-### Using a standard action
+### Usar uma ação padrão
 
 You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). This feature is supported in the following contexts:
 

@@ -327,7 +327,7 @@ Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
 
-## Pointers
+## Punteros
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
 
