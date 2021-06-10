@@ -165,7 +165,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 *   **True** if the folder is created successfully;
 *   **False** if a folder with the same name already exists or if an error occured.
 
-#### Example 1
+#### Ejemplo 1
 
 Create an empty folder in the database folder:
 
@@ -174,7 +174,7 @@ var $created : Boolean
 $created:=Folder("/PACKAGE/SpecialPrefs").create()
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Creation of the "/Archives2019/January/" folder in the database folder:
 
