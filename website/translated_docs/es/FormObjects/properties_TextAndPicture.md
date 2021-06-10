@@ -14,7 +14,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 | Name                    | Data Type | Possible Values                                                                                              |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| customBackgroundPicture | cadena    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
 #### Objects Supported
@@ -80,7 +80,7 @@ Designates the placement of an icon in relation to the form object.
 
 | Name          | Data Type | Possible Values         |
 | ------------- | --------- | ----------------------- |
-| iconPlacement | string    | "none", "left", "right" |
+| iconPlacement | cadena    | "none", "left", "right" |
 
 #### Objects Supported
 
@@ -180,7 +180,7 @@ Here are the results using the various options for this property:
 
 | Name          | Data Type | Possible Values                            |
 | ------------- | --------- | ------------------------------------------ |
-| textPlacement | string    | "left", "top", "right", "bottom", "center" |
+| textPlacement | cadena    | "left", "top", "right", "bottom", "center" |
 
 #### Objects Supported
 
@@ -244,7 +244,7 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 | Name           | Data Type | Possible Values                                                                                      |
 |:-------------- | --------- | ---------------------------------------------------------------------------------------------------- |
-| popupPlacement | string    | <li>"none"<li>"linked"<li>"separated" |
+| popupPlacement | cadena    | <li>"none"<li>"linked"<li>"separated" |
 
 
 #### Objects Supported
