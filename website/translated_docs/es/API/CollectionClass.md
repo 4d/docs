@@ -110,7 +110,7 @@ You must pay attention to the following conversion issues:
 *   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
-#### Example 1
+#### Ejemplo 1
 
 
 
@@ -122,7 +122,7 @@ You want to create a new empty collection and assign it to a 4D collection varia
   //$myCol=[]
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to create a prefilled collection:
 
@@ -247,7 +247,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 *   *propertyPath* is not found in the collection.
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $col : Collection
@@ -255,7 +255,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
  $vAvg:=$col.average() //12
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $col : Collection
@@ -442,7 +442,7 @@ If passed, the *option* parameter can contain one of the following constants (or
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
 
 
-#### Example 1
+#### Ejemplo 1
 
 We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. To do this, we must create a shared copy of the collection (*$sharedLastnames*).
 
@@ -465,7 +465,7 @@ End use
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 We want to combine *$sharedColl1* and *$sharedColl2*. Since they belong to different shared groups, a direct combination would result in an error. Therefore, we must make a shared copy of *$sharedColl1* and designate *$sharedColl2* as a shared group for the copy.
 
@@ -614,7 +614,7 @@ For an element to be found, the type of *value* must be equivalent to the type o
 The optional *propertyPath* parameter allows you to count values inside a collection of objects: pass in *propertyPath* the path of the property whose values you want to count.
 > This function does not modify the original collection.
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $col : Collection
@@ -624,7 +624,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $col : Collection
@@ -818,7 +818,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
 var $c : Collection  
@@ -836,7 +836,7 @@ With the following ***NumberGreaterThan0*** method:
 $1.result:=$1.value>0
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 This example tests that all elements of a collection are of the real type:
 
@@ -903,7 +903,7 @@ The contents of the returned collection depends on the *targetPath* parameter:
 *   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
 var $c : Collection
@@ -917,7 +917,7 @@ $c2:=$c.extract("name";ck keep null) //$c2=[Cleveland,null,Blountsville,null]
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 
 ```4d
@@ -1038,7 +1038,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example 1
+#### Ejemplo 1
 
 You want to get the collection of text elements whose length is smaller than 6:
 
@@ -1059,7 +1059,7 @@ The code for ***LengthLessThan*** method is:
  End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to filter elements according to their value type:
 
@@ -1139,7 +1139,7 @@ By default, `.find()` searches in the whole collection. Optionally, you can pass
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example 1
+#### Ejemplo 1
 
 You want to get the first element with a length smaller than 5:
 
@@ -1159,7 +1159,7 @@ The code for ***LengthLessThan*** method is:
  End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to find a city name within a collection:
 
@@ -1801,7 +1801,7 @@ If the collection contains elements of different types, they are first grouped b
 6.  collections
 7.  dates
 
-#### Example 1
+#### Ejemplo 1
 
 Ordering a collection of numbers in ascending and descending order:
 
@@ -1816,7 +1816,7 @@ Ordering a collection of numbers in ascending and descending order:
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 Ordering a collection of objects based on a text formula with property names:
 
@@ -1916,7 +1916,7 @@ In *methodName*, pass a comparison method that compares two values and returns *
 *   *methodName* sets the following parameter:
     *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
 
-#### Example 1
+#### Ejemplo 1
 
 You want to sort a collection of strings in numerical order rather than alphabetical order:
 
@@ -1937,7 +1937,7 @@ You want to sort a collection of strings in numerical order rather than alphabet
 
 
 
-#### Example 2
+#### Ejemplo 2
 
 You want to sort a collection of strings on their length:
 
@@ -2060,7 +2060,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 > This function modifies the original collection.
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $col : Collection
@@ -2072,7 +2072,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 
 
-#### Example 2
+#### Ejemplo 2
 
 You want to sort the resutling collection:
 
@@ -2131,7 +2131,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 > Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2146,7 +2146,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 
 ```4d
@@ -2249,7 +2249,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -2679,7 +2679,7 @@ If the collection contains elements of different types, they are first grouped b
 6.  collections
 7.  dates
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -2689,7 +2689,7 @@ If the collection contains elements of different types, they are first grouped b
   // $col=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $col; $col2 : Collection
@@ -2751,7 +2751,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 *   the collection does not contain numerical elements,
 *   *propertyPath* is not found in the collection.
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -2761,7 +2761,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
  $vSum:=$col.sum() //32
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $col : Collection
