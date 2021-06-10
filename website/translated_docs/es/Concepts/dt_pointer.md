@@ -1,11 +1,11 @@
 ---
-id: pointer
+id: puntero
 title: Puntero
 ---
 
-A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
+Una variable o expresión puntero es una referencia a otra variable (incluyendo arrays y elementos de arrays), tabla, campo u objeto. No hay ningún campo de tipo Puntero.
 
-Pointers provide an advanced way (in programming) to refer to data. When you use the language, you access various objects—in particular, tables, fields, variables, objects, and arrays—by simply using their names. However, it is often useful to refer to these elements and access them without knowing their names. This is what pointers let you do.
+Los punteros ofrecen una forma avanzada (en programación) de referirse a los datos. Cuando se utiliza el lenguaje, se accede a varios objetos -en particular, tablas, campos, variables, objetos y arrays- simplemente utilizando sus nombres. Sin embargo, con frecuencia es útil referirse a estos elementos y acceder a ellos sin conocer sus nombres. Esto es lo que los punteros le permiten hacer.
 
 The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
 
@@ -25,12 +25,12 @@ You can use pointers to reference tables, fields, variables, arrays, array eleme
 
 ## Using a pointer: Basic example
 
-It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:
+It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. Comenzamos creando una variable:
 
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar es ahora una variable que contiene la cadena “Hello.” We can now create a pointer to $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
@@ -129,17 +129,17 @@ In Method2, the debugger will display $1 as follows:
 | -- | ------------------ |
 |    |                    |
 
-The value of $1 will be:
+El valor de 1 dólar será:
 
 | $MyVar (Method1) | "Hello world" |
 | ---------------- | ------------- |
 |                  |               |
 
-### Pointers to array elements
-You can create a pointer to an array element. For example, the following lines create an array and assign a pointer to the first array element to a variable called $ElemPtr:
+### Punteros a elementos del array
+Puede crear un puntero a un elemento del array. Por ejemplo, las siguientes líneas crean un array y asignan un puntero al primer elemento del array a una variable llamada $ElemPtr:
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ElemPtr:=->$anArray{1} //Create a pointer to the array element
+ARRAY REAL($anArray;10) //Crear un array
+$ElemPtr:=->$anArray{1} //Crear un puntero al elemento de array
 ```
 
 You could use the dereferenced pointer to assign a value to the element, like this:
