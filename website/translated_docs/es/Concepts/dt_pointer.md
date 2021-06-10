@@ -9,23 +9,23 @@ Los punteros ofrecen una forma avanzada (en programación) de referirse a los da
 
 The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
 
-Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. In both cases, the pointer references numeric data that could be used in a calculation.
+Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. En ambos casos, el puntero hace referencia a datos numéricos que podrían utilizarse en un cálculo.
 
-You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
+Puede utilizar punteros para referenciar tablas, campos, variables, arrays, elementos de arrays y objetos. La siguiente tabla ofrece un ejemplo de cada tipo de datos:
 
-| Tipo          | To Reference            | To Use                   | To Assign                |
-| ------------- | ----------------------- | ------------------------ | ------------------------ |
-| Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
-| Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
-| Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Objeto        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Tipo        | Referenciación          | Uso                      | Asignación               |
+| ----------- | ----------------------- | ------------------------ | ------------------------ |
+| Tabla       | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Campo       | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
+| Variable    | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
+| Array       | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
+| Elem. array | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
+| Objeto      | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## Using a pointer: Basic example
+## Utilizar punteros: ejemplo básico
 
-It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. Comenzamos creando una variable:
+Lo más fácil es explicar el uso de los punteros mediante un ejemplo. Este ejemplo muestra cómo acceder a una variable a través de un puntero. Comenzamos creando una variable:
 
 ```4d
 $MyVar:="Hello"
@@ -98,13 +98,13 @@ You can use the dereferenced pointer in commands, like this:
 ```4d  
 DEFAULT TABLE($TablePtr->)
 ```
-### Pointers to fields
-Anywhere that the language expects to see a field, you can use a dereferenced pointer to reference the field. You create a pointer to a field by using a line like this:
+### Punteros a campos
+En cualquier lugar en el que el lenguaje espere ver un campo, se puede utilizar un puntero desreferenciado para referenciar el campo. Se crea un puntero a un campo utilizando una línea de instrucción como esta:
 ```4d
 $FieldPtr:=->[aTable]ThisField
 ```
 
-You can also get a pointer to a field by using the `Field` command, for example:
+También puede obtener un puntero a un campo utilizando el comando `Campo`, por ejemplo:
 ```4d
 $FieldPtr:=Field(1;2)
 ```
@@ -114,16 +114,16 @@ You can use the dereferenced pointer in commands, like this:
 OBJECT SET FONT($FieldPtr->;"Arial")
 ```
 
-### Pointers to local variables
+### Punteros a variables locales
 
-When you use pointers to process or local variables, you must be sure that the variable pointed to is already set when the pointer is used. Keep in mind that local variables are deleted when the method that created them has completed its execution and process variables are deleted at the end of the process that created them. When a pointer calls a variable that no longer exists, this causes a syntax error in interpreted mode (variable not defined) but it can generate a more serious error in compiled mode.
+Cuando se utilizan punteros a variables de proceso o locales, hay que asegurarse de que la variable a la que se apunta ya está definida cuando se utilice el puntero. Tenga en cuenta que las variables locales se borran cuando el método que las creó ha terminado su ejecución y las variables de proceso se borran al final del proceso que las creó. Cuando un puntero llama a una variable que ya no existe, esto provoca un error de sintaxis en modo interpretado (variable no definida) pero puede generar un error más grave en modo compilado.
 
-Pointers to local variables allow you to save process variables in many cases. Pointers to local variables can only be used within the same process. In the debugger, when you display a pointer to a local variable that has been declared in another method, the original method name is indicated in parentheses, after the pointer. For example, if you write in Method1:
+Los punteros a variables locales permiten guardar las variables del proceso en muchos casos. Los punteros a variables locales sólo pueden utilizarse dentro del mismo proceso. En el depurador, cuando se muestra un puntero a una variable local que ha sido declarada en otro método, el nombre del método original se indica entre paréntesis, después del puntero. Por ejemplo, si se escribe en Method1:
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
-In Method2, the debugger will display $1 as follows:
+En Method2, el depurador mostrará $1 de la siguiente manera:
 
 | $1 | ->$MyVar (Method1) |
 | -- | ------------------ |
@@ -182,7 +182,7 @@ Si el campo [myTable]myField contenía la cadena "jones", se cambiaría por la c
 En el método takeTwo, y de hecho, siempre que se utilicen punteros, es importante que el tipo de datos del objeto al que se hace referencia sea correcto. En el ejemplo anterior, los punteros deben apuntar a algo que contenga una cadena o texto.
 
 ### Punteros a punteros
-If you really like to complicate things, you can use pointers to reference other pointers. Consider this example:
+Si realmente le gusta complicar las cosas, puede utilizar punteros para referenciar otros punteros. Considere este ejemplo:
 ```4d
  $MyVar:="Hello"
  $PointerOne:=->$MyVar
@@ -190,24 +190,24 @@ If you really like to complicate things, you can use pointers to reference other
  ($PointerTwo->)->:="Goodbye"
  ALERT(($PointerTwo->)->)
 ```
-It displays an alert box with the word “Goodbye” in it.
+Muestra un cuadro de alerta con la palabra "Goodbye".
 
-Here is an explanation of each line of the example:
+A continuación se explica cada línea del ejemplo:
 
-- $MyVar:="Hello" --> This line puts the string "Hello" into the variable $MyVar.
-- $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
-- $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, $MyVar is assigned "Goodbye".
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, the alert box displays the contents of $MyVar.
+- $MyVar:="Hello" --> Esta línea pone la cadena "Hello" en la variable $MyVar.
+- $PointerOne:=->$MyVar --> $PointerOne ahora contiene un puntero a $MyVar.
+- $PointerTwo:=->$PointerOne --> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
+- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+- ALERT (($PointerTwo->)->) --> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. En este caso, la caja de alerta muestra el contenido de $MyVar.
 
-The following line puts "Hello" into $MyVar:
+La siguiente línea pone "Hello" en $MyVar:
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
-The following line gets "Hello" from $MyVar and puts it into $NewVar:
+La siguiente línea obtiene "Hello de $MyVar y lo pone en $NewVar:
 ```
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Importante:** la desreferenciación múltiple requiere paréntesis.
