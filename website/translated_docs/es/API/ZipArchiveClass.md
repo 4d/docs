@@ -160,7 +160,7 @@ The returned status object contains the following properties:
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 To compress a `4D.File`:
 
@@ -180,7 +180,7 @@ To compress a `4D.File`:
 
 
 
-#### Example 2
+#### Ejemplo 2
 
 To compress a `4D.Folder` without the folder itself:
 
