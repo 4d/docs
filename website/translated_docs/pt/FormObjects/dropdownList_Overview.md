@@ -81,7 +81,7 @@ When the form is executed, 4D automatically manages the pop-up menu or combo box
 ### Save as
 When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved.
 
-## Using a standard action
+## Usar uma ação padrão
 You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
