@@ -16,14 +16,14 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property      | Tipo    | Descripción                    |
-| ------------- | ------- | ------------------------------ |
-| code          | longint | 31                             |
-| description   | texto   | "On Selection Change"          |
-| objectName    | texto   | 4D View Pro area name          |
-| sheetName     | texto   | Name of the sheet of the event |
-| oldSelections | objeto  | Cell range before change       |
-| newSelections | objeto  | Cell range after change        |
+| Property      | Tipo         | Descripción                    |
+| ------------- | ------------ | ------------------------------ |
+| code          | entero largo | 31                             |
+| description   | texto        | "On Selection Change"          |
+| objectName    | texto        | 4D View Pro area name          |
+| sheetName     | texto        | Name of the sheet of the event |
+| oldSelections | objeto       | Cell range before change       |
+| newSelections | objeto       | Cell range after change        |
 
 #### Ejemplo
 
