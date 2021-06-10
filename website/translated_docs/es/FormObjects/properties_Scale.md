@@ -68,7 +68,7 @@ Specifies the location of an object's displayed text.
 
 |      Name       | Data Type | Possible Values                          |
 |:---------------:|:---------:| ---------------------------------------- |
-| labelsPlacement |  string   | "none", "top", "bottom", "left", "right" |
+| labelsPlacement |  cadena   | "none", "top", "bottom", "left", "right" |
 
 #### Objects Supported
 
