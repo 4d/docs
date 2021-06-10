@@ -67,7 +67,7 @@ Using `ds` requires that the target database is compliant with ORDA, as specifie
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 Using the main datastore on the 4D database:
 
@@ -75,7 +75,7 @@ Using the main datastore on the 4D database:
  $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -163,7 +163,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 *   the given port is the right HTTPS port configured in the database settings
 *   a valid certificate and private encryption key are installed in the database. Otherwise, error "1610 - A remote request to host xxx has failed" is raised
 
-#### Example 1
+#### Ejemplo 1
 
 Connection to a remote datastore without user / password:
 
@@ -175,7 +175,7 @@ Connection to a remote datastore without user / password:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Connection to a remote datastore with user / password / timeout / tls:
 
@@ -393,7 +393,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $info : Object
@@ -405,7 +405,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
   //{"type":"4D","networked":true,"localID":""}
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 On a remote datastore:
 
@@ -694,7 +694,7 @@ The ORDA request log can be sent to a file or to memory, depending on the parame
 
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
 
-#### Example 1
+#### Ejemplo 1
 
 You want to log ORDA client requests in a file and use the log sequence number:
 
@@ -711,7 +711,7 @@ You want to log ORDA client requests in a file and use the log sequence number:
  SET DATABASE PARAMETER(Client Log Recording;0)
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to log ORDA client requests in memory:
 
