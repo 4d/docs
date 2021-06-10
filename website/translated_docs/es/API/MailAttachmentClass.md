@@ -92,7 +92,7 @@ By default, if the *disposition* parameter is omitted:
 *   if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 *   if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
-#### Example 1
+#### Ejemplo 1
 
 You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
 
@@ -130,7 +130,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to send an email with a 4D Write Pro area as an attachment:
 
