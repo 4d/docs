@@ -52,7 +52,7 @@ Entity selections can be created from existing selections using various function
 <!-- REF #_command_.Create entity selection.Params -->
 | Parameter  | Tipo               |    | Descripción                                                                                 |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| dsTable    | Table              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
+| dsTable    | Tabla              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
 | parámetros | Objeto             | -> | Build option: context                                                                       |
 | Resultado  | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
 <!-- END REF -->
