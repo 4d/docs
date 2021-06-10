@@ -16,7 +16,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 | Name          | Data Type | Possible Values     |
 | ------------- | --------- | ------------------- |
-| windowSizingY | string    | "fixed", "variable" |
+| windowSizingY | cadena    | "fixed", "variable" |
 
 
 ---
@@ -33,7 +33,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 | Name          | Data Type | Possible Values     |
 | ------------- | --------- | ------------------- |
-| windowSizingX | string    | "fixed", "variable" |
+| windowSizingX | cadena    | "fixed", "variable" |
 
 ---
 
