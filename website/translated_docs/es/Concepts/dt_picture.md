@@ -29,17 +29,17 @@ La mayoría de los comandos de gestión de imágenes [4D](https://doc.4d.com/4Dv
 
 ## Operadores de imágenes
 
-| Operación                 | Sintaxis               | Devuelve | Acción                                                                                                                                                             |
-| ------------------------- | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | Imagen   | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | Imagen   | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | Imagen   | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | Imagen   | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | Imagen   | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | Imagen   | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | Imagen   | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | Imagen   | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | Imagen   | Resize Picture vertically by Number ratio                                                                                                                          |
+| Operación                | Sintaxis               | Devuelve | Acción                                                                                                                                                             |
+| ------------------------ | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Concatenación horizontal | Imagen1 + Imagen2      | Imagen   | Añadir Imagen2 a la derecha de Imagen1                                                                                                                             |
+| Concatenación vertical   | Imagen1 / Imagen2      | Imagen   | Añadir Imagen2 debajo de Imagen1                                                                                                                                   |
+| Superposición exclusiva  | Imagen1 & Imagen2      | Imagen   | Superpone Imagen2 sobre Imagen1 (Imagen2 en primer plano). Produce el mismo resultado que `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                    |
+| Superposición inclusiva  | Pict1 &#124; Pict2     | Imagen   | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Horizontal move          | Picture + Number       | Imagen   | Move Picture horizontally Number pixels                                                                                                                            |
+| Vertical move            | Picture / Number       | Imagen   | Move Picture vertically Number pixels                                                                                                                              |
+| Resizing                 | Picture * Number       | Imagen   | Resize Picture by Number ratio                                                                                                                                     |
+| Horizontal scaling       | Picture *+ Number      | Imagen   | Resize Picture horizontally by Number ratio                                                                                                                        |
+| Vertical scaling         | Picture *&#124; Number | Imagen   | Resize Picture vertically by Number ratio                                                                                                                          |
 
 **Notes :**
 
@@ -51,27 +51,27 @@ La mayoría de los comandos de gestión de imágenes [4D](https://doc.4d.com/4Dv
 
 ### Ejemplos
 
-Horizontal concatenation
+Concatenación horizontal
 ```4d
  circle+rectangle //Place the rectangle to the right of the circle
  rectangle+circle //Place the circle to the right of the rectangle
 ```
 ![](assets/en/Concepts/concatHor.en.png) ![](assets/en/Concepts/concatHor2.en.png)
 
-Vertical concatenation
+Concatenación vertical
 ```4d
  circle/rectangle //Place the rectangle under the circle
  rectangle/circle //Place the circle under the rectangle
 ```
 ![](assets/en/Concepts/concatVer.en.png) ![](assets/en/Concepts/concatVer2.en.png)
 
-Exclusive superimposition
+Superposición exclusiva
 ```4d
 Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 ```
 ![](assets/en/Concepts/superimpoExc.fr.png)
 
-Inclusive superimposition
+Superposición inclusiva
 ```4d
 Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
 ```
