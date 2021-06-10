@@ -353,8 +353,8 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 
 | Identificador                   | Longitud Max. | Ejemplo                    |
 | ------------------------------- | ------------- | -------------------------- |
-| Table                           | 31            | [Invoices]                 |
-| Field                           | 31            | [Employees]Last Name       |
+| Tabla                           | 31            | [Invoices]                 |
+| Campo                           | 31            | [Employees]Last Name       |
 | Variable/array interproceso     | <> + 31       | <>vlNextProcessID          |
 | Variable/Array proceso          | 31            | vsCurrentName              |
 | Variable/Array local            | $ + 31        | $vlLocalCounter            |
