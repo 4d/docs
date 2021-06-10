@@ -522,7 +522,7 @@ Pass in *mime* a valid MIME document to convert. It can be provided by any mail 
 
 Email object.
 
-#### Example 1
+#### Ejemplo 1
 
 You want to load a mail template saved as MIME in a text document and send an email:
 
@@ -546,7 +546,7 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 In this example, you send directly a 4D Write Pro document containing pictures:
 
