@@ -44,7 +44,7 @@ The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary 
 The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
 $salary:=ds.Employee.salary //returns the salary attribute in the Employee dataclass
@@ -52,7 +52,7 @@ $compCity:=ds.Company["city"] //returns the city attribute in the Company datacl
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 Considering the following database structure:
 
@@ -213,7 +213,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
-#### Example 1
+#### Ejemplo 1
 
 We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is given and exists:
 
@@ -233,7 +233,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is with the \_\_KEY attribute and exists:
 
@@ -388,7 +388,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $entity : cs.EmployeeEntity  
@@ -397,7 +397,7 @@ In the optional *settings* parameter, you can pass an object containing addition
  $entity2:=ds.Invoice.get("DGGX20030") // return the entity whose primary key value is "DGGX20030"
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 This example illustrates the use of the *context* property:
 
@@ -512,7 +512,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d 
  #DECLARE ($entity : Object)  
@@ -526,7 +526,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $settings : Object
@@ -934,7 +934,7 @@ queryPath:
     steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
 
-#### Example 1
+#### Ejemplo 1
 
 This section provides various examples of queries.
 
@@ -1071,7 +1071,7 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
   //salesperson is a related entity
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 This section illustrates queries with named placeholders for attributes.
 
