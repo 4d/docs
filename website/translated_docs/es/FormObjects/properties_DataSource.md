@@ -85,7 +85,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 | Name              | Data Type | Possible Values   |
 | ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| currentItemSource | cadena    | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -109,7 +109,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 | Name                      | Data Type | Possible Values   |
 | ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| currentItemPositionSource | cadena    | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -132,7 +132,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 | Name               | Data Type | Possible Values                                    |
 | ------------------ | --------- | -------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| dataSourceTypeHint | cadena    | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 
 #### Objects Supported
@@ -165,7 +165,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 | Name   | Data Type | Possible Values      |
 | ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| saveAs | cadena    | "value", "reference" |
 
 
 > Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
@@ -242,7 +242,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 | Name       | Data Type | Possible Values                                                         |
 | ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| dataSource | cadena    | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -297,7 +297,7 @@ Using this property requires compliance with the following principles:
 
 | Name   | Data Type | Possible Values      |
 | ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| saveAs | cadena    | "value", "reference" |
 
 #### Objects Supported
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -318,7 +318,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 | Name                | Data Type | Possible Values       |
 | ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| selectedItemsSource | cadena    | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -336,7 +336,7 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 | Name           | Data Type | Possible Values      |
 | -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| namedSelection | cadena    | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
