@@ -1,11 +1,11 @@
 ---
-id: pointer
+id: puntero
 title: Puntero
 ---
 
-A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
+Una variable o expresión puntero es una referencia a otra variable (incluyendo arrays y elementos de arrays), tabla, campo u objeto. No hay ningún campo de tipo Puntero.
 
-Pointers provide an advanced way (in programming) to refer to data. When you use the language, you access various objects—in particular, tables, fields, variables, objects, and arrays—by simply using their names. However, it is often useful to refer to these elements and access them without knowing their names. This is what pointers let you do.
+Los punteros ofrecen una forma avanzada (en programación) de referirse a los datos. Cuando se utiliza el lenguaje, se accede a varios objetos -en particular, tablas, campos, variables, objetos y arrays- simplemente utilizando sus nombres. Sin embargo, con frecuencia es útil referirse a estos elementos y acceder a ellos sin conocer sus nombres. Esto es lo que los punteros le permiten hacer.
 
 The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
 
@@ -25,12 +25,12 @@ You can use pointers to reference tables, fields, variables, arrays, array eleme
 
 ## Using a pointer: Basic example
 
-It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:
+It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. Comenzamos creando una variable:
 
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar es ahora una variable que contiene la cadena “Hello.” We can now create a pointer to $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
@@ -129,59 +129,59 @@ In Method2, the debugger will display $1 as follows:
 | -- | ------------------ |
 |    |                    |
 
-The value of $1 will be:
+El valor de 1 dólar será:
 
 | $MyVar (Method1) | "Hello world" |
 | ---------------- | ------------- |
 |                  |               |
 
-### Pointers to array elements
-You can create a pointer to an array element. For example, the following lines create an array and assign a pointer to the first array element to a variable called $ElemPtr:
+### Punteros a elementos del array
+Puede crear un puntero a un elemento del array. Por ejemplo, las siguientes líneas crean un array y asignan un puntero al primer elemento del array a una variable llamada $ElemPtr:
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ElemPtr:=->$anArray{1} //Create a pointer to the array element
+ARRAY REAL($anArray;10) //Crear un array
+$ElemPtr:=->$anArray{1} //Crear un puntero al elemento de array
 ```
 
-You could use the dereferenced pointer to assign a value to the element, like this:
+Puede utilizar el puntero desreferenciado para asignar un valor al elemento, así:
 ```4d
 $ElemPtr->:=8
 ```
 
-### Pointers to arrays
-You can create a pointer to an array. For example, the following lines create an array and assign a pointer to the array to a variable called $ArrPtr:
+### Punteros a arrays
+Puede crear un puntero a un array. Por ejemplo, las siguientes líneas crean un array y asignan un puntero al array a una variable llamada $ArrPtr:
 ```4d
-ARRAY REAL($anArray;10) //Create an array
-$ArrPtr:=->$anArray //Create a pointer to the array
+ARRAY REAL($anArray;10) //Crear un array
+$ArrPtr:=->$anArray //Crear un puntero al array
 ```
-It is important to understand that the pointer points to the array; it does not point to an element of the array. For example, you can use the dereferenced pointer from the preceding lines like this:
+Es importante entender que el puntero apunta al array; no apunta a un elemento del array. Por ejemplo, puede utilizar el puntero desreferenciado de las líneas anteriores de esta manera:
 ```4d
-SORT ARRAY($ArrPtr->;>) //Sort the array
+SORT ARRAY($ArrPtr->;>) //Ordenar el array
 ```
-If you need to refer to the fourth element in the array by using the pointer, you do this:
+Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo siguiente:
 ```4d
  ArrPtr->{4}:=84
 ```
 
-### Pointers as parameters to methods
-You can pass a pointer as a parameter to a method. Inside the method, you can modify the object referenced by the pointer. For example, the following method, `takeTwo`, takes two parameters that are pointers. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:
+### Punteros como parámetros a los métodos
+Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 ```4d
-  //takeTwo project method
-  //$1 – Pointer to a string field or variable. Change this to uppercase.
-  //$2 – Pointer to a string field or variable. Change this to lowercase.
+  //Método proyecto takeTwo
+  //$1 – Puntero a un campo o variable de tipo cadena. Cambia la cadena a mayúsculas.
+  //$2 - Puntero a un campo o variable de tipo cadena. Cambia la cadena a minúsculas.
  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 
-The following line uses the `takeTwo` method to change a field to uppercase characters and to change a variable to lowercase characters:
+La siguiente línea utiliza el método `takeTwo` para cambiar un campo a mayúsculas y para cambiar una variable a minúsculas:
 ```  
 takeTwo(->[myTable]myField;->$MyVar)
 ```
 
-If the field [myTable]myField contained the string "jones", it would be changed to the string "JONES". If the variable $MyVar contained the string "HELLO", it would be changed to the string "hello".
+Si el campo [myTable]myField contenía la cadena "jones", se cambiaría por la cadena "JONES". Si la variable $MyVar contenía la cadena "HELLO", se cambiaría por la cadena "hello".
 
-In the takeTwo method, and in fact, whenever you use pointers, it is important that the data type of the object being referenced is correct. In the previous example, the pointers must point to something that contains a string or text.
+En el método takeTwo, y de hecho, siempre que se utilicen punteros, es importante que el tipo de datos del objeto al que se hace referencia sea correcto. En el ejemplo anterior, los punteros deben apuntar a algo que contenga una cadena o texto.
 
-### Pointers to pointers
+### Punteros a punteros
 If you really like to complicate things, you can use pointers to reference other pointers. Consider this example:
 ```4d
  $MyVar:="Hello"
