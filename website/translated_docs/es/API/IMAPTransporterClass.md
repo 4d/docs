@@ -394,7 +394,7 @@ The function returns an object describing the IMAP status:
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 To copy a selection of messages:
 
@@ -422,7 +422,7 @@ To copy a selection of messages:
  $status:=$transporter.copy($mailIds;"documents")
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 To copy all messages in the current mailbox:
 
@@ -585,7 +585,7 @@ The function returns an object describing the IMAP status:
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 To delete a selection of messages:
 
@@ -613,7 +613,7 @@ To delete a selection of messages:
  $status:=$transporter.delete($mailIds)
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 To delete all messages in the current mailbox:
 
@@ -1291,7 +1291,7 @@ The function returns an object describing the IMAP status:
 
 
 
-#### Example 1
+#### Ejemplo 1
 
 To move a selection of messages:
 
@@ -1318,7 +1318,7 @@ To move a selection of messages:
  $status:=$transporter.move($mailIds;"documents")
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 To move all messages in the current mailbox:
 
