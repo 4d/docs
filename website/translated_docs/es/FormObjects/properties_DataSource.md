@@ -79,7 +79,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 | Name              | Data Type | Possible Values   |
 | ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| currentItemSource | cadena    | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -103,7 +103,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 | Name                      | Data Type | Possible Values   |
 | ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| currentItemPositionSource | cadena    | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -192,7 +192,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 | Name       | Data Type | Possible Values                                                         |
 | ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| dataSource | cadena    | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -249,7 +249,7 @@ Using this property requires compliance with the following principles:
 
 | Name   | Data Type | Possible Values      |
 | ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| saveAs | cadena    | "value", "reference" |
 
 #### Objects Supported
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -270,7 +270,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 | Name                | Data Type | Possible Values       |
 | ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| selectedItemsSource | cadena    | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -288,7 +288,7 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 | Name           | Data Type | Possible Values      |
 | -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| namedSelection | cadena    | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
