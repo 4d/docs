@@ -14,7 +14,7 @@ A variant type variable can contain a value of the following data types:
 - longint
 - objeto
 - imagen
-- pointer
+- puntero
 - real
 - texto
 - time
