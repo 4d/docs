@@ -19,5 +19,5 @@ The form menu bar will operate for both input and output forms.
 
 | Name    | Data Type | Possible Values    |
 | ------- | --------- | ------------------ |
-| menuBar | string    | Name of a menu bar |
+| menuBar | cadena    | Name of a menu bar |
 

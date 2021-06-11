@@ -42,7 +42,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 | Name        | Data Type | Possible Values                       |
 | ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| contextMenu | cadena    | "automatic" (used if missing), "none" |
 
 #### Objects Supported
 
@@ -125,7 +125,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 | Name        | Data Type | Possible Values                                                                                                              |
 | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | string    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| entryFilter | cadena    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
 
 #### Objects Supported
@@ -250,7 +250,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 | Name        | Data Type | Possible Values                                                              |
 | ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| placeholder | cadena    | Text to be displayed (grayed out) when the object does not contain any value |
 
 #### Objects Supported
 
@@ -305,7 +305,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | shortcutControl | booleano  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
 | shortcutShift   | booleano  | true, false                                                                                                                                                                                                                                                                                 |
 |                 |           |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| shortcutKey     | cadena    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### Objects Supported

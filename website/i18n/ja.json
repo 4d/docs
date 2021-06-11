@@ -21,7 +21,7 @@
         "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Web 管理"
       },
       "API/ClassClass": {
         "title": "Class"
@@ -903,7 +903,7 @@
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",

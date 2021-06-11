@@ -233,7 +233,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 | Name      | Data Type | Possible Values                          |
 | --------- | --------- | ---------------------------------------- |
-| rowHeight | string    | css value in unit "em" or "px" (default) |
+| rowHeight | cadena    | css value in unit "em" or "px" (default) |
 
 #### Objects Supported
 
@@ -267,7 +267,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 | Name            | Data Type | Possible Values              |
 | --------------- | --------- | ---------------------------- |
-| rowHeightSource | string    | Name of a 4D array variable. |
+| rowHeightSource | cadena    | Name of a 4D array variable. |
 
 #### Objects Supported
 

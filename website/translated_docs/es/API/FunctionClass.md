@@ -158,7 +158,7 @@ If *formulaExp* uses local variables, their values are copied and stored in the 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
 
 
-#### Example 1
+#### Ejemplo 1
 
 A simple formula:
 
@@ -172,7 +172,7 @@ A simple formula:
  $result:=$o.f() // returns 3
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 A formula using local variables:
 
@@ -330,7 +330,7 @@ You can also pass a collection to be used as $1...$n parameters in the formula u
 Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. This can be useful for passing calculated results.
 
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $f : 4D.Function
@@ -341,7 +341,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var $calc : 4D.Function
@@ -389,7 +389,7 @@ You can also pass values to be used as *$1...$n* parameters in the formula using
 
 Note that `.call()` is similar to [`.apply()`](#apply) except that parameters are passed directly.
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
  var $f : 4D.Function
@@ -397,7 +397,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
  $result:=$f.call(Null;"hello") // returns "HELLO"
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  $o:=New object("value";50)

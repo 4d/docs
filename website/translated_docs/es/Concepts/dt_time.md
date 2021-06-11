@@ -42,48 +42,48 @@ Una hora nula se escribe ?00:00:00?
 | División entera   | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
 | Módulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Módulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
-| Igual             | Time = Time    | Booleano | ?01:02:03? = ?01:02:03? | True       |
+| Igual             | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                   |                |          | ?01:02:03? = ?01:02:04? | False      |
-| Desigualdad       | Time # Time    | Booleano | ?01:02:03? # ?01:02:04? | True       |
+| Desigualdad       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |
 |                   |                |          | ?01:02:03? # ?01:02:03? | False      |
-| Mayor que         | Time > Time    | Booleano | ?01:02:04? > ?01:02:03? | True       |
+| Mayor que         | Hora > Hora    | Booleano | ?01:02:04? > ?01:02:03? | True       |
 |                   |                |          | ?01:02:03? > ?01:02:03? | False      |
-| Menor que         | Time < Time    | Booleano | ?01:02:03? < ?01:02:04? | True       |
+| Menor que         | Hora < Hora    | Booleano | ?01:02:03? < ?01:02:04? | True       |
 |                   |                |          | ?01:02:03? < ?01:02:03? | False      |
-| Mayor o igual que | Time >= Time   | Booleano | ?01:02:03? >=?01:02:03? | True       |
+| Mayor o igual que | Hora >= Hora   | Booleano | ?01:02:03? >=?01:02:03? | True       |
 |                   |                |          | ?01:02:03? >=?01:02:04? | False      |
-| Menor o igual que | Time <= Time   | Booleano | ?01:02:03? <=?01:02:03? | True       |
+| Menor o igual que | Hora <= Hora   | Booleano | ?01:02:03? <=?01:02:03? | True       |
 |                   |                |          | ?01:02:04? <=?01:02:03? | False      |
 
-### Example 1
+### Ejemplo 1
 
 Para obtener una expresión de tipo hora a partir de una expresión que combina una expresión de hora con un número, utilice los comandos `Time` y `Time string`.
 
 Puede combinar expresiones de los tipos hora y número utilizando las funciones `Time` o `Current time`:
 
 ```4d
-    //The following line assigns to $vlSeconds the number of seconds   
-    //that will be elapsed between midnight and one hour from now
+    //La siguiente línea asigna a $vlSeconds el número de segundos   
+    //que transcurrirán entre la medianoche y una hora a partir de ahora
 $vlSeconds:=Current time+3600
-    //The following line assigns to $vHSoon the time it will be in one hour
+    //La siguiente línea asigna a $vHSoon la hora que será dentro de una hora
 $vhSoon:=Time(Current time+3600)
 ```
 
 La segunda línea podría escribirse de forma más sencilla:
 
 ```4d
-  // The following line assigns to $vHSoon the time it will be in one hour
+  // La siguiente línea asigna a $vHSoon la hora que será en una hora
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Example 2
+### Ejemplo 2
 
 El operador Modulo puede utilizarse, más concretamente, para sumar tiempos que tengan en cuenta el formato de 24 horas:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 p.m.
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
+$t1:=?23:00:00? // Son las 23:00 p.m.
+  // Queremos añadir 2 horas y media
+$t2:=$t1 +?02:30:00? // Con una simple adición, $t2 es ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? y es 1:30 a.m. a la mañana siguiente
 ```
 

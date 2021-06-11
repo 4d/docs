@@ -167,7 +167,7 @@ The function applies for properties whose [kind](DataClassAttributeClass.md#kind
 
 If one of the compared entities is **Null**, an error is raised.
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -218,7 +218,7 @@ $diff2:
 ]
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 ```4d
  var vCompareResult1; vCompareResult2; vCompareResult3; $attributesToInspect : Collection
@@ -392,7 +392,7 @@ The object returned by `.drop( )` contains the following properties:
 | `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><li>**Associated statusText**: "Stamp has changed"</li>        |
 
 
-#### Example 1
+#### Ejemplo 1
 
 Example without `dk force drop if stamp changed` option:
 
@@ -411,7 +411,7 @@ Example without `dk force drop if stamp changed` option:
  End case
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Example with `dk force drop if stamp changed` option:
 
@@ -954,7 +954,7 @@ The object returned by `.lock( )` contains the following properties:
 | `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br>**Associated statusText**: "Stamp has changed" |
 
 
-#### Example 1
+#### Ejemplo 1
 
 Example with error:
 
@@ -972,7 +972,7 @@ Example with error:
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 Example with `dk reload if stamp changed` option:
 
@@ -1213,7 +1213,7 @@ The following values can be returned in the `status` and `statusText` properties
 | `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br>**Associated statusText**: "Stamp has changed" |
 
 
-#### Example 1
+#### Ejemplo 1
 
 Creating a new entity:
 
@@ -1229,7 +1229,7 @@ Creating a new entity:
  End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Updating an entity without `dk auto merge` option:
 
@@ -1327,7 +1327,7 @@ If a filter is specified for attributes of the relatedEntities [kind](DataClassA
 In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
 
-#### Example 1
+#### Ejemplo 1
 
 The following structure will be used throughout all examples of this section:
 
@@ -1365,7 +1365,7 @@ Returns:
 
 
 
-#### Example 2
+#### Ejemplo 2
 
 Extracting the primary key and the stamp:
 
@@ -1635,7 +1635,7 @@ In the case of a related entity having been touched (i.e., the foreign key), the
 
 If no entity attribute has been touched, the method returns an empty collection.
 
-#### Example 1
+#### Ejemplo 1
 
 
 ```4d
@@ -1651,7 +1651,7 @@ If no entity attribute has been touched, the method returns an empty collection.
 ```
 
 
-#### Example 2
+#### Ejemplo 2
 
 
 ```4d

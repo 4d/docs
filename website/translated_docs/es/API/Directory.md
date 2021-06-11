@@ -552,7 +552,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 Collection of `File` objects.
 
-#### Example 1
+#### Ejemplo 1
 
 You want to know if there are invisible files in the Database folder:
 
@@ -565,7 +565,7 @@ You want to know if there are invisible files in the Database folder:
  End if
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 You want to get all files that are not invisible in the Documents folder:
 

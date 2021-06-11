@@ -113,7 +113,7 @@ Here is the description of the JSON file contents:
 | --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros    |                     |                          | objeto | list of defined macros                                 |
 |           | `<macroName>` |                          | objeto | macro definition                                       |
-|           |                     | class                    | string | macro class name                                       |
+|           |                     | class                    | cadena | macro class name                                       |
 |           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
@@ -224,7 +224,7 @@ Here are the properties of the `$editor` object:
 | $editor.currentPage       | Objeto    | The current page, containing all the form objects and the entry order of the page |
 | $editor.currentSelection  | Colección | Collection of names of selected objects                                           |
 | $editor.formProperties    | Objeto    | Properties of the current form                                                    |
-| $editor.target            | string    | Name of the object under the mouse when clicked on a macro                        |
+| $editor.target            | cadena    | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 

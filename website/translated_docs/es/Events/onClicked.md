@@ -34,13 +34,13 @@ If both events are selected for an object, the `On Clicked` and then the `On Dou
 
 This event is generated when the user clicks anywhere on a 4D View Pro document. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Tipo    | Descripción                    |
-| ----------- | ------- | ------------------------------ |
-| code        | longint | On Clicked                     |
-| description | texto   | "On Clicked"                   |
-| objectName  | texto   | 4D View Pro area name          |
-| sheetName   | texto   | Name of the sheet of the event |
-| range       | objeto  | Cell range                     |
+| Property    | Tipo         | Descripción                    |
+| ----------- | ------------ | ------------------------------ |
+| code        | entero largo | On Clicked                     |
+| description | texto        | "On Clicked"                   |
+| objectName  | texto        | 4D View Pro area name          |
+| sheetName   | texto        | Name of the sheet of the event |
+| range       | objeto       | Cell range                     |
 
 #### Ejemplo
 
