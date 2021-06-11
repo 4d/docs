@@ -4,7 +4,7 @@ title: Un recorrido rápido
 sidebar_label: Un recorrido rápido
 ---
 
-Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
+Utilizando el lenguaje 4D, la impresión del tradicional mensaje "Hello, world!" en pantalla puede hacerse de varias maneras. The most simple is probably to write the following single line in a project method:
 
 ```4d  
 ALERT("Hello, World!")
