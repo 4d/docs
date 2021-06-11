@@ -7,9 +7,9 @@ Una variable o expresión puntero es una referencia a otra variable (incluyendo 
 
 Los punteros ofrecen una forma avanzada (en programación) de referirse a los datos. Cuando se utiliza el lenguaje, se accede a varios objetos -en particular, tablas, campos, variables, objetos y arrays- simplemente utilizando sus nombres. Sin embargo, con frecuencia es útil referirse a estos elementos y acceder a ellos sin conocer sus nombres. Esto es lo que los punteros le permiten hacer.
 
-The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+El concepto de los punteros no es tan raro en la vida cotidiana. A menudo se hace referencia a algo sin conocer su identidad exacta. Por ejemplo, puede decirle a un amigo: "Vamos a dar una vuelta en tu coche" en lugar de "Vamos a dar una vuelta en el coche con matrícula 123ABD." En este caso, se refiere al coche con matrícula 123ABD utilizando la frase " tu coche." La frase "coche con matrícula 123ABD" es como el nombre de un objeto, y usar la frase "tu coche" es como usar un puntero para referenciar el objeto.
 
-Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. En ambos casos, el puntero hace referencia a datos numéricos que podrían utilizarse en un cálculo.
+Poder referirse a algo sin conocer su identidad exacta es muy útil. De hecho, su amigo podría comprarse un coche nuevo, y la frase " tu coche" seguiría siendo correcta: seguiría siendo un coche y usted podría seguir dando un paseo en él. Los punteros funcionan de la misma manera. Por ejemplo, un puntero podría referirse en un momento dado a un campo numérico llamado Edad, y más tarde referirse a una variable numérica llamada Vejez. En ambos casos, el puntero hace referencia a datos numéricos que podrían utilizarse en un cálculo.
 
 Puede utilizar punteros para referenciar tablas, campos, variables, arrays, elementos de arrays y objetos. La siguiente tabla ofrece un ejemplo de cada tipo de datos:
 
@@ -30,71 +30,71 @@ Lo más fácil es explicar el uso de los punteros mediante un ejemplo. Este ejem
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar es ahora una variable que contiene la cadena “Hello.” We can now create a pointer to $MyVar:
+$MyVar es ahora una variable que contiene la cadena “Hello.” Ahora podemos crear un puntero a $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.
+El símbolo -> significa "obtener un puntero a." Este símbolo está formado por un guión seguido de un signo "mayor que". En este caso, obtiene el puntero que hace referencia o "apunta" a $MyVar. Este puntero se asigna a MyPointer con el operador de asignación.
 
-$MyPointer is now a variable that contains a pointer to $MyVar. $MyPointer does not contain “Hello”, which is the value in $MyVar, but you can use $MyPointer to get this value. The following expression returns the value in $MyVar:
+$MyPointer es ahora una variable que contiene un puntero a $MyVar. $MyPointer no contiene " Hello ", que es el valor en $MyVar, pero se puede utilizar $MyPointer para obtener este valor. La siguiente expresión devuelve el valor de $MyVar:
 ```4d
 $MyPointer->
 ```
 
-In this case, it returns the string “Hello”. The -> symbol, when it follows a pointer, references the object pointed to. This is called dereferencing.
+En este caso, devuelve la cadena "Hello". El símbolo ->, cuando sigue a un puntero, hace referencia al objeto apuntado. Esto se llama desreferenciación.
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. For example, the following line displays an alert box with the word Hello in it:
+Es importante entender que se puede utilizar un puntero seguido del símbolo -> en cualquier lugar donde se podría haber utilizado el objeto al que apunta el puntero. Esto significa que podría utilizar la expresión $MyPointer-> en cualquier lugar en el que pudiera utilizar la variable original $MyVar. Por ejemplo, la siguiente línea muestra un cuadro de alerta con la palabra Hello:
 ```4d
 ALERT($MyPointer->)
 ```
 
-You can also use $MyPointer to change the data in $MyVar. For example, the following statement stores the string "Goodbye" in the variable $MyVar:
+También puede utilizar $MyPointer para cambiar los datos en $MyVar. Por ejemplo, la siguiente instrucción almacena la cadena "Goodbye" en la variable $MyVar:
 ```4d
 $MyPointer->:="Goodbye"
 ```
-If you examine the two uses of the expression $MyPointer->, you will see that it acts just as if you had used $MyVar instead. In summary, the following two lines perform the same action—both display an alert box containing the current value in the variable $MyVar:
+Si examina los dos usos de la expresión $MyPointer->, verá que actúa igual que si hubiera utilizado $MyVar en su lugar. En resumen, las dos líneas siguientes realizan la misma acción: ambas muestran un cuadro de alerta con el valor actual de la variable $MyVar:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
-The following two lines perform the same action— both assign the string "Goodbye" to $MyVar:
+Las siguientes dos líneas realizan la misma acción - ambas asignan la cadena "Goodbye" a $MyVar:
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
 ```
 
-## Pointer operators
+## Operadores en punteros
 
-With:
+Con:
 ```4d
-  ` vPtrA and vPtrB point to the same object
+  ` vPtrA y vPtrB apuntan al mismo objeto
  vPtrA:=->anObject
  vPtrB:=->anObject
-  ` vPtrC points to another object
+  ` vPtrC apunta a otro objeto
  vPtrC:=->anotherObject
 ```
 
 | Operación   | Sintaxis          | Devuelve | Expresión     | Valor |
 | ----------- | ----------------- | -------- | ------------- | ----- |
-| Igual       | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+| Igual       | Puntero = Puntero | Booleano | vPtrA = vPtrB | True  |
 |             |                   |          | vPtrA = vPtrC | False |
-| Desigualdad | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
+| Desigualdad | Puntero # Puntero | Booleano | vPtrA # vPtrC | True  |
 |             |                   |          | vPtrA # vPtrB | False |
 
-## Main usages
-### Pointers to tables
-Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:
+## Principales usos
+### Punteros a tablas
+En cualquier lugar en el que el lenguaje espere ver una tabla, se puede utilizar un puntero desreferenciado a la tabla. Se crea un puntero a una tabla utilizando una línea de instrucción como esta:
 ```4d
 $TablePtr:=->[anyTable]
 ```
-You can also get a pointer to a table by using the `Table` command:
+También puede obtener un puntero a una tabla utilizando el comando `Table`:
 ```4d  
 $TablePtr:=Table(20)
 ```
-You can use the dereferenced pointer in commands, like this:
+Puedes utilizar el puntero desreferenciado en los comandos, así:
 ```4d  
 DEFAULT TABLE($TablePtr->)
 ```
@@ -109,7 +109,7 @@ También puede obtener un puntero a un campo utilizando el comando `Campo`, por 
 $FieldPtr:=Field(1;2)
 ```
 
-You can use the dereferenced pointer in commands, like this:
+Puedes utilizar el puntero desreferenciado en los comandos, así:
 ```4d
 OBJECT SET FONT($FieldPtr->;"Arial")
 ```
