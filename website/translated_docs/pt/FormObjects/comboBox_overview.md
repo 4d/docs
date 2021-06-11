@@ -28,13 +28,13 @@ If the object contains other properties, they are ignored.
 
 When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
 
-### Using an array
+### Usar um array
 
 Please refer to **Using an array** in the [drop-down list page](dropdownList_Overview.md#using-an-array) for information about how to initialize the array.
 
 When the user enters text into the combo box, the 0th element of the array gets the entered text.
 
-### Using a choice list
+### Utilizar uma lista de seleção
 
 If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. This makes it easier to manage listed fields/variables.
 > If you use a hierarchical list, only the first level is displayed and can be selected.
