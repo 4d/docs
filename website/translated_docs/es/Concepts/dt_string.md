@@ -53,14 +53,14 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 |                   |                  |          | "abd" <= "abc"          | False    |
 | Contains keyword  | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
 |                   |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                   | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
+|                   | Imagen % Cadena  | Booleano | Picture_expr % "Mer"    | True (*) |
 
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
+(*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
-## String comparisons
+## Comparaciones de cadenas
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
+- Las cadenas se comparan caracter por caracter (excepto en el caso de la búsqueda por [palabras clave](dt_string.md#keywords), ver más abajo).
+- Cuando se comparan cadenas, se ignoran las mayúsculas y minúsculas de los caracteres; así, "a"="A" devuelve `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // porque 65 no es igual a 97
