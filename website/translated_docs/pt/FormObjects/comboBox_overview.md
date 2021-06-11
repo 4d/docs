@@ -11,9 +11,9 @@ A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview),
 
 You initialize a combo box in exactly the same way as a drop-down list. If the user enters text into the combo box, it fills the 0th element of the array. In other respects, you treat a combo box as an enterable area that uses its array or a choice list as the set of default values.
 
-Use the `On Data Change` event to manage entries into the enterable area, as you would for any enterable area object. For more information, refer to the description of the [Form event](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) command in the *4D Language Reference* manual.
+Use the `On Data Change` event to manage entries into the enterable area, as you would for any enterable area object. Para saber mais, vej a descrição do comando of the [Form event](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) no manual de*4D Language Reference* .
 
-## Options for combo boxes
+## Opções de combo box
 
 Combo box type objects accept two specific options concerning choice lists associated with them:
 
