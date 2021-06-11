@@ -70,7 +70,7 @@ Form.myDrop.index //3
 
 
 
-### Using an array
+### Usar um array
 
 An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list can display an array as a list of values when you click on it.
 
@@ -123,7 +123,7 @@ If you need to save the user’s choice into a field, you would use an assignmen
 You must select each event that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
 
 
-### Using a choice list
+### Utilizar uma lista de seleção
 
 If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). This makes it easier to manage listed fields/variables.
 
