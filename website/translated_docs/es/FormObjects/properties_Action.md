@@ -192,7 +192,7 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 | Name   | Data Type | Possible Values                                                                                                  |
 | ------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| action | cadena    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objects Supported
 

@@ -57,7 +57,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 | Name         | Data Type | Possible Values                 |
 | ------------ | --------- | ------------------------------- |
-| headerHeight | string    | positive decimal+px &#124; em ) |
+| headerHeight | cadena    | positive decimal+px &#124; em ) |
 
 #### Objects Supported
 

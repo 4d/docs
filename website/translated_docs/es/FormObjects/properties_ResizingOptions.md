@@ -35,7 +35,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 | Name         | Data Type | Possible Values         |
 | ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| resizingMode | cadena    | "rightToLeft", "legacy" |
 
 #### Objects Supported
 
@@ -62,7 +62,7 @@ Three options are available:
 
 | Name    | Data Type | Possible Values         |
 | ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| sizingX | cadena    | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -87,7 +87,7 @@ Three options are available:
 
 | Name    | Data Type | Possible Values         |
 | ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| sizingY | cadena    | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -113,7 +113,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 | Name         | Data Type |           Possible Values            |
 |:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| splitterMode |  cadena   | "move" (pusher), "resize" (standard) |
 
 #### Objects Supported
 

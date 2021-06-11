@@ -18,7 +18,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 | Name                 | Data Type | Possible Values         |
 | -------------------- | --------- | ----------------------- |
-| methodsAccessibility | string    | "none" (default), "all" |
+| methodsAccessibility | cadena    | "none" (default), "all" |
 
 #### Objects Supported
 
@@ -34,7 +34,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 | Name           | Data Type | Possible Values            |
 | -------------- | --------- | -------------------------- |
-| progressSource | string    | Name of a Longint variable |
+| progressSource | cadena    | Name of a Longint variable |
 
 #### Objects Supported
 
@@ -65,7 +65,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 | Name      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
-| urlSource | string    | A URL.          |
+| urlSource | cadena    | A URL.          |
 
 #### Objects Supported
 
@@ -96,7 +96,7 @@ Tenga en cuenta que el motor Blink tiene las siguientes restricciones:
 
 | Name      | Data Type | Possible Values      |
 | --------- | --------- | -------------------- |
-| webEngine | string    | "embedded", "system" |
+| webEngine | cadena    | "embedded", "system" |
 
 #### Objects Supported
 
