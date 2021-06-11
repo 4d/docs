@@ -5,7 +5,7 @@ title: Modos interpretado y compilado
 
 Las aplicaciones 4D pueden funcionar en modo **interpretado** o **compilado**:
 
-- in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
+- en modo interpretado, las declaraciones se leen y se traducen en lenguaje máquina en el momento de su ejecución. Puede añadir o modificar el código siempre que lo necesite, la aplicación se actualiza automáticamente.
 - in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
 
 The advantages of the compilation are:
