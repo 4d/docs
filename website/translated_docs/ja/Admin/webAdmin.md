@@ -1,44 +1,44 @@
 ---
 id: webAdmin
-title: Web Administration
+title: Web 管理
 ---
 
 
-An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific management features such as the [Data Explorer](dataExplorer.md). You can connect locally or remotely to this web server from a browser or any web application and access the associated 4D application.
+`WebAdmin` とは、4D および 4D Server に使用される組み込みの Webサーバーコンポーネントの名称で、[データエクスプローラー](dataExplorer.md) などの管理機能への安全な Webアクセスを提供します。 ブラウザーや、任意の Webアプリケーションから、ローカルまたはリモートでこの Webサーバーに接続し、関連の 4Dアプリケーションにアクセスすることができます。
 
-The WebAdmin handles the authentication of users with "WebAdmin" privileges, so that they can open administration sessions and access dedicated interfaces.
+WebAdmin 内部コンポーネントは、"WebAdmin" 権限を持つユーザーの認証を処理し、管理セッションを開いて専用インターフェースにアクセスできるようにします。
 
-This feature can be used in 4D applications running headless as well as 4D applications running with interfaces.
-
-
-## Starting the WebAdmin web server
-
-By default, the `WebAdmin` web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item.
+この機能は、ヘッドレスで動作する 4Dアプリケーションでも、インターフェースを持つ 4Dアプリケーションでも使用できます。
 
 
-### Launch at startup
+## WebAdmin Webサーバーの起動
 
-You can configure the `WebAdmin` web server to be launched at 4D or 4D Server application startup (before any project is loaded).
+デフォルトでは、`WebAdmin` Webサーバーは開始しません。 起動時に開始するように設定するか、(インターフェース付きの場合は) メニューから手動で開始する必要があります。
 
-- If you use a 4D application with interface, select the **File > Web Administration > Settings...** menu item.
+
+### 自動スタートアップ
+
+`WebAdmin` Webサーバーは、4D または 4D Server アプリケーションの起動時 (プロジェクトの読み込み前) に開始するように設定できます。
+
+- インターフェイスを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu1.png)
 
-Check the **Web server administration automatic startup** option in the settings dialog box:
+Web管理設定ダイアログボックスで、**Webサーバー管理自動スタートアップ** オプションをチェックします。
 
 ![alt-text](assets/en/Admin/waSettings.png)
 
-- Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following *Command Line Interface* argument:
+- ヘッドレスの 4Dアプリケーションを使用しているかにかかわらず、以下の *コマンドライン・インターフェース* の引数を使用して、自動スタートアップを有効にすることができます:
 
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
 ```
 
-> If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
+> `WebAdmin` Webサーバーが使用する TCPポート (設定により、[HTTPS](#https-port) または [HTTP](#http-port)) が開始時に空いていない場合、4D は次の 20個のポートを順に試し、利用できる最初のポートを使用します。 利用可能なポートがない場合、Webサーバーは開始せず、エラーが表示されるか、(ヘッドレスアプリケーションの場合は) コンソールのログに記録されます。
 
 
-### Start and stop
+### 開始と停止
 
 If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
 
