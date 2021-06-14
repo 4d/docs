@@ -217,7 +217,7 @@ Class constructor($macro : Object)
 | ------------------------- | ------ | -------------------------------- |
 | $editor.form              | オブジェクト | フォーム全体                           |
 | $editor.file              | File   | フォームファイルの Fileオブジェクト             |
-| $editor.name              | 文字列    | フォームの名称                          |
+| $editor.name              | String | フォームの名称                          |
 | $editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
 | $editor.currentPageNumber | number | 現在のページの番号                        |
 | $editor.currentPage       | オブジェクト | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
@@ -234,7 +234,7 @@ Class constructor($macro : Object)
 | formProperties    | オブジェクト | マクロによって変更された formProperties       |
 | editor.groups     | オブジェクト | マクロによって変更されたグループ情報                |
 | editor.views      | オブジェクト | マクロによって変更されたビュー情報                 |
-| editor.activeView | 文字列    | 有効なビュー名                           |
+| editor.activeView | String | 有効なビュー名                           |
 
 
 
