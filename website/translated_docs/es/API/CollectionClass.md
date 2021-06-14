@@ -1312,6 +1312,7 @@ Optionally, you can pass the index of collection from which to start the search 
 #### Ejemplo
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1753,12 +1754,11 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parameter   | Tipo      |    | Descripción                                       |
-| ----------- | --------- |:--:| ------------------------------------------------- |
-| pathStrings | Texto     | -> | Property path(s) on which to order the collection |
-| pathObjects | Colección | -> | Collection of criteria objects                    |
-| ascOrDesc   | Entero    | -> | `ck ascending` or `ck descending` (scalar values) |
-| Resultado   | Colección | <- | Ordered copy of the collection (shallow copy)     |
+| Parameter | Tipo |  | Descripción |
+| --------- | ---- |::| ----------- |
+|           |      |  |             |
+
+|pathStrings|Text|->|Property path(s) on which to order the collection| |pathObjects|Collection|->|Collection of criteria objects| |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)| |Result|Collection |<-|Ordered copy of the collection (shallow copy)|
 <!-- END REF -->
 
 
@@ -1778,8 +1778,10 @@ You can also pass a criteria parameter to define how the collection elements mus
 *   *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
 
 ```4d
-    {"*propertyPath*": string,
-    "*descending*": boolean}  
+{
+    "propertyPath": string,
+    "descending": boolean
+}
 ```
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
