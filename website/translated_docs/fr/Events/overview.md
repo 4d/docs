@@ -56,7 +56,7 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | Sur validation                | Oui                                | Oui                | Tous les objets             |
 | Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
 | Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
-| Sue avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
+| Sur avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
 | Sue après frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
 | Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |

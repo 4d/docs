@@ -24,16 +24,16 @@ This property is an "object function", i.e. a function which is bound to its par
  $f.message() //displays "Hello world"
 ```
 
-Syntax with brackets is also supported:
+También se admite la sintaxis con paréntesis:
 
 ```4d
  $f["message"]() //displays "Hello world"
 ```
 
-Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
+Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
 
 ```4d
- $o:=$f.message //returns the formula object in $o 
+ $o:=$f.message //devuelve el objeto fórmula en $o 
 ```
 
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:

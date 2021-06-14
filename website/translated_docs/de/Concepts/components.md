@@ -42,7 +42,7 @@ Darüberhinaus wurden spezifische Maßnahmen für die 4D Funktionen `Structure f
 
 ### Nicht verwendbare Befehle
 
-Die folgenden Befehle eignen sich nicht zur Verwendung in einer Komponenten, da sie die Strukturdatei verändern — die im Nur-Lesen Modus geöffnet ist. Bei Ausführen in einer Komponente wird der Fehler -10511 generiert: "Der Befehl "{command_name}" kann von einer Komponente nicht aufgerufen werden".
+Die folgenden Befehle eignen sich nicht zur Verwendung in einer Komponenten, da sie die Strukturdatei verändern — die im Nur-Lesen Modus geöffnet ist. Bei Ausführen in einer Komponente wird der Fehler -10511 generiert: "Der Befehl "{command_name}" kann von einer Komponente nicht aufgerufen werden":
 
 - `ON EVENT CALL`
 - `In einem Ereignis aufgerufene Methode`

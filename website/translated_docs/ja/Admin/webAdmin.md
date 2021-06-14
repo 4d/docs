@@ -20,7 +20,7 @@ WebAdmin 内部コンポーネントは、"WebAdmin" 権限を持つユーザー
 
 `WebAdmin` Webサーバーは、4D または 4D Server アプリケーションの起動時 (プロジェクトの読み込み前) に開始するように設定できます。
 
-- インターフェイスを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
+- インターフェースを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu1.png)
 
@@ -40,100 +40,100 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 ### 開始と停止
 
-If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
+インターフェースを持つ 4Dアプリケーションを使用している場合、プロジェクトの `WebAdmin` Webサーバーはいつでも開始または停止することができます:
 
-Select the **File > Web Administration > Start Server** menu item.
+**ファイル ＞ Web管理 ＞ Webサーバー開始** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu2.png)
 
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the `WebAdmin` web server.
+サーバーが開始されていると、メニュー項目は **Webサーバー停止** になります。`WebAdmin` Webサーバーを停止するには、これを選択します。
 
 
 
-## WebAdmin Settings
+## WebAdmin 設定
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via an url is not allowed.
+[**アクセスキー**](#access-key) を定義するには、`WebAdmin` コンポーネントの設定は必須です。 デフォルトで、アクセスキーが設定されていない場合は、URL経由のアクセスは許可されません。
 
-You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
+`WebAdmin` コンポーネントの設定は、[Web管理設定ダイアログボックス](#settings-dialog-box) (後述参照) でおこないます。
 
-> If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
+> ヘッドレス4Dアプリケーションを使用している場合は、[*コマンドライン・インターフェース* の引数](#webadmin-headless-configuration) を使用して基本的な設定を定義できます。 高度なパラメーターを定義するには、設定ファイルをカスタマイズする必要があります。
 
 
-### Settings dialog box
+### 設定ダイアログボックス
 
-To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
+Web管理の設定ダイアログボックスを開くには、**ファイル ＞ Web 管理 ＞ 設定...** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu1.png)
 
-The following dialog box is displayed:
+次のようなダイアログボックスが表示されます:
 
 ![alt-text](assets/en/Admin/waSettings2.png)
 
-#### Web server administration automatic startup
+#### Webサーバー管理自動スタートアップ
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launching-at-startup)). By default, this option is not checked.
+4D または 4D Server アプリケーションの起動時に `WebAdmin` Webサーバーを自動的に開始させるには、このオプションをチェックします ([前述参照](#自動スタートアップ)）。 デフォルトでは、このオプションはチェックされていません。
 
-#### Accept HTTP connections on localhost
+#### ローカルホストでHTTP接続を受け入れる
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTP on the same machine as the 4D application. By default, this option is checked.
+このオプションを有効にすると、4Dアプリケーションと同じマシン上で HTTP を介して `WebAdmin` Webサーバーに接続できます。 デフォルトでは、このオプションはチェックされています。
 
 **注:**
-- Connections with HTTP other than localhost are never accepted.
-- Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
+- ローカルホスト以外による HTTP接続は受け付けません。
+- このオプションがチェックされていても、[HTTPSを受け入れる](#HTTPSを受け入れる) がチェックされていて、TLS の設定が有効な場合、ローカルホストの接続は HTTPS を使用します。
 
 
-#### HTTP Port
+#### HTTP ポート
 
-Port number to use for connections through HTTP to the `WebAdmin` web server when the **Accept HTTP connections on localhost** option is checked. Default value is 7080.
-
-
-#### Accept HTTPS
-
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked.
-
-#### HTTPS Port
-
-Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. Default value is 7443.
+**ローカルホストでHTTP接続を受け入れる** オプションが有効な場合、`WebAdmin` Webサーバーへの HTTP接続に使用するポート番号です。 デフォルト値は 7080 です。
 
 
-#### Certificate folder path
+#### HTTPSを受け入れる
 
-Path of the folder where the TLS certificate files are located. By default, the certificate folder path is empty and 4D or 4D Server uses the certificate files embedded in the 4D application (custom certificates must be stored next to the project folder).
+このオプションを有効にすると、`WebAdmin` Webサーバーに HTTPS を介して接続できます。 デフォルトでは、このオプションはチェックされています。
 
-#### Debug log mode
+#### HTTPS ポート
 
-Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). 次のオプションから選択することができます:
+**HTTPSを受け入れる** オプションが有効な場合、`WebAdmin` Webサーバーへの HTTPS接続に使用するポート番号です。 デフォルト値は 7443 です。
 
-- **Disable** (default)
-- **With all body parts** - enabled with body parts in response and request
-- **Without body parts** - enabled without body parts (body size is provided)
-- **With request body** - enabled with body part in request only
-- **With response body** - enabled with body part in response only
 
-#### Access Key
+#### 認証フォルダパス
 
-Defining an access key is mandatory to unlock access to the `WebAdmin` web server through an URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through an URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
+TLS証明書ファイルが置かれているフォルダーのパスです。 デフォルトでは認証フォルダパスは空で、4D または 4D Server は 4Dアプリケーションに組み込まれた証明書ファイルを使用します (カスタム証明書はプロジェクトフォルダーの隣に保存する必要があります)。
+
+#### デバッグログモード
+
+HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている HTTPDebugLog_*nn*.txt (nn はファイル番号)) の状態やフォーマットを指定します。 次のオプションから選択することができます:
+
+- **無効化** (デフォルト)
+- **bodyパーツを全て** - レスポンスおよびリクエストのボディパーツを含める形で有効化。
+- **bodyパーツを含めない** - ボディパーツを含めない形で有効化 (ボディザイズは提供されます)
+- **リクエストのbody** - リクエストのボディパーツのみを含める形で有効化。
+- **レスポンスのbody** - レスポンスのボディパーツのみを含める形で有効化。
+
+#### アクセスキー
+
+`WebAdmin` Webサーバーへの URL経由アクセスのロックを解除するには、アクセスキーの定義は必須です (4Dメニューコマンドによるアクセスにはアクセスキーは必要ありません)。 アクセスキーが定義されていない場合、[データエクスプローラーページ](dataExplorer.md) などの Web管理インターフェースに Webクライアントを使って URLを介した接続はできません。 接続リクエストがあった場合には、エラーページが返されます:
 
 ![alt-text](assets/en/Admin/accessKey.png)
 
-An access key is similar to a password but not associated to a login.
+アクセスキーはパスワードに似ていますが、ログインとは関係ありません。
 
-- To define a new access key: click the **Define** button, enter the access key string in the dialog box and click **OK**. The button label becomes **Modify**.
-- To modify the access key: click the **Modify** button, enter the new access key string in the dialog box and click **OK**.
-- To delete the access key: click the **Modify** button, let the access key area empty and click **OK**.
+- 新しいアクセスキーを定義するには、**定義** ボタンをクリックし、ダイアログボックスにアクセスキーの文字列を入力して **OK** をクリックします。 すると、ボタンラベルが **編集** に変わります。
+- アクセスキーを編集するには、**編集** ボタンをクリックし、ダイアログボックスに新しいアクセスキーの文字列を入力して **OK** をクリックします。
+- 新しいアクセスキーを削除するには、**編集** ボタンをクリックし、ダイアログボックスのアクセスキー欄を空にして **OK** をクリックします。
 
 
-## WebAdmin Headless Configuration
+## WebAdmin のヘッドレス設定
 
-All [WebAdmin settings](#webadmin-settings) are stored in the `WebAdmin.4DSettings` file. There is one default `WebAdmin.4DSettings` file per 4D and 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
+すべての [WebAdmin 設定](#webadmin-設定) は、`WebAdmin.4DSettings` ファイルに保存されます。 4D および 4D Server アプリケーション毎にデフォルトの `WebAdmin.4DSettings` ファイルが 1つ存在し、同じホストマシン上で複数のアプリケーションを運用することができます。
 
-When running a 4D or 4D Server application headless, you can set and use the default `WebAdmin.4DSettings` file, or designate a custom `.4DSettings` file.
+4D および 4D Server アプリケーションをヘッドレスで実行している場合、デフォルトの `WebAdmin.4DSettings` ファイルを設定して使用するか、カスタムの `.4DSettings` ファイルを指定することができます。
 
-To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
+ファイルの内容を設定するには、インターフェースを持つ 4Dアプリケーションの[WebAdmin設定ダイアログ](#設定ダイアログボックス) を使用し、その後ヘッドレスで実行します。 このとき、デフォルトの `WebAdmin.4DSettings` ファイルが使用されます。
 
-Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the [Command line interface](cli.md) to support this feature.
+また、カスタムの `.4DSettings` ファイル (xml形式) を設定し、デフォルトファイルの代わりに使用することもできます。 この機能をサポートするために、[コマンドライン・インターフェース](cli.md) ではいくつかの専用の引数が用意されています。
 
-> The access key is not stored in clear in the `.4DSettings` file.
+> `.4DSettings` ファイルにおいて、アクセスキーは平文では保存されません。
 
 例:
 
@@ -145,12 +145,12 @@ Or, you can set a custom `.4DSettings` file (xml format) and use it instead of t
 ```
 
 
-## Authentication and Session
+## 認証とセッション
 
-- When a web management page is accessed by entering an URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
+- 事前に本人確認せずに URL経由で Web管理ページにアクセスした場合、認証が必要になります。 ユーザーは、認証ダイアログボックスに [アクセスキー](#アクセスキー) を入力する必要があります。 `WebAdmin` 設定でアクセスキーが定義されていない場合には、URL経由のアクセスはできません。
 
-- When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
+- 4D または 4D Server のメニュー項目 (**レコード ＞ データエクスプローラー** または **ウィンドウ ＞ データエクスプローラー** (4D Server) など) から Web管理ページに直接アクセスした場合、アクセスは認証なしで許可され、ユーザーは自動的に認証されます。
 
-Once the access is granted, a web [session](WebServer/sessions.md) with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the `WebAdmin` component delivers requested pages.
+アクセスが許可されると、4Dアプリケーション上に "WebAdmin" 権限を持つ Web[セッション](WebServer/sessions.md) が作成されます。 カレントセッションが "WebAdmin" 権限を持っている限り、`WebAdmin` コンポーネントは要求されたページを提供します。
 
 
