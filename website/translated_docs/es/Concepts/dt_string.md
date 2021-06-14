@@ -53,14 +53,14 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 |                   |                  |          | "abd" <= "abc"          | False    |
 | Contains keyword  | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
 |                   |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                   | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
+|                   | Imagen % Cadena  | Booleano | Picture_expr % "Mer"    | True (*) |
 
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
+(*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
-## String comparisons
+## Comparaciones de cadenas
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
+- Las cadenas se comparan caracter por caracter (excepto en el caso de la búsqueda por [palabras clave](dt_string.md#keywords), ver más abajo).
+- Cuando se comparan cadenas, se ignoran las mayúsculas y minúsculas de los caracteres; así, "a"="A" devuelve `TRUE`. Para saber si los caracteres están en mayúsculas o minúsculas, compare sus códigos de caracteres. Por ejemplo, la siguiente expresión devuelve `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // porque 65 no es igual a 97
@@ -170,13 +170,13 @@ En caso contrario, si los símbolos de referencia de caracteres aparecen dentro 
  End if
 ```
 
-### Advanced note about invalid character reference
+### Nota avanzada sobre la referencia de caracteres inválidos
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres existentes en la cadena de la misma manera que se dirige a los elementos existentes de un array. Por ejemplo, si se referencia el 20º carácter de una variable cadena, esta variable DEBE contener al menos 20 caracteres.
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- No hacerlo, en modo interpretado, no causa un error de sintaxis.
+- No hacerlo, en modo compilado (sin opciones), puede llevar a la corrupción de la memoria, si, por ejemplo, se escribe un caracter más allá del final de una cadena o un texto.
+- Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. For example, executing the following code:
 
 ```
 //Very bad and nasty thing to do, boo!
