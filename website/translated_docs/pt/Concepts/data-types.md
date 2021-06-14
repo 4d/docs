@@ -71,7 +71,7 @@ The following table lists the basic data types, the data types to which they can
 
 | Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
 | -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Data    | Hora    | Bool       |
+| String (1)           |           | Num       | Date    | Hora    | Bool       |
 | Number (2)           | String    |           |         |         | Bool       |
 | Date                 | String    |           |         |         | Bool       |
 | Hora                 | String    |           |         |         | Bool       |
