@@ -170,13 +170,13 @@ En caso contrario, si los símbolos de referencia de caracteres aparecen dentro 
  End if
 ```
 
-### Advanced note about invalid character reference
+### Nota avanzada sobre la referencia de caracteres inválidos
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres existentes en la cadena de la misma manera que se dirige a los elementos existentes de un array. Por ejemplo, si se referencia el 20º carácter de una variable cadena, esta variable DEBE contener al menos 20 caracteres.
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- No hacerlo, en modo interpretado, no causa un error de sintaxis.
+- No hacerlo, en modo compilado (sin opciones), puede llevar a la corrupción de la memoria, si, por ejemplo, se escribe un caracter más allá del final de una cadena o un texto.
+- Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. For example, executing the following code:
 
 ```
 //Very bad and nasty thing to do, boo!
