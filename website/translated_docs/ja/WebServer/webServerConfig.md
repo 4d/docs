@@ -254,7 +254,7 @@ In the framework of optimized HTTP exchanges, size threshold for requests below 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
 
-## HTTP Port
+## HTTP ポート
 
 | Can be set with  | 名                                            | コメント   |
 | ---------------- | -------------------------------------------- | ------ |
@@ -284,7 +284,7 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 
 
-## HTTPS Port
+## HTTPS ポート
 
 | Can be set with  | 名                                              | コメント   |
 | ---------------- | ---------------------------------------------- | ------ |
