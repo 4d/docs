@@ -239,3 +239,7 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 ## `WebFolder`
 
 Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
+
+## `.gitignore` file (optional)
+
+File that specifies which files will be ignored by git. You can include a default gitignore file in your projects using the **Create default .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create default `.gitignore` file](Preferences/general.md#create-default-gitignore-file).
