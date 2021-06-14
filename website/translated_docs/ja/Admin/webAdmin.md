@@ -20,7 +20,7 @@ WebAdmin 内部コンポーネントは、"WebAdmin" 権限を持つユーザー
 
 `WebAdmin` Webサーバーは、4D または 4D Server アプリケーションの起動時 (プロジェクトの読み込み前) に開始するように設定できます。
 
-- インターフェイスを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
+- インターフェースを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu1.png)
 
@@ -40,45 +40,45 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 ### 開始と停止
 
-If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
+インターフェースを持つ 4Dアプリケーションを使用している場合、プロジェクトの `WebAdmin` Webサーバーはいつでも開始または停止することができます:
 
-Select the **File > Web Administration > Start Server** menu item.
+**ファイル ＞ Web管理 ＞ Webサーバー開始** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu2.png)
 
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the `WebAdmin` web server.
+サーバーが開始されていると、メニュー項目は **Webサーバー停止** になります。`WebAdmin` Webサーバーを停止するには、これを選択します。
 
 
 
-## WebAdmin Settings
+## WebAdmin 設定
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via an url is not allowed.
+[**アクセスキー**](#access-key) を定義するには、`WebAdmin` コンポーネントの設定は必須です。 デフォルトで、アクセスキーが設定されていない場合は、URL経由のアクセスは許可されません。
 
-You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
+`WebAdmin` コンポーネントの設定は、[Web管理設定ダイアログボックス](#settings-dialog-box) (後述参照) でおこないます。
 
-> If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
+> ヘッドレス4Dアプリケーションを使用している場合は、[*コマンドライン・インターフェース* の引数](#webadmin-headless-configuration) を使用して基本的な設定を定義できます。 高度なパラメーターを定義するには、設定ファイルをカスタマイズする必要があります。
 
 
-### Settings dialog box
+### 設定ダイアログボックス
 
-To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
+Web管理の設定ダイアログボックスを開くには、**ファイル ＞ Web 管理 ＞ 設定...** メニュー項目を選択します。
 
 ![alt-text](assets/en/Admin/waMenu1.png)
 
-The following dialog box is displayed:
+次のようなダイアログボックスが表示されます:
 
 ![alt-text](assets/en/Admin/waSettings2.png)
 
-#### Web server administration automatic startup
+#### Webサーバー管理自動スタートアップ
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launching-at-startup)). By default, this option is not checked.
+4D または 4D Server アプリケーションの起動時に `WebAdmin` Webサーバーを自動的に開始させるには、このオプションをチェックします ([前述参照](#自動スタートアップ)）。 デフォルトでは、このオプションはチェックされていません。
 
-#### Accept HTTP connections on localhost
+#### ローカルホストでHTTP接続を受け入れる
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTP on the same machine as the 4D application. By default, this option is checked.
+このオプションを有効にすると、4Dアプリケーションと同じマシン上で HTTP を介して `WebAdmin` Webサーバーに接続できます。 デフォルトでは、このオプションはチェックされています。
 
 **注:**
-- Connections with HTTP other than localhost are never accepted.
+- ローカルホスト以外による HTTP接続は受け付けません。
 - Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
 
 
@@ -89,7 +89,7 @@ Port number to use for connections through HTTP to the `WebAdmin` web server whe
 
 #### Accept HTTPS
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked.
+When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. デフォルトでは、このオプションはチェックされています。
 
 #### HTTPS Port
 
