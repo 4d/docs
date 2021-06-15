@@ -4,7 +4,7 @@ title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. En el lenguaje 4D, hay dos categorías de métodos:
+Un método es básicamente un trozo de código que ejecuta una o varias acciones. En el lenguaje 4D, hay dos categorías de métodos:
 
 - **Los métodos integrados**, que son suministrados por 4D o por desarrolladores externos y que sólo pueden ser llamados en su código. Los métodos integrados incluyen:
     - Comandos y funciones de 4D API, como `ALERT` o `Current date`.
@@ -13,7 +13,7 @@ A method is basically a piece of code that executes one or several actions. En e
 
     Los métodos integrados se detallan en el manual *Lenguaje 4D* o en los manuales dedicados a los plug-ins o componentes.
 
-- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
+- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
 
 **Nota:** 4D también ofrece métodos específicos que se ejecutan automáticamente en función de los eventos de la base o de los eventos formulario. Ver [Métodos especializados](#specialized-methods).
 
