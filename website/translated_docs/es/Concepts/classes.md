@@ -477,7 +477,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+In most cases, the value of `This` is determined by how a function is called. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
 
@@ -504,10 +504,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este ejemplo](#example-1).
 
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+En todos los casos, `Esto` se refiere al objeto al que el método fue llamado, como si el método estuviera en el objeto..
 
 ```4d
 //Class: ob
@@ -516,7 +516,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Luego puede escribir en un método proyecto:
 
 ```4d
 $o:=cs.ob.new()
@@ -524,7 +524,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad *f*, la hereda de su clase. Since *f* is called as a method of $o, its `This` refers to $o.
 
 
 ## Class commands
