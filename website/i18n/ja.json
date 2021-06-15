@@ -9,7 +9,7 @@
         "title": "Command Line Interface"
       },
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Webデータエクスプローラー"
       },
       "Admin/debugLogFiles": {
         "title": "Description of log files"
@@ -906,7 +906,7 @@
     "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Description of log files|no description given": "Description of log files",
