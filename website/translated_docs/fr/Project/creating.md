@@ -69,7 +69,7 @@ You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application
 - double-click or drag and drop the `.4DLink` file onto the 4D application
 - go to **File** > **Open Recent Projects** and select a project
 
-![open-recent-projects](assets/en/Project/4DLinkfiles.png)
+![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
 
 A .4DLink file of "remote project" type can be copied and used on several machines.
 > It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
@@ -105,7 +105,9 @@ Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuven
 Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
+
+![](assets/en/Project/projectReload.png)
     - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
     - **Non** : enregistrer les modifications et écraser l'autre version
     - **Annuler** : ne pas enregistrer
