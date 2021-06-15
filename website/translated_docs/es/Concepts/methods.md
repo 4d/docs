@@ -4,9 +4,9 @@ title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+Un método es básicamente un trozo de código que ejecuta una o varias acciones. Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas de código.
 
 ## Method Types
 
