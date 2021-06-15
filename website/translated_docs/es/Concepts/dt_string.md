@@ -25,21 +25,21 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 | Secuencias de escape | Carácter reemplazado |
 | -------------------- | -------------------- |
-| \n                  | LF (Line feed)       |
-| \t                  | HT (Tab)             |
-| \r                  | CR (Carriage return) |
-| \\\               | \ (Backslash)       |
-| \\"                | " (Quotation marks)  |
+| \n                  | LF (Retorno línea)   |
+| \t                  | HT (Tabulación)      |
+| \r                  | CR (Retorno carro)   |
+| \\\               | \ (Barra invertida) |
+| \\"                | " (Comillas)         |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
+**Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
 
-## String operators
+## Operadores de cadenas
 
 | Operación         | Sintaxis         | Devuelve | Expresión               | Valor    |
 | ----------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenation     | String + String  | Cadena   | "abc" + "def"           | "abcdef" |
-| Repetition        | String * Number  | Cadena   | "ab" * 3                | "ababab" |
-| Igual             | String = String  | Booleano | "abc" = "abc"           | True     |
+| Concatenación     | Cadena + Cadena  | Cadena   | "abc" + "def"           | "abcdef" |
+| Repetición        | Cadena * Número  | Cadena   | "ab" * 3                | "ababab" |
+| Igual             | Cadena = Cadena  | Booleano | "abc" = "abc"           | True     |
 |                   |                  |          | "abc" = "abd"           | False    |
 | Desigualdad       | String # String  | Booleano | "abc" # "abd"           | True     |
 |                   |                  |          | "abc" # "abc"           | False    |
