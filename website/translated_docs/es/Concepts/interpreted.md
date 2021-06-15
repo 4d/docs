@@ -77,8 +77,8 @@ $p->:=55 //assigns a number value
 Imagine a function that returns the length (number of charaters) of values that can be of any type.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean
+  // Calc_Length (cuántos caracteres)
+  // $1 = puntero a tipo de variable flexible, numérica, texto, hora, booleana
 
 C_POINTER($1)
 C_TEXT($result)  
@@ -87,7 +87,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Entonces se puede llamar a este método:
 ```4d
 $var1:="my text"
 $var2:=5.3
