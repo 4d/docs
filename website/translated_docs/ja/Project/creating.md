@@ -69,7 +69,7 @@ title: プロジェクトを開発する
 - `.4DLink` をダブルクリック、あるいは 4Dアプリケーションにドラッグ&ドロップする
 - **ファイル** ＞ **最近使用したプロジェクトを開く** のサブメニューを開き、プロジェクトを選択する
 
-![最近使用したファイルを開く](assets/en/Project/4DLinkfiles.png)
+![最近使用したファイルを開く](assets/en/Project/4Dlinkfiles.png)
 
 "リモートプロジェクト" タイプの .4DLinkファイルは、他のマシンにコピーして使用することができます。
 > 4D と 4D Server の接続ダイアログで 4DLinkファイルを選択することもできます (ローカルプロジェクトの開始のみ)。
@@ -105,7 +105,9 @@ XX はアプリケーションのバージョン番号を意味します。 た�
 4D のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:
 
 - 開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます: ![](assets/en/Project/lockicon.png)
-- 開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します: ![](assets/en/Project/projectReload.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
+
+![](assets/en/Project/projectReload.png)
     - **はい**: 編集内容を破棄してリロードします
     - **いいえ**: 編集内容で上書き保存します
     - **キャンセル**: 保存しません
