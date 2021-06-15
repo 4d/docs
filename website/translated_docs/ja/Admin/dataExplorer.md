@@ -1,49 +1,49 @@
 ---
 id: dataExplorer
-title: Web Data Explorer
+title: Webデータエクスプローラー
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **プレビュー**: Webデータエクスプローラーは、プレビュー機能として提供されています。 運用環境でこの機能を使用することは推奨されません。最終的な実装は若干異なる可能性があります。
 
 
-The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any steps of the development process.
+データエクスプローラーは、プロジェクトのデータストアにあるデータを表示・クエリするための Webインターフェースを提供します。 このツールを使用すると、すべてのエンティティを簡単に表示し、属性値に基づいて検索・並べ替え・フィルターすることができます。 このツールは、開発プロセスのどの段階においても、データを管理し、問題を迅速に特定するのに役立ちます。
 
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
 
-## Access Configuration
+## アクセス設定
 
-The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
+データエクスプローラーの設定や認証は [`WebAdmin`](webAdmin.md) Webサーバーコンポーネントに依存しています。
 
-- **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
-- **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
+- **設定**: データエクスプローラーの設定は、[`WebAdmin` Webサーバーの設定](webAdmin.md#webadmin-設定) を再利用します。
+- **認証**: データエクスプローラーへのアクセスは、[認証されたセッションユーザー](webAdmin.md#認証とセッション) が、"WebAdmin" 権限を持っている場合に許可されます。 **データエクスプローラー** のメニュー項目 (後述参照) からデータエクスプローラーにアクセスした場合、認証は自動的におこなわれます。
 
-> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) function.
+> データエクスプローラーへのアクセスは、[`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) 関数を使って無効化できます。
 
 
-## Opening the Data Explorer
+## データエクスプローラーを開く
 
-The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
+[`WebAdmin` Webサーバーを開始](webAdmin.md#webadmin-webサーバーの起動)すると、データエクスプローラーのページが自動的に利用可能になります。
 
-To connect to the Data Explorer web page:
+データエクスプローラーWebページに接続するには:
 
-- if you use a 4D application with interface, select **Data Explorer...** command from:
-    - the **Records** menu (in 4D stand-alone)
-    - the **Window** menu (in 4D Server)
+- インターフェースを持つ 4Dアプリケーションを使用している場合は、**データエクスプローラー...** を次のメニュー内から選択します:
+    - **レコード** メニュー (4Dスタンドアロンの場合)
+    - **ウィンドウ** メニュー (4D Serverの場合)
 
-- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
+- ヘッドレス4Dアプリケーションを使用しているかどうかに関わらず、Webブラウザーを開いて次のアドレスを入力します:
 
-    `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
+    `IPaddress:HTTPPort/dataexplorer`<br /> または<br /> `IPaddress:HTTPSPort/dataexplorer`
 
-    In this context, you will be prompted to enter the [access key](webAdmin.md#access-key) to open a `WebAdmin` session on the server:
+    このコンテキストでは、サーバー上で `WebAdmin` セッションを開くために [アクセスキー](webAdmin.md#アクセスキー) の入力を求められます。
 
 ![alt-text](assets/en/Admin/accessKeyEnter.png)
 
-> [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) values are configured in the `WebAdmin` settings.
+> [HTTPPort](webAdmin.md#http-ポート) および [HTTPSPort](webAdmin.md#https-ポート) の値は、`WebAdmin` 設定内で定義されます。
 
 
 
-## Using the Data Explorer
+## データエクスプローラーの使用
 
 In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
 
