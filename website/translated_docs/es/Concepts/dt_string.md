@@ -176,27 +176,27 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 
 - No hacerlo, en modo interpretado, no causa un error de sintaxis.
 - No hacerlo, en modo compilado (sin opciones), puede llevar a la corrupción de la memoria, si, por ejemplo, se escribe un caracter más allá del final de una cadena o un texto.
-- Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. For example, executing the following code:
+- Si no lo hace, en el modo compilado, se produce un error con la opción Range Checking On. Por ejemplo, ejecutando el siguiente código:
 
 ```
-//Very bad and nasty thing to do, boo!
+//Muy malo y desagradable, ¡Boo!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
 
-will trigger the Runtime Error shown here:
+provocará el error de tiempo de ejecución que se muestra aquí:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Ejemplo
 
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+El siguiente método proyecto pone en mayúsculas el primer carácter de cada palabra del texto recibido como parámetro y devuelve el texto resultante en mayúsculas:
 
 ```4d
-  //Capitalize_text project method
-  //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
+  //Método proyecto Capitalize_text
+  //Capitalize_text ( Texto ) -> Texto
+  //Capitalize_text ( Texto fuente ) -> Texto en mayúsculas
 
  $0:=$1
  $vlLen:=Length($0)
@@ -210,12 +210,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+Por ejemplo, la línea:
 
 ```4d
-ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
+ALERT(Capitalize_text("hola, me llamo jane doe y me presento a la presidencia"))
 ```
 
-displays the alert shown here:
+muestra la alerta que aparece aquí:
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)
