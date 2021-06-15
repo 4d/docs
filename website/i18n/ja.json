@@ -6,7 +6,7 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "コマンドライン・インターフェース"
       },
       "Admin/dataExplorer": {
         "title": "Webデータエクスプローラー"
@@ -871,7 +871,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
-      "Web Development": "Web Development",
+      "Web Development": "Web 開発",
       "REST Server": "REST サーバー",
       "Client/Server": "クライアント/サーバー",
       "Forms": "フォーム",
@@ -897,7 +897,7 @@
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Web 開発",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
@@ -910,7 +910,7 @@
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Command Line Interface|no description given": "コマンドライン・インターフェース",
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
