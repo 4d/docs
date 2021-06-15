@@ -27,6 +27,7 @@
   "Class API Reference":
   [
 	"API/overview",
+	"API/4DBlobClass",
 	"API/ClassClass",
 	"API/CollectionClass",
 	"API/CryptoKeyClass",
