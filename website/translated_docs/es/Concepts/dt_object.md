@@ -5,7 +5,7 @@ title: Objeto
 
 Las variables, campos o expresiones de tipo objeto pueden contener datos de diversos tipos. La estructura de los objetos "nativos" 4D se basa en el principio clásico de los pares "propiedad/valor". La sintaxis de estos objetos se basa en la notación JSON:
 
-- El nombre de una propiedad es siempre un texto, por ejemplo "Name". It must follow [specific rules](identifiers.md#object-properties).
+- El nombre de una propiedad es siempre un texto, por ejemplo "Name". Debe seguir [reglas específicas](identifiers.md#object-properties).
 
 - Un valor de propiedad puede ser del tipo siguiente:
     - número (Real, Entero, etc.)
@@ -14,21 +14,21 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
     - booleano
     - puntero (almacenado como tal, evaluado con el comando `JSON Stringify` o al copiar),
     - fecha (tipo fecha o cadena en formato fecha ISO)
-    - object(1) (objects can be nested on several levels)
-    - picture(2)
+    - objeto(1) (los objetos pueden ser anidados en varios niveles)
+    - imagen(2)
     - colección
 
-(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+(1)Los objetos ORDA como [entidades](ORDA/dsMapping.md#entity) o las [selecciones de entidades](ORDA/dsMapping.md#entity-selection) no pueden almacenarse en **campos objeto**; sin embargo, se soportan completamente en las **variables objeto** en memoria.
 
-(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2)Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[objeto Imagen]".
 
 **Atención:** recuerde que los nombres de atributos diferencian entre mayúsculas y minúsculas.
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación objeto](dt_object.md#syntax-basics) o los comandos clásicos disponibles en el tema **Objetos (Lenguaje)**. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
 
-Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. You can use such values wherever 4D expressions are expected:
+Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Puede utilizar estos valores siempre que se esperen expresiones 4D:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- en código 4D, ya sea escrito en los métodos (editor de métodos) o externalizado (fórmulas, archivos de etiquetas procesados por `PROCESS 4D TAGS` o el servidor web, archivos de exportación, documentos 4D Write Pro...),
 - en las áreas de expresiones del depurador y del explorador de ejecución,
 - en la lista de propiedades del editor de formularios para los objetos formulario: campo Variable o Expresión, así como diversas expresiones de list box y columnas (fuente de datos, color de fondo, estilo o color de fuente).
 
