@@ -11,7 +11,7 @@ Un valor de tiempo puede ser tratado como un número. El número devuelto de una
 
 **Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
-## Time literals
+## Constantes literales de tipo hora
 
 Una constante hora está rodeada de signos de interrogación (?...?).
 
@@ -20,25 +20,25 @@ Una constante hora se ordena hora:minuto:segundo, con dos puntos (:) para separa
 Estos son algunos ejemplos de constantes de tipo hora:
 
 ```4d
-?00:00:00? ` midnight
+?00:00:00? ` media noche
 ?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?13:01:59? ` 1 pm, 1 minuto, y 59 segundos
 ```
 
 Una hora nula se escribe ?00:00:00?
 
 **Consejo:** el Editor de métodos incluye un acceso directo para introducir una hora nula. Para escribir una hora nula, introduzca el carácter de interrogante (?) y pulse Intro.
 
-## Time operators
+## Operadores de horas
 
 | Operación         | Sintaxis       | Devuelve | Expresión               | Valor      |
 | ----------------- | -------------- | -------- | ----------------------- | ---------- |
-| Adición           | Time + Time    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Resta             | Time – Time    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Adición           | Time + Number  | Número   | ?02:03:04? + 65         | 7449       |
-| Resta             | Time – Number  | Número   | ?02:03:04? – 65         | 7319       |
-| Multiplicación    | Time * Number  | Número   | ?02:03:04? * 2          | 14768      |
-| División          | Time / Number  | Número   | ?02:03:04? / 2          | 3692       |
+| Adición           | Hora + Hora    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Resta             | Hora – Hora    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Adición           | Hora + Número  | Número   | ?02:03:04? + 65         | 7449       |
+| Resta             | Hora – Número  | Número   | ?02:03:04? – 65         | 7319       |
+| Multiplicación    | Hora * Número  | Número   | ?02:03:04? * 2          | 14768      |
+| División          | Hora / Número  | Número   | ?02:03:04? / 2          | 3692       |
 | División entera   | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
 | Módulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Módulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
