@@ -35,7 +35,7 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 
 ---
-## Input alternatives
+## Alternativas
 
 You can also represent field and variable expressions in your forms using alternative objects, more particularly:
 
