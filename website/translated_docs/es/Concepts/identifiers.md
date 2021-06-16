@@ -361,7 +361,7 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 | Propiedades de objetos          | 255           | $o.myAttribute             |
 | Form                            | 31            | "My Custom Web Input"      |
 | Objetos de formulario           | 255           | "MyButton"                 |
-| Project method                  | 31            | M_ADD_CUSTOMERS          |
+| Métodos proyecto                | 31            | M_ADD_CUSTOMERS          |
 | Comando de plug-in              | 31            | PDF SET ROTATION           |
 | Conjuntos interproceso          | <> + 255      | "<>Records to be Archived" |
 | Conjuntos proceso               | 255           | "Current selected records" |
