@@ -6,9 +6,9 @@ title: Parámetros
 
 ## Utilización de parámetros
 
-A menudo encontrará que necesita pasar datos a sus métodos. This is easily done with parameters.
+A menudo encontrará que necesita pasar datos a sus métodos. Esto se hace fácilmente con parámetros.
 
-**Los parámetros** (o **argumentos**) son piezas de datos que un método necesita para realizar su tarea. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Los parámetros** (o **argumentos**) son piezas de datos que un método necesita para realizar su tarea. Los términos *parámetros* y *argumentos* se utilizan indistintamente en este manual. Los parámetros también se pasan a los comandos integrados de 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
