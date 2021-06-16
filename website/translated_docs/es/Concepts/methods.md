@@ -8,7 +8,7 @@ Un método es básicamente un trozo de código que ejecuta una o varias acciones
 
 El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas de código.
 
-## Method Types
+## Tipos de métodos
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
