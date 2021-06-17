@@ -361,26 +361,26 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.drop( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ         |                     | タイプ           | 説明                                                                                 |
-| ------------- | ------------------- | ------------- | ---------------------------------------------------------------------------------- |
-| success       |                     | boolean       | ドロップが成功した場合には true、それ以外は false                                                     |
-|               |                     |               | ***エラーの場合にのみ利用可能:***                                                               |
-| status(*)     |                     | number        | エラーコード、以下参照                                                                        |
-| statusText(*) |                     | text          | エラーの詳細、以下参照                                                                        |
-|               |                     |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                                   |
-| LockKindText  |                     | text          | "Locked by record"                                                                 |
-| lockInfo      |                     | object        | ロック元についての情報                                                                        |
-|               | task_id             | number        | プロセスID                                                                             |
-|               | user_name           | text          | マシン上でのセッションユーザー名                                                                   |
-|               | user4d_alias        | text          | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory |
-|               | host_name           | text          | マシン名                                                                               |
-|               | task_name           | text          | プロセス名                                                                              |
-|               | client_version      | text          |                                                                                    |
-|               |                     |               | ***深刻なエラーの場合にのみ利用可能 (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):***           |
-| errors        |                     | オブジェクトのコレクション |                                                                                    |
-|               | message             | text          | エラーメッセージ                                                                           |
-|               | component signature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                                         |
-|               | errCode             | number        | エラーコード                                                                             |
+| プロパティ         |                     | タイプ           | 説明                                                                       |
+| ------------- | ------------------- | ------------- | ------------------------------------------------------------------------ |
+| success       |                     | boolean       | ドロップが成功した場合には true、それ以外は false                                           |
+|               |                     |               | ***エラーの場合にのみ利用可能:***                                                     |
+| status(*)     |                     | number        | エラーコード、以下参照                                                              |
+| statusText(*) |                     | text          | エラーの詳細、以下参照                                                              |
+|               |                     |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
+| LockKindText  |                     | text          | "Locked by record"                                                       |
+| lockInfo      |                     | object        | ロック元についての情報                                                              |
+|               | task_id             | number        | プロセスID                                                                   |
+|               | user_name           | text          | マシン上でのセッションユーザー名                                                         |
+|               | user4d_alias        | text          | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|               | host_name           | text          | マシン名                                                                     |
+|               | task_name           | text          | プロセス名                                                                    |
+|               | client_version      | text          |                                                                          |
+|               |                     |               | ***深刻なエラーの場合にのみ利用可能 (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):*** |
+| errors        |                     | オブジェクトのコレクション |                                                                          |
+|               | message             | text          | エラーメッセージ                                                                 |
+|               | component signature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|               | errCode             | number        | エラーコード                                                                   |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
@@ -1177,28 +1177,28 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.save()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ        |                    | タイプ           | 説明                                                                                 |
-| ------------ | ------------------ | ------------- | ---------------------------------------------------------------------------------- |
-| success      |                    | boolean       | 保存に成功した場合には true、それ以外は false                                                       |
-|              |                    |               | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                                      |
-| autoMerged   |                    | boolean       | 自動マージが実行された場合には true、それ以外は false                                                   |
-|              |                    |               | ***エラーの場合にのみ利用可能***:                                                               |
-| status       |                    | number        | エラーコード、[以下参照](#status-と-statustext)                                                |
-| statusText   |                    | text          | エラーの詳細、[以下参照](#status-と-statustext)                                                |
-|              |                    |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                                   |
-| lockKindText |                    | text          | "Locked by record"                                                                 |
-| lockInfo     |                    | object        | ロック元についての情報                                                                        |
-|              | task_id            | number        | プロセスID                                                                             |
-|              | user_name          | text          | マシン上でのセッションユーザー名                                                                   |
-|              | user4d_alias       | text          | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory |
-|              | host_name          | text          | マシン名                                                                               |
-|              | task_name          | text          | プロセス名                                                                              |
-|              | client_version     | text          |                                                                                    |
-|              |                    |               | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):           |
-| errors       |                    | オブジェクトのコレクション |                                                                                    |
-|              | message            | text          | エラーメッセージ                                                                           |
-|              | componentSignature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                                         |
-|              | errCode            | number        | エラーコード                                                                             |
+| プロパティ        |                    | タイプ           | 説明                                                                       |
+| ------------ | ------------------ | ------------- | ------------------------------------------------------------------------ |
+| success      |                    | boolean       | 保存に成功した場合には true、それ以外は false                                             |
+|              |                    |               | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                            |
+| autoMerged   |                    | boolean       | 自動マージが実行された場合には true、それ以外は false                                         |
+|              |                    |               | ***エラーの場合にのみ利用可能***:                                                     |
+| status       |                    | number        | エラーコード、[以下参照](#status-と-statustext)                                      |
+| statusText   |                    | text          | エラーの詳細、[以下参照](#status-と-statustext)                                      |
+|              |                    |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                         |
+| lockKindText |                    | text          | "Locked by record"                                                       |
+| lockInfo     |                    | object        | ロック元についての情報                                                              |
+|              | task_id            | number        | プロセスID                                                                   |
+|              | user_name          | text          | マシン上でのセッションユーザー名                                                         |
+|              | user4d_alias       | text          | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|              | host_name          | text          | マシン名                                                                     |
+|              | task_name          | text          | プロセス名                                                                    |
+|              | client_version     | text          |                                                                          |
+|              |                    |               | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
+| errors       |                    | オブジェクトのコレクション |                                                                          |
+|              | message            | text          | エラーメッセージ                                                                 |
+|              | componentSignature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|              | errCode            | number        | エラーコード                                                                   |
 
 ##### status と statusText
 
