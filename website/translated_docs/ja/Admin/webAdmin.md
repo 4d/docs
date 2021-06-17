@@ -52,7 +52,7 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 ## WebAdmin 設定
 
-[**アクセスキー**](#access-key) を定義するには、`WebAdmin` コンポーネントの設定は必須です。 デフォルトで、アクセスキーが設定されていない場合は、URL経由のアクセスは許可されません。
+[**アクセスキー**](#access-key) を定義するには、`WebAdmin` コンポーネントの設定は必須です。 By default when the access key is not set, access via a URL is not allowed.
 
 `WebAdmin` コンポーネントの設定は、[Web管理設定ダイアログボックス](#settings-dialog-box) (後述参照) でおこないます。
 
@@ -112,7 +112,7 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 
 #### アクセスキー
 
-`WebAdmin` Webサーバーへの URL経由アクセスのロックを解除するには、アクセスキーの定義は必須です (4Dメニューコマンドによるアクセスにはアクセスキーは必要ありません)。 アクセスキーが定義されていない場合、[データエクスプローラーページ](dataExplorer.md) などの Web管理インターフェースに Webクライアントを使って URLを介した接続はできません。 接続リクエストがあった場合には、エラーページが返されます:
+Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). 接続リクエストがあった場合には、エラーページが返されます:
 
 ![alt-text](assets/en/Admin/accessKey.png)
 
@@ -147,7 +147,7 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 
 ## 認証とセッション
 
-- 事前に本人確認せずに URL経由で Web管理ページにアクセスした場合、認証が必要になります。 ユーザーは、認証ダイアログボックスに [アクセスキー](#アクセスキー) を入力する必要があります。 `WebAdmin` 設定でアクセスキーが定義されていない場合には、URL経由のアクセスはできません。
+- When a web management page is accessed by entering a URL and without prior identification, an authentication is required. ユーザーは、認証ダイアログボックスに [アクセスキー](#アクセスキー) を入力する必要があります。 `WebAdmin` 設定でアクセスキーが定義されていない場合には、URL経由のアクセスはできません。
 
 - 4D または 4D Server のメニュー項目 (**レコード ＞ データエクスプローラー** または **ウィンドウ ＞ データエクスプローラー** (4D Server) など) から Web管理ページに直接アクセスした場合、アクセスは認証なしで許可され、ユーザーは自動的に認証されます。
 
