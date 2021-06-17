@@ -3,15 +3,15 @@ id: plug-ins
 title: Plug-ins
 ---
 
-As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+A medida que desarrolle una aplicación 4D, descubrirá muchas funcionalidades de las que no se percató cuando empezó. Incluso puede extender la versión estándar de 4D añadiendo **plug-ins** a su entorno de desarrollo 4D.
 
-## Why the need for a plug-in?
+## ¿Por qué es necesario un plug-in?
 
-Although 4D provides hundred of built-in methods used to manipulate objects, records and implement user interface, some special use or feature (sometimes platform dependant) may be needed: one may need ODBC under Windows, another may need Apple services under macOS, while yet another may want to implement specific statistics tools, social network login, payment platform, file access over the network, a special user interface, or a private picture structure.
+Aunque 4D ofrece cientos de métodos integrados para manipular objetos, registros e implementar la interfaz de usuario, es posible que se necesite algún uso o característica especial (que a veces depende de la plataforma): uno puede necesitar ODBC en Windows, otro puede necesitar los servicios de Apple en macOS, mientras que otro puede querer implementar herramientas estadísticas específicas, inicio de sesión en redes sociales, plataforma de pago, acceso a archivos a través de la red, una interfaz de usuario especial o una estructura de imagen privada.
 
-It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
+Es evidente que cubrir todas las áreas de los sistemas operativos macOS y Windows por medio de los comandos de 4D sin duda conduciría a un producto con miles de comandos, y al mismo tiempo, la mayoría de los usuarios no tendrían necesidad de un conjunto tan grande de funcionalidades. Además, la creación de una herramienta tan completa haría que el entorno 4D fuera increíblemente complejo y llevaría a la mayoría de los usuarios meses de estudio antes de poder esperar resultados útiles.
 
-The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
+La naturaleza modular del entorno 4D permite la creación de aplicaciones básicas, pero no impide el desarrollo de sistemas muy complejos. La arquitectura del plug-in 4D abre el entorno 4D a todo tipo de aplicaciones o de usuario. 4D Plug-ins multiply that application or user's power and productivity.
 
 ## What is a plug-in and what can it do?
 
