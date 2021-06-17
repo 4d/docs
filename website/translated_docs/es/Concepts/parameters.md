@@ -182,7 +182,7 @@ La caja de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" y la caja de aler
 
 Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. En lugar de pasar el campo al método, se pasa un puntero al mismo, por lo que se escribiría:
 
 ```4d
   //Esta es una parte del código del método MY_METHOD
@@ -196,7 +196,7 @@ Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 
 Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dentro del método `DO SOMETHING`, $1 ya no es el valor del campo sino un puntero al campo. El objeto **referenciado** por $1 ($1-> en el código anterior) es el campo real. Por lo tanto, cambiar el objeto referenciado va más allá del alcance de la subrutina, y el campo real se ve afectado. En este ejemplo, las dos cajas de alerta dirán "WILLIAMS".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Por lo tanto, escribiría:
 
 ```4d
     //Esta es una parte del código del método MY_METHO
