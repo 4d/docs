@@ -45,10 +45,8 @@ Some commands that alter the original blob do not support the 4D.Blob type:
 ### Passing a 4D.Blob
 
 ```4d
-
 var $myBlob: 4D.Blob.new
 var $myText:= BLOB to text ( $myBlob ; UTF8 )
-
 ```
 
 ### Passing a C_BLOB 
@@ -56,10 +54,8 @@ var $myText:= BLOB to text ( $myBlob ; UTF8 )
 To modify a blob, you need to use a C_BLOB variable and pass it to a command. For example: 
 
 ```4d
-
 C_BLOB(anyBlobVar)
 SET BLOB SIZE ( $myBlob ; 16*1024 )
-
 ```
 
 ### Passing a C_BLOB by reference using a pointer
