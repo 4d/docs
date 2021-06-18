@@ -88,16 +88,16 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 デフォルトで、4D は POSIXシンタックスで表現されたパスを期待します。 プラットフォームパス名 (Windows または macOS) を使用する場合、*pathType* 引数を使用してそのことを宣言する必要があります。 以下の定数を使用することができます:
 
-| 定数               | 結果 | 説明                                             |
-| ---------------- | -- | ---------------------------------------------- |
-| fk platform path | 1  | プラットフォーム特有のシンタックスで表現されたパス (プラットフォームパス名の場合には必須) |
-| fk posix path    | 0  | POSIXシンタックスで表現されたパス (デフォルト)                    |
+| 定数               | 値 | 説明                                             |
+| ---------------- | - | ---------------------------------------------- |
+| fk platform path | 1 | プラットフォーム特有のシンタックスで表現されたパス (プラットフォームパス名の場合には必須) |
+| fk posix path    | 0 | POSIXシンタックスで表現されたパス (デフォルト)                    |
 
 **File ( fileConstant { ; \* } )**
 
 *fileConstant* には、以下の定数のどれか一つを指定して 4Dビルトインの、またはシステムファイルを渡します:
 
-| 定数                                | 結果 | 説明                                                                                                                                                                                                                                                                                           |
+| 定数                                | 値  | 説明                                                                                                                                                                                                                                                                                           |
 | --------------------------------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19 | バックアップ履歴ファイル。 バックアップ保存先フォルダに保存されています。                                                                                                                                                                                                                                                        |
 | Backup log file                   | 13 | カレントのバックアップのログファイル。 アプリケーションの Logs フォルダーに保存されています。                                                                                                                                                                                                                                           |
@@ -227,10 +227,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 macOS 上では、この関数はデフォルトで標準エイリアスを作成します。 *aliasType* 引数を渡すことで、シンボリックリンクを作成することもできます。 以下の定数を使用することができます:
 
-| 定数                 | 結果 | 説明                  |
-| ------------------ | -- | ------------------- |
-| `fk alias link`    | 0  | エイリアスリンク (デフォルト)    |
-| `fk symbolic link` | 1  | シンボリックリンク (macOSのみ) |
+| 定数                 | 値 | 説明                  |
+| ------------------ | - | ------------------- |
+| `fk alias link`    | 0 | エイリアスリンク (デフォルト)    |
+| `fk symbolic link` | 1 | シンボリックリンク (macOSのみ) |
 
 Windows 上では、常にショートカット (.lnk ファイル) が作成されます (*aliasType* 引数は無視されます)。
 
@@ -333,23 +333,23 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 参照  | タイプ    |    | 説明                              |
-| --- | ------ | -- | ------------------------------- |
-| 戻り値 | オブジェクト | <- | .exe のバージョンリソースや .plist ファイルの中身 |
+| 参照  | タイプ    |    | 説明                                                    |
+| --- | ------ | -- | ----------------------------------------------------- |
+| 戻り値 | オブジェクト | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
 #### 説明
 
-`.getAppInfo()` 関数は、 <!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-この関数は、既存の .exe あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**.exe ファイルの場合に返されるオブジェクト**
+**Returned object with a .exe or .dll file**
 
-> .exe ファイルの読み取りは Windows上でのみ可能です。
+> Reading a .exe or .dll is only possible on Windows.
 
 プロパティはすべてテキストです。
 
@@ -564,25 +564,25 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 参照   | タイプ    |    | 説明                                     |
-| ---- | ------ | -- | -------------------------------------- |
-| info | オブジェクト | -> | .exe のバージョンリソースや .plist ファイルに書き込むプロパティ |
+| 参照   | タイプ    |    | 説明                                                               |
+| ---- | ------ | -- | ---------------------------------------------------------------- |
+| info | オブジェクト | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
 #### 説明
 
-`.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.plist** ファイルの情報として書き込みます<!-- END REF -->。
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-この関数は、既存の .exe あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**.exe ファイル用の *info* オブジェクト**
+***info* parameter object with a .exe or .dll file**
 
-> .exe ファイル情報の書き込みは Windows上でのみ可能です。
+> Writing a .exe or .dll file information is only possible on Windows.
 
-*info* オブジェクトに設定された各プロパティは .exe ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | タイプ  |
 | ---------------- | ---- |
@@ -716,13 +716,13 @@ $infoPlistFile.setAppInfo($info)
 
 *breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
 
-| 定数                            | 結果 | 説明                                                                                                        |
-| ----------------------------- | -- | --------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0  | 何も処理をしません。                                                                                                |
-| `Document with native format` | 1  | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2  | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
-| `Document with CR`            | 3  | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
-| `Document with LF`            | 4  | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
+| 定数                            | 値 | 説明                                                                                                        |
+| ----------------------------- | - | --------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                |
+| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
+| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
+| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
+| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 

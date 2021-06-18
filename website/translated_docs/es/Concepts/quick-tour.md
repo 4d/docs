@@ -90,42 +90,42 @@ PDF REMOVE PAGE(path;page)
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
-4D SVG is included in 4D.
+4D SVG está incluido en 4D.
 
-## Constants
+## Constantes
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
+4D ofrece un conjunto extensivo de constantes predefinidas, cuyos valores son accesibles por nombre. Por ejemplo, `Read Mode` es una constante (valor 2). Las constantes predefinidas aparecen subrayadas por defecto en el editor de métodos 4D. Permiten escribir un código más legible.
 
 ```4d
-vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
+vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
 ## Métodos
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
+4D ofrece un gran número de métodos (o comandos) integrados, pero también le permite crear sus propios **métodos de proyecto**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje. Los métodos proyecto son métodos genéricos, pero hay otros tipos de métodos: métodos objeto, métodos formulario, métodos tabla (Triggers) y métodos base.
 
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
+Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja.
 
-For example, the following line is a statement that will display a confirmation dialog box:
+Por ejemplo, la siguiente línea es una sentencia que mostrará una caja de diálogo de confirmación:
 
 ```4d
-CONFIRM("Do you really want to close this account?";"Yes";"No")
+CONFIRM("¿Realmente quiere cerrar esta cuenta?"; "Sí"; "No")
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+Un método también contiene pruebas y bucles que controlan el flujo de ejecución. Los métodos 4D soportan las estructuras `If...Else...End if` y `Case of...Else...End case`, así como los bucles: `While...End while`, `Repeat...Until`, `For...End for`, y `For each...End for each`:
 
 El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
 
 ```4d
 $myText:="hello"
@@ -265,7 +265,7 @@ The same symbols are often used for different operations, depending on the data 
 | Data Type       | Operación     | Ejemplo                                                                                              |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
 | Número          | Adición       | 1 + 2 adds the numbers and results in 3                                                              |
-| Cadena          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
+| Cadena          | Concatenación | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 
