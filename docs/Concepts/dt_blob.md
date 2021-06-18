@@ -9,11 +9,62 @@ A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists
 
 Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
-## Parameter passing, Pointers and function results  
+## Blob Types 
+
+4D supports two types of blobs:
+* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob. 
+* **C_BLOB**: Classical blob variable
+
+We recommend using blob objects (4D.Blob) to manipulate blobs. Blob objects are optimized, shareable (when passed as method parameters, they are passed by reference) and usable in preemptive threads.
+
+### Automatic conversion of blob type
+4D automatically converts blob objects (4D.Blob) to classical blobs (C_BLOB) and vice versa. For example: 
+
+```4d
+C_BLOB($myBlob)
+$o:=New object("blob";$myBlob)
+$type:=Value type($o.blob)  //object
+```
+
+Some commands that alter the original blob do not support the 4D.Blob type:
+
+* DELETE FROM BLOB
+* INSERT IN BLOB 
+* INTEGER TO BLOB 
+* LONGINT TO BLOB 
+* REAL TO BLOB 
+* SET BLOB SIZE 
+* TEXT TO BLOB 
+* VARIABLE TO BLOB 
+* LIST TO BLOB 
+
+## Passing Blobs as parameters
 
 4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
 
-To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.
+### Passing a 4D.Blob
+
+```4d
+
+var $myBlob: 4D.Blob.new
+var $myText:= BLOB to text ( $myBlob ; UTF8 )
+
+```
+
+### Passing a C_BLOB 
+
+To modify a blob, you need to use a C_BLOB variable and pass it to a command. For example: 
+
+```4d
+
+C_BLOB(anyBlobVar)
+SET BLOB SIZE ( $myBlob ; 16*1024 )
+
+```
+
+### Passing a C_BLOB by reference using a pointer
+
+To pass a C_BLOB to your own methods, you can also define a pointer to the C_BLOB and pass the pointer as parameter.
 
 **Examples:**
 ```4d
