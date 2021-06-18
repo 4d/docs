@@ -6,7 +6,7 @@ title: 4D WebStudio
 > **Preview**: 4D WebStudio is provided as a preview feature. Using this feature in production is not recommended; the final implementation could be slightly different.
 
 
-4D WebStudio is a powerful integrated development environment (IDE) that lets tap into various parts of your 4D projects (such as databases and methods) and link them to highly customizable interface elements in order to build a complete application.
+4D WebStudio is a powerful integrated development environment (IDE) that lets you tap into various parts of your 4D projects (such as databases and methods) and link them to highly customizable interface elements in order to build complete applications.
 
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
