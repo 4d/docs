@@ -8,11 +8,11 @@ title: Clases
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Cada objeto es una instancia de su clase. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. Cada objeto es una instancia de su clase. Una clase puede extenderse a otra clase con la palabra clave [`extender`](#class-extends-classname), y entonces hereda sus [funciones](#function).
 
-> The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
+> El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
-For example, you could create a `Person` class with the following definition:
+Por ejemplo, puede crear una clase `Person` con la siguiente definición:
 
 ```4d  
 //Class: Person.4dm
@@ -24,7 +24,7 @@ Function sayHello()->$welcome : Text
     $welcome:="Hello "+This.firstName+" "+This.lastName
 ```
 
-In a method, creating a "Person":
+En un método, creando una "Persona":
 
 ```
 var $person : cs.Person //object of Person class  
@@ -36,19 +36,19 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 
 
-## Managing classes
+## Gestión de clases
 
-### Class definition
+### Definición de una clase
 
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+Una clase usuario en 4D está definida por un archivo de método específico (.4dm), almacenado en la carpeta `/Project/Sources/Classes/`. El nombre del archivo es el nombre de la clase.
 
-When naming classes, you should keep in mind the following rules:
+Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 
-- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties).
+- Un [nombre de clase](identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
 - Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
+- No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
 
-For example, if you want to define a class named "Polygon", you need to create the following file:
+Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el siguiente archivo:
 
 - Project folder
     + Project
@@ -56,33 +56,33 @@ For example, if you want to define a class named "Polygon", you need to create t
             - Clases
                 + Polygon.4dm
 
-### Deleting a class
+### Borrar una clase
 
-To delete an existing class, you can:
+Para eliminar una clase existente, puede:
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- en su disco, elimine el archivo de clase .4dm de la carpeta "Classes",
+- en el Explorador 4D, seleccionar la clase y hacer clic en ![](assets/en/Users/MinussNew.png) o elegir **Mover a la papelera** en el menú contextual.
 
 
-### Using 4D interface
+### Utilizar la interfaz 4D
 
-Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
+Los archivos de clase se almacenan automáticamente en la ubicación adecuada cuando se crean a través de la interfaz de 4D, ya sea a través del menú **Archivo** o del Explorador.
 
 #### Menú Archivo y barra de herramientas
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nuevo > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
 
 #### Explorador
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
 
-To create a new class, you can:
+Para crear una nueva clase, puede:
 
-- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
-- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page.
+- seleccione la categoría **Clases** y haga clic en el botón ![](assets/en/Users/PlussNew.png).
+- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases. ![](assets/en/Concepts/newClass.png)
+- seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
 
 #### Soporte del código de clase
 
@@ -93,7 +93,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
     - a class function is a code block
     - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
     - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format.
+- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> formato.
 
 ## Class stores
 
