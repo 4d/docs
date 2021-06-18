@@ -105,7 +105,7 @@ Since the editors use files on the disk, potential conflicts could happen if the
 The 4D development framework includes a file access manager to control concurrent access:
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
+- si un archivo abierto se edita simultáneamente desde diferentes ubicaciones, 4D muestra un diálogo de alerta al intentar guardar los cambios:
 
 ![](assets/en/Project/projectReload.png)
     - **Yes**: discard editor changes and reload the modified version
