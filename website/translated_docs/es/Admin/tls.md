@@ -1,6 +1,6 @@
 ---
 id: tls
-title: TLS Protocol (HTTPS)
+title: Protocolo TLS (HTTPS)
 ---
 
 All 4D servers can communicate in secured mode through the TLS (Transport Layer Security) protocol:
@@ -9,7 +9,7 @@ All 4D servers can communicate in secured mode through the TLS (Transport Layer 
 - the application server (client-server desktop applications)
 - the SQL server
 
-## Overview
+## Generalidades
 
 The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
 
@@ -59,7 +59,7 @@ To get a digital certificate:
 
 The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
 
-## Installation and activation
+## Instalación y activación
 
 ### `key.pem` and `cert.pem` files
 

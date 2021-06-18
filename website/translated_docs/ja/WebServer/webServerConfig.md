@@ -20,10 +20,10 @@ There are different ways to configure the 4D web server settings, depending on t
 
 ## Cache
 
-| Can be set with     | 名                                       | コメント |
-| ------------------- | --------------------------------------- | ---- |
-| Settings dialog box | Configuration page/Use the 4D Web cache |      |
-| Settings dialog box | Configuration page/Page Cache Size      |      |
+| Can be set with | 名                                       | コメント |
+| --------------- | --------------------------------------- | ---- |
+| 設定ダイアログボックス     | Configuration page/Use the 4D Web cache |      |
+| 設定ダイアログボックス     | Configuration page/Page Cache Size      |      |
 
 Enables and configures the web page cache.
 
@@ -50,11 +50,11 @@ With 4D in remote mode, these files must be located in the local resources folde
 
 ## Character Set
 
-| Can be set with     | 名                              | コメント                           |
-| ------------------- | ------------------------------ | ------------------------------ |
-| webServer object    | `characterSet`                 | MIBEnum integer or Name string |
-| `WEB SET OPTION`    | `Web character set`            | MIBEnum integer or Name string |
-| Settings dialog box | Options (II) page/Standard Set | Pop up menu                    |
+| Can be set with  | 名                              | コメント                           |
+| ---------------- | ------------------------------ | ------------------------------ |
+| webServer object | `characterSet`                 | MIBEnum integer or Name string |
+| `WEB SET OPTION` | `Web character set`            | MIBEnum integer or Name string |
+| 設定ダイアログボックス      | Options (II) page/Standard Set | Pop up menu                    |
 
 Defines the set of characters to be used by the 4D web server. デフォルト値は OS の言語に依存します。
 > This setting is also used for generating Quick Reports in HTML format .
@@ -72,11 +72,11 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 ## CORS Settings
 
-| Can be set with     | 名                                                       | コメント                                                                           |
-| ------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| webServer object    | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| `WEB SET OPTION`    | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| Settings dialog box | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
+| Can be set with  | 名                                                       | コメント                                                                           |
+| ---------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| webServer object | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
+| `WEB SET OPTION` | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
+| 設定ダイアログボックス      | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
 
 List of allowed hosts and methods for the CORS service.
 
@@ -141,7 +141,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | ------------------- | ---------------------------------------------------------- | ------------------------------------- |
 | webServer object    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | テキスト                                  |
 | `WEB SET HOME PAGE` |                                                            | Can be different for each web process |
-| Settings dialog box | Configuration page/Default Home Page                       |                                       |
+| 設定ダイアログボックス         | Configuration page/Default Home Page                       |                                       |
 
 Designate a default home page for the web server. This page can be static or [semi-dynamic].
 
@@ -161,11 +161,11 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 ## Enable CORS Service
 
-| Can be set with     | 名                                                  | コメント                                                |
-| ------------------- | -------------------------------------------------- | --------------------------------------------------- |
-| webServer object    | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
-| `WEB SET OPTION`    | `Web CORS enabled`                                 | 0 (disabled, default) or 1 (enabled)                |
-| Settings dialog box | Options (II) page/Enable CORS                      | Unchecked by default                                |
+| Can be set with  | 名                                                  | コメント                                                |
+| ---------------- | -------------------------------------------------- | --------------------------------------------------- |
+| webServer object | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
+| `WEB SET OPTION` | `Web CORS enabled`                                 | 0 (disabled, default) or 1 (enabled)                |
+| 設定ダイアログボックス      | Options (II) page/Enable CORS                      | Unchecked by default                                |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
@@ -178,22 +178,22 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 ## Enable HTTP
 
-| Can be set with     | 名                                                  | コメント    |
-| ------------------- | -------------------------------------------------- | ------- |
-| webServer object    | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
-| `WEB SET OPTION`    | `Web HTTP enabled`                                 |         |
-| Settings dialog box | Configuration page/Enable HTTP                     |         |
+| Can be set with  | 名                                                  | コメント    |
+| ---------------- | -------------------------------------------------- | ------- |
+| webServer object | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
+| `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
+| 設定ダイアログボックス      | Configuration page/Enable HTTP                     |         |
 
 Indicates whether or not the web server will accept non-secure connections.
 
 
 ## Enable HTTPS
 
-| Can be set with     | 名                                                    | コメント    |
-| ------------------- | ---------------------------------------------------- | ------- |
-| webServer object    | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
-| `WEB SET OPTION`    | `Web HTTPS enabled`                                  |         |
-| Settings dialog box | Configuration page/Enable HTTPS                      |         |
+| Can be set with  | 名                                                    | コメント    |
+| ---------------- | ---------------------------------------------------- | ------- |
+| webServer object | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
+| `WEB SET OPTION` | `Web HTTPS enabled`                                  |         |
+| 設定ダイアログボックス      | Configuration page/Enable HTTPS                      |         |
 
 Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
 
@@ -254,13 +254,13 @@ In the framework of optimized HTTP exchanges, size threshold for requests below 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
 
-## HTTP Port
+## HTTP ポート
 
-| Can be set with     | 名                                            | コメント   |
-| ------------------- | -------------------------------------------- | ------ |
-| webServer object    | [`HTTPPort`](API/WebServerClass.md#httpport) | number |
-| `WEB SET OPTION`    | `Web port ID`                                |        |
-| Settings dialog box | Configuration page/HTTP Port                 |        |
+| Can be set with  | 名                                            | コメント   |
+| ---------------- | -------------------------------------------- | ------ |
+| webServer object | [`HTTPPort`](API/WebServerClass.md#httpport) | number |
+| `WEB SET OPTION` | `Web port ID`                                |        |
+| 設定ダイアログボックス      | Configuration page/HTTP Port                 |        |
 
 Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
@@ -284,24 +284,24 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 
 
-## HTTPS Port
+## HTTPS ポート
 
-| Can be set with     | 名                                              | コメント   |
-| ------------------- | ---------------------------------------------- | ------ |
-| webServer object    | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
-| `WEB SET OPTION`    | `Web HTTPS port ID`                            |        |
-| Settings dialog box | Configuration page/HTTPS Port                  |        |
+| Can be set with  | 名                                              | コメント   |
+| ---------------- | ---------------------------------------------- | ------ |
+| webServer object | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
+| `WEB SET OPTION` | `Web HTTPS port ID`                            |        |
+| 設定ダイアログボックス      | Configuration page/HTTPS Port                  |        |
 
 Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers.
 
 
 ## Inactive Process Timeout
 
-| Can be set with     | 名                                                                        | コメント   |
-| ------------------- | ------------------------------------------------------------------------ | ------ |
-| webServer object    | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |        |
-| `WEB SET OPTION`    | `Web inactive process timeout`                                           |        |
-| Settings dialog box | Options (I) page/Inactive Process Timeout                                | Slider |
+| Can be set with  | 名                                                                        | コメント   |
+| ---------------- | ------------------------------------------------------------------------ | ------ |
+| webServer object | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |        |
+| `WEB SET OPTION` | `Web inactive process timeout`                                           |        |
+| 設定ダイアログボックス      | Options (I) page/Inactive Process Timeout                                | Slider |
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
@@ -322,11 +322,11 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 ## IP Address to listen
 
-| Can be set with     | 名                                                              | コメント        |
-| ------------------- | -------------------------------------------------------------- | ----------- |
-| webServer object    | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION`    | `Web IP address to listen`                                     |             |
-| Settings dialog box | Configuration page/IP Address                                  | Pop up menu |
+| Can be set with  | 名                                                              | コメント        |
+| ---------------- | -------------------------------------------------------------- | ----------- |
+| webServer object | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
+| `WEB SET OPTION` | `Web IP address to listen`                                     |             |
+| 設定ダイアログボックス      | Configuration page/IP Address                                  | Pop up menu |
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
@@ -355,11 +355,11 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 
 ## Keep Session
 
-| Can be set with     | 名                                                  | コメント |
-| ------------------- | -------------------------------------------------- | ---- |
-| webServer object    | [`keepSession`](API/WebServerClass.md#keepsession) |      |
-| `WEB SET OPTION`    | `Web keep session`                                 |      |
-| Settings dialog box | Options (I) page/Automatic Session Management      |      |
+| Can be set with  | 名                                                  | コメント |
+| ---------------- | -------------------------------------------------- | ---- |
+| webServer object | [`keepSession`](API/WebServerClass.md#keepsession) |      |
+| `WEB SET OPTION` | `Web keep session`                                 |      |
+| 設定ダイアログボックス      | Options (I) page/Automatic Session Management      |      |
 
 Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
 
@@ -370,11 +370,11 @@ Default is true (enabled).
 
 ## Log Recording
 
-| Can be set with     | 名                                                    | コメント        |
-| ------------------- | ---------------------------------------------------- | ----------- |
-| webServer object    | [`logRecording`](API/WebServerClass.md#logrecording) |             |
-| `WEB SET OPTION`    | `Web log recording`                                  |             |
-| Settings dialog box | Log (type) page/Log Format                           | Pop up menu |
+| Can be set with  | 名                                                    | コメント        |
+| ---------------- | ---------------------------------------------------- | ----------- |
+| webServer object | [`logRecording`](API/WebServerClass.md#logrecording) |             |
+| `WEB SET OPTION` | `Web log recording`                                  |             |
+| 設定ダイアログボックス      | Log (type) page/Log Format                           | Pop up menu |
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
@@ -393,11 +393,11 @@ This setting allows you to select the format of this file. Available values are:
 
 ## Maximum Concurrent Web Processes
 
-| Can be set with     | 名                                                                        | コメント |
-| ------------------- | ------------------------------------------------------------------------ | ---- |
-| webServer object    | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |      |
-| `WEB SET OPTION`    | `Web max concurrent processes`                                           |      |
-| Settings dialog box | Options (I) page/Maximum Concurrent Web Processes                        |      |
+| Can be set with  | 名                                                                        | コメント |
+| ---------------- | ------------------------------------------------------------------------ | ---- |
+| webServer object | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |      |
+| `WEB SET OPTION` | `Web max concurrent processes`                                           |      |
+| 設定ダイアログボックス      | Options (I) page/Maximum Concurrent Web Processes                        |      |
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
@@ -518,7 +518,7 @@ In this case, robots are not allowed to access the entire site.
 | --------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | webServer object      | [`rootFolder`](API/WebServerClass.md#rootfolder) | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
 | `WEB SET ROOT FOLDER` |                                                  |                                                                                                                                       |
-| Settings dialog box   | Configuration page/Default HTML Root             |                                                                                                                                       |
+| 設定ダイアログボックス           | Configuration page/Default HTML Root             |                                                                                                                                       |
 
 Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.
 

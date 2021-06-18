@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title: Appearance
+title: Apariencia
 ---
 
 ---
@@ -44,7 +44,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| hideFocusRing | boolean   | true, false     |
+| hideFocusRing | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -67,7 +67,7 @@ By default, this option is not enabled.
 
 | Name                | Data Type | Possible Values |
 | ------------------- | --------- | --------------- |
-| hideSystemHighlight | boolean   | true, false     |
+| hideSystemHighlight | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -83,9 +83,9 @@ An interface tool allowing the user to move the viewing area to the left or righ
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Descripción                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
@@ -97,7 +97,7 @@ Available values:
 
 | Name                | Data Type | Possible Values                  |
 | ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -121,7 +121,7 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -140,7 +140,7 @@ Displays/hides both background images and background color.
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show footers
@@ -157,7 +157,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -177,7 +177,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 ## Show headers
@@ -194,7 +194,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -213,7 +213,7 @@ Displays/hides invisible characters
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -231,7 +231,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -252,7 +252,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show page frame
@@ -269,7 +269,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 
@@ -298,7 +298,7 @@ With the Show references property on, the reference is displayed:
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Show vertical ruler
@@ -315,7 +315,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
@@ -351,7 +351,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 
 #### See also
@@ -365,9 +365,9 @@ An interface tool allowing the user to move the viewing area up and down.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Descripción                                                                                                                                              |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
@@ -381,7 +381,7 @@ Available values:
 
 | Name              | Data Type | Possible Values                  |
 | ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| scrollbarVertical | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -413,7 +413,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 ## Zoom
@@ -430,6 +430,6 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 

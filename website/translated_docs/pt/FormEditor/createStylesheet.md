@@ -12,7 +12,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
-## Style Sheet Files
+## Arquivos folhas de estilo
 
 4D accepts three, specific style sheet files:
 
@@ -25,7 +25,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
-## Style Sheet Architecture
+## Arquitetura das folhas de estilo
 
 While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
@@ -37,10 +37,10 @@ Every style rule in a style sheet contains two parts:
 
 
 
-## Style Sheet Selectors
+## Seletores de folhas de estilo
 
 
-### Object Type
+### Tipo de objeto
 
 Corresponding to the CSS element selector, the object type defines the type of object to style.
 
@@ -115,7 +115,7 @@ class: "okButtons important"
 ```
 
 
-### All Objects
+### Todos os objetos
 
 Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
 
@@ -130,7 +130,7 @@ In the following example, all objects will have a gray fill:
 ```
 
 
-### Specific Attribute
+### Atributos específicos
 
 Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
 
@@ -188,7 +188,7 @@ text[text|=Hello]
 ```
 
 
-## Style Sheet Declarations
+## Declarações de folhas de estilo
 
 ### Media Queries
 
@@ -241,7 +241,7 @@ The majority of form object attributes can be defined within a style sheet, exce
 
 Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
-#### Attribute Mapping
+#### Mapa de atributos
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
@@ -260,7 +260,7 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 > 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 
-#### Specific Attribute Values
+#### Valores de atributos específicos
 
 - For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
@@ -280,12 +280,12 @@ icon: url("edit.png"); /* relative path to the form file */
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
 
-## Priority Order
+## Ordem de prioridade
 
 4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
 
 
-### JSON vs Style Sheet
+### JSON vs Folha de estilo
 
 If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
 
@@ -306,7 +306,7 @@ To override this behavior, the style value must be followed with an `!important`
 
 
 
-### Multiple Style Sheets
+### Folhas de estilo múltiplas
 
 At runtime, 4D automatically prioritizes style sheets in the following order:
 
@@ -341,7 +341,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 > Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
 
-## Creating or Editing Style Sheets
+## Criação ou modificação de folhas de estilo
 
 You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
 

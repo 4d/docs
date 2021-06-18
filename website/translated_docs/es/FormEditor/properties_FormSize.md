@@ -27,7 +27,7 @@ Size options depend on the value of the **Size based on** option.
 
 | Name           | Data Type | Possible Values                                       |
 | -------------- | --------- | ----------------------------------------------------- |
-| formSizeAnchor | string    | Name of object to use to defined the size of the form |
+| formSizeAnchor | cadena    | Name of object to use to defined the size of the form |
 
 ---
 ## Height

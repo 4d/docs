@@ -1,6 +1,6 @@
 ---
 id: propertiesForm
-title: Form Properties
+title: Propiedades de los formularios
 ---
 
 ---
@@ -18,7 +18,7 @@ This property defines the color scheme for the form. By default when the propert
 
 | Name        | Data Type | Possible Values |
 | ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
+| colorScheme | cadena    | "dark", "light" |
 
 ---
 
@@ -34,9 +34,9 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON Grammar
 
-| Name  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| Name  | Data Type | Possible Values                                                          |
+| ----- | --------- | ------------------------------------------------------------------------ |
+| pages | colección | Collection of pages (each page is an object, page 0 is the first element |
 
 ---
 
@@ -66,7 +66,7 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                | JSON grammar     | Description                                                   | Supported with              |
+| Form Type                | JSON grammar     | Descripción                                                   | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
 | Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
@@ -79,7 +79,7 @@ Supported types depend on the form category:
 
 | Name        | Data Type | Possible Values                                              |
 | ----------- | --------- | ------------------------------------------------------------ |
-| destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+| destination | cadena    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
 ---
 
@@ -96,7 +96,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 | Name          | Data Type | Possible Values                                                                                                    |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| inheritedForm | cadena    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
 ---
 
@@ -129,7 +129,7 @@ Only project forms can be specified as published subforms.
 
 | Name   | Data Type | Possible Values |
 | ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
+| shared | booleano  | true, false     |
 
 
 ---
@@ -148,7 +148,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 | Name             | Data Type | Possible Values |
 | ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
+| memorizeGeometry | booleano  | true, false     |
 
 #### See also
 [**Save Value**](FormObjects/properties_Object.md#save-value)
@@ -174,6 +174,6 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 | Name        | Data Type | Possible Values                                        |
 | ----------- | --------- | ------------------------------------------------------ |
-| windowTitle | string    | The name of the window as plain text or as a reference |
+| windowTitle | cadena    | The name of the window as plain text or as a reference |
 
 

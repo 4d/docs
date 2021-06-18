@@ -240,12 +240,12 @@ Function add($x : Variant; $y : Integer): Integer
 > The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 > 
 > ```4d
-Function add($x : Integer)
-  var $2; $value : Integer
-  var $0 : Text
-  $value:=$x+$2
-  $0:=String($value)
-```
+> Function add($x : Integer)
+>   var $2; $value : Integer
+>   var $0 : Text
+>   $value:=$x+$2
+>   $0:=String($value)
+> ```
 
 
 

@@ -19,22 +19,22 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
 
-| Property       | Type               | Description                                                                                                                                                                                                                                       |
+| Property       | Tipo               | Descripción                                                                                                                                                                                                                                       |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
+| `values`       | Colección          | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
 | `currentValue` | same as Collection | Text entered by the user                                                                                                                                                                                                                          |
 
 If the object contains other properties, they are ignored.
 
 When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
 
-### Using an array
+### Utilizar un array
 
 Please refer to **Using an array** in the [drop-down list page](dropdownList_Overview.md#using-an-array) for information about how to initialize the array.
 
 When the user enters text into the combo box, the 0th element of the array gets the entered text.
 
-### Using a choice list
+### Utilizar una lista de selección
 
 If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. This makes it easier to manage listed fields/variables.
 > If you use a hierarchical list, only the first level is displayed and can be selected.

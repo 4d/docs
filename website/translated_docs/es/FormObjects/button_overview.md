@@ -1,6 +1,6 @@
 ---
 id: buttonOverview
-title: Button
+title: Botón
 ---
 
 A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
@@ -271,7 +271,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 
 
-### Help
+### Ayuda
 
 
 The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.

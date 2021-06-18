@@ -16,7 +16,7 @@ This option allows you to configure the default 4D display at startup, when the 
 *   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 *   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
 *   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+> > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
 ### Automatic form creation
 
@@ -112,5 +112,5 @@ URL access to the on-line documentation for the version on 4D Doc Center. 4D bui
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
 *   When it is checked, 4D first looks for the page in the local folder. If it is found, 4D displays the page in the current browser. If not, 4D will automatically look for it in the on-line documentation of the Web site. This makes it possible to access the documentation even when you are offline.
-*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Opciones de redimensionamiento
 ---
 
 ---
@@ -35,7 +35,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 | Name         | Data Type | Possible Values         |
 | ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| resizingMode | cadena    | "rightToLeft", "legacy" |
 
 #### Objects Supported
 
@@ -51,7 +51,7 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                                 |
+| Option | JSON value | Resultado                                                                                                              |
 | ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
 | Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
@@ -62,7 +62,7 @@ Three options are available:
 
 | Name    | Data Type | Possible Values         |
 | ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| sizingX | cadena    | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -76,7 +76,7 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                               |
+| Option | JSON value | Resultado                                                                                                            |
 | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
@@ -87,7 +87,7 @@ Three options are available:
 
 | Name    | Data Type | Possible Values         |
 | ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| sizingY | cadena    | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -113,11 +113,11 @@ When this property is not applied to the splitter, the result is as follows:
 
 | Name         | Data Type |           Possible Values            |
 |:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| splitterMode |  cadena   | "move" (pusher), "resize" (standard) |
 
 #### Objects Supported
 
-[Splitter](splitterTabControlOverview#splitters)
+[Separador](splitterTabControlOverview#splitters)
 
 
 
@@ -131,7 +131,7 @@ Designates if the size of the column can be modified by the user.
 
 | Name      | Data Type | Possible Values |
 |:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| resizable | booleano  | "true", "false" |
 
 #### Objects Supported
 

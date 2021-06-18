@@ -8,11 +8,11 @@ title: On Close Box
 | 22   | Form             | The window’s close box has been clicked |
 
 
-## Description
+## Descripción
 
 The `On Close Box` event is generated when the user clicks on the clos box of the window.
 
-### Example
+### Ejemplo
 
 This example shows how to respond to a close window event with a form used for record data entry:
 

@@ -68,7 +68,7 @@ Une collection est initialisée avec :
 
 
 
-## Nouvelle collection
+## `Nouvelle collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -147,7 +147,7 @@ You create a new collection and then add a new element:
 
 
 
-## Nouvelle collection partagée
+## `Nouvelle collection partagée`
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -1023,7 +1023,7 @@ In case of inconsistency, the following rules apply:
 The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* receives the following parameters:
 
@@ -1118,7 +1118,7 @@ The code for ***TypeLookUp*** is:
 The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* receives the following parameters:
 
@@ -1217,7 +1217,7 @@ The code for ***FindCity*** is:
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s).
 
 *methodName* receives the following parameters:
 
@@ -1559,6 +1559,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 #### Exemple
 
+
 ```4d
  var $col : Collection //$col.length initialized to 0
  $col:=New collection("one";"two";"three") //$col.length updated to 3
@@ -1598,7 +1599,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* receives the following parameters:
 
@@ -1969,7 +1970,7 @@ $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-The ***sortCollection*** method:
+La méthode ***sortCollection*** :
 
 ```4d
 var$1Object
@@ -1998,22 +1999,22 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 **.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
-| Paramètres | Type |    | Description                |
-| ---------- | ---- |:--:| -------------------------- |
-| Résultat   | any  | <- | Last element of collection |
+| Paramètres | Type |    | Description                   |
+| ---------- | ---- |:--:| ----------------------------- |
+| Résultat   | any  | <- | Dernier élément de collection |
 <!-- END REF -->
 
 
 #### Description
 
-The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
+La fonction `.pop()` <!-- REF #collection.pop().Summary -->supprime le dernier élément de la collection et le retourne comme résultat de la fonction<!-- END REF -->.
 > This function modifies the original collection.
 
-When applied to an empty collection, `.pop()` returns ***undefined***.
+Lorsqu'il est appliqué à une collection vide, .`pop()` retourne ***undefined***.
 
 #### Exemple
 
-`.pop()`, used in conjunction with [`.push()`](#push), can be used to implement a first-in, last-out stack feature:
+`.pop()`, combiné à [`push()`](#push), peut être utilisé pour implémenter une fonctionnalité last in first out de traitement des données empilées :
 
 ```4d
  var $stack : Collection
@@ -2045,16 +2046,16 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 **.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
-| Paramètres | Type       |    | Description                                   |
-| ---------- | ---------- |:--:| --------------------------------------------- |
-| element    | Mixed      | -> | Element(s) to add to the collection           |
-| Résultat   | Collection | <- | Original collection containing added elements |
+| Paramètres | Type       |    | Description                                         |
+| ---------- | ---------- |:--:| --------------------------------------------------- |
+| element    | Mixed      | -> | Élément(s) à ajouter à la collection                |
+| Résultat   | Collection | <- | Collection originale contenant des éléments ajoutés |
 <!-- END REF -->
 
 
 #### Description
 
-The `.push()` function <!-- REF #collection.push().Summary -->appends one or more *element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
+La fonction `.push()`<!-- REF # collection.push().Summary -->ajoute un ou plusieurs *élément*(s) à la fin de l'instance de collection et retourne la collection modifiée<!-- END REF -->.
 > This function modifies the original collection.
 
 
@@ -2072,7 +2073,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 #### Exemple 2
 
-You want to sort the resutling collection:
+Vous souhaitez trier la collection résultante :
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2105,18 +2106,18 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
-| Paramètres    | Type       |    | Description                                       |
-| ------------- | ---------- |:--:| ------------------------------------------------- |
-| queryString   | Texte      | -> | Search criteria                                   |
-| value         | Mixed      | -> | Value(s) to compare when using placeholder(s)     |
-| querySettings | Objet      | -> | Query options: parameters, attributes             |
-| Résultat      | Collection | <- | Element(s) matching queryString in the collection |
+| Paramètres    | Type       |    | Description                                               |
+| ------------- | ---------- |:--:| --------------------------------------------------------- |
+| queryString   | Texte      | -> | Search criteria                                           |
+| value         | Mixed      | -> | Value(s) to compare when using placeholder(s)             |
+| querySettings | Objet      | -> | Options de requête : paramètres, attributs                |
+| Résultat      | Collection | <- | Élément(s) correspondant à queryString dans la collection |
 <!-- END REF -->
 
 
 #### Description
 
-The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
+La fonction `.query()` <!-- REF #collection.query().Summary -->retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche <!-- END REF -->définis par *queryString* et (éventuellement) *value* ou *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
 The *queryString* parameter uses the following syntax:
@@ -2125,9 +2126,9 @@ The *queryString* parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using , value and *querySettings* parameters, please refer to the **dataClass** `.query()` function description.
+For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
 
-
+> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Exemple 1
 
@@ -2162,14 +2163,14 @@ For detailed information on how to build a query using , value and *querySetting
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-This example returns persons whose name contains "in":
+Cet exemple retourne les personnes dont le nom contient "in" :
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-This example returns persons whose name does not begin with a string from a variable (entered by the user, for example):
+Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2177,14 +2178,14 @@ This example returns persons whose name does not begin with a string from a vari
   //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
-This example returns persons whose age is not known (property set to null or undefined):
+Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
 
 ```4d
  $col:=$c.query("age=null") //placeholders not allowed with "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
-This example returns persons hired more than 90 days ago:
+Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
@@ -2194,7 +2195,7 @@ This example returns persons hired more than 90 days ago:
 
 #### Example 3
 
-More examples of queries can be found in the `dataClass.query()` page. 
+Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`. 
 
 <!-- END REF -->
 
@@ -2216,24 +2217,24 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 <!-- REF #collection.reduce().Params -->
-| Paramètres | Type                                            |    | Description                                                          |
-| ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | Texte                                           | -> | Name of the function to call to process collection elements          |
-| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                 |
-| Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
+| Paramètres | Type                                               |    | Description                                                               |
+| ---------- | -------------------------------------------------- |:--:| ------------------------------------------------------------------------- |
+| methodName | Texte                                              | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
+| initValue  | Texte, Numérique, Objet, Collection, Date, Booléen | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
+| param      | expression                                         | -> | Parameter(s) to pass to *methodName*                                      |
+| Résultat   | Texte, Numérique, Objet, Collection, Date, Booléen | <- | Résultat de la valeur de l'accumulateur                                   |
 <!-- END REF -->
 
 
 #### Description
 
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la méthode callback *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique<!-- END REF -->.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in param (optional). *methodName* takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif). *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S'il est omis, *$1.accumulator* commence par *Undefined*.
 
 *methodName* receives the following parameters:
 
@@ -2256,7 +2257,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
  $r:=$c.reduce("Multiply";1) //returns 86400
 ```
 
-With the following ***Multiply*** method:
+Avec la méthode ***Multiply*** suivante :
 
 ```4d
  If(Value type($1.value)=Is real)
@@ -2266,7 +2267,7 @@ With the following ***Multiply*** method:
 
 #### Exemple
 
-This example allows reducing several collection elements to a single one:
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection
@@ -2278,7 +2279,7 @@ This example allows reducing several collection elements to a single one:
  $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+Avec la méthode ***Flatten*** suivante :
 
 ```4d
  If($1.accumulator=Null)
@@ -2308,28 +2309,29 @@ With the following ***Flatten*** method:
 <!-- REF #collection.remove().Params -->
 | Paramètres | Type        |    | Description                                           |
 | ---------- | ----------- |:--:| ----------------------------------------------------- |
-| index      | Entier long | -> | Element at which to start removal                     |
-| howMany    | Entier long | -> | Number of elements to remove, or 1 element if omitted |
-| Résultat   | Collection  | <- | Original collection without removed element(s)        |
+| index      | Entier long | -> | Élément à partir duquel la suppression peut commencer |
+| howMany    | Entier long | -> | Nombre d'éléments à supprimer, ou 1 élément si omis   |
+| Résultat   | Collection  | <- | Collection d'origine sans élément(s) supprimé(s)      |
 <!-- END REF -->
 
 
 #### Description
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
 > This function modifies the original collection.
 
-In *index*, pass the position where you want the element to be removed from the collection.
+Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
 > **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
 *   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
 *   If the calculated value < 0, *index* is set to 0.
 *   If the calculated value > the length of the collection, *index* is set to the length.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+Dans *howMany*, passez le nombre d'éléments à supprimer de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
 
 
-If you try to remove an element from an empty collection, the method does nothing (no error is generated).
+
+Si vous essayez de supprimer un élément d'une collection vide, la méthode ne fait rien (aucune erreur n'est générée).
 
 
 #### Exemple
@@ -2367,23 +2369,23 @@ If you try to remove an element from an empty collection, the method does nothin
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| Paramètres   | Type                                            |    | Description                        |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
-| size         | Entier long                                     | -> | New size of the collection         |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
-| Résultat     | Collection                                      | <- | Resized original collection        |
+| Paramètres   | Type                                               |    | Description                                         |
+| ------------ | -------------------------------------------------- |:--:| --------------------------------------------------- |
+| size         | Entier long                                        | -> | Nouvelle taille de la collection                    |
+| defaultValue | Numérique, Texte, Objet, Collection, Date, Booléen | -> | Valeur par défaut pour remplir de nouveaux éléments |
+| Résultat     | Collection                                         | <- | Collection d'origine redimensionnée                 |
 <!-- END REF -->
 
 
 #### Description
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+La fonction `.resize()` <!-- REF #collection.resize().Summary -->définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée<!-- END REF -->.
 > This function modifies the original collection.
 
 *   If *size* < collection length, exceeding elements are removed from the collection.
 *   If *size* > collection length, the collection length is increased to size.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre *defaultValue*.
 
 #### Exemple
 
@@ -2401,6 +2403,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->
@@ -2425,13 +2428,13 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- REF #collection.reverse().Params -->
 | Paramètres | Type       |    | Description                     |
 | ---------- | ---------- |:--:| ------------------------------- |
-| Résultat   | Collection | <- | Inverted copy of the collection |
+| Résultat   | Collection | <- | Copie inversée de la collection |
 <!-- END REF -->
 
 
 #### Description
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
+La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
 #### Exemple
@@ -2462,18 +2465,18 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 **.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
-| Paramètres | Type |    | Description                 |
-| ---------- | ---- |:--:| --------------------------- |
-| Résultat   | any  | <- | First element of collection |
+| Paramètres | Type |    | Description                   |
+| ---------- | ---- |:--:| ----------------------------- |
+| Résultat   | any  | <- | Premier élément de collection |
 <!-- END REF -->
 
 
 #### Description
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+La fonction `.shift()` <!-- REF #collection.shift().Summary -->supprime le premier élément de la collection et le retourne comme résultat de la fonction<!-- END REF -->.
 > This function modifies the original collection.
 
-If the collection is empty, this method does nothing.
+Si la collection est vide, cette méthode ne fait rien.
 
 #### Exemple
 
@@ -2506,20 +2509,20 @@ If the collection is empty, this method does nothing.
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
-| Paramètres | Type        |    | Description                                              |
-| ---------- | ----------- |:--:| -------------------------------------------------------- |
-| startFrom  | Entier long | -> | Index to start the search at (included)                  |
-| end        | Entier long | -> | End index (not included)                                 |
-| Résultat   | Collection  | <- | New collection containing sliced elements (shallow copy) |
+| Paramètres | Type        |    | Description                                                               |
+| ---------- | ----------- |:--:| ------------------------------------------------------------------------- |
+| startFrom  | Entier long | -> | Index pour démarrer la recherche (inclus)                                 |
+| end        | Entier long | -> | End index (not included)                                                  |
+| Résultat   | Collection  | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |
 <!-- END REF -->
 
 
 #### Description
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
+La fonction `.slice()` <!-- REF #collection.slice().Summary -->retourne une partie d'une collection dans une nouvelle collection<!-- END REF -->, sélectionnée de l'index *startFrom* à l'index de *fin* (fin non incluse). Cette fonction retourne une *copie superficielle* de la collection. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
 
 *   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
 *   If the calculated value < 0, *startFrom* is set to 0.
@@ -2558,12 +2561,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| Paramètres | Type        |    | Description                                               |
-| ---------- | ----------- |:--:| --------------------------------------------------------- |
-| startFrom  | Entier long | -> | Index to start the test at                                |
-| methodName | Texte       | -> | Name of the method to call for the test                   |
-| param      | Mixed       | -> | Parameter(s) to pass to *methodName*                      |
-| Résultat   | Booléen     | <- | True if at least one element successfully passed the test |
+| Paramètres | Type        |    | Description                                  |
+| ---------- | ----------- |:--:| -------------------------------------------- |
+| startFrom  | Entier long | -> | Index to start the test at                   |
+| methodName | Texte       | -> | Name of the method to call for the test      |
+| param      | Mixed       | -> | Parameter(s) to pass to *methodName*         |
+| Résultat   | Booléen     | <- | Vrai si au moins un élément a réussi le test |
 <!-- END REF -->
 
 
@@ -2612,7 +2615,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
  $b:=$c.some(1;"NumberGreaterThan0") //$b=false
 ```
 
-With the following *NumberGreaterThan0* method:
+Avec la méthode *NumberGreaterThan0* suivante :
 
 ```4d
  $1.result:=$1.value>0

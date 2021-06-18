@@ -92,7 +92,7 @@ title: Document クラス
 
 #### 説明
 
-`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -235,7 +235,7 @@ title: Document クラス
 #### 説明
 
 `.isWritable` プロパティは、 <!-- REF #document.isWritable.Summary -->ファイルがディスク上に存在し、書き込み可能な場合に true<!-- END REF -->を返します。
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
+> このプロパティは 4Dアプリケーションがディスクに書き込めるかどうか (アクセス権限) をチェックし、ファイルの *writable* (書き込み可能) 属性のみ依存するわけではありません。
 
 このプロパティは **読み取り専用** です。
 
@@ -366,7 +366,7 @@ title: Document クラス
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。 
 
@@ -390,7 +390,7 @@ title: Document クラス
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。 
 
@@ -470,7 +470,7 @@ title: Document クラス
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
 | overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
-| 戻り値               | 4D.File   | <- | Copied file                       |
+| 戻り値               | 4D.File   | <- | コピーされたファイル                        |
 <!-- END REF -->
 
 
@@ -478,11 +478,11 @@ title: Document クラス
 
 `.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+*destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
-If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+*destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
 | 定数             | 結果 | 説明                 |
 | -------------- | -- | ------------------ |
@@ -495,7 +495,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 #### 例題
 
-You want to copy a picture *file* from the user's document folder to the application folder:
+ユーザーのドキュメントフォルダーにあるピクチャーファイルを、アプリケーションフォルダー内にコピーします。
 
 ```4d
 var $source; $copy : Object
@@ -536,12 +536,12 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### 例題
 
-To save a document's contents in a `BLOB` field:
+ドキュメントの中身を `BLOB` フィールドに保存します:
 
 ```4d
  var $vPath : Text
  $vPath:=Select document("";"*";"Select a document";0)
- If(OK=1) //If a document has been chosen
+ If(OK=1) // キュメントが選択されていれば
     [aTable]aBlobField:=File($vPath;fk platform path).getContent()
  End if
 ```
@@ -566,7 +566,7 @@ To save a document's contents in a `BLOB` field:
 | 参照   | タイプ   |    | 説明                       |
 | ---- | ----- | -- | ------------------------ |
 | size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
-| 戻り値  | ピクチャー | <- | Icon                     |
+| 戻り値  | ピクチャー | <- | アイコン                     |
 <!-- END REF -->
 
 
@@ -574,9 +574,9 @@ To save a document's contents in a `BLOB` field:
 
 `.getIcon()` 関数は、 <!-- REF #document.getIcon().Summary -->ファイルのアイコンを返します<!-- END REF -->。
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
+任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
-If the file does not exist on disk, a default blank icon is returned.
+ファイルがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。
 
 **戻り値**
 
@@ -602,38 +602,38 @@ If the file does not exist on disk, a default blank icon is returned.
 
 
 <!-- REF #document.getText().Params -->
-| 参照          | タイプ  |    | 説明                              |
-| ----------- | ---- | -- | ------------------------------- |
-| charSetName | テキスト | -> | Name of character set           |
-| charSetNum  | 整数   | -> | Number of character set         |
-| breakMode   | 整数   | -> | Processing mode for line breaks |
-| 戻り値         | テキスト | <- | Text from the document          |
+| 参照          | タイプ  |    | 説明               |
+| ----------- | ---- | -- | ---------------- |
+| charSetName | テキスト | -> | 文字セットの名前         |
+| charSetNum  | 整数   | -> | 文字セットの番号         |
+| breakMode   | 整数   | -> | 改行の処理モード         |
+| 戻り値         | テキスト | <- | ドキュメントから取得したテキスト |
 <!-- END REF -->
 
 
 #### 説明
 `.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->。
 
-Optionally, you can designate the character set to be used for reading the contents. You can pass either:
+任意で、コンテンツの読み取りに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- *charSetName* に標準の文字セット名を含んだ文字列 ("ISO-8859-1" や "UTF-8" など) を渡します。
+- *charSetNum* に標準の文字セット名の MIBEnum ID (倍長整数) を渡します。
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> 4D によってサポートされている文字セットの一覧については、`CONVERT FROM TEXT` コマンドを参照ください。
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored). If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
+ドキュメントにバイトオーダーマーク (BOM) が含まれている場合、4D は *charSetName* または *charSetNum* 引数で設定されている文字セットではなく、BOM で指定されたものを使用します (結果として引数は無視されます)。 ドキュメントに BOM が含まれておらず、また *charSetName* および *charSetNum* 引数が渡されなかった場合、4D はデフォルトで "UTF-8" を文字セットとして使用します。
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
+*breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:
 
-| 定数                            | 結果 | 説明                                                                                                                                                                  |
-| ----------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0  | No processing                                                                                                                                                       |
-| `Document with native format` | 1  | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |
-| `Document with CRLF`          | 2  | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                     |
-| `Document with CR`            | 3  | Line breaks are converted to OS X format: CR (carriage return)                                                                                                      |
-| `Document with LF`            | 4  | Line breaks are converted to Unix format: LF (line feed)                                                                                                            |
+| 定数                            | 結果 | 説明                                                                                                        |
+| ----------------------------- | -- | --------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0  | 何も処理をしません。                                                                                                |
+| `Document with native format` | 1  | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
+| `Document with CRLF`          | 2  | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
+| `Document with CR`            | 3  | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
+| `Document with LF`            | 4  | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+*breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
 **戻り値**
 
@@ -641,7 +641,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 #### 例題
 
-Given the following text document (fields are separated by tabs):
+以下のテキストを持つドキュメントがある場合を考えます (フィールドはタブ区切りです):
 
 ```4d
 id name price vat
@@ -649,19 +649,19 @@ id name price vat
 2 café 1.05€ 19.6
 ```
 
-When you execute this code:
+以下のコードを実行すると:
 
 
 ```4d
- $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
+ $myFile:=Folder(fk documents folder).file("Billing.txt") // デフォルトでUTF-8
  $txt:=$myFile.getText()
 ```
-... you get:
+以下の結果が得られます:
 
 ```4d
   // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
   // \t = tab
-  // \r = CR
+  // \r = CR (キャリッジリターン)
 ```
  
 

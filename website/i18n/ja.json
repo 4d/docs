@@ -6,10 +6,10 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "コマンドライン・インターフェース"
       },
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Webデータエクスプローラー"
       },
       "Admin/debugLogFiles": {
         "title": "Description of log files"
@@ -21,13 +21,13 @@
         "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Web 管理"
       },
       "API/ClassClass": {
-        "title": "クラス"
+        "title": "Class"
       },
       "API/CollectionClass": {
-        "title": "コレクション"
+        "title": "Collection"
       },
       "API/CryptoKeyClass": {
         "title": "CryptoKey"
@@ -36,7 +36,7 @@
         "title": "DataClassAttribute"
       },
       "API/DataClassClass": {
-        "title": "データクラス"
+        "title": "DataClass"
       },
       "API/DataStoreClass": {
         "title": "DataStore"
@@ -51,7 +51,7 @@
         "title": "Email"
       },
       "API/EntityClass": {
-        "title": "エンティティ"
+        "title": "Entity"
       },
       "API/EntitySelectionClass": {
         "title": "EntitySelection"
@@ -78,7 +78,7 @@
         "title": "POP3Transporter"
       },
       "API/SessionClass": {
-        "title": "セッション"
+        "title": "Session"
       },
       "API/SignalClass": {
         "title": "Signal"
@@ -656,7 +656,7 @@
         "sidebar_label": "検査ページ"
       },
       "Notes/updates": {
-        "title": "Documentation updates"
+        "title": "ドキュメンテーション更新情報"
       },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
@@ -701,7 +701,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/compiler": {
-        "title": "Compilation"
+        "title": "コンパイル"
       },
       "Project/creating": {
         "title": "プロジェクトを開発する"
@@ -871,7 +871,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
-      "Web Development": "Web Development",
+      "Web Development": "Web 開発",
       "REST Server": "REST サーバー",
       "Client/Server": "クライアント/サーバー",
       "Forms": "フォーム",
@@ -897,20 +897,20 @@
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Web 開発",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Command Line Interface|no description given": "コマンドライン・インターフェース",
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
@@ -918,7 +918,7 @@
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
-    "Documentation updates|no description given": "Documentation updates",
+    "Documentation updates|no description given": "ドキュメンテーション更新情報",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Usuarios y sesiones
 ---
 
 REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
@@ -19,7 +19,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 
 
-## Example
+## Ejemplo
 
 In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
 

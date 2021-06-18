@@ -1,7 +1,7 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: Página Verificación
+sidebar_label: Página Verificación
 ---
 
 You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).

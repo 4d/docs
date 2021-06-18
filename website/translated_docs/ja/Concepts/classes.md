@@ -276,12 +276,12 @@ Function add($x : Variant; $y : Integer): Integer
 > メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
-Function add($x : Integer)
-  var $2; $value : Integer
-  var $0 : Text
-  $value:=$x+$2
-  $0:=String($value)
-```
+> Function add($x : Integer)
+>   var $2; $value : Integer
+>   var $0 : Text
+>   $value:=$x+$2
+>   $0:=String($value)
+> ```
 
 
 

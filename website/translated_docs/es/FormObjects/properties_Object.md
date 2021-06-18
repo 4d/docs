@@ -1,10 +1,10 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objetos
 ---
 
 ---
-## Type
+## Tipo
 
  `MANDATORY SETTING`
 
@@ -15,7 +15,7 @@ This property designates the type of the [active or inactive form object](formOb
 
 | Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
 | ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| type | cadena    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
 #### Objects Supported
@@ -39,7 +39,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 | Name | Data Type | Possible Values                                                      |
 | ---- | --------- | -------------------------------------------------------------------- |
-| name | string    | Any allowed name which does not belong to an already existing object |
+| name | cadena    | Any allowed name which does not belong to an already existing object |
 
 #### Objects Supported
 
@@ -55,19 +55,19 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Object                                     | Saved value                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Value of associated variable (0, 1, 2)                                                 |
-| [Drop-down List](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)          | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)               | Number of selected tab                                                                 |
+| Objeto                                        | Saved value                                                                            |
+| --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [Check Box](checkbox_overview.md)             | Value of associated variable (0, 1, 2)                                                 |
+| [Lista desplegable](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Botón radio](radio_overview.md)              | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Tab control](tabControl.md)                  | Number of selected tab                                                                 |
 
 
 #### JSON Grammar
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| memorizeValue | boolean   | true, false     |
+| memorizeValue | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -122,7 +122,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por ejemplo:
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
@@ -176,7 +176,7 @@ However, this property has a typing function in the following specific cases:
 
 | Name               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
+| dataSourceTypeHint | cadena    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
 
 #### Objects Supported
 
@@ -193,7 +193,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 | Name  | Data Type | Possible Values                                           |
 | ----- | --------- | --------------------------------------------------------- |
-| class | string    | One string with CSS name(s) separated by space characters |
+| class | cadena    | One string with CSS name(s) separated by space characters |
 
 
 #### Objects Supported
@@ -219,7 +219,7 @@ The collection or the entity selection must be available to the form when it is 
 
 | Name       | Data Type | Possible Values                                              |
 | ---------- | --------- | ------------------------------------------------------------ |
-| dataSource | string    | Expression that returns a collection or an entity selection. |
+| dataSource | cadena    | Expression that returns a collection or an entity selection. |
 
 #### Objects Supported
 
@@ -231,7 +231,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Data Source
+## Fuente de datos
 
 Specify the type of list box.
 
@@ -246,7 +246,7 @@ Specify the type of list box.
 
 | Name        | Data Type | Possible Values                                             |
 | ----------- | --------- | ----------------------------------------------------------- |
-| listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
+| listboxType | cadena    | "array", "currentSelection", "namedSelection", "collection" |
 
 #### Objects Supported
 
@@ -267,11 +267,11 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 | Name           | Data Type | Possible Values                                               |
 | -------------- | --------- | ------------------------------------------------------------- |
-| pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
+| pluginAreaKind | cadena    | Name of the plug-in external area (starts with a % character) |
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
 
 
 
@@ -285,12 +285,12 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 | Name       | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
-| radioGroup | string    | Radio group name |
+| radioGroup | cadena    | Radio group name |
 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[Botón radio](radio_overview.md)
 
 
 
@@ -312,9 +312,9 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| Name  | Data Type | Possible Values |
+| ----- | --------- | --------------- |
+| texto | cadena    | any text        |
 
 #### Objects Supported
 
@@ -334,17 +334,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Date | Time | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   | X    | X    | X    | X    |      | Same as column type |
-| Maximum               | X   | X    | X    | X    | X    |      | Same as column type |
-| Sum                   | X   |      |      | X    | X    |      | Same as column type |
-| Count                 | X   | X    | X    | X    | X    | X    | Longint             |
-| Average               | X   |      |      | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variance(*)           | X   |      |      | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X    | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
+| Minimum               | X   | X     | X     | X    | X    |      | Same as column type |
+| Maximum               | X   | X     | X     | X    | X    |      | Same as column type |
+| Sum                   | X   |       |       | X    | X    |      | Same as column type |
+| Count                 | X   | X     | X     | X    | X    | X    | Entero largo        |
+| Average               | X   |       |       | X    |      |      | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
+| Variance(*)           | X   |       |       | X    |      |      | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
@@ -370,7 +370,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 | Name                | Data Type | Possible Values                                                                                       |
 | ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| variableCalculation | cadena    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
 #### Objects Supported
 

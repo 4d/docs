@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Imagen
 ---
 
 ---
@@ -16,9 +16,9 @@ Two main locations can be used for static picture path:
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                             |
-|:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+|  Name  | Data Type | Possible Values                             |
+|:------:|:---------:| ------------------------------------------- |
+| imagen |   texto   | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported
@@ -27,7 +27,7 @@ Two main locations can be used for static picture path:
 
 
 ---
-## Display
+## Visualización
 
 
 ### Scaled to fit
@@ -66,7 +66,7 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 | Name          | Data Type | Possible Values                                          |
 | ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| pictureFormat | cadena    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 #### Objects Supported
 

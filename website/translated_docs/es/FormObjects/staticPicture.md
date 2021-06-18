@@ -1,6 +1,6 @@
 ---
 id: staticPicture
-title: Static picture
+title: Imagen estática
 ---
 
 
@@ -15,7 +15,7 @@ Static pictures are stored outside the forms and inserted by reference. In the f
 
 
 
-## Format and location
+## Formato y ubicación
 
 The original picture must be stored in a format managed natively by 4D (4D recognizes the main picture formats: JPEG, PNG, BMP, SVG, GIF, etc.).
 

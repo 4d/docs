@@ -12,7 +12,7 @@ The following options are available:
 *   **Name** ("ID" by default): Sets the default name of primary key fields. You can use any name you want, as long as it respects the [4D naming rules](Concepts/identifiers.md#tables-and-fields).
 *   **Type** ([Longint](Concepts/number.md) by default): Sets the default type of primary key fields. You can choose the UUID type. In this case, the primary key fields created by default are of the [Alpha type](Concepts/string.md) and have the **UUID Format** and **Auto UUID** field properties checked.
 
-## Structure editor
+## Editor de estructura
 
 This group of options configures the display of the 4D Structure editor.
 

@@ -69,17 +69,17 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New collection
+## `New collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| 参照    | タイプ                                         |    | 説明             |
-| ----- | ------------------------------------------- |:--:| -------------- |
-| value | 数値、テキスト、日付、時間、ブール、オブジェクト、コレクション、ピクチャー、ポインター | -> | コレクションの値       |
-| 戻り値   | コレクション                                      | <- | New collection |
+| 参照    | タイプ                                         |    | 説明        |
+| ----- | ------------------------------------------- |:--:| --------- |
+| value | 数値、テキスト、日付、時間、ブール、オブジェクト、コレクション、ピクチャー、ポインター | -> | コレクションの値  |
+| 戻り値   | コレクション                                      | <- | 新しいコレクション |
 <!-- END REF -->
 
 
@@ -148,7 +148,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New shared collection
+## `New shared collection`
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -160,10 +160,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| 参照    | タイプ                                 |    | 説明                    |
-| ----- | ----------------------------------- |:--:| --------------------- |
-| value | 数値、テキスト、日付、時間、ブール、共有オブジェクト、共有コレクション | -> | 共有コレクションの値            |
-| 戻り値   | コレクション                              | <- | New shared collection |
+| 参照    | タイプ                                 |    | 説明          |
+| ----- | ----------------------------------- |:--:| ----------- |
+| value | 数値、テキスト、日付、時間、ブール、共有オブジェクト、共有コレクション | -> | 共有コレクションの値  |
+| 戻り値   | コレクション                              | <- | 新規の共有コレクション |
 <!-- END REF -->
 
 
@@ -1560,6 +1560,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 例題
 
+
 ```4d
  var $col : Collection // $col.length が 0 に初期化されます
  $col:=New collection("one";"two";"three") // $col.length が 3 に更新されます
@@ -1783,10 +1784,10 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 *   *ascOrDesc* : Integer。 **Objects and collections** テーマから、以下の定数のいずれか一つを渡します:
 
-    | 定数            | タイプ  | 結果 | 説明                   |
-    | ------------- | ---- | -- | -------------------- |
-    | ck ascending  | 倍長整数 | 0  | 要素は昇順に並べられます (デフォルト) |
-    | ck descending | 倍長整数 | 1  | 要素は降順に並べられます         |
+    | 定数            | タイプ  | 値 | 説明                   |
+    | ------------- | ---- | - | -------------------- |
+    | ck ascending  | 倍長整数 | 0 | 要素は昇順に並べられます (デフォルト) |
+    | ck descending | 倍長整数 | 1 | 要素は降順に並べられます         |
 
     このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 
@@ -2126,9 +2127,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 ```
 
-*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、[`dataClass.query()`](dataclassClass.md#query) 関数を参照ください。
+*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、[`DataClass.query()`](DataClassClass.md#query) 関数を参照ください。
 
-
+> *queryString* 引数および *formula* オブジェクト引数の使用に関わらず、フォーミュラは `collection.query()` 関数でサポートされていません。
 
 #### 例題 1
 
@@ -2326,6 +2327,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *howMany* には、*index* の位置から削除する要素の数を渡します。 *howMany* が省略された場合、1つの要素のみが削除されます。
 
 
+
 空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。
 
 
@@ -2398,6 +2400,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->

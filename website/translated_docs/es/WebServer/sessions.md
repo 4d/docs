@@ -84,7 +84,7 @@ You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#set
 
 > In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
-Example:
+Ejemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -95,7 +95,7 @@ End if
 ```
 
 
-## Example
+## Ejemplo
 
 In a CRM application, each salesperson manages their own client portfolio. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
 

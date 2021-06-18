@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Entrada
 ---
 
 ---
@@ -15,7 +15,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Name       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| spellcheck | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -42,7 +42,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 | Name        | Data Type | Possible Values                       |
 | ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| contextMenu | cadena    | "automatic" (used if missing), "none" |
 
 #### Objects Supported
 
@@ -67,7 +67,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Name      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+| enterable | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -99,7 +99,7 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | Description                                                                                                                                  |
+| Entry Filter                    | Descripción                                                                                                                                  |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
 | &9                              | Allow only numbers.                                                                                                                          |
@@ -125,7 +125,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 | Name        | Data Type | Possible Values                                                                                                              |
 | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | string    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| entryFilter | cadena    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
 
 #### Objects Supported
@@ -159,7 +159,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 | Name      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
-| focusable | boolean   | true, false     |
+| focusable | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -182,7 +182,7 @@ By default, the object uses the current keyboard layout.
 
 | Name            | Data Type | Possible Values                                                             |
 | --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| keyboardDialect | texto     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### Objects Supported
@@ -206,7 +206,7 @@ This property is available for [inputs objects](input_overview.md) containing ex
 - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
   ![](assets/en/FormObjects/multilineNo.png)
 
-#### Yes
+#### Sí
 When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
 
 
@@ -214,12 +214,12 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 | Name      | Data Type | Possible Values                                   |
 | --------- | --------- | ------------------------------------------------- |
-| multiline | text      | "yes", "no", "automatic" (default if not defined) |
+| multiline | texto     | "yes", "no", "automatic" (default if not defined) |
 
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 
@@ -250,7 +250,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 | Name        | Data Type | Possible Values                                                              |
 | ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| placeholder | cadena    | Text to be displayed (grayed out) when the object does not contain any value |
 
 #### Objects Supported
 
@@ -273,7 +273,7 @@ This property keeps the selection visible within the object after it has lost th
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| showSelection | boolean   | true, false     |
+| showSelection | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -299,13 +299,13 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 | Name            | Data Type | Possible Values                                                                                                                                                                                                                                                                             |
 | --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean   | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean   | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutAccel   | booleano  | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | booleano  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | booleano  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | booleano  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | booleano  | true, false                                                                                                                                                                                                                                                                                 |
 |                 |           |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| shortcutKey     | cadena    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### Objects Supported
@@ -329,7 +329,7 @@ When this option is not enabled, users must first select the cell row and then c
 
 | Name            | Data Type | Possible Values |
 | --------------- | --------- | --------------- |
-| singleClickEdit | boolean   | true, false     |
+| singleClickEdit | booleano  | true, false     |
 
 #### Objects Supported
 

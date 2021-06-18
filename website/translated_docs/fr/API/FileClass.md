@@ -573,7 +573,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe or .plist file. The function must be used with an existing .exe or .plist file.
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 

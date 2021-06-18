@@ -69,7 +69,7 @@ A collection is initialized with:
 
 
 
-## New collection
+## `New collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -148,7 +148,7 @@ You create a new collection and then add a new element:
 
 
 
-## New shared collection
+## `New shared collection`
 
 <details><summary>History</summary>
 | Version | Changes |
@@ -1560,6 +1560,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 #### Beispiel
 
+
 ```4d
  var $col : Collection //$col.length initialized to 0
  $col:=New collection("one";"two";"three") //$col.length updated to 3
@@ -2126,9 +2127,9 @@ The *queryString* parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using , value and *querySettings* parameters, please refer to the **dataClass** `.query()` function description.
+For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
 
-
+> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Beispiel 1
 
@@ -2326,6 +2327,7 @@ In *index*, pass the position where you want the element to be removed from the 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
 
 
+
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
 
 
@@ -2398,6 +2400,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->

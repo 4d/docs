@@ -1,6 +1,6 @@
 ---
 id: licenses
-title: Managing 4D Licenses
+title: Gestión de licencias 4D
 ---
 
 Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
@@ -97,7 +97,7 @@ In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can 
 
 Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
-### License Management
+### Gestión de licencias
 
 After you log in, you can click on **License list** at the top right of the page:
 

@@ -1,6 +1,6 @@
 ---
 id: creating
-title: Creating menus and menu bars
+title: Creación de menús y barras de menús
 ---
 
 You can create menus and menu bars:

@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: Subformulario
 ---
 
 ---
@@ -12,11 +12,11 @@ Specifies if the user can delete subrecords in a list subform.
 
 | Name            | Data Type | Possible Values             |
 | --------------- | --------- | --------------------------- |
-| deletableInList | boolean   | true, false (default: true) |
+| deletableInList | booleano  | true, false (default: true) |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -35,11 +35,11 @@ You use this property to declare the detail form to use in the subform. It can b
 
 | Name       | Data Type | Possible Values                                                                                                                     |
 | ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| detailForm | cadena    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Double-click on empty row
@@ -53,11 +53,11 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 | Name                         | Data Type | Possible Values                    |
 | ---------------------------- | --------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string    | "addSubrecord" or "" to do nothing |
+| doubleClickInEmptyAreaAction | cadena    | "addSubrecord" or "" to do nothing |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 #### See also
 [Double click on row](#double-click-on-row)
@@ -81,11 +81,11 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 | Name                   | Data Type | Possible Values                     |
 | ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| doubleClickInRowAction | cadena    | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 #### See also
@@ -103,12 +103,12 @@ When a list subform has this property enabled, the user can modify record data d
 
 | Name            | Data Type | Possible Values |
 | --------------- | --------- | --------------- |
-| enterableInList | boolean   | true, false     |
+| enterableInList | booleano  | true, false     |
 
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -122,11 +122,11 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 | Name     | Data Type | Possible Values                                                                                                                     |
 | -------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| listForm | cadena    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 
@@ -139,11 +139,11 @@ Specifies the table that the list subform belongs to (if any).
 
 | Name  | Data Type | Possible Values                   |
 | ----- | --------- | --------------------------------- |
-| table | string    | 4D table name, or "" if no table. |
+| table | cadena    | 4D table name, or "" if no table. |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Selection Mode
@@ -162,8 +162,8 @@ Designates the option for allowing users to select rows:
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| selectionMode | cadena    | "multiple", "single", "none" |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
