@@ -479,8 +479,32 @@
 <blockquote>
 <p>The <code>transporter</code> object must have already been created using the <code>SMTP New transporter</code> command.</p>
 </blockquote>
-<p>The method creates the SMTP connection if it is not already alive. If the <code>.keepAlive</code> property of the <code>transporter</code> object is <strong>false</strong>, the SMTP connection is automatically closed after the execution of <code>.send()</code>, otherwise it stays alive until the <code>transporter</code> object is destroyed. For more information, please refer to the <code>SMTP New transporter</code> command description.</p>
+<p>The method creates the SMTP connection if it is not already alive. If the <code>.keepAlive</code> property of the <code>transporter</code> object is <strong>false</strong>, the SMTP connection is automatically closed after the execution of <code>.send()</code>, otherwise it stays alive until the <code>transporter</code> object is destroyed. For more information, please refer to the <a href="#smtp-new-transporter"><code>SMTP New transporter</code></a> command description.</p>
 <p>In <em>mail</em>, pass a valid <a href="/docs/en/API/EmailObjectClass.html#email-object"><code>Email</code> object</a> to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.</p>
+<h4><a class="anchor" aria-hidden="true" id="returned-object-1"></a><a href="#returned-object-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returned object</h4>
+<p>The function returns an object describing the SMTP status of the operation. This object can contain the following properties:</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td>True if the send is successful, False otherwise</td></tr>
+<tr><td>status</td><td>number</td><td>Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing)</td></tr>
+<tr><td>statusText</td><td>text</td><td>Status message returned by the SMTP server</td></tr>
+</tbody>
+</table>
+<p>In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the <code>ON ERR CALL</code> command. Use the <code>GET LAST ERROR STACK</code> command for information about the error.</p>
+<p>In this case, the resulting status object contains the following values:</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>False</td></tr>
+<tr><td>status</td><td>0</td></tr>
+<tr><td>statusText</td><td>&quot;Failed to send email&quot;</td></tr>
+</tbody>
+</table>
 <h2><a class="anchor" aria-hidden="true" id="sendtimeout"></a><a href="#sendtimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sendTimeOut</h2>
 <p><details><summary>History</summary></p>
 <table>

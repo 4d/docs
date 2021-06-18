@@ -383,7 +383,7 @@
 <tr><td>lockInfo</td><td></td><td>object</td><td>Information about the lock origin</td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>Process id</td></tr>
 <tr><td></td><td>user_name</td><td>text</td><td>Session user name on the machine</td></tr>
-<tr><td></td><td>user4d_id</td><td>text</td><td>User name in the 4D database directory</td></tr>
+<tr><td></td><td>user4d_alias</td><td>text</td><td>User alias if defined by <code>SET USER ALIAS</code>, otherwise user name in the 4D directory</td></tr>
 <tr><td></td><td>host_name</td><td>text</td><td>Machine name</td></tr>
 <tr><td></td><td>task_name</td><td>text</td><td>Process name</td></tr>
 <tr><td></td><td>client_version</td><td>text</td></tr>
@@ -495,6 +495,7 @@
 <ul>
 <li>If a property of the object does not exist in the dataclass, it is ignored.</li>
 <li>Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see <a href="/docs/en/Concepts/data-types.html#converting-data-types"><code>Converting data types</code></a>), otherwise the attribute is left untouched.</li>
+<li>The primary key can be given as is or with a &quot;__KEY&quot; property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when <a href="#save">.save()</a> is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null.</li>
 </ul>
 <p><em>filler</em> can handle a related entity under the following conditions:</p>
 <ul>
@@ -1048,7 +1049,7 @@
 <tr><td>lockInfo</td><td></td><td>object</td><td>Information about the lock origin</td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>Process id</td></tr>
 <tr><td></td><td>user_name</td><td>text</td><td>Session user name on the machine</td></tr>
-<tr><td></td><td>user4d_id</td><td>text</td><td>User name in the 4D database directory</td></tr>
+<tr><td></td><td>user4d_alias</td><td>text</td><td>User alias if defined by <code>SET USER ALIAS</code>, otherwise user name in the 4D directory</td></tr>
 <tr><td></td><td>host_name</td><td>text</td><td>Machine name</td></tr>
 <tr><td></td><td>task_name</td><td>text</td><td>Process name</td></tr>
 <tr><td></td><td>client_version</td><td>text</td><td></td></tr>

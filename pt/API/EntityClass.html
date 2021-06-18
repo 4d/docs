@@ -491,6 +491,7 @@
 <ul>
 <li>If a property of the object does not exist in the dataclass, it is ignored.</li>
 <li>Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see <a href="/docs/pt/Concepts/data-types.html#converting-data-types"><code>Converting data types</code></a>), otherwise the attribute is left untouched.</li>
+<li>The primary key can be given as is or with a &quot;__KEY&quot; property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when <a href="#save">.save()</a> is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null.</li>
 </ul>
 <p><em>filler</em> can handle a related entity under the following conditions:</p>
 <ul>

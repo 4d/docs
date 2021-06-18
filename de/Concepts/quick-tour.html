@@ -161,7 +161,7 @@ End for</span>
 <p>Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, akzeptiert Objektnotation eine Folge von Symbolen, um auf Untereigenschaften zuzugreifen, wie zum Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
 </code></pre>
-<p>Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftnamen Klammern () anfügen, um die Methode auszuführen:</p>
+<p>Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftsnamen Klammern () anfügen, um die Methode auszuführen:</p>
 <pre><code class="hljs"><span class="hljs-built_in">$f</span>:=<span class="hljs-keyword">New</span> object
 <span class="hljs-built_in">$f</span>.message:=<span class="hljs-keyword">New</span> formula(ALERT(<span class="hljs-string">"Hello world!"</span>))
 <span class="hljs-built_in">$f</span>.message() <span class="hljs-comment">//displays "Hello world!"</span>
@@ -320,7 +320,7 @@ For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number
 End for</span>
 </code></pre>
 <ul>
-<li><strong>Mehrzeilige Kommentarblöcke</strong> können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:</li>
+<li><strong>Mehrzeilige Kommentarblöcke</strong> können eine unbegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
 <span class="hljs-comment">/*
