@@ -86,21 +86,21 @@ Para crear una nueva clase, puede:
 
 #### Soporte del código de clase
 
-In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+En las diferentes ventanas 4D (editor de código, compilador, depurador, explorador de ejecución), el código de la clase se maneja básicamente como un método proyecto con algunas especificidades:
 
-- In the code editor:
-    - a class cannot be run
-    - a class function is a code block
-    - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
-    - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> formato.
+- En el editor de código:
+    - una clase no puede ser ejecutada
+    - una función de clase es un bloque de código
+    - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
+    - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
+- En el explorador de ejecución y el depurador, las funciones de clase se muestran con el formato \<ClassName> constructor o \<ClassName>.\<FunctionName> formato.
 
 ## Class stores
 
-Available classes are accessible from their class stores. Two class stores are available:
+Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
-- `cs` for user class store
-- `4D` for built-in class store
+- `cs` para el class store usuario
+- `4D` para el class store integrado
 
 
 ### `cs`
