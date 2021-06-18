@@ -35,25 +35,25 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 ## Operadores de cadenas
 
-| Operación         | Sintaxis         | Devuelve | Expresión               | Valor    |
-| ----------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenación     | Cadena + Cadena  | Cadena   | "abc" + "def"           | "abcdef" |
-| Repetición        | Cadena * Número  | Cadena   | "ab" * 3                | "ababab" |
-| Igual             | Cadena = Cadena  | Booleano | "abc" = "abc"           | True     |
-|                   |                  |          | "abc" = "abd"           | False    |
-| Desigualdad       | String # String  | Booleano | "abc" # "abd"           | True     |
-|                   |                  |          | "abc" # "abc"           | False    |
-| Mayor que         | String > String  | Booleano | "abd" > "abc"           | True     |
-|                   |                  |          | "abc" > "abc"           | False    |
-| Menor que         | String < String  | Booleano | "abc" < "abd"           | True     |
-|                   |                  |          | "abc" < "abc"           | False    |
-| Mayor o igual que | String >= String | Booleano | "abd" >= "abc"          | True     |
-|                   |                  |          | "abc" >= "abd"          | False    |
-| Menor o igual que | String <= String | Booleano | "abc" <= "abd"          | True     |
-|                   |                  |          | "abd" <= "abc"          | False    |
-| Contains keyword  | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
-|                   |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                   | Imagen % Cadena  | Booleano | Picture_expr % "Mer"    | True (*) |
+| Operación              | Sintaxis         | Devuelve | Expresión               | Valor    |
+| ---------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concatenación          | Cadena + Cadena  | Cadena   | "abc" + "def"           | "abcdef" |
+| Repetición             | Cadena * Número  | Cadena   | "ab" * 3                | "ababab" |
+| Igual                  | Cadena = Cadena  | Booleano | "abc" = "abc"           | True     |
+|                        |                  |          | "abc" = "abd"           | False    |
+| Desigualdad            | Cadena # Cadena  | Booleano | "abc" # "abd"           | True     |
+|                        |                  |          | "abc" # "abc"           | False    |
+| Mayor que              | Cadena > Cadena  | Booleano | "abd" > "abc"           | True     |
+|                        |                  |          | "abc" > "abc"           | False    |
+| Menor que              | Cadena < Cadena  | Booleano | "abc" < "abd"           | True     |
+|                        |                  |          | "abc" < "abc"           | False    |
+| Mayor o igual que      | Cadena >= Cadena | Booleano | "abd" >= "abc"          | True     |
+|                        |                  |          | "abc" >= "abd"          | False    |
+| Menor o igual que      | Cadena <= Cadena | Booleano | "abc" <= "abd"          | True     |
+|                        |                  |          | "abd" <= "abc"          | False    |
+| Contiene palabra clave | Cadena % Cadena  | Booleano | "Alpha Bravo" % "Bravo" | True     |
+|                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
+|                        | Imagen % Cadena  | Booleano | Picture_expr % "Mer"    | True (*) |
 
 (*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
