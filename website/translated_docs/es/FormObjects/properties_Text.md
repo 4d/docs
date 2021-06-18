@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: Texto
 ---
 
 ---
@@ -13,11 +13,11 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 | Property             | Data Type | Possible Values       |
 | -------------------- | --------- | --------------------- |
-| allowFontColorPicker | boolean   | false (default), true |
+| allowFontColorPicker | booleano  | false (default), true |
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 ## Bold
@@ -31,7 +31,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | Property   | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| fontWeight | texto     | "normal", "bold" |
 
 #### Objects Supported
 
@@ -50,7 +50,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 | Name      | Data Type | Possible Values    |
 | --------- | --------- | ------------------ |
-| fontStyle | string    | "normal", "italic" |
+| fontStyle | cadena    | "normal", "italic" |
 
 #### Objects Supported
 
@@ -68,7 +68,7 @@ Sets the text to have a line running beneath it.
 
 | Name           | Data Type | Possible Values       |
 | -------------- | --------- | --------------------- |
-| textDecoration | string    | "normal", "underline" |
+| textDecoration | cadena    | "normal", "underline" |
 
 #### Objects Supported
 
@@ -110,7 +110,7 @@ Three font themes are available:
 
 | Name      | Data Type | Possible Values                |
 | --------- | --------- | ------------------------------ |
-| fontTheme | string    | "normal", "main", "additional" |
+| fontTheme | cadena    | "normal", "main", "additional" |
 
 
 #### Objects Supported
@@ -134,7 +134,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 | Name       | Data Type | Possible Values      |
 | ---------- | --------- | -------------------- |
-| fontFamily | string    | CSS font family name |
+| fontFamily | cadena    | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objects Supported
@@ -179,7 +179,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 | Name   | Data Type | Possible Values                           |
 | ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| stroke | cadena    | any css value, "transparent", "automatic" |
 
 #### Objects Supported
 
@@ -211,7 +211,7 @@ Foreground color;Dark shadow color)
 
 | Name            | Data Type | Possible Values       |
 | --------------- | --------- | --------------------- |
-| rowStrokeSource | string    | Font color expression |
+| rowStrokeSource | cadena    | Font color expression |
 
 #### Objects Supported
 
@@ -226,7 +226,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+Ejemplo:
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
@@ -240,7 +240,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 | Name           | Data Type | Possible Values                                 |
 | -------------- | --------- | ----------------------------------------------- |
-| rowStyleSource | string    | Style expression to evaluate for each row/cell. |
+| rowStyleSource | cadena    | Style expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -260,7 +260,7 @@ Horizontal location of text within the area that contains it.
 
 | Name      | Data Type | Possible Values                                   |
 | --------- | --------- | ------------------------------------------------- |
-| textAlign | string    | "automatic", "right", "center", "justify", "left" |
+| textAlign | cadena    | "automatic", "right", "center", "justify", "left" |
 
 #### Objects Supported
 
@@ -283,7 +283,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 | Name          | Data Type | Possible Values                        |
 | ------------- | --------- | -------------------------------------- |
-| verticalAlign | string    | "automatic", "top", "middle", "bottom" |
+| verticalAlign | cadena    | "automatic", "top", "middle", "bottom" |
 
 #### Objects Supported
 
@@ -303,21 +303,21 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
-| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| disabled            | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
+| Property name       | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | cadena   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
+| fill                | cadena   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
+| fontStyle           | cadena   | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
+| fontWeight          | cadena   | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
+| textDecoration      | cadena   | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
+| unselectable        | booleano | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
+| disabled            | booleano | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
+| cell.\<columnName> | objeto   | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 
-**Example**
+**Ejemplo**
 
 In the *Color* project method, write the following code:
 
@@ -363,7 +363,7 @@ Then, the *Color* method would contain:
 
 | Name       | Data Type | Possible Values                                  |
 | ---------- | --------- | ------------------------------------------------ |
-| metaSource | string    | Object expression to evaluate for each row/cell. |
+| metaSource | cadena    | Object expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -412,7 +412,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      boolean
+      booleano
     </td>
     
     <td>
@@ -452,7 +452,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Result
+      Resultado
     </th>
   </tr>
   
@@ -592,7 +592,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      string
+      cadena
     </td>
     
     <td>
@@ -656,7 +656,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      string
+      cadena
     </td>
     
     <td>
@@ -731,7 +731,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      boolean
+      booleano
     </td>
     
     <td>
@@ -745,7 +745,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a>
+  <a href="input_overview.md">Entrada</a>
 </p>
 
 

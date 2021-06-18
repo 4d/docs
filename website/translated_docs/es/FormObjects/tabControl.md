@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Pestañas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.

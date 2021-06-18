@@ -1,6 +1,6 @@
 ---
 id: glossary
-title: Glossary
+title: Glosario
 ---
 
 ## Main concepts at a glance
@@ -128,12 +128,12 @@ $myClass.query("name = smith")
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
 
 *   number
-*   text
+*   texto
 *   null
-*   boolean
-*   date
-*   object
-*   collection
+*   booleano
+*   fecha
+*   objeto
+*   colección
 *   picture(\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.

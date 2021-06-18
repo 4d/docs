@@ -5,12 +5,12 @@ title: Formula
 
 
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、ネイティブな [`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 
-### Formula Objects
+### Formula オブジェクト
 
-Formula objects can be encapsulated in object properties:
+Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 
 ```4d
  var $f : 4D.Function
@@ -18,61 +18,61 @@ Formula objects can be encapsulated in object properties:
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-This property is an "object function", i.e. a function which is bound to its parent object. To execute a function stored in an object property, use the **()** operator after the property name, such as:
+このようなプロパティは "オブジェクト関数"、つまり親オブジェクトに紐づいた関数です。 オブジェクトプロパティに保存されている関数を実行するには、プロパティ名のあとに **()** をつけます:
 
 ```4d
- $f.message() //displays "Hello world"
+ $f.message() // "Hello world" を表示します
 ```
 
 大カッコを使用したシンタックスもサポートされます:
 
 ```4d
- $f["message"]() //displays "Hello world"
+ $f["message"]() // "Hello world" と表示します
 ```
 
-Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
+たとえ引数を受け取らなかったとしても (後述参照)、オブジェクト関数を実行するためにはカッコ ( ) をつけて呼び出す必要があるという点に注意してください。 オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
 
 ```4d
  $o:=$f.message // $o にはフォーミュラオブジェクトが返されます 
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
+[`apply()`](#apply) および [`call()`](#call) 関数を使って関数を実行することもできます:
 
 ```4d
- $f.message.apply() //displays "Hello world"
+ $f.message.apply() // "Hello world!" を表示します
 ```
 
-#### Passing parameters
+#### 引数の受け渡し
 
-You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. たとえば:
+フォーミュラには、[位置引数シンタックス](Concepts/parameters.md#位置引数) $1, $2...$n を使用して引数を渡すことができます。 たとえば:
 
 ```4d
  var $f : Object
  $f:=New object
  $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") //displays "Hello John"
+ $f.message("John") // "Hello John" を表示します
 ```
 
-Or using the [.call()](#call) function:
+あるいは、[.call()](#call) 関数を使用して:
 
 ```4d
  var $f : Object
  $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
+ $text:=$f.call(Null;"Hello";"World") // "Hello World" を返します
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) // "Welcome to 2019" (例) を返します
 ```
 
-#### Parameters to a single method
+#### 単一メソッド用の引数
 
-For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. たとえば:
+利便性のために、フォーミュラが単一のプロジェクトメソッドから作成された場合には、引数はフォーミュラオブジェクトの初期化では省略することができます。 省略された引数は、フォーミュラを呼び出す時に一緒に渡すことができます。 たとえば:
 
 ```4d
  var $f : 4D.Function
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
+  // ここで Formula(myMethod($1;$2) と書く必要はありません
+ $text:=$f.call(Null;"Hello";"World") // "Hello World" を返します
+ $text:=$f.call() // "How are you?" を返します
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -83,15 +83,15 @@ For more convenience, when the formula is made of a single project method, param
  End if
 ```
 
-Parameters are received within the method, in the order they are specified in the call.
+引数はメソッド内において、呼び出し時に指定した順で受け取られます。
 
-### About 4D.Function objects
+### 4D.Function オブジェクトについて
 
-A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of Function objects:
+`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の Function オブジェクトが利用できます:
 
-- native functions, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
-- user functions, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
-- formula functions, i.e. functions that can execute any 4D formula.
+- ネイティブ関数、つまり、`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数。
+- ユーザー関数 (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
+- フォーミュラ関数 (4Dフォーミュラを実行するもの)。
 
 
 
@@ -129,14 +129,14 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 #### 説明
 
-`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
+`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
-Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as "shared by components and host database". When called, the formula object is evaluated within the context of the database or component that created it.
+フォーミュラがオブジェクトとして存在することで、コマンドやメソッドに対して引数 (計算された属性) として渡したり、"コンポーネントとホストデータベース間で共有" として宣言せずとも様々なコンポーネントから実行したりできるようになります。 呼び出されたフォーミュラオブジェクトは、それを作成したデータベースあるいはコンポーネントのコンテキストにおいて評価されます。
 
-The returned formula can be called with:
+返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
-*   [`.call()`](#call) or [`.apply()`](#apply) methods, or
-*   object notation syntax (see [formula object](#formula-object)).
+*   [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
+*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
 
 ```4d
  var $f : 4D.Function
@@ -149,18 +149,18 @@ The returned formula can be called with:
  $o.myFormula() // 3 を返します
 ```
 
-You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+フォーミュラには [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
 
-You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
+フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、`This` コマンドでアクセス可能です。
 
-If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.
+*formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。 実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。
 
-The object created by `Formula` can be saved, for example, in a database field or in a blob document.
+`Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
 
 
 #### 例題 1
 
-A simple formula:
+単純なフォーミュラの例:
 
 ```4d
  var $f : 4D.Function
@@ -174,7 +174,7 @@ A simple formula:
 
 #### 例題 2
 
-A formula using local variables:
+ローカル変数を使用するフォーミュラの例:
 
 ```4d
 
@@ -189,7 +189,7 @@ A formula using local variables:
 
 #### 例題 3
 
-A simple formula using parameters:
+引数を用いたシンプルなフォーミュラの例:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -199,28 +199,28 @@ A simple formula using parameters:
 
 #### 例題 4
 
-A formula using a project method with parameters:
+引数を用いたプロジェクトメソッドを使用する例:
 
 ```4d
  $o:=New object("f";Formula(myMethod))
- $result:=$o.f("param1";"param2") // equivalent to $result:=myMethod("param1";"param2")
+ $result:=$o.f("param1";"param2") // $result:=myMethod("param1";"param2") と同等です
 ```
 
 
 #### 例題 5
 
-Using `This`:
+`This` を使用する例:
 
 ```4d
  $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
  $o.firstName:="John"
  $o.lastName:="Smith"
- $result:=$o.fullName() //returns "John Smith"
+ $result:=$o.fullName() // "John Smith" を返します
 ```
 
 #### 例題 6
 
-Calling a formula using object notation:
+オブジェクト記法を使用してフォーミュラを呼び出す例:
 
 ```4d
  var $feta; $robot : Object
@@ -230,11 +230,11 @@ Calling a formula using object notation:
 
  $calc:=Formula(This.total:=This.price*This.quantity)
 
-  //sets the formula to object properties
+  // フォーミュラをオブジェクトプロパティに設定します
  $feta.calc:=$calc
  $robot.calc:=$calc
 
-  //call the formula
+  // フォーミュラを呼び出します
  $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
@@ -264,30 +264,30 @@ Calling a formula using object notation:
 
 #### 説明
 
-`Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->*formulaString* に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
+`Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->*formulaString* に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). In this context, using syntax with tokens is highly advised.
-> Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
+このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。 多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。 このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
+> ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
 
 
 #### 例題
 
-The following code will create a dialog accepting a formula in text format:
+以下のコードは、テキストフォーマットのフォーミュラを受け入れるダイアログを作成し、:
 
 ```4d
  var $textFormula : Text
  var $f : 4D.Function
- $textFormula:=Request("Please type a formula")
+ $textFormula:=Request("フォーミュラを入力してください")
  If(ok=1)
     $f:=Formula from string($textFormula)
-    ALERT("Result = "+String($f.call()))
+    ALERT("結果 = "+String($f.call()))
  End if
 ```
 
 ![](assets/en/API/formulaDialog.png)
 
 
-...and execute the formula:
+そのフォーミュラを実行します:
 
 
 ![](assets/en/API/formulaAlert.png)
@@ -320,14 +320,14 @@ The following code will create a dialog accepting a formula in text format:
 
 #### 説明
 
-`.apply()` 関数は、 <!-- REF #formulaClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 The formula object can be created using the `Formula` or `Formula from string` commands.
+`.apply()` 関数は、 <!-- REF #formulaClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+*thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
-You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
+任意の *formulaParams* 引数を渡すことで、フォーミュラ内で $1...$n の引数として使用されるコレクションを渡すこともできます。
 
-`.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。 This can be useful for passing calculated results.
+`.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。 これは計算された結果を渡すのに便利です。
 
 
 #### 例題 1
@@ -381,11 +381,11 @@ You can also pass a collection to be used as $1...$n parameters in the formula u
 
 #### 説明
 
-`.call()` 関数は、 <!-- REF #formulaClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 The formula object can be created using the `Formula` or `Formula from string` commands.
+`.call()` 関数は、 <!-- REF #formulaClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+*thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
-You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
+任意の *params* 引数を渡すことで、フォーミュラ内で *$1...$n* の引数として使用される値を渡すこともできます。
 
 `.call()` は [`.apply()`](#apply) と似ていますが、引数を直接渡す点が異なります。
 

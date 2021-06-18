@@ -69,13 +69,8 @@ A collection is initialized with:
 
 
 
-## New collection
+## `New collection`
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v16 R4|Added|
-</details>
 
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
@@ -154,7 +149,7 @@ You create a new collection and then add a new element:
 
 
 
-## New shared collection
+## `New shared collection`
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -1100,6 +1095,7 @@ The code for ***TypeLookUp*** is:
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
 
+
     $1.result:=True
  End if
 ``` 
@@ -1336,6 +1332,9 @@ Optionally, you can pass the index of collection from which to start the search 
 *	If *startFrom* = 0, the whole collection is searched (default).
 
 #### Example 
+
+
+
 
 
 ```4d
@@ -1592,6 +1591,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 #### Example
 
+
 ```4d
  var $col : Collection //$col.length initialized to 0
  $col:=New collection("one";"two";"three") //$col.length updated to 3
@@ -1789,6 +1789,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 <!-- REF #collection.orderBy().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
+
 |pathStrings|Text|->|Property path(s) on which to order the collection|
 |pathObjects|Collection|->|Collection of criteria objects|
 |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
@@ -1813,8 +1814,10 @@ You can also pass a criteria parameter to define how the collection elements mus
 *	*pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:  
 
 ```4d
-	{"*propertyPath*": string,
-	"*descending*": boolean}  
+{
+    "propertyPath": string,
+    "descending": boolean
+}
 ```	
 
 *	*ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
@@ -2166,9 +2169,9 @@ The *queryString* parameter uses the following syntax:
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using , value and *querySettings* parameters, please refer to the **dataClass** `.query()` function description.
+For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
 
-
+> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter. 
 
 #### Example 1
 
@@ -2369,6 +2372,7 @@ In *index*, pass the position where you want the element to be removed from the 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
 
 
+
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
 
 
@@ -2442,6 +2446,7 @@ By default, new elements are filled will **null** values. You can specify the va
  
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->

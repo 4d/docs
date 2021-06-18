@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Web Area
+title: Área Web
 ---
 
 
@@ -12,7 +12,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 > The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 
-## Specific properties
+## Propiedades específicas
 
 ### Associated variables
 
@@ -59,7 +59,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1
+#### Ejemplo 1
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
 4D code of `today` method:
@@ -96,7 +96,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
@@ -122,12 +122,12 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 ```
 
 
-## Standard actions
+## Acciones estándar
 
 Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
-## Form events
+## Eventos formulario
 
 Specific form events are intended for programmed management of web areas, more particularly concerning the activation of links:
 
@@ -147,7 +147,7 @@ In addition, web areas support the following generic form events:
 - `On Losing Focus`
 
 
-## Web area rules
+## Reglas de las áreas web
 
 ### User interface
 

@@ -109,16 +109,16 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-| Attribute |                     |                          | Type   | Description                                            |
+| Attribute |                     |                          | Tipo   | Descripción                                            |
 | --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros    |                     |                          | object | list of defined macros                                 |
-|           | `<macroName>` |                          | object | macro definition                                       |
-|           |                     | class                    | string | macro class name                                       |
+| macros    |                     |                          | objeto | list of defined macros                                 |
+|           | `<macroName>` |                          | objeto | macro definition                                       |
+|           |                     | class                    | cadena | macro class name                                       |
 |           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
-### Example
+### Ejemplo
 
 ```js
 {
@@ -160,7 +160,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Parameter | Type   | Description                                              |
+| Parameter | Tipo   | Descripción                                              |
 | --------- | ------ | -------------------------------------------------------- |
 | $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
@@ -172,7 +172,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 
 
-#### Example
+#### Ejemplo
 
 In the `formMacros.json` file:
 
@@ -201,7 +201,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| Parameter | Type   | Description                                      |
+| Parameter | Tipo   | Descripción                                      |
 | --------- | ------ | ------------------------------------------------ |
 | $editor   | Objeto | Form properties                                  |
 | $result   | Objeto | Form properties modified by the macro (optional) |
@@ -214,7 +214,7 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties of the `$editor` object:
 
-| Property                  | Type      | Description                                                                       |
+| Property                  | Tipo      | Descripción                                                                       |
 | ------------------------- | --------- | --------------------------------------------------------------------------------- |
 | $editor.form              | Objeto    | The entire form                                                                   |
 | $editor.file              | File      | File object of the form file                                                      |
@@ -224,11 +224,11 @@ Here are the properties of the `$editor` object:
 | $editor.currentPage       | Objeto    | The current page, containing all the form objects and the entry order of the page |
 | $editor.currentSelection  | Colección | Collection of names of selected objects                                           |
 | $editor.formProperties    | Objeto    | Properties of the current form                                                    |
-| $editor.target            | string    | Name of the object under the mouse when clicked on a macro                        |
+| $editor.target            | cadena    | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Type      | Description                                                 |
+| Property          | Tipo      | Descripción                                                 |
 | ----------------- | --------- | ----------------------------------------------------------- |
 | currentPage       | Objeto    | currentPage including objects modified by the macro, if any |
 | currentSelection  | Colección | currentSelection if modified by the macro                   |
@@ -248,7 +248,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Type | Description |
+| Property | Tipo | Descripción |
 | -------- | ---- | ----------- |
 |          |      |             |
  source|String|method code|
@@ -264,7 +264,7 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
 
 
-#### Example
+#### Ejemplo
 
 You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
@@ -293,14 +293,14 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type      | Description                              |
+| Parameter    |                       | Tipo      | Descripción                              |
 | ------------ | --------------------- | --------- | ---------------------------------------- |
 | $editor      |                       | Objeto    | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | Objeto    | Object returned by [onInvoke](#oninvoke) |
 | $error       |                       | Colección | Error stack                              |
-|              | [].errCode            | Number    | Error code                               |
-|              | [].message            | Text      | Description of the error                 |
-|              | [].componentSignature | Text      | Internal component signature             |
+|              | [].errCode            | Número    | Error code                               |
+|              | [].message            | Texto     | Description of the error                 |
+|              | [].componentSignature | Texto     | Internal component signature             |
 
 The `onError` function is executed when the macros processor encounters an error.
 
@@ -309,7 +309,7 @@ When executing a macro, if 4D encounters an error which prevents the macro from 
 - deleting or modifying a script whose file is read-only.
 - creating two objects with the same internal ID.
 
-#### Example
+#### Ejemplo
 
 In a macro class definition, you can write the following generic error code:
 

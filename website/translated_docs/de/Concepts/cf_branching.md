@@ -119,7 +119,7 @@ Vor jedem Boolean Ausdruck steht ein Doppelpunkt (`:`). Die Kombination aus Dopp
 :(bValidate=1)
 ```
 
-Nur die Anweisungsfolge, die auf die erste wahre Bedingung (TRUE) folgt (und bis zur nächsten wahren Bedingung), wird ausgeführt. Ist keine der Bedingungen wahr (TRUE), wird keine Anweisungsfolge ausgeführt (wenn kein Teil `Else` enthalten ist).
+Nur die Anweisungsfolge, die auf die erste wahre Bedingung TRUE folgt (und bis zur nächsten wahren Bedingung), wird ausgeführt. Ist keine der Bedingungen wahr (TRUE), wird keine Anweisungsfolge ausgeführt (wenn kein Teil `Else` enthalten ist).
 
 Sie können nach der letzten Befehlsfolge eine Else Anweisung integrieren. Sind dann alle Bedingungen falsch (FALSE), wird die Anweisungsfolge nach `Else` ausgeführt.
 

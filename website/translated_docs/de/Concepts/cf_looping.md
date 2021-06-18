@@ -280,7 +280,7 @@ Die formale Syntax der Abfragefolge `For each..End for each` lautet:
  End for each
 ```
 
-Die Struktur `For each...End for each` durchläuft den angegebenen Eintrag *Current_item* für alle Werte von *Expression*. Der Typ *Current_item* richtet sich nach der Art von *Expression*. Die Schleife `For each...End for each` kann drei Arten durchlaufen:
+Die Struktur `For each...End for each` durchläuft den angegebenen Eintrag *Current_item* für alle Werte von *Expression*. Der Typ *Current_item* richtet sich nach der Art von *Expression*. Die Schleife `For each...End for each` kann drei Arten von *Ausdrücken* durchlaufen:
 
 - Collections: Schleife durch jedes Element der Collection
 - Entity-Selections: Schleife durch jede Entity

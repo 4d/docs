@@ -69,13 +69,8 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New collection
+## `新しいコレクション`
 
-<details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v16 R4 | 追加 |
-</details>
 
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
@@ -153,7 +148,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New shared collection
+## `新規の共有コレクション`
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -1085,6 +1080,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
 
+
     $1.result:=True
  End if
 ``` 
@@ -1314,6 +1310,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
+
 
 
 ```4d
@@ -1564,6 +1561,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 例題
 
+
 ```4d
  var $col : Collection // $col.length が 0 に初期化されます
  $col:=New collection("one";"two";"three") // $col.length が 3 に更新されます
@@ -1756,12 +1754,11 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderBy().Params -->
-| 参照          | タイプ    |    | 説明                                         |
-| ----------- | ------ |:--:| ------------------------------------------ |
-| pathStrings | テキスト   | -> | コレクションの並べ替え基準とするプロパティパス                    |
-| pathObjects | コレクション | -> | 条件オブジェクトのコレクション                            |
-| ascOrDesc   | 整数     | -> | `ck ascending` または `ck descending` (スカラー値) |
-| 戻り値         | コレクション | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)               |
+| 参照 | タイプ |  | 説明 |
+| -- | --- |::| -- |
+|    |     |  |    |
+
+|pathStrings|テキスト|->|コレクションの並べ替え基準とするプロパティパス| |pathObjects|コレクション|->|条件オブジェクトのコレクション| |ascOrDesc|整数|->|`ck ascending` または `ck descending` (スカラー値)| |戻り値|コレクション |<-|並べ替えられたコレクションのコピー (シャロウ・コピー)|
 <!-- END REF -->
 
 
@@ -1781,8 +1778,10 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *   *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
 ```4d
-    {"*propertyPath*": string,
-    "*descending*": boolean}  
+{
+    "propertyPath": string,
+    "descending": boolean
+}
 ```
 
 *   *ascOrDesc* : Integer。 **Objects and collections** テーマから、以下の定数のいずれか一つを渡します:
@@ -2130,9 +2129,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 ```
 
-*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、[`dataClass.query()`](dataclassClass.md#query) 関数を参照ください。
+*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、[`DataClass.query()`](DataClassClass.md#query) 関数を参照ください。
 
-
+> *queryString* 引数および *formula* オブジェクト引数の使用に関わらず、フォーミュラは `collection.query()` 関数でサポートされていません。
 
 #### 例題 1
 
@@ -2330,6 +2329,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *howMany* には、*index* の位置から削除する要素の数を渡します。 *howMany* が省略された場合、1つの要素のみが削除されます。
 
 
+
 空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。
 
 
@@ -2402,6 +2402,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
  $c:=New collection(1;2;3;4;5)
  $c.resize(2) //$c=[1,2]
+
 ```
 
 <!-- END REF -->

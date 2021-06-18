@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Action
+title: Acción
 ---
 
 
@@ -23,7 +23,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Data Type | Possible Values                                              |
 | -------- | --------- | ------------------------------------------------------------ |
-| dragging | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | texto     | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -55,7 +55,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Data Type | Possible Values                                              |
 | -------- | --------- | ------------------------------------------------------------ |
-| dropping | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | texto     | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
@@ -74,7 +74,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 | Name                | Data Type | Possible Values |
 | ------------------- | --------- | --------------- |
-| continuousExecution | boolean   | true, false     |
+| continuousExecution | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -98,16 +98,16 @@ Several types of method references are supported:
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- una ruta de acceso al archivo del método personalizado que incluya la extensión .4dm, por ejemplo:  
+  `../../CustomMethods/myMethod.4dm` También puede utilizar un sistema de archivos:  
+  `/RESOURCES/Buttons/bOK.4dm` En este caso, 4D no ofrece soporte automático para las operaciones con objetos.
 
 
 #### JSON Grammar
 
 | Name   | Data Type | Possible Values                                                    |
 | ------ | --------- | ------------------------------------------------------------------ |
-| method | text      | Object method standard or custom file path, or project method name |
+| method | texto     | Object method standard or custom file path, or project method name |
 
 
 #### Objects Supported
@@ -127,7 +127,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 | Name        | Data Type | Possible Values |
 | ----------- | --------- | --------------- |
-| movableRows | boolean   | true, false     |
+| movableRows | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -146,11 +146,11 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| selectionMode | text      | "multiple", "single", "none" |
+| selectionMode | texto     | "multiple", "single", "none" |
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md)
+[Lista jerárquica](list_overview.md)
 
 
 
@@ -170,7 +170,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 | Name     | Data Type | Possible Values |
 | -------- | --------- | --------------- |
-| sortable | boolean   | true, false     |
+| sortable | booleano  | true, false     |
 
 #### Objects Supported
 [List Box](listbox_overview.md)
@@ -192,7 +192,7 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 | Name   | Data Type | Possible Values                                                                                                  |
 | ------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| action | cadena    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objects Supported
 

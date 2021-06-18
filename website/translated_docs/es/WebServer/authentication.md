@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Authentication
+title: Autenticación
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
@@ -90,18 +90,18 @@ The `On Web Authentication` database method is NOT called:
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 
-### Syntax
+### Sintaxis
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parámetros | Type     |    | Description                                       |
+| Parámetros | Tipo     |    | Descripción                                       |
 | ---------- | -------- |:--:| ------------------------------------------------- |
-| $1         | Text     | <- | URL                                               |
-| $2         | Text     | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text     | <- | IP address of the web client (browser)            |
-| $4         | Text     | <- | IP address of the server                          |
-| $5         | Text     | <- | User name                                         |
-| $6         | Text     | <- | Password                                          |
+| $1         | Texto    | <- | URL                                               |
+| $2         | Texto    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
+| $3         | Texto    | <- | IP address of the web client (browser)            |
+| $4         | Texto    | <- | IP address of the server                          |
+| $5         | Texto    | <- | User name                                         |
+| $6         | Texto    | <- | Password                                          |
 | $0         | Booleano | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:
@@ -178,7 +178,7 @@ The `On Web Connection` database method is only executed if the connection has b
 > * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 
 
-### Example
+### Ejemplo
 
 Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
 

@@ -10,7 +10,7 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
 
-## Using an array
+## Usar um array
 
 An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
 
@@ -62,7 +62,7 @@ If you need to save the user’s choice into a field, you would use an assignmen
 You must select each [event] that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
 
 
-## Using a choice list
+## Utilizar uma lista de seleção
 
 If you want to use a drop-down list to manage the values of a listed field or variable, 4D lets you reference the field or variable directly as the object's data source. This makes it easier to manage listed fields/variables.
 > If you use a hierarchical list, only the first level is displayed and can be selected.
@@ -79,7 +79,7 @@ When the form is executed, 4D automatically manages the pop-up menu or combo box
 ### Save as
 When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved.
 
-## Using a standard action
+## Usar uma ação padrão
 You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.

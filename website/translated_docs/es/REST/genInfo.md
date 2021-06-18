@@ -1,6 +1,6 @@
 ---
 id: genInfo
-title: Getting Server Information
+title: Obtener información del servidor
 ---
 
 You can get several information from the REST server:
@@ -25,7 +25,7 @@ Use the [`$info`]($info.md) parameter to get information about the entity select
 
 Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
 
-For example:
+Por ejemplo:
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 

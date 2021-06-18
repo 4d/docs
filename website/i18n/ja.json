@@ -6,7 +6,7 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Webデータエクスプローラー"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -15,7 +15,7 @@
         "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Web 管理"
       },
       "API/classClass": {
         "title": "クラス"
@@ -156,7 +156,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "文字列"
+        "title": "String"
       },
       "Concepts/time": {
         "title": "時間"
@@ -838,7 +838,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
-      "Web Development": "Web Development",
+      "Web Development": "Web 開発",
       "REST Server": "REST サーバー",
       "Client/Server": "クライアント/サーバー",
       "Forms": "フォーム",
@@ -864,16 +864,16 @@
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Web 開発",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Preferences|no description given": "Preferences",
@@ -883,7 +883,7 @@
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
-    "Documentation updates|no description given": "Documentation updates",
+    "Documentation updates|no description given": "ドキュメンテーション更新情報",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

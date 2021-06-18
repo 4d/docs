@@ -1,6 +1,6 @@
 ---
 id: propertiesDataSource
-title: Data Source
+title: Fuente de datos
 ---
 
 ---
@@ -24,7 +24,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| automaticInsertion | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -79,7 +79,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 | Name              | Data Type | Possible Values   |
 | ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| currentItemSource | cadena    | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -103,7 +103,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 | Name                      | Data Type | Possible Values   |
 | ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| currentItemPositionSource | cadena    | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -142,9 +142,9 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| Name   | Data Type | Possible Values                                                  |
+| ------ | --------- | ---------------------------------------------------------------- |
+| values | colección | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 #### Objects Supported
 
@@ -154,7 +154,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 
 ---
-## Expression
+## Expresión
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
@@ -192,7 +192,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 | Name       | Data Type | Possible Values                                                         |
 | ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| dataSource | cadena    | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -249,7 +249,7 @@ Using this property requires compliance with the following principles:
 
 | Name   | Data Type | Possible Values      |
 | ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| saveAs | cadena    | "value", "reference" |
 
 #### Objects Supported
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -270,7 +270,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 | Name                | Data Type | Possible Values       |
 | ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| selectedItemsSource | cadena    | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -288,7 +288,7 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 | Name           | Data Type | Possible Values      |
 | -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| namedSelection | cadena    | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)

@@ -77,7 +77,7 @@ Check this option if you want the `WebAdmin` web server to be automatically laun
 
 When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTP on the same machine as the 4D application. By default, this option is checked.
 
-**Notes:**
+**Notas:**
 - Connections with HTTP other than localhost are never accepted.
 - Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
 
@@ -133,7 +133,7 @@ To set the file contents, you can use the [WebAdmin settings dialog](#settings-d
 
 Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the *Command Line Interface* to support this feature:
 
-| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Value     | Description                                                                                                                                                                                                                                                                                          |
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Valor     | Descripción                                                                                                                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--webadmin-settings-file`                                                                                                                                                                   | File path | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                           |
 | `--webadmin-access-key`                                                                                                                                                                      | Cadena    | Access key for the WebAdmin web server                                                                                                                                                                                                                                                               |
@@ -142,7 +142,7 @@ Or, you can set a custom `.4DSettings` file (xml format) and use it instead of t
 
 > The access key is not stored in clear in the `.4DSettings` file.
 
-Example:
+Ejemplo:
 
 ```
 "%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 

@@ -8,7 +8,7 @@ title: On Deactivate
 | 12   | Form             | The form’s window ceases to be the frontmost window |
 
 
-## Description
+## Descripción
 
 If the window of a form was the frontmost window, this event is called when the window is sent to the background.
 

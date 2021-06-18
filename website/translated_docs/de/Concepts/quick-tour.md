@@ -175,7 +175,7 @@ Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, a
 $vAge:=employee.children[2].age
 ```
 
-Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftnamen Klammern () anfügen, um die Methode auszuführen:
+Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftsnamen Klammern () anfügen, um die Methode auszuführen:
 
 ```
 $f:=New object
@@ -374,7 +374,7 @@ Für /* eingebundenen Kommentar */ ($vCounter;1;100)...
 End for
 ```
 
-- **Mehrzeilige Kommentarblöcke** können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
+- **Mehrzeilige Kommentarblöcke** können eine unbegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
 
 ```4d
 For ($vCounter;1;100)

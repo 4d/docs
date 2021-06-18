@@ -220,7 +220,7 @@
         "title": "Sur avant saisie"
       },
       "Events/onBeforeKeystroke": {
-        "title": "Sue avant frappe clavier"
+        "title": "Sur avant frappe clavier"
       },
       "Events/onBeginDragOver": {
         "title": "Sur début survol"

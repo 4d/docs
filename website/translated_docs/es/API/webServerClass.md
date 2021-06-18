@@ -8,7 +8,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 
 
-### Web Server object
+### Objeto servidor web
 
 Web server objects are instantiated with the [`WEB Server`](#web-server) command.
 
@@ -46,10 +46,10 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Type         |    | Description                                                    |
+| Parameter | Tipo         |    | Descripción                                                    |
 | --------- | ------------ | -- | -------------------------------------------------------------- |
-| option    | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
-| Result    | 4D.WebServer | <- | Web server object                                              |
+| option    | Entero       | -> | Web server to get (default if omitted = `Web server database`) |
+| Resultado | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -57,7 +57,7 @@ The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the d
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
-| Constant                       | Value | Comment                                                  |
+| Constant                       | Valor | Comment                                                  |
 | ------------------------------ | ----- | -------------------------------------------------------- |
 | `Web server database`          | 1     | Current database Web server (default if omitted)         |
 | `Web server host database`     | 2     | Web server of the host database of a component           |
@@ -65,7 +65,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 
 The returned Web server object contains the current values of the Web server properties.
 
-#### Example
+#### Ejemplo
 
 From your component, you want to know if the Web server of the host database is started:
 
@@ -92,9 +92,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Type      |    | Description                                    |
+| Parameter | Tipo      |    | Descripción                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
-| Result    | Colección | <- | Collection of the available Web server objects |
+| Resultado | Colección | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
@@ -112,7 +112,7 @@ All available Web servers are returned by the `WEB Server list` command, whether
 You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 
-#### Example
+#### Ejemplo
 
 We want to know how many running web servers are available:
 
@@ -727,10 +727,10 @@ The <!-- REF #webServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #webServerClass.start().Params -->
 
-| Parameter | Type   |    | Description                           |
-| --------- | ------ | -- | ------------------------------------- |
-| settings  | Objeto | -> | Web server settings to set at startup |
-| Result    | Objeto | <- | Status of the web server startup      |
+| Parameter  | Tipo   |    | Descripción                           |
+| ---------- | ------ | -- | ------------------------------------- |
+| parámetros | Objeto | -> | Web server settings to set at startup |
+| Resultado  | Objeto | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
@@ -747,16 +747,16 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Type      | Description                                                          |
+| Property |                         | Tipo      | Descripción                                                          |
 | -------- | ----------------------- | --------- | -------------------------------------------------------------------- |
 | success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
 | errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Number    | 4D error code                                                        |
-|          | \[].message            | Text      | Description of the 4D error                                          |
-|          | \[].componentSignature | Text      | Signature of the internal component which returned the error         |
+|          | \[].errCode            | Número    | 4D error code                                                        |
+|          | \[].message            | Texto     | Description of the 4D error                                          |
+|          | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
-#### Example
+#### Ejemplo
 
 ```4d
  var $settings;$result : Object
@@ -789,7 +789,7 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #webServerClass.stop().Params -->
 
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Descripción                     |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 
@@ -801,7 +801,7 @@ If the web server was started, all web connections and web processes are closed,
 > This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 
-#### Example
+#### Ejemplo
 
 To stop the database Web server:
 

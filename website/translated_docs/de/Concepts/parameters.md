@@ -14,7 +14,7 @@ Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergebe
 ALERT("Hello")
 ```
 
-Parameter werden Methoden oder Class Functions auf diesselbe Weise übergeben. Erlaubt beispielsweise eine Class Function mit Namen `getArea()` zwei Parameter, könnte ein Aufruf der Class Function wie folgt aussehen:
+Parameter werden Methoden oder Class Functions auf dieselbe Weise übergeben. Erlaubt beispielsweise eine Class Function mit Namen `getArea()` zwei Parameter, könnte ein Aufruf der Class Function wie folgt aussehen:
 
 ```
 $area:=$o.getArea(50;100)

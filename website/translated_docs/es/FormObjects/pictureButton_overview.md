@@ -1,6 +1,6 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: Botón Imagen
 ---
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
@@ -10,7 +10,7 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
   For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Property                   | JSON name              | Value |
+  | Property                   | JSON name              | Valor |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
   | Columns                    | columnCount            | 4     |
@@ -26,7 +26,7 @@ Picture buttons can be used in two ways:
 Clicking the object changes the picture.
 
 
-## Using picture buttons
+## Utilizar los botones imagen
 
 You can implement a picture button in the following manner:
 
@@ -43,7 +43,7 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
 
 
-## Animation
+## Animación
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 

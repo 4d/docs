@@ -1,6 +1,6 @@
 ---
 id: shared
-title: Shared objects and collections
+title: Objetos y colecciones compartidos
 ---
 
 **Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
@@ -16,7 +16,7 @@ In order to modify a shared object/collection, the **Use...End use** structure m
 
 A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
-## Using shared objects or collections
+## Utilización de objetos o colecciones compartidos
 
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
@@ -90,7 +90,7 @@ Shared objects and shared collections are designed to allow communication betwee
 **Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
 
 
-## Example 1
+## Ejemplo 1
 
 You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
 
@@ -127,7 +127,7 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
  End use
 ```
 
-## Example 2
+## Ejemplo 2
 
 The following examples highlight specific rules when handling shared groups:
 

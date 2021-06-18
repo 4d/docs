@@ -35,7 +35,7 @@ The specified form is displayed:
 
 | Name       | Data Type | Possible Values                                                                                                                                                                                       |
 | ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+| detailForm | cadena    | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
 #### Objects Supported
 
@@ -65,7 +65,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 | Name                   | Data Type | Possible Values                     |
 | ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| doubleClickInRowAction | cadena    | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
@@ -89,7 +89,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 | Name         | Data Type | Possible Values |
 | ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+| highlightSet | cadena    | Name of the set |
 
 #### Objects Supported
 
@@ -184,7 +184,7 @@ You can set the "hidden", "disabled" and "selectable" interface properties for e
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
-| Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Constant                 | Valor | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
@@ -206,7 +206,7 @@ You can define several interface properties at once:
 
 ![](assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+Note that setting properties for an element overrides any other values for this element (if not reset). Por ejemplo:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
@@ -220,7 +220,7 @@ Note that setting properties for an element overrides any other values for this 
 
 | Name             | Data Type | Possible Values        |
 | ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| rowControlSource | cadena    | Row control array name |
 
 #### Objects Supported
 
@@ -242,7 +242,7 @@ Designates the option for allowing users to select rows:
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| selectionMode | cadena    | "multiple", "single", "none" |
 
 #### Objects Supported
 

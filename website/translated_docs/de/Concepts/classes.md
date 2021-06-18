@@ -207,9 +207,9 @@ Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<Clas
 Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
 - Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
-- Verwendung einer Class Member Method "Function":
-    - `apply()`
-    - `call()`
+- Verwendung einer Class Member Method "4D.Function":
+    - [`apply()`](API/formulaClass.md#apply)
+    - [`call()`](API/formulaClass.md#call)
 
 > **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
 
@@ -240,12 +240,12 @@ Function add($x : Variant; $y : Integer): Integer
 > Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
 > 
 > ```4d
-Function add($x : Integer)
-  var $2; $value : Integer
-  var $0 : Text
-  $value:=$x+$2
-  $0:=String($value)
-```
+> Function add($x : Integer)
+>   var $2; $value : Integer
+>   var $0 : Text
+>   $value:=$x+$2
+>   $0:=String($value)
+> ```
 
 
 

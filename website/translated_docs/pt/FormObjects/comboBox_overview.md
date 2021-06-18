@@ -11,7 +11,7 @@ You initialize a combo box in exactly the same way as a drop-down list. If the u
 
 Use the `On Data Change` event to manage entries into the enterable area, as you would for any enterable area object. For more information, refer to the description of the [Form event code](https://doc.4d.com/4Dv17R5/4D/17-R5/Form-event.301-4127796.en.html) command in the *4D Language Reference* manual.
 
-## Options for combo boxes
+## Opções de combo box
 
 Combo box type objects accept two specific options concerning choice lists associated with them:
 

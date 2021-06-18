@@ -1,6 +1,6 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Background and Border
+title: Fondo y borde
 ---
 
 ---
@@ -12,7 +12,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 | Name          | Data Type | Possible Values                           |
 | ------------- | --------- | ----------------------------------------- |
-| alternateFill | string    | any css value; "transparent"; "automatic" |
+| alternateFill | cadena    | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -31,7 +31,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 | Name | Data Type | Possible Values                           |
 | ---- | --------- | ----------------------------------------- |
-| fill | string    | any css value; "transparent"; "automatic" |
+| fill | cadena    | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 
@@ -55,7 +55,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 | Name          | Data Type | Possible Values                           |
 | ------------- | --------- | ----------------------------------------- |
-| rowFillSource | string    | An expression returning a RGB color value |
+| rowFillSource | cadena    | An expression returning a RGB color value |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -74,7 +74,7 @@ Allows setting a standard style for the object border.
 
 | Name        | Data Type | Possible Values                                                   |
 | ----------- | --------- | ----------------------------------------------------------------- |
-| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | texto     | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### Objects Supported
 
@@ -115,7 +115,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| hideExtraBlankRows | boolean   | true, false     |
+| hideExtraBlankRows | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -139,7 +139,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 | Name   | Data Type | Possible Values                           |
 | ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| stroke | cadena    | any css value, "transparent", "automatic" |
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
@@ -204,7 +204,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| rowFillSource | string    | The name of a longint array. |
+| rowFillSource | cadena    | The name of a longint array. |
 
 #### Objects Supported
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -222,7 +222,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | Name | Data Type | Possible Values |
 | ---- | --------- | --------------- |
-| fill | text      | "transparent"   |
+| fill | texto     | "transparent"   |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)

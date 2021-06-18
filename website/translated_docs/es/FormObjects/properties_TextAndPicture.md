@@ -1,6 +1,6 @@
 ---
 id: propertiesTextAndPicture
-title: Text and Picture
+title: Texto e Imagen
 ---
 
 ---
@@ -14,7 +14,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 | Name                    | Data Type | Possible Values                                                                                              |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| customBackgroundPicture | cadena    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
 #### Objects Supported
@@ -34,7 +34,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 | Name  | Data Type | Possible Values                                                                                                                                                    |
 |:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |   texto   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
@@ -51,7 +51,7 @@ This property allows setting the size (in pixels) of the horizontal margins of t
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| With / Without       | Example                                                   |
+| With / Without       | Ejemplo                                                   |
 | -------------------- | --------------------------------------------------------- |
 | Without margin       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
@@ -80,7 +80,7 @@ Designates the placement of an icon in relation to the form object.
 
 | Name          | Data Type | Possible Values         |
 | ------------- | --------- | ----------------------- |
-| iconPlacement | string    | "none", "left", "right" |
+| iconPlacement | cadena    | "none", "left", "right" |
 
 #### Objects Supported
 
@@ -152,7 +152,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 | Name | Data Type | Possible Values                              |
 | ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
+| icon | imagen    | Relative or filesystem path in POSIX syntax. |
 
 #### Objects Supported
 
@@ -168,7 +168,7 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Description                                                                                                                                      | Example                                                        |
+| Option       | Descripción                                                                                                                                      | Ejemplo                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
@@ -180,7 +180,7 @@ Here are the results using the various options for this property:
 
 | Name          | Data Type | Possible Values                            |
 | ------------- | --------- | ------------------------------------------ |
-| textPlacement | string    | "left", "top", "right", "bottom", "center" |
+| textPlacement | cadena    | "left", "top", "right", "bottom", "center" |
 
 #### Objects Supported
 
@@ -244,7 +244,7 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 | Name           | Data Type | Possible Values                                                                                      |
 |:-------------- | --------- | ---------------------------------------------------------------------------------------------------- |
-| popupPlacement | string    | <li>"none"<li>"linked"<li>"separated" |
+| popupPlacement | cadena    | <li>"none"<li>"linked"<li>"separated" |
 
 
 #### Objects Supported

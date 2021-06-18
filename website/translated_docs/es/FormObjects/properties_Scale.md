@@ -1,6 +1,6 @@
 ---
 id: propertiesScale
-title: Scale
+title: Escala
 ---
 
 ---
@@ -29,7 +29,7 @@ Displays/Hides the graduations next to the labels.
 
 |      Name       | Data Type | Possible Values |
 |:---------------:|:---------:| --------------- |
-| showGraduations |  boolean  | "true", "false" |
+| showGraduations | booleano  | "true", "false" |
 
 #### Objects Supported
 
@@ -68,7 +68,7 @@ Specifies the location of an object's displayed text.
 
 |      Name       | Data Type | Possible Values                          |
 |:---------------:|:---------:| ---------------------------------------- |
-| labelsPlacement |  string   | "none", "top", "bottom", "left", "right" |
+| labelsPlacement |  cadena   | "none", "top", "bottom", "left", "right" |
 
 #### Objects Supported
 
