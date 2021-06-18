@@ -42,32 +42,32 @@ Cuando crea un método proyecto, éste pasa a formar parte del lenguaje del proy
 
 Se utilizan subrutinas para:
 
-- Reduce repetitive coding
-- Clarify your methods
-- Facilitate changes to your methods
-- Modularize your code
+- Reducción del código repetitivo
+- Clarificación de los métodos
+- Facilitar los cambios en sus métodos
+- Modularizar el código
 
-For example, let’s say you have a project of customers. As you customize the project, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
+Por ejemplo, supongamos que tiene un proyecto de clientes. Al personalizar el proyecto, se da cuenta de que hay algunas tareas que realiza reiteradamente, como la búsqueda de un cliente y la modificación de su registro. El código para hacer esto podría ser:
 
 ```4d
-  // Look for a customer
+  // Búsqueda de un cliente
  QUERY BY EXAMPLE([Customers])
-  // Select the input form
+  // Selección del formulario entrada
  FORM SET INPUT([Customers];"Data Entry")
-  // Modify the customer's record
+  // Modificación del registro del cliente
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your project where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+Si no utiliza subrutinas, tendrá que escribir el código cada vez que quiera modificar el registro de un cliente. Si hay diez lugares en su proyecto donde necesita hacer esto, tendrá que escribir el código diez veces. Si utiliza subrutinas, sólo tendrá que escribirlas una vez. Esta es la primera ventaja de las subrutinas: reducir la cantidad de código.
 
-If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
+Si el código descrito anteriormente fuera un método llamado `MODIFY_CUSTOMER`, se ejecutaría simplemente utilizando el nombre del método en otro método. Por ejemplo, para modificar el registro de un cliente y luego imprimir el registro, se escribiría este método:
 
 ```4d
  MODIFY_CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY_CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+Esta posibilidad simplifica enormemente sus métodos. En el ejemplo, no es necesario saber cómo funciona el método `MODIFY_CUSTOMER`, sólo lo que hace. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. In this way, your methods become extensions to the 4D language.
 
 If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
 
