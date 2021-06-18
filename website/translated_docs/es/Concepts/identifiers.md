@@ -230,7 +230,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Los métodos proyecto pueden aceptar parámetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Además, se pueden direccionar múltiples parámetros consecutivos (y últimos) con la sintaxis ${n} donde n, expresión numérica, es el número del parámetro.
+Los métodos proyecto pueden aceptar parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Además, se pueden direccionar múltiples parámetros consecutivos (y últimos) con la sintaxis ${n} donde n, expresión numérica, es el número del parámetro.
 
 Dentro de una función, la variable local $0 contiene el valor a devolver.
 
@@ -361,7 +361,7 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 | Propiedades de objetos          | 255           | $o.myAttribute             |
 | Form                            | 31            | "My Custom Web Input"      |
 | Objetos de formulario           | 255           | "MyButton"                 |
-| Project method                  | 31            | M_ADD_CUSTOMERS          |
+| Métodos proyecto                | 31            | M_ADD_CUSTOMERS          |
 | Comando de plug-in              | 31            | PDF SET ROTATION           |
 | Conjuntos interproceso          | <> + 255      | "<>Records to be Archived" |
 | Conjuntos proceso               | 255           | "Current selected records" |

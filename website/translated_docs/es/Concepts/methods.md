@@ -4,7 +4,7 @@ title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. En el lenguaje 4D, hay dos categorías de métodos:
+Un método es básicamente un trozo de código que ejecuta una o varias acciones. En el lenguaje 4D, hay dos categorías de métodos:
 
 - **Los métodos integrados**, que son suministrados por 4D o por desarrolladores externos y que sólo pueden ser llamados en su código. Los métodos integrados incluyen:
     - Comandos y funciones de 4D API, como `ALERT` o `Current date`.
@@ -13,27 +13,27 @@ A method is basically a piece of code that executes one or several actions. En e
 
     Los métodos integrados se detallan en el manual *Lenguaje 4D* o en los manuales dedicados a los plug-ins o componentes.
 
-- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
+- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
 
 **Nota:** 4D también ofrece métodos específicos que se ejecutan automáticamente en función de los eventos de la base o de los eventos formulario. Ver [Métodos especializados](#specialized-methods).
 
 
 ## Métodos proyecto
 
-A project method can have one of the following roles, depending on how it is executed and used:
+Un método proyecto puede tener uno de los siguientes papeles, dependiendo de cómo se ejecute y utilice:
 
 - Subrutina y función
 - Método asociado a un objeto
-- Menu method
-- Process method
-- Event or Error catching method
+- Método de menú
+- Método de gestión de proceso
+- Métodos de gestión de eventos o errores
 
 ### Subrutinas y funciones
-A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
+Una subrutina es un método proyecto que puede considerarse como un ayudante. Realiza aquellas tareas que otros métodos le solicitan. Una función es una subrutina que devuelve un valor al método que la llamó.
 
-Cuando crea un método proyecto, éste pasa a formar parte del lenguaje de la base en la que lo crea. Entonces puede llamar al método proyecto desde otros métodos proyecto, o desde [métodos predefinidos](#predefined-methods) de la misma manera que llama a los comandos integrados de 4D. A project method used in this way is called a subroutine.
+Cuando crea un método proyecto, éste pasa a formar parte del lenguaje de la base en la que lo crea. Entonces puede llamar al método proyecto desde otros métodos proyecto, o desde [métodos predefinidos](#predefined-methods) de la misma manera que llama a los comandos integrados de 4D. Un método proyecto utilizado de este manera se llama una subrutina.
 
-You use subroutines to:
+Se utilizan subrutinas para:
 
 - Reduce repetitive coding
 - Clarify your methods
@@ -231,16 +231,16 @@ Some typical uses of recursion in 4D are:
 - Treating records within tables that relate to each other in the same way as in the example.
 - Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
 
-**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
+**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Sin esta prueba condicional, el método se llamaría a sí mismo indefinidamente; eventualmente, 4D devolvería un error "Pila llena" porque ya no tendría espacio para "apilar" las llamadas (así como los parámetros y las variables locales utilizadas en el método).
 
 
 ## Métodos especializados
 
 Además de los **métodos proyecto**, 4D soporta varios tipos de métodos específicos, que se llaman automáticamente en función de los eventos:
 
-| Tipo                             | Calling context                                                                          | Accepts parameters | Descripción                                                                                                                                                          |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+| Tipo                           | Contexto de llamada                                                                             | Acepta los parámetros | Descripción                                                                                                                                                                  |
+| ------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Método objeto (widget)**     | Automático, cuando un evento involucra al objeto al que se asocia el método                     | No                    | Propiedad de un objeto formulario (también llamado widget)                                                                                                                   |
+| **Método formulario**          | Automático, cuando un evento involucra al formulario al que se asocia el método                 | No                    | Propiedad de un formulario. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (o *método tabla*) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar) | No                    | Propiedad de una tabla. Los triggers son métodos que pueden evitar operaciones "ilegales" con los registros de su base.                                                      |
+| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                 | Sí (predefinido)      | Hay 16 métodos base en 4D. Véase la sección métodos base                                                                                                                     |
