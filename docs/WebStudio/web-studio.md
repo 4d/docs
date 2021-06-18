@@ -63,9 +63,20 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 The 4D WebStudio provides several tools ranging from interface customization to method and event linking.
 
+![alt-text](assets/en/web-studio/web-studio-interface.png)
+
+1. The **Explorer** displays your project's web forms, methods, classes, assets and data model.
+2. The **tabs** let you keep track of your currently opened elements, such as your forms and methods.
+3. **Components** allow you to design the interface of your end users' application. Customize their look using the **Styles library** and determine the data they will display using the **Data sources**.
+4. Drag and drop :
+	*	components onto your canvas	
+	*	styles and data sources onto these components
+5. The **event and method editors** lets you link events and methods to your components
+6. The **Styles panel** allows for advanced style customization
+
 ### Explorer
 
-You can see see the eplorer as the skeleton of your project. It displays your project's web forms, methods, classes, assets and data model.
+You can see see the explorer as the skeleton of your project. It displays your project's web forms, methods, classes, assets and data model.
 
 ![alt-text](assets/en/web-studio/explorer.png)
 
