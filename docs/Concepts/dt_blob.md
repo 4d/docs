@@ -46,7 +46,7 @@ Some commands that alter the original blob do not support the 4D.Blob type:
 
 ```4d
 var $myBlob: 4D.Blob.new
-var $myText:= BLOB to text ( $myBlob ; UTF8 )
+$myText:= BLOB to text ( $myBlob ; UTF8 )
 ```
 
 ### Passing a C_BLOB 
