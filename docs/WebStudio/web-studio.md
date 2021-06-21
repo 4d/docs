@@ -1,43 +1,44 @@
 ---
 id: webStudio
-title: 4D WebStudio
+title: WebStudio
 ---
 
-> **Preview**: 4D WebStudio is provided as a preview feature. Using this feature in production is not recommended; the final implementation could be slightly different.
+> **Preview**: The web studio is provided as a preview feature. Using this feature in production is not recommended; the final implementation could be slightly different.
 
 
-4D WebStudio is a powerful integrated development environment (IDE) that lets you tap into various parts of your 4D projects (such as databases and methods) and link them to highly customizable interface elements in order to build complete applications.
-
+WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources, such as a 4D project's databases and methods, and link them to highly customizable interface elements in order to build complete applications.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
 ### Requirements
 
-4D WebStudio supports the following web browsers:
+The web studio supports the following web browsers:
 
 - Chrome
 - Safari
 - Edge
 - FireFox
 
-The minimum resolution to use the 4D WebStudio is 1280x720. Recommended resolution is 1920x1080.
+The minimum resolution to use the web studio is 1280x720. Recommended resolution is 1920x1080.
+
+> The web studio is not compatible with binary databases. When working with a binary database, opening the web studio  will throw an error.
 
 ## Access Configuration
 
 The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. 
 
-- **configuration**: the 4D WebStudio configuration inherits the [`WebAdmin` web server settings](../Admin/webAdmin.md#webadmin-settings),
-- **authentication**: access to 4D WebStudio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When 4D WebStudio is accessed through the **WebStudio** menu item (see below), automatic authentication is provided. 
+- **configuration**: The web studio configuration inherits the [`WebAdmin` web server settings](../Admin/webAdmin.md#webadmin-settings),
+- **authentication**: access to the web studio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the web studio is accessed through the **Design** > **Web Studio...** menu item, automatic authentication is provided. 
 
 > **TODO --> ADD protection on instance level (4D client)**
 
-## Opening 4D WebStudio
+## Opening the web studio
 
-The 4D WebStudio page is automatically available when [the `WebAdmin` web server is started](../Admin/webAdmin.md#starting-the-webadmin-web-server). 
+The web studio page is automatically available when [the `WebAdmin` web server is started](../Admin/webAdmin.md#starting-the-webadmin-web-server). 
 
- There are two ways to access the 4D WebStudio :
+ There are two ways to access the web studio :
 
- *	from a 4D application, go to **Design** > **4D WebStudio**. 
+ *	from a 4D application, go to **Design** > **Web Studio...**. 
  
  	If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
 
@@ -49,7 +50,7 @@ The 4D WebStudio page is automatically available when [the `WebAdmin` web server
 	
 		IPaddress:HTTPSPort/studio
 
-	For example, after launching a local web server on port 7080, type this address in your browser to access the 4D WebStudio: 
+	For example, after launching a local web server on port 7080, type this address in your browser to access the web studio: 
 
 		localhost:7080/studio
 
@@ -61,22 +62,23 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 ## Interface
 
-The 4D WebStudio provides several tools ranging from interface customization to method and event linking.
+The web studio provides several tools ranging from interface customization to method and event linking.
 
 ![alt-text](assets/en/web-studio/web-studio-interface.png)
 
-1. The **Explorer** displays your project's web forms, methods, classes, assets and data model.
-2. The **tabs** let you keep track of your currently opened elements, such as your forms and methods.
-3. **Components** allow you to design the interface of your end users' application. Customize their look using the **Styles library** and determine the data they will display using the **Data sources**.
-4. Drag and drop :
-	*	components onto your canvas	
-	*	styles and data sources onto these components
-5. The **event and method editors** lets you link events and methods to your components
-6. The **Styles panel** allows for advanced style customization
+<ol class="interface-numbers">
+<li class="interface-item">The Explorer displays your project's web forms, methods, classes, assets and data model.</li>
+<li class="interface-item">The Tabs let you keep track of your currently opened elements, such as your forms and methods.</li>
+<li class="interface-item">Components allow you to design the interface of your end user's application. </li>
+<li class="interface-item">The Canvas is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop styles and data sources onto these components.</li>
+<li class="interface-item">The Event and method editors lets you link events and methods to your components.</li>
+<li class="interface-item"> The Styles panel allows for advanced style customization.</li>
+<li class="interface-item"> The menu buttons allow you to save all your work, preview the application, and access your settings.</li>
+</ol>
 
 ### Explorer
 
-You can see see the explorer as the skeleton of your project. It displays your project's web forms, methods, classes, assets and data model.
+You can see the explorer as the skeleton of your project. It displays your project's web forms, methods, classes, assets and data model.
 
 ![alt-text](assets/en/web-studio/explorer.png)
 
@@ -88,7 +90,9 @@ These tabs let you keep track of which elements of your project are currently op
 
 ### Components
 
-Right under the tabs is the components section. You can search for a component or choose one from the list, then drag it onto the canvas.
+This area lets you search for a component or choose one from the list. Once a component is on the canvas, you can :
+*	customize its look using the Styles library and the Style Panel
+*	assign it a data source
 
 ![alt-text](assets/en/web-studio/components.png)
 
@@ -99,11 +103,15 @@ The styles library offers a choice of predefined CSS styles that you can apply t
 ![alt-text](assets/en/web-studio/styles-library.png)
 
 ### Data Sources
-This section holds the various data sources available.
+This section groups the available data sources.
 
 ![alt-text](assets/en/web-studio/data-sources.png)
 
 #### The difference between Catalog, Remote and Local
+
+*  The **Catalog** holds data from your 4D Project. You can transfer data from your 4D project to the server (**Remote** data source) to use it as data source in your web form editor.
+*  **Remote** data sources are *persistent* data sources. They are stored on the server.
+*  **Local** data sources are volatile sources. They are not stored in memory.
 
 ### Canvas
 The largest panel holds the canvas. This is where you drop your components, styles and data sources to build your application.
@@ -121,13 +129,4 @@ This panel allows for advanced component customization. It is a dynamic panel, w
 You can link events to your components. For example, you cna assign an `onchange` event to a search bar so that it suggests a list of employees as the user is typing.
 
 ![alt-text](assets/en/web-studio/events.png)
-
-### Tabs (save all etc)
-
-You can save all
-
-### Preview mode
-
-You can preview what your app will look like by clicking the eyecon.
-
 
