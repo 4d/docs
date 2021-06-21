@@ -78,9 +78,9 @@ The `4D.Blob.size` property <!-- REF #4D.Blob.size.Summary --> returns the size 
 #### Description
 The `4D.Blob.slice()` property <!-- REF #4D.Blob.slice().Summary --> creates and returns a blob object (4D.Blob) that contains data from a subset of the blob on which it's called. <!-- END REF -->
 
-The `start` parameter is an index into the Blob indicating the first byte to include in the new Blob. If you specify a negative value, 4D treats it as an offset from the end of the Blob toward the beginning. For example, -10 would be the 10th from last byte in the Blob. The default value is 0. If you specify a value for start that is larger than the size of the source Blob, the returned Blob's size is 0, and it contains no data.
+The *start* parameter is an index into the Blob indicating the first byte to include in the new Blob. If you specify a negative value, 4D treats it as an offset from the end of the Blob toward the beginning. For example, -10 would be the 10th from last byte in the Blob. The default value is 0. If you specify a value for start that is larger than the size of the source Blob, the returned Blob's size is 0, and it contains no data.
 
-The `end` parameter is an index into the Blob indicating the first byte that will not be included in the new Blob (i.e. the byte exactly at this index is not included).  If you specify a negative value, 4D treats it as an offset from the end of the Blob toward the beginning. For example, -10 would be the 10th from last byte in the Blob. The default value is the size of the blob. the default value is the blob's size.
+The *end* parameter is an index into the Blob indicating the first byte that will not be included in the new Blob (i.e. the byte exactly at this index is not included).  If you specify a negative value, 4D treats it as an offset from the end of the Blob toward the beginning. For example, -10 would be the 10th from last byte in the Blob. The default value is the size of the blob. the default value is the blob's size.
 
 #### Return Value
 
