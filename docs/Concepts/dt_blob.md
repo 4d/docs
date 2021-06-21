@@ -3,7 +3,7 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or can contain up to 2147483647 bytes (2 GB). 
+A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or can contain up to 2147483647 bytes (2 GB). 
 
 A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
@@ -40,7 +40,7 @@ Some commands alter the original blob, and thus do not support the 4D.Blob type:
 
 ## Passing blobs as parameters
 
-4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
+Blobs can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. blobs can also be passed as parameters to user methods, or returned by functions.
 
 ### Passing a 4D.Blob
 
@@ -66,21 +66,21 @@ To pass a C_BLOB to your own methods, you can also define a pointer to the C_BLO
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(anyBlobVar)
-  ` The BLOB is passed as parameter to a 4D command
+  ` The blob is passed as parameter to a 4D command
  SET BLOB SIZE(anyBlobVar;1024*1024)
-  ` The BLOB is passed as parameter to an external routine
+  ` The blob is passed as parameter to an external routine
  $errCode:=Do Something With This BLOB(anyBlobVar)
-  ` The BLOB is passed as a parameter to a method that returns a BLOB
+  ` The blob is passed as a parameter to a method that returns a blob
  C_BLOB(retrieveBlob)
  retrieveBlob:=Fill_Blob(anyBlobVar)
-  ` A pointer to the BLOB is passed as parameter to a user method
+  ` A pointer to the blob is passed as parameter to a user method
  COMPUTE BLOB(->anyBlobVar)
 ```
 **Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
 ## Assignment operator
 
-You can assign BLOBs to each other.
+You can assign blobs to each other.
 
 **Example:**
 ```4d
@@ -96,7 +96,7 @@ However, no operator can be applied to BLOBs.
 
 ## Addressing BLOB contents  
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+You can address each byte of a blob individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(vBlob)
@@ -107,4 +107,4 @@ You can address each byte of a BLOB individually using the curly brackets symbol
     vBlob{vByte}:=0
  End for
 ```
-Because you can address all the bytes of a BLOB individually, you can actually store whatever you want in a BLOB field or variable.
+Because you can address all the bytes of a blob individually, you can actually store whatever you want in a BLOB field or variable.
