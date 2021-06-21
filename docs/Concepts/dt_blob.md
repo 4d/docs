@@ -12,10 +12,10 @@ Like the other field types that can retain a large amount of data (such as the P
 ## Blob Types 
 
 4D supports two types of blobs:
-* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob. 
+* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob
 * **C_BLOB**: Classical blob variable
 
-We recommend using blob objects (4D.Blob) to manipulate blobs. Blob objects are optimized, shareable (when passed as method parameters, they are passed by reference) and usable in preemptive threads.
+We recommend using blob objects (4D.Blob) to manipulate blobs. Blob objects are optimized, shareable — when passed as method parameters, they are passed by reference — and usable in preemptive threads.
 
 ### Automatic conversion of blob type
 4D automatically converts blob objects (4D.Blob) to classical blobs (C_BLOB) and vice versa. For example: 
@@ -26,19 +26,19 @@ $o:=New object("blob";$myBlob)
 $type:=Value type($o.blob)  //object
 ```
 
-Some commands that alter the original blob do not support the 4D.Blob type:
+Some commands alter the original blob, and thus do not support the 4D.Blob type:
 
-* DELETE FROM BLOB
-* INSERT IN BLOB 
-* INTEGER TO BLOB 
-* LONGINT TO BLOB 
-* REAL TO BLOB 
-* SET BLOB SIZE 
-* TEXT TO BLOB 
-* VARIABLE TO BLOB 
-* LIST TO BLOB 
+* [DELETE FROM BLOB](https://doc.4d.com/4dv19R/help/command/en/page560.html)
+* [INSERT IN BLOB](https://doc.4d.com/4dv19R/help/command/en/page559.html) 
+* [INTEGER TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page548.html) 
+* [LONGINT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page550.html) 
+* [REAL TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page552.html) 
+* [SET BLOB SIZE](https://doc.4d.com/4dv19R/help/command/en/page606.html) 
+* [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html) 
+* [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html) 
+* [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html) 
 
-## Passing Blobs as parameters
+## Passing blobs as parameters
 
 4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
 
