@@ -12,7 +12,7 @@ Like the other field types that can retain a large amount of data (such as the P
 ## Blob Types 
 
 4D supports two types of blobs:
-* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob
+* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob (see [4D.Blob Class](../API/BlobClass.md))
 * **C_BLOB**: Classical blob variable
 
 We recommend using blob objects (4D.Blob) to manipulate blobs. Blob objects are optimized, shareable — when passed as method parameters, they are passed by reference — and usable in preemptive threads.
