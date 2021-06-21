@@ -67,13 +67,13 @@ The web studio provides several tools ranging from interface customization to me
 ![alt-text](assets/en/web-studio/web-studio-interface.png)
 
 <ol class="interface-numbers">
-<li class="interface-item">The Explorer displays your project's web forms, methods, classes, assets and data model.</li>
-<li class="interface-item">The Tabs let you keep track of your currently opened elements, such as your forms and methods.</li>
-<li class="interface-item">Components allow you to design the interface of your end user's application. </li>
-<li class="interface-item">The Canvas is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop styles and data sources onto these components.</li>
-<li class="interface-item">The Event and method editors lets you link events and methods to your components.</li>
-<li class="interface-item"> The Styles panel allows for advanced style customization.</li>
-<li class="interface-item"> The menu buttons allow you to save all your work, preview the application, and access your settings.</li>
+<li class="interface-item">Explorer: Displays your project's web forms, methods, classes, assets and data model.</li>
+<li class="interface-item">Tabs: They let you keep track of your currently opened elements, such as your forms and methods.</li>
+<li class="interface-item">Components: The building blocks of your end user's application interface. </li>
+<li class="interface-item">Canvas: This is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop styles and data sources onto these components.</li>
+<li class="interface-item">Event and method editors: This is where you link events and methods to your components.</li>
+<li class="interface-item">Styles panel: Allows for advanced style customization.</li>
+<li class="interface-item">Menu buttons: Save all your work, preview the end user's application, and access your settings.</li>
 </ol>
 
 ### Explorer
