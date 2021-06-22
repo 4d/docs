@@ -20,7 +20,7 @@ Un catálogo único y global devuelto por el comando `Storage` está siempre dis
 ## Utilización de objetos o colecciones compartidos
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
-### Modification
+### Modificación
 Modifications can be applied to shared objects and shared collections:
 
 - adding or removing object properties,
@@ -47,7 +47,7 @@ Please refer to example 2 for an illustration of shared group rules.
 
 **Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
 
-### Read
+### Lectura
 Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
 
 However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
