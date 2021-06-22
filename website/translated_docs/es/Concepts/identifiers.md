@@ -381,7 +381,7 @@ Asegúrese de utilizar nombres únicos para los diferentes elementos de su base.
 4D identifica los nombres utilizados en los métodos en función del siguiente orden de prioridad:
 
 1. Campos
-2. Commands
+2. Comandos
 3. Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
