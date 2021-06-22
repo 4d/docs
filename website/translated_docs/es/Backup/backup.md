@@ -47,7 +47,7 @@ El botón **Parar** permite al usuario interrumpir la copia de seguridad en cual
 
 El estado de la última copia de seguridad (correcta o fallida) se almacena en el área de información de la [página de copias de seguridad en el CSM](MSC/backup.md) o en la **página de mantenimiento** de 4D Server. También se registra en la base **Backup journal.txt**.
 
-### Accessing the application during backup
+### Acceso a la aplicación durante la copia de seguridad
 
 Durante una copia de seguridad, el acceso a la aplicación está restringido por 4D en función del contexto. 4D bloquea los procesos relacionados con los tipos de archivos incluidos en la copia de seguridad: si sólo se hace una copia de seguridad de los archivos del proyecto, no se podrá acceder a la estructura pero sí a los datos.
 
@@ -60,7 +60,7 @@ Por el contrario, si sólo se hace una copia de seguridad del archivo de datos, 
 
 Puede ocurrir que una copia de seguridad no se ejecute correctamente. Puede haber varias causas de fallo en la copia de seguridad: interrupción del usuario, archivo adjunto no encontrado, problemas en el disco de destino, transacción incompleta, etc. 4D procesa la incidencia según la causa.
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the **Backup journal.txt**.
+En todos los casos, tenga en cuenta que el estado de la última copia de seguridad (correcta o fallida) se almacena en el área de información de la [página de copias de seguridad en el CSM](MSC/backup.md) o en la **página de mantenimiento** de 4D Server, así como en el **Backup journal.txt**.
 
 - **Interrupción del usuario**: el botón **Parar** de la caja de diálogo de progreso permite a los usuarios interrumpir la copia de seguridad en cualquier momento. En este caso, la copia de elementos se detiene y se genera el error 1406. Puedes interceptar este error en el método base `On Backup Shutdown`.
 - **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la aplicación y de los archivos adjuntos accesibles) y devuelve un error.

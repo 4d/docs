@@ -24,15 +24,23 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 ## MAIL New attachment
 
+<details><summary>履歴</summary>
+| バージョン  | 内容                                   |
+| ------ | ------------------------------------ |
+| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+</details>
+
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
 | 参照          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
+| file        | 4D.File           | -> | Attachment file                                        |
+| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                     |
+| blob        | 4D.Blob           | -> | 添付を格納した BLOB                                           |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
-| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
 | name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
 | cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | テキスト              | -> | content-type ヘッダーの値                                    |
@@ -45,11 +53,12 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 `MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL_New_attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
-添付を定義するには、パスまたは Blob を引数として渡します。
+To define the attachment, you can use:
 
-- *path*: システムシンタックスで表現された添付ファイルのパスを **テキスト** 値で渡します。 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
-
-- *blob*: 添付そのものを **BLOB** で渡します。
+- a *file*, pass a `4D.File` object containing the attachment file.
+- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
+- a *blob*, pass a `4D.Blob` object containing the attachment itself.
+- a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
 
 任意の *name* 引数として、添付を指定するためにメールクライアントが使用する名前と拡張子を渡すことができます。 *name* が省略された場合:
 
@@ -160,22 +169,30 @@ $transporter.send($email)
 
 ## 4D.MailAttachment.new()
 
+<details><summary>履歴</summary>
+| バージョン  | 内容                                   |
+| ------ | ------------------------------------ |
+| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+</details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->
-**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
 | 参照          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
+| file        | 4D.File           | -> | Attachment file                                        |
+| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                     |
+| blob        | 4D.Blob           | -> | 添付を格納した BLOB                                           |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
-| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
 | name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
 | cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | テキスト              | -> | content-type ヘッダーの値                                    |
 | disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
 <!-- END REF -->
+
 
 #### 説明
 
@@ -210,18 +227,18 @@ $transporter.send($email)
 ## .getContent()
 
 <!-- REF #MailAttachmentClass.getContent().Syntax -->
-**.getContent()** : Blob<!-- END REF -->
+**.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 参照  | タイプ  |    | 説明    |
-| --- | ---- |:--:| ----- |
-| 戻り値 | BLOB | <- | 添付の中身 |
+| 参照  | タイプ     |    | 説明    |
+| --- | ------- |:--:| ----- |
+| 戻り値 | 4D.Blob | <- | 添付の中身 |
 <!-- END REF -->
 
 
 #### 説明
 
-`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を BLOB として返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 
 

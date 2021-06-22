@@ -24,15 +24,23 @@ Attachment objects provide the following read-only properties and functions:
 
 ## MAIL New attachment
 
+<details><summary>Historique</summary>
+| Version | Modifications                        |
+| ------- | ------------------------------------ |
+| v19 R2  | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+</details>
+
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
 | Paramètres  | Type              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
+| file        | 4D.File           | -> | Attachment file                                                      |
+| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texte             | -> | Path of the attachment file                                          |
-| blob        | Blob              | -> | BLOB containing the attachment                                       |
 | name        | Texte             | -> | Name + extension used by the mail client to designate the attachment |
 | cid         | Texte             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texte             | -> | Value of the content-type header                                     |
@@ -45,11 +53,12 @@ Attachment objects provide the following read-only properties and functions:
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
 
-You can pass either a path or a Blob to define the attachment.
+To define the attachment, you can use:
 
-- If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
-
-- If you use a *blob*, pass a **BLOB** value containing the attachment itself.
+- a *file*, pass a `4D.File` object containing the attachment file.
+- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
+- a *blob*, pass a `4D.Blob` object containing the attachment itself.
+- a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
 
 The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
 
@@ -160,22 +169,30 @@ $transporter.send($email)
 
 ## 4D.MailAttachment.new()
 
+<details><summary>Historique</summary>
+| Version | Modifications                        |
+| ------- | ------------------------------------ |
+| v19 R2  | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+</details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->
-**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
 | Paramètres  | Type              |    | Description                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
+| file        | 4D.File           | -> | Attachment file                                                      |
+| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texte             | -> | Path of the attachment file                                          |
-| blob        | Blob              | -> | BLOB containing the attachment                                       |
 | name        | Texte             | -> | Name + extension used by the mail client to designate the attachment |
 | cid         | Texte             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texte             | -> | Value of the content-type header                                     |
 | disposition | Texte             | -> | Value of the content-disposition header: "inline" or "attachment".   |
 | Résultat    | 4D.MailAttachment | <- | Attachment object                                                    |
 <!-- END REF -->
+
 
 #### Description
 
@@ -210,18 +227,18 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 ## .getContent()
 
 <!-- REF #MailAttachmentClass.getContent().Syntax -->
-**.getContent()** : Blob<!-- END REF -->
+**.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Paramètres | Type |    | Description               |
-| ---------- | ---- |:--:| ------------------------- |
-| Résultat   | Blob | <- | Content of the attachment |
+| Paramètres | Type    |    | Description               |
+| ---------- | ------- |:--:| ------------------------- |
+| Résultat   | 4D.Blob | <- | Content of the attachment |
 <!-- END REF -->
 
 
 #### Description
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
 
 
 

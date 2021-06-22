@@ -9,7 +9,7 @@ Las horas están en formato de 24 horas.
 
 Un valor de tiempo puede ser tratado como un número. El número devuelto de una hora es el número de segundos desde la medianoche (00:00:00) que representa esa hora.
 
-**Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Nota:** en el manual de *referencia del lenguaje 4D*, los parámetros de tipo Hora en las descripciones de los comandos se llaman Hora, excepto cuando se indique lo contrario.
 
 ## Constantes literales de tipo hora
 
@@ -39,9 +39,9 @@ Una hora nula se escribe ?00:00:00?
 | Resta             | Hora – Número  | Número   | ?02:03:04? – 65         | 7319       |
 | Multiplicación    | Hora * Número  | Número   | ?02:03:04? * 2          | 14768      |
 | División          | Hora / Número  | Número   | ?02:03:04? / 2          | 3692       |
-| División entera   | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
-| Módulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Módulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
+| División entera   | Hora \ Número | Número   | ?02:03:04? \ 2         | 3692       |
+| Módulo            | Hora % Hora    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Módulo            | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
 | Igual             | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                   |                |          | ?01:02:03? = ?01:02:04? | False      |
 | Desigualdad       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |

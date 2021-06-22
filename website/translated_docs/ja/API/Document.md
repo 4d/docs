@@ -511,28 +511,29 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容              |
+| ------ | --------------- |
+| v19 R2 | Returns 4D.Blob |
+| v17 R5 | 追加              |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : Blob<!-- END REF -->
+**.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 参照  | タイプ  |    | 説明         |
-| --- | ---- | -- | ---------- |
-| 戻り値 | BLOB | <- | ファイルのコンテンツ |
+| 参照  | タイプ     |    | 説明         |
+| --- | ------- | -- | ---------- |
+| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
 <!-- END REF -->
 
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した BLOB を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
-`Blob`。
+A `4D.Blob` object.
 
 #### 例題
 
