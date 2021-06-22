@@ -1,5 +1,5 @@
 ---
-id: 4DBlobClass
+id: BlobClass
 title: 4D.Blob
 ---
 
