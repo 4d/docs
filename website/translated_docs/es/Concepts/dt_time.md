@@ -37,9 +37,9 @@ Una hora nula se escribe ?00:00:00?
 | Resta             | Hora – Número  | Número   | ?02:03:04? – 65         | 7319       |
 | Multiplicación    | Hora * Número  | Número   | ?02:03:04? * 2          | 14768      |
 | División          | Hora / Número  | Número   | ?02:03:04? / 2          | 3692       |
-| División entera   | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
-| Módulo            | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Módulo            | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
+| División entera   | Hora \ Número | Número   | ?02:03:04? \ 2         | 3692       |
+| Módulo            | Hora % Hora    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Módulo            | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
 | Igual             | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                   |                |          | ?01:02:03? = ?01:02:04? | False      |
 | Desigualdad       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |

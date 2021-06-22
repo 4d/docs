@@ -35,36 +35,36 @@ Cuando crea un método proyecto, éste pasa a formar parte del lenguaje de la ba
 
 Se utilizan subrutinas para:
 
-- Reduce repetitive coding
-- Clarify your methods
-- Facilitate changes to your methods
-- Modularize your code
+- Reducción del código repetitivo
+- Clarificación de los métodos
+- Facilitar los cambios en sus métodos
+- Modularizar el código
 
-Por ejemplo, supongamos que tiene una base de clientes. Al personalizar la base, se da cuenta de que hay algunas tareas que realiza reiteradamente, como la búsqueda de un cliente y la modificación de su registro. The code to do this might look like this:
+Por ejemplo, supongamos que tiene una base de clientes. Al personalizar la base, se da cuenta de que hay algunas tareas que realiza reiteradamente, como la búsqueda de un cliente y la modificación de su registro. El código para hacer esto podría ser:
 
 ```4d
-  // Look for a customer
+  // Búsqueda de un cliente
  QUERY BY EXAMPLE([Customers])
-  // Select the input form
+  // Selección del formulario entrada
  FORM SET INPUT([Customers];"Data Entry")
-  // Modify the customer's record
+  // Modificación del registro del cliente
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. Si hay diez lugares en su base personalizada donde necesita hacer esto, tendrá que escribir el código diez veces. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+Si no utiliza subrutinas, tendrá que escribir el código cada vez que quiera modificar el registro de un cliente. Si hay diez lugares en su base personalizada donde necesita hacer esto, tendrá que escribir el código diez veces. Si utiliza subrutinas, sólo tendrá que escribirlas una vez. Esta es la primera ventaja de las subrutinas: reducir la cantidad de código.
 
-Si el código descrito anteriormente fuera un método llamado `MODIFICAR CLIENTE`, se ejecutaría simplemente utilizando el nombre del método en otro método. For example, to modify a customer’s record and then print the record, you would write this method:
+Si el código descrito anteriormente fuera un método llamado `MODIFICAR CLIENTE`, se ejecutaría simplemente utilizando el nombre del método en otro método. Por ejemplo, para modificar el registro de un cliente y luego imprimir el registro, se escribiría este método:
 
 ```4d
  MODIFY CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. En el ejemplo, no es necesario saber cómo funciona el método `MODIFICAR CLIENTE`, sólo lo que hace. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+Esta posibilidad simplifica enormemente sus métodos. En el ejemplo, no es necesario saber cómo funciona el método `MODIFICAR CLIENTE`, sólo lo que hace. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
 
-Si necesita cambiar su método de búsqueda de clientes en esta base de ejemplo, tendrá que cambiar sólo un método, no diez. This is the next reason to use subroutines—to facilitate changes to your methods.
+Si necesita cambiar su método de búsqueda de clientes en esta base de ejemplo, tendrá que cambiar sólo un método, no diez. Esta es la siguiente razón para utilizar subrutinas: facilitar los cambios en sus métodos.
 
-Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Considere el siguiente código de una base de de cuentas corrientes:
+Utilizando las subrutinas, hace que su código sea modular. Esto significa simplemente dividir el código en módulos (subrutinas), cada una de las cuales realiza una tarea lógica. Considere el siguiente código de una base de de cuentas corrientes:
 
 ```4d
  FIND CLEARED CHECKS ` Buscar los cheques emitidos
@@ -164,9 +164,9 @@ Los métodos proyecto pueden llamarse a sí mismos. Por ejemplo:
 - El método A puede llamar al método B que puede llamar a A, por lo que A volverá a llamar a B y así sucesivamente.
 - Un método puede llamarse a sí mismo.
 
-Esto se llama recursividad. The 4D language fully supports recursion.
+Esto se llama recursividad. El lenguaje 4D soporta totalmente la recursividad.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Aquí un ejemplo. Digamos que tiene una tabla `[Friends and Relatives]` compuesta por este conjunto de campos extremadamente simplificado:
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
