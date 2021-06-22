@@ -1,9 +1,9 @@
 ---
-id: 4DBlobClass
-title: 4D.Blob
+id: BlobClass
+title: BLOB
 ---
 
-The 4D.Blob class lets you create and manipulate `4D.Blob` objects.
+The Blob class lets you create and manipulate `4D.Blob` objects.
 
 ### 概要
 |                                                                                                                                                                 |
