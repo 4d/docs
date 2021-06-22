@@ -144,30 +144,30 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Un objeto class tiene las propiedades y funciones siguientes:
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
 
-A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+Un objeto de clase es un [objeto compartido](shared.md) y, por tanto, se puede acceder a él desde diferentes procesos de 4D simultáneamente.
 
-### Inheritance
+### Herencia
 
 If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass).
 
 When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
 
 
-## Class keywords
+## Palabras clave de clase
 
-Specific 4D keywords can be used in class definitions:
+En las definiciones de clase se pueden utilizar palabras claves específicas de 4D:
 
-- `Function <Name>` to define class functions of the objects.
-- `Class constructor` to define the properties of the objects.
-- `Class extends <ClassName>` to define inheritance.
+- `Function <Name>` para definir las funciones de clase de los objetos.
+- `Class constructor` para definir las propiedades de los objetos.
+- `Class extends <ClassName>` para definir la herencia.
 
 
 ### `Function`
@@ -179,19 +179,19 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Las funciones de clase son propiedades específicas de la clase. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
-> **Consejo:** comenzar el nombre de la función con un carácter de subrayado ("_") excluirá la función de las funcionalidades de autocompletado en el editor de código 4D. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Consejo:** comenzar el nombre de la función con un carácter de subrayado ("_") excluirá la función de las funcionalidades de autocompletado en el editor de código 4D. Por ejemplo, si declara `Function _myPrivateFunction` en `MyClass`, no se propondrá en el editor de código cuando digite en `"cs.MyClass. "`.
 
-Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Por ejemplo:
+Inmediatamente después del nombre de la función, los [parámetros](#parameters) de la función se pueden declarar con un nombre y un tipo de datos asignados, incluido el parámetro de retorno (opcional). Por ejemplo:
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-Within a class function, the `This` command is used as the object instance. Por ejemplo:
+En una función de clase, el comando `This` se utiliza como instancia del objeto. Por ejemplo:
 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)
@@ -202,11 +202,11 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Para una función de clase, el comando `Current method name` devuelve: "*\<ClassName>.\<FunctionName>*", por ejemplo "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+En el código de la aplicación, las funciones de clase se llaman como métodos miembros de la instancia del objeto y pueden recibir los [parámetros](#class-function-parameters) si los hay. Se soportan las siguientes sintaxis:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- uso del operador `()`. For example, `myObject.methodName("hello")`
 - use of a "4D.Function" class member method:
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
@@ -218,7 +218,7 @@ In the application code, class functions are called as member methods of the obj
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. El nombre del parámetro debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties). Múltiples parámetros (y tipos) están separados por punto y coma (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
