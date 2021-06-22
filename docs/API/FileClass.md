@@ -724,7 +724,12 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
+#### Compatibility
+In projects created before 4D v19 R2:
+* 4D automatically used a BOM, 
+* CR was the default end of line (EOL) character for projects created on macOS. 
 
+You can activate the new behavior (no BOM and LF as EOL character on macOS) for those projects in **Design** > **Settings...** > **Compatiblity**.
 
 #### Example
 
