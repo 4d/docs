@@ -5,7 +5,7 @@ title: List Box
 
 ## Overview
 
-List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event managemet, customized appearance, moving of columns, etc.
+List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. Incluem funções avançadas relativas à entrada de dados, a ordenação de colunas, a gestão de eventos, o aspecto personalizado, o deslocamento de colunas, etc.
 
 ![](assets/en/FormObjects/listbox.png)
 
@@ -208,7 +208,7 @@ A list box is made of one or more column object(s) which have specific propertie
 ![](assets/en/FormObjects/listbox_column.png)
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro licence (see [Using object arrays in columns (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). O uso de arrays de objetos exige uma licença de 4D View Pro (ver [Utilização de arrays de objetos em colunas (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
 
 
 ### Column Specific Properties
@@ -396,11 +396,11 @@ In the object method of the list box, you can write:
  Case of
     :(Form event=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // cores de fundo linha
        For($i;1;$n)
-          If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
-          Else // not selected
+          If(LB_Arrays{$i}=True) // selecionado
+             _ListboxBackground{$i}:=0x0080C080 // fundo verde
+          Else // não selecionado
              _ListboxBackground{$i}:=lk inherited
           End if
        End for
@@ -727,14 +727,14 @@ In this case, you must fill and empty arrays through the code. The principles to
 
 
 
-## Object arrays in columns (4D View Pro)
+## Arrays objetos nas colunas (4D View Pro)
 
 List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
 
 The following list box was designed using an object array:
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
+> **Nota sobre as licenças**: a possibilidade de utilizar arrays de objetos nas list boxes é o primeiro passo para a próxima ferramenta "4D View Pro" que substituirá progressivamente ao plug-in 4D View. O uso desta funcionalidade exige ter uma licença válida de 4D View. Para saber mais, consulte o site Web de 4D.
 
 ### Configuring an object array column
 
