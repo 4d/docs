@@ -379,7 +379,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Property   |                          | Tipo      | Descripción                                                                                                  |
+| Propriedad |                          | Tipo      | Descripción                                                                                                  |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | booleano  | True if the check is successful, False otherwise                                                             |
 | status     |                          | number    | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
