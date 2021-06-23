@@ -27,36 +27,36 @@ Aunque la aplicación funcionará de la misma manera en modo interpretado y comp
 | No se puede cambiar un array unidimensional a uno bidimensional, ni cambiar un array bidimensional a uno unidimensional.                                                                                 | Posible                                                                           |
 | Aunque el compilador escribirá la variable por usted, debe especificar el tipo de datos de una variable utilizando directivas del compilador cuando el tipo de datos sea ambiguo, como en un formulario. |                                                                                   |
 | La función `Undefined` siempre devuelve False para las variables. Las variables siempre están definidas.                                                                                                 |                                                                                   |
-| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro.                      | Preemptive process properties are ignored                                         |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                                             | It is always possible to interrupt 4D                                             |
+| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro.                      | Se ignoran las propiedades de los procesos preventivos                            |
+| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                                                    | Siempre es posible interrumpir 4D                                                 |
 
-## Using Compiler Directives with the Interpreter
+## Utilizar las directivas del compilador con el intérprete
 
-Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
+Las aplicaciones no compiladas no requieren directivas del compilador. El intérprete digita automáticamente cada variable en función de cómo se utilice en cada declaración, y una variable puede volver a escribirse libremente en el proyecto de aplicación.
 
-Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
+Debido a esta flexibilidad, es posible que una aplicación tenga un rendimiento diferente en modo interpretado y compilado.
 
-For example, if you write:
+Por ejemplo, si se escribe:
 
 ```4d
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the project, you write:
+y en otra parte del proyecto, escribe:
 ```4d
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+En este ejemplo, `MyInt` se asigna el mismo valor (3) tanto en el modo interpretado como en el compilado, siempre que la directiva del compilador se interprete *antes* de la declaración de asignación.
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+El intérprete 4D utiliza directivas de compilador para escribir las variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
+The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. El intérprete, sin embargo, no es sistemático. Interpreta las declaraciones en el orden de ejecución. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
 
 
-## Using pointers to avoid retyping
+## Utilización de punteros para evitar la reescritura
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Una variable no se puede volver a escribir. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
 
 ```4d
 C_POINTER($p)
@@ -66,12 +66,12 @@ C_LONGINT($age)
 $name:="Smith"
 $age:=50
 
-$p:=->$name //text target for the pointer
-$p->:="Wesson" //assigns a text value
+$p:=->$name //texto objetivo para el puntero
+$p->:="Wesson" //asigna un valor texto
 
 $p:=->$age  
-// new target of different type for the pointer
-$p->:=55 //assigns a number value
+// nuevo objetivo de tipo diferente para el puntero
+$p->:=55 //asigna un valor numérico
 ```
 
 Imagine a function that returns the length (number of charaters) of values that can be of any type.
