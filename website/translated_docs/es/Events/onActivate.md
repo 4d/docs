@@ -3,9 +3,9 @@ id: onActivate
 title: On Activate
 ---
 
-| Code | Can be called by | Definition                                                                               |
-| ---- | ---------------- | ---------------------------------------------------------------------------------------- |
-| 11   | Form             | The form's window becomes the frontmost window or the subform's container gets the focus |
+| Code | Puede ser llamado por | Definición                                                                               |
+| ---- | --------------------- | ---------------------------------------------------------------------------------------- |
+| 11   | Formulario            | The form's window becomes the frontmost window or the subform's container gets the focus |
 
 
 ## Descripción
