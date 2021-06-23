@@ -118,45 +118,45 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
  C_TEXT($what)
  C_OBJECT($2)
  C_OBJECT($inventory)
- $what:=$1 //for better readability
+ $what:=$1 //para una mejor legibilidad
  $inventory:=$2
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) //método para contar productos
+ Use($inventory) //utilizar el objeto compartido
+    $inventory[$what]:=$count  //guardar los resultados de este artículo
  End use
 ```
 
 ## Ejemplo 2
 
-The following examples highlight specific rules when handling shared groups:
+Los siguientes ejemplos ilustran las reglas específicas para el manejo de los grupos compartidos:
 
 ```4d
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  //se crea el grupo 1
  End use
 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //se crea el grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar un objeto del grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+  //$ob4 ya pertenece a otro grupo
+  //la asignación no está permitida
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //eliminar cualquier referencia a $ob4 del grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar un objeto del grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+  //$ob4 aún pertenece al grupo 2
+  //la asignación no está permitida
  End use
 ```
