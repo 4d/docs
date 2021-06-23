@@ -320,14 +320,14 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 **Example**
 
-In the *Color* project method, write the following code:
+No método de projeto *Color*, entre o código abaixo:
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+//Método Color
+//Define a cor da fonte para certas linhas e a cor de fundo para uma coluna específica :
 C_OBJECT($0)
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID é um atributo de objetos/entidades de uma coleção
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -336,27 +336,27 @@ End if
 $0:=Form.meta
 ```
 
-**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+**Melhores práticas:** Por razões de otimização, é recomendado nesse caso criar o objeto `meta.cell` uma vez no método formulário:
 
 ```4d
-  //form method
+  //método de formulário
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Column2";New object("fill";"black"))
  End case
 ```
 
-Then, the *Color* method would contain:
+O método *Color* iria conter :
 
 ```4d
-  //Color method
+  //Método Color 
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reusa o mesmo objeto para melhor performance
  ...
 ```
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> Veja também o comando [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 
 
@@ -380,7 +380,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
+Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. Quando essa opção for marcada, 4D interpreta qualquer tag\<SPAN> HTML encontrada nessa área. </p> 
 
 <p spaces-before="0">
   By default, this option is not enabled.
@@ -443,7 +443,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+  Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
 </p>
 
 <table spaces-before="0">
@@ -499,7 +499,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <p spaces-before="0">
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+  Além de <a href="text.md">áreas de texto estáticas</a>, <a href="input_overview.md">input</a> os objetos de texto podem ser girados quando forem não-<a href="properties_Entry.md#enterable">digitáveis</a>. Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.
 </p>
 
 
@@ -544,7 +544,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+  <a href="input_overview.md">Input</a> (não-digitável) - <a href="text.md">Área Texto</a>
 </p>
 
 
@@ -561,11 +561,11 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font color to each row of the list box or cell of the column.
+  Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 </p>
 
 <h4 spaces-before="0">
@@ -624,11 +624,11 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font style to each row of the list box or each cell of the column.
+  Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estillos de Fonte</a>. Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
 </p>
 
 
@@ -682,11 +682,11 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+  Essa propriedade só está disponível para a área input <a href="#multi-style">Multiestilo</a>. Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.
 </p>
 
 <p spaces-before="0">
-  For example, here is a text that includes a style modification:
+  Por exemplo, aqui está um texto que inclui uma modificação de estilo:
 </p>
 
 <p spaces-before="0">
@@ -694,17 +694,17 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  When the property is disabled, the area only stores the modification. The stored contents are therefore:
+  Quando a propriedade for desativada, a área só armazena a modificação. Os conteúdos armazenados são entretanto:
 </p>
 
-<pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
+<pre><code>Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!
 </code></pre>
 
 <p spaces-before="0">
-  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+  Quando a propriedade for ativada, a área armazena todas as informações de formatação. A primeira tag genérica descreve o estilo padrão quando cada variação no sujeito for um par de tags aninhadas. Os conteúdos armazenados na área são portanto:
 </p>
 
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
+<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!&lt;/SPAN&gt;
 </code></pre>
 
 <h4 spaces-before="0">
