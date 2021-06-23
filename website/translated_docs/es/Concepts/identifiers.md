@@ -359,7 +359,7 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 | Variable/Array proceso          | 31            | vsCurrentName              |
 | Variable/Array local            | $ + 31        | $vlLocalCounter            |
 | Propiedades de objetos          | 255           | $o.myAttribute             |
-| Form                            | 31            | "My Custom Web Input"      |
+| Formulario                      | 31            | "My Custom Web Input"      |
 | Objetos de formulario           | 255           | "MyButton"                 |
 | Métodos proyecto                | 31            | M_ADD_CUSTOMERS          |
 | Comando de plug-in              | 31            | PDF SET ROTATION           |
