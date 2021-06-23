@@ -48,7 +48,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### Objects Supported
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista suspensa](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista hierárquica](list_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 
 
