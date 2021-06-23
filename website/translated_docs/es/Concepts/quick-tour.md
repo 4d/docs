@@ -17,7 +17,7 @@ This code will display a platform-standard alert dialog box with the "Hello, Wor
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
 
 
-## Assigning Values
+## Asignar los valores
 
 Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
 
@@ -58,7 +58,7 @@ MyOtherDate:=Current date+30
 
 The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
-## Commands
+## Comandos
 
 4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Ejemplo:
 
@@ -129,10 +129,10 @@ Un método proyecto puede llamar a otro método proyecto con o sin parámetros (
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) //Llama al método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
+  //Este es el código del método Do_Something
 $0:=Uppercase($1)
 ```
 
@@ -155,7 +155,7 @@ If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
-## Objects and collections
+## Objetos y colecciones
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. Por ejemplo:
 
@@ -284,14 +284,14 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 - Quick Report editor as a formula for a column
 
 
-### Expression types
+### Tese de expresiones
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
 | Expresión                | Tipo               | Descripción                                                                                                                                                                     |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | Cadena             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | Cadena             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | Cadena             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| “Sr. ” + [People]Name    | Cadena             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
 | Uppercase("smith")       | Cadena             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
 | 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
 | 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
