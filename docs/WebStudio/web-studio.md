@@ -118,7 +118,7 @@ The largest panel holds the canvas. This is where you drop your components, styl
 
 ![alt-text](assets/en/web-studio/canvas.png)
 
-### The Style Panel
+### The Properties Panel
 
 This panel allows for advanced component customization. It is a dynamic panel, which means that its contents adapt to the currently selected component.
 
