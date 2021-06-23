@@ -333,23 +333,23 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 参照  | タイプ    |    | 説明                                                    |
-| --- | ------ | -- | ----------------------------------------------------- |
-| 戻り値 | オブジェクト | <- | Contents of .exe/.dll version resource or .plist file |
+| 参照  | タイプ    |    | 説明                                   |
+| --- | ------ | -- | ------------------------------------ |
+| 戻り値 | オブジェクト | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+`.getAppInfo()` 関数は、 <!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.dll**、**.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**Returned object with a .exe or .dll file**
+**.exe または .dll ファイルの場合に返されるオブジェクト**
 
-> Reading a .exe or .dll is only possible on Windows.
+> .exe および .dll ファイルの読み取りは Windows上でのみ可能です。
 
 プロパティはすべてテキストです。
 
@@ -564,25 +564,25 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 参照   | タイプ    |    | 説明                                                               |
-| ---- | ------ | -- | ---------------------------------------------------------------- |
-| info | オブジェクト | -> | Properties to write in .exe/.dll version resource or .plist file |
+| 参照   | タイプ    |    | 説明                                          |
+| ---- | ------ | -- | ------------------------------------------- |
+| info | オブジェクト | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+`.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.dll**、**.plist** ファイルの情報として書き込みます<!-- END REF -->。
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-***info* parameter object with a .exe or .dll file**
+**.exe または .dll ファイル用の *info* オブジェクト**
 
-> Writing a .exe or .dll file information is only possible on Windows.
+> .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+*info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | タイプ  |
 | ---------------- | ---- |
@@ -712,21 +712,21 @@ $infoPlistFile.setAppInfo($info)
 
 > 4D によってサポートされている文字セットの一覧については、`CONVERT FROM TEXT` コマンドを参照ください。
 
-文字セットのバイトオーダーマーク (BOM) が存在する場合、4D はそれもファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットと BOM を使用します。
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
 
-*breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
+*breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 The following constants, found in the **System Documents** theme, are available:
 
-| 定数                            | 値 | 説明                                                                                                        |
-| ----------------------------- | - | --------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                |
-| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
-| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
-| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
+| 定数                            | 値 | 説明                                                                                                                                                             |
+| ----------------------------- | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                                                                     |
+| `Document with native format` | 1 | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
+| `Document with CRLF`          | 2 | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| `Document with CR`            | 3 | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| `Document with LF`            | 4 | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-
+> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### 例題
 
