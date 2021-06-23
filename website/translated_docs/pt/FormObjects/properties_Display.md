@@ -133,7 +133,7 @@ Suppose you use the format ##0 to display three digits. If the user enters nothi
 ### Separator characters
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: *   in a Real type field, using this key will insert the decimal separator defined in the system, *   in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> Em Windows, ao utilizar a tecla do separador decimal do teclado numérico, 4D diferencia entre o tipo de campo onde se encontra o cursor: * em um campo de tipo Real, ao utilizar esta tecla se insere o separador decimal definido no sistema, * em qualquer outro tipo de campo, esta tecla insere o caractere associado à tecla, normalmente um ponto (.) ou uma vírgula (,).
 
 
 ### Decimal points and other display characters
