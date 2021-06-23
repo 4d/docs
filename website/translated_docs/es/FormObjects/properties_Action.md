@@ -21,9 +21,9 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dragging | texto     | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Tipos de datos | Possible Values                                              |
+| -------- | -------------- | ------------------------------------------------------------ |
+| dragging | texto          | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -33,7 +33,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 
-#### See also
+#### Ver también
 [Droppable](#droppable)
 
 
@@ -53,16 +53,16 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dropping | texto     | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Tipos de datos | Possible Values                                              |
+| -------- | -------------- | ------------------------------------------------------------ |
+| dropping | texto          | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
 
-#### See also
+#### Ver también
 [Draggable](#draggable)
 
 
@@ -72,9 +72,9 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| continuousExecution | booleano  | true, false     |
+| Name                | Tipos de datos | Possible Values |
+| ------------------- | -------------- | --------------- |
+| continuousExecution | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -105,9 +105,9 @@ Several types of method references are supported:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                    |
-| ------ | --------- | ------------------------------------------------------------------ |
-| method | texto     | Object method standard or custom file path, or project method name |
+| Name   | Tipos de datos | Possible Values                                                    |
+| ------ | -------------- | ------------------------------------------------------------------ |
+| method | texto          | Object method standard or custom file path, or project method name |
 
 
 #### Objects Supported
@@ -125,9 +125,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| movableRows | booleano  | true, false     |
+| Name        | Tipos de datos | Possible Values |
+| ----------- | -------------- | --------------- |
+| movableRows | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -144,9 +144,9 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | texto     | "multiple", "single", "none" |
+| Name          | Tipos de datos | Possible Values              |
+| ------------- | -------------- | ---------------------------- |
+| selectionMode | texto          | "multiple", "single", "none" |
 
 #### Objects Supported
 
@@ -168,9 +168,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-| -------- | --------- | --------------- |
-| sortable | booleano  | true, false     |
+| Name     | Tipos de datos | Possible Values |
+| -------- | -------------- | --------------- |
+| sortable | booleano       | true, false     |
 
 #### Objects Supported
 [List Box](listbox_overview.md)
@@ -190,9 +190,9 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                                                                  |
-| ------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | cadena    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Name   | Tipos de datos | Possible Values                                                                                                  |
+| ------ | -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| action | cadena         | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objects Supported
 
