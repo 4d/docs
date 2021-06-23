@@ -3,7 +3,7 @@ id: webStudio
 title: WebStudio
 ---
 
-> **Preview**: The web studio is provided as a preview feature. Using this feature in production is not recommended; the final implementation could be slightly different.
+> **Preview**: The web studio is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.
 
 
 WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources, such as a 4D project's databases and methods, and link them to highly customizable interface elements in order to build complete applications.
@@ -72,7 +72,7 @@ The web studio provides several tools ranging from interface customization to me
 <li class="interface-item">Components: The building blocks of your end user's application interface. </li>
 <li class="interface-item">Canvas: This is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop styles and data sources onto these components.</li>
 <li class="interface-item">Event and method editors: This is where you link events and methods to your components.</li>
-<li class="interface-item">Styles panel: Allows for advanced style customization.</li>
+<li class="interface-item">Properties panel: Allows for advanced style customization.</li>
 <li class="interface-item">Menu buttons: Save all your work, preview the end user's application, and access your settings.</li>
 </ol>
 
@@ -90,9 +90,7 @@ These tabs let you keep track of which elements of your project are currently op
 
 ### Components
 
-This area lets you search for a component or choose one from the list. Once a component is on the canvas, you can :
-*	customize its look using the Styles library and the Style Panel
-*	assign it a data source
+This area lets you search for a component or choose one from the list. Once a component is on the canvas, you can customize its look and designate the data it displays using the Styles library and the Properties Panel.
 
 ![alt-text](assets/en/web-studio/components.png)
 
@@ -107,14 +105,12 @@ This section groups the available data sources.
 
 ![alt-text](assets/en/web-studio/data-sources.png)
 
-#### The difference between Catalog, Remote and Local
-
-*  The **Catalog** holds data from your 4D Project. You can transfer data from your 4D project to the server (**Remote** data source) to use it as data source in your web form editor.
-*  **Remote** data sources are *persistent* data sources. They are stored on the server.
-*  **Local** data sources are volatile sources. They are not stored in memory.
+*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your datastore, and they will be stored on the server as **Remote** data sources.
+*  **Remote** data sources: Entities and entity selections, stored on the server, that can be assigned to components. 
+*  **Local** data sources: Scalar types. No request is sent to the server to access these data sources. 
 
 ### Canvas
-The largest panel holds the canvas. This is where you drop your components, styles and data sources to build your application.
+This is where you drop your components, styles and data sources to build your application.
 
 ![alt-text](assets/en/web-studio/canvas.png)
 
