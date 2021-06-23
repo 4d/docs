@@ -3,7 +3,7 @@ id: onClicked
 title: On Clicked
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Definition                    |
+| Code | Puede ser llamado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Definición                    |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | 4    | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview) - [Button](FormObjects/button_overview.md) - [Button Grid](FormObjects/buttonGrid_overview.md) - [Check Box](FormObjects/checkbox_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - [Dropdown list](FormObjects/dropdownList_Overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md#overview) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) - [Picture Button](FormObjects/pictureButton_overview.md) - [Picture Pop up menu](FormObjects/picturePopupMenu_overview.md) - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) - [Progress Indicators](FormObjects/progressIndicator.md) - [Radio Button](FormObjects/radio_overview.md) - [Ruler](FormObjects/ruler.md) - [Spinner](FormObjects/spinner.md) - [Splitter](FormObjects/splitters.md) - [Stepper](FormObjects/stepper.md) - [Tab control](FormObjects/tabControl.md) | A click occurred on an object |
 
@@ -14,7 +14,7 @@ The `On Clicked` event is generated when the user clicks on an object.
 
 > Some form objects can be activated with the keyboard. For example, once a check box gets the focus, it can be entered using the space bar. In such a case, the `On Clicked` event is still generated.
 
-The `On Clicked` event usually occurs once the mouse button is released. However, there are several exceptions:
+The `On Clicked` event usually occurs once the mouse button is released. Sin embargo, hay varias excepciones:
 
 - [Invisible buttons](FormObjects/properties_Display.md#not-rendered): The `On Clicked` event occurs as soon as the click is made and does not wait for the mouse button to be released.
 - [Rulers](FormObjects/ruler.md): If the [Execute object method](FormObjects/properties_Action.md#execute-object-method) option is set to **true**, the `On Clicked` event occurs as soon as the click is made.
@@ -24,7 +24,7 @@ The `On Clicked` event usually occurs once the mouse button is released. However
 
 In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
 
-### On Clicked and On Double Clicked
+### On Clicked y On Double Clicked
 
 After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
 
@@ -34,13 +34,13 @@ If both events are selected for an object, the `On Clicked` and then the `On Dou
 
 This event is generated when the user clicks anywhere on a 4D View Pro document. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Tipo         | Descripción                    |
-| ----------- | ------------ | ------------------------------ |
-| code        | entero largo | On Clicked                     |
-| description | texto        | "On Clicked"                   |
-| objectName  | texto        | 4D View Pro area name          |
-| sheetName   | texto        | Name of the sheet of the event |
-| range       | objeto       | Cell range                     |
+| Propriedad  | Tipo         | Descripción                  |
+| ----------- | ------------ | ---------------------------- |
+| code        | entero largo | On Clicked                   |
+| description | texto        | "On Clicked"                 |
+| objectName  | texto        | Nombre del área 4D View Pro  |
+| sheetName   | texto        | Nombre de la hoja del evento |
+| range       | objeto       | Cell range                   |
 
 #### Ejemplo
 
