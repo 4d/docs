@@ -12,10 +12,31 @@ Like the other field types that can retain a large amount of data (such as the P
 ## Blob Types 
 
 4D supports two types of blobs:
-* **4D.Blob**: Blob object that encapsulates a blob or part of it without altering the original blob (see [4D.Blob Class](../API/BlobClass.md))
-* **C_BLOB**: Classical blob variable
+* **scalar blob**:  Blob that can be altered
+* **blob object (4D.Blob)**: Blob object that encapsulates a blob or part of it without altering the original blob (boxing). See [4D.Blob Class](../API/BlobClass.md))
 
-We recommend using blob objects (4D.Blob) to manipulate blobs. Blob objects are optimized, shareable — when passed as method parameters, they are passed by reference — and usable in preemptive threads.
+
+Depending on your needs, you might want to choose a blob type over the other:
+
+||Scalar Blob |4D.Blob |
+|----|:----:|:----:|
+|Alterable|Yes|No|
+|Shareable in objects and collections|No|Yes|
+|Duplicated when passed to custom methods*|Yes|No|
+Performance when accessing bytes|+|-|
+
+*Unlike certain built-in 4D methods that take a blob as a parameter, the methods you create will duplicate scalar blobs passed as parameters. Passing blob objects (4D.Blob) to your own methods is more efficient since they are automatically passed by reference.
+
+
+#### Access to bytes
+
+Use brackets to directly access a specific byte in a blob (read-only for 4D.Blob type), 
+
+```4d 
+$b:=$blobObj[3]
+// Equivalent with a c_blob:
+$b:=$blob{3}
+```
 
 ### Automatic conversion of blob type
 4D automatically converts blob objects (4D.Blob) to classical blobs (C_BLOB) and vice versa. For example: 
@@ -51,16 +72,16 @@ $myText:= BLOB to text ( $myBlob ; UTF8 )
 
 ### Passing a C_BLOB 
 
-To modify a blob, you need to use a C_BLOB variable and pass it to a command. For example: 
+To modify a blob, you need to use a scalar blob stored in a variable and pass it to a command. For example: 
 
 ```4d
-C_BLOB($myBlob)
+var $myBlob : Blob
 SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
 ### Passing a C_BLOB by reference using a pointer
 
-To pass a C_BLOB to your own methods, you can also define a pointer to the C_BLOB and pass the pointer as parameter.
+To pass a scalar blob to your own methods, you can also define a pointer to the variable that stores it and pass the pointer as parameter.
 
 **Examples:**
 ```4d
