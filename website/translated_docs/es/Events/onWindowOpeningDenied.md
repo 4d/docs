@@ -3,7 +3,7 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                            | Definition                       |
+| Code | Puede ser llamado por                       | Definición                       |
 | ---- | ------------------------------------------- | -------------------------------- |
 | 53   | [Área Web](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
 
@@ -15,5 +15,5 @@ This event is generated when the opening of a pop-up window is blocked by the We
 You can find out the blocked URL using the `WA Get last filtered URL` command.
 
 
-### See also
+### Ver también
 [`On Open External Link`](onOpenExternalLink.md)
