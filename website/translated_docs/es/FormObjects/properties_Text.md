@@ -11,9 +11,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON Grammar
 
-| Property             | Data Type | Possible Values       |
-| -------------------- | --------- | --------------------- |
-| allowFontColorPicker | booleano  | false (default), true |
+| Propriedad           | Tipos de datos | Possible Values       |
+| -------------------- | -------------- | --------------------- |
+| allowFontColorPicker | booleano       | false (default), true |
 
 #### Objects Supported
 
@@ -29,9 +29,9 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON Grammar
 
-| Property   | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| fontWeight | texto     | "normal", "bold" |
+| Propriedad | Tipos de datos | Possible Values  |
+| ---------- | -------------- | ---------------- |
+| fontWeight | texto          | "normal", "bold" |
 
 #### Objects Supported
 
@@ -48,9 +48,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
-| --------- | --------- | ------------------ |
-| fontStyle | cadena    | "normal", "italic" |
+| Name      | Tipos de datos | Possible Values    |
+| --------- | -------------- | ------------------ |
+| fontStyle | cadena         | "normal", "italic" |
 
 #### Objects Supported
 
@@ -66,9 +66,9 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values       |
-| -------------- | --------- | --------------------- |
-| textDecoration | cadena    | "normal", "underline" |
+| Name           | Tipos de datos | Possible Values       |
+| -------------- | -------------- | --------------------- |
+| textDecoration | cadena         | "normal", "underline" |
 
 #### Objects Supported
 
@@ -108,9 +108,9 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                |
-| --------- | --------- | ------------------------------ |
-| fontTheme | cadena    | "normal", "main", "additional" |
+| Name      | Tipos de datos | Possible Values                |
+| --------- | -------------- | ------------------------------ |
+| fontTheme | cadena         | "normal", "main", "additional" |
 
 
 #### Objects Supported
@@ -133,9 +133,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values      |
-| ---------- | --------- | -------------------- |
-| fontFamily | cadena    | CSS font family name |
+| Name       | Tipos de datos | Possible Values      |
+| ---------- | -------------- | -------------------- |
+| fontFamily | cadena         | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objects Supported
@@ -151,9 +151,9 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
-| -------- | --------- | ------------------------------------- |
-| fontSize | integer   | Font size in points. Minimum value: 0 |
+| Name     | Tipos de datos | Possible Values                       |
+| -------- | -------------- | ------------------------------------- |
+| fontSize | integer        | Font size in points. Minimum value: 0 |
 
 #### Objects Supported
 
@@ -178,9 +178,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | cadena    | any css value, "transparent", "automatic" |
+| Name   | Tipos de datos | Possible Values                           |
+| ------ | -------------- | ----------------------------------------- |
+| stroke | cadena         | any css value, "transparent", "automatic" |
 
 #### Objects Supported
 
@@ -210,9 +210,9 @@ Foreground color;Dark shadow color)
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values       |
-| --------------- | --------- | --------------------- |
-| rowStrokeSource | cadena    | Font color expression |
+| Name            | Tipos de datos | Possible Values       |
+| --------------- | -------------- | --------------------- |
+| rowStrokeSource | cadena         | Font color expression |
 
 #### Objects Supported
 
@@ -239,9 +239,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                 |
-| -------------- | --------- | ----------------------------------------------- |
-| rowStyleSource | cadena    | Style expression to evaluate for each row/cell. |
+| Name           | Tipos de datos | Possible Values                                 |
+| -------------- | -------------- | ----------------------------------------------- |
+| rowStyleSource | cadena         | Style expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -259,9 +259,9 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| textAlign | cadena    | "automatic", "right", "center", "justify", "left" |
+| Name      | Tipos de datos | Possible Values                                   |
+| --------- | -------------- | ------------------------------------------------- |
+| textAlign | cadena         | "automatic", "right", "center", "justify", "left" |
 
 #### Objects Supported
 
@@ -282,9 +282,9 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                        |
-| ------------- | --------- | -------------------------------------- |
-| verticalAlign | cadena    | "automatic", "top", "middle", "bottom" |
+| Name          | Tipos de datos | Possible Values                        |
+| ------------- | -------------- | -------------------------------------- |
+| verticalAlign | cadena         | "automatic", "top", "middle", "bottom" |
 
 #### Objects Supported
 
@@ -362,9 +362,9 @@ Then, the *Color* method would contain:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                  |
-| ---------- | --------- | ------------------------------------------------ |
-| metaSource | cadena    | Object expression to evaluate for each row/cell. |
+| Name       | Tipos de datos | Possible Values                                  |
+| ---------- | -------------- | ------------------------------------------------ |
+| metaSource | cadena         | Object expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -399,7 +399,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Tipos de datos
     </th>
     
     <th>
@@ -516,7 +516,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Tipos de datos
     </th>
     
     <th>
@@ -579,7 +579,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Tipos de datos
     </th>
     
     <th>
@@ -643,7 +643,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Tipos de datos
     </th>
     
     <th>
@@ -718,7 +718,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Data Type
+      Tipos de datos
     </th>
     
     <th>
