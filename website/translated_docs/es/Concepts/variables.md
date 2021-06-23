@@ -3,20 +3,20 @@ id: variables
 title: Variables
 ---
 
-Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Los datos en 4D se almacenan de dos formas fundamentalmente diferentes. **Los campos** almacenan los datos permanentemente en el disco; **las variables** almacenan los datos en la memoria de forma temporal.
 
-When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+Cuando define su base, especifique a 4D los nombres y los tipos de campos que desea utilizar. Las variables son muy parecidas, también se les da nombres y tipos diferentes (ver [Tipos de datos](Concepts/data-types.md)).
 
-Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
+Una vez creada, puede utilizar una variable dondequiera que la necesite en su aplicación. Por ejemplo, podría necesitar almacenar una variable texto en un campo del mismo tipo:
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
 
-Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
+Las variables son objetos del lenguaje; puede crear y utilizar variables que nunca aparecerán en la pantalla. En sus formularios, puede mostrar variables en la pantalla (excepto de los punteros y de los BLOB), introducir datos en ellas e imprimirlas en informes. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Declaring Variables
+## Declaración de variables
 
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
@@ -52,7 +52,7 @@ var $myVar //a variant variable
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
 This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` puede ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -61,35 +61,35 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType                | Contents                              |
-| ---------------------- | ------------------------------------- |
-| `Texto`                | Text value                            |
-| `Fecha`                | Date value                            |
-| `Hora`                 | Time value                            |
-| `Booleano`             | Boolean value                         |
-| `Entero`               | Long integer value                    |
-| `Real`                 | Real value                            |
-| `Puntero`              | Pointer value                         |
-| `Imagen`               | Picture value                         |
-| `Blob`                 | BLOB value                            |
-| `Colección`            | Collection value                      |
-| `Variant`              | Variant value                         |
-| `Objeto`               | Object with default class (4D.Object) |
-| `4D.<className>` | Object of the 4D class name           |
-| `cs.<className>` | Object of the user class name         |
+| varType                | Contents                                 |
+| ---------------------- | ---------------------------------------- |
+| `Texto`                | Valor texto                              |
+| `Fecha`                | Valor fecha                              |
+| `Hora`                 | Valor Hora                               |
+| `Booleano`             | Valor booleano                           |
+| `Entero`               | Valor entero largo                       |
+| `Real`                 | Valor real                               |
+| `Puntero`              | Valor puntero                            |
+| `Imagen`               | Valor imagen                             |
+| `Blob`                 | Valor BLOB                               |
+| `Colección`            | Valor colección                          |
+| `Variant`              | Valor variant                            |
+| `Objeto`               | Objeto con clase por defecto (4D.object) |
+| `4D.<className>` | Objeto del nombre de la clase 4D         |
+| `cs.<className>` | Objeto del nombre de la clase usuario    |
 
 #### Ejemplos
 
-- To declare local and process basic variables:
+- Para declarar variables básicas locales y de proceso:
 
 ```4d
 var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+//equivalente a:  
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+//también equivalente a C_OBJECT($o)
 ```
 
 - To declare object variables of 4D class:
@@ -108,9 +108,9 @@ var $entity : cs.EmployeeEntity
 ```
 
 
-### Using a C_ directive
+### Utilizando un C_ directive
 
-> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
+> **Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
@@ -133,7 +133,7 @@ The following are some basic variable declarations:
 **Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 
-## Assigning Data
+## Asignar los valores
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
@@ -147,7 +147,7 @@ creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber alrea
 
 > It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Of course, variables would not be very useful if you could not get data out of them. Una vez más, se utiliza el operador de asignación. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
 ```4d
 [Products]Size:=MyNumber
@@ -161,28 +161,28 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variables locales, proceso e interproceso
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variables locales
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 
-You may want to use a local variable to:
+Es posible que desee utilizar una variable local para:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
+- Evitar conflictos con los nombres de otras variables
+- Utilizar los datos temporalmente
 - Reduce the number of process variables
 
 The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
 
 When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aquí un ejemplo:
+Frequently, in an application, small pieces of information are needed from the user. El comando `Request` puede obtener esta información. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aquí un ejemplo:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Introduzca su identificación:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -192,7 +192,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
-### Process variables
+### Variables proceso
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
@@ -203,12 +203,12 @@ In interpreted mode, variables are maintained dynamically; they are created and 
 A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
 
 - Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
+- Gestión de arrastrar y soltar interproceso
 - In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Variables interproceso
 
 Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
 
