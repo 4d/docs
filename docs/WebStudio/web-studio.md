@@ -114,7 +114,7 @@ This is where you drop your components, styles and data sources to build your ap
 
 ![alt-text](assets/en/web-studio/canvas.png)
 
-### The Properties Panel
+### Properties Panel
 
 This panel allows for advanced component customization. It is a dynamic panel, which means that its contents adapt to the currently selected component.
 
@@ -122,7 +122,7 @@ This panel allows for advanced component customization. It is a dynamic panel, w
 
 ### Events, Methods and Code Panel
 
-You can link events to your components. For example, you cna assign an `onchange` event to a search bar so that it suggests a list of employees as the user is typing.
+You can link events to your components. For example, you can assign an `onchange` event to a search bar so that it suggests a list of employees as the user is typing.
 
 ![alt-text](assets/en/web-studio/events.png)
 
