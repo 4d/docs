@@ -38,7 +38,7 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
 ### Supported Properties
 [Estilo del borde](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Negrita](properties_Text.md#bold) - [Abaixo](properties_CoordinatesAndSizing. md#bottom) - [Classe](properties_Object.md#css-class) - [Fuente](properties_Text.md#font) - [Cor da fonte](properties_Text. md#font-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Conselho de ajuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions. md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Cor da linha](properties_BackgroundAndBorder. md##font-color-line-color) - [Nome de objeto](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md) - [Direita](properties_CoordinatesAndSizing. md#right) - [Título](properties_Object.md#title) -[Acima](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object. md#type) - [Sublinhado](properties_Text.md#underline) - [Tamanho vertical](properties_ResizingOptions.md#vertical-sizing) - [Variável ou expressão](properties_Object. md#variable-or-expression) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
-## Interaction with the properties of neighboring objects
+## Interação com as propriedades dos objetos vizinhos
 
 In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
 
@@ -51,7 +51,7 @@ In a form, splitters interact with the objects that are around them according to
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 > An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
 
-## Managing splitters programmatically
+## Gestão programada dos separadores
 
 You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
 
