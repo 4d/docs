@@ -32,21 +32,21 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
 ```
 
 
-### Using the `var` keyword
+### Utilizando la palabra clave `var`
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+Se recomienda declarar las variables utilizando la palabra clave `var` ya que esta sintaxis permite vincular las variables objeto con las clases. Using this syntax enhances code editor suggestions and type-ahead features.
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+Para declarar una variable de cualquier tipo con la palabra clave `var`, utilice la siguiente sintaxis:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
 Por ejemplo:
 
 ```4d
-var $myText : Text  //a text variable
-var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
-var $myVar //a variant variable
+var $myText : Text  //una variable texto
+var myDate1; myDate2 : Date  //varias variables fecha
+var $myFile : 4D.File  //una variable objeto clase archivo
+var $myVar //una variable variant
 ```
 
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
@@ -59,7 +59,7 @@ This syntax only supports [local and process variables](#local-process-and-inter
 
 If `varType` is omitted, a variable of the **variant** type is created.
 
-The following table lists all supported `varType` values:
+La siguiente tabla enumera todos los valores `varType` soportados:
 
 | varType                | Contents                                 |
 | ---------------------- | ---------------------------------------- |
@@ -130,14 +130,14 @@ The following are some basic variable declarations:
  C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
 ```
 
-**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. Para más información, consulte [Arrays](Concepts/arrays.md).
 
 
 ## Asignar los valores
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
 
-The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Por ejemplo:
+El operador de asignación es un primer medio para crear una variable e introducir datos en ella. You write the name of the variable that you want to create on the left side of the assignment operator. Por ejemplo:
 
 ```4d
 MyNumber:=3
