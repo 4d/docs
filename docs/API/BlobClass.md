@@ -30,23 +30,13 @@ The Blob class lets you create and manipulate `4D.Blob` objects.
 <!-- END REF -->
 
 #### Description
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary --> creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (`C_Blob` or `4D.Blob`).<!-- END REF --> 
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary --> creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`).<!-- END REF --> 
 
 If the `blob` parameter is omitted, the method returns an empty blob.
 
 #### Return Value
 
-A `4D.Blob` object that optionally encapsulates a copy of the data from a C_BLOB or another `4D.Blob`.
-
-#### Access to bytes 
-
-To directly access a specific byte in a blob, use brackets:
-
-```4d 
-$b:=$blobObj[3]
-// Equivalent with a c_blob:
-$b:=$blob{3}
-```
+A `4D.Blob` object that optionally encapsulates a copy of the data from a scalar blob or another `4D.Blob`.
 
 ## .size
 
@@ -91,16 +81,20 @@ A new `4D.Blob` object that contains the specified subset of the data contained 
 ```4d
 var $myBlob : Object
 var $myString : Text
-var $myNewBlob : Object
-var $initialBlob : Blob
+var $myNewBlob : 4D.Blob
+var $isBlob : Boolean
 
-TEXT TO BLOB("Hello, World!"; $initialBlob)
+// Store text in a 4D.Blob
+CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
+$is4DBlob:=OB Instance of($myBlob; 4D.Blob);   //True
 
-$myBlob:=4D.Blob.new($initialBlob)
-$myString:=BLOB to text($myBlob; UTF8)
-// $myString contains "Hello World!"
+$myString:=Convert to text($myBlob; "UTF-8")
+// $myString contains "Hello, World!"
+
+// Create a new 4D.Blob from $myBlob
 $myNewBlob:=$myBlob.slice(0; 5)
-$myString:=BLOB to text($myNewBlob; UTF8)
+
+$myString:=Convert to text($myNewBlob; "UTF-8")
 // $myString contains "Hello"
 ```
 

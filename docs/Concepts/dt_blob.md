@@ -7,7 +7,7 @@ A BLOB (Binary Large OBject) field, variable or expression is a contiguous serie
 
 A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
-Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
+Like other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
 ## Blob Types 
 
@@ -25,26 +25,29 @@ Depending on your needs, you might want to choose a blob type over the other:
 |Duplicated when passed to custom methods*|Yes|No|
 Performance when accessing bytes|+|-|
 
-*Unlike certain built-in 4D methods that take a blob as a parameter, the methods you create will duplicate scalar blobs passed as parameters. Passing blob objects (4D.Blob) to your own methods is more efficient since they are automatically passed by reference.
+*Unlike certain built-in 4D methods designed to take a blob as a parameter, the methods you create will duplicate scalar blobs passed as parameters. Passing blob objects (4D.Blob) to your own methods is more efficient since they are automatically passed by reference.
 
+## Assignment operator
 
-#### Access to bytes
+You can assign blob variables to each other.
 
-Use brackets to directly access a specific byte in a blob (read-only for 4D.Blob type), 
-
-```4d 
-$b:=$blobObj[3]
-// Equivalent with a c_blob:
-$b:=$blob{3}
+**Example:**
+```4d
+  ` Declare two variables of type Blob
+ var $vBlobA, $vBlobB : Blob
+  ` Set the size of the first blob to 10K
+ SET BLOB SIZE($vBlobA;10*1024)
+  ` Assign the first blob to the second one
+ $vBlobB:=$vBlobA
 ```
 
 ### Automatic conversion of blob type
-4D automatically converts blob objects (4D.Blob) to classical blobs (C_BLOB) and vice versa. For example: 
+4D automatically converts blob objects (4D.Blob) to scalar blobs stored in variables and vice versa when they're assigned to each other. For example: 
 
 ```4d
-C_BLOB($myBlob)
+var $myBlob: Blob
 $o:=New object("blob";$myBlob)
-$type:=Value type($o.blob)  //object
+$type:=OB Instance of($o.blob;4D.Blob)  //True
 ```
 
 Some commands alter the original blob, and thus do not support the 4D.Blob type:
@@ -61,7 +64,7 @@ Some commands alter the original blob, and thus do not support the 4D.Blob type:
 
 ## Passing blobs as parameters
 
-Blobs can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. blobs can also be passed as parameters to user methods, or returned by functions.
+Blobs can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. Blobs can also be passed as parameters to user methods, or returned by functions.
 
 ### Passing a 4D.Blob
 
@@ -70,7 +73,30 @@ var $myBlob: 4D.Blob.new
 $myText:= BLOB to text ( $myBlob ; UTF8 )
 ```
 
-### Passing a C_BLOB 
+### Passing a blob by reference using a pointer
+
+To pass a scalar blob to your own methods, you can also define a pointer to the variable that stores it and pass the pointer as parameter.
+
+**Examples:**
+```4d
+  ` Declare a variable of type BLOB
+var $anyBlobVar: Blob
+  ` The blob is passed as parameter to a 4D command
+ SET BLOB SIZE($anyBlobVar;1024*1024)
+  ` The blob is passed as parameter to an external routine
+ $errCode:=Do Something With This BLOB($anyBlobVar)
+  ` The blob is passed as a parameter to a method that returns a blob
+ var $retrieveBlob: Blob
+ retrieveBlob:=Fill_Blob($anyBlobVar)
+  ` A pointer to the blob is passed as parameter to a user method
+ COMPUTE BLOB(->$anyBlobVar)
+```
+**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+
+
+However, no operator can be applied to BLOBs.
+
+### Modifying a blob
 
 To modify a blob, you need to use a scalar blob stored in a variable and pass it to a command. For example: 
 
@@ -79,53 +105,31 @@ var $myBlob : Blob
 SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
-### Passing a C_BLOB by reference using a pointer
+## Accessing the contents of a blob
 
-To pass a scalar blob to your own methods, you can also define a pointer to the variable that stores it and pass the pointer as parameter.
+### Accessing a blob's bytes
 
-**Examples:**
-```4d
-  ` Declare a variable of type BLOB
- C_BLOB(anyBlobVar)
-  ` The blob is passed as parameter to a 4D command
- SET BLOB SIZE(anyBlobVar;1024*1024)
-  ` The blob is passed as parameter to an external routine
- $errCode:=Do Something With This BLOB(anyBlobVar)
-  ` The blob is passed as a parameter to a method that returns a blob
- C_BLOB(retrieveBlob)
- retrieveBlob:=Fill_Blob(anyBlobVar)
-  ` A pointer to the blob is passed as parameter to a user method
- COMPUTE BLOB(->anyBlobVar)
-```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+Use brackets to directly access a specific byte in a blob (read-only for 4D.Blob type): 
 
-## Assignment operator
-
-You can assign blobs to each other.
-
-**Example:**
-```4d
-  ` Declare two variables of type BLOB
- C_BLOB(vBlobA;vBlobB)
-  ` Set the size of the first BLOB to 10K
- SET BLOB SIZE(vBlobA;10*1024)
-  ` Assign the first BLOB to the second one
- vBlobB:=vBlobA
+```4d 
+$b:=$blobObj[3]
+// Equivalent with a scalar blob stored in a variable:
+$b:=$blob{3}
 ```
 
-However, no operator can be applied to BLOBs.
-
-## Addressing BLOB contents  
+> Since 4D.Blobs are not alterable, you can read the bytes of a 4D.Blob using this method, but not modify them.
 
 You can address each byte of a blob individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
 ```4d
   ` Declare a variable of type BLOB
- C_BLOB(vBlob)
+ var $vBlob : Blob
   ` Set the size of the BLOB to 256 bytes
- SET BLOB SIZE(vBlob;256)
+ SET BLOB SIZE($vBlob;256)
   ` The loop below initializes the 256 bytes of the BLOB to zero
- For(vByte;0;BLOB size(vBlob)-1)
-    vBlob{vByte}:=0
+ For(vByte;0;BLOB size($vBlob)-1)
+    $vBlob{vByte}:=0
  End for
 ```
 Because you can address all the bytes of a blob individually, you can actually store whatever you want in a BLOB field or variable.
+
+
