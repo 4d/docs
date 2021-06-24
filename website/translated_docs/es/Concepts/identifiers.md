@@ -105,7 +105,7 @@ ON EVENT CALL("HANDLE EVENTS")
 
 ## Tables and Fields
 
-Una tabla se designa colocando su nombre entre paréntesis: \[...]. You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
+Una tabla se designa colocando su nombre entre paréntesis: \[...]. Para designar un campo hay que especificar primero la tabla a la que pertenece (el nombre del campo sigue inmediatamente al nombre de la tabla).
 
 Un nombre de tabla y un nombre de campo pueden contener hasta 31 caracteres.
 
@@ -134,7 +134,7 @@ The name of a variable can be up to 31 characters, not including the scope symbo
 
 - A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
 - A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Thereafter, the name can include any letter or digit, and the underscore character ("_").
+- A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
 - Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
