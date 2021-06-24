@@ -112,7 +112,7 @@ Un nombre de tabla y un nombre de campo pueden contener hasta 31 caracteres.
 - A table or field name must begin with a letter, an underscore, or a dollar ("$")
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
-- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
+- Deben respetarse reglas adicionales cuando la base deba manejarse vía SQL: sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz, y el nombre no debe incluir ninguna palabra clave SQL (comando, atributo, etc.).
 
 
 Ejemplos:
@@ -130,12 +130,12 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols ($ or <>).
+El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance ($ o <>).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o "<>" para [variables de interproceso](variables.md#interprocess-variables).
+- Un dígito como primer carácter está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Un caracter de espacio está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
@@ -152,11 +152,11 @@ If(bValidate=1) //variable proceso
 
 ## Otros nombres
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+En el lenguaje 4D, varios elementos tienen sus nombres manejados como cadenas: **formularios**, **objetos de formulario**, **selecciones temporales**, **procesos**, **conjuntos**, **barras de menú**, etc.
 
-Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
+Estos nombres de cadena pueden contener hasta 255 caracteres, sin incluir los caracteres "$" o "<>" (si los hay).
 
-- String names can contain any characters.
+- Los nombres de las cadenas pueden contener cualquier carácter.
 - Los nombres de las cadenas son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
