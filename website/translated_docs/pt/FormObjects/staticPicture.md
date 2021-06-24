@@ -12,11 +12,11 @@ Static pictures are [static objects](formObjects_overview.md#active-and-static-o
 
 Static pictures are stored outside the forms and inserted by reference. In the form editor, static picture objects are created by copy/paste or drag and drop operations.
 
-> If you place a static picture on page 0 of a multi-page form, it will appear automatically as a background element on all pages. You can also include it in an inherited form, applied in the background of other different forms. Either way, your database will run faster than if the picture was pasted into each page.
+> If you place a static picture on page 0 of a multi-page form, it will appear automatically as a background element on all pages. You can also include it in an inherited form, applied in the background of other different forms. De qualquer maneira, seu banco de dados roda mais rápido se a imagem for colada em cada página.
 
 
 
-## Format and location
+## Formato e localização
 
 The original picture must be stored in a format managed natively by 4D (4D recognizes the main picture formats: JPEG, PNG, BMP, SVG, GIF, etc.).
 
