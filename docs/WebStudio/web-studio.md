@@ -6,7 +6,7 @@ title: WebStudio
 > **Preview**: The web studio is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.
 
 
-WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources, such as a 4D project's databases and methods, and link them to highly customizable interface elements in order to build complete applications.
+WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources, such as a 4D project's database and methods, and link them to highly customizable interface elements in order to build complete applications.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
@@ -28,7 +28,7 @@ The minimum resolution to use the web studio is 1280x720. Recommended resolution
 The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. 
 
 - **configuration**: The web studio configuration inherits the [`WebAdmin` web server settings](../Admin/webAdmin.md#webadmin-settings),
-- **authentication**: access to the web studio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the web studio is accessed through the **Design** > **Web Studio...** menu item, automatic authentication is provided. 
+- **authentication**: Access to the web studio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the web studio is accessed through the **Design** > **Web Studio...** menu item, automatic authentication is provided. 
 
 > **TODO --> ADD protection on instance level (4D client)**
 
