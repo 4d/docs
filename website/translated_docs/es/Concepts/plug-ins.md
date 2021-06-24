@@ -11,11 +11,11 @@ Aunque 4D ofrece cientos de métodos integrados para manipular objetos, registro
 
 Es evidente que cubrir todas las áreas de los sistemas operativos macOS y Windows por medio de los comandos de 4D sin duda conduciría a un producto con miles de comandos, y al mismo tiempo, la mayoría de los usuarios no tendrían necesidad de un conjunto tan grande de funcionalidades. Además, la creación de una herramienta tan completa haría que el entorno 4D fuera increíblemente complejo y llevaría a la mayoría de los usuarios meses de estudio antes de poder esperar resultados útiles.
 
-La naturaleza modular del entorno 4D permite la creación de aplicaciones básicas, pero no impide el desarrollo de sistemas muy complejos. La arquitectura del plug-in 4D abre el entorno 4D a todo tipo de aplicaciones o de usuario. 4D Plug-ins multiply that application or user's power and productivity.
+La naturaleza modular del entorno 4D permite la creación de aplicaciones básicas, pero no impide el desarrollo de sistemas muy complejos. La arquitectura del plug-in 4D abre el entorno 4D a todo tipo de aplicaciones o de usuario. Los plug-ins 4D multiplican la potencia y la productividad de la aplicación o del usuario.
 
 ## ¿Qué es un plug-in y qué puede hacer?
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+Un plug-in es una pieza de código que 4D lanza al inicio. Añade funcionalidad a 4D y aumenta así su capacidad.
 
 Normalmente, un plug-in hace cosas que:
 - 4D no puede efectuar (es decir, una tecnología de plataforma específica),
