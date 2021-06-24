@@ -49,14 +49,14 @@ MyInt:=3.1416
 
 En este ejemplo, `MyInt` se asigna el mismo valor (3) tanto en el modo interpretado como en el compilado, siempre que la directiva del compilador se interprete *antes* de la declaración de asignación.
 
-El intérprete 4D utiliza directivas de compilador para escribir las variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+El intérprete 4D utiliza directivas de compilador para escribir las variables. Cuando el intérprete encuentra una directiva de compilador, escribe la variable según la directiva. Si una declaración posterior intenta asignar un valor incorrecto (por ejemplo, asignar un valor alfanumérico a una variable numérica) la asignación no tendrá lugar y generará un error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. El intérprete, sin embargo, no es sistemático. Interpreta las declaraciones en el orden de ejecución. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
+El orden en el que aparecen las dos declaraciones es irrelevante para el compilador, porque primero busca en todo el proyecto para las directivas del compilador. El intérprete, sin embargo, no es sistemático. Interpreta las declaraciones en el orden de ejecución. Ese orden, por supuesto, puede cambiar de una sesión a otra, dependiendo de lo que haga el usuario. Por esta razón, es importante diseñar su proyecto de manera que las directivas del compilador se ejecuten antes de cualquier declaración que contenga las variables declaradas.
 
 
 ## Utilización de punteros para evitar la reescritura
 
-Una variable no se puede volver a escribir. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Una variable no se puede volver a escribir. Sin embargo, es posible utilizar un puntero para referirse a variables de diferentes tipos de datos. Por ejemplo, el siguiente código está permitido tanto en modo interpretado como compilado:
 
 ```4d
 C_POINTER($p)
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //asigna un valor numérico
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Imagine una función que devuelve la longitud (número de caracteres) de valores de todo tipo.
 
 ```4d
   // Calc_Length (cuántos caracteres)
