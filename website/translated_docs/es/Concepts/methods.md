@@ -184,25 +184,25 @@ Aquí un ejemplo. Digamos que tiene una tabla `[Friends and Relatives]` compuest
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
-For this example, we assume the values in the fields are unique (there are no two persons with the same name). Given a name, you want to build the sentence “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+Para este ejemplo, suponemos que los valores de los campos son únicos (no hay dos personas con el mismo nombre). A partir de un nombre, quiere escribir la frase "Un amigo mío, Juan, que es hijo de Pablo, que es hijo de Juana, que es hijo de Roberto, que es hijo de Leonor, se gana la vida así":
 
 1. Puede proceder de esta manera:
 
 ```4d
- $vsName:=Request("Enter the name:";"John")
+ $vsName:=Request("Introduzca el nombre:";"John")
  If(OK=1)
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
     If(Records in selection([Friends and Relatives])>0)
-       $vtTheWholeStory:="A friend of mine, "+$vsName
+       $vtTheWholeStory:="Un amigo mío, "+$vsName
        Repeat
           QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$vsName)
           $vlQueryResult:=Records in selection([Friends and Relatives])
           If($vlQueryResult>0)
-             $vtTheWholeStory:=$vtTheWholeStory+" who is the child of "+[Friends and Relatives]Name
+             $vtTheWholeStory:=$vtTheWholeStory+" que es hijo de "+[Friends and Relatives]Name
              $vsName:=[Friends and Relatives]Name
           End if
        Until($vlQueryResult=0)
-       $vtTheWholeStory:=$vtTheWholeStory+", does this for a living!"
+       $vtTheWholeStory:=$vtTheWholeStory+", ¡se gana la vida con esto!"
        ALERT($vtTheWholeStory)
     End if
  End if
@@ -223,7 +223,7 @@ For this example, we assume the values in the fields are unique (there are no tw
 con la función recursiva `Genealogy of` siguiente:
 
 ```4d
-  ` Genealogy of project method
+  ` Método proyecto Genealogy of
   ` Genealogy of ( String ) -> Text
   ` Genealogy of ( Name ) -> Part of sentence
 
@@ -238,11 +238,11 @@ Note que el método `Genealogy of` se llama a sí mismo.
 
 La primera forma es un **algoritmo iterativo**. La segunda forma es un **algoritmo recursivo**.
 
-When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
+Cuando implemente el código para casos como el del ejemplo anterior, es importante tener en cuenta que siempre puede escribir métodos utilizando los algoritmos iterativos o recursivos. Normalmente, la recursividad ofrece un código más conciso, legible y mantenible, pero su uso no es obligatorio.
 
 En 4D, algunos usos típicos de la recursividad son:
 
-- Treating records within tables that relate to each other in the same way as in the example.
-- Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
+- Tratar los registros dentro de las tablas que se relacionan entre sí de la misma manera que en el ejemplo.
+- Navegar por los documentos y las carpetas del disco, utilizando los comandos `FOLDER LIST` y `DOCUMENT LIST`. Una carpeta puede contener carpetas y documentos, las subcarpetas pueden a su vez contener carpetas y documentos, y así sucesivamente.
 
-**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Sin esta prueba condicional, el método se llamaría a sí mismo indefinidamente; eventualmente, 4D devolvería un error "Pila llena" porque ya no tendría espacio para "apilar" las llamadas (así como los parámetros y las variables locales utilizadas en el método).
+**Importante:** Las llamadas recursivas deben terminar siempre en algún punto. En el ejemplo, el método `Genealogy of` deja de llamarse a sí mismo cuando la consulta no devuelve ningún registro. Sin esta prueba condicional, el método se llamaría a sí mismo indefinidamente; eventualmente, 4D devolvería un error "Pila llena" porque ya no tendría espacio para "apilar" las llamadas (así como los parámetros y las variables locales utilizadas en el método).
