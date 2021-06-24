@@ -79,10 +79,7 @@ A new `4D.Blob` object that contains the specified subset of the data contained 
 #### Example 
 
 ```4d
-var $myBlob : Object
-var $myString : Text
-var $myNewBlob : 4D.Blob
-var $isBlob : Boolean
+var $myBlob : 4D.Blob
 
 // Store text in a 4D.Blob
 CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
