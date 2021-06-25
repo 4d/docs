@@ -1,41 +1,41 @@
 ---
 id: installation
-title: Installation and activation
+title: Instalação e ativação
 ---
 
-Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
+Welcome to 4D! Vai encontrar abaixo toda informação necessário para instalar e registrar sua aplicação 4D.
 
 
 ## Required configuration
 
-Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
+Consulte a [página de descarga de produto](https://us.4d.com/product-download) no web site de 4D para conhecer a configuração mínima de Mac / Windows para sua serie 4D.
 
-All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
+Todos os detalhes estão disponíveis na [página Recursos](https://us.4d.com/resources/feature-release) do website de 4D.
 
 
 ## Installation on disk
 
-4D products are installed from the 4D Web site:
+Os produtos 4D são instalados desde o website de 4D:
 
-1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
-2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+1. Utilizando seu navegador, conecte-se ao website de 4D e vá à página de [Descargas/downloads](https://us.4d.com/product-download/Feature-Release).
+2. Clique no link de download do seu produto e siga as instruções exibidas na tela.
 
 
-## Activation of a product
+## Ativação de um produto
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. You also need to activate any additional licenses you obtain.
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Também é preciso ativar qualquer licença adicional que obter.
 
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D usado em modo local com um banco de dados interpretado, sem acesso ao modo Desenho.
 
-**Important:** You must have an Internet connection and an e-mail account in order to activate your products.
+**Importante:** deve ter uma conexão a Internet e uma conta de correio eletrônico para ativar seus produtos.
 
-### Activate 4D
+### Ativação de 4D
 
-1. Launch the 4D application.
-2. Select the **License Manager...** command from the **Help** menu.
+1. Lançar a aplicação 4D.
+2. Selecione o comando **Gestão de licenças...** de menu **Ajuda**.
 
 ![](assets/en/getStart/helpMenu.png)
 
