@@ -230,7 +230,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Los métodos proyecto pueden aceptar parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Además, se pueden direccionar múltiples parámetros consecutivos (y últimos) con la sintaxis ${n} donde n, expresión numérica, es el número del parámetro.
+Los métodos proyecto pueden aceptar parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles dentro del método llamado como variables locales numeradas secuencialmente: $1, $2,..., $n. Además, se pueden direccionar múltiples parámetros consecutivos (y últimos) con la sintaxis ${n} donde n, expresión numérica, es el número del parámetro.
 
 Dentro de una función, la variable local $0 contiene el valor a devolver.
 
@@ -359,7 +359,7 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 | Variable/Array proceso          | 31            | vsCurrentName              |
 | Variable/Array local            | $ + 31        | $vlLocalCounter            |
 | Propiedades de objetos          | 255           | $o.myAttribute             |
-| Form                            | 31            | "My Custom Web Input"      |
+| Formulario                      | 31            | "My Custom Web Input"      |
 | Objetos de formulario           | 255           | "MyButton"                 |
 | Métodos proyecto                | 31            | M_ADD_CUSTOMERS          |
 | Comando de plug-in              | 31            | PDF SET ROTATION           |
@@ -381,7 +381,7 @@ Asegúrese de utilizar nombres únicos para los diferentes elementos de su base.
 4D identifica los nombres utilizados en los métodos en función del siguiente orden de prioridad:
 
 1. Campos
-2. Commands
+2. Comandos
 3. Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
