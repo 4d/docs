@@ -12,18 +12,18 @@ title: On After Edit
 
 ### Caso general
 
-This event can be used filter the data entry in keyboard enterable objects at the lowest level.
+Este evento se puede utilizar para filtrar la entrada de datos en los objetos editables por teclado en el nivel más bajo.
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
+Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, *es decir*:
 
-- Standard editing actions which modify content like paste, cut, delete or cancel;
-- Dropping a value (action similar to paste);
-- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
+- Soltar un valor (acción similar a pegar);
+- Toda entrada de teclado realizada por el usuario; en este caso, el evento `On After Edit` se genera después de los eventos [`On Before Keystroke`](onBeforeKeystroke.md) y [`On After Keystroke`](onAfterKeystroke.md), si se utilizan.
+- Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
 
 ### 4D View Pro
 
-The object returned by the `FORM Event` command contains:
+El objeto devuelto por el comando `FORM Event` contiene:
 
 | Propriedad  | Tipo         | Descripción                                                                                         |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------- |
@@ -33,20 +33,20 @@ The object returned by the `FORM Event` command contains:
 | sheetName   | texto        | Nombre de la hoja del evento                                                                        |
 | action      | texto        | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
+En función del valor de la propiedad `action`, el [objeto evento](overview.md#event-object) contendrá propiedades adicionales.
 
 #### action = editChange
 
-| Propriedad  | Tipo    | Descripción                       |
-| ----------- | ------- | --------------------------------- |
-| range       | objeto  | Cell range                        |
-| editingText | variant | The value from the current editor |
+| Propriedad  | Tipo    | Descripción                            |
+| ----------- | ------- | -------------------------------------- |
+| range       | objeto  | Rango de celdas                        |
+| editingText | variant | El valor proveniente del editor actual |
 
 #### action = valueChanged
 
 | Propriedad | Tipo    | Descripción                                |
 | ---------- | ------- | ------------------------------------------ |
-| range      | objeto  | Cell range                                 |
+| range      | objeto  | Rango de celdas                            |
 | oldValue   | variant | Valor de la celda antes de la modificación |
 | newValue   | variant | Valor de la celda luego de la modificación |
 
@@ -55,7 +55,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 | Propriedad | Tipo     | Descripción                                        |
 | ---------- | -------- | -------------------------------------------------- |
-| fromRange  | objeto   | Range of source cell range (being dragged)         |
+| fromRange  | objeto   | Rango de celdas fuente (que se arrastra)           |
 | toRange    | objeto   | Rango de la celda de destino (ubicación de soltar) |
 | copy       | booleano | Indica si el rango fuente se copia o no            |
 | insert     | booleano | Indica si el rango fuente se inserta o no          |
@@ -66,21 +66,21 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | Propriedad | Tipo   | Descripción                    |
 | ---------- | ------ | ------------------------------ |
 | fillRange  | objeto | Gama utilizada para el relleno |
- autoFillType|longint|Valor utilizado para el relleno.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
+ autoFillType|longint|Valor utilizado para el relleno.<li>0: las celdas se llenan con todos los datos (valores, formato y fórmulas)<li>1: las celdas se llenan con datos automáticamente secuenciales<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
 
 
 #### action = formulaChanged
 
 | Propriedad | Tipo   | Descripción            |
 | ---------- | ------ | ---------------------- |
-| range      | objeto | Cell range             |
+| range      | objeto | Rango de celdas        |
 | formula    | texto  | La fórmula introducida |
 
 #### action = clipboardPasted
 
 | Propriedad  | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | objeto       | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| range       | objeto       | Rango de celdas                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | pasteOption | entero largo | Indica lo que se pega desde el portapapeles:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |
 | pasteData   | objeto       | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
 
