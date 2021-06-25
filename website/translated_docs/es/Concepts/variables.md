@@ -13,7 +13,7 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 Las variables se crean declarándolas mediante uno de los comandos de los temas "Compilador" o "Arrays".
 
-**Nota:**los arrays son un tipo particular de variables. Un array es una serie ordenada de variables del mismo tipo. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Nota:**los arrays son un tipo particular de variables. Un array es una serie ordenada de variables del mismo tipo. Para más información, consulte [Arrays](Concepts/arrays.md).
 
 For example, if you want to define a text variable, you write:
 
@@ -47,25 +47,25 @@ The following are some basic variable declarations:
 
 ## Asignar los valores
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
 
-El operador de asignación es la principal forma de crear una variable y de introducir datos en ella. You write the name of the variable that you want to create on the left side of the assignment operator. Por ejemplo:
+El operador de asignación es la principal forma de crear una variable y de introducir datos en ella. Se escribe el nombre de la variable que se quiere crear a la izquierda del operador de asignación. Por ejemplo:
 
 ```4d
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
 
-Of course, variables would not be very useful if you could not get data out of them. Una vez más, se utiliza el operador de asignación. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+En este caso, _[Products]Size_ sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
 
-You assign data to array elements by using curly braces ({...}):
+Los valores se asignan a los elementos del array utilizando llaves ({...}):
 
 ```4d
 atNames{1}:="Richard"
