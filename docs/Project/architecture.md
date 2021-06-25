@@ -242,4 +242,4 @@ Defaut root folder of the 4D Web server for pages, pictures, etc. It is automati
 
 ## `.gitignore` file (optional)
 
-File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-default-gitignore-file).
+File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
