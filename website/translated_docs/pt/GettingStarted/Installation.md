@@ -39,18 +39,18 @@ No activation is required for the following uses:
 
 ![](assets/en/getStart/helpMenu.png)
 
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
+Se mostra a caixa de diálogo **Gestão de licenças** (a página de Ativação Instantânea está selecionada por padrão). Ver a próxima seção.
 
-> When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
+> Quando abrir/criar uma aplicação local interpretada com 4D Developer Edition, um mecanismo de autoativação é implementado. Nesse caso, uma caixa de diálogo informa que vai ser conectado a nosso banco de dados de cliente e que suas licenças serão ativadas (deverá introduzir a senha de sua conta 4D).
 
-### Activate 4D Server
+### Activação de 4D Server
 
-1. Launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+1. Lançar a aplicação 4D Server. The dialog box for choosing the [activation mode](#activation-mode) appears.
 
 ![](assets/en/getStart/helpMenu.png)
 
 
-## 4D Activation mode
+## Modo de ativação de 4D
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
@@ -178,5 +178,5 @@ For the UK:
 - Telephone: 01625 536178
 
 
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+Encontre a comunidade de desenvolvedores de 4D online aqui: [https://discuss.4d.com](https://discuss.4d.com).
 
