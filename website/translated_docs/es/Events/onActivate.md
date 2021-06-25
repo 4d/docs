@@ -14,4 +14,4 @@ Si la ventana de un formulario fue enviada al fondo, este evento es llamado cuan
 
 Este evento se aplica al formulario en su conjunto y no a un objeto en particular. Por lo tanto, si se selecciona la propiedad de evento formulario `On Activate`, sólo se llamará al método formulario.
 
-In the case of a subform, this event is passed to the subform when the container gets the focus (if it has the [focusable](FormObjects/properties_Entry.md#focusable) property). 
+En el caso de un subformulario, este evento se pasa al subformulario cuando el contenedor obtiene el foco (si tiene la propiedad [focusable](FormObjects/properties_Entry.md#focusable)). 
