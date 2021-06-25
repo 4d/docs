@@ -72,7 +72,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 #### *parámetros*
 
-| Property        | Tipo    | Descripción                                    |
+| Propriedad      | Tipo    | Descripción                                    |
 | --------------- | ------- | ---------------------------------------------- |
 | [curve](#curve) | texto   | Name of ECDSA curve                            |
 | [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
@@ -132,7 +132,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### *options*
 
-| Property          | Tipo  | Descripción                                                                                                                                  |
+| Propriedad        | Tipo  | Descripción                                                                                                                                  |
 | ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                       |
 | encodingEncrypted | texto | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "Base64". |
@@ -143,11 +143,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
-| Property | Tipo      | Descripción                                                         |
-| -------- | --------- | ------------------------------------------------------------------- |
-| success  | booleano  | True if the message has been successfully decrypted                 |
-| result   | texto     | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors   | colección | If `success` is `false`, may contain a collection of errors         |
+| Propriedad | Tipo      | Descripción                                                         |
+| ---------- | --------- | ------------------------------------------------------------------- |
+| success    | booleano  | True if the message has been successfully decrypted                 |
+| result     | texto     | Message decrypted and decoded using the `options.encodingDecrypted` |
+| errors     | colección | If `success` is `false`, may contain a collection of errors         |
 
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
@@ -180,7 +180,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 ##### *options*
 
-| Property          | Tipo  | Descripción                                                                                                                                               |
+| Propriedad        | Tipo  | Descripción                                                                                                                                               |
 | ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
 | encodingEncrypted | texto | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
@@ -293,7 +293,7 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *options*
 
-| Property          | Tipo     | Descripción                                                                                                                         |
+| Propriedad        | Tipo     | Descripción                                                                                                                         |
 | ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
 | encodingEncrypted | texto    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
@@ -367,11 +367,11 @@ The `CryptoKey` must contain a valid **public** key.
 
 #### *options*
 
-| Property | Tipo     | Descripción                                                                                                                                      |
-| -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash     | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
-| pss      | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
-| encoding | texto    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+| Propriedad | Tipo     | Descripción                                                                                                                                      |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash       | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
+| pss        | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
+| encoding   | texto    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 
 
 #### *Resultado*
@@ -380,10 +380,10 @@ The function returns a status object with `success` property set to `true` if `m
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
-| Property | Tipo      | Descripción                                                 |
-| -------- | --------- | ----------------------------------------------------------- |
-| success  | booleano  | True if the signature matches the message                   |
-| errors   | colección | If `success` is `false`, may contain a collection of errors |
+| Propriedad | Tipo      | Descripción                                                 |
+| ---------- | --------- | ----------------------------------------------------------- |
+| success    | booleano  | True if the signature matches the message                   |
+| errors     | colección | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

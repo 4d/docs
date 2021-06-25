@@ -25,9 +25,9 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 ## MAIL New attachment
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                   |
-| ------ | ------------------------------------ |
-| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+| バージョン  | 内容                                 |
+| ------ | ---------------------------------- |
+| v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
@@ -37,8 +37,8 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 | 参照          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| file        | 4D.File           | -> | Attachment file                                        |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                     |
+| file        | 4D.File           | -> | 添付ファイル                                                 |
+| zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
 | blob        | 4D.Blob           | -> | 添付を格納した BLOB                                           |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
 | name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
@@ -170,9 +170,9 @@ $transporter.send($email)
 ## 4D.MailAttachment.new()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                   |
-| ------ | ------------------------------------ |
-| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+| バージョン  | 内容                                 |
+| ------ | ---------------------------------- |
+| v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->
@@ -182,8 +182,8 @@ $transporter.send($email)
 
 | 参照          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| file        | 4D.File           | -> | Attachment file                                        |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                     |
+| file        | 4D.File           | -> | 添付ファイル                                                 |
+| zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
 | blob        | 4D.Blob           | -> | 添付を格納した BLOB                                           |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
 | name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |

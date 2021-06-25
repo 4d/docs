@@ -146,7 +146,7 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
-## Property
+## Propriedad
 
 See [Attribute](#attribute).
 > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.

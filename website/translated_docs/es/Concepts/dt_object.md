@@ -76,7 +76,7 @@ Ejemplos:
 
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+Como el valor de una propiedad de objeto puede ser un objeto o una colección, la notación objeto acepta una secuencia de símbolos para acceder a subpropiedades, por ejemplo:
 ```4d
  $vAge:=employee.children[2].age
 ```

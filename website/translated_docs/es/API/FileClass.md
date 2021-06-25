@@ -353,7 +353,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Property         | Tipo  |
+| Propriedad       | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -386,7 +386,7 @@ $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
 ```
 
-#### See also
+#### Ver también
 
 [.setAppInfo()](#setappinfo)
 
@@ -584,7 +584,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Property         | Tipo  |
+| Propriedad       | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -631,7 +631,7 @@ $info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
 $infoPlistFile.setAppInfo($info)
 ```
 
-#### See also
+#### Ver también
 
 [.getAppInfo()](#getappinfo)
 
@@ -712,21 +712,21 @@ Optionally, you can designate the character set to be used for writing the conte
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | Constant                      | Valor | Comment                                                                                                                                                        |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | No processing                                                                                                                                                  |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                |
-| `Document with CR`            | 3     | Line breaks are converted to OS X format: CR (carriage return)                                                                                                 |
-| `Document with LF`            | 4     | Line breaks are converted to Unix format: LF (line feed)                                                                                                       |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
+| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-
+> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Ejemplo
 

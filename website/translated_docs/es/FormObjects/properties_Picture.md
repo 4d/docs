@@ -16,9 +16,9 @@ Two main locations can be used for static picture path:
 
 #### JSON Grammar
 
-|  Name  | Data Type | Possible Values                             |
-|:------:|:---------:| ------------------------------------------- |
-| imagen |   texto   | Relative or filesystem path in POSIX syntax |
+|  Name  | Tipos de datos | Possible Values                             |
+|:------:|:--------------:| ------------------------------------------- |
+| imagen |     texto      | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported
@@ -64,9 +64,9 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | cadena    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Name          | Tipos de datos | Possible Values                                          |
+| ------------- | -------------- | -------------------------------------------------------- |
+| pictureFormat | cadena         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 #### Objects Supported
 

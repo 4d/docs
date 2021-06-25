@@ -74,7 +74,7 @@ El nombre de un método proyecto puede contener hasta 31 caracteres.
 - Un nombre de método proyecto debe comenzar por una letra, un dígito o un guión bajo
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, el caracter de subrayado ("_"), o el caracter de espacio.
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
-- Project method names are case insensitive.
+- Los nombres de métodos proyecto son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
 
@@ -84,9 +84,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Consejo:** es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método devuelve un valor, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir un proyecto para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.
 
- > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
+ > Cuando se llama a un método, sólo hay que escribir su nombre. Sin embargo, algunos comandos integrados en 4D, como `ON EVENT CALL`, así como también todos los comandos del plug-in, esperan el nombre de un método como una cadena cuando se pasa un parámetro de tipo método.
 
 Ejemplos:
 
@@ -105,14 +105,14 @@ ON EVENT CALL("HANDLE EVENTS")
 
 ## Tables and Fields
 
-You designate a table by placing its name between brackets: \[...]. You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
+Una tabla se designa colocando su nombre entre paréntesis: \[...]. Para designar un campo hay que especificar primero la tabla a la que pertenece (el nombre del campo sigue inmediatamente al nombre de la tabla).
 
-A table name and field name can contain up to 31 characters.
+Un nombre de tabla y un nombre de campo pueden contener hasta 31 caracteres.
 
 - A table or field name must begin with a letter, an underscore, or a dollar ("$")
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
-- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
+- Deben respetarse reglas adicionales cuando la base deba manejarse vía SQL: sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz, y el nombre no debe incluir ninguna palabra clave SQL (comando, atributo, etc.).
 
 
 Ejemplos:
@@ -126,38 +126,38 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ```
 
-> Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
+> No se recomienda dar el mismo nombre a una tabla y a una [clase](#classes), para evitar conflictos.
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols ($ or <>).
+El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance ($ o <>).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Thereafter, the name can include any letter or digit, and the underscore character ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o "<>" para [variables de interproceso](variables.md#interprocess-variables).
+- Un dígito como primer carácter está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
+- A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
+- Un caracter de espacio está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
-- Variable names are case insensitive.
+- Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
 
 Ejemplos:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales 
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) //variable local
+$vsMyString:="Hello there" //variable local
+var $vName; $vJob : Text //variables locales 
+If(bValidate=1) //variable proceso 
+<>vlProcessID:=Current process() //variable interproceso
 ```
 
-## Other names
+## Otros nombres
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+En el lenguaje 4D, varios elementos tienen sus nombres manejados como cadenas: **formularios**, **objetos de formulario**, **selecciones temporales**, **procesos**, **conjuntos**, **barras de menú**, etc.
 
-Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
+Estos nombres de cadena pueden contener hasta 255 caracteres, sin incluir los caracteres "$" o "<>" (si los hay).
 
-- String names can contain any characters.
-- String names are case insensitive.
+- Los nombres de las cadenas pueden contener cualquier carácter.
+- Los nombres de las cadenas son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
 
