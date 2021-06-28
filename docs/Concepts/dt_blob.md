@@ -13,7 +13,7 @@ Like other field types that can retain a large amount of data (such as the Pictu
 
 Using the 4D language, there are two ways to handle a blob:
 * **as a scalar value**: a scalar blob can be altered and stored in a Blob variable or field.
-* **as an object (`4D.Blob`)**: a `4D.Blob` is a blob object. It is passed by reference. You can encapsulate a blob or part of it in a `4D.Blob` without altering the original blob. This method is called [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). See [4D.Blob Class](../API/BlobClass.md).
+* **as an object (`4D.Blob`)**: a `4D.Blob` is a blob object. You can encapsulate a blob or part of it in a `4D.Blob` without altering the original blob. This method is called [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). For more info on how to instantiate a `4D.Blob`, see [4D.Blob Class](../API/BlobClass.md).
 
 Each blob type has its advantages. Use the following table to determine which one suits your needs:
 
@@ -24,11 +24,11 @@ Each blob type has its advantages. Use the following table to determine which on
 |Duplicated when passed to custom methods*|Yes|No|
 Performance when accessing bytes|+|-|
 
-*Unlike certain built-in 4D commands designed to take a blob as a parameter, the methods you create duplicate scalar blobs passed as parameters. In that case, using a `4D.Blob` is more efficient.
+*Unlike certain built-in 4D commands designed to take a blob as a parameter, custom methods duplicate scalar blobs, resulting in more memory usage. When working with custom methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
 
 ## Passing blobs as parameters
 
-Both types of blob can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. 
+Scalar blobs and blob objects can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. 
 
 They can also be passed as parameters to your own methods, and returned by functions. Keep in mind that unlike blob objects (`4D.Blob`), which are passed by reference, scalar blobs are duplicated in memory when passed to your own methods as parameters.
 
@@ -61,7 +61,7 @@ var $myBlobVar: Blob
 ```
 **Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
-You cannot use operators on blobs.
+You cannot use operators on blobs. 
 
 ## Assigning a blob variable to another
 
@@ -83,18 +83,17 @@ You can assign a blob variable to another:
 ```4d
 // Create a variable of type Blob and an object variable
 var $myBlob: Blob
-var $o : Object
+var $myObject : Object
 
-// Assign that blob to an object's property named "blob"
-$o:=New object("blob"; $myBlob)
+// Assign that blob to a property of $myObject named "blob"
+$myObject:=New object("blob"; $myBlob)
 
 // The blob stored in $myBlob is automatically converted to a 4D.Blob
-$type:= OB Instance of($o.blob; 4D.Blob)  //True
+$type:= OB Instance of($myObject.blob; 4D.Blob)  //True
 
-// Conversion from 4D.Blob to blob
-$myBlob:= $o.blob 
+// Conversion from 4D.Blob to Blob
+$myBlob:= $myObject.blob 
 $type:= Value type($myBlob) // Blob
-
 ```
 
 ### Modifying a blob
@@ -106,7 +105,7 @@ var $myBlob : Blob
 SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
-Some commands alter the original blob, and thus do not support the `4D.Blob` type:
+Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
 
 * [DELETE FROM BLOB](https://doc.4d.com/4dv19R/help/command/en/page560.html)
 * [INSERT IN BLOB](https://doc.4d.com/4dv19R/help/command/en/page559.html) 
