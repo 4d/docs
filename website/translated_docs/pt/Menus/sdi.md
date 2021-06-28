@@ -9,7 +9,7 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 
 > The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
-### SDI mode availabilty
+### Disponibilidade do modo SDI
 The SDI mode is available in the following execution environment only:
 
 - Windows
