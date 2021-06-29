@@ -9,6 +9,7 @@ A blob is loaded into memory in its entirety. A blob variable is held and exists
 
 Like other field types that can retain a large amount of data (such as the Picture field type), Blob fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a Blob field.
 
+
 ## Blob Types 
 
 Using the 4D language, there are two ways to handle a blob:
@@ -26,13 +27,15 @@ Performance when accessing bytes|+|-|
 
 *Unlike certain built-in 4D commands designed to take a blob as a parameter, custom methods duplicate scalar blobs, resulting in more memory usage. When working with custom methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
 
+You cannot use operators on blobs. 
+
 ## Passing blobs as parameters
 
 Scalar blobs and blob objects can be passed as parameters to 4D commands or plug-in routines that expect blob parameters. 
 
-They can also be passed as parameters to your own methods, and returned by functions. Keep in mind that unlike blob objects (`4D.Blob`), which are passed by reference, scalar blobs are duplicated in memory when passed to your own methods as parameters.
+### Passing blobs and blob objects to 4D commands
 
-### Passing a blob to a 4D command
+You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as a parameter: 
 
 ```4d
 var $myBlob: 4D.Blob
@@ -40,6 +43,22 @@ var $myBlob: 4D.Blob
 $myBlob:= 4D.Blob.new()
 $myText:= BLOB to text ( $myBlob ; UTF8 )
 ```
+
+Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
+
+* [DELETE FROM BLOB](https://doc.4d.com/4dv19R/help/command/en/page560.html)
+* [INSERT IN BLOB](https://doc.4d.com/4dv19R/help/command/en/page559.html) 
+* [INTEGER TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page548.html) 
+* [LONGINT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page550.html) 
+* [REAL TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page552.html) 
+* [SET BLOB SIZE](https://doc.4d.com/4dv19R/help/command/en/page606.html) 
+* [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html) 
+* [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html) 
+* [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html) 
+
+### Passing blobs and blob objects to custom methods
+
+You can pass blobs and blob objects (`4D.Blob`) to your own methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to your own methods.
 
 ### Passing a scalar blob by reference using a pointer
 
@@ -61,11 +80,9 @@ var $myBlobVar: Blob
 ```
 **Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
-You cannot use operators on blobs. 
-
 ## Assigning a blob variable to another
 
-You can assign a blob variable to another:
+You can assign a Blob variable to another:
 
 **Example:**
 ```4d
@@ -96,46 +113,33 @@ $myBlob:= $myObject.blob
 $type:= Value type($myBlob) // Blob
 ```
 
-### Modifying a blob
+## Modifying a scalar blob
 
-Unlike blob objects, scalar blobs can be altered. You can modify the contents of a scalar blob. For example: 
+Unlike blob objects, scalar blobs can be altered. For example: 
 
 ```4d
 var $myBlob : Blob
 SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
-Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
-
-* [DELETE FROM BLOB](https://doc.4d.com/4dv19R/help/command/en/page560.html)
-* [INSERT IN BLOB](https://doc.4d.com/4dv19R/help/command/en/page559.html) 
-* [INTEGER TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page548.html) 
-* [LONGINT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page550.html) 
-* [REAL TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page552.html) 
-* [SET BLOB SIZE](https://doc.4d.com/4dv19R/help/command/en/page606.html) 
-* [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html) 
-* [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html) 
-* [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html) 
-
-
 ## Individually accessing bytes in a blob
 
-### Accessing a scalar blob's bytes
+#### Accessing a scalar blob's bytes
 
-You can address each byte of a scalar blob using curly brackets. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
+You can access individual bytes of a scalar blob using curly brackets. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
 ```4d
   ` Declare a variable of type Blob
  var $vBlob : Blob
   ` Set the size of the blob to 256 bytes
  SET BLOB SIZE($vBlob;256)
-  ` The loop below changes the bytes, setting them to zero
+  ` The following code loops through the blob to set each byte to zero
  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
  End for
 ```
 Because you can address all the bytes of a blob individually, you can store whatever you want in a Blob variable or field.
 
-### Accessing a `4D.Blob`'s bytes
+#### Accessing a `4D.Blob`'s bytes
 Use square brackets to directly access a specific byte in a `4D.Blob`
 
 ```4d 
