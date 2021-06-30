@@ -66,7 +66,7 @@ En función del valor de la propiedad `action`, el [objeto evento](overview.md#e
 | Propriedad | Tipo   | Descripción                    |
 | ---------- | ------ | ------------------------------ |
 | fillRange  | objeto | Gama utilizada para el relleno |
- autoFillType|longint|Valor utilizado para el relleno.<li>0: las celdas se llenan con todos los datos (valores, formato y fórmulas)<li>1: las celdas se llenan con datos automáticamente secuenciales<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
+ autoFillType|longint|Valor utilizado para el relleno.<li>0: las celdas se llenan con todos los datos (valores, formato y fórmulas)<li>1: las celdas se llenan con datos automáticamente secuenciales<li>2: Las celdas se llenan sólo con el formato<li>3: Las celdas se llenan de valores pero sin formato<li>4: Se eliminan los valores de las celdas<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: Se llenan las celdas de la izquierda<li>1: Se llenan las celdas a la derecha<li>2: Las celdas de arriba se llenan<li>3: Las celdas de abajo se llenan|
 
 
 #### action = formulaChanged
@@ -78,16 +78,16 @@ En función del valor de la propiedad `action`, el [objeto evento](overview.md#e
 
 #### action = clipboardPasted
 
-| Propriedad  | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | objeto       | Rango de celdas                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| pasteOption | entero largo | Indica lo que se pega desde el portapapeles:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |
-| pasteData   | objeto       | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
+| Propriedad  | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | objeto       | Rango de celdas                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| pasteOption | entero largo | Indica lo que se pega desde el portapapeles:<li>0: se pega todo (valores, formato y fórmulas)<li>1: solo se pegan los valores<li>2: sólo se pega el formato<li>3: solo se pegan las fórmulas<li>4: los valores y el formato se pegan (no las fórmulas)<li>5: las fórmulas y el formato se pegan (no los valores) |
+| pasteData   | objeto       | Los datos del portapapeles a pegar<li>"text" (texto): el texto del portapapeles<li>"html" (texto): el código HTML del portapapeles                                                                                                                                                                                                                                                                       |
 
 
 #### Ejemplo
 
-Here is an example handling an `On After Edit` event:
+Aquí hay un ejemplo de manejo de un evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)
@@ -101,7 +101,7 @@ Here is an example handling an `On After Edit` event:
  End if
 ```
 
-The above example could generate an event object like this:
+El ejemplo anterior podría generar un objeto evento como este:
 
 ```
 {
