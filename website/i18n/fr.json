@@ -23,6 +23,9 @@
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
+      "API/BlobClass": {
+        "title": "Blob"
+      },
       "API/ClassClass": {
         "title": "Class"
       },
@@ -852,6 +855,9 @@
       },
       "WebServer/webServerObject": {
         "title": "Objet Serveur Web"
+      },
+      "WebStudio/webStudio": {
+        "title": "WebStudio"
       }
     },
     "links": {

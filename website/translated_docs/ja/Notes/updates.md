@@ -5,6 +5,14 @@ title: ドキュメンテーション更新情報
 
 このドキュメントのおもな更新内容のリストです。 4D製品の新機能についての一般的な情報は、[doc.4d.com](https://doc.4d.com) の **リリースノート** を参照ください。
 
+## 4D v19 R2
+
+- A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
+- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/blob.md#blob-types)
+- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
+- New [WebStudio](WebStudio/webStudio.md) component (preview in 4D v19 R2)
+
+
 ## 4D v19
 
 - [IMAPTransporter クラス](API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
