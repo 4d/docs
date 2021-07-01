@@ -210,7 +210,7 @@ The number of loops is based on the number of elements of the collection. At eac
     <table class="table">    
 
         <tr><th>Name</th></tr>
-        
+
           <!--#4DEACH $name in getNames-->
         <tr>
             <td><!--#4DTEXT $name--></td>
@@ -372,23 +372,63 @@ The two following codes are equivalent.
 
 Code using 4DELSE only:
 
-```html<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 is true*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/*None of the conditions are true*/<!--#4DENDIF--><!--#4DENDIF--><!--#4DENDIF-->```
+```html
+<!--#4DIF Condition1-->
+  /* Condition1 is true*/
+<!--#4DELSE-->
+    <!--#4DIF Condition2-->
+        /* Condition2 is true*/
+    <!--#4DELSE-->
+        <!--#4DIF Condition3-->
+            /* Condition3 is true */
+        <!--#4DELSE-->
+            /*None of the conditions are true*/
+        <!--#4DENDIF-->
+    <!--#4DENDIF-->
+<!--#4DENDIF-->
+```
 
 Similar code using the `4DELSEIF` tag:
 
-```<!--#4DIF Condition1-->/* Condition1 is true*/<!--#4DELSEIF Condition2-->/* Condition2 is true*/<!--#4DELSEIF Condition3-->/* Condition3 is true */<!--#4DELSE-->/* None of the conditions are true*/<!--#4DENDIF-->```
+```
+<!--#4DIF Condition1-->
+     /* Condition1 is true*/
+<!--#4DELSEIF Condition2-->
+     /* Condition2 is true*/
+<!--#4DELSEIF Condition3-->
+    /* Condition3 is true */
+<!--#4DELSE-->
+    /* None of the conditions are true*/
+<!--#4DENDIF-->
+```
 
 This example of code inserted in a static HTML page displays a different label according the `vname#""` expression result:
 
 ```html
 <BODY>
-...<!--#4DIF (vname#"")-->Names starting with<!--#4DTEXT vname-->.<!--#4DELSE-->No name has been found.<!--#4DENDIF-->...
+...
+<!--#4DIF (vname#"")-->
+Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE-->
+No name has been found.
+<!--#4DENDIF-->
+...
 </BODY>
 ```
 
 This example inserts different pages depending on which user is connected:
 
-```html<!--#4DIF LoggedIn=False--><!--#4DINCLUDE Login.htm --><!--#4DELSEIF User="Admin" --><!--#4DINCLUDE AdminPanel.htm --><!--#4DELSEIF User="Manager" --><!--#4DINCLUDE SalesDashboard.htm --><!--#4DELSE--><!--#4DINCLUDE ItemList.htm --><!--#4DENDIF-->```
+```html
+<!--#4DIF LoggedIn=False-->
+    <!--#4DINCLUDE Login.htm -->
+<!--#4DELSEIF User="Admin" -->
+    <!--#4DINCLUDE AdminPanel.htm -->
+<!--#4DELSEIF User="Manager" -->
+    <!--#4DINCLUDE SalesDashboard.htm -->
+<!--#4DELSE-->
+    <!--#4DINCLUDE ItemList.htm -->
+<!--#4DENDIF-->
+```
 
 
 ## 4DINCLUDE
@@ -413,7 +453,11 @@ In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document c
 
 Voici quelques exemples :
 
-```html<!--#4DINCLUDE subpage.html--><!--#4DINCLUDE folder/subpage.html--><!--#4DINCLUDE ../folder/subpage.html-->```
+```html
+<!--#4DINCLUDE subpage.html-->
+<!--#4DINCLUDE folder/subpage.html-->
+<!--#4DINCLUDE ../folder/subpage.html-->
+```
 
 
 
@@ -435,7 +479,11 @@ This syntax makes a loop for each record from the table current selection in the
 
 The following code:
 
-```html<!--#4DLOOP [People]--><!--#4DTEXT [People]Name--><!--#4DTEXT [People]Surname--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP [People]-->
+<!--#4DTEXT [People]Name--> <!--#4DTEXT [People]Surname--><BR>
+<!--#4DENDLOOP-->
+```
 
 ... could be expressed in 4D language in the following way:
 
@@ -455,7 +503,11 @@ This syntax makes a loop for each array item. The array current item is increase
 
 The following code example:
 
-```html<!--#4DLOOP arr_names--><!--#4DTEXT arr_names{arr_names}--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP arr_names-->
+<!--#4DTEXT arr_names{arr_names}--><BR>
+<!--#4DENDLOOP-->
+```
 
 ... could be expressed in 4D language in the following way:
 
@@ -476,7 +528,11 @@ For security reasons, within a Web process, the `On Web Authentication` database
 
 The following code example:
 
-```html<!--#4DLOOP my_method--><!--#4DTEXT var--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP my_method-->
+<!--#4DTEXT var--> <BR> 
+<!--#4DENDLOOP-->
+```
 
 ... could be expressed in 4D language in the following way:
 
@@ -516,7 +572,13 @@ With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* retu
 
 For example, the following code:
 
-```html<!--#4DEVAL $i:=0--><!--#4DLOOP ($i<4)--><!--#4DEVAL $i--><!--#4DEVAL $i:=$i+1--><!--#4DENDLOOP-->```
+```html
+<!--#4DEVAL $i:=0-->
+<!--#4DLOOP ($i<4)-->
+<!--#4DEVAL $i-->
+<!--#4DEVAL $i:=$i+1-->
+<!--#4DENDLOOP-->
+```
 
 ...produces the following result:
 
@@ -541,7 +603,7 @@ Exemple :
  $array{2}:="world"
  $input:="<!--#4DEVAL $1-->"
  $input:=$input+"<!--#4DLOOP $2-->"
- $input:=$input+"<!--#4DEVAL $2->{$2->}-->"
+ $input:=$input+"<!--#4DEVAL $2->{$2->}--> "
  $input:=$input+"<!--#4DENDLOOP-->"
  PROCESS 4D TAGS($input;$output;"elements = ";->$array)
   // $output = "elements = hello world "
@@ -594,7 +656,7 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
 
 ```html
-<P>Welcome to<!--#4DTEXT vtSiteName-->!</P>
+<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
 Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
@@ -639,7 +701,9 @@ $4DEVAL(UserName)
 
 instead of:
 
-```html<!--#4DEVAL(UserName)-->```
+```html
+<!--#4DEVAL(UserName)-->
+```
 
 The main advantage of this syntax is that it allows you to write XML-compliant templates. Some 4D developers need to create and validate XML-based templates using standard XML parser tools. Since the "<" character is invalid in an XML attribute value, it was not possible to use the "`<!-- -->`" syntax of 4D tags without breaking the document syntax. On the other hand, escaping the "<" character will prevent 4D from interpreting the tags correctly.
 
@@ -664,21 +728,21 @@ The following examples show the result of processing depending on the syntax and
 ```4d
   // example 1
  myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is:<!--#4DHTML myName-->"
+ input:="My name is: <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
   //4D will quit!
 ```
 ```4d
   // example 2
  myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is:<!--#4DTEXT myName-->"
+ input:="My name is: <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is:<!--#4DHTML QUIT 4D-->"
+  //output is "My name is: <!--#4DHTML QUIT 4D-->"
 ```
 ```4d
   // example 3
  myName:="$4DEVAL(QUIT 4D)" //malicious injection
- input:="My name is:<!--#4DTEXT myName-->"
+ input:="My name is: <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
   //output is "My name is: $4DEVAL(QUIT 4D)"
 ```
