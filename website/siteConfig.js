@@ -44,9 +44,10 @@ const siteConfig = {
 
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
-    {href: 'https://developer.4d.com/docs', label:'v19 BETA', version :'19'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R6', version:'18R6'},
-    {href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
+    {href: 'https://developer.4d.com/docs', label:'v19 R2 BETA', version :'19R2'},
+    //{href: 'https://developer.4d.com/docs/Rx', label:'v18 R6', version:'18R6'},
+    {href: 'https://developer.4d.com/docs/19', label:'v19', version:'19'},
+	{href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
     //{href: 'https://developer.4d.com/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
