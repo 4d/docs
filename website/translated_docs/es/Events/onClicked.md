@@ -40,7 +40,7 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | description | texto        | "On Clicked"                 |
 | objectName  | texto        | Nombre del área 4D View Pro  |
 | sheetName   | texto        | Nombre de la hoja del evento |
-| range       | objeto       | Cell range                   |
+| range       | objeto       | Rango de celdas              |
 
 #### Ejemplo
 

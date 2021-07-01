@@ -12,7 +12,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 > The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 
-## Specific properties
+## Propriedades específicas
 
 ### Associated variables
 
@@ -121,12 +121,12 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 ```
 
 
-## Standard actions
+## Ações padrão
 
 Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
-## Form events
+## Eventos formulário
 
 Specific form events are intended for programmed management of web areas, more particularly concerning the activation of links:
 
@@ -146,7 +146,7 @@ In addition, web areas support the following generic form events:
 - [`On Losing Focus`](Events/onLosingFocus.md)
 
 
-## Web area rules
+## Regras das áreas web
 
 ### User interface
 

@@ -26,7 +26,7 @@ This event is generated when the user doubl-clicks anywhere on a 4D View Pro doc
 | description | texto        | "On Double Clicked"          |
 | objectName  | texto        | Nombre del área 4D View Pro  |
 | sheetName   | texto        | Nombre de la hoja del evento |
-| range       | objeto       | Cell range                   |
+| range       | objeto       | Rango de celdas              |
 
 #### Ejemplo
 

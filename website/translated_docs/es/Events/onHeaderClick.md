@@ -31,7 +31,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
 | description | texto        | "On Header Click"                                                                                                                   |
 | objectName  | texto        | Nombre del área 4D View Pro                                                                                                         |
 | sheetName   | texto        | Nombre de la hoja del evento                                                                                                        |
-| range       | objeto       | Cell range                                                                                                                          |
+| range       | objeto       | Rango de celdas                                                                                                                     |
 | sheetArea   | entero largo | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### Ejemplo
