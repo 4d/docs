@@ -5,7 +5,7 @@ title: BLOB
 
 - BLOB (Binary Large OBjects) sind miteinander zusammenhängende Bytes unterschiedlicher Länge, die Sie als ganze Einheit oder als einzelne Bytes ansprechen können. A BLOB can be empty (null length) or contain up to 2147483647 bytes (2 GB).
 
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available. For example, the maximum blob size on macOS is 1GB.
+> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
 - Ein BLOB wird als Ganzes in den Speicher geladen. Eine BLOB Variable existiert und wird nur im Speicher gehalten. Ein BLOB Datenfeld wird von der Festplatte in den Speicher geladen sowie der Rest des Datensatzes, zu dem es gehört.
 - Wie andere Feldtypen mit einer umfangreichen Datenanzahl, z. B. der Typ Bild, werden BLOB-Felder beim Ändern des Datensatzes nicht im Speicher dupliziert. Folglich ist das Ergebnis, das von den Befehlen `Old` und `Modified` bei Anwendung auf ein BLOB-Feld zurückgegeben wird, nicht signifikant.
