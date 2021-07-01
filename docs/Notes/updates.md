@@ -5,6 +5,14 @@ title: Documentation updates
 
 The list of main updates in this documentation. For general information about new features in the 4D products, see the **release notes** on [doc.4d.com](https://doc.4d.com). 
 
+## 4D v19 R2
+ 
+- A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
+- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/blob.md#blob-types)
+- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext) 
+- New [WebStudio](WebStudio/webStudio.md) component (preview in 4D v19 R2)
+
+
 ## 4D v19
  
 - [IMAPTransporter Class](API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
