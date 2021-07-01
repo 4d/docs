@@ -23,7 +23,7 @@ The page contains action buttons that provide direct access to the verification 
 
 Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
