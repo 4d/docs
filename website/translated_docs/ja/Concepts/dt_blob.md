@@ -15,21 +15,33 @@ Like other field types that can retain a large amount of data (such as the Pictu
 ## Blob Types
 
 Using the 4D language, there are two ways to handle a blob:
-* **as a scalar value**: a scalar blob can be altered and stored in a Blob variable or field.
+* **as a scalar value**: a blob can be stored in a Blob variable or field and altered.
 * **as an object (`4D.Blob`)**: a `4D.Blob` is a blob object. You can encapsulate a blob or part of it in a `4D.Blob` without altering the original blob. This method is called [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). For more info on how to instantiate a `4D.Blob`, see [4D.Blob Class](../API/BlobClass.md).
 
 Each blob type has its advantages. Use the following table to determine which one suits your needs:
 
-|                                           | BLOB | 4D.Blob |
-| ----------------------------------------- |:----:|:-------:|
-| Alterable                                 |  ◯   |    ×    |
-| Shareable in objects and collections      |  ×   |    ◯    |
-| Duplicated when passed to custom methods* |  ◯   |    ×    |
+|                                      | BLOB | 4D.Blob |
+| ------------------------------------ |:----:|:-------:|
+| Alterable                            |  ◯   |    ×    |
+| Shareable in objects and collections |  ×   |    ◯    |
+| Duplicated when passed to methods*   |  ◯   |    ×    |
  Performance when accessing bytes|+|-|
 
-*Unlike certain built-in 4D commands designed to take a blob as a parameter, custom methods duplicate scalar blobs, resulting in more memory usage. When working with custom methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+*Unlike the built-in 4D commands designed to take a blob as a parameter, methods duplicate blobs, resulting in more memory usage. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
 
 You cannot use operators on blobs.
+
+## Checking if a variable holds a blob or a 4D.Blob
+
+Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or 4D.Blob. To check that an object is a blob object, use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+
+```4d
+var $myBlob: Blob
+var $myBlobObject: 4D.Blob
+
+$type:= OB Value type($myblobObject) // 38 (object)
+$is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
+```
 
 ## Passing blobs as parameters
 
@@ -41,9 +53,8 @@ You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as
 
 ```4d
 var $myBlob: 4D.Blob
-
-$myBlob:= 4D.Blob.new()
-$myText:= BLOB to text ( $myBlob ; UTF8 )
+CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
+$myText:= BLOB to text ( $myBlob ; UTF8 text without length )
 ```
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
@@ -58,9 +69,9 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 * [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html)
 * [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html)
 
-### Passing blobs and blob objects to custom methods
+### Passing blobs and blob objects to methods
 
-You can pass blobs and blob objects (`4D.Blob`) to your own methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to your own methods.
+You can pass blobs and blob objects (`4D.Blob`) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
 
 ### Passing a scalar blob by reference using a pointer
 
@@ -68,16 +79,25 @@ To pass a scalar blob to your own methods without duplicating it in memory, defi
 
 **例: **
 ```4d
-  ` Declare a variable of type Blob
+// Declare a variable of type Blob
 var $myBlobVar: Blob
-  ` Pass the blob as parameter to a 4D command
+// Pass the blob as parameter to a 4D command
  SET BLOB SIZE($myBlobVar;1024*1024)
-  ` Pass the blob as parameter to an external routine
+```
+
+```4d
+// Pass the blob as parameter to an external routine
  $errCode:=Do Something With This blob($myBlobVar)
-  ` Pass the blob as a parameter to a method that returns a blob
+```
+
+```4d
+// Pass the blob as a parameter to a method that returns a blob
  var $retrieveBlob: Blob
  retrieveBlob:=Fill_Blob($myBlobVar)
-  ` Pass a pointer to the blob as a parameter to your own method, 
+ ```
+
+ ```4d
+// Pass a pointer to the blob as a parameter to your own method, 
  COMPUTE BLOB(->$myBlobVar)
 ```
 **プラグイン開発にあたっての注意:** BLOB 引数は “&O” (数字の0ではなく、アルファベットの"O") として宣言します。
@@ -144,8 +164,11 @@ Because you can address all the bytes of a blob individually, you can store what
 #### Accessing a `4D.Blob`'s bytes
 Use square brackets to directly access a specific byte in a `4D.Blob`
 
-```4d 
-$b:=$blobObj[3]
+```4d
+var $myBlob: 4D.Blob
+CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
+$myText:= BLOB to text ( $myBlob ; UTF8 text without length )
+$byte:=$myBlob[5]
 ```
 
 Since 4D.Blobs are not alterable, you can read the bytes of a 4D.Blob using this method, but not modify them.
