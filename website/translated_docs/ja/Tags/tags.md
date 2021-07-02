@@ -13,8 +13,22 @@ title: 変換タグ
 
 ```html
 <HTML>
-<BODY><!--#4DSCRIPT/PRE_PROCESS-->(メソッド呼び出し)<!--#4DIF (myvar=1)-->(If 条件)<!--#4DINCLUDE banner1.html-->(サブページ挿入)<!--#4DENDIF-->(End if)<!--#4DIF (mtvar=2)--><!--#4DINCLUDE banner2.html--><!--#4DENDIF--><!--#4DLOOP [TABLE]-->(カレントセレクションでのループ)<!--#4DIF ([TABLE]ValNum>10)-->(If [TABLE]ValNum>10)<!--#4DINCLUDE subpage.html-->(サブページの挿入)<!--#4DELSE-->(Else)
-   <B>Value:<!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)<!--#4DENDIF--><!--#4DENDLOOP-->(End for)
+<BODY>
+<!--#4DSCRIPT/PRE_PROCESS-->   (メソッド呼び出し)
+<!--#4DIF (myvar=1)-->   (If 条件)
+   <!--#4DINCLUDE banner1.html-->   (サブページ挿入)
+<!--#4DENDIF-->   (End if)
+<!--#4DIF (mtvar=2)-->
+   <!--#4DINCLUDE banner2.html-->
+<!--#4DENDIF-->
+
+<!--#4DLOOP [TABLE]-->   (カレントセレクションでのループ)
+<!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
+   <!--#4DINCLUDE subpage.html-->   (サブページの挿入)
+<!--#4DELSE-->   (Else)
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><BR>   (フィールド表示)
+<!--#4DENDIF-->
+<!--#4DENDLOOP-->   (End for)
 </BODY>
 </HTML>
 ```
@@ -36,7 +50,9 @@ title: 変換タグ
 
 4Dタグは繰り返し解釈されます。4D は常に変換の結果を解釈しようとし、新しい変換が起きた際にはそれに伴う新しい解釈が実行され、取得結果の変換が必要がなくなるまで繰り返されます。 たとえば、以下のようなステートメントがあった場合:
 
-```html<!--#4DHTML [Mail]Letter_type-->```
+```html
+<!--#4DHTML [Mail]Letter_type-->
+```
 
 もし `[Mail]Letter_type` テキストフィールド自体にもタグ (たとえば`<!--#4DSCRIPT/m_Gender-->`) が含まれていた場合、このタグは 4DHTMLタグの解釈の後に、それに伴って評価されます。
 
@@ -66,21 +82,52 @@ Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ペー�
 
 以下のように、各呼び出しごとに相対パスを指定したコードは:
 
-```html<!--#4DINCLUDE subpage.html--><!--#4DINCLUDE folder/subpage1.html--><!--#4DINCLUDE folder/subpage2.html--><!--#4DINCLUDE folder/subpage3.html--><!--#4DINCLUDE ../folder/subpage.html-->```
+```html
+<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE folder/subpage1.html-->
+<!--#4DINCLUDE folder/subpage2.html-->
+<!--#4DINCLUDE folder/subpage3.html-->
+<!--#4DINCLUDE ../folder/subpage.html-->
+```
 以下のコードと同一です:
 
-```html<!--#4DINCLUDE subpage.html--><!--#4DBASE folder/--><!--#4DINCLUDE subpage1.html--><!--#4DINCLUDE subpage2.html--><!--#4DINCLUDE subpage3.html--><!--#4DBASE ../folder/--><!--#4DINCLUDE subpage.html--><!--#4DBASE WEBFOLDER-->```
+```html
+<!--#4DINCLUDE subpage.html--> 
+<!--#4DBASE folder/-->
+<!--#4DINCLUDE subpage1.html-->
+<!--#4DINCLUDE subpage2.html-->
+<!--#4DINCLUDE subpage3.html-->
+<!--#4DBASE ../folder/-->
+<!--#4DINCLUDE subpage.html-->
+<!--#4DBASE WEBFOLDER-->
+```
 
 たとえば、ホームページのディレクトリを設定する場合:
 
 ```html
-/* Index.html */<!--#4DIF LangFR=True--><!--#4DBASE FR/--><!--#4DELSE--><!--#4DBASE US/--><!--#4DENDIF--><!--#4DINCLUDE head.html--><!--#4DINCLUDE body.html--><!--#4DINCLUDE footer.html-->```
+/* Index.html */
+<!--#4DIF LangFR=True-->
+    <!--#4DBASE FR/-->
+<!--#4DELSE-->
+    <!--#4DBASE US/-->
+<!--#4DENDIF-->
+<!--#4DINCLUDE head.html-->
+<!--#4DINCLUDE body.html-->
+<!--#4DINCLUDE footer.html-->
+```
 
 上で組み込まれる "head.html" ファイル内でカレントフォルダーが `<!--#4DBASE -->` を使用して変更されても、"index.html" 内では変更されません:
 
 ```html
 /* Head.htm */
-/* ここでのワーキングディレクトリはインクルードされるファイルに対して相対的 (FR/ または US/) */<!--#4DBASE Styles/--><!--#4DINCLUDE main.css--><!--#4DINCLUDE product.css--><!--#4DBASE Scripts/--><!--#4DINCLUDE main.js--><!--#4DINCLUDE product.js-->```
+/* ここでのワーキングディレクトリはインクルードされるファイルに対して相対的 (FR/ または US/) */
+<!--#4DBASE Styles/-->
+<!--#4DINCLUDE main.css-->
+<!--#4DINCLUDE product.css-->
+<!--#4DBASE Scripts/-->
+<!--#4DINCLUDE main.js-->
+<!--#4DINCLUDE product.js-->
+```
 
 
 ## 4DCODE
@@ -93,7 +140,8 @@ Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ペー�
 
 たとえば、以下のようにテンプレートに書くことができます:
 
-```html<!--#4DCODE
+```html
+<!--#4DCODE
 // パラメーターの初期化
 C_OBJECT:C1216($graphParameters)
 OB SET:C1220($graphParameters;"graphType";1)
@@ -109,7 +157,8 @@ If(OB Is defined:C1231($graphParameters;"graphType"))
         End if
     End if
 End if
--->```
+-->
+```
 
 
 4DCODE タグの機能は以下の通りです:
@@ -160,9 +209,14 @@ End if
 ```html
     <table class="table">    
 
-        <tr><th>Name</th></tr><!--#4DEACH $name in getNames--><tr>
+        <tr><th>Name</th></tr>
+
+          <!--#4DEACH $name in getNames-->
+        <tr>
             <td><!--#4DTEXT $name--></td>
-        </tr><!--#4DENDEACH--></table>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
 ```
 
 #### 例題: オブジェクトのコレクション
@@ -170,13 +224,20 @@ End if
 *getSalesPersons* はオブジェクトのコレクションを返すメソッドです。
 
 ```html
-    <table class="table"><!--#4DCODE 
+    <table class="table">    
+         <!--#4DCODE 
             $salePersons:=getSalesPersons
-          --><tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr><!--#4DEACH $salesPerson in $salePersons--><tr>
+          -->          
+       <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
+
+          <!--#4DEACH $salesPerson in $salePersons-->
+        <tr>
             <td><!--#4DTEXT $salesPerson.ID--></td>
             <td><!--#4DTEXT $salesPerson.firstname--></td>
             <td><!--#4DTEXT $salesPerson.lastname--></td>
-        </tr><!--#4DENDEACH--></table>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
 ```
 
 
@@ -194,11 +255,16 @@ End if
 ```html
     <table class="table">     
 
-        <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr><!--#4DEACH $customer in ds.Customers.all()--><tr>
+        <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr>
+
+          <!--#4DEACH $customer in ds.Customers.all()-->
+        <tr>
             <td><!--#4DTEXT $customer.ID--></td>
             <td><!--#4DTEXT $customer.name--></td>
             <td><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
-        </tr><!--#4DENDEACH--></table>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
 ```
 
 #### 例題: `PROCESS 4D TAGS`
@@ -228,12 +294,20 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 *getGamers* は、ゲームスコアを管理するために ("Mary"; 10; "Ann"; 20; "John"; 40) のようなオブジェクトを返すプロジェクトメソッドです。
 
 ```html
-    <table class="table"><!--#4DCODE
+    <table class="table">    
+          <!--#4DCODE
            $gamers:=getGamers
-          --><tr><th>Gamers</th><th>Scores</th></tr><!--#4DEACH $key in $gamers--><tr>
+          -->          
+
+        <tr><th>Gamers</th><th>Scores</th></tr>
+
+          <!--#4DEACH $key in $gamers-->
+        <tr>
             <td ><!--#4DTEXT $key--></td>
             <td ><!--#4DTEXT $gamers[$key]--></td>
-        </tr><!--#4DENDEACH--></table>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
 ```
 
 
@@ -298,26 +372,63 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 `4DELSE` のみを使用する場合:
 
-```html<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSE--><!--#4DIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSE--><!--#4DIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/*いずれの条件も true でない場合*/<!--#4DENDIF-->
+```html
+<!--#4DIF Condition1-->
+  /* Condition1 が true の場合*/
+<!--#4DELSE-->
+    <!--#4DIF Condition2-->
+        /* Condition2 が true の場合*/
+    <!--#4DELSE-->
+        <!--#4DIF Condition3-->
+            /* Condition3 が true の場合 */
+        <!--#4DELSE-->
+            /*いずれの条件も true でない場合*/
         <!--#4DENDIF-->
     <!--#4DENDIF-->
+<!--#4DENDIF-->
 ```
 
 同じ内容を `4DELSEIF` タグを使用して記述した場合:
 
-```<!--#4DIF Condition1-->/* Condition1 が true の場合*/<!--#4DELSEIF Condition2-->/* Condition2 が true の場合*/<!--#4DELSEIF Condition3-->/* Condition3 が true の場合 */<!--#4DELSE-->/* いずれの条件も true でない場合*/<!--#4DENDIF-->```
+```
+<!--#4DIF Condition1-->
+     /* Condition1 が true の場合*/
+<!--#4DELSEIF Condition2-->
+     /* Condition2 が true の場合*/
+<!--#4DELSEIF Condition3-->
+    /* Condition3 が true の場合 */
+<!--#4DELSE-->
+    /* いずれの条件も true でない場合*/
+<!--#4DENDIF-->
+```
 
 スタティックな HTMLページに書かれたこの例題のコードは、`vname#""` 式の結果に応じ、異なるラベルを表示します:
 
 ```html
 <BODY>
-...<!--#4DIF (vname#"")-->Names starting with<!--#4DTEXT vname-->.<!--#4DELSE-->No name has been found.<!--#4DENDIF-->...
+...
+<!--#4DIF (vname#"")-->
+Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE-->
+No name has been found.
+<!--#4DENDIF-->
+...
 </BODY>
 ```
 
 この例題は接続したユーザーによって異なるページを返します:
 
-```html<!--#4DIF LoggedIn=False--><!--#4DINCLUDE Login.htm --><!--#4DELSEIF User="Admin" --><!--#4DINCLUDE AdminPanel.htm --><!--#4DELSEIF User="Manager" --><!--#4DINCLUDE SalesDashboard.htm --><!--#4DELSE--><!--#4DINCLUDE ItemList.htm --><!--#4DENDIF-->```
+```html
+<!--#4DIF LoggedIn=False-->
+    <!--#4DINCLUDE Login.htm -->
+<!--#4DELSEIF User="Admin" -->
+    <!--#4DINCLUDE AdminPanel.htm -->
+<!--#4DELSEIF User="Manager" -->
+    <!--#4DINCLUDE SalesDashboard.htm -->
+<!--#4DELSE-->
+    <!--#4DINCLUDE ItemList.htm -->
+<!--#4DENDIF-->
+```
 
 
 ## 4DINCLUDE
@@ -342,7 +453,11 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 例:
 
-```html<!--#4DINCLUDE subpage.html--><!--#4DINCLUDE folder/subpage.html--><!--#4DINCLUDE ../folder/subpage.html-->```
+```html
+<!--#4DINCLUDE subpage.html-->
+<!--#4DINCLUDE folder/subpage.html-->
+<!--#4DINCLUDE ../folder/subpage.html-->
+```
 
 
 
@@ -364,7 +479,11 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 以下のコードは:
 
-```html<!--#4DLOOP [People]--><!--#4DTEXT [People]Name--><!--#4DTEXT [People]Surname--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP [People]-->
+<!--#4DTEXT [People]Name--> <!--#4DTEXT [People]Surname--><BR>
+<!--#4DENDLOOP-->
+```
 
 4Dランゲージで表すと以下のとおりです:
 
@@ -384,7 +503,11 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 以下のコードは:
 
-```html<!--#4DLOOP arr_names--><!--#4DTEXT arr_names{arr_names}--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP arr_names-->
+<!--#4DTEXT arr_names{arr_names}--><BR>
+<!--#4DENDLOOP-->
+```
 
 4Dランゲージで表すと以下のとおりです:
 
@@ -405,7 +528,11 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 以下のコードは:
 
-```html<!--#4DLOOP my_method--><!--#4DTEXT var--><BR><!--#4DENDLOOP-->```
+```html
+<!--#4DLOOP my_method-->
+<!--#4DTEXT var--> <BR> 
+<!--#4DENDLOOP-->
+```
 
 4Dランゲージで表すと以下のとおりです:
 
@@ -445,7 +572,13 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 たとえば、以下のコードは:
 
-```html<!--#4DEVAL $i:=0--><!--#4DLOOP ($i<4)--><!--#4DEVAL $i--><!--#4DEVAL $i:=$i+1--><!--#4DENDLOOP-->```
+```html
+<!--#4DEVAL $i:=0-->
+<!--#4DLOOP ($i<4)-->
+<!--#4DEVAL $i-->
+<!--#4DEVAL $i:=$i+1-->
+<!--#4DENDLOOP-->
+```
 
 以下の結果を生成します:
 
@@ -470,7 +603,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
  $array{2}:="world"
  $input:="<!--#4DEVAL $1-->"
  $input:=$input+"<!--#4DLOOP $2-->"
- $input:=$input+"<!--#4DEVAL $2->{$2->}-->"
+ $input:=$input+"<!--#4DEVAL $2->{$2->}--> "
  $input:=$input+"<!--#4DENDLOOP-->"
  PROCESS 4D TAGS($input;$output;"elements = ";->$array)
   // $output = "elements = hello world "
@@ -521,7 +654,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 タグ `<!--#4DTEXT VarName-->` を使用して 4D変数や値を返す式への参照を挿入できます。 たとえば、(HTMLページ内にて) 以下のように記述すると:
 
 ```html
-<P> <!--#4DTEXT vtSiteName-->へようこそ！</P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
 4D変数 `vtSiteName` の値が HTMLページに送信時に挿入されます。 値はテキストとして挿入されます。">"のようなHTMLの特殊文字は、自動的にエスケープされます。

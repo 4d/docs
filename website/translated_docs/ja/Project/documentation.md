@@ -200,7 +200,11 @@ _イタリック_
 
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
-```4d<!-- size 引数に応じて、異なるロゴを返します -->GetLogo (size) -> logo
+```4d
+<!-- size 引数に応じて、異なるロゴを返します -->
+
+
+GetLogo (size) -> logo
 
 
 | 引数 | 型   | in/out | 説明 |
