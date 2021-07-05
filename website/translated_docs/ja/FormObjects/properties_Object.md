@@ -330,7 +330,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 ## 変数の計算
 
 このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
-> リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-FOOTER-CALCULATION.301-4505215.ja.html) 4D コマンドを使用しても設定できます。
+> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
 
 様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 
@@ -364,6 +364,8 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 - 式が "複雑" な場合には、カレントセレクション/命名セレクションリストボックスにおいて **サポートされません**。 これらの場合には、カスタム計算を使用する必要があります。
 
 **カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
+
+> You can only use [variables](Concepts/variables.md) as custom calculations. Other [expressions](Concepts/quick-tour.md#expressions) are not supported.
 
 
 #### JSON 文法
