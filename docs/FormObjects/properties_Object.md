@@ -338,7 +338,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area. 
 
->The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
+>The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
@@ -371,7 +371,9 @@ Using automatic calculations in footers of columns based upon expressions has th
 - it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
 - it is **not supported** with current selection/named selection list boxes when the expression is "complex". You need to use custom calculations.
 
-When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
+When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming. 
+
+> You can only use [variables](Concepts/variables.md) as custom calculations. Other [expressions](Concepts/quick-tour.md#expressions) are not supported.  
 
 
 #### JSON Grammar
