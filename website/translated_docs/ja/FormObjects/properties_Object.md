@@ -348,6 +348,8 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 (*) 配列型のリストボックスのみ
 
+> Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
+
 自動計算の際、リストボックス行の表示/非表示状態は考慮されません。 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
 
 *Null* 値は計算において無視されます。
@@ -364,8 +366,6 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 - 式が "複雑" な場合には、カレントセレクション/命名セレクションリストボックスにおいて **サポートされません**。 これらの場合には、カスタム計算を使用する必要があります。
 
 **カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
-
-> You can only use [variables](Concepts/variables.md) as custom calculations. Other [expressions](Concepts/quick-tour.md#expressions) are not supported.
 
 
 #### JSON 文法
