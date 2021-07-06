@@ -9,8 +9,7 @@ The list of main updates in this documentation. For general information about ne
  
 - A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
 - New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/blob.md#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext) 
-- New [WebStudio](WebStudio/webStudio.md) component (preview in 4D v19 R2)
+- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
 
 
 ## 4D v19
