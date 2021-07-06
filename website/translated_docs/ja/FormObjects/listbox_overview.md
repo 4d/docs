@@ -527,24 +527,24 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 リストボックスの [ソート可](properties_Action.md#ソート可) プロパティの選択を解除すると、ユーザーによる標準の並べ替えを禁止することができます。
 
-開発者は、`LISTBOX SORT COLUMNS` コマンドを使用するか、または `On Header Click` と `On After Sort` フォームイベント (`FORM Event`コマンド参照) を 4D の配列管理コマンドを組み合わせて、独自の並べ替えを設定することができます。
+The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command) and relevant 4D commands.
 
-> [ソート可](properties_Action.md#ソート可) プロパティは、ユーザーによる標準の並べ替えにのみ影響します。`LISTBOX SORT COLUMNS` コマンドは、このプロパティを考慮しません。
+> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command does not take this property into account.
 
 [列ヘッダー変数](properties_Object.md#変数あるいは式)の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。
 
-- 変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません;  
+- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed.  
   ![](assets/en/FormObjects/sorticon0.png)
 
-- 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています;  
-  ![](assets/en/FormObjects/sorticon1.png)
+- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed. ![](assets/en/FormObjects/sorticon1.png)
 
-- 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。  
-  ![](assets/en/FormObjects/sorticon2.png)
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed. ![](assets/en/FormObjects/sorticon2.png)
 
-変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
 
-> `OBJECT SET FORMAT` コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
+
+> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## スタイルとカラー、表示の管理
