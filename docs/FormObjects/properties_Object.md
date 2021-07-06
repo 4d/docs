@@ -356,6 +356,8 @@ There are several types of calculations available. The following table shows whi
 
 (*) Only for array type list boxes.
 
+> Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.  
+
 Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
 *Null* values are not taken into account for any calculations.  
@@ -372,8 +374,6 @@ Using automatic calculations in footers of columns based upon expressions has th
 - it is **not supported** with current selection/named selection list boxes when the expression is "complex". You need to use custom calculations.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming. 
-
-> You can only use [variables](Concepts/variables.md) as custom calculations. Other [expressions](Concepts/quick-tour.md#expressions) are not supported.  
 
 
 #### JSON Grammar
