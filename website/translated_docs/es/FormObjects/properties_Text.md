@@ -320,7 +320,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 **Ejemplo**
 
-In the *Color* project method, write the following code:
+En el método proyecto *Color*, escribe el siguiente código:
 
 ```4d
 //Color method
