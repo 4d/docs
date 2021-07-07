@@ -323,11 +323,11 @@ Specifies an expression or a variable which will be evaluated for each row displ
 En el método proyecto *Color*, escribe el siguiente código:
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+//Método Color
+//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica:
 C_OBJECT($0)
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID es un atributo de objetos/entidades de una colección
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -336,27 +336,27 @@ End if
 $0:=Form.meta
 ```
 
-**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+**Buenas prácticas:** por razones de optimización, se recomendaría en este caso crear el objeto `meta.cell` una vez en el método formulario:
 
 ```4d
-  //form method
+  //método formulario
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Column2";New object("fill";"black"))
  End case
 ```
 
-Then, the *Color* method would contain:
+Entonces, el método *Color* contendría:
 
 ```4d
-  //Color method
+  //método Color
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reutilizar el mismo objeto para mejorar el rendimiento
  ...
 ```
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> Ver también el comando [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 
 
@@ -380,7 +380,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
+Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas \<SPAN> HTML presentes en el área.</p> 
 
 <p spaces-before="0">
   By default, this option is not enabled.
@@ -443,7 +443,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+  Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
 </p>
 
 <table spaces-before="0">
@@ -499,7 +499,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <p spaces-before="0">
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+  Además de <a href="text.md">áreas de texto estáticas</a>, los objetos de texto de las <a href="input_overview.md">áreas de entrada</a> pueden girar cuando no son<a href="properties_Entry.md#enterable">editables</a>. Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
 </p>
 
 
