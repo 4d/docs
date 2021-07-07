@@ -24,17 +24,17 @@ Each blob type has its advantages. Use the following table to determine which on
 |----|:----:|:----:|
 |Alterable|Yes|No|
 |Shareable in objects and collections|No|Yes|
-|Duplicated when passed to methods*|Yes|No|
+|Passed by reference*|No|Yes|
 Performance when accessing bytes|+|-|
 
-*Unlike the built-in 4D commands designed to take a blob as a parameter, methods duplicate blobs, resulting in more memory usage. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
 
 You cannot use operators on blobs. 
 
-## Checking if a variable holds a blob or a 4D.Blob
+## Checking if a variable holds a scalar blob or a `4D.Blob`
 
-Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or 4D.Blob.
-To check that an object is a blob object, use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or Object.
+To check that an object is a blob object (`4D.Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob
