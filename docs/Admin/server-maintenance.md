@@ -54,9 +54,10 @@ This button can be used to immediately restart the server. When you click on thi
 
 This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
 
-- Next backup: date and time of next automatic backup.
-- Needed space: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
-- Available space: space available on the backup volume.
+- **Last backup**: date and time of last backup.
+- **Next backup**: date and time of next scheduled backup.
+- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Available space**: space available on the backup volume.
 
 
 The Start backup button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the Settings... button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
