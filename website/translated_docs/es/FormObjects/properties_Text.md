@@ -628,7 +628,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </p>
 
 <p spaces-before="0">
-  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para llenar el array (utilizando un método), utilice las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estilos de fuente</a>. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 </p>
 
 
@@ -682,11 +682,11 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </h2>
 
 <p spaces-before="0">
-  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+  Esta propiedad sólo está disponible para un área de entrada <a href="#multi-estilo">Multi-estilo</a>. Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
 </p>
 
 <p spaces-before="0">
-  For example, here is a text that includes a style modification:
+  Por ejemplo, este es un texto que incluye una modificación de estilo:
 </p>
 
 <p spaces-before="0">
@@ -694,17 +694,17 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </p>
 
 <p spaces-before="0">
-  When the property is disabled, the area only stores the modification. The stored contents are therefore:
+  Cuando la propiedad está desactivada, el área sólo almacena la modificación. Por lo tanto, los contenidos almacenados son:
 </p>
 
-<pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
+<pre><code>¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!
 </code></pre>
 
 <p spaces-before="0">
-  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+  Cuando la propiedad está activa, el área almacena toda la información de formato. La primera etiqueta genérica describe el estilo por defecto y luego cada variación es objeto de un par de etiquetas anidadas. Por lo tanto, los contenidos almacenados en el área son:
 </p>
 
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
+<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!&lt;/SPAN&gt;
 </code></pre>
 
 <h4 spaces-before="0">
