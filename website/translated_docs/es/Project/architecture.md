@@ -47,7 +47,7 @@ Project development file, used to designate and launch the project. This file ca
 - 4D Developer
 - 4D Server (sólo lectura, ver [Desarrollar un proyecto](developing.md))
 
-**Nota:** en los proyectos 4D, el desarrollo se realiza con 4D Developer y el desarrollo multiusuario se gestiona a través de las herramientas de control de versión. 4D Server can open .4DProject files for testing purposes.
+**Nota:** en los proyectos 4D, el desarrollo se realiza con 4D Developer y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server can open .4DProject files for testing purposes.
 
 
 ### Sources folder
@@ -200,15 +200,15 @@ Esta carpeta contiene **archivos de propiedades usuario** utilizados para la adm
 
 Esta carpeta contiene archivos que memorizan las configuraciones del usuario, por ejemplo, el punto de ruptura o las posiciones de las ventanas. You can just ignore this folder. It contains for example:
 
-| Contents                   | Descripción                                            | Format |
-| -------------------------- | ------------------------------------------------------ | ------ |
-| methodPreferences.json     | Current user method editor preferences                 | JSON   |
-| methodWindowPositions.json | Current user window positions for methods              | JSON   |
-| formWindowPositions.json   | Current user window positions for forms                | JSON   |
-| workspace.json             | List of opened windows; on macOS, order of tab windows | JSON   |
-| debuggerCatches.json       | Caught calls to commands                               | JSON   |
-| recentTables.json          | Ordered list of tables                                 | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions            | XML    |
+| Contents                   | Descripción                                               | Format |
+| -------------------------- | --------------------------------------------------------- | ------ |
+| methodPreferences.json     | Current user method editor preferences                    | JSON   |
+| methodWindowPositions.json | Current user window positions for methods                 | JSON   |
+| formWindowPositions.json   | Current user window positions for forms                   | JSON   |
+| workspace.json             | List of opened windows; on macOS, order of tab windows    | JSON   |
+| debuggerCatches.json       | Caught calls to commands                                  | JSON   |
+| recentTables.json          | Ordered list of tables                                    | JSON   |
+| preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal | XML    |
 
 
 ## Components folder
