@@ -248,50 +248,50 @@ Debe designar la ubicación en su disco de la aplicación 4D Volume Desktop a ut
 
 > El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D Developer v18, debe seleccionar un 4D Volume Desktop v18.
 
-Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. Los diferentes escenarios propuestos se describen en el párrafo [Gestión de las conexiones para las aplicaciones clientes](#management-of-client-connections).
 
-#### Copy of client applications in the server application
+#### Copia de las aplicaciones clientes en la aplicación servidor
 
-The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
+Las opciones de esta área para configurar el mecanismo de actualización de las partes clientes de sus aplicaciones cliente/servidor utilizando la red cada vez que se genera una nueva versión de la aplicación.
 
-- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
-- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Permitir la actualización automática de la aplicación cliente Windows** - Marque estas opciones para que su aplicación cliente/servidor Windows pueda aprovechar el mecanismo de actualización automática de los clientes a través de la red.
+- **Permitir la actualización automática de la aplicación cliente Macintosh** - Marque estas opciones para que su aplicación cliente/servidor Macintosh pueda aprovechar el mecanismo de actualización automática para clientes a través de la red.
 
-*   **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
+*   **Permitir la actualización automática de la aplicación cliente Macintosh** - Si desea crear una aplicación cliente multiplataforma, debe designar la ubicación en su disco de la aplicación 4D Volume Desktop que corresponde a la plataforma "concurrente" de la plataforma de construcción.
 
-    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
-
-
-
-#### Displaying update notification
-
-The client application update notification is carried out automatically following the server application update.
-
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
-
-To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. The rest of the process is automatic.
-
-On the client side, when the “old” client application tries to connect to the updated server application, a dialog box is displayed on the client machine, indicating that a new version is available. The user can either update their version or cancel the dialog box.
-
-*   If the user clicks **OK**, the new version is downloaded to the client machine over the network. Once the download is complete, the old client application is closed and the new version is launched and connects to the server. The old version of the application is then placed in the machine’s recycle bin.
-*   If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
-
-#### Forcing automatic updates
-
-In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
-
-To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
-
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+    Por ejemplo, si construye su aplicación en Windows, debe utilizar el botón **[...]** para designar la aplicación 4D Volume Desktop macOS (suministrada como paquete).
 
 
-#### Update Error
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. The application is now going to quit.”
+#### Mostrar la notificación de actualización
 
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
+La notificación de actualización de la aplicación cliente se realiza automáticamente tras la actualización de la aplicación servidor.
 
-*   **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
+Funciona de la siguiente manera: cuando se construye una nueva versión de la aplicación cliente/servidor utilizando el generador de aplicaciones, la nueva parte cliente se copia como un archivo comprimido en la subcarpeta **Upgrade4DClient** de la carpeta Server **ApplicationName** (en macOS, estas carpetas se incluyen en el paquete servidor). Si ha seguido el proceso de generación de una aplicación cliente multiplataforma, un archivo *4darchive* de actualización está disponible para cada plataforma:
+
+Para activar las notificaciones de actualización de la aplicación cliente, basta con sustituir la versión antigua de la aplicación servidor por la nueva y ejecutarla. El resto del proceso es automático.<p
+
+Del lado del cliente, cuando la aplicación cliente "antigua" intenta conectarse a la aplicación servidor actualizada, se muestra una caja de diálogo en la máquina cliente, indicando que hay una nueva versión disponible. El usuario puede actualizar su versión o cancelar la caja de diálogo.
+
+*   Si el usuario hace clic en **Aceptar**, la nueva versión se descarga en el equipo cliente a través de la red. Once the download is complete, the old client application is closed and the new version is launched and connects to the server. La versión antigua de la aplicación se pone entonces en la papelera de reciclaje de la máquina.
+*   Si el usuario hace clic en **Cancelar**, la actualización se cancela; si la versión antigua de la aplicación cliente no está en el rango de versiones aceptadas por el servidor (consulte el siguiente párrafo), la aplicación se cierra y la conexión es imposible. En caso contrario (por defecto), se establece la conexión.
+
+#### Forzar las actualizaciones automáticas
+
+En algunos casos, es posible que desee evitar que las aplicaciones cliente puedan cancelar la descarga de actualizaciones. Por ejemplo, si ha utilizado una nueva versión de la aplicación fuente 4D Server, la nueva versión de la aplicación cliente debe instalarse absolutamente en cada máquina cliente.
+
+Para forzar la actualización, simplemente excluya el número de versión actual de las aplicaciones clientes (X-1 y anteriores) en el rango de número de versión compatible con la aplicación servidor. In this case, the update mechanism will not allow non-updated client applications to connect. Por ejemplo, si la nueva versión de la aplicación cliente-servidor es la 6, puede estipular que toda aplicación cliente con un número de versión inferior a la 6 no podrá conectarse.
+
+El [número de versión actual](build-server-application) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de los números autorizados se definen en el proyecto de la aplicación mediante unas llaves [XML](#build-application-settings) específicas.
+
+
+#### Error de actualización
+
+Si 4D no puede realizar la actualización de la aplicación cliente, la máquina cliente muestra el siguiente mensaje de error: "La actualización de la aplicación cliente ha fallado. La aplicación va a cerrarse ahora."
+
+Hay muchas causas posibles de este error. Cuando le aparezca este mensaje, es aconsejable que compruebe primero los siguientes parámetros:
+
+*   **Rutas de acceso** - Compruebe la validez de las rutas de acceso definidas en el proyecto de la aplicación a través de la caja de diálogo del Generador de aplicaciones o mediante las llaves XML (por ejemplo *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
 *   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 
