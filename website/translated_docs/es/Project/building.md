@@ -291,37 +291,37 @@ Si 4D no puede realizar la actualización de la aplicación cliente, la máquina
 
 Hay muchas causas posibles de este error. Cuando le aparezca este mensaje, es aconsejable que compruebe primero los siguientes parámetros:
 
-*   **Rutas de acceso** - Compruebe la validez de las rutas de acceso definidas en el proyecto de la aplicación a través de la caja de diálogo del Generador de aplicaciones o mediante las llaves XML (por ejemplo *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
-*   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
+*   **Rutas de acceso** - Compruebe la validez de las rutas de acceso definidas en el proyecto de la aplicación a través de la caja de diálogo del Generador de aplicaciones o mediante las llaves XML (por ejemplo *ClientMacFolderToWin*). Más concretamente, verifique las rutas de acceso a las versiones de 4D Volume Desktop.
+*   **Privilegios de lectura/escritura** - En el equipo cliente, verifique que el usuario actual tiene derechos de acceso de escritura para la actualización de la aplicación cliente.
 
 
-### Generated files
+### Archivos generados
 
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
-> These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
+Una vez construida la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Cliente Servidor ejecutable**. Esta carpeta contiene dos subcarpetas, *<ApplicationName>Client* y *<ApplicationName>Server*.
+> Estas carpetas no se generan si se produce un error. En este caso, abra el [archivo-de-historial](#archivo-de-registro) para conocer la causa del error.
 
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The *\<ApplicationName>Server* folder contains the server portion of the application.
+La carpeta *<ApplicationName>Client* contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de la aplicación. This folder must be installed on each client machine. La carpeta *<ApplicationName>Server* contiene la parte servidor de la aplicación.
 
-The contents of these folders vary depending on the current platform:
+El contenido de estas carpetas varía en función de la plataforma actual:
 
-*   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
+*   *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, llamado  *\<ApplicationName>Client.exe* para la parte cliente y *\<ApplicationName>Server.exe* para la parte servidor, así como los archivos .rsr correspondientes. Las carpetas también contienen varios archivos y carpetas necesarios para el funcionamiento de las aplicaciones y los elementos personalizados que pueden estar en las carpetas 4D Volume Desktop y 4D Server de origen.
+*   *macOS* - Cada carpeta contiene sólo el paquete de aplicaciones, llamado\<ApplicationName> Client para la parte cliente y \<ApplicationName> Server para la parte servidor. Each package contains all the necessary items for the application to work. En macOS, se lanza un paquete haciendo doble clic en él.
 
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+    > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Se puede visualizar su contenido (**Control+clic** sobre el icono) para poder modificarlo..
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
+Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete *<ApplicationName>Server*. This subfolder contains the client application in macOS and/or Windows format as a compressed file. Este archivo se utiliza durante la actualización automática de las aplicaciones clientes.
 
-#### Customizing 4D Volume Desktop folder
+#### Personalizar la carpeta 4D Volume Desktop
 
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. You are then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for instance:
+Durante la creación de una aplicación ejecutable, 4D duplica el contenido de la carpeta 4D Volume Desktop en la subcarpeta Final Application de la carpeta de destino. A continuación, podrá personalizar el contenido de la carpeta 4D Volume Desktop original según sus necesidades. Puede, por ejemplo:
 
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
+- Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
+- Añadir una carpeta PlugIns personalizada;
+- Personalizar el contenido de la carpeta Resources.
 
-#### Location of Web files
+#### Ubicación de los archivos web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+Si la parte servidor y/o del cliente de su aplicación de doble clic se utiliza como servidor web, los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. These items are the following:
 
 - *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 - Default Web root folder (WebFolder).
