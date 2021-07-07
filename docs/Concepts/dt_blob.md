@@ -69,6 +69,8 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 * [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html) 
 * [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html) 
 * [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html) 
+* [SOAP DECLARATION](https://doc.4d.com/4dv19R/help/command/en/page782.html) 
+* [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page777.html) 
 
 ### Passing blobs and blob objects to methods
 
