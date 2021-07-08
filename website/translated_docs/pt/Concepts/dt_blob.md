@@ -3,9 +3,7 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually. A blob can be empty (null length) or contain up to 2147483647 bytes (2 GB).
-
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually.
 
 A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
@@ -25,9 +23,12 @@ Each blob type has its advantages. Use the following table to determine which on
 | Alterable                            | Yes  |   No    |
 | Shareable in objects and collections |  No  |   Yes   |
 | Passed by reference*                 |  No  |   Yes   |
- Performance when accessing bytes|+|-|
+| Performance when accessing bytes     |  +   |    -    |
+| Maximum size                         | 2GB  | Memory  |
 
 *Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+
+> By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
 You cannot use operators on blobs.
 
