@@ -1,13 +1,13 @@
 ---
 id: architecture
-title: Architecture of a 4D project
+title: Arquitetura de um projeto 4D
 ---
 
-A 4D project is made of several folders and files, stored within a single parent database folder (package folder). For example:
+Um projeto 4D é feito de várias pastas e arquivos, armazenados dentro de uma única pasta pai do banco de dados (pasta pacote). For example:
 
 - MyProject
-    - Components
-    - Data
+    - Componentes
+    - Dados
         - Logs
         - Settings
     - Documentation
@@ -28,26 +28,26 @@ A 4D project is made of several folders and files, stored within a single parent
 
 The Project folder typically contains the following hierarchy:
 
-- *databaseName*.4DProject file
+- Arquivo *nomBase*.4DProject
 - Sources
     + Classes
     + DatabaseMethods
-    + Methods
-    + Forms
+    + Métodos
+    + Formulários
     + TableForms
     + Triggers
 - DerivedData
 - Trash (if any)
 
 
-### *databaseName*.4DProject file
+### Arquivo *nomBase*.4DProject
 
 Project development file, used to designate and launch the project. This file can be opened by:
 
 - 4D Developer
-- 4D Server (read-only, see [Developing a project](developing.md))
+- 4D Server (apenas leitura, ver [Desenvolver um projeto](developing.md))
 
-**Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
+**Nota:** nos projetos 4D, o desenvolvimento se realiza com 4D Developer e o desenvolvimento multiusuários se gerencia através das ferramentas de controle de versão. 4D Server can open .4DProject files for testing purposes.
 
 
 ### Sources folder
@@ -68,15 +68,15 @@ Project development file, used to designate and launch the project. This file ca
 
 #### DatabaseMethods folder
 
-| Contents                 | Description                                                            | Format |
-| ------------------------ | ---------------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Database methods defined in the database. One file per database method | text   |
+| Contents                 | Description                                                          | Format |
+| ------------------------ | -------------------------------------------------------------------- | ------ |
+| *databaseMethodName*.4dm | Métodos de banco definidos na database. One file per database method | text   |
 
 #### Methods folder
 
-| Contents         | Description                                                  | Format |
-| ---------------- | ------------------------------------------------------------ | ------ |
-| *methodName*.4dm | Project methods defined in the database. One file per method | text   |
+| Contents         | Description                                                   | Format |
+| ---------------- | ------------------------------------------------------------- | ------ |
+| *methodName*.4dm | Métodos de projeto definidos na database. One file per method | text   |
 
 #### Classes folder
 
@@ -109,9 +109,9 @@ Project development file, used to designate and launch the project. This file ca
 
 #### Triggers folder
 
-| Contents      | Description                                                                                 | Format |
-| ------------- | ------------------------------------------------------------------------------------------- | ------ |
-| table_*n*.4dm | Trigger methods defined in the database. One trigger file per table (n is the table number) | text   |
+| Contents      | Description                                                                               | Format |
+| ------------- | ----------------------------------------------------------------------------------------- | ------ |
+| table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text   |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
@@ -120,8 +120,8 @@ Project development file, used to designate and launch the project. This file ca
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- Methods
-- Forms
+- Métodos
+- Formulários
 - TableForms
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
@@ -134,11 +134,11 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 ## Resources folder
 
-The Resources folder contains any custom database resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+A pasta Resources contém todos os arquivos e pastas de recursos personalizados do banco de dados. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
 | Contents              | Description                                                                                                                                           | Format  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Database resource files and folders                                                                                                                   | various |
+| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                      | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
@@ -158,15 +158,15 @@ The data folder contains the data file and all files and folders relating to the
 
 ### Settings folder
 
-This folder contains **user settings files for data** used for database administration.
+Esta pasta contém **arquivos de configuração de dados** utilizados para a administração do banco de dados.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> Estes parâmetros têm prioridade sobre os **[arquivos de propriedades usuário](#settings-folder-1)** e os arquivos de **propriedades estrutura**.
 
-| Contents            | Description                                                                                                                                                                                                          | Format |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
-| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                               | JSON   |
+| Contents            | Description                                                                                                                                                                                                                                                                              | Format |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Backup.4DSettings   | Parâmetros de cópia de segurança do banco de dados, utilizados para definir as [opções de cópia de segurança](Backup/settings.md)) quando o banco de dados for lançado com este arquivo de dados. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
+| settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados                                                                                                                                                                                                               | XML    |
+| directory.json      | Descrição de os grupos e usuários de 4D e seus direitos de acesso quando o banco for lançado com este arquivo de dados.                                                                                                                                                                  | JSON   |
 
 
 
@@ -180,11 +180,11 @@ The Logs folder contains all log files used by the project. Log files include, i
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> Uma pasta Logs adicional está disponível na pasta de preferências do usuário do sistema (pasta 4D ativa, ver [Obter pasta 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) comando) para os arquivos de registro de manutenção e nos casos em que a pasta de dados for de apenas leitura.
 
 ## Settings folder
 
-This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
+Esta pasta contém **arquivos de propriedades usuário** utilizados para a administração do banco de dados. Os arquivos são adicionados à pasta se for necessário.
 
 > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
 
