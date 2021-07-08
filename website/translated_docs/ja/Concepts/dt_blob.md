@@ -5,7 +5,7 @@ title: BLOB
 
 A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually. A blob can be empty (null length) or contain up to 2147483647 bytes (2 GB).
 
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> デフォルトで、4D は BLOB の最大サイズを 2GB に設定していますが、OSや空き容量によっては、この制限サイズが小さくなる場合があります。
 
 A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
@@ -24,16 +24,16 @@ Each blob type has its advantages. Use the following table to determine which on
 | ------------------------------------ |:----:|:-------:|
 | Alterable                            |  ◯   |    ×    |
 | Shareable in objects and collections |  ×   |    ◯    |
-| Duplicated when passed to methods*   |  ◯   |    ×    |
+| Passed by reference*                 |  ×   |    ◯    |
  Performance when accessing bytes|+|-|
 
-*Unlike the built-in 4D commands designed to take a blob as a parameter, methods duplicate blobs, resulting in more memory usage. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
 
 You cannot use operators on blobs.
 
-## Checking if a variable holds a blob or a 4D.Blob
+## Checking if a variable holds a scalar blob or a `4D.Blob`
 
-Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or 4D.Blob. To check that an object is a blob object, use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or Object. To check that an object is a blob object (`4D.Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob
@@ -68,6 +68,8 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 * [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html)
 * [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html)
 * [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html)
+* [SOAP DECLARATION](https://doc.4d.com/4dv19R/help/command/en/page782.html)
+* [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page777.html)
 
 ### Passing blobs and blob objects to methods
 

@@ -706,6 +706,9 @@
       "Project/compiler": {
         "title": "Compilation"
       },
+      "Project/components": {
+        "title": "4D Components Library"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -910,6 +913,7 @@
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
     "Web Administration|no description given": "Web Administration",
+    "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
