@@ -186,11 +186,11 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 Esta pasta contém **arquivos de propriedades usuário** utilizados para a administração do banco de dados. Os arquivos são adicionados à pasta se for necessário.
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> Se existir um arquivo de propriedades de dados [em uma pasta de dados ](#settings-folder), da pasta Dados, tem prioridade sobre o arquivo de propriedades do usuário.
 
 | Contents            | Description                                                                                                                                                                                                                                                                                                                          | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| directory.json      | Description of 4D groups and users for the database, as well as their access rights                                                                                                                                                                                                                                                  | JSON   |
+| directory.json      | Descrição dos grupos e usuários de 4D para o banco de dados, assim como seus direitos de acesso                                                                                                                                                                                                                                      | JSON   |
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
@@ -198,7 +198,7 @@ Esta pasta contém **arquivos de propriedades usuário** utilizados para a admin
 
 ## userPreferences.*userName* folder
 
-This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
 
 | Contents                   | Description                                            | Format |
 | -------------------------- | ------------------------------------------------------ | ------ |
@@ -208,14 +208,14 @@ This folder contains files that memorize user configurations, e.g. break point o
 | workspace.json             | List of opened windows; on macOS, order of tab windows | JSON   |
 | debuggerCatches.json       | Caught calls to commands                               | JSON   |
 | recentTables.json          | Ordered list of tables                                 | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions            | XML    |
+| preferences.4DPreferences  | Rota de dados atual e posições da janela principal     | XML    |
 
 
 ## Components folder
 
-This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+Esta carpeta contém os componentes que devem estar disponíveis unicamente no banco de dados projeto. It must be stored at the same level as the Project folder.
 
-> A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
+> Um banco de dados projeto pode ser utilizado por si mesmo como um componente: - para o desenvolvimento: ponha um alias/apelido de arquivo .4dproject na pasta Components do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local.
 
 
 ## Plugins folder
