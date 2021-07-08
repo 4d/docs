@@ -289,6 +289,7 @@ The `.4darchive` is copied at the following location:
 #### Selecting client archive for the concurrent platform
 
 
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -441,6 +442,7 @@ The page lists the elements loaded by the current 4D application:
 
 *	 **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it. 
 
+
 *	**Plugins and components** column - Displays the name of the plug-in/component.
 
 *	**ID** column - Displays the plug-in/component's identification number (if any).
@@ -518,12 +520,13 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below). 
 
 
-
 #### About Gatekeeper  
 
 Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched. 
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened..."). 
+
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 
 #### About Notarization
@@ -581,6 +584,7 @@ The opening sequence for launching a merged application is:
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder. 
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
+
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
