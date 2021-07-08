@@ -363,7 +363,7 @@ Using automatic calculations in footers of columns based upon expressions has th
 
 - it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
 - it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
-- it is **not supported** with current selection/named selection list boxes when the expression is "complex". You need to use custom calculations.
+- it is **not supported** with current selection/named selection list boxes when the expression is "complex". Es necesario utilizar cálculos personalizados.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 

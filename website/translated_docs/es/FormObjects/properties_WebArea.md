@@ -86,7 +86,7 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 The Blink engine has the following limitations:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html):utilizar este comando requiere que al menos una página ya esté cargada en el área (a través de una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área).
 - Cuando se activa soltar URLs mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), la primera soltada debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área.
 
 #### JSON Grammar
