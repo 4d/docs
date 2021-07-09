@@ -307,11 +307,11 @@ Result:
 
 
 
-#### Current selection scope
+#### Alcance de la selección actual
 
-Call of a `updateSalary` method:
+Llamada de un método `updateSalary`:
 - en la tabla [Employee]
-- with **Current selection** scope
+- con el alcance de **Current selection**
 
 ```4d
     //updateSalary  
@@ -331,7 +331,7 @@ $0:=New object("updates";$vCount)
 
 `POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
 
-POST data (in the request body): [1.5]
+Datos POST (en el cuerpo de la petición): [1.5]
 
 Result:
 ```
