@@ -175,7 +175,7 @@ Como el valor de una propiedad de objeto puede ser un objeto o una colección, l
 $vAge:=employee.children[2].age
 ```
 
-Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
+Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que encapsula un método (una fórmula), debe añadir paréntesis () al nombre de la propiedad para ejecutar el método:
 
 ```
 $f:=New object
@@ -183,17 +183,17 @@ $f.message:=New formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
-To access a collection element, you have to pass the element number embedded in square brackets:
+Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
 
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //acceso al 4º elemento de la colección
 ```
 
 ## Clases
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+El lenguaje 4D soporta las clases de objetos. Añade un archivo `myClass.4dm` en la carpeta Project/Sources/Classes de un proyecto para crear una clase llamada "myClass".
 
 To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. Se pueden pasar parámetros.
 
@@ -202,16 +202,16 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. Un método miembro de clase puede recibir y devolver parámetros como cualquier método, y utilizar `This` como instancia del objeto.
 
 ```4d  
-//in the myClass.4dm file
+//en el archivo myClass.4dm
 Function hello
   C_TEXT($0)
   $0:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+Para ejecutar un método miembro de clase, basta con utilizar el operador `()` en el método miembro de la instancia del objeto.
 
 ```4d
 $o:=cs.myClass.new()
@@ -223,7 +223,7 @@ $message:=$o.myClass.hello()
 Optionally, use the `Class constructor` keyword to declare properties of the object.
 
 ```4d  
-//in the Rectangle.4dm file
+//en el archivo Rectangle.4dm
 Class constructor
 C_LONGINT($1;$2)
 This.height:=$1
@@ -249,7 +249,7 @@ This.name:="Square"
 
 
 ## Operadores
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
+Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. Por ejemplo, 1 + 2 utiliza el operador de adición (o signo más) para sumar dos números, y el resultado es 3. Esta tabla muestra algunos operadores numéricos comunes:
 
 | Operador | Operación      | Ejemplo   |
 | -------- | -------------- | --------- |
@@ -258,71 +258,71 @@ When you use the language, it is rare that you will simply want a piece of data.
 | *        | Multiplicación | 2 * 3 = 6 |
 | /        | División       | 6 / 2 = 3 |
 
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
+Los operadores numéricos son sólo un tipo de operador disponible. 4D soporta múltiples tipos de datos, como números, texto, fechas e imágenes, por lo que existen operadores que realizan operaciones con estos diferentes tipos de datos.
 
-The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
+Los mismos símbolos se utilizan a menudo para diferentes operaciones, dependiendo del tipo de datos. Por ejemplo, el signo más (+) realiza diferentes operaciones con diferentes datos:
 
-| Tipos de datos | Operación        | Ejemplo                                                                                              |
-| -------------- | ---------------- | ---------------------------------------------------------------------------------------------------- |
-| Número         | Adición          | 1 + 2 adds the numbers and results in 3                                                              |
-| Cadena         | Concatenación    | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
-| Fecha y Número | Adición de fecha | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+| Tipos de datos | Operación        | Ejemplo                                                                                                                |
+| -------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Número         | Adición          | 1 + 2 suma los números y da como resultado 3                                                                           |
+| Cadena         | Concatenación    | "Hola" + "a todos" concatena (une) las cadenas y da como resultado "Hola a todos"                                      |
+| Fecha y Número | Adición de fecha | !1989-01-01! + 20 añade 20 días a la fecha del 1 de enero de 1989 y da como resultado la fecha del 21 de enero de 1989 |
 
 
 ## Expresiones
 
-En pocas palabras, las expresiones devuelven un valor. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
+En pocas palabras, las expresiones devuelven un valor. De hecho, al utilizar el lenguaje 4D, se utilizan expresiones todo el tiempo y se tiende a pensar en ellas sólo en términos del valor que representan. Las expresiones también se llaman fórmulas.
 
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
+Las expresiones se componen de casi todas las demás partes del lenguaje: comandos, operadores, variables, campos, propiedades de objetos y elementos de colección. Se utilizan expresiones para escribir líneas de código, que a su vez se utilizan para construir métodos. El lenguaje utiliza expresiones siempre que necesita un dato.
 
-Las expresiones son rara vez "autónomas." There are several places in 4D where an expression can be used by itself. It includes:
+Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una expresión puede ser utilizada por sí misma. It includes:
 
-- Formula editor (apply formula, query with formula, order by formula)
+- Editor de fórmulas (apply formula, query with formula, order by formula)
 - El comando `EXECUTE FORMULA`
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
-- Quick Report editor as a formula for a column
+- La lista de propiedades, donde se puede utilizar una expresión como fuente de datos para la mayoría de los widgets
+- Depurador donde se puede comprobar el valor de las expresiones
+- En el editor de informes rápidos como fórmula para una columna
 
 
 ### Tese de expresiones
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
+Se hace referencia a una expresión por el tipo de datos que devuelve. Hay varios tipos de expresiones. En la siguiente tabla se dan ejemplos de cada tipo de expresión.
 
-| Expresión                | Tipo                   | Descripción                                                                                                                                                                   |
-| ------------------------ | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | Cadena                 | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                 |
-| “Hello ” + “there”       | Cadena                 | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                        |
-| “Sr. ” + [People]Name    | Cadena                 | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
-| Uppercase("smith")       | Cadena                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                                 |
-| 4                        | Número                 | Se trata de una constante numérica, 4.                                                                                                                                        |
-| 4 * 2                    | Número                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                                 |
-| myButton                 | Número                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                                      |
-| !1997-01-25!             | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                                      |
-| Current date+ 30         | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.            |
-| ?8:05:30?                | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                                        |
-| ?2:03:04? + ?1:02:03?    | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                                     |
-| True                     | Booleano               | Este comando devuelve el valor booleano TRUE.                                                                                                                                 |
-| 10 # 20                  | Booleano               | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.            |
-| “ABC” = “XYZ”            | Booleano               | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                                 |
-| My Picture + 50          | Imagen                 | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                                |
-| ->[People]Name           | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                             |
-| Table (1)                | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                                |
-| JSON Parse (MyString)    | Objeto                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                                        |
-| JSON Parse (MyJSONArray) | Colección              | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                              |
-| Form.pageNumber          | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                                    |
-| Col[5]                   | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                                |
-| $entitySel[0]            | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                                   |
+| Expresión                | Tipo                   | Descripción                                                                                                                                                          |
+| ------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | Cadena                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
+| “Hello ” + “there”       | Cadena                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
+| “Sr. ” + [People]Name    | Cadena                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
+| Uppercase("smith")       | Cadena                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                        |
+| 4                        | Número                 | Se trata de una constante numérica, 4.                                                                                                                               |
+| 4 * 2                    | Número                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                        |
+| myButton                 | Número                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                             |
+| !1997-01-25!             | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                             |
+| Current date+ 30         | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.   |
+| ?8:05:30?                | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                               |
+| ?2:03:04? + ?1:02:03?    | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                            |
+| True                     | Booleano               | Este comando devuelve el valor booleano TRUE.                                                                                                                        |
+| 10 # 20                  | Booleano               | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.   |
+| “ABC” = “XYZ”            | Booleano               | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                        |
+| My Picture + 50          | Imagen                 | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                       |
+| ->[People]Name           | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                    |
+| Table (1)                | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                       |
+| JSON Parse (MyString)    | Objeto                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                               |
+| JSON Parse (MyJSONArray) | Colección              | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                     |
+| Form.pageNumber          | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                           |
+| Col[5]                   | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                       |
+| $entitySel[0]            | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                          |
 
 ### Expresiones asignables y no asignables
 
 Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor. En 4D, las expresiones pueden ser **asignables**. Una expresión es asignable cuando puede utilizarse a la derecha de una asignación. Por ejemplo:
 
 ```4d  
-//$myVar variable is assignable, you can write:  
-$myVar:="Hello" //assign "Hello" to myVar
-//Form.pageNumber is assignable, you can write:  
-Form.pageNumber:=10 //assign 10 to Form.pageNumber
-//Form.pageTotal-Form.pageNumber is not assignable:
-Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
+//La variable $myVar es asignable, puede escribir:  
+$myVar:="Hola" //asignar "Hola" a myVar
+//Form.pageNumber es asignable, puede escribir:  
+Form.pageNumber:=10 //asignar 10 a Form.pageNumber
+//Form.pageTotal-Form.pageNumber no es asignable:
+Form.pageTotal- Form.pageNumber:=10 //error, no asignable
 ```
 En general, las expresiones que utilizan un operador no son asignables. Por ejemplo, `[Person]FirstName+" "+[Person]LastName` no es asignable.
 
