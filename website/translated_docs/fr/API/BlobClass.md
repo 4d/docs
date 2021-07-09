@@ -3,7 +3,7 @@ id: BlobClass
 title: Blob
 ---
 
-The Blob class lets you create and manipulate blob objects (`4D.Blob`).
+The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
 ### Sommaire
 |                                                                                                                                                                 |
