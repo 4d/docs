@@ -55,7 +55,7 @@ You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as
 ```4d
 var $myBlob: 4D.Blob
 CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
-$myText:= BLOB to text ( $myBlob ; UTF8 text without length )
+$myText:= BLOB to text( $myBlob ; UTF8 text without length )
 ```
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
@@ -137,6 +137,8 @@ $type:= OB Instance of($myObject.blob; 4D.Blob)  //True
 $myBlob:= $myObject.blob 
 $type:= Value type($myBlob) // Blob
 ```
+
+> When converting a 4D.Blob to a scalar blob, if the size of the 4D.Blob exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 1GB, if you convert a 4D.Blob of 1.5GB to a scalar blob, you obtain an empty blob.
 
 ## Modifying a scalar blob
 
