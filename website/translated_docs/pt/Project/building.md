@@ -7,9 +7,9 @@ title: Building a project package
 
 The application builder allows you to:
 
-*   Build a compiled database, without interpreted code,
+*   Gerar um banco de dados compilado, sem código interpretado
 *   Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
-*   Build different applications from the same compiled database via an XML project,
+*   Gerar aplicações diferentes a partir do mesmo banco de dados compilado mediante um projeto XML,
 *   Build homogeneous client-server applications,
 *   Build client-server applications with automatic updating of client and server parts.
 *   Save your build settings for future use (*Save settings* button).
@@ -20,7 +20,7 @@ The application builder allows you to:
 
 Building a project package can be carried out using:
 
-- either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command,
+- o comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 - or the [Build Application window](#application-builder).
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
@@ -32,12 +32,12 @@ The Build Application dialog includes several pages that can be accessed using t
 ![](assets/en/Project/appbuilderProj.png)
 
 
-Building can only be carried out once the database is compiled. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
+A geração do banco de dados só pode ser realizado quando o banco de dados for compilado. Se selecionar esse comando sem ter previamente compilado o banco de dados, ou no caso do código compilado não for correspondente ao código interpretado, aparece uma caixa de diálogo de advertência que indica que o banco de dados deve ser (re)compilado.
 
 
 ### Build application settings
 
-Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
+Cada parámetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada "buildApp.4DSettings", localizado na pasta  Settings do banco de dados.
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
@@ -45,11 +45,11 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Log file
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. The log file stores the following information for each build:
 - The start and end of building of targets,
 - The name and full access path of the files generated,
 - The date and time of the build,
-- Any errors that occurred.
+- Todos os erros que forem produzidos.
 
 
 
@@ -72,59 +72,59 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 ### Build compiled structure
 
-Builds a database containing only compiled code.
+Gera um banco de dados que contém apenas código compilado.
 
-This feature creates a *.4dz* file within a *Compiled Database* folder. If you have named your application “MyProject”, 4D will create:
+Esta funcionalidade cria um arquivo *.4dz* em uma pasta *Compiled Database*. Se chamar à sua aplicação "MyProject", 4D criará:
 
 *\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
+> A .4dz file is essentially a zipped (packed) version of the project folder. Os arquivos.4dz podem ser utilizados por 4D Server, a licença 4D Volume (aplicações fusionadas) e 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
 
 #### Include related folders
 
-When you check this option, any folders related to the database are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to [Database Architecture](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
+Quando se marca esta opção, todas as pastas relacionadas com o banco de dados na pasta Build como pastas *Components* e *Resources*. Para saber mais sobre essas pastas, consulte [Arquitetura do banco de dados](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
 
 
 ### Build component
 
 Builds a compiled component from the structure.
 
-A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation.
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
+A component is a standard 4D project in which specific functionalities have been developed. Quando o componente tiver sido configurado e instalado em outro banco de dados 4D (o banco local), suas funcionalidades são acessíveis desde o banco local. Para saber mais sobre os componentes, veja a documentação "Desenvolver e instalar componentes 4D'.
+Se tiver nomeado sua aplicação, *MeuComponente*, 4D criará uma pasta Components que contém a pasta *MeuComponente.4dbase*: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
 
-The *MyComponent.4dbase* folder contains:
+A pasta *MyComponent.4dbase* contém:
 -   *MyComponent.4DZ* file
--   A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
+-   Una carpeta *Resources* - todos os recursos associados são copian automaticamente nesta pasta. Todas as outras pastas de componentes ou plugins não são copiadas (um componente não pode utilizar plugins ou outros componentes).
 
 
-## Application page
+## Página de aplicação
 
-This tab allows you can build a stand-alone, single-user version of your application:
+Esta aba lhe permite construir uma versão autônoma e monousuário de sua aplicação:
 
 ![](assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### Criar uma aplicação autônoma
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+Selecionando a opção **Criar uma aplicação autônoma** e clicando em **Gerar** se criará uma aplicação autônoma (com duplo clique) diretamente desde o projeto do banco de dados.
 
-The following elements are required for the build:
-- 4D Volume Desktop (the 4D database engine),
-- an [appropriate license](#licenses)
+Os elementos abaixo são necessários para a geração:
+- 4D Volume Desktop (o motor do banco de dados 4D),
+- uma [licença apropriada](#licenses)
 
-On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
+Em Windows, esta funcionalidade cria um arquivo executável (.exe). Em macOS, se encarrega da criação de pacotes de software.
 
-The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
+O princípio consiste em fusionar o arquivo 4D Volume Desktop com um arquivo de estrutura compilado. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. Para mais informação sobre este ponto, consulte a documentação comercial e de [4D Store](http://www.4d.com/).
 
-You can define a default data file or allow users to create and use their own data file (see the [Data file management in final applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html) section).
+Pode definir um arquivo de dados por padrão ou permitir aos usuários criar e utilizar seu próprio arquivo de dados (consulte a seção [Gestão de arquivos de dados nas aplicações finais](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
 
-It is possible to automate the update of merged single-user applications by means of a sequence of language commands (see [Automatic updating of server or single-user applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
+É possível automatizar a atualização das aplicações monousuário fusionadas mediante uma sequência de comandos de linguagem (consulte a seção [Atualización automática de aplicações servidor ou monousuário](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
 
-#### 4D Volume Desktop Location
+#### Localização de 4D Volume Desktop
 
-In order to build a stand-alone application, you must first designate the folder containing the 4D Volume Desktop file:
+Para gerar uma aplicação autônoma, primeiro deve designar a pasta que contém o arquivo 4D Volume Desktop:
 
-*   *Windows* - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, as well as various files and folders required for its operation. These items must be placed at the same level as the selected folder.
+*   *Windows* - a pasta contém os arquivos 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, assim como vários arquivos e pastas necessários para seu funcionamento. These items must be placed at the same level as the selected folder.
 *   *macOS* - 4D Volume Desktop is provided in the form of a structured software package containing various generic files and folders.
 
 To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
