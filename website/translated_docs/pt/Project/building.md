@@ -155,18 +155,18 @@ Se especificou "MyProject" como nome da aplicação, encontrará os seguintes ar
     *   Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para o funcionamento da aplicação
     *   Pasta Database - Incluem uma pasta Resources e o arquivo MyProject.4DZ. Constituem a estrutura compilada do banco de dados assim como a pasta Resources. **Nota**: esta pasta também contém a pasta *Default Data*, se for definida (ver [Gestão de arquivos de dados em aplicações finais](#data-file-management-in-final-applicatons).
     *   (Opcional) Pasta Components ou pasta Plugins - contém todos os componentes ou arquivos plug-in incluídos no banco de dados. Para más informação ao respeito, consulte a seção [Plugins e componentes](#plugins-and-components).
-    *   Carpeta Licenses - Um arquivo XML de números de licença integrados na aplicação. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
-    *   Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
+    *   Carpeta Licenses - Um arquivo XML de números de licença integrados na aplicação. Para mais informação ao respeito, consulte a seção [Licenças e certificados](#licenses-and-certificate).
+    *   Elementos adicionais anexados à pasta 4D Volume Desktop, se houver (ver [Personalização da pasta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
-    All these items must be kept in the same folder in order for the executable to operate.</ul>
+    Todos esses elementos devem manter-se na mesma pasta para que o executável funcione.</ul>
 
 *   *macOS*
-    -   A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
+    -   Um pacote de software chamado MyProject.app que contém tua aplicação e todos os elementos necessários para seu funcionamento, incluindo os plug-ins, componentes e licencias. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Nota**: em macOS, o comando [Arquivo de aplicação](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) da linguagem 4D devolve o nome da rota do arquivo ApplicationName ( na pasta Contents:macOS do pacote de software) e não o do arquivo .comp (pasta Contents:Resources do pacote de software).
 
 
-#### Customizing 4D Volume Desktop folder
+#### Personalização da pasta 4D Volume Desktop
 
-When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for example:
+Quando construir uma aplicação Independente, 4D copia o conteúdo da pasta 4D Volume Desktop na pasta Destination > *Final Application*. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for example:
 
 *   Install a 4D Volume Desktop version corresponding to a specific language;
 *   Add a custom *PlugIns* folder;
