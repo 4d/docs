@@ -67,7 +67,7 @@ If(<>vtName#"")
 
 ## Variables proceso
 
-Una variable de proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). A process variable name can contain up to 31 characters.
+Una variable de proceso se designa con su nombre (que no puede empezar con los símbolos <> ni $). Un nombre de variable proceso puede contener hasta 31 caracteres.
 
 Ejemplos:
 ```4d
