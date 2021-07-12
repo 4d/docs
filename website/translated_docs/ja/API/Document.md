@@ -484,9 +484,9 @@ title: Document クラス
 
 *destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
-| 定数             | 結果 | 説明                 |
-| -------------- | -- | ------------------ |
-| `fk overwrite` | 4  | 既存要素があれば、それを上書きします |
+| 定数             | 値 | 説明                 |
+| -------------- | - | ------------------ |
+| `fk overwrite` | 4 | 既存要素があれば、それを上書きします |
 
 
 **戻り値**
@@ -511,28 +511,29 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容              |
+| ------ | --------------- |
+| v19 R2 | Returns 4D.Blob |
+| v17 R5 | 追加              |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : Blob<!-- END REF -->
+**.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 参照  | タイプ  |    | 説明         |
-| --- | ---- | -- | ---------- |
-| 戻り値 | BLOB | <- | ファイルのコンテンツ |
+| 参照  | タイプ     |    | 説明         |
+| --- | ------- | -- | ---------- |
+| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
 <!-- END REF -->
 
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した BLOB を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
-`Blob`。
+A `4D.Blob` object.
 
 #### 例題
 
@@ -625,13 +626,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 *breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:
 
-| 定数                            | 結果 | 説明                                                                                                        |
-| ----------------------------- | -- | --------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0  | 何も処理をしません。                                                                                                |
-| `Document with native format` | 1  | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2  | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
-| `Document with CR`            | 3  | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
-| `Document with LF`            | 4  | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
+| 定数                            | 値 | 説明                                                                                                        |
+| ----------------------------- | - | --------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                |
+| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
+| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
+| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
+| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 

@@ -10,7 +10,7 @@ When these pages are sent by the HTTP server, they are parsed and the tags they 
 For example, if you write in an HTML page:
 
 ```html
-<P> <!--#4DTEXT vtSiteName-->へようこそ！</P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
@@ -47,7 +47,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 
    <!--#4DINCLUDE banner2.html-->
 <!--#4DENDIF-->
- 
+
 <!--#4DLOOP [TABLE]-->   (loop on the current selection)
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
    <!--#4DINCLUDE subpage.html-->   (subpage insertion)

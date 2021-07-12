@@ -372,7 +372,7 @@ The object returned by `.drop( )` contains the following properties:
 | lockInfo      |                     | object              | Information about the lock origin                                                                                     |
 |               | task_id             | number              | Process id                                                                                                            |
 |               | user_name           | Texte               | Session user name on the machine                                                                                      |
-|               | user4d_id           | Texte               | User name in the 4D database directory                                                                                |
+|               | user4d_alias        | Texte               | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
 |               | host_name           | Texte               | Machine name                                                                                                          |
 |               | task_name           | Texte               | Process name                                                                                                          |
 |               | client_version      | Texte               |                                                                                                                       |
@@ -1190,7 +1190,7 @@ The object returned by `.save()` contains the following properties:
 | lockInfo     |                    | object              | Information about the lock origin                                                                                       |
 |              | task_id            | number              | Process id                                                                                                              |
 |              | user_name          | Texte               | Session user name on the machine                                                                                        |
-|              | user4d_id          | Texte               | User name in the 4D database directory                                                                                  |
+|              | user4d_alias       | Texte               | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | Texte               | Machine name                                                                                                            |
 |              | task_name          | Texte               | Process name                                                                                                            |
 |              | client_version     | Texte               |                                                                                                                         |

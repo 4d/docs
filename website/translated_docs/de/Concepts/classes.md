@@ -103,7 +103,7 @@ Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 - `4D` Store für vorgegebene Klassen
 
 
-### cs
+### `cs`
 
 #### cs -> classStore
 
@@ -121,7 +121,7 @@ Eine neue Instanz eines Objekts von `myClass` erstellen:
 $instance:=cs.myClass.new()
 ```
 
-### 4D
+### `4D`
 
 #### 4D -> classStore
 
@@ -170,7 +170,7 @@ In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwe
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
 
-### Function
+### `Function`
 
 #### Syntax
 
@@ -237,7 +237,7 @@ Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` dekla
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
+> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
 > 
 > ```4d
 > Function add($x : Integer)
@@ -249,7 +249,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-#### Beispiel
+#### Example
 
 ```4d
 // Class: Rectangle
@@ -265,16 +265,17 @@ Function getArea()->$result : Integer
 
 ```4d
 // In a project method
+
 var $rect : cs.Rectangle
 var $area : Real
 
-$rect:=cs.Rectangle.new()  
-$area:=$rect.getArea(50;100) //5000
+$rect:=cs.Rectangle.new(50;100)  
+$area:=$rect.getArea() //5000
 ```
 
 
 
-### Class Constructor
+### `Class Constructor`
 
 #### Syntax
 
@@ -286,13 +287,13 @@ Class Constructor({$parameterName : type; ...})
 
 Eine Function Class Constructor, die [Parameter](#parameter) zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.
 
-Rufen Sie die Function [`new()`](API/ClassClass.md#new) auf, wird der Class Constructor mit den Parametern aufgerufen, die optional in `new()` übergeben wurden.
+In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-Für eine Function Class Constructor gibt der Befehl `Current method name` : "*\<ClassName>:constructor*"zurück, z.B. "MyClass:constructor".
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
 
 
 
-#### Beispiel:
+#### Example:
 
 ```4d
 // Class: MyClass
@@ -312,7 +313,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-### Class extends \<ClassName>
+### `Class extends <ClassName>`
 
 #### Syntax
 
@@ -321,25 +322,26 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-Das Schlüsselwort `Class extends` dient beim Deklarieren einer Klasse zum Erstellen einer Benutzerklasse, die ein Kind einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Functions der übergeordneten Klasse.
+The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
 
-Für Class Extension gelten folgende Regeln:
+Class extension must respect the following rules:
 
-- Eine Benutzerklasse kann keine vorgegebene Klasse erweitern (außer 4D.Object, die für Benutzerklassen standardmäßig erweitert wird)
-- Eine Benutzerklasse kann keine  Benutzerklasse aus einem anderen Projekt bzw. Komponente erweitern.
-- Eine Benutzerklasse kann sich nicht selbst erweitern.
-- Eine Benutzerklasse lässt sich nicht kreisförmig erweitern (z.B. "a" erweitert "b", das wiederum "a" erweitert).
+- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
+- A user class cannot extend a user class from another project or component.
+- A user class cannot extend itself.
+- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
-Ein Verstoß gegen eine dieser Regeln wird weder vom Code-Editor noch vom Interpreter erkannt, in diesem Fall lösen nur der Compiler und `Syntaxprüfung` einen Fehler aus.
+Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
-Eine erweiterte Klasse kann den Constructor seiner übergeordneten Klasse über den Befehl [`Super`](#super) aufrufen.
+An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
-#### Beispiel
+#### Example
 
-Dieses Beispiel erstellt eine Klasse mit Namen `Square` aus einer Klasse mit Namen `Polygon`.
+This example creates a class called `Square` from a class called `Polygon`.
 
 ```4d
 //Class: Square
+
 //path: Classes/Square.4dm 
 
 Class extends Polygon
@@ -358,21 +360,21 @@ Class constructor ($side : Integer)
         $0:=This.height*This.width
 ```
 
-### Super
+### `Super`
 
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Typ    |    | Beschreibung                                 |
-| --------- | ------ | -- | -------------------------------------------- |
-| param     | mixed  | -> | Parameter für den übergeordneten Constructor |
-| Ergebnis  | object | <- | Überordnung des Objekts                      |
+| Parameter | Type   |    | Description                                    |
+| --------- | ------ | -- | ---------------------------------------------- |
+| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
+| Result    | object | <- | Object's parent                                |
 
-Mit dem Schlüsselwort `Super` lassen sich Aufrufe zur   `Superklasse` machen, z.B. zur übergeordneten Klasse.
+The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
-`Super` dient für zwei unterschiedliche Zwecke:
+`Super` serves two different purposes:
 
-- Innerhalb des [Constructor Code](#class-constructor) ist `Super` ein Befehl zum Aufrufen des Constructor der Superklasse. In einem Constructor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
+- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. In einem Constructor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
     - Werden nicht alle Class Constructors im Vererbungsbaum korrekt aufgerufen, wird der Fehler -10748 generiert. Der 4D Entwickler muss sicherstellen, dass Aufrufe gültig sind.
     - Wird `This` in einem Objekt aufgerufen, dessen Superklassen nicht aufgebaut wurden, wird Fehler -10743 generiert.
 
@@ -434,7 +436,7 @@ Function getArea()
 
 #### Beispiel 2
 
-Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. Sie haben die Klasse `Rectangle` mit einer Function angelegt:
+Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. Sie haben die Klasse  `Rectangle` mit einer Funktion erstellt:
 
 ```4d
 //Class: Rectangle
@@ -444,19 +446,19 @@ Function nbSides()
     $0:="I have 4 sides"
 ```
 
-Und die Klasse `Square` mit einer Function, die die Superclass Function aufruft:
+Sie haben auch die Klasse `Square` mit einer Function erstellt, welche die Superclass Function aufruft:
 
 ```4d
 //Class: Square
 
-Class extends Rectangle
+Class erweitert Rectangle
 
 Function description()
     var $0 : Text
     $0:=Super.nbSides()+" which are all equal"
 ```
 
-Dann können Sie in einer Projektmethode schreiben:
+Then you can write in a project method:
 
 ```4d
 var $square : Object
@@ -465,13 +467,13 @@ $square:=cs.Square.new()
 $message:=$square.description() //I have 4 sides which are all equal
 ```
 
-### This
+### `This`
 
 #### This -> Object
 
-| Parameter | Typ    |    | Beschreibung     |
-| --------- | ------ | -- | ---------------- |
-| Ergebnis  | object | <- | Aktuelles Objekt |
+| Parameter | Type   |    | Description    |
+| --------- | ------ | -- | -------------- |
+| Result    | object | <- | Current object |
 
 Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
 

@@ -3,9 +3,9 @@ id: onResize
 title: On Resize
 ---
 
-| Code | Can be called by | Definition                                                                                                                            |
-| ---- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 29   | Form             | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
+| Code | Puede ser llamado por | Definición                                                                                                                            |
+| ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 29   | Formulario            | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
 
 
 ## Descripción

@@ -22,7 +22,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 | styleSheets_mac.css     | For defining macOS only specific attribute styles     |
 | styleSheets_windows.css | For defining Windows only specific attribute styles   |
 
-These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+Estos archivos se almacenan en la carpeta "/SOURCES" del proyecto. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
 ## Arquitectura de las hojas de estilo
@@ -239,7 +239,7 @@ The majority of form object attributes can be defined within a style sheet, exce
     - `event`
     - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
 #### Mapa de atributos
 

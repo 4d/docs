@@ -14,7 +14,7 @@ The application builder allows you to:
 *   Build client-server applications with automatic updating of client and server parts.
 *   Save your build settings for future use (*Save settings* button).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc/4d.com)).
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
 ## Build application overview
@@ -43,7 +43,7 @@ Each build application parameter is stored as an XML key in the application proj
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command.
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
+XML keys provide additional options besides those displayed in the Build Application dialog box. XML keys provide additional options besides those displayed in the Build Application dialog box.
 
 ### Logbuch
 
@@ -264,11 +264,11 @@ You can check this option:
 
 Designates the location on your disk of the 4D Volume Desktop application to be used to build the client part of your application.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D v19, you must select a 4D Volume Desktop v19.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. The 4D Volume Desktop version number must match the 4D Developer Edition version number.
 
 The 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for the "concurrent" platform, you must carry out an additional build operation using a 4D application running on that platform.
 
-If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
 #### Copy of client applications inside the server application
 
@@ -284,6 +284,8 @@ The `.4darchive` is copied at the following location:
 ```
 
 #### Selecting client archive for the concurrent platform
+
+
 
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
@@ -436,6 +438,7 @@ The page lists the elements loaded by the current 4D application:
 
 *    **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
+
 *   **Plugins and components** column - Displays the name of the plug-in/component.
 
 *   **ID** column - Displays the plug-in/component's identification number (if any).
@@ -488,7 +491,7 @@ After the application is built, a new deployment license file is automatically i
 
 ### OS X signing certificate
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+The application builder can sign merged 4D applications under macOS (single-user applications, components, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
@@ -508,10 +511,11 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
 
-
 #### About Gatekeeper
 
 Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
+
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
 
 The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
 
@@ -520,7 +524,7 @@ The **Sign application** option of the 4D application builder lets you generate 
 
 Application notarization is highly recommended by Apple as of macOS 10.14.5 (Mojave) and 10.15 (Catalina), since non-notarized applications deployed via the internet are blocked by default.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
+The 4D [built-in signing features](#os-x-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
 
 For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -570,6 +574,7 @@ The opening sequence for launching a merged application is:
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
+
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)

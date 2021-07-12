@@ -1,6 +1,6 @@
 ---
 id: FileClass
-title: File 
+title: File
 ---
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
@@ -204,6 +204,7 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
+
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
@@ -334,21 +335,21 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe version resource or .plist file|
+|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
 <!-- END REF -->
 
 
 #### Description
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated). 
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
-**Returned object with a .exe file**
+**Returned object with a .exe or .dll file**
 
-> Reading a .exe is only possible on Windows.
+> Reading a .exe or .dll is only possible on Windows.
 
 All property values are Text.
 
@@ -565,23 +566,23 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe version resource or .plist file|
+|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
 <!-- END REF -->
 
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
-***info* parameter object with a .exe file**
+***info* parameter object with a .exe or .dll file**
 
-> Writing a .exe file information is only possible on Windows.
+> Writing a .exe or .dll file information is only possible on Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe file. Available properties are (any other property will be ignored):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
 |Property|Type|
 |---|---|
@@ -709,21 +710,21 @@ Optionally, you can designate the character set to be used for writing the conte
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 |Constant|Value|Comment|
 |--------|-----|-------|
 |`Document unchanged`|0|No processing|
-|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
-|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows|
+|`Document with CRLF`|2|Line breaks are converted to CRLF (carriage return + line feed), the default Windows format|
+|`Document with CR`|3|Line breaks are converted to CR (carriage return), the default Classic Mac OS format|
+|`Document with LF`|4|Line breaks are converted to LF (line feed), the default Unix and macOS format|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-
+> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Example
 

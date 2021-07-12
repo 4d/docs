@@ -372,7 +372,7 @@ The object returned by `.drop( )` contains the following properties:
 | lockInfo      |                     | object                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
 |               | user_name           | text                  | Session user name on the machine                                                                                      |
-|               | user4d_id           | text                  | User name in the 4D database directory                                                                                |
+|               | user4d_alias        | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
 |               | host_name           | text                  | Machine name                                                                                                          |
 |               | task_name           | text                  | Process name                                                                                                          |
 |               | client_version      | text                  |                                                                                                                       |
@@ -1190,7 +1190,7 @@ The object returned by `.save()` contains the following properties:
 | lockInfo     |                    | object                | Information about the lock origin                                                                                       |
 |              | task_id            | number                | Process id                                                                                                              |
 |              | user_name          | text                  | Session user name on the machine                                                                                        |
-|              | user4d_id          | text                  | User name in the 4D database directory                                                                                  |
+|              | user4d_alias       | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | text                  | Machine name                                                                                                            |
 |              | task_name          | text                  | Process name                                                                                                            |
 |              | client_version     | text                  |                                                                                                                         |

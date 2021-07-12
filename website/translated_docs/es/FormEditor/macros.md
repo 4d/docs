@@ -214,7 +214,7 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties of the `$editor` object:
 
-| Property                  | Tipo      | Descripción                                                                       |
+| Propriedad                | Tipo      | Descripción                                                                       |
 | ------------------------- | --------- | --------------------------------------------------------------------------------- |
 | $editor.form              | Objeto    | The entire form                                                                   |
 | $editor.file              | File      | File object of the form file                                                      |
@@ -228,7 +228,7 @@ Here are the properties of the `$editor` object:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Tipo      | Descripción                                                 |
+| Propriedad        | Tipo      | Descripción                                                 |
 | ----------------- | --------- | ----------------------------------------------------------- |
 | currentPage       | Objeto    | currentPage including objects modified by the macro, if any |
 | currentSelection  | Colección | currentSelection if modified by the macro                   |
@@ -248,9 +248,9 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Tipo | Descripción |
-| -------- | ---- | ----------- |
-|          |      |             |
+| Propriedad | Tipo | Descripción |
+| ---------- | ---- | ----------- |
+|            |      |             |
  source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.

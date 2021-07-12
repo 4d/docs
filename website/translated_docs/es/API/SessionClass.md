@@ -301,7 +301,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 - In the *settings* parameter, pass an object containing the following properties:
 
-| Property   | Tipo               | Descripción                                        |
+| Propriedad | Tipo               | Descripción                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
 | userName   | Texto              | User name to associate to the session (optional)   |

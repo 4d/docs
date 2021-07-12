@@ -802,13 +802,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Tipo      | Descripción                                                          |
-| -------- | ----------------------- | --------- | -------------------------------------------------------------------- |
-| success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
-| errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Número    | 4D error code                                                        |
-|          | \[].message            | Texto     | Description of the 4D error                                          |
-|          | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
+| Propriedad |                         | Tipo      | Descripción                                                          |
+| ---------- | ----------------------- | --------- | -------------------------------------------------------------------- |
+| success    |                         | Booleano  | True if the web server was correctly started, False otherwise        |
+| errors     |                         | Colección | 4D error stack (not returned if the web server started successfully) |
+|            | \[].errCode            | Número    | 4D error code                                                        |
+|            | \[].message            | Texto     | Description of the 4D error                                          |
+|            | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Ejemplo

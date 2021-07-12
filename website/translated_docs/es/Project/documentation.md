@@ -37,24 +37,24 @@ All documentation files are stored in the `Documentation` folder, located at the
 
 The `Documentation` folder architecture is the following:
 
-- **Documentation**
-    + **Clases**
+- `Documentation`
+    + `Clases`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **Formularios**
+    + `Formularios`
         * loginDial.md
         * ...
-    + **Métodos**
+    + `Métodos`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + `Triggers`
         * table1.md
         * ...
 

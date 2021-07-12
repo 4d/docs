@@ -14,7 +14,7 @@ Le générateur d'applications vous permet de :
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
 *   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc/4d.com)).
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
 ## Aperçu du générateur d'application
@@ -289,6 +289,8 @@ The `.4darchive` is copied at the following location:
 
 #### Selecting client archive for the concurrent platform
 
+
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -442,6 +444,7 @@ La page liste les éléments chargés par l'application 4D courante :
 
 *    La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. Pour exclure un plug-in ou un composant, désélectionnez la case qui lui est associée.
 
+
 *   Colonne **Plugins et composants** - Affiche le nom du plug-in/composant.
 
 *   Colonne **ID** - Affiche le numéro d'identification du plug-in/composant (le cas échéant).
@@ -494,7 +497,7 @@ A l’issue de la génération, un nouveau fichier de licence de déploiement es
 
 ### Certification des applications sous OS X
 
-Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper de macOS lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
+The application builder can sign merged 4D applications under macOS (single-user applications, components, 4D Server and client parts under macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper de macOS lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
 
 - Cochez l'option **Signer l’application** pour inclure la certification dans le processus de génération de l’application pour macOS :
 
@@ -514,19 +517,20 @@ Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez 
 > 4D recommande de souscrire au programme Apple Developer Program pour accéder aux "Developer Certificates" nécessaires à la notarisation des applications (voir ci-dessous).
 
 
-
 #### A propos de Gatekeeper
 
 Gatekeeper est une fonction de sécurité d’OS X permettant de contrôler l’exécution des applications téléchargées depuis Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
-L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 
 #### À propos de la notarisation
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notariées déployées via Internet sont bloquées par défaut.
 
-Sous 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple pour permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce post du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description, par étapes, du processus de notarisation.
+The 4D [built-in signing features](#os-x-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce post du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description, par étapes, du processus de notarisation.
 
 Pour plus d'informations sur le concept de notarisation, veuillez consulter [cette page sur le site Apple developer](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -576,6 +580,7 @@ La séquence de lancement d'une application fusionnée est la suivante :
 Toute application autonome ou serveur générée avec 4D stocke le chemin d'accès du dernier fichier de données ouvert dans le dossier de préférences de l'utilisateur de l'application.
 
 L'emplacement du dossier de préférences de l'utilisateur de l'application correspond au chemin retourné par l'instruction suivante :
+
 
 ```4d
 prefsUtilisateur:=Get 4D folder(Dossier 4D actif)

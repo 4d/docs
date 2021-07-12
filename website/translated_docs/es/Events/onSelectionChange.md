@@ -3,7 +3,7 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                      | Definition                              |
+| Code | Puede ser llamado por                                                                                                                                                                                                                                                 | Definición                              |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
 
@@ -16,14 +16,14 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property      | Tipo         | Descripción                    |
-| ------------- | ------------ | ------------------------------ |
-| code          | entero largo | 31                             |
-| description   | texto        | "On Selection Change"          |
-| objectName    | texto        | 4D View Pro area name          |
-| sheetName     | texto        | Name of the sheet of the event |
-| oldSelections | objeto       | Cell range before change       |
-| newSelections | objeto       | Cell range after change        |
+| Propriedad    | Tipo         | Descripción                  |
+| ------------- | ------------ | ---------------------------- |
+| code          | entero largo | 31                           |
+| description   | texto        | "On Selection Change"        |
+| objectName    | texto        | Nombre del área 4D View Pro  |
+| sheetName     | texto        | Nombre de la hoja del evento |
+| oldSelections | objeto       | Cell range before change     |
+| newSelections | objeto       | Cell range after change      |
 
 #### Ejemplo
 

@@ -37,24 +37,24 @@ title: ドキュメンテーション
 
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
-- **Documentation**
-    + **クラス**
+- `Documentation`
+    + `クラス`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **フォーム**
+    + `フォーム`
         * loginDial.md
         * ...
-    + **メソッド**
+    + `メソッド`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + `Triggers`
         * table1.md
         * ...
 
@@ -200,7 +200,11 @@ _イタリック_
 
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
-```4d<!-- size 引数に応じて、異なるロゴを返します -->GetLogo (size) -> logo
+```4d
+<!-- size 引数に応じて、異なるロゴを返します -->
+
+
+GetLogo (size) -> logo
 
 
 | 引数 | 型   | in/out | 説明 |

@@ -126,9 +126,9 @@ Accepted HTTP method(s) for the corresponding CORS host. The following HTTP meth
 
 Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-| 結果 | 定数          | 説明                             |
-| -- | ----------- | ------------------------------ |
-| 0  | wdl disable | Web HTTP debug log is disabled |
+| 値 | 定数          | 説明                             |
+| - | ----------- | ------------------------------ |
+| 0 | wdl disable | Web HTTP debug log is disabled |
 
 
 
@@ -380,13 +380,13 @@ Starts or stops the recording of requests received by the 4D web server in the *
 
 This setting allows you to select the format of this file. Available values are:
 
-| 結果 | フォーマット               | 説明                                                                                                                                                                                                                       |
-| -- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0  | No Log File          | Default                                                                                                                                                                                                                  |
-| 1  | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
-| 2  | Record in DLF format | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
-| 3  | Record in ELF format | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
-| 4  | Record in WLF format | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
+| 値 | フォーマット               | 説明                                                                                                                                                                                                                       |
+| - | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0 | No Log File          | Default                                                                                                                                                                                                                  |
+| 1 | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
+| 2 | Record in DLF format | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
+| 3 | Record in ELF format | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
+| 4 | Record in WLF format | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 

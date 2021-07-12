@@ -361,7 +361,7 @@ Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode
 
 The object returned by `.drop( )` contains the following properties:
 
-| Property      |                     | Tipo                  | Descripción                                                                                                           |
+| Propriedad    |                     | Tipo                  | Descripción                                                                                                           |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
@@ -372,7 +372,7 @@ The object returned by `.drop( )` contains the following properties:
 | lockInfo      |                     | objeto                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
 |               | user_name           | texto                 | Session user name on the machine                                                                                      |
-|               | user4d_id           | texto                 | User name in the 4D database directory                                                                                |
+|               | user4d_alias        | texto                 | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
 |               | host_name           | texto                 | Machine name                                                                                                          |
 |               | task_name           | texto                 | Process name                                                                                                          |
 |               | client_version      | texto                 |                                                                                                                       |
@@ -919,7 +919,7 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 The object returned by `.lock( )` contains the following properties:
 
-| Property         |                     | Tipo                  | Descripción                                                                                                         |
+| Propriedad       |                     | Tipo                  | Descripción                                                                                                         |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | success          |                     | booleano              | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
@@ -1104,7 +1104,7 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 The object returned by `.reload( )` contains the following properties:
 
-| Property         | Tipo     | Descripción                                                                                                                                           |
+| Propriedad       | Tipo     | Descripción                                                                                                                                           |
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number   | Error code, see below                                                                                                                                 |
@@ -1177,7 +1177,7 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Property     |                    | Tipo                  | Descripción                                                                                                             |
+| Propriedad   |                    | Tipo                  | Descripción                                                                                                             |
 | ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | success      |                    | booleano              | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
@@ -1190,7 +1190,7 @@ The object returned by `.save()` contains the following properties:
 | lockInfo     |                    | objeto                | Information about the lock origin                                                                                       |
 |              | task_id            | number                | Process id                                                                                                              |
 |              | user_name          | texto                 | Session user name on the machine                                                                                        |
-|              | user4d_id          | texto                 | User name in the 4D database directory                                                                                  |
+|              | user4d_alias       | texto                 | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | texto                 | Machine name                                                                                                            |
 |              | task_name          | texto                 | Process name                                                                                                            |
 |              | client_version     | texto                 |                                                                                                                         |
@@ -1722,9 +1722,9 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Property | Tipo     | Descripción                                                                                                                                                                                        |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success  | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
+| Propriedad | Tipo     | Descripción                                                                                                                                                                                        |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success    | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
 #### Ejemplo
 

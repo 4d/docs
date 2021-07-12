@@ -121,7 +121,7 @@ The "Compiler" page of the Settings dialog box lets you set parameters related t
 
 This area groups the generic options used during the compilation process.
 
-#### Generate symbol file
+#### Generate the symbol file
 
 Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the project folder with the name `ProjectName_symbols.txt`.
 

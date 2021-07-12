@@ -62,7 +62,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Valor    | Constants                      | Comment                                |
+| Valor    | Constantes                     | Comment                                |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `IMAP authentication login`    | Authentication using LOGIN protocol    |
@@ -93,7 +93,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Valor    | Constants                      | Comment                                        |
+| Valor    | Constantes                     | Comment                                        |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
@@ -125,7 +125,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Valor    | Constants                      | Comment                                |
+| Valor    | Constantes                     | Comment                                |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `SMTP authentication login`    | Authentication using LOGIN protocol    |
@@ -379,7 +379,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Property   |                          | Tipo      | Descripción                                                                                                  |
+| Propriedad |                          | Tipo      | Descripción                                                                                                  |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | booleano  | True if the check is successful, False otherwise                                                             |
 | status     |                          | number    | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |

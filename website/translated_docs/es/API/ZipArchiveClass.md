@@ -73,7 +73,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 - *zipStructure*: You pass an object describing the ZIP archive object. The following properties are available to define the structure:<li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><table>
   <tr>
     <td>
-      Property
+      Propriedad
     </td>
     
     <td>
@@ -150,7 +150,7 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Tipo     | Descripción                                                                                                                             |
+| Propriedad | Tipo     | Descripción                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
 | status     | Entero   | Status code                                                                                                                             |

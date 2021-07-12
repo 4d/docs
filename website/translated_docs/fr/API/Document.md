@@ -511,28 +511,29 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| Version | Modifications   |
+| ------- | --------------- |
+| v19 R2  | Returns 4D.Blob |
+| v17 R5  | Ajoutées        |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : Blob<!-- END REF -->
+**.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Paramètres | Type |    | Description  |
-| ---------- | ---- | -- | ------------ |
-| Résultat   | Blob | <- | File content |
+| Paramètres | Type    |    | Description  |
+| ---------- | ------- | -- | ------------ |
+| Résultat   | 4D.Blob | <- | File content |
 <!-- END REF -->
 
 
 #### Description
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Valeur retournée**
 
-A `Blob`.
+A `4D.Blob` object.
 
 #### Exemple
 

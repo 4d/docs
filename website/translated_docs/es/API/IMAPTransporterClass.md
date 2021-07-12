@@ -182,7 +182,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -250,7 +250,7 @@ The optional `destinationBox` parameter lets you pass the name of a mailbox wher
 
 In the optional `options` parameter, you can pass an object to define the charset and encoding for specific parts of the email. Available properties:
 
-| Property      | Tipo  | Descripción                                                                                                                                                                    |
+| Propriedad    | Tipo  | Descripción                                                                                                                                                                    |
 | ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | headerCharset | Texto | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values: See possible charsets table below |
 | bodyCharset   | Texto | Charset and encoding used for the html and text body contents of the email. Possible values: See possible charsets table below                                                 |
@@ -269,7 +269,7 @@ Possible charsets:
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -382,7 +382,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -487,7 +487,7 @@ In the `name` parameter, pass the name of the new mailbox.
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -573,7 +573,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -674,7 +674,7 @@ In the `name` parameter, pass the name of the mailbox to delete.
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -750,7 +750,7 @@ The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->re
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -821,7 +821,7 @@ In the optional *name* parameter, pass the name of the mailbox to access. The na
 
 The `boxInfo` object returned contains the following properties:
 
-| Property   | Tipo   | Descripción                                                         |
+| Propriedad | Tipo   | Descripción                                                         |
 | ---------- | ------ | ------------------------------------------------------------------- |
 | name       | texto  | Name of the mailbox                                                 |
 | mailCount  | number | Number of messages in the mailbox                                   |
@@ -871,7 +871,7 @@ The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary
 
 In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
 
-| Property     | Tipo     | Descripción                                          |
+| Propriedad   | Tipo     | Descripción                                          |
 | ------------ | -------- | ---------------------------------------------------- |
 | isSubscribed | Booleano | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
 
@@ -879,7 +879,7 @@ In the optional `parameters` parameter, pass an object containing values to filt
 
 Each object of the returned collection contains the following properties:
 
-| Property         | Tipo     | Descripción                                                                                                          |
+| Propriedad       | Tipo     | Descripción                                                                                                          |
 | ---------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | \[].name        | texto    | Name of the mailbox                                                                                                  |
 | \[].selectable  | booleano | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
@@ -1004,7 +1004,7 @@ In the first parameter, you can pass either:
 
 The optional *options* parameter allows you pass an object defining additional instructions for handling the message. The following properties are available:
 
-| Property   | Tipo     | Descripción                                                                                                                 |
+| Propriedad | Tipo     | Descripción                                                                                                                 |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | booleano | If True, the message is marked as "seen" in the mailbox. If False, the message is not marked as "seen". Default value: True |
 | withBody   | booleano | Pass True to return the body of the message. If False, only the message header is returned. Default value: True             |
@@ -1098,7 +1098,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 **Options**
 
-| Property   | Tipo     | Descripción                                                                                                                                                               |
+| Propriedad | Tipo     | Descripción                                                                                                                                                               |
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | Booleano | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). Default value: True |
 | withBody   | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Default value: True                                              |
@@ -1111,9 +1111,9 @@ The optional *options* parameter allows you to define the parts of the messages 
 `.getMails()` returns an object containing the following collections:
 
 
-| Property | Tipo      | Descripción                                                                                                                        |
-| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| list     | Colección | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
+| Propriedad | Tipo      | Descripción                                                                                                                        |
+| ---------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| list       | Colección | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
 
 |notFound |Collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.|
 
@@ -1279,7 +1279,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -1461,7 +1461,7 @@ Note that False values are ignored.
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -1531,7 +1531,7 @@ Pass the new name for the mailbox in the `newName` parameter.
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -1755,7 +1755,7 @@ The optional `state` parameter defines the type of access to the mailbox. The po
 
 The `boxInfo` object returned contains the following properties:
 
-| Property   | Tipo   | Descripción                               |
+| Propriedad | Tipo   | Descripción                               |
 | ---------- | ------ | ----------------------------------------- |
 | name       | Texto  | Name of the mailbox                       |
 | mailCount  | number | Number of messages in the mailbox         |
@@ -1811,7 +1811,7 @@ In the `name` parameter, pass the name of the mailbox to add (subscribe) to your
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |
@@ -1884,7 +1884,7 @@ In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) fr
 
 The function returns an object describing the IMAP status:
 
-| Property   |                         | Tipo      | Descripción                                                                              |
+| Propriedad |                         | Tipo      | Descripción                                                                              |
 | ---------- | ----------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | success    |                         | Booleano  | True if the operation is successful, False otherwise                                     |
 | statusText |                         | Texto     | Status message returned by the IMAP server, or last error returned in the 4D error stack |

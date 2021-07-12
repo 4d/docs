@@ -19,7 +19,7 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
 
-| Property       | Tipo               | Descripción                                                                                                                                                                                                                                       |
+| Propriedad     | Tipo               | Descripción                                                                                                                                                                                                                                       |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Colección          | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
 | `currentValue` | same as Collection | Text entered by the user                                                                                                                                                                                                                          |
