@@ -14,20 +14,20 @@ title: On Column Resize
 
 Este evento se genera cuando el ancho de una columna en el list box es modificado por un usuario. El evento se activa "en directo", *es decir*, se envía continuamente durante el evento, mientras se redimensiona el list box o la columna en cuestión. Este redimensionamiento es realizado manualmente por un usuario, o puede ocurrir como resultado de que el list box y su(s) columna(s) sean redimensionados junto con la propia ventana del formulario (ya sea que el formulario sea redimensionado manualmente o utilizando el comando `RESIZE FORM WINDOW`).
 
-> The `On Column Resize` event is not triggered when a [fake column](FormObjects/propertiesResizingOptions.html#about-the-fake-blank-column) is resized.
+> El evento `On Column Resize` no se activa cuando se redimensiona una [falsa columna](FormObjects/propertiesResizingOptions.html#about-the-fake-blank-column).
 
 ### 4D View Pro
 
-This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Este evento se genera cuando el ancho de una columna es modificado por un usuario. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Propriedad  | Tipo         | Descripción                                                         |
-| ----------- | ------------ | ------------------------------------------------------------------- |
-| code        | entero largo | On Column Resize                                                    |
-| description | texto        | "On Column Resize"                                                  |
-| objectName  | texto        | Nombre del área 4D View Pro                                         |
-| sheetName   | texto        | Nombre de la hoja del evento                                        |
-| range       | objeto       | Cell range of the columns whose widths have changed                 |
-| header      | booleano     | True if the row header column (first column) is resized, else false |
+| Propriedad  | Tipo         | Descripción                                                                               |
+| ----------- | ------------ | ----------------------------------------------------------------------------------------- |
+| code        | entero largo | On Column Resize                                                                          |
+| description | texto        | "On Column Resize"                                                                        |
+| objectName  | texto        | Nombre del área 4D View Pro                                                               |
+| sheetName   | texto        | Nombre de la hoja del evento                                                              |
+| range       | objeto       | Rango de celdas de las columnas cuyo ancho ha cambiado                                    |
+| header      | booleano     | True si la columna de encabezado de línea (primera columna) se redimensiona, si no, false |
 
 #### Ejemplo
 
