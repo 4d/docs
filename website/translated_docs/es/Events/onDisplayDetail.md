@@ -3,7 +3,7 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                                                        |
+| Code | Puede ser llamado por                              | Definición                                                                                        |
 | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 
@@ -12,7 +12,7 @@ title: On Display Detail
 
 The `On Display Detail` event can be used in the following contexts:
 
-### Output form
+### Formulario de salida
 
 A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 
@@ -20,7 +20,7 @@ A record is about to be displayed in a list form displayed via `DISPLAY SELECTIO
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
-- For each record:
+- Para cada registro:
     - For each object in the detail area:
         - Object method with `On Display Detail` event
     - Form method with `On Display Detail` event
@@ -30,11 +30,11 @@ In this context, the following sequence of calls to methods and form events is t
 Calling a 4D command that displays a dialog box from the `On Display Detail` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
 
 
-### Selection list box
+### List box selección
 
 This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
 
 
-### Displayed line number
+### Número de línea mostrado
 
 The `Displayed line number` 4D command works with the `On Display Detail` form event. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.

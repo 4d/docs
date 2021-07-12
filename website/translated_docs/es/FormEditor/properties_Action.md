@@ -25,7 +25,7 @@ Several types of method references are supported:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                  |
-| ------ | --------- | ---------------------------------------------------------------- |
-| method | texto     | Form method standard or custom file path, or project method name |
+| Name   | Tipos de datos | Possible Values                                                  |
+| ------ | -------------- | ---------------------------------------------------------------- |
+| method | texto          | Form method standard or custom file path, or project method name |
 

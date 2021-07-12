@@ -69,7 +69,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## `New collection`
+## `新しいコレクション`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -148,7 +148,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## `New shared collection`
+## `新規の共有コレクション`
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -1312,6 +1312,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 #### 例題
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1753,12 +1754,11 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderBy().Params -->
-| 参照          | タイプ    |    | 説明                                         |
-| ----------- | ------ |:--:| ------------------------------------------ |
-| pathStrings | テキスト   | -> | コレクションの並べ替え基準とするプロパティパス                    |
-| pathObjects | コレクション | -> | 条件オブジェクトのコレクション                            |
-| ascOrDesc   | 整数     | -> | `ck ascending` または `ck descending` (スカラー値) |
-| 戻り値         | コレクション | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)               |
+| 参照 | タイプ |  | 説明 |
+| -- | --- |::| -- |
+|    |     |  |    |
+
+|pathStrings|テキスト|->|コレクションの並べ替え基準とするプロパティパス| |pathObjects|コレクション|->|条件オブジェクトのコレクション| |ascOrDesc|整数|->|`ck ascending` または `ck descending` (スカラー値)| |戻り値|コレクション |<-|並べ替えられたコレクションのコピー (シャロウ・コピー)|
 <!-- END REF -->
 
 
@@ -1778,8 +1778,10 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *   *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
 ```4d
-    {"*propertyPath*": string,
-    "*descending*": boolean}  
+{
+    "propertyPath": string,
+    "descending": boolean
+}
 ```
 
 *   *ascOrDesc* : Integer。 **Objects and collections** テーマから、以下の定数のいずれか一つを渡します:

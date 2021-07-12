@@ -26,7 +26,7 @@ const siteConfig = {
   url: 'https://4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,
-  baseUrl: '/docs/' /* base url for your project */,
+  baseUrl: '/docs/19/' /* base url for your project */,
 // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -47,8 +47,9 @@ const siteConfig = {
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
     //{doc: 'ReleaseNotes/whatsNew', label:"What's New"},
-    {href: 'https://developer.4d.com/docs', label:'v19 BETA', version :'19'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R6', version:'18R6'},
+    {href: 'https://developer.4d.com/docs', label:'v19 R2 BETA', version :'19R2'},
+    //{href: 'https://developer.4d.com/docs/Rx', label:'v18 R6', version:'18R6'},
+	{href: 'https://developer.4d.com/docs/19', label:'v19', version:'19'},
     {href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
     //{href: 'https://developer.4d.com/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},
@@ -87,7 +88,7 @@ const siteConfig = {
 
   },
 
-  editUrl: 'https://github.com/4D/docs/edit/master/docs/',
+  editUrl: 'https://github.com/4D/docs/edit/19/docs/',
 
   /* custom fonts for website */
   /*fonts: {

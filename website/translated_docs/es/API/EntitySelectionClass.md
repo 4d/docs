@@ -68,9 +68,9 @@ If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is
 
 In the optional *settings* parameter, you can pass an object containing the following property:
 
-| Property | Tipo  | Descripción                                                                                                       |
-| -------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Propriedad | Tipo  | Descripción                                                                                                       |
+| ---------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| context    | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Ejemplo
@@ -83,7 +83,7 @@ $employees:=Create entity selection([Employee])
 // on all entities related to the Employee dataclass
 ```
 
-#### See also
+#### Ver también
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
@@ -1545,7 +1545,7 @@ For detailed information on how to build a query using *queryString*, *value*, a
 
 More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
 
-#### See also
+#### Ver también
 
 [`.query()`](DataClassClass.md#query) for dataclass
 

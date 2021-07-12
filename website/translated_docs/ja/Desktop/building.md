@@ -14,7 +14,7 @@ title: プロジェクトパッケージのビルド
 *   クライアントとサーバーの自動更新機能を備えたクライアント/サーバーアプリケーションのビルド
 *   ビルド設定の保存 (*設定保存* ボタン)
 
-> コンパイル済みアプリケーションは、**読み取り専用** である [.4dz files](#コンパイル済みストラクチャーをビルド) ファイルに基づきます。 コンパイル済みアプリケーションの場合、ソースファイルを変更するコマンドや関数 (`CREATE INDEX` や `CREATE TABLE` (SQL)) は、デフォルトでは使用できないことに留意が必要です。 しかしながら、`PackProject` XML キー ([doc.4d.com](https://doc/4d.com) 参照) を使用することで、ローカルな変更をサポートするアプリケーションをビルドすることも可能です。
+> コンパイル済みアプリケーションは、**読み取り専用** である [.4dz files](#コンパイル済みストラクチャーをビルド) ファイルに基づきます。 コンパイル済みアプリケーションの場合、ソースファイルを変更するコマンドや関数 (`CREATE INDEX` や `CREATE TABLE` (SQL)) は、デフォルトでは使用できないことに留意が必要です。 しかしながら、`PackProject` XML キー ([doc.4d.com](https://doc.4d.com) 参照) を使用することで、ローカルな変更をサポートするアプリケーションをビルドすることも可能です。
 
 
 ## アプリケーションのビルド
@@ -284,6 +284,7 @@ The `.4darchive` is copied at the following location:
 ```
 
 #### Selecting client archive for the concurrent platform
+
 
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 

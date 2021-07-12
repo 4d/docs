@@ -3,9 +3,9 @@ id: onCloseBox
 title: On Close Box
 ---
 
-| Code | Can be called by | Definition                              |
-| ---- | ---------------- | --------------------------------------- |
-| 22   | Form             | The window’s close box has been clicked |
+| Code | Puede ser llamado por | Definición                              |
+| ---- | --------------------- | --------------------------------------- |
+| 22   | Formulario            | The window’s close box has been clicked |
 
 
 ## Descripción

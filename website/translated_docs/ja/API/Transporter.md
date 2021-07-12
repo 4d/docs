@@ -62,7 +62,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                    |
+| 値        | 定数                             | 説明                    |
 | -------- | ------------------------------ | --------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
 | LOGIN    | `IMAP authentication login`    | LOGIN プロトコルを使用した認証    |
@@ -93,7 +93,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                          |
+| 値        | 定数                             | 説明                          |
 | -------- | ------------------------------ | --------------------------- |
 | APOP     | `POP3 authentication APOP`     | APOP プロトコルを使用した認証 (POP3 のみ) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | CRAM-MD5 プロトコルを使用した認証       |
@@ -125,7 +125,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                    |
+| 値        | 定数                             | 説明                    |
 | -------- | ------------------------------ | --------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
 | LOGIN    | `SMTP authentication login`    | LOGIN プロトコルを使用した認証    |
@@ -160,7 +160,7 @@ title: Transporter クラス
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                           |
+| 定数                       | 値                              | 説明                                                                                           |
 | ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                    |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                                    |
@@ -218,7 +218,7 @@ title: Transporter クラス
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                       |
+| 定数                       | 値                              | 説明                                                                                       |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                               |

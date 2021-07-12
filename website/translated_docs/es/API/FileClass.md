@@ -332,27 +332,27 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter | Tipo   |    | Descripción                                      |
-| --------- | ------ | -- | ------------------------------------------------ |
-| Resultado | Objeto | <- | Contents of .exe version resource or .plist file |
+| Parameter | Tipo   |    | Descripción                                           |
+| --------- | ------ | -- | ----------------------------------------------------- |
+| Resultado | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
-**Returned object with a .exe file**
+**Returned object with a .exe or .dll file**
 
-> Reading a .exe is only possible on Windows.
+> Reading a .exe or .dll is only possible on Windows.
 
 All property values are Text.
 
-| Property         | Tipo  |
+| Propriedad       | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -385,7 +385,7 @@ $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
 ```
 
-#### See also
+#### Ver también
 
 [.setAppInfo()](#setappinfo)
 
@@ -563,27 +563,27 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Tipo   |    | Descripción                                                 |
-| --------- | ------ | -- | ----------------------------------------------------------- |
-| info      | Objeto | -> | Properties to write in .exe version resource or .plist file |
+| Parameter | Tipo   |    | Descripción                                                      |
+| --------- | ------ | -- | ---------------------------------------------------------------- |
+| info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
-***info* parameter object with a .exe file**
+***info* parameter object with a .exe or .dll file**
 
-> Writing a .exe file information is only possible on Windows.
+> Writing a .exe or .dll file information is only possible on Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe file. Available properties are (any other property will be ignored):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Property         | Tipo  |
+| Propriedad       | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -630,7 +630,7 @@ $info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
 $infoPlistFile.setAppInfo($info)
 ```
 
-#### See also
+#### Ver también
 
 [.getAppInfo()](#getappinfo)
 

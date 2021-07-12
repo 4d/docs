@@ -337,21 +337,21 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。  
 
-クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
+In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-クラスコンストラクター関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例: "MyClass:constructor")。
-
-
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
 
 
 
-#### 例題:
+
+
+#### Example:
 
 
 
 ```4d
-// クラス: MyClass
-// MyClass のクラスコンストラクター
+// Class: MyClass
+// Class constructor of MyClass
 Class Constructor ($name : Text)
     This.name:=$name
 ```
@@ -360,8 +360,8 @@ Class Constructor ($name : Text)
 
 
 ```4d
-// プロジェクトメソッドにて
-// オブジェクトをインスタンス化します
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -377,17 +377,17 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-#### シンタックス
+#### Syntax
 
 
 
 ```4d
-// クラス: ChildClass
+// Class: ChildClass
 Class extends <ParentClass>
 ```
 
 
-クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
+The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. この子クラスは、親クラスのすべての機能を継承します。
 
 クラス継承は次のルールに沿っている必要があります:
 

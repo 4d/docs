@@ -211,7 +211,7 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON   |
 | debuggerCatches.json       | Caught calls to commands                                    | JSON   |
 | recentTables.json          | Ordered list of tables                                      | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions                 | XML    |
+| preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal   | XML    |
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
 
 

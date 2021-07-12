@@ -121,7 +121,7 @@ title: コンパイル
 
 このエリアには、コンパイル処理中に使用される一般的なオプションがまとめられています。
 
-#### Symbolファイルを生成
+#### Generate symbol file
 
 Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトフォルダー内に `ProjectName_symbols.txt` という名前で作成されます。
 
