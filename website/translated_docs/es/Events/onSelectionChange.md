@@ -14,7 +14,7 @@ This event can be generated in different contexts.
 
 
 ### 4D View Pro
-The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+The current selection of rows or columns is modified. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedad    | Tipo         | Descripción                  |
 | ------------- | ------------ | ---------------------------- |
