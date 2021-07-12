@@ -124,41 +124,41 @@ Pode definir um arquivo de dados por padrão ou permitir aos usuários criar e u
 
 Para gerar uma aplicação autônoma, primeiro deve designar a pasta que contém o arquivo 4D Volume Desktop:
 
-*   *Windows* - a pasta contém os arquivos 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, assim como vários arquivos e pastas necessários para seu funcionamento. These items must be placed at the same level as the selected folder.
-*   *macOS* - 4D Volume Desktop is provided in the form of a structured software package containing various generic files and folders.
+*   *Windows* - a pasta contém os arquivos 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, assim como vários arquivos e pastas necessários para seu funcionamento. Estes elementos devem sern colocados no mesmo nível que a pasta selecionada.
+*   *macOS* - 4D Volume Desktop é fornecida na forma de um pacote de software estruturado que contém vários arquivos e pastas genéricas.
 
-To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
+Para selecionar a pasta de 4D Volume Desktop, clique no botão **[...]**. Aparece uma caixa de diálogo que lhe permite determinar a pasta (Windows) ou o pacote (macOS) de 4D Volume Desktop.
 
-Once the folder is selected, its complete pathname is displayed and, if it actually contains 4D Volume Desktop, the option for building an executable application is activated.
+Quando a pasta for selecionada,  se mostra seu nome de rota completo e, se realmente conter 4D Volume Desktop, se ativa a opção de construir uma aplicação executável.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
+> O número de versão de 4D Volume Desktop deve coincidir com o número de versão de 4D Developer Edition. Por ejemplo, se utilizar 4D Developer v18, deve selecionar um 4D Volume Desktop v18.
 
-#### Data linking mode
+#### Modo de vinculo de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+Esta opção permite escolher o modo de vinculação entre a aplicação fusionada e o arquivo de dados local. Existem dois modos de vinculação de dados:
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Por nome da aplicação** (como padrão) - a aplicação 4D abre automaticamente o último arquivo de dados aberto correspondente ao arquivo de estrutura. This allows you to move the application package freely on the disk. Esta opção deve ser utilizada geralmente para as aplicações fusionadas, a menos que necessite especificamente duplicar a aplicação.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
+*   **Rota da aplicação** - a aplicação 4D fusionada analisará o arquivo *lastDataPath. xml* e tentará abrir o arquivo de dados com um atributo "executablePath" que coincida com a rota completa da aplicação. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Caso contrario, se abrirá el último arquivo de datos aberto (modo por defecto).
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
+Para mais informação sobre o modo de vinculação de dados, consulte a seção [Último arquivo de dados aberto](#último-arquivo-de-dados-aberto).
 
 
-#### Generated files
+#### Arquivos gerados
 
-When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
+Quando clicar no botão **Construir**, 4D cria automaticamente uma pasta **Aplicação final** na **Pasta de destino** especificada. Dentro da pasta Final Application há uma subpasta com o nome da aplicação especificada nela.
 
-If you have specified "MyProject" as the name of the application, you will find the following files in this subfolder (aka MyProject):
+Se especificou "MyProject" como nome da aplicação, encontrará os seguintes arquivos nesta subpasta (também conhecida como MyProject):
 
 *   *Windows*
-    *   MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
-    *   4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
-    *   Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
-    *   (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
-    *   Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+    *   MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
+    *   Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para o funcionamento da aplicação
+    *   Pasta Database - Incluem uma pasta Resources e o arquivo MyProject.4DZ. Constituem a estrutura compilada do banco de dados assim como a pasta Resources. **Nota**: esta pasta também contém a pasta *Default Data*, se for definida (ver [Gestão de arquivos de dados em aplicações finais](#data-file-management-in-final-applicatons).
+    *   (Opcional) Pasta Components ou pasta Plugins - contém todos os componentes ou arquivos plug-in incluídos no banco de dados. Para más informação ao respeito, consulte a seção [Plugins e componentes](#plugins-and-components).
+    *   Carpeta Licenses - Um arquivo XML de números de licença integrados na aplicação. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
     *   Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
 
-    All these items must be kept in the same folder in order for the executable to operate.
+    All these items must be kept in the same folder in order for the executable to operate.</ul>
 
 *   *macOS*
     -   A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
@@ -229,11 +229,11 @@ Used to indicate the current version number for the application generated. You m
 
 #### Data linking mode
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Existem dois modos de vinculação de dados:
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Por nome da aplicação** (como padrão) - a aplicação 4D abre automaticamente o último arquivo de dados aberto correspondente ao arquivo de estrutura. This allows you to move the application package freely on the disk. Esta opção deve ser utilizada geralmente para as aplicações fusionadas, a menos que necessite especificamente duplicar a aplicação.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
+*   **Rota da aplicação** - a aplicação 4D fusionada analisará o arquivo *lastDataPath. xml* e tentará abrir o arquivo de dados com um atributo "executablePath" que coincida com a rota completa da aplicação. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
