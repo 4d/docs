@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>表示フォーマット · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="表示フォーマット · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="---"/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R2 BETA</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/FormObjects/propertiesDisplay.html">English</a></li><li><a href="/docs/19/de/FormObjects/propertiesDisplay.html">Deutsch</a></li><li><a href="/docs/19/es/FormObjects/propertiesDisplay.html">Español</a></li><li><a href="/docs/19/fr/FormObjects/propertiesDisplay.html">Français</a></li><li><a href="/docs/19/pt/FormObjects/propertiesDisplay.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>フォームオブジェクトプロパティ</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">はじめに<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/GettingStarted/installation.html">インストール</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">プロジェクト管理<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Project/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Project/creating.html">プロジェクトを開発する</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Project/architecture.html">プロジェクトのアーキテクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Project/documentation.html">ドキュメンテーション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Project/compiler.html">コンパイル</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ランゲージのコンセプト<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/about.html">4D ランゲージについて</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/quick-tour.html">概要</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/data-types.html">データタイプの概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/boolean.html">ブール</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/collection.html">コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/date.html">日付</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/null-undefined.html">Null と 未定義</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/number.html">数値 (実数、倍長整数、整数)</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/object.html">オブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/picture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/pointer.html">ポインター</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/time.html">時間</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/variant.html">バリアント</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/variables.html">変数</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/arrays.html">配列</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/methods.html">メソッド</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/parameters.html">引数</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/shared.html">共有オブジェクトと共有コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/classes.html">クラス</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/control-flow.html">制御フロー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/branching.html">分岐構造</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/looping.html">ループ構造</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/19/ja/Tags/tags.html">変換タグ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/error-handling.html">エラー処理</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/interpreted-compiled.html">インタープリターモードとコンパイル済みモード</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/components.html">コンポーネント</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/plug-ins.html">プラグイン</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Concepts/identifiers.html">識別子の命名規則</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORDA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/overview.html">ORDAとは何か</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/dsmapping.html">データモデルオブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/ordaClasses.html">データモデルクラス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/entities.html">データ操作</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/datastores.html">リモートデータストアの利用</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/ORDA/glossary.html">用語集</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">クラス API リファレンス<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/overview.html">クラス API の概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/ClassClass.html">クラス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/CollectionClass.html">コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/CryptoKeyClass.html">CryptoKey</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/DataClassClass.html">データクラス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/DataClassAttributeClass.html">DataClassAttribute</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/DataStoreClass.html">DataStore</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/EmailObjectClass.html">Email</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/EntityClass.html">エンティティ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/EntitySelectionClass.html">EntitySelection</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/FileClass.html">File</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/FolderClass.html">Folder</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/FunctionClass.html">Formula</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/IMAPTransporterClass.html">IMAPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/MailAttachmentClass.html">MailAttachment</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/POP3TransporterClass.html">POP3Transporter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/SessionClass.html">セッション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/SignalClass.html">Signal</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/SMTPTransporterClass.html">SMTPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/WebServerClass.html">WebServer</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/ZipArchiveClass.html">ZIPArchive</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/ZipFileClass.html">ZIPFile</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/API/ZipFolderClass.html">ZIPFolder</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">アクセス権限<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Users/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Users/editing.html">4Dユーザー＆グループの管理</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Preferences<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/general.html">General Page</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/structure.html">Structure Page</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/forms.html">Forms Page</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/methods.html">Methods Page</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Preferences/shortcuts.html">Shortcuts Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">データベース管理<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/webAdmin.html">Web 管理</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/dataExplorer.html">Webデータエクスプローラー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/licenses.html">4D ライセンスの管理</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/tls.html">TLS Protocol (HTTPS)</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/debugLogFiles.html">Description of log files</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Admin/cli.html">コマンドライン・インターフェース</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/information.html">情報ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/analysis.html">ログ解析ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/verify.html">検査ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/backup.html">バックアップページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/compact.html">圧縮ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/rollback.html">ロールバックページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/restore.html">復元ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/repair.html">修復ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/MSC/encrypt.html">暗号化ページ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">バックアップと復元<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Backup/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Backup/backup.html">バックアップ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Backup/settings.html">バックアップ設定</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Backup/log.html">ログファイル (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Backup/restore.html">復元</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Web サーバー<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/webServer.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/webServerConfig.html">バックアップ設定</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/webServerAdmin.html">データベース管理</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/webServerObject.html">Webサーバーオブジェクト</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Web 開発<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/gettingStarted.html">はじめに</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/templates.html">Template pages</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/httpRequests.html">Processing HTTP requests</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/allowProject.html">Allowing project methods</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/errorPages.html">Custom HTTP Error Pages</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/authentication.html">Authentication</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/sessions.html">User sessions</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/WebServer/preemptiveWeb.html">Using preemptive web processes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">REST サーバー<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/gettingStarted.html">はじめに</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/configuration.html">サーバー設定</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/authUsers.html">ユーザーとセッション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/genInfo.html">サーバー情報の取得</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/manData.html">データ操作</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/classFunctions.html">ORDAクラス関数の呼び出し</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/REST_requests.html">RESTリクエストについて</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (general)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/upload.html">$upload</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (dataClass)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/REST/version.html">$version</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">クライアント/サーバー<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Desktop/clientServer.html">クライアント/サーバー管理</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">フォーム<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/forms.html">4D フォームについて</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/formEditor.html">フォームエディター</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/macros.html">フォームエディターマクロ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/objectLibrary.html">オブジェクトライブラリ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/stylesheets.html">スタイルシート</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/pictures.html">ピクチャー</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">フォームプロパティ<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/jsonReference.html">JSON プロパティリスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/action.html">動作</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/propertiesForm.html">フォームプロパティ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/formSize.html">フォームサイズ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/markers.html">Markers</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/menu.html">メニュー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/print.html">印刷</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormEditor/windowSize.html">ウィンドウサイズ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">フォームオブジェクト<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/formObjectsOverview.html">4D フォームオブジェクトについて</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/buttonOverview.html">ボタン</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/buttonGridOverview.html">ボタングリッド</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/checkboxOverview.html">チェックボックス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/groupBox.html">グループボックス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/inputOverview.html">入力</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/listOverview.html">階層リスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/listboxOverview.html">リストボックス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/pictureButtonOverview.html">ピクチャーボタン</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/picturePopupMenuOverview.html">ピクチャーポップアップメニュー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/pluginAreaOverview.html">プラグインエリア</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/progressIndicator.html">進捗インジケーター</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/radiobuttonOverview.html">ラジオボタン</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/ruler.html">ルーラー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/shapesOverview.html">図形</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/spinner.html">スピナー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/splitters.html">スプリッター</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/staticPicture.html">スタティックピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/stepper.html">ステッパー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/subformOverview.html">サブフォーム</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/tabControl.html">タブコントロール</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/text.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/webAreaOverview.html">Webエリア</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/viewProAreaOverview.html">4D View Pro エリア</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/writeProAreaOverview.html">4D Write Pro エリア</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">フォームオブジェクトプロパティ<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesReference.html">JSON プロパティリスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesAction.html">動作</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesAnimation.html">アニメーション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesAppearance.html">アピアランス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesBackgroundAndBorder.html">背景色と境界線</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesCoordinatesAndSizing.html">座標とサイズ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesCrop.html">行列数</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesDataSource.html">データソース</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesDisplay.html">表示フォーマット</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesEntry.html">入力</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesFooters.html">フッター</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesGridlines.html">グリッド線</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesHeaders.html">ヘッダー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesHelp.html">ヘルプ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesHierarchy.html">階層</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesListBox.html">リストボックス</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesObject.html">オブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesPicture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesPlugIns.html">プラグイン</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesPrint.html">印刷</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesRangeOfValues.html">値の範囲</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesResizingOptions.html">リサイズオプション</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesScale.html">スケール</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesSubform.html">サブフォーム</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesText.html">テキスト</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesTextAndPicture.html">テキスト、ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/FormObjects/propertiesWebArea.html">Webエリア</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">フォームイベント<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onActivate.html">On Activate</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onAfterEdit.html">On After Edit</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onAfterKeystroke.html">On After Keystroke</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onAfterSort.html">On After Sort</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onAlternativeClick.html">On Alternative Click</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onBeforeDataEntry.html">On Before Data Entry</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onBeforeKeystroke.html">On Before Keystroke</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onBeginDragOver.html">On Begin Drag Over</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onBeginUrlLoading.html">On Begin URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onClicked.html">On Clicked</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onCloseBox.html">On Close Box</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onCloseDetail.html">On Close Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onCollapse.html">On Collapse</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onColumnMoved.html">On Column Moved</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onColumnResize.html">On Column Resize</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDataChange.html">On Data Change</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDeactivate.html">On Deactivate</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDeleteAction.html">On Delete Action</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDisplayDetail.html">On Display Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDoubleClicked.html">On Double Clicked</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDragOver.html">On Drag Over</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onDrop.html">On Drop</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onEndUrlLoading.html">On End URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onExpand.html">On Expand</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onFooterClick.html">On Footer Click</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onGettingFocus.html">On Getting focus</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onHeader.html">On Header</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onHeaderClick.html">On Header Click</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onLoad.html">On Load</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onLoadRecord.html">On Load Record</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onLongClick.html">On Long Click</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onLosingFocus.html">On Losing focus</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onMenuSelected.html">On Menu Selected</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onMouseEnter.html">On Mouse Enter</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onMouseLeave.html">On Mouse Leave</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onMouseMove.html">On Mouse Move</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onMouseUp.html">On Mouse Up</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onOpenDetail.html">On Open Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onOpenExternalLink.html">On Open External Link</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onOutsideCall.html">On Outside Call</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onPageChange.html">On Page Change</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onPlugInArea.html">On Plug in Area</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onPrintingBreak.html">On Printing Break</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onPrintingDetail.html">On Printing Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onPrintingFooter.html">On Printing Footer</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onResize.html">On Resize</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onRowMoved.html">On Row Moved</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onRowResize.html">On Row Resize</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onScroll.html">On Scroll</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onSelectionChange.html">On Selection Change</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onTimer.html">On Timer</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onUnload.html">On Unload</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onUrlFiltering.html">On URL Filtering</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onUrlLoadingError.html">On URL Loading Error</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onUrlResourceLoading.html">On URL Resource Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onValidate.html">On Validate</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onVpRangeChanged.html">On VP Range Changed</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onVpReady.html">On VP Ready</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Events/onWindowOpeningDenied.html">On Window Opening Denied</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">メニュー<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Menus/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Menus/creating.html">メニューとメニューバーの作成</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Menus/properties.html">メニュープロパティ</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Menus/bars.html">メニューバーの管理</a></li><li class="navListItem"><a class="navItem" href="/docs/19/ja/Menus/sdi.html">Windows での SDIモード</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">アプリケーションビルド<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/19/ja/Desktop/building.html">プロジェクトパッケージのビルド</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/FormObjects/properties_Display.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">表示フォーマット</h1></header><article><div><span><hr>
+<h2><a class="anchor" aria-hidden="true" id="文字フォ－マット"></a><a href="#文字フォ－マット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>文字フォ－マット</h2>
+<p>文字フォーマットは、表示や印刷時に文字フィールドや変数にデータを表示する方法を制御します。 以下は文字フィールド用に提供されるフォーマットのリストです:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_alphaFormat.png" alt=""></p>
+<p>このリストからフォーマットを選択するか、コンボボックスに入力すことができます。 フォーマットポップアップメニューには、主に使用される文字フォーマット (電話番号等) が用意されています。 また、ツールボックスのフィルターとフォーマットで設定したカスタムフォーマットを選択することもできます。 この場合、そのフォーマットをオブジェクトプロパティで変更することはできません。 開発者が作成したカスタムフォーマットやフィルターはリストの先頭に表示されます。</p>
+<p>シャープ (#) は文字表示フォーマットのプレースホルダーです。 ハイフンやスペース、その他の句読点を表示したい場所に挿入できます。 表示したい実際の句読点と、文字データを表示する場所には # を置きます。</p>
+<p>たとえば部品番号が &quot;RB-1762-1&quot; のようなフォーマットの時、</p>
+<p>文字フォーマットを以下のように書けます:</p>
+<pre><code class="hljs">##-####-#
+</code></pre>
+<p>ユーザーが “RB17621” と入力すると、フィールドには以下の通りに表示されます:</p>
+<pre><code class="hljs">RB-1762-1
+</code></pre>
+<p>フィールドに実際に格納される値は “RB17621” です。</p>
+<p>フォーマットが許可するよりも多くの文字が入力されると、4Dは最後の文字を表示します。 たとえばフォーマットが以下の時:</p>
+<pre><code class="hljs">(#######)
+</code></pre>
+<p>そしてユーザーが “proportion” と入力すると、フィールドには以下のように表示されます:</p>
+<pre><code class="hljs">(portion)
+</code></pre>
+<p>フィールドには “proportion” が格納されます。 表示フォーマットにかかわらず、4Dは入力された文字を受け入れ、格納します。 データが失われることはありません。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法"></a><a href="#json-文法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>textFormat</td><td>string</td><td>&quot;### ####&quot;, &quot;(###) ### ####&quot;, &quot;### ### ####&quot;, &quot;### ## ####&quot;, &quot;00000&quot;, カスタムフォーマット</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト"></a><a href="#対象オブジェクト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="日付フォーマット"></a><a href="#日付フォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>日付フォーマット</h2>
+<p>日付フォーマットは、表示や印刷時に日付を表示する方法を制御します。 データ入力の際は選択した表示フォーマットとは関係なく、YYYY/MM/DD 形式で日付を入力します。</p>
+<blockquote>
+<p><a href="#数値フォーマット">数値フォーマット</a> や <a href="#文字フォ－マット">文字フォ－マット</a> と異なり、日付表示フォ－マットは4Dの組み込みフォーマットのなかから選択しなければなりません。</p>
+</blockquote>
+<p>利用可能な日付表示フォーマットは以下のとおりです:</p>
+<table>
+<thead>
+<tr><th>フォーマット</th><th>JSON 文字列</th><th>例</th></tr>
+</thead>
+<tbody>
+<tr><td>System date short</td><td>- (デフォルト)</td><td>20/03/25</td></tr>
+<tr><td>System date abbreviated <em>(1)</em></td><td>systemMedium</td><td>2020/03/25</td></tr>
+<tr><td>System date long</td><td>systemLong</td><td>2020年3月25日 水曜日</td></tr>
+<tr><td>RFC 822</td><td>rfc822</td><td>Tue, 25 Mar 2020 22:00:00 GMT</td></tr>
+<tr><td>Short Century</td><td>shortCentury</td><td>03/25/20、ただし 04/25/2032 <em>(2)</em></td></tr>
+<tr><td>Internal date long</td><td>long</td><td>March 25, 2020</td></tr>
+<tr><td>Internal date abbreviated <em>(1)</em></td><td>abbreviated</td><td>Mar 25, 2020</td></tr>
+<tr><td>Internal date short</td><td>short</td><td>03/25/2020</td></tr>
+<tr><td>ISO Date Time <em>(3)</em></td><td>iso8601</td><td>2020-03-25T00:00:00</td></tr>
+</tbody>
+</table>
+<p><em>(1)</em> &quot;June&quot; は &quot;Jun&quot;、”July” は &quot;Jul&quot; に省略されます。</p>
+<p><em>(2)</em> 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、<a href="https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html">SET DEFAULT CENTURY</a> コマンドで変更することができます。</p>
+<p><em>(3)</em> <code>ISO Date Time</code> フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。</p>
+<blockquote>
+<p>表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルト設定ですが、<a href="https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html">SET DEFAULT CENTURY</a> コマンドで変更することができます。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-1"></a><a href="#json-文法-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>dateFormat</td><td>string</td><td>&quot;systemShort&quot;, &quot;systemMedium&quot;, &quot;systemLong&quot;, &quot;iso8601&quot;, &quot;rfc822&quot;, &quot;short&quot;, &quot;shortCentury&quot;, &quot;abbreviated&quot;, &quot;long&quot;, &quot;blankIfNull&quot; (他の値と組み合わせることができます)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-1"></a><a href="#対象オブジェクト-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a> - <a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="数値フォーマット"></a><a href="#数値フォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数値フォーマット</h2>
+<blockquote>
+<p>数値フィールドには整数、倍長整数、整数64bit、実数、そしてフロート型が含まれます。</p>
+</blockquote>
+<p>数値フォーマットは表示や印刷時に数値を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は数値だけを (必要に応じ小数点やマイナス記号も) 入力します。</p>
+<p>4Dは様々なデフォルトの数値表示フォーマットを提供しています。</p>
+<h3><a class="anchor" aria-hidden="true" id="プレースホルダー"></a><a href="#プレースホルダー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プレースホルダー</h3>
+<p>それぞれの数値表示フォーマットでは、数値記号 (#)、ゼロ (0)、キャレット (^)、アスタリスク (*) をプレースホルダーとして使用します。 表示しようとする各桁に対して 1つのプレースホルダーを使用し、独自の数値表示フォーマットを作成できます。</p>
+<table>
+<thead>
+<tr><th>プレースホルダー</th><th>千項及び末尾のゼロ</th></tr>
+</thead>
+<tbody>
+<tr><td>#</td><td>何も表示しない</td></tr>
+<tr><td>0</td><td>0を表示</td></tr>
+<tr><td>^</td><td>スペースを表示 (1)</td></tr>
+<tr><td>*</td><td>アスタリスクを表示</td></tr>
+</tbody>
+</table>
+<p>(1) キャレット (^) は、ほとんどのフォントの数字と同じ幅を占めるスペースを生成します。</p>
+<p>たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは &lt;&lt;&lt; をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。</p>
+<p>ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は &lt;&lt;&lt; と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。</p>
+<blockquote>
+<p>表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。</p>
+</blockquote>
+<p>各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。</p>
+<p>たとえば ##0 というフォーマットを使用して 3桁の数字を表示するものとします。 ユーザーがフィールドに何も入力しないと、フィールドには 0 が表示されます。 26 と入力すると、フィールドには 26 と表示されます。</p>
+<h3><a class="anchor" aria-hidden="true" id="区切り文字"></a><a href="#区切り文字" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>区切り文字</h3>
+<p>数値表示フォーマット (科学的記数法を除く) は自動でシステムの地域パラメーターに基づきます。 4D は OS に定義された小数点と千の位区切り文字を使用して “.” と “,” 文字をそれぞれ置き換えます。 0 や # に続くピリオドとコンマはプレースホルダー文字として扱われます。</p>
+<blockquote>
+<p>Windows 環境下で、テンキーの小数点キーを使用した際、4Dはカーソルが位置しているフィールドの型に応じて挙動が変化します: *   実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。 *   それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="小数点とその他の表示文字"></a><a href="#小数点とその他の表示文字" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>小数点とその他の表示文字</h3>
+<p>表示フォーマット内では 1つの小数点を使用することができます。 ユーザーが小数点を入力するかどうかに関係なく、小数点を表示したい場合、ゼロの間に小数点を置かなければなりません。</p>
+<p>フォーマット内で他の文字を使用することもできます。 文字を単独で使用したりプレースホルダーの前後に配置すると、その文字が常に表示されます。 たとえば次のようなフォーマットの場合:</p>
+<pre><code class="hljs">￥##0
+</code></pre>
+<p>円記号はプレースホルダーの前に置かれているため、常に表示されます。</p>
+<p>文字がプレースホルダーの間に置かれている場合、両側に数字が表示される場合のみ、その文字が表示されます。 たとえばフォーマットを次のように指定したとき:</p>
+<pre><code class="hljs">###.##0
+</code></pre>
+<p>ポイント (点) は、ユーザが少なくとも4桁以上の数値を入力した場合にのみ表示されます。</p>
+<p>数値表示フォーマットにおいて、スペースは文字として扱われます。</p>
+<h3><a class="anchor" aria-hidden="true" id="正数、負数、ゼロのフォーマット"></a><a href="#正数、負数、ゼロのフォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>正数、負数、ゼロのフォーマット</h3>
+<p>数値表示フォーマットは最大で 3つの部分に分けられ、それぞれ正数、負数、ゼロの値に対応する表示フォーマットを指定できます。 それぞれの部分は以下のように並び、セミコロンで区切られます:</p>
+<pre><code class="hljs">正数;負数;ゼロ
+</code></pre>
+<p>3つの部分すべてを指定する必要はありません。 1つの部分だけを使用する場合、4Dはすべての数値に対してそのフォーマットを使用し、負の数の先頭にマイナス記号を配置します。</p>
+<p>2つの部分を指定する場合、4D は 1番目のフォーマットを正数とゼロに対して使用し、負数には 2番目のフォーマットを使用します。 3つの部分をすべて指定すると、1番目のフォーマットを正数、2 番目を負数、3 番目をゼロに使用します。</p>
+<blockquote>
+<p>3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 <code>###;###;#</code> と指定した場合、ゼロ値は &quot;#&quot; と表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。</p>
+</blockquote>
+<p>次の数値表示フォーマットの例は、円記号とカンマを表示し、負の数値はカッコ内に入れ、ゼロを表示しません:</p>
+<pre><code class="hljs">￥###,##0.00;(￥###,##0.00);
+</code></pre>
+<p>2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:</p>
+<pre><code class="hljs">￥###,##0.00;(￥###,##0.00)
+</code></pre>
+<p>この場合、ゼロは “￥0.00” と表示されます。</p>
+<h3><a class="anchor" aria-hidden="true" id="科学的記数法"></a><a href="#科学的記数法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>科学的記数法</h3>
+<p>科学的記数法で数値を表示したい場合には、<strong>アンパサンド</strong> (&amp;) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:</p>
+<pre><code class="hljs">&amp;3
+</code></pre>
+<p>759.62 は以下のように表示されます:</p>
+<pre><code class="hljs">7.60e+2
+</code></pre>
+<p>科学的記数法フォーマットは、表示される数値を自動的に丸める唯一のフォーマットです。 前述の例では、数値が 7.59e+2 と切り捨てられずに 7.60e+2 に丸められている点に注意してください。</p>
+<h3><a class="anchor" aria-hidden="true" id="16進フォーマット"></a><a href="#16進フォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>16進フォーマット</h3>
+<p>次の表示フォーマットを使用して、数値を 16進表記で表示することができます:</p>
+<ul>
+<li><code>&amp;x</code>: このフォーマットでは 16進数が “0xFFFF” 形式で表示されます。</li>
+<li><code>&amp;$</code>: このフォーマットでは 16進数が “$FFFF” 形式で表示されます。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="xml記法"></a><a href="#xml記法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>XML記法</h3>
+<p><code>&amp;xml</code> フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。</p>
+<h3><a class="anchor" aria-hidden="true" id="数値を時間として表示する"></a><a href="#数値を時間として表示する" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数値を時間として表示する</h3>
+<p><code>&amp;/</code>の後に数字を指定することにより、数値を時間として (時間フォーマットで) 表示することができます。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。</p>
+<p>たとえば次のフォーマットを指定すると:</p>
+<pre><code class="hljs">&amp;/7
+</code></pre>
+<p>ドロップダウンメニューの7番目の時間フォーマット (AM/PM で表わす時間) に対応します。 このフォーマットが指定された数値フィールドの場合、25000 は次のように表示されます:</p>
+<pre><code class="hljs">6:56 AM
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h3>
+<p>次の表は各種フォーマットの数値表示への効果を表わしています。 正数、負数、ゼロという 3つの欄では 1234.50、-1234.50、0 がそれぞれどのように表示されるかを示しています。</p>
+<table>
+<thead>
+<tr><th>入力されたフォーマット</th><th>正数</th><th>負数</th><th>ゼロ</th></tr>
+</thead>
+<tbody>
+<tr><td>###</td><td>&lt;&lt;&lt;</td><td>&lt;&lt;&lt;</td><td></td></tr>
+<tr><td>####</td><td>1234</td><td>&lt;&lt;&lt;&lt;</td><td></td></tr>
+<tr><td>#######</td><td>1234</td><td>-1234</td><td></td></tr>
+<tr><td>#####.##</td><td>1234.5</td><td>-1234.5</td><td></td></tr>
+<tr><td>####0.00</td><td>1234.50</td><td>-1234.50</td><td>0.00</td></tr>
+<tr><td>#####0</td><td>1234</td><td>-1234</td><td>0</td></tr>
+<tr><td>+#####0;–#####0;0</td><td>+1234</td><td>-1234</td><td>0</td></tr>
+<tr><td>#####0DB;#####0CR;0</td><td>1234DB</td><td>1234CR</td><td>0</td></tr>
+<tr><td>#####0;(#####0)</td><td>1234</td><td>(1234)</td><td>0</td></tr>
+<tr><td>###,##0</td><td>1,234</td><td>-1,234</td><td>0</td></tr>
+<tr><td>##,##0.00</td><td>1,234.50</td><td>-1,234.50</td><td>0.00</td></tr>
+<tr><td>^^^^^^^</td><td>1234</td><td>-1234</td><td></td></tr>
+<tr><td>^^^^^^0</td><td>1234</td><td>-1234</td><td>0</td></tr>
+<tr><td>^^^,^^0</td><td>1,234</td><td>-1,234</td><td>0</td></tr>
+<tr><td>^^,^^0.00</td><td>1,234.50</td><td>-1,234.50</td><td>0.00</td></tr>
+<tr><td>*******</td><td>***1234</td><td>**-1234</td><td>*******</td></tr>
+<tr><td>******0</td><td>***1234</td><td>**-1234</td><td>******0</td></tr>
+<tr><td>***,**0</td><td>**1,234</td><td>*-1,234</td><td>******0</td></tr>
+<tr><td>**,**0.00</td><td>*1,234.50</td><td>-1,234.50</td><td>*****0.00</td></tr>
+<tr><td>$*,**0.00;–$*,**0.00</td><td>$1,234.50</td><td>-$1,234.50</td><td>$****0.00</td></tr>
+<tr><td>$^^^^0</td><td>$ 1234</td><td>$–1234</td><td>$    0</td></tr>
+<tr><td>$^^^0;–$^^^0</td><td>$1234</td><td>–$1234</td><td>$   0</td></tr>
+<tr><td>$^^^0 ;($^^^0)</td><td>$1234</td><td>($1234)</td><td>$   0</td></tr>
+<tr><td>$^,^^0.00 ;($^,^^0.00)</td><td>$1,234.50</td><td>($1,234.50)</td><td>$    0.00</td></tr>
+<tr><td>&amp;2</td><td>1.2e+3</td><td>-1.2e+3</td><td>0.0e+0</td></tr>
+<tr><td>&amp;5</td><td>1.23450e+3</td><td>-1.23450e+3</td><td>0.00000</td></tr>
+<tr><td>&amp;xml</td><td>1234.5</td><td>-1234.5</td><td>0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-2"></a><a href="#json-文法-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>numberFormat</td><td>string</td><td>数値 (必要に応じて小数点およびマイナス記号を含む)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-2"></a><a href="#対象オブジェクト-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a> - <a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a> - <a href="/docs/19/ja/FormObjects/progressIndicator.html">進捗インジケーター</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="ピクチャーフォーマット"></a><a href="#ピクチャーフォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ピクチャーフォーマット</h2>
+<p>ピクチャーフォーマットはピクチャーが表示あるいは印刷される際の表示方法を制御します。 データ入力時はフォーマットに関わらず、ユーザーはクリップボードからのペーストやドラッグ＆ドロップでピクチャーを入力します。</p>
+<p>トランケートとスケーリングオプションを選択しても、ピクチャーが変更されることはなく、 ピクチャーフィールドのデータは失われません。 ピクチャー表示フォーマットはピクチャーの表示にのみ影響します。</p>
+<h3><a class="anchor" aria-hidden="true" id="スケーリング"></a><a href="#スケーリング" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スケーリング</h3>
+<p><code>JSON 文法では: &quot;scaled&quot;</code></p>
+<p><strong>スケーリング</strong> を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_pictureFormat_ScaledToFit.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="トランケート-中央合わせ中央合わせしない"></a><a href="#トランケート-中央合わせ中央合わせしない" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>トランケート (中央合わせ/中央合わせしない)</h3>
+<p><code>JSON 文法では: &quot;truncatedCenter&quot; / &quot;truncatedTopLeft&quot;</code></p>
+<p><strong>トランケート (中央合わせ)</strong> フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。</p>
+<p><strong>トランケート (中央合わせしない)</strong> フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。</p>
+<blockquote>
+<p>ピクチャーフォーマットが <strong>トランケート (中央合わせしない)</strong> の場合、入力エリアにスクロールバーを追加できます。</p>
+</blockquote>
+<p><img src="/docs/19/assets/en/FormObjects/property_pictureFormat_Truncated.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="スケーリング-プロポーショナル-とスケーリング-中央合わせ・プロポーショナル"></a><a href="#スケーリング-プロポーショナル-とスケーリング-中央合わせ・プロポーショナル" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スケーリング (プロポーショナル) とスケーリング (中央合わせ・プロポーショナル)</h3>
+<p><code>JSON 文法では: &quot;proportionalTopLeft&quot; / &quot;proportionalCenter&quot;</code></p>
+<p><strong>スケーリング (プロポーショナル)</strong> を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 <strong>スケーリング (中央合わせ・プロポーショナル)</strong> オプションも同様ですが、ピクチャーはエリアの中央に配置されます。</p>
+<p>ピクチャーがエリアよりも小さい場合、サイズは変更されません。 ピクチャーがエリアよりも大きい場合、そのエリア内に全体が表示されるよう、比率を保ったままサイズが小さくなります。 比率が保たれるため、ピクチャーは歪むことなく表示されます。</p>
+<p><strong>中央合わせ</strong> を選択した場合、画像はエリアの中央に配置されます:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_pictureFormat_ScaledProportional.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="繰り返し"></a><a href="#繰り返し" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>繰り返し</h3>
+<p><code>JSON 文法では: &quot;tiled&quot;</code></p>
+<p><strong>繰り返し</strong> フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_pictureFormat_Replicated.png" alt=""></p>
+<p>フィールドがオリジナルのピクチャーよりも小さいサイズにされた場合、ピクチャーはトランケート (中央合わせなし) されます。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-3"></a><a href="#json-文法-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>pictureFormat</td><td>string</td><td>&quot;truncatedTopLeft&quot;, &quot;scaled&quot;, &quot;truncatedCenter&quot;, &quot;tiled&quot;, &quot;proportionalTopLeft&quot;, &quot;proportionalCenter&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-3"></a><a href="#対象オブジェクト-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="時間フォーマット"></a><a href="#時間フォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>時間フォーマット</h2>
+<p>時間フォーマットは、表示や印刷時に時間を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は 24時間制の “HH:MM:SS” フォーマット、または 12時間制の “HH:MM:SS AM/PM” フォーマットで時間を入力します。</p>
+<blockquote>
+<p><a href="#文字フォーマット">文字</a> や <a href="#数値フォーマット">数値</a> の表示フォーマットとは異なり、時間の表示フォ－マットはフォーマットポップアップメニューから選択しなければなりません。</p>
+</blockquote>
+<p>次の表は、時間フィールドの表示フォーマットとそれぞれのフォーマットの例を示しています:</p>
+<table>
+<thead>
+<tr><th>フォーマット</th><th>JSON 文字列</th><th>コメント</th><th>04:30:25 の例</th></tr>
+</thead>
+<tbody>
+<tr><td>HH:MM:SS</td><td>hh_mm_ss</td><td></td><td>04:30:25</td></tr>
+<tr><td>HH:MM</td><td>hh_mm</td><td></td><td>04:30</td></tr>
+<tr><td>Hour Min Sec</td><td>HH_MM_SS</td><td></td><td>4 時 30 分 25 秒</td></tr>
+<tr><td>Hour Min</td><td>HH_MM</td><td></td><td>4 時 30 分</td></tr>
+<tr><td>HH:MM AM/PM</td><td>hh_mm_am</td><td></td><td>4:30 AM</td></tr>
+<tr><td>MM SS</td><td>mm_ss</td><td>00:00:00からの経過時間</td><td>270:25</td></tr>
+<tr><td>Min Sec</td><td>MM_SS</td><td>00:00:00からの経過時間</td><td>270 分 25 秒</td></tr>
+<tr><td>ISO Date Time</td><td>iso8601</td><td>時間に関連する XML 標準表現に対応。 主に XML フォーマットでのデータのやり取りに使用します。</td><td>0000-00-00T04:30:25</td></tr>
+<tr><td>System time short</td><td>- (デフォルト)</td><td>システムに定義された標準の時間フォーマット</td><td>04:30:25</td></tr>
+<tr><td>System time long abbreviated</td><td>systemMedium</td><td>macOSのみ: システムに定義された時間フォーマットの短縮型。 <br>Windows では System time short フォーマットと同じ</td><td>04:30:25</td></tr>
+<tr><td>System time long</td><td>systemLong</td><td>macOSのみ: システムに定義された時間フォーマット。 <br>Windows では System time short フォーマットと同じ</td><td>04:30:25 JST</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-4"></a><a href="#json-文法-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>timeFormat</td><td>string</td><td>&quot;systemShort&quot;, &quot;systemMedium&quot;, &quot;systemLong&quot;, &quot;iso8601&quot;, &quot;hh_mm_ss&quot;, &quot;hh_mm&quot;, &quot;hh_mm_am&quot;, &quot;mm_ss&quot;, &quot;HH_MM_SS&quot;, &quot;HH_MM&quot;, &quot;MM_SS&quot;, &quot;blankIfNull&quot; (他の値と組み合わせることができます)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-4"></a><a href="#対象オブジェクト-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a> - <a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="テキスト-true時テキスト-false時"></a><a href="#テキスト-true時テキスト-false時" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>テキスト (True時)/テキスト (False時)</h2>
+<p><a href="/docs/19/ja/FormObjects/propertiesObject.html#式の型">ブール式</a> を次のフォームオブジェクトで表示した場合:</p>
+<ul>
+<li><a href="/docs/19/ja/FormObjects/inputOverview.html">入力オブジェクト</a> にテキストとして</li>
+<li><a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> に表示タイプ <a href="/docs/19/ja/FormObjects/propertiesDisplay.html#表示タイプ">&quot;ポップアップ&quot;</a> を選択して</li>
+</ul>
+<p>... 値の代わりに表示するテキストを指定することができます:</p>
+<ul>
+<li><strong>テキスト (True時)</strong> - 値が &quot;true&quot; の時に表示するテキスト</li>
+<li><strong>テキスト (False時)</strong> - 値が &quot;false&quot; の時に表示するテキスト</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-5"></a><a href="#json-文法-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>booleanFormat</td><td>string</td><td>&quot;&lt;<em>テキスト (true時)</em>&gt;;&lt;<em>テキスト (false時)</em>&gt;&quot;, 例: &quot;済み;未処理&quot; /</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-5"></a><a href="#対象オブジェクト-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="表示タイプ"></a><a href="#表示タイプ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>表示タイプ</h2>
+<p>列のデータに表示フォーマットを割り当てるために使用します。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。</p>
+<p>ブール式および数値 (数値または整数) 式の列はチェックボックスとして表示することができます。 表示タイプにチェックボックスを選択すると、<a href="#タイトル">タイトル</a>プロパティが表示され、チェックボックスのタイトルを設定できます。</p>
+<p>ブール式の列はポップアップメニューとしても表示することができます。 この場合には、<a href="#テキスト-True時-テキスト-False時">テキスト (True時) とテキスト (False時)</a> プロパティが表示され、ポップアップメニューの対応するタイトルを設定できます。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-6"></a><a href="#json-文法-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>controlType</td><td>string</td><td><li><strong>数値列</strong>: &quot;automatic&quot; (デフォルト) または &quot;checkbox&quot;<li><strong>ブール列</strong>: &quot;checkbox&quot; (デフォルト) または &quot;popup&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-6"></a><a href="#対象オブジェクト-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="レンダリングしない"></a><a href="#レンダリングしない" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>レンダリングしない</h2>
+<p>このプロパティが選択されていると、アプリケーションモードでオブジェクトが描画されません (あとから描画することができます)。</p>
+<p>このプロパティは、”透明” ボタンの実装を可能にします。  レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-7"></a><a href="#json-文法-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>display</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-7"></a><a href="#対象オブジェクト-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/buttonOverview.html">ボタン</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="スリーステート"></a><a href="#スリーステート" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スリーステート</h2>
+<p>チェックボックスオブジェクトに、3 番目の状態を付加します。 チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。</p>
+<h4><a class="anchor" aria-hidden="true" id="リストボックス列におけるスリーステートチェックボックス"></a><a href="#リストボックス列におけるスリーステートチェックボックス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>リストボックス列におけるスリーステートチェックボックス</h4>
+<p><a href="/docs/19/ja/FormObjects/propertiesObject.html#式の型-式タイプ">式タイプ</a> が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます:</p>
+<ul>
+<li>0 = チェックされていない</li>
+<li>1 = チェックされている</li>
+<li>2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。</li>
+<li>-1 = 非表示チェックボックス</li>
+<li>-2 = チェックされていない、入力不可</li>
+<li>-3 = チェックされている、入力不可</li>
+<li>-4 = セミチェックボックス、入力不可</li>
+</ul>
+<p>スリーステートチェックボックスの場合も、<a href="#タイトル">タイトル</a>プロパティが表示され、チェックボックスのタイトルを設定できます。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-8"></a><a href="#json-文法-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>threeState</td><td>boolean</td><td>true, false</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-8"></a><a href="#対象オブジェクト-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/checkboxOverview.html">チェックボックス</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="タイトル"></a><a href="#タイトル" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>タイトル</h2>
+<p>タイトルは、リストボックス列のプロパティとして次の場合に提供されます:</p>
+<ul>
+<li><a href="/docs/19/ja/FormObjects/propertiesObject.html#式の型-式タイプ">式タイプ</a> が <strong>ブール</strong> で <a href="/docs/19/ja/FormObjects/propertiesDisplay.html#表示タイプ">表示タイプ</a> が &quot;チェックボックス&quot; の場合</li>
+<li><a href="/docs/19/ja/FormObjects/propertiesObject.html#式の型-式タイプ">式タイプ</a> が <strong>数値</strong> (数値または整数) で <a href="/docs/19/ja/FormObjects/propertiesDisplay.html#表示タイプ">表示タイプ</a> が &quot;スリーステートチェックボックス&quot; の場合</li>
+</ul>
+<p>これらの場合に、チェックボックスのタイトルをこのプロパティで設定できます。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-9"></a><a href="#json-文法-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>controlTitle</td><td>string</td><td>タイトル用のあらゆる文字列</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-9"></a><a href="#対象オブジェクト-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="エリプシスを使用して省略"></a><a href="#エリプシスを使用して省略" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エリプシスを使用して省略</h2>
+<p>リストボックスのカラムが、中身をすべて表示するのには狭すぎる場合の値の表示を管理します。</p>
+<p>このオプションは、どのような型の中身に対しても利用可能です(ただしピクチャーとオブジェクトを除く)。</p>
+<ul>
+<li><p>このオプションがチェックされているとき (デフォルト)、リストボックスセルの中身がカラムの幅を超えた場合、それらは省略され、エリプシスが表示されます:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_truncate1.png" alt=""></p></li>
+</ul>
+<blockquote>
+<p>エリプシスの位置はOSによって変わります。 上記の例 (Windows) では、テキストの右側に表示されます (テキストの後半が省略されます)。 macOS 上では、テキストの真ん中に表示されます (テキストの中盤が省略されます)。</p>
+</blockquote>
+<ul>
+<li><p>このオプションのチェックが外れているとき、セルの中身がカラムの幅を超えていた場合、収まりきらない部分は表示されず、エリプシスも表示されません:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_truncate2.png" alt=""></p></li>
+</ul>
+<p>エリプシスで省略オプションはデフォルトではチェックされており、配列、セレクション、コレクション型のリストボックスに対して指定可能です。</p>
+<blockquote>
+<p>テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは <a href="#ワードラップ">ワードラップ</a> オプションがチェックされていない場合にのみ使用可能です。 ワードラップオプションがチェックされていた場合、セル内を超えたコンテンツについてはワードラップ機能によって管理されますので、エリプシスで省略オプションは使用できません。</p>
+</blockquote>
+<p>エリプシスで省略オプションはブール型のカラムに対しても適用可能です。しかしながら、<a href="#表示タイプ">セルのフォーマット</a>によって表示される結果は異なります:</p>
+<ul>
+<li>表示タイプがポップアップに設定されている場合は、エリプシスでラベルが省略されます。</li>
+<li>表示タイプがチェックボックスに設定されている場合は、ラベルは常に見切れます (エリプシスで省略されません)。</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-10"></a><a href="#json-文法-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>truncateMode</td><td>string</td><td>&quot;withEllipsis&quot;, &quot;none&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-10"></a><a href="#対象オブジェクト-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスヘッダー">リストボックスヘッダー</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="表示状態"></a><a href="#表示状態" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>表示状態</h2>
+<p>このプロパティが選択されていると、アプリケーションモードでオブジェクトがデフォルトで非表示になります。</p>
+<p>大部分のオブジェクトに対して、表示状態プロパティを指定することができます。 このプロパティを使用すると、ダイナミックなインターフェースを容易に開発できるようになります。 インターフェースを開発するとき、多くの場合はフォームの <code>On Load</code> イベント中にプログラムからオブジェクトを非表示にした後で、一部のオブジェクトを再度表示する必要性が頻繁に生じます。 表示状態プロパティを使用すると、特定オブジェクトをあらかじめ非表示にしておくことにより、このロジックを逆に働かせることができます。 この後、状況に応じて <code>OBJECT SET VISIBLE</code> コマンドを使用し、これらのオブジェクトを表示するようプログラミングすることができます。</p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-11"></a><a href="#json-文法-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>visibility</td><td>string</td><td>&quot;visible&quot;, &quot;hidden&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-11"></a><a href="#対象オブジェクト-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/viewProAreaOverview.html">4D View Pro エリア</a> - <a href="/docs/19/ja/FormObjects/writeProAreaOverview.html">4D Write Pro エリア</a> - <a href="/docs/19/ja/FormObjects/buttonOverview.html">ボタン</a> - <a href="/docs/19/ja/FormObjects/buttonGridOverview.html">ボタングリッド</a> - <a href="/docs/19/ja/FormObjects/checkboxOverview.html">チェックボックス</a> - <a href="/docs/19/ja/FormObjects/comboBoxOverview.html">コンボボックス</a> - <a href="/docs/19/ja/FormObjects/dropdownListOverview.html">ドロップダウンリスト</a> - <a href="/docs/19/ja/FormObjects/groupBox.html">グループボックス</a> - <a href="/docs/19/ja/FormObjects/listOverview.html">階層リスト</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html">リストボックス</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスヘッダー">リストボックスヘッダー</a> - <a href="/docs/19/ja/FormObjects/pictureButtonOverview.html">ピクチャーボタン</a> - <a href="/docs/19/ja/FormObjects/picturePopupMenuOverview.html">ピクチャーポップアップメニュー</a> - <a href="/docs/19/ja/FormObjects/pluginAreaOverview.html">プラグインエリア</a> - <a href="/docs/19/ja/FormObjects/progressIndicator.html">進捗インジケーター</a> - <a href="/docs/19/ja/FormObjects/radiobuttonOverview.html">ラジオボタン</a> - <a href="/docs/19/ja/FormObjects/spinner.html">スピナー</a> - <a href="/docs/19/ja/FormObjects/splitters.html">スプリッター</a> - <a href="/docs/19/ja/FormObjects/staticPicture.html">スタティックピクチャー</a> - <a href="/docs/19/ja/FormObjects/stepper.html">ステッパー</a> - <a href="/docs/19/ja/FormObjects/subformOverview.html">サブフォーム</a> - <a href="/docs/19/ja/FormObjects/tabControl.html">タブコントロール</a> - <a href="/docs/19/ja/FormObjects/text.html">テキストエリア</a> - <a href="/docs/19/ja/FormObjects/webAreaOverview.html">Web エリア</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="ワードラップ"></a><a href="#ワードラップ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ワードラップ</h2>
+<blockquote>
+<p><a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> オブジェクトにおいては、<a href="/docs/19/ja/FormObjects/propertiesEntry.html#複数行">複数行</a> プロパティが &quot;はい&quot;に設定されている場合にのみ、このプロパティは表示されます。</p>
+</blockquote>
+<p>このオプションは、表示する内容がオブジェクトの幅を超えたときの表示を管理します。</p>
+<h4><a class="anchor" aria-hidden="true" id="リストボックスにてチェック--入力オブジェクトで-はい-に設定"></a><a href="#リストボックスにてチェック--入力オブジェクトで-はい-に設定" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>リストボックスにてチェック / 入力オブジェクトで &quot;はい&quot; に設定</h4>
+<p><code>JSON 文法では: &quot;normal&quot;</code></p>
+<p>このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。</p>
+<ul>
+<li><p>一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。下矢印キーを押すことで、エリアの内容をスクロールできます。</p></li>
+<li><p>複数行のカラムやエリアの場合、4Dは自動改行を実行します。</p></li>
+</ul>
+<p><img src="/docs/19/assets/en/FormObjects/wordwrap2.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="リストボックスにてチェックなし--入力オブジェクトで-いいえ-に設定"></a><a href="#リストボックスにてチェックなし--入力オブジェクトで-いいえ-に設定" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>リストボックスにてチェックなし / 入力オブジェクトで &quot;いいえ&quot; に設定</h4>
+<p><code>JSON 文法では: &quot;none&quot;</code></p>
+<p>このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:</p>
+<p><img src="/docs/19/assets/en/FormObjects/wordwrap3.png" alt=""></p>
+<p>リストボックスの場合、長すぎるテキストは切り落とされ、省略記号 (...) が表示されます。 以下の例では、左の列ではワードラップのオプションがチェックされていて、右の列ではされていません:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_wordwrap1.png" alt=""></p>
+<p>ワードラップの オプションの値に関わらず、行の高さは変化しないことに注意してください。 改行を含むテキストがカラムの中に表示しきれないとき、表示しきれない部分は 切り落とされ、省略記号も表示されません。 単一の行を表示するリストボックスの場合、テキストの最初の行のみ表示されます:</p>
+<p><img src="/docs/19/assets/en/FormObjects/property_wordwrap2.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="入力オブジェクトで-自動-に設定-デフォルト"></a><a href="#入力オブジェクトで-自動-に設定-デフォルト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>入力オブジェクトで &quot;自動&quot; に設定 (デフォルト)</h4>
+<p><code>JSON 文法では: &quot;automatic&quot;</code></p>
+<ul>
+<li>一行のエリアの場合、行の最後に表示される単語は切り落とされ、改行はされません。</li>
+<li>複数行のエリアの場合、4Dは自動改行を実行します。</li>
+</ul>
+<p><img src="/docs/19/assets/en/FormObjects/wordwrap1.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="json-文法-12"></a><a href="#json-文法-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
+<table>
+<thead>
+<tr><th>名</th><th>データタイプ</th><th>とりうる値</th></tr>
+</thead>
+<tbody>
+<tr><td>wordwrap</td><td>string</td><td>&quot;automatic&quot; (リストボックスを除く), &quot;normal&quot;, &quot;none&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="対象オブジェクト-12"></a><a href="#対象オブジェクト-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>対象オブジェクト</h4>
+<p><a href="/docs/19/ja/FormObjects/inputOverview.html">入力</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックス列">リストボックス列</a> - <a href="/docs/19/ja/FormObjects/listboxOverview.html#リストボックスフッター">リストボックスフッター</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/ja/FormObjects/propertiesDataSource.html"><span class="arrow-prev">← </span><span>データソース</span></a><a class="docs-next button" href="/docs/19/ja/FormObjects/propertiesEntry.html"><span>入力</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#文字フォ－マット">文字フォ－マット</a></li><li><a href="#日付フォーマット">日付フォーマット</a></li><li><a href="#数値フォーマット">数値フォーマット</a><ul class="toc-headings"><li><a href="#プレースホルダー">プレースホルダー</a></li><li><a href="#区切り文字">区切り文字</a></li><li><a href="#小数点とその他の表示文字">小数点とその他の表示文字</a></li><li><a href="#正数、負数、ゼロのフォーマット">正数、負数、ゼロのフォーマット</a></li><li><a href="#科学的記数法">科学的記数法</a></li><li><a href="#16進フォーマット">16進フォーマット</a></li><li><a href="#xml記法">XML記法</a></li><li><a href="#数値を時間として表示する">数値を時間として表示する</a></li><li><a href="#例題">例題</a></li></ul></li><li><a href="#ピクチャーフォーマット">ピクチャーフォーマット</a><ul class="toc-headings"><li><a href="#スケーリング">スケーリング</a></li><li><a href="#トランケート-中央合わせ中央合わせしない">トランケート (中央合わせ/中央合わせしない)</a></li><li><a href="#スケーリング-プロポーショナル-とスケーリング-中央合わせ・プロポーショナル">スケーリング (プロポーショナル) とスケーリング (中央合わせ・プロポーショナル)</a></li><li><a href="#繰り返し">繰り返し</a></li></ul></li><li><a href="#時間フォーマット">時間フォーマット</a></li><li><a href="#テキスト-true時テキスト-false時">テキスト (True時)/テキスト (False時)</a></li><li><a href="#表示タイプ">表示タイプ</a></li><li><a href="#レンダリングしない">レンダリングしない</a></li><li><a href="#スリーステート">スリーステート</a></li><li><a href="#タイトル">タイトル</a></li><li><a href="#エリプシスを使用して省略">エリプシスを使用して省略</a></li><li><a href="#表示状態">表示状態</a></li><li><a href="#ワードラップ">ワードラップ</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:ja","version:19"]}
+              });
+            </script></body></html>
