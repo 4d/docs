@@ -41,11 +41,11 @@ Webページキャッシュの有効化と設定をおこないます。
 
 Webサーバー用の TLS証明書ファイルが置かれているフォルダーです。
 
-By default with 4D or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder).
+4D または 4D Server のデフォルトでは、これらのファイルは[Project フォルダー](Project/architecture.md#project-フォルダー) の隣に配置する必要があります。
 
-With 4D in remote mode, these files must be located in the local resources folder of the database on the remote machine (see `4D Client Database Folder` paragraph of the `Get 4D folder` command). You must copy these files manually on the remote machine.
+4D をリモートモードで使用する場合、これらのファイルは、リモートマシン上のデータベースのローカルリソースフォルダーに配置されている必要があります (`Get 4D folder` コマンドの `4D Client Database Folder` の項を参照ください)。 これらのファイルをリモートマシンに手動でコピーする必要があります。
 
-> TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
+> TLS 証明書ファイルは、*key.pem* (秘密の暗号鍵を含むドキュメント) と *cert.pem* (証明書を含むドキュメント) です。
 
 
 ## Character Set
