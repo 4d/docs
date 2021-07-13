@@ -31,90 +31,90 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 Additional properties are returned when the event occurs on specific objects. En particular:
 
 - Los [list box](FormObjects/listbox_overview.md#supported-form-events) y las [columnas de list box](FormObjects/listbox_overview.md#supported-form-events-1) devuelven las [propiedades adicionales](FormObjects/listbox_overview.md#additional-properties) tales como `columnName` o `isRowSelected`.
-- [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
+- Las [áreas de View Pro](FormObjects/viewProArea_overview.md) devuelven por ejemplo las propiedades `sheetName` o `action` en el objeto evento [On After Edit](onAfterEdit.md).
 
 
-## Events and Methods
+## Eventos y métodos
 
-When a form event occurs, 4D performs the following actions:
+Cuando se produce un evento formulario, 4D realiza las siguientes acciones:
 
-- First, it browses the objects of the form and calls the object method for any object (involved in the event) whose corresponding object event property has been selected.
-- Second, it calls the form method if the corresponding form event property has been selected.
+- En primer lugar, explora los objetos del formulario y llama al método objeto para todo objeto (asociado al evento) cuya propiedad de evento de objeto correspondiente haya sido seleccionada.
+- Luego, llama al método formulario si la propiedad del evento formulario correspondiente ha sido seleccionada.
 
-Do not assume that the object methods, if any, will be called in a particular order. The rule of thumb is that the object methods are always called before the form method. If an object is a subform, the object methods of the subform’s list form are called, then the form method of the list form is called. 4D then continues to call the object methods of the parent form. In other words, when an object is a subform, 4D uses the same rule of thumb for the object and form methods within the subform object.
+No asuma que los métodos objeto, si los hay, serán llamados en un orden particular. La regla general es que los métodos objeto siempre se llaman antes que el método formulario. Si un objeto es un subformulario, se llaman los métodos objeto del formulario lista del subformulario, y luego se llama al método formulario del formulario listado. 4D continúa llamando a los métodos objeto del formulario padre. En otras palabras, cuando un objeto es un subformulario, 4D utiliza la misma regla general para los métodos objeto y formulario dentro del objeto subformulario.
 
-Except for the [On Load](onLoad.md) and [On Unload](onUnload.md) events (see below), if the form event property is not selected for a given event, this does not prevent calls to object methods for the objects whose same event property is selected. In other words, enabling or disabling an event at the form level has no effect on the object event properties.
+Excepto en los eventos [En carga](onLoad.md) y [En descarga](onUnload.md) (ver más abajo), si la propiedad del evento formulario no está seleccionada para un evento determinado, esto no impide las llamadas a los métodos objetos cuya misma propiedad de evento está seleccionada. En otras palabras, la activación o desactivación de un evento a nivel de formulario no tiene ningún efecto sobre las propiedades del evento del objeto.
 
-The number of objects involved in an event depends on the nature of the event.
+El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
-## Call Table
+## Tabla de llamadas
 
-The following table summarizes how object and form methods are called for each event type:
+La tabla siguiente resume la forma en que se llaman los métodos objeto y formulario para cada tipo de evento:
 
-| Event                    | Object Methods                      | Form Method | Which Objects          |
-| ------------------------ | ----------------------------------- | ----------- | ---------------------- |
-| On Load                  | Sí                                  | Sí          | All objects            |
-| On Unload                | Sí                                  | Sí          | All objects            |
-| On Validate              | Sí                                  | Sí          | All objects            |
-| On Clicked               | Sí                                  | Sí          | Involved object only   |
-| On Double Clicked        | Sí                                  | Sí          | Involved object only   |
-| On Before Keystroke      | Sí                                  | Sí          | Involved object only   |
-| On After Keystroke       | Sí                                  | Sí          | Involved object only   |
-| On After Edit            | Sí                                  | Sí          | Involved object only   |
-| On Getting Focus         | Sí                                  | Sí          | Involved object only   |
-| On Losing Focus          | Sí                                  | Sí          | Involved object only   |
-| On Activate              | Never                               | Sí          | None                   |
-| On Deactivate            | Never                               | Sí          | None                   |
-| On Outside Call          | Never                               | Sí          | None                   |
-| On Page Change           | Never                               | Sí          | None                   |
-| On Begin Drag Over       | Sí                                  | Sí          | Involved object only   |
-| On Drop                  | Sí                                  | Sí          | Involved object only   |
-| On Drag Over             | Sí                                  | Never       | Involved object only   |
-| On Mouse Enter           | Sí                                  | Sí          | All objects            |
-| On Mouse Move            | Sí                                  | Sí          | All objects            |
-| On Mouse Leave           | Sí                                  | Sí          | All objects            |
-| On Mouse Up              | Sí                                  | Never       | Involved object only   |
-| On Menu Selected         | Never                               | Sí          | None                   |
-| On Bound variable change | Never                               | Sí          | None                   |
-| On Data Change           | Sí                                  | Sí          | Involved object only   |
-| On Plug in Area          | Sí                                  | Sí          | Involved object only   |
-| On Header                | Sí                                  | Sí          | All objects            |
-| On Printing Detail       | Sí                                  | Sí          | All objects            |
-| On Printing Break        | Sí                                  | Sí          | All objects            |
-| On Printing Footer       | Sí                                  | Sí          | All objects            |
-| On Close Box             | Never                               | Sí          | None                   |
-| On Display Detail        | Sí                                  | Sí          | All objects            |
-| On Open Detail           | Yes (List box)                      | Sí          | None except List boxes |
-| On Close Detail          | Yes (List box)                      | Sí          | None except List boxes |
-| On Resize                | Never                               | Sí          | None                   |
-| On Selection Change      | Sí                                  | Sí          | Involved object only   |
-| On Load Record           | Never                               | Sí          | None                   |
-| On Timer                 | Never                               | Sí          | None                   |
-| On Scroll                | Sí                                  | Never       | Involved object only   |
-| On Before Data Entry     | Yes (List box)                      | Never       | Involved object only   |
-| On Column Moved          | Yes (List box)                      | Never       | Involved object only   |
-| On Row Moved             | Yes (List box)                      | Never       | Involved object only   |
-| On Column Resize         | Yes (List box and 4D View Pro Area) | Never       | Involved object only   |
-| On Header Click          | Yes (List box and 4D View Pro Area) | Never       | Involved object only   |
-| On Footer Click          | Yes (List box)                      | Never       | Involved object only   |
-| On After Sort            | Yes (List box)                      | Never       | Involved object only   |
-| On Long Click            | Yes (Button)                        | Sí          | Involved object only   |
-| On Alternative Click     | Yes (Button and List box)           | Never       | Involved object only   |
-| On Expand                | Yes (Hier. list and list box)       | Never       | Involved object only   |
-| On Collapse              | Yes (Hier. list and list box)       | Never       | Involved object only   |
-| On Delete Action         | Yes (Hier. list and list box)       | Never       | Involved object only   |
-| On URL Resource Loading  | Yes (Web Area)                      | Never       | Involved object only   |
-| On Begin URL Loading     | Yes (Web Area)                      | Never       | Involved object only   |
-| On URL Loading Error     | Yes (Web Area)                      | Never       | Involved object only   |
-| On URL Filtering         | Yes (Web Area)                      | Never       | Involved object only   |
-| On End URL Loading       | Yes (Web Area)                      | Never       | Involved object only   |
-| On Open External Link    | Yes (Web Area)                      | Never       | Involved object only   |
-| On Window Opening Denied | Yes (Web Area)                      | Never       | Involved object only   |
-| On VP Range Changed      | Yes (4D View Pro Area)              | Never       | Involved object only   |
-| On VP Ready              | Yes (4D View Pro Area)              | Never       | Involved object only   |
-| On Row Resize            | Yes (4D View Pro Area)              | Never       | Involved object only   |
+| Evento                   | Método objeto                    | Método formulario | Objetos                         |
+| ------------------------ | -------------------------------- | ----------------- | ------------------------------- |
+| On Load                  | Sí                               | Sí                | Todos los objetos               |
+| On Unload                | Sí                               | Sí                | Todos los objetos               |
+| On Validate              | Sí                               | Sí                | Todos los objetos               |
+| On Clicked               | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Double Clicked        | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Before Keystroke      | Sí                               | Sí                | Objetos involucrados únicamente |
+| On After Keystroke       | Sí                               | Sí                | Objetos involucrados únicamente |
+| On After Edit            | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Getting Focus         | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Losing Focus          | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Activate              | Nunca                            | Sí                | Ninguno                         |
+| On Deactivate            | Nunca                            | Sí                | Ninguno                         |
+| On Outside Call          | Nunca                            | Sí                | Ninguno                         |
+| On Page Change           | Nunca                            | Sí                | Ninguno                         |
+| On Begin Drag Over       | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Drop                  | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Drag Over             | Sí                               | Nunca             | Objetos involucrados únicamente |
+| On Mouse Enter           | Sí                               | Sí                | Todos los objetos               |
+| On Mouse Move            | Sí                               | Sí                | Todos los objetos               |
+| On Mouse Leave           | Sí                               | Sí                | Todos los objetos               |
+| On Mouse Up              | Sí                               | Nunca             | Objetos involucrados únicamente |
+| On Menu Selected         | Nunca                            | Sí                | Ninguno                         |
+| On Bound variable change | Nunca                            | Sí                | Ninguno                         |
+| On Data Change           | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Plug in Area          | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Header                | Sí                               | Sí                | Todos los objetos               |
+| On Printing Detail       | Sí                               | Sí                | Todos los objetos               |
+| On Printing Break        | Sí                               | Sí                | Todos los objetos               |
+| On Printing Footer       | Sí                               | Sí                | Todos los objetos               |
+| On Close Box             | Nunca                            | Sí                | Ninguno                         |
+| On Display Detail        | Sí                               | Sí                | Todos los objetos               |
+| On Open Detail           | Sí (List box)                    | Sí                | Ninguna, excepto los list box   |
+| On Close Detail          | Sí (List box)                    | Sí                | Ninguna, excepto los list box   |
+| On Resize                | Nunca                            | Sí                | Ninguno                         |
+| On Selection Change      | Sí                               | Sí                | Objetos involucrados únicamente |
+| On Load Record           | Nunca                            | Sí                | Ninguno                         |
+| On Timer                 | Nunca                            | Sí                | Ninguno                         |
+| On Scroll                | Sí                               | Nunca             | Objetos involucrados únicamente |
+| On Before Data Entry     | Sí (List box)                    | Nunca             | Objetos involucrados únicamente |
+| On Column Moved          | Sí (List box)                    | Nunca             | Objetos involucrados únicamente |
+| On Row Moved             | Sí (List box)                    | Nunca             | Objetos involucrados únicamente |
+| On Column Resize         | Sí (List box y Área 4D View Pro) | Nunca             | Objetos involucrados únicamente |
+| On Header Click          | Sí (List box y Área 4D View Pro) | Nunca             | Objetos involucrados únicamente |
+| On Footer Click          | Sí (List box)                    | Nunca             | Objetos involucrados únicamente |
+| On After Sort            | Sí (List box)                    | Nunca             | Objetos involucrados únicamente |
+| On Long Click            | Sí (botón)                       | Sí                | Objetos involucrados únicamente |
+| On Alternative Click     | Sí (Botón y List box)            | Nunca             | Objetos involucrados únicamente |
+| On Expand                | Sí (Lista jerarq. y list box)    | Nunca             | Objetos involucrados únicamente |
+| On Collapse              | Sí (Lista jerarq. y list box)    | Nunca             | Objetos involucrados únicamente |
+| On Delete Action         | Sí (Lista jerarq. y list box)    | Nunca             | Objetos involucrados únicamente |
+| On URL Resource Loading  | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On Begin URL Loading     | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On URL Loading Error     | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On URL Filtering         | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On End URL Loading       | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On Open External Link    | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On Window Opening Denied | Sí (Área Web)                    | Nunca             | Objetos involucrados únicamente |
+| On VP Range Changed      | Sí (Área 4D View Pro)            | Nunca             | Objetos involucrados únicamente |
+| On VP Ready              | Sí (Área 4D View Pro)            | Nunca             | Objetos involucrados únicamente |
+| On Row Resize            | Sí (Área 4D View Pro)            | Nunca             | Objetos involucrados únicamente |
 
-Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
+Tenga siempre en cuenta que, para todo evento, se llama al método de un formulario o de un objeto si se selecciona la correspondiente propiedad del evento para el formulario o los objetos. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
 
 > WARNING: The [On Load](onLoad) and [On Unload](onUnloas) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.
 
