@@ -75,7 +75,7 @@ The **Watch** page (**Web** heading) in the Runtime Explorer displays web server
 
 
 
-## Administration URLs
+## 管理用 URL
 
 Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
 
