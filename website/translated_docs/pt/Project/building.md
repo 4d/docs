@@ -37,7 +37,7 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 ### Build application settings
 
-Cada parámetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada "buildApp.4DSettings", localizado na pasta  Settings do banco de dados.
+Cada parâmetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada "buildApp.4DSettings", localizado na pasta  Settings do banco de dados.
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
@@ -124,7 +124,7 @@ Pode definir um arquivo de dados por padrão ou permitir aos usuários criar e u
 
 Para gerar uma aplicação autônoma, primeiro deve designar a pasta que contém o arquivo 4D Volume Desktop:
 
-*   *Windows* - a pasta contém os arquivos 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, assim como vários arquivos e pastas necessários para seu funcionamento. Estes elementos devem sern colocados no mesmo nível que a pasta selecionada.
+*   *Windows* - a pasta contém os arquivos 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, assim como vários arquivos e pastas necessários para seu funcionamento. Estes elementos devem ser colocados no mesmo nível que a pasta selecionada.
 *   *macOS* - 4D Volume Desktop é fornecida na forma de um pacote de software estruturado que contém vários arquivos e pastas genéricas.
 
 Para selecionar a pasta de 4D Volume Desktop, clique no botão **[...]**. Aparece uma caixa de diálogo que lhe permite determinar a pasta (Windows) ou o pacote (macOS) de 4D Volume Desktop.
@@ -171,45 +171,45 @@ Quando construir uma aplicação Independente, 4D copia o conteúdo da pasta 4D 
 *   Install a 4D Volume Desktop version corresponding to a specific language;
 *   Add a custom *PlugIns* folder;
 *   Customize the contents of the *Resources* folder.
-> In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
+> In macOS, 4D Volume Desktop is provided in the form of a software package. Para modificá-lo, primeiro precisa exibir seu conteúdo (**Control+clique** no ícone).
 
 
-#### Location of Web files
+#### Localização dos arquivos web
 
-If your stand-alone application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+Se sua aplicação executável for usada como servidor web, os arquivos e pastas requeridos pelo servidor devem ser instalados em locais  específicas. Estes elementos são os seguintes:
 
-*   *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-*   default Web root folder.
+*   *arquivoscert.pem* e *key.pem* (opcional): Estes arquivos se utilizam para as conexões SSL e pelos comandos de criptografia de dados,.
+* Marcador="*" level="0" spaces="0" spaces-after-marker="2"> pasta raiz da web padrão..
 
-Items must be installed:
+Os elementos devem estar instalados:
 
-- **on Windows**: in the *Final Application\MyProject\Database* subfolder.
-- **on macOS**: next to the *MyProject.app* software package.
-
-
+- **em Windows**: na subpasta *Aplicação final*..
+- **em macOS**: junto ao pacote de software *MyProject.app*.
 
 
 
-## Client/Server page
 
-On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
+
+## Página de cliente/servidor
+
+Nesta aba podem ser construídas aplicações cliente-servidor personalizadas, homogêneas, multiplataforma e com opção de atualização automática.
 
 ![](assets/en/Project/buildappCSProj.png)
 
-### What is a Client/Server application?
+### O que é uma aplicação Cliente/Servidor?
 
-A client/server application comes from the combination of three items:
+Uma aplicação cliente/servidor surge da combinação de três elementos:
 
-- A compiled 4D database,
-- The 4D Server application,
-- The 4D Volume Desktop application (macOS and/or Windows).
+- Um banco de dados compilado em 4D,
+- A aplicação 4D Server,
+- Marcador="-" level="0" spaces="0" spaces-after-marker="0">A aplicação 4D Volume Desktop (macOS ou Windows)..
 
-Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).
+Depois de construída, uma aplicação cliente/servidor é composta de duas partes personalizadas: a parte Servidor (única) e a parte Cliente (para instalar em cada máquina cliente).
 
-Also, the client/server application is customized and its handling simplified:
+Também se personaliza a aplicação cliente/servidor e se simplifica seu manejo:
 
-- To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
+- Para lançar a parte de servidor, o usuário simplesmente dá duplo clique na aplicação do servidor. Não é necessário selecionar o banco de dados.
+- Para lançar a parte cliente, o usuário simplesmente dá duplo clique na aplicação cliente, que se conecta diretamente à aplicação servidor. Não é necessário escolher um banco de dados em uma caixa de diálogo de conexão. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
 - It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
