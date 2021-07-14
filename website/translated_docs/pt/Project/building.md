@@ -209,46 +209,46 @@ Depois de construída, uma aplicação cliente/servidor é composta de duas part
 Também se personaliza a aplicação cliente/servidor e se simplifica seu manejo:
 
 - Para lançar a parte de servidor, o usuário simplesmente dá duplo clique na aplicação do servidor. Não é necessário selecionar o banco de dados.
-- Para lançar a parte cliente, o usuário simplesmente dá duplo clique na aplicação cliente, que se conecta diretamente à aplicação servidor. Não é necessário escolher um banco de dados em uma caixa de diálogo de conexão. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
-- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
-- It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
+- Para lançar a parte cliente, o usuário simplesmente dá duplo clique na aplicação cliente, que se conecta diretamente à aplicação servidor. Não é necessário escolher um banco de dados em uma caixa de diálogo de conexão. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. Se um usuário tentar se conectar com a parte servidor utilizando uma aplicação 4D padrão, se devolve uma mensagem de erro e a conexão é impossível.
+- Se pode configurar uma aplicação cliente/servidor para que a parte cliente [se atualize automaticamente através da rede](#copy-of-client-applications-in-the-server-application).
+- Também é possível automatizar a atualização da parte servidor mediante o uso de uma sequência de comandos da linguagem ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) e [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
 
 
-### Build server application
+### Construir aplicação de servidor
 
-Check this option to generate the server part of your application during the building phase. You must designate the location on your disk of the 4D Server application to be used. This 4D Server must correspond to the current platform (which will also be the platform of the server application).
+Marque esta opção para gerar a parte de servidor de sua aplicação durante a fase de construção. You must designate the location on your disk of the 4D Server application to be used. Este 4D Server deve corresponder a plataforma atual (que também será a plataforma da aplicação do servidor).
 
-#### 4D Server location
+#### Local de 4D Server
 
-Click on the **[...]** button and use the *Browse for folder* dialog box to locate the 4D Server application. In macOS, you must select the 4D Server package directly.
+Clique no botão **[...]** e utilize a caixa de diálogo *Buscar pasta* para localizar a aplicação 4D Server. Em macOS, deve selecionar o pacote de 4D Server diretamente.
 
-#### Current version
+#### Versão atual
 
-Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
+Se utiliza para indicar o número de versão atual da aplicação gerada. You may then accept or reject connections by client applications according to their version number. O intervalo de compatibilidade das aplicações clientes e servidor se define mediante [chaves XML](#build-application-settings)).
 
-#### Data linking mode
+#### Modo de link de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Existem dois modos de vinculação de dados:
+Esta opção permite escolher o modo de vinculação entre a aplicação fusionada e o arquivo de dados local. Existem dois modos de vinculação de dados:
 
 *   **Por nome da aplicação** (como padrão) - a aplicação 4D abre automaticamente o último arquivo de dados aberto correspondente ao arquivo de estrutura. This allows you to move the application package freely on the disk. Esta opção deve ser utilizada geralmente para as aplicações fusionadas, a menos que necessite especificamente duplicar a aplicação.
 
-*   **Rota da aplicação** - a aplicação 4D fusionada analisará o arquivo *lastDataPath. xml* e tentará abrir o arquivo de dados com um atributo "executablePath" que coincida com a rota completa da aplicação. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
+*   **Rota da aplicação** - a aplicação 4D fusionada analisará o arquivo *lastDataPath. xml* e tentará abrir o arquivo de dados com um atributo "executablePath" que coincida com a rota completa da aplicação. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Caso contrario, se abrirá o último arquivo de dados aberto (modo padrão).
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
+Para mais informação sobre o modo de vinculação de dados, consulte [Último arquivo de dados aberto.](#last-data-file-opened)
 
 
-### Build client application
+### Construir aplicação cliente
 
-Checking this option generates the client part of your application during the building phase.
+Marcando esta opção se gera a parte cliente de sua aplicação durante a fase de construção.
 
 #### 4D Volume Desktop
 
-You must designate the location on your disk of the 4D Volume Desktop application to be used. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. For more information about this point, see [Customizing 4D Server and/or 4D Client folders](#customizing-4d-server-and-or-4d-client-folders).
+Deve determinar o local em seu disco da aplicação 4D Volume Desktop a utilizar. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. Para mais informação sobre este ponto, consulte [Personalizar as pastas 4D Server ou 4D Client](#customizing-4d-server-and-or-4d-client-folders).
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
+> O número de versão de 4D Volume Desktop deve coincidir com o número de versão de 4D Developer Edition. Por exemplo, si utiliza 4D Developer v18, deve selecionar um 4D Volume Desktop v18.
 
-If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+Se quiser que a aplicação cliente se conecte ao servidor utilizando um local específico (distinto do nome de servidor publicado na subrede), deve utilizar a chave XML `IPAddress` no arquivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
 
 #### Copy of client applications in the server application
 
