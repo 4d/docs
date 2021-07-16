@@ -3,62 +3,62 @@ id: backup
 title: Backup
 ---
 
-A backup can be started in three ways:
+Uma cópia de segurança pode ser iniciada de três maneiras:
 
-- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
-- Automatically, using the scheduler that can be set in the Settings,
-- Programmatically, using the `BACKUP` command.
+- Manualmente, utilizando o comando **Cópia de segurança...** do menu 4D **Arquivo** ou o botão **Cópia de segurança** de [Centro de manutenção e segurança](MSC/backup.md).
+- Automaticamente, usando o agendamento  que pode ser estabelecido em Configurações
+- Por programação, utilizando o comando `BACKUP`.
 
-> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
+> 4D Server: é possível iniciar uma cópia de segurança manualmente desde uma máquina remota mediante um método que chama ao comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
 ## Manual backup
 
-1. Select the **Backup...** command in the 4D **File** menu.   
-   The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
+1. Selecione o comando **Backup...** no menu 4D **Arquivo**.   
+   Aparece a janela de cópia de segurança: ![](assets/en/Backup/backup01.png) Pode ver a localização da pasta da cópia de segurança mediante o menu emergente situado junto à área "Destino da cópia de segurança". Esta localização é definida na página **Cópia de segurança/configuração** das Propriedades do banco de dados.
 
-- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
+- Também pode abrir o [Centro de manutenção e segurança](MSC/overview.md) de 4D e mostrar a [página de cópias de segurança](MSC/backup.md).
 
-The **Database properties...** button causes the Backup/Configuration page of the Structure Settings to be displayed.
+O botão **Propriedades de Banco de Dados...** faz com que seja exibida a página Backup/Configuration das Configurações de Estrutura.
 
- 2. Click **Backup** to start the backup using current parameters.
+ 2. Clique em **Backup/Cópia de segurança** para iniciar a cópia de segurança utilizando os parâmetros atuais.
 
 
 ## Backup automático periódico
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
+As cópias de segurança programadas são iniciadas automaticamente. São configurados na página **Backup/Scheduler** na página **Configurações**.
 
-Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
+As cópias de segurança são feitas automaticamente na hora definida nessa página sem nenhum tipo de intervenção do usuário. Para saber mais sobre o uso desta caixa de diálogo, consulte [Definir as cópias de segurança periódicas](settings.md#scheduler).
 
 
 ## Comando BACKUP
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
+Quando o comando `BACKUP` da linguagem 4D for executado desde um método, a cópia de segurança se inicia utilizando os parâmetros atuais definidos nas propriedades. Pode utilizar os métodos `On Backup Startup` e `On Backup Shutdown` para controlar o processo de cópia de segurança (consulte o manual *Linguagem, de 4D*).
 
 
 ## Gerenciar o processo de  backup
 
-Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
+Quando iniciar o backup, 4D exibe uma caixa de diálogo com um termômetro indicando o progresso da cópia de segurança:
 
 ![](assets/en/Backup/backupProgress.png)
 
-This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
+Esse termômetro também é mostrado na página [Backup de CSM](MSC/backup.md) se utilizou esta caixa de diálogo.
 
-The **Stop** button lets the user interrupt the backup at any time (refer to [Handling backup issues](backup.md#handling-backup-issues) below).
+O botão **Parar** permite ao usuário interromper a cópia de segurança em qualquer momento (consulte [Manejar os problemas da cópia de segurança](backup.md#handling-backup-issues) mais adiante).
 
-The status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server. It is also recorded in the database **Backup journal.txt**.
+O estado da última cópia de segurança (correta ou com erro) é armazenada na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server. Também se registra no banco de dados **Backup journal.txt**.
 
-### Accessing the application during backup
+### Acesso da aplicação durante o backup
 
-During a backup, access to the application is restricted by 4D according to the context. 4D locks any processes related to the types of files included in the backup: if only the project files are being backed up, access to the structure is not possible but access to the data will be allowed.
+Durante a cópia de segurança, acesso à aplicação é restrito por 4D dependendo do contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
 
-Conversely, if only the data file is being backed up, access to the structure is still allowed. In this case, the application access possibilities are as follows:
+Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Nesse caso, as possibilidades de acesso à aplicação são as seguintes:
 
-- With the 4D single-user version, the application is locked for both read and write; all processes are frozen. No actions can be performed.
-- With 4D Server, the application is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the application is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the data. > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
+- Com a versão 4D monousuário, a aplicação é trancada tanto para leitura quanto escrita, todos os processos são congelados. Nenhuma ação é realizada.
+- Com 4D Server, a aplicação está bloqueada só para escrita; as máquinas clientes podem ver os dados. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Quando a aplicação for salva, a janela desaparece a ação é realizada. Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Além disso, um método parcialmente executado pode causar inconsistências lógicas nos dados. > Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executardo porque a copia de segurança está em progresso).
 
 ### Gestão dos problemas das cópias de segurança
 
-It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
+Pode acontecer que uma cópia de segurança não seja executada corretamente. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
 
 In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the **Backup journal.txt**.
 
