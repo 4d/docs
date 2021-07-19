@@ -96,7 +96,7 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //llenar el array con los elementos a contar
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
@@ -104,7 +104,7 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  //Crear procesos
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
   //$inventory object sent by reference
