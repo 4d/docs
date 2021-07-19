@@ -15,7 +15,7 @@ Las variables se crean declarándolas mediante uno de los comandos de los temas 
 
 **Nota:**los arrays son un tipo particular de variables. Un array es una serie ordenada de variables del mismo tipo. Para más información, consulte [Arrays](Concepts/arrays.md).
 
-For example, if you want to define a text variable, you write:
+Por ejemplo, si se quiere definir una variable de tipo texto, se escribe:
 
 ```4d
  C_TEXT(myText)
@@ -33,7 +33,7 @@ Una vez creada, puede utilizar una variable en el lugar que necesite en su base 
  [MyTable]MyField:=MyText
 ```
 
-The following are some basic variable declarations:
+A continuación se presentan algunas declaraciones de variables básicas:
 
 ```4d
 
@@ -73,19 +73,19 @@ atNames{1}:="Richard"
 
 ## Variables locales, proceso e interproceso
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+Puedes crear tres tipos de variables: **local**, **proceso**, e **interproceso**. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
 
 ### Variables locales
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Una variable local, como su nombre indica, es local a un método, accesible sólo dentro del método en el que fue creada y no accesible fuera de ese método. Ser local a un método se conoce formalmente como ser de "alcance local." Las variables locales se utilizan para restringir una variable para que funcione sólo dentro del método.
 
 Es posible que desee utilizar una variable local para:
 
 - Evitar conflictos con los nombres de otras variables
 - Utilizar los datos temporalmente
-- Reduce the number of process variables
+- Reducir el número de variables proceso
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+El nombre de una variable local siempre comienza por el signo dólar ($) y puede contener hasta 31 caracteres adicionales. Si introduce un nombre más largo, 4D lo trunca a la longitud adecuada.
 
 Cuando se trabaja en una base con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
