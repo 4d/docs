@@ -66,9 +66,9 @@ Returns information about all of your project's dataclasses and their attributes
 
 ### Descripción
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
+Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+Para más información sobre lo que se devuelve para cada clase de datos y sus atributos, utilice [`$catalog/{dataClass}`](#catalogdataClass).
 
 
 ### Ejemplo
@@ -187,7 +187,7 @@ Returns information about a dataclass and its attributes
 
 ### Descripción
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Si quiere recuperar esta información para todas las clases de datos del almacén de datos de su proyecto, utilice [`$catalog/$all`](#catalogall).
 
 The information you retrieve concerns the following:
 
@@ -201,40 +201,40 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Propriedad     | Tipo   | Descripción                                                                                  |
-| -------------- | ------ | -------------------------------------------------------------------------------------------- |
-| name           | Cadena | Name of the dataclass                                                                        |
-| collectionName | Cadena | Name of an entity selection on the dataclass                                                 |
-| tableNumber    | Número | Table number in the 4D database                                                              |
-| scope          | Cadena | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | Cadena | A URI to the data in the dataclass                                                           |
+| Propriedad     | Tipo   | Descripción                                                                                                         |
+| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| name           | Cadena | Name of the dataclass                                                                                               |
+| collectionName | Cadena | Name of an entity selection on the dataclass                                                                        |
+| tableNumber    | Número | Table number in the 4D database                                                                                     |
+| scope          | Cadena | Alcance de la clase de datos (tenga en cuenta que sólo se muestran las clases de datos cuyo **Alcance** es público) |
+| dataURI        | Cadena | A URI to the data in the dataclass                                                                                  |
 
 
 ### Attribute(s)
 
 Here are the properties for each exposed attribute that are returned:
 
-| Propriedad  | Tipo     | Descripción                                                                                                                                           |
-| ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | Cadena   | Attribute name.                                                                                                                                       |
-| kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | Número   | Position of the field in the database table).                                                                                                         |
-| scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
-| indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
-| type        | Cadena   | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
-| path        | Cadena   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                         |
-| foreignKey  | Cadena   | For a relatedEntity attribute, name of the related attribute.                                                                                         |
-| inverseName | Cadena   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
+| Propriedad  | Tipo     | Descripción                                                                                                                                                           |
+| ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Cadena   | Attribute name.                                                                                                                                                       |
+| kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                                            |
+| fieldPos    | Número   | Position of the field in the database table).                                                                                                                         |
+| scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                     |
+| indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                                         |
+| type        | Cadena   | Tipo de atributo (booleano, blob, byte, fecha, duración, imagen, long, long64, número, cadena, uuid o palabra) o la clase de datos para un atributo de relación N->1. |
+| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                             |
+| path        | Cadena   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                         |
+| foreignKey  | Cadena   | For a relatedEntity attribute, name of the related attribute.                                                                                                         |
+| inverseName | Cadena   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                        |
 
 
 ### Primary Key
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
+El objeto llave devuelve el nombre del atributo **name** definido como **llave primaria** para la clase de datos.
 
 
 ### Ejemplo
-You can retrieve the information regarding a specific dataclass.
+Puede recuperar la información relativa a una clase de datos específica.
 
 `GET  /rest/$catalog/Employee`
 

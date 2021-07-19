@@ -3,9 +3,7 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually. A blob can be empty (null length) or contain up to 2147483647 bytes (2 GB).
-
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually.
 
 A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
@@ -25,9 +23,12 @@ Each blob type has its advantages. Use the following table to determine which on
 | Alterable                            | Oui  |   Non   |
 | Shareable in objects and collections | Non  |   Oui   |
 | Passed by reference*                 | Non  |   Oui   |
- Performance when accessing bytes|+|-|
+| Performance when accessing bytes     |  +   |    -    |
+| Maximum size                         | 2GB  | Memory  |
 
 *Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+
+> By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
 You cannot use operators on blobs.
 
@@ -54,7 +55,7 @@ You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as
 ```4d
 var $myBlob: 4D.Blob
 CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
-$myText:= BLOB to text ( $myBlob ; UTF8 text without length )
+$myText:= BLOB to text( $myBlob ; UTF8 text without length )
 ```
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
@@ -136,6 +137,8 @@ $type:= OB Instance of($myObject.blob; 4D.Blob)  //True
 $myBlob:= $myObject.blob 
 $type:= Value type($myBlob) // Blob
 ```
+
+> When converting a 4D.Blob to a scalar blob, if the size of the 4D.Blob exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 1GB, if you convert a 4D.Blob of 1.5GB to a scalar blob, you obtain an empty blob.
 
 ## Modifying a scalar blob
 

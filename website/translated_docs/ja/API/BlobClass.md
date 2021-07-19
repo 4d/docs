@@ -3,7 +3,7 @@ id: BlobClass
 title: BLOB
 ---
 
-The Blob class lets you create and manipulate blob objects (`4D.Blob`).
+The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
 ### 概要
 |                                                                                                                                                                 |
@@ -21,7 +21,7 @@ The Blob class lets you create and manipulate blob objects (`4D.Blob`).
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
-**4D.Blob.new** ( blob : 4D.Blob ) : 4D.Blob<br/>**4D.Blob.new** ( blob : Blob ) : 4D.Blob<br/>**4D.Blob.new()** : 4D.Blob<!-- END REF -->
+**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( blobScal : Blob ) : 4D.Blob<br/>**4D.Blob.new**( blobObj : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.new().Params -->
 | 参照   | タイプ             |    | 説明           |
@@ -38,7 +38,7 @@ If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 ## .size
 
 <!-- REF #4D.Blob.size.Syntax -->
-**4D.Blob.size** : Integer<!-- END REF -->
+**4D.Blob.size** : Real<!-- END REF -->
 
 #### 説明
 The `4D.Blob.size` property <!-- REF #4D.Blob.size.Summary --> returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
@@ -52,19 +52,19 @@ The `4D.Blob.size` property <!-- REF #4D.Blob.size.Summary --> returns the size 
 </details>
 
 <!-- REF #4D.Blob.slice().Syntax -->
-**4D.Blob.slice** ( start : Integer; end : Integer ) : 4D.Blob<br/>**4D.Blob.slice** ( start : Integer ) : 4D.Blob<br/>**4D.Blob.slice()** : 4D.Blob<!-- END REF -->
+**4D.Blob.slice()** : 4D.Blob<br/>**4D.Blob.slice**( start : Real ) : 4D.Blob<br/>**4D.Blob.slice**( start : Real; end : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.slice().Params -->
 | 参照    | タイプ     |    | 説明                                                                     |
 | ----- | ------- |:--:| ---------------------------------------------------------------------- |
-| start | 整数      | -> | index of the first byte to include in the new `4D.Blob`.               |
-| end   | 整数      | -> | index of the first byte that will not be included in the new `4D.Blob` |
+| start | 実数      | -> | index of the first byte to include in the new `4D.Blob`.               |
+| end   | 実数      | -> | index of the first byte that will not be included in the new `4D.Blob` |
 | 戻り値   | 4D.Blob | <- | New `4D.Blob`                                                          |
 <!-- END REF -->
 
 
 #### 説明
-`4D.Blob.slice()` <!-- REF #4D.Blob.slice().Summary --> creates and returns a `4D.Blob` that contains data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF --> 
+`4D.Blob.slice()` <!-- REF #4D.Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF --> 
 
 The `start` parameter is an index into the blob indicating the first byte to include in the new `4D.Blob`. If you specify a negative value, 4D treats it as an offset from the end of the blob toward the beginning. For example, -10 would be the 10th from last byte in the blob. The default value is 0. If you specify a value for start that is larger than the size of the source blob, the returned `4D.Blob`'s size is 0, and it contains no data.
 

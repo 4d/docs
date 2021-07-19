@@ -179,7 +179,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in an application, small pieces of information are needed from the user. El comando `Request` puede obtener esta información. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aquí un ejemplo:
+Frequently, in an application, small pieces of information are needed from the user. El comando `Request` puede obtener esta información. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
 
 ```4d
  $vsID:=Request("Introduzca su identificación:")
@@ -188,34 +188,34 @@ Frequently, in an application, small pieces of information are needed from the u
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Para más información, consulte [Parámetros](Concepts/parameters.md).
 
 ### Variables proceso
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+Una variable proceso sólo está disponible dentro de un proceso. Es accesible al método del proceso y a todos los métodos llamados desde el proceso.
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+Una variable proceso no tiene un prefijo antes de su nombre. Un nombre de variable proceso puede contener hasta 31 caracteres.
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
+En modo interpretado, las variables se mantienen dinámicamente; se crean y se borran de la memoria "sobre la marcha". En modo compilado, todos los procesos que se crean (procesos usuario) comparten la misma definición de variables proceso, pero cada proceso tiene una instancia diferente para cada variable. Por ejemplo, la variable miVar es una variable en el proceso P_1 y otra en el proceso P_2.
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+Un proceso puede leer y escribir las variables proceso de otro proceso utilizando los comandos `GET PROCESS VARIABLE` y `SET PROCESS VARIABLE`. Es una buena práctica de programación restringir el uso de estos comandos a la situación para la que fueron creados en 4D:
 
-- Interprocess communication at specific places or your code
+- Comunicación interprocesos en lugares específicos de su código
 - Gestión de arrastrar y soltar interproceso
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- En Cliente/Servidor, la comunicación entre los procesos en las máquinas cliente y los procedimientos almacenados ejecutados en las máquinas servidoras
 
-For more information, see the chapter **Processes** and the description of these commands.
+Para más información, consulte el capítulo **Procesos** y la descripción de estos comandos.
 
 ### Variables interproceso
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
+Las variables interproceso están disponibles en todo el proyecto y son compartidas por todos los procesos cooperativos. Se utilizan principalmente para compartir información entre procesos.
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> No se recomienda el uso de variables interproceso, ya que no están disponibles para los procesos apropiativos y tienden a hacer que el código sea menos mantenible.
 
-The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+El nombre de una variable interproceso siempre comienza con los símbolos (<>) -un signo "menor que" seguido de un signo "mayor que"- seguido de 31 caracteres.
 
-In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+En modo cliente/servidor, cada máquina (cliente y servidor) comparten la misma definición de las variables interproceso, pero cada máquina tiene una instancia diferente para cada variable.
 
 
