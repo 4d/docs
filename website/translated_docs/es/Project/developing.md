@@ -31,6 +31,6 @@ Esta funcionalidad está habilitada para todos los editores integrados:
 
 - Editor de estructura
 - Editor de formularios
-- Method editor
+- Editor de método
 - Editor de parámetros
 - Toolbox editor

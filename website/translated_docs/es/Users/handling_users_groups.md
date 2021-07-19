@@ -7,8 +7,8 @@ title: Gestión de usuarios y grupos 4D
 
 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
 
-The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. The Designer can:
-- access all database servers without restriction,
+The most powerful user is named **Designer**. Ningún aspecto de la base de datos está cerrado al Diseñador. The Designer can:
+- acceder a todos los servidores de la base sin restricciones,
 - create users and groups,
 - assign access privileges to groups,
 - access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
@@ -22,9 +22,9 @@ The Administrator can:
 
 The Administrator cannot:
 - edit the Designer user
-- by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- por defecto, el acceso a las partes protegidas de la base. In particular, the Administrator cannot access to the Design mode if it is restricted. El administrador debe formar parte de uno o varios grupos para tener privilegios de acceso en la base. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
-Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las bases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Designer icon: ![](assets/en/Users/iconDesigner.png)
 - Administrator icon: ![](assets/en/Users/iconAdmin.png)

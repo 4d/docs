@@ -293,7 +293,7 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 ## Variable Calculation
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
+> Ó cálculo de rodapés também pode ser definido com o comando 4D `LISTBOX SET FOOTER CALCULATION`.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
@@ -314,7 +314,7 @@ There are several types of calculations available. The following table shows whi
 When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
-> Automatic calculations are not supported with: *  footers of columns based on formulas, *  footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
+> Os cálculos automáticos não são compatíveis: * com rodapés de colunas baseadas em fórmulas, *  os rodapés dos list boxes [Coleção e seleção de entidades](listbox_overview.md#collection-or-entity-selection-list-boxes). Precisa utilizar cálculos personalizados.
 
 #### JSON Grammar
 

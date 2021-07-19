@@ -3,7 +3,7 @@ id: manData
 title: Manipulación de datos
 ---
 
-All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
+Todos [los atributos, clases](configuration.md#exposing-tables-and-fields) y métodos del datastore expuestos pueden ser accedidos a través de REST. Los nombres de clases de datos, atributos y métodos son sensibles a las mayúsculas y minúsculas; sin embargo, los datos de las búsquedas no lo son.
 
 ## Querying data
 
@@ -20,9 +20,9 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Además de recuperar una sola entidad en una clase de datos utilizando [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), también puede escribir un método en su clase DataClass y llamarlo para devolver una selección de entidades (o una colección) utilizando [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
 
-Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver la colección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
 
 ## Navigating data
@@ -69,17 +69,17 @@ To compute all values and return a JSON object:
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## Obtener datos de los métodos
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+Puede llamar los métodos proyecto 4D que están [expuestos como servicio REST](%7BdataClass%7D.html#4d-configuration). Un método 4D puede devolver en $0:
 
-- an object
-- a collection
+- un objeto
+- una colección
 
-The following example is a dataclass method that reveives parameters and returns an object:
+El siguiente ejemplo es un método de clase de datos que recibe parámetros y devuelve un objeto:
 
 ```4d
-// 4D findPerson method
+// método 4D findPerson
 C_TEXT($1;$firstname;$2;$lastname)
 $firstname:=$1
 $lastname:=$2
@@ -87,11 +87,11 @@ $lastname:=$2
 $0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
 ```
 
-The method properties are configured accordingly on the 4D project side:
+Las propiedades del método se configuran en consecuencia del lado del proyecto 4D:
 
 ![alt-text](assets/en/REST/methodProp_ex.png)
 
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+Luego puede enviar la siguiente petición REST POST, por ejemplo utilizando el comando `HTTP Request` de 4D:
 
 ```4d
 C_TEXT($content)
@@ -102,7 +102,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+Las llamadas de métodos se detallan en la sección [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod).
 
 ## Selecting Attributes to get
 
@@ -132,7 +132,7 @@ You can apply this technique to:
 
 #### Dataclass Example
 
-The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
+Las siguientes peticiones devuelven sólo el nombre y el apellido de la clase de datos People (ya sea toda la clase de datos o una selección de entidades basada en la búsqueda definida en `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 

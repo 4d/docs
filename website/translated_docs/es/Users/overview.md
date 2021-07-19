@@ -3,7 +3,7 @@ id: generalidades
 title: Generalidades
 ---
 
-If more than one person uses a database, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the database or to database operations.
+Si diferentes personas utilizan una base de datos, lo que suele ocurrir en la arquitectura cliente-servidor o en las interfaces web, es necesario controlar el acceso u ofrecer diferentes funcionalidades en función de los usuarios conectados. It is also essential to provide security for sensitive data. Puede ofrecer esta protección asignando contraseñas a los usuarios y creando grupos que tengan diferentes niveles de acceso a la información de la base o a las operaciones de la misma.
 
 > For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
@@ -13,9 +13,9 @@ If more than one person uses a database, which is usually the case in client-ser
 
 ## Assigning group access
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
+4D’s password access system is based on users and groups. Se crean usuarios y se les asignan contraseñas, se colocan los usuarios en grupos y se les asignan a cada grupo derechos de acceso apropiados a las partes de la base.
 
-Groups can then be assigned access privileges to specific parts or features of the database (Design access, HTTP server, SQL server, etc.), or any custom part.
+Los grupos pueden entonces asignar privilegios de acceso a partes específicas o funcionalidades de la base (acceso al modo Diseño, servidor HTTP, servidor SQL, etc.), o a cualquier parte personalizada.
 
 The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
 
@@ -27,18 +27,18 @@ The following example shows Design and Runtime explorer access rights being assi
 
 You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
 
-Until you give the Designer a password, all database access are done with the Designer's access rights, even if you have set up users and groups (when the database opens, no ID is required). Any part of the database can be opened.
+Hasta que no le asigne una contraseña al Diseñador, todos los accesos a la base se hacen con los derechos de acceso del Diseñador, incluso si ha configurado usuarios y grupos (cuando se abre la base, no se requiere ninguna identificación). Se puede abrir cualquier parte de la base.
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the database, remote users must enter a password.
+When a password is assigned to the Designer, all the access privileges take effect. Para poder conectarse a la base, los usuarios remotos deben introducir una contraseña.
 
 To disable the password access system, you just need to remove the Designer password.
 
 
 ## Users and groups in project architecture
 
-In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. The following table lists the main users and groups features and their availability:
+En las bases proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pueden configurarse tanto en entornos monousuario como cliente-servidor. Sin embargo, el control de acceso sólo es efectivo en las bases 4D Server. The following table lists the main users and groups features and their availability:
 
-|                                                               | 4D Developer (single-user)   | 4D Server |
+|                                                               | 4D Developer (monopuesto)    | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
 | Adding/editing users and groups                               | yes                          | yes       |
 | Assigning user/group access to servers                        | yes                          | yes       |
@@ -61,11 +61,11 @@ The editors for users and groups are located in the toolbox of 4D. These editors
 
 ## Directory.json file
 
-Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
+Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico de la base llamado **directory.json**.
 
 This file can be stored at the following locations:
 
-- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
+- en la carpeta de propiedades de la base usuario, es decir, en la carpeta "Settings" al mismo nivel que la carpeta "Project". Estas propiedades se utilizan por defecto para la base.
+- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. Si un archivo directory.json está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings de la base usuario. This feature allows you to define custom/local Users and Groups configurations. La configuración personalizada no se verá afectada por una actualización de la base.
 
-> If users and groups management is not active, the directory.json is not created.
+> Si la gestión de usuarios y grupos no está activa, el archivo directory.json no se crea.
