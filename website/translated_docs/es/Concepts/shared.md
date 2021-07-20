@@ -35,9 +35,9 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` bloquea el objeto/colección compartido para otros hilos, mientras que el último `End use` desbloquea todos los objetos y colecciones. Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+A shared object/collection can only be modified by one process at a time. `Use` bloquea el objeto/colección compartido para otros hilos, mientras que el último `End use` desbloquea todos los objetos y colecciones. Intentar modificar un objeto/colección compartido sin al menos un `Use...End use` genera un error. Cuando un proceso llama a `Use...End use` en un objeto/colección compartido que ya está en uso por otro proceso, simplemente se pone en espera hasta que el `End use` lo desbloquee (no se genera ningún error). En consecuencia, las instrucciones dentro de las estructuras `Use...End use` deben ejecutarse rápidamente y desbloquear los elementos lo antes posible. Por lo tanto, se recomienda enfáticamente evitar modificar un objeto o colección compartido directamente desde la interfaz, por ejemplo, a través de una caja de diálogo.
 
-Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
+La asignación de objetos/colecciones compartidos a propiedades o elementos de otros objetos/colecciones compartidos está permitida y crea **grupos compartidos**. Un grupo compartido se crea automáticamente cuando un objeto/colección compartido se define como valor de propiedad o elemento de otro objeto/colección compartido. Los grupos compartidos permiten anidar objetos y colecciones compartidos, pero imponen reglas adicionales:
 
 - Al llamar a `Use` en un objeto/colección compartido de un grupo se bloquearán las propiedades/elementos de todos los objetos/colecciones compartidos que pertenezcan al mismo grupo.
 - Un objeto/colección compartido sólo puede pertenecer a un grupo compartido. Se devuelve un error si se intenta asignar un objeto/colección compartido ya agrupado a un grupo diferente.
@@ -78,7 +78,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 - Una vez que se ejecuta con éxito la línea **Use**, todas las propiedades/elementos de _Shared_object_or_Shared_collection_ se bloquean para el resto de procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
 - La secuencia _de instrucciones_ puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
 - Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido (ver **Uso de objetos o colecciones compartidos**).
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
+- Si otro proceso intenta acceder a una de las propiedades _Objeto_compartido_o_Colección_compartida_ o una propiedad conectad mientras se está ejecutando una secuencia **Use... End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
 - La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos que comparten el mismo identificador de bloqueo.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. En ese caso, todos los bloqueos se apilan y las propiedades/elementos se liberarán sólo cuando se ejecute la última llamada de End use.
 
@@ -91,7 +91,7 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //llenar el array con los elementos a contar
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
@@ -99,7 +99,7 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  //Crear procesos
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
   //$inventory object sent by reference

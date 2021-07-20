@@ -95,7 +95,7 @@ Se tiver nomeado sua aplicação, *MeuComponente*, 4D criará uma pasta Componen
 
 A pasta *MyComponent.4dbase* contém:
 -   *MyComponent.4DZ* file
--   Una carpeta *Resources* - todos os recursos associados são copian automaticamente nesta pasta. Todas as outras pastas de componentes ou plugins não são copiadas (um componente não pode utilizar plugins ou outros componentes).
+-   Uma pasta *Resources* - todos os recursos associados são copiados automaticamente nesta pasta. Todas as outras pastas de componentes ou plugins não são copiadas (um componente não pode utilizar plugins ou outros componentes).
 
 
 ## Página de aplicação
@@ -154,8 +154,8 @@ Se especificou "MyProject" como nome da aplicação, encontrará os seguintes ar
     *   MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
     *   Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para o funcionamento da aplicação
     *   Pasta Database - Incluem uma pasta Resources e o arquivo MyProject.4DZ. Constituem a estrutura compilada do banco de dados assim como a pasta Resources. **Nota**: esta pasta também contém a pasta *Default Data*, se for definida (ver [Gestão de arquivos de dados em aplicações finais](#data-file-management-in-final-applicatons).
-    *   (Opcional) Pasta Components ou pasta Plugins - contém todos os componentes ou arquivos plug-in incluídos no banco de dados. Para más informação ao respeito, consulte a seção [Plugins e componentes](#plugins-and-components).
-    *   Carpeta Licenses - Um arquivo XML de números de licença integrados na aplicação. Para mais informação ao respeito, consulte a seção [Licenças e certificados](#licenses-and-certificate).
+    *   (Opcional) Pasta Components ou pasta Plugins - contém todos os componentes ou arquivos plug-in incluídos no banco de dados. Para mais informação ao respeito, consulte a seção [Plugins e componentes](#plugins-and-components).
+    *   Pasta Licenses - Um arquivo XML de números de licença integrados na aplicação. Para mais informação ao respeito, consulte a seção [Licenças e certificados](#licenses-and-certificate).
     *   Elementos adicionais anexados à pasta 4D Volume Desktop, se houver (ver [Personalização da pasta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
     Todos esses elementos devem manter-se na mesma pasta para que o executável funcione.</ul>
@@ -166,12 +166,12 @@ Se especificou "MyProject" como nome da aplicação, encontrará os seguintes ar
 
 #### Personalização da pasta 4D Volume Desktop
 
-Quando construir uma aplicação Independente, 4D copia o conteúdo da pasta 4D Volume Desktop na pasta Destination > *Final Application*. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for example:
+Quando construir uma aplicação Independente, 4D copia o conteúdo da pasta 4D Volume Desktop na pasta Destination > *Final Application*. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. Pode, por exemplo:
 
-*   Install a 4D Volume Desktop version corresponding to a specific language;
-*   Add a custom *PlugIns* folder;
-*   Customize the contents of the *Resources* folder.
-> In macOS, 4D Volume Desktop is provided in the form of a software package. Para modificá-lo, primeiro precisa exibir seu conteúdo (**Control+clique** no ícone).
+*   Instalar uma versão de 4D Volume Desktop correspondente a uma linguagem específico;
+*   Adicionar uma pasta *PlugIns* personalizada;
+*   Personaliza o conúdo da pasta *Resources*.
+> Em macOS, 4D Volume Desktop se proporciona em forma de pacote de software. Para modificá-lo, primeiro precisa exibir seu conteúdo (**Control+clique** no ícone).
 
 
 #### Localização dos arquivos web
@@ -246,108 +246,108 @@ Marcando esta opção se gera a parte cliente de sua aplicação durante a fase 
 
 Deve determinar o local em seu disco da aplicação 4D Volume Desktop a utilizar. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. Para mais informação sobre este ponto, consulte [Personalizar as pastas 4D Server ou 4D Client](#customizing-4d-server-and-or-4d-client-folders).
 
-> O número de versão de 4D Volume Desktop deve coincidir com o número de versão de 4D Developer Edition. Por exemplo, si utiliza 4D Developer v18, deve selecionar um 4D Volume Desktop v18.
+> O número de versão de 4D Volume Desktop deve coincidir com o número de versão de 4D Developer Edition. Por exemplo, se utiliza 4D Developer v18, deve selecionar um 4D Volume Desktop v18.
 
-Se quiser que a aplicação cliente se conecte ao servidor utilizando um local específico (distinto do nome de servidor publicado na subrede), deve utilizar a chave XML `IPAddress` no arquivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+Se quiser que a aplicação cliente se conecte ao servidor utilizando um local específico (distinto do nome de servidor publicado na subrede), deve utilizar a chave XML `IPAddress` no arquivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. Os diferentes cenários propostos são descritos no parágrafo [Gestão das conexões para as aplicações clientes](#management-of-client-connections).
 
-#### Copy of client applications in the server application
+#### Cópia das aplicações clientes na aplicação servidor
 
-The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
+As opções desta área para configurar o mecanismo de atualização das partes clientes de suas aplicações cliente/servidor utilizando a rede cada vez que se gera uma nova versão da aplicação.
 
-- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
-- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Permitir a atualização automática da aplicação cliente Windows** - Marque estas opções para que sua aplicação cliente/servidor Windows possa aproveitar o mecanismo de atualização automática dos clientes através da rede.
+- **Permitir a atualização automática da aplicação cliente Macintosh** - Marque estas opções para que sua aplicação cliente/servidor Macintosh possa aproveitar o mecanismo de atualização automática para clientes através da rede.
 
-*   **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
+*   **Permitir a atualização automática da aplicação cliente Macintosh** - Se quiser criar uma aplicação cliente multiplataforma, deve designar a localização em seu disco da aplicação 4D Volume Desktop que corresponde à plataforma "concorrente" da plataforma de construção.
 
-    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
-
-
-
-#### Displaying update notification
-
-The client application update notification is carried out automatically following the server application update.
-
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
-
-To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. The rest of the process is automatic.
-
-On the client side, when the “old” client application tries to connect to the updated server application, a dialog box is displayed on the client machine, indicating that a new version is available. The user can either update their version or cancel the dialog box.
-
-*   If the user clicks **OK**, the new version is downloaded to the client machine over the network. Once the download is complete, the old client application is closed and the new version is launched and connects to the server. The old version of the application is then placed in the machine’s recycle bin.
-*   If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
-
-#### Forcing automatic updates
-
-In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
-
-To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
-
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
-
-
-#### Update Error
-
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. The application is now going to quit.”
-
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
-
-*   **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
-*   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
-
-
-### Generated files
-
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
-> These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
-
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The *\<ApplicationName>Server* folder contains the server portion of the application.
-
-The contents of these folders vary depending on the current platform:
-
-*   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
-
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
-
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
-
-#### Customizing 4D Volume Desktop folder
-
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. You are then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for instance:
-
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
-
-#### Location of Web files
-
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
-
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
-
-Items must be installed:
-*   **on Windows**
-    *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
-
-*   **on macOS**
-    *   **Server application** - next to the *\<ApplicationName>Server* software package.
-    *   **Client application** - next to the *\<ApplicationName>Client* software package.
+    Por exemplo, se construir a aplicação em Windows, deve utilizar o botão **[...]** para designar a aplicação 4D Volume Desktop macOS (fornecida como pacote).
 
 
 
+#### Mostrar a notificação de atualização
+
+A notificação de atualização da aplicação cliente se realiza automaticamente depois da atualização da aplicação servidor.
+
+Funciona da seguinte maneira: quando se construir uma nova versão da aplicação cliente/servidor utilizando o gerador de aplicações, a nova parte cliente se copia como um arquivo comprimido na subpasta **Upgrade4DClient** da pasta Server **ApplicationName** (em macOS, estas pastas são incluídas no pacote servidor). Se seguiu o processo para gerar uma aplicação cliente multiplataforma, um arquivo *4darchive* de atualização está disponível para cada plataforma:
+
+Para ativar as notificações de atualização da aplicação cliente, basta com substituir a versão antiga da aplicação servidor pela nova e executá-la. O resto do processo é automático.<p
+
+Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O usuário pode atualizar sua versão ou cancelar a caixa de diálogo.
+
+*   Se o usuário clicar em **Aceitar**, a nova versão se descarrega  na máquina cliente através da rede. Once the download is complete, the old client application is closed and the new version is launched and connects to the server. A versão antiga da aplicação sé colocada na pasta lixeira da máquina.
+*   Se o usuário clicar em **Cancelar**, a atualização é cancelada; se a versão antiga da aplicação cliente não estiver no intervalo de versões aceitas pelo servidor (consulte o parágrafo abaixo), a aplicação é fechado e a conexão é impossível. Caso contrário (como padrão), se estabelece a conexão.
+
+#### Forçar as atualizações automáticas
+
+Em alguns casos, é possível que queira evitar que as aplicações cliente possam cancelar a descarga de atualizações. Por exemplo, se usar uma nova versão da aplicação fonte 4D Server, a nova versão da aplicação cliente deve instalar-se absolutamente em cada máquina cliente.
+
+Para forçar a atualização, simplesmente exclua o número de versão atual das aplicações clientes (X-1 e anteriores) no intervalo de número de versão compatível com a aplicação servidor. In this case, the update mechanism will not allow non-updated client applications to connect. Por exemplo, se a nova versão da aplicação cliente-servidor for a 6, pode estipular que toda aplicação cliente com um número de versão inferior a 6 não poderá conectar.
+
+O [número de versão atual](build-server-application) se define na página Cliente/Servidor do gerador da aplicação. Os intervalos dos números autorizados se definem no projeto da aplicação mediante umas chaves [XML](#build-application-settings) específicas.
 
 
-## Plugins & components page
+#### Erro de atualização
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+Se 4D não puder realizar a atualização da aplicação cliente, a máquina cliente mostra a seguinte mensagem de erro: "A atualização da aplicação cliente falhou. A aplicação vai ser fechada agora."
 
-The page lists the elements loaded by the current 4D application:
+Há muitas causas possíveis deste erro. Quando lhe apareça esta mensagem, é aconselhável que comprove primeiro os seguintes parâmetros:
+
+*   **Rotas de acesso** - Comprove a validez das rotas de acesso definidas no projeto de aplicação através da caixa de diálogo do Gerador de aplicações ou mediante as chaves XML (por exemplo *ClientMacFolderToWin*). Mais concretamente, verifique as rotas de acesso às versões de 4D Volume Desktop.
+*   **Privilégios de leitura/escritura** - Na máquina cliente, verifique que o usuário atual tem direitos de acesso de escrita para a atualização da aplicação cliente.
+
+
+### Arquivos gerados
+
+Quando construir a aplicação cliente/servidor, encontrará uma nova pasta na pasta de destino chamada **Cliente Servidor executável**. Esta pasta contém duas subpastas, *<ApplicationName>Client* e *<ApplicationName>Server*.
+> Estas pastas não são geradas se produzir um erro. Neste caso, abra o [arquivo-de-historico](#archivo-de-registro) para conhecer a causa de erro.
+
+A pasta *<ApplicationName>Client* contém a parte cliente da aplicação correspondente à plataforma de execução do gerador da aplicação. This folder must be installed on each client machine. a pasta *<ApplicationName>Server* contém a parte servidor da aplicação.
+
+o conteúdo destas pastas varia em função da plataforma atual:
+
+*   *Windows* - Cada pasta contém o arquivo executável da aplicação, chamado  *\<ApplicationName>Client.exe* para a parte cliente e *\<ApplicationName>Server.exe* para a parte servidor, assim como os arquivos .rsr correspondentes. As pastas também contém vários arquivos e pastas necessários para o funcionamento das aplicações e os elementos personalizados que podem estar nas pastas 4D Volume Desktop e 4D Server de origem.
+*   *macOS* - Cada pasta contém só o pacote de aplicações, chamado\<ApplicationName> Cliente para a parte cliente e \<ApplicationName> Server para a parte servidor. Each package contains all the necessary items for the application to work. Em macOS, se lança um pacote dando um duplo clique.
+
+    > Os pacotes macOS gerados contém os mesmos elementos que as subpastas Windows. Pode visualizar seu conteúdo (**Control+clique** sobre o ícone) para poder modificá-lo..
+
+Se marcar a opção "Permitir a atualização automática da aplicação cliente", se adiciona uma subpasta adicional chamada *Upgrade4DClient* na pasta/pacote *<ApplicationName>Server*. This subfolder contains the client application in macOS and/or Windows format as a compressed file. Este arquivo se utiliza durante a atualização automática das aplicações clientes.
+
+#### Personalizar a pasta 4D Volume Desktop
+
+Durante a criação de uma aplicação executável, 4D duplica o conteúdo da pasta 4D Volume Desktop na subpasta Final Application da pasta de destino. A seguir poderá personalizar o conteúdo da pasta 4D volume desktop original segundo suas necessidades. Pode, por exemplo:
+
+- Instalar uma versão de 4D Volume Desktop correspondente a uma linguagem específico;
+- Adicionar uma pasta PlugIns personalizada;
+- Personalizar o conteúdo da pasta Resources.
+
+#### Local dos arquivos web
+
+Se a parte servidor ou do cliente de sua aplicação de duplo clique se utiliza como servidor web, os arquivos e pastas exigidos pelo  servidor debem ser instalados em locais específicos. Estes elementos são os seguintes:
+
+- *cert.pem* e *key.pem* arquivos (opcional): Esses arquivos são usados por conexões SSL e por comandos de criptografia,
+- Pasta web raiz (WebFolder).
+
+Itens devem ser instalados:
+*   **em Windows**
+    *   **aplicação servidor** - em *executávle Cliente Servidor\ \<ApplicationName>Server\Server Database* subpasta.
+    *   **Aplicação cliente** - em *executável Client Server\ \<ApplicationName>Cliente* subpasta.
+
+*   **em macOS**
+    *   **Aplicação Servidor** - ao lado do *\<ApplicationName>Servidor* pacote de software.
+    *   **Aplicação Servidor** - ao lado de  *\<ApplicationName>Cliente* software package.
+
+
+
+
+
+## Plugins & páginas de componentes
+
+Nessa aba estabelece [plug-in](Concepts/plug-ins.md)e cada [componente](Concepts/components.md) que vai usar em sua aplicação standalone ou cliente/server.
+
+A página lista os elm,entos carregados pela aplicação atual  4D:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+*    **Ativo** coluna - Indica que os itens serão integrados na o pacote da aplicação. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
 
