@@ -20,10 +20,10 @@ title: 設定
 
 ## キャッシュ
 
-| 設定できる場所     | 名                            | コメント |
-| ----------- | ---------------------------- | ---- |
-| 設定ダイアログボックス | オプション (I) / 4D Webキャッシュを使用する |      |
-| 設定ダイアログボックス | オプション (I) / ページキャッシュサイズ      |      |
+| 設定できる場所     | 名                                | コメント |
+| ----------- | -------------------------------- | ---- |
+| 設定ダイアログボックス | オプション (I) ページ / 4D Webキャッシュを使用する |      |
+| 設定ダイアログボックス | オプション (I) ページ / ページキャッシュサイズ      |      |
 
 Webページキャッシュの有効化と設定をおこないます。
 
@@ -48,41 +48,41 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 > TLS 証明書ファイルは、*key.pem* (秘密の暗号鍵を含むドキュメント) と *cert.pem* (証明書を含むドキュメント) です。
 
 
-## Character Set
+## 文字コード
 
-| 設定できる場所          | 名                              | コメント                           |
-| ---------------- | ------------------------------ | ------------------------------ |
-| webServer オブジェクト | `characterSet`                 | MIBEnum integer or Name string |
-| `WEB SET OPTION` | `Web character set`            | MIBEnum integer or Name string |
-| 設定ダイアログボックス      | Options (II) page/Standard Set | Pop up menu                    |
+| 設定できる場所          | 名                      | コメント                 |
+| ---------------- | ---------------------- | -------------------- |
+| webServer オブジェクト | `characterSet`         | MIBEnum 整数、または名称の文字列 |
+| `WEB SET OPTION` | `Web character set`    | MIBEnum 整数、または名称の文字列 |
+| 設定ダイアログボックス      | オプション (II) ページ / 文字コード | ポップアップメニュー           |
 
-Defines the set of characters to be used by the 4D web server. デフォルト値は OS の言語に依存します。
-> This setting is also used for generating Quick Reports in HTML format .
+4D Webサーバーが使用する文字セットを定義します。 デフォルト値は OS の言語に依存します。
+> この設定は、クイックレポートを HTMLフォーマットで書き出す際にも使用されます。
 
 
-## Cipher list
+## 暗号リスト
 
 | 設定できる場所          | 名                                                  | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
 | webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | テキスト |
 
-Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
+セキュアプロトコルに使用される暗号リストです。Webサーバーが実装する暗号アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
-> The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
+> 4D が使用するデフォルトの暗号リストは、`SET DATABASE PARAMETER` コマンドを使用してセッションごとに変更することができます。この場合、変更は 4Dアプリケーション全体に適用されます (Webサーバー・SQLサーバー・クライアント/サーバー接続、HTTPクライアント、セキュアプロトコルを使用するすべての 4Dコマンドを含む)。
 
-## CORS Settings
+## CORS設定
 
-| 設定できる場所          | 名                                                       | コメント                                                                           |
-| ---------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| webServer オブジェクト | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| `WEB SET OPTION` | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| 設定ダイアログボックス      | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
+| 設定できる場所          | 名                                                    | コメント                                      |
+| ---------------- | ---------------------------------------------------- | ----------------------------------------- |
+| webServer オブジェクト | [`CORSSettings`](API/WebServerClass.md#corssettings) | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
+| `WEB SET OPTION` | `Web CORS settings`                                  | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
+| 設定ダイアログボックス      | オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド             | 新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。  |
 
-List of allowed hosts and methods for the CORS service.
+CORSサービスで許可されたホストとメソッドの一覧
 
-#### Domain names (host property)
+#### ドメイン名 (hostプロパティ)
 
-Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. 複数のドメインを追加してホワイトリストを作成することができます。 複数のシンタックスがサポートされています:
+CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 複数のシンタックスがサポートされています:
 
 - 192.168.5.17:8081
 - 192.168.5.17
@@ -96,9 +96,9 @@ Domain name or IP address from where external pages are allowed to send data req
 - \*
 
 
-#### HTTP methods allowed (methods property)
+#### 許可された HTTPメソッド (methodsプロパティ)
 
-Accepted HTTP method(s) for the corresponding CORS host. The following HTTP methods are supported:
+対応する CORSホストに対して許可する HTTPメソッド。 以下の HTTPメソッドがサポートされます:
 
 - GET
 - HEAD
@@ -109,22 +109,22 @@ Accepted HTTP method(s) for the corresponding CORS host. The following HTTP meth
 - TRACE
 - PATCH
 
-メソッド名はセミコロン区切りで指定します(例: "post;get")。 If methods is empty, null, or undefined, all methods are enabled.
+メソッド名はセミコロン区切りで指定します(例: "post;get")。 methods が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
 #### 参照
 
-[Enable CORS Service](#enable-cors-service)
+[CORSを有効化](#enable-cors-service)
 
 
 
-## Debug log
+## デバッグログ
 
-| 設定できる場所          | 名               | コメント   |
-| ---------------- | --------------- | ------ |
-| webServer オブジェクト | `debugLog`      | number |
-| `WEB SET OPTION` | `Web debug log` | number |
+| 設定できる場所          | 名               | コメント |
+| ---------------- | --------------- | ---- |
+| webServer オブジェクト | `debugLog`      | 数値   |
+| `WEB SET OPTION` | `Web debug log` | 数値   |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Webサーバーの HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている HTTPDebugLog_nn.txt (nn はファイル番号)) の状態を指定します。 It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
 | 値 | 定数          | 説明                             |
 | - | ----------- | ------------------------------ |
@@ -159,7 +159,7 @@ For example, if you want the default home page to be "MyHome.htm", and it is loc
 
 If you do not specify any default home page, the `On Web Connection` database method is called. It is up to you to process the request procedurally.
 
-## Enable CORS Service
+## CORSを有効化
 
 | 設定できる場所          | 名                                                  | コメント                                                |
 | ---------------- | -------------------------------------------------- | --------------------------------------------------- |
@@ -174,7 +174,7 @@ When disabled (default), all cross site requests sent with CORS are ignored.
 For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
 
 #### 参照
-[CORS Settings](#cors-settings)
+[CORS設定](#cors-settings)
 
 ## Enable HTTP
 
@@ -322,11 +322,11 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 ## IP Address to listen
 
-| 設定できる場所          | 名                                                              | コメント        |
-| ---------------- | -------------------------------------------------------------- | ----------- |
-| webServer オブジェクト | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION` | `Web IP address to listen`                                     |             |
-| 設定ダイアログボックス      | Configuration page/IP Address                                  | Pop up menu |
+| 設定できる場所          | 名                                                              | コメント       |
+| ---------------- | -------------------------------------------------------------- | ---------- |
+| webServer オブジェクト | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |            |
+| `WEB SET OPTION` | `Web IP address to listen`                                     |            |
+| 設定ダイアログボックス      | Configuration page/IP Address                                  | ポップアップメニュー |
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
@@ -370,11 +370,11 @@ Default is true (enabled).
 
 ## Log Recording
 
-| 設定できる場所          | 名                                                    | コメント        |
-| ---------------- | ---------------------------------------------------- | ----------- |
-| webServer オブジェクト | [`logRecording`](API/WebServerClass.md#logrecording) |             |
-| `WEB SET OPTION` | `Web log recording`                                  |             |
-| 設定ダイアログボックス      | Log (type) page/Log Format                           | Pop up menu |
+| 設定できる場所          | 名                                                    | コメント       |
+| ---------------- | ---------------------------------------------------- | ---------- |
+| webServer オブジェクト | [`logRecording`](API/WebServerClass.md#logrecording) |            |
+| `WEB SET OPTION` | `Web log recording`                                  |            |
+| 設定ダイアログボックス      | Log (type) page/Log Format                           | ポップアップメニュー |
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 

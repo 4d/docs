@@ -114,23 +114,23 @@ var $entity : cs.EmployeeEntity
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
-For example, if you want to define a text variable, you write:
+Por ejemplo, si se quiere definir una variable de tipo texto, se escribe:
 
 ```4d
  C_TEXT(myText)
 ```
 
-The following are some basic variable declarations:
+A continuación se presentan algunas declaraciones de variables básicas:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
+ C_BLOB(vxMyBlob) // La variable proceso vxMyBlob se declara como una variable de tipo BLOB 
+C_DATE($vdCurDate) // La variable local $vdCurDate se declara como una variable de tipo Fecha
+ C_LONGINT(vg1;vg2;vg3) // Las 3 variables de proceso vg1, vg2 y vg3 se declaran como variables de tipo Entero largo
+ C_OBJECT($vObj) // La variable local $vObj se declara como una variable de tipo Objeto
+ C_COLLECTION($vCol) // La variable local $vCol se declara como una variable de tipo Colección
 ```
 
-**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. Para más información, consulte [Arrays](Concepts/arrays.md).
+**Nota:** los array son un tipo particular de variables (un array es una serie ordenada de variables del mismo tipo). Los arrays se declaran con comandos específicos, como `ARRAY LONGINT(alAnArray;10)`. Para más información, consulte [Arrays](Concepts/arrays.md).
 
 
 ## Asignar los valores
@@ -145,7 +145,7 @@ MyNumber:=3
 
 crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> Normalmente no se recomienda crear variables sin [declarar su tipo](#crear-variables).
 
 Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 
@@ -163,21 +163,21 @@ atNames{1}:="Richard"
 
 ## Variables locales, proceso e interproceso
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+Puedes crear tres tipos de variables: **local**, **proceso**, e **interproceso**. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
 
 ### Variables locales
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Una variable local, como su nombre indica, es local a un método, accesible sólo dentro del método en el que fue creada y no accesible fuera de ese método. Ser local a un método se conoce formalmente como ser de "alcance local." Las variables locales se utilizan para restringir una variable para que funcione sólo dentro del método.
 
 Es posible que desee utilizar una variable local para:
 
 - Evitar conflictos con los nombres de otras variables
 - Utilizar los datos temporalmente
-- Reduce the number of process variables
+- Reducir el número de variables proceso
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+El nombre de una variable local siempre comienza por el signo dólar ($) y puede contener hasta 31 caracteres adicionales. Si introduce un nombre más largo, 4D lo trunca a la longitud adecuada.
 
-When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+Cuando se trabaja en un proyecto de aplicación con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
 Frequently, in an application, small pieces of information are needed from the user. El comando `Request` puede obtener esta información. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
 
