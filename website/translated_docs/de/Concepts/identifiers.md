@@ -12,7 +12,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 - Ein Name muss mit einem Buchstaben, einem Unterstrich oder einem Dollarzeichen ("$") beginnen (Beachten Sie, dass das Dollarzeichen ein Element auf lokaler Ebene kennzeichnen kann, siehe unten.).
 - Der Name kann Buchstaben, Zahlen, Leerzeichen und den Unterstrich ("_") enthalten.
-- Punkte (".") und Klammern ("[ ]") sind in Tabellen-, Feld-, Methoden- oder Variablennamen nicht erlaubt.
+- Punkte (".") Punkte (".") und Klammern ("[ ]") sind in Tabellen-, Feld-, Methoden- oder Variablennamen nicht erlaubt.
 - Kommas, Schrägstriche, Anführungszeichen und Doppelpunkte sind nicht erlaubt.
 - Zeichen, die für Operatoren reserviert sind, wie z.B. * und +, sind nicht erlaubt.
 - Verwenden Sie keine reservierten Namen, d.h. 4D Befehlsnamen (`Date`, `Time`, usw.), Schlüsselwörter (If, For, usw.) und Konstanten.
@@ -20,8 +20,8 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 ### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
 - Leerzeichen sind nicht erlaubt.
-- Klammern ("[ ]") sind nicht erlaubt.
-- <0>Wichtig:</0> Groß- und Kleinschreibung wird unterschieden.
+- Punkte (".") Klammern ("[ ]") sind nicht erlaubt.
+- Wichtig: Groß- und Kleinschreibung wird unterschieden.
 
 ### Zusätzliche Regeln für SQL
 - Nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert.

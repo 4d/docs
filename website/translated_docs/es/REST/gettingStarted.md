@@ -1,23 +1,23 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: Comencemos
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
+4D le ofrece un servidor REST poderoso, que permite el acceso directo a los datos almacenados en sus bases de datos 4D.
 
-The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+El servidor REST está incluido en las aplicaciones 4D y 4D Server, está automáticamente disponible en sus bases 4D [una vez configurado](configuration.md).
 
 This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
-- create and configure a basic 4D database
-- access data from the 4D database through REST using a standard browser.
+- crear y configurar una base de datos 4D simple
+- acceder a los datos de la base 4D a través de REST utilizando un navegador estándar.
 
-To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+Para simplificar el ejemplo, vamos a utilizar una aplicación 4D y un navegador que se ejecutan en la misma máquina. Of course, you could also use a remote architecture.
 
 
 
-## Creating and configuring the 4D database
+## Crear y configurar la base de datos 4D
 
-1. Launch your 4D or 4D Server application and create a new database. You can name it "Emp4D", for example.
+1. Lance su aplicación 4D o 4D Server y cree una nueva base de datos. You can name it "Emp4D", for example.
 
 2. In the Structure editor, create an [Employees] table and add the following fields to it:
     - Lastname (Alpha)
@@ -32,7 +32,7 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Muestre la página **Recursos web/REST** de la caja de diálogo de las Propiedades de la base de datos y [marque la opción Exponer como servidor REST](configuration.md#starting-the-rest-server).
 
 5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
 
@@ -135,4 +135,4 @@ You have many possibilities to filter data to receive. For example, to get only 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D database.  
+La [API REST](REST_requests.md) ofrece varios comandos para interactuar con la base 4D.  

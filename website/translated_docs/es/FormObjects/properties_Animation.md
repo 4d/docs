@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-title: Animation
+title: Animación
 ---
 
 ---
@@ -11,13 +11,13 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 #### JSON Grammar
 
-| Name                 | Data Type | Possible Values |
-| -------------------- | --------- | --------------- |
-| loopBackToFirstFrame | boolean   | true, false     |
+| Name                 | Tipos de datos | Possible Values |
+| -------------------- | -------------- | --------------- |
+| loopBackToFirstFrame | booleano       | true, false     |
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)
 
 
 
@@ -29,13 +29,13 @@ Displays the first picture all the time except when the user clicks the button. 
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values |
-| ---------------------- | --------- | --------------- |
-| switchBackWhenReleased | boolean   | true, false     |
+| Name                   | Tipos de datos | Possible Values |
+| ---------------------- | -------------- | --------------- |
+| switchBackWhenReleased | booleano       | true, false     |
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)
 
 
 
@@ -48,13 +48,13 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchContinuously | boolean   | true, false     |
+| Name               | Tipos de datos | Possible Values |
+| ------------------ | -------------- | --------------- |
+| switchContinuously | booleano       | true, false     |
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)
 
 
 
@@ -66,13 +66,13 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| frameDelay | integer   | minimum: 0      |
+| Name       | Tipos de datos | Possible Values |
+| ---------- | -------------- | --------------- |
+| frameDelay | integer        | minimum: 0      |
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)
 
 
 
@@ -85,13 +85,13 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchWhenRollover | boolean   | true, false     |
+| Name               | Tipos de datos | Possible Values |
+| ------------------ | -------------- | --------------- |
+| switchWhenRollover | booleano       | true, false     |
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)
 
 
 
@@ -106,11 +106,11 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values |
-|:---------------------- | --------- | --------------- |
-| useLastFrameAsDisabled | boolean   | true, false     |
+| Name                   | Tipos de datos | Possible Values |
+|:---------------------- | -------------- | --------------- |
+| useLastFrameAsDisabled | booleano       | true, false     |
 
 
 #### Objects Supported
 
-[Picture Button](pictureButton_overview.md)
+[Botón Imagen](pictureButton_overview.md)

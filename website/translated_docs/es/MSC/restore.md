@@ -1,37 +1,37 @@
 ---
-id: restore
-title: Restore Page
-sidebar_label: Restore Page
+id: restaurar
+title: Página Restauración
+sidebar_label: Página Restauración
 ---
 
-## Restoring a backup
+## Restauración de una copia de seguridad
 
-You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
+Puede restaurar manualmente un archivo de la base de datos actual utilizando la página **Restaurar**. Esta página ofrece varias opciones que pueden utilizarse para controlar la restauración de las bases:
 
 ![](assets/en/MSC/MSC_restore.png)
 
-> 4D automatic recovery systems restore databases and include data log file when necessary.
+> Los sistemas de recuperación automática de 4D restauran las bases e incluyen el archivo de historial de datos cuando es necesario.
 
-The list found in the left part of the window displays any existing backups of the database. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. It is then added to the list of archives.
+La lista que se encuentra en la parte izquierda de la ventana muestra las copias de seguridad existentes de la base. También puede hacer clic en el botón Examinar... que se encuentra justo debajo del área para abrir cualquier otro archivo de una ubicación diferente. It is then added to the list of archives.
 
 When you select a backup in this list, the right part of the window displays the information concerning this particular backup:
 
 - **Path**: Complete pathname of the selected backup file. Clicking the Show button opens the backup file in a system window.
 - **Date and Time**: Date and time of backup.
 - **Content**: Contents of the backup file. Each item in the list has a check box next to it which can be used to indicate whether or not you want to restore it. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the database structure file. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Destination folder of the restored files**: Folder where the restored files will be placed. Por defecto, 4D restaura los archivos en una carpeta llamada "Archivename" (sin extensión) que se coloca junto al archivo de estructura de la base. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
 
 The **Restore** button launches the manual restoration of the selected element(s).
 
-## Successive integration of several data log files
+## Integración sucesiva de varios archivos de historial de datos
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into a database. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 database backups, you can restore the first backup then integrate the journal (data log) archives one by one. This means that you can, for example, recover a data file even when the last backup files are missing.
+La opción **Integrar uno o varios archivos de historial tras la restauración** permite integrar sucesivamente varios archivos de registro de datos en una base de datos. Si, por ejemplo, dispone de 4 archivos historial (.4BL) correspondientes a 4 copias de seguridad de la base, puede restaurar la primera copia de seguridad y, a continuación, integrar los archivos historial de datos uno por uno. This means that you can, for example, recover a data file even when the last backup files are missing.
 
 When this option is checked, 4D displays the standard Open file dialog box after the restore, which can be used to select journal file to be integrated. The Open file dialog box is displayed again after each integration until it is cancelled.
 
-## Restoring an encrypted database
+## Restauración de una base encriptada
 
-Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current database. Matching encryption keys must always be provided.
+Tenga en cuenta que la llave de cifrado de los datos (frase secreta) puede haber cambiado a través de varias versiones de los archivos de copia de seguridad (.4BK), de los archivos .journal (.4BL) y de la base actual. Matching encryption keys must always be provided.
 
 When restoring a backup and integrating the current log file in a encrypted database:
 
@@ -41,9 +41,9 @@ When restoring a backup and integrating the current log file in a encrypted data
 The following sequence illustrates the principles of a multi-key backup/restore operation:
 
 
-| Operation                   | Generated files                                   | Comment                                                                                                                                                                                                                      |
+| Operación                   | Generated files                                   | Comment                                                                                                                                                                                                                      |
 | --------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New database                |                                                   |                                                                                                                                                                                                                              |
+| Nueva base                  |                                                   |                                                                                                                                                                                                                              |
 | Add data (record # 1)       |                                                   |                                                                                                                                                                                                                              |
 | Backup database             | 0000.4BL and 0001.4BK                             |                                                                                                                                                                                                                              |
 | Add data (record # 2)       |                                                   |                                                                                                                                                                                                                              |

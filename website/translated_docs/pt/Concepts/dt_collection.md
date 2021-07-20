@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).
+Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, número, objeto, booleano, coleção ou null).
 
-To manage Collection type variables you must use object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Para gerenciar as variáveis de tipo Coleção se deve utilizar a notação de objetos (ver  [Syntax basics](Concepts/dt_object.md#syntax-basics)).
 
 To access a collection element, you need to pass the element number inside square brackets:
 
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in express
 
 **Warning:** Collection elements are numbered from 0.
 
-You can assign a value to a collection element or get a collection element value using object notation:
+Pode atribuir um valor a um elemento da coleção ou obter o valor de um elemento da coleção utilizando a notação de objetos:
 
 ```4d
  myCol[10]:="My new element"
@@ -46,24 +46,24 @@ Collections must have been initialized, for example using the `New collection` c
 
 Example:
 ```4d
- C_COLLECTION($colVar) //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ C_COLLECTION($colVar) //criação de uma variável 4D de tipo coleção
+ $colVar:=Nova coleção //inicialização da coleção e atribuição a variável 4D
 ```
 
 ### Regular or shared collection
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes.
-- shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- coleções padrão (não compartilhadas), utilizando o comando `New collection`. These collections can be edited without any specific access control but cannot be shared between processes.
+- coleções compartidas, utilizando o comando `New shared collection`. These collections can be shared between processes, including preemptive threads. O acesso a estas coleções é controlada mediante estruturas `Use...End use`. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
-## Collection methods
+## Métodos de coleção
 
-4D collection references benefit from special methods (sometimes named *member functions*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
+As referências a coleções 4D se beneficiam de métodos especiais (as vezes chamados *funções membro*). Graças à notação de objetos, esses métodos podem ser aplicados às referências da coleção usando a sintaxe abaixo:
 
 > {$result:=}myCollection.memberFunction( {params} )
 
-Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
+Note que mesmo não tiver parâmetros, uma função membro deve ser chamada com parênteses (), do contrário é gerado um erro de sintaxe..
 
 For example:
 
@@ -72,7 +72,7 @@ $newCol:=$col.copy() //deep copy of $col to $newCol
 $col.push(10;100) //add 10 and 100 to the collection
 ```
 
-Some methods return the original collection after modification, so that you can run the calls in a sequence:
+Alguns métodos retornam a coleção original depois de moficiação, para que possa rodar as chamadas em sequência:
 
 ```4d
  $col:=New collection(5;20)
@@ -83,12 +83,12 @@ Some methods return the original collection after modification, so that you can 
 ### propertyPath parameter
 
 
-Several methods accept a _propertyPath_ as parameter. This parameter stands for:
+Vários métodos aceitam uma _propertyPath_ como parâmetro. This parameter stands for:
 
 - either an object property name, for example "lastName"
 - or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Atenção:** quando utilizar métodos e parâmetros propertyPath, não pode utilizar ".", "[ ]", ou espaços nos nomes das propriedades já que impedirá que 4D analise corretamente a rota:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

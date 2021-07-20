@@ -1,12 +1,12 @@
 ---
 id: REST_requests
-title: About REST Requests
+title: Acerca de las peticiones REST
 ---
 
 
 The following structures are supported for REST requests:
 
-| URI                              | Resource                                                                    | {Subresource}                                                              | {Querystring}                                                   |
+| URI                              | Recurso                                                                     | {Subresource}                                                              | {Querystring}                                                   |
 | -------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ | [{method}](%7BdataClass%7D.html#dataclassmethod)                |
@@ -20,14 +20,14 @@ The following structures are supported for REST requests:
 |                                  | [$info]($info.md)                                                           |                                                                            |                                                                 |
 
 
-While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
+Mientras que todas las solicitudes REST deben contener los parámetros URI y Resource, el subresource (que filtra los datos devueltos) es opcional.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Por ejemplo:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
 
-The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+The parameters allow you to manipulate data in dataclasses in your 4D project. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 
@@ -38,7 +38,7 @@ With each REST request, the server returns the status and a response (with or wi
 ### Request Status
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
-| Status                    | Description                                                                |
+| Status                    | Descripción                                                                |
 | ------------------------- | -------------------------------------------------------------------------- |
 | 0                         | Request not processed (server might not be started).                       |
 | 200 OK                    | Request processed without error.                                           |

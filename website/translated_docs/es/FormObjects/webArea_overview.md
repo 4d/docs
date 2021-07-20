@@ -1,40 +1,40 @@
 ---
 id: webAreaOverview
-title: Web Area
+title: Área Web
 ---
 
 ## Generalidades
 
-The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: Páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, Javascript, etc. El motor de renderizado del área web depende de la plataforma de ejecución de la aplicación y de [la opción motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) seleccionada.
 
-It is possible to create several Web areas in the same form. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
+Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-areas-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
-> The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) así como también [eventos formulario](#form-events) genéricos y específicos, permiten al desarrollador controlar el funcionamiento de las áreas web. Specific variables can be used to exchange information between the area and the 4D environment.
+> No se recomienda el uso de plugins web ni de applets de Java en las áreas web porque pueden provocar inestabilidad en el funcionamiento de 4D, especialmente a nivel de gestión de eventos.
 
 
-## Specific properties
+## Propiedades específicas
 
 ### Associated variables
 
-Two specific variables can be associated with each Web area:
-- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the Web area
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the Web area.
+Se pueden asociar dos variables específicas a cada área web:
+- [`URL`](properties_WebArea.md#url) --para controlar la URL que muestra el área web
+- [`Progresión`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
 ### Web rendering engine
 
-You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the Web area, depending on the specifics of your application.
+Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área web, dependiendo de las particularidades de su aplicación.
 
-Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
+La selección del motor de renderizado web anidado le permite llamar a los métodos 4D desde el área web.
 
 ### Access 4D methods
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area.
+Cuando se selecciona la propiedad [Acceder a los métodos 4D](properties_WebArea.md#access-4d-methods), se puede llamar a los métodos 4D desde un área Web.
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
 ### $4d object
 
-The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+El [motor de renderizado web incrustado de 4D](#use-embedded-web-rendering-engine) suministra al área un objeto JavaScript llamado $4d que puede asociar a cualquier método proyecto 4D utilizando la notación objeto ".".
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1
+#### Ejemplo 1
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
 4D code of `today` method:
@@ -66,13 +66,13 @@ Given a 4D project method named `today` that does not receive parameters and ret
  $0:=String(Current date;System date long)
 ```
 
-In the Web area, the 4D method can be called with the following syntax:
+En el área Web, el método 4D puede ser llamado con la siguiente sintaxis:
 
 ```js
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the Web area.
+The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. Queremos mostrar la fecha en la página HTML que es cargada por el área Web.
 
 Here is the code of the HTML page:
 
@@ -93,7 +93,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
@@ -109,7 +109,7 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
  End for
 ```
 
-The JavaScript code run in the Web area is:
+El código JavaScript que se ejecuta en el área web es el siguiente:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
@@ -119,14 +119,14 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 ```
 
 
-## Standard actions
+## Acciones estándar
 
-Four specific standard actions are available for managing Web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic Web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Hay cuatro acciones estándar específicas para gestionar las áreas web de forma automática: `Open Back URL`, `Open Next URL`, `Refresh Current URL` y `Stop Loading URL`. Acciones estándar. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
-## Form events
+## Eventos formulario
 
-Specific form events are intended for programmed management of Web areas, more particularly concerning the activation of links:
+Los eventos formulario específicos están destinados a la gestión programada de las áreas de la web, más concretamente a la activación de los enlaces:
 
 - `On Begin URL Loading`
 - `On URL Resource Loading`
@@ -136,7 +136,7 @@ Specific form events are intended for programmed management of Web areas, more p
 - `On Open External Link`
 - `On Window Opening Denied`
 
-In addition, Web areas support the following generic form events:
+Además, las áreas web soportan los siguientes eventos de formulario genéricos:
 
 - `On Load`
 - `On Unload`
@@ -144,53 +144,53 @@ In addition, Web areas support the following generic form events:
 - `On Losing Focus`
 
 
-## Web area rules
+## Reglas de las áreas web
 
 ### User interface
 
-When the form is executed, standard browser interface functions are available to the user in the Web area, which permit interaction with other form areas:
+Cuando se ejecuta el formulario, las funciones estándar de la interfaz del navegador están disponibles para el usuario en el área web, lo que permite la interacción con otras áreas del formulario:
 
-- **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a Web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the mouse cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the area.
+- **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
+- **El menú contextual**: es posible utilizar el [menú contextual](properties_Entry.md#context-menu) estándar del sistema con el área web. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
+- **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D. Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor del ratón muestra un icono "prohibido" <img src="assets/es/FormObjects/forbidden.png" alt=" />. Tiene que utilizar el comando `WA SET PREFERENCE` para permitir explícitamente soltar URLs o archivos en el área.
 
 ### Subforms
-For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
+Por razones relacionadas con los mecanismos de redibujado de ventanas, la inserción de un área web en un subformulario está sujeta a las siguientes restricciones:
 
 - The subform must not be able to scroll
-- The limits of the Web area must not exceed the size of the subform
+- Los límites del área web no deben superar el tamaño del subformulario
 
-> Superimposing a Web area on top of or beneath other form objects is not supported.
+> No se soporta la superposición de un área web sobre o debajo de otros objetos formulario.
 
 
 ### Web Area and Web server conflict (Windows)
-Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
+En Windows, no se recomienda acceder, a través de un área web, al servidor web de la aplicación 4D que contiene el área, ya que esta configuración podría provocar un conflicto que paralice la aplicación. Por supuesto, un 4D remoto puede acceder al servidor web de 4D Server, pero no a su propio servidor web.
 
 ### Web plugins and Java applets
-The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+No se recomienda el uso de plugins web ni de applets de Java en las áreas web porque pueden provocar inestabilidad en el funcionamiento de 4D, especialmente a nivel de gestión de eventos.
 
 ### Insertion of protocol (macOS)
-The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+Las URLs manejadas por programación en áreas web bajo macOS deben comenzar con el protocolo. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
 
 
-## Access to Web inspector
-You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
+## Acceso al inspector web
+Puede ver y utilizar un inspector web dentro de las áreas web de sus formularios. El inspector web es un depurador que ofrece el motor web integrado. Permite analizar el código y el flujo de información de las páginas web.
 
-### Displaying the Web inspector
-The following conditions must be met in order to view the Web inspector in a Web area:
+### Mostrar el inspector Web
+Para poder visualizar el inspector web en un área web deben cumplirse las siguientes condiciones:
 
-- You must [select the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
-- You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
-- You must expressly enable the use of the inspector in the area by means of the following statement:
+- You must [El motor de renderizado web integrado debe ser seleccionado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área (el inspector web sólo está disponible con esta configuración).
+- Debe activar el [menú contextual](properties_Entry.md#context-menu) del área (este menú se utiliza para llamar al inspector)
+- Debe habilitar expresamente el uso del inspector en el área mediante la siguiente instrucción:
 
 ```4d
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-### Using the Web inspector
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.
+### Utilización del inspector Web
+When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Al seleccionar esta opción, se muestra la ventana del inspector web.
 
-> The Web inspector is included in the embedded Web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the Web rendering engine.
+> El inspector web está incluido en el motor de renderizado web integrado. Para una descripción detallada de las funcionalidades de este depurador, consulte la documentación que ofrece el motor de renderizado web.
 
 
 

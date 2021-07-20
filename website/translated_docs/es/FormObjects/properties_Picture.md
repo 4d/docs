@@ -10,15 +10,15 @@ Pathname of a static source picture for a [picture button](pictureButton_overvie
 
 Two main locations can be used for static picture path:
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. In this case, the Pathname is "/RESOURCES/\<picture path\>".
+- en la carpeta **Resources** de la base proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios de la base de datos. In this case, the Pathname is "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                             |
-|:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+|  Name  | Tipos de datos | Possible Values                             |
+|:------:|:--------------:| ------------------------------------------- |
+| imagen |     texto      | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported
@@ -27,7 +27,7 @@ Two main locations can be used for static picture path:
 
 
 ---
-## Display
+## Visualización
 
 
 ### Scaled to fit
@@ -64,9 +64,9 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Name          | Tipos de datos | Possible Values                                          |
+| ------------- | -------------- | -------------------------------------------------------- |
+| pictureFormat | cadena         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 #### Objects Supported
 

@@ -105,20 +105,20 @@ These options apply to main backup files and to log backup files.
 - **Compression Rate** By default, 4D compresses backups to help save disk space. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
     - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
     - **Fast** (default): This option is a compromise between backup speed and archive size.
-    - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
+    - **Compactar** : a taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
-    - **Interlacing Rate**: Interlacing consists of storing data in non-adjacent sectors in order to limit risks in the case of sector damage. The higher the rate, the higher the security; however, data processing will use more memory.
-    - **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
+- **Taxa de Entrelaçamento e de Redundância** 4D gera arquivos usando algoritmos específicos baseados em mecanismos de otimização (interlacing) e segurança (redundância). Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus contém para essas opções as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
+    - **Taxa de Entrelaçamento**: O Interlacing consiste de armazenar dados em setores não adjacentes para limitar riscos no caso de danos de setor. Quanto maior a taxa, maior a segurança; entretanto, o processamento de dados usa mais memória.
+    - **Taxa de redundância**: Redundância permite a segurança de dados  em arquivos repetindo a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
 
 
 ### Automatic Restore
 
-- **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
-> In the case of an automatic restore, only the data file is restored. If you wish to get the attached files or the project files, you must perform a manual restore.
+- **Restaura a última cópia de segurança se o banco de dados for danificado**: Quando essa opção for marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido do banco, se uma anomalia for detectada (arquivo corrupto por exemplo) durante a o lançamento do banco de dados. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
+> No caso de uma restauração automatica, só os arquivos de dados são restaurados. Se quiser os arquivos anexados ou os arquivos de projeto, precisa fazer uma restauração  manual
 
-- **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the database.
-    - When opening a database, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
-    - When restoring a database, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+- **Integrar o último arquivo de histórico se o banco de dados estiver incompleto**: Quando essa opção for marcada, o programa integra automaticamente o arquivo de histórico quando abrir ou restaurar o banco de dados.
+    - Quando abrir um banco de dados, o arquivo de histórico atual é integrado automaticamente se 4D detectar que há operações armazenadas no arquivo de log que não estejam presentes nos dados. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
+    - Quando restaurar um banco de dados, se o arquivo atual de hsitórico, ou se um arquivo de backup de histórico tiverem o mesmo número que um arquivo de backup e estiverem armazenados na mesma pasta, 4D vai examinar seu conteúdo. If it contains operations not found in the data file, the program automatically integrates it.
 
 The user does not see any dialog box; the operation is completely automatic. The goal is to make use as easy as possible. The operation is logged in the backup journal.

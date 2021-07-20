@@ -31,7 +31,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 | \\\         | \ (Backslash - umgekehrter Schrägstrich) |
 | \\"          | " (Anführungszeichen)                     |
 
-**Hinweis:** Das Zeichen \ wird unter Windows als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
+**Hinweis:** Das Zeichen \ (backslash) wird unter Windows als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
 
 ## String Operatoren
 

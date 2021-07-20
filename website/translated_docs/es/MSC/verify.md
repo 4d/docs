@@ -1,7 +1,7 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: Página Verificación
+sidebar_label: Página Verificación
 ---
 
 You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
@@ -21,9 +21,9 @@ The page contains action buttons that provide direct access to the verification 
 
 ## Open log file
 
-Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml where:
+Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la base. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). Se crea en formato XML y se denomina: *NombreBase*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml donde:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *NomBase* es el nombre del archivo de estructura sin extensión, por ejemplo "Facturas",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.

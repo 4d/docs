@@ -277,7 +277,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Instalação e ativação"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -335,7 +335,7 @@
         "sidebar_label": "Verify Page"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Arquitetura de um projeto 4D"
       },
       "Project/building": {
         "title": "Building a project package"
@@ -469,7 +469,7 @@
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation and activation|in index page Getting started": "Instalação e ativação",
     "Language Concepts|in index page Getting started": "Language Concepts",
     "Project databases|in index page Getting started": "Project databases",
     "Form Editor|no description given": "Form Editor",

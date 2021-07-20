@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Action
+title: Acción
 ---
 
 
@@ -21,9 +21,9 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dragging | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Tipos de datos | Possible Values                                              |
+| -------- | -------------- | ------------------------------------------------------------ |
+| dragging | texto          | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -33,7 +33,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 
-#### See also
+#### Ver también
 [Droppable](#droppable)
 
 
@@ -53,16 +53,16 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dropping | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Tipos de datos | Possible Values                                              |
+| -------- | -------------- | ------------------------------------------------------------ |
+| dropping | texto          | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
 
-#### See also
+#### Ver también
 [Draggable](#draggable)
 
 
@@ -72,9 +72,9 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| continuousExecution | boolean   | true, false     |
+| Name                | Tipos de datos | Possible Values |
+| ------------------- | -------------- | --------------- |
+| continuousExecution | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -98,21 +98,21 @@ Several types of method references are supported:
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- una ruta de acceso al archivo del método personalizado que incluya la extensión .4dm, por ejemplo:  
+  `../../CustomMethods/myMethod.4dm` También puede utilizar un sistema de archivos:  
+  `/RESOURCES/Buttons/bOK.4dm` En este caso, 4D no ofrece soporte automático para las operaciones con objetos.
 
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                    |
-| ------ | --------- | ------------------------------------------------------------------ |
-| method | text      | Object method standard or custom file path, or project method name |
+| Name   | Tipos de datos | Possible Values                                                    |
+| ------ | -------------- | ------------------------------------------------------------------ |
+| method | texto          | Object method standard or custom file path, or project method name |
 
 
 #### Objects Supported
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview. md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview. md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview. md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview. md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview. md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview. md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper. md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
 
 
 
@@ -125,9 +125,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| movableRows | boolean   | true, false     |
+| Name        | Tipos de datos | Possible Values |
+| ----------- | -------------- | --------------- |
+| movableRows | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -144,13 +144,13 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | text      | "multiple", "single", "none" |
+| Name          | Tipos de datos | Possible Values              |
+| ------------- | -------------- | ---------------------------- |
+| selectionMode | texto          | "multiple", "single", "none" |
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md)
+[Lista jerárquica](list_overview.md)
 
 
 
@@ -168,9 +168,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-| -------- | --------- | --------------- |
-| sortable | boolean   | true, false     |
+| Name     | Tipos de datos | Possible Values |
+| -------- | -------------- | --------------- |
+| sortable | booleano       | true, false     |
 
 #### Objects Supported
 [List Box](listbox_overview.md)
@@ -190,9 +190,9 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                                                                  |
-| ------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Name   | Tipos de datos | Possible Values                                                                                                  |
+| ------ | -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| action | cadena         | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objects Supported
 

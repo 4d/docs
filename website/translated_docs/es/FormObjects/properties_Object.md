@@ -1,10 +1,10 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objetos
 ---
 
 ---
-## Type
+## Tipo
 
  `MANDATORY SETTING`
 
@@ -13,9 +13,9 @@ This property designates the type of the [active or inactive form object](formOb
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
-| ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| Name | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                                          |
+| ---- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type | cadena         | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
 #### Objects Supported
@@ -37,9 +37,9 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                      |
-| ---- | --------- | -------------------------------------------------------------------- |
-| name | string    | Any allowed name which does not belong to an already existing object |
+| Name | Tipos de datos | Possible Values                                                      |
+| ---- | -------------- | -------------------------------------------------------------------- |
+| name | cadena         | Any allowed name which does not belong to an already existing object |
 
 #### Objects Supported
 
@@ -60,7 +60,7 @@ The form object variables allow you to control and monitor the objects. For exam
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
-### Expressions
+### Expresiones
 
 You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
@@ -85,7 +85,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por ejemplo:
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
@@ -107,7 +107,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### JSON Grammar
 
-| Name       | Data Type               | Possible Values                                                                                                                                                                                                                                                                                                                       |
+| Name       | Tipos de datos          | Possible Values                                                                                                                                                                                                                                                                                                                       |
 | ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
@@ -126,7 +126,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
 
 However, this property has a typing function in the following specific cases:
 
@@ -137,9 +137,9 @@ However, this property has a typing function in the following specific cases:
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| Name               | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | cadena         | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
 
 #### Objects Supported
 
@@ -154,9 +154,9 @@ A list of space-separated words used as class selectors in css files.
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                           |
-| ----- | --------- | --------------------------------------------------------- |
-| class | string    | One string with CSS name(s) separated by space characters |
+| Name  | Tipos de datos | Possible Values                                           |
+| ----- | -------------- | --------------------------------------------------------- |
+| class | cadena         | One string with CSS name(s) separated by space characters |
 
 
 #### Objects Supported
@@ -180,9 +180,9 @@ The collection or the entity selection must be available to the form when it is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                              |
-| ---------- | --------- | ------------------------------------------------------------ |
-| dataSource | string    | Expression that returns a collection or an entity selection. |
+| Name       | Tipos de datos | Possible Values                                              |
+| ---------- | -------------- | ------------------------------------------------------------ |
+| dataSource | cadena         | Expression that returns a collection or an entity selection. |
 
 #### Objects Supported
 
@@ -194,7 +194,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Data Source
+## Fuente de datos
 
 Specify the type of list box.
 
@@ -207,9 +207,9 @@ Specify the type of list box.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                             |
-| ----------- | --------- | ----------------------------------------------------------- |
-| listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
+| Name        | Tipos de datos | Possible Values                                             |
+| ----------- | -------------- | ----------------------------------------------------------- |
+| listboxType | cadena         | "array", "currentSelection", "namedSelection", "collection" |
 
 #### Objects Supported
 
@@ -228,13 +228,13 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                               |
-| -------------- | --------- | ------------------------------------------------------------- |
-| pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
+| Name           | Tipos de datos | Possible Values                                               |
+| -------------- | -------------- | ------------------------------------------------------------- |
+| pluginAreaKind | cadena         | Name of the plug-in external area (starts with a % character) |
 
 
 #### Objects Supported
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
 
 
 
@@ -246,14 +246,14 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| radioGroup | string    | Radio group name |
+| Name       | Tipos de datos | Possible Values  |
+| ---------- | -------------- | ---------------- |
+| radioGroup | cadena         | Radio group name |
 
 
 #### Objects Supported
 
-[Radio Button](radio_overview.md)
+[Botón radio](radio_overview.md)
 
 
 
@@ -271,13 +271,13 @@ To insert a \ in the label, enter "&#92;&#92;".
 
 By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
-For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Para la traducción de la base de datos, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| Name  | Tipos de datos | Possible Values |
+| ----- | -------------- | --------------- |
+| texto | cadena         | any text        |
 
 #### Objects Supported
 
@@ -293,34 +293,34 @@ For database translation purposes, you can enter an XLIFF reference in the title
 ## Variable Calculation
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
+> El cálculo de los pies de página también puede definirse con el comando 4D `LISTBOX SET FOOTER CALCULATION`.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Fecha | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ----- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   |      | X     | X    | X    |      | Same as column type |
-| Maximum               | X   |      | X     | X    | X    |      | Same as column type |
-| Sum                   | X   |      | X     |      | X    |      | Same as column type |
-| Count                 | X   | X    | X     | X    | X    | X    | Longint             |
-| Average               | X   |      |       | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |       | X    |      |      | Real                |
-| Variance(*)           | X   |      |       | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |       | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X     | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
+| Minimum               | X   |       | X     | X    | X    |      | Same as column type |
+| Maximum               | X   |       | X     | X    | X    |      | Same as column type |
+| Sum                   | X   |       | X     |      | X    |      | Same as column type |
+| Count                 | X   | X     | X     | X    | X    | X    | Entero largo        |
+| Average               | X   |       |       | X    |      |      | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
+| Variance(*)           | X   |       |       | X    |      |      | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
 When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
-> Automatic calculations are not supported with: *  footers of columns based on formulas, *  footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
+> Los cálculos automáticos no soportan: * pies de página de columnas basadas en fórmulas, *  los pies de página de los list boxes [Colección y selección de entidades](listbox_overview.md#collection-or-entity-selection-list-boxes). Es necesario utilizar cálculos personalizados.
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                                                                                       |
-| ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Name                | Tipos de datos | Possible Values                                                                                       |
+| ------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| variableCalculation | cadena         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
 #### Objects Supported
 

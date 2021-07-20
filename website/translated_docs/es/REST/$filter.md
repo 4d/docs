@@ -8,7 +8,7 @@ title: '$filter'
 Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 
-## Description
+## Descripción
 
 This parameter allows you to define the filter for your dataclass or method.
 
@@ -27,7 +27,7 @@ A more compex filter is composed of the following elements, which joins two quer
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `salary` son atributos de la clase de datos Employee.
 
 ### Using the params property
 
@@ -35,7 +35,7 @@ You can also use 4D's params property.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
 For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation.
 > When inserting quotes (') or double quotes ("), you must escape them using using their character code:
@@ -69,7 +69,7 @@ You can search in the object by writing the following:
 
 The comparator must be one of the following values:
 
-| Comparator | Description              |
+| Comparator | Descripción              |
 | ---------- | ------------------------ |
 | =          | equals to                |
 | !=         | not equal to             |
@@ -79,7 +79,7 @@ The comparator must be one of the following values:
 | <=         | less than or equal to    |
 | begin      | begins with              |
 
-## Examples
+## Ejemplos
 
 In the following example, we look for all employees whose last name begins with a "j":
 
@@ -87,14 +87,14 @@ In the following example, we look for all employees whose last name begins with 
  GET  /rest/Employee?$filter="lastName begin j"
 ```
 
-In this example, we search the Employee dataclass for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
+En este ejemplo, buscamos en la clase de datos Empleado todos los empleados cuyo salario sea superior a 20.000 y que no trabajen para una empresa llamada Acme:
 
 ```
  GET  /rest/Employee?$filter="salary>20000 AND  
  employer.name!=acme"&$orderby="lastName,firstName"
 ```
 
-In this example, we search the Person dataclass for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
+En este ejemplo, buscamos en la clase de datos Person todas las personas cuya propiedad número en el atributo anotherobj de tipo Object es mayor que 50:
 
 ```
  GET  /rest/Person/?filter="anotherobj.mynum > 50"

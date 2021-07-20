@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: Subformulario
 ---
 
 ---
@@ -10,13 +10,13 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values             |
-| --------------- | --------- | --------------------------- |
-| deletableInList | boolean   | true, false (default: true) |
+| Name            | Tipos de datos | Possible Values             |
+| --------------- | -------------- | --------------------------- |
+| deletableInList | booleano       | true, false (default: true) |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -33,13 +33,13 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                     |
-| ---------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Name       | Tipos de datos | Possible Values                                                                                                                     |
+| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Double-click on empty row
@@ -51,15 +51,15 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### JSON Grammar
 
-| Name                         | Data Type | Possible Values                    |
-| ---------------------------- | --------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string    | "addSubrecord" or "" to do nothing |
+| Name                         | Tipos de datos | Possible Values                    |
+| ---------------------------- | -------------- | ---------------------------------- |
+| doubleClickInEmptyAreaAction | cadena         | "addSubrecord" or "" to do nothing |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
-#### See also
+#### Ver también
 [Double click on row](#double-click-on-row)
 
 ---
@@ -79,16 +79,16 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| Name                   | Tipos de datos | Possible Values                     |
+| ---------------------- | -------------- | ----------------------------------- |
+| doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
-#### See also
+#### Ver también
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
@@ -101,14 +101,14 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| enterableInList | boolean   | true, false     |
+| Name            | Tipos de datos | Possible Values |
+| --------------- | -------------- | --------------- |
+| enterableInList | booleano       | true, false     |
 
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 ---
@@ -120,13 +120,13 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                                                                                                     |
-| -------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string    | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Name     | Tipos de datos | Possible Values                                                                                                                     |
+| -------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 
 
@@ -137,13 +137,13 @@ Specifies the table that the list subform belongs to (if any).
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                   |
-| ----- | --------- | --------------------------------- |
-| table | string    | 4D table name, or "" if no table. |
+| Name  | Tipos de datos | Possible Values                   |
+| ----- | -------------- | --------------------------------- |
+| table | cadena         | 4D table name, or "" if no table. |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)
 
 ---
 ## Selection Mode
@@ -160,10 +160,10 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| Name          | Tipos de datos | Possible Values              |
+| ------------- | -------------- | ---------------------------- |
+| selectionMode | cadena         | "multiple", "single", "none" |
 
 #### Objects Supported
 
-[Subform](subform_overview.md)
+[Subformulario](subform_overview.md)

@@ -1,6 +1,6 @@
 ---
 id: propertiesRangeOfValues
-title: Range of Values
+title: Rango de valores
 ---
 
 ---
@@ -11,9 +11,9 @@ You can assign a default value to be entered in an input object. This property i
 The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
 - text/string
 - number/integer
-- date
+- fecha
 - time
-- boolean
+- booleano
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
@@ -29,13 +29,13 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### JSON Grammar
 
-| Name         | Data Type                           | Possible Values                            |
+| Name         | Tipos de datos                      | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 
@@ -48,9 +48,9 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
+| Name         | Tipos de datos | Possible Values                  |
+| ------------ | -------------- | -------------------------------- |
+| excludedList | list           | A list of values to be excluded. |
 
 #### Objects Supported
 
@@ -69,9 +69,9 @@ Making a list required does not automatically display the list when the field is
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+| Name         | Tipos de datos | Possible Values             |
+| ------------ | -------------- | --------------------------- |
+| requiredList | list           | A list of mandatory values. |
 
 #### Objects Supported
 

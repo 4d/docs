@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: Display
+title: Visualización
 ---
 
 ---
@@ -38,9 +38,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                      |
-| ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| Name       | Tipos de datos | Possible Values                                                                      |
+| ---------- | -------------- | ------------------------------------------------------------------------------------ |
+| textFormat | cadena         | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
 #### Objects Supported
 
@@ -87,9 +87,9 @@ The table below shows choices available:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Name       | Tipos de datos | Possible Values                                                                                                                                                                  |
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -133,7 +133,7 @@ Suppose you use the format ##0 to display three digits. If the user enters nothi
 ### Separator characters
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located: *   in a Real type field, using this key will insert the decimal separator defined in the system, *   in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> En Windows, al utilizar la tecla del separador decimal del teclado numérico, 4D hace una distinción según el tipo de campo donde se encuentre el cursor: * en un campo de tipo Real, al utilizar esta tecla se inserta el separador decimal definido en el sistema, * en cualquier otro tipo de campo, esta tecla inserta el carácter asociado a la tecla, normalmente un punto (.) o una coma (,).
 
 
 ### Decimal points and other display characters
@@ -211,7 +211,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
     6:56 AM
 
-### Examples
+### Ejemplos
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
@@ -247,9 +247,9 @@ The following table shows how different formats affect the display of numbers. T
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                                                |
-| ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
+| Name         | Tipos de datos | Possible Values                                                |
+| ------------ | -------------- | -------------------------------------------------------------- |
+| numberFormat | cadena         | Numbers (including a decimal point or minus sign if necessary) |
 
 #### Objects Supported
 
@@ -311,9 +311,9 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| Name          | Tipos de datos | Possible Values                                                                                       |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| pictureFormat | cadena         | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
 #### Objects Supported
 
@@ -331,7 +331,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
+| Format name                  | JSON string  | Comentarios                                                                                                                                      | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -347,9 +347,9 @@ The table below shows the Time field display formats and gives examples:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Name       | Tipos de datos | Possible Values                                                                                                                                                                                          |
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -371,9 +371,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Name          | Tipos de datos | Possible Values                                                          |
+| ------------- | -------------- | ------------------------------------------------------------------------ |
+| booleanFormat | cadena         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
 #### Objects Supported
@@ -394,9 +394,9 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                                                                                                                 |
-| ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+| Name        | Tipos de datos | Possible Values                                                                                                                                                 |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
 #### Objects Supported
 
@@ -416,9 +416,9 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+| Name    | Tipos de datos | Possible Values |
+| ------- | -------------- | --------------- |
+| display | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -453,9 +453,9 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
+| Name       | Tipos de datos | Possible Values |
+| ---------- | -------------- | --------------- |
+| threeState | booleano       | true, false     |
 
 #### Objects Supported
 
@@ -475,9 +475,9 @@ In that cases, the title of the check box can be entered using this property.
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                    |
-| ------------ | --------- | ---------------------------------- |
-| controlTitle | string    | Any custom label for the check box |
+| Name         | Tipos de datos | Possible Values                    |
+| ------------ | -------------- | ---------------------------------- |
+| controlTitle | cadena         | Any custom label for the check box |
 
 #### Objects Supported
 
@@ -514,9 +514,9 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values        |
-| ------------ | --------- | ---------------------- |
-| truncateMode | string    | "withEllipsis", "none" |
+| Name         | Tipos de datos | Possible Values        |
+| ------------ | -------------- | ---------------------- |
+| truncateMode | cadena         | "withEllipsis", "none" |
 
 
 
@@ -539,9 +539,9 @@ You can handle the Visible property for most form objects. This property simplif
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values     |
-| ---------- | --------- | ------------------- |
-| visibility | string    | "visible", "hidden" |
+| Name       | Tipos de datos | Possible Values     |
+| ---------- | -------------- | ------------------- |
+| visibility | cadena         | "visible", "hidden" |
 
 #### Objects Supported
 
@@ -599,9 +599,9 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                    |
-| -------- | --------- | -------------------------------------------------- |
-| wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
+| Name     | Tipos de datos | Possible Values                                    |
+| -------- | -------------- | -------------------------------------------------- |
+| wordwrap | cadena         | "automatic" (excluding list box), "normal", "none" |
 
 #### Objects Supported
 
