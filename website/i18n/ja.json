@@ -854,13 +854,10 @@
         "title": "データベース管理"
       },
       "WebServer/webServerConfig": {
-        "title": "バックアップ設定"
+        "title": "設定"
       },
       "WebServer/webServerObject": {
         "title": "Webサーバーオブジェクト"
-      },
-      "WebStudio/webStudio": {
-        "title": "WebStudio"
       }
     },
     "links": {
