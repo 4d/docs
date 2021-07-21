@@ -33,7 +33,6 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'docs',
-  noIndex: true,
   organizationName: '4D',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
