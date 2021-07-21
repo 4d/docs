@@ -262,65 +262,65 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 
 #### Valores de atributos específicos
 
-- For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
+- Para los atributos `icon`, `picture` y `customBackgroundPicture` que soportan una ruta a una imagen, la sintaxis es:
 
 ```
-icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
-icon: url("edit.png"); /* relative path to the form file */
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* ruta absoluta */
+icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 ```
 
-- For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+- Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
-    - CSS color name: `fill: red;`
-    - Hexa value: `fill: #FF0000;`
-    - the `rgb()` function: `fill:rgb(255,0,0)`
+    - Nombre del color CSS: `fill: red;`
+    - Valor hexadécimal: `fill: #FF0000;`
+    - función `rgb()`: `fill:rgb(255,0,0)`
 
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Por ejemplo:
-    - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
-    - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
+- Si una cadena utiliza caracteres prohibidos en CSS, puede rodear la cadena con comillas simples o dobles. Por ejemplo:
+    - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+    - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
 
 ## Orden de prioridad
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+Los proyectos 4D priorizan las definiciones de estilo en conflicto, primero por la definición del formulario y luego por las hojas de estilo.
 
 
 ### JSON vs Hoja de estilo
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+Si un atributo está definido en la descripción del formulario JSON y en una hoja de estilo, 4D utilizará el valor del archivo JSON.
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+Para anular este comportamiento, el valor del estilo debe ir seguido de una declaración `!important`.
 
-**Example 1:**
+**Ejemplo 1:**
 
-| JSON form description | Hoja de estilo | 4D displays |
-| --------------------- | -------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;`  | `"Button"`  |
+| Descripción del formulario JSON | Hoja de estilo | 4D muestra |
+| ------------------------------- | -------------- | ---------- |
+| `"text": "Button",`             | `text: Edit;`  | `"Button"` |
 
-**Example 2:**
+**Ejemplo 2:**
 
-| JSON form description | Hoja de estilo           | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| Descripción del formulario JSON | Hoja de estilo           | 4D muestra |
+| ------------------------------- | ------------------------ | ---------- |
+| `"text": "Button",`             | `text: Edit !important;` | `"Edit"`   |
 
 
 
 
 ### Hojas de estilo múltiples
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el siguiente orden:
 
-1.  The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
-2.  It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3.  If it exists, it will then load a specific CSS file defined in the JSON form:
+1.  El formulario 4D cargará primero el archivo CSS por defecto `/SOURCES/styleSheets.css`.
+2.  Luego cargará el archivo CSS para la plataforma actual `/SOURCES/styleSheets_mac.css` o `/SOURCES/styleSheets_windows.css`.
+3.  Si existe, entonces cargará un archivo CSS específico definido en el formulario JSON:
 
-    *   a file for both platforms:
+    *   un archivo para ambas plataformas:
 
     ```
     "css": "<path>" 
     ```
 
-    *   or a list of files for both platforms:
+    *   o una lista de archivos para ambas plataformas:
 
     ```
     "css": [
@@ -329,7 +329,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
           ],
     ```
 
-    *   or a list of files per platform:
+    *   o una lista de archivos por plataforma:
 
     ```
      "css": [
@@ -338,12 +338,12 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
         ],
     ```
 
-> Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> Las rutas de los archivos pueden ser relativas o absolutas. * Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON. * Por razones de seguridad, sólo se aceptan las rutas del sistema de archivos para las rutas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 
 ## Creación o modificación de hojas de estilo
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+Puede crear hojas de estilo utilizando su editor de texto preferido y guardando el archivo con extensión ".css" en la carpeta "/SOURCES" del proyecto.
 
 The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
 
