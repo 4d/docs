@@ -4,19 +4,19 @@ title: Hojas de estilo
 ---
 
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
+Una hoja de estilo agrupa una combinación de atributos de objetos formulario, desde los atributos de texto hasta casi todos los atributos de objeto disponibles.
 
-In addition to harmonizing an application's interface, style sheets provide three major advantages:
+Además de armonizar la interfaz de sus aplicaciones, las hojas de estilo ofrecen tres grandes ventajas:
 
-*   Saves time during development: Each object has specific group of settings within a single operation.
-*   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-*   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
+*   Permite ahorrar tiempo durante el desarrollo: para cada objeto tiene un grupo específico de parámetros dentro de una sola operación.
+*   Facilita el mantenimiento: las hojas de estilo modifican la apariencia de todos los objetos que las utilicen, por lo que cambiar el tamaño de la fuente en una hoja de estilo cambiará el tamaño de la fuente para todos los objetos que utilicen esta misma hoja de estilo.
+*   Control del desarrollo multiplataforma: las hojas de estilo se pueden aplicar a las plataformas macOS y Windows, sólo a macOS o sólo a Windows. Cuando se aplica una hoja de estilo, 4D utiliza automáticamente la hoja de estilo apropiada.
 
 ## Archivos hojas de estilo
 
-4D accepts three, specific style sheet files:
+4D acepta tres archivos específicos de hojas de estilo:
 
-| Style Sheet             | Platform                                              |
+| Hoja de estilo          | Plataforma                                            |
 | ----------------------- | ----------------------------------------------------- |
 | styleSheets.css         | Default global style sheet for both macOS and Windows |
 | styleSheets_mac.css     | For defining macOS only specific attribute styles     |
@@ -293,13 +293,13 @@ To override this behavior, the style value must be followed with an `!important`
 
 **Example 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
+| JSON form description | Hoja de estilo | 4D displays |
+| --------------------- | -------------- | ----------- |
+| `"text": "Button",`   | `text: Edit;`  | `"Button"`  |
 
 **Example 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
+| JSON form description | Hoja de estilo           | 4D displays |
 | --------------------- | ------------------------ | ----------- |
 | `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
 
