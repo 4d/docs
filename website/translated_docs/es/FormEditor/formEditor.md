@@ -67,9 +67,9 @@ The toolbar contains the following elements:
 | ![](assets/en/FormEditor/displyAndPage.png)   | [Visualización y gestión de páginas](forms.html#form-pages) | Esta área permite pasar de una página de formulario a otra y añadir páginas. Para navegar entre las páginas del formulario, haga clic en los botones de flecha o en el área central y elija la página que desea visualizar en el menú que aparece. Si pulsa el botón flecha derecha mientras se muestra la última página del formulario, 4D le permite añadir una página. |
 | ![](assets/en/FormEditor/cssPreviewicon.png)  | [CSS Preview](#css-preview)                                 | Este botón se utiliza para seleccionar el modo CSS a utilizar.                                                                                                                                                                                                                                                                                                            |
 | ![](assets/en/FormEditor/views.png)           | [Gestión de vistas](#views)                                 | Este botón muestra u oculta la paleta de vistas. Esta función se detalla en la sección Utilizar las vistas de objeto.                                                                                                                                                                                                                                                     |
-| ![](assets/en/FormEditor/shields2.png)        | [Visualización de escudos](#shields)                        | Cada clic en este botón provoca la visualización sucesiva de todos los tipos de escudos de formulario. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                                                  |
-| ![](assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)          | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                                                                   |
-| ![](assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                       | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                                                                      |
+| ![](assets/en/FormEditor/shields2.png)        | [Visualización de escudos](#shields)                        | Cada clic en este botón provoca la visualización sucesiva de todos los tipos de escudos de formulario. El botón también está vinculado a un menú que permite seleccionar directamente el tipo de escudo a mostrar.                                                                                                                                                        |
+| ![](assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)    | Este botón muestra la librería de objetos preconfigurada que ofrece numerosos objetos con ciertas propiedades que han sido predefinidas.                                                                                                                                                                                                                                  |
+| ![](assets/en/FormEditor/listBoxBuilder1.png) | [Creación de list box](#list-box-builder)                   | Este botón crea nuevos list box de tipo selección de entidades.                                                                                                                                                                                                                                                                                                           |
 
 ### Object bar
 
@@ -113,16 +113,16 @@ You can navigate in the Property List using the following shortcuts:
 *   **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
 *   **PgUp** and **PgDn**: Used to scroll the Property List contents.
 *   **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+*   **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
+*   **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
 
 
 
 ## Manipulating Form Objects
 
-### Adding objects
+### Añadir objetos
 
-You can add objects to forms in several ways:
+Puede añadir objetos en los formularios de varias maneras:
 
 *   By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
 *   By dragging and dropping the object from the object bar
@@ -459,7 +459,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 
 
-## List Box Builder
+## Creación de list box
 
 You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
 
