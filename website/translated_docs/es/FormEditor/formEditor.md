@@ -231,48 +231,48 @@ An active object that has been grouped must be ungrouped before you can access i
 La agrupación sólo afecta a los objetos en el editor de formularios. Cuando se ejecuta el formulario, todos los objetos agrupados actúan como si estuvieran desagrupados.
 > No es posible agrupar objetos que pertenezcan a diferentes vistas y sólo se pueden agrupar aquellos objetos que pertenezcan a la vista actual (ver [Utilizar las vistas de objeto](#views) ).
 
-To group objects:
+Para agrupar los objetos:
 
-1.  Select the objects that you want to group.
-2.  Choose **Group** from the Object menu.<p>O<p> Click the Group button  in the toolbar of the Form editor:<p>![](assets/en/FormEditor/group.png)<p> 4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
+1.  Seleccione los objetos que desea agrupar.
+2.  Elija **Agrupar** en el menú Objetos.<p>O<p> Haga clic en el botón Agrupar de la barra de herramientas del editor de formularios:<p>![](assets/en/FormEditor/group.png)<p> 4D marca el límite de los objetos recién agrupados con marcas. No hay marcas que delimiten ninguno de los objetos individuales del grupo. Ahora, al modificar el objeto agrupado, se modifican todos los objetos que componen el grupo.
 
-To ungroup an object:
+Para desagrupar un grupo de objetos:
 
-1.  Select the grouped object that you want to ungroup.
-2.  Choose **Ungroup** from the **Object** menu.<p>O<p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.<p>4D marks the boundaries of the individual objects with handles.
+1.  Seleccione el grupo de objetos que desea desagrupar.
+2.  Elija **Desagrupar** en el menú **Objetos**.<p>O<p>Haga clic en el botón **Desagrupar** (menú del botón **Agrupar**) de la barra de herramientas del editor de formularios.<p>Si **Desagrupar** está atenuado, significa que el objeto seleccionado ya está separado en su forma más simple.<p>4D marca los bordes de los objetos individuales con marcas.
 
 
-### Aligning objects
+### Alinear objetos
 
-You can align objects with each other or using an invisible grid on the form.
+Puede alinear los objetos entre sí o mediante una rejilla invisible en el formulario.
 
-*   When you align one object to another, you can align it to the top, bottom, side, or horizontal or vertical center of the other object. You can directly align a selection of objects using the alignment tools or apply more advanced alignment settings using the Alignment Assistant. The latter option allows you, for example, to set the object that will be used as the position reference and to preview the alignment in the form before applying it.
-*   When you use the invisible grid, each object can be aligned manually with others based on “noticeable” positions which are depicted with dotted lines that appear when the object being moved approaches other objects.
+*   Cuando se alinea un objeto con otro, se puede alinear con la parte superior, inferior, lateral o con el centro horizontal o vertical del otro objeto. Puede alinear directamente una selección de objetos utilizando las herramientas de alineación o aplicar ajustes de alineación más avanzados utilizando el Asistente de Alineación. Esta última opción permite, por ejemplo, definir el objeto que se utilizará como referencia de posición y previsualizar la alineación en el formulario antes de aplicarla.
+*   Cuando se utiliza la rejilla invisible, cada objeto puede alinearse manualmente con otros basándose en posiciones "perceptibles" que se representan con líneas de puntos que aparecen cuando el objeto que se mueve se acerca a otros objetos.
 
-#### Using the instantaneous alignment tools
+#### Utilizar las herramientas de alineación directa
 
-The alignment tools in the toolbar and in the Align submenu of the Object menu allow you to quickly align selected objects.
+Las herramientas de alineación de la barra de herramientas y del submenú Alinear del menú Objeto permiten alinear rápidamente los objetos seleccionados.
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+Cuando 4D alinea los objetos, deja un objeto seleccionado en su lugar y alinea el resto de los objetos a ese. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. La figura siguiente muestra objetos sin alineación, "alineados a la izquierda", "alineados horizontalmente por centros" y "alineados a la derecha":
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
-#### Using the alignment assistant
+#### Utilizar el asistente de alineación
 
-The Alignment Assistant allows you to perform any type of alignment and/or distribution of objects.
+El Asistente de Alineación permite realizar cualquier tipo de alineación y/o distribución de objetos.
 
 ![](assets/en/FormEditor/alignmentAssistant.png)
 
 
-To display this dialog box, select the objects you want to align then choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, a continuación, elija el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.
 
-*   In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.
+*   En las áreas "Alineación izquierda/derecha" y/o "Alineación superior/inferior", haga clic en el icono que corresponde a la alineación que desea realizar.<p>El área de ejemplo muestra los resultados de su selección.
 
-*   To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.<p>In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.
+*   Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**.<p>En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla.<p>O:<p>Para alinear los objetos a un objeto específico, seleccione la opción **Alinear en** y seleccione el objeto al que desea que se alineen los demás objetos de la lista de objetos. En este caso, la posición del objeto de referencia no se alterará.
 
-You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
+Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
 > This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
 
 #### Using the Magnetic Grid
@@ -312,9 +312,9 @@ To distribute objects using the Align and Distribute dialog box:
 
 2.  Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>The following dialog box appears:![](assets/en/FormEditor/alignmentAssistant.png)
 
-3.  In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Standard horizontal distribution icon)<p>The example area displays the results of your selection.
+3.  In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Standard horizontal distribution icon)<p>El área de ejemplo muestra los resultados de su selección.
 
-4.  To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
+4.  To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>O:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
 
     *   Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
     *   Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
