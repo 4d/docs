@@ -16,11 +16,11 @@ Además de armonizar la interfaz de sus aplicaciones, las hojas de estilo ofrece
 
 4D acepta tres archivos específicos de hojas de estilo:
 
-| Hoja de estilo          | Plataforma                                            |
-| ----------------------- | ----------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles     |
-| styleSheets_windows.css | For defining Windows only specific attribute styles   |
+| Hoja de estilo          | Plataforma                                                                |
+| ----------------------- | ------------------------------------------------------------------------- |
+| styleSheets.css         | Default global style sheet for both macOS and Windows                     |
+| styleSheets_mac.css     | For defining macOS only specific attribute styles                         |
+| styleSheets_windows.css | Para definir los estilos de atributos específicos para Windows únicamente |
 
 Estos archivos se almacenan en la carpeta "/SOURCES" del proyecto. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
