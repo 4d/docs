@@ -17,11 +17,11 @@ The `On Drag Over` event is repeatedly sent to the destination object when the m
 
 To **accept** the drag, the destination object method must return 0 (zero), so you write `$0:=0`. To **reject** the drag, the object method must return -1 (minus one), so you write `$0:=-1`. During an `On Drag Over` event, 4D treats the object method as a function. If no result is returned, 4D assumes that the drag is accepted.
 
-If you accept the drag, the destination object is highlighted. Si rechaza el arrastre, el destino no se resalta. Accepting the drag does not mean that the dragged data is going to be inserted into the destination object. It only means that if the mouse button was released at this point, the destination object would accept the dragged data and the [`On Drop`](onDrop.md) event would be fired.
+If you accept the drag, the destination object is highlighted. Si rechaza el arrastre, el destino no se resalta. Aceptar el arrastre no significa que los datos arrastrados vayan a ser insertados en el objeto de destino. It only means that if the mouse button was released at this point, the destination object would accept the dragged data and the [`On Drop`](onDrop.md) event would be fired.
 
 If you do not process the `On Drag Over` event for a droppable object, that object will be highlighted for all drag over operations, no matter what the nature and type of the dragged data.
 
-The `On Drag Over` event is the means by which you control the first phase of a drag-and-drop operation. Not only can you test whether the dragged data is of a type compatible with the destination object, and then accept or reject the drag; you can simultaneously notify the user of this fact, because 4D highlights (or not) the destination object, based on your decision.
+El evento `On Drag Over` es el medio por el que se controla la primera fase de una operación de arrastrar y soltar. Not only can you test whether the dragged data is of a type compatible with the destination object, and then accept or reject the drag; you can simultaneously notify the user of this fact, because 4D highlights (or not) the destination object, based on your decision.
 
 The code handling an `On Drag Over` event should be short and execute quickly, because that event is sent repeatedly to the current destination object, due to the movements of the mouse.
 
