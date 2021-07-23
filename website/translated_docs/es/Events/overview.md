@@ -17,9 +17,9 @@ End if
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
 
 
-## Event object
+## Objeto evento
 
-Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+Each event is returned as an object by the `FORM Event` command. Por defecto, contiene las siguientes propiedades:
 
 | Propriedad | Tipo | Descripción |
 | ---------- | ---- | ----------- |
