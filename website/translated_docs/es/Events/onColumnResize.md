@@ -18,7 +18,7 @@ Este evento se genera cuando el ancho de una columna en el list box es modificad
 
 ### 4D View Pro
 
-Este evento se genera cuando el ancho de una columna es modificado por un usuario. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Este evento se genera cuando el ancho de una columna es modificado por un usuario. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedad  | Tipo         | Descripción                                                                               |
 | ----------- | ------------ | ----------------------------------------------------------------------------------------- |
