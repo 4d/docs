@@ -526,60 +526,60 @@ Pode selecionar o modo de linking de dados durante o processo de construção da
 
 Mais especificamente os casos abaixos são cobertos:
 
-- Evitar a exibição do diálogo  4D "Open Data File" quando lançar uma nova aplicação fusionada atualizada. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
-- Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
+- Evitar a exibição do diálogo  4D "Open Data File" quando lançar uma nova aplicação fusionada atualizada. É possível detectar, por exemplo ao iniciar, que o arquivo de dados padrão foi aberto e assim executar seu próprio código ou diálogos para criar ou selecionar um arquivo de dados local
+- Permitir a distribuição de aplicações fusionadas com dados apenas leitura (para aplicações demo por exemplo).
 
 
-To define and use a default data file:
+Para definri e usar um arquivo de dados padrão:
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
-- When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
+- Deve fornecer um arquivo de dados padrão  (chamado de "Default.4DD") e armazena-o em uma pasta padrão  (chamado "Default Data") dentro da pasta de projeto de banco de dados. Esse arquivo pode ser fornecido junto com todos os outros necessários arquivos, dependendo da configuração do banco de dados: index (.4DIndx), blobs externos, históricos, etc. It is your responsibility to provide a valid default data file. Note entretanto que como um arquivo de dados padrão é aberto em modo apenas leitura, é recomendado desmarcar a opção "Use Log File" no arquivo de estrutura original antes de criar o arquivo de dados.
+- Quando a aplicação for construida, a pasta de dados padrão é integrada na aplicação fusionada. Todos os arquivos dentro dessa pasta de dados padrão também são embebidos.
 
-The following graphic illustrates this feature:
+O gráfico a seguir ilustra essa propriedade:
 
 ![](assets/en/Project/DefaultData.png)
 
-When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
+Quando o arquivo de dados padrão for detectado ao lançamento, é aberto silenciosamente em modo apenas leitura, assim permitindo que execute qualquer operação personalizada que não modifique o arquivo de dados.
 
 
-## Management of client connection(s)
+## Gerenciamento de conexões de cliente
 
-The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
+O gerenciamento de conexões de aplicações de cliente cobre os mecanismos pelos quais uma aplicação de cliente fusionada se conecta ao servidor alvo, quando estiver em seu ambiente de produção.
 
-### Connection scenario
+### Cenário de conexão
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+O processo de conexão para aplicação de clientes fusionadas é compatível com casos onde o servidor dedicado não estiver disponível O cenário de inicialização para uma aplicação cliente 4D é o abaixo:
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
+- A aplicação cliente tenta conectar ao servidor usando o serviço de descoberta (baseado no nome de servidor, transmitido na mesma subnet).  
   OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box.
-    - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
-    - If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+  Se a informação de uma conexão válida for armazenada no arquivo "EnginedServer.4DLink" dentro da aplicação cliente, a aplicação cliente tenta se conectar com o endereço de servidor especificado.
+- Se isso falhar, a aplicação cliente tentar se conectar ao servidor usando informação armazenada na pasta de preferência de usuários da aplicação (arquivo "lastServer.xml" ver o último passo).
+- Se isso falhar, a aplicação cliente exibe uma caixa de diálogo de erro de conexão.
+    - Se o usuário clicar no botão **Selecione...**  (quando permitido pelo desenvolvedor  4D no passo de construção, ver abaixo), a caixa de diálogo padrão "Server connection" é exibida.
+    - Se o usuário clicar no botão **Quit** a aplicaão do cliente termina.
+- Se a conexão tiver sucesso, a aplicação cliente guarda a informação de conexão na pasta de preferências de usuário da aplicação para uso futuro.
 
-### Storing the last server path
+### Armazenar a última rota de servidor
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+A última rota de servidor usada e validade é uatomaticamente salva no arquivo chamado "lastServer.xml" na pasta de preferência de usuário da aplicação. Essa pasta é armazenada no local abaixo:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+Esse mecanismo afeta o caso onde o servidor alvo primário está temporariamente indisponível por algum motivo (modo manutenção por exemplo). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Qualquer indisponibilidade subsequente seria tratada automaticamente através da informação de rota "lastServer.xml".
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability.  
-> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
+> - Quando aplicações cliente não possam se beneficiar do serviço de descoberta, por exemplo por causa da configuração de rede, é recomendado que o desenvolvedor forneça um nome de host no momento de construção usando a chave [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) no arquivo "BuildApp.4DSettings". The mechanism addresses cases of temporary unavailability.  
+> - Apertar a tecla **Alt/Option** ao iniciar vai exibir a caixa de diálogo de seleção de servidor ainda é compatível em todos os casos.
 
 
 
-### Availability of the server selection dialog box in case of error
+### Disponibilidade da caixa de diálogo de seleção de servidor no caso de erro
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+Pode escolher se quer ou não exibir a caixa de diálogo de seleção de servidor padrão na aplicação de cliente fusionada quando o servidor não puder ser alcançado. A configuração depende do valor da chave [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML na máquina onde a aplicação foi construida:
 
-- **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
-  `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
+- **Exibe uma mensagem de erro sem acesso possível à caixa de diálogo de seleção de servidor**. Default operation. A aplicação só pode terminar.  
+  `ServerSelectionAllowed`: **False** ou chave omitida ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
+- **É possível exibir uma mensagem de erro com acesso a caixa de dialogo de seleção de servidor**. O usuário pode acessar a janela de seleção de servidor clicando no botão **Select...**.   
   `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
