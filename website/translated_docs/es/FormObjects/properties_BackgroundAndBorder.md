@@ -10,7 +10,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values                                                 |
+| Nombre        | Tipos de datos | Possible Values                                                 |
 | ------------- | -------------- | --------------------------------------------------------------- |
 | alternateFill | cadena         | any css value; "transparent"; "automatic"; "automaticAlternate" |
 
@@ -29,9 +29,9 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 #### JSON Grammar
 
 
-| Name | Tipos de datos | Possible Values                           |
-| ---- | -------------- | ----------------------------------------- |
-| fill | cadena         | any css value; "transparent"; "automatic" |
+| Nombre | Tipos de datos | Possible Values                           |
+| ------ | -------------- | ----------------------------------------- |
+| fill   | cadena         | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 
@@ -53,7 +53,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values                           |
+| Nombre        | Tipos de datos | Possible Values                           |
 | ------------- | -------------- | ----------------------------------------- |
 | rowFillSource | cadena         | An expression returning a RGB color value |
 
@@ -72,7 +72,7 @@ Allows setting a standard style for the object border.
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                                   |
+| Nombre      | Tipos de datos | Possible Values                                                   |
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | borderStyle | texto          | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
@@ -89,7 +89,7 @@ Describes dotted line type as a sequence of black and white points.
 
 #### JSON Grammar
 
-| Name            | Tipos de datos         | Possible Values                                                          |
+| Nombre          | Tipos de datos         | Possible Values                                                          |
 | --------------- | ---------------------- | ------------------------------------------------------------------------ |
 | strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
@@ -114,7 +114,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON Grammar
 
-| Name               | Tipos de datos | Possible Values |
+| Nombre             | Tipos de datos | Possible Values |
 | ------------------ | -------------- | --------------- |
 | hideExtraBlankRows | booleano       | true, false     |
 
@@ -138,7 +138,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Possible Values                           |
 | ------ | -------------- | ----------------------------------------- |
 | stroke | cadena         | any css value, "transparent", "automatic" |
 
@@ -157,7 +157,7 @@ Designates the thickness of a line.
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                                   |
+| Nombre      | Tipos de datos | Possible Values                                                   |
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | strokeWidth | number         | 0 for smallest width on a printed form, or any integer value < 20 |
 
@@ -203,7 +203,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values              |
+| Nombre        | Tipos de datos | Possible Values              |
 | ------------- | -------------- | ---------------------------- |
 | rowFillSource | cadena         | The name of a longint array. |
 
@@ -221,9 +221,9 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### JSON Grammar
 
-| Name | Tipos de datos | Possible Values |
-| ---- | -------------- | --------------- |
-| fill | texto          | "transparent"   |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| fill   | texto          | "transparent"   |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
