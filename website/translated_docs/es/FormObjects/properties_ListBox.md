@@ -10,7 +10,7 @@ Collection of columns of the list box.
 
 #### JSON Grammar
 
-| Name    | Tipos de datos               | Possible Values                                  |
+| Nombre  | Tipos de datos               | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -33,7 +33,7 @@ The specified form is displayed:
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values                                                                                                                                                                                       |
+| Nombre     | Tipos de datos | Possible Values                                                                                                                                                                                       |
 | ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | cadena         | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
@@ -63,7 +63,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Tipos de datos | Possible Values                     |
+| Nombre                 | Tipos de datos | Possible Values                     |
 | ---------------------- | -------------- | ----------------------------------- |
 | doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
@@ -87,7 +87,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values |
+| Nombre       | Tipos de datos | Possible Values |
 | ------------ | -------------- | --------------- |
 | highlightSet | cadena         | Name of the set |
 
@@ -126,7 +126,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 #### JSON Grammar
 
-| Name              | Tipos de datos | Possible Values |
+| Nombre            | Tipos de datos | Possible Values |
 | ----------------- | -------------- | --------------- |
 | lockedColumnCount | integer        | minimum: 0      |
 
@@ -141,7 +141,7 @@ Number of columns that cannot be moved during execution.
 
 #### JSON Grammar
 
-| Name              | Tipos de datos | Possible Values |
+| Nombre            | Tipos de datos | Possible Values |
 | ----------------- | -------------- | --------------- |
 | staticColumnCount | integer        | minimum: 0      |
 
@@ -162,7 +162,7 @@ Sets the number of columns of the list box.
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values |
+| Nombre      | Tipos de datos | Possible Values |
 | ----------- | -------------- | --------------- |
 | columnCount | integer        | minimum: 1      |
 
@@ -218,7 +218,7 @@ Note that setting properties for an element overrides any other values for this 
 
 #### JSON Grammar
 
-| Name             | Tipos de datos | Possible Values        |
+| Nombre           | Tipos de datos | Possible Values        |
 | ---------------- | -------------- | ---------------------- |
 | rowControlSource | cadena         | Row control array name |
 
@@ -240,7 +240,7 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values              |
+| Nombre        | Tipos de datos | Possible Values              |
 | ------------- | -------------- | ---------------------------- |
 | selectionMode | cadena         | "multiple", "single", "none" |
 
