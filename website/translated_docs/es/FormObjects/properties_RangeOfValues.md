@@ -29,7 +29,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### JSON Grammar
 
-| Name         | Tipos de datos                      | Possible Values                            |
+| Nombre       | Tipos de datos                      | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
@@ -48,7 +48,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values                  |
+| Nombre       | Tipos de datos | Possible Values                  |
 | ------------ | -------------- | -------------------------------- |
 | excludedList | list           | A list of values to be excluded. |
 
@@ -69,7 +69,7 @@ Making a list required does not automatically display the list when the field is
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values             |
+| Nombre       | Tipos de datos | Possible Values             |
 | ------------ | -------------- | --------------------------- |
 | requiredList | list           | A list of mandatory values. |
 
