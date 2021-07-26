@@ -22,7 +22,7 @@ You can either:
 
 #### JSON Grammar
 
-|  Name   | Tipos de datos | Possible Values                       |
+| Nombre  | Tipos de datos | Possible Values                       |
 |:-------:|:--------------:| ------------------------------------- |
 | tooltip |     texto      | additional information to help a user |
 
