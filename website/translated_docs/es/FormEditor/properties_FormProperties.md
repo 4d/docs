@@ -16,7 +16,7 @@ This property defines the color scheme for the form. By default when the propert
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values |
+| Nombre      | Tipos de datos | Possible Values |
 | ----------- | -------------- | --------------- |
 | colorScheme | cadena         | "dark", "light" |
 
@@ -34,9 +34,9 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values                                                          |
-| ----- | -------------- | ------------------------------------------------------------------------ |
-| pages | colección      | Collection of pages (each page is an object, page 0 is the first element |
+| Nombre | Tipos de datos | Possible Values                                                          |
+| ------ | -------------- | ------------------------------------------------------------------------ |
+| pages  | colección      | Collection of pages (each page is an object, page 0 is the first element |
 
 ---
 
@@ -77,7 +77,7 @@ Supported types depend on the form category:
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                              |
+| Nombre      | Tipos de datos | Possible Values                                              |
 | ----------- | -------------- | ------------------------------------------------------------ |
 | destination | cadena         | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
@@ -94,7 +94,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values                                                                                                    |
+| Nombre        | Tipos de datos | Possible Values                                                                                                    |
 | ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------ |
 | inheritedForm | cadena         | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
@@ -110,7 +110,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### JSON Grammar
 
-| Name               | Tipos de datos   | Possible Values            |
+| Nombre             | Tipos de datos   | Possible Values            |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
@@ -127,7 +127,7 @@ Only project forms can be specified as published subforms.
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values |
+| Nombre | Tipos de datos | Possible Values |
 | ------ | -------------- | --------------- |
 | shared | booleano       | true, false     |
 
@@ -146,7 +146,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON Grammar
 
-| Name             | Tipos de datos | Possible Values |
+| Nombre           | Tipos de datos | Possible Values |
 | ---------------- | -------------- | --------------- |
 | memorizeGeometry | booleano       | true, false     |
 
@@ -172,7 +172,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                        |
+| Nombre      | Tipos de datos | Possible Values                                        |
 | ----------- | -------------- | ------------------------------------------------------ |
 | windowTitle | cadena         | The name of the window as plain text or as a reference |
 
