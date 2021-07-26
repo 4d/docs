@@ -48,7 +48,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values    |
+| Nombre    | Tipos de datos | Possible Values    |
 | --------- | -------------- | ------------------ |
 | fontStyle | cadena         | "normal", "italic" |
 
@@ -66,7 +66,7 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Tipos de datos | Possible Values       |
+| Nombre         | Tipos de datos | Possible Values       |
 | -------------- | -------------- | --------------------- |
 | textDecoration | cadena         | "normal", "underline" |
 
@@ -108,7 +108,7 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values                |
+| Nombre    | Tipos de datos | Possible Values                |
 | --------- | -------------- | ------------------------------ |
 | fontTheme | cadena         | "normal", "main", "additional" |
 
@@ -132,7 +132,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values      |
+| Nombre     | Tipos de datos | Possible Values      |
 | ---------- | -------------- | -------------------- |
 | fontFamily | cadena         | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
@@ -152,7 +152,7 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Tipos de datos | Possible Values                       |
+| Nombre   | Tipos de datos | Possible Values                       |
 | -------- | -------------- | ------------------------------------- |
 | fontSize | integer        | Font size in points. Minimum value: 0 |
 
@@ -179,7 +179,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Possible Values                           |
 | ------ | -------------- | ----------------------------------------- |
 | stroke | cadena         | any css value, "transparent", "automatic" |
 
@@ -211,7 +211,7 @@ Foreground color;Dark shadow color)
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values       |
+| Nombre          | Tipos de datos | Possible Values       |
 | --------------- | -------------- | --------------------- |
 | rowStrokeSource | cadena         | Font color expression |
 
@@ -240,7 +240,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name           | Tipos de datos | Possible Values                                 |
+| Nombre         | Tipos de datos | Possible Values                                 |
 | -------------- | -------------- | ----------------------------------------------- |
 | rowStyleSource | cadena         | Style expression to evaluate for each row/cell. |
 
@@ -260,7 +260,7 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values                                   |
+| Nombre    | Tipos de datos | Possible Values                                   |
 | --------- | -------------- | ------------------------------------------------- |
 | textAlign | cadena         | "automatic", "right", "center", "justify", "left" |
 
@@ -283,7 +283,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values                        |
+| Nombre        | Tipos de datos | Possible Values                        |
 | ------------- | -------------- | -------------------------------------- |
 | verticalAlign | cadena         | "automatic", "top", "middle", "bottom" |
 
@@ -362,7 +362,7 @@ Entonces, el método *Color* contendría:
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values                                  |
+| Nombre     | Tipos de datos | Possible Values                                  |
 | ---------- | -------------- | ------------------------------------------------ |
 | metaSource | cadena         | Object expression to evaluate for each row/cell. |
 
@@ -395,7 +395,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -512,7 +512,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -575,7 +575,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -639,7 +639,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -714,7 +714,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
