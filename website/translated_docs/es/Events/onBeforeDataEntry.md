@@ -10,11 +10,11 @@ title: On Before Data Entry
 
 ## Descripción
 
-This event is generated just before a cell in the list box is edited (before the entry cursor is displayed). This event allows the developer, for example, to display a different text depending on whether the user is in the display or edit mode.
+Este evento se genera justo antes de que se edite una celda del list box (antes de que se muestre el cursor de entrada). Este evento permite al desarrollador, por ejemplo, mostrar un texto diferente dependiendo de si el usuario está en el modo de visualización o de edición.
 
-When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the list box or column method.
+Cuando el cursor llega a la celda, se genera el evento `On Before Data Entry` en el list box o método de la columna.
 
-- If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively.
+- Si, en el contexto de este evento, $0 se define como -1, la celda se considera como no editable. Si el evento se generó después de presionar **Tab** o **Mayús+Tab**, el foco pasa a la siguiente celda o a la anterior, respectivamente.
 - If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.
 
 See also [Managing entry](FormObjects/listbox_overview.md#managing-entry) section.

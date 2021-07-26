@@ -858,9 +858,6 @@
       },
       "WebServer/webServerObject": {
         "title": "Objeto servidor web"
-      },
-      "WebStudio/webStudio": {
-        "title": "WebStudio"
       }
     },
     "links": {

@@ -3,9 +3,9 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Puede ser llamado por                              | Definición                                                                                                               |
-| ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| 8    | Form - [List Box](FormObjects/listbox_overview.md) | Un registro está a punto de ser mostrado en un formulario lista o una línea está a punto de ser mostrada en un list box. |
+| Code | Puede ser llamado por                                    | Definición                                                                                                               |
+| ---- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 8    | Formulario - [List Box](FormObjects/listbox_overview.md) | Un registro está a punto de ser mostrado en un formulario lista o una línea está a punto de ser mostrada en un list box. |
 
 
 ## Descripción

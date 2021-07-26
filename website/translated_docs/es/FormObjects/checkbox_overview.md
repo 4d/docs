@@ -188,7 +188,7 @@ Example with states unchecked / checked / highlighted:
 
 
 
-### Rounded Bevel
+### Bevel redondeado
 
 The Rounded Bevel check box button style is nearly identical to the [Bevel](#bevel) button style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
@@ -249,7 +249,7 @@ The OS X Gradient button style has a light gray background with a title and may 
 
 
 
-### OS X Textured
+### OS X Texturizado
 
 The OS X Textured button style is similar to the [Bevel](#bevel) button style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel button style, the OS X Textured button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
@@ -370,7 +370,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 ```
 
 
-### Custom
+### Personalizado
 
 The Custom button style accepts a personalized background picture and allows managing specific properties:
 
