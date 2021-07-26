@@ -10,7 +10,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values |
+| Nombre      | Tipos de datos | Possible Values |
 | ----------- | -------------- | --------------- |
 | showHeaders | booleano       | true, false     |
 
@@ -55,7 +55,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values                 |
+| Nombre       | Tipos de datos | Possible Values                 |
 | ------------ | -------------- | ------------------------------- |
 | headerHeight | cadena         | positive decimal+px &#124; em ) |
 
