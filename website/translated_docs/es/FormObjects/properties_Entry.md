@@ -13,7 +13,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values |
+| Nombre     | Tipos de datos | Possible Values |
 | ---------- | -------------- | --------------- |
 | spellcheck | booleano       | true, false     |
 
@@ -40,7 +40,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                       |
+| Nombre      | Tipos de datos | Possible Values                       |
 | ----------- | -------------- | ------------------------------------- |
 | contextMenu | cadena         | "automatic" (used if missing), "none" |
 
@@ -65,7 +65,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values |
+| Nombre    | Tipos de datos | Possible Values |
 | --------- | -------------- | --------------- |
 | enterable | booleano       | true, false     |
 
@@ -123,7 +123,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                                                                                              |
+| Nombre      | Tipos de datos | Possible Values                                                                                                              |
 | ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | entryFilter | cadena         | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
@@ -157,7 +157,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values |
+| Nombre    | Tipos de datos | Possible Values |
 | --------- | -------------- | --------------- |
 | focusable | booleano       | true, false     |
 
@@ -180,7 +180,7 @@ By default, the object uses the current keyboard layout.
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values                                                             |
+| Nombre          | Tipos de datos | Possible Values                                                             |
 | --------------- | -------------- | --------------------------------------------------------------------------- |
 | keyboardDialect | texto          | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
@@ -212,7 +212,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values                                   |
+| Nombre    | Tipos de datos | Possible Values                                   |
 | --------- | -------------- | ------------------------------------------------- |
 | multiline | texto          | "yes", "no", "automatic" (default if not defined) |
 
@@ -248,7 +248,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values                                                              |
+| Nombre      | Tipos de datos | Possible Values                                                              |
 | ----------- | -------------- | ---------------------------------------------------------------------------- |
 | placeholder | cadena         | Text to be displayed (grayed out) when the object does not contain any value |
 
@@ -271,7 +271,7 @@ This property keeps the selection visible within the object after it has lost th
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values |
+| Nombre        | Tipos de datos | Possible Values |
 | ------------- | -------------- | --------------- |
 | showSelection | booleano       | true, false     |
 
@@ -297,7 +297,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                             |
+| Nombre          | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                             |
 | --------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | shortcutAccel   | booleano       | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
 | shortcutAlt     | booleano       | true, false                                                                                                                                                                                                                                                                                 |
@@ -327,7 +327,7 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values |
+| Nombre          | Tipos de datos | Possible Values |
 | --------------- | -------------- | --------------- |
 | singleClickEdit | booleano       | true, false     |
 
