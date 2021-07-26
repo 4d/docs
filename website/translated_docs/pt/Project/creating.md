@@ -1,22 +1,22 @@
 ---
 id: creating
-title: Creating a 4D project
+title: Criar um projeto 4D
 ---
 
-## Requirements
+## Requisitos
 
-New 4D projects can only be created from **4D Developer** (see [Developing a project](developing.md)).
+Os novos projetos 4D só podem ser criados desde **4D Developer** (ver [Desenvolver um projeto](developing.md)).
 
 
-**Note:** 4D Server can open .4DProject files in read-only mode, for testing purposes only. For deployment, 4D projects are provided as .4dz files (zipped files). For more information, please refer to [Building a project package](building.md).
+**Nota:** Servidor 4D pode abrir arquivos .4DProject em modo apenas leitura, mas apenas para propósitos de teste. Para lançamento, projetos 4D são oferecidos como arquivos .4dz (arquivos compactados zipados). Para saber mais, consulte [Construir um pacote de projetos](building.md).
 
-> You can create project databases by exporting existing binary databases. See "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
+> Pode criar bancos de dados projeto exportando os bancos binários existentes. Ver "Exportar desde um banco de dados 4D" em [doc.4d.com](https://doc.4d.com).
 
-## Creating the project files
+## Criar arquivos de projeto
 
-To create a new database project:
+Para criar um novo projeto de banco de dados:
 
-1. Launch a 4D Developer application.
+1. Lance uma aplicação 4D Developer.
 2. Select **New > Database Project...** from the **File** menu: ![](assets/en/Project/project-create1.png) OR Select **Database Project...** from the **New** toolbar button: ![](assets/en/Project/projectCreate2.png)   
    A standard **Save** dialog box appears so that you can choose the name and location of the 4D database project main folder.
 1. Enter the name of your project folder and click **Save**. This name will be used:
