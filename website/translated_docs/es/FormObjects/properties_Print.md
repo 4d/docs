@@ -26,7 +26,7 @@ The print options are:
 
 #### JSON Grammar
 
-|    Name    | Tipos de datos | Possible Values                                     |
+|   Nombre   | Tipos de datos | Possible Values                                     |
 |:----------:|:--------------:| --------------------------------------------------- |
 | printFrame |     cadena     | "fixed", "variable", (subform only) "fixedMultiple" |
 
