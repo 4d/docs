@@ -10,7 +10,7 @@ Enables the "barber shop" variant for the thermometer.
 
 #### JSON Grammar
 
-|      Name       | Tipos de datos | Possible Values                                             |
+|     Nombre      | Tipos de datos | Possible Values                                             |
 |:---------------:|:--------------:| ----------------------------------------------------------- |
 | [max](#maximum) |     number     | NOT passed = enabled; passed = disabled (basic thermometer) |
 
@@ -27,7 +27,7 @@ Displays/Hides the graduations next to the labels.
 
 #### JSON Grammar
 
-|      Name       | Tipos de datos | Possible Values |
+|     Nombre      | Tipos de datos | Possible Values |
 |:---------------:|:--------------:| --------------- |
 | showGraduations |    booleano    | "true", "false" |
 
@@ -44,7 +44,7 @@ Scale display measurement.
 
 #### JSON Grammar
 
-|      Name      | Tipos de datos | Possible Values |
+|     Nombre     | Tipos de datos | Possible Values |
 |:--------------:|:--------------:| --------------- |
 | graduationStep |    integer     | minimum: 0      |
 
@@ -66,7 +66,7 @@ Specifies the location of an object's displayed text.
 
 #### JSON Grammar
 
-|      Name       | Tipos de datos | Possible Values                          |
+|     Nombre      | Tipos de datos | Possible Values                          |
 |:---------------:|:--------------:| ---------------------------------------- |
 | labelsPlacement |     cadena     | "none", "top", "bottom", "left", "right" |
 
@@ -86,9 +86,9 @@ Maximum value of an indicator.
 
 #### JSON Grammar
 
-| Name | Tipos de datos  | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| max  | string / number | minimum: 0 (for numeric data types) |
+| Nombre | Tipos de datos  | Possible Values                     |
+|:------:|:---------------:| ----------------------------------- |
+|  max   | string / number | minimum: 0 (for numeric data types) |
 
 #### Objects Supported
 
@@ -103,9 +103,9 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 #### JSON Grammar
 
-| Name | Tipos de datos  | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| min  | string / number | minimum: 0 (for numeric data types) |
+| Nombre | Tipos de datos  | Possible Values                     |
+|:------:|:---------------:| ----------------------------------- |
+|  min   | string / number | minimum: 0 (for numeric data types) |
 
 #### Objects Supported
 
@@ -121,9 +121,9 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 
 #### JSON Grammar
 
-| Name | Tipos de datos | Possible Values |
-|:----:|:--------------:| --------------- |
-| step |    integer     | minimum: 1      |
+| Nombre | Tipos de datos | Possible Values |
+|:------:|:--------------:| --------------- |
+|  step  |    integer     | minimum: 1      |
 
 
 #### Objects Supported
