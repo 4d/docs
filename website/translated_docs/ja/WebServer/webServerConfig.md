@@ -578,49 +578,49 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティーコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
 
-> For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
+> `SameSite` 属性に関する詳細な説明は [Mozilla のドキュメンテーション](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) または [こちらの Web開発ページ (英語)](https://web.dev/samesite-cookies-explained/) を参照ください。
 
 次の値が提供されています:
 
-- "Strict" (default `SameSite` attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.
-- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
-- "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティーのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティーの Webサイトには決して送信されません。
+- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティーのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
+- "None": ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
 
-The `Secure` attribute value of the session cookie is automatically set to "True" if the connection is HTTPS (whatever the `SameSite` attribute value).
+セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。
 
-> It is not recommended to set `SameSite=None` on a HTTP server since the `Secure` attribute will be missing (used in HTTPS only) and cookies will be blocked.
-
-
-
-## Session IP Address Validation
-
-Can be set with|Name|Comments| |---|---|---| |webServer object|[`sessionIPAddressValidation`](API/WebServerClass.md#sessionipaddressvalidation)|| |`WEB SET OPTION`|`Web session enable IP address validation`||
-
-IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application.
-
-When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
-
-Possible values: 0 (disabled) or 1 (enabled, default).
+> HTTPサーバーで `SameSite=None` を設定することは、(HTTPS でのみ使用される) `Secure` 属性が欠落し、cookie がブロックされるため、推奨されません。
 
 
 
+## セッション IPアドレス検証
 
-## Deprecated Settings
+設定できる場所|名称|コメント| |---|---|---| |webServer object|[`sessionIPAddressValidation`](API/WebServerClass.md#sessionipaddressvalidation)|| |`WEB SET OPTION`|`Web session enable IP address validation`||
 
-The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.
+セッションcookie の IP アドレス検証のステータス。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して 4D Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 4G/5G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可するには、このオプションに 0 を渡します。 この設定はアプリケーションのセキュリティレベルを下げることに留意が必要です。
 
-#### Allow database Access through 4DSYNC URLs
+この設定が変更された際には、その設定は直ちに反映されます (HTTPサーバーを再起動する必要はありません)。
 
-This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
+とり得る値: 0 (無効化) または 1 (有効化)。
 
 
-#### Reuse temporary contexts (in remote mode)
 
-Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
 
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
+## 廃止予定の設定
 
-In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
+以下の設定は現在もサポートされていますが、廃止予定の機能や技術に依存しています。 通常はデフォルト値のままにしておくことが推奨されます。
+
+#### "4DSYNC" URLを使用したデータベースアクセスを許可
+
+このオプションを使用して、廃止予定の */4DSYNC* URL による HTTP同期サポートを制御します。
+
+
+#### 一時的なコンテキストを再利用する (リモートモード)
+
+前の Webリクエストを処理するために作成された Webプロセスを再利用することによって、4Dリモートモードで実行されている 4D Webサーバーの動作を最適化できます。 実際、4D Webサーバーはそれぞれの Webリクエストを処理するために専用の Webプロセスを必要とします。リモートモードでは、このプロセスは必要に応じて、データやデータベースエンジンにアクセスするために 4D Server に接続します。 そしてプロセス独自の変数やセレクションを使用して、一時的なコンテキストを作成します。 リクエストの処理が終了すると、このプロセスは廃棄されます。
+
+**一時的なコンテキストを再利用する** オプションがチェックされていると、リモートモードの 4D は作成された固有の Webプロセスを保守し、その後のリクエストで再利用します。 プロセスの作成処理が省略されるため、Webサーバーのパフォーマンスが向上します。
+
+他方このオプションを使用する場合、不正な結果が返されることを避けるために、4Dメソッド内で使用される変数をシステマチックに初期化する必要があります。 同様に、以前のリクエストで使用されたカレントセレクションやカレントレコードをアンロードする必要があります。
 > * This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
 > 
 > * This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
