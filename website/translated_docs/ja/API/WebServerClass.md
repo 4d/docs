@@ -489,7 +489,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.isRunning** : Boolean<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーの実行状態<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーの実行状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -607,7 +607,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.name** : Text<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -621,7 +621,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.openSSLVersion** : Text<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -635,7 +635,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -691,7 +691,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
  <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-*読み取り専用プロパティ*
+*読み取り専用プロパティ。*
 
 <!-- END REF -->
 
@@ -731,7 +731,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 | Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
 | Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
 
-詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) を参照ください。
+詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#セッションcookie-samesite) を参照ください。
 
 
 <!-- END REF -->
