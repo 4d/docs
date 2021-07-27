@@ -572,5 +572,5 @@ You can choose whether or not to display the standard server selection dialog bo
 - **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
   `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
+- **Display of an error message with access to the server selection dialog box possible**. El usuario puede acceder a la ventana de selección del servidor haciendo clic en el botón **Seleccionar...**.   
   `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)

@@ -22,7 +22,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON Grammar
 
-| Name               | Tipos de datos | Possible Values |
+| Nombre             | Tipos de datos | Possible Values |
 | ------------------ | -------------- | --------------- |
 | automaticInsertion | booleano       | true, false     |
 
@@ -40,7 +40,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### JSON Grammar
 
-| Name       | Tipos de datos   | Possible Values                                     |
+| Nombre     | Tipos de datos   | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
 | list       | list, collection | A list of possible values (hierarchical lists only) |
@@ -59,7 +59,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | Tipos de datos   | Possible Values                          |
+| Nombre | Tipos de datos   | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -77,7 +77,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Name              | Tipos de datos | Possible Values   |
+| Nombre            | Tipos de datos | Possible Values   |
 | ----------------- | -------------- | ----------------- |
 | currentItemSource | cadena         | Object expression |
 
@@ -101,7 +101,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Name                      | Tipos de datos | Possible Values   |
+| Nombre                    | Tipos de datos | Possible Values   |
 | ------------------------- | -------------- | ----------------- |
 | currentItemPositionSource | cadena         | Number expression |
 
@@ -142,7 +142,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values                                                  |
+| Nombre | Tipos de datos | Possible Values                                                  |
 | ------ | -------------- | ---------------------------------------------------------------- |
 | values | colección      | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
@@ -190,7 +190,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values                                                         |
+| Nombre     | Tipos de datos | Possible Values                                                         |
 | ---------- | -------------- | ----------------------------------------------------------------------- |
 | dataSource | cadena         | A 4D variable, field name, or an arbitrary complex language expression. |
 
@@ -212,9 +212,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values |
-| ----- | -------------- | --------------- |
-| table | number         | Table number    |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| table  | number         | Table number    |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
@@ -247,7 +247,7 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values      |
+| Nombre | Tipos de datos | Possible Values      |
 | ------ | -------------- | -------------------- |
 | saveAs | cadena         | "value", "reference" |
 
@@ -268,7 +268,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Name                | Tipos de datos | Possible Values       |
+| Nombre              | Tipos de datos | Possible Values       |
 | ------------------- | -------------- | --------------------- |
 | selectedItemsSource | cadena         | Collection expression |
 
@@ -286,7 +286,7 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Name           | Tipos de datos | Possible Values      |
+| Nombre         | Tipos de datos | Possible Values      |
 | -------------- | -------------- | -------------------- |
 | namedSelection | cadena         | Named selection name |
 

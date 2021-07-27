@@ -347,106 +347,113 @@ A página lista os elm,entos carregados pela aplicação atual  4D:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Ativo** coluna - Indica que os itens serão integrados na o pacote da aplicação. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+*    **Ativo** coluna - Indica que os itens serão integrados na o pacote da aplicação. All the items are checked by default. Para excluir um  plug-in ou um componente, de-selecione a check box que está do lado.
 
-*   **Plugins and components** column - Displays the name of the plug-in/component.
+*   **Coluna Plugins e componentes**  - Exibe o nome do componente ou  plug-in.
 
-*   **ID** column - Displays the plug-in/component's identification number (if any).
+*   **Coluna ID** - Exibe o número de identificação do plug-in/componente  (se houver).
 
-*   **Type** column - Indicates the type of item: plug-in or component.
+*   **Coluna Tipo** coluna - Indica o tipo de item: plug-in ou componente.
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+Se quiser integrar outros  plug-ins ou componentes com sua aplicação executável, precisa colocá-las nas pastas  **PlugIns** ou **Componentes** do lado da aplicação 4D Volume Desktop ou da aplicação 4D Server. O mecanismo para copiar os conteúdos da pasta de aplicação fonte  (ver [Personalizar a pasta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) pode ser usada para integrar qualquer tipo de arquivo em uma aplicação executável.
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
-
-
+Se houver um conflito entre duas versões diferentes do mesmo plug-in (um carregado por 4D e outro em uma pasta aplicação fonte), a prioridade é do plug-in instalado na pasta 4D Volume Desktop/4D Server. Entretanto se houver duas instâncias do mesmo componente, a aplicação não vai abrir.
+> O uso de plug-ins ou componentes em uma versão lançada exige os números de licença necessários.
 
 
 
 
-## Licenses & Certificate page
 
-The Licences & Certificate page can be used to:
 
-*   designate the license number(s) that you want to integrate into your single-user stand-alone application
-*   sign the application by means of a certificate in macOS.
+## Página Licenças &  Certificado
+
+
+
+
+
+
+##
+
+A página Licenças & Certificados pode ser usada para:
+
+*   determinar o número de licenças que precisa integrar em sua aplicação monusuário  stand-alone
+*   assine a aplicação usando o certificado em macOS.
 
 
 ![](assets/en/Project/buildapplicenseProj.png)
 
-### Licenses
+### Licenças
 
-This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+Essa aba exibe a lista de licenças de lançamento disponíveis que pode integrar em sua aplicação. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. Pode adicoinar outro número de 4D Developer Professional e licenças associadas que está sendo usada atualmente.
 
-To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
+Para remover ou adicionar uma licença, use os botões **[+]** e **[-]** no fundo da janela.
 
-When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
+Quando clicar no botão \[+]  uma caixa de diálogo abrir arquivo aparece com os conteúdos da pasta *Licenças* em sua máquina. Para saber mais sobre o local dessa pasta, veja o comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) .
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+Precisa deteminar os arquivos que contenham sua licença Developr assim como aquelas contendo suas licenças de lançamento. Estes arquivo foram gerados ou atualizados quando foram compradas as licenças  *4D Developer Professional* e *4D Desktop Volume* .
 
-Once you have selected a file, the list will indicate the characteristics of the license that it contains.
+Quando tiver selecionado um arquivo, a lista indica as caracteristicas da licença que contém.
 
-*   **License #** - Product license number
-*   **License** - Name of the product
-*   **Expiration date** - Expiration date of the license (if any)
-*   **Path** -  Location on disk
+*   **License #** - Número de licença de produto
+*   **License** - Nome do produto
+*   **Expiration date** - Prazo de validade da licença (se houver
+*   **Path** -  Local no disco
 
-If a license is not valid, a message will warn you.
+Se uma licença não for válida, uma mensagem vai avisar.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
-> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+Pode determinar quantos arquivos válidos quantos quiser. Quando construir uma aplicação executável, 4D vai usar a licença mais apropriada que esteja disponível.
+> Licenças dedicadas "R" são necessárias para construir aplicações baseadas em versões  "R-release" (número de licença para produtos "R" começa com "R-4DDP").
 
-After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+Depois que a aplicação for construída, um novo arquivo de  licença de lançamento é incluído automaticamente na pasta Licenças ao lado da aplicação executável (Windows) ou do pacote (macOS).
 
 
-### OS X signing certificate
+### Certificado de assinatura OS X
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+O construtor da aplicação pode assinar aplicações fusionadas 4D em macOS (aplicações monousuário, 4D Server e partes clientes em macOS). A assinatura de uma aplicação a autoriza a ser executada usando uma funcionalidade Gatekeeper de macOS quando a opção "Mac App Store and identified Developers" for selecionada  (ver "About Gatekeeper" abaixo).
 
-- Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
+- Marque a opção **Sign application** para incluir certificação no construtor de aplicação para OSX. 4D vai verificar a disponibilidade dos elementos exigidos para certificação quando a construção ocorrer:
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
+Esta opção é exibida em Windows e macOS, mas só é considerada em versões macOS.
 
-*   **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
+*   **Nome de certificado** - Digite o nome de seu certificado desenvolvedor validado por Apple. O nome do certificado é geralmente o nome do certificado no serviço Keychain Access  (parte em vermelho no exemplo abaixo):
 
 ![](assets/en/Project/certificate.png)
 
-To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
-> This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
+Para obter um certificado de desenvolvedor de  Apple, Inc., pode usar os comandos do menu Keychain Access ou ir aqui: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
+> Esse certificado exige a presença da serviço Apple codesign, que é fornecido como padrão e geralmente está na pasta “/usr/bin/”. Se um erro acontecer, tenha certeza que o serviço está presente em seu disco.
 
 
-#### About Gatekeeper
+#### Sobre o Gatekeeper
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
+Gatekeeper é uma funcionalidade de segurança de OS X que controla a execução de aplicações baixadas da  Internet. Se uma aplicação baixada não vier da Apple Store ou não for assinada, ela será rejeitada e não poderá ser lançada.
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+A opção **Sign application** do construtor de aplicação 4D permite gerar aplicações que são compatíveis com essa opção por padrão.
 
 
-#### About Notarization
+#### Sobre Autenticação
 
-Application notarization is highly recommended by Apple as of macOS 10.14.5 (Mojave) and 10.15 (Catalina), since non-notarized applications deployed via the internet are blocked by default.
+Autenticação de Aplicação é altamente recomendado por  Apple desde macOS 10.14.5 (Mojave) e 10.15 (Catalina), já que aplicações não autenticadas lançadas via internet são bloqueadas por padrão.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
+Em 4D v18, as funcionalidades [de assinatura integradas](#os-x-signing-certificate) foram atualizadas para atender às exigências de Apple usando o serviço de autenticação de Apple. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Veja [este blog 4D ](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) que oferece uma descrição passo a passo do processo de autenticação.
 
-For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+para saber mais sobre o conceito de autenticação, veja [esta página do site desenvolvedor Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Customizing application icons
+## Ícones de personalização de aplicações
 
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+4D associa um ícone padrão com aplicações stand-alone, servidor e cliente, entretanto pode personalizar o ícone para cada aplicação.
 
-*   **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
-> Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+*   **macOs** - Quando construir uma aplicação de duplo clique, 4D maneja a personalização do ícone. Para fazer isso, deve criar um arquivo ícone  (tipo icns), antes de construir o arquivo da aplicação, e colocá-lo na pasta projeto.
+> Apple, Inc. oferece uma ferramenta especifica para construir *icns* arquivos ícones (para mais informação, veja [documentação Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
-    Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
+    Seu arquivo ícone deve ter o mesmo nome que o arquivo de projeto e incluir a extensão *.icns*. 4D leva esse arquivo em consideração automaticamente quando construir uma aplicação de duplo clique (o arquivo *.icns* é renomeado *ApplicationName.icns* e copiado na pasta Resources;  *A entrada CFBundleFileIcon*  de *info.plist* arquivo for atualizado).
 
-*   **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the project folder.
+*   **Windows** - Quando construir uma aplicação duplo clique, 4D gerencia a personalização do ícone. Para fazer isso, deve criar um arquivo de ícone (*.ico* extensão), antes de construir o arquivo aplicação, e colocá-lo na pasta projeto.
 
-    Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
+    Seu arquivo ícone deve ter o mesmo nome que o arquivo de projeto e inclui a extensão *.ico*. 4D automaticamente leva em conta esse arquivo quando construir a aplicação de duplo clique.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
+Pode também estabelecer especificamente [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) no arquivo buildApp.4DSettings para determinar cada ícone para usar. As chaves abaixo são disponíveis:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -459,118 +466,120 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 
 
-## Management of data file(s)
+## Gerenciamento de arquivos de dados
 
-### Opening the data file
+### Abrir o arquivo de dados
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+Quando um usuário lança uma aplicação fusionada ou uma atualização (monousuário ou cliente/servidor), 4D tenta selecionar um arquivo de dados válido. Vários locais são examinadas pela aplicação sucessivamente.
 
-The opening sequence for launching a merged application is:
+A sequencia de abertura para lançar uma aplicação fusionada é:
 
-1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
-2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
-3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+1. 4D tenta abrir o último arquivo de dados aberto, [como descrito abaixo](#last-data-file-opened) (não é aplicável durante o lançamento inicial).
+2. Se não for encontrado, 4D tenta abrir o arquivo de dados em uma pasta de dados do lado do arquivo .4DZ em modo apenas leitura.
+3. Se não for encontrado, 4D tenta abrir o arquivo de dados padrão (mesmo nome e mesmo local que o arquivo .4DZ).
+4. Se não for encontrado, 4D exibe uma caixa de diálogo "Open data file" .
 
 
-### Last data file opened
+### ùltimo arquivo de dados aberto
 
-#### Path of last data file
-Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
+#### Rota do último arquivo de dados
+Qualquer aplicação standalone ou servidor construida com 4D armazena o último arquivo de dados aberto na pasta preferencia de usuário doa aplicação.
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+O local da pasta de preferências de usuário da aplicação corresponde à rota retornada pela declaração abaixo:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+A rota de arquivo de dados é armazenado em um arquivod edicado chamado *lastDataPath.xml*.
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+Graças a essa arquitetura, quando oferecer uma atualização de sua aplicação, o arquivo de dados de usuário local (último arquivo de dados usado) é aberto automaticamente no primeiro lançamento
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Esse mecanismo geralmente é adeqaudo para lançamentos padrão. Entretanto, por razões específicas, por exemplo se quiser dupliar suas aplicações fusionadas, pode querer mudar a maneira em que os arquivos de dados estão conectados à aplicação (descrito abaixo).
 
-#### Configuring the data linking mode
+#### Configurando o modo de  data linking mode
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+Com suas aplicações compiladas, 4D automaticamente usa o último arquivo de dados aberto. Como padrão, a rota de cada arquivo de dados é armazenada na pasta de preferências de usuário da aplicação e é conectada ao  **nome da aplicação**
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+Isso pode ser inadequado se quiser duplicar uma aplicação fusionada criada para usar arquivos de dados diferentes.
 
-4D therefore lets you link the data file path to the application path. In this case, the data file will be linked using a specific path and will not just be the last file opened. You therefore link your data **by application path**.
+Isso pode ser inadequado se quiser duplicar uma aplicação fusionada criada para ser usada com arquivos de dados diferentes. Aplicações duplicadas na verdade partilharm a pasta de preferências de usuário da aplicação e assim, sempre usam o mesmo arquivo de dados - mesmo se o arquivo de dados for renomeado, porque o último arquivo usado para essa aplicação está aberto..
 
-This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
+4D  assim perlite linkar a rota do arquivo de dados na rota da aplicação. In this case, the data file will be linked using a specific path and will not just be the last file opened. Faz assim um link de seus dados  **com a rota da aplicação**.
 
-
-*Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
-
-*Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
-
-You can select the data linking mode during the build application process. You can either:
-
-- Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
-- Use the **LastDataPathLookup** XML key (single-user application or server application).
+Esse modo permite duplicar suas aplicações fusionadas sem quebrar o linke ao arquivo de dados. Entretanto, com essa opção, se o pacote dea aplicação for movido no disco, o usuário será pedido um arquivo de dados, já que a rota da aplicação não corresponde mais com o atributo "executablePath" (depois que o usuário tiver selecionar um arquivo de dados, o arquivo *lastDataPath.xml* é também atualizado).
 
 
-### Defining a default data folder
+*Duplicação quando dados linkados pelo nome da aplicação:* ![](assets/en/Project/datalinking1.png)
 
-4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+*Duplicação quando os dados são linkados pela rota da aplicação:* ![](assets/en/Project/datalinking2.png)
 
-More specifically, the following cases are covered:
+Pode selecionar o modo de linking de dados durante o processo de construção da aplicação. É possível:
 
-- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
-- Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
+- Usar a [página Application](#application) ou [a página Client/Server](#client-server) do diálogo Build Application.
+- Use a chave  XML**LastDataPathLookup**  (aplicações monousuário ou servidor).
 
 
-To define and use a default data file:
+### Definir uma pasta padrão de dados
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
-- When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
+4D permite que defina um arquivo de dados padrão no estágio de construção da aplicação. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. Isso dá mais controle sobre a criação de arquivos de dados ou sua abertura quando lançar uma aplicação fusionada pela primeira vez.
 
-The following graphic illustrates this feature:
+Mais especificamente os casos abaixos são cobertos:
+
+- Evitar a exibição do diálogo  4D "Open Data File" quando lançar uma nova aplicação fusionada atualizada. É possível detectar, por exemplo ao iniciar, que o arquivo de dados padrão foi aberto e assim executar seu próprio código ou diálogos para criar ou selecionar um arquivo de dados local
+- Permitir a distribuição de aplicações fusionadas com dados apenas leitura (para aplicações demo por exemplo).
+
+
+Para definri e usar um arquivo de dados padrão:
+
+- Deve fornecer um arquivo de dados padrão  (chamado de "Default.4DD") e armazena-o em uma pasta padrão  (chamado "Default Data") dentro da pasta de projeto de banco de dados. Esse arquivo pode ser fornecido junto com todos os outros necessários arquivos, dependendo da configuração do banco de dados: index (.4DIndx), blobs externos, históricos, etc. It is your responsibility to provide a valid default data file. Note entretanto que como um arquivo de dados padrão é aberto em modo apenas leitura, é recomendado desmarcar a opção "Use Log File" no arquivo de estrutura original antes de criar o arquivo de dados.
+- Quando a aplicação for construida, a pasta de dados padrão é integrada na aplicação fusionada. Todos os arquivos dentro dessa pasta de dados padrão também são embebidos.
+
+O gráfico a seguir ilustra essa propriedade:
 
 ![](assets/en/Project/DefaultData.png)
 
-When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
+Quando o arquivo de dados padrão for detectado ao lançamento, é aberto silenciosamente em modo apenas leitura, assim permitindo que execute qualquer operação personalizada que não modifique o arquivo de dados.
 
 
-## Management of client connection(s)
+## Gerenciamento de conexões de cliente
 
-The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
+O gerenciamento de conexões de aplicações de cliente cobre os mecanismos pelos quais uma aplicação de cliente fusionada se conecta ao servidor alvo, quando estiver em seu ambiente de produção.
 
-### Connection scenario
+### Cenário de conexão
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+O processo de conexão para aplicação de clientes fusionadas é compatível com casos onde o servidor dedicado não estiver disponível O cenário de inicialização para uma aplicação cliente 4D é o abaixo:
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
+- A aplicação cliente tenta conectar ao servidor usando o serviço de descoberta (baseado no nome de servidor, transmitido na mesma subnet).  
   OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box.
-    - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
-    - If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+  Se a informação de uma conexão válida for armazenada no arquivo "EnginedServer.4DLink" dentro da aplicação cliente, a aplicação cliente tenta se conectar com o endereço de servidor especificado.
+- Se isso falhar, a aplicação cliente tentar se conectar ao servidor usando informação armazenada na pasta de preferência de usuários da aplicação (arquivo "lastServer.xml" ver o último passo).
+- Se isso falhar, a aplicação cliente exibe uma caixa de diálogo de erro de conexão.
+    - Se o usuário clicar no botão **Selecione...**  (quando permitido pelo desenvolvedor  4D no passo de construção, ver abaixo), a caixa de diálogo padrão "Server connection" é exibida.
+    - Se o usuário clicar no botão **Quit** a aplicaão do cliente termina.
+- Se a conexão tiver sucesso, a aplicação cliente guarda a informação de conexão na pasta de preferências de usuário da aplicação para uso futuro.
 
-### Storing the last server path
+### Armazenar a última rota de servidor
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+A última rota de servidor usada e validade é uatomaticamente salva no arquivo chamado "lastServer.xml" na pasta de preferência de usuário da aplicação. Essa pasta é armazenada no local abaixo:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+Esse mecanismo afeta o caso onde o servidor alvo primário está temporariamente indisponível por algum motivo (modo manutenção por exemplo). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Qualquer indisponibilidade subsequente seria tratada automaticamente através da informação de rota "lastServer.xml".
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability.  
-> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
+> - Quando aplicações cliente não possam se beneficiar do serviço de descoberta, por exemplo por causa da configuração de rede, é recomendado que o desenvolvedor forneça um nome de host no momento de construção usando a chave [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) no arquivo "BuildApp.4DSettings". The mechanism addresses cases of temporary unavailability.  
+> - Apertar a tecla **Alt/Option** ao iniciar vai exibir a caixa de diálogo de seleção de servidor ainda é compatível em todos os casos.
 
 
 
-### Availability of the server selection dialog box in case of error
+### Disponibilidade da caixa de diálogo de seleção de servidor no caso de erro
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+Pode escolher se quer ou não exibir a caixa de diálogo de seleção de servidor padrão na aplicação de cliente fusionada quando o servidor não puder ser alcançado. A configuração depende do valor da chave [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML na máquina onde a aplicação foi construida:
 
-- **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
-  `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
+- **Exibe uma mensagem de erro sem acesso possível à caixa de diálogo de seleção de servidor**. Default operation. A aplicação só pode terminar.  
+  `ServerSelectionAllowed`: **False** ou chave omitida ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
+- **É possível exibir uma mensagem de erro com acesso a caixa de dialogo de seleção de servidor**. O usuário pode acessar a janela de seleção de servidor clicando no botão **Select...**.   
   `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
