@@ -7,7 +7,7 @@ title: ドキュメンテーション更新情報
 
 ## 4D v19 R2
 
-- A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
+- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](Preferences/general.md#gitignore-ファイルを作成) が作成可能
 - New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
 - New [WebStudio](WebStudio/webStudio.md) component (preview in 4D v19 R2)
