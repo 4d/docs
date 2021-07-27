@@ -129,7 +129,7 @@ For each process, the following fields are logged:
 
 ## HTTPDebugLog.txt
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+This log file records each HTTP request and each response in raw mode. ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
 How to start this log:
 
