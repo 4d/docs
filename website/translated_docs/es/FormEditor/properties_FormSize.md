@@ -25,7 +25,7 @@ Size options depend on the value of the **Size based on** option.
 
 #### JSON Grammar
 
-| Name           | Tipos de datos | Possible Values                                       |
+| Nombre         | Tipos de datos | Possible Values                                       |
 | -------------- | -------------- | ----------------------------------------------------- |
 | formSizeAnchor | cadena         | Name of object to use to defined the size of the form |
 
@@ -37,7 +37,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values |
+| Nombre | Tipos de datos | Possible Values |
 | ------ | -------------- | --------------- |
 | height | number         | integer value   |
 
@@ -50,7 +50,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values |
+| Nombre      | Tipos de datos | Possible Values |
 | ----------- | -------------- | --------------- |
 | rightMargin | number         | integer value   |
 
@@ -64,7 +64,7 @@ This value also determines the top margins of forms used in the Label editor.
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values |
+| Nombre       | Tipos de datos | Possible Values |
 | ------------ | -------------- | --------------- |
 | bottomMargin | number         | integer value   |
 
@@ -77,6 +77,6 @@ Width of the form (in pixels) when the [form size](#size-based-on) is **Set size
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values |
-| ----- | -------------- | --------------- |
-| width | number         | integer value   |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| width  | number         | integer value   |

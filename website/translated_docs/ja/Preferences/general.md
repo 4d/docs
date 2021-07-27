@@ -77,7 +77,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Create `.gitignore` file
+### `.gitignore` ファイルを作成する
 
 You might need or want git to ignore some files in your new projects.
 

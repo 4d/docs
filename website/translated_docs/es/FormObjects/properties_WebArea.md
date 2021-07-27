@@ -16,7 +16,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### JSON Grammar
 
-| Name                 | Tipos de datos | Possible Values         |
+| Nombre               | Tipos de datos | Possible Values         |
 | -------------------- | -------------- | ----------------------- |
 | methodsAccessibility | cadena         | "none" (default), "all" |
 
@@ -32,7 +32,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### JSON Grammar
 
-| Name           | Tipos de datos | Possible Values            |
+| Nombre         | Tipos de datos | Possible Values            |
 | -------------- | -------------- | -------------------------- |
 | progressSource | cadena         | Name of a Longint variable |
 
@@ -63,7 +63,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values |
+| Nombre    | Tipos de datos | Possible Values |
 | --------- | -------------- | --------------- |
 | urlSource | cadena         | A URL.          |
 
@@ -91,7 +91,7 @@ The Blink engine has the following limitations:
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values      |
+| Nombre    | Tipos de datos | Possible Values      |
 | --------- | -------------- | -------------------- |
 | webEngine | cadena         | "embedded", "system" |
 

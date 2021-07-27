@@ -10,7 +10,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values             |
+| Nombre          | Tipos de datos | Possible Values             |
 | --------------- | -------------- | --------------------------- |
 | deletableInList | booleano       | true, false (default: true) |
 
@@ -33,7 +33,7 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values                                                                                                                     |
+| Nombre     | Tipos de datos | Possible Values                                                                                                                     |
 | ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
@@ -51,7 +51,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### JSON Grammar
 
-| Name                         | Tipos de datos | Possible Values                    |
+| Nombre                       | Tipos de datos | Possible Values                    |
 | ---------------------------- | -------------- | ---------------------------------- |
 | doubleClickInEmptyAreaAction | cadena         | "addSubrecord" or "" to do nothing |
 
@@ -79,7 +79,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Tipos de datos | Possible Values                     |
+| Nombre                 | Tipos de datos | Possible Values                     |
 | ---------------------- | -------------- | ----------------------------------- |
 | doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
@@ -101,7 +101,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values |
+| Nombre          | Tipos de datos | Possible Values |
 | --------------- | -------------- | --------------- |
 | enterableInList | booleano       | true, false     |
 
@@ -120,7 +120,7 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 #### JSON Grammar
 
-| Name     | Tipos de datos | Possible Values                                                                                                                     |
+| Nombre   | Tipos de datos | Possible Values                                                                                                                     |
 | -------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | listForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
@@ -137,9 +137,9 @@ Specifies the table that the list subform belongs to (if any).
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values                   |
-| ----- | -------------- | --------------------------------- |
-| table | cadena         | 4D table name, or "" if no table. |
+| Nombre | Tipos de datos | Possible Values                   |
+| ------ | -------------- | --------------------------------- |
+| table  | cadena         | 4D table name, or "" if no table. |
 
 #### Objects Supported
 
@@ -160,7 +160,7 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values              |
+| Nombre        | Tipos de datos | Possible Values              |
 | ------------- | -------------- | ---------------------------- |
 | selectionMode | cadena         | "multiple", "single", "none" |
 

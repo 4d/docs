@@ -29,7 +29,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### JSON Grammar
 
-| Name          | Tipos de datos | Possible Values |
+| Nombre        | Tipos de datos | Possible Values |
 | ------------- | -------------- | --------------- |
 | rowHeightAuto | booleano       | true, false     |
 
@@ -49,7 +49,7 @@ Bottom coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values |
+| Nombre | Tipos de datos | Possible Values |
 | ------ | -------------- | --------------- |
 | bottom | number         | minimum: 0      |
 
@@ -65,9 +65,9 @@ Left coordinate of the object on the form.
 
 #### JSON Grammar
 
-| Name | Tipos de datos | Possible Values |
-| ---- | -------------- | --------------- |
-| left | number         | minimum: 0      |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| left   | number         | minimum: 0      |
 
 
 #### Objects Supported
@@ -83,9 +83,9 @@ Right coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values |
-| ----- | -------------- | --------------- |
-| right | number         | minimum: 0      |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| right  | number         | minimum: 0      |
 
 #### Objects Supported
 
@@ -101,9 +101,9 @@ Top coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name | Tipos de datos | Possible Values |
-| ---- | -------------- | --------------- |
-| top  | number         | minimum: 0      |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| top    | number         | minimum: 0      |
 
 #### Objects Supported
 
@@ -125,7 +125,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### JSON Grammar
 
-| Name         | Tipos de datos | Possible Values |
+| Nombre       | Tipos de datos | Possible Values |
 | ------------ | -------------- | --------------- |
 | borderRadius | integer        | minimum: 0      |
 
@@ -144,7 +144,7 @@ This property designates an object's vertical size.
 
 #### JSON Grammar
 
-| Name   | Tipos de datos | Possible Values |
+| Nombre | Tipos de datos | Possible Values |
 | ------ | -------------- | --------------- |
 | height | number         | minimum: 0      |
 
@@ -164,9 +164,9 @@ This property designates an object's horizontal size.
 
 #### JSON Grammar
 
-| Name  | Tipos de datos | Possible Values |
-| ----- | -------------- | --------------- |
-| width | number         | minimum: 0      |
+| Nombre | Tipos de datos | Possible Values |
+| ------ | -------------- | --------------- |
+| width  | number         | minimum: 0      |
 
 #### Objects Supported
 
@@ -189,7 +189,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### JSON Grammar
 
-| Name     | Tipos de datos | Possible Values |
+| Nombre   | Tipos de datos | Possible Values |
 | -------- | -------------- | --------------- |
 | maxWidth | number         | minimum: 0      |
 
@@ -207,7 +207,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### JSON Grammar
 
-| Name     | Tipos de datos | Possible Values |
+| Nombre   | Tipos de datos | Possible Values |
 | -------- | -------------- | --------------- |
 | minWidth | number         | minimum: 0      |
 
@@ -231,7 +231,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### JSON Grammar
 
-| Name      | Tipos de datos | Possible Values                          |
+| Nombre    | Tipos de datos | Possible Values                          |
 | --------- | -------------- | ---------------------------------------- |
 | rowHeight | cadena         | css value in unit "em" or "px" (default) |
 
@@ -265,7 +265,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### JSON Grammar
 
-| Name            | Tipos de datos | Possible Values              |
+| Nombre          | Tipos de datos | Possible Values              |
 | --------------- | -------------- | ---------------------------- |
 | rowHeightSource | cadena         | Name of a 4D array variable. |
 
