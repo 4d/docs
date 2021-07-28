@@ -1,6 +1,6 @@
 ---
 id: webServerAdmin
-title: データベース管理
+title: 管理
 ---
 
 4D provides several integrated tools to start, stop, or monitor the integrated web server.
