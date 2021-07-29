@@ -10,12 +10,12 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 *   [4DRequestsLog.txt](#4drequestslogtxt)
 *   [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 *   [HTTPDebugLog.txt](#httpdebuglogtxt)
-*   4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
+*   4DDebugLog.txt ([標準](#4ddebuglogtxt-標準) & [タブ分け](#4ddebuglogtxt-タブ分け))
 *   [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 *   [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-*   [ORDA client requests log file](#orda-client-requests)
+*   [ORDA クライアントリクエストのログファイル](#orda-client-requests)
 
 Note: When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
 
@@ -28,7 +28,7 @@ Log files share some fields so that you can establish a chronology and make conn
 
 This log file records standard requests carried out by the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
 
-How to start this log:
+このログの開始方法:
 
 *   on the server:
 
@@ -58,9 +58,9 @@ This file starts with the following headers:
 
 For each request, the following fields are logged:
 
-| Field name                                 | 説明                                                                                                                                                                                                               |
+| フィールド名                                     | 説明                                                                                                                                                                                                               |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sequence_number                            | Unique and sequential operation number in the logging session                                                                                                                                                    |
+| sequence_number                            | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                                                                                                   |
 | time                                       | Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                   |
 | systemid                                   | System ID                                                                                                                                                                                                        |
 | component                                  | Component signature (e.g., '4SQLS' or 'dbmg')                                                                                                                                                                    |
@@ -81,7 +81,7 @@ Request flow:
 
 This log file records information on each process created on the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
 
-How to start this log:
+このログの開始方法:
 
 *   on the server:
 
@@ -109,9 +109,9 @@ This file starts with the following headers:
 
 For each process, the following fields are logged:
 
-| Field name                        | 説明                                                             |
+| フィールド名                            | 説明                                                             |
 | --------------------------------- | -------------------------------------------------------------- |
-| sequence_number                   | Unique and sequential operation number in the logging session  |
+| sequence_number                   | ログセッション内で固有かつシーケンシャルなオペレーション番号                                 |
 | time                              | Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm" |
 | process\_info_index             | Unique and sequential process number                           |
 | CDB4DBaseContext                  | DB4D component database context UUID                           |
@@ -129,31 +129,30 @@ For each process, the following fields are logged:
 
 ## HTTPDebugLog.txt
 
-This log file records each HTTP request and each response in raw mode. ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
+このログファイルは、各 HTTPリクエストとそれぞれのレスポンスを rawモードで記録します。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
-How to start this log:
+このログの開始方法:
 
 ```4d
-WEB SET OPTION(Web debug log;wdl enable without body)  
-//other values are available
+WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可能
 ```
 
-The following fields are logged for both Request and Response:
+リクエストとレスポンスの両方に対して以下のフィールドが記録されます:
 
-| Field name     | 説明                                                            |
-| -------------- | ------------------------------------------------------------- |
-| SocketID       | ID of socket used for communication                           |
-| PeerIP         | IPv4 address of host (client)                                 |
-| PeerPort       | Port used by host (client)                                    |
-| TimeStamp      | Timestamp in milliseconds (since system startup)              |
-| ConnectionID   | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber | Unique and sequential operation number in the logging session |
+| フィールド名         | 説明                                  |
+| -------------- | ----------------------------------- |
+| SocketID       | 通信に使用されたソケットの ID                    |
+| PeerIP         | ホスト (あるいはクライアント) の IPv4アドレス         |
+| PeerPort       | ホスト (あるいはクライアント) が使用したポート番号         |
+| TimeStamp      | (システムが開始されてからの) ミリ秒単位でのタイムスタンプ      |
+| ConnectionID   | 接続UUID (通信に使用された VTCPSocket の UUID) |
+| SequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号      |
 
-## 4DDebugLog.txt (standard)
+## 4DDebugLog.txt (標準)
 
 This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.
 
-How to start this log:
+このログの開始方法:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
@@ -167,18 +166,18 @@ The following fields are logged for each event:
 
 | Column # | 説明                                                                                                            |
 | -------- | ------------------------------------------------------------------------------------------------------------- |
-| 1        | Unique and sequential operation number in the logging session                                                 |
+| 1        | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                |
 | 2        | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                    |
 | 3        | Process ID (p=xx) and unique process ID (puid=xx)                                                             |
 | 4        | Stack level                                                                                                   |
 | 5        | Can be Command Name/ Method Name/Message/ Task Start Stop info/Plugin Name, event or Callback/Connection UUID |
 | 6        | Time taken for logging operation in milliseconds                                                              |
 
-## 4DDebugLog.txt (tabular)
+## 4DDebugLog.txt (タブ分け)
 
 This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).
 
-How to start this log:
+このログの開始方法:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
@@ -190,9 +189,9 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Column # | Field name                      | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Column # | フィールド名                          | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1        | sequence_number                 | Unique and sequential operation number in the logging session                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 1        | sequence_number                 | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | 2        | time                            | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 3        | ProcessID                       | プロセスID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 4        | unique_processID                | Unique process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -208,7 +207,7 @@ The following fields are logged for each event:
 
 This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
 
-How to start this log:
+このログの開始方法:
 
 ```4d
  SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording
@@ -216,14 +215,14 @@ How to start this log:
 
 The following fields are logged for each event:
 
-| Field Name         | 説明                                                            |
-| ------------------ | ------------------------------------------------------------- |
-| sequenceNumber     | Unique and sequential operation number in the logging session |
-| timestamp          | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)    |
-| loggerID           | Optional                                                      |
-| componentSignature | Optional - internal component signature                       |
-| messageLevel       | Info, Warning, Error                                          |
-| message            | Description of the log entry                                  |
+| Field Name         | 説明                                                         |
+| ------------------ | ---------------------------------------------------------- |
+| sequenceNumber     | ログセッション内で固有かつシーケンシャルなオペレーション番号                             |
+| timestamp          | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) |
+| loggerID           | Optional                                                   |
+| componentSignature | Optional - internal component signature                    |
+| messageLevel       | Info, Warning, Error                                       |
+| message            | Description of the log entry                               |
 
 Depending on the event, various other fields can also be logged, such as task, socket, etc.
 
@@ -282,19 +281,19 @@ The log files can be produced in two versions:
 
 For each request, the following fields are logged:
 
-| Column # | 説明                                                            |
-| -------- | ------------------------------------------------------------- |
-| 1        | Unique and sequential operation number in the logging session |
-| 2        | Date and time in RFC3339 format (yyyy-mm-ddThh:mm:ss.ms)      |
-| 3        | 4D Process ID                                                 |
-| 4        | Unique process ID                                             |
-| 5        | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>                                    |
+| Column # | 説明                                                       |
+| -------- | -------------------------------------------------------- |
+| 1        | ログセッション内で固有かつシーケンシャルなオペレーション番号                           |
+| 2        | Date and time in RFC3339 format (yyyy-mm-ddThh:mm:ss.ms) |
+| 3        | 4D Process ID                                            |
+| 4        | Unique process ID                                        |
+| 5        | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>                               |
 
 ## ORDA client requests
 
 This log records each ORDA request sent from a remote machine. You can direct log information to memory or to a file on disk. The name and location of this log file are your choice.
 
-How to start this log:
+このログの開始方法:
 
 ```4d
 //to be executed on a remote machine
@@ -319,11 +318,11 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Field name     | 説明                                                            | 例題                                                      |
-| -------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber | Unique and sequential operation number in the logging session | 104                                                     |
-| url            | Client ORDA request URL                                       | "rest/Persons(30001)"                                   |
-| startTime      | Starting date and time using ISO 8601 format                  | "2019-05-28T08:25:12.346Z"                              |
-| endTime        | Ending date and time using ISO 8601 format                    | "2019-05-28T08:25:12.371Z"                              |
-| duration       | Client processing duration (ms)                               | 25                                                      |
-| response       | Server response object                                        | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| フィールド名         | 説明                                           | 例題                                                      |
+| -------------- | -------------------------------------------- | ------------------------------------------------------- |
+| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号               | 104                                                     |
+| url            | Client ORDA request URL                      | "rest/Persons(30001)"                                   |
+| startTime      | Starting date and time using ISO 8601 format | "2019-05-28T08:25:12.346Z"                              |
+| endTime        | Ending date and time using ISO 8601 format   | "2019-05-28T08:25:12.371Z"                              |
+| duration       | Client processing duration (ms)              | 25                                                      |
+| response       | Server response object                       | {"status":200,"body":{"__entityModel":"Persons",\[...] |
