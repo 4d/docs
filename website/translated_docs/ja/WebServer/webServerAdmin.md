@@ -3,53 +3,53 @@ id: webServerAdmin
 title: 管理
 ---
 
-4D provides several integrated tools to start, stop, or monitor the integrated web server.
+4Dには、統合された Webサーバーを起動・停止・監視するためのツールがいくつか用意されています。
 
 
-## Starting the 4D Web Server
+## 4D Webサーバーの開始
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
-
-
-A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
-
-The main 4D web server can be started in different ways:
-
-*   Using a button/menu command.
-    *   4D: **Run\>Start Web Server** menu<br>![](assets/en/WebServer/start1.png)
-    *   4D Server: **Start HTTP server** button of the HTTP Server page<br>![](assets/en/WebServer/start2.png)
-
-*   Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br>![](assets/en/WebServer/config.png)
-
-*   Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
-
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
-> You do not need to relaunch the 4D application to start or stop the web server.
-
-## Stopping the 4D Web Server
-
-The main 4D web server can be stopped in different ways:
-
-*   Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
-
-*   Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
-
-The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
+> 4D や 4D Server の Webサーバーを起動するには、"4D Web Application" ライセンスが必要です。 詳細については [4D Webサイト](https://www.4d.com) を参照ください。
 
 
-## Testing the 4D Web Server
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
-The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
+4D Webサーバーは複数の方法で起動できます:
+
+*   ボタン/メニューコマンドの使用。
+    *   4D: **実行 ＞ Webサーバー開始** メニュー<br>![](assets/en/WebServer/start1.png)
+    *   4D Server: HTTPサーバーページの **HTTPサーバー開始** ボタン<br>![](assets/en/WebServer/start2.png)
+
+*   4Dアプリケーション開始時に Webサーバーを自動起動。 これには、ストラクチャー設定の **Web/設定**ページを表示し、**開始時にWebサーバーを起動** オプションを有効にします:<br>![](assets/en/WebServer/config.png)
+
+*   [`webServer.start()`](API/WebServerClass.md#start) 関数または `WEB START SERVER` コマンドを呼び出してプログラムで開始。
+
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して [`webServer.start()`](API/WebServerClass.md#start) 関数を呼び出すことで開始できます。
+> Webサーバーを開始したり停止したりするために、4Dアプリケーションを再起動する必要はありません。
+
+## 4D Webサーバーの停止
+
+4D Webサーバーは複数の方法で停止できます:
+
+*   4D の **実行 ＞ Webサーバー停止** メニューを使用するか、 4D Server にて HTTPサーバーページの **HTTPサーバー停止** ボタンを使用する (いずれも、サーバー開始前は **…開始** と表示されています)。
+
+*   [`webServer.stop()`](API/WebServerClass.md#stop) 関数または `WEB STOP SERVER` コマンドを呼び出してプログラムで停止。
+
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して `webServer.stop()` 関数を呼び出すことで停止できます。
+
+
+## 4D Webサーバーのテスト
+
+**Webサーバーテスト** メニューコマンドを使用してビルトインの Webサーバーが正しく実行されているか確認できます (4Dのみ)。 このメニューは Webサーバーが実行されているときに **実行** メニューからアクセスできます:
 
 ![](assets/en/WebServer/test1.png)
 
 
-When you select this command, the home page of the website published by the 4D application is displayed in a window of your default web browser:
+このコマンドを選択すると、4Dアプリケーションが公開している Webサイトのホームページが、デフォルト Webブラウザーに表示されます:
 
 ![](assets/en/WebServer/defaultHomePage.png)
 
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 ページは、Webブラウザーが実行されているマシンの IPアドレスを指定する標準のショートカットである、*ローカルホスト* の URL を使用して呼び出されます。 コマンドはストラクチャー設定で指定された [TCP 公開ポート](webServerConfig.md#http-ポート) 番号を考慮に入れます。
 
 
 
