@@ -3,178 +3,178 @@ id: webServerAdmin
 title: 管理
 ---
 
-4D provides several integrated tools to start, stop, or monitor the integrated web server.
+4Dには、統合された Webサーバーを起動・停止・監視するためのツールがいくつか用意されています。
 
 
-## Starting the 4D Web Server
+## 4D Webサーバーの開始
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
-
-
-A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
-
-The main 4D web server can be started in different ways:
-
-*   Using a button/menu command.
-    *   4D: **Run\>Start Web Server** menu<br>![](assets/en/WebServer/start1.png)
-    *   4D Server: **Start HTTP server** button of the HTTP Server page<br>![](assets/en/WebServer/start2.png)
-
-*   Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br>![](assets/en/WebServer/config.png)
-
-*   Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
-
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
-> You do not need to relaunch the 4D application to start or stop the web server.
-
-## Stopping the 4D Web Server
-
-The main 4D web server can be stopped in different ways:
-
-*   Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
-
-*   Programmatically, by calling the [`webServer.stop()`](API/WebServerClass.md#stop) function or `WEB STOP SERVER` command.
-
-The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
+> 4D や 4D Server の Webサーバーを起動するには、"4D Web Application" ライセンスが必要です。 詳細については [4D Webサイト](https://www.4d.com) を参照ください。
 
 
-## Testing the 4D Web Server
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
-The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
+4D Webサーバーは複数の方法で起動できます:
+
+*   ボタン/メニューコマンドの使用。
+    *   4D: **実行 ＞ Webサーバー開始** メニュー<br>![](assets/en/WebServer/start1.png)
+    *   4D Server: HTTPサーバーページの **HTTPサーバー開始** ボタン<br>![](assets/en/WebServer/start2.png)
+
+*   4Dアプリケーション開始時に Webサーバーを自動起動。 これには、ストラクチャー設定の **Web/設定**ページを表示し、**開始時にWebサーバーを起動** オプションを有効にします:<br>![](assets/en/WebServer/config.png)
+
+*   [`webServer.start()`](API/WebServerClass.md#start) 関数または `WEB START SERVER` コマンドを呼び出してプログラムで開始。
+
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して [`webServer.start()`](API/WebServerClass.md#start) 関数を呼び出すことで開始できます。
+> Webサーバーを開始したり停止したりするために、4Dアプリケーションを再起動する必要はありません。
+
+## 4D Webサーバーの停止
+
+4D Webサーバーは複数の方法で停止できます:
+
+*   4D の **実行 ＞ Webサーバー停止** メニューを使用するか、 4D Server にて HTTPサーバーページの **HTTPサーバー停止** ボタンを使用する (いずれも、サーバー開始前は **…開始** と表示されています)。
+
+*   [`webServer.stop()`](API/WebServerClass.md#stop) 関数または `WEB STOP SERVER` コマンドを呼び出してプログラムで停止。
+
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して `webServer.stop()` 関数を呼び出すことで停止できます。
+
+
+## 4D Webサーバーのテスト
+
+**Webサーバーテスト** メニューコマンドを使用してビルトインの Webサーバーが正しく実行されているか確認できます (4Dのみ)。 このメニューは Webサーバーが実行されているときに **実行** メニューからアクセスできます:
 
 ![](assets/en/WebServer/test1.png)
 
 
-When you select this command, the home page of the website published by the 4D application is displayed in a window of your default web browser:
+このコマンドを選択すると、4Dアプリケーションが公開している Webサイトのホームページが、デフォルト Webブラウザーに表示されます:
 
 ![](assets/en/WebServer/defaultHomePage.png)
 
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+このコマンドで Webサーバーの動作や、ホームページの表示などを検証できます。 ページは、Webブラウザーが実行されているマシンの IPアドレスを指定する標準のショートカットである、*ローカルホスト* の URL を使用して呼び出されます。 コマンドはストラクチャー設定で指定された [TCP 公開ポート](webServerConfig.md#http-ポート) 番号を考慮に入れます。
 
 
 
-## Clearing the Cache
+## キャッシュクリア
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+いつでもページやイメージをキャッシュからクリアできます (たとえば、スタティックページを更新し、キャッシュにそれをリロードさせたい場合)。
 
-To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. The cache is then immediately cleared.
-> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
+これをおこなうには、Web / オプション (I) ページの **キャッシュクリア** ボタンをクリックします。 キャッシュは即座にクリアされます。
+> 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
 
 
 
-## Runtime Explorer
+## ランタイムエクスプローラー
 
-The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
+Webサーバーに関連する情報は、ランタイムエクスプローラーにある **ウォッチ** ページ (**Web** 項目内) に表示されます。
 
-*   **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. This information is only available if the web server is active and if the cache size is greater than 0.
+*   **Webキャッシュ使用**: Webキャッシュに存在するページ数とその使用率を示します。 Webサーバーがアクティブでキャッシュサイズが 0 より大きい場合のみ、この情報が利用できます。
 
-*   **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. This information is only available if the web server is active.
+*   **Webサーバー経過時間**: Webサーバーの使用時間を (時間 : 分: 秒 フォーマットで) 示します。 Webサーバーがアクティブである場合のみ、この情報が利用できます。
 
-*   **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). This information is only available if the web server is active.
+*   **Webヒット数**: Webサーバーが起動してから受け取った HTTPリクエストの総数と、毎秒のリクエスト数を示します (ランタイムエクスプローラーの更新の間で測定) 。 Webサーバーがアクティブである場合のみ、この情報が利用できます。
 
 
 
 
 ## 管理用 URL
 
-Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
+Webサイト管理用の URL を使用して、サーバー上に公開している Webサイトをコントロールできます。 4D Webサーバーは、*/4DSTATS*、*/4DHTMLSTATS*、*/4DCACHECLEAR* と */4DWEBTEST* の 4つの URL を受け入れます。
 
-> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST is always available.
+> */4DSTATS*、*/4DHTMLSTATS* と */4DCACHECLEAR* はデータベースの設計者と管理者のみが利用可能です。 4D のパスワードシステムが起動されていないと、これらの URL はすべてのユーザーに対して利用可能となります。 */4DWEBTEST* は、常に利用可能です。
 
 
 ### /4DSTATS
 
-The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
+**/4DSTATS** URL は以下の情報を (ブラウザーで表示可能な) HTML の表形式で返します:
 
-| Item                   | 説明                                                           |
-| ---------------------- | ------------------------------------------------------------ |
-| Cache Current Size     | Current size of web server cache (in bytes)                  |
-| Cache Max Size         | Maximum size of cache (in bytes)                             |
-| Cached Object Max Size | Maximum size of each object in the cache (in bytes)          |
-| Cache Use              | Percentage of cache used                                     |
-| Cached Objects         | Number of objects found in the cache, **including pictures** |
+| 項目                   | 説明                                |
+| -------------------- | --------------------------------- |
+| 現在のキャッシュサイズ          | Webサーバーの現在のキャッシュサイズ (バイト単位)       |
+| 最大キャッシュサイズ           | キャッシュの最大サイズ (バイト単位)               |
+| キャッシュされたオブジェクトの最大サイズ | キャッシュされたオブジェクト中で最も大きなもの (バイト単位)   |
+| 使用キャッシュ              | キャッシュ使用率                          |
+| キャッシュされているオブジェクト     | キャッシュされているオブジェクトの数 (**ピクチャー含む**)。 |
 
-This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
-> The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
+この情報を用いて、サーバーの機能を確認することができ、最終的には対応するパラメーターを適合させます。
+> `WEB GET STATISTICS` コマンドを使用して、スタティックページに対してキャッシュがどのように使用されているかに関する情報を入手することが可能です。
 
 ### /4DHTMLSTATS
 
-The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
+*/4DHTMLSTATS* URL は、*/4DSTATS* URLと同じ情報を HTML表形式で返します。 その違いは **キャッシュされているオブジェクト** に HTMLページの情報のみが返され、ピクチャーファイルをカウントしないことです。 さらにこの URL は **フィルターされたオブジェクト** の情報を返します。
 
-| Item                   | 説明                                                                     |
-| ---------------------- | ---------------------------------------------------------------------- |
-| Cache Current Size     | Current size of web server cache (in bytes)                            |
-| Cache Max Size         | Maximum size of cache (in bytes)                                       |
-| Cached Object Max Size | Maximum size of each object in the cache (in bytes)                    |
-| Cache Use              | Percentage of cache used                                               |
-| Cached Objects         | Number of objects found in the cache, **without pictures**             |
-| Filtered Objects       | Number of objects in cache not counted by URL, in particular, pictures |
+| 項目                   | 説明                                      |
+| -------------------- | --------------------------------------- |
+| 現在のキャッシュサイズ          | Webサーバーの現在のキャッシュサイズ (バイト単位)             |
+| 最大キャッシュサイズ           | キャッシュの最大サイズ (バイト単位)                     |
+| キャッシュされたオブジェクトの最大サイズ | キャッシュされたオブジェクト中で最も大きなもの (バイト単位)         |
+| 使用キャッシュ              | キャッシュ使用率                                |
+| キャッシュされているオブジェクト     | キャッシュされているオブジェクトの数 (**ピクチャーを除く**)。      |
+| フィルターされたオブジェクト       | URL でカウントされないキャッシュ中のオブジェクトの数 (特にピクチャー)。 |
 
 
 ### /4DCACHECLEAR
 
-The */4DCACHECLEAR* URL immediately clears the cache of the static pages and images. It allows you to therefore “force” the update of the pages that have been modified.
+*/4DCACHECLEAR* URLは、スタティックページとイメージのキャッシュを即座に消去します。 そのため、修正されたページを "強制的に" 更新することができます。
 
 ### /4DWEBTEST
 
-The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
+*/4DWEBTEST* URLは、Webサーバーの状態を確認するために設計されています。 このURLが呼び出されると、4D は以下の HTTPフィールドを記したテキストファイルを返します。
 
-| HTTP Field | 説明                                   | 例題                                                                                                                              |
-| ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| 日付         | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
-| User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
+| HTTPフィールド  | 説明                      | 例題                                                                                                                              |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Date       | RFC 822 フォーマットでの現在の日付   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Server     | 4D/バージョン番号              | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| User-Agent | 名前とバージョン @ IPクライアントアドレス | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
 
 
-## Logs
+## ログ
 
-4D allows you to generate two logs of web requests:
+4Dでは、Webリクエストのログを2種類作成することができます:
 
-- a debug log, useful in the web server development phase (*HTTPDebugLog.txt*),
-- a standardized web request log, rather used for statistic purposes (*logweb.txt*).
+- Webサーバーの開発段階で有用なデバッグログ (*HTTPDebugLog.txt*)。
+- おもに統計目的で使用される、標準化された Webリクエストログ (*logweb.txt*)。
 
-Both log files are automatically created in the **Logs** folder of the application project.
+両方のログファイルは、アプリケーションプロジェクトの **Logs** フォルダーに自動的に作成されます。
 
 ### HTTPDebugLog.txt
 
-The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
+[`WebServer` オブジェクト](webServerObject.md) または `WEB SET OPTION` コマンドを使って、[http デバッグファイル](webServerConfig.md#デバッグログ) を有効化することができます。
 
-This log file records each HTTP request and each response in raw mode. ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
+このログファイルは、各 HTTPリクエストとそれぞれのレスポンスを rawモードで記録します。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
-The following fields are logged for both Request and Response:
+リクエストとレスポンスの両方に対して以下のフィールドが記録されます:
 
-| Field name     | 説明                                                            |
-| -------------- | ------------------------------------------------------------- |
-| SocketID       | ID of socket used for communication                           |
-| PeerIP         | IPv4 address of host (client)                                 |
-| PeerPort       | Port used by host (client)                                    |
-| TimeStamp      | Timestamp in milliseconds (since system startup)              |
-| ConnectionID   | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber | Unique and sequential operation number in the logging session |
+| フィールド名         | 説明                                  |
+| -------------- | ----------------------------------- |
+| SocketID       | 通信に使用されたソケットの ID                    |
+| PeerIP         | ホスト (あるいはクライアント) の IPv4アドレス         |
+| PeerPort       | ホスト (あるいはクライアント) が使用したポート番号         |
+| TimeStamp      | (システムが開始されてからの) ミリ秒単位でのタイムスタンプ      |
+| ConnectionID   | 接続UUID (通信に使用された VTCPSocket の UUID) |
+| SequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号      |
 
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format.
+[`WebServer` オブジェクト](webServerObject.md)、`WEB SET OPTION` コマンド、またはストラクチャー設定の **Web/ログ (タイプ)** ページを使って、[Webログファイル](webServerConfig.md#ログの記録) を有効化することができます。 ログのフォーマットを選択する必要があります。
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+それぞれのリクエストが行単位でファイル内に表示されます: *host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length*。各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終ります。
 
-DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):
+DLF (Combined Log Format) フォーマットは CLF (Common Log Format) フォーマットと類似していて、まったく同じ構造を使用します。 さらに、各リクエストの最後に2つのHTTPフィールド、Referer と User-agent を追加します。 CLF/DLF フォーマット (カスタマイズ不可) についての説明です:
 
-| Field name           | 説明                                                                                                                                                                  |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                       |
-| rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                        |
-| user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                     |
-| DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. The date and time are local to the server. |
-| request              | request sent by the client (ex. GET /index.htm HTTP/1.0                                                                                                             |
-| state                | reply given by the server                                                                                                                                           |
-| length               | size of the data returned (except the HTTP header) or 0                                                                                                             |
-| Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                          |
-| User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                       |
+| フィールド名               | 説明                                                                                |
+| -------------------- | --------------------------------------------------------------------------------- |
+| host                 | クライアントの IPアドレス (例: 192.100.100.10)                                                |
+| rfc931               | 4Dによって作成されない情報。常に - (マイナス記号) です。                                                  |
+| user                 | 認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。                  |
+| DD/MMM/YYYY:HH:MM:SS | DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年、HH: 時間、MM: 分、SS: 秒。 日付と時間はサーバーのローカルタイム。 |
+| request              | クライアントによって送られたリクエスト (例: GET /index.htm HTTP/1.0) 。                                |
+| state                | サーバーの返答。                                                                          |
+| length               | 返されたデータ (HTTPヘッダー以外) のサイズまたは 0                                                    |
+| Referer              | DLF のみ - リクエストされたドキュメントを指しているページの URL を含みます。                                      |
+| User-agent           | DLF のみ - リクエストのオリジンにおけるクライアントのブラウザーまたはソフトウェアの名前とバージョンを含みます。                       |
 
 #### ELF/WLF
 
