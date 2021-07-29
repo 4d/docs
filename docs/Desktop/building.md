@@ -1,6 +1,6 @@
 ---
 id: building
-title: Building a project package
+title: Build Application
 ---
 
 4D includes an application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications. 
@@ -17,14 +17,17 @@ The application builder allows you to:
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
-## Build application overview
+## Overview
 
 Building a project package can be carried out using:
 
 - either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command, 
-- or the [Build Application window](#application-builder). 
+- or the [Build Application dialog](#application-builder). 
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+
+### Build application dialog
+
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -60,7 +63,6 @@ Checking this file may help you saving time during the subsequent deployment ste
 > Use the `Get 4D file(Build application log file)` command to get the log file location. 
 
 
-
 ## Application name and destination folder
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -86,7 +88,11 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
+A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
+
+> When generating .4dz files, by default 4D uses a **standard** zip format, readable by any unzip tool. You can choose to use a **custom** zip format, adapted by 4D. The advantage of the custom format is that it cannot be read by standard unzip tools. To use the custom .4dz format, add the `UseStandardZipFormat` build key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file.
+
+
 
 
 #### Include related folders
@@ -290,6 +296,7 @@ The `.4darchive` is copied at the following location:
 
 
 
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -441,6 +448,7 @@ The page lists the elements loaded by the current 4D application:
 ![](assets/en/Project/buildapppluginsProj.png)
 
 *	 **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it. 
+
 
 
 *	**Plugins and components** column - Displays the name of the plug-in/component.
