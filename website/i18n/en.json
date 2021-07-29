@@ -17,8 +17,8 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
-      "Admin/server-maintenance": {
-        "title": "Maintenance Page"
+      "Admin/server-admin": {
+        "title": "4D Server Administration Window"
       },
       "Admin/tls": {
         "title": "TLS Protocol (HTTPS)"
