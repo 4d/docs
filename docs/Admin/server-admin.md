@@ -267,12 +267,12 @@ After verification, a report file is generated in XML format on the server in th
 
 ### Uptime
 
-This area indicates the duration of the server operation since the last time it was started (days, hours and minutes).
+This area indicates the duration of the application server operation since the last time it was started (days, hours and minutes).
 
 
 #### Restart server... 
 
-This button can be used to immediately restart the server. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After restarting, 4D Server automatically relaunches the application. The 4D users can then be reconnected.
+This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 
@@ -332,7 +332,7 @@ The upper part of the page provides information about the current status of the 
 
 - **State**: Started or Stopped.
 - **Starting time**: Date and time the application server was launched. This date corresponds to the opening of the project by 4D Server.
-- **Uptime**: Time elapsed since last opening of project.
+- **Uptime**: Time elapsed since last opening of the project by the server.
 
 ### Accept/Reject New Connections
 
