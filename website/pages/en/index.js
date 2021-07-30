@@ -57,6 +57,7 @@ class Index extends React.Component {
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
+    serverAdmin: <translate>4D Server Administration Window</translate>,
 	cs: <translate>Client/Server</translate>,
     tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
@@ -100,6 +101,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.webAdmin}](${siteConfig.baseUrl}${this.props.language}/Admin/webAdmin.html)<br>
 				[${subContents.dataExplorer}](${siteConfig.baseUrl}${this.props.language}/Admin/dataExplorer.html)<br>
+				[${subContents.serverAdmin}](${siteConfig.baseUrl}${this.props.language}/Admin/server-admin.html)<br>
 				[${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
 				[${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)<br>
 	            [${subContents.cli}](${siteConfig.baseUrl}${this.props.language}/Admin/cli.html)<br>
