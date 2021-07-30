@@ -541,97 +541,97 @@ If you don't want to display shields, select **No Shields** in the selection men
 
 Here is a description of each type of shield:
 
-| Icono                                        | Nombre                             | Is displayed ...                                                                                                                     |
-| -------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                      | For objects with an associated object method                                                                                         |
-| ![](assets/en/FormEditor/standardAction.png) | Standard Action                    | For objects with an associated standard action                                                                                       |
-| ![](assets/en/FormEditor/resizing.png)       | Redimensionamiento                 | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](assets/en/FormEditor/entryOrder.png)     | Orden de entrada                   | For enterable objects, indicates the number of entry order                                                                           |
-| ![](assets/en/FormEditor/viewNumber.png)     | Current View                       | For all objects in the current view                                                                                                  |
-| ![](assets/en/FormEditor/cssShield.png)      | [Hoja de estilo](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
-| ![](assets/en/FormEditor/filter.png)         | Filter                             | For enterable objects with an associated entry filter                                                                                |
-| ![](assets/en/FormEditor/helpTip.png)        | Help Tip                           | For objects with an associated tip                                                                                                   |
-| ![](assets/en/FormEditor/localized.png)      | Localized                          | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
-| ![](assets/en/FormEditor/noShields.png)      | No Shields                         | No shields appear                                                                                                                    |
+| Icono                                        | Nombre                             | Is displayed ...                                                                                                                                 |
+| -------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                      | For objects with an associated object method                                                                                                     |
+| ![](assets/en/FormEditor/standardAction.png) | Standard Action                    | For objects with an associated standard action                                                                                                   |
+| ![](assets/en/FormEditor/resizing.png)       | Redimensionamiento                 | For objects with at least one resizing property, indicates the combination of current properties                                                 |
+| ![](assets/en/FormEditor/entryOrder.png)     | Orden de entrada                   | En el caso de los objetos editables, indica el número de orden de entrada                                                                        |
+| ![](assets/en/FormEditor/viewNumber.png)     | Vista actual                       | Para todos los objetos de la vista actual                                                                                                        |
+| ![](assets/en/FormEditor/cssShield.png)      | [Hoja de estilo](stylesheets.html) | Para objetos con uno o más valores de atributos reemplazados por una hoja de estilo.                                                             |
+| ![](assets/en/FormEditor/filter.png)         | Filtro                             | Para los objetos introducibles con un filtro de entrada asociado                                                                                 |
+| ![](assets/en/FormEditor/helpTip.png)        | Help Tip                           | Para los objetos con un mensaje de ayuda asociado                                                                                                |
+| ![](assets/en/FormEditor/localized.png)      | Localizado                         | Para los objetos cuya etiqueta proviene de una referencia (etiqueta que empieza por ":"). La referencia puede ser de tipo recurso (STR#) o XLIFF |
+| ![](assets/en/FormEditor/noShields.png)      | Sin escudos                        | No aparecen escudos                                                                                                                              |
 
-## Views
+## Vistas
 
-The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
+El editor de formularios de 4D le permite crear formularios complejos distribuyendo los objetos formulario entre distintas vistas que pueden ocultarse o mostrarse según sea necesario.
 
-For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
+Por ejemplo, puede distribuir los objetos según su tipo (campos, variables, objetos estáticos, etc.). Todo tipo de objeto formulario, incluidos los subformularios y las áreas de plug-in, puede incluirse en las vistas.
 
-There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked.
+No hay límite en el número de vistas por formulario. Puedes crear tantas vistas diferentes como necesite. Además, cada vista puede mostrarse, ocultarse y/o bloquearse.
 
 
-View management is handled via the View palette.
+La gestión de las vistas se realiza a través de la paleta de vistas.
 
 ![](assets/en/FormEditor/viewEditor.png)
 
 
-### Accessing the View palette
+### Acceder a la paleta de vistas
 
-There are three ways to access the View palette:
+Hay tres formas de acceder a la paleta de vistas:
 
-*   **Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
+*   **Barra de herramientas**: haga clic en el icono Vistas de la barra de herramientas del Editor de formularios. (Este icono aparece en gris cuando al menos un objeto pertenece a una vista distinta de la vista por defecto.)
 
-    |                  Default view only                   |               With additional views                |
-    |:----------------------------------------------------:|:--------------------------------------------------:|
-    | ![](assets/en/FormEditor/icon.png "No views in use") | ![](assets/en/FormEditor/icon2.png "Views in use") |
+    |                  Sólo vista por defecto                   |               Con vistas adicionales                |
+    |:---------------------------------------------------------:|:---------------------------------------------------:|
+    | ![](assets/en/FormEditor/icon.png "No hay vistas en uso") | ![](assets/en/FormEditor/icon2.png "Vistas en uso") |
 
-*   **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
+*   **Menú contextual** (formulario u objeto): haga clic derecho en cualquier lugar del editor de formularios o de un objeto, y seleccione **Vista actual**
 
     ![](assets/en/FormEditor/contextMenu.png)
 
-The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+La vista actual se indica con una marca de verificación (por ejemplo, "Dirección de trabajo" en la imagen superior)
 
 
-*   **Form menu**: Click on the **Form** menu and select **View List**
+*   **Menú Formulario**: haga clic en el menú **Formulario** y seleccione **Mostrar la lista**
 
 ![](assets/en/FormEditor/formMenu.png)
 
 
-### Before you begin
+### Antes de comenzar
 
-Here are a few important things to know before you start working with views:
+Aquí hay algunas cosas importantes que hay que saber antes de empezar a trabajar con vistas:
 
-*   **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
+*   **Contexto de uso**: las vistas son una herramienta puramente gráfica que sólo se puede utilizar en el Editor de formularios; no se puede acceder a las vistas por programación ni en el modo Aplicación.
 
-*   **Views and pages**: Objects of the same view can belong to different form pages; only objects of the current page (and of page 0 if it is visible) can be displayed, regardless of the view configuration.
+*   **Vistas y páginas**: Los objetos de una misma vista pueden pertenecer a diferentes páginas del formulario; sólo se pueden mostrar los objetos de la página actual (y de la página 0 si es visible), independientemente de la configuración de las vistas.
 
-*   **Views and levels**: Views are independent of object levels; there is no display hierarchy among different views.
+*   **Vistas y niveles**: las vistas son independientes de los niveles de los objetos; no existe una jerarquía de visualización entre las diferentes vistas.
 
-*   **Views and groups**: Only objects belonging to the current view can be grouped.
+*   **Vistas y grupos**: sólo se pueden agrupar los objetos que pertenecen a la vista actual.
 
-*   **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
+*   **Vistas actuales y por defecto**: la vista por defecto es la primera vista de un formulario y no se puede eliminar; la vista actual es la que se está editando y el nombre se muestra en negrita.
 
 
 
 ### Gestión de vistas
 
-#### Creating views
+#### Crear vistas
 
-Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
+Todo objeto creado en un formulario se coloca en la primera vista ("Vista 1") del formulario. La primera vista es **siempre** la vista por defecto, indicada por (por defecto) después del nombre. El nombre de la vista puede cambiarse (ver [Renombrar vistas](#renaming-views)), sin embargo sigue siendo la vista por defecto.
 
 
 ![](assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+Hay dos maneras de añadir vistas adicionales:
 
-*   Click on the **Add a new view** button at the bottom of the View palette:
+*   Haga clic en el botón **Añadir una nueva vista** en la parte inferior de la paleta Vista:
 
 ![](assets/en/FormEditor/addView.png)
 
-*   Right-click on an existing view and select **Insert view**:
+*   Haga clic con el botón derecho en una vista existente y seleccione **Insertar vista**:
 
 ![](assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+No hay límite en el número de vistas.
 
-#### Renaming views
+#### Renombrar vistas
 
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
+Por defecto las vistas se nombran como "Vista" + el número de la vista, sin embargo puede cambiar estos nombres para mejorar la legibilidad y adaptarse mejor a sus necesidades.
 
-To rename a view, you can use either:
+Para cambiar el nombre de una vista, puede utilizar:
 
 *   Double-click directly on the view name (the selected view in this case). The name then becomes editable:
 
@@ -652,7 +652,7 @@ Note that the Default view does not change:
 
 #### Deleting views
 
-To rename a view, you can use either:
+Para cambiar el nombre de una vista, puede utilizar:
 
 *   Click on the **Delete the selected view** button at the bottom of the View palette:
 
