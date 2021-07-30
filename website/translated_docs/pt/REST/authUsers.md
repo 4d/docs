@@ -5,7 +5,7 @@ title: Users and sessions
 
 REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+Como primeiro passo para abrir uma sessão REST no servidor 4D, o usuário que envia a solicitude deve estar autenticado.
 
 
 ## Authenticating users

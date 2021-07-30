@@ -390,9 +390,9 @@ To create a data entry group:
 
 When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
 
-#### Excluding an object from the entry order
+#### Excluir un objeto del orden de entrada
 
-By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
+Por defecto, todos los objetos que soportan la propiedad enfocable se incluyen en el orden de entrada. To exclude an object from the entry order:
 
 1. Select the Entry order mode, then
 
@@ -461,50 +461,50 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 ## Creación de list box
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+Puede crear rápidamente nuevos list box de tipo selección de entidades con el **-Generador de list box**. El nuevo list box puede ser utilizado inmediatamente o puede ser editado a través del Editor de formularios.
 
-The List box builder lets you create and fill entity selection list boxes in a few simple operations.
-
-
-
-### Using the List Box Builder
+El generador de list box le permite crear y llenar los list box de tipo selección de entidades en unas pocas y sencillas operaciones.
 
 
-1.  In the Form Editor toolbar, click on the List box builder icon:
+
+### Utilización del generador de list box
+
+
+1.  En la barra de herramientas del Editor de formularios, haga clic en el icono del generador de list box:
 
     ![](assets/en/FormEditor/listboxBuilderIcon.png)
 
-    The List box builder is displayed:
+    Se muestra el generador de list box:
 
     ![](assets/en/FormEditor/listboxBuilder.png)
 
-2.  Select a table from the **Table** dropdown list:
+2.  Seleccione una tabla de la lista desplegable **Tabla**:
 
     ![](assets/en/FormEditor/listboxBuilderTable.png)
 
-3.  Select the fields for the list box in the **Fields** area:
+3.  Seleccione los campos del list box en el área **Campos**:
 
     ![](assets/en/FormEditor/listboxBuilderFields.png)
 
-    By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+    Por defecto, se seleccionan todos los campos. Puede seleccionar o deseleccionar los campos individualmente o utilizar **Ctrl+clic** (Windows) o **Cmd+clic** (macOS) para seleccionarlos o deseleccionarlos todos a la vez.
 
-    You can change the order of the fields by dragging them and dropping them.
+    Puede cambiar el orden de los campos arrastrándolos y soltándolos.
 
-4.  The expression to fill the list box's rows from the entity selection is prefilled:
+4.  La expresión para llenar las líneas del list box a partir de la selección de la entidad se llena previamente:
 
     ![](assets/en/FormEditor/listboxBuilderExpression.png)
 
-    This expression can be changed if necessary.
+    Esta expresión puede modificarse si es necesario.
 
-5.  Clicking on the **Copy** button will copy the expression for loading all records into memory:
+5.  Al hacer clic en el botón **Copiar** se copiará la expresión para cargar todos los registros en la memoria:
 
     ![](assets/en/FormEditor/listboxBuilderCode.png)
 
-6.  Click the the **Build widget** button to create the list box.
+6.  Haga clic en el botón **Crear un widget** para crear el list box.
 
     ![](assets/en/FormEditor/listboxBuilderBuild.png)
 
-The final list box:
+El list box final:
 
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
 
@@ -546,7 +546,7 @@ Here is a description of each type of shield:
 | ![](assets/en/FormEditor/objectMethod.png)   | Object Method                      | For objects with an associated object method                                                                                         |
 | ![](assets/en/FormEditor/standardAction.png) | Standard Action                    | For objects with an associated standard action                                                                                       |
 | ![](assets/en/FormEditor/resizing.png)       | Redimensionamiento                 | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](assets/en/FormEditor/entryOrder.png)     | Entry Order                        | For enterable objects, indicates the number of entry order                                                                           |
+| ![](assets/en/FormEditor/entryOrder.png)     | Orden de entrada                   | For enterable objects, indicates the number of entry order                                                                           |
 | ![](assets/en/FormEditor/viewNumber.png)     | Current View                       | For all objects in the current view                                                                                                  |
 | ![](assets/en/FormEditor/cssShield.png)      | [Hoja de estilo](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
 | ![](assets/en/FormEditor/filter.png)         | Filter                             | For enterable objects with an associated entry filter                                                                                |
