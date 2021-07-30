@@ -18,6 +18,7 @@ For detailed information about the session implementation, please refer to the [
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
+| [<!-- INCLUDE #SessionClass.storage).Syntax -->](#storage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
@@ -308,7 +309,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+> In the current implementation, only the "WebAdmin" privilege is available.
 
 By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
 
@@ -353,6 +354,8 @@ End if
 The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
 
 When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
+
+> Like the `Storage` object of the server, the `.storage` property does not share its locking identifier with shared objects or collections added as properties (its locking identifier remains negative).
 
 This property is **read only** itself but it returns a read-write object.
 
