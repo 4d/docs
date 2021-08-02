@@ -4,23 +4,23 @@ title: Webサーバーオブジェクト
 ---
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
 
-- one web server for the host application,
-- one web server for the component #1,
-- one web server for the component #2.
+- ホストアプリケーションの Webサーバーを1つ
+- コンポーネント#1 の Webサーバーを1つ
+- コンポーネント#2 の Webサーバーを1つ
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
+1つの 4Dアプリケーションプロジェクトに接続できるコンポーネントの数、つまり Webサーバーの数には、メモリ以外の制限はありません。
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> 4Dランゲージの従来の [WEBコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
 
-Each web server (host application or component) can be used in its own separate context, including:
-- `On Web Authentication` and `On Web Connection` database method calls
-- 4D tags processing and method calls,
+各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
+- `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
+- 4Dタグの処理とメソッドの呼び出し
 - web sessions and TLS protocol management.
 
 This allows you to develop independant components and features that come with their own web interfaces.
@@ -106,7 +106,7 @@ These properties are defined:
 
 The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
-| Command                         | スコープ                                 |
+| コマンド                            | スコープ                                 |
 | ------------------------------- | ------------------------------------ |
 | `SET DATABASE PARAMETER`        | Host application web server          |
 | `WEB CLOSE SESSION`             | Web server that received the request |
