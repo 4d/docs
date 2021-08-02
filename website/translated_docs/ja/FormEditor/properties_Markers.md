@@ -23,7 +23,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 #### JSON 文法
 
-| 名           | データタイプ                            | とりうる値                                                                                              |
+| 名称          | データタイプ                            | とりうる値                                                                                              |
 | ----------- | --------------------------------- | -------------------------------------------------------------------------------------------------- |
 | markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br>Minimum value: 0 |
 
@@ -37,7 +37,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 #### JSON 文法
 
-| 名          | データタイプ  | とりうる値                          |
+| 名称         | データタイプ  | とりうる値                          |
 | ---------- | ------- | ------------------------------ |
 | markerBody | integer | Detail marker position. 最小値: 0 |
 
@@ -52,7 +52,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 #### JSON 文法
 
-| 名            | データタイプ  | とりうる値  |
+| 名称           | データタイプ  | とりうる値  |
 | ------------ | ------- | ------ |
 | markerFooter | integer | 最小値: 0 |
 
@@ -80,7 +80,7 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 #### JSON 文法
 
-| 名            | データタイプ                            | とりうる値                                                                                                |
+| 名称           | データタイプ                            | とりうる値                                                                                                |
 | ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br>Minimum value: 0 |
 
