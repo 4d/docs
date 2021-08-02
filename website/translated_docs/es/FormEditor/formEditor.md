@@ -752,25 +752,25 @@ By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next 
 
 ![](assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+Para bloquear los objetos de una vista, haga clic en el icono *Bloquear/Desbloquear*. El candado está cerrado, lo que significa que la vista está bloqueada:
 
 ![](assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> La [vista actual](#antes-del-comienzo) no se puede bloquear.
 
-To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
+Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono *Bloquear/Desbloquear* de esa vista.
 
 ## Zoom
 
-You can zoom in the current form. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+Puede hacer zoom en el formulario actual. Pase al modo "Zoom" haciendo clic en el icono de la lupa o haciendo clic directamente en la barra de porcentaje deseada (50%, 100%, 200%, 400% y 800%):
 
 ![](assets/en/FormEditor/zoom.png)
 
-*   When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage.
-*   When you click on a percentage bar, the display is immediately modified.
+*   Al hacer clic en la lupa, el cursor se convierte en una lupa. A continuación, puede hacer clic en el formulario para aumentar la visualización o mantener presionada la tecla Mayús y hacer clic para reducir el porcentaje de visualización.
+*   Al hacer clic en una barra de porcentaje, la visualización se modifica inmediatamente.
 
-In Zoom mode, all Form editor functions remain available(*).
+En el modo Zoom, todas las funciones del editor de formularios siguen estando disponibles(*).
 
-(*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.
+(*) Por razones técnicas, no es posible seleccionar los elementos del list box (encabezados, columnas, pies de página) cuando el editor de formularios está en modo Zoom.
 
 
 
