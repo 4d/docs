@@ -10,7 +10,7 @@ Sets the number of columns in a thumbnail table.
 
 #### JSON Grammar
 
-| Name        | Tipos de datos | Possible Values |
+| Nombre      | Tipos de datos | Possible Values |
 |:----------- |:--------------:| --------------- |
 | columnCount |    integer     | minimum: 1      |
 
@@ -28,7 +28,7 @@ Sets the number of rows in a thumbnail table.
 
 #### JSON Grammar
 
-| Name     | Tipos de datos | Possible Values |
+| Nombre   | Tipos de datos | Possible Values |
 |:-------- |:--------------:| --------------- |
 | rowCount |    integer     | minimum: 1      |
 

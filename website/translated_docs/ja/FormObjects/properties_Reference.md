@@ -10,7 +10,7 @@ title: JSON プロパティリスト
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [p](#p) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [z](#z)
 
 
-`list` (`choiceList`</code> 参照)</td> 
+`list` (`choiceList` 参照)</td> 
 
 </tr> 
 

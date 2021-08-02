@@ -47,7 +47,7 @@ To connect to the Data Explorer web page:
 
 In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
 
-### Requirements
+### Requisitos
 
 The Data Explorer supports the following web browsers:
 

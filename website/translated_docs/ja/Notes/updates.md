@@ -7,9 +7,9 @@ title: ドキュメンテーション更新情報
 
 ## 4D v19 R2
 
-- A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
-- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/blob.md#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
+- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](Preferences/general.md#gitignore-ファイルを作成する) が作成可能
+- 新しい [`4D.Blob`](Concepts/blob.md#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](API/BlobClass.md)
+- [`.setText()`](API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
 
 ## 4D v19

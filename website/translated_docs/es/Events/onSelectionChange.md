@@ -3,27 +3,27 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Puede ser llamado por                                                                                                                                                                                                                                                 | Definición                              |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
+| Code | Puede ser llamado por                                                                                                                                                                                                                                                                | Definición                            |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| 31   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [Área 4D Write Pro](FormObjects/writeProArea_overview.md) - Formulario - [Lista jerárquica](FormObjects/list_overview.md) - [Área de entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | La selección en el objeto se modifica |
 
 
 ## Descripción
 
-This event can be generated in different contexts.
+Este evento puede generarse en diferentes contextos.
 
 
 ### 4D View Pro
-The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Se modifica la selección actual de líneas o columnas. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propriedad    | Tipo         | Descripción                  |
-| ------------- | ------------ | ---------------------------- |
-| code          | entero largo | 31                           |
-| description   | texto        | "On Selection Change"        |
-| objectName    | texto        | Nombre del área 4D View Pro  |
-| sheetName     | texto        | Nombre de la hoja del evento |
-| oldSelections | objeto       | Cell range before change     |
-| newSelections | objeto       | Cell range after change      |
+| Propriedad    | Tipo         | Descripción                      |
+| ------------- | ------------ | -------------------------------- |
+| code          | entero largo | 31                               |
+| description   | texto        | "On Selection Change"            |
+| objectName    | texto        | Nombre del área 4D View Pro      |
+| sheetName     | texto        | Nombre de la hoja del evento     |
+| oldSelections | objeto       | Rango de celdas antes del cambio |
+| newSelections | objeto       | Rango de celdas luego del cambio |
 
 #### Ejemplo
 
@@ -34,21 +34,21 @@ The current selection of rows or columns is modified. In this context, the [even
  End if
 ```
 
-### List form
+### Formulario listado
 
-The current record or the current selection of rows is modified in a list form.
-
-
-### Hierarchical list
-
-This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
+El registro actual o la selección actual de líneas se modifica en un formulario listado.
 
 
-### Input & 4D Write Pro
+### Lista jerárquica
 
-The text selection or the position of the cursor in the area is modified following a click or a keystroke.
+Este evento se genera cada vez que se modifica la selección en la lista jerárquica tras un clic del ratón o una presión del teclado.
+
+
+### Área de entrada y 4D Write Pro
+
+La selección de texto o la posición del cursor en el área se modifica tras un clic o una presión de tecla.
 
 
 ### List box
-This event is generated each time the current selection of rows or columns of the list box is modified.
+Este evento se genera cada vez que se modifica la selección actual de líneas o de columnas del list box.
 

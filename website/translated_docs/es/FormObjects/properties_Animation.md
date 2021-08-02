@@ -11,7 +11,7 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 #### JSON Grammar
 
-| Name                 | Tipos de datos | Possible Values |
+| Nombre               | Tipos de datos | Possible Values |
 | -------------------- | -------------- | --------------- |
 | loopBackToFirstFrame | booleano       | true, false     |
 
@@ -29,7 +29,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 #### JSON Grammar
 
-| Name                   | Tipos de datos | Possible Values |
+| Nombre                 | Tipos de datos | Possible Values |
 | ---------------------- | -------------- | --------------- |
 | switchBackWhenReleased | booleano       | true, false     |
 
@@ -48,7 +48,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 #### JSON Grammar
 
-| Name               | Tipos de datos | Possible Values |
+| Nombre             | Tipos de datos | Possible Values |
 | ------------------ | -------------- | --------------- |
 | switchContinuously | booleano       | true, false     |
 
@@ -66,7 +66,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### JSON Grammar
 
-| Name       | Tipos de datos | Possible Values |
+| Nombre     | Tipos de datos | Possible Values |
 | ---------- | -------------- | --------------- |
 | frameDelay | integer        | minimum: 0      |
 
@@ -85,7 +85,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 #### JSON Grammar
 
-| Name               | Tipos de datos | Possible Values |
+| Nombre             | Tipos de datos | Possible Values |
 | ------------------ | -------------- | --------------- |
 | switchWhenRollover | booleano       | true, false     |
 
@@ -106,7 +106,7 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 #### JSON Grammar
 
-| Name                   | Tipos de datos | Possible Values |
+| Nombre                 | Tipos de datos | Possible Values |
 |:---------------------- | -------------- | --------------- |
 | useLastFrameAsDisabled | booleano       | true, false     |
 
