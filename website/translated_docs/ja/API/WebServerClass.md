@@ -72,7 +72,7 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| 参照    | タイプ          |    | 説明                                               |
+| 引数    | タイプ          |    | 説明                                               |
 | ----- | ------------ | -- | ------------------------------------------------ |
 | オプション | 整数           | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値   | 4D.WebServer | <- | WebServer オブジェクト                                 |
@@ -118,7 +118,7 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| 参照  | タイプ    |    | 説明                         |
+| 引数  | タイプ    |    | 説明                         |
 | --- | ------ | -- | -------------------------- |
 | 戻り値 | コレクション | <- | 利用可能な Webサーバーオブジェクトのコレクション |
 
@@ -768,7 +768,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.start().Params -->
 
-| 参照       | タイプ    |    | 説明              |
+| 引数       | タイプ    |    | 説明              |
 | -------- | ------ | -- | --------------- |
 | settings | オブジェクト | -> | 開始時の Webサーバー設定  |
 | 戻り値      | オブジェクト | <- | Webサーバー開始のステータス |
@@ -830,7 +830,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| 参照 | タイプ |  | 説明                |
+| 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
 

@@ -851,7 +851,7 @@
         "title": "概要"
       },
       "WebServer/webServerAdmin": {
-        "title": "データベース管理"
+        "title": "管理"
       },
       "WebServer/webServerConfig": {
         "title": "設定"
@@ -873,7 +873,7 @@
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
       "Preferences": "Preferences",
-      "Administration": "データベース管理",
+      "Administration": "管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
@@ -921,7 +921,7 @@
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
-    "Administration|no description given": "データベース管理",
+    "Administration|no description given": "管理",
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
