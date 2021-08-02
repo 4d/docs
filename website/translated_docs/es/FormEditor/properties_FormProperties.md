@@ -24,7 +24,7 @@ This property defines the color scheme for the form. By default when the propert
 
 ## Pages
 
-Each form has is made of at least two pages:
+Cada formulario consta de al menos dos páginas:
 
 - a page 0 (background page)
 - a page 1 (main page)
