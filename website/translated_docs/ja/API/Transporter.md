@@ -364,7 +364,7 @@ title: Transporter クラス
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| 参照  | タイプ    |    | 説明                         |
+| 引数  | タイプ    |    | 説明                         |
 | --- | ------ |:--:| -------------------------- |
 | 戻り値 | オブジェクト | <- | transporter オブジェクト接続のステータス |
 <!-- END REF -->
