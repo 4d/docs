@@ -35,7 +35,7 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| 参照          | タイプ               |    | 説明                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | file        | 4D.File           | -> | 添付ファイル                                                 |
 | zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
@@ -180,7 +180,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| 参照          | タイプ               |    | 説明                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | file        | 4D.File           | -> | 添付ファイル                                                 |
 | zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
@@ -230,7 +230,7 @@ $transporter.send($email)
 **.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 参照  | タイプ     |    | 説明    |
+| 引数  | タイプ     |    | 説明    |
 | --- | ------- |:--:| ----- |
 | 戻り値 | 4D.Blob | <- | 添付の中身 |
 <!-- END REF -->
