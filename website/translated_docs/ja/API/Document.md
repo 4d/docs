@@ -465,7 +465,7 @@ title: Document クラス
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| 参照                | タイプ       |    | 説明                                |
+| 引数                | タイプ       |    | 説明                                |
 | ----------------- | --------- |:--:| --------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
@@ -521,7 +521,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 参照  | タイプ     |    | 説明         |
+| 引数  | タイプ     |    | 説明         |
 | --- | ------- | -- | ---------- |
 | 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
 <!-- END REF -->
@@ -564,7 +564,7 @@ A `4D.Blob` object.
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                       |
+| 引数   | タイプ   |    | 説明                       |
 | ---- | ----- | -- | ------------------------ |
 | size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
 | 戻り値  | ピクチャー | <- | アイコン                     |
@@ -603,7 +603,7 @@ A `4D.Blob` object.
 
 
 <!-- REF #document.getText().Params -->
-| 参照          | タイプ  |    | 説明               |
+| 引数          | タイプ  |    | 説明               |
 | ----------- | ---- | -- | ---------------- |
 | charSetName | テキスト | -> | 文字セットの名前         |
 | charSetNum  | 整数   | -> | 文字セットの番号         |
