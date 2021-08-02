@@ -8,11 +8,11 @@ title: Corte
 
 Sets the number of columns in a thumbnail table.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values |
-|:----------- |:--------------:| --------------- |
-| columnCount |    integer     | minimum: 1      |
+| Nombre      | Tipos de datos | Valores posibles |
+|:----------- |:--------------:| ---------------- |
+| columnCount |    integer     | minimum: 1       |
 
 #### Objects Supported
 
@@ -26,11 +26,11 @@ Sets the number of columns in a thumbnail table.
 
 Sets the number of rows in a thumbnail table.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre   | Tipos de datos | Possible Values |
-|:-------- |:--------------:| --------------- |
-| rowCount |    integer     | minimum: 1      |
+| Nombre   | Tipos de datos | Valores posibles |
+|:-------- |:--------------:| ---------------- |
+| rowCount |    integer     | minimum: 1       |
 
 #### Objects Supported
 
