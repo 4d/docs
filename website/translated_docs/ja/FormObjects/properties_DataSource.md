@@ -25,7 +25,7 @@ This property is supported by:
 
 #### JSON 文法
 
-| 名                  | データタイプ  | とりうる値       |
+| 名称                 | データタイプ  | とりうる値       |
 | ------------------ | ------- | ----------- |
 | automaticInsertion | boolean | true, false |
 
@@ -46,7 +46,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON 文法
 
-| 名          | データタイプ     | とりうる値                |
+| 名称         | データタイプ     | とりうる値                |
 | ---------- | ---------- | -------------------- |
 | choiceList | リスト、コレクション | 選択可能な値のリスト           |
 | list       | リスト、コレクション | 選択可能な値のリスト (階層リストのみ) |
@@ -65,7 +65,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON 文法
 
-| 名      | データタイプ     | とりうる値                  |
+| 名称     | データタイプ     | とりうる値                  |
 | ------ | ---------- | ---------------------- |
 | labels | リスト、コレクション | タブコントロールラベルに使用する値のリスト。 |
 
@@ -83,7 +83,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON 文法
 
-| 名                 | データタイプ | とりうる値     |
+| 名称                | データタイプ | とりうる値     |
 | ----------------- | ------ | --------- |
 | currentItemSource | string | オブジェクト型の式 |
 
@@ -107,7 +107,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON 文法
 
-| 名                         | データタイプ | とりうる値 |
+| 名称                        | データタイプ | とりうる値 |
 | ------------------------- | ------ | ----- |
 | currentItemPositionSource | string | 数値型の式 |
 
@@ -130,7 +130,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                              |
+| 名称                 | データタイプ | とりうる値                                              |
 | ------------------ | ------ | -------------------------------------------------- |
 | dataSourceTypeHint | string | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
@@ -163,7 +163,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                |
+| 名称     | データタイプ | とりうる値                |
 | ------ | ------ | -------------------- |
 | saveAs | string | "value", "reference" |
 
@@ -192,7 +192,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名      | データタイプ     | とりうる値                                      |
+| 名称     | データタイプ     | とりうる値                                      |
 | ------ | ---------- | ------------------------------------------ |
 | values | collection | デフォルト値 (文字列) のコレクション。例: "a", "b", "c", "d" |
 
@@ -240,7 +240,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                     |
+| 名称         | データタイプ | とりうる値                     |
 | ---------- | ------ | ------------------------- |
 | dataSource | string | 4D変数、フィールド名、あるいは任意のランゲージ式 |
 
@@ -262,7 +262,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値  |
+| 名称    | データタイプ | とりうる値  |
 | ----- | ------ | ------ |
 | table | number | テーブル番号 |
 
@@ -295,7 +295,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                |
+| 名称     | データタイプ | とりうる値                |
 | ------ | ------ | -------------------- |
 | saveAs | string | "value", "reference" |
 
@@ -316,7 +316,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値   |
+| 名称                  | データタイプ | とりうる値   |
 | ------------------- | ------ | ------- |
 | selectedItemsSource | string | コレクション式 |
 
@@ -334,7 +334,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値       |
+| 名称             | データタイプ | とりうる値       |
 | -------------- | ------ | ----------- |
 | namedSelection | string | 命名セレクションの名前 |
 
