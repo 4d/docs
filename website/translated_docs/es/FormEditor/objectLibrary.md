@@ -44,7 +44,7 @@ Objects are stored with all their properties, including their object methods. Li
 Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
 
 
-### Creating an object library
+### Crear una librería de objetos
 
 To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
 
@@ -54,7 +54,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
 
-### Opening an object library
+### Abrir una librería de objetos
 
 Una determinada librería de objetos sólo puede ser abierta por una base a la vez. Sin embargo, se pueden abrir varias librerías diferentes en la misma base.
 
@@ -64,11 +64,11 @@ To open a custom object library, select **Open>Object Library...** command in th
 
 In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
 
-- project forms
+- formularios proyecto
 - form pages 1
 
 
-### Building an object library
+### Crear una librería de objetos
 
 Objects are placed in an object library using drag-and-drop or a cut-copy-paste operation. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
 
@@ -97,7 +97,7 @@ Using copy-paste or drag-and-drop with certain library objects also causes their
 
 The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
 
-- Lists
+- Listas
 - Formats/Filters
 - Imágenes
 - Help Tips (linked to a field)
