@@ -120,7 +120,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
-| 参照         | タイプ         |    | 説明                                  |
+| 引数         | タイプ         |    | 説明                                  |
 | ---------- | ----------- |:--:| ----------------------------------- |
 | formulaExp | 式           | -> | オブジェクトとして返されるフォーミュラ                 |
 | 戻り値        | 4D.Function | <- | フォーミュラを格納しているネイティブな Function オブジェクト |
@@ -255,7 +255,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
-| 参照            | タイプ         |    | 説明                        |
+| 引数            | タイプ         |    | 説明                        |
 | ------------- | ----------- |:--:| ------------------------- |
 | formulaString | テキスト        | -> | オブジェクトとして返されるフォーミュラ文字列    |
 | 戻り値           | 4D.Function | <- | フォーミュラを格納しているネイティブなオブジェクト |
@@ -310,7 +310,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| 参照            | タイプ    |    | 説明                                     |
+| 引数            | タイプ    |    | 説明                                     |
 | ------------- | ------ |:--:| -------------------------------------- |
 | thisObj       | オブジェクト | -> | フォーミュラ内で This コマンドによって返されるオブジェクト       |
 | formulaParams | コレクション | -> | フォーミュラが実行される際に $1...$n として渡される値のコレクション |
@@ -371,7 +371,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| 参照      | タイプ    |    | 説明                               |
+| 引数      | タイプ    |    | 説明                               |
 | ------- | ------ | -- | -------------------------------- |
 | thisObj | オブジェクト | -> | フォーミュラ内で This コマンドによって返されるオブジェクト |
 | params  | any    | -> | フォーミュラが実行される際に $1...$n として渡される値  |
