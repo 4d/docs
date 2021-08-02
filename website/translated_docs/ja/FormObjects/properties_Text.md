@@ -48,7 +48,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値              |
+| 名称        | データタイプ | とりうる値              |
 | --------- | ------ | ------------------ |
 | fontStyle | string | "normal", "italic" |
 
@@ -66,7 +66,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                 |
+| 名称             | データタイプ | とりうる値                 |
 | -------------- | ------ | --------------------- |
 | textDecoration | string | "normal", "underline" |
 
@@ -108,7 +108,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値                          |
+| 名称        | データタイプ | とりうる値                          |
 | --------- | ------ | ------------------------------ |
 | fontTheme | string | "normal", "main", "additional" |
 
@@ -132,7 +132,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値          |
+| 名称         | データタイプ | とりうる値          |
 | ---------- | ------ | -------------- |
 | fontFamily | string | CSS フォントファミリー名 |
 > 4D では [Webセーフ](https://www.w3schools.com/cssref/css_websafe_fonts.asp) フォントだけを使うことを推奨しています。
@@ -152,7 +152,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名        | データタイプ  | とりうる値                   |
+| 名称       | データタイプ  | とりうる値                   |
 | -------- | ------- | ----------------------- |
 | fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 |
 
@@ -181,7 +181,7 @@ title: テキスト
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                |
+| 名称     | データタイプ | とりうる値                                |
 | ------ | ------ | ------------------------------------ |
 | stroke | string | 任意の css値; "transparent"; "automatic" |
 
@@ -227,7 +227,7 @@ Foreground color;Dark shadow color)
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値    |
+| 名称              | データタイプ | とりうる値    |
 | --------------- | ------ | -------- |
 | rowStrokeSource | string | フォントカラー式 |
 
@@ -270,7 +270,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                   |
+| 名称             | データタイプ | とりうる値                   |
 | -------------- | ------ | ----------------------- |
 | rowStyleSource | string | 表示される行/セルごとに評価されるスタイル式。 |
 
@@ -299,7 +299,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値                                             |
+| 名称        | データタイプ | とりうる値                                             |
 | --------- | ------ | ------------------------------------------------- |
 | textAlign | string | "automatic", "right", "center", "justify", "left" |
 
@@ -332,7 +332,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                  |
+| 名称            | データタイプ | とりうる値                                  |
 | ------------- | ------ | -------------------------------------- |
 | verticalAlign | string | "automatic", "top", "middle", "bottom" |
 
@@ -435,7 +435,7 @@ End case
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                     |
+| 名称         | データタイプ | とりうる値                     |
 | ---------- | ------ | ------------------------- |
 | metaSource | string | 表示される行/セルごとに評価されるオブジェクト式。 |
 
@@ -477,7 +477,7 @@ End case
 <table spaces-before="0">
   <tr>
     <th>
-      名
+      名称
     </th>
     
     <th>
@@ -602,7 +602,7 @@ End case
 <table spaces-before="0">
   <tr>
     <th>
-      名
+      名称
     </th>
     
     <th>
@@ -673,7 +673,7 @@ End case
 <table spaces-before="0">
   <tr>
     <th>
-      名
+      名称
     </th>
     
     <th>
@@ -745,7 +745,7 @@ End case
 <table spaces-before="0">
   <tr>
     <th>
-      名
+      名称
     </th>
     
     <th>
@@ -828,7 +828,7 @@ End case
 <table spaces-before="0">
   <tr>
     <th>
-      名
+      名称
     </th>
     
     <th>
