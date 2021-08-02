@@ -14,9 +14,9 @@ Two main locations can be used for static picture path:
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values                             |
+| Nombre | Tipos de datos | Valores posibles                            |
 |:------:|:--------------:| ------------------------------------------- |
 | imagen |     texto      | Relative or filesystem path in POSIX syntax |
 
@@ -62,9 +62,9 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values                                          |
+| Nombre        | Tipos de datos | Valores posibles                                         |
 | ------------- | -------------- | -------------------------------------------------------- |
 | pictureFormat | cadena         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
