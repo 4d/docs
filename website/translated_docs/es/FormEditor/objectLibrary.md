@@ -43,33 +43,33 @@ Objects are stored with all their properties, including their object methods. Li
 Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
 
 
-### Creating an object library
+### Crear una librería de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+Para crear una librería de objetos, seleccione **Nuevo>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece una caja de diálogo estándar para guardar el archivo, que le permite elegir el nombre y la ubicación de la librería de objetos.
 
-Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
+Una vez validada la caja de diálogo, 4D crea una nueva librería de objetos en su disco y muestra su ventana (vacía por defecto).
 
 ![](assets/en/FormEditor/library4.png)
 
-You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
+Puede crear tantas librerías como desee por proyecto. Una librería creada y construida en macOS puede utilizarse en Windows y viceversa.
 
-### Opening an object library
+### Abrir una librería de objetos
 
-A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project.
+Una determinada librería de objetos sólo puede ser abierta por un proyecto a la vez. Sin embargo, se pueden abrir varias librerías diferentes en el mismo proyecto.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You can select the following file types:
+Para abrir una librería de objetos personalizada, seleccione el comando **Abrir>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece una caja de diálogo estándar para abrir archivos, que le permite seleccionar la librería de objetos que desea abrir. Puede seleccionar los siguientes tipos de archivos:
 - **.4dproject**
 - **.4dz**
 
-In fact, custom object libraries are regular 4D projects. Only the following parts of a project are exposed when it is opened as library:
+De hecho, las librerías de objetos personalizadas son proyectos 4D clásicos. Sólo se exponen las siguientes partes de un proyecto cuando se abre como librería:
 
-- project forms
+- formularios proyecto
 - form pages 1
 
 
-### Building an object library
+### Crear una librería de objetos
 
-Objects are placed in an object library using drag-and-drop or a cut-copy-paste operation. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+Los objetos se colocan en una librería de objetos mediante una operación de arrastrar y soltar o de cortar, copiar y pegar. Pueden provenir de un formulario o de otra librería de objetos (incluyendo la [librería estándar](#using-the-standard-object-library)). No se conserva ningún enlace con el objeto original: si el original se modifica, el objeto copiado no se ve afectado.
 
 > In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
 
@@ -96,7 +96,7 @@ Using copy-paste or drag-and-drop with certain library objects also causes their
 
 The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
 
-- Lists
+- Listas
 - Formats/Filters
 - Imágenes
 - Help Tips (linked to a field)
