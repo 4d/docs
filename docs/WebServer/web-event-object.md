@@ -13,6 +13,7 @@ The returned object contains the following properties:
 |----|----|----|
 | caller | Text | Server reference of the component triggering the event |
 | eventType | Text | Event type (onclick, onchange, onmouseover...) |
+| data	| Object	| For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
 
 ####
 
