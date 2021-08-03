@@ -8,11 +8,11 @@ title: Encabezados
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values |
-| ----------- | -------------- | --------------- |
-| showHeaders | booleano       | true, false     |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| showHeaders | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -53,9 +53,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values                 |
+| Nombre       | Tipos de datos | Valores posibles                |
 | ------------ | -------------- | ------------------------------- |
 | headerHeight | cadena         | positive decimal+px &#124; em ) |
 
