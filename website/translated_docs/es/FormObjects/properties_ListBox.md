@@ -8,9 +8,9 @@ title: List Box
 
 Collection of columns of the list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos               | Possible Values                                  |
+| Nombre  | Tipos de datos               | Valores posibles                                 |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -31,9 +31,9 @@ The specified form is displayed:
 *   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 *   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values                                                                                                                                                                                       |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                      |
 | ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | cadena         | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
@@ -61,9 +61,9 @@ Regardless of the action selected/chosen, the `On Double clicked` form event is 
 
 For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre                 | Tipos de datos | Possible Values                     |
+| Nombre                 | Tipos de datos | Valores posibles                    |
 | ---------------------- | -------------- | ----------------------------------- |
 | doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
@@ -85,11 +85,11 @@ This property is used to specify the set to be used to manage highlighted record
 > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values |
-| ------------ | -------------- | --------------- |
-| highlightSet | cadena         | Name of the set |
+| Nombre       | Tipos de datos | Valores posibles |
+| ------------ | -------------- | ---------------- |
+| highlightSet | cadena         | Name of the set  |
 
 #### Objects Supported
 
@@ -124,11 +124,11 @@ These properties interact as follows:
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre            | Tipos de datos | Possible Values |
-| ----------------- | -------------- | --------------- |
-| lockedColumnCount | integer        | minimum: 0      |
+| Nombre            | Tipos de datos | Valores posibles |
+| ----------------- | -------------- | ---------------- |
+| lockedColumnCount | integer        | minimum: 0       |
 
 #### Objects Supported
 
@@ -139,11 +139,11 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 Number of columns that cannot be moved during execution.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre            | Tipos de datos | Possible Values |
-| ----------------- | -------------- | --------------- |
-| staticColumnCount | integer        | minimum: 0      |
+| Nombre            | Tipos de datos | Valores posibles |
+| ----------------- | -------------- | ---------------- |
+| staticColumnCount | integer        | minimum: 0       |
 
 #### Objects Supported
 
@@ -160,11 +160,11 @@ Number of columns that cannot be moved during execution.
 Sets the number of columns of the list box.
 > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values |
-| ----------- | -------------- | --------------- |
-| columnCount | integer        | minimum: 1      |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| columnCount | integer        | minimum: 1       |
 
 #### Objects Supported
 
@@ -216,9 +216,9 @@ Note that setting properties for an element overrides any other values for this 
 ```
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre           | Tipos de datos | Possible Values        |
+| Nombre           | Tipos de datos | Valores posibles       |
 | ---------------- | -------------- | ---------------------- |
 | rowControlSource | cadena         | Row control array name |
 
@@ -238,9 +238,9 @@ Designates the option for allowing users to select rows:
 - **Multiple**: Several rows can be selected simultaneously in this mode.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values              |
+| Nombre        | Tipos de datos | Valores posibles             |
 | ------------- | -------------- | ---------------------------- |
 | selectionMode | cadena         | "multiple", "single", "none" |
 
