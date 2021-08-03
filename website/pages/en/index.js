@@ -131,7 +131,8 @@ class Index extends React.Component {
                   title: <translate>Web applications</translate>,
                 },
                 {
-                  content: `[4D for iOS](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
+                  content: `[Go Mobile with 4D (Beta)](https://developer.4d.com/go-mobile)<br>
+				  [4D for iOS](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_MobileApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Mobile',
