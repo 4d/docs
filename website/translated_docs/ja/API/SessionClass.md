@@ -355,7 +355,7 @@ End if
 
 `Session` オブジェクトの作成時には、`.storage` プロパティは空です。 共有オブジェクトのため、このプロパティはサーバー上の `Storage` オブジェクトにおいて利用可能です。
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+> サーバーの `Storage` オブジェクトと同様に、`.storage` プロパティは常に "単独で" 存在します。共有オブジェクトや共有コレクションを `.storage` に追加しても、共有グループは作成されません。
 
 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。
 
