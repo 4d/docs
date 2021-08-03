@@ -8,9 +8,9 @@ title: Fondo y borde
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values                                                 |
+| Nombre        | Tipos de datos | Valores posibles                                                |
 | ------------- | -------------- | --------------------------------------------------------------- |
 | alternateFill | cadena         | any css value; "transparent"; "automatic"; "automaticAlternate" |
 
@@ -26,10 +26,10 @@ Defines the background color of an object.
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
-#### JSON Grammar
+#### Gramática JSON
 
 
-| Nombre | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Valores posibles                          |
 | ------ | -------------- | ----------------------------------------- |
 | fill   | cadena         | any css value; "transparent"; "automatic" |
 
@@ -51,9 +51,9 @@ An expression or a variable (array variables cannot be used) to apply a custom b
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
 > With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values                           |
+| Nombre        | Tipos de datos | Valores posibles                          |
 | ------------- | -------------- | ----------------------------------------- |
 | rowFillSource | cadena         | An expression returning a RGB color value |
 
@@ -70,9 +70,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 Allows setting a standard style for the object border.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values                                                   |
+| Nombre      | Tipos de datos | Valores posibles                                                  |
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | borderStyle | texto          | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
@@ -87,9 +87,9 @@ Allows setting a standard style for the object border.
 
 Describes dotted line type as a sequence of black and white points.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre          | Tipos de datos         | Possible Values                                                          |
+| Nombre          | Tipos de datos         | Valores posibles                                                         |
 | --------------- | ---------------------- | ------------------------------------------------------------------------ |
 | strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
@@ -112,11 +112,11 @@ You can remove these empty rows by selecting this option. The bottom of the list
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre             | Tipos de datos | Possible Values |
-| ------------------ | -------------- | --------------- |
-| hideExtraBlankRows | booleano       | true, false     |
+| Nombre             | Tipos de datos | Valores posibles |
+| ------------------ | -------------- | ---------------- |
+| hideExtraBlankRows | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -136,9 +136,9 @@ Designates the color of the object's lines. The color can be specified by:
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Valores posibles                          |
 | ------ | -------------- | ----------------------------------------- |
 | stroke | cadena         | any css value, "transparent", "automatic" |
 
@@ -155,9 +155,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 Designates the thickness of a line.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values                                                   |
+| Nombre      | Tipos de datos | Valores posibles                                                  |
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | strokeWidth | number         | 0 for smallest width on a printed form, or any integer value < 20 |
 
@@ -201,9 +201,9 @@ Next you want to color the cells with negative values in dark orange. To do this
 You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values              |
+| Nombre        | Tipos de datos | Valores posibles             |
 | ------------- | -------------- | ---------------------------- |
 | rowFillSource | cadena         | The name of a longint array. |
 
@@ -219,11 +219,11 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values |
-| ------ | -------------- | --------------- |
-| fill   | texto          | "transparent"   |
+| Nombre | Tipos de datos | Valores posibles |
+| ------ | -------------- | ---------------- |
+| fill   | texto          | "transparent"    |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
