@@ -237,6 +237,6 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。
 
-## `.gitignore` file (optional)
+## `.gitignore` ファイル (任意)
 
-File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+git が無視するファイルを指定します。 プロジェクトに gitignore ファイルを含めるには、環境設定 ＞ **一般** ページの **.gitignore ファイルを作成する** オプションを使用します。 このファイルの内容を設定するには、[`.gitignore` ファイルを作成する](Preferences/general.md#gitignore-ファイルを作成する) を参照してください。
