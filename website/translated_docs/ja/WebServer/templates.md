@@ -1,39 +1,39 @@
 ---
 id: templates
-title: Template pages
+title: テンプレートページ
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+4D の Webサーバーでは、タグを含む HTMLテンプレートページを使用することができます。つまり、静的な HTMLコードと、4DTEXT、4DIF、4DINCLUDEなどの [変換タグ](Tags/tags.md) によって追加された 4D参照の組み合わせです。 これらのタグは通常、HTMLタイプのコメント (`<!--#4DTagName TagValue-->`) として、HTMLソースコードに挿入されます。
 
-When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
+これらのページが HTTPサーバーから送信される際、ページは解析され、含まれているタグが実行され、結果のデータに置き換えられます。 このように、ブラウザーが受け取るページは、静的な要素と 4D の処理による値が組み合わさったものです。
 
-For example, if you write in an HTML page:
+たとえば、HTMLページ内にて以下のように記述すると:
 
 ```html
 <P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
-The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
+4D変数 *vtSiteName* の値が HTMLページに挿入されます。
 
 
-## Tags for templates
+## テンプレート用タグ
 
-The following 4D tags are available:
+以下の 4Dタグを使用することができます:
 
-- 4DTEXT, to insert 4D variables and expressions as text,
-- 4DHTML, to insert HTML code,
-- 4DEVAL, to evaluate any 4D expression,
-- 4DSCRIPT, to execute a 4D method,
-- 4DINCLUDE, to include a page within another one,
-- 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
-- 4DCODE, to insert 4D code,
-- 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
-- 4DLOOP and 4DENDLOOP, to make loops in the HTML code,
-- 4DEACH and 4DENDEACH, to loop in collections, entity selections, or object properties.
+- 4DTEXT: 4D変数および式をテキストとして挿入します。
+- 4DHTML: HTMLコードを挿入します。
+- 4DEVAL: 4D式を評価します。
+- 4DSCRIPT: 4Dメソッドを実行します。
+- 4DINCLUDE: ページを他のページに含めます。
+- 4DBASE: 4DINCLUDE タグが使用するデフォルトフォルダーを変更します。
+- 4DCODE: 4Dコードを挿入します。
+- 4DIF, 4DELSE, 4DELSEIF, 4DENDIF: HTMLコードに条件式を挿入します。
+- 4DLOOP, 4DENDLOOP: HTMLコードにループを挿入します。
+- 4DEACH, 4DENDEACH: コレクション内、エンティティセレクション内、またはオブジェクトのプロパティをループします。
 
-These tags are described in the [Transformation Tags](Tags/tags.md) page.
+これらのタグについては、[変換タグ](Tags/tags.md) のページで説明しています。
 
-It is possible to mix tags. For example, the following HTML code is allowed:
+タグは混在させることが可能です。 たとえば、次のような HTMLコードが認められています:
 
 ```html
 <HTML>
