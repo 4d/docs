@@ -67,7 +67,8 @@
 	"WebServer/errorPages",
 	"WebServer/authentication",
 	"WebServer/sessions",
-	"WebServer/preemptiveWeb"],
+	"WebServer/preemptiveWeb",
+	"web-studio/web-studio"],
   "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",
