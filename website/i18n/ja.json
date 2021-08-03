@@ -836,7 +836,7 @@
         "title": "はじめに"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "HTTPリクエストの処理"
       },
       "WebServer/preemptiveWeb": {
         "title": "Using preemptive web processes"
