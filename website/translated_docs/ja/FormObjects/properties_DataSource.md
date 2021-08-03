@@ -6,20 +6,20 @@ title: データソース
 ---
 ## 自動挿入
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+このオプションがチェックされていると、オブジェクトに関連付けられたリストにない値をユーザーが入力した場合に、その値が自動的にメモリー内のリストに追加されます。
 
-When the **automatic insertion** option is not set (default), the value entered is stored in the form object but not in the list in memory.
+**自動挿入** のオプションが設定されていない場合、入力された値はフォームオブジェクトの中には保存されますが、メモリー内のリストには入力されません。
 
-This property is supported by:
+このプロパティは次のフォームオブジェクトでサポートされています:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
-- [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
+- 選択リストと紐づけられている [コンボボックス](comboBox_overview.md) および [リストボックス列](listbox_overview.md#リストボックス列) フォームオブジェクト。
+- 配列またはオブジェクトデータソースにより、紐づけられたリストが生成されている [コンボボックス](comboBox_overview.md) フォームオブジェクト。
 
 たとえば、"France, Germany, Italy" という値を含む選択リストが "Countries" というコンボボックスに関連付けられていた場合を考えます。**自動挿入** のオプションがチェックをされていて、ユーザーが "Spain" という値を入力すると、"Spain" という値が自動的にメモリー内のリストに追加されます:
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the choice list was created from a list defined in Design mode, the original list is not modified.
+> デザインモードで定義された選択リストが関連付けられている場合、自動挿入によって、その元のリストが変更されることはありません。
 
 
 
@@ -41,7 +41,7 @@ This property is supported by:
 
 選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
+選択リストをオブジェクトに紐づけるには、[OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/ja/page237.html) または [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1266.html) コマンドを使ってもおこなえます。
 
 
 #### JSON 文法
@@ -119,46 +119,46 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 
 ---
-## Data Type (expression type)
+## データタイプ (式の型)
 
-Defines the data type for the displayed expression. This property is used with:
+表示される式のデータタイプを定義します。 このプロパティは次のフォームオブジェクトで使用されます:
 
-- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
-- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
+- セレクションおよびコレクション型の [リストボックス列](listbox_overview.md#リストボックス列)。
+- オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md)。
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+[式タイプ](properties_Object.md#式の型式タイプ) の章も参照ください。
 
 #### JSON 文法
 
 | 名称                 | データタイプ | とりうる値                                              |
 | ------------------ | ------ | -------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| dataSourceTypeHint | string | <li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 *配列/セレクションリストボックスのみ*: "integer", "object"</li><li>**ドロップダウンリスト:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 
 #### 対象オブジェクト
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
+オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
 ---
-## Data Type (list)
+## データタイプ (リスト)
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). This property is used with:
+[ドロップダウンリスト](dropdownList_Overview.md) に関連づけられたフィールドまたは変数に保存するデータの種類を定義します。 このプロパティは次のフォームオブジェクトで使用されます:
 
-- Drop-down lists [associated to a choice list](dropdownList_Overview.md#using-a-choice-list).
-- Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+- [選択リストと紐づいた](dropdownList_Overview.md#選択リストの使用) ドロップダウンリスト。
+- [階層型の選択リストと紐づいた](dropdownList_Overview.md#階層型選択リストの使用) ドロップダウンリスト
 
 次の値が提供されています:
 
-- **List reference**: declares that the drop-down list is hierarchical. It means that the drop-down list can display up to two hierarchical levels and its contents can be managed by the 4D language commands of the **Hierarchical Lists** theme.
-- **Selected item value** (default): the drop-down list is not hierarchical and the value of the item chosen in the list by the user is saved directly. たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **Selected item reference**: the drop-down list is not hierarchical and the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
+- **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
+- **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
+- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
-Using the **Selected item reference** option requires compliance with the following principles:
-- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 The [expression](properties_Object.md#expression-type) property is automatically set.
+**選択された項目参照** オプションの使用の際には、以下の点に注意する必要があります:
+- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 [式の型](properties_Object.md#式の型式タイプ) プロパティは自動的に設定されます。
 - リストの項目には有効かつ固有の参照が関連付けられている必要があります。
-- The drop-down list must be associated with a field or a variable.
+- ドロップダウンリストはフィールドまたは変数と紐づいている必要があります。
 
 
 #### JSON 文法
@@ -168,12 +168,12 @@ Using the **Selected item reference** option requires compliance with the follow
 | saveAs | string | "value", "reference" |
 
 
-> Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
+> `"type": "dropdown"` フォームオブジェクトに `"dataSourceTypeHint" : "integer"` のみを設定すると、階層ドロップダウンリストが宣言されます。
 
 
 #### 対象オブジェクト
 
-[Drop-down Lists](dropdownList_Overview.md) associated to lists
+リストと紐づいた [ドロップダウンリスト](dropdownList_Overview.md)
 
 
 ---
@@ -283,13 +283,13 @@ Using the **Selected item reference** option requires compliance with the follow
 このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
 - **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
+- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
 
 このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
 リスト項目の参照番号の使用の際には、以下の点に注意する必要があります:
 
-- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 The [expression](properties_Object.md#expression-type) property is automatically set.
+- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 [式の型](properties_Object.md#式の型式タイプ) プロパティは自動的に設定されます。
 - リストの項目には有効かつ固有の参照が関連付けられている必要があります。
 
 
@@ -300,7 +300,7 @@ Using the **Selected item reference** option requires compliance with the follow
 | saveAs | string | "value", "reference" |
 
 #### 対象オブジェクト
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
