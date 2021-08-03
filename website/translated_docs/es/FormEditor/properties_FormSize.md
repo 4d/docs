@@ -23,9 +23,9 @@ Size options depend on the value of the **Size based on** option.
 > For output forms, only the [**Hor. margin**](#hor-margin) or [**Width**](width) fields are available.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre         | Tipos de datos | Possible Values                                       |
+| Nombre         | Tipos de datos | Valores posibles                                      |
 | -------------- | -------------- | ----------------------------------------------------- |
 | formSizeAnchor | cadena         | Name of object to use to defined the size of the form |
 
@@ -35,11 +35,11 @@ Size options depend on the value of the **Size based on** option.
 Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values |
-| ------ | -------------- | --------------- |
-| height | number         | integer value   |
+| Nombre | Tipos de datos | Valores posibles |
+| ------ | -------------- | ---------------- |
+| height | number         | integer value    |
 
 
 ---
@@ -48,11 +48,11 @@ Value to add (in pixels) to the right margin of the form when the [form size](#s
 
 This value also determines the right-hand margins of forms used in the Label editor.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values |
-| ----------- | -------------- | --------------- |
-| rightMargin | number         | integer value   |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| rightMargin | number         | integer value    |
 
 
 ---
@@ -62,11 +62,11 @@ Value to add (in pixels) to the bottom margin of the form when the [form size](#
 
 This value also determines the top margins of forms used in the Label editor.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values |
-| ------------ | -------------- | --------------- |
-| bottomMargin | number         | integer value   |
+| Nombre       | Tipos de datos | Valores posibles |
+| ------------ | -------------- | ---------------- |
+| bottomMargin | number         | integer value    |
 
 
 ---
@@ -75,8 +75,8 @@ This value also determines the top margins of forms used in the Label editor.
 Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values |
-| ------ | -------------- | --------------- |
-| width  | number         | integer value   |
+| Nombre | Tipos de datos | Valores posibles |
+| ------ | -------------- | ---------------- |
+| width  | number         | integer value    |
