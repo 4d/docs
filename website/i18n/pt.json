@@ -108,7 +108,7 @@
         "title": "Backup"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "Arquivo de Log (.journal)"
       },
       "Backup/overview": {
         "title": "Overview"
@@ -822,6 +822,15 @@
       },
       "Users/overview": {
         "title": "Overview"
+      },
+      "web-studio/web-event-object": {
+        "title": "WEB Event Object"
+      },
+      "web-studio/web-form-object": {
+        "title": "WEB Form Object"
+      },
+      "web-studio/web-studio": {
+        "title": "Web Studio"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
