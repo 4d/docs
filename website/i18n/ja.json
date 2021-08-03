@@ -707,7 +707,7 @@
         "title": "コンパイル"
       },
       "Project/components": {
-        "title": "4D Components Library"
+        "title": "4D コンポーネントライブラリ"
       },
       "Project/creating": {
         "title": "プロジェクトを開発する"
@@ -845,7 +845,7 @@
         "title": "User sessions"
       },
       "WebServer/templates": {
-        "title": "Template pages"
+        "title": "テンプレートページ"
       },
       "WebServer/webServer": {
         "title": "概要"
@@ -910,7 +910,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web 管理",
-    "4D Components Library|no description given": "4D Components Library",
+    "4D Components Library|no description given": "4D コンポーネントライブラリ",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
