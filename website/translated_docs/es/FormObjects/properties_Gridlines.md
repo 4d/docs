@@ -8,9 +8,9 @@ title: Rejillas
 
 Defines the color of the horizontal lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre               | Tipos de datos | Possible Values                            |
+| Nombre               | Tipos de datos | Valores posibles                           |
 | -------------------- | -------------- | ------------------------------------------ |
 | horizontalLineStroke | color          | any css value, "'transparent", "automatic" |
 
@@ -26,9 +26,9 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 Defines the color of the vertical lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre             | Tipos de datos | Possible Values                            |
+| Nombre             | Tipos de datos | Valores posibles                           |
 | ------------------ | -------------- | ------------------------------------------ |
 | verticalLineStroke | color          | any css value, "'transparent", "automatic" |
 
