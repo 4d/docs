@@ -1,20 +1,20 @@
 ---
 id: httpRequests
-title: Processing HTTP requests
+title: HTTPリクエストの処理
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+4D Webサーバーは、HTTPリクエストを処理するための機能を複数備えています:
 
-- the `On Web Connection` database method, a router for your web application,
-- the `/4DACTION` URL to call server-side code
-- `WEB GET VARIABLES` to get values from HTML objects sent to the server
-- other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- the *COMPILER_WEB* project method, to declare your variables.
+- Webアプリケーションのルーターとなる `On Web Connection` データベースメソッド。
+- サーバーサイドコードを呼び出すための `/4DACTION` URL。
+- サーバーに送信された HTMLオブジェクトから値を取得する `WEB GET VARIABLES`。
+- `WEB GET HTTP BODY`、`WEB GET HTTP HEADER`、`WEB GET BODY PART` などのコマンドによって、リクエスト処理をカスタマイズすることができます (cookie 含む)。
+- 変数を宣言するための *COMPILER_WEB* プロジェクトメソッド。
 
 
 ## On Web Connection
 
-The `On Web Connection` database method can be used as the entry point for the 4D Web server.
+`On Web Connection` データベースメソッドは、4D Webサーバーのエントリーポイントとして使用できます。
 
 ### Database method calls
 
@@ -117,7 +117,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
 
-- The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
+- The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. 属性がチェックされていない場合、Webリクエストは拒否されます。
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
 
 `4DACTION/` can be associated with a URL in a static Web page:
