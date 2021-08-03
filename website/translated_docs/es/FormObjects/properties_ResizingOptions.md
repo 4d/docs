@@ -31,9 +31,9 @@ The fake header and/or footer can be clicked but this does not have any effect o
 If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values         |
+| Nombre       | Tipos de datos | Valores posibles        |
 | ------------ | -------------- | ----------------------- |
 | resizingMode | cadena         | "rightToLeft", "legacy" |
 
@@ -58,9 +58,9 @@ Three options are available:
 | Ninguno | "fixed"    | The object remains stationary when the form is resized                                                                 |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos | Possible Values         |
+| Nombre  | Tipos de datos | Valores posibles        |
 | ------- | -------------- | ----------------------- |
 | sizingX | cadena         | "grow", "move", "fixed" |
 
@@ -83,9 +83,9 @@ Three options are available:
 | Ninguno | "fixed"    | The object remains stationary when the form is resized                                                               |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos | Possible Values         |
+| Nombre  | Tipos de datos | Valores posibles        |
 | ------- | -------------- | ----------------------- |
 | sizingY | cadena         | "grow", "move", "fixed" |
 
@@ -109,9 +109,9 @@ When this property is not applied to the splitter, the result is as follows:
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos |           Possible Values            |
+| Nombre       | Tipos de datos |           Valores posibles           |
 |:------------ |:--------------:|:------------------------------------:|
 | splitterMode |     cadena     | "move" (pusher), "resize" (standard) |
 
@@ -127,11 +127,11 @@ When this property is not applied to the splitter, the result is as follows:
 
 Designates if the size of the column can be modified by the user.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre    | Tipos de datos | Possible Values |
-|:--------- |:--------------:|:---------------:|
-| resizable |    booleano    | "true", "false" |
+| Nombre    | Tipos de datos | Valores posibles |
+|:--------- |:--------------:|:----------------:|
+| resizable |    booleano    | "true", "false"  |
 
 #### Objects Supported
 
