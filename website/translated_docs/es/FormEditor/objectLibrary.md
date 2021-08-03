@@ -71,34 +71,34 @@ De hecho, las librerías de objetos personalizadas son proyectos 4D clásicos. S
 
 Los objetos se colocan en una librería de objetos mediante una operación de arrastrar y soltar o de cortar, copiar y pegar. Pueden provenir de un formulario o de otra librería de objetos (incluyendo la [librería estándar](#using-the-standard-object-library)). No se conserva ningún enlace con el objeto original: si el original se modifica, el objeto copiado no se ve afectado.
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> Para poder arrastrar y soltar objetos de los formularios a las librerías de objetos, debe asegurarse de seleccionar la opción **Iniciar arrastrar y soltar** en las Preferencias de 4D.
 
-Basic operations are available in the context menu or the options menu of the window:
+Las principales operaciones están disponibles en el menú contextual o en el menú de opciones de la ventana:
 
 ![](assets/en/FormEditor/library5.png)
 
-- **Cut** or **Copy** to the pasteboard
-- **Paste** an object from the pasteboard
-- **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library.
+- **Cortar** o **Copiar** al portapapeles
+- **Pegar** un objeto del tablero portapapeles
+- **Borrar** - elimina el objeto de la librería
+- **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Tenga en cuenta que los nombres de los objetos deben ser únicos en una librería.
 
 
-You can place individual objects (including subforms) or sets of objects in an object library. Each object or set is grouped into a single item:
+Puede colocar objetos individuales (incluidos los subformularios) o conjuntos de objetos en una librería de objetos. Cada objeto o conjunto se agrupa en un solo elemento:
 
 ![](assets/en/FormEditor/library6.png)
 
-An object library can contain up to 32,000 items.
+Una librería de objetos puede contener hasta 32.000 elementos.
 
-Objects are copied with all their properties, both graphic and functional, including their methods. These properties are kept in full when the item is copied into a form or another library.
+Los objetos se copian con todas sus propiedades, tanto gráficas como funcionales, incluidos sus métodos. Estas propiedades se mantienen en su totalidad cuando el elemento se copia en un formulario o en otra librería.
 
-#### Dependent objects
-Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
+#### Objetos dependientes
+El uso de copiar y pegar o arrastrar y soltar con ciertos objetos de librería también hace que se copien sus objetos dependientes. Por ejemplo, si se copia un botón, se copiará también el método del objeto que se pueda adjuntar. Estos objetos dependientes no se pueden copiar ni arrastrar y soltar directamente.
 
-The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
+A continuación se muestra una lista de objetos dependientes que se pegarán en la librería al mismo tiempo que el objeto principal que los utiliza (cuando corresponda):
 
 - Listas
-- Formats/Filters
+- Formatos/Filtros
 - Imágenes
-- Help Tips (linked to a field)
-- Object methods
+- Mensajes de ayuda (asociados a un campo)
+- Métodos objeto
 
