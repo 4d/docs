@@ -83,13 +83,13 @@ Em determinadas estratégias de copia de segurança (por exemplo, no caso de que
 
 ## backupHistory.json
 
-Toda a informação relativa às últimas operações de cópia de segurança e restauração se armazena no arquivo **backupHistory.json** da aplicação. It logs the path of each saved file (including attachments) as well as number, date, time, duration, and status of each operation. To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+Toda a informação relativa às últimas operações de cópia de segurança e restauração se armazena no arquivo **backupHistory.json** da aplicação. Registra a rota de cada arquivo guardado (incluídos os anexos), assim como o número, a data, a hora, a duração e o estado de cada operação. Para limitar o tamanho do arquivo, o número de operações registradas é o mesmo que o número de backups disponíveis ("Keep only the last X backup files") definido nas configurações de backup.
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+O arquivo **backupHistory.json** é criado na pasta de destino do backup atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(Backup history file)
+$backupHistory:=Get 4D file(arquivo histórico Backup)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate. 
+> **AVISO**  
+> Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.
+> O arquivo **backupHistory.json** é formatado para ser usado pela aplicação 4D. Se estiver procurando por um relatório que possa ser lido por olhos humanos, o diário de Backup journal é mais preciso. 
