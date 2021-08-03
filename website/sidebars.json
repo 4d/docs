@@ -68,9 +68,7 @@
 	"WebServer/authentication",
 	"WebServer/sessions",
 	"WebServer/preemptiveWeb",
-	"web-studio/web-studio",
-	"web-studio/web-form-object",
-	"web-studio/web-event-object"],
+	"web-studio/web-studio"],
   "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",

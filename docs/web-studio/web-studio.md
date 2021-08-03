@@ -163,3 +163,74 @@ At this stage, there is no debugger for the web studio.
 You cannot navigate from page to page.
 
 The web form cannot be rendered exclusively in the web studio (eye icon).
+
+## WEB Form Object
+
+The object returned by the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command lets you handle, on the server side, the behavior of your WebForm and its components.
+
+#### Accessing a web form's components
+
+Each property of the object returned by the [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html) is a [web form component](web-studio.md#components). The property name is the server reference of the component.
+
+For example, the following code hides the component that has `firstName` as server reference.
+
+```4d
+$input:=WebForm.firstName 
+$input.hide()
+```
+
+#### Setting the behavior of web form components using functions
+
+Each web form component object contains the following functions:
+
+| Function | Description |
+|----|----|
+| show() | displays the component |
+| hide() | hides the component |
+| addCSSClass($className) |  adds the specified CSS class to the component
+| removeCSSClass($className) | removes the specified CSS class from the component
+
+#### Example
+
+```4d 
+WebForm.firstName.hide() // hides the component that has "firstName" as server reference
+
+WebForm.firstName.show() //displays the component that has "firstName" as server reference
+
+WebForm.firstName.addCSSClass("red") // adds the "red" CSS class to the component
+
+WebForm.firstName.removeCSSClass("red") // The "red" CSS class is removed from the component
+```
+
+## WEB Event Object
+
+The [WEB Event](https://doc.4d.com/4dv19R/help/command/en/page1734.html) command returns an object describing the event triggered in a web form component, such as a button or a datatable. 
+
+The command must be called in the context of a web form handled by the web server (see [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html)).
+
+The returned object contains the following properties:
+
+| Property | Type | Description |
+|----|----|----|
+| caller | Text | Server reference of the component triggering the event |
+| eventType | Text | Event type (onclick, onchange, onmouseover...) |
+| data	| Object	| For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
+
+####
+
+This generic method can be called on the server for several components:
+
+```4d 
+var $event; $webForm : Object
+
+$webForm:=Web Form
+$event:=Web Event
+$compRef:=$event.caller //server reference of the web component
+
+If ($event.eventType="onmouseover") // event is onmouseover
+$webForm["helpOn_"+$compRef].show() // displays help on the component (e.g. "orderNumber")
+// by showing the text component with reference "helpOn_orderNumber"
+Else
+$webForm["helpOn_"+$compRef].hide() // hides the help on orderNumber
+End if
+```
