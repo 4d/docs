@@ -823,6 +823,15 @@
       "Users/overview": {
         "title": "Generalidades"
       },
+      "web-studio/web-event-object": {
+        "title": "WEB Event Object"
+      },
+      "web-studio/web-form-object": {
+        "title": "WEB Form Object"
+      },
+      "web-studio/web-studio": {
+        "title": "Web Studio"
+      },
       "WebServer/allowProject": {
         "title": "Permitir métodos proyecto"
       },
