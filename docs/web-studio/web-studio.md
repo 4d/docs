@@ -168,7 +168,7 @@ The web form cannot be rendered exclusively in the web studio (eye icon).
 
 The object returned by the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command lets you handle, on the server side, the behavior of your WebForm and its components.
 
-## Accessing a web form's components
+#### Accessing a web form's components
 
 Each property of the object returned by the [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html) is a [web form component](web-studio.md#components). The property name is the server reference of the component.
 
@@ -179,7 +179,7 @@ $input:=WebForm.firstName
 $input.hide()
 ```
 
-## Setting the behavior of web form components using functions
+#### Setting the behavior of web form components using functions
 
 Each web form component object contains the following functions:
 
