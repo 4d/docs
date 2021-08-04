@@ -511,10 +511,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v19 R2 | Returns 4D.Blob |
-| v17 R5 | 追加              |
+| バージョン  | 内容            |
+| ------ | ------------- |
+| v19 R2 | 4D.Blob を返します |
+| v17 R5 | 追加            |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
@@ -529,11 +529,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### 説明
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
-A `4D.Blob` object.
+`4D.Blob` オブジェクト。
 
 #### 例題
 
