@@ -53,12 +53,12 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 `MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL_New_attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
-To define the attachment, you can use:
+添付を定義するには、次のパラメーターが使えます:
 
-- a *file*, pass a `4D.File` object containing the attachment file.
-- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
-- a *blob*, pass a `4D.Blob` object containing the attachment itself.
-- a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
+- *file*: 添付ファイルを格納する `4D.File` オブジェクトを渡します。
+- *zipfile*: 添付ファイルを格納する `4D.ZipFile` オブジェクトを渡します。
+- *blob*: 添付そのものを `4D.Blob` に格納して渡します。
+- *path*: システムシンタックスで表現された添付ファイルのパスを **テキスト** 値で渡します。 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
 
 任意の *name* 引数として、添付を指定するためにメールクライアントが使用する名前と拡張子を渡すことができます。 *name* が省略された場合:
 
@@ -238,7 +238,7 @@ $transporter.send($email)
 
 #### 説明
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を `4D.Blob` オブジェクトとして返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 
 
