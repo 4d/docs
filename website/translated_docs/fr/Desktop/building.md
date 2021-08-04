@@ -1,6 +1,6 @@
 ---
 id: building
-title: Générer un package projet
+title: Générateur d'application
 ---
 
 4D includes an application builder to create a project package (final build). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.
@@ -17,14 +17,17 @@ Le générateur d'applications vous permet de :
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
-## Aperçu du générateur d'application
+## Aperçu
 
 Générer un package de projet peut être réalisée à l'aide de :
 
 - either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command,
-- soit la[ fenêtre Générateur d'application](#application-builder).
+- or the [Build Application dialog](#application-builder).
 
-Pour afficher la boîte de dialogue du générateur d'application, sélectionnez **Développement** > **Générer l'application...** dans la barre de menus.
+
+### Build application dialog
+
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -60,7 +63,6 @@ La vérification de ce fichier peut vous aider à gagner du temps lors des proch
 > Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal.
 
 
-
 ## Nom de l'application et dossier de destination
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -86,7 +88,11 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 #### Inclure les dossiers associés
@@ -290,6 +296,8 @@ The `.4darchive` is copied at the following location:
 #### Selecting client archive for the concurrent platform
 
 
+
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -443,6 +451,8 @@ La page liste les éléments chargés par l'application 4D courante :
 
 *    La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. Pour exclure un plug-in ou un composant, désélectionnez la case qui lui est associée.
 
+
+
 *   Colonne **Plugins et composants** - Affiche le nom du plug-in/composant.
 
 *   Colonne **ID** - Affiche le numéro d'identification du plug-in/composant (le cas échéant).
@@ -515,12 +525,13 @@ Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez 
 > 4D recommande de souscrire au programme Apple Developer Program pour accéder aux "Developer Certificates" nécessaires à la notarisation des applications (voir ci-dessous).
 
 
-
 #### A propos de Gatekeeper
 
 Gatekeeper est une fonction de sécurité d’OS X permettant de contrôler l’exécution des applications téléchargées depuis Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
-L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 
 #### À propos de la notarisation
@@ -577,6 +588,7 @@ La séquence de lancement d'une application fusionnée est la suivante :
 Toute application autonome ou serveur générée avec 4D stocke le chemin d'accès du dernier fichier de données ouvert dans le dossier de préférences de l'utilisateur de l'application.
 
 L'emplacement du dossier de préférences de l'utilisateur de l'application correspond au chemin retourné par l'instruction suivante :
+
 
 ```4d
 prefsUtilisateur:=Get 4D folder(Dossier 4D actif)
