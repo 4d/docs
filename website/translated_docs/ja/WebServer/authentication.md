@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Authentication
+title: 認証
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
@@ -45,7 +45,7 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 > **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode).
 
 
-### Basic protocol
+### BASIC認証
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
 
@@ -60,7 +60,7 @@ Entered values are then evaluated:
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
 > With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
 
-### DIGEST protocol
+### DIGEST認証
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
@@ -94,31 +94,31 @@ The `On Web Authentication` database method is NOT called:
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| 引数 | タイプ  |    | 説明                                                |
-| -- | ---- |:--:| ------------------------------------------------- |
-| $1 | テキスト | <- | URL                                               |
-| $2 | テキスト | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3 | テキスト | <- | IP address of the web client (browser)            |
-| $4 | テキスト | <- | IP address of the server                          |
-| $5 | テキスト | <- | ユーザー名                                             |
-| $6 | テキスト | <- | Password                                          |
-| $0 | ブール  | -> | True = request accepted, False = request rejected |
+| 引数 | タイプ  |    | 説明                                           |
+| -- | ---- |:--:| -------------------------------------------- |
+| $1 | テキスト | <- | URL                                          |
+| $2 | テキスト | <- | HTTPヘッダー + HTTPボディ (32 KBまで)                 |
+| $3 | テキスト | <- | Webクライアント (ブラウザー) の IPアドレス                   |
+| $4 | テキスト | <- | サーバーの IPアドレス                                 |
+| $5 | テキスト | <- | ユーザー名                                        |
+| $6 | テキスト | <- | パスワード                                        |
+| $0 | ブール  | -> | True = リクエストは受け入れられました、False = リクエストが拒否されました |
 
-You must declare these parameters as follows:
+これらの引数を以下のように宣言しなければなりません:
 
 ```4d
-//On Web Authentication database method
+// On Web Authentication データベースメソッド
 
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
 
-//Code for the method
+// メソッドのコード
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
 
 ```4d
-// On Web Authentication database method
+// On Web Authentication データベースメソッド
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
@@ -132,9 +132,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Let’s take the example of an Intranet connection. 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
 
-| URL entered in web browser           | Value of parameter $1    |
+| Webブラウザーに入力された値                      | $1 の値                    |
 | ------------------------------------ | ------------------------ |
 | 123.45.67.89                         | /                        |
 | http://123.45.67.89                  | /                        |
@@ -142,48 +142,48 @@ Let’s take the example of an Intranet connection. Suppose that the IP address 
 | http://123.45.67.89/Customers/Add    | /Customers/Add           |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $2 - Header and Body of the HTTP request
+#### $2 - HTTPリクエストのヘッダーとボディ
 
-The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+二番目の引数 (`$2`) は、Webブラウザーから送信された HTTPリクエストのヘッダーとボディです。 この情報は `On Web Authentication` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
+> パフォーマンス上の理由により、$2 を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
 
-#### $3 - Web client IP address
+#### $3 - Webクライアントの IPアドレス
 
-The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
-
-
-#### $4 - Server IP address
-
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
+`$3` 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
+> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
 
-#### $5 and $6 - User Name and Password
+#### $4 - サーバー IPアドレス
 
-The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+`$4` 引数は Webサーバーを呼び出すために使用された IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-IPアドレス) を参照ください。
 
-#### $0 parameter
 
-The `On Web Authentication` database method returns a boolean in $0:
+#### $5 と $6 - ユーザー名とパスワード
 
-*   If $0 is True, the connection is accepted.
+`$5` と `$6` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります。 [BASIC](#basic認証) または [DIGEST](#digest認証) 認証が選択されていると、接続のたびにこのダイアログが表示されます。
+> ブラウザーから送信されたユーザー名が 4D に存在する場合、$6 引数 (ユーザーパスワード) はセキュリティのため渡されません。
 
-*   If $0 is False, the connection is refused.
+#### $0 引数
 
-The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
-> **WARNING**<br>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+`On Web Authentication` データベースメソッドはブール値を $0 に返します:
+
+*   $0=True: 接続を受け入れます。
+
+*   $0=False: 接続を受け入れません。
+
+`On Web Connection` データベースメソッドは、`On Web Authentication` データベースメソッドにより接続が受け入れられた時にのみ実行されます。
+> **警告**<br>$0 に値が設定されないか、`On Web Authentication`データベースメソッド内で $0 が定義されていない場合、接続は受け入れられたものとされ、`On Web Connection` データベースメソッドが実行されます。
+> * `On Web Authentication` データベースメソッド内でインターフェース要素を呼び出してはいけません (`ALERT`, `DIALOG` 等)。メソッドの実行が中断され、接続が拒否されてしまいます。 処理中にエラーが発生した場合も同様です。
 
 
 ### 例題
 
-Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
+[DIGEST認証モード](#digest認証) での `On Web Authentication` データベースメソッドの例題:
 
 ```4d
- // On Web Authentication Database Method
+ // On Web Authentication データベースメソッド
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
     $user : Text; $pw : Text) -> $valid : Boolean
 
@@ -191,9 +191,9 @@ Example of the `On Web Authentication` database method in [DIGEST mode](#digest-
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // ユーザーが見つかった場合
     $valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+    $valid:=False // ユーザーは存在しません
  End if
 ```

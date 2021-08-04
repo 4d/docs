@@ -836,7 +836,7 @@
         "title": "Allowing project methods"
       },
       "WebServer/authentication": {
-        "title": "Authentication"
+        "title": "認証"
       },
       "WebServer/errorPages": {
         "title": "Custom HTTP Error Pages"
