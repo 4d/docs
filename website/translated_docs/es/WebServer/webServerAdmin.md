@@ -1,6 +1,6 @@
 ---
 id: webServerAdmin
-title: Administration
+title: Administración
 ---
 
 4D provides several integrated tools to start, stop, or monitor the integrated web server.
@@ -86,7 +86,7 @@ Website administration URLS allow you to control the website published on your s
 
 The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
 
-| Item                   | Description                                                  |
+| Item                   | Descripción                                                  |
 | ---------------------- | ------------------------------------------------------------ |
 | Cache Current Size     | Current size of web server cache (in bytes)                  |
 | Cache Max Size         | Maximum size of cache (in bytes)                             |
@@ -101,7 +101,7 @@ This information can allow you to check the functioning of your server and event
 
 The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
-| Item                   | Description                                                            |
+| Item                   | Descripción                                                            |
 | ---------------------- | ---------------------------------------------------------------------- |
 | Cache Current Size     | Current size of web server cache (in bytes)                            |
 | Cache Max Size         | Maximum size of cache (in bytes)                                       |
@@ -119,9 +119,9 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Description                          | Example                                                                                                                         |
+| HTTP Field | Descripción                          | Ejemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Fecha      | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
 | User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
@@ -144,7 +144,7 @@ This log file records each HTTP request and each response in raw mode. Whole req
 
 The following fields are logged for both Request and Response:
 
-| Field name     | Description                                                   |
+| Field name     | Descripción                                                   |
 | -------------- | ------------------------------------------------------------- |
 | SocketID       | ID of socket used for communication                           |
 | PeerIP         | IPv4 address of host (client)                                 |
@@ -164,7 +164,7 @@ Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):
 
-| Field name           | Description                                                                                                                                                         |
+| Field name           | Descripción                                                                                                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                       |
 | rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                        |
@@ -189,7 +189,7 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Field          | ELF | WLF | Value                                  |
+| Campo          | ELF | WLF | Valor                                  |
 | -------------- | --- | --- | -------------------------------------- |
 | BYTES_RECEIVED |     | X   | Number of bytes received by the server |
  BYTES_SENT| X|  X|  Number of bytes sent by the server to the client| C_DNS|  X|  X   |IP address of the DNS (ELF: field identical to the C_IP field)| C_IP|   X|  X|  IP address of the client (for example 192.100.100.10)| CONNECTION_ID|      |X| Connection ID number| CS(COOKIE)| X|  X|  Information about cookies contained in the HTTP request| CS(HOST)|   X|  X|  Host field of the HTTP request| CS(REFERER)|    X|  X|  URL of the page pointing to the requested document| CS(USER_AGENT)| X|  X|  Information about the software and operating system of the client| CS_SIP| X|  X|  IP address of the server| CS_URI| X|  X|  URI on which the request is made| CS_URI_QUERY|   X|  X|  Request query parameters| CS_URI_STEM|    X|  X|  Part of request without query parameters| DATE|   X|  X|  DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year| METHOD| X|  X|  HTTP method used for the request sent to the server| PATH_ARGS|  |   X|  CGI parameters: string located after the “$” character| STATUS| X|  X|  Reply provided by the server| TIME|   X|  X|  HH: hour, MM: minutes, SS: seconds| TRANSFER_TIME|  X|  X|  Time requested by server to generate the reply| USER|   X|  X|  User name if authenticated; otherwise - (minus sign).<p>If the user name contains spaces, they are replaced by _ (underlines)| URL |   |X| URL requested by the client|
@@ -219,8 +219,8 @@ First you must choose the frequency (days, weeks, etc.) or the file size limit c
 
 *   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
 
-*   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
+*   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
 
-*   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup must be started.
+*   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. When this option is checked, you must indicate the day of the month and the time when the backup must be started.
 
 *   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.

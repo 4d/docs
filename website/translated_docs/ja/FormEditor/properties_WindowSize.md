@@ -14,7 +14,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値               |
+| 名称            | データタイプ | とりうる値               |
 | ------------- | ------ | ------------------- |
 | windowSizingY | string | "fixed", "variable" |
 
@@ -31,7 +31,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値               |
+| 名称            | データタイプ | とりうる値               |
 | ------------- | ------ | ------------------- |
 | windowSizingX | string | "fixed", "variable" |
 
@@ -45,7 +45,7 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 ##### JSON 文法
 
-| 名               | データタイプ | とりうる値         |
+| 名称              | データタイプ | とりうる値         |
 | --------------- | ------ | ------------- |
 | windowMinHeight | number | integer value |
 | windowMaxHeight | number | integer value |
@@ -58,7 +58,7 @@ Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値         |
+| 名称             | データタイプ | とりうる値         |
 | -------------- | ------ | ------------- |
 | windowMinWidth | number | integer value |
 | windowMaxWidth | number | integer value |

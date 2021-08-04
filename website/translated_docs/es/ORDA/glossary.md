@@ -1,6 +1,6 @@
 ---
 id: glossary
-title: Glossary
+title: Glosario
 ---
 
 ## Main concepts at a glance
@@ -128,12 +128,12 @@ $myClass.query("name = smith")
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
 
 *   number
-*   text
+*   texto
 *   null
-*   boolean
-*   date
-*   object
-*   collection
+*   booleano
+*   fecha
+*   objeto
+*   colección
 *   picture(\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
@@ -146,7 +146,7 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
-## Property
+## Propriedad
 
 See [Attribute](#attribute).
 > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.

@@ -1,6 +1,6 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: Lista jerárquica
 ---
 
 
@@ -11,7 +11,7 @@ Hierarchical lists are form objects that can be used to display data as lists wi
 Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
 
 
-## Hierarchical list data source
+## Fuente de datos de lista jerárquica
 
 The contents of a hierarchical list form object can be initialized in one of the following ways:
 
@@ -21,7 +21,7 @@ The contents of a hierarchical list form object can be initialized in one of the
 In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
 
 
-## ListRef and object name
+## RefList y nombre de objeto
 
 A hierarchical list is both a **language object** existing in memory and a **form object**.
 
@@ -79,7 +79,7 @@ As with other object property management commands, it is possible to use the “
     - `Selected list items`
 
 
-## Generic commands to use with hierarchical lists
+## Comandos genéricos utilizables con listas jerárquicas
 
 It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. You can pass to these commands either the object name of the hierarchical list (using the * parameter), or its variable name (containing the ListRef value):
 
@@ -95,7 +95,7 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 
 > Reminder: Except `OBJECT SET SCROLL POSITION`, these commands modify all the representations of the same list, even if you only specify a list via its object name.
 
-## Priority of property commands
+## Prioridad de los comandos de propiedad
 
 Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. When all three of these means are used to set list properties, the following order of priority is applied:
 
@@ -106,7 +106,7 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 
-## Management of items by position or by reference
+## Gestión de los elementos por posición o por referencia
 
 You can usually work in two ways with the contents of hierarchical lists: by position or by reference.
 
@@ -142,7 +142,7 @@ In most cases, when using hierarchical lists for user interface purposes and whe
 Basically, you need to deal with item reference numbers when you want direct access to any item of the list programmatically and not necessarily the one currently selected in the list.
 
 
-## Modifiable element
+## Elemento modificable
 
 You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item.
 

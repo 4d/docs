@@ -40,7 +40,7 @@ Once a signal has been released using a `signal.trigger()` call, it cannot be re
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
-### Example
+### Ejemplo
 
 ```4d
  var $signal : 4D.Signal
@@ -107,14 +107,14 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| Parameter   | Type      |    | Description                            |
+| Parameter   | Tipo      |    | Descripción                            |
 | ----------- | --------- |:--:| -------------------------------------- |
-| description | Text      | -> | Description for the signal             |
-| Result      | 4D.Signal | <- | Native object encapsulating the signal |
+| description | Texto     | -> | Description for the signal             |
+| Resultado   | 4D.Signal | <- | Native object encapsulating the signal |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
@@ -132,7 +132,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 A new [`4D.Signal` object](#signal-object).
 
-#### Example
+#### Ejemplo
 
 Here is a typical example of a worker that sets a signal:
 
@@ -178,7 +178,7 @@ The ***doSomething*** method could be like:
 <!-- REF #SignalClass.description.Syntax -->
 **.description** : Text<!-- END REF -->
 
-#### Description
+#### Descripción
 
 The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
 
@@ -203,7 +203,7 @@ This property is **read-write**.
 <!-- REF #SignalClass.signaled.Syntax -->
 **.signaled** : Boolean<!-- END REF -->
 
-#### Description
+#### Descripción
 
 The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
@@ -226,13 +226,13 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Tipo |  | Descripción                     |
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
@@ -255,14 +255,14 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| Parameter | Type    |    | Description                                    |
-| --------- | ------- | -- | ---------------------------------------------- |
-| timeout   | Real    | -> | Maximum waiting time for the signal in seconds |
-| Result    | Boolean | <- | State of the `.signaled` property              |
+| Parameter | Tipo     |    | Descripción                                    |
+| --------- | -------- | -- | ---------------------------------------------- |
+| timeout   | Real     | -> | Maximum waiting time for the signal in seconds |
+| Resultado | Booleano | <- | State of the `.signaled` property              |
 <!-- END REF -->
 
 
-#### Description
+#### Descripción
 
 The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 

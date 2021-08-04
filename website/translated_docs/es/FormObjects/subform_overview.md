@@ -1,13 +1,13 @@
 ---
 id: subformOverview
-title: Subform
+title: Subformulario
 ---
 
 
 A subform is a form included in another form.
 
 
-## Terminology
+## Terminología
 
 In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
 
@@ -40,7 +40,7 @@ The page subform uses the input form indicated by the [Detail Form](properties_S
 
 > 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
-### Managing the bound variable
+### Gestión de la variable vinculada
 
 The [variable](properties_Object.md#variable-or-expression) bound to a page subform lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
 
@@ -76,7 +76,7 @@ Assigning the value to the variable generates the `On Data Change` form event in
 
 > If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
 
-### Using the subform bound object
+### Utilizar el objeto asociado al subformulario
 
 4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
 
@@ -103,7 +103,7 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 ![](assets/en/FormObjects/subforms5.png)
 
-### Advanced inter-form programming
+### Programación entre formularios avanzada
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
 4D has implemented the following mechanisms to meet these needs:

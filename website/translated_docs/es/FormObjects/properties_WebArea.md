@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Área Web
 ---
 
 ---
@@ -14,15 +14,15 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                 | Data Type | Possible Values         |
-| -------------------- | --------- | ----------------------- |
-| methodsAccessibility | string    | "none" (default), "all" |
+| Nombre               | Tipos de datos | Valores posibles        |
+| -------------------- | -------------- | ----------------------- |
+| methodsAccessibility | cadena         | "none" (default), "all" |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 ---
@@ -30,15 +30,15 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Data Type | Possible Values            |
-| -------------- | --------- | -------------------------- |
-| progressSource | string    | Name of a Longint variable |
+| Nombre         | Tipos de datos | Valores posibles           |
+| -------------- | -------------- | -------------------------- |
+| progressSource | cadena         | Name of a Longint variable |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -61,15 +61,15 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
 - When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| urlSource | string    | A URL.          |
+| Nombre    | Tipos de datos | Valores posibles |
+| --------- | -------------- | ---------------- |
+| urlSource | cadena         | A URL.           |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -86,15 +86,15 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 The Blink engine has the following limitations:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html):utilizar este comando requiere que al menos una página ya esté cargada en el área (a través de una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área).
+- Cuando se activa soltar URLs mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), la primera soltada debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Data Type | Possible Values      |
-| --------- | --------- | -------------------- |
-| webEngine | string    | "embedded", "system" |
+| Nombre    | Tipos de datos | Valores posibles     |
+| --------- | -------------- | -------------------- |
+| webEngine | cadena         | "embedded", "system" |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)

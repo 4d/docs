@@ -1,6 +1,6 @@
 ---
 id: propertiesHelp
-title: Help
+title: Ayuda
 ---
 
 ---
@@ -20,11 +20,11 @@ You can either:
 > In macOS, displaying help tips is not supported in pop-up type windows.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|  Name   | Data Type | Possible Values                       |
-|:-------:|:---------:| ------------------------------------- |
-| tooltip |   text    | additional information to help a user |
+| Nombre  | Tipos de datos | Valores posibles                      |
+|:-------:|:--------------:| ------------------------------------- |
+| tooltip |     texto      | additional information to help a user |
 
 #### Objects Supported
 
@@ -45,7 +45,7 @@ When different tips are associated with the same object in several locations, th
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
 
-#### See also
+#### Ver también
 
 [Placeholder](properties_Entry.md#placeholder)
 

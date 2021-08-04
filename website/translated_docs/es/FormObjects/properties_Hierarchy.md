@@ -1,6 +1,6 @@
 ---
 id: propertiesHierarchy
-title: Hierarchy
+title: Jerarquía
 ---
 
 ---
@@ -15,11 +15,11 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type    | Possible Values                                  |
-| ---------- | ------------ | ------------------------------------------------ |
-| datasource | string array | Collection of array names defining the hierarchy |
+| Nombre     | Tipos de datos | Valores posibles                                 |
+| ---------- | -------------- | ------------------------------------------------ |
+| datasource | string array   | Collection of array names defining the hierarchy |
 
 #### Objects Supported
 

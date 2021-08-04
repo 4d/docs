@@ -3,12 +3,12 @@ id: onMenuSelected
 title: On Menu Selected
 ---
 
-| Code | Can be called by | Definition                                             |
-| ---- | ---------------- | ------------------------------------------------------ |
-| 18   | Form             | A menu item has been chosen in the associated menu bar |
+| Code | Puede ser llamado por | Definición                                                      |
+| ---- | --------------------- | --------------------------------------------------------------- |
+| 18   | Formulario            | Se ha elegido un elemento de menú en la barra de menús asociada |
 
 
-## Description
+## Descripción
 
 The `On Menu Selected` event is sent to the form method when a command of a menu bar associated to the form is selected. You can then call the `Menu selected` language command to test the selected menu.
 

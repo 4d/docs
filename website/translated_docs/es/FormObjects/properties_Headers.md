@@ -1,6 +1,6 @@
 ---
 id: propertiesHeaders
-title: Headers
+title: Encabezados
 ---
 
 ---
@@ -8,11 +8,11 @@ title: Headers
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| showHeaders | boolean   | true, false     |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| showHeaders | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -53,17 +53,17 @@ Note that converting back and forth may lead to an end result that is different 
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values                 |
-| ------------ | --------- | ------------------------------- |
-| headerHeight | string    | positive decimal+px &#124; em ) |
+| Nombre       | Tipos de datos | Valores posibles                |
+| ------------ | -------------- | ------------------------------- |
+| headerHeight | cadena         | positive decimal+px &#124; em ) |
 
 #### Objects Supported
 
 [List Box](listbox_overview.md)
 
 
-#### See also
+#### Ver también
 
 [Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)

@@ -23,6 +23,9 @@
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
+      "API/BlobClass": {
+        "title": "Blob"
+      },
       "API/ClassClass": {
         "title": "Class"
       },
@@ -852,11 +855,14 @@
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
+      },
+      "WebStudio/webStudio": {
+        "title": "WebStudio"
       }
     },
     "links": {
-      "v18 R6 BETA": "v18 R6 BETA",
-      "v18 R5": "v18 R5",
+      "v19 BETA": "v19 BETA",
+      "v18 R6": "v18 R6",
       "v18": "v18"
     },
     "categories": {

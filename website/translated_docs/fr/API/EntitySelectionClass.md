@@ -111,7 +111,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
+> > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -597,6 +597,8 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 3.  numbers
 4.  dates
 
+You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
+
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
 An error is returned if:
@@ -604,13 +606,19 @@ An error is returned if:
 *   *attributePath* is a related attribute,
 *   *attributePath* is not found in the entity selection dataclass.
 
-#### Exemple
+#### Exemples
 
 You want to get a collection containing a single element per country name:
 
 ```4d
  var $countries : Collection
  $countries:=ds.Employee.all().distinct("address.country")
+```
+
+`nicknames` is a collection and `extra` is an object attribute:
+
+```4d
+$values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
 <!-- END REF -->

@@ -27,6 +27,7 @@
   "Class API Reference":
   [
 	"API/overview",
+	"API/BlobClass",
 	"API/ClassClass",
 	"API/CollectionClass",
 	"API/CryptoKeyClass",
@@ -66,7 +67,8 @@
 	"WebServer/errorPages",
 	"WebServer/authentication",
 	"WebServer/sessions",
-	"WebServer/preemptiveWeb"],
+	"WebServer/preemptiveWeb",
+	"WebStudio/webStudio"],
   "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",

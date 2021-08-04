@@ -45,7 +45,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| 参照     | タイプ                |    | 説明                                                   |
+| 引数     | タイプ                |    | 説明                                                   |
 | ------ | ------------------ |:--:| ---------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                            |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブエジェクト) |
@@ -125,7 +125,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| 参照     | タイプ                |    | 説明                                                   |
+| 引数     | タイプ                |    | 説明                                                   |
 | ------ | ------------------ |:--:| ---------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                            |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブエジェクト) |
@@ -248,7 +248,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| 参照   | タイプ    |    | 説明                                           |
+| 引数   | タイプ    |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
 | mail | オブジェクト | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
 | 戻り値  | オブジェクト | <- | SMTP ステータス                                   |

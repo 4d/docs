@@ -89,7 +89,7 @@ title: プロジェクトのアーキテクチャー
 
 | 内容                                        | 説明                                  | 形式    |
 | ----------------------------------------- | ----------------------------------- | ----- |
-| *formName*/form.4DForm                    | プロジェクトフォームの定義                       | JSON  |
+| *formName*/form.4DForm                    | プロジェクトフォームの定義                       | json  |
 | *formName*/method.4dm                     | プロジェクトフォームメソッド                      | text  |
 | *formName*/Images/*pictureName*           | プロジェクトフォームのスタティックピクチャー              | ピクチャー |
 | *formName*/ObjectMethods/*objectName*.4dm | オブジェクトメソッド  (1つのオブジェクトメソッドにつき1ファイル) | text  |
@@ -98,11 +98,11 @@ title: プロジェクトのアーキテクチャー
 
 | 内容                                                   | 説明                                             | 形式    |
 | ---------------------------------------------------- | ---------------------------------------------- | ----- |
-| *n*/Input/*formName*/form.4DForm                     | 入力テーブルフォームの定義 (n: テーブル番号)                      | JSON  |
+| *n*/Input/*formName*/form.4DForm                     | 入力テーブルフォームの定義 (n: テーブル番号)                      | json  |
 | *n*/Input/*formName*/Images/*pictureName*            | 入力テーブルフォームのスタティックピクチャー                         | ピクチャー |
 | *n*/Input/*formName*/method.4dm                      | 入力テーブルフォームのフォームメソッド                            | text  |
 | *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | 入力テーブルフォームのオブジェクトメソッド  (1つのオブジェクトメソッドにつき1ファイル) | text  |
-| *n*/Output/*formName*/form.4DForm                    | 出力テーブルフォーム (n: テーブル番号)                         | JSON  |
+| *n*/Output/*formName*/form.4DForm                    | 出力テーブルフォーム (n: テーブル番号)                         | json  |
 | *n*/Output/*formName*/Images/*pictureName*           | 出力テーブルフォームのスタティックピクチャー                         | ピクチャー |
 | *n*/Output/*formName*/method.4dm                     | 出力テーブルフォームのフォームメソッド                            | text  |
 | *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | 出力テーブルフォームのオブジェクトメソッド  (1つのオブジェクトメソッドにつき1ファイル) | text  |
@@ -149,7 +149,7 @@ Resources フォルダーには、追加のカスタムプロジェクトリソ�
 (*) .4db バイナリデータベースから変換されたプロジェクトの場合のみ
 
 
-## `Data`
+## `データ`
 
 Data フォルダーには、データファイルのほか、データに関わるするファイルやフォルダーがすべて格納されています。
 
@@ -215,7 +215,7 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 | CompilerIntermediateFiles  | Apple Silicon用にコンパイルした結果生成される中間ファイル | Folder |
 
 
-## `Components`
+## `コンポーネント`
 
 アプリケーションプロジェクトが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
@@ -235,4 +235,8 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ## `WebFolder`
 
-ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。 
+ページ、ピクチャーなどのための、4D Web サーバーのデフォルトのルートフォルダー。 Web サーバーが初回起動時に、自動で作成されます。
+
+## `.gitignore` ファイル (任意)
+
+git が無視するファイルを指定します。 プロジェクトに gitignore ファイルを含めるには、環境設定 ＞ **一般** ページの **.gitignore ファイルを作成する** オプションを使用します。 このファイルの内容を設定するには、[`.gitignore` ファイルを作成する](Preferences/general.md#gitignore-ファイルを作成する) を参照してください。

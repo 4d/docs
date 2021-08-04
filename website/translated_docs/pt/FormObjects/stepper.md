@@ -7,7 +7,7 @@ A stepper lets the user scroll through numeric values, durations (times) or date
 
 ![](assets/en/FormObjects/indicator_numericStepper.png)
 
-## Using steppers
+## Usando os steppers
 
 You can assign the variable associated with the object to an enterable area (field or variable) to store or modify the current value of the object.
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesPrint
-title: Print
+title: Imprimir
 ---
 
 ---
@@ -24,11 +24,11 @@ The print options are:
 > This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|    Name    | Data Type | Possible Values                                     |
-|:----------:|:---------:| --------------------------------------------------- |
-| printFrame |  string   | "fixed", "variable", (subform only) "fixedMultiple" |
+|   Nombre   | Tipos de datos | Valores posibles                                    |
+|:----------:|:--------------:| --------------------------------------------------- |
+| printFrame |     cadena     | "fixed", "variable", (subform only) "fixedMultiple" |
 
 
 #### Objects Supported

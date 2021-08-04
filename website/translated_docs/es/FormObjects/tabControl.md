@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Pestañas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.
@@ -45,7 +45,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 To supply the labels for a tab control, you can use:
 
-- an object
+- un objeto
 - a choice list
 - an array
 
@@ -53,11 +53,11 @@ To supply the labels for a tab control, you can use:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
-| Property       | Type       | Description                                                                                                                           |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | Text       | Currently selected value                                                                                                              |
+| Propriedad     | Tipo      | Descripción                                                                                                                           |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Colección | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
+| `index`        | number    | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
+| `currentValue` | Texto     | Currently selected value                                                                                                              |
 
 The initialization code must be executed before the form is presented to the user.
 
@@ -70,7 +70,7 @@ Form.tabControl.index:=2 //start on page 3
 ```
 
 
-### Using a choice list
+### Utilizar una lista de selección
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 

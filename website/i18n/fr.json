@@ -6,13 +6,13 @@
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "Interface de ligne de commande"
       },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
       "Admin/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "Description des fichiers historiques"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -22,6 +22,9 @@
       },
       "Admin/webAdmin": {
         "title": "Web Administration"
+      },
+      "API/BlobClass": {
+        "title": "Blob"
       },
       "API/ClassClass": {
         "title": "Class"
@@ -229,7 +232,7 @@
         "title": "Sur avant saisie"
       },
       "Events/onBeforeKeystroke": {
-        "title": "Sue avant frappe clavier"
+        "title": "Sur avant frappe clavier"
       },
       "Events/onBeginDragOver": {
         "title": "Sur début survol"
@@ -703,6 +706,9 @@
       "Project/compiler": {
         "title": "Compilation"
       },
+      "Project/components": {
+        "title": "4D Components Library"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -817,6 +823,15 @@
       "Users/overview": {
         "title": "Aperçu"
       },
+      "web-studio/web-event-object": {
+        "title": "WEB Event Object"
+      },
+      "web-studio/web-form-object": {
+        "title": "WEB Form Object"
+      },
+      "web-studio/web-studio": {
+        "title": "Web Studio"
+      },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
@@ -855,8 +870,8 @@
       }
     },
     "links": {
-      "v18 R6 BETA": "v18 R6 BETA",
-      "v18 R5": "v18 R5",
+      "v19 R2 BETA": "v19 R2 BETA",
+      "v19": "v19",
       "v18": "v18"
     },
     "categories": {
@@ -904,13 +919,14 @@
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
+    "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
-    "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Description of log files|no description given": "Description des fichiers historiques",
+    "Command Line Interface|no description given": "Interface de ligne de commande",
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",

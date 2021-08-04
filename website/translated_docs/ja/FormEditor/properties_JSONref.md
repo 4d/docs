@@ -3,8 +3,8 @@ id: jsonReference
 title: JSON プロパティリスト
 ---
 
-This page provides a comprehensive list of all form properties, sorted by their JSON name. プロパティ名をクリックすると、詳細説明に移動します。
-> In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
+この一覧は、すべてのフォームプロパティを JSON名順に並べてまとめたものです。 プロパティ名をクリックすると、詳細説明に移動します。
+> "フォームプロパティ" の章では、プロパティリストにおけるテーマと名称で各プロパティを紹介しています。
 
 [a](#a) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [h](#h) - [i](#i) - [m](#m) - [p](#p) - [r](#r) - [s](#s) - [w](#w)
 

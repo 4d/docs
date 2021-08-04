@@ -1,6 +1,6 @@
 ---
 id: installation
-title: Installation
+title: Instalación
 ---
 
 Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.

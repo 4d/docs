@@ -1,6 +1,6 @@
 ---
 id: jsonReference
-title: JSON property list
+title: Lista de propiedades JSON
 ---
 
 This page provides a comprehensive list of all form properties, sorted by their JSON name. Click on a property name to access its detailed description.
@@ -8,7 +8,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 
 [a](#a) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [h](#h) - [i](#i) - [m](#m) - [p](#p) - [r](#r) - [s](#s) - [w](#w)
 
-| Property                                                                  | Description                                                                                                             | Possible Values                                                                                                                      |
+| Propriedad                                                                | Descripción                                                                                                             | Valores posibles                                                                                                                     |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | <a name="a">**a**</a>                                                 |                                                                                                                         |                                                                                                                                      |
 | [`bottomMargin`](properties_FormSize.md#vert-margin)                      | Vertical margin value (in pixels)                                                                                       | minimum: 0<a name="d"></a>                                                                                                  |
@@ -36,7 +36,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 | [`method`](properties_Action.md#method)                                   | A project method name.                                                                                                  | The name of an existing project method                                                                                               |
 | <a name="p">**p**</a>                                                 |                                                                                                                         |                                                                                                                                      |
 | [`pages`](properties_FormProperties.md#pages)                             | Collection of pages (each page is an object)                                                                            | Page objects                                                                                                                         |
-| [`pageFormat`](properties_Print.md#settings)                              | object                                                                                                                  | Available print properties                                                                                                           |
+| [`pageFormat`](properties_Print.md#settings)                              | objeto                                                                                                                  | Available print properties                                                                                                           |
 | <a name="r">**r**</a>                                                |                                                                                                                         |                                                                                                                                      |
 | [`rightMargin`](properties_FormSize.md#hor-margin)                        | Horizontal margin value (in pixels)                                                                                     | minimum: 0                                                                                                                           |
 | <a name="s">**s**</a>                                                |                                                                                                                         |                                                                                                                                      |

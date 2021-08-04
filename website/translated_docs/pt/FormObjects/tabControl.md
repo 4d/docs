@@ -70,7 +70,7 @@ Form.tabControl.index:=2 //start on page 3
 ```
 
 
-### Using a choice list
+### Utilizar uma lista de seleção
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 

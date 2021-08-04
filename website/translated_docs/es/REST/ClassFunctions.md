@@ -1,6 +1,6 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: Llamar a las funciones de clase ORDA
 ---
 
 
@@ -26,7 +26,7 @@ Functions must always be called using REST **POST** requests (a GET request will
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Syntax                                                                      |
+| Class function                                                     | Sintaxis                                                                    |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
@@ -42,7 +42,7 @@ Functions are called on the corresponding object on the server datastore.
 > The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
-## Parameters
+## Parámetros
 
 
 
@@ -74,11 +74,11 @@ Entities passed in parameters are referenced on the server through their key (*i
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Properties               | Type                                 | Description                                                                |
+| Properties               | Tipo                                 | Descripción                                                                |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Boolean                              | Mandatory - True to indicate to the server that the parameter is an entity |
+| __DATACLASS              | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
@@ -100,11 +100,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | String  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Boolean | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | Tipo     | Descripción                                                                          |
+| ------------------------ | -------- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed    | Optional - Values to modify                                                          |
+| __DATASET                | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
@@ -132,7 +132,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -162,7 +162,7 @@ You can then run this request:
 
 Body of the request: ["Aguada"]
 
-#### Result
+#### Resultado
 
 The result is an entity:
 ```
@@ -206,7 +206,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -232,7 +232,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -264,7 +264,7 @@ Once you have created an entityset, you can run this request:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -295,7 +295,7 @@ You can then run this request:
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -350,7 +350,7 @@ Body of the request:
 Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -387,7 +387,7 @@ Body of the request:
 
 Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
 
-#### Result
+#### Resultado
 
 ``` 
 {
@@ -423,7 +423,7 @@ Body of the request:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -477,7 +477,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -544,7 +544,7 @@ Body of the request:
 
 ```
 
-#### Result
+#### Resultado
 
 The entities with primary keys 1 and 2 have been updated.
 

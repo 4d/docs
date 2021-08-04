@@ -26,7 +26,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
 
-```
+```js
 {
    "macros": {
       "Add Hello World button": {
@@ -40,7 +40,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 3. Within the `AddButton` class, write the following function:
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
 
     var $btnHello : Object
@@ -109,111 +109,16 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      Attribute
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-      Type
-    </th>
-    
-    <th>
-      Description
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      macros
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      list of defined macros
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-      \<macroName>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      macro definition
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      class
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      macro class name
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      \<customProperty>
-    </td>
-    
-    <td>
-      any
-    </td>
-    
-    <td>
-      (optional) custom value to retrieve in the constructor
-    </td>
-  </tr>
-</table>
+| Attribute |                     |                          | Tipo   | Descripción                                            |
+| --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
+| macros    |                     |                          | objeto | list of defined macros                                 |
+|           | `<macroName>` |                          | objeto | macro definition                                       |
+|           |                     | class                    | cadena | macro class name                                       |
+|           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
-### Example
+### Ejemplo
 
 ```js
 {
@@ -253,11 +158,11 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 ### Class constructor
 
-#### Class constructor($macro : object)
+#### Class constructor($macro : Object)
 
-| Parameter | Type   | Description                                              |
+| Parameter | Tipo   | Descripción                                              |
 | --------- | ------ | -------------------------------------------------------- |
-| $macro    | Object | Macro declaration object (in the `formMacros.json` file) |
+| $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -267,7 +172,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 
 
-#### Example
+#### Ejemplo
 
 In the `formMacros.json` file:
 
@@ -284,7 +189,7 @@ In the `formMacros.json` file:
 
 You can write:
 
-```code4d  
+```4d  
 // Class "AlignOnTarget"
 Class constructor($macro : Object)
     This.myParameter:=$macro.myParam //left
@@ -294,45 +199,52 @@ Class constructor($macro : Object)
 
 ### onInvoke()
 
-#### onInvoke($editor : object) -> $result : object
+#### onInvoke($editor : Object) -> $result : Object
 
-| Parameter | Type   | Description                                      |
-| --------- | ------ | ------------------------------------------------ |
-| $editor   | Object | Form properties                                  |
-| $result   | Object | Form properties modified by the macro (optional) |
+| Parameter | Tipo   | Descripción                                                                          |
+| --------- | ------ | ------------------------------------------------------------------------------------ |
+| $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
+| $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
-When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
+When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
 
 Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
 
-Here are the properties of the `$editor` object:
+Here are the properties returned in the *$editor* parameter:
 
-| Property                  | Type       | Description                                                                       |
-| ------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.form              | Object     | The entire form                                                                   |
-| $editor.file              | File       | File object of the form file                                                      |
-| $editor.name              | String     | Name of the form                                                                  |
-| $editor.table             | number     | Table number of the form, 0 for project form                                      |
-| $editor.currentPageNumber | number     | The number of the current page                                                    |
-| $editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.currentSelection  | Collection | Collection of names of selected objects                                           |
-| $editor.formProperties    | Object     | Properties of the current form                                                    |
-| $editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
+| Propriedad                       | Tipo      | Descripción                                                                       |
+| -------------------------------- | --------- | --------------------------------------------------------------------------------- |
+| $editor.editor.form              | Objeto    | The entire form                                                                   |
+| $editor.editor.file              | File      | File object of the form file                                                      |
+| $editor.editor.name              | Cadena    | Name of the form                                                                  |
+| $editor.editor.table             | number    | Table number of the form, 0 for project form                                      |
+| $editor.editor.currentPageNumber | number    | The number of the current page                                                    |
+| $editor.editor.currentPage       | Objeto    | The current page, containing all the form objects and the entry order of the page |
+| $editor.editor.currentSelection  | Colección | Collection of names of selected objects                                           |
+| $editor.editor.formProperties    | Objeto    | Properties of the current form                                                    |
+| $editor.editor.target            | cadena    | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Type       | Description                                                 |
-| ----------------- | ---------- | ----------------------------------------------------------- |
-| currentPage       | Object     | currentPage including objects modified by the macro, if any |
-| currentSelection  | Collection | currentSelection if modified by the macro                   |
-| formProperties    | Object     | formProperties if modified by the macro                     |
-| editor.groups     | Object     | group info, if groups are modified by the macro             |
-| editor.views      | Object     | view info, if views are modified by the macro               |
-| editor.activeView | String     | Active view name                                            |
+| Propriedad        | Tipo      | Descripción                                                 |
+| ----------------- | --------- | ----------------------------------------------------------- |
+| currentPage       | Objeto    | currentPage including objects modified by the macro, if any |
+| currentSelection  | Colección | currentSelection if modified by the macro                   |
+| formProperties    | Objeto    | formProperties if modified by the macro                     |
+| editor.groups     | Objeto    | group info, if groups are modified by the macro             |
+| editor.views      | Objeto    | view info, if views are modified by the macro               |
+| editor.activeView | Cadena    | Active view name                                            |
 
 
+For example, if objects of the current page and groups have been modified, you can write:
+
+```4d
+    $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
+            "editor"; New object("groups"; $editor.editor.form.editor.groups))
+
+```
 
 
 #### `method` attribute
@@ -343,9 +255,9 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-|          |      |             |
+| Propriedad | Tipo | Descripción |
+| ---------- | ---- | ----------- |
+|            |      |             |
  source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
@@ -359,11 +271,11 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
 
 
-#### Example
+#### Ejemplo
 
 You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
     var $name : Text
 
@@ -386,16 +298,16 @@ Function onInvoke($editor : Object)->$result : Object
 
 ### onError()
 
-#### onError($editor : object; $resultMacro : Object ; $error : Collection)
+#### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type       | Description                              |
-| ------------ | --------------------- | ---------- | ---------------------------------------- |
-| $editor      |                       | Object     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Object     | Object returned by [onInvoke](#oninvoke) |
-| $error       |                       | Collection | Error stack                              |
-|              | [].errCode            | Number     | Error code                               |
-|              | [].message            | Text       | Description of the error                 |
-|              | [].componentSignature | Text       | Internal component signature             |
+| Parameter    |                       | Tipo      | Descripción                              |
+| ------------ | --------------------- | --------- | ---------------------------------------- |
+| $editor      |                       | Objeto    | Object send to [onInvoke](#oninvoke)     |
+| $resultMacro |                       | Objeto    | Object returned by [onInvoke](#oninvoke) |
+| $error       |                       | Colección | Error stack                              |
+|              | [].errCode            | Número    | Error code                               |
+|              | [].message            | Texto     | Description of the error                 |
+|              | [].componentSignature | Texto     | Internal component signature             |
 
 The `onError` function is executed when the macros processor encounters an error.
 
@@ -404,7 +316,7 @@ When executing a macro, if 4D encounters an error which prevents the macro from 
 - deleting or modifying a script whose file is read-only.
 - creating two objects with the same internal ID.
 
-#### Example
+#### Ejemplo
 
 In a macro class definition, you can write the following generic error code:
 

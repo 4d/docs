@@ -47,7 +47,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 
    <!--#4DINCLUDE banner2.html-->
 <!--#4DENDIF-->
- 
+
 <!--#4DLOOP [TABLE]-->   (loop on the current selection)
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
    <!--#4DINCLUDE subpage.html-->   (subpage insertion)

@@ -3,13 +3,13 @@ id: onDeleteAction
 title: On Delete Action
 ---
 
-| Code | Can be called by                                                                                | Definition                          |
-| ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
-| 58   | [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
+| Code | Puede ser llamado por                                                                          | Definición                              |
+| ---- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
+| 58   | [Lista jerárquica](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | El usuario intenta eliminar un elemento |
 
 
-## Description
+## Descripción
 
-This event is generated each time a user attempts to delete the selected item(s) by pressing a deletion key (**Delete** or **Backspace**) or selecting a menu item whose associated standard action is 'Clear' (such as the **Clear** command in the **Edit** menu).
+Este evento se genera cada vez que un usuario intenta eliminar los elementos seleccionados presionando una tecla de eliminación (**Borrar** o **Retroceso**) o seleccionando un elemento de menú cuya acción estándar asociada es "Borrar" (como el comando **Borrar** del menú **Edición**).
 
-Note that generating the event is the only action carried out by 4D: the program does not delete any items. It is up to the developer to handle the deletion and any prior warning messages that are displayed.
+Tenga en cuenta que la generación del evento es la única acción que realiza 4D: el programa no borra ningún elemento. Es el desarrollador quien debe gestionar el borrado y los mensajes de advertencia previos que se muestren.

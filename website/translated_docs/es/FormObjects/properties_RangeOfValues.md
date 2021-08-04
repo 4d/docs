@@ -1,6 +1,6 @@
 ---
 id: propertiesRangeOfValues
-title: Range of Values
+title: Rango de valores
 ---
 
 ---
@@ -11,9 +11,9 @@ You can assign a default value to be entered in an input object. This property i
 The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
 - text/string
 - number/integer
-- date
+- fecha
 - time
-- boolean
+- booleano
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
@@ -27,15 +27,15 @@ You can use a sequence number to create a unique number for each record in the t
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type                           | Possible Values                            |
+| Nombre       | Tipos de datos                      | Valores posibles                           |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 
@@ -46,11 +46,11 @@ You can use a sequence number to create a unique number for each record in the t
 Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
+| Nombre       | Tipos de datos | Valores posibles                 |
+| ------------ | -------------- | -------------------------------- |
+| excludedList | list           | A list of values to be excluded. |
 
 #### Objects Supported
 
@@ -67,11 +67,11 @@ Restricts the valid entries to the items on the list. For example, you may want 
 Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+| Nombre       | Tipos de datos | Valores posibles            |
+| ------------ | -------------- | --------------------------- |
+| requiredList | list           | A list of mandatory values. |
 
 #### Objects Supported
 

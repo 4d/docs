@@ -527,24 +527,24 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 リストボックスの [ソート可](properties_Action.md#ソート可) プロパティの選択を解除すると、ユーザーによる標準の並べ替えを禁止することができます。
 
-開発者は、`LISTBOX SORT COLUMNS` コマンドを使用するか、または `On Header Click` と `On After Sort` フォームイベント (`FORM Event`コマンド参照) を 4D の配列管理コマンドを組み合わせて、独自の並べ替えを設定することができます。
+開発者は、`LISTBOX SORT COLUMNS` コマンドを使用するか、または `On Header Click` と `On After Sort` フォームイベント ([`FORM Event`](https://doc.4d.com/4dv19/help/command/ja/page1606.html) コマンド参照) を 4D の配列管理コマンドと組み合わせて、独自の並べ替えを設定することができます。
 
-> [ソート可](properties_Action.md#ソート可) プロパティは、ユーザーによる標準の並べ替えにのみ影響します。`LISTBOX SORT COLUMNS` コマンドは、このプロパティを考慮しません。
+> [ソート可](properties_Action.md#ソート可) プロパティは、ユーザーによる標準の並べ替えにのみ影響します。[`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/ja/page916.html) コマンドは、このプロパティを考慮しません。
 
 [列ヘッダー変数](properties_Object.md#変数あるいは式)の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。
 
-- 変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません;  
+- 変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません。  
   ![](assets/en/FormObjects/sorticon0.png)
 
-- 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています;  
-  ![](assets/en/FormObjects/sorticon1.png)
+- 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています。 ![](assets/en/FormObjects/sorticon1.png)
 
-- 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。  
-  ![](assets/en/FormObjects/sorticon2.png)
+- 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。 ![](assets/en/FormObjects/sorticon2.png)
+
+> 列ヘッダー変数には、宣言された、あるいは動的な [変数](Concepts/variables.md) のみを使用できます。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> `OBJECT SET FORMAT` コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+> [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/ja/page236.html) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
 
 
 ## スタイルとカラー、表示の管理

@@ -1,6 +1,6 @@
 ---
 id: propertiesFooters
-title: Footers
+title: Pies
 ---
 
 ---
@@ -8,11 +8,11 @@ title: Footers
 
 This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| showFooters | boolean   | true, false     |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| showFooters | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -54,17 +54,17 @@ Note that converting back and forth may lead to an end result that is different 
 ```
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values               |
-| ------------ | --------- | ----------------------------- |
-| footerHeight | string    | positive decimal+px &#124; em |
+| Nombre       | Tipos de datos | Valores posibles              |
+| ------------ | -------------- | ----------------------------- |
+| footerHeight | cadena         | positive decimal+px &#124; em |
 
 #### Objects Supported
 
 [List Box](listbox_overview.md)
 
 
-#### See also
+#### Ver también
 
 [Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

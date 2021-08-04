@@ -3,13 +3,13 @@ id: onTimer
 title: On Timer
 ---
 
-| Code | Can be called by | Definition                                                        |
-| ---- | ---------------- | ----------------------------------------------------------------- |
-| 27   | Form             | The number of ticks defined by the `SET TIMER` command has passed |
+| Code | Puede ser llamado por | Definición                                                              |
+| ---- | --------------------- | ----------------------------------------------------------------------- |
+| 27   | Formulario            | El número de graduaciones definido por el comando `SET TIMER` ha pasado |
 
 
-## Description
+## Descripción
 
-This event is generated only if the form method contains a previous call to the `SET TIMER` command.
+Este evento se genera sólo si el método formulario contiene una llamada previa al comando `SET TIMER`.
 
-When the `On Timer` form event property is selected, only the form method will receive the event, no object method will be called.
+Cuando se selecciona la propiedad de evento formulario `On Timer`, sólo el método formulario recibirá el evento, no se llamará a ningún método objeto.

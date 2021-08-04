@@ -26,7 +26,7 @@ title: フォームエディターマクロ
 
 1. プロジェクトの `Sources` フォルダー内に配置された `formMacros.json` ファイルに、次のように書きます:
 
-```
+```js
 {
    "macros": {
       "Add Hello World button": {
@@ -40,7 +40,7 @@ title: フォームエディターマクロ
 
 3. `AddButton` クラスに次の関数を定義します:
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
 
     var $btnHello : Object
@@ -109,107 +109,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      属性
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-    </th>
-    
-    <th>
-      タイプ
-    </th>
-    
-    <th>
-      説明
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      macros
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      定義されたマクロのリスト
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-      \<macroName>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      マクロ定義
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      class
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      マクロクラス名
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-    </td>
-    
-    <td>
-    </td>
-    
-    <td>
-      \<customProperty>
-    </td>
-    
-    <td>
-      any
-    </td>
-    
-    <td>
-      (任意) コンストラクターによって取得するカスタム値
-    </td>
-  </tr>
-</table>
+| 属性     |                     |                          | タイプ    | 説明                         |
+| ------ | ------------------- | ------------------------ | ------ | -------------------------- |
+| macros |                     |                          | object | 定義されたマクロのリスト               |
+|        | `<macroName>` |                          | object | マクロ定義                      |
+|        |                     | class                    | string | マクロクラス名                    |
+|        |                     | `<customProperty>` | any    | (任意) コンストラクターによって取得するカスタム値 |
 
 カスタムプロパティはマクロの [constructor](#class-constructor) 関数に受け渡されます。
 
@@ -253,9 +158,9 @@ JSONファイルの説明です:
 
 ### Class constructor
 
-#### Class constructor($macro : object)
+#### Class constructor($macro : Object)
 
-| 参照     | タイプ    | 説明                                 |
+| 引数     | タイプ    | 説明                                 |
 | ------ | ------ | ---------------------------------- |
 | $macro | オブジェクト | `formMacros.json` ファイルのマクロ宣言オブジェクト |
 
@@ -284,7 +189,7 @@ JSONファイルの説明です:
 
 以下のように書くことができます:
 
-```code4d  
+```4d  
 // クラス "AlignOnTarget"
 Class constructor($macro : Object)
     This.myParameter:=$macro.myParam // left    ...
@@ -293,32 +198,32 @@ Class constructor($macro : Object)
 
 ### onInvoke()
 
-#### onInvoke($editor : object) -> $result : object
+#### onInvoke($editor : Object) -> $result : Object
 
-| 参照      | タイプ    | 説明                         |
-| ------- | ------ | -------------------------- |
-| $editor | オブジェクト | フォームプロパティ                  |
-| $result | オブジェクト | マクロによって変更されたフォームプロパティ (任意) |
+| 引数      | タイプ    | 説明                                                                                   |
+| ------- | ------ | ------------------------------------------------------------------------------------ |
+| $editor | オブジェクト | Form Editor Macro Proxy object containing the form properties                        |
+| $result | オブジェクト | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
-呼び出しの際、関数は `$editor` パラメーターに、フォームの全要素とそれらの現在値のコピーを受け取ります。 つまり、これらのプロパティに対して、任意の処理を実行することができます。
+When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. つまり、これらのプロパティに対して、任意の処理を実行することができます。
 
 マクロによってオブジェクトを変更・追加・削除した場合、操作を反映させるには最後に結果のプロパティを `$result` に返します。 返されたプロパティは解析され、フォームに対して変更が適用されます。 戻り値に含まれるプロパティが少ないほど、この処理にかかる時間も削減されます。
 
-`$editor` オブジェクトのプロパティは次の通りです:
+Here are the properties returned in the *$editor* parameter:
 
-| プロパティ                     | タイプ    | 説明                               |
-| ------------------------- | ------ | -------------------------------- |
-| $editor.form              | オブジェクト | フォーム全体                           |
-| $editor.file              | File   | フォームファイルの Fileオブジェクト             |
-| $editor.name              | 文字列    | フォームの名称                          |
-| $editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
-| $editor.currentPageNumber | number | 現在のページの番号                        |
-| $editor.currentPage       | オブジェクト | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
-| $editor.currentSelection  | コレクション | 選択されているオブジェクトの名称のコレクション          |
-| $editor.formProperties    | オブジェクト | カレントフォームのプロパティ                   |
-| $editor.target            | string | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称 |
+| プロパティ                            | タイプ    | 説明                               |
+| -------------------------------- | ------ | -------------------------------- |
+| $editor.editor.form              | オブジェクト | フォーム全体                           |
+| $editor.editor.file              | File   | フォームファイルの Fileオブジェクト             |
+| $editor.editor.name              | String | フォームの名称                          |
+| $editor.editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
+| $editor.editor.currentPageNumber | number | 現在のページの番号                        |
+| $editor.editor.currentPage       | オブジェクト | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
+| $editor.editor.currentSelection  | コレクション | 選択されているオブジェクトの名称のコレクション          |
+| $editor.editor.formProperties    | オブジェクト | カレントフォームのプロパティ                   |
+| $editor.editor.target            | string | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称 |
 
 マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
@@ -329,9 +234,16 @@ Class constructor($macro : Object)
 | formProperties    | オブジェクト | マクロによって変更された formProperties       |
 | editor.groups     | オブジェクト | マクロによって変更されたグループ情報                |
 | editor.views      | オブジェクト | マクロによって変更されたビュー情報                 |
-| editor.activeView | 文字列    | 有効なビュー名                           |
+| editor.activeView | String | 有効なビュー名                           |
 
 
+For example, if objects of the current page and groups have been modified, you can write:
+
+```4d
+    $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
+            "editor"; New object("groups"; $editor.editor.form.editor.groups))
+
+```
 
 
 #### `method` 属性
@@ -362,7 +274,7 @@ Class constructor($macro : Object)
 
 選択されているオブジェクトに対して、フォントカラーを赤に、フォントスタイルをイタリックに変更するマクロ関数を定義します。
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
     var $name : Text
 
@@ -385,9 +297,9 @@ Function onInvoke($editor : Object)->$result : Object
 
 ### onError()
 
-#### onError($editor : object; $resultMacro : Object ; $error : Collection)
+#### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| 参照           |                       | タイプ    | 説明                                   |
+| 引数           |                       | タイプ    | 説明                                   |
 | ------------ | --------------------- | ------ | ------------------------------------ |
 | $editor      |                       | オブジェクト | [onInvoke](#oninvoke) に渡されたオブジェクト    |
 | $resultMacro |                       | オブジェクト | [onInvoke](#oninvoke) によって返されたオブジェクト |

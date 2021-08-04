@@ -201,7 +201,7 @@ This folder contains **user settings files** used for application administration
 
 ## `userPreferences.<userName>`
 
-This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
 
 | Contents                   | Description                                                 | Format |
 | -------------------------- | ----------------------------------------------------------- | ------ |
@@ -211,7 +211,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON   |
 | debuggerCatches.json       | Caught calls to commands                                    | JSON   |
 | recentTables.json          | Ordered list of tables                                      | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions                 | XML    |
+| preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML    |
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
 
 
@@ -235,4 +235,8 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 ## `WebFolder`
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+
+## `.gitignore` file (optional)
+
+File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
