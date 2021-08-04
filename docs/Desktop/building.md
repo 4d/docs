@@ -90,7 +90,7 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
 
-> When generating .4dz files, by default 4D uses a **standard** zip format, readable by any unzip tool. You can choose to use a **custom** zip format, adapted by 4D. The advantage of the custom format is that it cannot be read by standard unzip tools. To use the custom .4dz format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file.
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
 
 
 
