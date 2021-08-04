@@ -16,7 +16,7 @@ title: HTTPリクエストの処理
 
 `On Web Connection` データベースメソッドは、4D Webサーバーのエントリーポイントとして使用できます。
 
-### Database method calls
+### データベースメソッドの呼び出し
 
 The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
 
