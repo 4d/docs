@@ -10,7 +10,7 @@ Reference of a method attached to the form. You can use a form method to manage 
 
 You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
 
-Several types of method references are supported:
+Se soportan varios tipos de referencias de métodos:
 
 - a standard project method file path, i.e. that uses the following pattern:  
   `method.4dm`  
@@ -23,9 +23,9 @@ Several types of method references are supported:
   `/RESOURCES/Forms/FormMethod.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values                                                  |
-| ------ | -------------- | ---------------------------------------------------------------- |
-| method | texto          | Form method standard or custom file path, or project method name |
+| Nombre | Tipos de datos | Valores posibles                                                                  |
+| ------ | -------------- | --------------------------------------------------------------------------------- |
+| method | texto          | Ruta estándar o personalizada del método formulario, o nombre del método proyecto |
 

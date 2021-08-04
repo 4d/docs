@@ -55,7 +55,7 @@ title: Class
 **.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
-| 参照    | タイプ      |    | 説明              |
+| 引数    | タイプ      |    | 説明              |
 | ----- | -------- |:--:| --------------- |
 | param | any      | -> | コンストラクター関数に渡す引数 |
 | 戻り値   | 4D.Class | <- | クラスの新規オブジェクト    |

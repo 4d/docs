@@ -60,7 +60,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| 参照             | タイプ       |    | 説明                                             |
+| 引数             | タイプ       |    | 説明                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
 | path           | テキスト      | -> | フォルダーパス                                        |
 | folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
@@ -147,7 +147,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| 参照  | タイプ |    | 説明                                     |
+| 引数  | タイプ |    | 説明                                     |
 | --- | --- | -- | -------------------------------------- |
 | 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
 <!-- END REF -->
@@ -208,7 +208,7 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| 参照                | タイプ       |    | 説明                       |
+| 引数                | タイプ       |    | 説明                       |
 | ----------------- | --------- | -- | ------------------------ |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
 | aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
@@ -270,7 +270,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 参照    | タイプ |    | 説明            |
+| 引数    | タイプ |    | 説明            |
 | ----- | --- | -- | ------------- |
 | オプション | 整数  | -> | フォルダー削除のオプション |
 <!-- END REF -->
@@ -384,7 +384,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| 参照                | タイプ       |    | 説明               |
+| 引数                | タイプ       |    | 説明               |
 | ----------------- | --------- | -- | ---------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
 | newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称 |
@@ -454,7 +454,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!--REF #FolderClass.rename().Params -->
-| 参照      | タイプ       |    | 説明             |
+| 引数      | タイプ       |    | 説明             |
 | ------- | --------- | -- | -------------- |
 | newName | テキスト      | -> | フォルダーの新しい完全な名称 |
 | 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |

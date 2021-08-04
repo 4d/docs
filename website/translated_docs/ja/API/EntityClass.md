@@ -92,7 +92,7 @@ title: Entity
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| 参照  | タイプ       |    | 説明                  |
+| 引数  | タイプ       |    | 説明                  |
 | --- | --------- |:--:| ------------------- |
 | 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
 <!-- END REF -->
@@ -137,7 +137,7 @@ title: Entity
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 参照                  | タイプ       |    | 説明                  |
+| 引数                  | タイプ       |    | 説明                  |
 | ------------------- | --------- |:--:| ------------------- |
 | entityToCompare     | 4D.Entity | -> | 対象エンティティと比較するエンティティ |
 | attributesToCompare | コレクション    | -> | 比較する属性の名称           |
@@ -341,7 +341,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.drop().Params -->
-| 参照   | タイプ    |    | 説明                                                           |
+| 引数   | タイプ    |    | 説明                                                           |
 | ---- | ------ |:--:| ------------------------------------------------------------ |
 | mode | 整数     | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
 | 戻り値  | オブジェクト | <- | ドロップの結果                                                      |
@@ -449,7 +449,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.first().Params -->
-| 参照  | タイプ       |    | 説明                                        |
+| 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
@@ -488,7 +488,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #EntityClass.fromObject().Params -->
-| 参照     | タイプ    |    | 説明                    |
+| 引数     | タイプ    |    | 説明                    |
 | ------ | ------ |:--:| --------------------- |
 | filler | オブジェクト | -> | エンティティの属性値を設定するオブジェクト |
 <!-- END REF -->
@@ -578,7 +578,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| 参照  | タイプ          |    | 説明                             |
+| 引数  | タイプ          |    | 説明                             |
 | --- | ------------ |:--:| ------------------------------ |
 | 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト |
 <!-- END REF -->
@@ -625,7 +625,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
-| 参照   | タイプ  |    | 説明                                                       |
+| 引数   | タイプ  |    | 説明                                                       |
 | ---- | ---- |:--:| -------------------------------------------------------- |
 | mode | 整数   | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
 | 戻り値  | テキスト | <- | エンティティのテキスト型プライマリーキーの値                                   |
@@ -669,7 +669,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 参照  | タイプ                |    | 説明                                      |
+| 引数  | タイプ                |    | 説明                                      |
 | --- | ------------------ |:--:| --------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null) |
 <!-- END REF -->
@@ -713,7 +713,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 参照  | タイプ |    | 説明                                   |
+| 引数  | タイプ |    | 説明                                   |
 | --- | --- |:--:| ------------------------------------ |
 | 戻り値 | 整数  | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
 <!-- END REF -->
@@ -762,7 +762,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.indexOf().Params -->
-| 参照              | タイプ                |    | 説明                            |
+| 引数              | タイプ                |    | 説明                            |
 | --------------- | ------------------ |:--:| ----------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション |
 | 戻り値             | 整数                 | <- | エンティティセレクション内でのエンティティの位置      |
@@ -812,7 +812,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| 参照  | タイプ |    | 説明                                         |
+| 引数  | タイプ |    | 説明                                         |
 | --- | --- |:--:| ------------------------------------------ |
 | 戻り値 | ブール | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
 <!-- END REF -->
@@ -853,7 +853,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.last().Params -->
-| 参照  | タイプ       |    | 説明                                        |
+| 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
@@ -894,7 +894,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
-| 参照   | タイプ    |    | 説明                                                       |
+| 引数   | タイプ    |    | 説明                                                       |
 | ---- | ------ |:--:| -------------------------------------------------------- |
 | mode | 整数     | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
 | 戻り値  | オブジェクト | <- | ロックの結果                                                   |
@@ -1007,7 +1007,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.next().Params -->
-| 参照  | タイプ       |    | 説明                                         |
+| 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
@@ -1049,7 +1049,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.previous().Params -->
-| 参照  | タイプ       |    | 説明                                         |
+| 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
@@ -1091,7 +1091,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.reload().Params -->
-| 参照  | タイプ    |    | 説明          |
+| 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
 | 戻り値 | オブジェクト | <- | ステータスオブジェクト |
 <!-- END REF -->
@@ -1154,7 +1154,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| 参照   | タイプ    |    | 説明                               |
+| 引数   | タイプ    |    | 説明                               |
 | ---- | ------ |:--:| -------------------------------- |
 | mode | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
 | 戻り値  | オブジェクト | <- | 保存の結果                            |
@@ -1289,7 +1289,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| 参照           | タイプ    |    | 説明                                                                                            |
+| 引数           | タイプ    |    | 説明                                                                                            |
 | ------------ | ------ |:--:| --------------------------------------------------------------------------------------------- |
 | filterString | テキスト   | -> | 取得する属性 (カンマ区切り)                                                                               |
 | filterCol    | コレクション | -> | 取得する属性のコレクション                                                                                 |
@@ -1576,7 +1576,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| 参照  | タイプ |    | 説明                                                   |
+| 引数  | タイプ |    | 説明                                                   |
 | --- | --- |:--:| ---------------------------------------------------- |
 | 戻り値 | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
 <!-- END REF -->
@@ -1620,7 +1620,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 参照  | タイプ    |    | 説明                      |
+| 引数  | タイプ    |    | 説明                      |
 | --- | ------ |:--:| ----------------------- |
 | 戻り値 | コレクション | <- | 変更された属性の名前、あるいは空のコレクション |
 <!-- END REF -->
@@ -1696,7 +1696,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.unlock().Params -->
-| 参照  | タイプ    |    | 説明          |
+| 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
 | 戻り値 | オブジェクト | <- | ステータスオブジェクト |
 <!-- END REF -->
