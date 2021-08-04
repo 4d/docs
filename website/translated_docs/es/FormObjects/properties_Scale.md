@@ -8,9 +8,9 @@ title: Escala
 
 Enables the "barber shop" variant for the thermometer.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|     Nombre      | Tipos de datos | Possible Values                                             |
+|     Nombre      | Tipos de datos | Valores posibles                                            |
 |:---------------:|:--------------:| ----------------------------------------------------------- |
 | [max](#maximum) |     number     | NOT passed = enabled; passed = disabled (basic thermometer) |
 
@@ -25,11 +25,11 @@ Enables the "barber shop" variant for the thermometer.
 
 Displays/Hides the graduations next to the labels.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|     Nombre      | Tipos de datos | Possible Values |
-|:---------------:|:--------------:| --------------- |
-| showGraduations |    booleano    | "true", "false" |
+|     Nombre      | Tipos de datos | Valores posibles |
+|:---------------:|:--------------:| ---------------- |
+| showGraduations |    booleano    | "true", "false"  |
 
 #### Objects Supported
 
@@ -42,11 +42,11 @@ Displays/Hides the graduations next to the labels.
 
 Scale display measurement.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|     Nombre     | Tipos de datos | Possible Values |
-|:--------------:|:--------------:| --------------- |
-| graduationStep |    integer     | minimum: 0      |
+|     Nombre     | Tipos de datos | Valores posibles |
+|:--------------:|:--------------:| ---------------- |
+| graduationStep |    integer     | minimum: 0       |
 
 
 #### Objects Supported
@@ -64,9 +64,9 @@ Specifies the location of an object's displayed text.
 * Top - Displays labels to the left of or above an indicator
 * Bottom - Displays labels to the right of or below an indicator
 
-#### JSON Grammar
+#### Gramática JSON
 
-|     Nombre      | Tipos de datos | Possible Values                          |
+|     Nombre      | Tipos de datos | Valores posibles                         |
 |:---------------:|:--------------:| ---------------------------------------- |
 | labelsPlacement |     cadena     | "none", "top", "bottom", "left", "right" |
 
@@ -84,9 +84,9 @@ Maximum value of an indicator.
 - For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 - To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos  | Possible Values                     |
+| Nombre | Tipos de datos  | Valores posibles                    |
 |:------:|:---------------:| ----------------------------------- |
 |  max   | string / number | minimum: 0 (for numeric data types) |
 
@@ -101,9 +101,9 @@ Maximum value of an indicator.
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos  | Possible Values                     |
+| Nombre | Tipos de datos  | Valores posibles                    |
 |:------:|:---------------:| ----------------------------------- |
 |  min   | string / number | minimum: 0 (for numeric data types) |
 
@@ -119,11 +119,11 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre | Tipos de datos | Possible Values |
-|:------:|:--------------:| --------------- |
-|  step  |    integer     | minimum: 1      |
+| Nombre | Tipos de datos | Valores posibles |
+|:------:|:--------------:| ---------------- |
+|  step  |    integer     | minimum: 1       |
 
 
 #### Objects Supported

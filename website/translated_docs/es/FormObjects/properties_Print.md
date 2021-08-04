@@ -24,9 +24,9 @@ The print options are:
 > This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|   Nombre   | Tipos de datos | Possible Values                                     |
+|   Nombre   | Tipos de datos | Valores posibles                                    |
 |:----------:|:--------------:| --------------------------------------------------- |
 | printFrame |     cadena     | "fixed", "variable", (subform only) "fixedMultiple" |
 
