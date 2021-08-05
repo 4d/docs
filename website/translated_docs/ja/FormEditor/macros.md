@@ -200,10 +200,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| 引数      | タイプ    | 説明                                                                                   |
-| ------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor | オブジェクト | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト                                        |
-| $result | オブジェクト | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| 引数      | タイプ    | 説明                                            |
+| ------- | ------ | --------------------------------------------- |
+| $editor | オブジェクト | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
+| $result | オブジェクト | マクロによって変更されたフォームプロパティ (任意)                    |
 
 マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
@@ -237,7 +237,7 @@ Class constructor($macro : Object)
 | editor.activeView | String | 有効なビュー名                           |
 
 
-For example, if objects of the current page and groups have been modified, you can write:
+たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
