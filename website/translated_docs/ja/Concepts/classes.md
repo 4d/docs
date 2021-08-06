@@ -107,7 +107,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 #### cs -> classStore
 
-| 参照         | タイプ    |    | 説明                          |
+| 引数         | タイプ    |    | 説明                          |
 | ---------- | ------ | -- | --------------------------- |
 | classStore | object | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
@@ -125,7 +125,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| 参照         | タイプ    |    | 説明       |
+| 引数         | タイプ    |    | 説明       |
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 

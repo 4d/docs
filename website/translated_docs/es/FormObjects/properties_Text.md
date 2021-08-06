@@ -9,9 +9,9 @@ title: Texto
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Propriedad           | Tipos de datos | Possible Values       |
+| Propriedad           | Tipos de datos | Valores posibles      |
 | -------------------- | -------------- | --------------------- |
 | allowFontColorPicker | booleano       | false (default), true |
 
@@ -27,9 +27,9 @@ Sets the selected text to appear darker and heavier.
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br> **This is bold text.**
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Propriedad | Tipos de datos | Possible Values  |
+| Propriedad | Tipos de datos | Valores posibles |
 | ---------- | -------------- | ---------------- |
 | fontWeight | texto          | "normal", "bold" |
 
@@ -46,9 +46,9 @@ Sets the selected text to slant slightly to the right.
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br> *This is text in italics.*
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values    |
+| Nombre    | Tipos de datos | Valores posibles   |
 | --------- | -------------- | ------------------ |
 | fontStyle | cadena         | "normal", "italic" |
 
@@ -64,9 +64,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 Sets the text to have a line running beneath it.
 > This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Tipos de datos | Possible Values       |
+| Nombre         | Tipos de datos | Valores posibles      |
 | -------------- | -------------- | --------------------- |
 | textDecoration | cadena         | "normal", "underline" |
 
@@ -106,9 +106,9 @@ Three font themes are available:
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values                |
+| Nombre    | Tipos de datos | Valores posibles               |
 | --------- | -------------- | ------------------------------ |
 | fontTheme | cadena         | "normal", "main", "additional" |
 
@@ -131,9 +131,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 > <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br>
 <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values      |
+| Nombre     | Tipos de datos | Valores posibles     |
 | ---------- | -------------- | -------------------- |
 | fontFamily | cadena         | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
@@ -149,9 +149,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 Allows defining the object's font size in points.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name     | Tipos de datos | Possible Values                       |
+| Nombre   | Tipos de datos | Valores posibles                      |
 | -------- | -------------- | ------------------------------------- |
 | fontSize | integer        | Font size in points. Minimum value: 0 |
 
@@ -176,9 +176,9 @@ The color can be specified by:
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name   | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Valores posibles                          |
 | ------ | -------------- | ----------------------------------------- |
 | stroke | cadena         | any css value, "transparent", "automatic" |
 
@@ -208,9 +208,9 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;
 Foreground color;Dark shadow color)
 ```
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name            | Tipos de datos | Possible Values       |
+| Nombre          | Tipos de datos | Valores posibles      |
 | --------------- | -------------- | --------------------- |
 | rowStrokeSource | cadena         | Font color expression |
 
@@ -237,9 +237,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Tipos de datos | Possible Values                                 |
+| Nombre         | Tipos de datos | Valores posibles                                |
 | -------------- | -------------- | ----------------------------------------------- |
 | rowStyleSource | cadena         | Style expression to evaluate for each row/cell. |
 
@@ -257,9 +257,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 Horizontal location of text within the area that contains it.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values                                   |
+| Nombre    | Tipos de datos | Valores posibles                                  |
 | --------- | -------------- | ------------------------------------------------- |
 | textAlign | cadena         | "automatic", "right", "center", "justify", "left" |
 
@@ -280,9 +280,9 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Tipos de datos | Possible Values                        |
+| Nombre        | Tipos de datos | Valores posibles                       |
 | ------------- | -------------- | -------------------------------------- |
 | verticalAlign | cadena         | "automatic", "top", "middle", "bottom" |
 
@@ -320,14 +320,14 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 **Ejemplo**
 
-In the *Color* project method, write the following code:
+En el método proyecto *Color*, escribe el siguiente código:
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+//Método Color
+//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica:
 C_OBJECT($0)
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID es un atributo de objetos/entidades de una colección
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -336,33 +336,33 @@ End if
 $0:=Form.meta
 ```
 
-**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+**Buenas prácticas:** por razones de optimización, se recomendaría en este caso crear el objeto `meta.cell` una vez en el método formulario:
 
 ```4d
-  //form method
+  //método formulario
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Column2";New object("fill";"black"))
  End case
 ```
 
-Then, the *Color* method would contain:
+Entonces, el método *Color* contendría:
 
 ```4d
-  //Color method
+  //método Color
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reutilizar el mismo objeto para mejorar el rendimiento
  ...
 ```
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> Ver también el comando [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values                                  |
+| Nombre     | Tipos de datos | Valores posibles                                 |
 | ---------- | -------------- | ------------------------------------------------ |
 | metaSource | cadena         | Object expression to evaluate for each row/cell. |
 
@@ -380,7 +380,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
+Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas \<SPAN> HTML presentes en el área. </p> 
 
 <p spaces-before="0">
   By default, this option is not enabled.
@@ -389,13 +389,13 @@ This property enables the possibility of using specific styles in the selected a
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -403,7 +403,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -443,7 +443,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+  Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
 </p>
 
 <table spaces-before="0">
@@ -499,20 +499,20 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <p spaces-before="0">
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+  Además de <a href="text.md">áreas de texto estáticas</a>, los objetos de texto de las <a href="input_overview.md">áreas de entrada</a> pueden girar cuando no son<a href="properties_Entry.md#enterable">editables</a>. Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
 </p>
 
 
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -520,7 +520,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -544,7 +544,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+  <a href="input_overview.md">Entrada</a> (no editable) - <a href="text.md">Área de texto</a>
 </p>
 
 
@@ -561,21 +561,21 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font color to each row of the list box or cell of the column.
+  Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 </p>
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -583,7 +583,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -624,22 +624,22 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font style to each row of the list box or each cell of the column.
+  Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para llenar el array (utilizando un método), utilice las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estilos de fuente</a>. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 </p>
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -647,7 +647,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -682,11 +682,11 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+  Esta propiedad sólo está disponible para un área de entrada <a href="#multi-estilo">Multi-estilo</a>. Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
 </p>
 
 <p spaces-before="0">
-  For example, here is a text that includes a style modification:
+  Por ejemplo, este es un texto que incluye una modificación de estilo:
 </p>
 
 <p spaces-before="0">
@@ -694,27 +694,27 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  When the property is disabled, the area only stores the modification. The stored contents are therefore:
+  Cuando la propiedad está desactivada, el área sólo almacena la modificación. Por lo tanto, los contenidos almacenados son:
 </p>
 
-<pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
+<pre><code>¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!
 </code></pre>
 
 <p spaces-before="0">
-  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+  Cuando la propiedad está activa, el área almacena toda la información de formato. La primera etiqueta genérica describe el estilo por defecto y luego cada variación es objeto de un par de etiquetas anidadas. Por lo tanto, los contenidos almacenados en el área son:
 </p>
 
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
+<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!&lt;/SPAN&gt;
 </code></pre>
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -722,7 +722,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   

@@ -3,9 +3,7 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually. A blob can be empty (null length) or contain up to 2147483647 bytes (2 GB). 
-
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually. 
 
 A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
@@ -24,17 +22,20 @@ Each blob type has its advantages. Use the following table to determine which on
 |----|:----:|:----:|
 |Alterable|Yes|No|
 |Shareable in objects and collections|No|Yes|
-|Duplicated when passed to methods*|Yes|No|
-Performance when accessing bytes|+|-|
+|Passed by reference*|No|Yes|
+|Performance when accessing bytes|+|-|
+|Maximum size|2GB|Memory|
 
-*Unlike the built-in 4D commands designed to take a blob as a parameter, methods duplicate blobs, resulting in more memory usage. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+
+> By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
 You cannot use operators on blobs. 
 
-## Checking if a variable holds a blob or a 4D.Blob
+## Checking if a variable holds a scalar blob or a `4D.Blob`
 
-Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or 4D.Blob.
-To check that an object is a blob object, use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or Object.
+To check that an object is a blob object (`4D.Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob
@@ -55,7 +56,7 @@ You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as
 ```4d
 var $myBlob: 4D.Blob
 CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
-$myText:= BLOB to text ( $myBlob ; UTF8 text without length )
+$myText:= BLOB to text( $myBlob ; UTF8 text without length )
 ```
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
@@ -69,6 +70,8 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 * [TEXT TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page554.html) 
 * [VARIABLE TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page532.html) 
 * [LIST TO BLOB](https://doc.4d.com/4dv19R/help/command/en/page556.html) 
+* [SOAP DECLARATION](https://doc.4d.com/4dv19R/help/command/en/page782.html) 
+* [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page777.html) 
 
 ### Passing blobs and blob objects to methods
 
@@ -136,6 +139,9 @@ $myBlob:= $myObject.blob
 $type:= Value type($myBlob) // Blob
 ```
 
+> When converting a 4D.Blob to a scalar blob, if the size of the 4D.Blob exceeds the maximum size for scalar blobs, the resulting scalar blob is empty.
+For example, when the maximum size for scalar blobs is 1GB, if you convert a 4D.Blob of 1.5GB to a scalar blob, you obtain an empty blob.
+
 ## Modifying a scalar blob
 
 Unlike blob objects, scalar blobs can be altered. For example: 
@@ -151,11 +157,11 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 You can access individual bytes of a scalar blob using curly brackets. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
 ```4d
-  ` Declare a variable of type Blob
+  // Declare a variable of type Blob
  var $vBlob : Blob
-  ` Set the size of the blob to 256 bytes
+  // Set the size of the blob to 256 bytes
  SET BLOB SIZE($vBlob;256)
-  ` The following code loops through the blob to set each byte to zero
+  // The following code loops through the blob to set each byte to zero
  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
  End for

@@ -323,7 +323,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 No método de projeto *Color*, entre o código abaixo:
 
 ```4d
-//Método Color
+//Método Cor
 //Define a cor da fonte para certas linhas e a cor de fundo para uma coluna específica :
 C_OBJECT($0)
 Form.meta:=New object

@@ -505,7 +505,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 **MAIL Convert from MIME**( *mime* : Blob ) : Object<br>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
-| 参照   | タイプ       |    | 説明           |
+| 引数   | タイプ       |    | 説明           |
 | ---- | --------- |:--:| ------------ |
 | mime | BLOB、テキスト | -> | MIME形式のメール   |
 | 戻り値  | オブジェクト    | <- | Email オブジェクト |
@@ -592,7 +592,7 @@ $status:=$transporter.send($email)
 **MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
-| 参照      | タイプ    |    | 説明                      |
+| 引数      | タイプ    |    | 説明                      |
 | ------- | ------ |:--:| ----------------------- |
 | mail    | オブジェクト | -> | Email オブジェクト            |
 | options | オブジェクト | -> | 文字セットとエンコーディングのメールオプション |

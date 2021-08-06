@@ -16,7 +16,7 @@ This property defines the color scheme for the form. By default when the propert
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値           |
+| 名称          | データタイプ | とりうる値           |
 | ----------- | ------ | --------------- |
 | colorScheme | string | "dark", "light" |
 
@@ -34,7 +34,7 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON 文法
 
-| 名     | データタイプ     | とりうる値                                                                    |
+| 名称    | データタイプ     | とりうる値                                                                    |
 | ----- | ---------- | ------------------------------------------------------------------------ |
 | pages | collection | Collection of pages (each page is an object, page 0 is the first element |
 
@@ -77,7 +77,7 @@ Supported types depend on the form category:
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                        |
+| 名称          | データタイプ | とりうる値                                                        |
 | ----------- | ------ | ------------------------------------------------------------ |
 | destination | string | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
@@ -94,7 +94,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                                                                                              |
+| 名称            | データタイプ | とりうる値                                                                                                              |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
 | inheritedForm | string | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
@@ -110,7 +110,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### JSON 文法
 
-| 名                  | データタイプ           | とりうる値                      |
+| 名称                 | データタイプ           | とりうる値                      |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
@@ -127,7 +127,7 @@ Only project forms can be specified as published subforms.
 
 #### JSON 文法
 
-| 名      | データタイプ  | とりうる値       |
+| 名称     | データタイプ  | とりうる値       |
 | ------ | ------- | ----------- |
 | shared | boolean | true, false |
 
@@ -146,7 +146,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON 文法
 
-| 名                | データタイプ  | とりうる値       |
+| 名称               | データタイプ  | とりうる値       |
 | ---------------- | ------- | ----------- |
 | memorizeGeometry | boolean | true, false |
 
@@ -172,7 +172,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                  |
+| 名称          | データタイプ | とりうる値                                                  |
 | ----------- | ------ | ------------------------------------------------------ |
 | windowTitle | string | The name of the window as plain text or as a reference |
 

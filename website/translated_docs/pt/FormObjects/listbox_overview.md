@@ -527,24 +527,24 @@ By default, a list box automatically handles standard column sorts when the head
 
 You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command) and relevant 4D commands.
 
-> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
+> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command does not take this property into account.
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
-- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
+- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed.  
   ![](assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
-  ![](assets/en/FormObjects/sorticon1.png)
+- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed. ![](assets/en/FormObjects/sorticon1.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
-  ![](assets/en/FormObjects/sorticon2.png)
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed. ![](assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
 
-> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+
+> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display

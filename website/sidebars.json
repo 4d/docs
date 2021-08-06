@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler","Project/components"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -68,7 +68,7 @@
 	"WebServer/authentication",
 	"WebServer/sessions",
 	"WebServer/preemptiveWeb",
-	"WebStudio/webStudio"],
+	"web-studio/web-studio"],
   "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",
@@ -210,7 +210,7 @@
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
-   "Build application":["Desktop/building"]
+   "Build Application":["Desktop/building"]
 
 
   }

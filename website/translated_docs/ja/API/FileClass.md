@@ -66,7 +66,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| 参照           | タイプ     |    | 説明                                             |
+| 引数           | タイプ     |    | 説明                                             |
 | ------------ | ------- |:--:| ---------------------------------------------- |
 | path         | テキスト    | -> | ファイルパス                                         |
 | fileConstant | 整数      | -> | 4Dファイル定数                                       |
@@ -166,7 +166,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| 参照  | タイプ |    | 説明                                   |
+| 引数  | タイプ |    | 説明                                   |
 | --- | --- | -- | ------------------------------------ |
 | 戻り値 | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
 <!-- END REF -->
@@ -210,7 +210,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| 参照                | タイプ       |    | 説明                       |
+| 引数                | タイプ       |    | 説明                       |
 | ----------------- | --------- | -- | ------------------------ |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
 | aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
@@ -276,7 +276,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 
 <!-- REF #FileClass.delete().Params -->
-| 参照 | タイプ |  | 説明                |
+| 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
@@ -333,7 +333,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 参照  | タイプ    |    | 説明                                   |
+| 引数  | タイプ    |    | 説明                                   |
 | --- | ------ | -- | ------------------------------------ |
 | 戻り値 | オブジェクト | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
 <!-- END REF -->
@@ -453,7 +453,7 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| 参照                | タイプ       |    | 説明              |
+| 引数                | タイプ       |    | 説明              |
 | ----------------- | --------- | -- | --------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー         |
 | newName           | テキスト      | -> | 移動先でのファイルの完全な名称 |
@@ -521,7 +521,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| 参照      | タイプ     |    | 説明            |
+| 引数      | タイプ     |    | 説明            |
 | ------- | ------- | -- | ------------- |
 | newName | テキスト    | -> | ファイルの新しい完全な名称 |
 | 戻り値     | 4D.File | <- | 名称変更されたファイル   |
@@ -564,7 +564,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 参照   | タイプ    |    | 説明                                          |
+| 引数   | タイプ    |    | 説明                                          |
 | ---- | ------ | -- | ------------------------------------------- |
 | info | オブジェクト | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
 <!-- END REF -->
@@ -649,7 +649,7 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| 参照      | タイプ  |    | 説明            |
+| 引数      | タイプ  |    | 説明            |
 | ------- | ---- | -- | ------------- |
 | content | BLOB | -> | ファイルの新しいコンテンツ |
 <!-- END REF -->
@@ -688,7 +688,7 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setText().Params -->
-| 参照          | タイプ  |    | 説明                                 |
+| 引数          | タイプ  |    | 説明                                 |
 | ----------- | ---- | -- | ---------------------------------- |
 | text        | テキスト | -> | ファイルに保存するテキスト                      |
 | charSetName | テキスト | -> | 文字セットの名前                           |

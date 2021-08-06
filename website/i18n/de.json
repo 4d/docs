@@ -706,6 +706,9 @@
       "Project/compiler": {
         "title": "Compilation"
       },
+      "Project/components": {
+        "title": "4D Components Library"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -820,6 +823,15 @@
       "Users/overview": {
         "title": "Überblick"
       },
+      "web-studio/web-event-object": {
+        "title": "WEB Event Object"
+      },
+      "web-studio/web-form-object": {
+        "title": "WEB Form Object"
+      },
+      "web-studio/web-studio": {
+        "title": "Web Studio"
+      },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
@@ -855,14 +867,11 @@
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
-      },
-      "WebStudio/webStudio": {
-        "title": "WebStudio"
       }
     },
     "links": {
-      "v19 BETA": "v19 BETA",
-      "v18 R6": "v18 R6",
+      "v19 R2 BETA": "v19 R2 BETA",
+      "v19": "v19",
       "v18": "v18"
     },
     "categories": {
@@ -910,6 +919,7 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",

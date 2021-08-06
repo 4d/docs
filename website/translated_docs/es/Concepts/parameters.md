@@ -28,7 +28,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 Los parámetros de entrada están separados por punto y coma (;).
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Los mismos principios se aplican cuando los métodos se ejecutan a través de comandos dedicados, por ejemplo:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
@@ -36,7 +36,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //en el contexto de un subformulario
 ```
 
-Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Data can be returned from methods. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Data can be returned from methods. La instrucción pone el valor devuelto por `Length` en una variable llamada *MyLength*. Esta es la instrucción:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -61,7 +61,7 @@ Function add($x : Integer)
 
 
 
-## Named parameters
+## Parámetro con nombre
 
 Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
 
@@ -201,12 +201,12 @@ In this example, `$0` is first assigned the value of `$1`, then used as paramete
 
 You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
 
-- tables
+- tablas
 - arrays
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
-### Parameter indirection
+### Indirección de parámetros
 
 Los métodos proyecto 4D aceptan un número variable de parámetros del mismo tipo, empezando por la derecha. Este principio se llama **la indirección de parámetros**. Al utilizar el comando `Count parameters` puede dirigirse a esos parámetros con un bucle `For...End for` y la sintaxis de indirección de parámetros.
 
@@ -321,7 +321,7 @@ See [Interpreted and compiled modes](interpreted.md) page for more information.
 
 La declaración de parámetros también es obligatoria en los siguientes contextos (estos contextos no soportan la declaración en un método "Compiler"):
 
-- Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de $1 a $6, de tipo Texto. At the beginning of the database method, you must write (even if all parameters are not used):
+- Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de $1 a $6, de tipo Texto. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
 ```4d
 // On Web Connection
@@ -330,9 +330,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 > You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
 
-- Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
 
-- Objetos formulario que aceptan el evento formulario `On Drag Over` - El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Por ejemplo:
+- Objetos formulario que aceptan el evento formulario `On Drag Over` - El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio método proyecto. **Nota:** el compilador no inicializa el parámetro $0. Por lo tanto, tan pronto como utilice el evento formulario `On Drag Over`, debe inicializar $0. Por ejemplo:
 
 ```4d
  C_LONGINT($0)
@@ -374,8 +374,8 @@ En el método `ChangeAge` puede escribir:
 ```
 
 Esto ofrece una poderosa manera de definir [parámetros opcionales](#optional-parameters) (ver también abajo). Para manejar los parámetros que faltan, puede:
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
+- verificar si se suministran todos los parámetros esperados comparándolos con el valor `Null`, o
+- predefinir los valores de los parámetros, o
 - use them as empty values.
 
 En el método `ChangeAge` anterior, las propiedades Age y Name son obligatorias y producirían errores si faltaran. Para evitar este caso, puede escribir simplemente:
@@ -419,7 +419,7 @@ Dentro de la subrutina, puede utilizar los parámetros $1, $2... de la misma man
 
 
 
-## Optional parameters
+## Parámetros opcionales
 
 En el manual *Lenguaje de 4D*, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro *okButtonTitle* puede omitirse al llamar al comando. Se puede llamar de las siguientes maneras:
 
@@ -463,7 +463,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 
 
-## Values or references
+## Valores o referencias
 
 When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Por ejemplo:
 
@@ -510,7 +510,7 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dent
 Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" This is described in the [Returning values](#returning-values) paragraph.
 
 
-### Particular cases: objects and collections
+### Casos particulares: objetos y colecciones
 
 Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un *puntero* interno).
 

@@ -18,7 +18,7 @@
         "title": "4D ライセンスの管理"
       },
       "Admin/tls": {
-        "title": "TLS Protocol (HTTPS)"
+        "title": "TLSプロトコル (HTTPS)"
       },
       "Admin/webAdmin": {
         "title": "Web 管理"
@@ -706,6 +706,9 @@
       "Project/compiler": {
         "title": "コンパイル"
       },
+      "Project/components": {
+        "title": "4D コンポーネントライブラリ"
+      },
       "Project/creating": {
         "title": "プロジェクトを開発する"
       },
@@ -820,11 +823,20 @@
       "Users/overview": {
         "title": "概要"
       },
+      "web-studio/web-event-object": {
+        "title": "WEB Event Object"
+      },
+      "web-studio/web-form-object": {
+        "title": "WEB Form Object"
+      },
+      "web-studio/web-studio": {
+        "title": "Web Studio"
+      },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
       "WebServer/authentication": {
-        "title": "Authentication"
+        "title": "認証"
       },
       "WebServer/errorPages": {
         "title": "Custom HTTP Error Pages"
@@ -833,7 +845,7 @@
         "title": "はじめに"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "HTTPリクエストの処理"
       },
       "WebServer/preemptiveWeb": {
         "title": "Using preemptive web processes"
@@ -842,27 +854,24 @@
         "title": "User sessions"
       },
       "WebServer/templates": {
-        "title": "Template pages"
+        "title": "テンプレートページ"
       },
       "WebServer/webServer": {
         "title": "概要"
       },
       "WebServer/webServerAdmin": {
-        "title": "データベース管理"
+        "title": "管理"
       },
       "WebServer/webServerConfig": {
-        "title": "バックアップ設定"
+        "title": "設定"
       },
       "WebServer/webServerObject": {
         "title": "Webサーバーオブジェクト"
-      },
-      "WebStudio/webStudio": {
-        "title": "WebStudio"
       }
     },
     "links": {
-      "v19 BETA": "v19 BETA",
-      "v18 R6": "v18 R6",
+      "v19 R2 BETA": "v19 R2 BETA",
+      "v19": "v19",
       "v18": "v18"
     },
     "categories": {
@@ -873,7 +882,7 @@
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
       "Preferences": "Preferences",
-      "Administration": "データベース管理",
+      "Administration": "管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
@@ -910,8 +919,9 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web 管理",
+    "4D Components Library|no description given": "4D コンポーネントライブラリ",
     "Client/Server|no description given": "クライアント/サーバー",
-    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
@@ -920,7 +930,7 @@
     "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
-    "Administration|no description given": "データベース管理",
+    "Administration|no description given": "管理",
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",

@@ -17,7 +17,7 @@ The form menu bar will operate for both input and output forms.
 
 #### JSON 文法
 
-| 名       | データタイプ | とりうる値              |
+| 名称      | データタイプ | とりうる値              |
 | ------- | ------ | ------------------ |
 | menuBar | string | Name of a menu bar |
 

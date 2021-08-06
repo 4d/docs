@@ -681,7 +681,7 @@ You want the collection of all folders and subfolders of the database folder:
 | Parameter | Tipo   |    | Descripción                                   |
 | --------- | ------ | -- | --------------------------------------------- |
 | size      | Entero | -> | Side length for the returned picture (pixels) |
-| Resultado | Imagen | <- | Icon                                          |
+| Resultado | Imagen | <- | Icono                                         |
 <!-- END REF -->
 
 
