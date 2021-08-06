@@ -200,18 +200,18 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| 引数      | タイプ    | 説明                                                                                   |
-| ------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor | オブジェクト | Form Editor Macro Proxy object containing the form properties                        |
-| $result | オブジェクト | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| 引数      | タイプ    | 説明                                            |
+| ------- | ------ | --------------------------------------------- |
+| $editor | オブジェクト | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
+| $result | オブジェクト | マクロによって変更されたフォームプロパティ (任意)                    |
 
 マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
-When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. つまり、これらのプロパティに対して、任意の処理を実行することができます。
+呼び出しの際、関数は `$editor.editor` プロパティに、フォームの全要素とそれらの現在値のコピーを受け取ります。 つまり、これらのプロパティに対して、任意の処理を実行することができます。
 
 マクロによってオブジェクトを変更・追加・削除した場合、操作を反映させるには最後に結果のプロパティを `$result` に返します。 返されたプロパティは解析され、フォームに対して変更が適用されます。 戻り値に含まれるプロパティが少ないほど、この処理にかかる時間も削減されます。
 
-Here are the properties returned in the *$editor* parameter:
+*$editor* 引数にて渡されるプロパティは次の通りです:
 
 | プロパティ                            | タイプ    | 説明                               |
 | -------------------------------- | ------ | -------------------------------- |
@@ -237,7 +237,7 @@ Here are the properties returned in the *$editor* parameter:
 | editor.activeView | String | 有効なビュー名                           |
 
 
-For example, if objects of the current page and groups have been modified, you can write:
+たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 

@@ -833,7 +833,7 @@
         "title": "Web Studio"
       },
       "WebServer/allowProject": {
-        "title": "Allowing project methods"
+        "title": "プロジェクトメソッドの許可"
       },
       "WebServer/authentication": {
         "title": "認証"

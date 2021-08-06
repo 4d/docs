@@ -330,24 +330,24 @@ return false
 HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
 
 
-## Other Web Server Commands
+## その他の Webサーバーコマンド
 
-The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
+4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
-- the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。これを必要に応じて解析することができます。
+- `WEB GET HTTP HEADER` コマンドは、リクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
+- `WEB GET BODY PART` と `WEB Get body part count` コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
 
-These commands are summarized in the following graphic:
+これらのコマンドは次の図にまとめられています:
 
 ![](assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
+4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 4D Webサーバーでは、サーバーから Webクライアントへのチャンクド・エンコーディングもサポートしています (`WEB SEND RAW DATA` を使用します)。
 
-## COMPILER_WEB Project Method
+## COMPILER_WEB プロジェクトメソッド
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
+COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`<On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
 
-> The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
+> COMPILER_WEB プロジェクトメソッドは (存在すれば)、SOAPリクエストが受け入れられるごとに実行されます。
 
 
