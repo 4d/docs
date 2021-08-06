@@ -312,7 +312,7 @@ This button allows you to load a special server log configuration file (`.json` 
 
 #### Pause logging
 
-This button suspends all currently logging operations started on the server (except [ORDA logs](debugLogFiles.md#orda-client-requests)). This feature can be useful to temporarily lighten the server tasks.
+This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
