@@ -57,7 +57,12 @@ title: 管理
 
 いつでもページやイメージをキャッシュからクリアできます (たとえば、スタティックページを更新し、キャッシュにそれをリロードさせたい場合)。
 
-これをおこなうには、Web / オプション (I) ページの **キャッシュクリア** ボタンをクリックします。 キャッシュは即座にクリアされます。
+To do so, you can:
+
+-   4D: click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
+-   4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](Admin/server-admin.md#http-server-page).
+
+キャッシュは即座にクリアされます。
 > 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
 
 
