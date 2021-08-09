@@ -1741,7 +1741,7 @@ The returned object contains the following properties:
 
 If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
 
-The function returns an an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
 
 #### Example
 
