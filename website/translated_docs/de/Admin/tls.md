@@ -37,7 +37,7 @@ You can control the level of security of your web server by defining the [minimu
 ## How to get a certificate?
 
 A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Wes browsers authorize only the certificates issued by a certification authority referenced in their properties.
+> Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
 
 ![](assets/en/WebServer/tls2.png)
 
