@@ -17,6 +17,9 @@
       "Admin/licenses": {
         "title": "Gestión de licencias 4D"
       },
+      "Admin/server-admin": {
+        "title": "4D Server Administration Window"
+      },
       "Admin/tls": {
         "title": "Protocolo TLS (HTTPS)"
       },
@@ -919,6 +922,7 @@
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
     "Web Administration|no description given": "Web Administration",
+    "4D Server Administration Window|no description given": "4D Server Administration Window",
     "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
