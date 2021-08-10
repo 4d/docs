@@ -260,11 +260,30 @@ The SMTP connection is automatically closed:
 The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
+The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
 
 In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
 
+#### Returned object
+
+The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
+
+| Propriedad | Tipo     | Descripción                                                                                      |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------ |
+| success    | booleano | True if the send is successful, False otherwise                                                  |
+| status     | number   | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
+| statusText | texto    | Status message returned by the SMTP server                                                       |
+
+In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
+
+In this case, the resulting status object contains the following values:
+
+| Propriedad | Valor                  |
+| ---------- | ---------------------- |
+| success    | False                  |
+| status     | 0                      |
+| statusText | "Failed to send email" |
 
 
 <!-- INCLUDE transporter.sendTimeOut.Desc -->
