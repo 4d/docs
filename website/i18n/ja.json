@@ -689,7 +689,7 @@
         "title": "Forms Page"
       },
       "Preferences/general": {
-        "title": "General Page"
+        "title": "一般ページ"
       },
       "Preferences/methods": {
         "title": "Methods Page"
@@ -851,7 +851,7 @@
         "title": "HTTPリクエストの処理"
       },
       "WebServer/preemptiveWeb": {
-        "title": "Using preemptive web processes"
+        "title": "プリエンプティブWebプロセスの使用"
       },
       "WebServer/sessions": {
         "title": "ユーザーセッション"
