@@ -854,7 +854,7 @@
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "ユーザーセッション"
       },
       "WebServer/templates": {
         "title": "テンプレートページ"
