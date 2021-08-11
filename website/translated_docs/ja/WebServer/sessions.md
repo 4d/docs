@@ -1,9 +1,9 @@
 ---
 id: sessions
-title: User sessions
+title: ユーザーセッション
 ---
 
-The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
+4D Webサーバーは、**ユーザーセッション** を管理するビルトインの機能を提供します。 ユーザーセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。 ユーザーセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
 
 Web server user sessions allow to:
 
