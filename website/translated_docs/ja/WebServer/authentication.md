@@ -3,91 +3,91 @@ id: authentication
 title: 認証
 ---
 
-Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
+Webユーザーに特定のアクセス権を与えるには、ユーザーを認証することが必要です。 認証とは、ユーザーの資格情報 (通常は名前とパスワード) を取得・処理する方法のことです。
 
 
-## Authentication modes
+## 認証モード
 
-The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
+4D Webサーバーでは、3つの認証モードが用意されており、ストラクチャー設定ダイアログボックスの **Web**/**オプション (I)** ページで選択することができます:
 
 ![](assets/en/WebServer/authentication.png)
 
-> Using a **custom** authentication is recommended.
+> **カスタムの認証** を使用することが推奨されています。
 
 ### 概要
 
-The operation of the 4D web server's access system is summarized in the following diagram:
+4D Webサーバーのアクセスシステムの処理を以下に図示します:
 
 ![](assets/en/WebServer/serverAccess.png)
 
-> Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
+> `rest/` で始まるリクエストは、[RESTサーバー](REST/configuration.md) が直接処理します。
 
 
-### Custom (default)
+### カスタムの認証 (デフォルト)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4Dは、[認証を必要とする](#データベースメソッドの呼び出し) HTTPリクエストのみを評価します。
 
-This authentication mode is the most flexible because it allows you to:
+この認証モードは最も柔軟性が高く、以下のことが可能です:
 
-- either, delegate the user authentication to a third-party application (e.g. a social network, SSO);
-- or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). The important thing is that you never store the password in clear, using such code:
+- ユーザー認証をサードパーティ・アプリケーション (例: ソーシャルネットワーク、SSO) に委ねることができます。
+- 顧客データベースにアカウントを作成できるよう、ユーザーにインターフェース (Webフォームなど) を提供することもできます。登録後は、任意のカスタムアルゴリズムでユーザーを認証することができます ("ユーザーセッション" の章の [例題](sessions.md#例題) を参照ください)。 重要なのは、以下のようなコードを使って、決してパスワードを平文で保存しないことです:
 
 ```4d
-//... user account creation
+//... ユーザーアカウントの作成
 ds.webUser.password:=Generate password hash($password)  
 ds.webUser.save()
 ```
 
-See also [this example](gettingStarted.md#authenticating-users) from the "Getting started" chapter.
+"はじめに" の章の [例題](gettingStarted.md#ユーザー認証) も参照ください。
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.
+カスタム認証が提供されていない場合、4D は [`On Web Authentication`](#on-web-authentication) データベースメソッドを呼び出します (あれば)。 $1 と $2 に加えて、ブラウザーとサーバーの IPアドレス ($3 と$ 4) のみが提供され、ユーザー名とパスワード ($5 と $6) は空です。 ユーザー認証が成功した場合、このメソッドは $0 に **True** を返さなければなりません。この場合、リクエストされたリソースが提供されます。認証が失敗した場合には、$0 に **False** を返します。
 
-> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode).
+> **警告:** `On Web Authentication` データベースメソッドが存在しない場合、接続は自動的に受け入れられます (テストモード)。
 
 
 ### BASIC認証
 
-When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
+ユーザーがサーバーに接続するとダイアログボックスがブラウザー上に表示され、ユーザー名とパスワードの入力を求められます。
 
-> The name and password entered by the user are sent unencrypted in the HTTP request header. This mode typically requires HTTPS to provide confidentiality.
+> ユーザーが入力したユーザー名とパスワードは暗号化されずに、HTTPリクエストヘッダーに含められて送信されます。 このモードで機密性を確保するには通常、HTTPSを必要とします。
 
-Entered values are then evaluated:
+入力された値は次のように評価されます:
 
-- If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
-    - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
-    - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
+- **4Dパスワードを含む** オプションがチェックされている場合、ユーザーの認証情報はまず、[内部の 4Dユーザーテーブル](Users/overview.md) に対して評価されます。
+    - ブラウザーから送信されたユーザー名が 4D のユーザーテーブルに存在し、パスワードが正しい場合、接続は受け入れられます。 パスワードが正しくなければ接続は拒否されます。
+    - ユーザー名が 4D のユーザーテーブルに存在しない場合、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
 
-- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
-> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
+- **4Dパスワードを含む** オプションがチェックされていない場合、ユーザーの認証情報は、その他の接続情報 (IPアドレス、ポート、URL など) とともに [`On Web Authentication`](#on-web-authentication) データベースメソッドに受け渡されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
+> 4Dクライアントの Webサーバーでは、すべての 4Dクライアントマシンが同じユーザーテーブルを共有することに留意が必要です。 ユーザー名/パスワードの検証は 4D Serverアプリケーションでおこなわれます。
 
 ### DIGEST認証
 
-This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
+DIGESTモードはより高いセキュリティレベルを提供します。認証情報は復号が困難な一方向ハッシュを使用して処理されます。
 
-As in BASIC mode, users must enter their name and password when they connect. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
-> You must restart the web server in order for the changes made to these parameters to be taken into account.
+BASICモードと同様に、ユーザーは接続時に自分の名前とパスワードを入力する必要があります。 その後、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 DIGESTモードが有効の時、$6引数 (パスワード) は常に空の文字列が渡されます。 実際このモードを使用するとき、この情報はネットワークからクリアテキスト (平文) では渡されません。 この場合、接続リクエストは `WEB Validate digest` コマンドを使用して検証しなければなりません。
+> これらのパラメーターの変更を反映させるためには、Webサーバーを再起動する必要があります。
 
 
 
 ## On Web Authentication
 
-The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a dynamic HTTP request is received.
+`On Web Authentication` データベースメソッドは Webサーバーエンジンへのアクセス管理を担当します。 4D または 4D Server は、動的な HTTPリクエストを受け取ると、このデータベースメソッドを呼び出します。
 
 ### データベースメソッドの呼び出し
 
-The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+`On Web Authentication` データベースメソッドは、リクエストや処理が 4Dコードの実行を必要とするとき (REST呼び出しを除く) に自動で呼び出されます。 また、Webサーバーが無効な静的URLを受信した場合 (要求された静的ページが存在しない場合など) にも呼び出されます。
 
-The `On Web Authentication` database method is therefore called:
+つまり、`On Web Authentication` データベースメソッドは次の場合に呼び出されます:
 
-- when the web server receives a URL requesting a resource that does not exist
-- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
-- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
+- Webサーバーが、存在しないリソースを要求する URL を受信した場合
+- Webサーバーが `4DACTION/`, `4DCGI/` ... で始まる URL を受信した場合
+- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または `WEB SET HOME PAGE` コマンドでホームページが設定されていないとき
+- Webサーバーが、セミダイナミックページ内でコードを実行するタグ (`4DSCRIPT`など) を処理した場合。
 
-The `On Web Authentication` database method is NOT called:
+次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
-- when the web server receives a URL requesting a valid static page.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- Webサーバーが有効な静的ページを要求する URL を受信したとき。
+- Webサーバーが `rest/` で始まる URL を受信し、RESTサーバーが起動したとき (この場合、認証は [`On REST Authentication`データベースメソッド](REST/configuration.md#On-REST-Authentication-データベースメソッドを使用する) または [ストラクチャー設定](REST/configuration.md#ストラクチャー設定を使用する) によって処理されます)。
 
 
 ### シンタックス
@@ -125,14 +125,14 @@ The `On Web Authentication` database method is NOT called:
   -> $RequestAccepted : Boolean
 
 ```
-> All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-mode)の設定により異なります。
 
 
 #### $1 - URL
 
-The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
+最初の引数 (`$1`) は、ユーザーが Webブラウザーのアドレスエリアに入力したURLからホストのアドレスを取り除いたものです。
 
-Let’s take the example of an Intranet connection. 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
+イントラネット接続の場合をみてみましょう。 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
 
 | Webブラウザーに入力された値                      | $1 の値                    |
 | ------------------------------------ | ------------------------ |
