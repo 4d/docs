@@ -56,7 +56,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
 
-### Toolbar
+### Barra de herramientas
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
@@ -81,7 +81,7 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
  - *macOS* - the highlight of the button never appears.
 
 
-### Rounded Bevel
+### Bevel redondeado
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
 
@@ -100,7 +100,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 
 
-### OS X Textured
+### OS X Texturizado
 
 The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
 
@@ -143,7 +143,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
 
-### Custom
+### Personalizado
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 

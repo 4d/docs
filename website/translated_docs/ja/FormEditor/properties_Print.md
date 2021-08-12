@@ -24,7 +24,7 @@ You can modify the following print settings:
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                                                |
+| 名称          | データタイプ | とりうる値                                                                                |
 | ----------- | ------ | ------------------------------------------------------------------------------------ |
 | pageFormat  | object | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
 | paperName   | string | "A4", "US Letter"...                                                                 |

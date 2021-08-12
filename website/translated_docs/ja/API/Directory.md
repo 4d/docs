@@ -434,7 +434,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| 参照                | タイプ       |    | 説明                                |
+| 引数                | タイプ       |    | 説明                                |
 | ----------------- | --------- |:--:| --------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
@@ -490,7 +490,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 **.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
-| 参照   | タイプ     |    | 説明                              |
+| 引数   | タイプ     |    | 説明                              |
 | ---- | ------- | -- | ------------------------------- |
 | path | テキスト    | -> | ファイルのPOSIX相対パス名                 |
 | 戻り値  | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null) |
@@ -530,7 +530,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| 参照      | タイプ    |    | 説明                 |
+| 引数      | タイプ    |    | 説明                 |
 | ------- | ------ | -- | ------------------ |
 | options | 整数     | -> | ファイルリストのオプション      |
 | 戻り値     | コレクション | <- | 子ファイルオブジェクトのコレクション |
@@ -591,7 +591,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| 参照   | タイプ       |    | 説明                                            |
+| 引数   | タイプ       |    | 説明                                            |
 | ---- | --------- | -- | --------------------------------------------- |
 | path | テキスト      | -> | ファイルのPOSIX相対パス名                               |
 | 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null) |
@@ -631,7 +631,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| 参照      | タイプ    |    | 説明                  |
+| 引数      | タイプ    |    | 説明                  |
 | ------- | ------ | -- | ------------------- |
 | options | 整数     | -> | フォルダーリストのオプション      |
 | 戻り値     | コレクション | <- | 子フォルダーオブジェクトのコレクション |
@@ -678,7 +678,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                       |
+| 引数   | タイプ   |    | 説明                       |
 | ---- | ----- | -- | ------------------------ |
 | size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
 | 戻り値  | ピクチャー | <- | アイコン                     |

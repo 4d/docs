@@ -6,8 +6,8 @@ title: プロジェクトのアーキテクチャー
 4D プロジェクトは、一つの親アプリケーションフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
 - MyProject
-    - コンポーネント
-    - データ
+    - Components
+    - Data
         - Logs
         - Settings
     - Documentation
@@ -30,10 +30,10 @@ title: プロジェクトのアーキテクチャー
 
 - *applicationName*.4DProject ファイル
 - Sources
-    + クラス
+    + Classes
     + DatabaseMethods
-    + メソッド
-    + フォーム
+    + Methods
+    + Forms
     + TableForms
     + Triggers
 - DerivedData
@@ -120,8 +120,8 @@ title: プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- メソッド
-- フォーム
+- Methods
+- Forms
 - TableForms
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
@@ -131,7 +131,7 @@ title: プロジェクトのアーキテクチャー
 
 DerivedData フォルダーには、処理を最適化するため 4D が内部的に使用するキャッシュデーターが格納されます。 これらは必要に応じて自動的に生成・再生成されます。 このフォルダーは無視してかまいません。
 
-## Libraries folder
+## Libraries フォルダー
 
 > このフォルダーは macOS でのみ使用されます。
 

@@ -1,6 +1,6 @@
 ---
 id: tls
-title: TLS Protocol (HTTPS)
+title: TLSプロトコル (HTTPS)
 ---
 
 All 4D servers can communicate in secured mode through the TLS (Transport Layer Security) protocol:
@@ -37,7 +37,7 @@ You can control the level of security of your web server by defining the [minimu
 ## How to get a certificate?
 
 A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Wes browsers authorize only the certificates issued by a certification authority referenced in their properties.
+> Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
 
 ![](assets/en/WebServer/tls2.png)
 
@@ -68,7 +68,7 @@ To be able to use the TLS protocol with the server, you must install the **key.p
 - with 4D in local mode or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder)
 - with 4D in remote mode, these files must be located in the client database folder on the remote machine (for more information about the location of this folder, see the `Get 4D folder` command).
 
-You must copy these files manually on the remote machine.
+これらのファイルをリモートマシンに手動でコピーする必要があります。
 > Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
 
 ### Enabling TLS

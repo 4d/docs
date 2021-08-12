@@ -59,7 +59,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| 参照       | タイプ          |    | 説明                                               |
+| 引数       | タイプ          |    | 説明                                               |
 | -------- | ------------ | -- | ------------------------------------------------ |
 | settings | オブジェクト       | -> | キーペアを生成・ロードするための設定                               |
 | result   | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト|<!-- END REF -->
@@ -118,7 +118,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| 参照      | タイプ    |    | 説明                                                |
+| 引数      | タイプ    |    | 説明                                                |
 | ------- | ------ | -- | ------------------------------------------------- |
 | message | テキスト   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
 | options | オブジェクト | -> | デコーディングオプション                                      |
@@ -167,7 +167,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| 参照      | タイプ    |    | 説明                                                  |
+| 引数      | タイプ    |    | 説明                                                  |
 | ------- | ------ | -- | --------------------------------------------------- |
 | message | テキスト   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
 | options | オブジェクト | -> | エンコーディングオプション                                       |
@@ -209,7 +209,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| 参照  | タイプ  |    | 説明         |
+| 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | テキスト | <- | PEM 形式の秘密鍵 |
 <!-- END REF -->
@@ -236,7 +236,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| 参照  | タイプ  |    | 説明         |
+| 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | テキスト | <- | PEM 形式の公開鍵 |
 <!-- END REF -->
@@ -274,7 +274,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details><!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF --><!-- REF #CryptoKey.sign().Params -->| 参照      | タイプ    |    | 説明                                              |
+</details><!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF --><!-- REF #CryptoKey.sign().Params -->| 引数      | タイプ    |    | 説明                                              |
 | ------- | ------ | -- | ----------------------------------------------- |
 | message | テキスト   | -> | 署名をするメッセージ                                      |
 | options | オブジェクト | -> | 署名オプション                                         |
@@ -312,7 +312,7 @@ utf8 形式の *message* 文字列。<!-- END REF --><!-- REF CryptoKey.size -->
 | バージョン  | 内容 |
 | ------ | -- |
 | v18 R4 | 追加 |
-</details><!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF --><!-- REF #CryptoKey.verify().Params -->| 参照        | タイプ    |    | 説明                                                          |
+</details><!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF --><!-- REF #CryptoKey.verify().Params -->| 引数        | タイプ    |    | 説明                                                          |
 | --------- | ------ | -- | ----------------------------------------------------------- |
 | message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                          |
 | signature | テキスト   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |

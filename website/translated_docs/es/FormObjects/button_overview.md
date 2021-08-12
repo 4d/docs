@@ -92,7 +92,7 @@ By default, the Flat style has a white background with a label in the center, ro
 
 Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
 
-### Toolbar
+### Barra de herramientas
 
 The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
 
@@ -152,7 +152,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 
 
-### Rounded Bevel
+### Bevel redondeado
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
@@ -211,7 +211,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 ```
 
 
-### OS X Textured
+### OS X Texturizado
 
 The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
@@ -296,7 +296,7 @@ The Help button style can be used to display a standard system help button. By d
 > The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.
 
 
-### Circle
+### Círculo
 
 The Circle button style appears as a round system button. This button style is designed for macOS.
 
@@ -322,7 +322,7 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 
 
 
-### Custom
+### Personalizado
 
 The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset.
 

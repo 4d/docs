@@ -53,7 +53,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 - Project フォルダー
     + Project
         * Sources
-            - クラス
+            - Classes
                 + Polygon.4dm
 
 ### クラスの削除
@@ -107,7 +107,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 #### cs -> classStore
 
-| 参照         | タイプ    |    | 説明                          |
+| 引数         | タイプ    |    | 説明                          |
 | ---------- | ------ | -- | --------------------------- |
 | classStore | object | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
@@ -125,7 +125,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| 参照         | タイプ    |    | 説明       |
+| 引数         | タイプ    |    | 説明       |
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 
@@ -337,21 +337,21 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。  
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
-
-
+クラスコンストラクター関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例: "MyClass:constructor")。
 
 
 
-#### Example:
+
+
+#### 例題:
 
 
 
 ```4d
-// Class: MyClass
-// Class constructor of MyClass
+// クラス: MyClass
+// MyClass のクラスコンストラクター
 Class Constructor ($name : Text)
     This.name:=$name
 ```
@@ -360,8 +360,8 @@ Class Constructor ($name : Text)
 
 
 ```4d
-// In a project method
-// You can instantiate an object
+// プロジェクトメソッドにて
+// オブジェクトをインスタンス化します
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -377,17 +377,17 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-#### Syntax
+#### シンタックス
 
 
 
 ```4d
-// Class: ChildClass
+// クラス: ChildClass
 Class extends <ParentClass>
 ```
 
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. この子クラスは、親クラスのすべての機能を継承します。
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
 
 クラス継承は次のルールに沿っている必要があります:
 

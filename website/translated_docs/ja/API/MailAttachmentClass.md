@@ -29,7 +29,7 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| 参照          | タイプ               |    | 説明                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
 | blob        | BLOB              | -> | 添付を格納した BLOB                                           |
@@ -45,11 +45,11 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 `MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL_New_attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
-You can pass either a path or a Blob to define the attachment.
+添付を定義するには、パスまたは Blob を引数として渡します。
 
-- If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
+- *path*: システムシンタックスで表現された添付ファイルのパスを **テキスト** 値で渡します。 完全なパス名、または単純なファイル名を渡すことができます (ファイル名のみの場合、4D はプロジェクトファイルと同じディレクトリ内を検索します)。
 
-- If you use a *blob*, pass a **BLOB** value containing the attachment itself.
+- *blob*: 添付そのものを **BLOB** で渡します。
 
 任意の *name* 引数として、添付を指定するためにメールクライアントが使用する名前と拡張子を渡すことができます。 *name* が省略された場合:
 
@@ -166,7 +166,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| 参照          | タイプ               |    | 説明                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | path        | テキスト              | -> | 添付ファイルのパス                                              |
 | blob        | BLOB              | -> | 添付を格納した BLOB                                           |
@@ -213,7 +213,7 @@ $transporter.send($email)
 **.getContent()** : Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 参照  | タイプ  |    | 説明    |
+| 引数  | タイプ  |    | 説明    |
 | --- | ---- |:--:| ----- |
 | 戻り値 | BLOB | <- | 添付の中身 |
 <!-- END REF -->
@@ -221,7 +221,7 @@ $transporter.send($email)
 
 #### 説明
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を BLOB として返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 
 

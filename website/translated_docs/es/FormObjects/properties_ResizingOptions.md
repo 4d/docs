@@ -31,9 +31,9 @@ The fake header and/or footer can be clicked but this does not have any effect o
 If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Tipos de datos | Possible Values         |
+| Nombre       | Tipos de datos | Valores posibles        |
 | ------------ | -------------- | ----------------------- |
 | resizingMode | cadena         | "rightToLeft", "legacy" |
 
@@ -51,16 +51,16 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| Option | JSON value | Resultado                                                                                                              |
-| ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| Option  | JSON value | Resultado                                                                                                              |
+| ------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Grow    | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Move    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
+| Ninguno | "fixed"    | The object remains stationary when the form is resized                                                                 |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name    | Tipos de datos | Possible Values         |
+| Nombre  | Tipos de datos | Valores posibles        |
 | ------- | -------------- | ----------------------- |
 | sizingX | cadena         | "grow", "move", "fixed" |
 
@@ -76,16 +76,16 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| Option | JSON value | Resultado                                                                                                            |
-| ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| Option  | JSON value | Resultado                                                                                                            |
+| ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| Grow    | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
+| Move    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
+| Ninguno | "fixed"    | The object remains stationary when the form is resized                                                               |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name    | Tipos de datos | Possible Values         |
+| Nombre  | Tipos de datos | Valores posibles        |
 | ------- | -------------- | ----------------------- |
 | sizingY | cadena         | "grow", "move", "fixed" |
 
@@ -109,9 +109,9 @@ When this property is not applied to the splitter, the result is as follows:
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Tipos de datos |           Possible Values            |
+| Nombre       | Tipos de datos |           Valores posibles           |
 |:------------ |:--------------:|:------------------------------------:|
 | splitterMode |     cadena     | "move" (pusher), "resize" (standard) |
 
@@ -127,11 +127,11 @@ When this property is not applied to the splitter, the result is as follows:
 
 Designates if the size of the column can be modified by the user.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values |
-|:--------- |:--------------:|:---------------:|
-| resizable |    booleano    | "true", "false" |
+| Nombre    | Tipos de datos | Valores posibles |
+|:--------- |:--------------:|:----------------:|
+| resizable |    booleano    | "true", "false"  |
 
 #### Objects Supported
 

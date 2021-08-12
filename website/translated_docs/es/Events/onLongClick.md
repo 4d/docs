@@ -3,28 +3,28 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Puede ser llamado por                   | Definición                                                                           |
-| ---- | --------------------------------------- | ------------------------------------------------------------------------------------ |
-| 39   | [Botón](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
+| Code | Puede ser llamado por                   | Definición                                                                                   |
+| ---- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 39   | [Botón](FormObjects/button_overview.md) | Se presiona un botón y el botón del ratón permanece presionado durante un tiempo determinado |
 
 
 ## Descripción
 
 This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
 
-This event can be generated for the following button styles:
+Este evento se puede generar para los siguientes estilos de botones:
 
-- [Toolbar](FormObjects/button_overview.md#toolbar)
+- [Barra de herramientas](FormObjects/button_overview.md#toolbar)
 - [Bevel](FormObjects/button_overview.md#bevel)
-- [Rounded Bevel](FormObjects/button_overview.md#rounded-bevel)
+- [Bevel redondeado](FormObjects/button_overview.md#rounded-bevel)
 - [OS X Gradient](FormObjects/button_overview.md#os-x-gradient)
-- [OS X Textured](FormObjects/button_overview.md#os-x-textured)
+- [OS X Texturizado](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
 - [Ayuda](FormObjects/button_overview.md#help)
-- [Circle](FormObjects/button_overview.md#circle)
-- [Custom](FormObjects/button_overview.md#custom)
+- [Círculo](FormObjects/button_overview.md#circle)
+- [Personalizado](FormObjects/button_overview.md#custom)
 
-This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+Este evento se utiliza generalmente para mostrar menús emergentes en caso de presiones prolongadas en los botones. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
 
 ### Ver también
 [`On Alternative Click`](onAlternativeClick.md)
