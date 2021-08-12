@@ -80,6 +80,7 @@
 <tr><td><a href="#idletimeout"><strong>.idleTimeout</strong> : Integer</a><p>    the inactivity session timeout (in minutes), after which the session is automatically closed by 4D</td></tr>
 <tr><td><a href="#isguest"><strong>.isGuest()</strong> : Boolean</a><p>    returns True if the session is a Guest session (i.e. it has no privileges)</td></tr>
 <tr><td><a href="#setprivileges"><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</a><p>    associates the privilege(s) defined in the parameter to the session</td></tr>
+<tr><td><a href="#storage"><strong>.storage</strong> : Object</a><p>    a shared object that can be used to store information available to all requests of the web client</td></tr>
 <tr><td><a href="#username"><strong>.userName</strong> : Text</a><p>    the user name associated to the session</td></tr>
 </tbody>
 </table>
@@ -302,7 +303,7 @@ End if</span>
 </table>
 <p>If the <code>privileges</code> property contains an invalid privilege name, it is ignored.</p>
 <blockquote>
-<p>In the current implementation (v18 R6), only the &quot;WebAdmin&quot; privilege is available.</p>
+<p>In the current implementation, only the &quot;WebAdmin&quot; privilege is available.</p>
 </blockquote>
 <p>By default when no privilege is associated to the session, the session is a <a href="#isguest">Guest session</a>.</p>
 <p>The <a href="#username"><code>userName</code></a> property is available at session object level (read-only).</p>
@@ -335,6 +336,9 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.storage</code> property contains a shared object that can be used to store information available to all requests of the web client.</p>
 <p>When a <code>Session</code> object is created, the <code>.storage</code> property is empty. Since it is a shared object, this property will be available in the <code>Storage</code> object of the server.</p>
+<blockquote>
+<p>Like the <code>Storage</code> object of the server, the <code>.storage</code> property is always &quot;single&quot;: adding a shared object or a shared collection to <code>.storage</code> does not create a shared group.</p>
+</blockquote>
 <p>This property is <strong>read only</strong> itself but it returns a read-write object.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>You want to store the client IP in the <code>.storage</code> property. You can write in the <code>On Web Authentication</code> database method:</p>

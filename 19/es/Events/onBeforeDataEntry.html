@@ -75,10 +75,10 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h2>
-<p>This event is generated just before a cell in the list box is edited (before the entry cursor is displayed). This event allows the developer, for example, to display a different text depending on whether the user is in the display or edit mode.</p>
-<p>When the cursor arrives in the cell, the <code>On Before Data Entry</code> event is generated in the list box or column method.</p>
+<p>Este evento se genera justo antes de que se edite una celda del list box (antes de que se muestre el cursor de entrada). Este evento permite al desarrollador, por ejemplo, mostrar un texto diferente dependiendo de si el usuario está en el modo de visualización o de edición.</p>
+<p>Cuando el cursor llega a la celda, se genera el evento <code>On Before Data Entry</code> en el list box o método de la columna.</p>
 <ul>
-<li>If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after <strong>Tab</strong> or <strong>Shift+Tab</strong> was pressed, the focus goes to either the next cell or the previous one, respectively.</li>
+<li>Si, en el contexto de este evento, $0 se define como -1, la celda se considera como no editable. Si el evento se generó después de presionar <strong>Tab</strong> o <strong>Mayús+Tab</strong>, el foco pasa a la siguiente celda o a la anterior, respectivamente.</li>
 <li>If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.</li>
 </ul>
 <p>See also <a href="/docs/19/es/FormObjects/listboxOverview.html#managing-entry">Managing entry</a> section.</p>

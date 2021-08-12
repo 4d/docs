@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/Concepts/dt_blob.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">BLOB</h1></header><article><div><span><p>Un campo, variable o expresión BLOB (Binary Large OBjects) es una serie contigua de bytes que puede ser tratada como un objeto completo o cuyos bytes pueden ser direccionados individualmente. Un BLOB puede estar vacío (longitud nula) o puede contener hasta 2147483647 bytes (2 GB).</p>
 <blockquote>
-<p>By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.</p>
+<p>Por defecto, 4D define el tamaño máximo de los blob en 2GB, pero este límite de tamaño puede ser menor dependiendo de su sistema operativo y del espacio disponible.</p>
 </blockquote>
 <p>Un BLOB se carga en la memoria en su totalidad. Una variable BLOB se mantiene y existe sólo en la memoria. Un campo BLOB se carga en memoria desde el disco, como el resto del registro al que pertenece.</p>
 <p>Al igual que los otros tipos de campo que pueden retener una gran cantidad de datos (como el tipo de campo Imagen), los campos BLOB no se duplican en la memoria cuando se modifica un registro. Por consiguiente, el resultado devuelto por los comandos <code>Old</code> y <code>Modified</code> no es significativo cuando se aplica a un campo BLOB.</p>
