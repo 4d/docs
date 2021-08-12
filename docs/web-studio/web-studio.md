@@ -7,7 +7,7 @@ title: Web Studio
 
 The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database and methods of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
 
-At this stage, only the WebForm designer, the code editor and the event panel are available.
+At this stage, only the WebForm designer, the code editor and the contextual panel are available.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
@@ -27,7 +27,7 @@ The recommended resolution is 1920x1080.
 
 ### Configuration 
 
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. To access, the web studio, make sure your [web server is up and running](../WebServer/webServerAdmin.md#starting-the-web-server) and you've checked the **Enable access to the web studio** option in **Settings** > **Web** > **Web features**.
+The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. To access, the web studio, make sure your [web server is up and running](../WebServer/webServerAdmin.md#starting-the-4d-web-server) and you've checked the **Enable access to the web studio** option in **Settings** > **Web** > **Web features**.
 
 ### Authentication 
 
