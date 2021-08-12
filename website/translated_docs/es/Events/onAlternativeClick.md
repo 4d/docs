@@ -12,9 +12,9 @@ title: On Alternative Click
 
 ### Botones
 
-Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
+Algunos estilos de botón pueden ser [vinculados a un menú emergente](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) y mostrar un triángulo. Al hacer clic en este triángulo, aparece una ventana emergente de selección que brinda un conjunto de acciones alternativas en relación con la acción del botón principal.
 
-4D allows you to manage this type of button using the `On Alternative Click` event. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
+4D permite gestionar este tipo de botones utilizando el evento `On Alternative Click`. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
 
 - If the pop-up menu is **separated**,the event is only generated when a click occurs on the portion of the button with the arrow.
 - If the pop-up menu is **linked**, the event is generated when a click occurs on any part of the button. Note that the [`On Long Click`](onLongClick.md) event cannot be generated with this type of button.
