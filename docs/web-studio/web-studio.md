@@ -25,17 +25,32 @@ The web studio supports the following web browsers:
 
 The recommended resolution is 1920x1080.
 
-### Configuration 
+## Configuration and Authentication
 
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. To access, the web studio, make sure your [web server is up and running](../WebServer/webServerAdmin.md#starting-the-4d-web-server) and you've checked the **Enable access to the web studio** option in **Settings** > **Web** > **Web features**.
+The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. 
+### Enabling access to the web studio
 
-### Authentication 
+To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio). 
 
-Access to the web studio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the web studio is accessed through the **Design** > **Web Studio...** menu item, automatic authentication is provided. 
+To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+
+### Handling authentication
+
+By default, access to the web server is not granted. You need to enable authentication on the web server first (otherwise opening the web studio throws a 403 error).
+
+To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**.
+
+From there, there are two ways to authenticate:
+
+* using an [access key](../Admin/webAdmin.md#authentication-and-session)
+
+* clicking the **Design** > **Web Studio...** menu item from a 4D standalone application
 
 ## Opening the web studio
 
-The web studio page is automatically available when [the `WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server). 
+The web studio page is available when [the `WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and when authentication is activated. 
+
+> You can run the web server using a 4D standalone application, or in client/server mode using 4D Server.
 
  There are two ways to access the web studio :
 
@@ -56,8 +71,6 @@ The web studio page is automatically available when [the `WebAdmin` web server i
 		localhost:7080/studio
 
 	You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to open a `WebAdmin` session on the server.
-
-> To configure the [HTTPPort](../Admin/webAdmin.md#http-port) and the [HTTPSPort](../Admin/webAdmin.md#https-port), go to **File** > **Web Administration** > **Settings...**. 
 
 ## Interface
 
