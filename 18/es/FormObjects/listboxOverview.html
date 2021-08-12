@@ -253,7 +253,7 @@
 <p>For a list box cell to be enterable, both of the following conditions must be met:</p>
 <ul>
 <li>The cell’s column must have been set as <a href="/docs/18/es/FormObjects/propertiesEntry.html#enterable">Enterable</a> (otherwise, the cells of the column can never be enterable).</li>
-<li>In the <code>On Before Data Entry</code> event, $0 does not return -1. When the cursor arrives in the cell, the <code>On Before Data Entry</code> event is generated in the column method. If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after <strong>Tab</strong> or <strong>Shift+Tab</strong> was pressed, the focus goes to either the next cell or the previous one, respectively. If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.</li>
+<li>In the <code>On Before Data Entry</code> event, $0 does not return -1. When the cursor arrives in the cell, the <code>On Before Data Entry</code> event is generated in the column method. Si, en el contexto de este evento, $0 se define como -1, la celda se considera como no editable. Si el evento se generó después de presionar <strong>Tab</strong> o <strong>Mayús+Tab</strong>, el foco pasa a la siguiente celda o a la anterior, respectivamente. If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.</li>
 </ul>
 <p>Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.</p>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_entry.png" alt=""></p>
