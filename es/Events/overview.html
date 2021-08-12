@@ -76,8 +76,8 @@ End if</span>
 <blockquote>
 <p>Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.</p>
 </blockquote>
-<h2><a class="anchor" aria-hidden="true" id="event-object"></a><a href="#event-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event object</h2>
-<p>Each event is returned as an object by the <code>FORM Event</code> command. By default, it contains the following properties:</p>
+<h2><a class="anchor" aria-hidden="true" id="objeto-evento"></a><a href="#objeto-evento" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto evento</h2>
+<p>Each event is returned as an object by the <code>FORM Event</code> command. Por defecto, contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propriedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -90,92 +90,92 @@ End if</span>
 <p><code>Form event code</code> command| |description|text|Name of the form event (e.g. &quot;On After Edit&quot;)|</p>
 <p>Additional properties are returned when the event occurs on specific objects. En particular:</p>
 <ul>
-<li><a href="/docs/es/FormObjects/listboxOverview.html#supported-form-events">list boxes</a> and <a href="/docs/es/FormObjects/listboxOverview.html#supported-form-events-1">list box columns</a> return <a href="/docs/es/FormObjects/listboxOverview.html#additional-properties">additional properties</a> such as <code>columnName</code> or <code>isRowSelected</code>.</li>
-<li><a href="/docs/es/FormObjects/viewProAreaOverview.html">4D View Pro areas</a> return for example <code>sheetName</code> or <code>action</code> properties in the <a href="/docs/es/Events/onAfterEdit.html">On After Edit</a> event object.</li>
+<li>Los <a href="/docs/es/FormObjects/listboxOverview.html#supported-form-events">list box</a> y las <a href="/docs/es/FormObjects/listboxOverview.html#supported-form-events-1">columnas de list box</a> devuelven las <a href="/docs/es/FormObjects/listboxOverview.html#additional-properties">propiedades adicionales</a> tales como <code>columnName</code> o <code>isRowSelected</code>.</li>
+<li>Las <a href="/docs/es/FormObjects/viewProAreaOverview.html">áreas de View Pro</a> devuelven por ejemplo las propiedades <code>sheetName</code> o <code>action</code> en el objeto evento <a href="/docs/es/Events/onAfterEdit.html">On After Edit</a>.</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="events-and-methods"></a><a href="#events-and-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events and Methods</h2>
-<p>When a form event occurs, 4D performs the following actions:</p>
+<h2><a class="anchor" aria-hidden="true" id="eventos-y-métodos"></a><a href="#eventos-y-métodos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eventos y métodos</h2>
+<p>Cuando se produce un evento formulario, 4D realiza las siguientes acciones:</p>
 <ul>
-<li>First, it browses the objects of the form and calls the object method for any object (involved in the event) whose corresponding object event property has been selected.</li>
-<li>Second, it calls the form method if the corresponding form event property has been selected.</li>
+<li>En primer lugar, explora los objetos del formulario y llama al método objeto para todo objeto (asociado al evento) cuya propiedad de evento de objeto correspondiente haya sido seleccionada.</li>
+<li>Luego, llama al método formulario si la propiedad del evento formulario correspondiente ha sido seleccionada.</li>
 </ul>
-<p>Do not assume that the object methods, if any, will be called in a particular order. The rule of thumb is that the object methods are always called before the form method. If an object is a subform, the object methods of the subform’s list form are called, then the form method of the list form is called. 4D then continues to call the object methods of the parent form. In other words, when an object is a subform, 4D uses the same rule of thumb for the object and form methods within the subform object.</p>
-<p>Except for the <a href="/docs/es/Events/onLoad.html">On Load</a> and <a href="/docs/es/Events/onUnload.html">On Unload</a> events (see below), if the form event property is not selected for a given event, this does not prevent calls to object methods for the objects whose same event property is selected. In other words, enabling or disabling an event at the form level has no effect on the object event properties.</p>
-<p>The number of objects involved in an event depends on the nature of the event.</p>
-<h2><a class="anchor" aria-hidden="true" id="call-table"></a><a href="#call-table" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Call Table</h2>
-<p>The following table summarizes how object and form methods are called for each event type:</p>
+<p>No asuma que los métodos objeto, si los hay, serán llamados en un orden particular. La regla general es que los métodos objeto siempre se llaman antes que el método formulario. Si un objeto es un subformulario, se llaman los métodos objeto del formulario lista del subformulario, y luego se llama al método formulario del formulario listado. 4D continúa llamando a los métodos objeto del formulario padre. En otras palabras, cuando un objeto es un subformulario, 4D utiliza la misma regla general para los métodos objeto y formulario dentro del objeto subformulario.</p>
+<p>Excepto en los eventos <a href="/docs/es/Events/onLoad.html">En carga</a> y <a href="/docs/es/Events/onUnload.html">En descarga</a> (ver más abajo), si la propiedad del evento formulario no está seleccionada para un evento determinado, esto no impide las llamadas a los métodos objetos cuya misma propiedad de evento está seleccionada. En otras palabras, la activación o desactivación de un evento a nivel de formulario no tiene ningún efecto sobre las propiedades del evento del objeto.</p>
+<p>El número de objetos asociados a un evento depende de la naturaleza del mismo.</p>
+<h2><a class="anchor" aria-hidden="true" id="tabla-de-llamadas"></a><a href="#tabla-de-llamadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tabla de llamadas</h2>
+<p>La tabla siguiente resume la forma en que se llaman los métodos objeto y formulario para cada tipo de evento:</p>
 <table>
 <thead>
-<tr><th>Event</th><th>Object Methods</th><th>Form Method</th><th>Which Objects</th></tr>
+<tr><th>Evento</th><th>Método objeto</th><th>Método formulario</th><th>Objetos</th></tr>
 </thead>
 <tbody>
-<tr><td>On Load</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Unload</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Validate</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Clicked</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Double Clicked</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Before Keystroke</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On After Keystroke</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On After Edit</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Getting Focus</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Losing Focus</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Activate</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Deactivate</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Outside Call</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Page Change</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Begin Drag Over</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Drop</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Drag Over</td><td>Sí</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Mouse Enter</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Mouse Move</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Mouse Leave</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Mouse Up</td><td>Sí</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Menu Selected</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Bound variable change</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Data Change</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Plug in Area</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Header</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Printing Detail</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Printing Break</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Printing Footer</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Close Box</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Display Detail</td><td>Sí</td><td>Sí</td><td>All objects</td></tr>
-<tr><td>On Open Detail</td><td>Yes (List box)</td><td>Sí</td><td>None except List boxes</td></tr>
-<tr><td>On Close Detail</td><td>Yes (List box)</td><td>Sí</td><td>None except List boxes</td></tr>
-<tr><td>On Resize</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Selection Change</td><td>Sí</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Load Record</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Timer</td><td>Never</td><td>Sí</td><td>None</td></tr>
-<tr><td>On Scroll</td><td>Sí</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Before Data Entry</td><td>Yes (List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Column Moved</td><td>Yes (List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Row Moved</td><td>Yes (List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Column Resize</td><td>Yes (List box and 4D View Pro Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Header Click</td><td>Yes (List box and 4D View Pro Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Footer Click</td><td>Yes (List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On After Sort</td><td>Yes (List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Long Click</td><td>Yes (Button)</td><td>Sí</td><td>Involved object only</td></tr>
-<tr><td>On Alternative Click</td><td>Yes (Button and List box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Expand</td><td>Yes (Hier. list and list box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Collapse</td><td>Yes (Hier. list and list box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Delete Action</td><td>Yes (Hier. list and list box)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On URL Resource Loading</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Begin URL Loading</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On URL Loading Error</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On URL Filtering</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On End URL Loading</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Open External Link</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Window Opening Denied</td><td>Yes (Web Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On VP Range Changed</td><td>Yes (4D View Pro Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On VP Ready</td><td>Yes (4D View Pro Area)</td><td>Never</td><td>Involved object only</td></tr>
-<tr><td>On Row Resize</td><td>Yes (4D View Pro Area)</td><td>Never</td><td>Involved object only</td></tr>
+<tr><td>On Load</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Unload</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Validate</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Clicked</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Double Clicked</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Before Keystroke</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On After Keystroke</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On After Edit</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Getting Focus</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Losing Focus</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Activate</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Deactivate</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Outside Call</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Page Change</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Begin Drag Over</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Drop</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Drag Over</td><td>Sí</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Mouse Enter</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Mouse Move</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Mouse Leave</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Mouse Up</td><td>Sí</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Menu Selected</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Bound variable change</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Data Change</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Plug in Area</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Header</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Printing Detail</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Printing Break</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Printing Footer</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Close Box</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Display Detail</td><td>Sí</td><td>Sí</td><td>Todos los objetos</td></tr>
+<tr><td>On Open Detail</td><td>Sí (List box)</td><td>Sí</td><td>Ninguna, excepto los list box</td></tr>
+<tr><td>On Close Detail</td><td>Sí (List box)</td><td>Sí</td><td>Ninguna, excepto los list box</td></tr>
+<tr><td>On Resize</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Selection Change</td><td>Sí</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Load Record</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Timer</td><td>Nunca</td><td>Sí</td><td>Ninguno</td></tr>
+<tr><td>On Scroll</td><td>Sí</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Before Data Entry</td><td>Sí (List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Column Moved</td><td>Sí (List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Row Moved</td><td>Sí (List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Column Resize</td><td>Sí (List box y Área 4D View Pro)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Header Click</td><td>Sí (List box y Área 4D View Pro)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Footer Click</td><td>Sí (List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On After Sort</td><td>Sí (List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Long Click</td><td>Sí (botón)</td><td>Sí</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Alternative Click</td><td>Sí (Botón y List box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Expand</td><td>Sí (Lista jerarq. y list box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Collapse</td><td>Sí (Lista jerarq. y list box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Delete Action</td><td>Sí (Lista jerarq. y list box)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On URL Resource Loading</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Begin URL Loading</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On URL Loading Error</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On URL Filtering</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On End URL Loading</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Open External Link</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Window Opening Denied</td><td>Sí (Área Web)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On VP Range Changed</td><td>Sí (Área 4D View Pro)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On VP Ready</td><td>Sí (Área 4D View Pro)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
+<tr><td>On Row Resize</td><td>Sí (Área 4D View Pro)</td><td>Nunca</td><td>Objetos involucrados únicamente</td></tr>
 </tbody>
 </table>
-<p>Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.</p>
+<p>Tenga siempre en cuenta que, para todo evento, se llama al método de un formulario o de un objeto si se selecciona la correspondiente propiedad del evento para el formulario o los objetos. La ventaja de desactivar los eventos en el entorno de diseño (utilizando la lista de propiedades del editor de formularios) es que puede reducir el número de llamadas a los métodos y, por tanto, optimizar significativamente la velocidad de ejecución de sus formularios.</p>
 <blockquote>
-<p>WARNING: The <a href="onLoad">On Load</a> and <a href="onUnloas">On Unload</a> events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.</p>
+<p>ATENCIÓN: los eventos <a href="onLoad">On Load</a> y <a href="onUnloas">On Unload</a> se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.</p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/FormObjects/propertiesWebArea.html"><span class="arrow-prev">← </span><span>Área Web</span></a><a class="docs-next button" href="/docs/es/Events/onActivate.html"><span>On Activate</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#event-object">Event object</a></li><li><a href="#events-and-methods">Events and Methods</a></li><li><a href="#call-table">Call Table</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/FormObjects/propertiesWebArea.html"><span class="arrow-prev">← </span><span>Área Web</span></a><a class="docs-next button" href="/docs/es/Events/onActivate.html"><span>On Activate</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#objeto-evento">Objeto evento</a></li><li><a href="#eventos-y-métodos">Eventos y métodos</a></li><li><a href="#tabla-de-llamadas">Tabla de llamadas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

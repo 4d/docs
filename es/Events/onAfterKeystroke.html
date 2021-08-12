@@ -86,22 +86,22 @@
 <p></details></p>
 <h2><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h2>
 <blockquote>
-<p>The <code>On After Keystroke</code> event can generally be replaced by the <a href="/docs/es/Events/onAfterEdit.html"><code>On After Edit</code></a> event (see below).</p>
+<p>El evento <code>On After Keystroke</code> generalmente puede ser reemplazado por el evento <a href="/docs/es/Events/onAfterEdit.html"><code>On After Edit</code></a> (ver abajo).</p>
 </blockquote>
-<p>After the <a href="/docs/es/Events/onBeforeKeystroke.html"><code>On Before Keystroke</code></a> and <code>On After Keystroke</code> event properties are selected for an object, you can detect and handle the keystrokes within the object, using the <code>FORM event</code> command that will return <code>On Before Keystroke</code> and then <code>On After Keystroke</code> (for more information, please refer to the description of the <code>Get edited text</code> command).</p>
+<p>Después de que las propiedades de evento [<code>On Before Keystroke</code>](onBeforeKeystroke. md) y <code>On After Keystroke</code> estén seleccionadas para un objeto, puede detectar y manejar las presiones de las teclas dentro del objeto, utilizando el comando <code>FORM event</code> que devolverá <code>On Before Keystroke</code> y luego <code>On After Keystroke</code> (para más información, consulte la descripción del comando <code>Get edited text</code>).</p>
 <blockquote>
-<p>These events are also activated by language commands that simulate a user action like <code>POST KEY</code>.</p>
+<p>Estos eventos también son activados por comandos del lenguaje que simulan una acción del usuario como <code>POST KEY</code>.</p>
 </blockquote>
-<p>The <code>On After Keystroke</code> event is not generated:</p>
+<p>El evento <code>On After Keystroke</code> no se genera:</p>
 <ul>
-<li>in <a href="/docs/es/FormObjects/listboxOverview.html#list-box-columns">list box columns</a> method except when a cell is being edited (however it is generated in any cases in the <a href="/docs/es/FormObjects/listboxOverview.html">list box</a> method),</li>
-<li>when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use <a href="/docs/es/Events/onAfterEdit.html"><code>On After Edit</code></a>.</li>
+<li>en el método <a href="/docs/es/FormObjects/listboxOverview.html#list-box-columns">de las columnas de list box</a> excepto cuando se está editando una celda (sin embargo se genera en cualquier caso en el método de <a href="/docs/es/FormObjects/listboxOverview.html">list box</a>),</li>
+<li>cuando las modificaciones usuario no se realizan con el teclado (pegar, arrastrar y soltar, casilla de verificación, lista desplegable, combo box). Para procesar estos eventos, debe utilizar <a href="/docs/es/Events/onAfterEdit.html"><code>On After Edit</code></a>.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="secuencia-de-tecla"></a><a href="#secuencia-de-tecla" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Secuencia de tecla</h3>
-<p>When an entry requires a sequence of keystrokes, the <a href="/docs/es/Events/onBeforeKeystroke.html"><code>On Before Keystroke</code></a> and [<code>On After Keystroke event</code>] events are generated only when the entry is fully validaded by the user. The <code>Keystroke</code> command returns the validated character. This case mainly occurs:</p>
+<p>Cuando una entrada requiere una secuencia de presiones de teclas, los eventos <a href="/docs/es/Events/onBeforeKeystroke.html"><code>On Before Keystroke</code></a> y [<code>On After Keystroke</code>] se generan sólo cuando el usuario valida completamente la entrada. El comando <code>Keystroke</code> devuelve el carácter validado. Este caso se da principalmente:</p>
 <ul>
-<li>when using &quot;dead&quot; keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. &quot;ê&quot; or ñ),</li>
-<li>when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.</li>
+<li>cuando se utilizan las teclas &quot;muertas&quot; como ^ o ~: los eventos se generan sólo cuando se introduce el carácter extendido eventualmente (por ejemplo, &quot;ê&quot; o ñ),</li>
+<li>cuando un IME (editor de métodos de entrada) muestra una caja de diálogo intermedia en la que el usuario puede introducir una combinación de caracteres: los eventos se generan sólo cuando el diálogo IME se valida.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="ver-también"></a><a href="#ver-también" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también</h3>
 <p><a href="/docs/es/Events/onBeforeKeystroke.html">On Before Keystroke</a>.</p>

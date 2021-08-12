@@ -83,10 +83,10 @@
 <ol>
 <li>In a <code>formMacros.json</code> file within the <code>Sources</code> folder of your project, you write:</li>
 </ol>
-<pre><code class="hljs">{
-   <span class="hljs-attr">"macros"</span>: {
-      <span class="hljs-attr">"Add Hello World button"</span>: {
-       <span class="hljs-attr">"class"</span>: <span class="hljs-string">"AddButton"</span>
+<pre><code class="hljs css language-js">{
+   <span class="hljs-string">"macros"</span>: {
+      <span class="hljs-string">"Add Hello World button"</span>: {
+       <span class="hljs-string">"class"</span>: <span class="hljs-string">"AddButton"</span>
      }
    }
 }
@@ -95,30 +95,30 @@
 <li><p>Create a 4D class named <code>AddButton</code>.</p></li>
 <li><p>Within the <code>AddButton</code> class, write the following function:</p></li>
 </ol>
-<pre><code class="hljs css language-code4d">Function onInvoke($editor : Object)-&gt;$result : Object
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> onInvoke</span>(<span class="hljs-variable">$editor </span>: Object)-&gt;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
 
-    var $btnHello : Object
+    var</span> <span class="hljs-variable">$btnHello </span>: Object
 
     <span class="hljs-comment">// Create a "Hello" button</span>
-    $btnHello:=New object(<span class="hljs-string">"type"</span>; <span class="hljs-string">"button"</span>; \
+    <span class="hljs-variable">$btnHello</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>; <span class="hljs-string">"button"</span>; \
     <span class="hljs-string">"text"</span>; <span class="hljs-string">"Hello World!"</span>; \
-    <span class="hljs-string">"method"</span>; New object(<span class="hljs-string">"source"</span>; <span class="hljs-string">"ALERT(\"Hello World!\")"</span>); \
-    <span class="hljs-string">"events"</span>; New collection(<span class="hljs-string">"onClick"</span>); \
+    <span class="hljs-string">"method"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"source"</span>; <span class="hljs-string">"ALERT(\"Hello World!\")"</span>); \
+    <span class="hljs-string">"events"</span>;<span class="hljs-function"> New collection</span>(<span class="hljs-string">"onClick"</span>); \
     <span class="hljs-string">"width"</span>; <span class="hljs-number">120</span>; \
     <span class="hljs-string">"height"</span>; <span class="hljs-number">20</span>; \
     <span class="hljs-string">"top"</span>; <span class="hljs-number">0</span>; \
     <span class="hljs-string">"left"</span>; <span class="hljs-number">0</span>)  
 
     <span class="hljs-comment">// Add button in the current page</span>
-    $editor.<span class="hljs-keyword">editor</span>.currentPage.objects.btnHello:=$btnHello  
+    <span class="hljs-variable">$editor</span>.editor.currentPage.objects.btnHello:=<span class="hljs-variable">$btnHello  </span>
 
     <span class="hljs-comment">// Select the new button in the form editor</span>
-    $editor.<span class="hljs-keyword">editor</span>.currentSelection.<span class="hljs-keyword">clear</span>() <span class="hljs-comment">//unselect elements</span>
-    $editor.<span class="hljs-keyword">editor</span>.currentSelection.push(<span class="hljs-string">"btnHello"</span>)    
+    <span class="hljs-variable">$editor</span>.editor.currentSelection.<span class="hljs-function">clear</span>() <span class="hljs-comment">//unselect elements</span>
+    <span class="hljs-variable">$editor</span>.editor.currentSelection.<span class="hljs-function">push</span>(<span class="hljs-string">"btnHello"</span>)    
 
     <span class="hljs-comment">// Notify the modification to the 4D Form editor</span>
-    $result:=New object(<span class="hljs-string">"currentSelection"</span>; $editor.<span class="hljs-keyword">editor</span>.currentSelection;\  
-        <span class="hljs-string">"currentPage"</span>; $editor.<span class="hljs-keyword">editor</span>.currentPage)
+    <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"currentSelection"</span>; <span class="hljs-variable">$editor</span>.editor.currentSelection;\  
+        <span class="hljs-string">"currentPage"</span>; <span class="hljs-variable">$editor</span>.editor.currentPage)
 </code></pre>
 <p>You can then call the macro: <img src="/docs/assets/en/FormEditor/macroex1.png" alt=""> <img src="/docs/assets/en/FormEditor/macroex2.png" alt=""></p>
 <h2><a class="anchor" aria-hidden="true" id="calling-macros-in-the-form-editor"></a><a href="#calling-macros-in-the-form-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calling macros in the Form editor</h2>
@@ -179,7 +179,7 @@
 <h2><a class="anchor" aria-hidden="true" id="macro-functions"></a><a href="#macro-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Macro Functions</h2>
 <p>Every macro class can contain a <code>Class constructor</code> and two functions: <code>onInvoke()</code> and <code>onError()</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="class-constructor"></a><a href="#class-constructor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class constructor</h3>
-<h4><a class="anchor" aria-hidden="true" id="class-constructormacro--object"></a><a href="#class-constructormacro--object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class constructor($macro : object)</h4>
+<h4><a class="anchor" aria-hidden="true" id="class-constructormacro--object"></a><a href="#class-constructormacro--object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class constructor($macro : Object)</h4>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Tipo</th><th>Descripción</th></tr>
@@ -203,40 +203,40 @@
 }
 </code></pre>
 <p>You can write:</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-comment">// Class "AlignOnTarget"</span>
-Class constructor(<span class="hljs-variable">$macro</span> : Object)
-    This<span class="hljs-selector-class">.myParameter</span>:=<span class="hljs-variable">$macro</span><span class="hljs-selector-class">.myParam</span> <span class="hljs-comment">//left</span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Class "AlignOnTarget"</span><span class="hljs-keyword">
+Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
+    <span class="hljs-literal">This</span>.myParameter:=<span class="hljs-variable">$macro</span>.myParam <span class="hljs-comment">//left</span>
     ...
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="oninvoke"></a><a href="#oninvoke" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onInvoke()</h3>
-<h4><a class="anchor" aria-hidden="true" id="oninvokeeditor--object---result--object"></a><a href="#oninvokeeditor--object---result--object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onInvoke($editor : object) -&gt; $result : object</h4>
+<h4><a class="anchor" aria-hidden="true" id="oninvokeeditor--object---result--object"></a><a href="#oninvokeeditor--object---result--object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onInvoke($editor : Object) -&gt; $result : Object</h4>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>$editor</td><td>Objeto</td><td>Form properties</td></tr>
-<tr><td>$result</td><td>Objeto</td><td>Form properties modified by the macro (optional)</td></tr>
+<tr><td>$editor</td><td>Objeto</td><td>Form Editor Macro Proxy object containing the form properties</td></tr>
+<tr><td>$result</td><td>Objeto</td><td>Form Editor Macro Proxy object returning properties modified by the macro (optional)</td></tr>
 </tbody>
 </table>
 <p>The <code>onInvoke</code> function is automatically executed each time the macro is called.</p>
-<p>When the function is called, it receives in the <code>$editor</code> parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties.</p>
+<p>When the function is called, it receives in the <code>$editor.editor</code> property a copy of all the elements of the form with their current values. You can then execute any operation on these properties.</p>
 <p>Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in <code>$result</code>. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.</p>
-<p>Here are the properties of the <code>$editor</code> object:</p>
+<p>Here are the properties returned in the <em>$editor</em> parameter:</p>
 <table>
 <thead>
 <tr><th>Propriedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>$editor.form</td><td>Objeto</td><td>The entire form</td></tr>
-<tr><td>$editor.file</td><td>File</td><td>File object of the form file</td></tr>
-<tr><td>$editor.name</td><td>Cadena</td><td>Name of the form</td></tr>
-<tr><td>$editor.table</td><td>number</td><td>Table number of the form, 0 for project form</td></tr>
-<tr><td>$editor.currentPageNumber</td><td>number</td><td>The number of the current page</td></tr>
-<tr><td>$editor.currentPage</td><td>Objeto</td><td>The current page, containing all the form objects and the entry order of the page</td></tr>
-<tr><td>$editor.currentSelection</td><td>Colección</td><td>Collection of names of selected objects</td></tr>
-<tr><td>$editor.formProperties</td><td>Objeto</td><td>Properties of the current form</td></tr>
-<tr><td>$editor.target</td><td>cadena</td><td>Name of the object under the mouse when clicked on a macro</td></tr>
+<tr><td>$editor.editor.form</td><td>Objeto</td><td>The entire form</td></tr>
+<tr><td>$editor.editor.file</td><td>File</td><td>File object of the form file</td></tr>
+<tr><td>$editor.editor.name</td><td>Cadena</td><td>Name of the form</td></tr>
+<tr><td>$editor.editor.table</td><td>number</td><td>Table number of the form, 0 for project form</td></tr>
+<tr><td>$editor.editor.currentPageNumber</td><td>number</td><td>The number of the current page</td></tr>
+<tr><td>$editor.editor.currentPage</td><td>Objeto</td><td>The current page, containing all the form objects and the entry order of the page</td></tr>
+<tr><td>$editor.editor.currentSelection</td><td>Colección</td><td>Collection of names of selected objects</td></tr>
+<tr><td>$editor.editor.formProperties</td><td>Objeto</td><td>Properties of the current form</td></tr>
+<tr><td>$editor.editor.target</td><td>cadena</td><td>Name of the object under the mouse when clicked on a macro</td></tr>
 </tbody>
 </table>
 <p>Here are the properties that you can pass in the <code>$result</code> object if you want the macro processor to execute a modification. All properties are optional:</p>
@@ -253,6 +253,11 @@ Class constructor(<span class="hljs-variable">$macro</span> : Object)
 <tr><td>editor.activeView</td><td>Cadena</td><td>Active view name</td></tr>
 </tbody>
 </table>
+<p>For example, if objects of the current page and groups have been modified, you can write:</p>
+<pre><code class="hljs css language-4d">    <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"currentPage"</span>; <span class="hljs-variable">$editor</span>.editor.currentPage ; \ 
+            <span class="hljs-string">"editor"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"groups"</span>; <span class="hljs-variable">$editor</span>.editor.form.editor.groups))
+
+</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="method-attribute"></a><a href="#method-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>method</code> attribute</h4>
 <p>When handling the <code>method</code> attribute of form objects, you can define the attribute value in two ways in macros:</p>
 <ul>
@@ -278,7 +283,7 @@ Class constructor(<span class="hljs-variable">$macro</span> : Object)
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to define a macro function that will apply the red color and italic font style to any selected object(s).</p>
-<pre><code class="hljs css language-code4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> onInvoke</span>(<span class="hljs-variable">$editor </span>: Object)-&gt;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> onInvoke</span>(<span class="hljs-variable">$editor </span>: Object)-&gt;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$name </span>: Text<span class="hljs-keyword">
 
     If</span> (<span class="hljs-variable">$editor</span>.editor.currentSelection.length&gt;<span class="hljs-number">0</span>)       
@@ -297,7 +302,7 @@ Class constructor(<span class="hljs-variable">$macro</span> : Object)
     <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"currentPage"</span>; <span class="hljs-variable">$editor</span>.editor.currentPage)
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="onerror"></a><a href="#onerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onError()</h3>
-<h4><a class="anchor" aria-hidden="true" id="onerroreditor--object-resultmacro--object--error--collection"></a><a href="#onerroreditor--object-resultmacro--object--error--collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onError($editor : object; $resultMacro : Object ; $error : Collection)</h4>
+<h4><a class="anchor" aria-hidden="true" id="onerroreditor--object-resultmacro--object--error--collection"></a><a href="#onerroreditor--object-resultmacro--object--error--collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onError($editor : Object; $resultMacro : Object ; $error : Collection)</h4>
 <table>
 <thead>
 <tr><th>Parameter</th><th></th><th>Tipo</th><th>Descripción</th></tr>
