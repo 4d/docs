@@ -190,7 +190,7 @@ Example with states unchecked / checked / highlighted:
 
 
 
-### Rounded Bevel
+### Bevel redondeado
 
 El estilo de casilla de selección Bevel redondeado es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas. Al igual que el estilo Bevel, el estilo Bevel redondeado combina la apariencia del estilo [Clásico](#regular) con el comportamiento del estilo [Barra de herramientas](#toolbar).
 
@@ -251,7 +251,7 @@ El estilo Gradient OS X tiene un fondo gris claro con un título y se muestra co
 
 
 
-### OS X Textured
+### OS X Texturizado
 
 El estilo de casilla de selección OS X Textured es similar al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia diferente. Al igual que el estilo Bevel, el estilo OS X Textured combina la apariencia del estilo [Clásico](#regular) con el comportamiento del estilo [Barra de herramientas](#toolbar).
 
@@ -372,7 +372,7 @@ En macOS y Windows, una casilla de selección con el estilo "Disclosure" aparece
 ```
 
 
-### Custom
+### Personalizado
 
 El estilo de casilla de selección personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
 

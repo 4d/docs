@@ -138,7 +138,7 @@ La carpeta Resources contiene todos los archivos y carpetas de recursos personal
 
 | Contents              | Descripción                                                                                                                                           | Format  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Database resource files and folders                                                                                                                   | various |
+| *item*                | Archivos y carpetas de recursos de la base                                                                                                            | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | imagen  |
 
 (*) only if the project was exported from a .4db binary database.

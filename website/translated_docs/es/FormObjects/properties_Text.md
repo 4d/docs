@@ -9,9 +9,9 @@ title: Texto
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Propriedad           | Tipos de datos | Possible Values       |
+| Propriedad           | Tipos de datos | Valores posibles      |
 | -------------------- | -------------- | --------------------- |
 | allowFontColorPicker | booleano       | false (default), true |
 
@@ -27,9 +27,9 @@ Sets the selected text to appear darker and heavier.
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br> **This is bold text.**
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Propriedad | Tipos de datos | Possible Values  |
+| Propriedad | Tipos de datos | Valores posibles |
 | ---------- | -------------- | ---------------- |
 | fontWeight | texto          | "normal", "bold" |
 
@@ -46,9 +46,9 @@ Sets the selected text to slant slightly to the right.
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br> *This is text in italics.*
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values    |
+| Nombre    | Tipos de datos | Valores posibles   |
 | --------- | -------------- | ------------------ |
 | fontStyle | cadena         | "normal", "italic" |
 
@@ -64,9 +64,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 Sets the text to have a line running beneath it.
 > This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Tipos de datos | Possible Values       |
+| Nombre         | Tipos de datos | Valores posibles      |
 | -------------- | -------------- | --------------------- |
 | textDecoration | cadena         | "normal", "underline" |
 
@@ -106,9 +106,9 @@ Three font themes are available:
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values                |
+| Nombre    | Tipos de datos | Valores posibles               |
 | --------- | -------------- | ------------------------------ |
 | fontTheme | cadena         | "normal", "main", "additional" |
 
@@ -130,9 +130,9 @@ There are two types of font family names:
 You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
 > <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values      |
+| Nombre     | Tipos de datos | Valores posibles     |
 | ---------- | -------------- | -------------------- |
 | fontFamily | cadena         | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
@@ -150,9 +150,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 Allows defining the object's font size in points.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name     | Tipos de datos | Possible Values                       |
+| Nombre   | Tipos de datos | Valores posibles                      |
 | -------- | -------------- | ------------------------------------- |
 | fontSize | integer        | Font size in points. Minimum value: 0 |
 
@@ -177,9 +177,9 @@ The color can be specified by:
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name   | Tipos de datos | Possible Values                           |
+| Nombre | Tipos de datos | Valores posibles                          |
 | ------ | -------------- | ----------------------------------------- |
 | stroke | cadena         | any css value, "transparent", "automatic" |
 
@@ -209,9 +209,9 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;
 Foreground color;Dark shadow color)
 ```
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name            | Tipos de datos | Possible Values       |
+| Nombre          | Tipos de datos | Valores posibles      |
 | --------------- | -------------- | --------------------- |
 | rowStrokeSource | cadena         | Font color expression |
 
@@ -238,9 +238,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Tipos de datos | Possible Values                                 |
+| Nombre         | Tipos de datos | Valores posibles                                |
 | -------------- | -------------- | ----------------------------------------------- |
 | rowStyleSource | cadena         | Style expression to evaluate for each row/cell. |
 
@@ -258,9 +258,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 Horizontal location of text within the area that contains it.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Tipos de datos | Possible Values                                   |
+| Nombre    | Tipos de datos | Valores posibles                                  |
 | --------- | -------------- | ------------------------------------------------- |
 | textAlign | cadena         | "automatic", "right", "center", "justify", "left" |
 
@@ -281,9 +281,9 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Tipos de datos | Possible Values                        |
+| Nombre        | Tipos de datos | Valores posibles                       |
 | ------------- | -------------- | -------------------------------------- |
 | verticalAlign | cadena         | "automatic", "top", "middle", "bottom" |
 
@@ -360,9 +360,9 @@ Entonces, el método *Color* contendría:
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values                                  |
+| Nombre     | Tipos de datos | Valores posibles                                 |
 | ---------- | -------------- | ------------------------------------------------ |
 | metaSource | cadena         | Object expression to evaluate for each row/cell. |
 
@@ -389,13 +389,13 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -403,7 +403,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -506,13 +506,13 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -520,7 +520,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -569,13 +569,13 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </p>
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -583,7 +583,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -633,13 +633,13 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -647,7 +647,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   
@@ -708,13 +708,13 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </code></pre>
 
 <h4 spaces-before="0">
-  JSON Grammar
+  Gramática JSON
 </h4>
 
 <table spaces-before="0">
   <tr>
     <th>
-      Name
+      Nombre
     </th>
     
     <th>
@@ -722,7 +722,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </th>
     
     <th>
-      Possible Values
+      Valores posibles
     </th>
   </tr>
   

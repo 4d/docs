@@ -11,11 +11,11 @@ title: Objetos
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                                          |
-| ---- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | cadena         | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| Nombre | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                         |
+| ------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type   | cadena         | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
 #### Objects Supported
@@ -35,11 +35,11 @@ When using 4D’s language, you can refer to an active form object by its object
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name | Tipos de datos | Possible Values                                                      |
-| ---- | -------------- | -------------------------------------------------------------------- |
-| name | cadena         | Any allowed name which does not belong to an already existing object |
+| Nombre | Tipos de datos | Valores posibles                                                     |
+| ------ | -------------- | -------------------------------------------------------------------- |
+| name   | cadena         | Any allowed name which does not belong to an already existing object |
 
 #### Objects Supported
 
@@ -105,9 +105,9 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos          | Possible Values                                                                                                                                                                                                                                                                                                                       |
+| Nombre     | Tipos de datos          | Valores posibles                                                                                                                                                                                                                                                                                                                      |
 | ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
@@ -135,9 +135,9 @@ However, this property has a typing function in the following specific cases:
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Tipos de datos | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
+| Nombre             | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSourceTypeHint | cadena         | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
 
@@ -152,11 +152,11 @@ However, this property has a typing function in the following specific cases:
 A list of space-separated words used as class selectors in css files.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name  | Tipos de datos | Possible Values                                           |
-| ----- | -------------- | --------------------------------------------------------- |
-| class | cadena         | One string with CSS name(s) separated by space characters |
+| Nombre | Tipos de datos | Valores posibles                                          |
+| ------ | -------------- | --------------------------------------------------------- |
+| class  | cadena         | One string with CSS name(s) separated by space characters |
 
 
 #### Objects Supported
@@ -178,9 +178,9 @@ The collection or the entity selection must be available to the form when it is 
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
 > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values                                              |
+| Nombre     | Tipos de datos | Valores posibles                                             |
 | ---------- | -------------- | ------------------------------------------------------------ |
 | dataSource | cadena         | Expression that returns a collection or an entity selection. |
 
@@ -205,9 +205,9 @@ Specify the type of list box.
 - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
 - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Tipos de datos | Possible Values                                             |
+| Nombre      | Tipos de datos | Valores posibles                                            |
 | ----------- | -------------- | ----------------------------------------------------------- |
 | listboxType | cadena         | "array", "currentSelection", "namedSelection", "collection" |
 
@@ -226,9 +226,9 @@ Specify the type of list box.
 Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Tipos de datos | Possible Values                                               |
+| Nombre         | Tipos de datos | Valores posibles                                              |
 | -------------- | -------------- | ------------------------------------------------------------- |
 | pluginAreaKind | cadena         | Name of the plug-in external area (starts with a % character) |
 
@@ -244,9 +244,9 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Tipos de datos | Possible Values  |
+| Nombre     | Tipos de datos | Valores posibles |
 | ---------- | -------------- | ---------------- |
 | radioGroup | cadena         | Radio group name |
 
@@ -273,11 +273,11 @@ By default, the label is placed in the center of the object. When the object als
 
 Para la traducción de la base de datos, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name  | Tipos de datos | Possible Values |
-| ----- | -------------- | --------------- |
-| texto | cadena         | any text        |
+| Nombre | Tipos de datos | Valores posibles |
+| ------ | -------------- | ---------------- |
+| texto  | cadena         | any text         |
 
 #### Objects Supported
 
@@ -316,9 +316,9 @@ When an automatic calculation is set, it is applied to all the values found in t
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 > Los cálculos automáticos no soportan: * pies de página de columnas basadas en fórmulas, *  los pies de página de los list boxes [Colección y selección de entidades](listbox_overview.md#collection-or-entity-selection-list-boxes). Es necesario utilizar cálculos personalizados.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                | Tipos de datos | Possible Values                                                                                       |
+| Nombre              | Tipos de datos | Valores posibles                                                                                      |
 | ------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | variableCalculation | cadena         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
