@@ -18,38 +18,38 @@ title: 一般ページ
 *   **Welcomeウィザードを開くダイアログ** (初期設定): 4D は Welcomeウィザードダイアログボックスを表示します。
 > **4D Server**: 4D Server アプリケーションは、このオプションを無視します。 この環境においては、**何もしない** モードが常に選択されます。
 
-### Automatic form creation
+### 自動フォーム作成
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> このオプションは、バイナリデータベースでのみ使用され、プロジェクトアーキテクチャーでは無視されます。 doc.4d.com を参照ください。
 
-#### Window tabbing (macOS only)
+#### ウィンドウのタブ (macOSのみ)
 
-Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
+macOS Sierra 以降、Mac のアプリケーションは、複数のウィンドウを整理しやすくする自動ウィンドウタブ機能を利用することができます。単一の親ウィンドウ内でドキュメントウィンドウを積み重ね、タブを通してブラウズすることができます。 この機能は小さなスクリーンや、トラックパッドを使用している場合などに有用です。
 
-You can benefit from this feature in the following environments (with 4D 64-bit versions only):
+この機能は、以下の環境において利用することができます (4D 64-bit版のみ):
 
-*   Method Editor windows
-*   Form Editor windows
+*   メソッドエディターウィンドウ
+*   フォームエディターウィンドウ
 
-All windows from these editors can be put in tab form:
+これらのエディターのウィンドウはすべて、タブ形式にすることができます:
 
 ![](assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+**ウィンドウ** メニューのコマンドによって、タブを管理することができます:
 
 ![](assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+4D の環境設定ダイアログボックス内では、**ウィンドウタブ** オプションでこの機能を管理することができます:
 
 ![](assets/en/Preferences/general4.png)
 
 次の値が提供されています:
 
-*   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
-*   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+*   **システム設定に従う** (デフォルト): 4D のウィンドウは、macOSシステム環境設定で定義されているように振る舞います (フルスクリーン時のみ、常に、あるいは手動)。
+*   **しない**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいウィンドウを作成します (タブは作成されません)。
+*   **常にする**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいタブを作成します。
 
-### Exit Design when going to Application Environment
+### アプリケーションモードに移動する時に、デザインモードを終了する
 
 If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
 
