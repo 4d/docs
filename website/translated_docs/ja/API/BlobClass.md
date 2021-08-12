@@ -24,7 +24,7 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 **4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( blobScal : Blob ) : 4D.Blob<br/>**4D.Blob.new**( blobObj : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.new().Params -->
-| 参照   | タイプ             |    | 説明           |
+| 引数   | タイプ             |    | 説明           |
 | ---- | --------------- |:--:| ------------ |
 | blob | Blob or 4D.Blob | -> | Blob to copy |
 | 戻り値  | 4D.Blob         | <- | New 4D.Blob  |
@@ -55,7 +55,7 @@ The `4D.Blob.size` property <!-- REF #4D.Blob.size.Summary --> returns the size 
 **4D.Blob.slice()** : 4D.Blob<br/>**4D.Blob.slice**( start : Real ) : 4D.Blob<br/>**4D.Blob.slice**( start : Real; end : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.slice().Params -->
-| 参照    | タイプ     |    | 説明                                                                     |
+| 引数    | タイプ     |    | 説明                                                                     |
 | ----- | ------- |:--:| ---------------------------------------------------------------------- |
 | start | 実数      | -> | index of the first byte to include in the new `4D.Blob`.               |
 | end   | 実数      | -> | index of the first byte that will not be included in the new `4D.Blob` |

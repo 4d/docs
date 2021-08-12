@@ -15,9 +15,9 @@ The selection of a menu command causes an `On Menu Selected` event to be sent to
 The form menu bar will operate for both input and output forms.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos | Possible Values    |
+| Nombre  | Tipos de datos | Valores posibles   |
 | ------- | -------------- | ------------------ |
 | menuBar | cadena         | Name of a menu bar |
 

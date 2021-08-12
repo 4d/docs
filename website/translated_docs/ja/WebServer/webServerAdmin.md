@@ -178,49 +178,49 @@ DLF (Combined Log Format) フォーマットは CLF (Common Log Format) フォ�
 
 #### ELF/WLF
 
-The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+ELF (Extended Log Format) フォーマットは HTTPブラウザー界で広く普及しています。 そして、特別なニーズに応える洗練されたログを構築します。 この理由により、ELFフォーマットはカスタマイズされます。記録するフィールドやそのフィールドをファイルへ挿入する順番を選択することが可能です。
 
-The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
+WLF (WebStar Log Format) フォーマットは 4D WebSTAR サーバー用として特別に開発されました。
 
-##### Configuring the fields
+##### フィールドの設定
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields.
-> You cannot select the same field twice.
+ELF または WLF を選択すると、選択されたフォーマットに対して利用可能なフィールドが "Weg Log Token Selection" エリアに表示されます。 ログに含む各フィールドを選択する必要があります。 これには、選択するフィールドにチェックを入れます。
+> 同じフィールドを 2度選択することはできません。
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+各フォーマットで利用可能なフィールド (アルファベット順) とその内容を以下のテーブルに示します:
 
-| フィールド          | ELF | WLF | 値                                      |
-| -------------- | --- | --- | -------------------------------------- |
-| BYTES_RECEIVED |     | ○   | Number of bytes received by the server |
- BYTES_SENT| X|  X|  Number of bytes sent by the server to the client| C_DNS|  X|  X   |IP address of the DNS (ELF: field identical to the C_IP field)| C_IP|   X|  X|  IP address of the client (for example 192.100.100.10)| CONNECTION_ID|      |X| Connection ID number| CS(COOKIE)| X|  X|  Information about cookies contained in the HTTP request| CS(HOST)|   X|  X|  Host field of the HTTP request| CS(REFERER)|    X|  X|  URL of the page pointing to the requested document| CS(USER_AGENT)| X|  X|  Information about the software and operating system of the client| CS_SIP| X|  X|  IP address of the server| CS_URI| X|  X|  URI on which the request is made| CS_URI_QUERY|   X|  X|  Request query parameters| CS_URI_STEM|    X|  X|  Part of request without query parameters| DATE|   X|  X|  DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year| METHOD| X|  X|  HTTP method used for the request sent to the server| PATH_ARGS|  |   X|  CGI parameters: string located after the “$” character| STATUS| X|  X|  Reply provided by the server| TIME|   X|  X|  HH: hour, MM: minutes, SS: seconds| TRANSFER_TIME|  X|  X|  Time requested by server to generate the reply| USER|   X|  X|  User name if authenticated; otherwise - (minus sign).<p>If the user name contains spaces, they are replaced by _ (underlines)| URL |   |X| URL requested by the client|
-> Dates and times are given in GMT.
+| フィールド          | ELF | WLF | 値              |
+| -------------- | --- | --- | -------------- |
+| BYTES_RECEIVED |     | ○   | サーバーが受け取ったバイト数 |
+ BYTES_SENT| X|  X|  サーバーがクライアントに送ったバイト数| C_DNS|  X|  X   |DNS の IPアドレス (ELF: C_IP フィールドと同一のフィールド)| C_IP|   X|  X|  クライアントの IPアドレス (例: 192.100.100.10)| CONNECTION_ID|      |X| 接続ID番号| CS(COOKIE)| X|  X|  HTTPリクエストに格納されている cookie に関する情報 | CS(HOST)|   X|  X|  HTTPリクエストの Hostフィールド | CS(REFERER)|    X|  X|  リクエストされたドキュメントを指すページの URL| CS(USER_AGENT)| X|  X|  ソフトウェアに関する情報とクライアントのオペレーティングシステム | CS_SIP| X|  X|  サーバーの IPアドレス | CS_URI| X|  X|  リクエストが作成される URI | CS_URI_QUERY|   X|  X|  リクエストをクエリする引数| CS_URI_STEM|    X|  X|  エリ引数のないリクエストのパート | DATE|   X|  X|  DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年| METHOD| X|  X|  サーバーへ送られるリクエスト用の HTTPメソッド | PATH_ARGS|  |   X|  CGI引数: “$” の後に続く文字列| STATUS| X|  X|  サーバーの返答 | TIME|   X|  X|  HH: 時間、MM: 分、SS: 秒| TRANSFER_TIME|  X|  X|  返答を作成するためにサーバーによってリクエストされた時間| USER|   X|  X|  認証された場合はユーザー名。その他の場合は - (マイナス記号)。<p>ユーザー名にスペースがある場合、_ (アンダーライン) に置き換えられる| URL |   |X| クライアントがリクエストした URL|
+> 日付と時間は GMTで表されます。
 
 
-#### Backup Frequency
+#### 周期的なバックアップ
 
-Since a *logweb.txt* file can become considerably large, it is possible to set up an automatic archiving mechanism. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
+*logweb.txt* ファイルはかなり膨大になることがあるため、自動のアーカイブメカニズムを構築することが可能です。 バックアップはある周期 (時間、日、週、月単位) または、ファイルのサイズに基づいて起動します。設定の期限 (またはファイルサイズ) に近づくと、4D は自動的にカレントのログファイルを閉じてアーカイブします。そして新たにファイルを作成します。
 
-When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the *logweb.txt* file.
+Web のログファイル用のバックアップが起動すると、ログファイルは "Logweb Archives" という名前のフォルダーにアーカイブされます。このフォルダーは、*logweb.txt* ファイルと同じ階層に作成されます。
 
-The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: “D2020_09_04_T15_50_07.txt.”
+アーカイブされたファイルは、以下の例に基づいて名称変更されます: "DYYYY_MM_DD_Thh_mm_ss.txt"。 たとえば、ファイルがアーカイブされた時間が September 4, 2020 at 3:50 p.m. and 7 seconds である場合、"D2020_09_04_T15_50_07.txt" になります。
 
-#### Backup Parameters
+#### バックアップパラメーター
 
-The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
+logweb.txt の自動バックアップパラメーターは、ストラクチャー設定の **Web/ログ (バックアップ)** ページで設定します:
 
 ![](assets/en/WebServer/backup.png)
 
-First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
+最初に、頻度 (日、週などの単位) またはファイルサイズの上限に対応するラジオボタンをクリックして選択します。 必要に応じて、バックアップする正確な時間を指定します。
 
-*   **No Backup**: The scheduled backup function is deactivated.
+*   **バックアップしない**: 周期的なバックアップ機能が無効になっています。
 
-*   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
-    *   **starting at**: Used to set the time at which the first back up will begin.
+*   **X 時間ごと**: 1時間単位でバックアップをプログラムする際、このオプションを使用します。 1 から 24 の値を入力します。
+    *   **開始時刻**: 最初のバックアップ開始時間の設定に使用します。
 
-*   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
+*   **X 日ごと**: 1日単位でバックアップをプログラムする際、このオプションを使用します。 バックアップを毎日実行するには、1を入力します。 このオプションをチェックすると、バックアップの開始時間を指定しなければなりません。
 
-*   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. たとえば、毎週バックアップをおこなうには 1 と設定します。 When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
+*   **X 週ごと**: 1週間単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップを開始する曜日と時間を指定しなければなりません。 複数の曜日を選択することもできます。 たとえば、水曜日と金曜日を 選択し、2つのバックアップを設定することができます。
 
-*   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. たとえば、毎月バックアップをおこなうには 1 と設定します。 When this option is checked, you must indicate the day of the month and the time when the backup must be started.
+*   **X 月ごと**: 1ヶ月単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップ開始月の日時を指定しなければなりません。
 
-*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
+*   **X MB** (サイズ指定): カレントのリクエストログのファイルサイズに基づいてバックアップをプログラムする際、このオプションを使用します。 ファイルが指定サイズに達すると、バックアップが自動的に起動します。 サイズ制限は 1、10、100 または 1000MB ごとに設定可能です。

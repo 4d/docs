@@ -88,6 +88,8 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 > Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
 
 #### Inclure les dossiers associés
 
@@ -291,6 +293,7 @@ The `.4darchive` is copied at the following location:
 
 
 
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -443,6 +446,7 @@ La page liste les éléments chargés par l'application 4D courante :
 ![](assets/en/Project/buildapppluginsProj.png)
 
 *    La colonne **Actif** indique les éléments qui seront intégrés dans l’application générée. Par défaut, tous les éléments sont inclus. Pour exclure un plug-in ou un composant, désélectionnez la case qui lui est associée.
+
 
 
 *   Colonne **Plugins et composants** - Affiche le nom du plug-in/composant.

@@ -49,7 +49,7 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| 参照              | タイプ       |    | 説明                                                                             |
+| 引数              | タイプ       |    | 説明                                                                             |
 | --------------- | --------- |:--:| ------------------------------------------------------------------------------ |
 | fileToZip       | 4D.File   | -> | 圧縮する File または Folder オブジェクト                                                    |
 | folderToZip     | 4D.Folder | -> | 圧縮する File または Folder オブジェクト                                                    |
@@ -276,7 +276,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| 参照       | タイプ           |    | 説明                      |
+| 引数       | タイプ           |    | 説明                      |
 | -------- | ------------- |:--:| ----------------------- |
 | zipFile  | 4D.File       | -> | ZIPアーカイブファイル            |
 | password | テキスト          | -> | ZIPアーカイブのパスワード (必要であれば) |

@@ -58,38 +58,38 @@ Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o ac
 
 ### Gestão dos problemas das cópias de segurança
 
-Pode acontecer que uma cópia de segurança não seja executada corretamente. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
+Pode acontecer que uma cópia de segurança não seja executada corretamente. Pode haver várias causas de falha na cópia de segurança: interrupção do usuário, arquivo adjunto não encontrado, problemas no disco de destino, transação incompleta, etc. 4D processa a incidência segundo a causa.
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the **Backup journal.txt**.
+Em todos os casos, lembre que o estado da última copia de segurança (correta ou com falha) se armazena na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server, assim como **Backup journal.txt**.
 
-- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
-- **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of application files and accessible attached files) and returns an error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **Interrupção de Usuário**: The **Botão Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para e é gerado o erro 1406. Pode interceptar esse erro no método database `On Backup Shutdown`.
+- **Arquivo anexo não encontrado**: quando não encontrar um arquivo anexo, 4D realiza uma cópia de segurança parcial (cópia de segurança dos arquivos da aplicação e dos arquivos adjuntos acessíveis e devolve um erro.
+- **Copia de segurança impossível** (disco cheio ou protegido contra escrita, disco ausente, falha no disco, transação incompleta, aplicação não lançada no momento da cópia de segurança automática programada, etc.): se for um primeiro erro, 4D fará uma segunda tentativa de realizar a cópia de segurança. A espera entre duas tentativas é definida na página **Backup/Backup e Restauração** das Propriedades. Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Pode interceptar esse erro no método database `On Backup Shutdown`.
 
 ## Histórico de cópias de segurança (Backup Journal)
 
-To make following up and verifying backups easier, the backup module writes a summary of each operation performed in a special file, which is similar to an activity journal. Like an on-board manual, all database operations (backups, restores, log file integrations) are logged in this file whether they were scheduled or performed manually. The date and time that these operations occurred are also noted in the journal.
+Para facilitar o seguimento e a verificação das cópias de segurança, o módulo de cópia de segurança escreve um resumo de cada operação realizada em um arquivo especial, que é similar a um diário de atividades. Da mesma forma que no manual de bordo, todas as operações (backups, restaurações, integrações de histórico) são escritas nesse arquivo, não importa se a operação foi programada ou manual. A data e hora em que essas operações acontecem também é anotada no histórico.
 
-The backup journal is named "Backup Journal[001].txt" and is placed in the "Logs" folder of the project. The backup journal can be opened with any text editor.
+O histórico de cópia de segurança é chamado "Backup Journal[001].txt" e está localizado na pasta "Logs" do projeto. O histórico de cópias de segurança pode ser aberto com o editor de texto.
 
-#### Management of backup journal size
+#### Gerenciamento do tamanho de histórico de cópias de segurança.
 
-In certain backup strategies (for example, in the case where numerous attached files are being backed up), the backup journal can quickly grow to a large size. Two mechanisms can be used to control this size:
+Em determinadas estratégias de copia de segurança (por exemplo, no caso de que se realizem copias de segurança de numerosos arquivos anexos), o histórico de cópias de segurança pode alcançar rapidamente um grande tamanho. Dois mecanismos podem ser usados para controlar este tamanho:
 
-- **Automatic backup**: Before each backup, the application examines the size of the current backup journal file. If it is greater than 10 MB, the current file is archived and a new file is created with the [xxx] number incremented, for example "Backup Journal[002].txt”. Once file number 999 is reached, the numbering begins at 1 again and the existing files will be replaced.
-- **Possibility of reducing the amount of information recorded**: To do this, simply modify the value of the `VerboseMode` key in the *Backup.4DSettings* file of the project. By default, this key is set to True. If you change the value of this key to False, only the main information will be stored in the backup journal: date and time of start of operation and any errors encountered. The XML keys concerning backup configuration are described in the *4D XML Keys Backup* manual.
+- **Copia de segurança automática**: antes de cada copia de segurança, a aplicação examina o tamanho do arquivo historial de cópia de segurança atual. Se for superior a 10 MB, se arquiva o arquivo atual e é criado um arquivo com o número [xxx] incrementado, por exemplo "Backup Journal[002].txt”. Quando o arquivo número 999 for alcançado, a numeração volta para 1 e os arquivos existentes começam a ser substituídos.
+- **Possibilidade de reduzir a quantidade de informação registrada**: para isso, basta com modificar o valor da chave `VerboseMode` no arquivo *Backup.4DSettings* do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas a configuração da cópia de segurança são descritos no manual *Backup das chaves XML 4D*.
 
 
 
 ## backupHistory.json
 
-All information regarding the latest backup and restore operations are stored in the application's **backupHistory.json** file. It logs the path of each saved file (including attachments) as well as number, date, time, duration, and status of each operation. To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+Toda a informação relativa às últimas operações de cópia de segurança e restauração se armazena no arquivo **backupHistory.json** da aplicação. Registra a rota de cada arquivo guardado (incluídos os anexos), assim como o número, a data, a hora, a duração e o estado de cada operação. Para limitar o tamanho do arquivo, o número de operações registradas é o mesmo que o número de backups disponíveis ("Keep only the last X backup files") definido nas configurações de backup.
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+O arquivo **backupHistory.json** é criado na pasta de destino do backup atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(Backup history file)
+$backupHistory:=Get 4D file(arquivo histórico Backup)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate. 
+> **AVISO**  
+> Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.
+> O arquivo **backupHistory.json** é formatado para ser usado pela aplicação 4D. Se estiver procurando por um relatório que possa ser lido por olhos humanos, o diário de Backup journal é mais preciso. 

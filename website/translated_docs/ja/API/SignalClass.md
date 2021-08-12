@@ -107,7 +107,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| 参照          | タイプ       |    | 説明                   |
+| 引数          | タイプ       |    | 説明                   |
 | ----------- | --------- |:--:| -------------------- |
 | description | テキスト      | -> | シグナルの詳細              |
 | 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト |
@@ -226,7 +226,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| 参照 | タイプ |  | 説明                |
+| 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
@@ -255,7 +255,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| 参照      | タイプ |    | 説明                   |
+| 引数      | タイプ |    | 説明                   |
 | ------- | --- | -- | -------------------- |
 | timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
 | 戻り値     | ブール | <- | `.signaled` プロパティの状態 |

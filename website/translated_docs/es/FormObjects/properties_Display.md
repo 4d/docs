@@ -36,9 +36,9 @@ and the user enters "proportion", the field displays:
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values                                                                      |
+| Nombre     | Tipos de datos | Valores posibles                                                                     |
 | ---------- | -------------- | ------------------------------------------------------------------------------------ |
 | textFormat | cadena         | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
@@ -85,9 +85,9 @@ The table below shows choices available:
 > Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values                                                                                                                                                                  |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                 |
 | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
@@ -245,9 +245,9 @@ The following table shows how different formats affect the display of numbers. T
 | &5                                     | 1.23450e+3       | -1.23450e+3   | 0.00000                      |
 | &xml                                   | 1234.5           | -1234.5       | 0                            |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values                                                |
+| Nombre       | Tipos de datos | Valores posibles                                               |
 | ------------ | -------------- | -------------------------------------------------------------- |
 | numberFormat | cadena         | Numbers (including a decimal point or minus sign if necessary) |
 
@@ -309,9 +309,9 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values                                                                                       |
+| Nombre        | Tipos de datos | Valores posibles                                                                                      |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | cadena         | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
@@ -345,9 +345,9 @@ The table below shows the Time field display formats and gives examples:
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values                                                                                                                                                                                          |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                         |
 | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
@@ -369,9 +369,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 - **Text when True** - the text to be displayed when the value is "true"
 - **Text when False** - the text to be displayed when the value is "false"
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre        | Tipos de datos | Possible Values                                                          |
+| Nombre        | Tipos de datos | Valores posibles                                                         |
 | ------------- | -------------- | ------------------------------------------------------------------------ |
 | booleanFormat | cadena         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
@@ -392,9 +392,9 @@ Boolean and number (numeric or integer) columns can be displayed as check boxes.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre      | Tipos de datos | Possible Values                                                                                                                                                 |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                                                |
 | ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
@@ -414,11 +414,11 @@ When this property is enabled, the object is not drawn on the form, however it c
 In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos | Possible Values |
-| ------- | -------------- | --------------- |
-| display | booleano       | true, false     |
+| Nombre  | Tipos de datos | Valores posibles |
+| ------- | -------------- | ---------------- |
+| display | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -451,11 +451,11 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values |
-| ---------- | -------------- | --------------- |
-| threeState | booleano       | true, false     |
+| Nombre     | Tipos de datos | Valores posibles |
+| ---------- | -------------- | ---------------- |
+| threeState | booleano       | true, false      |
 
 #### Objects Supported
 
@@ -473,9 +473,9 @@ This property is available for a list box column if:
 
 In that cases, the title of the check box can be entered using this property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values                    |
+| Nombre       | Tipos de datos | Valores posibles                   |
 | ------------ | -------------- | ---------------------------------- |
 | controlTitle | cadena         | Any custom label for the check box |
 
@@ -512,9 +512,9 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 - For Pop-up type Boolean formats, labels are truncated with an ellipsis,
 - For Check box type Boolean formats, labels are always clipped.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre       | Tipos de datos | Possible Values        |
+| Nombre       | Tipos de datos | Valores posibles       |
 | ------------ | -------------- | ---------------------- |
 | truncateMode | cadena         | "withEllipsis", "none" |
 
@@ -537,9 +537,9 @@ You can handle the Visible property for most form objects. This property simplif
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre     | Tipos de datos | Possible Values     |
+| Nombre     | Tipos de datos | Valores posibles    |
 | ---------- | -------------- | ------------------- |
 | visibility | cadena         | "visible", "hidden" |
 
@@ -597,9 +597,9 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 ![](assets/en/FormObjects/wordwrap1.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre   | Tipos de datos | Possible Values                                    |
+| Nombre   | Tipos de datos | Valores posibles                                   |
 | -------- | -------------- | -------------------------------------------------- |
 | wordwrap | cadena         | "automatic" (excluding list box), "normal", "none" |
 

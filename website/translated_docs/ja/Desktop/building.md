@@ -88,6 +88,8 @@ title: プロジェクトパッケージのビルド
 
 > .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
 
 #### 関連するフォルダーを含む
 
@@ -287,6 +289,7 @@ The `.4darchive` is copied at the following location:
 
 
 
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -437,6 +440,7 @@ You can build specific a `.4darchive` file on the concurrent platform by selecti
 ![](assets/en/Project/buildapppluginsProj.png)
 
 *    **アクティブ** 列 - ビルドするアプリケーションパッケージに項目を統合するかどうかを指定します。 デフォルトですべての項目が選択されています。 プラグインやコンポーネントを除外するには、チェックボックスの選択を外します。
+
 
 
 *   **プラグイン&コンポーネント** 列 - プラグイン/コンポーネントの名称を表示します。

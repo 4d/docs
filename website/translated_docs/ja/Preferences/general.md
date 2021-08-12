@@ -1,22 +1,22 @@
 ---
 id: general
-title: General Page
+title: 一般ページ
 ---
 
-This page contains various options to configure the general operation of your 4D application.
+このページには、4Dアプリケーションの一般的な動作を設定するためのオプションが含まれています。
 
 ## オプション
 
-### At startup
+### 開始時
 
-This option allows you to configure the default 4D display at startup, when the user launches only the application.
+このオプションは、ユーザーがアプリケーションのみを起動したとき、4D が起動時に提供するデフォルトの表示を設定することができます。
 
-*   **Do nothing**: Only the application window appears, empty.
-*   **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-*   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-*   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+*   **何もしない**: アプリケーションウィンドウのみが表示されます。
+*   **ローカルプロジェクトを開くダイアログ**: 4Dは標準のドキュメントを開くダイアログボックスを表示し、ローカルのプロジェクトを選択することができます。
+*   **最後に使用したプロジェクトを開く**: 4D は最後に使用されたプロジェクトスを直接開きます。ドキュメントを開くダイアログボックスは表示されません。 ＞このオプションが選択されているときに、ドキュメントを開くダイアログボックスを強制的に表示させるには、プロジェクトを起動する際に、**Alt** (Windows) または **Option** (macOS) キーを押します。
+*   **リモートプロジェクトを開くダイアログ**: 4D は 4D Server にログオンする標準のダイアログボックスを表示し、ネットワークに公開されたプロジェクトを指定することができます。
+*   **Welcomeウィザードを開くダイアログ** (初期設定): 4D は Welcomeウィザードダイアログボックスを表示します。
+> **4D Server**: 4D Server アプリケーションは、このオプションを無視します。 この環境においては、**何もしない** モードが常に選択されます。
 
 ### Automatic form creation
 
@@ -100,26 +100,26 @@ A 4D database can thus operate in a language different from that of the system. 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
-## Documentation Location
+## ドキュメントの場所
 
-This area configures access to the 4D HTML documentation displayed in your current browser:
+このエリアでは、カレントブラウザーに表示される 4D HTMLドキュメントへのアクセスを設定します:
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   メソッドエディターで、4Dクラス関数またはコマンド名にカーソルがあるときに、**F1**キーを押したとき
+*   エクスプローラーの **コマンドページ** 上の 4Dコマンドをダブルクリックしたとき
 
 
-### Documentation language
+### ドキュメント言語
 
 Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
 
-### Look in the local folder first
+### 最初にローカルフォルダーを見る
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
 Sets where 4D will look for documentation pages.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If not, 4D automatically looks for it in the on-line documentation Web site. This makes it possible to access the documentation even when you are offline.
-*   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+*   チェックされている場合 (デフォルト)、4D はまずローカルフォルダーでページを探します (後述参照)。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 見つからない場合、4D は自動でオンラインドキュメントの Webサイトを参照します。 この場合インターネットに接続されていない環境でも、ローカルのドキュメントが参照できます。
+*   チェックされていない場合、4D はオンラインドキュメントの Webサイトに直接アクセスし、カレントブラウザーでページを表示します。 ページが見つからない場合、4D はブラウザーにエラーメッセージを表示します。
 
 ### Local folder
 
@@ -127,4 +127,4 @@ Sets where 4D will look for documentation pages.
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. 他の場所を指定するには、メニューの隣の **[...]** ボタンをクリックし、ドキュメントのルートフォルダー (`fr`, `en`, `es`, `de` または `ja` などの言語に対応するフォルダー) を選択します。 

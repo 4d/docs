@@ -20,9 +20,9 @@ You can either:
 > In macOS, displaying help tips is not supported in pop-up type windows.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre  | Tipos de datos | Possible Values                       |
+| Nombre  | Tipos de datos | Valores posibles                      |
 |:-------:|:--------------:| ------------------------------------- |
 | tooltip |     texto      | additional information to help a user |
 

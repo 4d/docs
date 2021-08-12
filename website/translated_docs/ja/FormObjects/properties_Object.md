@@ -13,7 +13,7 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名    | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                    |
+| 名称   | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                    |
 | ---- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type | string | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
@@ -37,7 +37,7 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名    | データタイプ | とりうる値                           |
+| 名称   | データタイプ | とりうる値                           |
 | ---- | ------ | ------------------------------- |
 | name | string | 既存オブジェクトによって使用されていない、命名規則に沿った名称 |
 
@@ -65,7 +65,7 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名             | データタイプ  | とりうる値       |
+| 名称            | データタイプ  | とりうる値       |
 | ------------- | ------- | ----------- |
 | memorizeValue | boolean | true, false |
 
@@ -91,7 +91,7 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名          | データタイプ            | とりうる値                                                                                                                                                                                                                         |
+| 名称         | データタイプ            | とりうる値                                                                                                                                                                                                                         |
 | ---------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | 文字列、または文字列のコレクション | <li>4D variable, field name, or any expression. <li>[ダイナミック変数](#ダイナミック変数) の場合は、空の文字列 <li>[階層リストボックス](listbox_overview.md#階層リストボックス) 列の場合に、文字列 (配列名) のコレクション |
 
@@ -174,7 +174,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                        |
+| 名称                 | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                        |
 | ------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time") *配列/セレクションリストボックスのみ*: "integer", "object" |
 
@@ -191,7 +191,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                       |
+| 名称    | データタイプ | とりうる値                       |
 | ----- | ------ | --------------------------- |
 | class | string | (複数の場合は半角スペース区切りの) クラス名の文字列 |
 
@@ -217,7 +217,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                      |
+| 名称         | データタイプ | とりうる値                      |
 | ---------- | ------ | -------------------------- |
 | dataSource | string | コレクションあるいはエンティティセレクションを返す式 |
 
@@ -244,7 +244,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                       |
+| 名称          | データタイプ | とりうる値                                                       |
 | ----------- | ------ | ----------------------------------------------------------- |
 | listboxType | string | "array", "currentSelection", "namedSelection", "collection" |
 
@@ -265,7 +265,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                                         |
+| 名称             | データタイプ | とりうる値                                                         |
 | -------------- | ------ | ------------------------------------------------------------- |
 | pluginAreaKind | string | プラグインが提供する外部エリアの、% 文字で始まる名称 (プロパティリストの候補表示では、この % 文字は表示されません) |
 
@@ -283,7 +283,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値    |
+| 名称         | データタイプ | とりうる値    |
 | ---------- | ------ | -------- |
 | radioGroup | string | ラジオグループ名 |
 
@@ -312,7 +312,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名    | データタイプ | とりうる値     |
+| 名称   | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
 | text | string | なんらかのテキスト |
 
@@ -370,7 +370,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値                                                                                                 |
+| 名称                  | データタイプ | とりうる値                                                                                                 |
 | ------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
 | variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 

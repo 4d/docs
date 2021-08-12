@@ -14,9 +14,9 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre               | Tipos de datos | Possible Values         |
+| Nombre               | Tipos de datos | Valores posibles        |
 | -------------------- | -------------- | ----------------------- |
 | methodsAccessibility | cadena         | "none" (default), "all" |
 
@@ -30,9 +30,9 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre         | Tipos de datos | Possible Values            |
+| Nombre         | Tipos de datos | Valores posibles           |
 | -------------- | -------------- | -------------------------- |
 | progressSource | cadena         | Name of a Longint variable |
 
@@ -61,11 +61,11 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
 - When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre    | Tipos de datos | Possible Values |
-| --------- | -------------- | --------------- |
-| urlSource | cadena         | A URL.          |
+| Nombre    | Tipos de datos | Valores posibles |
+| --------- | -------------- | ---------------- |
+| urlSource | cadena         | A URL.           |
 
 #### Objects Supported
 
@@ -89,9 +89,9 @@ The Blink engine has the following limitations:
 - [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html):utilizar este comando requiere que al menos una página ya esté cargada en el área (a través de una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área).
 - Cuando se activa soltar URLs mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), la primera soltada debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nombre    | Tipos de datos | Possible Values      |
+| Nombre    | Tipos de datos | Valores posibles     |
 | --------- | -------------- | -------------------- |
 | webEngine | cadena         | "embedded", "system" |
 
