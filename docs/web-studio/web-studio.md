@@ -34,31 +34,23 @@ To enable access to the web studio on the database level, you need to check the 
 
 To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
 
-### Handling authentication
+### Activating authentication
 
-By default, access to the web server is not granted. You need to enable authentication on the web server first (otherwise opening the web studio throws a 403 error).
+By default, access to the web server is not granted. You need to activate authentication on the web server first (otherwise opening the web studio throws a 403 error).
 
 To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**.
 
-From there, there are two ways to authenticate:
-
-* using an [access key](../Admin/webAdmin.md#authentication-and-session)
-
-* clicking the **Design** > **Web Studio...** menu item from a 4D standalone application
-
 ## Opening the web studio
 
-The web studio page is available when [the `WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and when authentication is activated. 
+The web studio page is available when the [`WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and [authentication is activated](#activating-authentication). 
 
-> You can run the web server using a 4D standalone application, or in client/server mode using 4D Server.
+There are two ways to access the web studio:
 
- There are two ways to access the web studio :
-
- *	from a 4D standalone application, go to **Design** > **Web Studio...**. 
+*	from your 4D application, go to **Design** > **Web Studio...**. 
  
  	If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
 
- *	on a browser, with the `WebAdmin` web server running, enter the following address:
+*	on a browser, with the `WebAdmin` web server running, enter the following address:
  	
 		IPaddress:HTTPPort/studio
 		
