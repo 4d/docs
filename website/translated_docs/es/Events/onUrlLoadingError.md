@@ -10,9 +10,9 @@ title: On URL Loading Error
 
 ## Descripción
 
-This event is generated when an error is detected during the loading of a URL.
+Este evento se genera cuando se detecta un error durante la carga de una URL.
 
-You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
+Puede llamar al comando `WA GET LAST URL ERROR` para obtener información sobre el error.
 
 
 ### Ver también

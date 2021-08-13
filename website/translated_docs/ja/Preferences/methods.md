@@ -1,49 +1,49 @@
 ---
 id: methods
-title: Methods Page
+title: メソッドページ
 ---
 
-This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+このページでは、メソッドエディターのインターフェースやデフォルトの表示、および動作に関するオプションを設定します。 ページはテーマとオプションという 2つのタブに分けられています。
 
-## Themes
+## テーマ
 
-This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+このページでは、メソッドエディターのテーマを選択・作成・設定することができます。 テーマは、コードエディターに表示される項目のフォント、フォントサイズ、カラー、スタイルを定義します。
 
 ![](assets/en/Preferences/themes.png)
 
-### Theme list
+### テーマリスト
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
+このリストでは、コードエディターに適用するテーマを選択します。 利用可能なテーマがすべて表示され、カスタムテーマがある場合はそれも表示されます。 4D はデフォルトで 2つのテーマを用意しています:
 
-*   **Default Light Theme**
-*   **Default Dark Theme**
+*   **デフォルトのLightテーマ**
+*   **デフォルトのDarkテーマ**
 
-> Default themes cannot be modified or deleted.
+> デフォルトのテーマは変更や削除ができません。
 
-A **myTheme** theme is automatically added if you already customized method editor styles in previous 4D releases.
+以前の 4Dリリースで、メソッドエディターのスタイルをカスタマイズしていた場合、**myTheme** テーマが自動的に追加されます。
 
-### Creating custom themes
+### カスタムテーマの作成
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+完全にカスタマイズ可能なテーマを作成することができます。 テーマを作成するには、既存のテーマを選択して、テーマリストの下部にある **+** をクリックします。 また、`4D Editor Themes` フォルダー内のテーマファイルをコピーして、カスタマイズしたテーマを追加することもできます (後述参照)。
 
-### Custom theme files
+### カスタムテーマファイル
 
-Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+カスタムテーマは、それぞれ別の *themeName.json* という JSONファイルに格納されます。カスタムテーマの JSONファイルは、4D [preferences](overview.md#ストレージ) ファイルと同じ階層にある `4D Editor Themes` フォルダーに格納されます。
 
-If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated.
+カスタムテーマでキー値が定義されていない場合は、*デフォルトのLightテーマ* の値がデフォルトとなります。 JSONテーマファイルが無効な場合、*デフォルトのLightテーマ* が読み込まれ、エラーが発生します。
 
-> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
+> 外部エディターでテーマファイルを変更した場合は、変更内容を反映させるために 4Dを再起動する必要があります。
 
-## Theme definition
+## テーマの定義
 
-Defining a theme means:
+テーマを定義するとは、以下のことを意味します:
 
-- setting a global font and font size for the whole code editor,
-- assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
+- コードエディター全体のグローバルフォントとフォントサイズを設定する。
+- 4D のランゲージ要素 (フィールド、テーブル、変数、引数、SQL など)、SQL のランゲージ要素 (キーワード、関数など)、そして背景色のそれぞれにスタイルと色を割り当てる。
 
-Combining different colors and styles is particularly useful for code maintenance purposes.
+異なる色やスタイルを組み合わせることは、コードのメンテナンス目的に特に便利です。
 
-### Font and Font size
+### フォントとフォントサイズ
 
 The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
 

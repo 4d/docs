@@ -10,7 +10,7 @@ title: On Long Click
 
 ## Descripción
 
-This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
+Este evento se genera cuando un botón recibe un clic y el botón del ratón se mantiene presionado durante un cierto tiempo. En teoría, el tiempo durante el cual se genera este evento es igual al tiempo máximo que separa un doble clic, definido en las preferencias del sistema.
 
 Este evento se puede generar para los siguientes estilos de botones:
 
@@ -24,7 +24,7 @@ Este evento se puede generar para los siguientes estilos de botones:
 - [Círculo](FormObjects/button_overview.md#circle)
 - [Personalizado](FormObjects/button_overview.md#custom)
 
-Este evento se utiliza generalmente para mostrar menús emergentes en caso de presiones prolongadas en los botones. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+Este evento se utiliza generalmente para mostrar menús emergentes en caso de presiones prolongadas en los botones. El evento [`On Clicked`](onClicked.md), si está activo, se genera si el usuario suelta el botón del ratón antes del límite de tiempo del "clic largo".
 
 ### Ver también
 [`On Alternative Click`](onAlternativeClick.md)

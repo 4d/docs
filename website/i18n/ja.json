@@ -686,13 +686,13 @@
         "title": "リモートデータストアの利用"
       },
       "Preferences/forms": {
-        "title": "Forms Page"
+        "title": "フォームページ"
       },
       "Preferences/general": {
         "title": "一般ページ"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "メソッドページ"
       },
       "Preferences/overview": {
         "title": "概要"
@@ -701,7 +701,7 @@
         "title": "Shortcuts Page"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "ストラクチャーページ"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"

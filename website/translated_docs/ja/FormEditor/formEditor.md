@@ -275,7 +275,7 @@ To display this dialog box, select the objects you want to align then choose the
 You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
 > This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
 
-#### Using the Magnetic Grid
+#### マグネティックグリッドを使用する
 
 The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
 
@@ -529,7 +529,7 @@ This function works as follows: Each shield is associated with a property (for e
 
 ![](assets/en/FormEditor/shield.png)
 
-### Using shields
+### バッジを使用する
 
 To activate a shield, click the *Shield* icon from the toolbar until the desired shield is selected. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
 
