@@ -99,7 +99,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 }
 ```
 
-To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
+Para indicar que un estilo debe aplicarse sólo a los objetos de un tipo determinado, especifique el tipo seguido de "." y el nombre de la clase, y luego, entre llaves, declare el estilo o los estilos a aplicar.
 
 ```
 text.center {
@@ -108,7 +108,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
+En la descripción del formulario 4D, se asocia un nombre de clase a un objeto mediante el atributo `class`. Este atributo contiene uno o varios nombres de clase, separados por un espacio:
 
 ```
 class: "okButtons important"             
@@ -117,11 +117,11 @@ class: "okButtons important"
 
 ### Todos los objetos
 
-Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
+En correspondencia con el selector CSS **universal**, el carácter "*" indica que el siguiente estilo se aplicará a todos los objetos del formulario.
 
-Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
+Indique que un estilo debe aplicarse a todos los objetos formulario con el carácter "*" y, a continuación, entre llaves, declare el o los estilos que deben aplicarse.
 
-In the following example, all objects will have a gray fill:
+En el siguiente ejemplo, todos los objetos tendrán un fondo gris:
 
 ```
 * {
@@ -132,7 +132,7 @@ In the following example, all objects will have a gray fill:
 
 ### Atributos específicos
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
+Los estilos correspondientes a los **selectores de atributos** CSS se pueden aplicar a todos los objetos formulario con un atributo específico.
 
 Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
 
