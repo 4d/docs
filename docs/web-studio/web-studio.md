@@ -5,9 +5,9 @@ title: Web Studio
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment. 
 
-The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database and methods of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
+The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
 
-At this stage, only the WebForm designer, the code editor and the contextual panel are available.
+At this stage, only the WebForm designer, the code editor and the contextual configuration panel are available.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
@@ -36,7 +36,7 @@ To do this, go to **Settings** > **Web** > **Web features** and check **Enable a
 
 ### Activating authentication
 
-By default, access to the web server is not granted. You need to activate authentication on the web server first (otherwise opening the web studio throws a 403 error).
+By default, access to the web server is not granted. You need to activate authentication on the `WebAdmin` web server first (otherwise opening the web studio throws a 403 error).
 
 To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
@@ -128,7 +128,7 @@ The styles library offers a choice of styles that you can apply to your componen
 
 There are two categories of styles: 
 * **Theme**: predefined CSS styles, available by default. 
-* **Local**: CSS styles you create. A local style can only be used in the web form where it's created.
+* **Local**: CSS styles you create. A local style can only be used in the web form where it is created.
 
 > **TODO --> Show that styles can be edited**
 
@@ -145,7 +145,7 @@ This section groups the available data sources:
 
 In this section, you'll find the following:
 
-*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your datastore, and they will be handled by the server as **Remote** data sources.
+*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your [datastore](../ORDA/dsMapping.md#datastore), and they will be handled by the server as **Remote** data sources.
 
 *  **Remote** data sources: Entities and entity selections, handled on the server, that can be assigned to components. They offer functions defined on the ORDA classes that they instantiate (DataStore classes, Dataclass class, Entity class, Entity Selection class).
 
