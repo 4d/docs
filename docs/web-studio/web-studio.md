@@ -38,7 +38,7 @@ To do this, go to **Settings** > **Web** > **Web features** and check **Enable a
 
 By default, access to the web server is not granted. You need to activate authentication on the web server first (otherwise opening the web studio throws a 403 error).
 
-To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**.
+To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
 ## Opening the web studio
 
@@ -127,8 +127,8 @@ The styles library offers a choice of styles that you can apply to your componen
 ![alt-text](assets/en/web-studio/styles-library.png)
 
 There are two categories of styles: 
-* **Theme**: predefined CSS styles, available by default.
-* **Local**: CSS styles you create. They can only be applied to WebForm components.
+* **Theme**: predefined CSS styles, available by default. 
+* **Local**: CSS styles you create. A local style can only be used in the web form where it's created.
 
 > **TODO --> Show that styles can be edited**
 
