@@ -3,12 +3,12 @@ id: formEditor
 title: Editor de formularios
 ---
 
-4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+4D ofrece un completo editor de formularios que le permite modificar su formulario hasta conseguir el efecto que desea. Con el editor de formularios puede crear y eliminar objetos formulario, manipularlos directamente y definir las propiedades de los mismos.
 
 
 ## Interface
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time.
+La interfaz del editor de formularios muestra cada formulario JSON en su propia ventana, que tiene una barra de herramientas y otra de objetos. Puede tener varios formularios abiertos al mismo tiempo.
 
 ### Display options
 
@@ -41,7 +41,7 @@ You can display or hide elements at any moment in the Form editor’s current wi
 
 ### Rulers
 
-The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
+Las reglas laterales e inferiores le ayudan a posicionar los objetos en el formulario. They can be [displayed or hidden](#display-options).
 
 Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
 
@@ -101,16 +101,16 @@ You can click twice on the button so that it remains selected even after you hav
 
 Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font.
 
-You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
+Puede visualizar y modificar las propiedades de los objetos y formularios utilizando la lista de propiedades. Muestra las propiedades del formulario o de los objetos en función de lo que se seleccione en la ventana del editor.
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Navigation shortcuts
+#### Accesos directos de navegación
 
-You can navigate in the Property List using the following shortcuts:
+Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
 
-*   **Arrow key**s ↑ ↓: Used to go from one cell to another.
-*   **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
+*   **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
+*   **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 *   **PgUp** and **PgDn**: Used to scroll the Property List contents.
 *   **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
 *   **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
