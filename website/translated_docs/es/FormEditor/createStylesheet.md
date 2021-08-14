@@ -134,20 +134,20 @@ En el siguiente ejemplo, todos los objetos tendrán un fondo gris:
 
 Los estilos correspondientes a los **selectores de atributos** CSS se pueden aplicar a todos los objetos formulario con un atributo específico.
 
-Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
+Especifique el atributo entre corchetes y, a continuación, entre llaves, declare el estilo o los estilos a aplicar.
 
-#### Supported syntaxes
+#### Sintaxis soportadas
 
-| Sintaxis                  | Descripción                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [attribute]               | matches objects with the `attribute`                                                                    |
-| [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
-| [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
-| [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
+| Sintaxis                  | Descripción                                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]               | coincide con objetos con el `attribute`                                                                                          |
+| [attribute="value"]       | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
+| [attribute~="value"]      | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
+| [attribute&#124;="value"] | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
 
 #### Ejemplos
 
-All objects with the `borderStyle` attribute will have purple lines:
+Todos los objetos con el atributo `borderStyle` tendrán líneas moradas:
 
 ```
 [borderStyle]
@@ -156,7 +156,7 @@ All objects with the `borderStyle` attribute will have purple lines:
 }
 ```
 
-All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
+Todos los objetos de tipo texto con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
 
 ```
@@ -166,7 +166,7 @@ text[text=Hello]
 }
 ```
 
-All objects with a text attribute whose value contains "Hello" will have blue lines:
+Todos los objetos con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
 ```
 [text~=Hello]
@@ -176,7 +176,7 @@ All objects with a text attribute whose value contains "Hello" will have blue li
 
 ```
 
-All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
+Todos los objetos de tipo texto con un atributo texto cuyo valor comience por "Hello" tendrán letras azules:
 
 ```
 text[text|=Hello]
@@ -232,7 +232,7 @@ This CSS defines a color combination for text and text background in the light s
 
 ### Object Attributes
 
-The majority of form object attributes can be defined within a style sheet, except the following attributes:
+La mayoría de los atributos del objeto formulario pueden ser definidos dentro de una hoja de estilo, excepto los siguientes atributos:
     - `method`
     - `type`
     - `class`
@@ -243,7 +243,7 @@ Form object attributes can be declared with their [JSON name](FormObjects/proper
 
 #### Mapa de atributos
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
+Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre CSS.
 
 | 4D               | CSS                |
 | ---------------- | ------------------ |
@@ -345,12 +345,12 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 Puede crear hojas de estilo utilizando su editor de texto preferido y guardando el archivo con extensión ".css" en la carpeta "/SOURCES" del proyecto.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opción de acceso directo para crear y editar una de las tres hojas de estilo con nombre específicas de la plataforma.
 
-1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1.  Abra la página **Estilos** eligiendo la **Caja de herramientas > Styles** del menú Diseño o haga clic en el icono **Caja de herramientas** de la barra de herramientas del editor de formularios.
 
     ![](assets/en/FormEditor/stylesheets.png)
 
-2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2.  Seleccione el tipo de hoja de estilo que desea crear y haga clic en el botón **Crear** o **Editar**: ![](assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.  
+3. La hoja de estilo se abrirá en su editor de texto predeterminado.  
