@@ -59,7 +59,7 @@ The web studio page is automatically available when [the `WebAdmin` web server i
 
 > To configure the [HTTPPort](../Admin/webAdmin.md#http-port) and the [HTTPSPort](../Admin/webAdmin.md#https-port), go to **File** > **Web Administration** > **Settings...**.
 
-## Interface
+## インターフェース
 
 The web studio provides several tools ranging from interface customization to method and event linking.
 
