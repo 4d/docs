@@ -4,7 +4,7 @@ title: 印刷
 ---
 
 
-## Settings
+## 設定
 
 Allows defining specific print settings for the form. This feature is useful to view printing page limits in the form editor.
 
