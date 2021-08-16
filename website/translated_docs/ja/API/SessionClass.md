@@ -309,7 +309,7 @@ End if
 
 無効なアクセス権名を含む場合、`privileges` プロパティは無視されます。
 
-> In the current implementation, only the "WebAdmin" privilege is available.
+> 現在の実装では、"WebAdmin" アクセス権のみ利用可能です。
 
 セッションにアクセス権が紐づいていない場合、そのセッションはデフォルトで [ゲストセッション](#isguest) です。
 
