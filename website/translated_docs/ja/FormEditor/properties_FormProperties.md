@@ -24,7 +24,7 @@ This property defines the color scheme for the form. By default when the propert
 
 ## Pages
 
-Each form has is made of at least two pages:
+各フォームは、少なくとも 2つのページで構成されています:
 
 - a page 0 (background page)
 - a page 1 (main page)
@@ -41,7 +41,7 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 ---
 
 
-## Form Name
+## フォーム名
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
@@ -52,7 +52,7 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ---
 
-## Form Type
+## フォームタイプ
 
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
@@ -66,7 +66,7 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                | JSON grammar     | 説明                                                            | Supported with              |
+| フォームタイプ                  | JSON grammar     | 説明                                                            | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
 | 詳細フォーム                   | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
@@ -83,7 +83,7 @@ Supported types depend on the form category:
 
 ---
 
-## Inherited Form Name
+## 継承されたフォーム名
 
 This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
 
@@ -101,7 +101,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 ---
 
 
-## Inherited Form Table
+## 継承されたフォームテーブル
 
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
@@ -117,7 +117,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ---
 
-## Published as Subform
+## サブフォームとして公開
 
 For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
 
@@ -134,7 +134,7 @@ Only project forms can be specified as published subforms.
 
 ---
 
-## Save Geometry
+## 配置を記憶
 
 When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
 
@@ -156,7 +156,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 ---
 
-## Window Title
+## ウィンドウタイトル
 
 The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
 
