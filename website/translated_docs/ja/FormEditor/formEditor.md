@@ -3,73 +3,73 @@ id: formEditor
 title: フォームエディター
 ---
 
-4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+4D が提供するフォームエディターを使用して、必要とされる機能に達するまでフォームを完全にカスタマイズできます。 フォームエディターでは、オブジェクトの作成や削除、操作、フォームやオブジェクトのプロパティの設定がおこなえます。
 
 
-## Interface
+## インターフェース
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time.
+フォームエディターは各JSONフォームを個別のウィンドウに表示し、ウィンドウごとにオブジェクトバーとツールバーがあります。 複数のフォームを同時に開くことができます。
 
-### Display options
+### 表示オプション
 
-You can show or hide several interface elements on the current page of the form:
+フォームのカレントページの大部分のインタフェース要素は、表示したり非表示にしたりすることができます。
 
-- **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
-- **Page 0**: Objects from [page 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
-- **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
-- **Rulers**: Rulers of the Form editor’s window.
-- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Limits**: Form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
+- **継承されたフォーム**: 継承されたフォームオブジェクト ([継承されたフォーム](forms.md#継承フォーム) が存在する場合)
+- **ページ0**: [ページ0](forms.md#フォームのページ) のオブジェクト。 このオプションで、フォームのカレントページのオブジェクトとページ0 のオブジェクトを区別することができます。
+- **用紙**: 印刷ページの用紙境界を示す灰色の線。 この要素は、[印刷用](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **ルーラー**: フォームエディターウィンドウのルーラー。
+- **マーカー**: フォームのエリアを識別する出力コントロールラインとマーカー。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **マーカーラベル**: マーカーラベル。これは出力コントロールラインが表示されている場合のみ有効です。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **境界**: フォームの境界。 このオプションが選択されていると、アプリケーションモードで表示されるとおりに、フォームがフォームエディターに表示されます。 これによりアプリケーションモードに移動しなくてもフォームを調整しやすくなります。
+> [**サイズを決めるもの**](properties_FormSize.md#サイズを決めるもの), [**水平 マージン**](properties_FormSize.md#水平マージン) そして [**垂直 マージン**](properties_FormSize.md#垂直マージン) フォームプロパティ設定はフォーム境界に影響します。 これらの設定を使用すると、フォーム上のオブジェクトに基づいて境界を設定できます。 フォームの境界を決定する位置にオブジェクトを配置したり、サイズを変更したりすると、境界も変更されます。
 
-#### Default display
+#### デフォルト表示
 
-When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
+エディターでフォームを開いたとき、インターフェース要素は、以下に応じてデフォルトで表示または非表示になります:
 
-- the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
-- the current [form type](properties_FormProperties.md#form-type):
-    - Markers and marker labels are always displayed by default on list forms
-    - Paper is displayed by default on "for printing" forms.
+- 環境設定で設定された **新フォームにデフォルトで表示** オプション - チェックされていないオプションはデフォルトでは表示されません。
+- カレントの [フォームタイプ](properties_FormProperties.md#フォームタイプ):
+    - リストフォームでは、マーカーとマーカーラベルはデフォルトで常に表示されます。
+    - 用紙は "印刷用" のフォームの場合、デフォルトで表示されます。
 
-#### Display/Hide elements
+#### 要素の表示/非表示
 
-You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
+**フォーム** メニューまたはフォームエディターのコンテキストメニューから **表示** を選択すると、フォームエディターのカレントウィンドウ内でいつでも要素の表示/非表示を切り替えることができます。
 
 ![](assets/en/FormEditor/showHideElements.png)
 
 
-### Rulers
+### ルーラー
 
-The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
+右と下にあるルーラーが、オブジェクトの配置を手助けします。 これらは、[表示または非表示](#表示オプション) にすることができます。
 
-Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
+**フォーム** メニューの **ルーラー定義...** を選択すると、単位を変更して、インチ、センチ、ピクセルのいずれかで表示させることができます。
 
 ### ツールバー
 
-The toolbar of the Form editor offers a set of tools to manipulate and modify the form. Each window has its own toolbar.
+フォームエディターのツールバーはフォームを操作・更新するための一連のツールを提供します。 ウィンドウごとに固有のツールバーを持ちます。
 
 ![](assets/en/FormEditor/toolbar.png)
 
-The toolbar contains the following elements:
+ツールバーには以下の要素があります:
 
-| アイコン                                          | 名称                                                   | 説明                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](assets/en/FormEditor/execute.png)         | Execute the form                                     | Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                     |
-| ![](assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                  |
-| ![](assets/en/FormEditor/zOrder.png)          | [Entry order](#data-entry-order)                     | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                       |
-| ![](assets/en/FormEditor/moving.png)          | [Moving](#moving-objects)                            | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.                                                                                        |
-| ![](assets/en/FormEditor/zoom.png)            | [拡大](#zoom)                                          | Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.                                                                                                  |
-| ![](assets/en/FormEditor/alignment.png)       | [Alignment](#aligning-objects)                       | This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                             |
-| ![](assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                         |
-| ![](assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                                             |
-| ![](assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                             |
-| ![](assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
-| ![](assets/en/FormEditor/cssPreviewicon.png)  | [CSS Preview](#css-preview)                          | This button is used to select the CSS Mode to use.                                                                                                                                                                                                                                                                           |
-| ![](assets/en/FormEditor/views.png)           | [Managing views](#views)                             | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                           |
-| ![](assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                       | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                       |
-| ![](assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
-| ![](assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
+| アイコン                                          | 名称                                    | 説明                                                                                                                                                        |
+| --------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/FormEditor/execute.png)         | フォーム実行                                | フォームの実行をテストするために使用します。 このボタンをクリックすると、4D は新しいウィンドウを開き、そのコンテキストでフォームを表示します (リストフォームの場合レコードリスト、詳細フォームの場合カレントレコード)。 フォームはメインプロセスで実行されます。                      |
+| ![](assets/en/FormEditor/selection.png)       | [選択ツール](#selecting-objects)           | フォームオブジェクトの選択・移動・リサイズをおこないます。<p>**注**: テキストやグループボックスタイプのオブジェクトを選択すると、**Enter**キーを押すことで編集モードになります。                                   |
+| ![](assets/en/FormEditor/zOrder.png)          | [入力順](#data-entry-order)              | "入力順" モードに切り替わり、フォームの現在の入力順を表示・変更できます。 入力順は、バッジを使用して確認することもできます。                                                                                          |
+| ![](assets/en/FormEditor/moving.png)          | [移動](#moving-objects)                 | "移動" モードに移行し、ウィンドウ中をドラッグ＆ドロップすることで素早くフォームの表示部分を移動することができます。 このモードでカーソルは手の形になります。 このモードは、フォームを拡大表示している時に特に便利です。                                            |
+| ![](assets/en/FormEditor/zoom.png)            | [拡大](#zoom)                           | フォーム表示の拡大/縮小率を変更できます (デフォルトで100%)。 "拡大/縮小" モードにするには虫眼鏡をクリックするか、拡大/縮小率バーをクリックします。 この機能は前節で説明しています。                                                         |
+| ![](assets/en/FormEditor/alignment.png)       | [整列](#aligning-objects)               | このボタンには、フォーム中でオブジェクトの並びを揃えるためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<p>CSS プレビューが "なし" の場合にのみ利用可能です。                    |
+| ![](assets/en/FormEditor/distribution.png)    | [均等配置](#distributing-objects)         | このボタンには、フォーム中でオブジェクトを均等に配置するためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<p>CSS プレビューが "なし" の場合にのみ利用可能です。                   |
+| ![](assets/en/FormEditor/level.png)           | [レベル](#layering-objects)              | このボタンには、フォーム上のオブジェクトの階層を変更するためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                                        |
+| ![](assets/en/FormEditor/group.png)           | [グループ化/グループ解除](#grouping-objects)     | このボタンには、フォーム上の選択オブジェクトのグループ化やグループ解除をおこなうためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                            |
+| ![](assets/en/FormEditor/displyAndPage.png)   | [表示とページ管理](forms.html#form-pages)     | このエリアを使用して、フォームページ間の移動やページの追加ができます。 フォームページを移動するには矢印ボタンをクリックするか、または中央のエリアをクリックすると現われるメニューから表示したいページを選択します。 最終ページが表示されている状態で、右矢印ボタンをクリックすると、4D はページを追加します。 |
+| ![](assets/en/FormEditor/cssPreviewicon.png)  | [CSSプレビュー](#css-preview)              | このボタンで、使用する CSSモードを選択します。                                                                                                                                 |
+| ![](assets/en/FormEditor/views.png)           | [ビュー管理](#views)                       | このボタンは、ビューパレットの表示や非表示をおこないます。 この機能については "オブジェクトビューを使用する" で説明しています。                                                                                        |
+| ![](assets/en/FormEditor/shields2.png)        | [バッジ表示](#shields)                     | このボタンをクリックするたびに、すべてのタイプのフォームバッジが順に表示されます。 また、このボタンには、表示するバッジタイプを直接選択できるメニューが関連付けられています。                                                                   |
+| ![](assets/en/FormEditor/library.png)         | [定義済みオブジェクトライブラリ](objectLibrary.html) | このボタンは定義済みオブジェクトライブラリを表示します。このライブラリは定義済みのプロパティを持つオブジェクトを多数提供します。                                                                                          |
+| ![](assets/en/FormEditor/listBoxBuilder1.png) | [リストボックスビルダー](#list-box-builder)      | このボタンは、新しいエンティティセレクション型リストボックスを作成します。                                                                                                                     |
 
 ### Object bar
 
@@ -340,7 +340,7 @@ To move an object to another level, select it and choose:
 
 When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
 
-### Data entry order
+### データの入力順
 
 The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
 
@@ -402,7 +402,7 @@ By default, all objects that support the focusable property are included in the 
 
 
 
-## CSS Preview
+## CSSプレビュー
 
 The Form editor allows you to view your forms with or without applied CSS values.
 
@@ -459,7 +459,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 
 
-## List Box Builder
+## リストボックスビルダー
 
 You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
 
@@ -606,7 +606,7 @@ Here are a few important things to know before you start working with views:
 
 
 
-### Managing views
+### ビュー管理
 
 #### Creating views
 
