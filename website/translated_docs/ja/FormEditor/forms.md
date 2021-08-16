@@ -4,7 +4,7 @@ title: 4D フォームについて
 ---
 
 
-フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
+フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 Users interact with the data in a database using forms and print reports using forms. フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
 
 ![](assets/en/FormObjects/form1.png)
 
