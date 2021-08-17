@@ -3,41 +3,41 @@ id: tls
 title: TLSプロトコル (HTTPS)
 ---
 
-All 4D servers can communicate in secured mode through the TLS (Transport Layer Security) protocol:
+すべての 4Dサーバーは、TLS (Transport Layer Security) プロトコルを通じて、保護モードで通信する事ができます:
 
-- the web server
-- the application server (client-server desktop applications)
-- the SQL server
+- Webサーバー
+- アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション）
+- SQLサーバー
 
 ## 概要
 
-The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
+TLSプロトコル (SSLプロトコルの後継版) は 2つのアプリケーション、主に Webサーバーとブラウザー間でのデータ交換を保護するために設計されています。 このプロトコルは幅広く使用されていて、多くの Webブラウザーとの互換性があります。
 
-At the network level, the security protocol is inserted between the TCP/IP layer (low level) and the HTTP high level protocol. It has been designed mainly to work with HTTP.
+ネットワークレベルにおいては、TLSプロトコルは TCP/IPレイヤー (低レベル) とHTTP高レベルプロトコルとの間に挿入されます。 TLS は主に HTTP で動作するように設計されました。
 
-Network configuration using TSL:
+TLS を用いたネットワーク設定:
 
 ![](assets/en/WebServer/tls1.png)
 
-The TLS protocol is designed to authenticate the sender and receiver and to guarantee the confidentiality and integrity of the exchanged information:
+TLSプロトコルは、送信者と受信者を認証するために設計され、交換された情報の機密性と整合性を保証します:
 
-*   **Authentication**: The sender and receiver identities are confirmed.
-*   **Confidentiality**: The sent data is encrypted so that no third person can understand the message.
-*   **Integrity**: The received data has not been changed, by accident or malevolently.
+*   **認証**: 送信者と受信者の ID を確認します。
+*   **機密性**: 送信データを暗号化します。そのため第三者はメッセージを解読することができません。
+*   **整合性**: 受信データが偶発的にまたは故意に修正されることはありません。
 
-TLS uses a public key encryption technique based on a pair of asymmetric keys for encryption and decryption: a public key and a private key. The private key is used to encrypt data. The sender (the website) does not give it to anyone. The public key is used to decrypt the information and is sent to the receivers (web browsers) through a certificate. When using TLS with the Internet, the certificate is delivered through a certification authority, such as Verisign®. The website pays the Certificate Authority to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
-> For more information on the encryption method and the public and private key issues, refer to the `ENCRYPT BLOB` command description.
+TLS は公開鍵暗号化技術を用います。これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。 秘密鍵はデータを暗号化するために使用されます。 送信者 (Webサイト) は、それを誰にも渡しません。 公開鍵は情報を復号化するために使用され、証明書を通して受信者 (Webブラウザー) へ送信されます。 インターネットで TLS を使用する際、証明書は Verisign® などの認証機関を通して発行されます。 Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
+> 暗号化メソッドと公開鍵および秘密鍵に関する詳細は、`ENCRYPT BLOB` コマンドの記述を参照してください。
 
-## Minimum version
+## 最低バージョン
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.2. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
+デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。 この値は `SET DATABASE PARAMETER` コマンドで `Min TLS version` セレクターを使用することで変更可能です。
 
-You can control the level of security of your web server by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+接続時に受け入れる [最低TLSバージョン](WebServer/webServerConfig.md#最低TLSバージョン) を定義することで、Webサーバーのセキュリティレベルを制御することができます。
 
-## How to get a certificate?
+## 証明書の取得方法
 
-A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
+サーバーを保護モードで起動させるには、認証機関の電子証明書が必要です。 This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
+> ブラウザーは、ルート証明書がインストールされた認証機関によって発行された証明書のみを許可します。ルート証明書がインストールされていない場合、通常警告が表示されます。
 
 ![](assets/en/WebServer/tls2.png)
 
