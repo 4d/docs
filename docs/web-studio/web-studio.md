@@ -1,11 +1,11 @@
 ---
 id: web-studio
-title: Web Studio
+title: 4D WebStudio
 ---
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment. 
 
-The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
+4D WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources (for example, the database of a 4D project), and link them to highly customizable interface elements in order to build complete applications.
 
 At this stage, only the WebForm designer, the code editor and the contextual configuration panel are available.
 
@@ -75,7 +75,7 @@ The web studio provides several tools ranging from interface customization to me
 <li class="interface-item">Tabs: They let you keep track of your currently opened elements, such as your forms and methods.</li>
 <li class="interface-item">Components: The building blocks of your end user's application interface. </li>
 <li class="interface-item">Canvas: This is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop CSS classes and data sources onto these components.</li>
-<li class="interface-item">Event and method assignment panel: This is where you link events and methods to your components.</li>
+<li class="interface-item">Contextual configuration panel: This is where you link events and methods to your components, edit CSS styles, etc.</li>
 <li class="interface-item">Properties panel: Allows for advanced style customization. Also allows binding a datasource to a component.</li>
 <li class="interface-item">Menu buttons: Save all your work, preview the end user's application</li>
 </ol>
@@ -122,7 +122,7 @@ The following components are available:
 
 ### Styles Library
 
-The styles library offers a choice of styles that you can apply to your components.
+The styles library offers a choice of CSS styles that you can apply to your components. 
 
 ![alt-text](assets/en/web-studio/styles-library.png)
 
