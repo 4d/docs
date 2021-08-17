@@ -5,9 +5,9 @@ title: Web Studio
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment.
 
-The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database and methods of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
+The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
 
-At this stage, only the WebForm designer, the code editor and the event panel are available.
+At this stage, only the WebForm designer, the code editor and the contextual configuration panel are available.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
@@ -25,39 +25,44 @@ The web studio supports the following web browsers:
 
 The recommended resolution is 1920x1080.
 
-### 設定
+## Configuration and Authentication
 
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. To access, the web studio, make sure your [web server is up and running](../WebServer/webServerAdmin.md#starting-the-web-server) and you've checked the **Enable access to the web studio** option in **Settings** > **Web** > **Web features**.
+The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings.
+### Enabling access to the web studio
 
-### 認証
+To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio).
 
-Access to the web studio is granted when the [session user is authenticated](../Admin/webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the web studio is accessed through the **Design** > **Web Studio...** menu item, automatic authentication is provided.
+To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+
+### Activating authentication
+
+By default, access to the web server is not granted. You need to activate authentication on the `WebAdmin` web server first (otherwise opening the web studio throws a 403 error).
+
+To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
 ## Opening the web studio
 
-The web studio page is automatically available when [the `WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server).
+The web studio page is available when the [`WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and [authentication is activated](#activating-authentication).
 
- There are two ways to access the web studio :
+There are two ways to access the web studio:
 
- *  from a 4D standalone application, go to **Design** > **Web Studio...**.
+*   from your 4D application, go to **Design** > **Web Studio...**.
 
     If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
 
- *  on a browser, with the `WebAdmin` web server running, enter the following address:
-   
+*   on a browser, with the `WebAdmin` web server running, enter the following address:
+  
         IPaddress:HTTPPort/studio
 
     または:
-   
+  
         IPaddress:HTTPSPort/studio
 
     For example, after launching a local web server on port 7080, type this address in your browser to access the web studio: 
-   
+  
         localhost:7080/studio
 
     You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to open a `WebAdmin` session on the server.
-
-> To configure the [HTTPPort](../Admin/webAdmin.md#http-port) and the [HTTPSPort](../Admin/webAdmin.md#https-port), go to **File** > **Web Administration** > **Settings...**.
 
 ## インターフェース
 
@@ -123,7 +128,7 @@ The styles library offers a choice of styles that you can apply to your componen
 
 There are two categories of styles:
 * **Theme**: predefined CSS styles, available by default.
-* **Local**: CSS styles you create. They can only be applied to WebForm components.
+* **Local**: CSS styles you create. A local style can only be used in the web form where it is created.
 
 > **TODO --> Show that styles can be edited**
 
@@ -140,7 +145,7 @@ This section groups the available data sources:
 
 In this section, you'll find the following:
 
-*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your datastore, and they will be handled by the server as **Remote** data sources.
+*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your [datastore](../ORDA/dsMapping.md#datastore), and they will be handled by the server as **Remote** data sources.
 
 *  **Remote** data sources: Entities and entity selections, handled on the server, that can be assigned to components. They offer functions defined on the ORDA classes that they instantiate (DataStore classes, Dataclass class, Entity class, Entity Selection class).
 
