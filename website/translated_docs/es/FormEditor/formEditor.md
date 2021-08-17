@@ -111,8 +111,8 @@ Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
 
 *   **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 *   **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
-*   **PgUp** and **PgDn**: Used to scroll the Property List contents.
-*   **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
+*   **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
+*   **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
 *   **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
 *   **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
 
@@ -255,7 +255,7 @@ Las herramientas de alineación de la barra de herramientas y del submenú Aline
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-Cuando 4D alinea los objetos, deja un objeto seleccionado en su lugar y alinea el resto de los objetos a ese. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. La figura siguiente muestra objetos sin alineación, "alineados a la izquierda", "alineados horizontalmente por centros" y "alineados a la derecha":
+Cuando 4D alinea los objetos, deja un objeto seleccionado en su lugar y alinea el resto de los objetos a ese. This object is the “anchor.” Utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. La figura siguiente muestra objetos sin alineación, "alineados a la izquierda", "alineados horizontalmente por centros" y "alineados a la derecha":
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
@@ -272,49 +272,49 @@ Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, 
 
 *   Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**.<p>En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla.<p>O:<p>Para alinear los objetos a un objeto específico, seleccione la opción **Alinear en** y seleccione el objeto al que desea que se alineen los demás objetos de la lista de objetos. En este caso, la posición del objeto de referencia no se alterará.
 
-Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
-> This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
+Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Los objetos se alinean entonces en el editor de formularios, pero como la caja de diálogo permanece en el primer plano, aún puede cancelar o aplicar la alineación.
+> Esta caja de diálogo le permite alinear y distribuir objetos en una sola operación. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distribuir-objetos).
 
-#### Using the Magnetic Grid
+#### Utilizar la rejilla magnética
 
-The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
+El editor de formularios dispone de una rejilla magnética virtual que puede ayudarle a colocar y alinear objetos en un formulario. La alineación magnética de los objetos se basa en su posición con respecto a los demás. La rejilla magnética sólo puede utilizarse cuando hay al menos dos objetos en el formulario.
 
-This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. A noticeable alignment is established each time that:
+Esto funciona de la siguiente manera: cuando mueve un objeto en el formulario, 4D indica las posibles ubicaciones de este objeto basándose en alineaciones notables con otros objetos formulario. Una alineación evidente se establece cada vez que:
 
-*   Horizontally, the edges or centers of two objects coincide,
-*   Vertically, the edges of two objects coincide.
+*   Horizontalmente, los bordes o centros de dos objetos coinciden,
+*   Verticalmente, los bordes de dos objetos coinciden.
 
-When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
+Cuando esto ocurre, 4D coloca el objeto en el lugar y muestra una línea roja que indica la alineación notable que se ha tenido en cuenta:
 
 ![](assets/en/FormEditor/magneticGrid1.png)
 
-Concerning the distribution of objects, 4D proposes a distance based on interface standards. Like with magnetic alignment, red lines indicate the noticeable differences once they are reached.
+En cuanto a la distribución de los objetos, 4D ofrece una distancia basada en los estándares de interfaz. Al igual que en el caso de la alineación magnética, las líneas rojas indican las diferencias notables una vez alcanzadas.
 
 ![](assets/en/FormEditor/magneticGrid2.png)
 
-This operation applies to all types of form objects. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
-> The Magnetic Grid also influences the manual resizing of objects.
+Este funcionamiento se aplica a todos los tipos de objetos de los formularios. La rejilla magnética puede activarse o desactivarse en cualquier momento utilizando el comando **Activar la rejilla magnética** del menú **Formulario** o del menú contextual del editor. También es posible definir la activación de esta función por defecto en la página **Preferencias** > **Formularios** (opción **Activar la alineación automática por defecto**). Puede activar o desactivar manualmente la rejilla magnética cuando se selecciona un objeto presionando la tecla **Ctrl** (Windows) o **Control** (macOS) .
+> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
 
-### Distributing objects
+### Distribuir los objetos
 
-You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation.
-> When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
+Puede repartir los objetos de manera que queden dispuestos con el mismo espacio entre ellos. Para ello, puede distribuir los objetos utilizando las herramientas de distribución de la paleta Herramientas o el Asistente de alineación. Este último le permite alinear y distribuir objetos en una sola operación.
+> Cuando está activa la [rejilla magnética](#using-the-magnetic-grid), también se ofrece una guía visual para la repartición cuando se desplaza un objeto manualmente.
 
-To distribute objects with equal spacing:
+Para repartir los objetos con igual espacio:
 
-1.  Select three or more objects and click the desired Distribute tool.
+1.  Seleccione tres o más objetos y haga clic en la herramienta Distribuir correspondiente.
 
-2.  In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](assets/en/FormEditor/distributionTool.png)<p>O<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2.  En la barra de herramientas, haga clic en la herramienta de distribución que corresponde a la distribución que desea aplicar.<p>![](assets/en/FormEditor/distributionTool.png)<p>O<p>Seleccione un comando del menú de distribución en el submenú **Alinear** del menú **Objeto** o en el menú contextual del editor.<p>4D distribuye los objetos consecuentemente. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
 
-To distribute objects using the Align and Distribute dialog box:
+Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
-1.  Select the objects you want to distribute.
+1.  Seleccione los objetos que desea distribuir.
 
-2.  Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>The following dialog box appears:![](assets/en/FormEditor/alignmentAssistant.png)
+2.  Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.<p>Aparece la siguiente caja de diálogo:![](assets/en/FormEditor/alignmentAssistant.png)
 
-3.  In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Standard horizontal distribution icon)<p>El área de ejemplo muestra los resultados de su selección.
+3.  En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Icono de distribución horizontal estándar)<p>El área de ejemplo muestra los resultados de su selección.
 
-4.  To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>O:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
+4.  Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>O:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
 
     *   Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
     *   Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
@@ -370,31 +370,31 @@ To view or change the entry order:
 
 1.  Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:<p>![](assets/en/FormEditor/zOrder.png)<p>The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry.<p>Viewing and changing the data entry order are the only actions you can perform until you click any tool in the Tools palette.
 
-2.  To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<p>![](assets/en/FormEditor/entryOrder3.png)<p>4D will adjust the entry order accordingly.
+2.  To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<p>![](assets/en/FormEditor/entryOrder3.png)<p>4D ajustará la orden de entrada en consecuencia.
 
-3.  Repeat step 2 as many times as necessary to set the data entry order you want.
+3.  Repita el paso 2 tantas veces como sea necesario para establecer el orden de entrada de datos que desee.
 
-4.  When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.<p>4D returns to normal operation of the Form editor.
+4.  Cuando esté satisfecho con el orden de entrada de datos, haga clic en cualquier herramienta no seleccionada de la barra de herramientas o elija **Orden de entrada** en el menú **Formulario**.<p>4D vuelve al modo de funcionamiento normal del editor de formularios.
 
-> Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> Sólo se muestra el orden de entrada de la página actual del formulario. Si el formulario contiene objetos editables en la página 0 o procedentes de un formulario heredado, el orden de entrada por defecto es el siguiente: objetos de la página 0 del formulario heredado > objetos de la página 1 del formulario heredado > objetos de la página 0 del formulario abierto > objetos de la página actual del formulario abierto.
 
 
-#### Using a data entry group
+#### Utilizar un grupo de entrada
 
-While you are changing the data entry order, you can select a group of objects in a form so that the standard data entry order applies to the objects within the group. This allows you to easily set the data entry order on forms in which fields are separated into groups or columns.
+Cuando se cambia el orden de entrada, se puede seleccionar un grupo de objetos en el formulario para que el orden de entrada estándar se aplique a los objetos del grupo. Esto le permite definir fácilmente el orden de entrada para los formularios en los que los campos están separados en grupos o columnas.
 
-To create a data entry group:
+Para crear un grupo de entrada:
 
-1.  Choose **Entry Order** from the *Form* menu or click the  button in the toolbar.
-2.  Draw a marquee around the objects you want to group for data entry.
+1.  Seleccione **Orden de entrada** en el menú *Formulario* o haga clic en el botón de la barra de herramientas.
+2.  Dibuje un rectángulo de selección alrededor de los objetos que desee agrupar para la entrada de datos.
 
-When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
+Al soltar el botón del ratón, los objetos encerrados o tocados por el rectángulo siguen el orden de entrada por defecto. El orden de entrada de los otros objetos restantes se ajusta según sea necesario.
 
 #### Excluir un objeto del orden de entrada
 
-Por defecto, todos los objetos que soportan la propiedad enfocable se incluyen en el orden de entrada. To exclude an object from the entry order:
+Por defecto, todos los objetos que soportan la propiedad enfocable se incluyen en el orden de entrada. Para excluir un objeto del orden de entrada:
 
-1. Select the Entry order mode, then
+1. Seleccione el modo de orden de entrada, y luego
 
 2.  **shift-click** on the object
 
@@ -516,16 +516,16 @@ El list box final:
 
 
 
-## Shields
+## Escudos
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+El editor de formularios 4D utiliza escudos para facilitar la visualización de las propiedades de los objetos. Puede encontrarlos en la barra de herramientas del formulario:
 
 ![](assets/en/FormEditor/shields.png)
 
 
 
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+El principio de esta función es el siguiente: cada escudo está asociado a una propiedad (por ejemplo, **Vistas**, que significa que el objeto "está en la vista actual"). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
 
 ![](assets/en/FormEditor/shield.png)
 
@@ -650,36 +650,36 @@ Note that the Default view does not change:
 ![](assets/en/FormEditor/reorderView.png)
 
 
-#### Deleting views
+#### Eliminar vistas
 
 Para cambiar el nombre de una vista, puede utilizar:
 
-*   Click on the **Delete the selected view** button at the bottom of the View palette:
+*   Haga clic en el botón **Eliminar la vista seleccionada** en la parte inferior de la paleta Vista:
 
     ![](assets/en/FormEditor/deleteView.png)
 
 
-*   Right-click on the view name, and select **Delete View**:
+*   Haga clic derecho en el nombre de la vista y seleccione **Eliminar la vista**:
 
     ![](assets/en/FormEditor/deleteView2.png)
-> If a view is deleted, any objects in it are automatically moved to the Default view.
+> Si se elimina una vista, los objetos que contiene se trasladan automáticamente a la vista por defecto.
 
 
 
 
-### Using views
+### Utilización de las vistas
 
-Once views are created, you can use the View palette to:
+Una vez creadas las vistas, puede utilizar la paleta de vistas para:
 
-*   Add object to views,
-*   Move objects from one view to another,
-*   Select all objects of the same view in a single click,
-*   Display or hide objects for each view,
-*   Lock the objects of a view.
+*   Añadir un objeto a las vistas,
+*   Mover los objetos de una vista a otra,
+*   Seleccionar todos los objetos de la misma vista con un solo clic,
+*   Mostrar u ocultar objetos para cada vista,
+*   Bloquear los objetos de una vista.
 
-#### Adding objects to views
+#### Añadir los objetos a las vistas
 
-An object can only belong to a single view.
+Un objeto sólo puede pertenecer a una única vista.
 
 To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
 
