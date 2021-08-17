@@ -1,68 +1,8 @@
 ---
-id: web-studio
-title: 4D WebStudio
+id: data-sources
+title: Interface
 ---
 
-> **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment. 
-
-4D WebStudio is a powerful integrated development environment (IDE) that lets you tap into various data sources (for example, the database of a 4D project), and link them to highly customizable interface elements in order to build complete applications.
-
-At this stage, only the WebForm designer, the code editor and the contextual configuration panel are available.
-
-![alt-text](assets/en/web-studio/web-studio-intro.png)
-
-> The web studio is not compatible with binary databases.
-
-## Requirements
-
-### Browser 
-
-The web studio supports the following web browsers:
-
-- Chrome
-- Edge
-- FireFox
-
-The recommended resolution is 1920x1080.
-
-## Configuration and Authentication
-
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. 
-### Enabling access to the web studio
-
-To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio). 
-
-To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
-
-### Activating authentication
-
-By default, access to the web server is not granted. You need to activate authentication on the `WebAdmin` web server first (otherwise opening the web studio throws a 403 error).
-
-To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
-
-## Opening the web studio
-
-The web studio page is available when the [`WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and [authentication is activated](#activating-authentication). 
-
-There are two ways to access the web studio:
-
-*	from your 4D application, go to **Design** > **Web Studio...**. 
- 
- 	If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
-
-*	on a browser, with the `WebAdmin` web server running, enter the following address:
- 	
-		IPaddress:HTTPPort/studio
-		
-	or:
-	
-		IPaddress:HTTPSPort/studio
-
-	For example, after launching a local web server on port 7080, type this address in your browser to access the web studio: 
-
-		localhost:7080/studio
-
-	You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to open a `WebAdmin` session on the server.
 
 ## Interface
 
@@ -175,7 +115,7 @@ This panel allows for advanced component customization. It is a dynamic panel, w
 
 As a rule, component properties and styling are separated.
 
-Values assigned by CSS are in *italics*. Overriden values (values assigned using the CSS area of the properties panel) display a blue dot.
+Values assigned by CSS are in *italics*. Overridden values (values assigned using the CSS area of the properties panel) display a blue dot.
 
 > **TODO --> Show the CSS part**
 
