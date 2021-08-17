@@ -261,10 +261,10 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションのクライアント部分をビルドするにはこのオプションを選択します。
 
-You can check this option:
+このオプションをチェックすると同時に:
 
-- along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
-- without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part.
+- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択: 現在のプラットフォーム用のサーバーと対応するクライアントをビルドし、(任意で) 自動アップデートアーカイブファイルも含むことができます。
+- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択しない: 通常は、サーバーの構築時に選択する "別プラットフォーム" 用のアップデートアーカイブをビルドするときにこの設定を使います。
 
 #### 4D Volume Desktopの場所
 
@@ -278,33 +278,33 @@ You can check this option:
 
 #### サーバーアプリケーション内部のクライアントアプリケーションのコピー
 
-このエリアのオプションは、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定します。 These options are only enabled when the **Build client application** option is checked.
+このエリアのオプションは、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定します。 これらのオプションは、**クライアントアプリケーションをビルド** オプションがチェックされている場合にのみ有効です。
 
-- **Allow automatic update of Windows client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Windows platform in case of update.
-- **Allow automatic update of Macintosh client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Macintosh platform in case of update.
+- **Windows クライアントアプリケーションの自動更新を有効にする** - このオプションをチェックすると、アップデートの際に Windowsプラットフォーム上のクライアントアプリケーションに送信される `.4darchive` ファイルを作成します。
+- **macOS クライアントアプリケーションの自動更新を有効にする** - このオプションをチェックすると、アップデートの際に macOSプラットフォーム上のクライアントアプリケーションに送信される `.4darchive` ファイルを作成します。
 
-The `.4darchive` is copied at the following location:
+`.4darchive` は以下の場所にコピーされます:
 
 ```
 <ApplicationName>_Build/Client Server executable/Upgrade4DClient/
 ```
 
-#### Selecting client archive for the concurrent platform
+#### 別プラットフォームのクライアントアーカイブの選択
 
 
 
 
-You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
+別プラットフォーム上で動作するクライアントアプリケーション用に、**自動更新を有効にする** オプションをチェックすることができます。 このオプションは、以下の場合にのみ有効です:
 
-- the **Build server application** option is checked,
-- the **Allow automatic update...** option for client applications running on the current platform is checked.
+- **サーバーアプリケーションをビルド** オプションがチェックされている。
+- 現在のプラットフォームで実行されるクライアントアプリケーションについて、**自動更新を有効にする** オプションがチェックされている。
 
-This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
+この機能を利用するには、**[...]** ボタンをクリックして、アップデートに使用するファイルのディスク上の場所を指定する必要があります。 選択するファイルは、現在のサーバープラットフォームによって異なります:
 
-| Current server platform | Required file                                                | 詳細                                                                                                                                                                         |
-| ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                 | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| 現在のサーバープラットフォーム | 必要なファイル                                                   | 詳細                                                                                                                                  |
+| --------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択します。 前もって Windows上で構築された `.4darchive` ファイルを選択するには、**Shift** を押しながら [...] をクリックします。 |
+| Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                     |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
