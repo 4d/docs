@@ -355,7 +355,7 @@ The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a sha
 
 When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+> Tout comme l'objet `Storage` du serveur, la propriété `.storage` est toujours "single" : l'ajout d'un objet partagé ou d'une collection partagée à `.storage` ne crée pas de groupe partagé.
 
 This property is **read only** itself but it returns a read-write object.
 
