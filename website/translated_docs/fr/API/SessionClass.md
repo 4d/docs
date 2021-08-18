@@ -309,7 +309,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 
-> In the current implementation, only the "WebAdmin" privilege is available.
+> Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
 
 By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
 
