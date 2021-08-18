@@ -1,6 +1,6 @@
 ---
 id: web-studio
-title: Web Studio
+title: Studio Web
 ---
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment.
@@ -205,7 +205,7 @@ The web studio is still in early stages of development, so some feature are not 
 
 * The web form cannot be rendered exclusively in the web studio (eye icon).
 
-## WEB Form Object
+## Objet Web Form
 
 The object returned by the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command lets you handle, on the server side, the behavior of your WebForm and its components.
 
@@ -243,7 +243,7 @@ WebForm.firstName.addCSSClass("red") // adds the "red" CSS class to the componen
 WebForm.firstName.removeCSSClass("red") // The "red" CSS class is removed from the component
 ```
 
-## WEB Event Object
+## Objet Web Event
 
 The [WEB Event](https://doc.4d.com/4dv19R/help/command/en/page1734.html) command returns an object describing the event triggered in a web form component, such as a button or a datatable.
 
