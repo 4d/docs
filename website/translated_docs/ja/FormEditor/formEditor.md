@@ -73,162 +73,162 @@ title: フォームエディター
 
 ### Object bar
 
-The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
+オブジェクトバーには、4Dフォーム上で使用できるアクティブオブジェクトや非アクティブオブジェクトがすべて含まれています。 一部のオブジェクトは、テーマ別にまとめられています。 各テーマでは、複数の項目のなかから選択することができます。 オブジェクトバーにフォーカスがある場合、キーボードのキーを使用してボタンを選択できます。 以下の表で利用可能なオブジェクトグループとショートカットを示します。
 
-| ボタン                                     | Group                                                                                                                                                                                                                                                     | Key |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---:|
-| ![](assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        |  T  |
-| ![](assets/en/FormEditor/input.png)     | [入力](FormObjects/input_overview.md)                                                                                                                                                                                                                       |  F  |
-| ![](assets/en/FormEditor/listbox.png)   | [Hierarchical List](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)                                                                                                                                                           |  L  |
-| ![](assets/en/FormEditor/combo.png)     | [Combo Box](FormObjects/comboBox_overview.md) / [Drop-down List](FormObjects/dropdownList_Overview.md) / [Picture Pop-up Menu](FormObjects/picturePopupMenu_overview.md)                                                                                  |  P  |
-| ![](assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    |  B  |
-| ![](assets/en/FormEditor/radio.png)     | [ラジオボタン](FormObjects/radio_overview.md)                                                                                                                                                                                                                   |  R  |
-| ![](assets/en/FormEditor/checkbox.png)  | [チェックボックス](FormObjects/checkbox_overview.md)                                                                                                                                                                                                              |  C  |
-| ![](assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            |  I  |
-| ![](assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         |  S  |
-| ![](assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)                                                                                                                                                                           |  D  |
-| ![](assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |  ○  |
+| ボタン                                     | グループ                                                                                                                                                                                                                                                      | キー |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--:|
+| ![](assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        | T  |
+| ![](assets/en/FormEditor/input.png)     | [入力](FormObjects/input_overview.md)                                                                                                                                                                                                                       | F  |
+| ![](assets/en/FormEditor/listbox.png)   | [Hierarchical List](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)                                                                                                                                                           | L  |
+| ![](assets/en/FormEditor/combo.png)     | [Combo Box](FormObjects/comboBox_overview.md) / [Drop-down List](FormObjects/dropdownList_Overview.md) / [Picture Pop-up Menu](FormObjects/picturePopupMenu_overview.md)                                                                                  | P  |
+| ![](assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    | B  |
+| ![](assets/en/FormEditor/radio.png)     | [ラジオボタン](FormObjects/radio_overview.md)                                                                                                                                                                                                                   | R  |
+| ![](assets/en/FormEditor/checkbox.png)  | [チェックボックス](FormObjects/checkbox_overview.md)                                                                                                                                                                                                              | C  |
+| ![](assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            | I  |
+| ![](assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         | S  |
+| ![](assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)                                                                                                                                                                           | D  |
+| ![](assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) | ○  |
 
-To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
+任意のオブジェクトタイプを描画するには、該当するボタンを選択してから、フォーム上でそのオブジェクトを描きます。 オブジェクトを作成した後でも、プロパティリストを用いてオブジェクトのタイプを変更することができます。 強制的にオブジェクトを規則正しい形で描画するには、**Shift**キーを押しながらオブジェクトを作成します。 この場合、線は水平方向、45度、または垂直方向に引かれます。また、四角は正方形に、楕円は正円に固定されます。
 
-The current variant of the theme is the object that will be inserted in the form. When you click the right side of a button, you access the variant menu:
+そのテーマで現在選択されているオブジェクトがフォームに挿入されます。 ボタンの右側をクリックすると、バリエーションメニューが表示されます:
 
 ![](assets/en/FormEditor/objectBar.png)
 
-You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
+ボタンを 2回クリックすると、フォーム上にオブジェクトを描画した後も、そのボタンが選択されたままになります (連続選択)。 この機能により、同じタイプのオブジェクトを複数連続して作成しやすくなります。 連続選択を解除したい場合は、別のオブジェクトやツールをクリックします。
 
 ### プロパティリスト
 
-Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font.
+フォームおよびフォームオブジェクトはプロパティを持ち、フォームへのアクセスやフォームの外観、およびフォーム使用時の動作が制御されます。 フォームプロパティには、たとえばフォーム名、メニューバー、フォームサイズなどがあります。 またオブジェクトプロパティには、たとえばオブジェクト名、オブジェクトサイズ、背景色、フォントなどがあります。
 
-You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
+プロパティリストを使用して、フォームおよびオブジェクトプロパティを表示・変更できます。 エディター上でオブジェクト選択していればそのプロパティが、オブジェクトを選択していない場合はフォームのプロパティがプロパティリストに表示されます。
 
-To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
+プロパティリストを表示/非表示にするには、**フォーム** メニュー、またはフォームエディターのコンテキストメニューから **プロパティリスト** を選択します。 さらに、フォームの空のエリアをダブルクリックすることでも表示させることができます。
 
-#### Navigation shortcuts
+#### ナビゲーションショートカット
 
-You can navigate in the Property List using the following shortcuts:
+次のショートカットを使用し、プロパティリスト内を移動することができます:
 
-*   **Arrow key**s ↑ ↓: Used to go from one cell to another.
-*   **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
-*   **PgUp** and **PgDn**: Used to scroll the Property List contents.
-*   **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+*   **矢印キー** ↑ ↓: あるセルから別のセルへ移動します。
+*   **矢印キー** ← →: テーマを展開/縮小するか、入力モードに入ります。
+*   **PgUp** と **PgDn**: プロパティリスト内をスクロールします。
+*   **Home** と **End**: プロパティリストの最初または最後のセルを表示するようスクロールします。
+*   イベント上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : クリックしたイベントの最初の状態に応じて、リストの各イベントを選択/選択解除します。
+*   テーマレベル上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : リストのすべてのテーマを展開/縮小します。
 
 
 
-## Manipulating Form Objects
+## フォームオブジェクトの操作
 
-### Adding objects
+### オブジェクトの追加
 
-You can add objects to forms in several ways:
+フォームにオブジェクトを追加する方法は複数あります:
 
-*   By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
-*   By dragging and dropping the object from the object bar
-*   By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
-*   By dragging and dropping an object from another form,
-*   By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
+*   オブジェクトバーでオブジェクトタイプを選択し、フォームエディター上で直接それを描画する ([オブジェクトバーを使用する](#オブジェクトバーを使用する) 参照)。
+*   オブジェクトバーからオブジェクトをドラッグ＆ドロップする。
+*   定義済み [オブジェクトライブラリ](objectLibrary.md) から選択したオブジェクトをドラッグ＆ドロップあるいはコピー/ペーストする。
+*   他のフォームからオブジェクトをドラッグ＆ドロップする。
+*   エクスプローラー (フィールド) やデザインモードの他のエディター (リストやピクチャー等) からオブジェクトをドラッグ＆ドロップする。
 
-Once the object is placed in the form, you can modify its characteristics using the Form editor.
+オブジェクトをフォームに配置したら、フォームエディターを使用してそのオブジェクトのプロパティを編集できます。
 
-You can work with two types of objects in your forms:
+フォームでは 2つのタイプのオブジェクトを扱います:
 
-*   **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. アクティブオブジェクトと異なり、スタティックオブジェクトには変数や式が割り当てられません。 しかし、スタティックオブジェクトにダイナミックオブジェクトを挿入することは可能です。
+*   **スタティックオブジェクト** (線、枠、背景ピクチャー等): これらは一般的に、フォームのアピアランスやラベル、グラフィックインターフェースを設定するために使用されます。 これらはフォームエディターのオブジェクトバーから利用できます。 プロパティリストを使用して、これらのグラフィック属性 (サイズ、カラー、フォント等) やリサイズオプションも指定できます。 アクティブオブジェクトと異なり、スタティックオブジェクトには変数や式が割り当てられません。 しかし、スタティックオブジェクトにダイナミックオブジェクトを挿入することは可能です。
 
-*   **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable.
+*   アクティブオブジェクト: この種のオブジェクトはインターフェース中でタスクや機能を実行します。フィールド、ボタン、リストボックスなど様々な種類があります。 各アクティブオブジェクトにはフィールドまたは変数が割り当てられます。
 
-### Selecting objects
+### オブジェクトの選択
 
-Before you can perform any operation on an object (such as changing a line width or font), you need to select the object that you want to modify.
+オブジェクトの操作 (線幅やフォントの変更など) をおこなう前に、対象のオブジェクトを選択する必要があります。
 
-To select an object using the toolbar:
+ツールバーを使用してオブジェクトを選択するには:
 
-1.  Click the Arrow tool  in the toolbar.<p>![](assets/en/FormEditor/selection.png)<p> When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
-2.  Click the object you want to select. Resizing handles identify the selected object.<p>![](assets/en/FormEditor/selectResize.png)
+1.  ツールバーの矢印ツールをクリックします。<p>![](assets/en/FormEditor/selection.png)<p> マウスカーソルをフォームエリアに移動すると、カーソルは標準の矢印の形をしたポインターに変わります。
+2.  選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<p>![](assets/en/FormEditor/selectResize.png)
 
-To select an object using the Property List:
+プロパティリストを使用してオブジェクトを選択するには:
 
-1.  Choose the object’s name from the Object List drop-down list located at the top of the Property List.<p>Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+1.  プロパティリストの一番上にあるオブジェクトリストドロップダウンリストからオブジェクト名を選択します。<p>この方法では、他のオブジェクトの下に隠れているオブジェクトや、カレントウィンドウの表示領域外に置かれているオブジェクトを選択することができます。 オブジェクトの選択を解除するには、オブジェクト境界の外側をクリックするか、またはオブジェクト上で **Shift+クリック** します。
+> "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックして選択することもできます。
 
-### Selecting multiple objects
+### 複数オブジェクトの選択
 
-You may want to perform the same operation on more than one form object — for example, to move the objects, align them, or change their appearance. 4D lets you select several objects at the same time. There are several ways to select multiple objects:
+複数のフォームオブジェクトに関して同じ操作を適用したい場合があります。たとえば、オブジェクトの移動や整列、外観の変更をおこなう場合などです。 4D では一度に複数のオブジェクトを選択することができます。 複数のオブジェクトを選択する方法はいくつかあります:
 
-*   Choose **Select All** from the Edit menu to select all the objects.
-*   Right-click on the object and choose the **Select Similar Objects** command in the context menu.
-*   Hold down the **Shift** key and click the objects you want to select.
-*   Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-*   Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Any object that is completely enclosed by the marquee is selected.
+*   編集メニュ－から **すべてを選択** を選択して、すべてのオブジェクトを選択する。
+*   オブジェクト上で右クリックし、コンテキストメニューから **同じ種類のオブジェクトを選択** コマンドを選択する。
+*   **Shift**キーを押しながら、選択したいオブジェクトをクリックする。
+*   選択したいオブジェクトグループの外側から各オブジェクトを囲むようにマーキー (選択矩形とも呼ばれます) を描画する。 マウスボタンを離すと、マーキー内及びマーキーに重なるオブジェクトが選択されます。
+*   **Alt**キー (Windows) または、**Option**キー (macOS) を押しながら、マーキーを描画します。 マーキーに完全に囲まれたオブジェクトが選択されます。
 
-The figure below shows a marquee being drawn to select two objects:
+次の図はマーキーが描画され、2つのオブジェクトが選択されている様子を示しています:
 
 ![](assets/en/FormEditor/selectMultiple.png)
 
-To deselect an object that is part of a set of selected objects, hold down the **Shift** key and click the object. The other objects remain selected. To deselect all the selected objects, click outside the boundaries of all the objects.
+一連の選択オブジェクトから任意のオブジェクトを除外するには、**Shift**キーを押しながらそのオブジェクトをクリックします。 この場合、他のオブジェクトは選択されたままになります。 選択されているオブジェクトをすべて選択解除するには、いずれのオブジェクトの境界にもかからない場所をクリックします。
 
 
-### Duplicating objects
+### オブジェクトの複製
 
-You can duplicate any object in the form, including active objects. Copies of active objects retain all the properties of the original, including name, type, standard action, display format, and object method.
+アクティブオブジェクトを含む任意のオブジェクトをフォーム上で複製できます。 アクティブオブジェクトのコピーはオブジェクト名を除き、変数名、型、標準アクション、表示フォーマット、オブジェクトメソッドなどすべてのプロパティが保持されます。
 
-You can duplicate an object directly using the Duplicate tool in the Tools palette or use the Duplicate Many dialog box to duplicate an object more than once. Also, using this dialog box, you can set the distance between two copies.
+ツールパレットの複製ツールを使用してオブジェクトを直接複製するか、"行列を指定して複製" ダイアログボックスでオブジェクトを複数一気に作成できます。 このダイアログでは、2つのコピー間の間隔も指定できます。
 
-To duplicate one or more objects:
+オブジェクトを複製するには:
 
-1. Select the object or objects that you want to duplicate.
-2. Choose **Duplicate** from the **Edit** menu. 4D creates a copy of each selected object and places the copy in front and slightly to the side of the original.
-3.  Move the copy (or copies) to the desired location. If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. Subsequent copies are also placed in the same relation to their originals. The figure below shows how this relative placement of copies works:
+1. 複製したいオブジェクトを選択します。
+2. **編集** メニューから **複製** を選択します。 4D は選択されたオブジェクトのコピーを作成し、オリジナルオブジェクトの基点から右下に配置します。複製されたコピーはオリジナルの前面におかれます。　
+3.  コピーを適切な場所に配置します。 ここで複製メニュー項目を再び選択すると、4D はもう一つコピーを作成し、最初のコピーと元のオブジェクトの間との同じ距離同じ方向に配置します。 これを活かし、オブジェクトのコピーをあるライン上に配置する必要がある場合は、以下の手順でおこないます。 元のオブジェクトを複製し、そのコピーをフォーム内の別の場所に移動させてから、コピーを複製します。 1つ目のコピーと元のオブジェクトの位置関係を再現する形で、2つ目のコピーも 1つ目のコピーに対して、自動的に配置されます。 後続のコピーも、それぞれのコピー元オブジェクトと同じ位置関係に配置されます。 以下の図は、この相対的なコピーの配置が動作する様子を示しています:
 
 ![](assets/en/FormEditor/duplicateObjects.png)
 
 
-#### Duplicate Many
+#### 行列を指定して複製
 
-The "Duplicate Many" dialog box appears when you select one or more object(s) and choose the **Duplicate Many...** command from the **Object** menu.
+"行列を指定して複製" ダイアログボックスは、**オブジェクト** メニューから **行列を指定して複製...** コマンドを選択すると表示されます。
 
 ![](assets/en/FormEditor/duplcateMany.png)
 
-*   In the upper area, enter the number of columns and lines (rows) of objects you want to get.<p>For example, if you want three columns and two lines of objects, enter 3 in the Column(s) area and 2 in the Line(s) area. If you want three horizontal new copies of an object, enter 4 in the Column(s) area and leave the default value, 1, in the Line(s) area.
+*   上のエリアには、作成したいオブジェクトの列数と行数を入力します。<p>たとえば、3列 2行のオブジェクトを作成したい場合、列に 3 を、行に 2 を入力します。 横に 3つの新しいコピーを作成したい場合は、列欄に 4 を入力し、行はデフォルトの 1 のままにします。
 
-*   For lines and columns, define the offset that you wish to leave between each copy.<p>The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object.<p>For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
+*   列と行それぞれに、コピー間のオフセットを指定できます。<p>値はポイント単位で指定します。 オフセットは、元のオブジェクトに対して相対的に、コピー毎に適用されます。<p>たとえば、元のオブジェクトの高さが 50ポイントである場合、オブジェクトごとに 20ポイント縦オフセットするには、列の "オフセット" エリアに 70 を入力します。
 
-*   If you wish to create a matrix of variables, select the **Number Variables** option and select the direction in which the variables are to be numbered, either by line(s) or by column(s). This option is active only when the selected object is a variable. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
-
-
-### Moving objects
-
-You can move any graphic or active object in the form including fields and objects created with a template. When moving an object, you have the following options:
-
-*   Move the object by dragging it,
-*   Move the object one pixel at a time using the arrow keys,
-*   Move the object by steps using the arrow keys (20-pixel steps by default),
-
-As you begin dragging the selected object, its handles disappear. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
-
-When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations.
-
-To move an object one pixel at a time:
-
-*   Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
-
-To move an object by steps:
-
-*   Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
+*   格子状に変数を作成したい場合、**変数に番号設定** オプションを選択し、番号を振る方向を行または列から選択します。 選択したオブジェクトが変数の場合にのみ、このオプションは有効になります。 詳細は *デザインリファレンス* で [**グリッド上にオブジェクト作成**](https://doc.4d.com/4Dv19/4D/19/Duplicating-on-a-matrix.300-5416673.ja.html) を参照ください。
 
 
-### Grouping objects
+### オブジェクトの移動
 
-4D lets you group objects so that you can select, move, and modify the group as a single object. Objects that are grouped retain their position in relation to each other. You would typically group a field and its label, an invisible button and its icon, and so forth.
+テンプレートで作成されたフィールドやオブジェクトを含め、フォーム上のグラフィックやアクティブオブジェクトはすべて移動可能です。 オブジェクトを移動するには、次のような方法があります:
 
-When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
+*   オブジェクトをドラッグして移動する。
+*   矢印キーを使用して、オブジェクトを 1ピクセルずつ移動する。
+*   Shiftキーと矢印キーを使用して、オブジェクトを 1ステップずつ移動する (デフォルトで 1ステップ=20ピクセル)。
 
-You can ungroup a group of objects to treat them as individual objects again.
+選択したオブジェクトのドラッグを開始すると、ハンドルが消えます。 4D はルーラーにオブジェクトの座標を示すマーカーを表示するので、適切な位置にオブジェクトを配置することができます。 このとき、ハンドルをドラッグしないようにしてください。 ハンドルをドラッグすると、オブジェクトのサイズが変更されます。 **Shift**キーを押しながらドラッグすると、制約付きの移動になります。
+
+[マグネティックグリッド](#マグネティックグリッドを使用する) が有効な場合、グリッドに吸着するようにオブジェクトが移動されます。
+
+オブジェクトを 1ピクセルずつ移動するには:
+
+*   移動したいオブジェクトを選択し、キーボード上の矢印キーを使用してオブジェクトを移動します。 矢印キーを押すたびに、矢印の方向へオブジェクトが 1ピクセルずつ移動します。
+
+オブジェクトを 1ステップずつ移動するには:
+
+*   移動したいオブジェクトを選択し、**Shift**キーを押しながらキーボード上の矢印キーを使用して、オブジェクトを移動します。 デフォルトで 1ステップにつき 20ピクセル移動します。 このピクセル数は、環境設定のフォームページで変更できます。
+
+
+### オブジェクトのグループ化
+
+4D ではオブジェクトをグループ化して、そのグループを一つのオブジェクトとして選択・移動・変更することができます。 グループ化されたオブジェクト同士の相対位置は保持されます。 一般的には、フィールドとそのラベル、透明ボタンとそのアイコン等をグループ化するでしょう。
+
+グループの大きさを変更すると、そのグループ内の全オブジェクトのサイズが同じ比率で変更されます (テキストエリアは除きます。テキストエリアのサイズは、そのフォントサイズに合わせて変更されます)。
+
+グループ化を解除すると、再び個々にオブジェクトを扱えるようになります。
 
 An active object that has been grouped must be ungrouped before you can access its properties or method. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
 
-Grouping only affects objects in the Form editor. When the form is executed, all grouped objects act as if they were ungrouped.
+グループ化はフォームエディター上でのみ意味を持ちます。 フォームの実行中は、グループ化されたすべてのオブジェクトが、グループ化されていないのと同じに動作します。
 > It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
 
 To group objects:
