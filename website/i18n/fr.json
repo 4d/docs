@@ -18,7 +18,7 @@
         "title": "Gestion des licences 4D"
       },
       "Admin/server-admin": {
-        "title": "4D Server Administration Window"
+        "title": "Fenêtre d'administration de 4D Server"
       },
       "Admin/tls": {
         "title": "TLS Protocol (HTTPS)"
@@ -827,19 +827,19 @@
         "title": "Aperçu"
       },
       "web-studio/web-event-object": {
-        "title": "WEB Event Object"
+        "title": "Objet Web Event"
       },
       "web-studio/web-form-object": {
-        "title": "WEB Form Object"
+        "title": "Objet Web Form"
       },
       "web-studio/web-studio": {
-        "title": "Web Studio"
+        "title": "Studio Web"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
       "WebServer/authentication": {
-        "title": "Authentication"
+        "title": "Authentification"
       },
       "WebServer/errorPages": {
         "title": "Custom HTTP Error Pages"
@@ -884,12 +884,12 @@
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
       "Access Rights": "Droits d'accès",
-      "Preferences": "Preferences",
+      "Preferences": "Préférences",
       "Administration": "Administration",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
-      "Web Development": "Web Development",
+      "Web Development": "Développement Web",
       "REST Server": "Serveur REST",
       "Client/Server": "Client/Server",
       "Forms": "Formulaires",
@@ -915,14 +915,14 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Développement Web",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
-    "4D Server Administration Window|no description given": "4D Server Administration Window",
+    "4D Server Administration Window|no description given": "Fenêtre d'administration de 4D Server",
     "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
@@ -931,7 +931,7 @@
     "Access Rights|no description given": "Droits d'accès",
     "Description of log files|no description given": "Description des fichiers historiques",
     "Command Line Interface|no description given": "Interface de ligne de commande",
-    "Preferences|no description given": "Preferences",
+    "Preferences|no description given": "Préférences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
