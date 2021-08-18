@@ -681,74 +681,74 @@ Una vez creadas las vistas, puede utilizar la paleta de vistas para:
 
 Un objeto sólo puede pertenecer a una única vista.
 
-To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
+Para crear un objeto en otra vista, basta con seleccionar la vista en la paleta de vistas (antes de crear el objeto) haciendo clic en su nombre (se muestra un icono de edición para la [Vista actual](#before-you-begin) y el nombre aparece en negrita):
 
 ![](assets/en/FormEditor/addObject.png)
 
-#### Moving objects between views
+#### Mover objetos entre vistas
 
-It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
+También es posible mover uno o más objetos de una vista a otra. En el formulario, seleccione el o los objetos cuya vista desea modificar. La lista de vistas indica, utilizando un símbolo, la vista a la que pertenece la selección:
 
 ![](assets/en/FormEditor/symbol.png)
-> The selection can contain several objects belonging to different views.
+> La selección puede contener varios objetos pertenecientes a diferentes vistas.
 
-Simply select the destination view, right-click, and select **Move to**:
+Simplemente seleccione la vista de destino, haga clic derecho y seleccione **Mover a**:
 
 ![](assets/en/FormEditor/moveObject.png)
 
 O
 
-Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
+Seleccione la vista de destino de la selección y haga clic en el botón **Mover a** de la parte inferior de la paleta de vistas:
 
 ![](assets/en/FormEditor/moveObject3.png)
 
-The selection is then placed in the new view:
+La selección se coloca entonces en la nueva vista:
 
 ![](assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+También puede mover un objeto a otra vista a través del menú contextual del objeto. Haga clic derecho en el objeto, seleccione **Mover a la vista** y seleccione una vista en la lista de vistas disponibles:
 
 ![](assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> La [vista actual](#antes-del-comienzo) se muestra en negrita.
 
 
 
-#### Select all objects of a view
+#### Seleccionar todos los objetos de una vista
 
-You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
+Puede seleccionar todos los objetos que pertenecen a la misma vista en la página actual del formulario. Esta función es útil para aplicar cambios globales a un conjunto de objetos.
 
-To do this, right-click on the view in which you wish to select all the objects, click on **Select All**:
+Para ello, haga clic derecho en la vista en la que desea seleccionar todos los objetos, haga clic en **Seleccionar todo**:
 
 ![](assets/en/FormEditor/selectAll.png)
 
-You can also use the button at the bottom of the View palette:
+También puede utilizar el botón situado en la parte inferior de la paleta de vistas:
 
 
 ![](assets/en/FormEditor/selectAll2.png)
 
 
-#### Show or hide objects of a view
+#### Mostrar u ocultar los objetos de una vista
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+Puede mostrar u ocultar objetos pertenecientes a una vista en cualquier momento en la página actual del formulario. De este modo, podrá centrarse en determinados objetos al editar el formulario, por ejemplo.
 
-By default, all views are shown, as indicated by the *Show/Hide* icon:
+Por defecto, se muestran todas las vistas, como indica el icono *Mostrar/Ocultar*:
 
 ![](assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+Para ocultar una vista, haga clic en el icono *Mostrar/Ocultar*. Entonces se atenúa y los objetos de la vista correspondiente dejan de mostrarse en el formulario:
 
 ![](assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> La [vista actual](#antes-del-comienzo) no se puede ocultar.
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+Para mostrar una vista que está oculta, simplemente selecciónela o haga clic en el icono *Mostrar/Ocultar* de esa vista.
 
 
 
-#### Locking objects of a view
+#### Bloquear los objetos de una vista
 
-You can lock the objects of a view. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
+Puede bloquear los objetos de una vista. Esto impide que se seleccionen, modifiquen o eliminen del formulario. Una vez bloqueado, un objeto no puede seleccionarse mediante un clic, un rectángulo o el comando **Seleccionar objetos similares** del menú contextual. Esta función es útil para evitar errores de manipulación.
 
-By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
+Por defecto, todas las vistas están desbloqueadas, como lo indica el icono *Bloquear/Desbloquear* que aparece junto a cada vista:
 
 ![](assets/en/FormEditor/lockUnlock.png)
 
