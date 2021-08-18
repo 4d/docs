@@ -9,7 +9,7 @@
         "title": "Interface de ligne de commande"
       },
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Explorateur de données Web"
       },
       "Admin/debugLogFiles": {
         "title": "Description des fichiers historiques"
@@ -926,7 +926,7 @@
     "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
     "Description of log files|no description given": "Description des fichiers historiques",
