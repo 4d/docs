@@ -155,11 +155,11 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 You can access individual bytes of a scalar blob using curly brackets. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
 ```4d
-  // Declare a variable of type Blob
+  // Déclarer une variable de type BLOB
  var $vBlob : Blob
-  // Set the size of the blob to 256 bytes
+  // Fixer la taille du BLOB à 256 octets
  SET BLOB SIZE($vBlob;256)
-  // The following code loops through the blob to set each byte to zero
+  //  Le code suivant initialise les octets du BLOB à zéro
  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
  End for
