@@ -22,12 +22,12 @@ title: アプリケーションビルド
 プロジェクトパッケージをビルドするには次の方法があります:
 
 - [`BUILD APPLICATION`](https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html) コマンドを使う
-- or the [Build Application dialog](#application-builder).
+- [アプリケーションビルド](#application-builder) ダイアログを使う
 
 
-### Build application dialog
+### アプリケーションビルド
 
-To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
+このウィンドウを開くには 4D の**デザイン**メニューから**アプリケーションビルド...**を選択します。
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -90,7 +90,7 @@ To display the Build application dialog, select **Design** > **Build Application
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準形式を使用したくない場合は、値を `False` に設定した `UseStandardZipFormat` XMLキーを [`buildApp.4DSettings`](#アプリケーションビルド設定) ファイルに追加します (詳細については、[doc.4d.com](https://doc.4d.com) の *アプリケーションビルド設定ファイル* マニュアルを参照ください)。
 
 
 
@@ -264,7 +264,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 このオプションをチェックすると同時に:
 
 - [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択: 現在のプラットフォーム用のサーバーと対応するクライアントをビルドし、(任意で) 自動アップデートアーカイブファイルも含むことができます。
-- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択しない: 通常は、サーバーの構築時に選択する "別プラットフォーム" 用のアップデートアーカイブをビルドするときにこの設定を使います。
+- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択しない: 通常は、サーバーのビルド時に選択する "別プラットフォーム" 用のアップデートアーカイブをビルドするときにこの設定を使います。
 
 #### 4D Volume Desktopの場所
 
@@ -306,7 +306,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 | macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択します。 前もって Windows上で構築された `.4darchive` ファイルを選択するには、**Shift** を押しながら [...] をクリックします。 |
 | Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                     |
 
-You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
+[**クライアントアプリケーションをビルド**](#クライアントアプリケーションをビルド) と [**自動更新を有効にする**](#copy-of-client-applications-inside-the-server-application) オプションのみを選択することで、サーバーとは異なるプラットフォーム上で `.4darchive` ファイルをビルドすることができます。
 
 
 #### 更新通知の表示
@@ -523,9 +523,9 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+> Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...") が発生します。
 
-The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
+アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 
 
 #### ノータリゼーション (公証) について
