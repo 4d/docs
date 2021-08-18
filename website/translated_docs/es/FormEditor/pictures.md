@@ -42,14 +42,14 @@ When using high resolution pictures, you can specify the scale factor by adding 
 
 | Display Type        | Scale Factor                                   | Ejemplo                                                                  |
 | ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------ |
-| Standard Resolution | 1:1 pixel density.                             | **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
+| Standard Resolution | densidad de pixel 1:1.                         | **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
 | High Resolution     | Pixel density increased by a factor of 2 or 3. | <table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>                                                |
 
 
 
 High resolution pictures with the @nx convention can be used in the following objects:
 
-*   [Static pictures](FormObjects/staticPicture.md)
+*   [Imágenes estáticas](FormObjects/staticPicture.md)
 *   [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
 *   [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
 *   [Tab controls](FormObjects/tabControl.md)
