@@ -226,123 +226,123 @@ title: フォームエディター
 
 グループ化を解除すると、再び個々にオブジェクトを扱えるようになります。
 
-An active object that has been grouped must be ungrouped before you can access its properties or method. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
+グループ化されたアクティブオブジェクトのプロパティやメソッドにアクセスするには、グループ化を解除しなければなりません。 しかし、グループに属するオブジェクトを、グループ化を解除せずに選択することは可能です。これには、オブジェクトを **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) します (グループはあらかじめ選択されている必要があります)。
 
 グループ化はフォームエディター上でのみ意味を持ちます。 フォームの実行中は、グループ化されたすべてのオブジェクトが、グループ化されていないのと同じに動作します。
-> It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
+> 異なるビューに属するオブジェクトをグループ化することはできず、カレントビューに属するオブジェクトのみをグループ化することができます ([オブジェクトビュー](#オブジェクトビュー) 参照)。
 
-To group objects:
+オブジェクトをグループ化するには:
 
-1.  Select the objects that you want to group.
-2.  Choose **Group** from the Object menu.<p>OR<p> Click the Group button  in the toolbar of the Form editor:<p>![](assets/en/FormEditor/group.png)<p> 4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
+1.  グループ化したいオブジェクトを選択します。
+2.  オブジェクトメニューから **グループ化** を選択します。<p>OR<p> フォームエディターのツールバーでグループ化ボタンをクリックします。<p>![](assets/en/FormEditor/group.png)<p> 4D は、新たにグループ化されたオブジェクトの境界をハンドルで表わします。 グループ内の各オブジェクトの境界にはハンドルが表示されません。 これ以降、グループ化されたオブジェクトを編集すると、グループを構成する全オブジェクトが変更されます。
 
-To ungroup an object:
+オブジェクトのグループ化を解除するには:
 
-1.  Select the grouped object that you want to ungroup.
-2.  Choose **Ungroup** from the **Object** menu.<p>OR<p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.<p>4D marks the boundaries of the individual objects with handles.
+1.  グループ化を解除したいグループオブジェクトを選択します。
+2.  **オブジェクト** メニューから **グループ化解除** を選択します。<p>OR<p>フォームエディターのツールバーで **グループ化解除** ボタン (**グループ化** ボタンのサブ項目) をクリックします。<p>**グループ化解除** が選択不可の場合、選択したオブジェクトはグループに属していないことを意味します。<p>4D は個々のオブジェクトの境界をハンドルで表わします。
 
 
-### Aligning objects
+### オブジェクトの整列
 
-You can align objects with each other or using an invisible grid on the form.
+フォーム上のオブジェクトを互いに整列させたり、または透明グリッドを用いて揃えることができます。
 
-*   When you align one object to another, you can align it to the top, bottom, side, or horizontal or vertical center of the other object. You can directly align a selection of objects using the alignment tools or apply more advanced alignment settings using the Alignment Assistant. The latter option allows you, for example, to set the object that will be used as the position reference and to preview the alignment in the form before applying it.
-*   When you use the invisible grid, each object can be aligned manually with others based on “noticeable” positions which are depicted with dotted lines that appear when the object being moved approaches other objects.
+*   オブジェクト同士を整列させる場合、オブジェクトの上端、下端、側面で揃えたり、または別のオブジェクトの縦や横の中心線に沿って揃えることができます。 整列ツールを使用して選択オブジェクトを直接揃えたり、または整列アシスタントを用いてさらに詳細な整列を適用することも可能です。 整列アシスタントを使用した場合、たとえば、整列の基準となるオブジェクトを選択したり、整列を適用する前にフォーム上の整列状態をプレビューできるようになります。
+*   透明グリッドを使用すると、各オブジェクトの位置を手動で揃えることができます。その際、移動中のオブジェクトが別のオブジェクトに接近すると、"目に見える" 位置ガイドとして点線が表示され、これに基づいて各オブジェクトの整列を実行することができます。
 
-#### Using the instantaneous alignment tools
+#### 即時整列ツールを使用する
 
-The alignment tools in the toolbar and in the Align submenu of the Object menu allow you to quickly align selected objects.
+ツールバーの整列ツール、またはオブジェクトメニューの整列サブメニューを使用して、選択したオブジェクトを瞬時に揃えることができます。
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+4D がオブジェクトを揃える場合、選択オブジェクトのうち 1つを定位置に置いたまま、そのオブジェクトを基準に残りのオブジェクトを整列させます。 この基準オブジェクトが "アンカー" となります。 整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。 次の図は整列なし、左揃え、縦中央揃え、右揃えの状態を示しています:
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
-#### Using the alignment assistant
+#### 整列アシスタントを使用する
 
-The Alignment Assistant allows you to perform any type of alignment and/or distribution of objects.
+整列アシスタントを使用すると、オブジェクトに関するあらゆるタイプの整列や均等配置を実行することができます。
 
 ![](assets/en/FormEditor/alignmentAssistant.png)
 
 
-To display this dialog box, select the objects you want to align then choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+このダイアログボックスを表示するには、揃えたいオブジェクトを選択し、**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。
 
-*   In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.
+*   "左/右整列" や "上/下整列" エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<p>見本エリアには、選択結果が表示されます。
 
-*   To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.<p>In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.
+*   標準のアンカー方式による整列を実行するには、**プレビュー** または **適用** をクリックします。<p>この場合、整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。<p>または:<p>特定のオブジェクトを基準にオブジェクトを揃えるには、**整列** オプションを選択し、整列基準としたいオブジェクトを一覧から選択します。 この場合、基準オブジェクトの位置は変わりません。
 
-You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
-> This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
+**プレビュー** ボタンをクリックすると、整列の結果をプレビューすることができます。 するとフォームエディター上のオブジェクトは見かけ上整列しますが、ダイアログボックスが表示されたままなので、この整列のキャンセルや適用をおこなうことができます。
+> 整列アシスタントを使用すると、1回の操作でオブジェクトの整列や均等配置をおこなえます。 オブジェクトを均等配置する方法についての詳細は、[オブジェクトの均等配置](#オブジェクトの均等配置) を参照ください。
 
 #### マグネティックグリッドを使用する
 
-The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
+フォームエディターには仮想的なマグネティックグリッド機能があります。この機能は、フォーム上でオブジェクトの配置や整列をおこなう際に役立ちます。 オブジェクトのマグネティック整列は、オブジェクト同士の相対位置に基づいておこなわれます。 マグネティックグリッドは、2つ以上のオブジェクトがフォーム上に存在する場合のみ使用可能です。
 
-This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. A noticeable alignment is established each time that:
+この機能は次のように作用します。フォーム上のあるオブジェクトを移動する際、4D は他のフォームオブジェクトとの相対的な位置関係に基づき、このオブジェクトの位置候補を示します。 次のような場合に候補が示されます:
 
-*   Horizontally, the edges or centers of two objects coincide,
-*   Vertically, the edges of two objects coincide.
+*   水平方向に 2つのオブジェクトの端または中央が同じ位置になる場合。
+*   垂直方向に 2つのオブジェクトの端が同じ位置になる場合。
 
-When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
+この状況になると、4D はその位置にオブジェクトを配置し、そこが候補位置であることを示す赤いラインを表示します:
 
 ![](assets/en/FormEditor/magneticGrid1.png)
 
-Concerning the distribution of objects, 4D proposes a distance based on interface standards. Like with magnetic alignment, red lines indicate the noticeable differences once they are reached.
+オブジェクトを均等配置する場合、4D はインターフェース標準に基づいてオブジェクト間の距離を提示します。 マグネティック整列と同様に、配置が決定した時点で、その間隔が赤いラインで表わされます。
 
 ![](assets/en/FormEditor/magneticGrid2.png)
 
-This operation applies to all types of form objects. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
-> The Magnetic Grid also influences the manual resizing of objects.
+この処理は、あらゆるタイプのフォームオブジェクトに対して適用されます。 **フォーム** メニューまたはエディターのコンテキストメニューの **マグネティックグリッド** コマンドを使用して、マグネティック機能をいつでも有効または無効に設定できます。 また、**環境設定** の **フォーム** ページにおいて、この機能をデフォルトで有効に設定しておくことも可能です (**デフォルトで自動揃えを有効にする** オプション)。 **Ctrl**キー (Windows) または **Control**キー (macOS) を押してオブジェクトを選択すると、手動でマグネティックグリッドが有効/無効に設定されます。
+> 手動でオブジェクトサイズを変更する場合も、このマグネティックグリッドの影響を受けます。
 
-### Distributing objects
+### オブジェクトの均等配置
 
-You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation.
-> When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
+各オブジェクトが同じ間隔で配置されるように、オブジェクトを均等配置することができます。 これには、ツールパレットまたは整列アシスタントの均等配置ツールを用います。 整列アシスタントを使用すると、1回の操作でオブジェクトの整列や均等配置をおこなえます。
+> [マグネティックグリッド](#マグネティックグリッドを使用する) が有効の場合、オブジェクトを手動で動かすと、均等配置のためガイドが表示されます。
 
-To distribute objects with equal spacing:
+同じ間隔を空けてオブジェクトを配置するには:
 
-1.  Select three or more objects and click the desired Distribute tool.
+1.  3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2.  In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](assets/en/FormEditor/distributionTool.png)<p>OR<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2.  適用したい均等配置に対応する整列ツールをツールバー上で選択します。<p>![](assets/en/FormEditor/distributionTool.png)<p>OR<p>**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから均等揃えメニューコマンドを選択します。<p>4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
-To distribute objects using the Align and Distribute dialog box:
+"整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:
 
-1.  Select the objects you want to distribute.
+1.  均等配置したいオブジェクトを選択します。
 
-2.  Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>The following dialog box appears:![](assets/en/FormEditor/alignmentAssistant.png)
+2.  **オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。<p>以下のダイアログボックスが表示されます:![](assets/en/FormEditor/alignmentAssistant.png)
 
-3.  In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Standard horizontal distribution icon)<p>The example area displays the results of your selection.
+3.  "左/右整列" や "上/下整列" エリアで、標準の均等配置アイコンをクリックします: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(標準の横均等揃えアイコン)<p>見本エリアには、選択結果が表示されます。
 
-4.  To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
+4.  標準の均等配置を実行するには、**プレビュー** または *適用* をクリックします。<p>この場合、4D は標準の均等配置を実行し、オブジェクトは等間隔で配置されます。<p>または:<p>特定の均等配置を実行するには、**均等配置** オプションを選択します (たとえば各オブジェクトの右辺までの距離をもとにしてオブジェクトを均等に配置したい場合)。 このオプションはスイッチのように機能します。 均等配置チェックボックスが選択されていると、このオプションの下にあるアイコンは異なる動作をおこないます:
 
-    *   Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
-    *   Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
+    *   左/右整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの左辺、中央 (横)、右辺で均等に揃えます。
+    *   上/下整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの上辺、中央 (縦)、下辺で均等に揃えます。
 
-    You can preview the actual result of your settings by clicking on the **Preview** button: the operation is carried out in the Form editor but the dialog box stays in the foreground. You can then **Cancel** or **Apply** the modifications.
-> This dialog box lets you combine object alignment and distribution. For more information about alignment, refer to [Aligning objects](#aligning-objects).
+    **プレビュー** ボタンをクリックすると、この設定による結果をプレビューすることができます。この表示はフォームエディター上で実行されますが、ダイアログボックスは前面に表示されたままです。 この後、変更の **キャンセル** または **適用** をおこなうことができます。
+> このダイアログボックスでは、整列と均等配置を合わせて実行することができます。 整列に関する詳細は [オブジェクトの整列](#オブジェクトの整列) を参照ください。
 
 
-### Layering objects
+### オブジェクトを重ねる
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). The figure below shows objects in front of and behind other objects:
+フォーム上で他のオブジェクトを隠しているオブジェクトの配置を調整する必要が生じることもあります。 たとえば、フォーム上のフィールドの背景にグラフィックを配置したい場合です。 4D には **前面へ**、**背面へ**、**一つ上のレベルへ**、**一つ下のレベルへ** という 4つのメニュー項目があり、これらのコマンドを使用してフォーム上のオブジェクトを "重ねる (レイヤー)" ことができます。 この重なりは、デフォルトの入力順も規定します (下の データの入力順 参照)。 次の図は、他のオブジェクトの前面/背面に置かれたオブジェクトを示しています:
 
 ![](assets/en/FormEditor/layering.png)
 
-To move an object to another level, select it and choose:
+選択したオブジェクトのレベルを変更するには、以下のいずれかの作業をおこないます:
 
-*   One of the **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** commands of the Object menu,
-*   One of the commands in the **Level>** submenu in the context menu of the editor,
-*   One of the commands associated with the level management button of the toolbar.
+*   オブジェクトメニューから **前面へ**、**背面へ**、**レベルを上げる**、**レベルを下げる** のいずれかを選択します。
+*   エディターのコンテキストメニューの **レベルに移動** サブメニュー内のコマンドのいずれかを選択します。
+*   ツールバーのレベル管理ボタンに割り当てられたコマンドのいずれかを選択します。
 
 ![](assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
+> 複数のオブジェクトが重なっている場合、**Ctrl+Shift+クリック** / **Command+Shift+クリック** ショートカットを使用して、クリックするたびに下のレイヤーにあるオブジェクトを選択できます。
 
-When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
+レベルの順序を考えるにあたって、4D は常に背面から全面へと進みます。 したがって、前・次で表現した場合、"前レベル" は 1つ背面のレベルのことになります。 "次レベルは" 1つ前面のレベルのことです。
 
 ### データの入力順
 
-The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
+データ入力順とは、入力フォームで **Tab**キーや **改行**キーを押したときに、フィールドやサブフォーム、その他のアクティブオブジェクトが選択される順番のことです。 **Shift+Tab** や **Shift+改行**キーを押すことで、フォーム内を逆方向 (逆の入力順) に移動することもできます。
 
 > You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
 
@@ -554,7 +554,7 @@ Here is a description of each type of shield:
 | ![](assets/en/FormEditor/localized.png)      | Localized                   | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
 | ![](assets/en/FormEditor/noShields.png)      | No Shields                  | No shields appear                                                                                                                    |
 
-## Views
+## オブジェクトビュー
 
 The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
 
