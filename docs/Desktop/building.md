@@ -1,6 +1,6 @@
 ---
 id: building
-title: Building a project package
+title: Build Application
 ---
 
 4D includes an application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications. 
@@ -17,14 +17,17 @@ The application builder allows you to:
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
-## Build application overview
+## Overview
 
 Building a project package can be carried out using:
 
 - either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command, 
-- or the [Build Application window](#application-builder). 
+- or the [Build Application dialog](#application-builder). 
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+
+### Build application dialog
+
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -60,7 +63,6 @@ Checking this file may help you saving time during the subsequent deployment ste
 > Use the `Get 4D file(Build application log file)` command to get the log file location. 
 
 
-
 ## Application name and destination folder
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -86,7 +88,11 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
+A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
+
+> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 #### Include related folders
@@ -289,6 +295,8 @@ The `.4darchive` is copied at the following location:
 #### Selecting client archive for the concurrent platform
 
 
+
+
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
 - the **Build server application** option is checked,
@@ -441,6 +449,8 @@ The page lists the elements loaded by the current 4D application:
 
 *	 **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it. 
 
+
+
 *	**Plugins and components** column - Displays the name of the plug-in/component.
 
 *	**ID** column - Displays the plug-in/component's identification number (if any).
@@ -518,12 +528,13 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below). 
 
 
-
 #### About Gatekeeper  
 
 Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched. 
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened..."). 
+
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 
 #### About Notarization
@@ -581,6 +592,7 @@ The opening sequence for launching a merged application is:
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder. 
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
+
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
