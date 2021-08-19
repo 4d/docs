@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-[プロジェクトにおいて、スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、[`Session`](#session) コマンドによって Session オブジェクトが返されます。 Webクライアント (ブラウザーなど) のセッションを制御するため、4D Webサーバーは自動的に Sessionオブジェクトを作成・管理します。 このオブジェクトは、ユーザーセッションへのインターフェースを Web開発者に対して提供し、アクセス権の管理や、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などを可能にします。
+[プロジェクトにおいて、スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、[`Session`](#session) コマンドによって Session オブジェクトが返されます。 Webクライアント (ブラウザーなど) のセッションを制御するため、4D Webサーバーは自動的に Sessionオブジェクトを作成・管理します。 このオブジェクトは、ユーザーセッションへのインターフェースを Web開発者に提供し、アクセス権の管理や、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などを可能にします。
 
 セッションの実装に関する詳細については、[Webサーバーセッション](WebServer/sessions.md) の章を参照ください。
 
@@ -18,12 +18,13 @@ title: Session
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
+| [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
 
 
-## Session
+## セッション
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -36,7 +37,7 @@ title: Session
 
 
 <!-- REF #_command_.Session.Params -->
-| 参照  | タイプ        |    | 説明             |
+| 引数  | タイプ        |    | 説明             |
 | --- | ---------- |:--:| -------------- |
 | 戻り値 | 4D.Session | <- | Session オブジェクト |
 <!-- END REF -->
@@ -94,7 +95,7 @@ IP:port/4DACTION/action_Session
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| 参照 | タイプ |  | 説明                |
+| 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
@@ -163,7 +164,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| 参照        | タイプ  |    | 説明                                                |
+| 引数        | タイプ  |    | 説明                                                |
 | --------- | ---- |:--:| ------------------------------------------------- |
 | privilege | テキスト | <- | 確認するアクセス権の名称                                      |
 | 戻り値       | ブール  | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
@@ -246,7 +247,7 @@ End if
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
-| 参照  | タイプ |    | 説明                            |
+| 引数  | タイプ |    | 説明                            |
 | --- | --- |:--:| ----------------------------- |
 | 戻り値 | ブール | <- | ゲストセッションの場合は true、それ以外は false |
 <!-- END REF -->
@@ -284,7 +285,7 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| 参照         | タイプ    |    | 説明                                          |
+| 引数         | タイプ    |    | 説明                                          |
 | ---------- | ------ |:--:| ------------------------------------------- |
 | privilege  | テキスト   | -> | アクセス権の名称                                    |
 | privileges | コレクション | -> | アクセス権の名称のコレクション                             |
@@ -350,9 +351,11 @@ End if
 
 #### 説明
 
-`.storage` プロパティは、 <!-- REF #SessionClass.storage.Summary -->Webクライアントのリクエストに対して提供されうる情報を保存するのに使用可能な共有オブジェクト<!-- END REF -->を格納します。
+`.storage` プロパティは、 <!-- REF #SessionClass.storage.Summary -->Webクライアントのリクエストに対応するために情報を保存しておける共有オブジェクト<!-- END REF -->を格納します。
 
 `Session` オブジェクトの作成時には、`.storage` プロパティは空です。 共有オブジェクトのため、このプロパティはサーバー上の `Storage` オブジェクトにおいて利用可能です。
+
+> サーバーの `Storage` オブジェクトと同様に、`.storage` プロパティは常に "単独で" 存在します。共有オブジェクトや共有コレクションを `.storage` に追加しても、共有グループは作成されません。
 
 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。
 
