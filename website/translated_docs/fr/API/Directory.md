@@ -434,12 +434,12 @@ Cette propriété est en **lecture seule**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| Paramètres        | Type        |    | Description                                 |
-| ----------------- | ----------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder                          |
-| newName           | Texte       | -> | Name for the copy                           |
-| overwrite         | Entier long | -> | `fk overwrite` to replace existing elements |
-| Résultat          | 4D.Folder   | <- | Copied file or folder                       |
+| Paramètres        | Type      |    | Description                                 |
+| ----------------- | --------- |:--:| ------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder                          |
+| newName           | Text      | -> | Name for the copy                           |
+| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
+| Résultat          | 4D.Folder | <- | Copied file or folder                       |
 <!-- END REF -->
 
 
