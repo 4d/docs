@@ -415,24 +415,24 @@ JSONフォームの入力順序の設定は、[`entryOrder`](properties_JSONref.
 
 ![](assets/en/FormEditor/cssToolbar.png)
 
-Select one of the following preview modes from the menu:
+メニューから、以下のプレビューモードのいずれかを選択します:
 
-| Toolbar Icon                         | CSS Preview Mode | 説明                                                                                                            |
-| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| ![](assets/en/FormEditor/cssNo.png)  | なし               | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
-| ![](assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
-| ![](assets/en/FormEditor/cssMac.png) | macOS            | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.   |
-> If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
+| ツールバーアイコン                            | CSSプレビューモード | 説明                                                               |
+| ------------------------------------ | ----------- | ---------------------------------------------------------------- |
+| ![](assets/en/FormEditor/cssNo.png)  | なし          | CSS の値はフォームに適用されず、CSS の値やアイコンはプロパティリストに表示されません。                  |
+| ![](assets/en/FormEditor/cssWin.png) | Windows     | Windowsプラットフォーム用の CSS値がフォームに適用されます。 プロパティリストに CSSの値とアイコンが表示されます。 |
+| ![](assets/en/FormEditor/cssMac.png) | macOS       | macOSプラットフォーム用の CSS値がフォームに適用されます。 プロパティリストに CSSの値とアイコンが表示されます。   |
+> オブジェクトに対して大きすぎるフォントサイズがスタイルシートまたは JSON で定義されている場合、オブジェクトは自動的にフォントに合わせてレンダリングされますが、オブジェクトのサイズは変更されません。
 
-The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
+CSSプレビューモードは、[JSON vs スタイルシート](stylesheets.html#json-vs-スタイルシート) の項で定義した、スタイルシートと JSON属性に適用される優先順位を反映します。
 
-Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
-> When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
+CSSプレビューモードを選択すると、オブジェクトは自動的にスタイルシートで定義されたスタイル (あれば) で表示されます。
+> オブジェクトをコピーまたは複製すると、CSS参照 (あれば) と JSON値のみがコピーされます。
 
 
-### CSS support in the Property List
+### プロパティリストの CSSサポート
 
-In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
+CSSプレビューモードでは、スタイルシートで属性値が定義されている場合、その属性名が表示され、その横に CSSアイコンが表示されます。 たとえば、このスタイルシートで定義されている属性値は:
 
 ```4d
 .myButton {
@@ -442,69 +442,69 @@ stroke: #800080;
 }
 ```
 
-are displayed with a CSS icon in the Property List:
+プロパティリストに CSSアイコンとともに表示されます:
 
 ![](assets/en/FormEditor/cssPpropList.png)
 
-An attribute value defined in a style sheet can be overridden in the JSON form description (except if the CSS includes the `!important` declaration, see below). In this case, the Property List displays the JSON form value in **bold**. You can reset the value to its style sheet definition with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts.
-> If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List.
+スタイルシートで定義された属性値は、JSONフォームの記述でオーバーライドすることができます (ただし、CSS に `!important` 宣言が含まれている場合は除きます。後述参照)。 この場合、プロパティリストでは、JSONフォームの値が **太字** で表示されます。 **Ctrl+クリック** (Windows) または **Command+クリック** (macOs) のショートカットで、値をスタイルシートの定義に戻すことができます。
+> グループ、グループ内のオブジェクト、または複数オブジェクトの選択範囲内のオブジェクトに対して、`!important` 宣言とともに属性が定義されている場合、その属性値はロックされ、プロパティリストで変更することはできません。
 
-#### Property List CSS Icons
+#### プロパティリスト CSSアイコン
 
-| アイコン                                       | 説明                                                                                                                                                                 |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
-| ![](assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
-| ![](assets/en/FormEditor/cssIconMixed.png) | Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects |
+| アイコン                                       | 説明                                                                                   |
+| ------------------------------------------ | ------------------------------------------------------------------------------------ |
+| ![](assets/en/FormEditor/cssIcon.png)      | 属性値がスタイルシートで定義されていることを示します                                                           |
+| ![](assets/en/FormEditor/cssImportant.png) | 属性値がスタイルシートで `!important` 宣言とともに定義されていることを示します                                       |
+| ![](assets/en/FormEditor/cssIconMixed.png) | グループまたは複数のオブジェクトの選択項目のうち、少なくとも 1つのオブジェクトについて、スタイルシートで定義された属性値が他のオブジェクトと異なる場合に表示されます。 |
 
 
 
 ## リストボックスビルダー
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+**リストボックスビルダー** を使用して、エンティティセレクション型リストボックスを素早く作成することができます。 作成したリストボックスは、すぐに使用することも、フォームエディターで編集することもできます。
 
-The List box builder lets you create and fill entity selection list boxes in a few simple operations.
-
-
-
-### Using the List Box Builder
+リストボックスビルダーでは、いくつかの簡単な操作で、エンティティセレクション型リストボックスの作成と入力ができます。
 
 
-1.  In the Form Editor toolbar, click on the List box builder icon:
+
+### リストボックスビルダーを使用する
+
+
+1.  フォームエディターツールバーのリストボックスビルダーアイコンをクリックします:
 
     ![](assets/en/FormEditor/listboxBuilderIcon.png)
 
-    The List box builder is displayed:
+    リストボックスビルダーが表示されます:
 
     ![](assets/en/FormEditor/listboxBuilder.png)
 
-2.  Select a table from the **Table** dropdown list:
+2.  **テーブル** ドロップダウンリストからテーブルを選択します:
 
     ![](assets/en/FormEditor/listboxBuilderTable.png)
 
-3.  Select the fields for the list box in the **Fields** area:
+3.  **フィールド** エリアで、リストボックスに表示するフィールドを選択します:
 
     ![](assets/en/FormEditor/listboxBuilderFields.png)
 
-    By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+    デフォルトでは、すべてのフィールドが選択されています。 フィールドは個別に選択/選択解除するか、**Ctrl+クリック** (Windows) または **Cmd+クリック** (macOS) で一括に選択/選択解除することができます。
 
-    You can change the order of the fields by dragging them and dropping them.
+    また、フィールドをドラッグ＆ドロップすることで、フィールドの順番を変更することができます。
 
-4.  The expression to fill the list box's rows from the entity selection is prefilled:
+4.  リストボックスをエンティティセレクションと紐づけるための式があらかじめ入力されています:
 
     ![](assets/en/FormEditor/listboxBuilderExpression.png)
 
-    This expression can be changed if necessary.
+    この式は必要に応じて変更できます。
 
-5.  Clicking on the **Copy** button will copy the expression for loading all records into memory:
+5.  **コピー** ボタンをクリックすると、全レコードをメモリに読み込む式が初期化用にコピーされます。
 
     ![](assets/en/FormEditor/listboxBuilderCode.png)
 
-6.  Click the the **Build widget** button to create the list box.
+6.  **ウィジェットをビルド** ボタンをクリックすると、リストボックスが作成されます。
 
     ![](assets/en/FormEditor/listboxBuilderBuild.png)
 
-The final list box:
+結果のリストボックスです:
 
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
 
