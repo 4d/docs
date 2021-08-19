@@ -119,15 +119,15 @@ To select any parent component displayed in the breadcrumbs trail, click its nam
 
 #### Tooltip
 
-The tooltip displays the type of the selected element and offers several options:
+When you select a component, the tooltip displays its type and offers several actions:
 
-|Icon|Description|Comment|
-|---|---|---|
+|Icon|Description|
+|---|---|
 |Cursor|Move the selected component on the canvas|
 |Arrow|Select the parent component|
 |CSS|Export the selected element's style to a CSS class|
-|T|Reset styles|
-|Duplicate|Duplicate the component|
+|Barred T|Reset styles|
+|Duplicate icon|Duplicate the component|
 
 The tooltip is contextual. This means that some actions are only available to certain elements, and not others. For example, you can duplicate a Text Input component, but not its individual parts (Label and Input).
 
@@ -157,11 +157,16 @@ Unlike Theme classes, Local styles can only be used in the Web Forms in which th
 
 The properties panel gives you extremely granular control over your elements. 
 
-After you select an element, you can edit its style in the properties panel. This also includes binding CSS classes to it.
+After you select an element, you can edit its properties using this panel. This includes style properties (as a rule, component properties and styling are separated).
+
+Using the properties panel, you can bind a CSS class to the element and define values individually.
 
 ![styles-library](assets/en/web-studio/properties-panel.png)
 
-Some visual properties (column size in datatables or grid areas for example) can be edited directly on the canvas.
+Some visual properties, such as column size in datatables or grid areas, can be edited directly on the canvas.
+
+When you edit CSS using the properties panel, it overrides the CSS defined for the component. Overriden properties have a blue dot in front of them.
+
 
 #### Example 
 
@@ -215,9 +220,43 @@ The following components are available:
 
 > More components will be available in the future, and existing components will be enhanced.
 
-## Data Sources 
+## About data sources
+
+Data sources contain data and automatically generate events when that data is changed. You can attach components to these events so that : 
+* data is automatically sent from the datasource to the component
+* when an end-user enters data in a component attached to a datasource, the datasource data is updated automatically 
+* etc.
+
+The **Data Sources** section groups the available data sources:
+
+![alt-text](assets/en/web-studio/data-sources.png)
+
+In this section, you'll find the following:
+
+*  The **Catalog** holds data from your 4D Project. You can designate entities or entity selections from your [datastore](../ORDA/dsMapping.md#datastore), and they will be handled by the server as **Remote** data sources.
+
+*  **Remote** data sources: Entities and entity selections, handled on the server, that can be assigned to components. They offer functions defined on the ORDA classes that they instantiate (DataStore classes, Dataclass class, Entity class, Entity Selection class).
+
+> Only the dataclasses and dataclass attributes [exposed as REST resources](https://doc.4d.com/4Dv19/4D/19/Field-properties.300-5416814.en.html) will be available at run time.
+
+*  **Local** data sources: Scalar types handled with the browser's memory. No request is sent to the server to access this data source.
+
+Only [exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be used when configuring an event.
+
+The data sources display the attributes as well as the functions/methods of data classes.
+## Creating a data source
 
 ## Adding events and methods
+
+![alt-text](assets/en/web-studio/events.png)
+
+You can link events to your components. For example, you can assign an `onchange` event to a search bar so that it suggests a list of employees as the user is typing.
+
+These events are used to execute code on the 4D server. There's no need to write additional Javascript or React code.
+
+Events are executed in the defined order, and you can map one method to several events or one event to several methods.
+
+> **TODO --> Add descritpion of the particular event on the component: Onload**
 
 ## WEB Form Object
 
@@ -289,3 +328,13 @@ Else
 $webForm["helpOn_"+$compRef].hide() // hides the help on orderNumber
 End if
 ```
+
+## Known limitations
+
+The web studio is still in early stages of development, so some feature are not yet available: 
+
+* At this stage, there is no debugger for the web studio.
+
+* You cannot navigate from page to page.
+
+* The web form cannot be rendered exclusively in the web studio (eye icon).
