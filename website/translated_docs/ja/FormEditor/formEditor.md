@@ -516,22 +516,22 @@ stroke: #800080;
 
 
 
-## Shields
+## バッジ
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+フォームエディターではバッジを使用してオブジェクトプロパティの表示を容易にできます。 バッジは、フォームのツールバーで選択します:
 
 ![](assets/en/FormEditor/shields.png)
 
 
 
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+この機能は次のように動作します: 各バッジは特定のプロパティに対応しています (たとえば、**カレントビュー** は、当該オブジェクトがカレントビュー内にあることを示します)。 バッジを有効にすると、4D はバッジとして選択されたプロパティが割り当てられているフォームオブジェクトの左上に小さなアイコン (バッジ) を表示します。
 
 ![](assets/en/FormEditor/shield.png)
 
 ### バッジを使用する
 
-To activate a shield, click the *Shield* icon from the toolbar until the desired shield is selected. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
+バッジを有効にするには、希望するバッジが選択されるまでツールバーの *バッジ* ボタンをクリックします。 You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
 
 
 If you don't want to display shields, select **No Shields** in the selection menu.
