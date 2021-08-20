@@ -45,10 +45,10 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 ##### JSON 文法
 
-| 名称              | データタイプ | とりうる値         |
-| --------------- | ------ | ------------- |
-| windowMinHeight | number | integer value |
-| windowMaxHeight | number | integer value |
+| 名称              | データタイプ | とりうる値 |
+| --------------- | ------ | ----- |
+| windowMinHeight | number | 整数値   |
+| windowMaxHeight | number | 整数値   |
 
 
 ## 最大幅, 最小幅
@@ -58,8 +58,8 @@ Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed 
 
 #### JSON 文法
 
-| 名称             | データタイプ | とりうる値         |
-| -------------- | ------ | ------------- |
-| windowMinWidth | number | integer value |
-| windowMaxWidth | number | integer value |
+| 名称             | データタイプ | とりうる値 |
+| -------------- | ------ | ----- |
+| windowMinWidth | number | 整数値   |
+| windowMaxWidth | number | 整数値   |
 
