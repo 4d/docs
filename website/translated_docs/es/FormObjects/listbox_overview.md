@@ -163,7 +163,7 @@ Supported properties depend on the list box type.
 | [Left](properties_CoordinatesAndSizing.md#left)                                              | X              | X                  | X                                       |
 | [Master Table](properties_DataSource.md#table)                                               |                | X                  |                                         |
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                       |
-| [Method](properties_Action.md#method)                                                        | X              | X                  | X                                       |
+| [Método](properties_Action.md#method)                                                        | X              | X                  | X                                       |
 | [Movable Rows](properties_Action.md#movable-rows)                                            | X              |                    |                                         |
 | [Named Selection](properties_DataSource.md#selectionName)                                    |                | X                  |                                         |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                       |
@@ -307,7 +307,7 @@ You can set standard properties (text, background color, etc.) for each column o
 | On Unload            |                                                                                                                                         |                                                                                        |
 
 
-## List box headers
+## Encabezados de list box
 
 > To be able to access the header properties of a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option of the list box.
 

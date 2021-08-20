@@ -12,7 +12,7 @@ Methods that are associated with objects in these areas are executed when the ar
 
 ---
 
-## Form Break
+## フォームブレーク
 
 Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
 
@@ -29,7 +29,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 ---
 
-## Form Detail
+## フォーム詳細
 
 The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
 
@@ -43,7 +43,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 ---
 
-## Form Footer
+## フォームフッター
 
 The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
 You make the Footer area smaller or larger.<p>
@@ -59,7 +59,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ---
 
-## Form Header
+## フォームヘッダー
 
 The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
 You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.<p>

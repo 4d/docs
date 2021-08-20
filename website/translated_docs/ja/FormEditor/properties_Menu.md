@@ -4,7 +4,7 @@ title: メニュー
 ---
 
 
-## Associated Menu Bar
+## 連結メニューバー
 
 When a menu bar is associated to a form, it is added to the right of the current menu bar when the form is displayed in Application environment.
 

@@ -136,13 +136,13 @@ Only project forms can be specified as published subforms.
 
 ## Save Geometry
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Open form window` con el parámetro `*`, varios parámetros del formulario son guardados automáticamente por 4D cuando se cierra la ventana, independientemente de cómo se hayan modificado durante la sesión:
 
-*   the current page,
-*   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+*   la página actual,
+*   la posición, el tamaño y la visibilidad de cada objeto del formulario (incluyendo el tamaño y la visibilidad de las columnas de list box).
+> Esta opción no tiene en cuenta los objetos generados con el comando `OBJECT DUPLICATE`. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
+Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
 
 #### Gramática JSON
 
@@ -151,29 +151,29 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | memorizeGeometry | booleano       | true, false      |
 
 #### Ver también
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Guardar valor**](FormObjects/properties_Object.md#save-value)
 
 
 ---
 
-## Window Title
+## Título de la ventana
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+El título de la ventana se utiliza cuando se abre el formulario mediante los comandos `Open form window` y `Open window`4D en el entorno de la aplicación. El nombre de la ventana aparece en la barra de título de la ventana.
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, *es decir*:
 
-*   A standard XLIFF reference stored in the Resources folder.
-*   A table or field label: The syntax to apply is <?[TableNum]FieldNum> or 
+*   Una referencia estándar XLIFF almacenada en la carpeta Resources.
+*   Una etiqueta de tabla o de campo: la sintaxis a aplicar es <?[TableNum]FieldNum> o 
   
   <?[TableName]FieldName>.
-*   A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
+*   Una variable o un campo: la sintaxis a aplicar es \<VariableName> o <[TableName]FieldName>. El valor actual del campo o de la variable se mostrará en el título de la ventana.
 
-> The number of characters for a window title is limited to 31.
+> El número de caracteres para el título de una ventana está limitado a 31.
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                       |
-| ----------- | -------------- | ------------------------------------------------------ |
-| windowTitle | cadena         | The name of the window as plain text or as a reference |
+| Nombre      | Tipos de datos | Valores posibles                                         |
+| ----------- | -------------- | -------------------------------------------------------- |
+| windowTitle | cadena         | El nombre de la ventana como texto plano o de referencia |
 
 

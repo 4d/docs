@@ -4,7 +4,7 @@ title: ウィンドウサイズ
 ---
 
 
-## Fixed Height
+## 固定高さ
 
 
 If you select this option, the window height will be locked and it will not be possible for the user to resize it.
@@ -21,7 +21,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 ---
 
-## Fixed Width
+## 固定幅
 
 
 If you select this option, the window width will be locked and it will not be possible for the user to resize it.
@@ -39,7 +39,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 
 
-## Maximum Height, Minimum Height
+## 最大高さ, 最小高さ
 
 Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed Height](#fixed-height) option is not set.
 
@@ -51,7 +51,7 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 | windowMaxHeight | number | integer value |
 
 
-## Maximum Width, Minimum Width
+## 最大幅, 最小幅
 
 Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed Width](#fixed-width) option is not set.
 

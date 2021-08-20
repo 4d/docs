@@ -1771,7 +1771,7 @@ $result2:=$invoices.selected($creditSel)
 
 #### Description
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+La fonction `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une sélection d'entité dans une nouvelle sélection d'entité<!-- END REF -->, sélectionnée de l'index *startFrom* à l'index de *fin* (*fin* non incluse) ou à la dernière entité de la sélection d'entité. This method returns a shallow copy of the entity selection (it uses the same entity references).
 > This function does not modify the original entity selection.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
@@ -1831,7 +1831,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 #### Description
 
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retourne la somme de toutes les valeurs d'*attributPath* dans la sélection d'entités<!-- END REF -->.
 
 `.sum()` returns 0 if the entity selection is empty.
 
@@ -1884,9 +1884,9 @@ $sum:=$sel.sum("salary")
 
 #### Description
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
+La fonction `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->crée et retourne une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurs <!-- END REF -->correspondant aux noms et valeurs d'attribut pour la sélection d'entité.
 
-If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](DataClassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.
+If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Les attributs avec la propriété [kind](DataClassAttributeClass.md#kind) définie sur "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\_KEY (clé primaire). Attributes with kind property as "relatedEntities" are not extracted.
 
 Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:
 
