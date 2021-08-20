@@ -1,13 +1,15 @@
 ---
 id: web-studio
-title: Studio Web
+title: 4D WebStudio
 ---
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment.
 
-The web studio is a powerful integrated development environment (IDE) that lets you tap into various data sources such as the database of a 4D project, and link them to highly customizable interface elements in order to build complete applications.
+## Aperçu
 
-At this stage, only the WebForm designer, the code editor and the contextual configuration panel are available.
+4D WebStudio is a powerful low-code platform for web design and development. More specifically, it's an integrated development environment (IDE) that lets you tap into various data sources (for example, the database of a 4D project), and link them to interface elements in order to build complete applications.
+
+At this stage, only the Web Form Designer, the code editor and the contextual configuration panel are available.
 
 ![alt-text](assets/en/web-studio/web-studio-intro.png)
 
@@ -25,9 +27,16 @@ The web studio supports the following web browsers:
 
 The recommended resolution is 1920x1080.
 
-## Configuration and Authentication
+### License
+
+4D WebStudio is available with the corresponding license.
+
+## Configuration
+
+Before opening the WebStudio, you'll need to enable access and authentication.
 
 The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings.
+
 ### Enabling access to the web studio
 
 To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio).
@@ -40,7 +49,7 @@ By default, access to the web server is not granted. You need to activate authen
 
 To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
-## Opening the web studio
+### Opening the web studio
 
 The web studio page is available when the [`WebAdmin` web server is running](../Admin/webAdmin.md#starting-the-webadmin-web-server) and [authentication is activated](#activating-authentication).
 
@@ -64,82 +73,160 @@ There are two ways to access the web studio:
 
     You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to open a `WebAdmin` session on the server.
 
-## Interface
+## Prise en main
 
-The web studio provides several tools ranging from interface customization to method and event linking.
+### Creating a WebForm
 
-![alt-text](assets/en/web-studio/web-studio-interface.png)
+In 4D WebStudio, everything starts with a WebForm. A WebForm is a container that holds all the other components (buttons, grids, style boxes, etc.) of your application.
+
+To create a WebForm:
+* from the homepage, click **Webform** and enter a name for the new Webform. The WebForm editor opens.
+* from the WebForm editor, click the **New +** tab > **Webform**
+
+### Web Form Editor Interface
+
+The Web Form Editor provides several tools to customize the interface and contents of your application:
+
+![interface](assets/en/web-studio/web-studio-interface.png)
 
 <ol class="interface-numbers">
 <li class="interface-item">Explorer: Displays your project's web forms, methods and classes (assets and data models are not available yet)</li>
 <li class="interface-item">Tabs: They let you keep track of your currently opened elements, such as your forms and methods.</li>
 <li class="interface-item">Components: The building blocks of your end user's application interface. </li>
 <li class="interface-item">Canvas: This is where you combine your components, styles and data sources. You can drag and drop components onto your canvas, then drag and drop CSS classes and data sources onto these components.</li>
-<li class="interface-item">Event and method assignment panel: This is where you link events and methods to your components.</li>
+<li class="interface-item">Contextual configuration panel: This is where you link events and methods to your components, edit CSS styles, etc.</li>
 <li class="interface-item">Properties panel: Allows for advanced style customization. Also allows binding a datasource to a component.</li>
 <li class="interface-item">Menu buttons: Save all your work, preview the end user's application</li>
 </ol>
 
-### Explorateur
+### Adding components to the Web Form
 
-You can see the explorer as the skeleton of your project. It displays your project's web forms, methods, classes (assets and data models are not available yet).
+Components are the building blocks of your application. To add a component, drag it from the Components section and drop it on the canvas.
 
-![alt-text](assets/en/web-studio/explorer.png)
+![add-component-screenshot](assets/en/web-studio/add-component.png)
 
-### Tabs
+### Keeping track of the structure
 
-These tabs let you keep track of which elements of your project are currently opened such as methods, web forms, and classes.
+You can use the following tools to manage your components and keep track of them.
 
-![alt-text](assets/en/web-studio/tabs.png)
+#### Breadcrumbs
 
-### Composants
+When you select a component, the breadcrumbs display its hierarchy:
 
-This area lets you search for a component or choose one from the list. Once a component is on the canvas, you can customize its look and designate the data it displays using the Styles library and the Properties Panel.
+![breadcrumbs](assets/en/web-studio/breadcrumbs.png)
+
+To select any parent component displayed in the breadcrumbs trail, click its name.
+
+#### Tooltip
+
+When you select a component, the tooltip displays its type and offers several actions:
+
+| Icône          | Description                                        |
+| -------------- | -------------------------------------------------- |
+| Cursor         | Move the selected component on the canvas          |
+| Arrow          | Select the parent component                        |
+| CSS            | Export the selected element's style to a CSS class |
+| Barred T       | Reset styles                                       |
+| Duplicate icon | Duplicate the component                            |
+
+The tooltip is contextual. This means that some actions are only available to certain elements, and not others. For example, you can duplicate a Text Input component, but not its individual parts (Label and Input).
+
+#### Outline
+
+The outline section displays the hierarchy of your WebForm. You can click an element in the list to select it.
+
+To display or hide an element, click the eye icon.
+
+### Styling a component
+
+Inside a WebForm, you can style components using the Properties panel and the Styles library and see the result directly on the canvas.
+
+#### Styles Library
+
+One way of styling components is by dragging CSS classes from the Styles library and dropping them on the components.
+
+The Styles Library offers two types of styles:
+* Local: Styles you create
+* Theme: Predefined CSS classes
+
+![styles-library](assets/en/web-studio/styles-library.png)
+
+Unlike Theme classes, Local styles can only be used in the Web Forms in which they are created.
+
+#### Properties Panel
+
+The properties panel gives you extremely granular control over your elements.
+
+After you select an element, you can edit its properties using this panel. This includes style properties (as a rule, component properties and styling are separated).
+
+Using the properties panel, you can bind a CSS class to the element and define values individually.
+
+![styles-library](assets/en/web-studio/properties-panel.png)
+
+Some visual properties, such as column size in datatables or grid areas, can be edited directly on the canvas.
+
+When you edit CSS using the properties panel, it overrides the CSS defined for the component. Overriden properties have a blue dot in front of them.
+
+
+#### Exemple
+
+To add a red background to a Button component:
+* From the Styles library: drag the `bg-red-500` class from the Styles library and drop it on the Button component
+
+* Using the Properties Panel:
+    * Select the Button component, and under Style, choose a red color for the background
+    * Select the Button component, and in the properties panel, select the `bg-red-500` class in the CSS section.
+
+### Exporting styles as CSS classes for reuse
+
+You can export the style of an element as a CSS class to reuse it later. To do this:
+1. Select a an element on the canvas, the tooltip appears
+2. Click the CSS icon in the tooltip and enter a name for the new CSS class
+3. Click **Export**
+
+This exports the style of the element as a local CSS class. Now it appears as a choice in the Styles library and in the property list, and you can apply the class to other elements on your canvas.
+
+#### Editing a class
+
+Once a local class is created, you can hover over it in the Styles Library and click the **Edit Class** button next to its name to edit the CSS directly. The changes apply to all the components using this class.
+
+## Composants
+
+This area lets you search for a component or choose one from the list. Once a component is on the canvas, you can [customize its look](#styling-a-component) and (for some components) assign a data source to it.
 
 ![alt-text](assets/en/web-studio/components.png)
 
 The following components are available:
 
-| Component    | Description |
-| ------------ | ----------- |
-| Style box    | ---         |
-| Grid         | ---         |
-| Columns      | ---         |
-| Tabs         | ---         |
-| Text input   | ---         |
-| Bouton       | ---         |
-| Radio button | ---         |
-| Range input  | ---         |
-| Select box   | ---         |
-| Image        | ---         |
-| Icône        | ---         |
-| Check box    | ---         |
-| Texte        | ---         |
-| Datatable    | ---         |
-| Matrix       | ---         |
+| Component    | Description                                                                                                   |
+| ------------ | ------------------------------------------------------------------------------------------------------------- |
+| Web Form     | Base container that holds all the other components                                                            |
+| Style box    | Container used to keep the content centered and legible                                                       |
+| Grid         | Allows you to produce complex and responsive layouts faster. Grid areas can be edited directly on the canvas  |
+| Columns      | Used in other components to organize information on a page                                                    |
+| Tabs         | Organizes and allows navigation between groups of content that are related and at the same level of hierarchy |
+| Text input   | Allows users to enter data in a form                                                                          |
+| Bouton       | Triggers actions on a web page. Serves as call to action (CTA) and links to pages, forms, assets, and more    |
+| Radio button | Allows selecting one of a set of options (only one option can be selected at any time)                        |
+| Range input  | Allows selecting a range of numeric values                                                                    |
+| Select box   | Allows selecting an item in a list                                                                            |
+| Image        | Displays an image                                                                                             |
+| Icône        | Displays an icon                                                                                              |
+| Check box    | Allows the user to make a binary choice, or select multiple choices in a list                                 |
+| Texte        | Displays text on a web page                                                                                   |
+| Datatable    | Displays data in the form of a table. Rows can be selected to interact with the server                        |
+| Matrix       | Container of repeated style boxes                                                                             |
 
-> More components will be available in the future.
+> More components will be available in the future, and existing components will be enhanced.
 
-### Styles Library
-
-The styles library offers a choice of styles that you can apply to your components.
-
-![alt-text](assets/en/web-studio/styles-library.png)
-
-There are two categories of styles:
-* **Theme**: predefined CSS styles, available by default.
-* **Local**: CSS styles you create. A local style can only be used in the web form where it is created.
-
-> **TODO --> Show that styles can be edited**
-
-### Data Sources
+## About data sources
 
 Data sources contain data and automatically generate events when that data is changed. You can attach components to these events so that :
-* data is automatically sent from the datasource to the widget
+* data is automatically sent from the datasource to the component
 * when an end-user enters data in a component attached to a datasource, the datasource data is updated automatically
 * etc.
 
-This section groups the available data sources:
+The **Data Sources** section groups the available data sources:
 
 ![alt-text](assets/en/web-studio/data-sources.png)
 
@@ -156,34 +243,9 @@ In this section, you'll find the following:
 Only [exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be used when configuring an event.
 
 The data sources display the attributes as well as the functions/methods of data classes.
+## Creating a data source
 
-> **TODO --> Show how datasources are created (initial value etc)**
-
-### Canvas
-
-The canvas is a WYSIWIG tool. First, drag and drop your components to the canvas. Then, you can drag and drop CSS classes and data sources onto these components to build and customize your application.
-
-> **TODO**: show tooltip, interaction with outline and breadcrumbs
-
-Some components' visual properties (column size in datatables or grid areas for example) can be edited directly on the canvas.
-
-![alt-text](assets/en/web-studio/canvas.png)
-
-### Properties Panel
-
-This panel allows for advanced component customization. It is a dynamic panel, which means that its contents adapt to the selected component.
-
-As a rule, component properties and styling are separated.
-
-Values assigned by CSS are in *italics*. Overriden values (values assigned using the CSS area of the properties panel) display a blue dot.
-
-> **TODO --> Show the CSS part**
-
-![alt-text](assets/en/web-studio/style-panel.png)
-
-When you edit CSS using the properties panel, it overrides the CSS defined for the component.
-
-### Events and Code Panel
+## Adding events and methods
 
 ![alt-text](assets/en/web-studio/events.png)
 
@@ -194,16 +256,6 @@ These events are used to execute code on the 4D server. There's no need to write
 Events are executed in the defined order, and you can map one method to several events or one event to several methods.
 
 > **TODO --> Add descritpion of the particular event on the component: Onload**
-
-## Known limitations
-
-The web studio is still in early stages of development, so some feature are not yet available:
-
-* At this stage, there is no debugger for the web studio.
-
-* You cannot navigate from page to page.
-
-* The web form cannot be rendered exclusively in the web studio (eye icon).
 
 ## Objet Web Form
 
@@ -275,3 +327,13 @@ Else
 $webForm["helpOn_"+$compRef].hide() // hides the help on orderNumber
 End if
 ```
+
+## Known limitations
+
+The web studio is still in early stages of development, so some feature are not yet available:
+
+* At this stage, there is no debugger for the web studio.
+
+* You cannot navigate from page to page.
+
+* The web form cannot be rendered exclusively in the web studio (eye icon).
