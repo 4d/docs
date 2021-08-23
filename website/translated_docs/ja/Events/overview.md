@@ -3,23 +3,23 @@ id: overview
 title: 概要
 ---
 
-Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs.
+フォームイベントとは、フォームメソッドやフォームオブジェクトメソッドの実行につながるイベントのことです。 フォームイベントにより、アプリケーションの流れをコントロールしたり、特定のイベントが発生したときにのみ実行されるコードを書くことができます。
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. たとえば:
+コードの中では、トリガーされたイベントを返す `FORM Event` コマンドを使ってイベントを制御します。 たとえば:
 
 ```4d  
-//code of a button
+// ボタンのコード
 If(FORM Event.code=On Clicked) 
-// do something when the button is clicked
+// ボタンがクリックされたときの動作
 End if
 ```
 
-> Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
+> すべてのフォームとフォーム上のすべてのアクティブなオブジェクトは、事前に定義されたイベントのセットを受け取ることができますが、フォームやオブジェクト毎に有効にされたイベントだけが実際に発生します。
 
 
-## Event object
+## イベントオブジェクト
 
-Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+各イベントは、`FORM Event` コマンドによってオブジェクトとして返されます。 デフォルトで、以下のプロパティが含まれています:
 
 | プロパティ | タイプ | 説明 |
 | ----- | --- | -- |
