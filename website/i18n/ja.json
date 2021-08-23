@@ -18,7 +18,7 @@
         "title": "4D ライセンスの管理"
       },
       "Admin/server-admin": {
-        "title": "4D Server Administration Window"
+        "title": "4D Server 管理画面"
       },
       "Admin/tls": {
         "title": "TLSプロトコル (HTTPS)"
@@ -884,7 +884,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
-      "Preferences": "Preferences",
+      "Preferences": "環境設定",
       "Administration": "管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
@@ -922,7 +922,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web 管理",
-    "4D Server Administration Window|no description given": "4D Server Administration Window",
+    "4D Server Administration Window|no description given": "4D Server 管理画面",
     "4D Components Library|no description given": "4D コンポーネントライブラリ",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
@@ -931,7 +931,7 @@
     "Access Rights|no description given": "アクセス権限",
     "Description of log files|no description given": "Description of log files",
     "Command Line Interface|no description given": "コマンドライン・インターフェース",
-    "Preferences|no description given": "Preferences",
+    "Preferences|no description given": "環境設定",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "管理",
