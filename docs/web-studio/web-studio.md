@@ -1,6 +1,6 @@
 ---
 id: web-studio
-title: 4D WebStudio
+title: 4D Web Studio
 ---
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment. 
@@ -33,21 +33,21 @@ The recommended resolution is 1920x1080.
 
 ## Configuration
 
-Before opening the WebStudio, you'll need to enable access and authentication. 
-
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings. 
+Before opening the web studio, you need to enable access to it and activate authentication.
 
 ### Enabling access to the web studio
 
-To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio). 
+By default, access to the web studio is not granted. You need to enable access to it on the database level and on the `WebAdmin` web server level.
 
-To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+1. To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio). 
+
+	To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+
+2.  To enable access to the web studio on the [`WebAdmin`](../Admin/webAdmin.md) web server, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
 ### Activating authentication
 
-By default, access to the web server is not granted. You need to activate authentication on the `WebAdmin` web server first (otherwise opening the web studio throws a 403 error).
-
-To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
+Authentication on the `WebAdmin` web server is granted using an access key. For more details, see [Access key](../Administration/webAdmin.md#access-key) 
 
 ### Opening the web studio
 
@@ -55,11 +55,11 @@ The web studio page is available when the [`WebAdmin` web server is running](../
 
 There are two ways to access the web studio:
 
-*	from your 4D application, go to **Design** > **Web Studio...**. 
+*	from your 4D standalone application, go to **Design** > **Web Studio...**. 
  
  	If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
 
-*	on a browser, with the `WebAdmin` web server running, enter the following address:
+*	on a browser, with the `WebAdmin` web server running (launched from 4D or 4D Server), enter the following address:
  	
 		IPaddress:HTTPPort/studio
 		
@@ -125,6 +125,7 @@ When you select a component, the tooltip displays its type and offers several ac
 |---|---|
 |Cursor|Move the selected component on the canvas|
 |Arrow|Select the parent component|
+|Delete|Remove the selected component from the canvas|
 |CSS|Export the selected element's style to a CSS class|
 |Barred T|Reset styles|
 |Duplicate icon|Duplicate the component|
@@ -133,7 +134,7 @@ The tooltip is contextual. This means that some actions are only available to ce
 
 #### Outline
 
-The outline section displays the hierarchy of your WebForm. You can click an element in the list to select it.
+The outline section displays the hierarchy of your Webform. You can click an element in the list to select it, or click and drag it anywhere in the outline to move it somewhere else.
 
 To display or hide an element, click the eye icon.
 
@@ -165,7 +166,9 @@ Using the properties panel, you can bind a CSS class to the element and define v
 
 Some visual properties, such as column size in datatables or grid areas, can be edited directly on the canvas.
 
-When you edit CSS using the properties panel, it overrides the CSS defined for the component. Overriden properties have a blue dot in front of them.
+##### Overridden properties
+
+When you edit CSS using the properties panel, it overrides the CSS defined for the component (default styles and CSS classes applied). Overriden properties have a blue dot in front of them.
 
 
 #### Example 
@@ -185,7 +188,9 @@ You can export the style of an element as a CSS class to reuse it later. To do t
 2. Click the CSS icon in the tooltip and enter a name for the new CSS class
 3. Click **Export**
 
-This exports the style of the element as a local CSS class. Now it appears as a choice in the Styles library and in the property list, and you can apply the class to other elements on your canvas.
+This exports the style of the element as a local CSS class. Now it appears as a choice in the Styles library and in the property list, and you can apply the class to other elements on your canvas. 
+
+Note that only the [overridden properties](#overriden-properties) are exported as a CSS class.
 
 #### Editing a class
 
