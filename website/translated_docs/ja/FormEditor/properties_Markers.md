@@ -74,15 +74,15 @@ title: マーカー
 
 `addSubrecord` (サブレコード追加) や `cancel`、`automaticSplitter` (自動スプリッター) などの標準アクションをボタンに割り当てることができます。 ヘッダーエリアに配置したアクティブオブジェクトでは以下のイベントを使用できます: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`。 フォームメソッドが `On Header` イベントで呼び出されるのは、エリアのオブジェクトメソッドが呼び出された後になります。
 
-The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+フォームには、[追加のヘッダーエリア](#追加マーカーの作成) を作成し、追加ブレークと関連づけることができます。 レベル1ヘッダーは、最初のソートフィールドによりグループ化されたレコードが印刷される直前に印刷されます。
 
 
 
 #### JSON 文法
 
-| 名称           | データタイプ                            | とりうる値                                                                                                |
-| ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br>Minimum value: 0 |
+| 名称           | データタイプ                            | とりうる値                                                            |
+| ------------ | --------------------------------- | ---------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | ヘッダーマーカーの位置 (ピクセル単位)、またはヘッダーマーカー位置のコレクションを指定します。<br>最小値: 0 |
 
 
 
@@ -90,13 +90,13 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 ## 追加マーカーの作成
 
-You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
+レポート用に追加のブレークエリアやヘッダーエリアを作成できます。 これらの追加されたエリアを使用して、小計などの計算結果をレポートに印刷したり、その他の情報を効果的に表示することができます。
 
-Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
+追加エリアは、[フォームブレーク](#フォームブレーク) と [フォームヘッダー](#フォームヘッダー) のプロパティにマーカー位置のコレクションを指定すると定義されます。
 
-> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
+> 4Dフォームエディターでは、**Alt**キーを押しながら適切なコントロールマーカーをクリックして、追加のコントロールラインを作成します。
 
-A form always starts with a Header, Detail, Break level 0, and Footer areas.
+フォームは常に、ヘッダー、詳細、ブレーク (レベル0)、およびフッターエリアを持った状態で作成されます。
 
 Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
 
@@ -108,7 +108,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 | Form Break 2 | Break at level 2 | Second sorted field             |
 | Form Break 3 | Break at level 3 | Third sorted field              |
 
-Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+Additional Header areas are associated with Breaks. レベル1ヘッダーは、最初のソートフィールドによりグループ化されたレコードが印刷される直前に印刷されます。
 
 | Label         | 説明                | Prints after groups created by: |
 | ------------- | ----------------- | ------------------------------- |
