@@ -85,11 +85,11 @@ En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrar
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+Class corresponde al **selector class** CSS y define el estilo para todos los objetos formulario con el atributo `class`.
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
+Puede especificar las clases a utilizar con un caracter "." seguido del nombre de la clase, y entre llaves, declarar el o los estilos a aplicar.
 
-In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
+En el siguiente ejemplo, el texto de todos los objetos con el nombre de la clase `okButtons` se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles, alineado al centro:
 
 ```
 .okButtons {
