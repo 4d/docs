@@ -79,7 +79,7 @@ A collection is initialized with:
 | Parameter | Tipo                                                                    |    | Descripción           |
 | --------- | ----------------------------------------------------------------------- |:--:| --------------------- |
 | value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| Resultado | Colección                                                               | <- | New collection        |
+| Resultado | Collection                                                              | <- | New collection        |
 <!-- END REF -->
 
 
@@ -163,7 +163,7 @@ You create a new collection and then add a new element:
 | Parameter | Tipo                                                                |    | Descripción                  |
 | --------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
 | value     | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| Resultado | Colección                                                           | <- | New shared collection        |
+| Resultado | Collection                                                          | <- | New shared collection        |
 <!-- END REF -->
 
 
@@ -224,7 +224,7 @@ You can pass any number of values of the following supported types:
 <!-- REF #collection.average().Params -->
 | Parameter    | Tipo            |    | Descripción                                     |
 | ------------ | --------------- |:--:| ----------------------------------------------- |
-| propertyPath | Texto           | -> | Object property path to be used for calculation |
+| propertyPath | Text            | -> | Object property path to be used for calculation |
 | Resultado    | Real, Undefined | <- | Arithmetic mean (average) of collection values  |
 <!-- END REF -->
 
@@ -283,9 +283,9 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.clear()** : Collection<!-- END REF -->
 
 <!-- REF #collection.clear().Params -->
-| Parameter | Tipo      |    | Descripción                                   |
-| --------- | --------- |:--:| --------------------------------------------- |
-| Resultado | Colección | <- | Original collection with all elements removed |
+| Parameter | Tipo       |    | Descripción                                   |
+| --------- | ---------- |:--:| --------------------------------------------- |
+| Resultado | Collection | <- | Original collection with all elements removed |
 <!-- END REF -->
 
 
@@ -323,11 +323,11 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| Parameter | Tipo      |    | Descripción                                                                   |
-| --------- | --------- |:--:| ----------------------------------------------------------------------------- |
-| col2      | Colección | -> | Collection to combine                                                         |
-| index     | Entero    | -> | Position to which insert elements to combine in collection (default=length+1) |
-| Resultado | Colección | <- | Original collection containing combined element(s)                            |
+| Parameter | Tipo       |    | Descripción                                                                   |
+| --------- | ---------- |:--:| ----------------------------------------------------------------------------- |
+| col2      | Collection | -> | Collection to combine                                                         |
+| index     | Integer    | -> | Position to which insert elements to combine in collection (default=length+1) |
+| Resultado | Collection | <- | Original collection containing combined element(s)                            |
 <!-- END REF -->
 
 
@@ -375,7 +375,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 | Parameter | Tipo                                                           |    | Descripción                                                                                                       |
 | --------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
 | value     | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
-| Resultado | Colección                                                      | <- | New collection with value(s) added to the original collection                                                     |
+| Resultado | Collection                                                     | <- | New collection with value(s) added to the original collection                                                     |
 <!-- END REF -->
 
 
@@ -418,12 +418,12 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| Parameter    | Tipo      |    | Descripción                                                                                              |
-| ------------ | --------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| option       | Entero    | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
-| groupWithCol | Colección | -> | Shared collection to be grouped with the resulting collection                                            |
-| groupWithObj | Objeto    | -> | Shared object to be grouped with the resulting collection                                                |
-| Resultado    | Colección | <- | Deep copy of the original collection                                                                     |
+| Parameter    | Tipo       |    | Descripción                                                                                              |
+| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
+| option       | Integer    | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
+| groupWithCol | Collection | -> | Shared collection to be grouped with the resulting collection                                            |
+| groupWithObj | Object     | -> | Shared object to be grouped with the resulting collection                                                |
+| Resultado    | Collection | <- | Deep copy of the original collection                                                                     |
 <!-- END REF -->
 
 
@@ -543,10 +543,10 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
-| Parameter    | Tipo  |    | Descripción                                     |
-| ------------ | ----- |:--:| ----------------------------------------------- |
-| propertyPath | Texto | -> | Object property path to be used for calculation |
-| Resultado    | Real  | <- | Number of elements in the collection            |
+| Parameter    | Tipo |    | Descripción                                     |
+| ------------ | ---- |:--:| ----------------------------------------------- |
+| propertyPath | Text | -> | Object property path to be used for calculation |
+| Resultado    | Real | <- | Number of elements in the collection            |
 <!-- END REF -->
 
 
@@ -594,7 +594,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 | Parameter    | Tipo                                            |    | Descripción                                     |
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                  |
-| propertyPath | Texto                                           | -> | Object property path to be used for calculation |
+| propertyPath | Text                                            | -> | Object property path to be used for calculation |
 | Resultado    | Real                                            | <- | Number of occurrences of the value              |
 <!-- END REF -->
 
@@ -672,11 +672,11 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| Parameter    | Tipo      |    | Descripción                                                      |
-| ------------ | --------- |:--:| ---------------------------------------------------------------- |
-| option       | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| propertyPath | Texto     | -> | Path of attribute whose distinct values you want to get          |
-| Resultado    | Colección | <- | New collection with only distinct values                         |
+| Parameter    | Tipo       |    | Descripción                                                      |
+| ------------ | ---------- |:--:| ---------------------------------------------------------------- |
+| option       | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
+| propertyPath | Text       | -> | Path of attribute whose distinct values you want to get          |
+| Resultado    | Collection | <- | New collection with only distinct values                         |
 <!-- END REF -->
 
 
@@ -726,11 +726,11 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
-| Parameter   | Tipo      |    | Descripción                                                      |
-| ----------- | --------- |:--:| ---------------------------------------------------------------- |
-| collection2 | Colección | -> | Collection to compare                                            |
-| option      | Entero    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Resultado   | Booleano  | <- | True if collections are identical, false otherwise               |
+| Parameter   | Tipo       |    | Descripción                                                      |
+| ----------- | ---------- |:--:| ---------------------------------------------------------------- |
+| collection2 | Collection | -> | Collection to compare                                            |
+| option      | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
+| Resultado   | Boolean    | <- | True if collections are identical, false otherwise               |
 <!-- END REF -->
 
 
@@ -782,12 +782,12 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
-| Parameter  | Tipo     |    | Descripción                                       |
-| ---------- | -------- |:--:| ------------------------------------------------- |
-| startFrom  | Entero   | -> | Index to start the test at                        |
-| methodName | Texto    | -> | Name of the method to call for the test           |
-| param      | Mixed    | -> | Parameter(s) to pass to methodName                |
-| Resultado  | Booleano | <- | True if all elements successfully passed the test |
+| Parameter  | Tipo    |    | Descripción                                       |
+| ---------- | ------- |:--:| ------------------------------------------------- |
+| startFrom  | Integer | -> | Index to start the test at                        |
+| methodName | Text    | -> | Name of the method to call for the test           |
+| param      | Mixed   | -> | Parameter(s) to pass to methodName                |
+| Resultado  | Boolean | <- | True if all elements successfully passed the test |
 <!-- END REF -->
 
 
@@ -879,12 +879,12 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
-| Parameter    | Tipo      |    | Descripción                                                                                                                        |
-| ------------ | --------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
-| propertyPath | Texto     | -> | Object property path whose values must be extracted to the new collection                                                          |
-| targetpath   | Texto     | -> | Target property path or property name                                                                                              |
-| option       | Entero    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
-| Resultado    | Colección | <- | New collection containing extracted values                                                                                         |
+| Parameter    | Tipo       |    | Descripción                                                                                                                        |
+| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
+| propertyPath | Text       | -> | Object property path whose values must be extracted to the new collection                                                          |
+| targetpath   | Text       | -> | Target property path or property name                                                                                              |
+| option       | Integer    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
+| Resultado    | Collection | <- | New collection containing extracted values                                                                                         |
 <!-- END REF -->
 
 
@@ -958,9 +958,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | Parameter | Tipo                                            |    | Descripción                            |
 | --------- | ----------------------------------------------- |:--:| -------------------------------------- |
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
-| startFrom | Entero                                          | -> | Start index (included)                 |
-| end       | Entero                                          | -> | End index (not included)               |
-| Resultado | colección                                       | <- | Original collection with filled values |
+| startFrom | Integer                                         | -> | Start index (included)                 |
+| end       | Integer                                         | -> | End index (not included)               |
+| Resultado | collection                                      | <- | Original collection with filled values |
 <!-- END REF -->
 
 
@@ -1011,11 +1011,11 @@ In case of inconsistency, the following rules apply:
 
 
 <!-- REF #collection.filter().Params -->
-| Parameter  | Tipo      |    | Descripción                                                |
-| ---------- | --------- |:--:| ---------------------------------------------------------- |
-| methodName | Texto     | -> | Name of the function to call to filter the collection      |
-| param      | Mixed     | -> | Parameter(s) to pass to *methodName*                       |
-| Resultado  | Colección | <- | New collection containing filtered elements (shallow copy) |
+| Parameter  | Tipo       |    | Descripción                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------- |
+| methodName | Text       | -> | Name of the function to call to filter the collection      |
+| param      | Mixed      | -> | Parameter(s) to pass to *methodName*                       |
+| Resultado  | Collection | <- | New collection containing filtered elements (shallow copy) |
 <!-- END REF -->
 
 
@@ -1105,12 +1105,12 @@ The code for ***TypeLookUp*** is:
 
 
 <!-- REF #collection.find().Params -->
-| Parameter  | Tipo   |    | Descripción                                  |
-| ---------- | ------ |:--:| -------------------------------------------- |
-| startFrom  | Entero | -> | Index to start the search at                 |
-| methodName | Texto  | -> | Name of the function to call for the find    |
-| param      | any    | -> | Parameter(s) to pass to *methodName*         |
-| Resultado  | any    | <- | First value found, or Undefined if not found |
+| Parameter  | Tipo    |    | Descripción                                  |
+| ---------- | ------- |:--:| -------------------------------------------- |
+| startFrom  | Integer | -> | Index to start the search at                 |
+| methodName | Text    | -> | Name of the function to call for the find    |
+| param      | any     | -> | Parameter(s) to pass to *methodName*         |
+| Resultado  | any     | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
 
@@ -1204,12 +1204,12 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parameter  | Tipo   |    | Descripción                                    |
-| ---------- | ------ |:--:| ---------------------------------------------- |
-| startFrom  | Entero | -> | Index to start the search at                   |
-| methodName | Texto  | -> | Name of the function to call for the find      |
-| param      | any    | -> | Parameter(s) to pass to *methodName*           |
-| Resultado  | Entero | <- | Index of first value found, or -1 if not found |
+| Parameter  | Tipo    |    | Descripción                                    |
+| ---------- | ------- |:--:| ---------------------------------------------- |
+| startFrom  | Integer | -> | Index to start the search at                   |
+| methodName | Text    | -> | Name of the function to call for the find      |
+| param      | any     | -> | Parameter(s) to pass to *methodName*           |
+| Resultado  | Integer | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
 
 
@@ -1285,8 +1285,8 @@ The code for ***FindCity*** method is:
 | Parameter | Tipo       |    | Descripción                                                                  |
 | --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                       |
-| startFrom | Entero     | -> | Index to start the search at                                                 |
-| Resultado | Entero     | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| startFrom | Integer    | -> | Index to start the search at                                                 |
+| Resultado | Integer    | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1343,11 +1343,11 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
-| Parameter   | Tipo      |    | Descripción                                              |
-| ----------- | --------- |:--:| -------------------------------------------------------- |
-| queryString | Texto     | -> | Search criteria                                          |
-| value       | any       | -> | Value(s) to compare when using placeholder(s)            |
-| Resultado   | Colección | <- | Element index(es) matching queryString in the collection |
+| Parameter   | Tipo       |    | Descripción                                              |
+| ----------- | ---------- |:--:| -------------------------------------------------------- |
+| queryString | Text       | -> | Search criteria                                          |
+| value       | any        | -> | Value(s) to compare when using placeholder(s)            |
+| Resultado   | Collection | <- | Element index(es) matching queryString in the collection |
 <!-- END REF -->
 
 
@@ -1398,11 +1398,11 @@ For a detailed description of the *queryString* and *value* parameters, please r
 **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
-| Parameter | Tipo      |    | Descripción                                     |
-| --------- | --------- |:--:| ----------------------------------------------- |
-| index     | Entero    | -> | Where to insert the element                     |
-| element   | any       | -> | Element to insert in the collection             |
-| Resultado | Colección | <- | Original collection containing inserted element |
+| Parameter | Tipo       |    | Descripción                                     |
+| --------- | ---------- |:--:| ----------------------------------------------- |
+| index     | Integer    | -> | Where to insert the element                     |
+| element   | any        | -> | Element to insert in the collection             |
+| Resultado | Collection | <- | Original collection containing inserted element |
 <!-- END REF -->
 
 
@@ -1449,11 +1449,11 @@ Any type of element accepted by a collection can be inserted, even another colle
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| Parameter | Tipo   |    | Descripción                                                              |
-| --------- | ------ |:--:| ------------------------------------------------------------------------ |
-| delimiter | Texto  | -> | Separator to use between elements                                        |
-| option    | Entero | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
-| Resultado | Texto  | <- | String containing all elements of the collection, separated by delimiter |
+| Parameter | Tipo    |    | Descripción                                                              |
+| --------- | ------- |:--:| ------------------------------------------------------------------------ |
+| delimiter | Text    | -> | Separator to use between elements                                        |
+| option    | Integer | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
+| Resultado | Text    | <- | String containing all elements of the collection, separated by delimiter |
 <!-- END REF -->
 
 
@@ -1496,8 +1496,8 @@ By default, null or empty elements of the collection are returned in the resulti
 | Parameter | Tipo       |    | Descripción                                                             |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection            |
-| startFrom | Entero     | -> | Index to start the search at                                            |
-| Resultado | Entero     | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| startFrom | Integer    | -> | Index to start the search at                                            |
+| Resultado | Integer    | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1588,11 +1588,11 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 <!-- REF #collection.map().Params -->
-| Parameter  | Tipo      |    | Descripción                                              |
-| ---------- | --------- |:--:| -------------------------------------------------------- |
-| methodName | Texto     | -> | Name of method used to transform the collection elements |
-| param      | any       | -> | Parameter(s) for the method                              |
-| Resultado  | Colección | <- | Collection of transformed values                         |
+| Parameter  | Tipo       |    | Descripción                                              |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| methodName | Text       | -> | Name of method used to transform the collection elements |
+| param      | any        | -> | Parameter(s) for the method                              |
+| Resultado  | Collection | <- | Collection of transformed values                         |
 <!-- END REF -->
 
 
@@ -1655,7 +1655,7 @@ Here is the ***Percentage*** method:
 <!-- REF #collection.max().Params -->
 | Parameter    | Tipo                                            |    | Descripción                                    |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
+| propertyPath | Text                                            | -> | Object property path to be used for evaluation |
 | Resultado    | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
 <!-- END REF -->
 
@@ -1705,7 +1705,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 <!-- REF #collection.min().Params -->
 | Parameter    | Tipo                                            |    | Descripción                                    |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
+| propertyPath | Text                                            | -> | Object property path to be used for evaluation |
 | Resultado    | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
 <!-- END REF -->
 
@@ -1786,10 +1786,10 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
 
-    | Constant      | Tipo         | Valor | Comment                                           |
-    | ------------- | ------------ | ----- | ------------------------------------------------- |
-    | ck ascending  | Entero largo | 0     | Elements are ordered in ascending order (default) |
-    | ck descending | Entero largo | 1     | Elements are ordered in descending order          |
+    | Constant      | Tipo    | Valor | Comment                                           |
+    | ------------- | ------- | ----- | ------------------------------------------------- |
+    | ck ascending  | Longint | 0     | Elements are ordered in ascending order (default) |
+    | ck descending | Longint | 1     | Elements are ordered in descending order          |
 
     This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
@@ -1895,9 +1895,9 @@ Ordering with a property path:
 <!-- REF #collection.orderByMethod().Params -->
 | Parameter  | Tipo       |    | Descripción                                      |
 | ---------- | ---------- |:--:| ------------------------------------------------ |
-| methodName | Texto      | -> | Name of method used to specify the sorting order |
+| methodName | Text       | -> | Name of method used to specify the sorting order |
 | extraParam | expression | -> | Parameter(s) for the method                      |
-| Resultado  | Colección  | <- | Sorted copy of the collection (shallow copy)     |
+| Resultado  | Collection | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2049,10 +2049,10 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 **.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
-| Parameter | Tipo      |    | Descripción                                   |
-| --------- | --------- |:--:| --------------------------------------------- |
-| element   | Mixed     | -> | Element(s) to add to the collection           |
-| Resultado | Colección | <- | Original collection containing added elements |
+| Parameter | Tipo       |    | Descripción                                   |
+| --------- | ---------- |:--:| --------------------------------------------- |
+| element   | Mixed      | -> | Element(s) to add to the collection           |
+| Resultado | Collection | <- | Original collection containing added elements |
 <!-- END REF -->
 
 
@@ -2109,12 +2109,12 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
-| Parameter     | Tipo      |    | Descripción                                       |
-| ------------- | --------- |:--:| ------------------------------------------------- |
-| queryString   | Texto     | -> | Search criteria                                   |
-| value         | Mixed     | -> | Value(s) to compare when using placeholder(s)     |
-| querySettings | Objeto    | -> | Query options: parameters, attributes             |
-| Resultado     | Colección | <- | Element(s) matching queryString in the collection |
+| Parameter     | Tipo       |    | Descripción                                       |
+| ------------- | ---------- |:--:| ------------------------------------------------- |
+| queryString   | Text       | -> | Search criteria                                   |
+| value         | Mixed      | -> | Value(s) to compare when using placeholder(s)     |
+| querySettings | Object     | -> | Query options: parameters, attributes             |
+| Resultado     | Collection | <- | Element(s) matching queryString in the collection |
 <!-- END REF -->
 
 
@@ -2222,7 +2222,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 <!-- REF #collection.reduce().Params -->
 | Parameter  | Tipo                                            |    | Descripción                                                          |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | Texto                                           | -> | Name of the function to call to process collection elements          |
+| methodName | Text                                            | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
 | param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                 |
 | Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
@@ -2310,11 +2310,11 @@ With the following ***Flatten*** method:
 
 
 <!-- REF #collection.remove().Params -->
-| Parameter | Tipo      |    | Descripción                                           |
-| --------- | --------- |:--:| ----------------------------------------------------- |
-| index     | Entero    | -> | Element at which to start removal                     |
-| howMany   | Entero    | -> | Number of elements to remove, or 1 element if omitted |
-| Resultado | Colección | <- | Original collection without removed element(s)        |
+| Parameter | Tipo       |    | Descripción                                           |
+| --------- | ---------- |:--:| ----------------------------------------------------- |
+| index     | Integer    | -> | Element at which to start removal                     |
+| howMany   | Integer    | -> | Number of elements to remove, or 1 element if omitted |
+| Resultado | Collection | <- | Original collection without removed element(s)        |
 <!-- END REF -->
 
 
@@ -2374,9 +2374,9 @@ If you try to remove an element from an empty collection, the method does nothin
 <!-- REF #collection.resize().Params -->
 | Parameter    | Tipo                                            |    | Descripción                        |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
-| size         | Entero                                          | -> | New size of the collection         |
+| size         | Integer                                         | -> | New size of the collection         |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
-| Resultado    | Colección                                       | <- | Resized original collection        |
+| Resultado    | Collection                                      | <- | Resized original collection        |
 <!-- END REF -->
 
 
@@ -2429,9 +2429,9 @@ By default, new elements are filled will **null** values. You can specify the va
 **.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
-| Parameter | Tipo      |    | Descripción                     |
-| --------- | --------- |:--:| ------------------------------- |
-| Resultado | Colección | <- | Inverted copy of the collection |
+| Parameter | Tipo       |    | Descripción                     |
+| --------- | ---------- |:--:| ------------------------------- |
+| Resultado | Collection | <- | Inverted copy of the collection |
 <!-- END REF -->
 
 
@@ -2512,11 +2512,11 @@ If the collection is empty, this method does nothing.
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
-| Parameter | Tipo      |    | Descripción                                              |
-| --------- | --------- |:--:| -------------------------------------------------------- |
-| startFrom | Entero    | -> | Index to start the search at (included)                  |
-| end       | Entero    | -> | End index (not included)                                 |
-| Resultado | Colección | <- | New collection containing sliced elements (shallow copy) |
+| Parameter | Tipo       |    | Descripción                                              |
+| --------- | ---------- |:--:| -------------------------------------------------------- |
+| startFrom | Integer    | -> | Index to start the search at (included)                  |
+| end       | Integer    | -> | End index (not included)                                 |
+| Resultado | Collection | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->
 
 
@@ -2564,12 +2564,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| Parameter  | Tipo     |    | Descripción                                               |
-| ---------- | -------- |:--:| --------------------------------------------------------- |
-| startFrom  | Entero   | -> | Index to start the test at                                |
-| methodName | Texto    | -> | Name of the method to call for the test                   |
-| param      | Mixed    | -> | Parameter(s) to pass to *methodName*                      |
-| Resultado  | Booleano | <- | True if at least one element successfully passed the test |
+| Parameter  | Tipo    |    | Descripción                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------- |
+| startFrom  | Integer | -> | Index to start the test at                                |
+| methodName | Text    | -> | Name of the method to call for the test                   |
+| param      | Mixed   | -> | Parameter(s) to pass to *methodName*                      |
+| Resultado  | Boolean | <- | True if at least one element successfully passed the test |
 <!-- END REF -->
 
 
@@ -2645,11 +2645,11 @@ With the following *NumberGreaterThan0* method:
 
 
 <!-- REF #collection.sort().Params -->
-| Parameter  | Tipo      |    | Descripción                                      |
-| ---------- | --------- |:--:| ------------------------------------------------ |
-| methodName | Texto     | -> | Name of method used to specify the sorting order |
-| extraParam | any       | -> | Parameter(s) for the method                      |
-| Resultado  | Colección | <- | Original collection sorted                       |
+| Parameter  | Tipo       |    | Descripción                                      |
+| ---------- | ---------- |:--:| ------------------------------------------------ |
+| methodName | Text       | -> | Name of method used to specify the sorting order |
+| extraParam | any        | -> | Parameter(s) for the method                      |
+| Resultado  | Collection | <- | Original collection sorted                       |
 <!-- END REF -->
 
 
@@ -2732,10 +2732,10 @@ If the collection contains elements of different types, they are first grouped b
 **.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.sum().Params -->
-| Parameter    | Tipo  |    | Descripción                                     |
-| ------------ | ----- |:--:| ----------------------------------------------- |
-| propertyPath | Texto | -> | Object property path to be used for calculation |
-| Resultado    | Real  | <- | Sum of collection values                        |
+| Parameter    | Tipo |    | Descripción                                     |
+| ------------ | ---- |:--:| ----------------------------------------------- |
+| propertyPath | Text | -> | Object property path to be used for calculation |
+| Resultado    | Real | <- | Sum of collection values                        |
 <!-- END REF -->
 
 
