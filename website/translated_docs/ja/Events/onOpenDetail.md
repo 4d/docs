@@ -18,4 +18,4 @@ The `On Open Detail` event can be used in the following contexts:
 
 ### Displayed line number
 
-The `Displayed line number` 4D command works with the `On Open Detail` form event. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.
+The `Displayed line number` 4D command works with the `On Open Detail` form event. このコマンドは、レコードのリストまたはリストボックスの行が画面に表示されるときに処理されている行の番号を返します。
