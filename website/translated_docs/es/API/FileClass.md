@@ -68,9 +68,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Params -->
 | Parameter    | Tipo    |    | Descripción                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | Texto   | -> | File path                                       |
-| fileConstant | Entero  | -> | 4D file constant                                |
-| pathType     | Entero  | -> | `fk posix path` (default) or `fk platform path` |
+| path         | Text    | -> | File path                                       |
+| fileConstant | Integer | -> | 4D file constant                                |
+| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
 | Resultado    | 4D.File | <- | New file object                                 |
 <!-- END REF -->
@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Tipo     |    | Descripción                                                |
-| --------- | -------- | -- | ---------------------------------------------------------- |
-| Resultado | Booleano | <- | True if the file was created successfully, false otherwise |
+| Parameter | Tipo    |    | Descripción                                                |
+| --------- | ------- | -- | ---------------------------------------------------------- |
+| Resultado | Boolean | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Descripción
@@ -213,8 +213,8 @@ Creation of a preferences file in the database folder:
 | Parameter         | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Entero    | -> | Type of the alias link                       |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
 | Resultado         | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
@@ -335,7 +335,7 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parameter | Tipo   |    | Descripción                                           |
 | --------- | ------ | -- | ----------------------------------------------------- |
-| Resultado | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
+| Resultado | Object | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -353,16 +353,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Propriedad       | Tipo  |
-| ---------------- | ----- |
-| InternalName     | Texto |
-| ProductName      | Texto |
-| CompanyName      | Texto |
-| LegalCopyright   | Texto |
-| ProductVersion   | Texto |
-| FileDescription  | Texto |
-| FileVersion      | Texto |
-| OriginalFilename | Texto |
+| Propriedad       | Tipo |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 **Returned object with a .plist file**
 
@@ -456,7 +456,7 @@ ALERT($info.Copyright)
 | Parameter         | Tipo      |    | Descripción                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
-| newName           | Texto     | -> | Full name for the moved file |
+| newName           | Text      | -> | Full name for the moved file |
 | Resultado         | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
 
@@ -523,7 +523,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.rename().Params -->
 | Parameter | Tipo    |    | Descripción                |
 | --------- | ------- | -- | -------------------------- |
-| newName   | Texto   | -> | New full name for the file |
+| newName   | Text    | -> | New full name for the file |
 | Resultado | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
@@ -566,7 +566,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 | Parameter | Tipo   |    | Descripción                                                      |
 | --------- | ------ | -- | ---------------------------------------------------------------- |
-| info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
+| info      | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -586,14 +586,14 @@ Each valid property set in the *info* object parameter is written in the version
 
 | Propriedad       | Tipo  |
 | ---------------- | ----- |
-| InternalName     | Texto |
-| ProductName      | Texto |
-| CompanyName      | Texto |
-| LegalCopyright   | Texto |
-| ProductVersion   | Texto |
-| FileDescription  | Texto |
+| InternalName     | Text  |
+| ProductName      | Text  |
+| CompanyName      | Text  |
+| LegalCopyright   | Text  |
+| ProductVersion   | Text  |
+| FileDescription  | Text  |
 | FileVersion      | Texto |
-| OriginalFilename | Texto |
+| OriginalFilename | Text  |
 
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
@@ -688,12 +688,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Tipo   |    | Descripción                                                |
-| ----------- | ------ | -- | ---------------------------------------------------------- |
-| texto       | Texto  | -> | Text to store in the file                                  |
-| charSetName | Texto  | -> | Name of character set                                      |
-| charSetNum  | Entero | -> | Number of character set                                    |
-| breakMode   | Entero | -> | Processing mode for line breaks|<!-- END REF -->
+| Parameter   | Tipo    |    | Descripción                                                |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| texto       | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Name of character set                                      |
+| charSetNum  | Integer | -> | Number of character set                                    |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 
