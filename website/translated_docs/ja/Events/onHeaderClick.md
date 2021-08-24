@@ -3,20 +3,20 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| コード | 呼び出し元                                                                                                                                                                       | 定義                                |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| 42  | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
+| コード | 呼び出し元                                                                                                                                                      | 定義                        |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 42  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | リストボックスの列ヘッダーでクリックがおこなわれた |
 
 
 ## 説明
 
 ### リストボックス
 
-This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
+このイベントは、リストボックスの列ヘッダーでクリックがおこなわれると生成されます。 この場合 `Self` コマンドを使用すればクリックされた列ヘッダーを知ることができます。
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+リストボックスで [ソート可](FormObjects/properties_Action.md#ソート可) プロパティが選択されている場合、`$0` に 0 または -1 を渡して標準の並べ替えをおこなうかどうか指定できます:
 
-- If `$0` equals 0, a standard sort is performed.
+- `$0 = 0` の場合、標準の並べ替えがおこなわれます。
 - If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
 
 If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
