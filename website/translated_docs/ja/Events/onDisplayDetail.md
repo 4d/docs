@@ -3,9 +3,9 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Can be called by                                   | 定義                                                                                                |
-| ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
+| コード | 呼び出し元                                             | 定義                                                                                                |
+| --- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 8   | フォーム - [リストボックス](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 
 
 ## 説明
@@ -16,7 +16,7 @@ The `On Display Detail` event can be used in the following contexts:
 
 A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
