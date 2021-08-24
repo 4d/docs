@@ -3,9 +3,9 @@ id: onScroll
 title: On Scroll
 ---
 
-| Code | Can be called by                                                                                                                                    | 定義                                                                                         |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| 59   | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
+| コード | 呼び出し元                                                                                                                                               | 定義                                                                                         |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 59  | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
 
 
 ## 説明
@@ -22,6 +22,6 @@ The event is triggered when the scroll is the result of a user action: using the
 The event is generated as soon as a user scrolls a picture within the picture input (field or variable) that contains it. You can scroll the contents of a picture area when the size of the area is smaller than its contents and the [display format](FormObjects/properties_Display.md#picture-format) is "Truncated (non Centered)".
 
 
-### List box
+### リストボックス
 
 The event is generated as soon as a user scrolls the rows or columns of the list box. 
