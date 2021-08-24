@@ -3,9 +3,9 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Can be called by                                                                                                                                                            | 定義                                |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
+| コード | 呼び出し元                                                                                                                                                                       | 定義                                |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| 42  | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 
 
 ## 説明
@@ -29,9 +29,9 @@ This event is generated when the user clicks on a column or row header in a 4D V
 | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数   | 42                                                                                                                                  |
 | description | text   | "On Header Click"                                                                                                                   |
-| objectName  | text   | 4D View Pro area name                                                                                                               |
-| sheetName   | text   | Name of the sheet of the event                                                                                                      |
-| range       | object | Cell range                                                                                                                          |
+| objectName  | text   | 4D View Pro エリア名                                                                                                                    |
+| sheetName   | text   | イベントが発生したシート名                                                                                                                       |
+| range       | object | セルのレンジ                                                                                                                              |
 | sheetArea   | 倍長整数   | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### 例題
