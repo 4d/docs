@@ -3,16 +3,16 @@ id: onOpenDetail
 title: On Open Detail
 ---
 
-| Code | Can be called by                                   | 定義                                                                                          |
-| ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 25   | Form - [List Box](FormObjects/listbox_overview.md) | The detail form associated with the output form or with the list box is about to be opened. |
+| コード | 呼び出し元                                             | 定義                                                                                          |
+| --- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 25  | フォーム - [リストボックス](FormObjects/listbox_overview.md) | The detail form associated with the output form or with the list box is about to be opened. |
 
 
 ## 説明
 
 The `On Open Detail` event can be used in the following contexts:
 
-- **Output forms**: A record is about to be displayed in the detail form associated with the output form. This event cannot be selected for project forms, it is only available with **table forms**.
+- **Output forms**: A record is about to be displayed in the detail form associated with the output form. このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
 - List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
 
 
