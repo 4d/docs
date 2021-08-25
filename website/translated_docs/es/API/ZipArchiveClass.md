@@ -150,11 +150,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Tipo     | Descripción                                                                                                                             |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Entero   | Status code                                                                                                                             |
-| success    | Booleano | True if archive created successfully, else false                                                                                        |
+| Property   | Tipo    | Descripción                                                                                                                             |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| statusText | Text    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
+| status     | Integer | Status code                                                                                                                             |
+| success    | Boolean | True if archive created successfully, else false                                                                                        |
 
 
 
@@ -279,7 +279,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 | Parameter | Tipo          |    | Descripción                 |
 | --------- | ------------- |:--:| --------------------------- |
 | zipFile   | 4D.File       | -> | Zip archive file            |
-| password  | Texto         | -> | ZIP archive password if any |
+| password  | Text          | -> | ZIP archive password if any |
 | Resultado | 4D.ZipArchive | <- | Archive object              |
 <!-- END REF -->
 
