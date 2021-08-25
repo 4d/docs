@@ -57,8 +57,8 @@ The `4D.Blob.size` property <!-- REF #4D.Blob.size.Summary --> returns the size 
 <!-- REF #4D.Blob.slice().Params -->
 | 引数    | タイプ     |    | 説明                                                                     |
 | ----- | ------- |:--:| ---------------------------------------------------------------------- |
-| start | 実数      | -> | index of the first byte to include in the new `4D.Blob`.               |
-| end   | 実数      | -> | index of the first byte that will not be included in the new `4D.Blob` |
+| start | Real    | -> | index of the first byte to include in the new `4D.Blob`.               |
+| end   | Real    | -> | index of the first byte that will not be included in the new `4D.Blob` |
 | 戻り値   | 4D.Blob | <- | New `4D.Blob`                                                          |
 <!-- END REF -->
 
