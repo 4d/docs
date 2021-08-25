@@ -218,7 +218,7 @@ The following components are available:
 |Select box|Allows selecting an item in a list|
 |Image|Displays an image|
 |Icon|Displays an icon|
-|Check box|Allows the user to make a binary choice, or select multiple choices in a list|
+|Check box|Allows the user to make a binary choice (boolean value)|
 |Text|Displays text on a web page|
 |Datatable|Displays data in the form of a table. Rows can be selected to interact with the server|
 |Matrix| Container of repeated style boxes|
@@ -261,26 +261,27 @@ These events are used to execute code on the 4D server. There's no need to write
 
 Events are executed in the defined order, and you can map one method to several events or one event to several methods.
 
-> **TODO --> Add descritpion of the particular event on the component: Onload**
+> **TODO --> Add description of the particular event on the component: Onload**
 
-## WEB Form Object
+### WEB Form Object
 
-The object returned by the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command lets you handle, on the server side, the behavior of your WebForm and its components.
+Using the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command, you can handle the behavior of your webform and its components on the server side.
 
-#### Accessing a web form's components
+#### Server-side reference
 
-Each property of the object returned by the [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html) is a [web form component](web-studio.md#components). The property name is the server reference of the component.
+The [WEB Form](https://doc.4d.com/4dv19R/help/command/en/page1735.html) command returns an object, and each of this object's properties is the server-side reference of a [component](web-studio.md#components).   
 
-For example, the following code hides the component that has `firstName` as server reference.
+For example, `Web Form.myImage` refers to the image component with `myImage` as server-side reference.
 
-```4d
-$input:=WebForm.firstName 
-$input.hide()
-```
+You can assign a server-side reference to your components in the properties panel:
 
-#### Setting the behavior of web form components using functions
+![alt-text](assets/en/web-studio/image-server-side.png)
 
-Each web form component object contains the following functions:
+In the above image, the server-side reference of the Image component is "imageAlias".
+
+#### Available functions
+
+Each webform component object offers the following functions:
 
 | Function | Description |
 |----|----|
@@ -291,17 +292,20 @@ Each web form component object contains the following functions:
 
 #### Example
 
-```4d 
-WebForm.firstName.hide() // hides the component that has "firstName" as server reference
+To call a function that hides an image when the user clicks a button: 
 
-WebForm.firstName.show() //displays the component that has "firstName" as server reference
+![alt-text](assets/en/web-studio/web-form-object.png)
 
-WebForm.firstName.addCSSClass("red") // adds the "red" CSS class to the component
+In the above image: 
+* The image has "imageAlias" as server-side reference
+* The **Hide** button component has an `onclick` event attached to it
+* The exposed function `isHidden` is attached to the `onclick` event and contains the following code:
+	```4d 
+	//hide the component that has "imageAlias" as server-side reference
+	Web Form.imageAlias.hide()
+	```
 
-WebForm.firstName.removeCSSClass("red") // The "red" CSS class is removed from the component
-```
-
-## WEB Event Object
+### WEB Event Object
 
 The [WEB Event](https://doc.4d.com/4dv19R/help/command/en/page1734.html) command returns an object describing the event triggered in a web form component, such as a button or a datatable. 
 
