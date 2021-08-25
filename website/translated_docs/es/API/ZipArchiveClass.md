@@ -49,14 +49,14 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parameter       | Tipo      |    | Descripción                                          |
+| Parámetros      | Tipo      |    | Descripción                                          |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
-| zipStructure    | Objeto    | -> | File or Folder object to compress                    |
+| zipStructure    | Object    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
-| options         | Entero    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultado       | Objeto    | <- | Status object                                        |
+| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| Resultado       | Object    | <- | Status object                                        |
 <!-- END REF -->
 
 
@@ -73,7 +73,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 - *zipStructure*: You pass an object describing the ZIP archive object. The following properties are available to define the structure:<li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><table>
   <tr>
     <td>
-      Propriedad
+      Property
     </td>
     
     <td>
@@ -91,7 +91,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
     </td>
     
     <td>
-      4D.File or 4D.Folder
+      4D.File o 4D.Folder
       
       <td>
         File or Folder
@@ -103,7 +103,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
         </td>
         
         <td>
-          Texto
+          Text
         </td>
         
         <td>
@@ -150,7 +150,7 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Propriedad | Tipo     | Descripción                                                                                                                             |
+| Property   | Tipo     | Descripción                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
 | status     | Entero   | Status code                                                                                                                             |
