@@ -437,8 +437,8 @@ This property is **read-only**.
 | Parameter         | Tipo      |    | Descripción                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
-| overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
+| newName           | Text      | -> | Name for the copy                           |
+| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
 | Resultado         | 4D.Folder | <- | Copied file or folder                       |
 <!-- END REF -->
 
@@ -492,7 +492,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 | Parameter | Tipo    |    | Descripción                          |
 | --------- | ------- | -- | ------------------------------------ |
-| path      | Texto   | -> | Relative POSIX file pathname         |
+| path      | Text    | -> | Relative POSIX file pathname         |
 | Resultado | 4D.File | <- | `File` object (null if invalid path) |
 <!-- END REF -->
 
@@ -530,10 +530,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Parameter | Tipo      |    | Descripción                         |
-| --------- | --------- | -- | ----------------------------------- |
-| options   | Entero    | -> | File list options                   |
-| Resultado | Colección | <- | Collection of children file objects |
+| Parameter | Tipo       |    | Descripción                         |
+| --------- | ---------- | -- | ----------------------------------- |
+| options   | Integer    | -> | File list options                   |
+| Resultado | Collection | <- | Collection of children file objects |
 <!-- END REF -->
 
 #### Descripción
@@ -593,7 +593,7 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- REF #directory.folder().Params -->
 | Parameter | Tipo      |    | Descripción                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
-| path      | Texto     | -> | Relative POSIX file pathname                   |
+| path      | Text      | -> | Relative POSIX file pathname                   |
 | Resultado | 4D.Folder | <- | Created folder object (null if invalid *path*) |
 <!-- END REF -->
 
@@ -631,10 +631,10 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Parameter | Tipo      |    | Descripción                           |
-| --------- | --------- | -- | ------------------------------------- |
-| options   | Entero    | -> | Folder list options                   |
-| Resultado | Colección | <- | Collection of children folder objects |
+| Parameter | Tipo       |    | Descripción                           |
+| --------- | ---------- | -- | ------------------------------------- |
+| options   | Integer    | -> | Folder list options                   |
+| Resultado | Collection | <- | Collection of children folder objects |
 <!-- END REF -->
 
 #### Descripción
@@ -678,10 +678,10 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Parameter | Tipo   |    | Descripción                                   |
-| --------- | ------ | -- | --------------------------------------------- |
-| size      | Entero | -> | Side length for the returned picture (pixels) |
-| Resultado | Imagen | <- | Icono                                         |
+| Parameter | Tipo    |    | Descripción                                   |
+| --------- | ------- | -- | --------------------------------------------- |
+| size      | Integer | -> | Side length for the returned picture (pixels) |
+| Resultado | Picture | <- | Icono                                         |
 <!-- END REF -->
 
 
