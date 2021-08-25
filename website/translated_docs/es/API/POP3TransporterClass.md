@@ -46,7 +46,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 <!-- REF POP3TransporterClass.POP3 New transporter.Params -->
 | Parameter | Tipo               |    | Descripción                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | objeto             | -> | Mail server information                             |
+| server    | object             | -> | Mail server information                             |
 | Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -107,7 +107,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Parameter | Tipo               |    | Descripción                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
+| server    | Object             | -> | Mail server information                             |
 | Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -218,7 +218,7 @@ Executing this method does not actually remove any email. The flagged email will
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Parameter | Tipo   |    | Descripción    |
 | --------- | ------ |:--:| -------------- |
-| Resultado | Objeto | <- | boxInfo object |
+| Resultado | Object | <- | boxInfo object |
 <!-- END REF -->
 
 
@@ -228,10 +228,10 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
 The `boxInfo` object returned contains the following properties:
 
-| Propriedad | Tipo   | Descripción                       |
-| ---------- | ------ | --------------------------------- |
-| mailCount  | Número | Number of messages in the mailbox |
-| size       | Número | Message size in bytes             |
+| Property  | Tipo   | Descripción                       |
+| --------- | ------ | --------------------------------- |
+| mailCount | Number | Number of messages in the mailbox |
+| size      | Number | Message size in bytes             |
 
 
 
@@ -268,10 +268,10 @@ The `boxInfo` object returned contains the following properties:
 **.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parameter | Tipo   |    | Descripción                                      |
-| --------- | ------ |:--:| ------------------------------------------------ |
-| msgNumber | Entero | -> | Number of the message in the list                |
-| Resultado | Objeto | <- | [Email object](EmailObjectClass.md#email-object) |
+| Parameter | Tipo    |    | Descripción                                      |
+| --------- | ------- |:--:| ------------------------------------------------ |
+| msgNumber | Integer | -> | Number of the message in the list                |
+| Resultado | Object  | <- | [Email object](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -328,10 +328,10 @@ You want to know the sender of the first mail of the mailbox:
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parameter | Tipo   |    | Descripción                       |
-| --------- | ------ |:--:| --------------------------------- |
-| msgNumber | Entero | -> | Number of the message in the list |
-| Resultado | Objeto | <- | mailInfo object                   |
+| Parameter | Tipo    |    | Descripción                       |
+| --------- | ------- |:--:| --------------------------------- |
+| msgNumber | Integer | -> | Number of the message in the list |
+| Resultado | Object  | <- | mailInfo object                   |
 <!-- END REF -->
 
 
@@ -343,10 +343,10 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The `mailInfo` object returned contains the following properties:
 
-| Propriedad | Tipo   | Descripción              |
-| ---------- | ------ | ------------------------ |
-| size       | Número | Message size in bytes    |
-| id         | Texto  | Unique ID of the message |
+| Property | Tipo   | Descripción              |
+| -------- | ------ | ------------------------ |
+| size     | Number | Message size in bytes    |
+| id       | Text   | Unique ID of the message |
 
 The method returns **Null** if:
 
@@ -391,9 +391,9 @@ The method returns **Null** if:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Parameter | Tipo      |    | Descripción                      |
-| --------- | --------- |:--:| -------------------------------- |
-| Resultado | Colección | <- | Collection of `mailInfo` objects |
+| Parameter | Tipo       |    | Descripción                      |
+| --------- | ---------- |:--:| -------------------------------- |
+| Resultado | Collection | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
 
 
@@ -403,11 +403,11 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
 
 Each `mailInfo` object in the returned collection contains the following properties:
 
-| Propriedad   | Tipo   | Descripción                                                        |
+| Property     | Tipo   | Descripción                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
-| \[ ].size   | Número | Message size in bytes                                              |
-| \[ ].number | Número | Message number                                                     |
-| \[ ].id     | Texto  | Unique ID of the message (useful if you store the message locally) |
+| \[ ].size   | Number | Message size in bytes                                              |
+| \[ ].number | Number | Message number                                                     |
+| \[ ].id     | Text   | Unique ID of the message (useful if you store the message locally) |
 
 If the mailbox does not contain a message, an empty collection is returned.
 
@@ -460,10 +460,10 @@ You want to know the total number and size of emails in the mailbox:
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| Parameter | Tipo   |    | Descripción                                           |
-| --------- | ------ |:--:| ----------------------------------------------------- |
-| msgNumber | Entero | -> | Number of the message in the list                     |
-| Resultado | Blob   | <- | Blob of the MIME string returned from the mail server |
+| Parameter | Tipo    |    | Descripción                                           |
+| --------- | ------- |:--:| ----------------------------------------------------- |
+| msgNumber | Integer | -> | Number of the message in the list                     |
+| Resultado | Blob    | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 
 
@@ -538,9 +538,9 @@ You want to know the total number and size of emails in the mailbox:
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                     |
+| ---------- | ---- |::| ------------------------------- |
+|            |      |  | Does not require any parameters |
 <!-- END REF -->
 
 
