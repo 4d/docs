@@ -3,14 +3,14 @@ id: onLoadRecord
 title: On Load Record
 ---
 
-| コード | 呼び出し元 | 定義                                                                  |
-| --- | ----- | ------------------------------------------------------------------- |
-| 40  | フォーム  | During user entry in list, a record is loaded and a field is edited |
+| コード | 呼び出し元 | 定義                                |
+| --- | ----- | --------------------------------- |
+| 40  | フォーム  | リスト更新中にレコードがロードされ、フィールドが編集モードに入った |
 
 
 ## 説明
 
-The `On Load Record` event can only be used in the context of an **output form**. It is triggered during data entry in list, after a record is highlighted and a field changes to editing mode.
+`On Load Record` イベントは、**出力フォーム** のコンテキストでのみ使用できます。 このイベントはリスト更新中に、レコードがハイライトされ、フィールドが編集モードになったときに生成されます。
 
 > このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
 
