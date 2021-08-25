@@ -297,7 +297,7 @@ To call a function that hides an image when the user clicks a button:
 ![alt-text](assets/en/web-studio/web-form-object.png)
 
 In the above image: 
-* The image has "imageAlias" as server-side reference
+* The image has `imageAlias` as server-side reference
 * The **Hide** button component has an `onclick` event attached to it
 * The exposed function `isHidden` is attached to the `onclick` event and contains the following code:
 	```4d 
@@ -309,38 +309,50 @@ In the above image:
 
 The [WEB Event](https://doc.4d.com/4dv19R/help/command/en/page1734.html) command returns an object describing the event triggered in a web form component, such as a button or a datatable. 
 
-The command must be called in the context of a web form handled by the web server (see [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html)).
+This generic method can be called on the server for several components.
+
+The command must be called in the context of a web form handled by the web server (see [WEB Form](https://doc.4d.com/4dv19R/help/command/en/page1735.html)).
 
 The returned object contains the following properties:
 
 | Property | Type | Description |
 |----|----|----|
-| caller | Text | Server reference of the component triggering the event |
+| caller | Text | Server-side reference of the component triggering the event |
 | eventType | Text | Event type (onclick, onchange, onmouseover...) |
 | data	| Object	| For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
 
-####
+#### Example
 
-This generic method can be called on the server for several components:
+The objective is to display help when the user hovers over over the component:
 
-```4d 
-var $event; $webForm : Object
+![alt-text](assets/en/web-studio/web-event-2.png)
 
-$webForm:=Web Form
-$event:=Web Event
-$compRef:=$event.caller //server reference of the web component
+To attach an `onmouseover` event to an Input Text component that displays the information:
 
-If ($event.eventType="onmouseover") // event is onmouseover
-$webForm["helpOn_"+$compRef].show() // displays help on the component (e.g. "orderNumber")
-// by showing the text component with reference "helpOn_orderNumber"
-Else
-$webForm["helpOn_"+$compRef].hide() // hides the help on orderNumber
-End if
-```
+![alt-text](assets/en/web-studio/web-event-1.png)
+
+In the above image: 
+
+* The Text Input component has `orderNumber` as server reference
+* The component has an `onmouseover` event attached to it
+* The exposed function `help` attached to the `onmouseover` event contains the following code: 
+	```4d 
+		var $event; $webForm : Object
+	
+		$webForm:=Web Form
+		$event:=Web Event
+		$componentRef:=$event.caller
+	
+		If ($event.eventType="onmouseover")  // event is onmouseover 
+			$webForm["helpOn_"+$componentRef].show()  // show the help on "orderNumber" by showing the text component with reference "helpOn_orderNumber" 
+		Else 
+		$webForm["helpOn_"+$componentRef].hide()  // hide the help on orderNumber
+		End if 
+	```
 
 ## Known limitations
 
-The web studio is still in early stages of development, so some feature are not yet available: 
+The web studio is still in early stages of development, so some features are not yet available: 
 
 * At this stage, there is no debugger for the web studio.
 
