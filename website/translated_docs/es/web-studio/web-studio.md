@@ -303,11 +303,11 @@ The command must be called in the context of a web form handled by the web serve
 
 The returned object contains the following properties:
 
-| Propriedad | Tipo   | Descripción                                                                                                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------- |
-| caller     | Texto  | Server reference of the component triggering the event                                                        |
-| eventType  | Texto  | Event type (onclick, onchange, onmouseover...)                                                                |
-| data       | Objeto | For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
+| Property  | Tipo   | Descripción                                                                                                   |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------- |
+| caller    | Texto  | Server reference of the component triggering the event                                                        |
+| eventType | Texto  | Event type (onclick, onchange, onmouseover...)                                                                |
+| data      | Objeto | For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
 
 ####
 
