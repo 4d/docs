@@ -1,6 +1,6 @@
 ---
 id: web-studio
-title: 4D WebStudio
+title: 4D Web Studio
 ---
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment.
@@ -33,21 +33,21 @@ The recommended resolution is 1920x1080.
 
 ## Configuration
 
-Before opening the WebStudio, you'll need to enable access and authentication.
-
-The web studio relies on the [`WebAdmin`](../Admin/webAdmin.md) web server component for its configuration and authentication settings.
+Before opening the web studio, you need to enable access to it and activate authentication.
 
 ### Enabling access to the web studio
 
-To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio).
+By default, access to the web studio is not granted. You need to enable access to it on the database level and on the `WebAdmin` web server level.
 
-To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+1. To enable access to the web studio on the database level, you need to check the option on the [web server configuration page](../WebServer/webServerAdmin.md#enable-access-to-the-web-studio).
+
+    To do this, go to **Settings** > **Web** > **Web features** and check **Enable access to the web studio**.
+
+2.  To enable access to the web studio on the [`WebAdmin`](../Admin/webAdmin.md) web server, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
 
 ### Activating authentication
 
-By default, access to the web server is not granted. You need to activate authentication on the `WebAdmin` web server first (otherwise opening the web studio throws a 403 error).
-
-To do this, go to **File** > **Web Administration** > **Settings...** and check **Enable access to the web studio**
+Authentication on the `WebAdmin` web server is granted using an access key. For more details, see [Access key](../Administration/webAdmin.md#access-key)
 
 ### Opening the web studio
 
@@ -55,11 +55,11 @@ The web studio page is available when the [`WebAdmin` web server is running](../
 
 There are two ways to access the web studio:
 
-*   from your 4D application, go to **Design** > **Web Studio...**.
+*   from your 4D standalone application, go to **Design** > **Web Studio...**.
 
     If the `WebAdmin` server is already running, your default browser opens at `IPaddress:HTTPPort/studio`. Otherwise, you will be asked if you want to start the `WebAdmin` web server first.
 
-*   on a browser, with the `WebAdmin` web server running, enter the following address:
+*   on a browser, with the `WebAdmin` web server running (launched from 4D or 4D Server), enter the following address:
   
         IPaddress:HTTPPort/studio
 
@@ -125,6 +125,7 @@ When you select a component, the tooltip displays its type and offers several ac
 | -------------- | -------------------------------------------------- |
 | Cursor         | Move the selected component on the canvas          |
 | Arrow          | Select the parent component                        |
+| Delete         | Remove the selected component from the canvas      |
 | CSS            | Export the selected element's style to a CSS class |
 | Barred T       | Reset styles                                       |
 | Duplicate icon | Duplicate the component                            |
@@ -133,7 +134,7 @@ The tooltip is contextual. This means that some actions are only available to ce
 
 #### Outline
 
-The outline section displays the hierarchy of your WebForm. You can click an element in the list to select it.
+The outline section displays the hierarchy of your Webform. You can click an element in the list to select it, or click and drag it anywhere in the outline to move it somewhere else.
 
 To display or hide an element, click the eye icon.
 
@@ -165,7 +166,9 @@ Using the properties panel, you can bind a CSS class to the element and define v
 
 Some visual properties, such as column size in datatables or grid areas, can be edited directly on the canvas.
 
-When you edit CSS using the properties panel, it overrides the CSS defined for the component. Overriden properties have a blue dot in front of them.
+##### Overridden properties
+
+When you edit CSS using the properties panel, it overrides the CSS defined for the component (default styles and CSS classes applied). Overriden properties have a blue dot in front of them.
 
 
 #### Exemple
@@ -185,6 +188,8 @@ You can export the style of an element as a CSS class to reuse it later. To do t
 3. Click **Export**
 
 This exports the style of the element as a local CSS class. Now it appears as a choice in the Styles library and in the property list, and you can apply the class to other elements on your canvas.
+
+Note that only the [overridden properties](#overriden-properties) are exported as a CSS class.
 
 #### Editing a class
 
@@ -212,7 +217,7 @@ The following components are available:
 | Select box   | Allows selecting an item in a list                                                                            |
 | Image        | Displays an image                                                                                             |
 | Icône        | Displays an icon                                                                                              |
-| Check box    | Allows the user to make a binary choice, or select multiple choices in a list                                 |
+| Check box    | Allows the user to make a binary choice (boolean value)                                                       |
 | Texte        | Displays text on a web page                                                                                   |
 | Datatable    | Displays data in the form of a table. Rows can be selected to interact with the server                        |
 | Matrix       | Container of repeated style boxes                                                                             |
@@ -255,26 +260,27 @@ These events are used to execute code on the 4D server. There's no need to write
 
 Events are executed in the defined order, and you can map one method to several events or one event to several methods.
 
-> **TODO --> Add descritpion of the particular event on the component: Onload**
+> **TODO --> Add description of the particular event on the component: Onload**
 
-## Objet Web Form
+### Objet Web Form
 
-The object returned by the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command lets you handle, on the server side, the behavior of your WebForm and its components.
+Using the [WEB Form](https://doc.4d.com/4dv19/help/command/en/page1735.html) command, you can handle the behavior of your webform and its components on the server side.
 
-#### Accessing a web form's components
+#### Server-side reference
 
-Each property of the object returned by the [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html) is a [web form component](web-studio.md#components). The property name is the server reference of the component.
+The [WEB Form](https://doc.4d.com/4dv19R/help/command/en/page1735.html) command returns an object, and each of this object's properties is the server-side reference of a [component](web-studio.md#components).
 
-For example, the following code hides the component that has `firstName` as server reference.
+For example, `Web Form.myImage` refers to the image component with `myImage` as server-side reference.
 
-```4d
-$input:=WebForm.firstName 
-$input.hide()
-```
+You can assign a server-side reference to your components in the properties panel:
 
-#### Setting the behavior of web form components using functions
+![alt-text](assets/en/web-studio/image-server-side.png)
 
-Each web form component object contains the following functions:
+In the above image, the server-side reference of the Image component is "imageAlias".
+
+#### Available functions
+
+Each webform component object offers the following functions:
 
 | Function                   | Description                                        |
 | -------------------------- | -------------------------------------------------- |
@@ -285,52 +291,67 @@ Each web form component object contains the following functions:
 
 #### Exemple
 
-```4d 
-WebForm.firstName.hide() // hides the component that has "firstName" as server reference
+To call a function that hides an image when the user clicks a button:
 
-WebForm.firstName.show() //displays the component that has "firstName" as server reference
+![alt-text](assets/en/web-studio/web-form-object.png)
 
-WebForm.firstName.addCSSClass("red") // adds the "red" CSS class to the component
+In the above image:
+* The image has `imageAlias` as server-side reference
+* The **Hide** button component has an `onclick` event attached to it
+* The exposed function `isHidden` is attached to the `onclick` event and contains the following code:
+    ```4d 
+    //hide the component that has "imageAlias" as server-side reference
+    Web Form.imageAlias.hide()
+    ```
 
-WebForm.firstName.removeCSSClass("red") // The "red" CSS class is removed from the component
-```
-
-## Objet Web Event
+### Objet Web Event
 
 The [WEB Event](https://doc.4d.com/4dv19R/help/command/en/page1734.html) command returns an object describing the event triggered in a web form component, such as a button or a datatable.
 
-The command must be called in the context of a web form handled by the web server (see [WEB Form command](https://doc.4d.com/4dv19R/help/command/en/page1735.html)).
+This generic method can be called on the server for several components.
+
+The command must be called in the context of a web form handled by the web server (see [WEB Form](https://doc.4d.com/4dv19R/help/command/en/page1735.html)).
 
 The returned object contains the following properties:
 
 | Propriété | Type  | Description                                                                                                   |
 | --------- | ----- | ------------------------------------------------------------------------------------------------------------- |
-| caller    | Texte | Server reference of the component triggering the event                                                        |
+| caller    | Texte | Server-side reference of the component triggering the event                                                   |
 | eventType | Texte | Event type (onclick, onchange, onmouseover...)                                                                |
 | data      | Objet | For Tabs component: contains an index property (Number) with the index of the clicked Tab (index starts at 0) |
 
-####
+#### Exemple
 
-This generic method can be called on the server for several components:
+The objective is to display help when the user hovers over over the component:
 
-```4d 
-var $event; $webForm : Object
+![alt-text](assets/en/web-studio/web-event-2.png)
 
-$webForm:=Web Form
-$event:=Web Event
-$compRef:=$event.caller //server reference of the web component
+To attach an `onmouseover` event to an Input Text component that displays the information:
 
-If ($event.eventType="onmouseover") // event is onmouseover
-$webForm["helpOn_"+$compRef].show() // displays help on the component (e.g. "orderNumber")
-// by showing the text component with reference "helpOn_orderNumber"
-Else
-$webForm["helpOn_"+$compRef].hide() // hides the help on orderNumber
-End if
-```
+![alt-text](assets/en/web-studio/web-event-1.png)
+
+In the above image:
+
+* The Text Input component has `orderNumber` as server reference
+* The component has an `onmouseover` event attached to it
+* The exposed function `help` attached to the `onmouseover` event contains the following code:
+    ```4d 
+        var $event; $webForm : Object
+
+        $webForm:=Web Form
+        $event:=Web Event
+        $componentRef:=$event.caller
+
+        If ($event.eventType="onmouseover")  // event is onmouseover 
+            $webForm["helpOn_"+$componentRef].show()  // show the help on "orderNumber" by showing the text component with reference "helpOn_orderNumber" 
+        Else 
+        $webForm["helpOn_"+$componentRef].hide()  // hide the help on orderNumber
+        End if 
+    ```
 
 ## Known limitations
 
-The web studio is still in early stages of development, so some feature are not yet available:
+The web studio is still in early stages of development, so some features are not yet available:
 
 * At this stage, there is no debugger for the web studio.
 
