@@ -3,9 +3,9 @@ id: onPageChange
 title: On Page Change
 ---
 
-| Code | Can be called by | 定義                                      |
-| ---- | ---------------- | --------------------------------------- |
-| 56   | フォーム             | The current page of the form is changed |
+| コード | 呼び出し元 | 定義                                      |
+| --- | ----- | --------------------------------------- |
+| 56  | フォーム  | The current page of the form is changed |
 
 
 ## 説明

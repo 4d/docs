@@ -62,9 +62,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF FolderClass.Folder.Params -->
 | Parameter      | Tipo      |    | Descripción                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Texto     | -> | Folder path                                     |
-| folderConstant | Entero    | -> | 4D folder constant                              |
-| pathType       | Entero    | -> | `fk posix path` (default) or `fk platform path` |
+| path           | Text      | -> | Folder path                                     |
+| folderConstant | Integer   | -> | 4D folder constant                              |
+| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
 | Resultado      | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
@@ -147,9 +147,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Tipo     |    | Descripción                                                  |
-| --------- | -------- | -- | ------------------------------------------------------------ |
-| Resultado | Booleano | <- | True if the folder was created successfully, false otherwise |
+| Parameter | Tipo    |    | Descripción                                                  |
+| --------- | ------- | -- | ------------------------------------------------------------ |
+| Resultado | Boolean | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
@@ -211,8 +211,8 @@ End if
 | Parameter         | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Entero    | -> | Type of the alias link                       |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
 | Resultado         | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
@@ -387,7 +387,7 @@ When `Delete with contents` is passed:
 | Parameter         | Tipo      |    | Descripción                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | Texto     | -> | Full name for the moved folder |
+| newName           | Text      | -> | Full name for the moved folder |
 | Resultado         | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
 

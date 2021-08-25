@@ -11,7 +11,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Gramática JSON
 
-| Propriedad           | Tipos de datos | Valores posibles      |
+| Property             | Tipos de datos | Valores posibles      |
 | -------------------- | -------------- | --------------------- |
 | allowFontColorPicker | booleano       | false (default), true |
 
@@ -29,7 +29,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### Gramática JSON
 
-| Propriedad | Tipos de datos | Valores posibles |
+| Property   | Tipos de datos | Valores posibles |
 | ---------- | -------------- | ---------------- |
 | fontWeight | texto          | "normal", "bold" |
 

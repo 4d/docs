@@ -15,7 +15,7 @@ La interfaz del editor de formularios muestra cada formulario JSON en su propia 
 You can show or hide several interface elements on the current page of the form:
 
 - **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
-- **Page 0**: Objects from [page 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
+- **Page 0**: Objects from [page 0](forms.md#form-pages). Esta opción permite distinguir entre los objetos de la página actual del formulario y los de la página 0.
 - **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
 - **Rulers**: Rulers of the Form editor’s window.
 - **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
@@ -56,7 +56,7 @@ La barra de herramientas contiene los siguientes elementos:
 | Icono                                         | Nombre                                                      | Descripción                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/FormEditor/execute.png)         | Ejecutar el formulario                                      | Se utiliza para probar la ejecución del formulario. Al presionar este botón, 4D abre una nueva ventana y muestra el formulario en su contexto (lista de registros para un formulario lista y página de registro actual para un formulario detallado). El formulario se ejecuta en el proceso principal.                                                                   |
-| ![](assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Permite seleccionar, mover y redimensionar los objetos del formulario.<p>**Nota**: cuando se selecciona un objeto de tipo Texto o Área de Grupo, al presionar la tecla **Intro** se pasa al modo de edición.                                                                                                                                        |
+| ![](assets/en/FormEditor/selection.png)       | [Herramienta de selección](#seleccionar - objetos)          | Permite seleccionar, mover y redimensionar los objetos del formulario.<p>**Nota**: cuando se selecciona un objeto de tipo Texto o Área de Grupo, al presionar la tecla **Intro** se pasa al modo de edición.                                                                                                                                        |
 | ![](assets/en/FormEditor/zOrder.png)          | [Orden de entrada](#data-entry-order)                       | Pasa al modo "Orden de entrada", donde es posible ver y cambiar el orden de entrada actual del formulario. Tenga en cuenta que los escudos permiten ver el orden de entrada actual, sin dejar de trabajar en el formulario.                                                                                                                                               |
 | ![](assets/en/FormEditor/moving.png)          | [Desplazamiento](#moving-objects)                           | Pasa al modo " Desplazamiento ", en el que es posible llegar rápidamente a cualquier parte del formulario utilizando la función de arrastrar y soltar en la ventana. El cursor toma la forma de una mano. Este modo de navegación es especialmente útil cuando se hace zoom en el formulario.                                                                             |
 | ![](assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                               | Permite modificar la escala de visualización del formulario (100% por defecto). Puede pasar al modo "Zoom" haciendo clic en la lupa o pulsando directamente en la barra correspondiente a la escala deseada. Esta función se detalla en la sección anterior.                                                                                                              |
@@ -314,59 +314,59 @@ Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 3.  En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Icono de distribución horizontal estándar)<p>El área de ejemplo muestra los resultados de su selección.
 
-4.  Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>O:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
+4.  Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>En este caso, 4D realizará una distribución estándar, de modo que los objetos se dispongan con la misma cantidad de espacio entre ellos.<p>O:<p>Para efectuar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). This option acts like a switch. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:
 
-    *   Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
-    *   Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
+    *   Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdo, central (hor.) y derecho de los objetos seleccionados.
+    *   Verticalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los bordes superiores, centros (vert.) y bordes inferiores de los objetos seleccionados.
 
-    You can preview the actual result of your settings by clicking on the **Preview** button: the operation is carried out in the Form editor but the dialog box stays in the foreground. You can then **Cancel** or **Apply** the modifications.
-> This dialog box lets you combine object alignment and distribution. For more information about alignment, refer to [Aligning objects](#aligning-objects).
+    Puede previsualizar el resultado real de sus parámetros haciendo clic en el botón **Previsualización**: la operación se lleva a cabo en el editor de formularios, pero la caja de diálogo permanece en primer plano. Puede entoces **Cancelar** o **Aplicar** las modificaciones.
+> Esta caja de diálogo permite combinar la alineación y la distribución de objetos. Para más información sobre la alineación, consulte [Alinear objetos](#aligning-objects).
 
 
-### Layering objects
+### Gestionar los planos de los objetos
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). The figure below shows objects in front of and behind other objects:
+A veces tendrá que reorganizar los objetos que obstruyen la vista de otros objetos del formulario. Por ejemplo, puede tener un gráfico que desee que aparezca detrás de los campos en un formulario. 4D ofrece cuatro elementos de menú, **Mover hacia atrás**, **Mover hacia delante**, **Subir un nivel** y **Bajar un nivel** que le permiten organizar los planos de los objetos en el formulario. Estas capas también determinan el orden de entrada por defecto (ver Modificación del orden de entrada de datos). La figura siguiente muestra objetos delante y detrás de otros objetos:
 
 ![](assets/en/FormEditor/layering.png)
 
-To move an object to another level, select it and choose:
+Para mover un objeto a otro plano, selecciónelo y elija:
 
-*   One of the **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** commands of the Object menu,
-*   One of the commands in the **Level>** submenu in the context menu of the editor,
-*   One of the commands associated with the level management button of the toolbar.
+*   Uno de los comandos **Mover hacia atrás**, **Mover hacia delante**, **Subir un nivel** y **Bajar un nivel** en el menú Objeto,
+*   Uno de los comandos del submenú **Plano>** del menú contextual del editor,
+*   Uno de los comandos asociados al botón de gestión de los planos de la barra de herramientas.
 
 ![](assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
+> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
 
-When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
+Al ordenar los diferentes niveles, 4D siempre va del fondo al primer plano. Como resultado, el nivel anterior desplaza la selección de objetos de un plano hacia el fondo del formulario. El siguiente nivel mueve la selección un plano hacia el primer plano del formulario.
 
-### Data entry order
+### Orden de entrada de los datos
 
-The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
+El orden de entrada de datos es el orden en el que se seleccionan los campos, subformularios y otros objetos activos al presionar la tecla **Tab** o la tecla **Retorno de carro** en un formulario de entrada. Es posible desplazarse por el formulario en sentido contrario (invertir el orden de entrada de datos) presionando las teclas **Mayúsc+Tab** o **Mayúsc+Retorno de carro** de retorno.
 
-> You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
+> Puede cambiar el orden de entrada en tiempo de ejecución utilizando los comandos `FORM SET ENTRY ORDER` y `FORM GET ENTRY ORDER`.
 
-Every object that supports the focusable property is included in the data entry order by default.
+Todos los objetos que soportan la propiedad enfocable se incluyen por defecto en el orden de entrada de datos.
 
-Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
+La configuración del orden de entrada para un formulario JSON se realiza con la propiedad [` entryOrder `](properties_JSONref.md).
 
-If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form.
+Si no especifica un orden de entrada personalizado, 4D utiliza por defecto el plano de los objetos para determinar el orden de entrada en el sentido "fondo hacia primer plano." El orden de entrada estándar corresponde, por tanto, al orden de creación de los objetos en el formulario.
 
-In some forms, a custom data entry order is needed. Below, for example, additional fields related to the address have been added after the creation of the form. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
+En algunos formularios, se necesita definir un orden de entrada de datos personalizado. A continuación, por ejemplo, se han añadido campos adicionales relacionados con la dirección después de la creación del formulario. El orden de entrada estándar resultante se vuelve ilógico y obliga al usuario a introducir la información de forma extraña:
 
 ![](assets/en/FormEditor/entryOrder1.png)
 
-In cases such as this, a custom data entry order allows you to enter the information in a more logical order:
+En casos como éste, un orden de entrada de datos personalizado le permite introducir la información en un orden más lógico:
 
 ![](assets/en/FormEditor/entryOrder2.png)
 
-#### Viewing and changing the data entry order
+#### Visualizar y modificar el orden de entrada de datos
 
-You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode. However, you can only modify the entry order using the “Entry order” mode.
+Puede ver el orden de entrada actual mediante los escudos "Orden de entrada" o utilizando el modo "Orden de entrada". Sin embargo, sólo puede modificar el orden de entrada utilizando el modo "Orden de entrada".
 
-This paragraph describes viewing and modifying the entry order using the “Entry order” mode. For more information about viewing the entry order using shields, refer to [Using shields](#using-shields).
+Este párrafo describe la visualización y la modificación del orden de entrada en modo "Orden de entrada". Para más información sobre la visualización del orden de entrada utilizando escudos, consulte [Using shields](#using-shields).
 
-To view or change the entry order:
+Para ver o cambiar el orden de entrada:
 
 1.  Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:<p>![](assets/en/FormEditor/zOrder.png)<p>The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry.<p>Viewing and changing the data entry order are the only actions you can perform until you click any tool in the Tools palette.
 
@@ -539,13 +539,13 @@ If you don't want to display shields, select **No Shields** in the selection men
 
 ### Shield descriptions
 
-Here is a description of each type of shield:
+A continuación se describe cada tipo de escudo:
 
-| Icono                                        | Nombre                             | Is displayed ...                                                                                                                                 |
+| Icono                                        | Nombre                             | Se muestra...                                                                                                                                    |
 | -------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                      | For objects with an associated object method                                                                                                     |
-| ![](assets/en/FormEditor/standardAction.png) | Standard Action                    | For objects with an associated standard action                                                                                                   |
-| ![](assets/en/FormEditor/resizing.png)       | Redimensionamiento                 | For objects with at least one resizing property, indicates the combination of current properties                                                 |
+| ![](assets/en/FormEditor/objectMethod.png)   | Método objeto                      | Para los objetos con un método objeto asociado                                                                                                   |
+| ![](assets/en/FormEditor/standardAction.png) | Acción estándar                    | Para los objetos con una acción estándar asociada                                                                                                |
+| ![](assets/en/FormEditor/resizing.png)       | Redimensionamiento                 | Para los objetos con al menos una propiedad de redimensionamiento, indica la combinación de propiedades actuales                                 |
 | ![](assets/en/FormEditor/entryOrder.png)     | Orden de entrada                   | En el caso de los objetos editables, indica el número de orden de entrada                                                                        |
 | ![](assets/en/FormEditor/viewNumber.png)     | Vista actual                       | Para todos los objetos de la vista actual                                                                                                        |
 | ![](assets/en/FormEditor/cssShield.png)      | [Hoja de estilo](stylesheets.html) | Para objetos con uno o más valores de atributos reemplazados por una hoja de estilo.                                                             |
@@ -633,19 +633,19 @@ Por defecto las vistas se nombran como "Vista" + el número de la vista, sin emb
 
 Para cambiar el nombre de una vista, puede utilizar:
 
-*   Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+*   Hacer doble clic directamente en el nombre de la vista (la vista seleccionada en este caso). El nombre se convierte entonces en editable:
 
     ![](assets/en/FormEditor/rename.png)
 
-*   Right-click on the view name. The name then becomes editable:
+*   Haga clic derecho en el nombre de la vista. El nombre se convierte entonces en editable:
 
     ![](assets/en/FormEditor/rename2.png)
 
-#### Reordering views
+#### Reordenar las vistas
 
-You can change the display order of views by dragging/dropping them within the View palette.
+Puede cambiar el orden de visualización de las vistas haciendo arrastrar y soltar dentro de la paleta de vistas.
 
-Note that the Default view does not change:
+Tenga en cuenta que la vista por defecto no cambia:
 
 ![](assets/en/FormEditor/reorderView.png)
 

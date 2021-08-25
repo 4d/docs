@@ -12,7 +12,7 @@ title: On Row Resize
 
 Este evento se genera cuando la altura de una línea es modificada por un usuario en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propriedad  | Tipo         | Descripción                                                                               |
+| Property    | Tipo         | Descripción                                                                               |
 | ----------- | ------------ | ----------------------------------------------------------------------------------------- |
 | code        | entero largo | 60                                                                                        |
 | description | texto        | "On Row Resize"                                                                           |

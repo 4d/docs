@@ -27,7 +27,7 @@ This property is an "object function", i.e. a function which is bound to its par
 También se admite la sintaxis con paréntesis:
 
 ```4d
- $f["message"]() //displays "Hello world"
+ $f["message"]() //muestra "Hello world"
 ```
 
 Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
@@ -39,7 +39,7 @@ Note that, even if it does not have parameters (see below), an object function t
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
 
 ```4d
- $f.message.apply() //displays "Hello world"
+ $f.message.apply() //muestra "Hello world"
 ```
 
 #### Passing parameters
@@ -50,7 +50,7 @@ You can pass parameters to your formulas using the [sequential parameter syntax]
  var $f : Object
  $f:=New object
  $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") //displays "Hello John"
+ $f.message("John") //muestra "Hello John"
 ```
 
 Or using the [.call()](#call) function:
@@ -122,7 +122,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 <!-- REF #_command_.Formula.Params -->
 | Parameter  | Tipo        |    | Descripción                               |
 | ---------- | ----------- |:--:| ----------------------------------------- |
-| formulaExp | Expresión   | -> | Formula to be returned as object          |
+| formulaExp | Expression  | -> | Formula to be returned as object          |
 | Resultado  | 4D.Function | <- | Native function encapsulating the formula |
 <!-- END REF -->
 
@@ -169,7 +169,7 @@ A simple formula:
  var $o : Object
  $o:=New object("f";$f)
 
- $result:=$o.f() // returns 3
+ $result:=$o.f() // devuelve 3
 ```
 
 #### Ejemplo 2
@@ -183,7 +183,7 @@ A formula using local variables:
  $o:=New object("f";Formula($value))
  $value:=20
 
- $result:=$o.f() // returns 10
+ $result:=$o.f() // devuelve 10
 ```
 
 
@@ -193,7 +193,7 @@ A simple formula using parameters:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
- $result:=$o.f(10;20) //returns 30
+ $result:=$o.f(10;20) //devuleve 30
 ```
 
 
@@ -257,7 +257,7 @@ Calling a formula using object notation:
 <!-- REF #_command_.Formula from string.Params -->
 | Parameter     | Tipo        |    | Descripción                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
-| formulaString | Texto       | -> | Text formula to be returned as object   |
+| formulaString | Text        | -> | Text formula to be returned as object   |
 | Resultado     | 4D.Function | <- | Native object encapsulating the formula |
 <!-- END REF -->
 
@@ -310,11 +310,11 @@ The following code will create a dialog accepting a formula in text format:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| Parameter     | Tipo      |    | Descripción                                                             |
-| ------------- | --------- |:--:| ----------------------------------------------------------------------- |
-| thisObj       | Objeto    | -> | Object to be returned by the This command in the formula                |
-| formulaParams | Colección | -> | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultado     | any       | <- | Value from formula execution                                            |
+| Parameter     | Tipo       |    | Descripción                                                             |
+| ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
+| thisObj       | Object     | -> | Object to be returned by the This command in the formula                |
+| formulaParams | Collection | -> | Collection of values to be passed as $1...$n when `formula` is executed |
+| Resultado     | any        | <- | Value from formula execution                                            |
 <!-- END REF -->
 
 
@@ -337,7 +337,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // devuelve 60
 ```
 
 
@@ -373,7 +373,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- REF #FunctionClass.call().Params -->
 | Parameter | Tipo   |    | Descripción                                               |
 | --------- | ------ | -- | --------------------------------------------------------- |
-| thisObj   | Objeto | -> | Object to be returned by the This command in the formula  |
+| thisObj   | Object | -> | Object to be returned by the This command in the formula  |
 | params    | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
 | Resultado | any    | <- | Value from formula execution                              |
 <!-- END REF -->
@@ -394,7 +394,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  var $f : 4D.Function
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // devuelve "HELLO"
 ```
 
 #### Ejemplo 2
@@ -402,7 +402,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  $o:=New object("value";50)
  $f:=Formula(This.value*2)
- $result:=$f.call($o) // returns 100
+ $result:=$f.call($o) // devuelve 100
 ``` 
 
 <!-- END REF -->

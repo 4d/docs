@@ -15,7 +15,7 @@ This event is generated when a change occurs within a cell range in the 4D View 
 
 The object returned by the FORM Event command contains:
 
-| Propriedad   | Tipo         | Descripción                                                                                                                                                                                                                                                                  |
+| Property     | Tipo         | Descripción                                                                                                                                                                                                                                                                  |
 | ------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName   | texto        | Nombre del área 4D View Pro                                                                                                                                                                                                                                                  |
 | code         | entero largo | On VP Range Changed                                                                                                                                                                                                                                                          |

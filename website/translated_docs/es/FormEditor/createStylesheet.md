@@ -18,22 +18,22 @@ Además de armonizar la interfaz de sus aplicaciones, las hojas de estilo ofrece
 
 | Hoja de estilo          | Plataforma                                                                |
 | ----------------------- | ------------------------------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows                     |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles                         |
+| styleSheets.css         | Hoja de estilo global por defecto para macOS y Windows                    |
+| styleSheets_mac.css     | Para definir los estilos de atributos específicos de macOS únicamente     |
 | styleSheets_windows.css | Para definir los estilos de atributos específicos para Windows únicamente |
 
-Estos archivos se almacenan en la carpeta "/SOURCES" del proyecto. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+Estos archivos se almacenan en la carpeta "/SOURCES" del proyecto. También se puede acceder directamente a través del [CSS Preview](formEditor.md#css-preview) en la barra de herramientas del editor de formularios.
 
 
 ## Arquitectura de las hojas de estilo
 
-While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
+Aunque adaptadas para satisfacer las necesidades específicas de los formularios 4D, las hojas de estilo para proyectos aplicación suelen seguir la sintaxis y la gramática CSS2.
 
-Every style rule in a style sheet contains two parts:
+Cada regla de estilo de una hoja de estilo contiene dos partes:
 
-*   a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors.
+*   un *selector* - Un selector define dónde aplicar el estilo. 4D soporta los selectores "object type", "object name", "class", "all objects" y "attribute value".
 
-*   a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.
+*   una *declaración* - La declaración define el estilo real a aplicar. Se pueden agrupar varias líneas de declaración para formar un bloque de declaración. Cada línea de un bloque de declaración CSS debe terminar con un punto y coma, y todo el bloque debe estar rodeado de llaves.
 
 
 
@@ -42,13 +42,13 @@ Every style rule in a style sheet contains two parts:
 
 ### Tipo de objeto
 
-Corresponding to the CSS element selector, the object type defines the type of object to style.
+El tipo de objeto define el tipo de objeto al que hay que aplicar el estilo, y corresponde al selector de elementos CSS.
 
-Specify the object type, then in curly braces, declare the style(s) to apply.
+Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estilos a aplicar.
 
 > The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 button {
@@ -68,11 +68,11 @@ text, input {
 
 ### Object Name
 
-Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
+El nombre del objeto corresponde al **selector de ID** CSS y define un objeto específico al que hay que dar estilo, ya que el nombre del objeto es único dentro del formulario.
 
-Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
+Designe el objeto con un carácter "#" antes del nombre del objeto y, a continuación, entre llaves, declare el o los estilos a aplicar.
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrará en fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 #okButton {
@@ -85,11 +85,11 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+Class corresponde al **selector class** CSS y define el estilo para todos los objetos formulario con el atributo `class`.
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
+Puede especificar las clases a utilizar con un caracter "." seguido del nombre de la clase, y entre llaves, declarar el o los estilos a aplicar.
 
-In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
+En el siguiente ejemplo, el texto de todos los objetos con el nombre de la clase `okButtons` se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles, alineado al centro:
 
 ```
 .okButtons {

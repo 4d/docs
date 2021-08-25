@@ -1,6 +1,6 @@
 ---
 id: server-admin
-title: 4D Server Administration Window
+title: 4D Server 管理画面
 ---
 
 

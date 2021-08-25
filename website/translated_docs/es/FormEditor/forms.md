@@ -105,28 +105,28 @@ Un formulario multipáginas tiene una página de fondo y varias páginas de visu
 
 ## Formularios heredados
 
-4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
+Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de *Formulario A* pueden ser utilizados en *Formulario B*. En este caso, *Formulario B* "hereda" los objetos de *Formulario A*.
 
-References to an inherited form are always active: if an element of an inherited form is modified (button styles, for example), all forms using this element will automatically be modified.
+Las referencias a un formulario heredado están siempre activas: si se modifica un elemento de un formulario heredado (estilos de botón, por ejemplo), se modificarán automáticamente todos los formularios que utilicen este elemento.
 
-All forms (table forms and project forms) can be designated as an inherited form. However, the elements they contain must be compatible with use in different database tables.
+Todos los formularios (formularios tabla y formularios proyecto) pueden ser designados como un formulario heredado. Sin embargo, los elementos que contienen deben ser compatibles con el uso en diferentes tablas de la base de datos.
 
-When a form is executed, the objects are loaded and combined in the following order:
+Cuando se ejecuta un formulario, los objetos se cargan y combinan en el siguiente orden:
 
-1.  Page zero of the inherited form
-2.  Page 1 of the inherited form
-3.  Page zero of the open form
-4.  Current page of the open form.
+1.  Página cero del formulario heredado
+2.  Página 1 del formulario heredado
+3.  Página cero del formulario abierto
+4.  Página actual del formulario abierto.
 
-This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
+Este orden determina el [orden de entrada](../FormEditor/formEditor.html#data-entry-order) de los objetos en el formulario.
 
-> Only pages 0 and 1 of an inherited form can appear in other forms.
+> Sólo las páginas 0 y 1 del formulario heredado pueden aparecer en otros formularios.
 
-The properties and method of a form are not considered when that form is used as an inherited form. On the other hand, the methods of objects that it contains are called.
+Las propiedades y el método de un formulario no se tienen en cuenta cuando ese formulario se utiliza como formulario heredado. Por otro lado, se llaman los métodos de los objetos que contiene.
 
-To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
+Para definir un formulario heredado, las propiedades [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (para el formulario tabla) deben definirse en el formulario que heredará algo de otro formulario.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to **\<None>** in the Property List (or " " in JSON).
+Un formulario puede heredar de un formulario proyecto, definiendo la propiedad [Inherited Form Table](properties_FormProperties.md#inherited-form-table) en **\<None>** la Lista de propiedades (o " " en JSON).
 
 To stop inheriting a form, select **\<None>** in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
 > It is possible to define an inherited form in a form that will eventually be used as an inherited form for a third form. The combining of objects takes place in a recursive manner. 4D detects recursive loops (for example, if form [table1]form1 is defined as the inherited form of [table1]form1, in other words, itself) and interrupts the form chain.

@@ -3,9 +3,9 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                      | 定義                                      |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
+| コード | 呼び出し元                                                                                                                                                                                                                                                                 | 定義                                      |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| 31  | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
 
 
 ## 説明
@@ -14,16 +14,16 @@ This event can be generated in different contexts.
 
 
 ### 4D View Pro
-The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+The current selection of rows or columns is modified. このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ         | タイプ    | 説明                             |
-| ------------- | ------ | ------------------------------ |
-| code          | 倍長整数   | 31                             |
-| description   | text   | "On Selection Change"          |
-| objectName    | text   | 4D View Pro area name          |
-| sheetName     | text   | Name of the sheet of the event |
-| oldSelections | object | Cell range before change       |
-| newSelections | object | Cell range after change        |
+| プロパティ         | タイプ    | 説明                       |
+| ------------- | ------ | ------------------------ |
+| code          | 倍長整数   | 31                       |
+| description   | text   | "On Selection Change"    |
+| objectName    | text   | 4D View Pro エリア名         |
+| sheetName     | text   | イベントが発生したシート名            |
+| oldSelections | object | Cell range before change |
+| newSelections | object | Cell range after change  |
 
 #### 例題
 
@@ -49,6 +49,6 @@ This event is generated every time the selection in the hierarchical list is mod
 The text selection or the position of the cursor in the area is modified following a click or a keystroke.
 
 
-### List box
+### リストボックス
 This event is generated each time the current selection of rows or columns of the list box is modified.
 

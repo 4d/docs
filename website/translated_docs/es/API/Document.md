@@ -468,8 +468,8 @@ This property is **read-only**.
 | Parameter         | Tipo      |    | Descripción                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
-| overwrite         | Entero    | -> | `fk overwrite` to replace existing elements |
+| newName           | Text      | -> | Name for the copy                           |
+| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
 | Resultado         | 4D.File   | <- | Copied file                                 |
 <!-- END REF -->
 
@@ -564,10 +564,10 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parameter | Tipo   |    | Descripción                                   |
-| --------- | ------ | -- | --------------------------------------------- |
-| size      | Entero | -> | Side length for the returned picture (pixels) |
-| Resultado | Imagen | <- | Icono                                         |
+| Parameter | Tipo    |    | Descripción                                   |
+| --------- | ------- | -- | --------------------------------------------- |
+| size      | Integer | -> | Side length for the returned picture (pixels) |
+| Resultado | Picture | <- | Icono                                         |
 <!-- END REF -->
 
 
@@ -603,12 +603,12 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parameter   | Tipo   |    | Descripción                     |
-| ----------- | ------ | -- | ------------------------------- |
-| charSetName | Texto  | -> | Name of character set           |
-| charSetNum  | Entero | -> | Number of character set         |
-| breakMode   | Entero | -> | Processing mode for line breaks |
-| Resultado   | Texto  | <- | Text from the document          |
+| Parameter   | Tipo    |    | Descripción                     |
+| ----------- | ------- | -- | ------------------------------- |
+| charSetName | Text    | -> | Name of character set           |
+| charSetNum  | Integer | -> | Number of character set         |
+| breakMode   | Integer | -> | Processing mode for line breaks |
+| Resultado   | Text    | <- | Text from the document          |
 <!-- END REF -->
 
 

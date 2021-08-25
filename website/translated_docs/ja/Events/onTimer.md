@@ -3,9 +3,9 @@ id: onTimer
 title: On Timer
 ---
 
-| Code | Can be called by | 定義                                                                |
-| ---- | ---------------- | ----------------------------------------------------------------- |
-| 27   | フォーム             | The number of ticks defined by the `SET TIMER` command has passed |
+| コード | 呼び出し元 | 定義                                                                |
+| --- | ----- | ----------------------------------------------------------------- |
+| 27  | フォーム  | The number of ticks defined by the `SET TIMER` command has passed |
 
 
 ## 説明

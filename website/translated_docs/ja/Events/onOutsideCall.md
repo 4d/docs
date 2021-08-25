@@ -3,9 +3,9 @@ id: onOutsideCall
 title: On Outside Call
 ---
 
-| Code | Can be called by | 定義                                           |
-| ---- | ---------------- | -------------------------------------------- |
-| 10   | フォーム             | The form received a `POST OUTSIDE CALL` call |
+| コード | 呼び出し元 | 定義                                           |
+| --- | ----- | -------------------------------------------- |
+| 10  | フォーム  | The form received a `POST OUTSIDE CALL` call |
 
 
 ## 説明
