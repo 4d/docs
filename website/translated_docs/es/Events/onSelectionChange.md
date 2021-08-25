@@ -16,7 +16,7 @@ Este evento puede generarse en diferentes contextos.
 ### 4D View Pro
 Se modifica la selección actual de líneas o columnas. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propriedad    | Tipo         | Descripción                      |
+| Property      | Tipo         | Descripción                      |
 | ------------- | ------------ | -------------------------------- |
 | code          | entero largo | 31                               |
 | description   | texto        | "On Selection Change"            |
