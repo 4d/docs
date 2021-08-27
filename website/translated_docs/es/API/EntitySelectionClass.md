@@ -69,9 +69,9 @@ If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is
 
 In the optional *settings* parameter, you can pass an object containing the following property:
 
-| Property | Tipo  | Descripción                                                                                                       |
-| -------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Propiedad | Tipo  | Descripción                                                                                                       |
+| --------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| context   | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Ejemplo
@@ -1711,7 +1711,7 @@ Pass in the *selectedEntities* parameter an entity selection containing entities
 
 The returned object contains the following properties:
 
-| Property       | Tipo      | Descripción                     |
+| Propiedad      | Tipo      | Descripción                     |
 | -------------- | --------- | ------------------------------- |
 | ranges         | Colección | Collection of range objects     |
 | ranges[].start | Entero    | First entity index in the range |
