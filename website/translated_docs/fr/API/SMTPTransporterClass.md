@@ -47,7 +47,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF #_command_.SMTP New transporter.Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objet              | -> | Mail server information                             |
+| server     | Object             | -> | Mail server information                             |
 | Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -127,7 +127,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objet              | -> | Mail server information                             |
+| server     | Object             | -> | Mail server information                             |
 | Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -248,10 +248,10 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Paramètres | Type  |    | Description                                       |
-| ---------- | ----- |:--:| ------------------------------------------------- |
-| mail       | Objet | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Résultat   | Objet | <- | SMTP status                                       |
+| Paramètres | Type   |    | Description                                       |
+| ---------- | ------ |:--:| ------------------------------------------------- |
+| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) to send |
+| Résultat   | Object | <- | SMTP status                                       |
 <!-- END REF -->
 
 
@@ -273,7 +273,7 @@ The function returns an object describing the SMTP status of the operation. This
 | ---------- | ------- | ------------------------------------------------------------------------------------------------ |
 | success    | boolean | True if the send is successful, False otherwise                                                  |
 | status     | number  | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
-| statusText | Texte   | Status message returned by the SMTP server                                                       |
+| statusText | text    | Status message returned by the SMTP server                                                       |
 
 In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
 
