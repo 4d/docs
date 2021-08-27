@@ -128,7 +128,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 | Nombre            | Tipos de datos | Valores posibles |
 | ----------------- | -------------- | ---------------- |
-| lockedColumnCount | integer        | minimum: 0       |
+| lockedColumnCount | integer        | mínimo: 0        |
 
 #### Objects Supported
 
@@ -143,7 +143,7 @@ Number of columns that cannot be moved during execution.
 
 | Nombre            | Tipos de datos | Valores posibles |
 | ----------------- | -------------- | ---------------- |
-| staticColumnCount | integer        | minimum: 0       |
+| staticColumnCount | integer        | mínimo: 0        |
 
 #### Objects Supported
 

@@ -26,15 +26,15 @@ En el contexto de un evento `On Clicked`, se puede comprobar el número de clics
 
 ### On Clicked y On Double Clicked
 
-After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
+Una vez que la propiedad de evento de objeto `On Clicked` o [`On Double Clicked`](onDoubleClicked.md) es seleccionada para un objeto, puede detectar y controlar los clics dentro o sobre el objeto utilizando el comando `FORM event` que devuelve `On Clicked` o [`On Double Clicked`](onDoubleClicked.md), según el caso.
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+Si se seleccionan ambos eventos para un objeto, se generará el evento `On Clicked` y luego el evento `On Double Clicked` cuando el usuario haga doble clic en el objeto.
 
 ### 4D View Pro
 
 Este evento se genera cuando el usuario hace clic en cualquier parte en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Property    | Tipo         | Descripción                  |
+| Propiedad   | Tipo         | Descripción                  |
 | ----------- | ------------ | ---------------------------- |
 | code        | entero largo | On Clicked                   |
 | description | texto        | "On Clicked"                 |

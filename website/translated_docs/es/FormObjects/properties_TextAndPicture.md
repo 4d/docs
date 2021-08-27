@@ -59,9 +59,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                        |
-| ------------- | -------------- | --------------------------------------- |
-| customBorderX | number         | For use with "custom" style. Minimum: 0 |
+| Nombre        | Tipos de datos | Valores posibles                       |
+| ------------- | -------------- | -------------------------------------- |
+| customBorderX | number         | For use with "custom" style. Mínimo: 0 |
 
 #### Objects Supported
 
@@ -101,7 +101,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 | Nombre       | Tipos de datos | Valores posibles |
 | ------------ | -------------- | ---------------- |
-| customOffset | number         | minimum: 0       |
+| customOffset | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -200,9 +200,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                        |
-| ------------- | -------------- | --------------------------------------- |
-| customBorderY | number         | For use with "custom" style. Minimum: 0 |
+| Nombre        | Tipos de datos | Valores posibles                       |
+| ------------- | -------------- | -------------------------------------- |
+| customBorderY | number         | For use with "custom" style. Mínimo: 0 |
 
 #### Objects Supported
 
