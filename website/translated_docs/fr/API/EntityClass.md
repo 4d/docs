@@ -157,7 +157,7 @@ The differences are returned as a collection of objects whose properties are:
 
 | Nom de propriété | Type                            | Description                                 |
 | ---------------- | ------------------------------- | ------------------------------------------- |
-| attributeName    | Chaine                          | Name of the attribute                       |
+| attributeName    | String                          | Name of the attribute                       |
 | value            | any - Depends on attribute type | Value of the attribute in the entity        |
 | otherValue       | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 
@@ -341,10 +341,10 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.drop().Params -->
-| Paramètres | Type        |    | Description                                                                     |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------------- |
-| mode       | Entier long | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Résultat   | Objet       | <- | Result of drop operation                                                        |
+| Paramètres | Type    |    | Description                                                                     |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
+| Résultat   | Object  | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### Description
@@ -361,26 +361,26 @@ Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode
 
 The object returned by `.drop( )` contains the following properties:
 
-| Propriété     |                     | Type                | Description                                                                                                           |
-| ------------- | ------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean             | true if the drop action is successful, false otherwise.                                                               |
-|               |                     |                     | ***Available only in case of error:***                                                                                |
-| status(*)     |                     | number              | Error code, see below                                                                                                 |
-| statusText(*) |                     | Texte               | Description of the error, see below                                                                                   |
-|               |                     |                     | ***Available only in case of pessimistic lock error:***                                                               |
-| LockKindText  |                     | Texte               | "Locked by record"                                                                                                    |
-| lockInfo      |                     | object              | Information about the lock origin                                                                                     |
-|               | task_id             | number              | Process id                                                                                                            |
-|               | user_name           | Texte               | Session user name on the machine                                                                                      |
-|               | user4d_alias        | Texte               | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
-|               | host_name           | Texte               | Machine name                                                                                                          |
-|               | task_name           | Texte               | Process name                                                                                                          |
-|               | client_version      | Texte               |                                                                                                                       |
-|               |                     |                     | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
-| errors        |                     | collection d'objets |                                                                                                                       |
-|               | message             | Texte               | Error message                                                                                                         |
-|               | component signature | Texte               | internal component signature (e.g. "dmbg" stands for the database component)                                          |
-|               | errCode             | number              | Error code                                                                                                            |
+| Propriété     |                     | Type                  | Description                                                                                                           |
+| ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
+|               |                     |                       | ***Available only in case of error:***                                                                                |
+| status(*)     |                     | number                | Error code, see below                                                                                                 |
+| statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
+|               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
+| LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
+| lockInfo      |                     | object                | Information about the lock origin                                                                                     |
+|               | task_id             | number                | Process id                                                                                                            |
+|               | user_name           | text                  | Session user name on the machine                                                                                      |
+|               | user4d_alias        | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
+|               | host_name           | text                  | Machine name                                                                                                          |
+|               | task_name           | text                  | Process name                                                                                                          |
+|               | client_version      | text                  |                                                                                                                       |
+|               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
+| errors        |                     | collection of objects |                                                                                                                       |
+|               | message             | text                  | Error message                                                                                                         |
+|               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
+|               | errCode             | number                | Error code                                                                                                            |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
@@ -488,9 +488,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Paramètres | Type  |    | Description                          |
-| ---------- | ----- |:--:| ------------------------------------ |
-| filler     | Objet | -> | Object from which to fill the entity |
+| Paramètres | Type   |    | Description                          |
+| ---------- | ------ |:--:| ------------------------------------ |
+| filler     | Object | -> | Object from which to fill the entity |
 <!-- END REF -->
 
 #### Description
@@ -625,11 +625,11 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
-| Paramètres | Type        |    | Description                                                                             |
-| ---------- | ----------- |:--:| --------------------------------------------------------------------------------------- |
-| mode       | Entier long | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Résultat   | Texte       | <- | Value of the text primary key of the entity                                             |
-| Résultat   | Entier long | <- | Value of the numeric primary key of the entity                                          |
+| Paramètres | Type    |    | Description                                                                             |
+| ---------- | ------- |:--:| --------------------------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
+| Résultat   | Text    | <- | Value of the text primary key of the entity                                             |
+| Résultat   | Integer | <- | Value of the numeric primary key of the entity                                          |
 
 <!-- END REF -->
 
@@ -713,9 +713,9 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Paramètres | Type        |    | Description                                             |
-| ---------- | ----------- |:--:| ------------------------------------------------------- |
-| Résultat   | Entier long | <- | Stamp of the entity (0 if entity has just been created) |
+| Paramètres | Type    |    | Description                                             |
+| ---------- | ------- |:--:| ------------------------------------------------------- |
+| Résultat   | Integer | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
 
 #### Description
@@ -765,7 +765,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 | Paramètres      | Type               |    | Description                                                        |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
-| Résultat        | Entier long        | <- | Position of the entity in an entity selection                      |
+| Résultat        | Integer            | <- | Position of the entity in an entity selection                      |
 <!-- END REF -->
 
 #### Description
@@ -814,7 +814,7 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- REF #EntityClass.isNew().Params -->
 | Paramètres | Type    |    | Description                                                               |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------- |
-| Résultat   | Booléen | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Résultat   | Boolean | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### Description
@@ -894,10 +894,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
-| Paramètres | Type        |    | Description                                                          |
-| ---------- | ----------- |:--:| -------------------------------------------------------------------- |
-| mode       | Entier long | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Résultat   | Objet       | <- | Result of lock operation                                             |
+| Paramètres | Type    |    | Description                                                          |
+| ---------- | ------- |:--:| -------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
+| Résultat   | Object  | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### Description
@@ -919,29 +919,29 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 The object returned by `.lock( )` contains the following properties:
 
-| Propriété        |                     | Type                | Description                                                                                                         |
-| ---------------- | ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean             | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
-|                  |                     |                     | ***Available only if `dk reload if stamp changed` option is used:***                                                |
-| **wasReloaded**  |                     | boolean             | true if the entity was reloaded with success, false otherwise.                                                      |
-|                  |                     |                     | ***Available only in case of error:***                                                                              |
-| status(\*)     |                     | number              | Error code, see below                                                                                               |
-| statusText(\*) |                     | Texte               | Description of the error, see below                                                                                 |
-|                  |                     |                     | ***Available only in case of pessimistic lock error:***                                                             |
-| lockKindText     |                     | Texte               | "Locked by record"                                                                                                  |
-| lockInfo         |                     | object              | Information about the lock origin                                                                                   |
-|                  | task_id             | number              | Process ID                                                                                                          |
-|                  | user_name           | Texte               | Session user name on the machine                                                                                    |
-|                  | user4d_alias        | Texte               | Name or alias of the 4D user                                                                                        |
-|                  | user4d_id           | number              | User id in the 4D database directory                                                                                |
-|                  | host_name           | Texte               | Machine name                                                                                                        |
-|                  | task_name           | Texte               | Process name                                                                                                        |
-|                  | client_version      | Texte               |                                                                                                                     |
-|                  |                     |                     | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
-| errors           |                     | collection d'objets |                                                                                                                     |
-|                  | message             | Texte               | Error message                                                                                                       |
-|                  | component signature | Texte               | internal component signature (e.g. "dmbg" stands for the database component)                                        |
-|                  | errCode             | number              | Error code                                                                                                          |
+| Propriété        |                     | Type                  | Description                                                                                                         |
+| ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
+|                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
+| **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
+|                  |                     |                       | ***Available only in case of error:***                                                                              |
+| status(\*)     |                     | number                | Error code, see below                                                                                               |
+| statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
+|                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
+| lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
+| lockInfo         |                     | object                | Information about the lock origin                                                                                   |
+|                  | task_id             | number                | Process ID                                                                                                          |
+|                  | user_name           | text                  | Session user name on the machine                                                                                    |
+|                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
+|                  | user4d_id           | number                | User id in the 4D database directory                                                                                |
+|                  | host_name           | text                  | Machine name                                                                                                        |
+|                  | task_name           | text                  | Process name                                                                                                        |
+|                  | client_version      | text                  |                                                                                                                     |
+|                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
+| errors           |                     | collection of objects |                                                                                                                     |
+|                  | message             | text                  | Error message                                                                                                       |
+|                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
+|                  | errCode             | number                | Error code                                                                                                          |
 
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
@@ -1091,9 +1091,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.reload().Params -->
-| Paramètres | Type  |    | Description   |
-| ---------- | ----- |:--:| ------------- |
-| Résultat   | Objet | <- | Status object |
+| Paramètres | Type   |    | Description   |
+| ---------- | ------ |:--:| ------------- |
+| Résultat   | Object | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1108,7 +1108,7 @@ The object returned by `.reload( )` contains the following properties:
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number  | Error code, see below                                                                                                                                 |
-| statusText(\*) | Texte   | Description of the error, see below                                                                                                                   |
+| statusText(\*) | text    | Description of the error, see below                                                                                                                   |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
@@ -1154,10 +1154,10 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| Paramètres | Type        |    | Description                                       |
-| ---------- | ----------- |:--:| ------------------------------------------------- |
-| mode       | Entier long | -> | `dk auto merge`: Enables the automatic merge mode |
-| Résultat   | Objet       | <- | Result of save operation                          |
+| Paramètres | Type    |    | Description                                       |
+| ---------- | ------- |:--:| ------------------------------------------------- |
+| mode       | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
+| Résultat   | Object  | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### Description
@@ -1177,28 +1177,28 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Propriété    |                    | Type                | Description                                                                                                             |
-| ------------ | ------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| success      |                    | boolean             | True if the save action is successful, False otherwise.                                                                 |
-|              |                    |                     | ***Available only if `dk auto merge` option is used***:                                                                 |
-| autoMerged   |                    | boolean             | True if an auto merge was done, False otherwise.                                                                        |
-|              |                    |                     | ***Available only in case of error***:                                                                                  |
-| status       |                    | number              | Error code, [see below](#status-and-statustext)                                                                         |
-| statusText   |                    | Texte               | Description of the error, [see below](#status-and-statustext)                                                           |
-|              |                    |                     | ***Available only in case of pessimistic lock error***:                                                                 |
-| lockKindText |                    | Texte               | "Locked by record"                                                                                                      |
-| lockInfo     |                    | object              | Information about the lock origin                                                                                       |
-|              | task_id            | number              | Process id                                                                                                              |
-|              | user_name          | Texte               | Session user name on the machine                                                                                        |
-|              | user4d_alias       | Texte               | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
-|              | host_name          | Texte               | Machine name                                                                                                            |
-|              | task_name          | Texte               | Process name                                                                                                            |
-|              | client_version     | Texte               |                                                                                                                         |
-|              |                    |                     | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
-| errors       |                    | collection d'objets |                                                                                                                         |
-|              | message            | Texte               | Error message                                                                                                           |
-|              | componentSignature | Texte               | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
-|              | errCode            | number              | Error code                                                                                                              |
+| Propriété    |                    | Type                  | Description                                                                                                             |
+| ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean               | True if the save action is successful, False otherwise.                                                                 |
+|              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
+| autoMerged   |                    | boolean               | True if an auto merge was done, False otherwise.                                                                        |
+|              |                    |                       | ***Available only in case of error***:                                                                                  |
+| status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
+| statusText   |                    | text                  | Description of the error, [see below](#status-and-statustext)                                                           |
+|              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
+| lockKindText |                    | text                  | "Locked by record"                                                                                                      |
+| lockInfo     |                    | object                | Information about the lock origin                                                                                       |
+|              | task_id            | number                | Process id                                                                                                              |
+|              | user_name          | text                  | Session user name on the machine                                                                                        |
+|              | user4d_alias       | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
+|              | host_name          | text                  | Machine name                                                                                                            |
+|              | task_name          | text                  | Process name                                                                                                            |
+|              | client_version     | text                  |                                                                                                                         |
+|              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                    | collection of objects |                                                                                                                         |
+|              | message            | text                  | Error message                                                                                                           |
+|              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | errCode            | number                | Error code                                                                                                              |
 
 ##### status and statusText
 
@@ -1289,12 +1289,12 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| Paramètres   | Type        |    | Description                                                                                             |
-| ------------ | ----------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | Texte       | -> | Attribute(s) to extract (comma-separated string)                                                        |
-| filterCol    | Collection  | -> | Collection of attribute(s) to extract                                                                   |
-| options      | Entier long | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Résultat     | Objet       | <- | Object built from the entity                                                                            |
+| Paramètres   | Type       |    | Description                                                                                             |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Attribute(s) to extract (comma-separated string)                                                        |
+| filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                   |
+| options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
+| Résultat     | Object     | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
 #### Description
@@ -1578,7 +1578,7 @@ Returns:
 <!-- REF #EntityClass.touched().Params -->
 | Paramètres | Type    |    | Description                                                                           |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------- |
-| Résultat   | Booléen | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Résultat   | Boolean | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### Description
@@ -1696,9 +1696,9 @@ In this case:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.unlock().Params -->
-| Paramètres | Type  |    | Description   |
-| ---------- | ----- |:--:| ------------- |
-| Résultat   | Objet | <- | Status object |
+| Paramètres | Type   |    | Description   |
+| ---------- | ------ |:--:| ------------- |
+| Résultat   | Object | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1724,7 +1724,7 @@ The object returned by `.unlock()` contains the following property:
 
 | Propriété | Type    | Description                                                                                                                                                                                        |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success   | Booléen | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
+| success   | Boolean | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
 #### Exemple
 
