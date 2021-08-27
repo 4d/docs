@@ -3,11 +3,11 @@ id: buttonOverview
 title: Botón
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+Un botón es un objeto activo al que se le puede asignar una acción (*por ejemplo*, una tarea de base de datos o una función de interfaz) para que la realice cuando un usuario haga clic en él.
 
 ![](assets/en/FormObjects/button_regular.png)
 
-Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
+Los botones pueden cumplir diversas funciones, según su estilo y la acción que se les asigne. Por ejemplo, los botones pueden guiar al usuario a través de un cuestionario o formulario para que lo llene, o para que tome decisiones. Dependiendo de sus propiedades, un botón puede estar diseñado para ser presionado una sola vez y ejecutar un comando, mientras que otros pueden requerir que el usuario haga clic más de una vez para recibir el resultado deseado.
 
 ## Handling buttons
 
@@ -96,7 +96,7 @@ Only the Regular and Flat styles offer the [Default Button](properties_Appearanc
 
 The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Toolbar style has a transparent background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
@@ -126,7 +126,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
-By default, the Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Bevel style has a light gray background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
@@ -156,7 +156,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
 
-By default, the Rounded Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Rounded Bevel style has a light gray background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
@@ -184,15 +184,15 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+El estilo del botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel). Al igual que el estilo Bevel, el estilo OS X Gradient combina la apariencia del estilo [Clásico](#regular) y del estilo [Barra de herramientas](#toolbar).
 
-By default, the OS X Gradient style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+Por defecto, el estilo OS X Gradient tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button.
+ - *Windows* - the button is identical to the Bevel style. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha del botón.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
- - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - el botón se muestra como un botón de dos tonos. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Example:
 
@@ -213,15 +213,15 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 ### OS X Texturizado
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). Al igual que el estilo Bevel, el estilo OS X Textured combina la apariencia del estilo [Clásico](#regular) y del estilo [Barra de herramientas](#toolbar).
 
 By default, the OS X Textured style appears as:
 
- - *Windows* - a standard system button with a light gray background with a label in the center. It has the special feature of being transparent in Vista.
+ - *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro. Tiene la particularidad de ser transparente en Vista.
 
  ![](assets/en/FormObjects/button_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Su altura está predefinida: no es posible ampliarla o reducirla.
 
 #### JSON Example:
 
@@ -243,11 +243,11 @@ By default, the OS X Textured style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's transparency and pop-up menu property option.
+El estilo de botón Office XP combina la apariencia del estilo [Clásico](#regular) y del estilo [Barra de herramientas](#toolbar).
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
 
 ![](assets/en/FormObjects/button_officexp.png)
 
