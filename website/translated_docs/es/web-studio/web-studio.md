@@ -314,7 +314,7 @@ The command must be called in the context of a web form handled by the web serve
 
 The returned object contains the following properties:
 
-| Property  | Tipo   | Descripción                                                                                                   |
+| Propiedad | Tipo   | Descripción                                                                                                   |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------- |
 | caller    | Texto  | Server-side reference of the component triggering the event                                                   |
 | eventType | Texto  | Event type (onclick, onchange, onmouseover...)                                                                |
