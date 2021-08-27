@@ -60,7 +60,7 @@ By default, the Flat style has a minimalist appearance. The Flat button style's 
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+By default, the Toolbar style has a transparent background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - the button is highlighted.
 
@@ -72,7 +72,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ### Bevel
 
-The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - the button is highlighted.
 
@@ -96,7 +96,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the button is displayed as a two-tone system button.
+ - *macOS* - el botón se muestra como un botón de dos tonos.
 
 
 
@@ -108,7 +108,7 @@ By default, the OS X Textured style appears as:
 
  - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Su altura está predefinida: no es posible ampliarla o reducirla.
 
   ![](assets/en/FormObjects/OSXTextured.png)
 
@@ -118,13 +118,13 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style (standard system button) with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
 
   ![](assets/en/FormObjects/radio_xp.png)
 
- - *macOS* - its background is always displayed.
+ - *macOS* - su fondo se muestra siempre.
 
 
 
