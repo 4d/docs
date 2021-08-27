@@ -45,10 +45,10 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 ##### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles |
-| --------------- | -------------- | ---------------- |
-| windowMinHeight | number         | integer value    |
-| windowMaxHeight | number         | integer value    |
+| Nombre          | Tipos de datos | Valores posibles   |
+| --------------- | -------------- | ------------------ |
+| windowMinHeight | number         | valor entero largo |
+| windowMaxHeight | number         | valor entero largo |
 
 
 ## Maximum Width, Minimum Width
@@ -58,8 +58,8 @@ Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed 
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles |
-| -------------- | -------------- | ---------------- |
-| windowMinWidth | number         | integer value    |
-| windowMaxWidth | number         | integer value    |
+| Nombre         | Tipos de datos | Valores posibles   |
+| -------------- | -------------- | ------------------ |
+| windowMinWidth | number         | valor entero largo |
+| windowMaxWidth | number         | valor entero largo |
 
