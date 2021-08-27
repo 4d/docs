@@ -74,7 +74,7 @@ They provide the following properties and functions:
 
 | Paramètres | Type         |    | Description                                                    |
 | ---------- | ------------ | -- | -------------------------------------------------------------- |
-| option     | Entier long  | -> | Web server to get (default if omitted = `Web server database`) |
+| option     | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
 | Résultat   | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
@@ -782,10 +782,10 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type  |    | Description                           |
-| ---------- | ----- | -- | ------------------------------------- |
-| settings   | Objet | -> | Web server settings to set at startup |
-| Résultat   | Objet | <- | Status of the web server startup      |
+| Paramètres | Type   |    | Description                           |
+| ---------- | ------ | -- | ------------------------------------- |
+| settings   | Object | -> | Web server settings to set at startup |
+| Résultat   | Object | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
