@@ -119,7 +119,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ## Publicado como Subformulario
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
+Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. When this property is selected, the form will be published in the host application.
 
 Only project forms can be specified as published subforms.
 
@@ -134,7 +134,7 @@ Only project forms can be specified as published subforms.
 
 ---
 
-## Save Geometry
+## Memorizar geometría
 
 Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Open form window` con el parámetro `*`, varios parámetros del formulario son guardados automáticamente por 4D cuando se cierra la ventana, independientemente de cómo se hayan modificado durante la sesión:
 
