@@ -122,7 +122,7 @@ myCol:=myCol.push("new value") //display new value in list box
 Supported properties depend on the list box type.
 
 
-| Property                                                                                     | Array list box | List box selección | Collection or Entity Selection list box |
+| Propiedad                                                                                    | Array list box | List box selección | Collection or Entity Selection list box |
 | -------------------------------------------------------------------------------------------- | -------------- | ------------------ | --------------------------------------- |
 | [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)   | X              | X                  | X                                       |
 | [Background Color](properties_BackgroundAndBorder.md#background-color)                       | X              | X                  | X                                       |
@@ -193,7 +193,7 @@ Supported properties depend on the list box type.
 | [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                          | X              | X                  | X                                       |
 | [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                             | X              | X                  | X                                       |
 | [Visibility](properties_Display.md#visibility)                                               | X              | X                  | X                                       |
-| [Width](properties_CoordinatesAndSizing.md#width)                                            | X              | X                  | X                                       |
+| [Ancho](properties_CoordinatesAndSizing.md#width)                                            | X              | X                  | X                                       |
 
 
 > List box columns, headers and footers support specific properties.
@@ -242,7 +242,7 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Tipo         | Descripción                                                           |
+| Propiedad        | Tipo         | Descripción                                                           |
 | ---------------- | ------------ | --------------------------------------------------------------------- |
 | area             | texto        | List box object area ("header", "footer", "cell")                     |
 | areaName         | texto        | Name of the area                                                      |
@@ -601,7 +601,7 @@ To restore the original appearance of the list box, you can:
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
-| Property         | Array list box                                                                             | List box selección                                                                           | Collection or Entity Selection list box                                                                                                                         |
+| Propiedad        | Array list box                                                                             | List box selección                                                                           | Collection or Entity Selection list box                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Background color | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
 | Font color       | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
