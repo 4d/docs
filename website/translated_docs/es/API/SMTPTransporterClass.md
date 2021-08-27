@@ -269,7 +269,7 @@ In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to se
 
 The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
 
-| Property   | Tipo    | Descripción                                                                                      |
+| Propiedad  | Tipo    | Descripción                                                                                      |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------ |
 | success    | boolean | True if the send is successful, False otherwise                                                  |
 | status     | number  | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
@@ -279,7 +279,7 @@ In case of an issue unrelated to the SMTP processing (e.g. a mandatory property 
 
 In this case, the resulting status object contains the following values:
 
-| Property   | Valor                  |
+| Propiedad  | Valor                  |
 | ---------- | ---------------------- |
 | success    | False                  |
 | status     | 0                      |
