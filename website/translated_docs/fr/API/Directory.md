@@ -492,7 +492,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 | Paramètres | Type    |    | Description                          |
 | ---------- | ------- | -- | ------------------------------------ |
-| path       | Texte   | -> | Relative POSIX file pathname         |
+| path       | Text    | -> | Relative POSIX file pathname         |
 | Résultat   | 4D.File | <- | `File` object (null if invalid path) |
 <!-- END REF -->
 
@@ -530,10 +530,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Paramètres | Type        |    | Description                         |
-| ---------- | ----------- | -- | ----------------------------------- |
-| options    | Entier long | -> | File list options                   |
-| Résultat   | Collection  | <- | Collection of children file objects |
+| Paramètres | Type       |    | Description                         |
+| ---------- | ---------- | -- | ----------------------------------- |
+| options    | Integer    | -> | File list options                   |
+| Résultat   | Collection | <- | Collection of children file objects |
 <!-- END REF -->
 
 #### Description
@@ -593,7 +593,7 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- REF #directory.folder().Params -->
 | Paramètres | Type      |    | Description                                    |
 | ---------- | --------- | -- | ---------------------------------------------- |
-| path       | Texte     | -> | Relative POSIX file pathname                   |
+| path       | Text      | -> | Relative POSIX file pathname                   |
 | Résultat   | 4D.Folder | <- | Created folder object (null if invalid *path*) |
 <!-- END REF -->
 
@@ -631,10 +631,10 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Paramètres | Type        |    | Description                           |
-| ---------- | ----------- | -- | ------------------------------------- |
-| options    | Entier long | -> | Folder list options                   |
-| Résultat   | Collection  | <- | Collection of children folder objects |
+| Paramètres | Type       |    | Description                           |
+| ---------- | ---------- | -- | ------------------------------------- |
+| options    | Integer    | -> | Folder list options                   |
+| Résultat   | Collection | <- | Collection of children folder objects |
 <!-- END REF -->
 
 #### Description
@@ -678,10 +678,10 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Paramètres | Type        |    | Description                                   |
-| ---------- | ----------- | -- | --------------------------------------------- |
-| size       | Entier long | -> | Side length for the returned picture (pixels) |
-| Résultat   | Image       | <- | Icône                                         |
+| Paramètres | Type    |    | Description                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| size       | Integer | -> | Side length for the returned picture (pixels) |
+| Résultat   | Image   | <- | Icône                                         |
 <!-- END REF -->
 
 
