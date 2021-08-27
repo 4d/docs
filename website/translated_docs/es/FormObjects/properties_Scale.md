@@ -46,7 +46,7 @@ Scale display measurement.
 
 |     Nombre     | Tipos de datos | Valores posibles |
 |:--------------:|:--------------:| ---------------- |
-| graduationStep |    integer     | minimum: 0       |
+| graduationStep |    integer     | mínimo: 0        |
 
 
 #### Objects Supported
