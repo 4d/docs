@@ -259,7 +259,7 @@ By default, the OS X Textured button style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *macOS* - a standard system button. Su altura está predefinida: no es posible ampliarla o reducirla.
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -286,7 +286,7 @@ The Office XP button style combines the appearance of the [Regular](#regular) bu
 
 The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
 
- - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+ - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Example with states unchecked / checked / highlighted:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
