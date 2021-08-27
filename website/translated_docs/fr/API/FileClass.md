@@ -66,13 +66,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Paramètres   | Type        |    | Description                                     |
-| ------------ | ----------- |:--:| ----------------------------------------------- |
-| path         | Texte       | -> | File path                                       |
-| fileConstant | Entier long | -> | 4D file constant                                |
-| pathType     | Entier long | -> | `fk posix path` (default) or `fk platform path` |
-| *            |             | -> | * to return file of host database               |
-| Résultat     | 4D.File     | <- | New file object                                 |
+| Paramètres   | Type    |    | Description                                     |
+| ------------ | ------- |:--:| ----------------------------------------------- |
+| path         | Text    | -> | File path                                       |
+| fileConstant | Integer | -> | 4D file constant                                |
+| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
+| *            |         | -> | * to return file of host database               |
+| Résultat     | 4D.File | <- | New file object                                 |
 <!-- END REF -->
 
 
@@ -168,7 +168,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF #FileClass.create().Params -->
 | Paramètres | Type    |    | Description                                                |
 | ---------- | ------- | -- | ---------------------------------------------------------- |
-| Résultat   | Booléen | <- | True if the file was created successfully, false otherwise |
+| Résultat   | Boolean | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Description
@@ -210,12 +210,12 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Paramètres        | Type        |    | Description                                  |
-| ----------------- | ----------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte       | -> | Name of the alias or shortcut                |
-| aliasType         | Entier long | -> | Type of the alias link                       |
-| Résultat          | 4D.File     | <- | Alias or shortcut file reference             |
+| Paramètres        | Type      |    | Description                                  |
+| ----------------- | --------- | -- | -------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
+| Résultat          | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
 
@@ -333,9 +333,9 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Paramètres | Type  |    | Description                                           |
-| ---------- | ----- | -- | ----------------------------------------------------- |
-| Résultat   | Objet | <- | Contents of .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| Résultat   | Object | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -353,16 +353,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 **Returned object with a .plist file**
 
@@ -456,7 +456,7 @@ ALERT($info.Copyright)
 | Paramètres        | Type      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
-| newName           | Texte     | -> | Full name for the moved file |
+| newName           | Text      | -> | Full name for the moved file |
 | Résultat          | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
 
@@ -523,7 +523,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.rename().Params -->
 | Paramètres | Type    |    | Description                |
 | ---------- | ------- | -- | -------------------------- |
-| newName    | Texte   | -> | New full name for the file |
+| newName    | Text    | -> | New full name for the file |
 | Résultat   | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
@@ -564,9 +564,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Paramètres | Type  |    | Description                                                      |
-| ---------- | ----- | -- | ---------------------------------------------------------------- |
-| info       | Objet | -> | Properties to write in .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                                      |
+| ---------- | ------ | -- | ---------------------------------------------------------------- |
+| info       | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -584,16 +584,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
@@ -688,12 +688,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Paramètres  | Type        |    | Description                                                |
-| ----------- | ----------- | -- | ---------------------------------------------------------- |
-| Texte       | Texte       | -> | Text to store in the file                                  |
-| charSetName | Texte       | -> | Name of character set                                      |
-| charSetNum  | Entier long | -> | Number of character set                                    |
-| breakMode   | Entier long | -> | Processing mode for line breaks|<!-- END REF -->
+| Paramètres  | Type    |    | Description                                                |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| Texte       | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Name of character set                                      |
+| charSetNum  | Integer | -> | Number of character set                                    |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 
