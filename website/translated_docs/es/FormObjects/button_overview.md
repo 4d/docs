@@ -298,11 +298,11 @@ El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda est�
 
 ### Círculo
 
-The Circle button style appears as a round system button. This button style is designed for macOS.
+El estilo de botón Círculo aparece como un botón sistema circular. Este estilo de botón está diseñado para macOS.
 
 ![](assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+En Windows, es idéntico al estilo "Ninguno" (no se tiene en cuenta el círculo del fondo).
 
 
 #### JSON Example:
@@ -324,7 +324,7 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 
 ### Personalizado
 
-The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset.
+El estilo de botón Personalizado acepta una imagen de fondo personalizada y permite gestionar parámetros adicionales como el margen y el desplazamiento del icono.
 
 ![](assets/en/FormObjects/button_custom.png)
 
@@ -349,9 +349,9 @@ The Custom button style accepts a personalized background picture and allows man
 
 
 
-## Supported Properties
+## Propiedades soportadas
 
-All buttons share the same set of basic properties:
+Todos los botones comparten el mismo conjunto de propiedades básicas:
 
 
 [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
