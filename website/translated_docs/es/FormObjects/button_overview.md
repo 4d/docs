@@ -251,7 +251,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ![](assets/en/FormObjects/button_officexp.png)
 
- - *macOS* - its background is always displayed.
+ - *macOS* - su fondo se muestra siempre.
 
 #### JSON Example:
 
@@ -274,7 +274,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 ### Ayuda
 
 
-The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.
+El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda estándar del sistema. Por defecto, el estilo Ayuda se muestra como un signo de interrogación dentro de un círculo.
 
 ![](assets/en/FormObjects/button_help.png)
 
@@ -293,7 +293,7 @@ The Help button style can be used to display a standard system help button. By d
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.
+> El estilo Ayuda no soporta las propiedades básicas [Número de estados](properties_TextAndPicture.md#number-of-states), [ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) y la [posición Título/Imagen](properties_TextAndPicture.md#title-picture-position).
 
 
 ### Círculo
