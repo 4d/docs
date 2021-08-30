@@ -4,18 +4,18 @@ title: 4D Server 管理画面
 ---
 
 
-When 4D Server is launched with interface under Windows or macOS, a graphical administration window is available, providing many analysis and control tools for the published 4D application. To display the 4D Server Administration window for the opened project, select the **Window > Administration** menu item, or press **Ctrl+U**.
+Windows または macOS上で、4D Server をインターフェースありで起動すると、グラフィカルな管理画面が利用でき、公開された 4Dアプリケーション用に多くの解析・制御ツールを提供します。 開いているプロジェクトの 4D Server 管理画面を表示するには、**ウィンドウ＞管理** メニュー項目を選択するか、**Ctrl+U** を押します。
 
-> The 4D Server administration window can be accessed from a remote 4D. For more information about this point, please refer to Administration from Remote Machines.
+> 管理画面はリモートの 4D からもアクセス可能です。 この点についての詳細は、 リモートマシンからの管理を参照ください。
 
 
-## Monitor Page
+## モニターページ
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+**モニター** ページには、データベース利用に関する動的な情報のほか、システムや 4D Serverアプリケーションの情報が表示されます。
 
 ![](assets/en/Admin/server-admin.png)
 
-> On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
+> Windows では、このページに表示されるシステム情報の一部は、Windows パフォーマンスアナライザー (WPA) ツールを介して取得されます。 These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
 
 #### Graphic area
 
