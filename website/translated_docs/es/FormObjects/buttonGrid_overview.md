@@ -28,6 +28,6 @@ Los botones de la rejilla están numerados de izquierda a derecha y de arriba a 
 Puede asociar el `gotoPage` [acción estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) a una rejilla de botones. Cuando se selecciona esta acción, 4D mostrará automáticamente la página del formulario que corresponde al número del botón que está seleccionado en la rejilla de botones. Por ejemplo, si el usuario selecciona el décimo botón de la rejilla, 4D mostrará la décima página del formulario actual (si existe).
 
 
-## Supported Properties
+## Propiedades soportadas
 
 [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing. md#bottom) - [Clase](properties_Object.md#css-class) - [Columnas](properties_Crop.md#columns) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions. md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Nombre del objeto](properties_Object. md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Filas](properties_Crop.md#rows) - [Acción estándar](properties_Action. md#standard-action) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object. md#type) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions. md#vertical-sizing) - [Ancho](properties_CoordinatesAndSizing.md#width) - [Visibilidad](properties_Display.md#visibility) 
