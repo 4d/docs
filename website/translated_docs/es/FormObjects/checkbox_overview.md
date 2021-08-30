@@ -403,7 +403,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 
 
-## Supported Properties
+## Propiedades soportadas
 
 All check boxes share the same set of basic properties:
 
