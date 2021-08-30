@@ -12,7 +12,7 @@
         "title": "Webデータエクスプローラー"
       },
       "Admin/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "ログファイルの詳細"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -943,7 +943,7 @@
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
-    "Description of log files|no description given": "Description of log files",
+    "Description of log files|no description given": "ログファイルの詳細",
     "Command Line Interface|no description given": "コマンドライン・インターフェース",
     "Preferences|no description given": "環境設定",
     "Getting started|no description given": "はじめに",
