@@ -290,7 +290,7 @@ The colors (highlight and background) of a check box with the Office XP button s
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - its background is always displayed. Example with states unchecked / checked:
+ - *macOS* - su fondo se muestra siempre. Example with states unchecked / checked:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
