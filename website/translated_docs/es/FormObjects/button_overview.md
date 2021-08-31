@@ -27,9 +27,9 @@ The [variable](properties_Object.md#variable-or-expression) associated with a bu
 
 ## Button Styles
 
-Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. A great number of variations can be obtained by combining these properties / behaviors.
+Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
 
-With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. The difference is in the processing of their associated variables.
+With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. La diferencia está en el tratamiento de sus variables asociadas.
 
 4D provides buttons in the following predefined styles:
 
@@ -354,14 +354,14 @@ El estilo de botón Personalizado acepta una imagen de fondo personalizada y per
 Todos los botones comparten el mismo conjunto de propiedades básicas:
 
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrita](properties_Text.md#bold) - [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo del botón](properties_TextAndPicture.md#button-style) - [Clase](properties_Object.md#css-class) - [Soltable](properties_Action.md#droppable) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Alto](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tam. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No representado](properties_Display.md#not-rendered) - [Número de estados](properties_TextAndPicture.md#number-of-states)(1) - [Nombre de objeto](properties_Object.md#object-name) - [Ruta imagen](properties_TextAndPicture.md#picture-pathname)(1) - [Derecho](properties_CoordinatesAndSizing.md#right) - [Atajo](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Posición Imagen/Título](properties_TextAndPicture.md#title-picture-position)(1) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-> (1) Not supported by the [Help](#help) style.
+> (1) No soportado por el estilo [Ayuda](#ayuda).
 
 
 Additional specific properties are available, depending on the [button style](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
-- [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
+- [Botón por defecto](properties_Appearance.md#default-button) (Plano, Clásico)
+- [Con menú emergente](properties_TextAndPicture.md#with-pop-up-menu) (Barra de herramientas, Bisel, Bisel redondeado, OS X Gradient, OS X Textured, Office XP, Círculo, Personalizado)
 
