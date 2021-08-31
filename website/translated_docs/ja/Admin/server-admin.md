@@ -1,12 +1,12 @@
 ---
 id: server-admin
-title: 4D Server 管理画面
+title: 4D Server 管理ウィンドウ
 ---
 
 
-Windows または macOS上で、4D Server をインターフェースありで起動すると、グラフィカルな管理画面が利用でき、公開された 4Dアプリケーション用に多くの解析・制御ツールを提供します。 開いているプロジェクトの 4D Server 管理画面を表示するには、**ウィンドウ＞管理** メニュー項目を選択するか、**Ctrl+U** を押します。
+Windows または macOS上で、4D Server をインターフェースありで起動すると、グラフィカルな管理ウィンドウが利用でき、公開された 4Dアプリケーション用に多くの解析・制御ツールを提供します。 開いているプロジェクトの 4D Server 管理ウィンドウを表示するには、**ウィンドウ＞管理** メニュー項目を選択するか、**Ctrl+U** を押します。
 
-> 管理画面はリモートの 4D からもアクセス可能です。 この点についての詳細は、 リモートマシンからの管理を参照ください。
+> 管理ウィンドウはリモートの 4D からもアクセス可能です。 この点についての詳細は、 リモートマシンからの管理を参照ください。
 
 
 ## モニターページ
@@ -45,32 +45,32 @@ Windows または macOS上で、4D Server をインターフェースありで�
 
 こういった場合には通常、[**ライセンスマネージャー**](licenses.md) をチェックする必要があります。
 
-#### Details Area
+#### 詳細エリア
 
-The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
+"詳細" エリアは、すでにグラフィックエリアで表示されている情報の一部と、追加の情報を提供します。
 
-- **Hard drive**: Overall capacity of the hard disk and distribution of the space used by the database data (data file + data index), the space used by other files and the free space available.
-- **Memory**: RAM memory installed on the machine and amount of memory used by 4D Server, by other applications or that is free. The memory used by 4D Server can also be displayed dynamically in the graphic area.
-- **Processors**: Instant occupancy rate for processor(s) of the machine by 4D Server and by other applications. This rate is constantly recalculated. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
-- **Network**: Instantaneous number of bytes sent and received by the machine (server or client). This value is updated constantly. The number of bytes received by can also be displayed dynamically in the graphic area.
+- **ハードディスク**: ハードディスク全体、およびデータベースデータ ( データファイルとインデックスファイル) の使用スペース、他のファイルの使用スペース、空きスペースなどを表示します。
+- **メモリ**: マシンにインストールされた RAMメモリ、4D Server による使用量、他のアプリケーションによる使用量、および空き容量。 4D Server が使用するメモリはグラフィックエリアにも動的に表示できます。
+- **プロセッサー**: 4D Server と他のアプリケーションによる、プロセッサーの使用率。 この使用率は絶えず再計算されます。 4D Server による使用率はグラフィックエリアにも動的に表示できます。
+- **ネットワーク**: マシン (サーバーまたはクライアント) が受信および送信したその瞬間のバイト数。 この値は絶えず更新されます。 受信したバイト数はグラフィックエリアにも動的に表示できます。
 
 
-## Users Page
+## ユーザーページ
 
-The **Users** page lists the 4D users connected to the server.
+**ユーザー** ページには、サーバーに接続しているユーザーが表示されます:
 
 
 ![](assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+"ユーザー" ボタンには、データベースに接続中のユーザ数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターを考慮しません)。 このページには、動的な検索エリアやコントロールボタンもあります。 ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+また、ヘッダーをクリックすると、リストの値が並べ替えられます。 クリックするごとに昇順/降順が入れ替わります。
 
 ![](assets/en/Admin/server-users-sort.png)
 
-### List of Users
+### ユーザーリスト
 
-For each user connected to the server, the list provides the following information:
+サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:
 
 - System of the client machine (macOS or Windows) as an icon.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
@@ -137,7 +137,7 @@ The **Processes** page lists all the processes underway.
 
 The "Processes" button indicates, in parentheses, the total number of processes running in the server (this number does not take into account any display filters applied to the window nor the state of the **Display processes by groups** option).
 
-You can change the order of the columns by simply dragging and dropping the column header areas. You can also sort the list of column values by clicking on its header.
+You can change the order of the columns by simply dragging and dropping the column header areas. また、ヘッダーをクリックすると、リストの値が並べ替えられます。
 
 Like the Users page, this page contains a dynamic [search/filtering area](#searchfiltering-area) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The search/filtering is carried out in the Session and Process name columns.
 
