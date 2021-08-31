@@ -60,7 +60,7 @@ title: 管理
 これをおこなうには:
 
 -   4D: ストラクチャー設定の Web / オプション (I) ページの **キャッシュクリア** ボタンをクリックします。
--   4D Server: [4D Server 管理画面](Admin/server-admin.md#httpサーバーページ) の HTTPサーバーページにて、**キャッシュクリア** ボタンをクリックします。
+-   4D Server: [4D Server 管理ウィンドウ](Admin/server-admin.md#httpサーバーページ) の HTTPサーバーページにて、**キャッシュクリア** ボタンをクリックします。
 
 キャッシュは即座にクリアされます。
 > 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
