@@ -18,7 +18,7 @@
         "title": "4D ライセンスの管理"
       },
       "Admin/server-admin": {
-        "title": "4D Server 管理画面"
+        "title": "4D Server 管理ウィンドウ"
       },
       "Admin/tls": {
         "title": "TLSプロトコル (HTTPS)"
@@ -935,7 +935,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web 管理",
-    "4D Server Administration Window|no description given": "4D Server 管理画面",
+    "4D Server Administration Window|no description given": "4D Server 管理ウィンドウ",
     "4D Components Library|no description given": "4D コンポーネントライブラリ",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
