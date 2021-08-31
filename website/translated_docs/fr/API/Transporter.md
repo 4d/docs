@@ -364,9 +364,9 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Paramètres | Type  |    | Description                                 |
-| ---------- | ----- |:--:| ------------------------------------------- |
-| Résultat   | Objet | <- | Status of the transporter object connection |
+| Paramètres | Type   |    | Description                                 |
+| ---------- | ------ |:--:| ------------------------------------------- |
+| Résultat   | Object | <- | Status of the transporter object connection |
 <!-- END REF -->
 
 
@@ -383,11 +383,11 @@ The function sends a request to the mail server and returns an object describing
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
-| statusText |                          | Texte      | Status message returned by the mail server, or last error returned in the 4D error stack                     |
+| statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
 |            | \[ ].errCode            | number     | 4D error code                                                                                                |
-|            | \[ ].message            | Texte      | Description of the 4D error                                                                                  |
-|            | \[ ].componentSignature | Texte      | Signature of the internal component which returned the error                                                 |
+|            | \[ ].message            | text       | Description of the 4D error                                                                                  |
+|            | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
 
 
 

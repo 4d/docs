@@ -210,6 +210,18 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Breakpoints and Command Catching"
+      },
+      "Debugging/debugger": {
+        "title": "Debugger"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
         "title": "Building a project package"
       },
@@ -439,7 +451,7 @@
         "title": "Imprimir"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "Tamaño de la ventana"
       },
       "FormObjects/buttonOverview": {
         "title": "Botón"
@@ -883,6 +895,7 @@
       "4D Language Concepts": "Conceptos del lenguaje 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Clases API",
+      "Debugging": "Debugging",
       "Access Rights": "Derechos de acceso",
       "Preferences": "Preferencias",
       "Administration": "Administración",
@@ -926,6 +939,7 @@
     "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
+    "Debugging|no description given": "Debugging",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",

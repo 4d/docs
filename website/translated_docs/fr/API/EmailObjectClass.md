@@ -63,10 +63,10 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 
 An object with two properties:
 
-| Propriété | Type  | Description                |
-| --------- | ----- | -------------------------- |
-| name      | Texte | Display name (can be null) |
-| email     | Texte | Email address              |
+| Propriété | Type | Description                |
+| --------- | ---- | -------------------------- |
+| name      | Text | Display name (can be null) |
+| email     | Text | Email address              |
 
 #### Collection
 
@@ -153,13 +153,13 @@ The `.bodyStructure` object contains the following properties:
 
 | Propriété   | Type                  | Valeur                                                                                                                                                  |
 | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| partID      | Texte                 | Identifies the part uniquely within the email                                                                                                           |
-| type        | Texte                 | (mandatory) Value of the Content-Type header field of the part                                                                                          |
-| charset     | Texte                 | Value of the charset parameter of the Content-Type header field                                                                                         |
-| encoding    | Texte                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
-| disposition | Texte                 | Value of the Content-Disposition header field of the part                                                                                               |
+| partID      | Text                  | Identifies the part uniquely within the email                                                                                                           |
+| type        | Text                  | (mandatory) Value of the Content-Type header field of the part                                                                                          |
+| charset     | Text                  | Value of the charset parameter of the Content-Type header field                                                                                         |
+| encoding    | Text                  | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
+| disposition | Text                  | Value of the Content-Disposition header field of the part                                                                                               |
 | language    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
-| location    | Texte                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
+| location    | Text                  | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
 | subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
 | headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
 
@@ -180,7 +180,7 @@ The `.bodyValues` object contains the following properties:
 
 | Propriété                  | Type    | Valeur                                                                                                                                      |
 | -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | Texte   | Value of the body part                                                                                                                      |
+| *partID*.value             | text    | Value of the body part                                                                                                                      |
 | *partID*.isEncodingProblem | boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
@@ -253,10 +253,10 @@ The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary --
 
 Every object of the headers collection can contain the following properties:
 
-| Propriété | Type  | Valeur                                                                                                                                                               |
-| --------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].name   | Texte | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
-| [].value  | Texte | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
+| Propriété | Type | Valeur                                                                                                                                                               |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [].name   | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
+| [].value  | text | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
 
 
 
@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Paramètres | Type       |    | Description   |
 | ---------- | ---------- |:--:| ------------- |
 | mime       | Blob, Text | -> | Email in MIME |
-| Résultat   | Objet      | <- | Email object  |
+| Résultat   | Object     | <- | Email object  |
 <!-- END REF -->
 
 #### Description
@@ -592,11 +592,11 @@ $status:=$transporter.send($email)
 **MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
-| Paramètres | Type  |    | Description                       |
-| ---------- | ----- |:--:| --------------------------------- |
-| mail       | Objet | -> | Email object                      |
-| options    | Objet | -> | Charset and encoding mail options |
-| Résultat   | Texte | <- | Email object converted to MIME    |
+| Paramètres | Type   |    | Description                       |
+| ---------- | ------ |:--:| --------------------------------- |
+| mail       | Object | -> | Email object                      |
+| options    | Object | -> | Charset and encoding mail options |
+| Résultat   | Text   | <- | Email object converted to MIME    |
 <!-- END REF -->
 
 #### Description
@@ -608,10 +608,10 @@ In *mail*, pass the content and the structure details of the email to convert. T
 
 In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
 
-| Propriété     | Type  | Description                                                                                                                                                                                                                  |
-| ------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Texte | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valeurs possibles :<p><p><table><tr><th>Constant</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
-| bodyCharset   | Texte | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                           |
+| Propriété     | Type | Description                                                                                                                                                                                                                  |
+| ------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| headerCharset | Text | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valeurs possibles :<p><p><table><tr><th>Constant</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
+| bodyCharset   | Text | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                           |
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 

@@ -117,7 +117,7 @@ myCol:=myCol.push("new value") //display new value in list box
 
 
 
-### Supported Properties
+### Propiedades soportadas
 
 Supported properties depend on the list box type.
 

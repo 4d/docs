@@ -109,7 +109,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 <!-- REF SignalClass.New signal.Params -->
 | Paramètres  | Type      |    | Description                            |
 | ----------- | --------- |:--:| -------------------------------------- |
-| description | Texte     | -> | Description for the signal             |
+| description | Text      | -> | Description for the signal             |
 | Résultat    | 4D.Signal | <- | Native object encapsulating the signal |
 <!-- END REF -->
 
@@ -257,8 +257,8 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 <!-- REF #SignalClass.wait().Params -->
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
-| timeout    | Réel    | -> | Maximum waiting time for the signal in seconds |
-| Résultat   | Booléen | <- | State of the `.signaled` property              |
+| timeout    | Real    | -> | Maximum waiting time for the signal in seconds |
+| Résultat   | Boolean | <- | State of the `.signaled` property              |
 <!-- END REF -->
 
 

@@ -49,14 +49,14 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Paramètres      | Type        |    | Description                                          |
-| --------------- | ----------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File     | -> | File or Folder object to compress                    |
-| folderToZip     | 4D.Folder   | -> | File or Folder object to compress                    |
-| zipStructure    | Objet       | -> | File or Folder object to compress                    |
-| destinationFile | 4D.File     | -> | Destination file for the archive                     |
-| options         | Entier long | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Résultat        | Objet       | <- | Status object                                        |
+| Paramètres      | Type      |    | Description                                          |
+| --------------- | --------- |:--:| ---------------------------------------------------- |
+| fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
+| folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
+| zipStructure    | Object    | -> | File or Folder object to compress                    |
+| destinationFile | 4D.File   | -> | Destination file for the archive                     |
+| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| Résultat        | Object    | <- | Status object                                        |
 <!-- END REF -->
 
 
@@ -150,11 +150,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Propriété  | Type        | Description                                                                                                                             |
-| ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| statusText | Texte       | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Entier long | Status code                                                                                                                             |
-| success    | Booléen     | True if archive created successfully, else false                                                                                        |
+| Propriété  | Type    | Description                                                                                                                             |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| statusText | Text    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
+| status     | Integer | Status code                                                                                                                             |
+| success    | Boolean | True if archive created successfully, else false                                                                                        |
 
 
 
@@ -279,7 +279,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 | Paramètres | Type          |    | Description                 |
 | ---------- | ------------- |:--:| --------------------------- |
 | zipFile    | 4D.File       | -> | Zip archive file            |
-| password   | Texte         | -> | ZIP archive password if any |
+| password   | Text          | -> | ZIP archive password if any |
 | Résultat   | 4D.ZipArchive | <- | Archive object              |
 <!-- END REF -->
 

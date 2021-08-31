@@ -465,12 +465,12 @@ Cette propriété est en **lecture seule**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Paramètres        | Type        |    | Description                                 |
-| ----------------- | ----------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder                          |
-| newName           | Texte       | -> | Name for the copy                           |
-| overwrite         | Entier long | -> | `fk overwrite` to replace existing elements |
-| Résultat          | 4D.File     | <- | Copied file                                 |
+| Paramètres        | Type      |    | Description                                 |
+| ----------------- | --------- |:--:| ------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder                          |
+| newName           | Text      | -> | Name for the copy                           |
+| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
+| Résultat          | 4D.File   | <- | Copied file                                 |
 <!-- END REF -->
 
 
@@ -564,10 +564,10 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Paramètres | Type        |    | Description                                   |
-| ---------- | ----------- | -- | --------------------------------------------- |
-| size       | Entier long | -> | Side length for the returned picture (pixels) |
-| Résultat   | Image       | <- | Icône                                         |
+| Paramètres | Type    |    | Description                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| size       | Integer | -> | Side length for the returned picture (pixels) |
+| Résultat   | Image   | <- | Icône                                         |
 <!-- END REF -->
 
 
@@ -603,12 +603,12 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Paramètres  | Type        |    | Description                     |
-| ----------- | ----------- | -- | ------------------------------- |
-| charSetName | Texte       | -> | Name of character set           |
-| charSetNum  | Entier long | -> | Number of character set         |
-| breakMode   | Entier long | -> | Processing mode for line breaks |
-| Résultat    | Texte       | <- | Text from the document          |
+| Paramètres  | Type    |    | Description                     |
+| ----------- | ------- | -- | ------------------------------- |
+| charSetName | Text    | -> | Name of character set           |
+| charSetNum  | Integer | -> | Number of character set         |
+| breakMode   | Integer | -> | Processing mode for line breaks |
+| Résultat    | Text    | <- | Text from the document          |
 <!-- END REF -->
 
 

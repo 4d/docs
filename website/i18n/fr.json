@@ -210,6 +210,18 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Breakpoints and Command Catching"
+      },
+      "Debugging/debugger": {
+        "title": "Debugger"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
         "title": "Générer un package projet"
       },
@@ -883,6 +895,7 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
+      "Debugging": "Debugging",
       "Access Rights": "Droits d'accès",
       "Preferences": "Préférences",
       "Administration": "Administration",
@@ -926,6 +939,7 @@
     "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Debugging|no description given": "Debugging",
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",

@@ -257,7 +257,7 @@ Calling a formula using object notation:
 <!-- REF #_command_.Formula from string.Params -->
 | Paramètres    | Type        |    | Description                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
-| formulaString | Texte       | -> | Text formula to be returned as object   |
+| formulaString | Text        | -> | Text formula to be returned as object   |
 | Résultat      | 4D.Function | <- | Native object encapsulating the formula |
 <!-- END REF -->
 
@@ -312,7 +312,7 @@ The following code will create a dialog accepting a formula in text format:
 <!-- REF #FunctionClass.apply().Params -->
 | Paramètres    | Type       |    | Description                                                             |
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
-| thisObj       | Objet      | -> | Object to be returned by the This command in the formula                |
+| thisObj       | Object     | -> | Object to be returned by the This command in the formula                |
 | formulaParams | Collection | -> | Collection of values to be passed as $1...$n when `formula` is executed |
 | Résultat      | any        | <- | Value from formula execution                                            |
 <!-- END REF -->
@@ -371,11 +371,11 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Paramètres | Type  |    | Description                                               |
-| ---------- | ----- | -- | --------------------------------------------------------- |
-| thisObj    | Objet | -> | Object to be returned by the This command in the formula  |
-| params     | any   | -> | Value(s) to be passed as $1...$n when formula is executed |
-| Résultat   | any   | <- | Value from formula execution                              |
+| Paramètres | Type   |    | Description                                               |
+| ---------- | ------ | -- | --------------------------------------------------------- |
+| thisObj    | Object | -> | Object to be returned by the This command in the formula  |
+| params     | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
+| Résultat   | any    | <- | Value from formula execution                              |
 <!-- END REF -->
 
 

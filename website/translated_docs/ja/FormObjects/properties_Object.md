@@ -78,7 +78,7 @@ title: オブジェクト
 ---
 ## 変数あるいは式
 
-> See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
+> セレクションおよびコレクション型のリストボックス列に関しては **[式](properties_DataSource.md#式)** の章も参照ください。
 
 
 このプロパティは、データのソースを指定します。 各アクティブフォームオブジェクトにはオブジェクト名と変数名が関連付けられています。 変数名とオブジェクト名は違っていてもかまいません。 同じフォーム内で複数のアクティブオブジェクトに同じ変数名を割り当てることができますが、[オブジェクト名](#オブジェクト名) はそれぞれユニークでなければなりません。
@@ -91,15 +91,15 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名称         | データタイプ            | とりうる値                                                                                                                                                                                                                         |
-| ---------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | 文字列、または文字列のコレクション | <li>4D variable, field name, or any expression. <li>[ダイナミック変数](#ダイナミック変数) の場合は、空の文字列 <li>[階層リストボックス](listbox_overview.md#階層リストボックス) 列の場合に、文字列 (配列名) のコレクション |
+| 名称         | データタイプ            | とりうる値                                                                                                                                                                                                  |
+| ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataSource | 文字列、または文字列のコレクション | <li>4D変数、フィールド名、あるいは任意の式 <li>[ダイナミック変数](#ダイナミック変数) の場合は、空の文字列 <li>[階層リストボックス](listbox_overview.md#階層リストボックス) 列の場合に、文字列 (配列名) のコレクション |
 
 
 
 ### 式
 
-You can use an [expression](Concepts/quick-tour.md#expressions) as data source for an object. Any valid 4D expression is allowed: simple expression, object property, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. 式はフォームが実行されたときに評価され、フォームイベント毎に再評価されます。 式には、[代入可および代入不可の式](Concepts/quick-tour.md#式) があることに注意が必要です。
+オブジェクトのデータソースとして、[式](Concepts/quick-tour.md#式) を使用することができます。 有効な 4D式であれば何でも受け入れられます。シンプルな式、オブジェクトプロパティ、フォーミュラ、4D関数、プロジェクトメソッド名、標準の `[Table]Field` シンタックスを使用したフィールド名を使用できます。 式はフォームが実行されたときに評価され、フォームイベント毎に再評価されます。 式には、[代入可および代入不可の式](Concepts/quick-tour.md#式) があることに注意が必要です。
 > 入力された式が、変数名とメソッド名の両方で使用されている場合、4Dはメソッド名が指定されたものと判断します。
 
 
@@ -160,10 +160,10 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 ---
 ## 式の型/式タイプ
 
-> This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> [セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のリストボックス列や、[オブジェクト](FormObjects/dropdownList_Overview.md#オブジェクトの使用) や [配列](FormObjects/dropdownList_Overview.md#配列の使用) に関連付けられた[ドロップダウンリスト](dropdownList_Overview.md) のプロパティリストでは、このプロパティは、[**データタイプ**](properties_DataSource.md#データタイプ-式の型) と呼ばれています。
 
 
-オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 In view of project compilation, you must [declare the variable](Concepts/variables.md#declaring-variables).
+オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 プロジェクトをコンパイルするには、[変数を宣言](Concepts/variables.md#変数の宣言) する必要があります。
 
 ただし、次の特定の場合には、このプロパティは型宣言の機能を持ちえます:
 

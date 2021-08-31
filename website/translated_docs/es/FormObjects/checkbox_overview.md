@@ -3,21 +3,21 @@ id: checkboxOverview
 title: Check Box
 ---
 
-A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
+Una casilla de selección es un tipo de botón utilizado para introducir o mostrar datos binarios (verdadero-falso). Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods or [standard actions](#using-a-standard-action). The method associated with it executes when the check box is selected. Like all buttons, a check box variable is set to 0 when the form is first opened.
+Check boxes are controlled by methods or [standard actions](#using-a-standard-action). El método asociado a ella se ejecuta cuando se selecciona la casilla de selección. Como todos los botones, la variable de la casilla de selección se pone en 0 cuando se abre el formulario por primera vez.
 
-A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Una casilla de selección muestra el texto junto a un pequeño cuadrado. Este texto se define en el área [Título](properties_Object.md#title) del tema "Objetos" de la Lista de propiedades. Para introducir en esta área un título en forma de referencia XLIFF (ver [Anexo B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 
 ## Utilizar casillas de selección
 
-A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
+Una casilla de selección puede asociarse a una [variable o expresión](properties_Object.md#variable-or-expression) de tipo entero o booleano.
 
-- **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
-- **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`.
+- **entero:** si la casilla está marcada, la variable tiene el valor 1. Cuando no se marca, tiene el valor 0. Si la casilla de selección está en tercer estado (ver más abajo), tiene el valor 2.
+- **booleano:** si la casilla está marcada, la variable tiene el valor `True`. Cuando no se marca, toma el valor `False`.
 
 Any or all check boxes in a form can be checked or unchecked. Multiple check boxes allow the user to select multiple options.
 
@@ -77,15 +77,15 @@ For detailed information on these actions, please refer to the [Standard actions
 
 ## Estilos de botones casillas de selección
 
-Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
+Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
 
-With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables.
+Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son *estructuralmente* idénticos. La diferencia está en el tratamiento de sus variables asociadas.
 
-4D provides check boxes in the following predefined button styles:
+4D ofrece casillas de selección en los siguientes estilos de botón predefinidos:
 
 ### Regular
 
-The Regular check box button style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+El estilo Clásico de botón casilla de selección corresponde a un sistema de casilla de selección estándar (*es decir, *, un rectángulo con un título descriptivo):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
@@ -109,7 +109,7 @@ The Regular check box button style is a standard system check box (*i.e.*, a rec
 
 ### Flat
 
-The Flat check box button style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
+El estilo plano del botón casilla de selección tiene una apariencia minimalista. La naturaleza gráfica del estilo Flat es especialmente útil para los formularios que se van a imprimir.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
@@ -130,13 +130,13 @@ The Flat check box button style is a minimalist appearance. The Flat style's gra
 
 
 
-### Toolbar Button
+### Botón barra de herramientas
 
-The Toolbar Button check box button style is primarily intended for integration in a toolbar.
+El estilo del botón barra de herramientas está destinado principalmente a la integración en una barra de herramientas.
 
-The Toolbar Button check box button style has a transparent background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+El estilo del botón Barra de herramientas tiene un fondo transparente con un título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
-Example with states unchecked / checked / highlighted:
+Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
@@ -161,11 +161,11 @@ Example with states unchecked / checked / highlighted:
 
 ### Bevel
 
-The Bevel check box button style combines the appearance of the [Regular](#regular) button style (*i.e.*, a rectangle with a descriptive title) with the [Toolbar Button](#toolbar-button) button style's behavior.
+El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (*es decir*, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
-The Bevel button style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+El botón Bevel tiene un fondo gris claro con un título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
-Example with states unchecked / checked / highlighted:
+Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
@@ -190,15 +190,15 @@ Example with states unchecked / checked / highlighted:
 
 ### Bevel redondeado
 
-The Rounded Bevel check box button style is nearly identical to the [Bevel](#bevel) button style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+El estilo del botón de la casilla de selección Bevel redondeado es casi idéntico al estilo del botón [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas. Al igual que el estilo de botón Bevel, el estilo del botón Bevel redondeado combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
-The Rounded Bevel button style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+El estilo de botón Bevel redondeado tiene un fondo gris claro con un título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
-Example on macOS:
+Ejemplo en macOS:
 
   ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> On Windows, the Rounded Bevel button style is identical to the [Bevel](#bevel) button style.
+> En Windows, el estilo de botón Bevel redondeado es idéntico al estilo de botón [Bevel](#bevel).
 
 
 #### JSON Example:
@@ -221,13 +221,13 @@ Example on macOS:
 
 ### OS X Gradient
 
-The OS X Gradient check box button style is nearly identical to the [Bevel](#bevel) button style. As with the Bevel button style, the OS X Gradient button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+El estilo del botón casilla de selección OS X Gradient es casi idéntico al estilo del botón [Bevel](#bevel). Al igual que el estilo de botón Bevel, el estilo del botón OS X Gradient combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
-The OS X Gradient button style has a light gray background with a title and may be displayed as a two-tone system button on macOS. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
+El estilo del botón Gradient OS X tiene un fondo gris claro con un título y se puede mostrar como un botón de sistema de dos tonos en macOS. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
   ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> On Windows, this check box button style is identical to the [Bevel](#bevel) button style.
+> En Windows, este estilo de botón casilla de selección es idéntico al estilo de botón [Bevel](#bevel).
 
 
 #### JSON Example:
@@ -259,7 +259,7 @@ By default, the OS X Textured button style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *macOS* - a standard system button. Su altura está predefinida: no es posible ampliarla o reducirla.
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -286,11 +286,11 @@ The Office XP button style combines the appearance of the [Regular](#regular) bu
 
 The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
 
- - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
+ - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - its background is always displayed. Example with states unchecked / checked:
+ - *macOS* - su fondo se muestra siempre. Example with states unchecked / checked:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -403,7 +403,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 
 
-## Supported Properties
+## Propiedades soportadas
 
 All check boxes share the same set of basic properties:
 
@@ -413,6 +413,6 @@ All check boxes share the same set of basic properties:
 
 Additional specific properties are available, depending on the [button style](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
 - [Three-States](properties_Display.md#three-states) (Flat, Regular)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

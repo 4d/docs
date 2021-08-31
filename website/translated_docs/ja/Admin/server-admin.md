@@ -1,309 +1,309 @@
 ---
 id: server-admin
-title: 4D Server 管理画面
+title: 4D Server 管理ウィンドウ
 ---
 
 
-When 4D Server is launched with interface under Windows or macOS, a graphical administration window is available, providing many analysis and control tools for the published 4D application. To display the 4D Server Administration window for the opened project, select the **Window > Administration** menu item, or press **Ctrl+U**.
+Windows または macOS上で、4D Server をインターフェースありで起動すると、グラフィカルな管理ウィンドウが利用でき、公開された 4Dアプリケーション用に多くの解析・制御ツールを提供します。 開いているプロジェクトの 4D Server 管理ウィンドウを表示するには、**ウィンドウ＞管理** メニュー項目を選択するか、**Ctrl+U** を押します。
 
-> The 4D Server administration window can be accessed from a remote 4D. For more information about this point, please refer to Administration from Remote Machines.
+> 管理ウィンドウはリモートの 4D からもアクセス可能です。 この点についての詳細は、 リモートマシンからの管理を参照ください。
 
 
-## Monitor Page
+## モニターページ
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+**モニター** ページには、データベース利用に関する動的な情報のほか、システムや 4D Serverアプリケーションの情報が表示されます。
 
 ![](assets/en/Admin/server-admin.png)
 
-> On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
+> Windows では、このページに表示されるシステム情報の一部は、Windows パフォーマンスアナライザー (WPA) ツールを介して取得されます。 これらのツールは、4D Server を起動したセッションを開いたユーザーが、必要な管理権限を持っている場合にのみアクセスできます。
 
-#### Graphic area
+#### グラフィックエリア
 
-The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
+グラフィックエリアでは、複数のパラメーター (CPU使用率、ネットワークトラフィック、およびメモリ) の変化がリアルタイムで表示されます。 ウィンドウの中央にあるメニューから表示する内容を選択します:
 
 ![](assets/en/Admin/server-graphic.png)
 
-- **CPU Usage**: Overall CPU usage of the machine, for all applications taken together. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
-- **Network**: Number of bytes received per second by the machine (server or client). The number of bytes sent is provided in the "Network" information area.
-- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
-- **Virtual memory**: Quantity of virtual memory used by the 4D Server application. This memory is allocated by the system according to the application needs. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
-- **Cache**: Quantity of cache memory used by the 4D Server application. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the total size of the cache memory, as set via the Settings.
+- **CPU使用率**: すべてのアプリケーションによるマシンの全体的な CPU使用率。 この使用率のうちの 4D Server による使用分は、"プロセッサー" 情報エリアで提供されます。
+- **ネットワーク**: マシン (サーバーまたはクライアント) が 1秒あたりに受信したバイト数。 送信バイト数は "ネットワーク" 情報エリアで提供されます。
+- **物理メモリ**: 4D Server が使用する、マシンの RAM の量。 メモリの利用に関するより詳細な情報は "メモリ" 情報エリアで提供されます。
+- **仮想メモリ**: 4D Server アプリケーションが使用する仮想メモリの量。 このメモリは、アプリケーションのニーズに応じてシステムにより割り当てられます。 エリアの右下に表示される値は、現在使用されているメモリ量を示します。 左上に表示される値は、利用可能な仮想メモリの最大値を示します。 最大値は、アプリケーションの一般メモリ設定に基づき動的に計算されます。
+- **キャッシュ**: 4D Server アプリケーションが使用するキャッシュメモリの量。 エリアの右下に表示される値は、現在使用されているメモリ量を示します。 左上に表示される値は、ストラクチャー設定にて指定されたキャッシュメモリの合計サイズを示します。
 
-Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
+このオプションが選択されている場合、キャッシュの有効な解析をおこなうために長めの観測時間が必要となるため、グラフエリアのスクロールは遅くなります。
 
 
-#### Overview Area
+#### 概要エリア
 
-The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
+"概要" エリアでは、システム、アプリケーション、そして 4D Server マシンにインストールされたライセンスに関する様々な情報が提供されます。
 
-- **System Information**: Computer, system and IP address of server
-- **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
-- **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **License**: Description of license. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **システム情報**: サーバーのマシン、システムおよび IPアドレス
+- **アプリケーション情報**: 4D Server の内部バージョン番号およびボリュームシャドウコピーステータス
+- **最大接続数**: サーバータイプ毎に可能な同時接続数
+- **ライセンス**: ライセンスの詳細。 プロダクトライセンス、あるいは付随エクスパンションのいずれかが 10日以内に失効するとき (例: サブスクリプション型ライセンスなど)、4D Server は自動的にそのライセンスを 4Dユーザーアカウントから更新しようとします。 この場合、なんらかの理由 (接続エラー、無効なアカウント状態、契約が延長されていないなど) で自動更新が失敗した場合、サーバー管理者に警告を伝えるアイコンがライセンスの隣に表示されます。 エリア上にマウスをホバーさせると、ライセンス更新状態についての追加の情報が tips として表示されます:
 
 ![](assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licences Manager**](licenses.md).
+こういった場合には通常、[**ライセンスマネージャー**](licenses.md) をチェックする必要があります。
 
-#### Details Area
+#### 詳細エリア
 
-The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
+"詳細" エリアは、すでにグラフィックエリアで表示されている情報の一部と、追加の情報を提供します。
 
-- **Hard drive**: Overall capacity of the hard disk and distribution of the space used by the database data (data file + data index), the space used by other files and the free space available.
-- **Memory**: RAM memory installed on the machine and amount of memory used by 4D Server, by other applications or that is free. The memory used by 4D Server can also be displayed dynamically in the graphic area.
-- **Processors**: Instant occupancy rate for processor(s) of the machine by 4D Server and by other applications. This rate is constantly recalculated. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
-- **Network**: Instantaneous number of bytes sent and received by the machine (server or client). This value is updated constantly. The number of bytes received by can also be displayed dynamically in the graphic area.
+- **ハードディスク**: ハードディスク全体、およびデータベースデータ ( データファイルとインデックスファイル) の使用スペース、他のファイルの使用スペース、空きスペースなどを表示します。
+- **メモリ**: マシンにインストールされた RAMメモリ、4D Server による使用量、他のアプリケーションによる使用量、および空き容量。 4D Server が使用するメモリはグラフィックエリアにも動的に表示できます。
+- **プロセッサー**: 4D Server と他のアプリケーションによる、プロセッサーの使用率。 この使用率は絶えず再計算されます。 4D Server による使用率はグラフィックエリアにも動的に表示できます。
+- **ネットワーク**: マシン (サーバーまたはクライアント) が受信および送信したその瞬間のバイト数。 この値は絶えず更新されます。 受信したバイト数はグラフィックエリアにも動的に表示できます。
 
 
-## Users Page
+## ユーザーページ
 
-The **Users** page lists the 4D users connected to the server.
+**ユーザー** ページには、サーバーに接続しているユーザーが表示されます:
 
 
 ![](assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+"ユーザー" ボタンには、データベースに接続中のユーザ数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターを考慮しません)。 このページには、動的な検索エリアやコントロールボタンもあります。 ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+また、ヘッダーをクリックすると、リストの値が並べ替えられます。 クリックするごとに昇順/降順が入れ替わります。
 
 ![](assets/en/Admin/server-users-sort.png)
 
-### List of Users
+### ユーザーリスト
 
-For each user connected to the server, the list provides the following information:
+サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:
 
-- System of the client machine (macOS or Windows) as an icon.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- システム: クライアントマシンのシステム (macOS/Windows)。
+- **4Dユーザー**: 4Dユーザー名、またはユーザーマシン上で [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/ja/page1666.html) コマンドで設定されていればエイリアス。 パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
+- **マシン名**: リモートマシンの名前。
+- **セッション名**: リモートマシン上で開かれたセッション名。
+- **IP アドレス**: リモートマシンの IPアドレス。
+- **ログイン日**: リモートマシンが接続した日付と時刻。
+- **CPU時間**: 接続してからこのユーザーが消費した CPU の時間
+- **Activity**: 4D Server がこのユーザーのために使用する時間の割合 (動的表示)。 リモートマシンがスリープモードに切り替わっている場合には "スリープ中" と表示 (以下参照)。
 
-#### Managing sleeping users
+#### スリープ中ユーザーの管理
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server は、サーバーマシンへのアクセスがアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。 この場合、接続されている 4Dリモートアプリケーションはこの急な切断を 4D Server へと自動的に知らせます。 サーバー側では、接続しているユーザーのアクティビティステータスを **スリープ中** へと変更されます:
 
 ![](assets/en/Admin/server-sleeping.png)
 
-This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+このステータスはサーバー側のリソースを一部解放します。 これに加え、4Dリモートアプリケーションはスリープモードから復帰したときに自動的に 4D Server へと再接続します。
 
-The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
+サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
-
-
-### Search/filtering Area
-
-This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
-
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Remote connection sleep timeout` セレクターを使用します。
 
 
-### Administration Buttons
+### 検索/フィルターエリア
 
-This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+この機能を使用して、検索エリアに入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができます。 エリアには、どの列に対して検索/フィルターが実行されるかが表示されています。 ユーザーページでは、4D ユーザー、マシン名、そしてセッション名です。
 
-#### Send message
+エリアにテキストが入力されると、リストはリアルタイムで更新されます。 値をセミコロンで区切ることで、一つ以上の値を使用して検索をおこなうことができます。 この場合 `OR` タイプの演算がおこなわれます。 たとえば、"John;Mary;Peter" と入力すると、John または Mary または Peter が対象となる列にある行のみが表示されます。
 
-This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+
+### 管理ボタン
+
+このページには 3つのコントロールボタンがあります。 これらのボタンは、最低 1つの行が選択されているときに有効になります。 **Shift**キーを押しながらクリックして連続した行を、あるいは **Ctrl** (Windows) / **Command** (macOS) キーを押しながらクリックして連続しない行を複数選択できます。
+
+#### メッセージ送信
+
+このボタンを使用して、ウィンドウで選択した 4Dユーザーにメッセージを送信できます。 ユーザーが選択されていないと、ボタンを使用できません。 ボタンをクリックするとダイアログボックスが表示され、メッセージを入力できます。 ダイアログにはメッセージを受信するユーザーの数が表示されます:
 
 ![](assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+クライアントマシン上でこのメッセージは警告メッセージとして表示されます。
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
-
-
-#### Watch Processes
-
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](#process-page) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
-
-#### Drop user
-
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
-
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1632.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
 
 
+#### プロセス監視
 
-## Processes Page
+このボタンをクリックすると、選択されたユーザーのプロセスを、管理ウィンドウの [**プロセス** ページ](#プロセスページ) に直接表示させることができます。 ボタンをクリックすると、4D Server はプロセスページに移動し、このページの検索/フィルターエリアに選択されたユーザー名を入力します。
 
-The **Processes** page lists all the processes underway.
+#### ユーザーをドロップ
+
+このボタンは、選択したユーザーの接続を強制的に解除するために使用します。 このボタンをクリックすると警告ダイアログが表示され、接続解除を実行するかキャンセルするか選択できます。確認ダイアログなしに選択ユーザーの接続を解除するには、**Alt**キーを押しながら、**ユーザーをドロップ** ボタンをクリックします。
+
+> [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1633.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
+
+
+
+## プロセスページ
+
+**プロセス** ページには実行中のプロセスが表示されます。
 
 ![](assets/en/Admin/server-admin-process-page.png)
 
 
-The "Processes" button indicates, in parentheses, the total number of processes running in the server (this number does not take into account any display filters applied to the window nor the state of the **Display processes by groups** option).
+"プロセス" ボタンには、サーバーで実行中のプロセス数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターや **グループ毎にプロセスを表示** オプションのステータスを考慮しません)。
 
-You can change the order of the columns by simply dragging and dropping the column header areas. You can also sort the list of column values by clicking on its header.
+列ヘッダーをドラッグ＆ドロップして、列の順番を入れ替えることができます。 また、ヘッダーをクリックすると、リストの値が並べ替えられます。
 
-Like the Users page, this page contains a dynamic [search/filtering area](#searchfiltering-area) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The search/filtering is carried out in the Session and Process name columns.
+ユーザーページと同様にこのページにも、検索欄に入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができる動的な [検索/フィルターエリア](#検索フィルターエリア) があります。 検索/フィルターはセッションとプロセス名の列に対して実行されます。
 
-There are also three shortcut buttons that can be used to filter by the type of process displayed in the window:
+ウィンドウに表示されるプロセスを、タイプ毎にフィルターするためのボタンが 3つあります:
 
 ![](assets/en/Admin/server-process-buttons.png)
 
-- **Users processes**: Processes generated by and for the user sessions. These processes are preceded by an icon in the form of a figure.
-- **4D Processes**: Processes generated by the 4D Server engine. These processes are preceded by an icon in the form of a notched wheel.
-- **Spare processes**: Processes that are inactive but kept temporarily and that can be reused at any time. This mechanism optimizes the reactivity of 4D Server. These processes are preceded by an icon in the form of a dimmed figure.
+- **ユーザープロセス**: ユーザーセッションにより、またユーザーセッションのために作成されたプロセス。 このプロセスには人のアイコンが表示されます。
+- **4D プロセス**: 4D Server エンジンが生成したプロセス。 このプロセスには歯車のアイコンが表示されます。
+- **予備プロセス**: 使用されていないが一時的に保持され、いつでも再利用が可能なプロセス。 このメカニズムは 4D Server の反応性を向上させます。 このプロセスには薄暗い人のアイコンが表示されます。
 
-The **Display processes by groups** option lets you group together the internal processes of 4D Server as well as the client processes, for better readability. When you check this option:
+**グループ毎にプロセスを表示** オプションを使用して、4D Server の内部プロセスやクライアントプロセスをグループ化できます。 このオプションをチェックすると:
 
-- the "twinned" 4D client processes (main 4D client process and 4D client base process, see [Process Type](#process-type)) are grouped as one,
-- a "Task managers" group is created; it includes the internal processes dedicated to dividing up tasks (Shared balancer, Net session manager, Exclusive pool worker),
-- a "Client managers" group is created; it includes various client internal processes.
+- 4Dクライアントのプロセス (メインの 4Dクライアントプロセスや 4Dクライアントの基本プロセス。[プロセスタイプ](#プロセスタイプ) 参照) は 1つにグループ化されます。
+- "タスクマネージャー" グループが作成され、タスクを分割するための内部プロセス (共有バランサー、ネットセッションマネージャー、Exclusive pool worker) がグループ化されます。
+- "クライアントマネージャー" グループが作成され、これにはクライアントのさまざまな内部プロセスが含まれます。
 
-The lower area of the window is used to display the graphic representation of the activity of the selected process(es).
+ウィンドウの下段には選択したプロセスの稼働状況がグラフィカルに表示されます。
 
-> You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) for a non-adjacent selection.
+> **Shift**キーを押しながら連続した行を、**Ctrl** (Windows) / **Command** (macOS) キーを押しながら非連続の行を選択できます。
 
-The activity of the process is the percentage of time that 4D Server has devoted to this process (ratio). The window provides the following information for each process:
+プロセスの稼働状況は、4D Server がこのプロセスのために使用した時間のパーセンテージです。 ウィンドウにはプロセスごとに以下の情報が表示されます:
 
-- Type of process (see below),
-- Session/Info:
-    - 4D process - blank,
-    - User process - 4D user name,
-    - Web process - URL path,
-- Name of the process,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
-- Current state of the process,
-- Running time (in seconds) of the process since its creation,
-- Percentage of time that 4D Server has devoted to this process (ratio).
+- プロセスタイプ (後述)
+- セッション/情報:
+    - 4Dプロセス - 空白
+    - ユーザープロセス - 4Dユーザー名
+    - Webプロセス - URLパス
+- プロセス名
+- プロセス番号 (たとえば [`New process`](https://doc.4d.com/4dv19/help/command/ja/page317.html) 関数で返される値)。 プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
+- プロセスの現在の状況
+- 作成されてからのプロセスの実行時間 (秒)
+- 4D Server がこのプロセスに使用した時間のパーセンテージ
 
-### Process Type
+### プロセスタイプ
 
-Each process is identified by an icon as well as a type. The color and form of the icon indicates the type of process:
+プロセスタイプはアイコンで識別できます。 アイコンの色や形に対応するプロセスタイプは以下のとおりです:
 
-| icon                                    | type                                                                                                                                                      |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](assets/en/Admin/server-icon-1.png)  | Application server                                                                                                                                        |
-| ![](assets/en/Admin/server-icon-2.png)  | SQL Server                                                                                                                                                |
-| ![](assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                             |
-| ![](assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                                                                                                  |
-| ![](assets/en/Admin/server-icon-5.png)  | SOAP Server                                                                                                                                               |
-| ![](assets/en/Admin/server-icon-6.png)  | Protected 4D client process (development process of a connected 4D)                                                                                       |
-| ![](assets/en/Admin/server-icon-7.png)  | Main 4D client process (main process of a connected 4D). Collaborative process, equivalent on the server of the process created on the client machine)    |
-| ![](assets/en/Admin/server-icon-8.png)  | 4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process) |
-| ![](assets/en/Admin/server-icon-9.png)  | Spare process (former or future "4D client database process")                                                                                             |
-| ![](assets/en/Admin/server-icon-10.png) | SQL server worker process                                                                                                                                 |
-| ![](assets/en/Admin/server-icon-11.png) | HTTP server worker process                                                                                                                                |
-| ![](assets/en/Admin/server-icon-12.png) | 4D client process (process running on the connected 4D)                                                                                                   |
-| ![](assets/en/Admin/server-icon-13.png) | Stored procedure (process launched by a connected 4D and running on the server)                                                                           |
-| ![](assets/en/Admin/server-icon-14.png) | Web method (launched by a 4DACTION for example)                                                                                                           |
-| ![](assets/en/Admin/server-icon-15.png) | Web method (preemptive)                                                                                                                                   |
-| ![](assets/en/Admin/server-icon-16.png) | SOAP method (launched by a Web Service)                                                                                                                   |
-| ![](assets/en/Admin/server-icon-17.png) | SOAP method (preemptive)                                                                                                                                  |
-| ![](assets/en/Admin/server-icon-18.png) | Logger                                                                                                                                                    |
-| ![](assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                   |
-| ![](assets/en/Admin/server-icon-20.png) | TCP session manager                                                                                                                                       |
-| ![](assets/en/Admin/server-icon-21.png) | Other process                                                                                                                                             |
-| ![](assets/en/Admin/server-icon-22.png) | Worker process (cooperative)                                                                                                                              |
-| ![](assets/en/Admin/server-icon-23.png) | 4D client process (preemptive)                                                                                                                            |
-| ![](assets/en/Admin/server-icon-24.png) | Stored procedure (preemptive process)                                                                                                                     |
-| ![](assets/en/Admin/server-icon-25.png) | Worker process (preemptive)                                                                                                                               |
+| icon                                    | type                                                                        |
+| --------------------------------------- | --------------------------------------------------------------------------- |
+| ![](assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                |
+| ![](assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                    |
+| ![](assets/en/Admin/server-icon-3.png)  | DB4D サーバー (データベースエンジン)                                                      |
+| ![](assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                    |
+| ![](assets/en/Admin/server-icon-5.png)  | SOAP サーバー                                                                   |
+| ![](assets/en/Admin/server-icon-6.png)  | 保護された 4Dクライアントプロセス (接続された 4D の開発プロセス)                                       |
+| ![](assets/en/Admin/server-icon-7.png)  | メイン4Dクライアントプロセス (接続された 4D のメインプロセス。 クライアントマシン上で作成されたプロセスに対応するサーバープロセス)      |
+| ![](assets/en/Admin/server-icon-8.png)  | 4Dクライアント基本プロセス (4Dクライアントプロセスと並列なプロセス。 メイン4Dクライアントプロセスをコントロールするプリエンプティブプロセス) |
+| ![](assets/en/Admin/server-icon-9.png)  | 予備プロセス (以前または後の "4Dクライアントデータベースプロセス")                                       |
+| ![](assets/en/Admin/server-icon-10.png) | SQL サーバーワーカープロセス                                                            |
+| ![](assets/en/Admin/server-icon-11.png) | HTTP サーバーワーカープロセス                                                           |
+| ![](assets/en/Admin/server-icon-12.png) | 4Dクライアントプロセス (接続された 4D 上で実行中のプロセス)                                          |
+| ![](assets/en/Admin/server-icon-13.png) | ストアドプロシージャー (接続された 4D により起動され、サーバー上で実行しているプロセス)                             |
+| ![](assets/en/Admin/server-icon-14.png) | Web メソッド (4DACTION などにより起動)                                                 |
+| ![](assets/en/Admin/server-icon-15.png) | Web メソッド (プリエンプティブ)                                                         |
+| ![](assets/en/Admin/server-icon-16.png) | SOAP メソッド (Webサービスにより起動)                                                    |
+| ![](assets/en/Admin/server-icon-17.png) | SOAP メソッド (プリエンプティブ)                                                        |
+| ![](assets/en/Admin/server-icon-18.png) | ロガー                                                                         |
+| ![](assets/en/Admin/server-icon-19.png) | TCP接続リスナー                                                                   |
+| ![](assets/en/Admin/server-icon-20.png) | TCPセッションマネージャー                                                              |
+| ![](assets/en/Admin/server-icon-21.png) | その他のプロセス                                                                    |
+| ![](assets/en/Admin/server-icon-22.png) | ワーカープロセス (コオペラティブ)                                                          |
+| ![](assets/en/Admin/server-icon-23.png) | 4Dクライアントプロセス (プリエンプティブ)                                                     |
+| ![](assets/en/Admin/server-icon-24.png) | ストアドプロシージャー (プリエンプティブプロセス)                                                  |
+| ![](assets/en/Admin/server-icon-25.png) | ワーカープロセス (プリエンプティブ)                                                         |
 
-> Each main 4D client process and its "twinned" 4D client base process are grouped together when the **Display processes by groups** option is checked.
+> **グループ毎にプロセスを表示** オプションがチェックされていると、それぞれの 4Dクライアントメインプロセスと、その対である 4Dクライアント基本プロセスは一緒にグループ化されて表示されます。
 
 
-### Administration Buttons
+### 管理ボタン
 
-The page also has five control buttons that act on the selected process(es). Note that only user processes can be acted upon.
+このページには、選択されたプロセスに対して動作する 5つのコントロールボタンがあります。 ユーザープロセスに対してのみ使用できる点に注意してください。
 
 ![](assets/en/Admin/server-process-actions.png)
 
-- **Abort Process**: can be used to abort the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation.
+- **プロセスを中断**: 選択したプロセスをアボートします。 このボタンをクリックすると警告ダイアログが表示され、操作を続行またはキャンセルできます。
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> 確認ダイアログなしに選択したプロセスをアボートするには、**Alt**キーを押しながらこのボタンをクリックするか、[`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/ja/page1634.html) コマンドを使用します。
 
-- **Pause Process**: can be used to pause the selected process(es).
-- **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.
-- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
+- **プロセスを一時停止**: 選択したプロセスを一時停止します。
+- **プロセスをアクティベート**: 選択したプロセスの実行を再開します。 対象のプロセスは、前述のボタンかプログラムにより一時停止状態でなければなりません。そうでなければ、このボタンは効果ありません。
+- **プロセスをデバッグ**: 選択したプロセスのデバッガーをサーバーマシン上で開きます。 このボタンをクリックすると警告ダイアログが表示され、操作を続行またはキャンセルできます。 4Dコードが実際にサーバーマシン上で実行されている場合にのみ、デバッガーウィンドウが表示される点に注意してください (たとえば、トリガーや "サーバー上で実行" 属性を持つメソッドの実行時など)。
 
-> You can also debug a process directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button.
+> 確認ダイアログなしに選択したプロセスをデバッグするには、**Alt**キーを押しながらこのボタンをクリックします。
 
-- **Watch users**: used to display, on the [Users page](#users-page), all the processes of the selected user(s). This button is active when at least one user process is selected.
+- **ユーザーを表示**: 選択されたプロセスのユーザーを管理ウィンドウの [ユーザーページ](#ユーザーページ) に直接表示させることができます。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
 
 
-## Maintenance Page
+## メンテナンスページ
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
+**メンテナンス** ページには、アプリケーションの現在の動作状況に関する情報が表示されます。 また、基本的なメンテナンス機能にアクセスすることもできます:
 
 ![](assets/en/Admin/server-maintenance.png)
 
 
-### Last verification/compacting
+### 最新の検査/圧縮:
 
-These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
+このエリアには、データベース上で実行された最新の [データの検査](MSC/verify.md) および [圧縮処理](MSC/compact.md) の日付、時刻、状況が表示されます。
 
-#### Verify Records and Indexes
+#### レコードとインデックスを検査
 
-This button can be used to launch the verification operation directly, without interrupting the server. Note that the server may be noticeably slowed down during the operation.
+このボタンを使用して、サーバーを止めることなく検査処理を直接起動できます。 検証の間、サーバーの動作が遅くなるかもしれないことに留意してください。
 
-All the records and all the indexes of the database are verified. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
+データベースのすべてのレコードとすべてのインデックスが検証されます。 検査対象を絞り込んだり、追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
 
-This area indicates the date, time and status of the last  carried out on the database data.
+このエリアには、データベースのデータに対して実行された処理の日付、時刻、状況が表示されます。
 
-#### Compact Data...
+#### データ圧縮
 
-Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
+このボタンを使用して、データ圧縮処理を直接起動できます。 この処理をおこなうにはサーバーを停止させる必要があります。ボタンをクリックすると、4D Server の終了ダイアログが表示され、終了方法を選択することができます:
 
 ![](assets/en/Admin/server-shut.png)
 
-After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
+アプリケーションが実際に停止された後、4D Server はデータベースのデータに対する標準の圧縮処理をおこないます。 追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
 
-Once the compacting is finished, 4D Server automatically restarts the application. The 4D users can then be reconnected.
+圧縮が終了すると、4D Server は自動でデータベースを再開します。 その後、4Dユーザーの再接続が可能になります。
 
-> If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
+> 圧縮リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
-
-
-### Uptime
-
-This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
+検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
 
-#### Restart server...
+### 動作時間
 
-This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
-
-> If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
-
-### Last backup
-
-This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
-
-- **Last backup**: date and time of last backup.
-- **Next backup**: date and time of next scheduled backup.
-- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
-- **Available space**: space available on the backup volume.
+このエリアには、サーバーが開始されてからの稼働時間 (日、時、分) が表示されます。
 
 
-The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
+#### サーバを再起動...
+
+このボタンをクリックするとサーバーを即座に再起動できます。 ボタンをクリックすると、4D Server の終了ダイアログが表示され、終了方法を選択することができます。 再起動後、4D Server は自動でプロジェクトを再度開きます。 その後、4Dユーザーの再接続が可能になります。
+
+> 再起動リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
+
+### 前回のバックアップ
+
+このエリアには、データベースの [前回のバックアップ](MSC/backup.md) の日付・時刻と、予定された次のバックアップがあれば、それに関する情報が表示されます。 自動バックアップは、ストラクチャー設定の **スケジューラー** ページで設定します
+
+- **前回のバックアップ**: 前回のバックアップ日時。
+- **次回のバックアップ**: 予定された次のバックアップ日時。
+- **必要なスペース**: バックアップに必要な計算された空き容量。 バックアップファイルの実際のサイズは (圧縮などの) 設定や、データファイルの変化により変わります。
+- **空きスペース**: バックアップボリュームの空き容量。
 
 
-### Request and Debug logs
+**バックアップ開始** ボタンを使用して、現在のバックアップパラメーター ( バックアップするファイル、アーカイブの場所、オプションなど) を使用したバックアップを即座に開始できます。 **環境設定...** ボタンをクリックして、これらのパラメーターを確認できます。 サーバー上でのバックアップがおこなわれる間、クライアントマシンはブロックされ (ただし接続解除はされません)、新規のクライアント接続はできなくなります。
 
-This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
 
-Refer to the [**Description of log files**](debugLogFiles.md) section for details on log files.
+### リクエストとデバッグログ
 
-#### Start/Stop Request and Debug Logs
+このエリアには、(ログファイルが有効化されている場合に) ログファイルの記録に要した時間が表示され、ログの有効化も管理できます。
 
-The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
+ログファイルについては、[**ログファイルの詳細**](debugLogFiles.md) を参照ください。
 
-> This button only logs operations that are executed on the server.
+#### リクエストとデバッグのログを開始/停止
 
-When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
+**リクエストとデバッグのログを開始** ボタンでログファイルが開始されます。 これによりフォーマンスが著しく低下する場合があるため、これはアプリケーションの開発フェーズでのみ使用します。
 
-#### View Report
+> このボタンは、サーバー上で実行されているオペレーションしか記録しません。
 
-The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
+ログが有効になると、ボタンのタイトルが **リクエストとデバッグのログを停止** に変わり、いつでもリクエストの記録を停止できます。 停止後にログを再開すると、以前のファイルは消去されることに留意してください。
+
+#### レポートを表示
+
+**レポートを表示** (リモートのデスクトップクライアントから処理を実行した場合は **レポートをダウンロード**) ボタンをクリックすると、システムウィンドウが開いて、リクエストログファイルが表示されます。
 
 #### Load logs configuration file
 

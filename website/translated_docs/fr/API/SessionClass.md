@@ -166,8 +166,8 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 | Paramètres | Type    |    | Description                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| privilege  | Texte   | <- | Name of the privilege to verify                  |
-| Résultat   | Booléen | <- | True if session has *privilege*, False otherwise |
+| privilege  | Text    | <- | Name of the privilege to verify                  |
+| Résultat   | Boolean | <- | True if session has *privilege*, False otherwise |
 <!-- END REF -->
 
 
@@ -249,7 +249,7 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 | Paramètres | Type    |    | Description                                     |
 | ---------- | ------- |:--:| ----------------------------------------------- |
-| Résultat   | Booléen | <- | True if session is a Guest one, False otherwise |
+| Résultat   | Boolean | <- | True if session is a Guest one, False otherwise |
 <!-- END REF -->
 
 #### Description
@@ -287,9 +287,9 @@ End if
 <!-- REF #SessionClass.setPrivileges().Params -->
 | Paramètres | Type       |    | Description                                                |
 | ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| privilege  | Texte      | -> | Privilege name                                             |
+| privilege  | Text       | -> | Privilege name                                             |
 | privileges | Collection | -> | Collection of privilege names                              |
-| settings   | Objet      | -> | Object with a "privileges" property (string or collection) |
+| settings   | Object     | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
 
 #### Description
@@ -305,7 +305,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 | Propriété  | Type               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
-| userName   | Texte              | User name to associate to the session (optional)   |
+| userName   | Text               | User name to associate to the session (optional)   |
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 
