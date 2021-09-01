@@ -89,7 +89,7 @@ El estilo Clásico de botón casilla de selección corresponde a un sistema de c
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -113,7 +113,7 @@ El estilo plano del botón casilla de selección tiene una apariencia minimalist
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -141,7 +141,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -170,7 +170,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -201,7 +201,7 @@ Ejemplo en macOS:
 > En Windows, el estilo de botón Bevel redondeado es idéntico al estilo de botón [Bevel](#bevel).
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myCheckBox": {
@@ -230,7 +230,7 @@ El estilo del botón Gradient OS X tiene un fondo gris claro con un título y se
 > En Windows, este estilo de botón casilla de selección es idéntico al estilo de botón [Bevel](#bevel).
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -263,7 +263,7 @@ By default, the OS X Textured button style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -294,7 +294,7 @@ The colors (highlight and background) of a check box with the Office XP button s
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -326,7 +326,7 @@ This check box button style can be used to add a standard collapse/expand icon. 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -355,7 +355,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -380,7 +380,7 @@ The Custom button style accepts a personalized background picture and allows man
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckbox": {
