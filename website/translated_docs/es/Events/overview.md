@@ -3,32 +3,32 @@ id: generalidades
 title: Generalidades
 ---
 
-Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs.
+Los eventos formulario son eventos que pueden llevar a la ejecución del método de formulario y/o del o de los métodos objeto de formulario. Los eventos de formulario le permiten controlar el flujo de su aplicación y escribir código que se ejecuta sólo cuando ocurre un evento específico.
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. Por ejemplo:
+En su código, se controlan los eventos mediante el comando `FORM Event`, que devuelve el evento disparado. Por ejemplo:
 
 ```4d  
 //code of a button
 If(FORM Event.code=On Clicked) 
-// do something when the button is clicked
+// hacer algo cuando se presiona el botón
 End if
 ```
 
-> Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
+> Cada formulario y cada objeto activo en el formulario puede escuchar un conjunto predefinido de eventos, pero sólo los eventos que habilitó a nivel del formulario y/o en cada nivel del objeto ocurrirán realmente.
 
 
 ## Objeto evento
 
-Each event is returned as an object by the `FORM Event` command. Por defecto, contiene las siguientes propiedades:
+Cada evento es devuelto como un objeto por el comando `FORM Event`. Por defecto, contiene las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
+ objectName|text|Nombre del objeto que desencadena el evento - No se incluye si el evento es desencadenado por el formulario| |code|longint|Valor numérico del evento formulario. También es devuelto por el comando 
 
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
+`Form event code`| |description|text|Nombre del evento de formulario (por ejemplo, "On After Edit")|
 
-Additional properties are returned when the event occurs on specific objects. En particular:
+Se devuelven propiedades adicionales cuando el evento se produce en objetos específicos. En particular:
 
 - Los [list box](FormObjects/listbox_overview.md#supported-form-events) y las [columnas de list box](FormObjects/listbox_overview.md#supported-form-events-1) devuelven las [propiedades adicionales](FormObjects/listbox_overview.md#additional-properties) tales como `columnName` o `isRowSelected`.
 - Las [áreas de View Pro](FormObjects/viewProArea_overview.md) devuelven por ejemplo las propiedades `sheetName` o `action` en el objeto evento [On After Edit](onAfterEdit.md).

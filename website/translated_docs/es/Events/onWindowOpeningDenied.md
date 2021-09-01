@@ -10,7 +10,7 @@ title: On Window Opening Denied
 
 ## Descripción
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+Este evento se genera cuando la apertura de una ventana emergente es bloqueada por el área web. Los áreas web de 4D no permiten la apertura de ventanas emergentes.
 
 Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 

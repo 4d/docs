@@ -110,9 +110,9 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### Gramática JSON
 
-| Nombre             | Tipos de datos   | Valores posibles           |
-| ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string or number | table name or table number |
+| Nombre             | Tipos de datos  | Valores posibles           |
+| ------------------ | --------------- | -------------------------- |
+| inheritedFormTable | string o number | table name or table number |
 
 
 ---

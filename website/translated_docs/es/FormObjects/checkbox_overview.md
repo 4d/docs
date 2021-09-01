@@ -83,7 +83,7 @@ Con la excepción de las [propiedades-disponibles](#supported-properties), mucho
 
 4D ofrece casillas de selección en los siguientes estilos de botón predefinidos:
 
-### Regular
+### Clásico
 
 El estilo Clásico de botón casilla de selección corresponde a un sistema de casilla de selección estándar (*es decir, *, un rectángulo con un título descriptivo):
 
