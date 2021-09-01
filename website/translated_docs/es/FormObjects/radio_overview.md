@@ -31,14 +31,14 @@ The value contained in a radio button object is not saved automatically (except 
 
 
 
-## Button Styles
+## Estilos de botón
 
 Radio [button styles](properties_TextAndPicture.md#button-style) control radio button's general appearance as well as its available properties. It is possible to apply different predefined styles to radio buttons. However, the same button style must be applied to all radio buttons in a group so that they work as expected.
 
 4D provides radio buttons in the following predefined styles:
 
 
-### Regular
+### Clásico
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
