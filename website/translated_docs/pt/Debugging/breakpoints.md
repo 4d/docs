@@ -3,7 +3,7 @@ id: breakpoints
 title: Breakpoints and Command Catching
 ---
 
-## Overview
+## Visão Geral
 
 
 Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
