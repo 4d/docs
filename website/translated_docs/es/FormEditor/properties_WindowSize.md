@@ -4,7 +4,7 @@ title: Tamaño de la ventana
 ---
 
 
-## Fixed Height
+## Alto fijo
 
 
 Si selecciona esta opción, la altura de la ventana quedará bloqueada y el usuario no podrá cambiar su tamaño.
