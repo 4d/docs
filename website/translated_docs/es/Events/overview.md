@@ -24,11 +24,11 @@ Cada evento es devuelto como un objeto por el comando `FORM Event`. Por defecto,
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- objectName|text|Nombre del objeto que desencadena el evento - No se incluye si el evento es desencadenado por el formulario| |code|longint|Valor numérico del evento formulario. Also returned by the 
+ objectName|text|Nombre del objeto que desencadena el evento - No se incluye si el evento es desencadenado por el formulario| |code|longint|Valor numérico del evento formulario. También es devuelto por el comando 
 
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
+`Form event code`| |description|text|Nombre del evento de formulario (por ejemplo, "On After Edit")|
 
-Additional properties are returned when the event occurs on specific objects. En particular:
+Se devuelven propiedades adicionales cuando el evento se produce en objetos específicos. En particular:
 
 - Los [list box](FormObjects/listbox_overview.md#supported-form-events) y las [columnas de list box](FormObjects/listbox_overview.md#supported-form-events-1) devuelven las [propiedades adicionales](FormObjects/listbox_overview.md#additional-properties) tales como `columnName` o `isRowSelected`.
 - Las [áreas de View Pro](FormObjects/viewProArea_overview.md) devuelven por ejemplo las propiedades `sheetName` o `action` en el objeto evento [On After Edit](onAfterEdit.md).
