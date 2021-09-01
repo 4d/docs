@@ -17,7 +17,7 @@ The application builder allows you to:
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
-## Overview
+## Visão Geral
 
 Building a project package can be carried out using:
 
