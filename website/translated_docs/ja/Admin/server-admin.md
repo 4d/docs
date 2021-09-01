@@ -319,168 +319,168 @@ When the logs have been paused, the button title changes to **Resume logging**, 
 > You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
 
 
-## Application Server Page
+## アプリケーションサーバーページ
 
-The Application Server page groups together information about the desktop application published by 4D Server and can be used to manage this publication.
+アプリケーションサーバーページには、4D Server が公開しているデスクトップアプリケーションについての情報がまとめられていて、公開を管理できます。
 
 ![](assets/en/Admin/server-admin-application-page.png)
 
 
-The upper part of the page provides information about the current status of the 4D Server application server.
+ページの上部には、4D Server アプリケーションサーバーの現在の状況が表示されます。
 
-- **State**: Started or Stopped.
-- **Starting time**: Date and time the application server was launched. This date corresponds to the opening of the project by 4D Server.
-- **Uptime**: Time elapsed since last opening of the project by the server.
+- **状況**: 開始または停止
+- **開始時刻**: アプリケーションサーバーの起動日と時刻。 これは、4D Server によってプロジェクトが開かれた日付です。
+- **動作時間**: プロジェクトがサーバーによって最後に開かれてからの経過時間。
 
-### Accept/Reject New Connections
+### 新規接続を許可/拒否
 
-This button toggles and can be used to manage the access of new desktop client machines to the application server.
+このボタンは切り替え表示され、アプリケーションサーバーへの新しいデスクトップクライアントの接続を管理します。
 
-By default, when the project is published:
-- The button is titled "Reject new connections."
-- New desktop clients can connect freely (within the limit of the connections permitted by the license).
-- The project name is published in the remote connection dialog box (if the "At Startup Publish Database Name in the Connection Dialog" option is checked in the Preferences).
+プロジェクトが公開された時、デフォルトでは:
+- ボタンのラベルは "新規接続を拒否" です。
+- ライセンスが許可する限り、新規クライアントは自由に接続が可能です。
+- プロジェクト名は接続ダイアログに公開されます ("起動時にデータベースを公開する" オプションがストラクチャー設定で有効になっている場合)。
 
-If you click on the **Reject new connections** button:
-- The button title changes to "Accept new connections."
-- No new desktop client can then connect. Clients attempting to connect will receive the following message:
+**新規接続を拒否** ボタンをクリックすると:
+- ボタンのラベルは "新規接続を許可" に変わります。
+- 新規クライアントは接続不可になります。 接続しようとしたクライアントには以下のメッセージが表示されます:
 
 ![](assets/en/Admin/server-error.png)
 
-- The project name no longer appears in the remote connection dialog box.
-- Desktop clients that are already connected are not disconnected and can continue to work normally.
+- 接続ダイアログにプロジェクト名が表示されなくなります。
+- すでに接続済みのクライアントは接続解除されず、通常通りに操作が可能です。
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/ja/page1635.html) コマンドを使用することでも、同じアクションを実行することができます。
 
-- If you click on the **Accept new connections button**, the application server returns to its default state.
+- **新規接続を許可** ボタンをクリックすると、アプリケーションサーバーはデフォルトに戻ります。
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. If the administrator uses a remote connection, they can be certain to be the only one modifying the data. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
+この機能はたとえば、サーバー開始直後に管理者が様々なメンテナンス操作 (検証や圧縮など) をおこなうことを可能にします。 管理者がクライアント接続を使用する場合、この機能により一つのクライアントだけがデータを更新できることを確実にできます。 また、クライアントマシンが接続されていない状態でおこなわなければならないメンテナンス操作の準備のために、この機能を使用することができます。
 
-### Information
+### 情報
 
 #### 設定
 
-This area provides information about the 4D project published by the server: name and location of data and structure files and name of database log file. You can click on the structure or data file name in order to view its complete pathname.
+このエリアには、サーバーが公開する 4Dプロジェクトについての情報 (データやストラクチャーファイルの名称と場所、データベースログファイルの名称) が表示されます。 ストラクチャーやデータファイル名をクリックすると、完全なパス名を表示させることができます。
 
-The **Mode** field indicates the current execution mode of the application: compiled or interpreted.
+**モード** 欄はアプリケーションの現在の実行モード 、コンパイル済みかインタープリターかが表示されます。
 
-The lower part of the area indicates the server configuration parameters (launched as service, port and IP address) and the enabling of TLS for client-server connections (does not concern SQL nor HTTP connections).
+エリアの下部には、サーバー設定パラメーター (サービスとして起動、ポート、IP アドレス) や、クライアント/サーバー接続用の TSL の状態 (SQL や HTTP接続は別設定) が表示されます。
 
 #### メモリ
 
-This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
+このエリアには、**総キャッシュメモリ** (ストラクチャー設定で設定されたパラメーター) と **使用キャッシュメモリ** (必要に応じて 4D Server が動的に割り当て) が表示されます。
 
 
-#### Application Server Connections
+#### アプリケーションサーバー接続数
 
-- **Maximum**: maximum number of simultaneous client connections allowed for the application server. This value depends on the license installed on the server machine.
-- **Used**: actual number of connections currently being used.
+- **最高**: アプリケーションサーバーに許可された最大のクライアント同時接続数を表します。 この値は、サーバーマシンにインストールされているライセンスによります。
+- **使用中**: 現在使用中の実際の接続数を表します。
 
 
-## SQL Server Page
+## SQLサーバーページ
 
-The SQL Server page groups together information about the integrated SQL server of 4D Server. It also includes a button that can be used to control the activation of the server.
+SQLサーバーページには、4D Server に統合された SQLサーバーについての情報が集められています。 また、SQLサーバーを有効にするためのボタンも含まれています。
 
 ![](assets/en/Admin/server-admin-sql-page.png)
 
 
-The upper part of the page provides information about the current status of the SQL server of 4D Server.
+ページの上部には、4D Server の SQLサーバーの現在の状況が表示されます。
 
-- **State**: Started or Stopped
-- **Starting time**: Date and time the SQL server was last launched.
-- **Uptime**: Time elapsed since last startup of the SQL server.
+- **状況**: 開始または停止
+- **開始時刻**: SQLサーバーの起動日と時刻。
+- **動作時間**: SQLサーバーが最後に開始されてからの経過時間。
 
-### Start / Stop SQL Server
+### SQLサーバー開始/停止
 
-This button toggles and can be used to control the activation of the 4D Server SQL server.
+このボタンは切り替え表示され、4D Server SQLサーバーをコントロールするために使用します。
 
-- When the SQL server state is "Started," the button is titled **Stop SQL Server**. If you click on this button, the 4D Server SQL server is immediately stopped; it no longer replies to any external SQL requests received on the designated TCP port.
-- When the SQL server state is "Stopped," the button is titled **Start SQL Server**. If you click on this button, the 4D Server SQL server is immediately started; it replies to any external SQL queries received on the designated TCP port. Note that you will need a suitable license to be able to use the 4D SQL server.
+- SQLサーバーの状態が "開始" の場合、ボタンのタイトルは **SQLサーバー停止** になります。 このボタンをクリックすると、4D Server SQLサーバーは即座に停止し、指定した TCPポートで受信される外部からの SQLクエリには応答しなくなります。
+- SQLサーバーの状態が "停止" の場合、ボタンのタイトルは **SQLサーバー開始** になります。 このボタンをクリックすると、4D Server SQLサーバーは即座に開始し、指定した TCPポートで受信される外部からの SQLクエリに応答します。 4D SQLサーバーを使用するには、適切なライセンスが必要な点に注意してください。
 
-> The SQL server can also be launched automatically on application startup (option in the Settings) or by programming.
+> ストラクチャー設定で設定してアプリケーション起動と同時に、またはプログラムを使用して必要な時に、SQLサーバーを自動で開始することができます。
 
-### Information
+### 情報
 
 #### 設定
 
-This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
+このエリアには、SQLサーバー設定のパラメーターが表示されます: 開始時の自動起動、待受IPアドレス、待受TCPポート (デフォルトで 19812)、そして SQL接続用の TSL の状態 (4D や Web接続は別設定)。
 
-These parameters can be modified via the 4D Settings.
+これらの値は 4D のストラクチャー設定で変更できます。
 
-#### Connections
+#### 接続
 
-Number of SQL connections currently open on 4D Server.
+4D Server上で現在開かれている SQL接続の数。
 
-#### Maximum Connections
+#### 最大接続数
 
-Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.
+許可される同時SQL接続の最大数。 この値は、サーバーマシンにインストールされているライセンスによります。
 
-## HTTP Server Page
+## HTTPサーバーページ
 
-The HTTP Server page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. The SOAP server manages the publication of Web Services. These servers rely on the internal HTTP server of 4D Server.
+HTTPサーバーページには、4D Server の Webサーバーや SOAPサーバーに関する情報が集められています。 Webサーバーは、HTMLページやピクチャーなどの Webコンテンツの公開を可能にします。 SOAPサーバーは Webサービスの公開を管理します。 これら 2つのサーバーは、4D Server の内部的な HTTPサーバーに依存しています。
 
 ![](assets/en/Admin/server-admin-web-page.png)
 
 
-The upper part of the page provides information about the current status of the HTTP server of 4D Server.
+ページの上部には、4D Server の HTTPサーバーの現在の状況が表示されます。
 
-- **State**: Started or Stopped
-- **Starting time**: Date and time the HTTP server was last launched.
-- **Uptime**: Time elapsed since last startup of the HTTP server.
-- **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
+- **状況**: 開始または停止
+- **開始時刻**: HTTPサーバーの起動日と時刻。
+- **動作時間**: HTTPサーバーが最後に開始されてからの経過時間。
+- **総HTTPヒット数**: HTTPサーバーが開始されてから、サーバーが受信したローレベルの HTTPヒット数。
 
 
-### Start/Stop HTTP Server
+### HTTPサーバー開始/停止
 
-This button toggles and can be used to control the activation of the 4D Server HTTP server.
+このボタンは切り替え表示され、4D Server HTTPサーバーをコントロールするために使用します。
 
-- When the HTTP server state is "Started," the button is titled **Stop HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
-- When the HTTP server state is "Stopped," the button is titled **Start HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately started; Web, REST, and SOAP requests are accepted.
+- HTTPサーバーの状態が "開始" の場合、ボタンのタイトルは **HTTPサーバー停止** になります。 このボタンをクリックすると、4D Server HTTPサーバーは即座に停止し、Webサーバー、RESTサーバー、および SOAPサーバーはリクエストを受け付けなくなります。
+- HTTPサーバーの状態が "停止" の場合、ボタンのタイトルは **HTTPサーバー開始** になります。 このボタンをクリックすると、4D Server HTTPサーバーは即座に開始し、Web、REST、および SOAPリクエストを受け付けます。
 
-> You must have a suitable license in order to be able to start the HTTP server.
+> HTTPサーバーを開始するには適切なライセンスが必要です。
 > 
-> The HTTP server can also be launched automatically on application startup (Settings) or by programming.
+> ストラクチャー設定で設定してアプリケーション起動と同時に、またはプログラムを使用して必要な時に、HTTPサーバーを自動で開始することができます。
 
-### Web Information
+### Web情報
 
-This area provides specific information about the Web server of 4D Server.
+このエリアには、4D Server の Webサーバーに関する情報が表示されます。
 
-- **Web requests**: Accepted or Rejected. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
-- **Maximum connections**: Maximum number of Web connections allowed. This value depends on the license installed on the server machine.
+- **Web リクエスト**: 受け入れ、または拒否。 この情報は Webサーバーが有効かどうかを示します。 Webサーバーは直接 HTTPサーバーにリンクしているため、HTTPサーバーが開始されていれば Webリクエストは受信され、停止されていれば拒否されます。
+- **最大接続数**: 許可される Web接続の最大数。 この値は、サーバーマシンにインストールされているライセンスによります。
 
-### SOAP Information
+### SOAP情報
 
-This area provides specific information about the SOAP server of 4D Server and includes a control button.
+このエリアには、4D Server の SOAPサーバーに関する情報が表示され、コントロールボタンも一つ含まれます。
 
-- **SOAP requests**: Accepted or Rejected. This information indicates whether the SOAP server is activated. In order for SOAP requests to be accepted, the HTTP server must be started and the SOAP server must explicitly accept the requests (see the Accept/Reject button).
-- **Maximum connections**: Maximum number of SOAP connections allowed. This value depends on the license installed on the server machine.
-- **Accept/Reject SOAP requests** button: This button toggles and can be used to control the activation of the 4D Server SOAP server. This button modifies the value of the **Allow Web Services Requests** option on the "Web Services" page of the Settings (and vice versa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- **SOAP リクエスト**: 受け入れ、または拒否。 この情報は SOAPサーバーが有効かどうかを示します。 SOAPリクエストを受け入れるためには、HTTPサーバーが開始され、かつ SOAPサーバーが明示的にリクエストを受け入れなければなりません (ボタンの説明参照)。
+- **最大接続数**: 許可される SOAP接続の最大数。 この値は、サーバーマシンにインストールされているライセンスによります。
+- **SOAPリクエストを受け入れる/受け入れない** ボタン: このボタンは切り替え表示され、4D Server SOAPサーバーのコントロールに使用します。 このボタンをクリックすると、ストラクチャー設定の "Webサービス" ページの **Webサービスリクエストを許可する** オプションが変更されます。また、ストラクチャー設定の当該オプションが変更されれば、ボタンのラベルも変わります。 また、[`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/ja/page1636.html) コマンドを使って新規の SOAPリクエストを拒否することもできますが、このコマンドは **Webサービスリクエストを許可する** オプションの値を変更しません。
 
-If you click on the **Accept SOAP requests** button and the HTTP server is stopped, 4D automatically starts it.
+HTTPサーバー停止中に **SOAPリクエスト受け入れる** ボタンをクリックすると、4D は自動で HTTPサーバーを開始します。
 
-### HTTP Server Configuration
+### HTTPサーバー設定
 
-This area provides information about the configuration parameters and operation of the HTTP server:
+このエリアには、HTTPサーバーの設定パラメーターや動作に関する情報が表示されます。
 
-- **Auto-launched at startup**: parameter set via the Settings.
-- **HTTP Server processes (used/total)**: number of HTTP processes created on the server (current number of processes / total of all processes created).
-- **Cache memory**: size of HTTP server cache memory, when it is activated (size actually used by cache / maximum size theoretically allocated to the cache in the Settings). You can click on the **Clear Cache** button to empty the current cache.
-- **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
-- **Log file information**: name, format and date of the next automatic log backup of the HTTP server (logweb.txt file).
+- **開始時に自動起動**: ストラクチャー設定で設定されたパラメーター。
+- **HTTP サーバープロセス (使用/総計)**: サーバー上で作成されたHTTPプロセス数 (現在のプロセス数 / 作成されたプロセスの総数)。
+- **キャッシュメモリ**: HTTPサーバーキャッシュメモリのサイズ ( キャッシュが実際に使用しているサイズ / ストラクチャー設定で理論的にキャッシュに割り当てられた最大サイズ)。 **キャッシュクリア** ボタンをクリックすると、現在のキャッシュを空にすることができます。
+- **待受IP**、**HTTPポート** (デフォルトは 80)、HTTP接続用の **TSL有効** (4D と SQL接続は別設定)、および **HTTPSポート**: これらは、ストラクチャー設定またはプログラミングにより設定された、HTTPサーバーの現在の [設定パラメーター](WebServer/webServerConfig.md) を表示します。
+- **ログファイル情報**: 名称、フォーマット、および HTTPサーバーの次回の自動ログバックアップの日付 (logweb.txt ファイル)。
 
 
-## Real Time Monitor Page
+## リアルタイムモニターページ
 
-The Real Time Monitor page monitors the progress of "long" operations performed by the application in real time. These operations are, for example, sequential queries, execution of formulas, etc.
+リアルタイムモニターは、アプリケーションによって実行された、"長い" オペレーションの状態をリアルタイムでモニターします。 これらのオペレーションとは、たとえばシーケンシャルクエリやフォーミュラの実行などです:
 
 ![](assets/en/Admin/server-admin-monitor-page.png)
-> This page is available in the administration window of the server machine and also from a remote 4D machine. In the case of a remote machine, this page displays data from operations performed on the server machine.
+> このページは、サーバーマシンの管理ウィンドウにありますが、リモートの 4Dマシンからも見られます。 リモートマシンの場合は、サーバーマシン上で実行されている操作のデータを表示します。
 
-A line is added for each long operation performed on the data. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
+データに対して実行されている長い処理は、それぞれに行が割り当てられます。 操作が完了すると、この行は消えます (**オペレーションを最低5秒間表示する** オプションをチェックすることで、短いオペレーションでも 5秒間表示したままにできます。以下参照)。
 
-The following information is provided for each line:
+各行について、以下の情報が表示されます:
 
-- **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
+- **開始時刻**: 操作の開始時刻が、"dd/mm/yyyy - hh:mm:ss" というフォーマットで表示されます。
 - **Duration** (ms): duration in milliseconds of operation in progress
 - **Information**: title of operation.
 - **Details**: this area displays detailed information which will vary according to the type of operation selected. More specifically:
