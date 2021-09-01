@@ -14,7 +14,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 > Using a **custom** authentication is recommended.
 
-### Overview
+### Visão Geral
 
 The operation of the 4D web server's access system is summarized in the following diagram:
 
