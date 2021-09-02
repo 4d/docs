@@ -481,10 +481,10 @@ HTTPサーバー停止中に **SOAPリクエスト受け入れる** ボタンを
 各行について、以下の情報が表示されます:
 
 - **開始時刻**: 操作の開始時刻が、"dd/mm/yyyy - hh:mm:ss" というフォーマットで表示されます。
-- **Duration** (ms): duration in milliseconds of operation in progress
-- **Information**: title of operation.
-- **Details**: this area displays detailed information which will vary according to the type of operation selected. More specifically:
-    + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
+- **経過時間** (秒): 進行中の操作の経過時間が秒単位で表示されます。
+- **情報**: 操作の説明。
+- **詳細**: このエリアには、選択したオペレーションのタイプに応じて、その詳細な情報が表示されます。 具体的には以下の情報が表示されます:
+    + **作成された場所**: そのオペレーションがクライアントアクションの結果か (クライアント上で作成)、ストアドプロシージャ―または "サーバー上で実行" オプションを使用した結果か (サーバー上で作成) を表示します。
     + **Operation Details**: Operation type and (for query operations) query plan.
     + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
     + **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
