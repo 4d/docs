@@ -36,8 +36,8 @@ When the user enters text into the combo box, the 0th element of the array gets 
 
 ### Utilizar una lista de selección
 
-If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. This makes it easier to manage listed fields/variables.
-> If you use a hierarchical list, only the first level is displayed and can be selected.
+If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. Esto facilita la gestión de los campos/variables listados.
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar.
 
 To associate a combo box with a field or variable, you can just enter the name of the field or variable directly in the [Variable or Expression](properties_Object.md#variable-or-expression) of the form object in the Property List.
 
