@@ -273,7 +273,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ---
 
-## Save as
+## Guardar como
 
 This property is available in the following conditions:
 
