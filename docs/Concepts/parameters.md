@@ -102,7 +102,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 	$area:=$width*$height
 ``` 
 
->If the type is not defined, the parameter will be defined as `Variant`.
+>If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
 
 All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
 
@@ -275,7 +275,7 @@ End for
 
 ### Declaring generic parameters
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. Non-declared generic parameters automatically get the [Variant](dt-variant.md) type.
+As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
 
 To declare generic parameters parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
