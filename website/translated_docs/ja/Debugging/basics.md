@@ -3,30 +3,30 @@ id: basics
 title: 画面の説明
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+エラーはつきものです。 何行ものコードを書いているのに、1つもエラーが出ないというのは普通はないことです。 逆に言えば、エラーを処理・修正することは当たり前のことなのです。
 
-The 4D development environment provides several debugging tools for all types of errors.
+4D の開発環境には、あらゆる種類のエラーに対応するためのデバッグツールが用意されています。
 
-## Error types
+## エラーの種類
 
-### Typing errors
+### タイプミス
 
-Typing errors are detected by the Method editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
+タイプミスはメソッドエディターによって検出されます。 これらは赤色で示され、ウィンドウ下部に追加情報が表示されます。 以下はタイプミスの例です:
 
 ![break-point](assets/en/Debugging/typing-error.png)
 
 
-Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
+このようなタイプミスは通常、シンタックスエラーの原因となります (上の例では、テーブル名が間違っています)。 コードの該当行の編集を確定すると、エラーの説明が表示されます。 このような場合タイプミスを修正して Enterキーを押すと、再度コードの検証がおこなわれます。
 
-### Syntax Errors
+### シンタックスエラー
 
-Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. たとえば:
+メソッドの実行時に限って、とらえることのできるエラーがあります。 [シンタックスエラーウィンドウ](#シンタックスエラーウィンドウ) はエラーが発生した際に表示されます: たとえば:
 
 ![syntax-error](assets/en/Debugging/syntax-error.png)
 
-Expand the **Details** area to display the last error and its number.
+**詳細** エリアを展開すると、最新のエラーと番号が表示されます。
 
-### Environmental Errors
+### 環境エラー
 
 Occasionally, there may not be enough memory to create a BLOB. Or, when you access a document on disk, the document may not exist or may already be opened by another application. These environmental errors do not directly occur because of your code or the way you wrote it. Most of the time, these errors are easy to treat with an [error catching method](Concepts/error-handling.md) installed using the `ON ERR CALL` command.
 
@@ -52,7 +52,7 @@ In Application mode, you might obtain errors that you don't see in interpreted m
 
 To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
 
-## Syntax Error Window
+## シンタックスエラーウィンドウ
 
 The Syntax error window automatically appears when the execution of a method is interrupted. This can happen when:
 
