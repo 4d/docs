@@ -22,7 +22,7 @@ title: 一般ページ
 
 > このオプションは、バイナリデータベースでのみ使用され、プロジェクトアーキテクチャーでは無視されます。 doc.4d.com を参照ください。
 
-#### ウィンドウのタブ (macOSのみ)
+### ウィンドウのタブ (macOSのみ)
 
 macOS Sierra 以降、Mac のアプリケーションは、複数のウィンドウを整理しやすくする自動ウィンドウタブ機能を利用することができます。単一の親ウィンドウ内でドキュメントウィンドウを積み重ね、タブを通してブラウズすることができます。 この機能は小さなスクリーンや、トラックパッドを使用している場合などに有用です。
 
@@ -48,6 +48,21 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 *   **システム設定に従う** (デフォルト): 4D のウィンドウは、macOSシステム環境設定で定義されているように振る舞います (フルスクリーン時のみ、常に、あるいは手動)。
 *   **しない**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいウィンドウを作成します (タブは作成されません)。
 *   **常にする**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいタブを作成します。
+
+### Appearance (macOS only)
+
+This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
+
+> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+
+次の値が提供されています:
+
+*   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
+*   **Light**: Use the Light Theme
+*   **Dark**: Use the Dark Theme
+
+> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+
 
 ### アプリケーションモードに移動する時に、デザインモードを終了する
 
