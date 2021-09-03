@@ -214,10 +214,10 @@
         "title": "画面の説明"
       },
       "Debugging/breakpoints": {
-        "title": "Breakpoints and Command Catching"
+        "title": "ブレークポイントとキャッチコマンド"
       },
       "Debugging/debugger": {
-        "title": "Debugger"
+        "title": "デバッガー"
       },
       "Debugging/debugging-remote": {
         "title": "Debugging from remote machines"
