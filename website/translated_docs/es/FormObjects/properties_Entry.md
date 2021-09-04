@@ -317,7 +317,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 
 ---
-## Single-Click Edit
+## Edición con un solo clic
 
 Enables direct passage to edit mode in list boxes.
 
