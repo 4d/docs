@@ -4,7 +4,7 @@ title: Fondo y borde
 ---
 
 ---
-## Alternate Background Color
+## Color de fondo alternado
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
@@ -38,7 +38,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Ver también
-[Transparent](#transparent)
+[Transparente](#transparent)
 
 
 ---
@@ -101,7 +101,7 @@ Describes dotted line type as a sequence of black and white points.
 
 
 ---
-## Hide extra blank rows
+## Ocultar líneas vacías finales
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
@@ -172,7 +172,7 @@ Designates the thickness of a line.
 
 
 ---
-## Row Background Color Array
+## Array colores de fondo
 
 `Array type list boxes`
 
@@ -215,7 +215,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 
 ---
-## Transparent
+## Transparente
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
