@@ -529,7 +529,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 
 ---
-## Visibility
+## Visibilidad
 
 This property allows hiding by default the object in the Application environment.
 
