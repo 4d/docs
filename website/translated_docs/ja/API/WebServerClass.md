@@ -72,9 +72,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| 参照    | タイプ          |    | 説明                                               |
+| 引数    | タイプ          |    | 説明                                               |
 | ----- | ------------ | -- | ------------------------------------------------ |
-| オプション | 整数           | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
+| オプション | Integer      | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値   | 4D.WebServer | <- | WebServer オブジェクト                                 |
 
 <!-- END REF -->
@@ -83,11 +83,11 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 *option*が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
-| 定数                             | 結果 | 説明                                 |
-| ------------------------------ | -- | ---------------------------------- |
-| `Web server database`          | 1  | カレントデータベースの Webサーバー( 省略時のデフォルト)    |
-| `Web server host database`     | 2  | コンポーネントのホストデータベースの Webサーバー         |
-| `Web server receiving request` | 3  | リクエストを受け取った Webサーバー (ターゲットWebサーバー) |
+| 定数                             | 値 | 説明                                 |
+| ------------------------------ | - | ---------------------------------- |
+| `Web server database`          | 1 | カレントデータベースの Webサーバー( 省略時のデフォルト)    |
+| `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー         |
+| `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー) |
 
 返される Webサーバーオブジェクトには、Webサーバープロパティのカレント値が格納されています。
 
@@ -118,9 +118,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| 参照  | タイプ    |    | 説明                         |
-| --- | ------ | -- | -------------------------- |
-| 戻り値 | コレクション | <- | 利用可能な Webサーバーオブジェクトのコレクション |
+| 引数  | タイプ        |    | 説明                         |
+| --- | ---------- | -- | -------------------------- |
+| 戻り値 | Collection | <- | 利用可能な Webサーバーオブジェクトのコレクション |
 
 <!-- END REF -->
 
@@ -489,7 +489,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.isRunning** : Boolean<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーの実行状態<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーの実行状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -607,7 +607,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.name** : Text<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -621,7 +621,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.openSSLVersion** : Text<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -635,7 +635,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*読み取り専用プロパティ* <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
+*読み取り専用プロパティ。* <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -691,7 +691,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
  <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-*読み取り専用プロパティ*
+*読み取り専用プロパティ。*
 
 <!-- END REF -->
 
@@ -725,13 +725,13 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。 とりうる値 (定数使用):
 
-| 定数                  | 結果       | 説明                                                              |
+| 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
 | Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
 | Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
 
-詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) を参照ください。
+詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#セッションcookie-samesite) を参照ください。
 
 
 <!-- END REF -->
@@ -768,10 +768,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.start().Params -->
 
-| 参照       | タイプ    |    | 説明              |
+| 引数       | タイプ    |    | 説明              |
 | -------- | ------ | -- | --------------- |
-| settings | オブジェクト | -> | 開始時の Webサーバー設定  |
-| 戻り値      | オブジェクト | <- | Webサーバー開始のステータス |
+| settings | Object | -> | 開始時の Webサーバー設定  |
+| 戻り値      | Object | <- | Webサーバー開始のステータス |
 
 <!-- END REF -->
 
@@ -788,13 +788,13 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ   |                         | タイプ    | 説明                                    |
-| ------- | ----------------------- | ------ | ------------------------------------- |
-| success |                         | ブール    | Webサーバーが正常に開始された場合には true、それ以外は false |
-| errors  |                         | コレクション | エラースタック (Webサーバーが正常に開始された場合には返されません)  |
-|         | \[].errCode            | 数値     | 4Dエラーコード                              |
-|         | \[].message            | テキスト   | 4Dエラーの詳細                              |
-|         | \[].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名                   |
+| プロパティ   |                         | タイプ        | 説明                                    |
+| ------- | ----------------------- | ---------- | ------------------------------------- |
+| success |                         | Boolean    | Webサーバーが正常に開始された場合には true、それ以外は false |
+| errors  |                         | Collection | エラースタック (Webサーバーが正常に開始された場合には返されません)  |
+|         | \[].errCode            | Number     | 4Dエラーコード                              |
+|         | \[].message            | Text       | 4Dエラーの詳細                              |
+|         | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                   |
 > Webサーバーが既に起動していた場合、エラーが返されます。
 
 #### 例題
@@ -830,7 +830,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| 参照 | タイプ |  | 説明                |
+| 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
 

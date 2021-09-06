@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Debugger
+title: デバッガー
 ---
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".

@@ -39,7 +39,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 
 ---
-## Italic
+## Itálica
 
 Sets the selected text to slant slightly to the right.
 
@@ -60,7 +60,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 
 ---
-## Underline
+## Subrayado
 Sets the text to have a line running beneath it.
 > This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
 
@@ -145,7 +145,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 
 ---
-## Font Size
+## Tamaño fuente
 
 Allows defining the object's font size in points.
 
@@ -161,7 +161,7 @@ Allows defining the object's font size in points.
 
 
 ---
-## Font Color
+## Color de fuente
 
 Designates the font color.
 
@@ -190,7 +190,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ---
 
-## Font Color Expression
+## Expresión color fuente
 
 `Selection and collection/entity selection type list boxes`
 
@@ -219,7 +219,7 @@ Foreground color;Dark shadow color)
 [List Box](listbox_overview.md#overview)
 
 ---
-## Style Expression
+## Expresión estilo
 
 `Selection and collection/entity selection type list boxes`
 
@@ -253,7 +253,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 
 ---
-## Horizontal Alignment
+## Alineación horizontal
 
 Horizontal location of text within the area that contains it.
 
@@ -269,7 +269,7 @@ Horizontal location of text within the area that contains it.
 
 
 ---
-## Vertical Alignment
+## Alineamiento vertical
 
 Vertical location of text within the area that contains it.
 
@@ -553,7 +553,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 <hr />
 <h2 spaces-before="0">
-  Row Font Color Array
+  Array colores de fuente
 </h2>
 
 <p spaces-before="0">
@@ -616,7 +616,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 <hr />
 <h2 spaces-before="0">
-  Row Style Array
+  Array de estilos
 </h2>
 
 <p spaces-before="0">

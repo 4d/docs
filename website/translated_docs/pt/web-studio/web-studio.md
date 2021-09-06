@@ -5,7 +5,7 @@ title: 4D Web Studio
 
 > **Preview**: The web studio is provided as a preview feature, allowing you to familiarize with the new concepts and philosophy. This feature is still in early stages of development, it's not recommended to use it in a production environment.
 
-## Overview
+## Visão Geral
 
 4D WebStudio is a powerful low-code platform for web design and development. More specifically, it's an integrated development environment (IDE) that lets you tap into various data sources (for example, the database of a 4D project), and link them to interface elements in order to build complete applications.
 

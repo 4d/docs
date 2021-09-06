@@ -19,59 +19,59 @@ Una casilla de selección puede asociarse a una [variable o expresión](properti
 - **entero:** si la casilla está marcada, la variable tiene el valor 1. Cuando no se marca, tiene el valor 0. Si la casilla de selección está en tercer estado (ver más abajo), tiene el valor 2.
 - **booleano:** si la casilla está marcada, la variable tiene el valor `True`. Cuando no se marca, toma el valor `False`.
 
-Any or all check boxes in a form can be checked or unchecked. Multiple check boxes allow the user to select multiple options.
+Una parte o todas las casillas de selección de un formulario pueden estar marcadas o desmarcadas. Las casillas de selección múltiples permiten al usuario seleccionar varias opciones.
 
 
-### Three-States check box
+### Casilla de selección de tres estados
 
-Check box objects with [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) [button style](properties_TextAndPicture.md#button-style) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection.
+Check box objects with [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) [button style](properties_TextAndPicture.md#button-style) accept a third state. Este tercer estado es un estado intermedio, que generalmente se utiliza para fines de visualización. Por ejemplo, permite indicar que una propiedad está presente en una selección de objetos, pero no en cada objeto de la selección.
 
 ![](assets/en/FormObjects/checkbox_3states.png)
 
-To enable this third state, you must select the [Three-States](properties_Display.md#three-states) property.
+Para activar este tercer estado, debe seleccionar la propiedad [Tres estados](properties_Display.md#three-states).
 
-This property is only available for regular and flat check boxes associated with numeric [variables or expressions](properties_Object.md#variable-or-expression) — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state).
+Esta propiedad sólo está disponible para casillas de selección regulares y planas asociadas a [variables o expresiones](properties_Object.md#variable-or-expression) - las casillas de selección de expresiones booleanas no pueden utilizar la propiedad [Tres estados](properties_Display.md#three-states) (una expresión booleana no puede estar en un estado intermedio).
 
-The variable associated with the check box returns the value 2 when the check box is in the third state.
-> In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
+La variable asociada a la casilla de selección devuelve el valor 2 cuando la casilla está en el tercer estado.
+> En el modo de entrada, las casillas de selección de los tres estados muestran cada estado de forma secuencial, en el siguiente orden: sin marcar / marcado / intermedio / sin marcar, etc. El estado intermedio no suele ser muy útil en el modo de entrada; en el código, basta con forzar el valor de la variable a 0 cuando toma el valor de 2 para pasar directamente del estado comprobado al estado no comprobado.
 
 
 ## Utilizar una acción estándar
 
-You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area.
+Puede asignar una [acción estándar](properties_Action.md#standard-action) a una casilla de selección para manejar los atributos de las áreas de texto. Por ejemplo, si asigna la acción estándar `fontBold`, en ejecución la casilla de selección gestionará el atributo "negrita" del texto seleccionado en el área actual.
 
-Only actions that can represent a true/false status ("checkable" actions) are supported by this object:
+Sólo las acciones que pueden representar un estado verdadero/falso (acciones "marcables") son soportadas por este objeto:
 
-| Supported actions                   | Usage condition (if any) |
-| ----------------------------------- | ------------------------ |
-| avoidPageBreakInsideEnabled         | 4D Write Pro areas only  |
-| fontItalic                          |                          |
-| fontBold                            |                          |
-| fontLinethrough                     |                          |
-| fontSubscript                       | 4D Write Pro areas only  |
-| fontSuperscript                     | 4D Write Pro areas only  |
-| fontUnderline                       |                          |
-| font/showDialog                     | Mac only                 |
-| htmlWYSIWIGEnabled                  | 4D Write Pro areas only  |
-| section/differentFirstPage          | 4D Write Pro areas only  |
-| section/differentLeftRightPages     | 4D Write Pro areas only  |
-| spell/autoCorrectionEnabled         |                          |
-| spell/autoDashSubstitutionsEnabled  | Mac only                 |
-| spell/autoLanguageEnabled           | Mac only                 |
-| spell/autoQuoteSubstitutionsEnabled | Mac only                 |
-| spell/autoSubstitutionsEnabled      |                          |
-| spell/enabled                       |                          |
-| spell/grammarEnabled                | Mac only                 |
-| spell/showDialog                    | Mac only                 |
-| spell/visibleSubstitutions          |                          |
-| visibleBackground                   | 4D Write Pro areas only  |
-| visibleFooters                      | 4D Write Pro areas only  |
-| visibleHeaders                      | 4D Write Pro areas only  |
-| visibleHiddenChars                  | 4D Write Pro areas only  |
-| visibleHorizontalRuler              | 4D Write Pro areas only  |
-| visiblePageFrames                   | 4D Write Pro areas only  |
-| visibleReferences                   |                          |
-| widowAndOrphanControlEnabled        | 4D Write Pro areas only  |
+| Acciones soportadas                 | Condiciones de uso (si las hay) |
+| ----------------------------------- | ------------------------------- |
+| avoidPageBreakInsideEnabled         | 4D Write Pro areas only         |
+| fontItalic                          |                                 |
+| fontBold                            |                                 |
+| fontLinethrough                     |                                 |
+| fontSubscript                       | 4D Write Pro areas only         |
+| fontSuperscript                     | 4D Write Pro areas only         |
+| fontUnderline                       |                                 |
+| font/showDialog                     | Mac only                        |
+| htmlWYSIWIGEnabled                  | 4D Write Pro areas only         |
+| section/differentFirstPage          | 4D Write Pro areas only         |
+| section/differentLeftRightPages     | 4D Write Pro areas only         |
+| spell/autoCorrectionEnabled         |                                 |
+| spell/autoDashSubstitutionsEnabled  | Mac only                        |
+| spell/autoLanguageEnabled           | Mac only                        |
+| spell/autoQuoteSubstitutionsEnabled | Mac only                        |
+| spell/autoSubstitutionsEnabled      |                                 |
+| spell/enabled                       |                                 |
+| spell/grammarEnabled                | Mac only                        |
+| spell/showDialog                    | Mac only                        |
+| spell/visibleSubstitutions          |                                 |
+| visibleBackground                   | 4D Write Pro areas only         |
+| visibleFooters                      | 4D Write Pro areas only         |
+| visibleHeaders                      | 4D Write Pro areas only         |
+| visibleHiddenChars                  | 4D Write Pro areas only         |
+| visibleHorizontalRuler              | 4D Write Pro areas only         |
+| visiblePageFrames                   | 4D Write Pro areas only         |
+| visibleReferences                   |                                 |
+| widowAndOrphanControlEnabled        | 4D Write Pro areas only         |
 
 For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
 
@@ -89,7 +89,7 @@ El estilo Clásico de botón casilla de selección corresponde a un sistema de c
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -107,13 +107,13 @@ El estilo Clásico de botón casilla de selección corresponde a un sistema de c
 
 
 
-### Flat
+### Plano
 
 El estilo plano del botón casilla de selección tiene una apariencia minimalista. La naturaleza gráfica del estilo Flat es especialmente útil para los formularios que se van a imprimir.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -141,7 +141,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -170,7 +170,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -201,7 +201,7 @@ Ejemplo en macOS:
 > En Windows, el estilo de botón Bevel redondeado es idéntico al estilo de botón [Bevel](#bevel).
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myCheckBox": {
@@ -230,7 +230,7 @@ El estilo del botón Gradient OS X tiene un fondo gris claro con un título y se
 > En Windows, este estilo de botón casilla de selección es idéntico al estilo de botón [Bevel](#bevel).
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -263,7 +263,7 @@ By default, the OS X Textured button style appears as:
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -294,7 +294,7 @@ The colors (highlight and background) of a check box with the Office XP button s
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -326,7 +326,7 @@ This check box button style can be used to add a standard collapse/expand icon. 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -355,7 +355,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckBox": {
@@ -380,7 +380,7 @@ The Custom button style accepts a personalized background picture and allows man
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myCheckbox": {

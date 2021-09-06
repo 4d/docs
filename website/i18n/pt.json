@@ -114,7 +114,7 @@
         "title": "Arquivo de Log (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -223,7 +223,7 @@
         "title": "Debugging from remote machines"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -409,7 +409,7 @@
         "title": "On Window Opening Denied"
       },
       "Events/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -625,7 +625,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -654,8 +654,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Visão Geral",
+        "sidebar_label": "Visão Geral"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -707,7 +707,7 @@
         "title": "Methods Page"
       },
       "Preferences/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Preferences/shortcuts": {
         "title": "Shortcuts Page"
@@ -731,7 +731,7 @@
         "title": "Documenting a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -836,16 +836,10 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
-      },
-      "web-studio/web-event-object": {
-        "title": "WEB Event Object"
-      },
-      "web-studio/web-form-object": {
-        "title": "WEB Form Object"
+        "title": "Visão Geral"
       },
       "web-studio/web-studio": {
-        "title": "Web Studio"
+        "title": "4D Web Studio"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
@@ -872,7 +866,7 @@
         "title": "Template pages"
       },
       "WebServer/webServer": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "WebServer/webServerAdmin": {
         "title": "Administration"
@@ -911,7 +905,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {

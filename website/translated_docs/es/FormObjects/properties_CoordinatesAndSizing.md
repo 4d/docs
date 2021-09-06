@@ -59,7 +59,7 @@ Bottom coordinate of the object in the form.
 
 
 ---
-## Left
+## Izquierda
 
 Left coordinate of the object on the form.
 
@@ -77,7 +77,7 @@ Left coordinate of the object on the form.
 
 
 ---
-## Right
+## Derecha
 
 Right coordinate of the object in the form.
 
@@ -95,7 +95,7 @@ Right coordinate of the object in the form.
 
 
 ---
-## Top
+## Arriba
 
 Top coordinate of the object in the form.
 
@@ -223,7 +223,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 
 ---
-## Row Height
+## Altura de las líneas
 
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
@@ -241,12 +241,12 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 
 #### Ver también
-[Row Height Array](#row-height-array)
+[Array altura de las líneas](#row-height-array)
 
 
 
 ---
-## Row Height Array
+## Array altura de las líneas
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 
@@ -275,7 +275,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 
 #### Ver también
-[Row Height](#row-height)
+[Altura de las líneas](#row-height)
 
 
 

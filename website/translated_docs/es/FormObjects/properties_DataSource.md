@@ -253,7 +253,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 ---
 
-## Master Table
+## Tabla principal
 `Current selection list boxes`
 
 Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
@@ -273,7 +273,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ---
 
-## Save as
+## Guardar como
 
 This property is available in the following conditions:
 
@@ -305,7 +305,7 @@ Using this property requires compliance with the following principles:
 
 
 ---
-## Selected Items
+## Elementos seleccionados
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.

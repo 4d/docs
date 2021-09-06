@@ -66,7 +66,7 @@ text, input {
 }
 ```
 
-### Object Name
+### Nombre del objeto
 
 El nombre del objeto corresponde al **selector de ID** CSS y define un objeto específico al que hay que dar estilo, ya que el nombre del objeto es único dentro del formulario.
 

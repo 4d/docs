@@ -8,7 +8,7 @@ title: フォームプロパティ
 ## カラースキーム
 > 配色プロパティは、macOS でのみ適用されます。
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](https://doc.4d.com/4Dv19/4D/19/SET-APPLICATION-COLOR-SCHEME.301-5430229.ja.html) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/page1762.html)). これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 *   dark - 暗い背景に明るいテキスト
 *   light - 明るい背景に暗いテキスト

@@ -47,7 +47,7 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
 
-### Flat
+### Plano
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
@@ -62,11 +62,11 @@ The Toolbar radio button style is primarily intended for integration in a toolba
 
 By default, the Toolbar style has a transparent background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is highlighted.
+ - *Windows* - el botón está resaltado.
 
 ![](assets/en/FormObjects/radio_toolbar.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - el resalte del botón nunca aparece.
 
 
 
@@ -74,11 +74,11 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is highlighted.
+ - *Windows* - el botón está resaltado.
 
   ![](assets/en/FormObjects/radio_bevel.png)
 
- - *macOS* - the highlight of the button never appears.
+ - *macOS* - el resalte del botón nunca aparece.
 
 
 ### Bevel redondeado
@@ -87,7 +87,7 @@ The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style 
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
- - *macOS* - the corners of the button are rounded. ![](assets/en/FormObjects/roundedBevel.png)
+ - *macOS* - las esquinas del botón están redondeadas. ![](assets/en/FormObjects/roundedBevel.png)
 
 
 ### OS X Gradient

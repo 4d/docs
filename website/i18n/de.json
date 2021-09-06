@@ -223,7 +223,7 @@
         "title": "Debugging from remote machines"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -838,14 +838,8 @@
       "Users/overview": {
         "title": "Überblick"
       },
-      "web-studio/web-event-object": {
-        "title": "WEB Event Object"
-      },
-      "web-studio/web-form-object": {
-        "title": "WEB Form Object"
-      },
       "web-studio/web-studio": {
-        "title": "Web Studio"
+        "title": "4D Web Studio"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
@@ -911,7 +905,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {

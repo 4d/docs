@@ -21,7 +21,7 @@ Some of the splitter’s general characteristics:
 
 Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
 "mySplitter": {

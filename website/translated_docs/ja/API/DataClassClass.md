@@ -110,7 +110,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
-| 参照       | タイプ                |    | 説明                |
+| 引数       | タイプ                |    | 説明                |
 | -------- | ------------------ |:--:| ----------------- |
 | settings | オブジェクト             | -> | ビルドオプション: context |
 | 戻り値      | 4D.EntitySelection | <- | データクラスの全エンティティの参照 |
@@ -163,7 +163,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| 参照        | タイプ                |    | 説明                        |
+| 引数        | タイプ                |    | 説明                        |
 | --------- | ------------------ |:--:| ------------------------- |
 | objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション |
 | settings  | オブジェクト             | -> | ビルドオプション: context         |
@@ -361,7 +361,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 <!-- REF #DataClassClass.get().Params -->
-| 参照         | タイプ       |    | 説明                      |
+| 引数         | タイプ       |    | 説明                      |
 | ---------- | --------- |:--:| ----------------------- |
 | primaryKey | 整数または文字列  | -> | 取得するエンティティのプライマリーキー値    |
 | settings   | オブジェクト    | -> | ビルドオプション: context       |
@@ -438,7 +438,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| 参照  | タイプ          |    | 説明                 |
+| 引数  | タイプ          |    | 説明                 |
 | --- | ------------ |:--:| ------------------ |
 | 戻り値 | cs.DataStore | <- | データクラスが属しているデータストア |
 <!-- END REF -->
@@ -492,7 +492,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| 参照  | タイプ    |    | 説明        |
+| 引数  | タイプ    |    | 説明        |
 | --- | ------ | -- | --------- |
 | 戻り値 | オブジェクト | <- | データクラスの情報 |
 <!-- END REF -->
@@ -565,7 +565,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
-| 参照  | タイプ       |    | 説明              |
+| 引数  | タイプ       |    | 説明              |
 | --- | --------- | -- | --------------- |
 | 戻り値 | 4D.Entity | <- | データクラスの新規エンティティ |
 <!-- END REF -->
@@ -608,7 +608,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| 参照        | タイプ                |    | 説明                                                                                                      |
+| 引数        | タイプ                |    | 説明                                                                                                      |
 | --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
 | keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                 |
@@ -656,7 +656,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
-| 参照            | タイプ                |    | 説明                                                                                   |
+| 引数            | タイプ                |    | 説明                                                                                   |
 | ------------- | ------------------ | -- | ------------------------------------------------------------------------------------ |
 | queryString   | テキスト               | -> | 検索条件 (文字列)                                                                           |
 | formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
@@ -896,7 +896,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 | プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parameters    | オブジェクト | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                             |
-| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
 | args          | オブジェクト | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                              |
 | allowFormulas | ブール    | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                         |
 | context       | テキスト   | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                             |

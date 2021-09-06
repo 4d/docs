@@ -41,38 +41,38 @@ El estilo de botón Clásico es un botón sistema estándar (*es decir,*, un rec
 
 ![](assets/en/FormObjects/button_regular.png)
 
-Por defecto, el estilo Clásico tiene un fondo gris claro con una etiqueta en el centro. Cuando el cursor pasa por encima del estilo de botón Clásico, el borde y el color de fondo cambian para demostrar que tiene el foco. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
+Por defecto, el estilo Clásico tiene un fondo gris claro con una etiqueta en el centro. Cuando el cursor pasa por encima del estilo de botón Clásico, el borde y el color de fondo cambian para demostrar que tiene el foco. Además de iniciar la ejecución del código, el estilo del botón Clásico imita un botón mecánico cambiando rápidamente el color de fondo al ser presionado.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
 
-    "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed 
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form 
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+    "miBotón": {
+        "tipo": "button", //define el tipo de objeto
+        "style": "regular", //define el estilo del botón
+        "defaultButton": "true" //define el botón como opción por defecto
+        "text": "OK", //texto que aparecerá en el botón
+        "action": "Cancel", //acción a realizar 
+        "left": 60, //posición izquierda en el formulario  
+        "top": 160, //posición superior en el formulario 
+        "width": 100, //ancho del botón
+        "height": 20 //altura del botón
         }
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+Sólo los estilos Clásico y Plano ofrecen la propiedad [Botón por defecto](properties_Appearance.md#default-button).
 
 
-### Flat
+### Plano
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+El estilo de botón Plano es un botón sistema estándar (*es decir, *, un rectángulo con una etiqueta descriptiva) que ejecuta código cuando un usuario hace clic en él.
 
 ![](assets/en/FormObjects/button_flat.png)
 
-By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+Por defecto, el estilo Plano tiene un fondo blanco con una etiqueta en el centro, esquinas redondeadas y una apariencia minimalista. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
 
@@ -90,21 +90,21 @@ By default, the Flat style has a white background with a label in the center, ro
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+Sólo los estilos Clásico y Plano ofrecen la propiedad [Botón por defecto](properties_Appearance.md#default-button).
 
 ### Barra de herramientas
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+El estilo de botón de la barra de herramientas está destinado principalmente a integrarse en una barra de herramientas. Incluye la opción de añadir un menú emergente (indicado por un triángulo invertido) que generalmente se utiliza para mostrar opciones adicionales para que el usuario las seleccione.
 
 By default, the Toolbar style has a transparent background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - el botón se resalta cuando utiliza la propiedad "Con menú emergente", se muestra un triángulo a la derecha y en el centro del botón.
 
 ![](assets/en/FormObjects/button_toolbar.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -124,17 +124,17 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ### Bevel
 
-The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+El estilo de botón Bisel combina la apariencia del estilo [Clásico](#regular) (*es decir*, un rectángulo con una etiqueta descriptiva) con la opción de propiedad del menú emergente del estilo [Barra de herramientas](#toolbar).
 
-By default, the Bevel style has a light gray background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
+Por defecto, el estilo Bevel tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - el botón está resaltado. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
 
 ![](assets/en/FormObjects/button_bevel.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - el resalte del botón nunca aparece. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -154,17 +154,17 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 ### Bevel redondeado
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. Al igual que el estilo Bevel, el estilo Bevel Redondeado combina la apariencia del estilo [Clásico](#regular) con la opción de propiedad del menú emergente del estilo [Barra de herramientas](#toolbar).
 
-By default, the Rounded Bevel style has a light gray background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
+Por defecto, el estilo Bevel Redondeado tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en el centro del botón.
 
   ![](assets/en/FormObjects/button_roundedbevel.png)
 
- - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - las esquinas del botón están redondeadas. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -188,13 +188,13 @@ El estilo del botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel). 
 
 Por defecto, el estilo OS X Gradient tiene un fondo gris claro con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
- - *Windows* - the button is identical to the Bevel style. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha del botón.
+ - *Windows* - el botón es idéntico al estilo Bevel. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha del botón.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
- - *macOS* - el botón se muestra como un botón de dos tonos. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - el botón se muestra como un botón de dos tonos. Cuando utiliza la propiedad "Con menú emergente", aparece un triángulo a la derecha y en la parte inferior del botón.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -213,7 +213,7 @@ Por defecto, el estilo OS X Gradient tiene un fondo gris claro con una etiqueta 
 
 ### OS X Texturizado
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). Al igual que el estilo Bevel, el estilo OS X Textured combina la apariencia del estilo [Clásico](#regular) y del estilo [Barra de herramientas](#toolbar).
+El estilo de botón OS X Textured es casi idéntico al estilo [Bevel](#bevel) pero con un tamaño menor (el tamaño máximo es el de un botón de sistema estándar de macOS). Al igual que el estilo Bevel, el estilo OS X Textured combina la apariencia del estilo [Clásico](#regular) y del estilo [Barra de herramientas](#toolbar).
 
 By default, the OS X Textured style appears as:
 
@@ -223,7 +223,7 @@ By default, the OS X Textured style appears as:
 
  - *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Su altura está predefinida: no es posible ampliarla o reducirla.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -253,7 +253,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
  - *macOS* - su fondo se muestra siempre.
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -278,7 +278,7 @@ El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda est�
 
 ![](assets/en/FormObjects/button_help.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myButton": {
@@ -305,7 +305,7 @@ El estilo de botón Círculo aparece como un botón sistema circular. Este estil
 En Windows, es idéntico al estilo "Ninguno" (no se tiene en cuenta el círculo del fondo).
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myButton": {
@@ -329,7 +329,7 @@ El estilo de botón Personalizado acepta una imagen de fondo personalizada y per
 ![](assets/en/FormObjects/button_custom.png)
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```code
     "myButton": {

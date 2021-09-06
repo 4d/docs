@@ -3,14 +3,14 @@ id: groupBox
 title: Área de grupo
 ---
 
-A group box is a static object that allows you to visually assemble multiple form objects:
+Un área de grupo es un objeto estático que permite ensamblar visualmente varios objetos de formulario:
 
 ![](assets/en/FormObjects/groupBox.png)
-> The name of a group box is static text; you can use a “localizable” reference as with any 4D label (see [Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) and *XLIFF Architecture* section in 4D Design Reference.
+> El nombre de un área de grupo es un texto estático; puede utilizar una referencia "localizable" como con cualquier etiqueta de 4D (ver [Utilizar las referencias en los textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) y la sección *Arquitectura XLIFF* en el manual Diseño de 4D.
 
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "myGroup": {

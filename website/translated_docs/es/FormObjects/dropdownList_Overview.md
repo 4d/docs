@@ -21,7 +21,7 @@ You can create different types of drop-down lists with different features. To de
 | Choice list saved as value     | Built upon a choice list (standard)              | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
 | Hierarchical choice list       | Can display hierarchical contents                | List            | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Standard action                | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Acción estándar                | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
 
@@ -98,21 +98,21 @@ In this case, the name of the [variable](properties_Object.md#variable-or-expres
    LIST TO ARRAY("Cities";aCities)
 ```
 
-In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code would be run in place of the assignment statements shown above.
+In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Este código puede ejecutarse en lugar de las sentencias de asignación mostradas anteriormente.
 
-If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
+Si necesita guardar la elección del usuario en un campo, deberá utilizar una sentencia de asignación que se ejecute después de aceptar el registro. El código podría ser así:
 
 ```4d
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) `nuevo registro
+          aCities:=3 `mostrar un valor por defecto
+       Else `registro existente, mostrar valor almacenado
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) `el usuario modifica la selección
+       City:=aCities{aCities} `el campo obtiene un nuevo valor
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -120,15 +120,15 @@ If you need to save the user’s choice into a field, you would use an assignmen
  End case
 ```
 
-You must select each event that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
+You must select each event that you test for in your Case statement. Los arrays siempre contienen un número finito de elementos. La lista de elementos es dinámica y puede ser modificada por un método. Los elementos de un array pueden modificarse, ordenarse y añadirse.
 
 
 ### Utilizar una lista de selección
 
-If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). This makes it easier to manage listed fields/variables.
+If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Esto facilita la gestión de los campos/variables listados.
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D then automatically takes care of managing the input and display of the current value in the form.
-> If you use a hierarchical list, only the first level is displayed and can be selected. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
+For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 > It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.
@@ -140,7 +140,7 @@ When the form is executed, 4D automatically manages the drop-down list during in
 
 #### Selected item value or Selected item reference
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. This option lets you optimize the size of the data saved.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Using a hierarchical choice list
 
