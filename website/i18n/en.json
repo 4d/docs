@@ -838,6 +838,9 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "web-studio/web-studio": {
+        "title": "4D Web Studio"
+      },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
