@@ -6,11 +6,12 @@ title: BLOB
 Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLOB-の種類) (`4D.Blob`) を操作することができます。
 
 ### 概要
-|                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.Blob.new().Summary --> |
-| [<!-- INCLUDE #4D.Blob.size.Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.Blob.size.Summary --> |
-| [<!-- INCLUDE #4D.Blob.slice().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.Blob.slice().Summary --> |
+
+|                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #4D.Blob.new().Syntax -->](#4dblobnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.Blob.new().Summary -->|
+| [<!-- INCLUDE #Blob.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #Blob.size.Summary -->|
+| [<!-- INCLUDE #Blob.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #Blob.slice().Summary -->|
 
 ## 4D.Blob.new()
 
@@ -21,9 +22,10 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
-**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( blobScal : Blob ) : 4D.Blob<br/>**4D.Blob.new**( blobObj : 4D.Blob ) : 4D.Blob<!-- END REF -->
+**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( *blobScal* : Blob ) : 4D.Blob<br/>**4D.Blob.new**( *blobObj* : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.new().Params -->
+
 | 引数   | タイプ             |    | 説明         |
 | ---- | --------------- |:--:| ---------- |
 | blob | Blob or 4D.Blob | -> | コピーする BLOB |
@@ -31,19 +33,20 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 <!-- END REF -->
 
 #### 説明
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary --> は新規の `4D.Blob` オブジェクトを作成し、(任意) 別の BLOBデータ (スカラーBLOB または `4D.Blob`) のコピーを格納します。<!-- END REF --> 
+
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`).<!-- END REF -->
 
 `blob` 引数が渡されなかった場合、関数は空の 4D.Blob を返します。
 
 ## .size
 
-<!-- REF #4D.Blob.size.Syntax -->
-**4D.Blob.size** : Real<!-- END REF -->
+<!-- REF #Blob.size.Syntax -->
+**.size** : Real<!-- END REF -->
 
 #### 説明
-`4D.Blob.size` プロパティは、 <!-- REF #4D.Blob.size.Summary --> `4D.Blob` のサイズを返します (バイト単位)。<!-- END REF -->
+The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
 
-## .slice
+## .slice()
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -51,24 +54,25 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 | v19 R2 | 追加 |
 </details>
 
-<!-- REF #4D.Blob.slice().Syntax -->
-**4D.Blob.slice()** : 4D.Blob<br/>**4D.Blob.slice**( start : Real ) : 4D.Blob<br/>**4D.Blob.slice**( start : Real; end : Real ) : 4D.Blob<!-- END REF -->
+<!-- REF #Blob.slice().Syntax -->
+**.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
-<!-- REF #4D.Blob.slice().Params -->
-| 引数    | タイプ     |    | 説明                               |
-| ----- | ------- |:--:| -------------------------------- |
-| start | Real    | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス  |
-| end   | Real    | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス |
-| 戻り値   | 4D.Blob | <- | 新規 `4D.Blob`                     |
-<!-- END REF -->
+<!-- REF #Blob.slice().Params -->
+| 引数    | タイプ     |    | 説明                                       |
+| ----- | ------- |:--:| ---------------------------------------- |
+| start | 実数      | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス          |
+| end   | 実数      | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス         |
+| 戻り値   | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
 
+|
 
 #### 説明
-`4D.Blob.slice()` 関数は、 <!-- REF #4D.Blob.slice().Summary --> 呼び出し対象である BLOB のデータの一部を参照する新規の `4D.Blob` を作成して返します。 元の BLOB は変更されません。<!-- END REF --> 
+
+`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. 元の BLOB は変更されません。<!-- END REF -->
 
 `start` 引数は、新しい `4D.Blob` に含める最初のバイトを示す BLOB のインデックスです。 負の値を指定した場合、4D は BLOB の末尾から先頭に向かってオフセットしたものとして扱います。 たとえば、-10 は BLOB の最後から 10番目のバイトを表します。 デフォルト値は 0 です。 start にソースBLOB のサイズより大きな値を指定すると、返される `4D.Blob` のサイズは 0 になり、データは含まれません。
 
-`end` 引数は、新しい `4D.Blob` に含めない最初のバイトを示す BLOB のインデックスです。つまる、指定インデックスのバイトは新しい `4D.Blob` から除外されます。  負の値を指定した場合、4D は BLOB の末尾から先頭に向かってオフセットしたものとして扱います。 たとえば、-10 は BLOB の最後から 10番目のバイトを表します。 デフォルト値は BLOB のサイズです。
+`end` 引数は、新しい `4D.Blob` に含めない最初のバイトを示す BLOB のインデックスです。つまる、指定インデックスのバイトは新しい `4D.Blob` から除外されます。 負の値を指定した場合、4D は BLOB の末尾から先頭に向かってオフセットしたものとして扱います。 たとえば、-10 は BLOB の最後から 10番目のバイトを表します。 デフォルト値は BLOB のサイズです。
 
 #### 例題
 
@@ -88,5 +92,3 @@ $myNewBlob:=$myBlob.slice(0; 5)
 $myString:=Convert to text($myNewBlob; "UTF-8")
 // $myString は "Hello" を格納します
 ```
-
-
