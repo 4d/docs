@@ -24,7 +24,7 @@ La restauración manual de las copias de seguridad puede realizarse a través de
 
 Para restaurar manualmente una aplicación a través de una caja de diálogo estándar:
 
-1. Elija **Restituir...** en el menú de la aplicación 4D **Archivo**. It is not mandatory that an application project be open. OR Execute the `RESTORE` command from a 4D method. Aparece una caja de diálogo estándar de apertura de archivos.
+1. Elija **Restituir...** en el menú de la aplicación 4D **Archivo**. It is not mandatory that an application project be open. O Ejecute el comando `RESTORE` desde un método 4D. Aparece una caja de diálogo estándar de apertura de archivos.
 2. Seleccione un archivo de copia de seguridad (.4bk) o un archivo de copia de seguridad del historial (.4bl) que desee restaurar y haga clic en **Abrir**. Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada *Nomarchivo* (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
 
 ![](assets/en/Backup/backup07.png)
