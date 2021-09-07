@@ -25,7 +25,7 @@ The following rules are applied for any conversions:
 *	A datastore only references tables with a single primary key. The following tables are not referenced:
 	*	Tables without a primary key
 	*	Tables with composite primary keys.
-*	BLOB fields are automatically available as [Blob object](Concepts/dt_blob.md#blob-types) attributes. 
+*	BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type. 
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, 
