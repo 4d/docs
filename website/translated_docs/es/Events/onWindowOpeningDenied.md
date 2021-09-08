@@ -3,9 +3,9 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Puede ser llamado por                       | Definición                       |
-| ---- | ------------------------------------------- | -------------------------------- |
-| 53   | [Área Web](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| Code | Puede ser llamado por                       | Definición                            |
+| ---- | ------------------------------------------- | ------------------------------------- |
+| 53   | [Área Web](FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
 
 ## Descripción
