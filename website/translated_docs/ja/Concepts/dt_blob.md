@@ -14,19 +14,19 @@ BLOB は全体がメモリにロードされます。 BLOB変数はメモリ内�
 4Dランゲージでは、BLOB を扱う方法が 2つあります:
 
 - **スカラー値として**: BLOB は BLOB変数またはフィールドに格納され、変更することができます。
-- **オブジェクト (`4D.Blob`)** として: `4D.Blob` は BLOBオブジェクトです。 オリジナルの BLOB を変更することなく、BLOBそのもの、またはその一部を `4D.Blob` に格納できます。 この方法を [ボクシング](https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%8C%96) と呼びます。 For more info on how to instantiate a `4D.Blob`, see [Blob Class](../API/BlobClass.md).
+- **オブジェクト (`4D.Blob`)** として: `4D.Blob` は BLOBオブジェクトです。 オリジナルの BLOB を変更することなく、BLOBそのもの、またはその一部を `4D.Blob` に格納できます。 この方法を [ボクシング](https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%8C%96) と呼びます。 `4D.Blob` をインスタンス化する方法については、[Blobクラス](../API/BlobClass.md) を参照ください。
 
 各 BLOBタイプには、それぞれ利点があります。 次の表を参考にして、どちらがニーズに合うかを確認してください:
 
-|                         | BLOB | 4D.Blob |
-| ----------------------- |:----:|:-------:|
-| 変更可能                    |  ◯   |    ×    |
-| オブジェクトやコレクション内で共有可能     |  ×   |    ◯    |
-| Passed by reference\* |  ×   |    ◯    |
-| バイトにアクセスする際のパフォーマンス     |  +   |    -    |
-| 最大サイズ                   | 2GB  |   メモリ   |
+|                     | BLOB | 4D.Blob |
+| ------------------- |:----:|:-------:|
+| 変更可能                |  ◯   |    ×    |
+| オブジェクトやコレクション内で共有可能 |  ×   |    ◯    |
+| 参照渡し\*            |  ×   |    ◯    |
+| バイトにアクセスする際のパフォーマンス |  +   |    -    |
+| 最大サイズ               | 2GB  |   メモリ   |
 
-\*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. メソッドを使用する場合は、参照によって渡される BLOBオブジェクト (`4D.Blob`) を使用する方が効率的です。
+\*スカラーBLOB をパラメーターとして受け取るように設計された 4Dコマンドとは異なり、スカラーBLOB をメソッドに渡すと、メモリ内で複製されます。 メソッドを使用する場合は、参照によって渡される BLOBオブジェクト (`4D.Blob`) を使用する方が効率的です。
 
 > デフォルトで、4D はスカラーBLOB の最大サイズを 2GB に設定していますが、OSや空き容量によっては、この制限サイズが小さくなる場合があります。
 
@@ -40,8 +40,8 @@ BLOB に演算子を適用することはできません。
 var $myBlob: Blob
 var $myBlobObject: 4D.Blob
 
-$type:= Value type($myblobObject) // 38 (object)
-$is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
+$type:= Value type($myblobObject) // 38 (オブジェクト)
+$is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  // true
 ```
 
 ## BLOB を引数として渡す
@@ -101,7 +101,7 @@ var $myBlobVar: Blob
 ```
 
 ```4d
-// Pass a pointer to the blob as a parameter to your own method,
+// BLOB のポインターをメソッドに渡します
 COMPUTE BLOB(->$myBlobVar)
 ```
 
@@ -127,22 +127,22 @@ BLOB変数は相互に代入することができます:
 スカラーBLOB が BLOBオブジェクトに (またはその逆) 割り当てられると、4Dはそれらを自動的に変換します。 たとえば:
 
 ```4d
-// Create a variable of type Blob and an object variable
+// BLOB型の変数とオブジェクト変数を作成します
 var $myBlob: Blob
 var $myObject : Object
 
-// Assign that blob to a property of $myObject named "blob"
+// $myObject の "blob" というプロパティに BLOB変数を代入します
 $myObject:=New object("blob"; $myBlob)
 
-// The blob stored in $myBlob is automatically converted to a 4D.Blob
-$type:= OB Instance of($myObject.blob; 4D.Blob)  //True
+// $myBlob に格納される BLOB は自動的に 4D.Blob に変換されます
+$type:= OB Instance of($myObject.blob; 4D.Blob)  // true
 
-// Conversion from 4D.Blob to Blob
+// 4D.Blob から スカラーBLOB への変換
 $myBlob:= $myObject.blob
-$type:= Value type($myBlob) // Blob
+$type:= Value type($myBlob) // BLOB
 ```
 
-> When converting a `4D.Blob` to a scalar blob, if the size of the `4D.Blob` exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 2GB, if you convert a `4D.Blob` of 2.5GB to a scalar blob, you obtain an empty blob.
+> `4D.Blob` をスカラーBLOB に変換する際に、`4D.Blob` のサイズがスカラーBLOB の最大サイズを超える場合、結果のスカラーBLOB は空になります。 たとえば、スカラーBLOB の最大サイズが 2GB の場合、2.5GB の `4D.Blob` をスカラーBLOB に変換すると、空の BLOB が得られます。
 
 ## スカラーBLOB の変更
 
@@ -170,7 +170,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
  End for
 ```
 
-Since you can address all the bytes of a blob individually, you can store whatever you want in a Blob variable or field.
+BLOB の各バイトはすべて個別にアドレス指定できるため、BLOB変数またはフィールドには何でも格納できます。
 
 #### `4D.Blob` のバイトへのアクセス
 
@@ -183,4 +183,4 @@ $myText:= BLOB to text ( $myBlob ; UTF8 text without length )
 $byte:=$myBlob[5]
 ```
 
-Since a `4D.Blob` cannot be altered, you can read the bytes of a `4D.Blob` using this syntax, but not modify them.
+`4D.Blob` は変更できないため、このシンタックスで `4D.Blob` のバイトを読むことはできますが、変更することはできません。
