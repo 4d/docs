@@ -124,7 +124,7 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- END REF -->
 
-The `WEB Server list` command<!-- REF #_command_.WEB Server list. Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos del servidor web disponibles en la aplicación 4D<!-- END REF -->.
 
 A 4D application can contain anywhere from one to several Web servers:
 
