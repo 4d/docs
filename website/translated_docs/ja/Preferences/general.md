@@ -49,19 +49,19 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 *   **しない**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいウィンドウを作成します (タブは作成されません)。
 *   **常にする**: 4Dフォームエディターあるいはメソッドエディターで開かれた新しいドキュメントは常に新しいタブを作成します。
 
-### Appearance (macOS only)
+### アピアランス (macOSのみ)
 
-This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
+このメニューで、**4D開発**環境で使用するカラースキームを選択します。 指定されたカラースキームは、デザインモードのすべてのエディターとウィンドウに適用されます。
 
-> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+> **デスクトップアプリケーション** で使用するカラースキームは、ストラクチャー設定ダイアログボックスの "インターフェース" ページで設定することができます。
 
 次の値が提供されています:
 
-*   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **システムのカラースキーム設定に合わせる** (デフォルト): macOSシステム環境設定で定義されているカラースキームを使用します。
+*   **Light**: ライトテーマを使用します。
+*   **Dark**: ダークテーマを使用します。
 
-> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+> この設定は macOS でのみサポートされています。 Windows上では、"Light" テーマが常に使用されます。
 
 
 ### アプリケーションモードに移動する時に、デザインモードを終了する
