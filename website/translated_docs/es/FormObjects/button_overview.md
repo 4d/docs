@@ -359,7 +359,7 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 > (1) No soportado por el estilo [Ayuda](#ayuda).
 
 
-Additional specific properties are available, depending on the [button style](#button-styles):
+Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
 - [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
 - [Botón por defecto](properties_Appearance.md#default-button) (Plano, Clásico)
