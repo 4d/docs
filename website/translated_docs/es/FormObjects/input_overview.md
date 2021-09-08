@@ -37,7 +37,7 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 ---
 ## Alternativas
 
-You can also represent field and variable expressions in your forms using alternative objects, more particularly:
+También puede representar expresiones de campos y de variables en sus formularios utilizando objetos alternativos, más concretamente:
 
 *   You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
 *   You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
