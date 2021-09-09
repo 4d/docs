@@ -195,6 +195,7 @@ The following fields are logged for each event:
 |Column #|Field name|Description|
 |---|---|---|
 |1| sequence_number| Unique and sequential operation number in the logging session |
+
 |2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) |
 |3|	ProcessID|Process ID|
 |4|	unique_processID|Unique process ID|
@@ -335,13 +336,13 @@ The following fields are logged for each request:
 
 ## Using a log configuration file
 
-You can use a log configuration file to easily manage log recording in a production environment. This file is typically preconfigured by the developer and can be sent to customers so that they just need to load it. Once loaded, the log configuration file triggers the recording of specific request and debug logs. 
+You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to copy or load it. Once enabled, the log configuration file triggers the recording of specific request and debug logs. 
 
-### How to enable the log configuration file
+### How to enable the file
 
-The log configuration file must be a `.json` file. There are several ways to enable it:
+There are several ways to enable the log configuration file:
 
-- On 4D Server with interface, you can open the Maintenance page and can click on the [Load logs configuration file](Admin/server-admin.md#load-logs-configuration-file) then select the file. It is immediately enabled. 
+- On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](Admin/server-admin.md#load-logs-configuration-file) button, then select the file. It is immediately enabled. 
 - You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. It is enabled at project startup (only on the server in client/server).
 - With a built application, you can copy the log configuration file in the following folder:
 	+ Windows: `Users\[userName]\AppData\Roaming\[application]`
@@ -351,7 +352,9 @@ The log configuration file must be a `.json` file. There are several ways to ena
 > - Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server `
 > - macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
 
-### Log configuration file syntax
+### JSON file description
+
+The log configuration file is a `.json` file that can contains the following properties:
 
 ```json
 {
@@ -396,6 +399,7 @@ The log configuration file must be a `.json` file. There are several ways to ena
                 },
                 "state": {
                     "description": "integer to specify type of debuglog and options",
+
                     "type": "integer",
                     "minimum": 0
                 }
@@ -479,7 +483,9 @@ The log configuration file must be a `.json` file. There are several ways to ena
 }
 ```
 
-Here is an example of "myLog.json":
+### Example
+
+Here is an example of log configuration file:
 
 ```json
 {
