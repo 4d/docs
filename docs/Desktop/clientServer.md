@@ -12,7 +12,7 @@ title: Client/Server Management
 
 ![](assets/en/getStart/localremote.png)   
 
-> Connecting to a remote projet from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
+> Connecting to a remote project from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
 
 
