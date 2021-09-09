@@ -77,7 +77,7 @@ For detailed information on these actions, please refer to the [Standard actions
 
 ## Estilos de botones casillas de selección
 
-Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
+Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. Es posible aplicar diferentes estilos predefinidos a las casillas de selección. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
 
 Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son *estructuralmente* idénticos. La diferencia está en el tratamiento de sus variables asociadas.
 
@@ -251,15 +251,15 @@ El estilo del botón Gradient OS X tiene un fondo gris claro con un título y se
 
 ### OS X Texturizado
 
-The OS X Textured button style is similar to the [Bevel](#bevel) button style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel button style, the OS X Textured button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+El estilo de botón OS X Textured es similar al estilo del botón [Bevel](#bevel) pero con un tamaño menor (el tamaño máximo es el de un botón de sistema estándar de macOS). Al igual que el estilo de botón Bevel, el estilo del botón OS X Textured combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
-By default, the OS X Textured button style appears as:
+Por defecto, el estilo del botón OS X Textured aparece como:
 
- - *Windows* - a standard system button with a light blue background with a title in the center.
+ - *Windows* - un botón sistema estándar con un fondo azul claro con un título en el centro.
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Su altura está predefinida: no es posible ampliarla o reducirla.
+ - *macOS* - un botón de sistema estándar. Su altura está predefinida: no es posible ampliarla o reducirla.
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -282,15 +282,15 @@ By default, the OS X Textured button style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+El estilo de botón Office XP combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del [Botón barra de herramientas](#toolbar-button).
 
-The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
+The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. La apariencia de la casilla de selección puede ser diferente cuando el cursor pasa por encima, dependiendo del sistema operativo:
 
  - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - su fondo se muestra siempre. Example with states unchecked / checked:
+ - *macOS* - su fondo se muestra siempre. Ejemplo con estados seleccionado / no seleccionado:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -313,15 +313,15 @@ The colors (highlight and background) of a check box with the Office XP button s
 
 
 
-### Collapse / Expand
+### Contraer/Desplegar
 
-This check box button style can be used to add a standard collapse/expand icon. These icons are used natively in hierarchical lists.
+Este estilo de botón de casilla de selección se puede utilizar para añadir un icono estándar de contraer/expandir. These icons are used natively in hierarchical lists.
 
- - *Windows* - the icon looks like a [+] or a [-]
+ - *Windows* - el icono se ve como un [+] o un [-]
 
   ![](assets/en/FormObjects/checkbox_collapse.png)
 
- - *macOS* - it looks like a triangle pointing right or down.
+ - *macOS* - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
@@ -342,9 +342,9 @@ This check box button style can be used to add a standard collapse/expand icon. 
 
 
 
-### Disclosure Button
+### Botón de divulgación
 
-In macOS and Windows, a check box with the "Disclosure" button style appears as a standard disclosure button, usually used to show/hide additional information. When used as a radio button, the button symbol points downwards with value 0 and upwards with value 1.
+En macOS y Windows, una casilla de selección con el estilo de botón "Divulgación" aparece como un botón de información estándar, normalmente utilizado para mostrar/ocultar información adicional. Cuando se utiliza como botón radio, el símbolo del botón apunta hacia abajo con el valor 0 y hacia arriba con el valor 1.
 
  - *Windows*
 
@@ -372,13 +372,13 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 
 ### Personalizado
 
-The Custom button style accepts a personalized background picture and allows managing specific properties:
+El estilo del botón Personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname)
-- [Icon Offset](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname)
+- [Desplazamiento icono](properties_TextAndPicture.md#icon-offset)
+- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Margen vertical](properties_TextAndPicture.md#verticalMargin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
+Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede utilizarse junto con una </a>imagen de fondo</a> [de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Ejemplo JSON:
 
@@ -390,7 +390,7 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
         "icon": "/RESOURCES/smiley.jpg", 
         "iconFrame": 4, 
         "customBackgroundPicture": "/RESOURCES/paper.jpg", 
-        "iconOffset": 5, //custom icon offset when clicked
+        "iconOffset": 5, //desplazamiento icono personalizado al hacer clic
         "left": 60, 
         "top": 160, 
         "width": 100,       
@@ -405,14 +405,14 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 ## Propiedades soportadas
 
-All check boxes share the same set of basic properties:
+Todas las casillas de selección comparten un mismo conjunto de propiedades básicas:
 
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 
-Additional specific properties are available, depending on the [button style](#button-styles):
+Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
 - [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
-- [Three-States](properties_Display.md#three-states) (Flat, Regular)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Tres estados](properties_Display.md#three-states) (Plano, Clásico)
+- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#title-picture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)
