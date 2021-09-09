@@ -336,25 +336,25 @@ The following fields are logged for each request:
 
 ## Using a log configuration file
 
-You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to copy or load it. Once enabled, the log configuration file triggers the recording of specific request and debug logs. 
+You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to copy or load it. Once enabled, the log configuration file triggers the recording of specific logs. 
 
 ### How to enable the file
 
 There are several ways to enable the log configuration file:
 
-- On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](Admin/server-admin.md#load-logs-configuration-file) button, then select the file. It is immediately enabled. 
-- You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. It is enabled at project startup (only on the server in client/server).
-- With a built application, you can copy the log configuration file in the following folder:
+- On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](Admin/server-admin.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server. 
+- You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. In this case, the file must be named `logConfig.json`. It is enabled at project startup (only on the server in client/server).
+- With a built application, you can copy the `logConfig.json` file in the following folder:
 	+ Windows: `Users\[userName]\AppData\Roaming\[application]`
 	+ macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 
-> If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the log configuration file in the following folder: 
+> If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder: 
 > - Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server `
 > - macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
 
 ### JSON file description
 
-The log configuration file is a `.json` file that can contains the following properties:
+The log configuration file is a `.json` file that can contain the following properties:
 
 ```json
 {
