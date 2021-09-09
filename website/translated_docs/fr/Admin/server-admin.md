@@ -307,7 +307,7 @@ The **View Report** button (named **Download report** if the operation was carri
 
 #### Load logs configuration file
 
-This button allows you to load a special server log configuration file (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
+This button allows you to load a special server [log configuration file](debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 
 
 #### Pause logging
