@@ -4,7 +4,7 @@ title: Texto e Imagen
 ---
 
 ---
-## Background pathname
+## Ruta de acceso fondo
 
 Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
 
@@ -91,7 +91,7 @@ Designates the placement of an icon in relation to the form object.
 
 
 ---
-## Icon Offset
+## Desplazamiento icono
 
 Sets a custom offset value in pixels, which will be used when the button is clicked
 

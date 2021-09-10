@@ -22,7 +22,7 @@ Although they are usually equivalent, some data types available at the database 
 |[Null](Concepts/dt_null_undefined.md)	|-	|Yes|-|-
 |[Pointer](Concepts/dt_pointer.md)	|-	|Yes|`Pointer`|`C_POINTER`, `ARRAY POINTER`
 |[Picture](Concepts/dt_picture.md)	|Yes	|Yes|`Picture`|`C_PICTURE`, `ARRAY PICTURE`
-|[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`Blob`|`C_BLOB`, `ARRAY BLOB`
+|[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`Blob`, `4D.Blob`|`C_BLOB`, `ARRAY BLOB`
 |[Object](Concepts/dt_object.md)	|Yes	|Yes|`Object`|`C_OBJECT`, `ARRAY OBJECT`
 |[Collection](Concepts/dt_collection.md)	|-	|Yes|`Collection`|`C_COLLECTION`  
 |[Variant](Concepts/dt_variant.md)(2)	|-	|Yes|`Variant`|`C_VARIANT`|

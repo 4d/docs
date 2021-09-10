@@ -132,11 +132,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### *options*
 
-| Propiedad         | Tipo | Descripción                                                                                                                                  |
-| ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                       |
-| encodingEncrypted | text | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "Base64". |
-| encodingDecrypted | text | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".  |
+| Propiedad         | Tipo | Descripción                                                                                                                                                    |
+| ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                         |
+| encodingEncrypted | text | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a descifrar. Puede ser "Base64", o "Base64URL". Default is "Base64". |
+| encodingDecrypted | text | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".                    |
 
 
 #### *Resultado*
@@ -293,12 +293,12 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *options*
 
-| Propiedad         | Tipo    | Descripción                                                                                                                         |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                          |
-| encodingEncrypted | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64". |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm  |
-| encoding          | text    | ERepresentation to be used for result signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                  |
+| Propiedad         | Tipo    | Descripción                                                                                                                                                                                      |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash              | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
+| encodingEncrypted | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                                              |
+| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                                               |
+| encoding          | text    | ERepresentation to be used for result signature. Los valores posibles son "Base64" o "Base64URL". Default is "Base64".                                                                           |
 
 
 #### *Resultado*
@@ -367,11 +367,11 @@ The `CryptoKey` must contain a valid **public** key.
 
 #### *options*
 
-| Propiedad | Tipo    | Descripción                                                                                                                                      |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash      | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". "HASH256", "HASH384", or "HASH512".                                       |
-| pss       | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm               |
-| encoding  | text    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+| Propiedad | Tipo    | Descripción                                                                                                                                                                                      |
+| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash      | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
+| pss       | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                                               |
+| encoding  | text    | Representación de la firma facilitada. Puede ser "Base64" o "Base64URL". Default is "Base64".                                                                                                    |
 
 
 #### *Resultado*
