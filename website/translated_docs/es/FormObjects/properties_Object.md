@@ -24,7 +24,7 @@ This property designates the type of the [active or inactive form object](formOb
 
 
 ---
-## Object Name
+## Nombre del objeto
 
 Each active form object is associated with an object name. Each object name must be unique.
 > Object names are limited to a size of 255 bytes.
@@ -76,7 +76,7 @@ Here is the list of objects whose value can be saved:
 
 
 ---
-## Variable or Expression
+## Variable o expresión
 
 > See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
 

@@ -291,6 +291,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
+
 ```
 
 #### 例題 5
@@ -578,6 +579,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
 **4D Server**: クライアント/サーバーにおいては、対応するテーブルのプライマリーキーが自動インクリメントであった場合、エンティティがサーバー側に保存されたときに計算されます。
+
+All attributes of the entity are initialized with the **null** value.
+
+> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
 
 #### 例題
 

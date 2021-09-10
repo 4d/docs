@@ -26,7 +26,7 @@ If the tab control is wide enough to display all the tabs with both the labels a
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
 
-### JSON Example:
+### Ejemplo JSON:
 
 ```4d
     "myTab": {
@@ -53,7 +53,7 @@ To supply the labels for a tab control, you can use:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
-| Propriedad     | Tipo      | Descripción                                                                                                                           |
+| Propiedad      | Tipo      | Descripción                                                                                                                           |
 | -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Colección | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
 | `index`        | number    | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
@@ -120,6 +120,6 @@ For example, if the user selects the 3rd tab, 4D will display the third page of 
 
 
 
-## Supported Properties
+## Propiedades soportadas
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

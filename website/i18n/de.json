@@ -207,8 +207,20 @@
       "Concepts/variables": {
         "title": "Variablen"
       },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Breakpoints and Command Catching"
+      },
+      "Debugging/debugger": {
+        "title": "Debugger"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -868,6 +880,7 @@
       "4D Language Concepts": "Konzepte der 4D Programmiersprache",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
+      "Debugging": "Debugging",
       "Access Rights": "Access Rights",
       "Preferences": "Preferences",
       "Administration": "Administration",
@@ -883,7 +896,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {
@@ -909,6 +922,7 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Debugging|no description given": "Debugging",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

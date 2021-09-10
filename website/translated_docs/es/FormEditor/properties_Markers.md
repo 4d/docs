@@ -1,5 +1,5 @@
 ---
-id: markers
+id: marcadores
 title: Marcadores
 ---
 
@@ -37,9 +37,9 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                   |
-| ---------- | -------------- | ---------------------------------- |
-| markerBody | integer        | Detail marker position. Minimum: 0 |
+| Nombre     | Tipos de datos | Valores posibles                  |
+| ---------- | -------------- | --------------------------------- |
+| markerBody | integer        | Detail marker position. Mínimo: 0 |
 
 ---
 
@@ -54,7 +54,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 | Nombre       | Tipos de datos | Valores posibles |
 | ------------ | -------------- | ---------------- |
-| markerFooter | integer        | minimum: 0       |
+| markerFooter | integer        | mínimo: 0        |
 
 
 ---

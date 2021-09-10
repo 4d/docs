@@ -124,7 +124,7 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- END REF -->
 
-The `WEB Server list` command<!-- REF #_command_.WEB Server list. Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos del servidor web disponibles en la aplicación 4D<!-- END REF -->.
 
 A 4D application can contain anywhere from one to several Web servers:
 
@@ -802,13 +802,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Propriedad |                         | Tipo      | Descripción                                                          |
-| ---------- | ----------------------- | --------- | -------------------------------------------------------------------- |
-| success    |                         | Booleano  | True if the web server was correctly started, False otherwise        |
-| errors     |                         | Colección | 4D error stack (not returned if the web server started successfully) |
-|            | \[].errCode            | Número    | 4D error code                                                        |
-|            | \[].message            | Texto     | Description of the 4D error                                          |
-|            | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
+| Propiedad |                         | Tipo      | Descripción                                                          |
+| --------- | ----------------------- | --------- | -------------------------------------------------------------------- |
+| success   |                         | Booleano  | True if the web server was correctly started, False otherwise        |
+| errors    |                         | Colección | 4D error stack (not returned if the web server started successfully) |
+|           | \[].errCode            | Número    | 4D error code                                                        |
+|           | \[].message            | Texto     | Description of the 4D error                                          |
+|           | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Ejemplo

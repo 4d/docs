@@ -12,7 +12,7 @@
         "title": "Webデータエクスプローラー"
       },
       "Admin/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "ログファイルの詳細"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -207,8 +207,20 @@
       "Concepts/variables": {
         "title": "変数"
       },
+      "Debugging/basics": {
+        "title": "画面の説明"
+      },
+      "Debugging/breakpoints": {
+        "title": "ブレークポイントとキャッチコマンド"
+      },
+      "Debugging/debugger": {
+        "title": "デバッガー"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
-        "title": "プロジェクトパッケージのビルド"
+        "title": "アプリケーションビルド"
       },
       "Desktop/clientServer": {
         "title": "クライアント/サーバー管理"
@@ -427,7 +439,7 @@
         "title": "JSON プロパティリスト"
       },
       "FormEditor/markers": {
-        "title": "Markers"
+        "title": "マーカー"
       },
       "FormEditor/menu": {
         "title": "メニュー"
@@ -502,7 +514,7 @@
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "表示フォーマット"
+        "title": "表示"
       },
       "FormObjects/propertiesEntry": {
         "title": "入力"
@@ -683,22 +695,22 @@
         "title": "リモートデータストアの利用"
       },
       "Preferences/forms": {
-        "title": "Forms Page"
+        "title": "フォームページ"
       },
       "Preferences/general": {
         "title": "一般ページ"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "メソッドページ"
       },
       "Preferences/overview": {
         "title": "概要"
       },
       "Preferences/shortcuts": {
-        "title": "Shortcuts Page"
+        "title": "ショートカットページ"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "ストラクチャーページ"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
@@ -868,8 +880,9 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
+      "Debugging": "Debugging",
       "Access Rights": "アクセス権限",
-      "Preferences": "Preferences",
+      "Preferences": "環境設定",
       "Administration": "管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
@@ -883,7 +896,7 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build application": "アプリケーションビルド"
+      "Build Application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -909,12 +922,13 @@
     "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
+    "Debugging|no description given": "Debugging",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
-    "Description of log files|no description given": "Description of log files",
+    "Description of log files|no description given": "ログファイルの詳細",
     "Command Line Interface|no description given": "コマンドライン・インターフェース",
-    "Preferences|no description given": "Preferences",
+    "Preferences|no description given": "環境設定",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "管理",

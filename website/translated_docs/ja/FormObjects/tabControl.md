@@ -11,7 +11,7 @@ title: タブコントロール
 
 各画面を移動するには、目的のタブをクリックします。
 
-これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。 If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。 タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/ja/page247.html) コマンドまたは`gotoPage` 標準アクションを使用します。
 
 タブコントロールの他の利用法は、サブフォームやリストボックスに表示されるデータを制御することです。 たとえば、名刺帳はタブコントロールを用いて実現することができます。 タブにはひらがなの各文字を表示し、タブコントロールの動作としてはユーザーがクリックした文字と一致するデータをロードします。
 
@@ -43,38 +43,38 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 ## タブコントロールへのラベルの追加
 
-To supply the labels for a tab control, you can use:
+タブコントロールにラベルを設定するには、次のものを利用できます:
 
 - オブジェクト
-- a choice list
-- an array
+- 選択リスト
+- 配列
 
 ### オブジェクトの使用
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. このオブジェクトには、次のプロパティが格納されていなくてはなりません:
+[コレクション](Concepts/dt_collection) をカプセル化した [オブジェクト](Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#変数あるいは式) として割り当てることができます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ    | 説明                                                                                                              |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| `values`       | コレクション | 必須 - スカラー値のコレクション。 Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number | Index of the currently tab control page (value between 0 and `collection.length-1`)                             |
-| `currentValue` | テキスト   | Currently selected value                                                                                        |
+| プロパティ          | タイプ    | 説明                                                                    |
+| -------------- | ------ | --------------------------------------------------------------------- |
+| `values`       | コレクション | 必須 - スカラー値のコレクション。 文字列の値のみがサポートされています。 無効、空、または未定義の場合、タブコントロールは空になります |
+| `index`        | number | タブコントロールのカレントページのインデックス (0 と `collection.length-1` の間の値)              |
+| `currentValue` | テキスト   | 現在選択されている値                                                            |
 
-The initialization code must be executed before the form is presented to the user.
+この初期化コードはユーザーにフォームを表示する前に実行しなければなりません。
 
-In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+次の例では、タブコントロールの [式](properties_Object.md#変数あるいは式) として `Form.tabControl` が定義されています。 フォームオブジェクトに [`gotoPage` 標準アクション](#gotopage-標準アクション) を関連付けることができます。
 
 ```4d
 Form.tabControl:=New object
 Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
-Form.tabControl.index:=2 //start on page 3
+Form.tabControl.index:=2 // ページ3 から開始します
 ```
 
 
 ### 選択リストの使用
 
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
+タブコントロールに [選択リスト](properties_DataSource.md#選択リスト-静的リスト) を関連付けることができます。これにはコレクション (静的リスト)、または jsonリスト ("$ref") への JSONポインターを使用します。 リストエディターにてリスト項目に関連付けられたアイコンはタブコントロールに表示されます。
 
-### Using a Text array
+### テキスト配列の使用
 
 フォームの各ページの名前を格納するテキスト配列を作成することができます。 このコードはユーザーにフォームを表示する前に実行しなければなりません。 たとえば、このコードをタブコントロールのオブジェクトメソッドに置いて、`On Load` イベントが生じたときにこのメソッドを実行します。
 
@@ -84,20 +84,20 @@ You can assign a [choice list](properties_DataSource.md#choice-list-static-list)
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
+> ページの名前を階層リストに保存し、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使用して値をロードすることも可能です。
 
 
-## Goto page features
+## Goto page 機能
 
 ### FORM GOTO PAGE コマンド
 
-You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
+タブコントロールのメソッドで [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/ja/page247.html) コマンドを使用できます:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
+[`On Clicked`](Events/onClicked.md) イベントが発生すると、このコマンドが実行されます。 この後 [`On Unload`](Events/onUnload.md) イベントの発生時にこの配列をクリアします。
 
 オブジェクトメソッドの例を次に示します:
 

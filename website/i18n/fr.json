@@ -9,7 +9,7 @@
         "title": "Interface de ligne de commande"
       },
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Explorateur de données Web"
       },
       "Admin/debugLogFiles": {
         "title": "Description des fichiers historiques"
@@ -168,7 +168,7 @@
         "title": "Pointeur"
       },
       "Concepts/string": {
-        "title": "Chaine"
+        "title": "Chaîne"
       },
       "Concepts/time": {
         "title": "Heure"
@@ -207,8 +207,20 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Breakpoints and Command Catching"
+      },
+      "Debugging/debugger": {
+        "title": "Debugger"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
-        "title": "Générer un package projet"
+        "title": "Générateur d'application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -824,7 +836,7 @@
         "title": "Allowing project methods"
       },
       "WebServer/authentication": {
-        "title": "Authentication"
+        "title": "Authentification"
       },
       "WebServer/errorPages": {
         "title": "Custom HTTP Error Pages"
@@ -868,13 +880,14 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
+      "Debugging": "Debugging",
       "Access Rights": "Droits d'accès",
-      "Preferences": "Preferences",
+      "Preferences": "Préférences",
       "Administration": "Administration",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
-      "Web Development": "Web Development",
+      "Web Development": "Développement Web",
       "REST Server": "Serveur REST",
       "Client/Server": "Client/Server",
       "Forms": "Formulaires",
@@ -883,7 +896,7 @@
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Générateur d'application"
     }
   },
   "pages-strings": {
@@ -900,7 +913,7 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Développement Web",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
@@ -909,12 +922,13 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Debugging|no description given": "Debugging",
+    "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
     "Description of log files|no description given": "Description des fichiers historiques",
     "Command Line Interface|no description given": "Interface de ligne de commande",
-    "Preferences|no description given": "Preferences",
+    "Preferences|no description given": "Préférences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

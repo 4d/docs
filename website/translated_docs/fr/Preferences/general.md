@@ -112,7 +112,7 @@ This area configures access to the 4D HTML documentation displayed in your curre
 
 Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
 
-### Look in the local folder first
+### Commencer par consulter le dossier local
 
 > This option is only taken into account for command documentation access (excluding class functions).
 

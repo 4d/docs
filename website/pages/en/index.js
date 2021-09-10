@@ -59,6 +59,7 @@ class Index extends React.Component {
     webAdmin: <translate>Web Administration</translate>,
 	cs: <translate>Client/Server</translate>,
     tls: <translate>TLS Protocol (HTTPS)</translate>,
+	  debugging: <translate>Debugging</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Access Rights</translate>,
@@ -90,6 +91,7 @@ class Index extends React.Component {
 				  [${subContents.langRef}](https://doc.4d.com/4Dv19/4D/19/4D-Language-Reference.100-5391516.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
+				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
                   [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
 				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
@@ -129,7 +131,8 @@ class Index extends React.Component {
                   title: <translate>Web applications</translate>,
                 },
                 {
-                  content: `[4D for iOS](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
+                  content: `[Go Mobile with 4D](https://developer.4d.com/go-mobile)<br>
+				  [4D for iOS (archive)](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_MobileApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Mobile',

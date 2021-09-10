@@ -51,7 +51,7 @@ Bottom coordinate of the object in the form.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| bottom | number         | minimum: 0       |
+| bottom | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -59,7 +59,7 @@ Bottom coordinate of the object in the form.
 
 
 ---
-## Left
+## Izquierda
 
 Left coordinate of the object on the form.
 
@@ -67,7 +67,7 @@ Left coordinate of the object on the form.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| left   | number         | minimum: 0       |
+| left   | number         | mínimo: 0        |
 
 
 #### Objects Supported
@@ -77,7 +77,7 @@ Left coordinate of the object on the form.
 
 
 ---
-## Right
+## Derecha
 
 Right coordinate of the object in the form.
 
@@ -85,7 +85,7 @@ Right coordinate of the object in the form.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| right  | number         | minimum: 0       |
+| right  | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -95,7 +95,7 @@ Right coordinate of the object in the form.
 
 
 ---
-## Top
+## Arriba
 
 Top coordinate of the object in the form.
 
@@ -103,7 +103,7 @@ Top coordinate of the object in the form.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| top    | number         | minimum: 0       |
+| top    | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -127,7 +127,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 | Nombre       | Tipos de datos | Valores posibles |
 | ------------ | -------------- | ---------------- |
-| borderRadius | integer        | minimum: 0       |
+| borderRadius | integer        | mínimo: 0        |
 
 #### Objects Supported
 
@@ -137,7 +137,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 
 ---
-## Height
+## Altura
 
 This property designates an object's vertical size.
 > Some objects may have a predefined height that cannot be altered.
@@ -146,7 +146,7 @@ This property designates an object's vertical size.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| height | number         | minimum: 0       |
+| height | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -154,7 +154,7 @@ This property designates an object's vertical size.
 
 
 ---
-## Width
+## Ancho
 
 This property designates an object's horizontal size.
 > * Some objects may have a predefined height that cannot be altered.
@@ -166,7 +166,7 @@ This property designates an object's horizontal size.
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| width  | number         | minimum: 0       |
+| ancho  | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -191,7 +191,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 | Nombre   | Tipos de datos | Valores posibles |
 | -------- | -------------- | ---------------- |
-| maxWidth | number         | minimum: 0       |
+| maxWidth | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -209,7 +209,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 | Nombre   | Tipos de datos | Valores posibles |
 | -------- | -------------- | ---------------- |
-| minWidth | number         | minimum: 0       |
+| minWidth | number         | mínimo: 0        |
 
 #### Objects Supported
 
@@ -223,7 +223,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 
 ---
-## Row Height
+## Altura de las líneas
 
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
@@ -241,12 +241,12 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 
 #### Ver también
-[Row Height Array](#row-height-array)
+[Array altura de las líneas](#row-height-array)
 
 
 
 ---
-## Row Height Array
+## Array altura de las líneas
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 
@@ -275,7 +275,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 
 #### Ver también
-[Row Height](#row-height)
+[Altura de las líneas](#row-height)
 
 
 

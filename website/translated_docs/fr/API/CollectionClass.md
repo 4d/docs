@@ -75,10 +75,10 @@ Une collection est initialisée avec :
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| Paramètres | Type                                                                       |    | Description             |
-| ---------- | -------------------------------------------------------------------------- |:--:| ----------------------- |
-| value      | Numérique, Texte, Date, Heure, Booléen, Objet, Collection, Image, Pointeur | -> | Valeur(s) de collection |
-| Résultat   | Collection                                                                 | <- | Nouvelle collection     |
+| Paramètres | Type                                                                    |    | Description             |
+| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection |
+| Résultat   | Collection                                                              | <- | Nouvelle collection     |
 <!-- END REF -->
 
 
@@ -2219,12 +2219,12 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 
 <!-- REF #collection.reduce().Params -->
-| Paramètres | Type                                               |    | Description                                                               |
-| ---------- | -------------------------------------------------- |:--:| ------------------------------------------------------------------------- |
-| methodName | Texte                                              | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
-| initValue  | Texte, Numérique, Objet, Collection, Date, Booléen | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
-| param      | expression                                         | -> | Parameter(s) to pass to *methodName*                                      |
-| Résultat   | Texte, Numérique, Objet, Collection, Date, Booléen | <- | Résultat de la valeur de l'accumulateur                                   |
+| Paramètres | Type                                            |    | Description                                                               |
+| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------- |
+| methodName | Texte                                           | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
+| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
+| param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                      |
+| Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                   |
 <!-- END REF -->
 
 
@@ -2371,11 +2371,11 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| Paramètres   | Type                                               |    | Description                                         |
-| ------------ | -------------------------------------------------- |:--:| --------------------------------------------------- |
-| size         | Entier long                                        | -> | Nouvelle taille de la collection                    |
-| defaultValue | Numérique, Texte, Objet, Collection, Date, Booléen | -> | Valeur par défaut pour remplir de nouveaux éléments |
-| Résultat     | Collection                                         | <- | Collection d'origine redimensionnée                 |
+| Paramètres   | Type                                            |    | Description                                         |
+| ------------ | ----------------------------------------------- |:--:| --------------------------------------------------- |
+| size         | Entier long                                     | -> | Nouvelle taille de la collection                    |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valeur par défaut pour remplir de nouveaux éléments |
+| Résultat     | Collection                                      | <- | Collection d'origine redimensionnée                 |
 <!-- END REF -->
 
 
@@ -2793,10 +2793,10 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
-| Paramètres | Type                                      |    | Description                                   |
-| ---------- | ----------------------------------------- |:--:| --------------------------------------------- |
-| value      | Texte, Numérique, Objet, Collection, Date | -> | Valeur(s) à insérer au début de la collection |
-| Résultat   | Réel                                      | <- | Collection contenant des éléments ajoutés     |
+| Paramètres | Type                                   |    | Description                                   |
+| ---------- | -------------------------------------- |:--:| --------------------------------------------- |
+| value      | Text, Number, Object, Collection, Date | -> | Valeur(s) à insérer au début de la collection |
+| Résultat   | Réel                                   | <- | Collection contenant des éléments ajoutés     |
 <!-- END REF -->
 
 

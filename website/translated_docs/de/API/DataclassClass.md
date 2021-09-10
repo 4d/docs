@@ -291,6 +291,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 
 
+
 ```
 
 #### Example 5
@@ -578,6 +579,10 @@ The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memo
 The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
+
+All attributes of the entity are initialized with the **null** value.
+
+> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
 
 #### Beispiel
 

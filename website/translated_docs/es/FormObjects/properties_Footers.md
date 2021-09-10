@@ -22,7 +22,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 
 ---
-## Height
+## Altura
 
 This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 
@@ -42,7 +42,7 @@ Note that converting back and forth may lead to an end result that is different 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "List Box": {

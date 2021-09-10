@@ -88,7 +88,7 @@ title: プロジェクトパッケージのビルド
 
 > .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準形式を使用したくない場合は、値を `False` に設定した `UseStandardZipFormat` XMLキーを [`buildApp.4DSettings`](#アプリケーションビルド設定) ファイルに追加します (詳細については、[doc.4d.com](https://doc.4d.com) の *アプリケーションビルド設定ファイル* マニュアルを参照ください)。
 
 
 #### 関連するフォルダーを含む
@@ -257,10 +257,10 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 アプリケーションのクライアント部分をビルドするにはこのオプションを選択します。
 
-You can check this option:
+このオプションをチェックすると同時に:
 
-- along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
-- without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part.
+- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択: 現在のプラットフォーム用のサーバーと対応するクライアントをビルドし、(任意で) 自動アップデートアーカイブファイルも含むことができます。
+- [**サーバーアプリケーションをビルド**](#サーバーアプリケーションをビルド) オプションを選択しない: 通常は、サーバーのビルド時に選択する "別プラットフォーム" 用のアップデートアーカイブをビルドするときにこの設定を使います。
 
 #### 4D Volume Desktopの場所
 
@@ -274,35 +274,35 @@ You can check this option:
 
 #### サーバーアプリケーション内部のクライアントアプリケーションのコピー
 
-このエリアのオプションは、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定します。 These options are only enabled when the **Build client application** option is checked.
+このエリアのオプションは、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定します。 これらのオプションは、**クライアントアプリケーションをビルド** オプションがチェックされている場合にのみ有効です。
 
-- **Allow automatic update of Windows client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Windows platform in case of update.
-- **Allow automatic update of Macintosh client application** - Check this option to build a `.4darchive` file that can be sent to your client applications on the Macintosh platform in case of update.
+- **Windows クライアントアプリケーションの自動更新を有効にする** - このオプションをチェックすると、アップデートの際に Windowsプラットフォーム上のクライアントアプリケーションに送信される `.4darchive` ファイルを作成します。
+- **macOS クライアントアプリケーションの自動更新を有効にする** - このオプションをチェックすると、アップデートの際に macOSプラットフォーム上のクライアントアプリケーションに送信される `.4darchive` ファイルを作成します。
 
-The `.4darchive` is copied at the following location:
+`.4darchive` は以下の場所にコピーされます:
 
 ```
 <ApplicationName>_Build/Client Server executable/Upgrade4DClient/
 ```
 
-#### Selecting client archive for the concurrent platform
+#### 別プラットフォームのクライアントアーカイブの選択
 
 
 
 
-You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
+別プラットフォーム上で動作するクライアントアプリケーション用に、**自動更新を有効にする** オプションをチェックすることができます。 このオプションは、以下の場合にのみ有効です:
 
-- the **Build server application** option is checked,
-- the **Allow automatic update...** option for client applications running on the current platform is checked.
+- **サーバーアプリケーションをビルド** オプションがチェックされている。
+- 現在のプラットフォームで実行されるクライアントアプリケーションについて、**自動更新を有効にする** オプションがチェックされている。
 
-This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
+この機能を利用するには、**[...]** ボタンをクリックして、アップデートに使用するファイルのディスク上の場所を指定する必要があります。 選択するファイルは、現在のサーバープラットフォームによって異なります:
 
-| Current server platform | Required file                                                | 詳細                                                                                                                                                                         |
-| ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                 | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| 現在のサーバープラットフォーム | 必要なファイル                                                   | 詳細                                                                                                                                  |
+| --------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択します。 前もって Windows上で構築された `.4darchive` ファイルを選択するには、**Shift** を押しながら [...] をクリックします。 |
+| Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                     |
 
-You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
+[**クライアントアプリケーションをビルド**](#クライアントアプリケーションをビルド) と [**自動更新を有効にする**](#copy-of-client-applications-inside-the-server-application) オプションのみを選択することで、サーバーとは異なるプラットフォーム上で `.4darchive` ファイルをビルドすることができます。
 
 
 #### 更新通知の表示
@@ -519,9 +519,9 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
+> Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...") が発生します。
 
-The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
+アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 
 
 #### ノータリゼーション (公証) について

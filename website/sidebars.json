@@ -51,6 +51,7 @@
 	"API/ZipFileClass",
 	"API/ZipFolderClass"
 	],
+  "Debugging":["Debugging/basics","Debugging/debugger","Debugging/breakpoints", "Debugging/debugging-remote"],
   "Access Rights":["Users/overview","Users/editing"],
   "Preferences":["Preferences/overview","Preferences/general","Preferences/structure","Preferences/forms","Preferences/methods","Preferences/shortcuts"],
   "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/debugLogFiles","Admin/cli"],

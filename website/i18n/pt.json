@@ -111,7 +111,7 @@
         "title": "Arquivo de Log (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -207,8 +207,20 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Breakpoints and Command Catching"
+      },
+      "Debugging/debugger": {
+        "title": "Debugger"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Debugging from remote machines"
+      },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -394,7 +406,7 @@
         "title": "On Window Opening Denied"
       },
       "Events/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -610,7 +622,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -639,8 +651,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Visão Geral",
+        "sidebar_label": "Visão Geral"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -692,7 +704,7 @@
         "title": "Methods Page"
       },
       "Preferences/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Preferences/shortcuts": {
         "title": "Shortcuts Page"
@@ -713,7 +725,7 @@
         "title": "Documenting a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -818,7 +830,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
@@ -845,7 +857,7 @@
         "title": "Template pages"
       },
       "WebServer/webServer": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "WebServer/webServerAdmin": {
         "title": "Administration"
@@ -868,6 +880,7 @@
       "4D Language Concepts": "4D Language Concepts",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
+      "Debugging": "Debugging",
       "Access Rights": "Access Rights",
       "Preferences": "Preferences",
       "Administration": "Administration",
@@ -883,7 +896,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {
@@ -909,6 +922,7 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Debugging|no description given": "Debugging",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

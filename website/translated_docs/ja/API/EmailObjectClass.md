@@ -151,17 +151,17 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ       | タイプ            | 値                                                                                                     |
-| ----------- | -------------- | ----------------------------------------------------------------------------------------------------- |
-| partID      | テキスト           | メールのパートを固有に識別する ID                                                                                    |
-| type        | テキスト           | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
-| charset     | テキスト           | Content-Type ヘッダーフィールドの Charset の値                                                                    |
-| encoding    | テキスト           | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                         |
-| disposition | テキスト           | パートの Content-Disposition ヘッダーフィールドの値                                                                  |
-| language    | テキストのコレクション    | パートの Content-Language ヘッダーフィールドの、[RFC3282](https://tools.ietf.org/html/rfc3282) で定義されている言語タグの一覧 (あれば) |
-| location    | テキスト           | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)    |
-| subParts    | オブジェクトのコレクション。 | それぞれの子の本文パート (*EmailBodyPart* オブジェクトのコレクション)                                                          |
-| headers     | オブジェクトのコレクション。 | パート内の全ヘッダーフィールドの、メッセージ内で出現する順の一覧 (*EmailHeader* オブジェクトのコレクション。[headers](#headers) プロパティ参照)            |
+| プロパティ       | タイプ                 | 値                                                                                                     |
+| ----------- | ------------------- | ----------------------------------------------------------------------------------------------------- |
+| partID      | テキスト                | メールのパートを固有に識別する ID                                                                                    |
+| type        | テキスト                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
+| charset     | テキスト                | Content-Type ヘッダーフィールドの Charset の値                                                                    |
+| encoding    | テキスト                | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                         |
+| disposition | テキスト                | パートの Content-Disposition ヘッダーフィールドの値                                                                  |
+| language    | Text の Collection   | パートの Content-Language ヘッダーフィールドの、[RFC3282](https://tools.ietf.org/html/rfc3282) で定義されている言語タグの一覧 (あれば) |
+| location    | テキスト                | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)    |
+| subParts    | Object の Collection | それぞれの子の本文パート (*EmailBodyPart* オブジェクトのコレクション)                                                          |
+| headers     | Object の Collection | パート内の全ヘッダーフィールドの、メッセージ内で出現する順の一覧 (*EmailHeader* オブジェクトのコレクション。[headers](#headers) プロパティ参照)            |
 
 
 
@@ -505,10 +505,10 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 **MAIL Convert from MIME**( *mime* : Blob ) : Object<br>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
-| 引数   | タイプ       |    | 説明           |
-| ---- | --------- |:--:| ------------ |
-| mime | BLOB、テキスト | -> | MIME形式のメール   |
-| 戻り値  | オブジェクト    | <- | Email オブジェクト |
+| 引数   | タイプ        |    | 説明           |
+| ---- | ---------- |:--:| ------------ |
+| mime | Blob, Text | -> | MIME形式のメール   |
+| 戻り値  | オブジェクト     | <- | Email オブジェクト |
 <!-- END REF -->
 
 #### 説明

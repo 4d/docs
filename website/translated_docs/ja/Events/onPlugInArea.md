@@ -3,11 +3,11 @@ id: onPlugInArea
 title: On Plug in Area
 ---
 
-| Code | Can be called by                                                   | 定義                                                            |
-| ---- | ------------------------------------------------------------------ | ------------------------------------------------------------- |
-| 19   | Form - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) | An external object requested its object method to be executed |
+| コード | 呼び出し元                                                 | 定義                              |
+| --- | ----------------------------------------------------- | ------------------------------- |
+| 19  | フォーム - [プラグインエリア](FormObjects/pluginArea_overview.md) | 外部オブジェクトのオブジェクトメソッドの実行がリクエストされた |
 
 
 ## 説明
 
-The event is generated when a plug-in requested its form area to execute the associated object method. 
+このイベントは、関連するオブジェクトメソッドの実行をプラグインがフォームエリアに要求したときに発生します。 

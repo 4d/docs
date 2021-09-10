@@ -22,7 +22,7 @@ title: データタイプの概要
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                              | -                                                        |
 | [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `Pointer`                                      | `C_POINTER`, `ARRAY POINTER`                             |
 | [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | `Picture`                                      | `C_PICTURE`, `ARRAY PICTURE`                             |
-| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `BLOB`                                         | `C_BLOB`, `ARRAY BLOB`                                   |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `Blob`, `4D.Blob`                              | `C_BLOB`, `ARRAY BLOB`                                   |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `Object`                                       | `C_OBJECT`, `ARRAY OBJECT`                               |
 | [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `Collection`                                   | `C_COLLECTION`                                           |
 | [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `Variant`                                      | `C_VARIANT`                                              |
@@ -33,7 +33,7 @@ title: データタイプの概要
 
 ## デフォルト値
 
-コンパイラ支持子によって変数の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッションの間はその値を保ち続けます。
+コンパイラー指示子によって変数の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッションの間はその値を保ち続けます。
 
 デフォルトの値は、変数の型とカテゴリ、その実行コンテキスト (インタープリターかコンパイルか) に加え、コンパイルモードではデータベース設定のコンパイラーページで定義されたコンパイルオプションによって決まります:
 

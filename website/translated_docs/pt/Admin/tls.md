@@ -9,7 +9,7 @@ All 4D servers can communicate in secured mode through the TLS (Transport Layer 
 - the application server (client-server desktop applications)
 - the SQL server
 
-## Overview
+## Visão Geral
 
 The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
 
