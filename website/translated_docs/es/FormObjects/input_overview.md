@@ -39,6 +39,6 @@ You can manage the data with object or form [methods](Concepts/methods.md).
 
 También puede representar expresiones de campos y de variables en sus formularios utilizando objetos alternativos, más concretamente:
 
-*   You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-*   You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
-*   You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+*   Puede mostrar e introducir datos de los campos de la base directamente en las columnas [de tipo List box](listbox_overview.md).
+*   Puede representar un campo de lista o una variable directamente en un formulario utilizando los objetos [Menús desplegables/Listas desplegables](popupMenuDropdownList_overview) y [Combo Box](comboBox_overview.md).
+*   Puede representar una expresión booleana como una [casilla de selección](checkbox_overview.md) o como un objeto [botón radio](radio_overview.md).
