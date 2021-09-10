@@ -4,28 +4,28 @@ title: Lista jerárquica
 ---
 
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+Las listas jerárquicas son objetos formulario que pueden utilizarse para mostrar datos en forma de listas con uno o más niveles que pueden desplegarse o contraerse.
 
 ![](assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+Cuando corresponda, el icono desplegar/contraer se mostrará automáticamente a la izquierda del elemento. Las listas jerárquicas soportan un número ilimitado de subniveles.
 
 
 ## Fuente de datos de lista jerárquica
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+El contenido de un objeto formulario lista jerárquica se puede inicializar de una de las siguientes maneras:
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode.
-- Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. La lista de elección debe haber sido definida en el editor de listas en modo Diseño.
+- Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
 
 
 ## RefList y nombre de objeto
 
-A hierarchical list is both a **language object** existing in memory and a **form object**.
+Una lista jerárquica es a la vez un **objeto de lenguaje** existente en memoria y un **objeto de formulario**.
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
+El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por *ListRef* en el manual de Lenguaje 4D. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
 
 The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
 
