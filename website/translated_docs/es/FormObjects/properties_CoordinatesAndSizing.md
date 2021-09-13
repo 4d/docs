@@ -42,7 +42,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 
 ---
-## Bottom
+## Abajo
 
 Bottom coordinate of the object in the form.
 
