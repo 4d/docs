@@ -5,7 +5,7 @@ title: Acción
 
 
 ---
-## Draggable
+## Arrastrable
 
 Control whether and how the user can drag the object. By default, no drag operation is allowed.
 
@@ -34,11 +34,11 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 #### Ver también
-[Droppable](#droppable)
+[Soltable](#droppable)
 
 
 ---
-## Droppable
+## Soltable
 
 Control whether and how the object can be the destination of a drag and drop operation.
 
@@ -63,7 +63,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 #### Ver también
-[Draggable](#draggable)
+[Arrastrable](#draggable)
 
 
 ---
