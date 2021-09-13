@@ -42,7 +42,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 
 ---
-## Background Color Expression
+## Expresión color de fondo
 
 `Selection and collection type list boxes`
 
@@ -66,7 +66,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 
 ---
-## Border Line Style
+## Estilo del borde
 
 Allows setting a standard style for the object border.
 
