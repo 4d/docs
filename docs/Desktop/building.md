@@ -180,6 +180,7 @@ If you have specified "MyProject" as the name of the application, you will find 
 
 *	*macOS*
 	-	A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package). 
+    * Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder. This compiled structure is needed when you [build a Server application](#allow-connection-of-silicon-mac-clients) on Windows. 
 
 
 #### Customizing 4D Volume Desktop folder
@@ -248,7 +249,20 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 #### Current version
 
 Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).	
- 
+
+#### Allow connection of Silicon Mac clients
+
+To allow macOS clients to connect to a Server application built on Windows, you need to use the [compiled structure](#generated-files) of a client application built on macOS. That compiled structure is generated when you build a client application on macOS. 
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+To enable this, check this option and specify a path to the compiled structure of the macOS client.
+
+
+#### Compiled structure location
+
+Path to the [compiled structure](#generated-files) of a Silicon macOS client application.
+
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
