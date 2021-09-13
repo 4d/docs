@@ -112,15 +112,17 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 **Possible values:**
 
-| dataClassAttribute.kind | fieldType                   | Comment            |
-| ----------------------- | --------------------------- | ------------------ |
-| storage                 | Corresponding 4D field type | See `Type` command |
-| relatedEntity           | 38 (Is object)              |                    |
-| relatedEntities         | 42 (Is collection)          |                    |
+| dataClassAttribute.kind | fieldType                   | Comment                                                                    |
+| ----------------------- | --------------------------- | -------------------------------------------------------------------------- |
+| storage                 | Corresponding 4D field type | See [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
+| relatedEntity           | 38 (Is object)              |                                                                            |
+| relatedEntities         | 42 (Is collection)          |                                                                            |
 
 <!-- END REF -->
 
+#### Ver también
 
+[`.type`](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -356,15 +358,17 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **Possible values:**
 
-| dataClassAttribute.kind | type                                                     | Comment                                                                                                                  |
-| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                   | Ex: "Companies"                                                                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix              | Ex: "EmployeeSelection"                                                                                                  |
+| dataClassAttribute.kind | type                                                             | Comment                                                                                                                                                                                                                                               |
+| ----------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "blob", "bool", "date", "image", "number", "object", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
+| relatedEntity           | related dataClass name                                           | Ex: "Companies"                                                                                                                                                                                                                                       |
+| relatedEntities         | related dataClass name + "Selection" suffix                      | Ex: "EmployeeSelection"                                                                                                                                                                                                                               |
 
 <!-- END REF -->
 
+#### Ver también
 
+[`.fieldType`](#fieldtype)
 
 
 <!-- REF DataClassAttributeClass.unique.Desc -->

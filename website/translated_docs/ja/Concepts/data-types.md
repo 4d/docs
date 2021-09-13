@@ -22,7 +22,7 @@ title: データタイプの概要
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                              | -                                                        |
 | [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `ポインター`                                        | `C_POINTER`, `ARRAY POINTER`                             |
 | [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | `ピクチャー`                                        | `C_PICTURE`, `ARRAY PICTURE`                             |
-| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `BLOB`                                         | `C_BLOB`, `ARRAY BLOB`                                   |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `Blob`, `4D.Blob`                              | `C_BLOB`, `ARRAY BLOB`                                   |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `オブジェクト`                                       | `C_OBJECT`, `ARRAY OBJECT`                               |
 | [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `コレクション`                                       | `C_COLLECTION`                                           |
 | [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `バリアント`                                        | `C_VARIANT`                                              |

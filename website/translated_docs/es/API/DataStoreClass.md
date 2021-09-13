@@ -60,12 +60,7 @@ You can also get a reference on an open remote datastore by passing its local id
 
 If no *localID* datastore is found, the command returns **Null**.
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
-
-*   A datastore only references tables with a single primary key. Tables without a primary key or with composite primary keys are not referenced.
-*   BLOB type attributes are not managed in the datastore.
-
-
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 #### Ejemplo 1
 
@@ -137,6 +132,8 @@ The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 If no matching database is found, `Open datastore` returns **Null**.
 
 *localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
+
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
 
@@ -373,7 +370,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parameter | Tipo   |    | Descripción          |
 | --------- | ------ |:--:| -------------------- |
-| Resultado | Object | <- | Datastore properties |
+| Resultado | Objeto | <- | Datastore properties |
 <!-- END REF -->
 
 #### Descripción
@@ -441,9 +438,9 @@ On a remote datastore:
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parameter | Tipo       |    | Descripción                                                  |
-| --------- | ---------- |:--:| ------------------------------------------------------------ |
-| Resultado | Collection | <- | Collection of objects, where each object describes a request |
+| Parameter | Tipo      |    | Descripción                                                  |
+| --------- | --------- |:--:| ------------------------------------------------------------ |
+| Resultado | Colección | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
 
 
@@ -480,9 +477,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parameter | Tipo    |    | Descripción                                                                    |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------ |
-| Resultado | Boolean | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
+| Parameter | Tipo     |    | Descripción                                                                    |
+| --------- | -------- |:--:| ------------------------------------------------------------------------------ |
+| Resultado | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
 <!-- END REF -->
 
 
@@ -551,9 +548,9 @@ When this function is not called, new entity selections can be shareable, depend
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | Parameter     | Tipo   |    | Descripción                           |
 | ------------- | ------ | -- | ------------------------------------- |
-| curPassPhrase | Text   | -> | Current encryption passphrase         |
-| curDataKey    | Object | -> | Current data encryption key           |
-| Resultado     | Object | <- | Result of the encryption key matching |
+| curPassPhrase | Texto  | -> | Current encryption passphrase         |
+| curDataKey    | Objeto | -> | Current data encryption key           |
+| Resultado     | Objeto | <- | Result of the encryption key matching |
 <!-- END REF -->
 
 
@@ -626,9 +623,9 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parameter | Tipo    |    | Descripción                                                                                          |
-| --------- | ------- | -- | ---------------------------------------------------------------------------------------------------- |
-| status    | Boolean | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
+| Parameter | Tipo     |    | Descripción                                                                                          |
+| --------- | -------- | -- | ---------------------------------------------------------------------------------------------------- |
+| status    | Booleano | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
 <!-- END REF -->
 
 
@@ -673,7 +670,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 | Parameter | Tipo    |    | Descripción                          |
 | --------- | ------- | -- | ------------------------------------ |
 | file      | 4D.File | -> | File object                          |
-| reqNum    | Integer | -> | Number of requests to keep in memory |
+| reqNum    | Entero  | -> | Number of requests to keep in memory |
 <!-- END REF -->
 
 

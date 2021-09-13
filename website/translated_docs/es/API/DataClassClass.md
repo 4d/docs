@@ -291,6 +291,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 
 
+
 ```
 
 #### Example 5
@@ -579,6 +580,10 @@ The entity object is created in memory and is not saved in the database until th
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
 
+All attributes of the entity are initialized with the **null** value.
+
+> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
+
 #### Ejemplo
 
 This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
@@ -610,7 +615,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- REF #DataClassClass.newSelection().Params -->
 | Parameter | Tipo               |    | Descripción                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder | Integer            | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
+| keepOrder | Entero             | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | Resultado | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
 <!-- END REF -->
 
@@ -658,10 +663,10 @@ When created, the entity selection does not contain any entities (`mySelection.l
 <!-- REF #DataClassClass.query().Params -->
 | Parameter     | Tipo               |    | Descripción                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Search criteria as string                                                                                                   |
-| formula       | Object             | -> | Search criteria as formula object                                                                                           |
+| queryString   | Texto              | -> | Search criteria as string                                                                                                   |
+| formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
+| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
 | Resultado     | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
 <!-- END REF -->
 

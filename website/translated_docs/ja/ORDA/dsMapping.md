@@ -3,12 +3,12 @@ id: dsmapping
 title: データモデルオブジェクト
 ---
 
-ORDA は、下地である 4D ストラクチャーへの自動マッピングに基づいた技術です。 ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
+The ORDA technology is based upon an automatic mapping of an underlying database structure. ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
 
 
 ## ストラクチャーマッピング
 
-`ds` および `Open datastore` コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
+When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 *   テーブルはデータクラスへとマップされます。
 *   フィールドはストレージ属性へとマップされます。
@@ -25,7 +25,7 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 *   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 以下のテーブルは参照されません:
     *   プライマリーキーがないテーブル
     *   複合プライマリーキーを持つテーブル
-*   [BLOB](Concepts/dt_blob.md) 型の属性はデータストア内では管理されません。 BLOB 型属性はエンティティ内で Null として返され、割り当てることができません。
+*   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
 
 > ORDA のデータストアマッピングでは、次のものは考慮されません:  
 > - テーブルあるいはフィールドの"非表示"オプション<br /> - `SET TABLE TITLES` あるいは `SET FIELD TITLES` を通して定義されたバーチャルストラクチャー<br /> - リレーションの"手動"あるいは"自動"プロパティ
@@ -129,7 +129,7 @@ $mydataclass:=OB Copy(ds.Employee) // null を返します
 ```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-// $prop にはすべてのデータクラス属性の名前が格納されます
+//$prop contains the names of all the dataclass attributes
 ```
 
 
@@ -144,12 +144,12 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
-テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
+All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
 
 #### ストレージ属性とリレーション属性
 
-データクラス属性にはいくつかの種類があります。ストレージ、リレートエンティティ、リレートエンティティズです。 スカラーである属性 (単一の値のみを提供するもの) は標準の 4D データ型 (整数、テキスト、オブジェクトなど) をサポートします。
+データクラス属性にはいくつかの種類があります。ストレージ、リレートエンティティ、リレートエンティティズです。 Attributes that are scalar (*i.e.*, provide only a single value) support all the standard 4D data types (integer, text, object, etc.).
 
 *   **ストレージ属性** は4D データベース内のフィールドに相当するもので、インデックスをつけることができます。 ストレージ属性に割り当てられた値は、保存時にエンティティの一部として保存されます。 ストレージ属性にアクセスしたとき、その値はデータストアから直接取り出されます。 ストレージ属性はエンティティを構成するもっとも基礎的な要素であり、名前とデータ型により定義されます。
 *   **リレーション属性** は他のエンティティへのアクセスを提供します。 リレーション属性は単一のエンティティ (あるいはエンティティなし) あるいはエンティティセレクション (0からNまでのエンティティ) のどちらかになります。 リレーション属性はリレーショナルストラクチャーの "クラシックな" リレーションに基づいており、リレートエンティティあるいはリレートエンティティズへの直接的なアクセスを提供します。 リレーション属性は、ORDA においては名前を使用することで直接的に利用可能です。
