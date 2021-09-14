@@ -4,7 +4,7 @@ title: Animación
 ---
 
 ---
-## Loop back to first frame
+## Vuelve a la primera secuencia
 
 Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
 
@@ -42,7 +42,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 
 ---
-## Switch continuously on clicks
+## Desplazamiento continuo en clics
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 
@@ -99,7 +99,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 
 ---
-## Use Last frame as disabled
+## Utilizar el último cuadro como desactivado
 
 Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
 
