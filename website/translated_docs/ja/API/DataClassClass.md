@@ -580,9 +580,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 **4D Server**: クライアント/サーバーにおいては、対応するテーブルのプライマリーキーが自動インクリメントであった場合、エンティティがサーバー側に保存されたときに計算されます。
 
-All attributes of the entity are initialized with the **null** value.
+エンティティの全属性は **null** 値で初期化されます。
 
-> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
+> 4Dデータベースのストラクチャーレベルで **ヌル値を空値にマップ** オプションが選択されていれば、属性はデフォルト値で初期化されます。
 
 #### 例題
 
