@@ -28,7 +28,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 |        |                |                  |
  defaultButton|boolean|true, false |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
 
@@ -46,7 +46,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 | ------------- | -------------- | ---------------- |
 | hideFocusRing | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
 
@@ -60,7 +60,7 @@ This property is used to disable the selection highlight in list boxes.
 
 When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
-By default, this option is not enabled.
+Por defecto, esta opción no está activada.
 
 
 #### Gramática JSON
@@ -69,7 +69,7 @@ By default, this option is not enabled.
 | ------------------- | -------------- | ---------------- |
 | hideSystemHighlight | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -79,18 +79,18 @@ By default, this option is not enabled.
 ---
 ## Barra de desplazamiento horizontal
 
-An interface tool allowing the user to move the viewing area to the left or right.
+Una herramienta de interfaz que permite al usuario desplazar el área de visualización hacia la izquierda o la derecha.
 
-Available values:
+Valores disponibles:
 
-| Property List | JSON value  | Descripción                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                      |
+| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sí                   | "visible"   | La barra de desplazamiento está siempre visible, incluso cuando no es necesaria (es decir, cuando el tamaño del contenido del objeto es menor que el del marco). |
+| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                      |
+| Automático           | "automatic" | La barra de desplazamiento aparece automáticamente cuando es necesario y el usuario puede introducir un texto mayor que el ancho del objeto                      |
 
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Los objetos imagen pueden tener las barras de desplazamiento cuando el formato de visualización de la imagen está definido como "Truncado (no centrado)."
 
 
 #### Gramática JSON
@@ -99,17 +99,17 @@ Available values:
 | ------------------- | -------------- | -------------------------------- |
 | scrollbarHorizontal | texto          | "visible", "hidden", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barra de desplazamiento vertical](#vertical-scroll-bar)
 
 ---
 ## Resolution
 
-Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+Define la resolución de la pantalla para el contenido del área 4D Write Pro. Por defecto, se define a 72 ppp (macOS), que es la resolución estándar para los formularios 4D en todas las plataformas. Si se define esta propiedad en 96 ppp, se establecerá un renderizado Windows/Web tanto en plataformas macOS como Windows. Si se define esta propiedad como **automática** significa que la representación del documento diferirá entre las plataformas macOS y Windows.
 
 
 #### Gramática JSON
@@ -119,16 +119,16 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 |        |                |                  |
  dpi|number|0=automatic, 72, 96 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
 
 
 ---
-## Show background
+## Mostrar el fondo
 
-Displays/hides both background images and background color.
+Muestra/oculta tanto las imágenes de fondo como el color de fondo.
 
 
 #### Gramática JSON
@@ -136,14 +136,14 @@ Displays/hides both background images and background color.
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
 |        |                |                  |
- showBackground|boolean|true (default), false|
+ showBackground|boolean|true (por defecto), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
 ---
-## Show footers
+## Mostrar los pies de página
 
 Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
@@ -155,13 +155,13 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 |        |                |                  |
  showFooters|boolean|true (default), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
-## Show Formula Bar
+## Mostrar la barra de fórmula
 
 When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
 
@@ -175,7 +175,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 |        |                |                  |
  withFormulaBar|boolean|true (default), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D View Pro](viewProArea_overview.md)
 
@@ -192,14 +192,14 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 |        |                |                  |
  showHeaders|boolean|true (default), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
 
 
 ---
-## Show hidden characters
+## Mostrar los caracteres ocultos
 
 Displays/hides invisible characters
 
@@ -211,15 +211,15 @@ Displays/hides invisible characters
 |        |                |                  |
  showHiddenChars|boolean|true (default), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
 
 ---
-## Show horizontal ruler
+## Mostrar la regla horizontal
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
+Muestra/oculta la regla horizontal cuando la vista del documento está en modo [Página](#modo-de-vista).
 
 
 #### Gramática JSON
@@ -227,9 +227,9 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
 |        |                |                  |
- showHorizontalRuler|boolean|true (default), false|
+ showHorizontalRuler|boolean|true (por defecto), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -238,7 +238,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 
 ---
-## Show HTML WYSYWIG
+## Mostrar HTML WYSYWIG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -248,9 +248,9 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
 |        |                |                  |
- showHTMLWysiwyg|boolean|true, false (default)|
+ showHTMLWysiwyg|boolean|true, false (por defecto)|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -267,7 +267,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 |        |                |                  |
  showPageFrames|boolean|true, false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -296,7 +296,7 @@ With the Show references property on, the reference is displayed:
 |        |                |                  |
  showReferences|boolean|true, false (default)|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -313,7 +313,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 |        |                |                  |
  showVerticalRuler|boolean|true (default), false|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -332,7 +332,7 @@ When tab controls with a custom direction are displayed under Windows, they auto
 |        |                |                  |
  labelsPlacement|boolean|"top", "bottom" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Tab Control](tabControl.md)
 
@@ -349,7 +349,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 |        |                |                  |
  userInterface|text|"none" (default), "ribbon", "toolbar" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D View Pro](viewProArea_overview.md)
 
@@ -363,15 +363,15 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 An interface tool allowing the user to move the viewing area up and down.
 
-Available values:
+Valores disponibles:
 
-| Property List | JSON value  | Descripción                                                                                                                                              |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sí            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Lista de propiedades | Valor JSON  | Descripción                                                                                                                                                      |
+| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sí                   | "visible"   | La barra de desplazamiento está siempre visible, incluso cuando no es necesaria (es decir, cuando el tamaño del contenido del objeto es menor que el del marco). |
+| No                   | "hidden"    | La barra de desplazamiento nunca es visible                                                                                                                      |
+| Automático           | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)                  |
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Los objetos imagen pueden tener las barras de desplazamiento cuando el formato de visualización de la imagen está definido como "Truncado (no centrado)."
 
 
 > If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
@@ -383,9 +383,9 @@ Available values:
 | ----------------- | -------------- | -------------------------------- |
 | scrollbarVertical | texto          | "visible", "hidden", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
 
@@ -411,7 +411,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 |        |                |                  |
  layoutMode|text|"page", "draft", "embedded"|
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
@@ -426,9 +426,9 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
 |        |                |                  |
- zoom|number|minimum = 0 |
+ zoom|número|minimum = 0 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
