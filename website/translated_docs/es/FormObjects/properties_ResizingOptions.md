@@ -4,7 +4,7 @@ title: Opciones de redimensionamiento
 ---
 
 ---
-## Column Auto-Resizing
+## Redimensionamiento columnas auto
 
 When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 

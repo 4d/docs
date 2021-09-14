@@ -21,7 +21,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 [List Box](listbox_overview.md)
 
 ---
-## Detail Form Name
+## Nombre formulario detallado
 `Selection type list box`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
@@ -47,7 +47,7 @@ The specified form is displayed:
 
 
 ---
-## Double-click on row
+## Doble clic en línea
 `Selection type list box`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:

@@ -20,7 +20,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 [Entrada](input_overview.md)
 
 ---
-## Bold
+## Negrita
 
 Sets the selected text to appear darker and heavier.
 
@@ -80,7 +80,7 @@ Sets the text to have a line running beneath it.
 
 
 ---
-## Font
+## Fuente
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
 > **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.

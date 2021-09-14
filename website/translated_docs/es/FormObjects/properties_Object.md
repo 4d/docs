@@ -203,7 +203,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 
 ---
-## Collection or entity selection
+## Collection o entity selection
 
 To use collection elements or entities to define the row contents of the list box.
 
