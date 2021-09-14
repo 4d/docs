@@ -208,69 +208,51 @@ ALERT($0)
 
 テーブルや配列の式は [ポインターを介した参照として](dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
-## 引数の間接参照 (${$i})
+## 引数の間接参照 (${N})
 
-プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを **引数の間接参照** といいます。 同じ型の不定数の引数を受け取るメソッドの場合、[`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンドと組み合わせることで、これらの引数を `For...End for` ループと引数関節参照シンタックスで操作することができます。 メソッド内で、間接参照は `${$i}` のように表示します。ここの `$i` は数値式です。 `${$i}` を **ジェネリックパラメーター** (generic parameter) と呼びます。
-
-次の例では `SEND PACKETS` プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
-
-```4d
-  //SEND PACKETS Project Method
-  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
-  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
-
- C_TIME($1)
- C_TEXT(${2}) // ジェネリックパラメーター宣言
- C_LONGINT($vlPacket)
-
- For($vlPacket;2;Count parameters)
-    SEND PACKET($1;${$vlPacket})
- End for
-```
-
-> 引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。
+4Dプロジェクトメソッドは、可変個の引数を受け取ることができます。 `For...End for` ループや [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンド、**引数の間接参照シンタックス** を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は `${N}` のように表示します。ここの `N` は数値式です。 `${N}` を **ジェネリックパラメーター** (generic parameter) と呼びます。
 
 
 
 ### ジェネリックパラメーターの使い方
 
-引数の数値を合計した結果を、引数として渡された表示形式で返すようなメソッドを考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。
-
-このメソッドは、以下のようにして呼び出します:
-
-```4d
- Result:=MySum("##0.00";125,2;33,5;24)
-
-```
-
-この場合、数値を合計し、指定した形式に編集された文字列 "182.70" が返されます。 メソッドの引数は正しい順序で渡す必要があります。最初に表示形式、次に数値です。
+以下は間接参照の例です。引数の数値を合計した結果を、引数として渡された表示形式で返すようなメソッドを考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。
 
 以下は `MySum` メソッドです:
 
 ```4d
- $Sum:=0
+ #DECLARE($format : Text) -> $result : Text
+ $sum:=0
  For($i;2;Count parameters)
-    $Sum:=$Sum+${$i}
+    $sum:=$sum+${$i}
  End for
- $0:=String($Sum;$1)
+ $result:=String($sum;$format)
 ```
 
-このメソッドは様々な呼び出し方ができます:
+このメソッドの引数は正しい順序で渡す必要があります。最初に表示形式、次に可変個の数値引数です。
 
 ```4d
- Result:=MySum("##0.00";125,2;33,5;24)
- Result:=MySum("000";1;2;3;200)
+ Result:=MySum("##0.00";125,2;33,5;24) // "182.70"
+ Result:=MySum("000";1;2;200) // "203"
 ```
 
-メソッド内で 1つ以上のパラメーターを宣言した場合でも、任意の数の引数を渡すことができます。 この場合，追加のパラメーターはすべて `${$i}` シンタックスで利用可能で，そのタイプは [Variant](dt_variant.md) です． [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンドを使用して、パラメーターが存在することをあらかじめ確認しておく必要があります。 たとえば:
+メソッド内で 0、1、またはそれ以上のパラメーターを宣言した場合でも、任意の数の引数を渡すことができます。 呼び出されたメソッド内では、`${N}` シンタックスを使って引数を利用でき、可変長引数の型はデフォルトで [バリアント](dt_variant.md) です ([コンパイラー指示子](#ジェネリックパラメーターの宣言) を使ってこれらを宣言できます)。 [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンドを使用して、パラメーターが存在することをあらかじめ確認しておく必要があります。 たとえば:
 
 ```4d
-#DECLARE($param1 : Text) // 宣言された引数は 1つですが、それ以上の引数を受け取れます
-MESSAGE( "First parameter: "+$param1)
-For($i;2;Count parameters)
-    MESSAGE( "parameter "+string($i)+": " +String(${$i}))
+// foo メソッド
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
+For($i;1;Count parameters)
+    ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
+
+このメソッドは次のように呼び出せます:
+
+```4d
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) // 追加の引数が受け渡されます
+```
+
+> 引数の間接参照は以下の条件を守ることにより、正しく動作します: 引数の一部のみを間接参照する場合、直接参照する引数の後に間接参照引数を配置するようにします。
 
 
 ### ジェネリックパラメーターの宣言
@@ -280,12 +262,12 @@ End for
 ジェネリックパラメーターの宣言には、コンパイラー指示子に ${N} を渡す、以下のシンタックスを使用します (N は 1つ目の最初のジェネリックパラメーターの番号です):
 
 ```4d
- C_LONGINT(${4})
+ C_TEXT(${4})
 ```
 
 > ジェネリックパラメーターの宣言は [受け渡し順](#順番引数) シンタックスでのみ使用できます。
 
-このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
+このコマンドは、4番目以降に間接参照されるすべての引数のデータ型がテキストであることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されればテキストと見なされます。
 
 > 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
 
@@ -369,6 +351,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     ...
  End if
 ```
+
+
 
 ## 引数の型間違い
 
@@ -472,7 +456,20 @@ ALERT("Are you sure?";"Yes I am") // 2つの引数
 ALERT("Time is over") // 1つの引数
 ```
 
-プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。
+4D methods and functions also accept such optional parameters. The issue with optional parameters is how to handle the case where some of them are missing in the called code. By default, if you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). たとえば:
+
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
 
 > 任意パラメーターが必要な場合、[オブジェクトプロパティを名前付き引数として使用する](#オブジェクトプロパティを名前付き引数として使用する) と型の制限がなく、柔軟で便利です。
 
