@@ -60,12 +60,7 @@ title: DataStore
 
 *localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
-`ds` を使用するには、データベースが **ORDAの必須要件** の章で説明されているように ORDA に準拠している必要があります。 以下のルールが適用されます:
-
-*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 プライマリーキーがないテーブル、あるいは複合プライマリーキーがあるテーブルは参照されません。
-*   BLOB型属性はデータストアで管理されません。
-
-
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 #### 例題 1
 
@@ -140,6 +135,8 @@ title: DataStore
 合致するデータベースが見つからない場合、`Open datastore` は **Null** を返します。
 
 *localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
+
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
@@ -329,7 +326,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | 引数  | タイプ    |    | 説明                           |
 | --- | ------ |:--:| ---------------------------- |
-| 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
+| 戻り値 | オブジェクト | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
 <!-- END REF -->
 
 
@@ -410,7 +407,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- REF #DataStoreClass.getInfo().Params -->
 | 引数  | タイプ    |    | 説明           |
 | --- | ------ |:--:| ------------ |
-| 戻り値 | Object | <- | データストアのプロパティ |
+| 戻り値 | オブジェクト | <- | データストアのプロパティ |
 <!-- END REF -->
 
 #### 説明
@@ -488,9 +485,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| 引数  | タイプ        |    | 説明                                 |
-| --- | ---------- |:--:| ---------------------------------- |
-| 戻り値 | Collection | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
+| 引数  | タイプ    |    | 説明                                 |
+| --- | ------ |:--:| ---------------------------------- |
+| 戻り値 | コレクション | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
 <!-- END REF -->
 
 
@@ -529,9 +526,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| 引数  | タイプ     |    | 説明                                                         |
-| --- | ------- |:--:| ---------------------------------------------------------- |
-| 戻り値 | Boolean | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
+| 引数  | タイプ |    | 説明                                                         |
+| --- | --- |:--:| ---------------------------------------------------------- |
+| 戻り値 | ブール | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
 <!-- END REF -->
 
 
@@ -606,9 +603,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | 引数            | タイプ    |    | 説明            |
 | ------------- | ------ | -- | ------------- |
-| curPassPhrase | Text   | -> | カレントのパスフレーズ   |
-| curDataKey    | Object | -> | カレントのデータ暗号化キー |
-| 戻り値           | Object | <- | 暗号化キーのチェックの結果 |
+| curPassPhrase | テキスト   | -> | カレントのパスフレーズ   |
+| curDataKey    | オブジェクト | -> | カレントのデータ暗号化キー |
+| 戻り値           | オブジェクト | <- | 暗号化キーのチェックの結果 |
 <!-- END REF -->
 
 
@@ -741,7 +738,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 | 引数     | タイプ     |    | 説明               |
 | ------ | ------- | -- | ---------------- |
 | file   | 4D.File | -> | File オブジェクト      |
-| reqNum | Integer | -> | メモリ内に保管するリクエストの数 |
+| reqNum | 整数      | -> | メモリ内に保管するリクエストの数 |
 <!-- END REF -->
 
 
