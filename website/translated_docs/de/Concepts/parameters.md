@@ -207,84 +207,66 @@ Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen 
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
-## Parameter indirection (${$i})
+## Parameter indirection (${N})
 
-4D Projektmethoden akzeptieren eine variable Anzahl von Parametern desselben Typs, beginnend von rechts. Dieses Prinzip wird **Parameter Indirektion** genannt. Using the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax. Within the method, an indirection address is formatted `${$i}`, where `$i` is a numeric variable. `${$i}` is called a **generic parameter**.
-
-Im folgenden Beispiel akzeptiert die Projektmethode `SEND PACKETS` einen Parameter Time mit einer variablen Anzahl von Textparametern:
-
-```4d
-  //SEND PACKETS Project Method
-  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
-  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
-
- C_TIME($1)
- C_TEXT(${2}) //generic parameter declaration
- C_LONGINT($vlPacket)
-
- For($vlPacket;2;Count parameters)
-    SEND PACKET($1;${$vlPacket})
- End for
-```
-
-> Die Indirektion von Parametern funktioniert am besten, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden.
+4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
 
 
 
 ### Using generic parameters
 
-Consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Bei jedem Aufruf dieser Methode kann die Anzahl der zu addierenden Werte variieren. Wir müssen die Werte als Parameter an die Methode und das Format in Form einer Zeichenkette übergeben. Die Anzahl der Werte kann von Aufruf zu Aufruf variieren.
-
-This method is called in the following manner:
-
-```4d
- Result:=MySum("##0.00";125,2;33,5;24)
-
-```
-
-In this case, the calling method will get the string "182.70", which is the sum of the numbers, formatted as specified. The method's parameters must be passed in the correct order: first the format and then the values.
+For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Bei jedem Aufruf dieser Methode kann die Anzahl der zu addierenden Werte variieren. Wir müssen die Werte als Parameter an die Methode und das Format in Form einer Zeichenkette übergeben. Die Anzahl der Werte kann von Aufruf zu Aufruf variieren.
 
 Here is the method, named `MySum`:
 
 ```4d
- $Sum:=0
+ #DECLARE($format : Text) -> $result : Text
+ $sum:=0
  For($i;2;Count parameters)
-    $Sum:=$Sum+${$i}
+    $sum:=$sum+${$i}
  End for
- $0:=String($Sum;$1)
+ $result:=String($sum;$format)
 ```
 
-This method can now be called in various ways:
+The method's parameters must be passed in the correct order, first the format and then a variable number of values:
 
 ```4d
- Result:=MySum("##0.00";125,2;33,5;24)
- Result:=MySum("000";1;2;3;200)
+ Result:=MySum("##0.00";125,2;33,5;24) //"182.70"
+ Result:=MySum("000";1;2;200) //"203"
 ```
 
-Note that even if you declared one or more parameters in the method, you can always pass the number of parameters that you want. In this case, extra parameters are all available through the `${$i}` syntax and their type is [Variant](dt_variant.md). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. Beispiel:
+Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. Beispiel:
 
 ```4d
-#DECLARE($param1 : Text) //we declare a single parameter, but we can get more
-MESSAGE( "First parameter: "+$param1)
-For($i;2;Count parameters)
-    MESSAGE( "parameter "+string($i)+": " +String(${$i}))
+//foo method
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
+For($i;1;Count parameters)
+    ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
+
+This method can be called:
+
+```4d
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+```
+
+> Die Indirektion von Parametern funktioniert am besten, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden.
 
 
 ### Generische Parameter deklarieren
 
 Analog zu anderen lokalen Variablen müssen auch generische Parameter nicht zwingend über Compiler Direktive aufgerufen werden. Es wird jedoch empfohlen, um jegliche Zweideutigkeiten zu vermeiden. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
 
-To declare generic parameters parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
 ```4d
- C_LONGINT(${4})
+ C_TEXT(${4})
 ```
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-Dieser Befehl bedeutet, dass die Methode ab dem 4. Parameter (eingeschlossen) eine variable Anzahl an Parametern vom Typ Lange Ganzzahl empfangen kann. $1, $2 und $3 können einen beliebigen Datentyp haben. Nutzen Sie jedoch $2 per Indirektion, wird als Datentyp der generische Typ verwendet. Es wird also der Datentyp Lange Ganzzahl sein, auch wenn es für Sie z. B. der Datentyp Zahl war.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 und $3 können einen beliebigen Datentyp haben. Nutzen Sie jedoch $2 per Indirektion, wird als Datentyp der generische Typ verwendet. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
 
 > Die Nummer in der Deklaration muss eine Konstante und keine Variable sein.
 
@@ -368,6 +350,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     ...
  End if
 ```
+
+
 
 ## Wrong parameter type
 
@@ -471,7 +455,20 @@ ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
 
-Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. Das Problem bei optionalen Parametern ist, wie sie sich verwalten lassen, wenn welche in der aufgerufenen Methode fehlen - das sollte nie einen Fehler produzieren. Eine gute Praxis ist, den nicht-verwendeten Parametern Standardwerte zuzuweisen.
+4D methods and functions also accept such optional parameters. The issue with optional parameters is how to handle the case where some of them are missing in the called code. By default, if you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). Beispiel:
+
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
 
 > Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
