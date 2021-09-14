@@ -180,7 +180,6 @@ If you have specified "MyProject" as the name of the application, you will find 
 
 *	*macOS*
 	-	A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package). 
-    * Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder. This compiled structure is needed when you [build a Server application](#allow-connection-of-silicon-mac-clients) on Windows. 
 
 
 #### Customizing 4D Volume Desktop folder
@@ -252,16 +251,18 @@ Used to indicate the current version number for the application generated. You m
 
 #### Allow connection of Silicon Mac clients
 
-To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application (on macOS) for Apple Silicon and Intel first, then use the [generated compiled structure](#generated-files) of that client application when building the Windows Server. 
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application (on macOS) for Apple Silicon and Intel, and select the [Build compiled structure](#build-compiled-structure) option (without the related folders). 
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application: 
 
 ![](assets/en/Desktop/allow-mac-clients.png)
 
-To enable this, check this option and specify a path to the compiled structure of the macOS client.
+When building the server application on Windows, check the **Allow connection of Silicon Mac clients** option and specify a path to the compiled structure of the Apple Intel/Silicon client.
 
 
 #### Compiled structure location
 
-Path to the [compiled structure](#generated-files) of a Silicon macOS client application.
+Path to the [compiled structure](#build-compiled-structure) of a Silicon macOS client application.
 
 #### Data linking mode
 
