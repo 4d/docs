@@ -116,13 +116,15 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 |dataClassAttribute.kind|	fieldType	|Comment|
 |---|---|---|
-|storage|	Corresponding 4D field type|	See `Type` command|
+|storage|	Corresponding 4D field type|	See [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)|
 |relatedEntity|	38 (Is object)	||
 |relatedEntities|	42 (Is collection)	||
 
 <!-- END REF -->
 
+#### See also
 
+[`.type`](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed  
@@ -368,13 +370,15 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 |dataClassAttribute.kind|	type|	Comment|
 |---|---|---|
-|storage|	"number", "date", "object", "bool", "image", or "string"|"number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types|
+|storage|"blob", "bool", "date", "image", "number", "object", or "string"| "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md).|
 |relatedEntity|related dataClass name|Ex: "Companies"|
 |relatedEntities|related dataClass name + "Selection" suffix|	Ex: "EmployeeSelection"|
 
 <!-- END REF -->
 
+#### See also
 
+[`.fieldType`](#fieldtype)
 
 
 <!-- REF DataClassAttributeClass.unique.Desc -->

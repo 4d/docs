@@ -14,7 +14,7 @@ You can modify the timeout, which by default is 120 seconds, by passing a value 
 
 ## Uploading scenario 
 
-Imagine you want to updload an image to update the picture attribute of an entity. 
+Imagine you want to upload an image to update the picture attribute of an entity. 
 
 To upload an image (or any binary file), you must first select the file from the client application. The file itlself must be passed in the **body** of the request. 
 
