@@ -986,11 +986,11 @@ When a "choiceList" or a "requiredList" attribute is present inside the object, 
 *   If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
-> The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> The widget values are defined through an array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
 
 Ejemplos:
 
-*   You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
+*   Quiere mostrar una lista desplegable con sólo dos opciones: "Open" o "Closed". "Closed" debe estar preseleccionado:
 
 ```4d
     ARRAY TEXT($RequiredList;0)
@@ -1003,7 +1003,7 @@ Ejemplos:
 ```
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
-*   You want to accept any integer value, but display a combo box to suggest the most common values:
+*   Quiere aceptar todo valor entero, pero mostrar un combo box para sugerir los valores más comunes:
 
 ```4d
     ARRAY LONGINT($ChoiceList;0)
@@ -1014,22 +1014,22 @@ Ejemplos:
     APPEND TO ARRAY($ChoiceList;100)
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
-    OB SET($ob;"value";10) //10 as default value
+    OB SET($ob;"value";10) //10 como valor por defecto
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName y requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+Los atributos "requiredListName" y "requiredListReference" permiten utilizar, en una celda de list box, una lista definida en 4D, ya sea en modo Diseño (en el editor de Listas de la Caja de Herramientas) o por programación (utilizando el comando New list). La celda se mostrará entonces como una lista desplegable. Esto significa que el usuario sólo puede seleccionar uno de los valores proporcionados en la lista.
 
-Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
-> * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
+Utilice "requiredListName" o "requiredListReference" en función del origen de la lista: si la lista procede de la caja de herramientas, pase un nombre; en caso contrario, si la lista se ha definido por programación, pase una referencia. In both cases, a "value" attribute can be used to preselect a value in the widget.
+> * Si desea definir estos valores a través de un simple array, debe utilizar el atributo "requiredList".
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
 Ejemplos:
 
-*   You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
+*   Desea mostrar una lista desplegable basada en una lista de "colores" definida en la caja de herramientas (que contiene los valores "azul", "amarillo" y "verde"), guardarla como valor y mostrar "azul" por defecto:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -1042,7 +1042,7 @@ Ejemplos:
 ```
 ![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
-*   You want to display a drop-down list based on a list defined by programming and save it as a reference:
+*   Quiere mostrar una lista desplegable basada en una lista definida por programación y guardarla como referencia:
 
 ```4d
     <>List:=New list
@@ -1053,14 +1053,14 @@ Ejemplos:
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
     OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
+    OB SET($ob;"value";2) //muestra Londres por defecto
     OB SET($ob;"requiredListReference";<>List)
 ```
 
 
     ![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
-#### choiceListName and choiceListReference
+#### choiceListName y choiceListReference
 
 The "choiceListName" and "choiceListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Tool box) or by programming (using the New list command). The cell is then displayed as a combo box, which means that the user can select or type a value.
 
