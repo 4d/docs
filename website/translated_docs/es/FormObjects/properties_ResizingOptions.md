@@ -37,7 +37,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 | ------------ | -------------- | ----------------------- |
 | resizingMode | cadena         | "rightToLeft", "legacy" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -51,7 +51,7 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| Option  | JSON value | Resultado                                                                                                              |
+| Option  | Valor JSON | Resultado                                                                                                              |
 | ------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Grow    | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
 | Move    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
@@ -64,7 +64,7 @@ Three options are available:
 | ------- | -------------- | ----------------------- |
 | sizingX | cadena         | "grow", "move", "fixed" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
@@ -76,7 +76,7 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| Option  | JSON value | Resultado                                                                                                            |
+| Option  | Valor JSON | Resultado                                                                                                            |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Grow    | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Move    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
@@ -89,7 +89,7 @@ Three options are available:
 | ------- | -------------- | ----------------------- |
 | sizingY | cadena         | "grow", "move", "fixed" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
 
@@ -115,7 +115,7 @@ When this property is not applied to the splitter, the result is as follows:
 |:------------ |:--------------:|:------------------------------------:|
 | splitterMode |     cadena     | "move" (pusher), "resize" (standard) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Separador](splitterTabControlOverview#splitters)
 
@@ -133,7 +133,7 @@ Designates if the size of the column can be modified by the user.
 |:--------- |:--------------:|:----------------:|
 | resizable |    booleano    | "true", "false"  |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
