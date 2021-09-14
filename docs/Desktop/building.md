@@ -252,7 +252,7 @@ Used to indicate the current version number for the application generated. You m
 
 #### Allow connection of Silicon Mac clients
 
-To allow macOS clients to connect to a Server application built on Windows, you must first build a client application (on macOS) for Apple Silicon and Intel first, then use the [generated compiled structure](#generated-files) of that client application when building the Windows Server. 
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application (on macOS) for Apple Silicon and Intel first, then use the [generated compiled structure](#generated-files) of that client application when building the Windows Server. 
 
 ![](assets/en/Desktop/allow-mac-clients.png)
 
