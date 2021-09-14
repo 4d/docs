@@ -248,14 +248,13 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 #### Allow connection of Silicon Mac clients
 
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
 To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
 
 Then, you can copy that structure to your Windows machine, and use it to build the server application:
 
 ![](assets/en/Desktop/allow-mac-clients.png)
-
-When building the server application on Windows, check the **Allow connection of Silicon Mac clients** option and specify the path to the compiled structure.
-
 
 #### Compiled structure location
 
