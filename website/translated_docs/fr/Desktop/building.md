@@ -306,6 +306,25 @@ This option lets you choose the linking mode between the merged application and 
 
 
 
+#### Allow connection of Silicon Mac clients
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders). 
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application: 
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+When building the server application on Windows, check the **Allow connection of Silicon Mac clients** option and specify the path to the compiled structure.
+
+
+
+
+#### Compiled structure location
+
+Path to the compiled structure of the Apple Silicon/Intel client application.
+
+
+
 #### Mode de liaison des données
 
 Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
