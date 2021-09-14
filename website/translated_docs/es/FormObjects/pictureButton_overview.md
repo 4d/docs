@@ -45,18 +45,18 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 
 ## Animación
 
-In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
+In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. Estas opciones de propiedades pueden combinarse para mejorar sus botones de imagen.
 
-- By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
+- Por defecto ([cuando no se selecciona la opción animación](properties_Animation.md)), un botón de imagen muestra la siguiente imagen de la serie cuando el usuario hace clic; muestra la imagen anterior de la serie cuando el usuario mantiene pulsada la tecla **Mayúsculas** y hace clic en el botón. Cuando el usuario llega a la última imagen de la serie, la imagen no cambia cuando el usuario hace clic de nuevo. En otras palabras, no vuelve a la primera imagen de la serie.
 
-The following other modes are available:
-- [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
+Hay otros modos disponibles:
+- [Vuelve a la primera secuencia](properties_Animation.md#loopBackToFirstFrame)
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
-- [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
+- [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+- [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled)
+> La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 
