@@ -6,7 +6,7 @@ title: Plug-ins
 ---
 ## Advanced Properties
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
 
 Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
 
@@ -19,7 +19,7 @@ Because the Advanced properties feature is under the control of the author of th
 | customProperties | texto          | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área de plug-in](pluginArea_overview.md)
 
