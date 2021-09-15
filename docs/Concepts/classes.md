@@ -21,7 +21,7 @@ Class constructor($firstname : Text; $lastname : Text)
 	This.lastName:=$lastname
 
 Function get fullName() -> $fullName : text
-	 $fullName:=This.firstName+" "+This.lastName
+	$fullName:=This.firstName+" "+This.lastName
 	
 Function sayHello()->$welcome : Text
 	$welcome:="Hello "+This.fullName
