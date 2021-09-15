@@ -207,84 +207,66 @@ You can use any [expression](quick-tour.md#expression-types) as sequential param
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
-## Parameter indirection (${$i})
+## Parameter indirection (${N})
 
-Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Using the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax. Within the method, an indirection address is formatted `${$i}`, where `$i` is a numeric variable. `${$i}` is called a **generic parameter**.
-
-No exemplo abaixo, o método projeto `SEND PACKETS` aceita um parâmetro de tempo seguido de um número variável de parâmetros de texto:
-
-```4d
-  //SEND PACKETS Project Method
-  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
-  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
-
- C_TIME($1)
- C_TEXT(${2}) //generic parameter declaration
- C_LONGINT($vlPacket)
-
- For($vlPacket;2;Count parameters)
-    SEND PACKET($1;${$vlPacket})
- End for
-```
-
-> A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
+4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
 
 
 
 ### Using generic parameters
 
-Consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
-
-This method is called in the following manner:
-
-```4d
- Result:=MySum("##0.00";125,2;33,5;24)
-
-```
-
-In this case, the calling method will get the string "182.70", which is the sum of the numbers, formatted as specified. The method's parameters must be passed in the correct order: first the format and then the values.
+For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
 Here is the method, named `MySum`:
 
 ```4d
- $Sum:=0
+ #DECLARE($format : Text) -> $result : Text
+ $sum:=0
  For($i;2;Count parameters)
-    $Sum:=$Sum+${$i}
+    $sum:=$sum+${$i}
  End for
- $0:=String($Sum;$1)
+ $result:=String($sum;$format)
 ```
 
-This method can now be called in various ways:
+The method's parameters must be passed in the correct order, first the format and then a variable number of values:
 
 ```4d
- Result:=MySum("##0.00";125,2;33,5;24)
- Result:=MySum("000";1;2;3;200)
+ Result:=MySum("##0.00";125,2;33,5;24) //"182.70"
+ Result:=MySum("000";1;2;200) //"203"
 ```
 
-Note that even if you declared one or more parameters in the method, you can always pass the number of parameters that you want. In this case, extra parameters are all available through the `${$i}` syntax and their type is [Variant](dt_variant.md). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. For example:
+Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. For example:
 
 ```4d
-#DECLARE($param1 : Text) //we declare a single parameter, but we can get more
-MESSAGE( "First parameter: "+$param1)
-For($i;2;Count parameters)
-    MESSAGE( "parameter "+string($i)+": " +String(${$i}))
+//foo method
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
+For($i;1;Count parameters)
+    ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
+
+This method can be called:
+
+```4d
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+```
+
+> A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
 
 
 ### Declaração de parâmetros genéricos
 
 Da mesma forma que com outras variáveis locais, não é obrigatório declarar os parâmetros genéricos mediante uma diretiva de compilador. Entretanto é recomendado que se evite qualquer ambiguidade. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
 
-To declare generic parameters parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
 
 ```4d
- C_LONGINT(${4})
+ C_TEXT(${4})
 ```
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Assim, será do tipo de dados LongInt, mesmo se para você fosse, por exemplo, do tipo de dados Real.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
 
 > The number in the declaration has to be a constant and not a variable.
 
@@ -368,6 +350,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     ...
  End if
 ```
+
+
 
 ## Wrong parameter type
 
@@ -471,7 +455,20 @@ ALERT("Are you sure?";"Yes I am") //2 parâmetros
 ALERT("Time is over") //1 parâmetro
 ```
 
-Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. O problema com os parâmetros opcionais é como manejar o caso em que alguns deles estejam faltando no método chamado, nunca deveria produzir um erro. Uma boa prática é atribuir valores padrão aos parâmetros não utilizados.
+4D methods and functions also accept such optional parameters. The issue with optional parameters is how to handle the case where some of them are missing in the called code. By default, if you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). For example:
+
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
 
 > When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
