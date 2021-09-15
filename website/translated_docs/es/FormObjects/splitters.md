@@ -21,7 +21,7 @@ Some of the splitter’s general characteristics:
 
 Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
 "mySplitter": {
@@ -35,7 +35,7 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
 ```
 
 
-### Supported Properties
+### Propiedades soportadas
 [Estilo del borde](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing. md#bottom) - [Clase](properties_Object.md#css-class) - [Fuente](properties_Text.md#font) - [Color de la fuente](properties_Text. md#font-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions. md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Color de la línea](properties_BackgroundAndBorder. md##font-color-line-color) - [Nombre del objeto](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md) - [Derecha](properties_CoordinatesAndSizing. md#right) - [Título](properties_Object.md#title) -[Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object. md#type) - [Subrayado](properties_Text.md#underline) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable o expresión](properties_Object. md#variable-or-expression) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 ## Interacción con las propiedades de los objetos vecinos

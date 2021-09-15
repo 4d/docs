@@ -1,6 +1,6 @@
 ---
-id: overview
-title: Overview
+id: visão Geral
+title: Visão Geral
 ---
 
 Pode criar menus ou barras de menu para seu banco de dados e para aplicações personalizadas. Como menus pull-down/suspenso são uma propriedade padrão de qualquer aplicação de desktop, sua adição faz com que seus bancos de dados sejam mais fáceis de usar e mais familiares aos usuários.

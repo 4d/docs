@@ -1,14 +1,14 @@
 ---
 id: parameters
-title: Parameters
+title: Parâmetros
 ---
 
 
 ## Utilização de parâmetros
 
-Frequentemente será preciso passar dados para seus métodos. This is easily done with parameters.
+Frequentemente será preciso passar dados para seus métodos. Isso é facilmente feito com parâmetros.
 
-**Os parâmetros** (ou **argumentos**) são peças de dados que um método necessita para realizar sua tarefa. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Os parâmetros** (ou **argumentos**) são peças de dados que um método necessita para realizar sua tarefa. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -35,7 +35,7 @@ Na subrotina (o método chamado), o valor de cada parâmetro se copia automatica
 
 Dentro da subrotina, pode utilizar os parâmetros $1, $2... da mesma maneira que utilizaria qualquer outra variável local. Entretanto, no caso de usar comandos que modifiquem o valor da variável passada como parâmetro (por exemplo `Find in field`), os parâmetros $1, $2, etc. não podem ser utilizardos diretamente. Primeiro deve copiá-los nas variáveis locais padrão (por exemplo: `$myvar:=$1`).
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Os mesmos princípios são usados quando métodos forem executados através de comandos dedicados, por exemplo:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
@@ -50,7 +50,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 
 Pode utilizar toda [expressão](Concepts/quick-tour.md#expression-types) como parâmetro, exceto:
 
-- tables
+- tabelas
 - arrays
 
 As expressões de tabelas ou arrays só podem ser passadas [como referência utilizando um ponteiro](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
@@ -62,13 +62,13 @@ Os dados podem ser devolvidos pelos métodos. Um método que devolve um valor se
 
 Os comandos de 4D ou 4D Plug-in que devolvem um valor também são chamados funções.
 
-Por exemplo, a linha abaixo é uma sentença que usa a função integrada, `Length`, para devolver a longitude de uma string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Por exemplo, a linha abaixo é uma sentença que usa a função integrada, `Length`, para devolver a longitude de uma string. As instruções põe o valor devolvido por `Length` em uma variável chamada *MyLength*. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. O valor a devolver é posto na variável local `$0`.
+Qualquer subrotina pode retornar um valor. O valor a devolver é posto na variável local `$0`.
 
 Por exemplo, a função abaixo, chamada `Uppercase4`, devolve uma string com os quatro  primeiros caracteres da string que foram passados em maiúsculas:
 
@@ -114,7 +114,7 @@ No exemplo abaixo, o método projeto `Capitalize`  aceita um parâmetro texto e 
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-A utilização de comandos tais como `New process` com métodos processo que aceitem parâmetros também requer que os parâmetros se declarem explicitamente no método chamado. For example:
+A utilização de comandos tais como `New process` com métodos processo que aceitem parâmetros também requer que os parâmetros se declarem explicitamente no método chamado. Por exemplo:
 
 ```4d
 C_TEXT($string)
@@ -142,16 +142,16 @@ Ver a página [Modos interpretado e compilado](Concepts/interpreted.md) para mai
 
 A declaração de parâmetros também é obrigatóiria nos contextos abaixo (esses contextos não são compatíveis com declarações em um método "Compiler"):
 
-- Métodos de banco de dados Por exemplo, o método banco `On Web Connection` recebe seis parâmetros, de $1 a $6, del tipo Texto. At the beginning of the database method, you must write (even if all parameters are not used):
+- Métodos de banco de dados Por exemplo, o método banco `On Web Connection` recebe seis parâmetros, de $1 a $6, del tipo Texto. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers O parâmetro $0 (Inteiro longo), que é o resultado de um trigger, será digitado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers O parâmetro $0 (Inteiro longo), que é o resultado de um trigger, será digitado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
-- Objetos formulário que aceitam o evento formulário `On Drag Over` O parâmetro $0 (Inteiro longo), que é o resultado do evento formulário `On Drag Over`, será digitado pelo compilador se o parâmetro não tiver sido declarado explícita mente. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Objetos formulário que aceitam o evento formulário `On Drag Over` O parâmetro $0 (Inteiro longo), que é o resultado do evento formulário `On Drag Over`, será digitado pelo compilador se o parâmetro não tiver sido declarado explícita mente. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
@@ -164,9 +164,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Values or references
+## Valores ou referências
 
-Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $2... da subrotina (ver [Utilização dos parâmetros](#using-parameters)). As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Como seu alcance é local, se o valor de um parâmetro for modificado na subrotina, não muda o valor no método chamada. For example:
+Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $2... da subrotina (ver [Utilização dos parâmetros](#using-parameters)). As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Como seu alcance é local, se o valor de um parâmetro for modificado na subrotina, não muda o valor no método chamada. Por exemplo:
 
 ```4d
     //Esta é uma parte do código do método MY_METHOD
@@ -182,7 +182,7 @@ A caixa de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" e a caixa de aler
 
 Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. Ao invés de passar o campo para o método, passa um ponteiro para ele, por isso pode escrever:
 
 ```4d
   //Esta é uma parte do código do método MY_METHOD
@@ -196,7 +196,7 @@ Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
 Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, dentro do método `DO SOMETHING`, $1 já não é o valor do campo mas um ponteiro ao campo. O objeto **referenciado** por $1 ($1-> no código anterior) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. Ao invés de ter o método `DO_SOMETHING` "faça algo", pode reescrever o método para que devolva um valor. Portanto escreveria:
 
 ```4d
     //Esta é uma parte do código do método MY_METHO
@@ -211,7 +211,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
 Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions).
 
 
-### Particular cases: objects and collections
+### Casos particulares: objetos e coleções
 
 Deve prestar atenção ao fato de que os tipos de dados Objeto e Coleção só podem ser manejados através de uma referência (ou seja, um  *ponteiro* interno).
 
@@ -241,7 +241,7 @@ Quando executar o método `CreatePerson`, as duas caixas de alerta dirão "50" j
 **4D Server:** quando são passados parâmetros entre métodos que não são executados na mesma máquina (utilizando por exemplo a opção "Executar no servidor"), as referencias não são utilizáveis. Nestes casos, são enviadas cópias dos parâmetros de objetos e coleções ao invés de referências.
 
 
-## Named parameters
+## Parâmetros com nomes
 
 A utilização de objetos como parâmetros permite manejar **parâmetros com nome**. Este estilo de programação é simples, flexível e fácil de ler.
 
@@ -265,9 +265,9 @@ No método `ChangeAge` pode escrever:
 ```
 
 Isso oferece uma poderosa maneira de definir [parâmetros opcionais](#optional-parameters) (ver também abaixo). Para manejar os parâmetros que faltam, pode:
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
+- veja se todos os parâmetros esperados são fornecidos comparando-os com o valor `Null`, ou
+- pré-definir os valores dos parâmetros, ou
+- usá-los como valores vazios.
 
 No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e produzirão erross se faltarão. Para evitar isso, pode escrever:
 
@@ -300,7 +300,7 @@ Não precisará mudar seu código existente. Sempre funcionará como na versão 
 Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima, todos os parâmetros são opcionais e qualquer pode ser dado em qualquer ordem.
 
 
-## Optional parameters
+## Parâmetros opcionais
 
 No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. Pode fazer a chamada de duas maneiras:
 ```4d
@@ -342,7 +342,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
 
-## Parameter indirection
+## Indireção dos parâmetros
 
 Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Ao utilizar o comando `Count parameters` pode endereçar esses parâmetros com um loop `For...End for` e a sintaxe de indireção de parâmetros.
 
@@ -400,6 +400,6 @@ Da mesma forma que com outras variáveis locais, não é obrigatório declarar o
  C_LONGINT(${4})
 ```
 
-This command means that starting with the fourth  parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
+Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Assim, será do tipo de dados LongInt, mesmo se para você fosse, por exemplo, do tipo de dados Real.
 
-**Note:** The number in the declaration has to be a constant and not a variable.
+**Nota:** O número na declaração tem que ser uma constante e não uma variável.

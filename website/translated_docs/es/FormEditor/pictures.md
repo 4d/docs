@@ -30,7 +30,7 @@ Este icono indica que la imagen no puede ser visualizada o manipulada localmente
 
 
 
-## Mouse Coordinates in a Picture
+## Coordenadas del ratón en una imagen
 
 4D permite recuperar las coordenadas locales del ratón en un [objeto de entrada](FormObjects/input_overview.md) asociado a una [expresión de imagen](FormObjects/properties_Object.md#expression-type), en caso de que se haga clic o se pase por encima, incluso si se ha aplicado un desplazamiento o zoom a la imagen. Este mecanismo, similar al de un mapa de imágenes, puede utilizarse, por ejemplo, para manejar barras de botones desplazables o la interfaz de un software de cartografía.
 
