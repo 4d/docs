@@ -14,7 +14,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 | ----------- | -------------- | ---------------- |
 | showHeaders | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -59,7 +59,7 @@ Note that converting back and forth may lead to an end result that is different 
 | ------------ | -------------- | ------------------------------- |
 | headerHeight | cadena         | positive decimal+px &#124; em ) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 

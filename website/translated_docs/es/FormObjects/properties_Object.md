@@ -18,7 +18,7 @@ This property designates the type of the [active or inactive form object](formOb
 | type   | cadena         | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -41,7 +41,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 | ------ | -------------- | -------------------------------------------------------------------- |
 | name   | cadena         | Any allowed name which does not belong to an already existing object |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -69,7 +69,7 @@ Here is the list of objects whose value can be saved:
 | ------------- | -------------- | ---------------- |
 | memorizeValue | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
 
@@ -143,7 +143,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
 
@@ -178,7 +178,7 @@ However, this property has a typing function in the following specific cases:
 | ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSourceTypeHint | cadena         | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
 
@@ -196,7 +196,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 | class  | cadena         | One string with CSS name(s) separated by space characters |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -221,7 +221,7 @@ The collection or the entity selection must be available to the form when it is 
 | ---------- | -------------- | ------------------------------------------------------------ |
 | dataSource | cadena         | Expression that returns a collection or an entity selection. |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -248,7 +248,7 @@ Specify the type of list box.
 | ----------- | -------------- | ----------------------------------------------------------- |
 | listboxType | cadena         | "array", "currentSelection", "namedSelection", "collection" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -270,7 +270,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 | pluginAreaKind | cadena         | Name of the plug-in external area (starts with a % character) |
 
 
-#### Objects Supported
+#### Objetos soportados
 [Área de plug-in](pluginArea_overview.md)
 
 
@@ -288,7 +288,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 | radioGroup | cadena         | Radio group name |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón radio](radio_overview.md)
 
@@ -316,7 +316,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 | ------ | -------------- | ---------------- |
 | texto  | cadena         | any text         |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -374,7 +374,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 | ------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | variableCalculation | cadena         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Footer](listbox_overview.md#list-box-footers)
 

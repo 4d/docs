@@ -14,8 +14,8 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 | ------------- | -------------- | --------------------------------------------------------------- |
 | alternateFill | cadena         | any css value; "transparent"; "automatic"; "automaticAlternate" |
 
-#### Objects Supported
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+#### Objetos soportados
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -29,11 +29,11 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 #### Gramática JSON
 
 
-| Nombre | Tipos de datos | Valores posibles                          |
-| ------ | -------------- | ----------------------------------------- |
-| fill   | cadena         | any css value; "transparent"; "automatic" |
+| Nombre | Tipos de datos | Valores posibles                         |
+| ------ | -------------- | ---------------------------------------- |
+| fill   | cadena         | un valor css; "transparent"; "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
@@ -57,8 +57,8 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 | ------------- | -------------- | ----------------------------------------- |
 | rowFillSource | cadena         | An expression returning a RGB color value |
 
-#### Objects Supported
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+#### Objetos soportados
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -76,7 +76,7 @@ Allows setting a standard style for the object border.
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | borderStyle | texto          | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -93,7 +93,7 @@ Describes dotted line type as a sequence of black and white points.
 | --------------- | ---------------------- | ------------------------------------------------------------------------ |
 | strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
 
@@ -118,7 +118,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 | ------------------ | -------------- | ---------------- |
 | hideExtraBlankRows | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md#overview)
 
@@ -131,8 +131,8 @@ You can remove these empty rows by selecting this option. The bottom of the list
 Designates the color of the object's lines. The color can be specified by:
 
 * a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* un valor HEX - como "# ff0000"
+* un valor RVB - como "rgb (255,0,0)"
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
@@ -144,9 +144,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
-#### Objects Supported
+#### Objetos soportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Línea](shapes_overview.md#line) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle)
 
 
 
@@ -161,9 +161,9 @@ Designates the thickness of a line.
 | ----------- | -------------- | ----------------------------------------------------------------- |
 | strokeWidth | number         | 0 for smallest width on a printed form, or any integer value < 20 |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Línea](shapes_overview.md#line) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle)
 
 
 
@@ -174,7 +174,7 @@ Designates the thickness of a line.
 ---
 ## Array colores de fondo
 
-`Array type list boxes`
+`List box de tipo array`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 
@@ -207,7 +207,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 | ------------- | -------------- | ---------------------------- |
 | rowFillSource | cadena         | The name of a longint array. |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
@@ -225,7 +225,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 | ------ | -------------- | ---------------- |
 | fill   | texto          | "transparent"    |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box](listbox_overview.md#overview)
 
 #### Ver también

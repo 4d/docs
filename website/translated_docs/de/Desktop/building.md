@@ -246,6 +246,20 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 
 Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
 
+#### Allow connection of Silicon Mac clients
+
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application:
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+#### Compiled structure location
+
+Path to the compiled structure of the Apple Silicon/Intel client application.
+
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:

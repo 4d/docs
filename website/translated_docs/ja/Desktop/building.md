@@ -246,6 +246,20 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 生成されるアプリケーションのバージョン番号を指定します。 このバージョン番号をもとに、クライアントアプリケーションからの接続を受け入れたり拒否したりできます。 クライアントとサーバーアプリケーションで互換性のある番号の範囲は [XML キー](#アプリケーションビルド設定) で設定します。
 
+#### Allow connection of Silicon Mac clients
+
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application:
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+#### Compiled structure location
+
+Path to the compiled structure of the Apple Silicon/Intel client application.
+
 #### データリンクモードの基準
 
 このオプションを使って、組み込みアプリケーションとローカルデータファイルとのリンクモードを選択します。 二種類のリンクモードから選択可能です:

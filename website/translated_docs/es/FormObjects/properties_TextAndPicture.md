@@ -17,7 +17,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 | customBackgroundPicture | cadena         | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -37,7 +37,7 @@ General appearance of the button. The button style also plays a part in the avai
 | style  |     texto      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -63,7 +63,7 @@ This parameter is useful, for example, when the background picture contains bord
 | ------------- | -------------- | -------------------------------------- |
 | customBorderX | number         | For use with "custom" style. Mínimo: 0 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -82,7 +82,7 @@ Designates the placement of an icon in relation to the form object.
 | ------------- | -------------- | ----------------------- |
 | iconPlacement | cadena         | "none", "left", "right" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Header](listbox_overview.md#list-box-headers)
 
@@ -103,7 +103,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 | ------------ | -------------- | ---------------- |
 | customOffset | number         | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -131,7 +131,7 @@ The following states are represented:
 | ---------- | -------------- | ---------------- |
 | iconFrames | number         | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -154,7 +154,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 | ------ | -------------- | -------------------------------------------- |
 | icon   | imagen         | Relative or filesystem path in POSIX syntax. |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
@@ -182,7 +182,7 @@ Here are the results using the various options for this property:
 | ------------- | -------------- | ------------------------------------------ |
 | textPlacement | cadena         | "left", "top", "right", "bottom", "center" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -204,7 +204,7 @@ This parameter is useful, for example, when the background picture contains bord
 | ------------- | -------------- | -------------------------------------- |
 | customBorderY | number         | For use with "custom" style. Mínimo: 0 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -247,6 +247,6 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 | popupPlacement | cadena         | <li>"none"<li>"linked"<li>"separated" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

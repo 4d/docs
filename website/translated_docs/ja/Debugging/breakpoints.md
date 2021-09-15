@@ -32,7 +32,7 @@ title: ブレークポイントとキャッチコマンド
 
 ブレークポイントプロパティウィンドウを使って、ブレークポイントのふるまいを変更することができます:
 
-![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
+![ブレークポイントプロパティ](assets/en/Debugging/breakpoint-properties.png)
 
 このウィンドウはメソッドエディターおよびデバッガーの [ソースコードエリア](debugger.md#ソースコードエリア) からアクセスします。 次の操作がおこなえます:
 
@@ -57,69 +57,69 @@ title: ブレークポイントとキャッチコマンド
 
 ### ブレークリスト
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Method Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+ブレークリストは、デバッガーウィンドウ又はメソッドエディターで作成したブレークポイントを管理することが出来るランタイムエクスプローラのページです。 ランタイムエクスプローラーの詳細については、[デザインリファレンスマニュアル](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.ja.html) を参照ください。
 
-To open the Break list page:
+ブレークリストのページを開くには:
 
-1. From the **Run menu**, click **Runtime Explorer...**
+1. **実行** メニューから **ランタイムエクスプローラー...** を選択します。
 
-2. Click the **Break** tab to display the Break list:
+2. **ブレーク** タブをクリックして、ブレークリストを表示させます:
 
-![break-list-runtime-explorer](assets/en/Debugging/break-list.png)
+![ランタイムエクスプローラーのブレークリスト](assets/en/Debugging/break-list.png)
 
-Using this window, you can:
+このウィンドウを使用して、以下のことが可能です:
 
-* Set conditions for breakpoints in the **Conditions** column
-* Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
-* Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
-* Open the methods where the breakpoint are located by double-clicking any line in the list
+* ブレークポイントの **条件** を設定する。
+* マージンの赤い点をクリックして、ブレークポイントをそれぞれ有効・無効化する。 無効化されたブレークポイントは透明な (薄い赤の) 点で表されます。
+* `Delete` または `Backspace` キーを押すか、リスト下の**削除** ボタンをクリックして、ブレークポイントを削除する。
+* ブレークポイントをダブルクリックして、メソッドエディターで対象メソッドを開く。
 
-You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Method Editor.
+このウィンドウから新しいブレークポイントを追加することはできません。 ブレークポイントは、デバッガーウィンドウかメソッドエディターでのみ設定できます。
 
 
-## Catching Commands
+## コマンドのキャッチ
 
-The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Unlike a break point, which is located in a particular project method (and therefore triggers a trace exception only when it is reached), the scope of catching a command includes all the processes that execute 4D code and call that command.
+**キャッチ** コマンドリストは、4Dコマンドの呼び出しを捕捉し、デバッガーウィンドウを表示するよう指示することができるランタイムエクスプローラのページです。 特定メソッドの特定行に効果が限定されるブレークポイントとは異なり、キャッチコマンドは、すべてのプロセスおよびメソッドが対象となります。
 
-Catching a command is a convenient way to trace large portions of code without setting break points at arbitrary locations. For example, if a record that should not be deleted is deleted after you've executed one or several processes, you can try to reduce the field of your investigation by catching commands such as `DELETE RECORD` and `DELETE SELECTION`. Each time these commands are called, you can check if the record in question has been deleted, and thus isolate the faulty part of the code.
+キャッチコマンド (コマンド捕捉) は、各所にブレークポイントを設定することなく、大きな範囲でトレースをおこなえる便利な方法です。 たとえば、いくつかのプロセスを実行した後に、削除すべきでないレコードが削除されてしまう場合には、`DELETE RECORD` や `DELETE SELECTION` といったコマンドの処理をキャッチすることにより、調査の範囲を狭めることができます。 キャッチ対象のコマンドが呼び出されるたびにデバッガーが起動されるので、問題のレコードが削除されてしまう経緯を調べ、コードの誤った箇所を突き止めることができます。
 
-Feel free to combine breakpoints and command catching.
+ブレークポイントとキャッチコマンドは組み合わせて使うことができます。
 
-To open the Caught Commands page:
+キャッチコマンドページを開くには:
 
-1. Choose **Run** > **Runtime explorer...** to open the Runtime Explorer.
+1. **実行** メニューから **ランタイムエクスプローラ...** を選択します。
 
-2. Click **Catch** to display the Caught Commands List:
+2. **キャッチ** タブをクリックすると、キャッチコマンドリストが表示されます:
 
-![runtime-explorer-window](assets/en/Debugging/catch-command.png)
+![ランタイムエクスプローラーウィンドウ](assets/en/Debugging/catch-command.png)
 
-This page lists the commands to be caught during execution. It is composed of two columns:
+このページは、実行中にキャッチされるコマンドをリスト表示します。 リストは 2つの列で構成されています:
 
-* The left column displays the Enable/Disable status of the caught command, followed by the name of the command
-* The right column displays the condition associated with the caught command, if any
+* 左の列には、キャッチするコマンドの有効/無効状況と、コマンド名が表示されます。
+* 右の列には、コマンドに関連する条件 (あれば) が表示されます。
 
-To add a command to be caught:
+キャッチするコマンドを新しく追加するには:
 
-1. Click on the **Add New Catch** button (in the shape of a +) located below the list. A new entry is added to the list with the `ALERT` command as default
-2. Click the **ALERT** label, type the name of the command you want to catch, then press **Enter**.
+1. リスト下部にある **新規キャッチを追加** ボタン (＋) をクリックします。 `ALERT` コマンドをデフォルトとして新しいエントリーが追加されます。
+2. 次に **ALERT** ラベルをクリックし、キャッチしたいコマンドの名前を入力します。入力したら、**Enter**キーを押して選択を確定させます。
 
-To enable or disable a caught command, click on the bullet (•) in front of the command label. The bullet is transparent when the command is disabled.
+キャッチコマンドを無効、あるいは有効にするには、コマンドラベルの前にある点 (•) をクリックします。 透明な (薄い赤の) 点は、キャッチが無効化されていることを表します。
 
-> Disabling a caught command has almost the same effect as deleting it. During execution, the debugger spends almost no time on the entry. The advantage of disabling an entry is that you do not have to recreate it when you need it again.
+> コマンドキャッチの無効化は、削除するのとほぼ同等の効果があります。 実行中、デバッガーはほぼ全くと言っていいほどエントリーに時間を使いません。 エントリーを無効化することの利点は、それが再び必要になったとき一から作り直さなくて良いという点です。
 
-To delete a caught command:
+キャッチコマンドを削除するには:
 
-1. Select a command in the list.
-2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
+1. リスト中のコマンド選択します。
+2. **Backspace** または **Delete** キーを押すか、リスト下部にある **削除** ボタンをクリックします。キャッチコマンドをすべて削除するには、**すべてを削除** ボタンをクリックします。
 
-### Setting a Condition for catching a command
+### キャッチコマンドに条件を設定する
 
-1. Click on the entry in the right column
-2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
+1. エントリーの右の列をクリックします。
+2. ブール値を返す 4Dフォーミュラ (式、コマンドやプロジェクトメソッド) を入力する。
 
-> To remove a condition, delete its formula.
+> 条件を削除するにはフォーミュラを削除します。
 
-Adding conditions allows you to stop execution when the command is invoked only if the condition is met. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
+条件の設定により、コマンド呼び出し時に特定の条件が満たされている場合にのみ、実行を中止する事ができます。 たとえば、`DELETE SELECTION` コマンドのキャッチに `Records in selection(\[Emp]>10)` という条件を設定した場合、\[Emp]テーブルのカレントセレクションが 9レコード以下の場合には `DELETE SELECTION` コマンドの呼び出しで実行が中断されません。
 
-Adding conditions to caught commands slows the execution, because the condition has to be evaluated each time an exception is met. On the other hand, adding conditions accelerates the debugging process, because 4D automatically skips occurrences that do not match the conditions.
+例外のたびに条件を評価することになるため、キャッチコマンドに条件を追加すると実行速度は遅くなります。 その一方で、条件を追加するとデバッグプロセスは早くなります。条件に合致しないオカレンスを、4D が自動的にスキップしていくからです。
 
