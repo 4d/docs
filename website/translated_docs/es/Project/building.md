@@ -1,24 +1,24 @@
 ---
 id: building
-title: Building a project package
+title: Construir un paquete proyecto
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
+4D Developer incluye un generador de aplicaciones finales para crear un paquete de proyecto (versión final). Este generador simplifica el proceso de finalización y despliegue de las aplicaciones compiladas en 4D. Maneja automáticamente las funcionalidades específicas de los distintos sistemas operativos y facilita el despliegue de aplicaciones cliente-servidor.
 
-The application builder allows you to:
+El generador de aplicaciones le permite:
 
 *   Generar una base de datos compilada, sin código interpretado,
-*   Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
+*   Generar una aplicación autónoma ejecutable, *es decir*, fusionada con 4D Volume Desktop, el motor de base de datos 4D,
 *   Generar diferentes aplicaciones a partir de la misma base de datos compilada mediante un proyecto XML,
-*   Build homogeneous client-server applications,
-*   Build client-server applications with automatic updating of client and server parts.
-*   Save your build settings for future use (*Save settings* button).
+*   Generar aplicaciones cliente-servidor homogéneas,
+*   Generar aplicaciones cliente-servidor con actualización automática de los componentes del cliente y del servidor.
+*   Guardar sus parámetros de generación para su uso futuro (botón *Guardar los parámetros*).
 
 
 
-## Build application overview
+## Vista general del generador de aplicaciones
 
-Building a project package can be carried out using:
+Generar un paquete de proyecto puede realizarse utilizando:
 
 - el comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 - or the [Build Application window](#application-builder).
@@ -321,33 +321,33 @@ Durante la creación de una aplicación ejecutable, 4D duplica el contenido de l
 
 #### Ubicación de los archivos web
 
-Si la parte servidor y/o del cliente de su aplicación de doble clic se utiliza como servidor web, los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. These items are the following:
+Si la parte servidor y/o del cliente de su aplicación de doble clic se utiliza como servidor web, los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. Estos elementos son los siguientes:
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
+- Archivos*cert.pem* y *key.pem* (opcional): estos archivos se utilizan para las conexiones SSL y por los comandos de encriptación de datos,
+- Carpeta raíz Web por defecto (WebFolder).
 
-Items must be installed:
-*   **on Windows**
-    *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
+Los elementos deben ser instalados:
+*   **en Windows**
+    *   **Aplicación servidor** - en la subcarpeta *ejecutable Client Server \ \<ApplicationName>Server\Server Database* subfolder.
+    *   **Aplicación Cliente** - en la subcarpeta *ejecutable Client Server\ \<ApplicationName>Client*.
 
-*   **on macOS**
-    *   **Server application** - next to the *\<ApplicationName>Server* software package.
-    *   **Client application** - next to the *\<ApplicationName>Client* software package.
-
-
+*   **en macOS**
+    *   **Aplicación servidor** - junto al paquete de software *\<ApplicationName>Server*.
+    *   **Aplicación Cliente** - junto al paquete de software *\<ApplicationName>Client*.
 
 
 
-## Plugins & components page
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
-The page lists the elements loaded by the current 4D application:
+## Página plugins y componentes
+
+En esta pestaña, define cada [plug-in](Concepts/plug-ins.md) y cada [componente](Concepts/components.md) que utilizará en su aplicación autónoma o cliente/servidor.
+
+La página enumera los elementos cargados por la aplicación 4D actual:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+*    Columna **Active** - Indica que los elementos se integrarán en el paquete de aplicaciones creado. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
 
@@ -355,9 +355,9 @@ The page lists the elements loaded by the current 4D application:
 
 *   **Type** column - Indicates the type of item: plug-in or component.
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. El mecanismo de copia del contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
+Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), tiene prioridad el plug-in instalado en la carpeta 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
 > The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
 
 
@@ -381,9 +381,9 @@ This tab displays the list of available deployment licenses that you can integra
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
-When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
+When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. Para más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+Debe designar los archivos que contienen su licencia de desarrollador así como los que contienen sus licencias de despliegue. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
 
 Once you have selected a file, the list will indicate the characteristics of the license that it contains.
 
@@ -446,7 +446,7 @@ For more information on the notarization concept, please refer to [this page on 
 
     Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
+You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. Las siguientes llaves están disponibles:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -459,11 +459,11 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 
 
-## Management of data file(s)
+## Gestión de archivo(s) de datos
 
-### Opening the data file
+### Apertura de archivo de datos
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+Cuando un usuario lanza una aplicación fusionada o una actualización (aplicaciones monopuesto o cliente/servidor), 4D intenta seleccionar un archivo de datos válido. Several locations are examined by the application successively.
 
 The opening sequence for launching a merged application is:
 
@@ -492,13 +492,13 @@ This mechanism is usually suitable for standard deployments. However, for specif
 
 #### Configuring the data linking mode
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+With your compiled applications, 4D automatically uses the last data file opened. Por defecto, la ruta del archivo de datos se almacena en la carpeta de preferencias del usuario de la aplicación y está vinculada al **nombre de la aplicación**.
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+Esto puede ser inadecuado si se quiere duplicar una aplicación fusionada que pretende utilizar diferentes archivos de datos. Las aplicaciones duplicadas en realidad comparten la carpeta de preferencias del usuario de la aplicación y, por lo tanto, siempre utilizan el mismo archivo de datos - incluso si el archivo de datos se cambia de nombre, porque se abre el último archivo utilizado para la aplicación.
 
-4D therefore lets you link the data file path to the application path. In this case, the data file will be linked using a specific path and will not just be the last file opened. You therefore link your data **by application path**.
+4D permite, por tanto, vincular la ruta del archivo de datos a la ruta de la aplicación. In this case, the data file will be linked using a specific path and will not just be the last file opened. Asocie sus datos **por la ruta de aplicación**.
 
-This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
+Este modo le permite duplicar sus aplicaciones fusionadas sin romper el vínculo con el archivo de datos. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 
 *Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
@@ -523,7 +523,7 @@ More specifically, the following cases are covered:
 
 To define and use a default data file:
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. Este archivo debe suministrarse junto con todos los demás archivos necesarios, dependiendo de la configuración de la base: índice (.4DIndx), Blobs externos, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 - When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
 The following graphic illustrates this feature:
@@ -552,13 +552,13 @@ The connection procedure for merged client applications supports cases where the
 
 ### Storing the last server path
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. Esta carpeta se almacena en la siguiente ubicación:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+Este mecanismo aborda el caso de que el servidor de destino primario no esté disponible temporalmente por alguna razón (modo mantenimiento, por ejemplo). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
 
 > - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability.  
 > - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
