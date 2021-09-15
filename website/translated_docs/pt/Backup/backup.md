@@ -14,7 +14,7 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 
 > 4D Server: é possível iniciar uma cópia de segurança manualmente desde uma máquina remota mediante um método que chama ao comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
-### Manual backup
+### Cópia de segurança manual
 
 1. Selecione o comando **Backup...** no menu 4D **Arquivo**.   
    Aparece a janela de cópia de segurança: ![](assets/en/Backup/backup01.png) Pode ver a localização da pasta da cópia de segurança mediante o menu emergente situado junto à área "Destino da cópia de segurança". Esta localização é definida na página **Cópia de segurança/configuração** das Propriedades do banco de dados.
@@ -35,7 +35,7 @@ As cópias de segurança são feitas automaticamente na hora definida nessa pág
 
 ### Comando BACKUP
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. Pode utilizar os métodos `On Backup Startup` e `On Backup Shutdown` para controlar o processo de cópia de segurança (consulte o manual *Linguagem, de 4D*).
+Quando o comando de linguagem `BACKUP` 4D for executado a partir de qualquer método, o backup começa usando os parâmetros atuais como definidos nas configurações Banco de Dados. Pode utilizar os métodos `On Backup Startup` e `On Backup Shutdown` para controlar o processo de cópia de segurança (consulte o manual *Linguagem, de 4D*).
 
 
 ## Gerenciar o processo de  backup
