@@ -112,11 +112,11 @@ title: DataClassAttribute
 
 **とりうる値:**
 
-| dataClassAttribute.kind | fieldType          | 説明                                                                         |
-| ----------------------- | ------------------ | -------------------------------------------------------------------------- |
-| storage                 | 対応する 4Dフィールド型      | See [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
-| relatedEntity           | 38 (Is object)     |                                                                            |
-| relatedEntities         | 42 (Is collection) |                                                                            |
+| dataClassAttribute.kind | fieldType          | 説明                                                                            |
+| ----------------------- | ------------------ | ----------------------------------------------------------------------------- |
+| storage                 | 対応する 4Dフィールド型      | [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) コマンド参照 |
+| relatedEntity           | 38 (Is object)     |                                                                               |
+| relatedEntities         | 42 (Is collection) |                                                                               |
 
 <!-- END REF -->
 
@@ -358,11 +358,11 @@ title: DataClassAttribute
 
 **とりうる値:**
 
-| dataClassAttribute.kind | type                                                             | 説明                                                                                                                                                                                                                     |
-| ----------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "blob", "bool", "date", "image", "number", "object", or "string" | 数値型の場合 "number" が返されます (期間を含む)。 "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
-| relatedEntity           | リレートされたデータクラス名                                                   | 例: "Companies"                                                                                                                                                                                                         |
-| relatedEntities         | リレートされたデータクラス名 + "Selection"                                     | 例: "EmployeeSelection"                                                                                                                                                                                                 |
+| dataClassAttribute.kind | type                                                              | 説明                                                                                                                                                                    |
+| ----------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "blob", "bool", "date", "image", "number", "object", または "string" | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 "blob" 属性は [BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) で、[Blob クラス](BlobClass.md) によって扱われます。 |
+| relatedEntity           | リレートされたデータクラス名                                                    | 例: "Companies"                                                                                                                                                        |
+| relatedEntities         | リレートされたデータクラス名 + "Selection"                                      | 例: "EmployeeSelection"                                                                                                                                                |
 
 <!-- END REF -->
 
