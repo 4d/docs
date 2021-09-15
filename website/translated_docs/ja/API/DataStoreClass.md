@@ -60,7 +60,7 @@ title: DataStore
 
 *localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
 #### 例題 1
 
@@ -136,7 +136,7 @@ Objects available in the `cs.Datastore` are mapped from the target database with
 
 *localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
