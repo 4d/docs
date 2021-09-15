@@ -40,7 +40,7 @@ You can display horizontal or vertical thermometers bars. This is determined by 
 
 Multiple graphical options are available: minimum/maximum values, graduations, steps.
 
-### Supported Properties
+### Propiedades soportadas
 [Barber shop](properties_Scale.md#barber-shop) - [Negrita](properties_Text.md#bold) - [Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) -[Abajo](properties_CoordinatesAndSizing. md#bottom) - [Clase](properties_Object.md#css-class) - [Graduación de la pantalla](properties_Scale.md#display-graduation) - [Enterable](properties_Entry. md#enterable) - [Ejecutar método objeto](properties_Action.md#execute-object-method) - [Tipo de expresión](properties_Object.md#expression-type) (sólo "entero", "número", "fecha" o "hora") - [Altura](properties_CoordinatesAndSizing. md#height) - [Paso de graduación](properties_Scale.md#graduation-step) -[Consejo de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions. md#horizontal-sizing) - [Lugar de la etiqueta](properties_Scale.md#label-location) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Máximo](properties_Scale. md#maximum) - [Mínimo](properties_Scale.md#minimum) - [Formato numérico](properties_Display.md#number-format) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing. md#right) - [Paso](properties_Scale.md#step) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variable o expresión](properties_Object. md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 
@@ -58,7 +58,7 @@ When the form is executed, the object is not animated. You manage the animation 
 * 1 (or any value other than 0) = Start animation,
 * 0 = Stop animation.
 
-### Supported Properties
+### Propiedades soportadas
 [Barber shop](properties_Scale.md#barber-shop) - [Negrita](properties_Text.md#bold) - [Estilo de la línea de borde](properties_BackgroundAndBorder. md#border-line-style) -[Abajo](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Enterable](properties_Entry. md#enterable) - [Ejecutar método objeto](properties_Action.md#execute-object-method) - [Tipo de expresión](properties_Object. md#expression-type) (sólo "entero", "número", "fecha" o "hora") - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help. md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing. md#left) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Arriba](properties_CoordinatesAndSizing. md#top) - [Tipo](properties_Object.md#type) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions. md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 
