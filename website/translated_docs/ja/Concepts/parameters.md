@@ -456,18 +456,18 @@ ALERT("Are you sure?";"Yes I am") // 2つの引数
 ALERT("Time is over") // 1つの引数
 ```
 
-4D methods and functions also accept such optional parameters. The issue with optional parameters is how to handle the case where some of them are missing in the called code. By default, if you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). たとえば:
+4Dメソッドや関数も、このような任意パラメーターを受け入れます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。 デフォルトでは、宣言されているよりも少ない引数をメソッドや関数に渡した場合、指定されなかったパラメーターは、[そのタイプに応じたデフォルト値](data-types.md#デフォルト値) として、呼び出されたコードの中で処理されます。 たとえば:
 
 ```4d
-// "concate" function of myClass
+// myClass クラスの "concate" 関数
 Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
 ```4d
-  // Calling method
+  // 呼び出し元メソッド
  $class:=cs.myClass.new()
  $class.concate("Hello") // "Hello "
- $class.concate() // Displays " "
+ $class.concate() // スペースのみ: " "
 ```
 
 
