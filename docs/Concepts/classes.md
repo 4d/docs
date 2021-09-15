@@ -294,15 +294,24 @@ Function get <name>()->$return : type
 // code
 ```
 ```4d
-Function set <name>({$parameterName : type; ...}){->$return : type}
+Function set <name>({$parameterName : type; ...})
 // code
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class. 
+`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
 
-In the class definition file, computed property declarations use the `Function get` and `Function set` keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). 
+- when the property is read, the `Function get` is executed,
+- when the property is written, the `Function set` is executed.
 
-The property type is defined by the `$return` type declaration of the `Function get`. It can be of the following types:
+If the property is not accessed, the code never executes.
+
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a persistent property contains the *gross price* of an object and another property contains the *VAT rate*, the *net price* could be handled by a computed property. 
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). 
+
+When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read. 
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of the following types:
 
 - Text
 - Boolean
@@ -313,14 +322,25 @@ The property type is defined by the `$return` type declaration of the `Function 
 - Image
 - Blob
 
-Computed properties are designed to handle object data that can be computed when the property is used only, and do not need to be stored. A computed property is usually built upon persistent properties. For example, if a property contains the *gross price* of an object and another property contains the *VAT rate*, a computed property could handle the *net price*. 
+Assigning *undefined* to an object property clears its value while preserving its value type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
 
-A computed property is used as a regular object property, without calling a function. Computed properties can be read-only or read-write:
+#### Examples
 
-- when the property is read, the `Function get` is called,
-- when the property is written, the `Function set` is called.
+```4d  
+//Class: Person.4dm
+Class constructor($firstname : Text; $lastname : Text)
+	This.firstName:=$firstname
+	This.lastName:=$lastname
 
-For example:
+Function get fullName() -> $fullName : Text
+	$fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : text )
+	$names:=Split string($fullName;" ")
+	This.firstName:=$names[0]
+	This.lastName:=$names[1]
+	
+```
 
 ```4d  
 //Class: Item.4dm
@@ -332,19 +352,11 @@ Function set netPrice( $netPrice : Real )
 	This.grossPrice := $netPrice * (1+(This.VATRate/100))
 ```
 
-In a method, you can use the computed property as any property:
-
 ```4d
+//in a project method
 $amount:=$item.netPrice * $quantity // Function get netPrice() is called
 $item.netPrice:=1500 // Function set netPrice() is called
 ```
-
-When both functions are defined, the computed property is **read-write**. 
-If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. 
-If only a `Function set` is defined, 4D returns *undefined* when the property is read. 
-
-Assigning *undefined* to an object property clears its value while preserving its value type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
-
 
 
 ### `Class Constructor`
