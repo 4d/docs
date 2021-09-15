@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: 表示フォーマット
+title: 表示
 ---
 
 ---
