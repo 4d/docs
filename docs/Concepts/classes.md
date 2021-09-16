@@ -8,7 +8,7 @@ title: Classes
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions. 
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and [properties](XXXXX).
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
@@ -107,6 +107,7 @@ Available classes are accessible from their class stores. Two class stores are a
 - `4D` for built-in class store
 
  
+
 ### `cs`
 
 #### cs -> classStore
@@ -294,7 +295,7 @@ Function get <name>()->$return : type
 // code
 ```
 ```4d
-Function set <name>({$parameterName : type; ...})
+Function set <name>($parameterName : type)
 // code
 ```
 
@@ -305,9 +306,11 @@ Function set <name>({$parameterName : type; ...})
 
 If the property is not accessed, the code never executes.
 
-Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a persistent property contains the *gross price* of an object and another property contains the *VAT rate*, the *net price* could be handled by a computed property. 
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property. 
 
 In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). 
+
+`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
 
 When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read. 
 
@@ -322,7 +325,7 @@ The type of the computed property is defined by the `$return` type declaration o
 - Image
 - Blob
 
-Assigning *undefined* to an object property clears its value while preserving its value type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
 
 #### Examples
 
@@ -336,9 +339,9 @@ Function get fullName() -> $fullName : Text
 	$fullName:=This.firstName+" "+This.lastName
 
 Function set fullName( $fullName : text )
-	$names:=Split string($fullName;" ")
-	This.firstName:=$names[0]
-	This.lastName:=$names[1]
+	$p:=Position(" "; $fullName)
+	This.firstName:=Substring($fullName; 1; $p-1)
+	This.lastName:=Substring($fullName; $p+1)
 	
 ```
 
