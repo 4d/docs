@@ -7,12 +7,12 @@ title: Acción
 ---
 ## Arrastrable
 
-Control whether and how the user can drag the object. By default, no drag operation is allowed.
+Controle si el usuario puede arrastrar el objeto y cómo. Por defecto, no se permite ninguna operación de arrastre.
 
-Two drag modes are available:
+Hay dos modos de arrastrar disponibles:
 
-- **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. You then manage the drag action using a method.   
-  In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
+- **Personalizado**: en este modo, toda operación de arrastrar realizada en el objeto dispara el evento formulario `On Begin Drag` en el contexto del objeto. A continuación, se gestiona la acción de soltar mediante un método.   
+  En modo personalizado, básicamente toda la operación de arrastrar y soltar es manejada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
 - **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. It can then be used in the same 4D area, between two 4D areas, or between 4D and another application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
   ![](assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](assets/en/FormObjects/property_automaticDragDrop2.png) In this mode, the `On Begin Drag` form event is NOT generated. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
@@ -45,7 +45,7 @@ Controla si el objeto puede ser el destino de una operación de arrastrar y solt
 Hay dos modos de soltar disponibles:
 
 - **Personalizado**: en este modo, cualquier operación de soltar realizada en el objeto activa los eventos formulario `On Drag Over` y `On Drop` en el contexto del objeto. A continuación, se gestiona la acción de soltar mediante un método.    
-  En modo personalizado, básicamente toda la operación de arrastrar y soltar es manejada por el programador. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
+  En modo personalizado, básicamente toda la operación de arrastrar y soltar es manejada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
 - **Automático**: en este modo, 4D gestiona automáticamente, si es posible, la inserción de los datos arrastrados de tipo texto o imagen que se sueltan sobre el objeto (los datos se pegan en el objeto). Los eventos `On Drag Over` y `On Drop` NO se generan. Por otra parte, se generan los eventos `On After Edit` (durante el soltar) y `On Data Change` (cuando el objeto pierde el foco).
 
 Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
@@ -184,7 +184,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 ## Acción estándar
 Actividades típicas que deben realizar por los objetos activos (*por ejemplo*, permitir que el usuario acepte, cancele o elimine registros, se desplace entre registros o de una página a otra en un formulario de varias páginas, etc.) han sido predefinidas por 4D como acciones estándar. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
+You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 
 You can also set this property using the `OBJECT SET ACTION` command.
 
