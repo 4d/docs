@@ -21,7 +21,7 @@ Two main locations can be used for static picture path:
 | imagen |     texto      | Relative or filesystem path in POSIX syntax |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
@@ -68,6 +68,6 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 | ------------- | -------------- | -------------------------------------------------------- |
 | pictureFormat | cadena         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Static Picture](staticPicture.md)

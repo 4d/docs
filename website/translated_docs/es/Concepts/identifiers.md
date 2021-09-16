@@ -366,7 +366,7 @@ La siguiente tabla resume las convenciones de denominación de 4D.
 | Conjuntos interproceso          | <> + 255      | "<>Records to be Archived" |
 | Conjuntos proceso               | 255           | "Current selected records" |
 | Conjunto cliente                | $ + 255       | "$Previous Subjects"       |
-| Named Selection                 | 255           | "Employees A to Z"         |
+| Selección temporal              | 255           | "Employees A to Z"         |
 | Selección temporal interproceso | <> + 255      | "<>Employees Z to A"       |
 | Proceso local                   | $ + 255       | "$Follow Events"           |
 | Proceso global                  | 255           | "*P_INVOICES_MODULE*"    |

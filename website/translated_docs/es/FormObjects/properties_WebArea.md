@@ -20,7 +20,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 | -------------------- | -------------- | ----------------------- |
 | methodsAccessibility | cadena         | "none" (default), "all" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área Web](webArea_overview.md)
 
@@ -36,7 +36,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 | -------------- | -------------- | -------------------------- |
 | progressSource | cadena         | Name of a Longint variable |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área Web](webArea_overview.md)
 
@@ -67,7 +67,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 | --------- | -------------- | ---------------- |
 | urlSource | cadena         | A URL.           |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área Web](webArea_overview.md)
 
@@ -98,6 +98,6 @@ Tenga en cuenta que el motor Blink tiene las siguientes restricciones:
 | --------- | -------------- | -------------------- |
 | webEngine | cadena         | "embedded", "system" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Área Web](webArea_overview.md)

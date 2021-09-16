@@ -39,7 +39,7 @@ Una vez finalizada la compactación, 4D genera un archivo de historial en la car
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
 
-## Advanced mode
+## Modo avanzado
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 

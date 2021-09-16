@@ -12,7 +12,7 @@
         "title": "Arquivo de Log (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -286,7 +286,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -315,8 +315,8 @@
         "sidebar_label": "Information Page"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Visão Geral",
+        "sidebar_label": "Visão Geral"
       },
       "MSC/repair": {
         "title": "Repair Page",
@@ -347,7 +347,7 @@
         "title": "Developing a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -446,7 +446,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Visão Geral"
       }
     },
     "links": {

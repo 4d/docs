@@ -26,7 +26,7 @@ If the tab control is wide enough to display all the tabs with both the labels a
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
 
-### JSON Example:
+### Ejemplo JSON:
 
 ```4d
     "myTab": {
@@ -89,5 +89,5 @@ When you assign the `gotoPage` [standard action](properties_Action.md#standard-a
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
 
 
-## Supported Properties
+## Propiedades soportadas
 [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Lista de opciones](properties_DataSource.md#choice-list-static-list) - [Clase](properties_Object.md#css-class) - [Tipo de expresión](properties_Object.md#expression-type) - [Fuente](properties_Text.md#font) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italico](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Dirección del control de la ficha](properties_Appearance.md#tab-control-direction) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width) 

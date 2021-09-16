@@ -16,12 +16,12 @@ Collection of columns of the list box.
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
-## Detail Form Name
+## Nombre formulario detallado
 `Selection type list box`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
@@ -37,7 +37,7 @@ The specified form is displayed:
 | ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | cadena         | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -47,7 +47,7 @@ The specified form is displayed:
 
 
 ---
-## Double-click on row
+## Doble clic en línea
 `Selection type list box`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
@@ -67,7 +67,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 | ---------------------- | -------------- | ----------------------------------- |
 | doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -75,7 +75,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 ---
-## Highlight Set
+## Conjunto resaltado
 
 `Selection type list box`
 
@@ -91,7 +91,7 @@ This property is used to specify the set to be used to manage highlighted record
 | ------------ | -------------- | ---------------- |
 | highlightSet | cadena         | Name of the set  |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -120,7 +120,7 @@ These properties interact as follows:
 
 *   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
-### Number of Locked Columns
+### Número de columnas bloqueadas
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
@@ -128,14 +128,14 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 | Nombre            | Tipos de datos | Valores posibles |
 | ----------------- | -------------- | ---------------- |
-| lockedColumnCount | integer        | minimum: 0       |
+| lockedColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
-### Number of Static Columns
+### Número de columnas estáticas
 
 Number of columns that cannot be moved during execution.
 
@@ -143,9 +143,9 @@ Number of columns that cannot be moved during execution.
 
 | Nombre            | Tipos de datos | Valores posibles |
 | ----------------- | -------------- | ---------------- |
-| staticColumnCount | integer        | minimum: 0       |
+| staticColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -155,7 +155,7 @@ Number of columns that cannot be moved during execution.
 
 
 ---
-## Number of Columns
+## Número de columnas
 
 Sets the number of columns of the list box.
 > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
@@ -166,7 +166,7 @@ Sets the number of columns of the list box.
 | ----------- | -------------- | ---------------- |
 | columnCount | integer        | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -174,7 +174,7 @@ Sets the number of columns of the list box.
 
 
 ---
-## Row Control Array
+## Array de control de líneas
 
 `Array type list box`
 
@@ -222,14 +222,14 @@ Note that setting properties for an element overrides any other values for this 
 | ---------------- | -------------- | ---------------------- |
 | rowControlSource | cadena         | Row control array name |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
 
 ---
-## Selection Mode
+## Modo de selección
 
 Designates the option for allowing users to select rows:
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
@@ -244,6 +244,6 @@ Designates the option for allowing users to select rows:
 | ------------- | -------------- | ---------------------------- |
 | selectionMode | cadena         | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
