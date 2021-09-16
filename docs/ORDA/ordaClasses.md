@@ -214,6 +214,15 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
 - **Example name**: cs.CityEntity
 
+Entity classes allow you to define **computed attributes** using specific keywords:
+
+- `Function get` *attribute*
+- `Function set` *attribute*
+- `Function query` *attribute*
+- `Function orderBy` *attribute*
+
+For more information, please refer to the [Computed attributes](XXX) section. 
+
 #### Example
 
 ```4d
@@ -258,6 +267,18 @@ When creating or editing data model classes, you must pay attention to the follo
 
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
+
+## Computed attributes
+
+A computed attribute is a dataclass attribute with a data type that masks a calculation. [Standard 4D classes](Concepts.md#function-get-and-function-set) implement the concept of computed properties through a *getter* (`Function get`) and a *setter* (`Function set`) accessors. ORDA entity objects benefit from this feature and extends it with two additional accessors: `Function query` and `Function orderBy`.
+
+At the very minimum, a computed attribute requires a *getter* function (`Function get`) that describes how its value will be calculated. When a *getter* function is supplied for an attribute, 4D does not create the underlying storage space in the datastore but instead substitutes the function's code each time the attribute is accessed. If the attribute is not accessed, the code never executes.
+
+A computed attribute can also implement a *setter* function (`Function set`), which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
+
+> [Standard 4D classes](Concepts.md#function-get-and-function-set) allow defining computed properties using the keywords. 
+
+Just like storage attributes, computed attributes may be included in queries. Normally, when a calculated attribute is used in a Wakanda query, the attribute is calculated once per entity examined. In many cases this is sufficient. However, calculated attributes can implement an On Query method that substitutes other attributes during the query. This allows calculated attributes to be queried quickly by redirecting searches to other attributes, including storage attributes that may already be indexed.
 
 
 ## Exposed vs non-exposed functions
