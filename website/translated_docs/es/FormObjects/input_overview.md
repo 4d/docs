@@ -4,27 +4,27 @@ title: Entrada
 ---
 
 
-Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+Las entradas le permiten añadir expresiones editables o no editables como [campos](Concepts/identifiers.md#fields) y [variables](Concepts/variables.md) de base de datos a sus formularios. Las entradas pueden manejar datos basados en caracteres (texto, fechas, números...) o imágenes:
 
 ![](assets/en/FormObjects/input.png)
 
-Inputs can contain [assignable or non-assignable expressions](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+Las entradas pueden contener [expresiones asignables o no asignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
-In addition, inputs can be [enterable or non-enterable](properties_Entry.md#enterable). An enterable input accepts data. You can set data entry controls for the object. A non-enterable input can only display values but cannot be edited by the user.
+Además, las entradas pueden ser [editables o no editables](properties_Entry.md#enterable). Una entrada introducible acepta los datos. Puede definir los controles de entrada de datos para el objeto. Una entrada no editable sólo puede mostrar valores, pero no puede ser editada por el usuario.
 
-You can manage the data with object or form [methods](Concepts/methods.md).
+Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
 
 
 ### Ejemplo JSON:
 
 ```4d
-    "myText": {
-        "type": "input",    //define the type of object
-        "spellcheck": true, //enable spelling verification
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20        //height of the object
+    "miTexto": {
+        "tipo": "input", //define el tipo de objeto
+        "spellcheck": true, //activa la verificación ortográfica
+        "left": 60, //posición izquierda en el formulario  
+        "top": 160, //posición superior en el formulario 
+        "width": 100, //ancho del objeto
+        "height": 20 //altura del objeto
         }
 ```
 
