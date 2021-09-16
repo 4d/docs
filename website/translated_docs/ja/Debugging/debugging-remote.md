@@ -1,6 +1,6 @@
 ---
 id: debugging-remote
-title: Debugging from remote machines
+title: リモートマシンからのデバッグ
 ---
 
 ## 概要
