@@ -4,7 +4,7 @@ title: Classes
 ---
 
 
-## Overview
+## Visão Geral
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
 

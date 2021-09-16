@@ -10,7 +10,7 @@ List boxes are complex active objects that allow displaying and entering data as
 
 A list box contains one or more columns whose contents are automatically synchronized. The number of columns is, in theory, unlimited (it depends on the machine resources).
 
-## Overview
+## Visão Geral
 
 ### Basic user features
 

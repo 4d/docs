@@ -31,12 +31,12 @@ Attachment オブジェクトには、次の読み取り専用プロパティや
 
 | 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| path        | Text              | -> | 添付ファイルのパス                                              |
 | blob        | BLOB              | -> | 添付を格納した BLOB                                           |
-| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | テキスト              | -> | content-type ヘッダーの値                                    |
-| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | Text              | -> | content-type ヘッダーの値                                    |
+| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
 <!-- END REF -->
 
@@ -168,12 +168,12 @@ $transporter.send($email)
 
 | 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| path        | Text              | -> | 添付ファイルのパス                                              |
 | blob        | BLOB              | -> | 添付を格納した BLOB                                           |
-| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | テキスト              | -> | content-type ヘッダーの値                                    |
-| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | Text              | -> | content-type ヘッダーの値                                    |
+| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
 <!-- END REF -->
 

@@ -1,6 +1,6 @@
 ---
 id: dataExplorer
-title: Web Data Explorer
+title: Explorateur de données Web
 ---
 
 > **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
@@ -11,7 +11,7 @@ The Data Explorer provides a web interface to view and query data in your projec
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
 
-## Access Configuration
+## Configuration
 
 The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
 

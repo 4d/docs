@@ -10,7 +10,7 @@ These options in the preferences modify the default name and type of the primary
 Les options suivantes sont disponibles :
 
 *   **Name** ("ID" by default): Sets the default name of primary key fields. You can use any name you want, as long as it respects the [4D naming rules](Concepts/identifiers.md#tables-and-fields).
-*   **Type** ([Longint](Concepts/number.md) by default): Sets the default type of primary key fields. You can choose the UUID type. In this case, the primary key fields created by default are of the [Alpha type](Concepts/string.md) and have the **UUID Format** and **Auto UUID** field properties checked.
+*   **Type** ([Entier long](Concepts/number.md) par défaut) : définit le type par défaut des champs de clé primaire. Vous pouvez choisir le type d'UUID. Dans ce cas, les champs de clé primaire créés par défaut sont de [type Alpha](Concepts/string.md) et les propriétés des champs **Format UUID** et **Auto UUID** sont cochées.
 
 ## Éditeur de structure
 

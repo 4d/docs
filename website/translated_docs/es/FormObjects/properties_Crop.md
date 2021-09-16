@@ -14,7 +14,7 @@ Sets the number of columns in a thumbnail table.
 |:----------- |:--------------:| ---------------- |
 | columnCount |    integer     | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
@@ -32,7 +32,7 @@ Sets the number of rows in a thumbnail table.
 |:-------- |:--------------:| ---------------- |
 | rowCount |    integer     | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 

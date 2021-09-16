@@ -9,7 +9,7 @@ title: プロジェクトのアーキテクチャー
     - Components
     - Data
         - Logs
-        - Settings
+        - 設定
     - Documentation
     - Plugins
     - Project
@@ -17,7 +17,7 @@ title: プロジェクトのアーキテクチャー
         - Sources
         - Trash
     - Resources
-    - Settings
+    - 設定
     - userPreferences.username
     - WebFolder
 

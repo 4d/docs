@@ -1,12 +1,12 @@
 ---
 id: authentication
-title: Authentication
+title: Authentification
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
 
 
-## Authentication modes
+## Modes d’authentification
 
 The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 

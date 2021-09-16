@@ -148,7 +148,7 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propriedad  | Tipo         | Descripción                                                                                                                                                                                                                                                            |
+| Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                            |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname    | Texto        | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
 | user        | Texto        | User name                                                                                                                                                                                                                                                              |
@@ -313,7 +313,7 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 The returned object contains the following properties:
 
-| Propriedad  |             |               | Tipo     | Descripción                                                                        |
+| Propiedad   |             |               | Tipo     | Descripción                                                                        |
 | ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
 | keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
@@ -382,12 +382,12 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Propriedad | Tipo     | Descripción                                                                                                                                                     |
+| Propiedad  | Tipo     | Descripción                                                                                                                                                     |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | cadena   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
 | networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
 | localID    | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
+| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -577,7 +577,7 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 
 The result of the command is described in the returned object:
 
-| Propriedad |                          | Tipo      | Descripción                                                                     |
+| Propiedad  |                          | Tipo      | Descripción                                                                     |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------- |
 | success    |                          | Booleano  | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |           | Properties below are returned only if success is *FALSE*                        |

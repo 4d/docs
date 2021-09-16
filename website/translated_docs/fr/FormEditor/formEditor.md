@@ -28,7 +28,7 @@ You can show or hide several interface elements on the current page of the form:
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
 - the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
-- the current [form type](properties_Form.md#form-type):
+- le [type de formulaire](properties_Form.md#form-type) courant :
     - Markers and marker labels are always displayed by default on list forms
     - Paper is displayed by default on "for printing" forms.
 

@@ -5,7 +5,7 @@ title: BLOB
 
 Um campo, variável ou expressão BLOB (Binary Large OBjects) é uma série contígua de bytes que pode ser tratada como um objeto completo ou cujos bytes podem ser direcionados individualmente. Um BLOB pode estar vazio (longitude nula) ou pode conter até 2147483647 bytes (2 GB).
 
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço está disponível.
 
 Um BLOB é carregado totalmente na memória. Uma variável BLOB é mantida e existe apenas na memória. Um campo BLOB é carregado na memória desde o disco, como o resto do registro ao que pertence.
 

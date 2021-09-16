@@ -111,7 +111,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 | ---------- | ------ | -- | ------------------------------------------------- |
 | classStore | objeto | <- | Class store usuario para el proyecto o componente |
 
-El comando `cs` devuelve la class store usuario para el proyecto o componente actual. The `cs` command returns the user class store for the current project or component. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
+El comando `cs` devuelve la class store usuario para el proyecto o componente actual. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
 #### Ejemplo
 
@@ -284,17 +284,15 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-Una función class constructor, que puede aceptar los [parámetros](#parameters), puede utilizarse para definir una clase usuario.  MyClass Class Constructor({$parameterName : type; ...}) // code </code></pre>
-
 Una función class constructor, que puede aceptar los [parámetros](#parameters), puede utilizarse para definir una clase usuario.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+En ese caso, cuando llama a la función [`new()`](API/ClassClass.md#new), se llama al constructor de la clase con los parámetros pasados ​​opcionalmente a la función `new()`.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
+Para una función class constructor, el comando `Current method name` devuelve: "*\<ClassName>:constructor*", por ejemplo "MyClass:constructor".
 
 
 
-#### Example:
+#### Ejemplo:
 
 ```4d
 // Class: MyClass
@@ -304,8 +302,8 @@ Class Constructor ($name : Text)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// En un método proyecto
+// Puede instanciar un objeto
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -316,14 +314,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### Sintaxis
 
 ```4d
 // Class: ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. La clase hija hereda todas las funciones de la clase padre.
+La palabra clave `Class extends` se utiliza en la declaración de clase para crear una clase usuario que sea hija de otra clase usuario. La clase hija hereda todas las funciones de la clase padre.
 
 La extensión de clase debe respetar las siguientes reglas:
 
@@ -477,9 +475,9 @@ $message:=$square.description() //Tengo 4 lados que son todos iguales
 
 La palabra clave `This` devuelve una referencia al objeto actualmente procesado. En 4D, se puede utilizar en [diferentes contextos](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función. It can't be set by assignment during execution, and it may be different each time the function is called.
+En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. For example:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
@@ -524,26 +522,19 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad *f*, la hereda de su clase. Since *f* is called as a method of $o, its `This` refers to $o.
+En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad *f*, la hereda de su clase. Como *f* se llama como un método de $o, su `This` hace referencia a $o.
 
 
-## Class commands
+## Comandos de clase
 
-Several commands of the 4D language allows you to handle class features.
+Varios comandos del lenguaje 4D permiten manejar las funcionalidades de clase.
 
 
 ### OB Class
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
-
-
-### OB Instance of
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Class` devuelve la clase del objeto pasado como parámetro.
 
 
 ### OB Instance of

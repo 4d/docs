@@ -239,7 +239,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
     - `event`
     - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjets/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).
 
 #### Mappage d'attributs
 

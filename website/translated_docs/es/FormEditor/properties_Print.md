@@ -31,7 +31,7 @@ You can modify the following print settings:
 | paperWidth  | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
 | paperHeight | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
 | orientation | cadena         | "landscape" (default is "portrait")                                                  |
-| scale       | number         | minimum: 0                                                                           |
+| scale       | number         | mínimo: 0                                                                            |
 
 
 ---

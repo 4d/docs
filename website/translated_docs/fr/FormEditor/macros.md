@@ -201,18 +201,18 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Paramètres | Type  | Description                                                                          |
-| ---------- | ----- | ------------------------------------------------------------------------------------ |
-| $editor    | Objet | Form Editor Macro Proxy object containing the form properties                        |
-| $result    | Objet | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| Paramètres | Type  | Description                                                                                 |
+| ---------- | ----- | ------------------------------------------------------------------------------------------- |
+| $editor    | Objet | Objet Form Editor Macro Proxy contenant les propriétés du formulaire                        |
+| $result    | Objet | Objet Form Editor Macro Proxy retournant des propriétés modifiées par la macro (facultatif) |
 
 La fonction `onInvoke` est automatiquement exécutée à chaque fois que la macro est appelée.
 
-When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. Vous pouvez ensuite exécuter n'importe quelle opération sur ces propriétés.
+Lorsque la fonction est appelée, elle reçoit dans la propriété `$editor.editor` une copie de tous les éléments du formulaire avec leurs valeurs courantes. Vous pouvez ensuite exécuter n'importe quelle opération sur ces propriétés.
 
 Une fois les opérations terminées, si la macro entraîne la modification, l'ajout ou la suppression d'objets, vous pouvez transmettre les propriétés modifiées résultantes dans `$result`. Le processeur de macros analysera les propriétés retournées et appliquera les opérations nécessaires dans le formulaire. Évidemment, moins vous retournez de propriétés, moins le traitement prendra du temps.
 
-Here are the properties returned in the *$editor* parameter:
+Voici les propriétés retournées dans le paramètre *$editor* :
 
 | Propriété                        | Type       | Description                                                                       |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
@@ -238,7 +238,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | editor.activeView | Chaine     | Active view name                                            |
 
 
-For example, if objects of the current page and groups have been modified, you can write:
+Par exemple, si des objets de la page courante et des groupes ont été modifiés, vous pouvez écrire ce qui suit :
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 

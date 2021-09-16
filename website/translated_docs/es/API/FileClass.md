@@ -352,7 +352,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Propriedad       | Tipo  |
+| Propiedad        | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -583,7 +583,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Propriedad       | Tipo  |
+| Propiedad        | Tipo  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |

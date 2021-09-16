@@ -112,7 +112,7 @@ Considering the following table properties:
 <!-- REF #DataClassClass.all().Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| settings   | Objet              | -> | Build option: context                               |
+| settings   | Object             | -> | Build option: context                               |
 | Résultat   | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
@@ -131,9 +131,9 @@ Lazy loading is applied.
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Propriété | Type  | Description                                                                                                                                                                                                                                                                                          |
-| --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Texte | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                          |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 #### Exemple
@@ -166,7 +166,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Paramètres | Type               |    | Description                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol  | Collection         | -> | Collection of objects to be mapped with entities |
-| settings   | Objet              | -> | Build option: context                            |
+| settings   | Object             | -> | Build option: context                            |
 | Résultat   | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
@@ -208,9 +208,9 @@ If a \_\_STAMP attribute is given, a check is performed with the stamp in the da
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Propriété | Type  | Description                                                                                                                                                                                                                                                                                          |
-| --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Texte | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                          |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 #### Exemple 1
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | Paramètres | Type            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | Objet           | -> | Build option: context                       |
+| settings   | Object          | -> | Build option: context                       |
 | Résultat   | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -382,9 +382,9 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Propriété | Type  | Description                                                                                                                                                                                                                                                                                         |
-| --------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Texte | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                         |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 
@@ -492,9 +492,9 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Paramètres | Type  |    | Description                  |
-| ---------- | ----- | -- | ---------------------------- |
-| Résultat   | Objet | <- | Information on the dataclass |
+| Paramètres | Type   |    | Description                  |
+| ---------- | ------ | -- | ---------------------------- |
+| Résultat   | Object | <- | Information on the dataclass |
 <!-- END REF -->
 
 
@@ -504,11 +504,11 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 **Returned object**
 
-| Propriété   | Type        | Description                              |
-| ----------- | ----------- | ---------------------------------------- |
-| name        | Texte       | Nom de la dataclass                      |
-| primaryKey  | Texte       | Name of the primary key of the dataclass |
-| tableNumber | Entier long | Internal 4D table number                 |
+| Propriété   | Type    | Description                              |
+| ----------- | ------- | ---------------------------------------- |
+| name        | Text    | Nom de la dataclass                      |
+| primaryKey  | Text    | Name of the primary key of the dataclass |
+| tableNumber | Integer | Internal 4D table number                 |
 
 
 
@@ -610,7 +610,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- REF #DataClassClass.newSelection().Params -->
 | Paramètres | Type               |    | Description                                                                                                                                   |
 | ---------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Entier long        | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
+| keepOrder  | Integer            | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | Résultat   | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
 <!-- END REF -->
 
@@ -658,10 +658,10 @@ When created, the entity selection does not contain any entities (`mySelection.l
 <!-- REF #DataClassClass.query().Params -->
 | Paramètres    | Type               |    | Description                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texte              | -> | Search criteria as string                                                                                                   |
-| formula       | Objet              | -> | Search criteria as formula object                                                                                           |
+| queryString   | Text               | -> | Search criteria as string                                                                                                   |
+| formula       | Object             | -> | Search criteria as formula object                                                                                           |
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Objet              | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
+| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
 | Résultat      | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
 <!-- END REF -->
 

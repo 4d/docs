@@ -39,7 +39,7 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
 
-## Advanced mode
+## Modo avanzado
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 

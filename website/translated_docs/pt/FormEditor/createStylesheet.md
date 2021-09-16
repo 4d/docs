@@ -22,7 +22,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 | styleSheets_mac.css     | For defining macOS only specific attribute styles     |
 | styleSheets_windows.css | For defining Windows only specific attribute styles   |
 
-These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+Estes arquivos se armazenam na pasta "/SOURCES" do projeto. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
 ## Arquitetura das folhas de estilo

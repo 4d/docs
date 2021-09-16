@@ -53,8 +53,8 @@ title: ピクチャー
 *   [ボタン](FormObjects/button_overview.md)/[ラジオボタン](FormObjects/radio_overview.md)/[チェックボックス](FormObjects/checkbox_overview.md)
 *   [ピクチャーボタン](FormObjects/pictureButton_overview.md)/[ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md)
 *   [タブコントロール](FormObjects/tabControl.md)
-*   [リストボックスヘッダー](FormObjects/listbox_overview.md#list-box-headers)
-*   [メニューアイコン](Menus/properties.md#item-icon)
+*   [リストボックスヘッダー](FormObjects/listbox_overview.md#リストボックスヘッダー)
+*   [メニューアイコン](Menus/properties.md#項目アイコン)
 
 
 
@@ -77,14 +77,14 @@ title: ピクチャー
 
 ## ダークモード (macOS のみ)
 
-You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
+[フォームがダークスキームを使用](properties_FormProperties.md#カラースキーム) している場合に、標準のピクチャーの代わりに使用する専用のピクチャーやアイコンを定義することができます。
 
-A dark mode picture is defined in the following way:
+ダークモードピクチャーは以下のように定義します:
 
-- dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
-- dark mode picture is stored next to the standard version.
+- ダークモードピクチャーは、標準 (ライトスキーム) バージョンと同じ名前で、"_dark "という接尾辞が付きます。
+- ダークモードピクチャーは、標準バージョンの隣に保存します。
 
-At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
+ランタイム時に、4D は [現在のフォームのカラースキーム](https://doc.4d.com/4Dv19R2/4D/19-R2/FORM-Get-color-scheme.301-5494033.ja.html) に応じて、ライト用またはダーク用のピクチャーを自動的にロードします。
 
 ![](assets/en/FormEditor/darkicon.png)
 
