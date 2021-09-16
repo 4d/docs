@@ -9,7 +9,7 @@ title: Glosario
 
 
 
-## Attribute
+## Atributo
 
 An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
 
