@@ -33,7 +33,7 @@ Drop-down list objects are initialized by loading a list of values into an array
 ```
 En este caso, el nombre de la variable asociada al objeto del formulario debe ser *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
-*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Por ejemplo:
+*  Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html). Por ejemplo:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
