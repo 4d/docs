@@ -291,9 +291,10 @@ $area:=$rect.getArea() //5000
 #### Syntax
 
 ```4d
-Function get <name>()->$return : type
+Function get <name>()->$result : type
 // code
 ```
+
 ```4d
 Function set <name>($parameterName : type)
 // code
@@ -331,6 +332,7 @@ The type of the computed property is defined by the `$return` type declaration o
 
 ```4d  
 //Class: Person.4dm
+
 Class constructor($firstname : Text; $lastname : Text)
 	This.firstName:=$firstname
 	This.lastName:=$lastname
@@ -345,20 +347,10 @@ Function set fullName( $fullName : text )
 	
 ```
 
-```4d  
-//Class: Item.4dm
-	
-Function get netPrice()->$netPrice : Real
-	$netPrice:=This.grossPrice / (1+(This.VATRate/100))
-
-Function set netPrice( $netPrice : Real )
-	This.grossPrice := $netPrice * (1+(This.VATRate/100))
-```
-
 ```4d
 //in a project method
-$amount:=$item.netPrice * $quantity // Function get netPrice() is called
-$item.netPrice:=1500 // Function set netPrice() is called
+$fullName:=$person.fullName // Function get fullName() is called
+$person.fullName:="John Smith" // Function set fullName() is called
 ```
 
 
