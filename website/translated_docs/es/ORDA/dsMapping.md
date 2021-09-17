@@ -133,7 +133,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 ```
 
 
-### Attribute
+### Atributo
 
 Dataclass properties are attribute objects describing the underlying fields or relations. Por ejemplo:
 
