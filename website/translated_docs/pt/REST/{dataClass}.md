@@ -7,48 +7,48 @@ title:
 
 
 
-Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass.
+Os nomes das classes de dados podem ser usadas diretamente nas petições REST para trabalhar com entidades, seleções de entidades ou métodos da classe de dados.
 
-## Available syntaxes
+## Sintaxe
 
-| Syntax                                                                     | Example                     | Description                                                                                          |
-| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                           |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                      |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Returns the data for one entity in which the attribute's value is defined                            |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
+| Sintaxe                                                                    | Exemplo                     | Descrição                                                                                          |
+| -------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
+| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
+| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Retona um valor baseado no método de entidade                                                      |
 
 
 
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+Retorna todos os dados (como padrão as primeiras 100 entidades) para uma classe de dados específica (*por exemplo *, `Company`)
 
-### Description
+### Descrição
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Quando chamar este parâmetro em sua petição REST, as primeiras 100 entidades são retornadas a menos que tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
 
-Here is a description of the data returned:
+Aqui está uma descrição dos dados retornados:
 
-| Property      | Type       | Description                                                                                                                                                                                     |
-| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Name of the dataclass.                                                                                                                                                                          |
-| __COUNT       | Number     | Number of entities in the dataclass.                                                                                                                                                            |
-| __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
-| __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
-| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
+| Propriedade   | Tipo    | Descrição                                                                                                                                                                                              |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| __entityModel | String  | Nome da dataclass.                                                                                                                                                                                     |
+| __COUNT       | Número  | Número de entidades na classe de dados.                                                                                                                                                                |
+| __SENT        | Número  | Número de entidades enviadas pela petição REST. Esse número pode ser o número total de entidades se for menor que o valor definido por `$top/$limit`.                                                  |
+| __FIRST       | Número  | Número de entidade em que a seleção vai começar. Ou o valor padrão 0 ou o valor definido por `$skip`.                                                                                                  |
+| __ENTITIES    | Coleção | Esta coleção de objetos contém um objeto para cada entidade com todos seus atributos. Todos os atributos relacionais são retornados como objetos com uma URI para obter informação sobre o objeto pai. |
 
-Each entity contains the following properties:
+Cada entidade contém as propriedades abaixo:
 
-| Property    | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the dataclass.                                                        |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| Propriedade | Tipo   | Descrição                                                                                                     |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
+| __KEY       | String | Valor da chave primária definida para a classe de dados.                                                      |
+| __TIMESTAMP | Data   | Registro de hora da última modificação da entidade                                                            |
+| __STAMP     | Número | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company/name,address`
 
