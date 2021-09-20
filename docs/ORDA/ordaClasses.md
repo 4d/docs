@@ -285,7 +285,6 @@ Just like storage attributes, computed attributes may be included in **queries**
 
 Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, this is sufficient in many cases. However, computed attributes can implement a `Function orderBy` that substitutes other attributes during the sort, thus increasing performance. 
 
-Once defined, computed attributes can be used and handle as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions. 
 
 ### How to define computed attributes
 
@@ -293,7 +292,12 @@ You create a computed attribute by defining a `get` accessor in the [entity clas
 
 Other computed attribute functions (`set`, `query` and `orderBy`) are also defined in the entity class. They are optional.  
 
-ORDA computer attribute functions can be [**exposed**](#exposed-vs-non-exposed-functions) and [**local**](#local-functions).
+Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. 
+
+> ORDA computed attribute functions can be [**exposed**](#exposed-vs-non-exposed-functions) or not.
+
+Once defined, computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions. 
+
 
 ### `Function get <attributeName>`
 
@@ -322,11 +326,13 @@ The *$event* parameter contains the following properties:
 |---|---|---|
 |attributeName|Text|Computed attribute name|
 |dataClassName|Text|Dataclass name|
-|eventKind|Text|"onGet"|
+|kind|Text|"get"|
 |result|Variant|Add this property with Null value if you want the attribute to return Null|
 
 
-#### Example
+#### Examples
+
+- *fullName* computed attribute:
 
 ```4d
 Function get fullName($event : Object)-> $result : Text
@@ -345,6 +351,29 @@ Function get fullName($event : Object)-> $result : Text
     End if 
 ```
 
+- A computed attribute can be based upon a related attribute:
+
+```4d
+Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
+    If (This.manager.manager=Null)
+        $event.result:=Null
+    Else 
+        $result:=This.manager.manager
+    End if
+    
+```
+
+- A computed attribute can be based upon related attributes:
+
+```4d
+Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
+    If (This.manager.manager=Null)
+        $result:=ds.Employee.newSelection()
+    Else 
+        $result:=This.manager.directReports.minus(this)
+    End if
+```
+    
 ### `Function set <attributeName>`
 
 #### Syntax
@@ -364,7 +393,7 @@ The *$event* parameter contains the following properties:
 |---|---|---|
 |attributeName|Text|Computed attribute name|
 |dataClassName|Text|Dataclass name|
-|eventKind|Text|"onSet"|
+|kind|Text|"set"|
 |value|Variant|Value to be handled by the computed attribute|
 
 #### Example
@@ -388,38 +417,30 @@ Function set fullName($value : Text; $event : Object)
 
 #### Syntax
 
-This function supports three syntaxes:
-
 ```4d
-Function query attributeName($event : Object)
-```
-
-With this syntax, you handle the query through the *$event* properties 'see example).
-
-```4d
-
+Function query <attributeName>($event : Object)
 Function query <attributeName>($event : Object) -> $result : Text
 Function query <attributeName>($event : Object) -> $result : Object
 // code
 ```
 
-With this syntax:
+This function supports three syntaxes:
 
-- If *$result* is a Text, it must be a valid query string
+- With the first syntax, you handle the whole query through the `$event.result` object property.
+- With the second and third syntaxes, the function returns a value in *$result*:
+	- If *$result* is a Text, it must be a valid query string
+	- If *$result* is an Object, it must contain two properties:
+	
+	|Property|Type|Description|
+	|---|---|---|
+	|$result.query|Text|Valid query string with placeholders (:1, :2, etc.)|
+	|$result.parameters|Collection|values for placeholders|
 
-- If *$result* is an Object, it must contain two properties:
+The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
-|Property|Type|Description|
-|---|---|---|
-|$result.query|Text|Valid query string with placeholders (:1, :2, etc.)|
-|$result.parameters|Collection|values for placeholders|
-
-
-
-The `query` function allows you to customize queries that use the computed attribute. 
-
-
-
+> The following features are not supported:
+- calling a `query` function on computed attributes of type Entity class or Entity selection class 
+- using the `order by` keyword in the resulting query string.
 
 The *$event* parameter contains the following properties:
 
@@ -427,22 +448,188 @@ The *$event* parameter contains the following properties:
 |---|---|---|
 |attributeName|Text|Computed attribute name|
 |dataClassName|Text|Dataclass name|
-|eventKind|Text|"onQuery"|
+|kind|Text|"query"|
 |value|Variant|Value to be handled by the computed attribute|
-|operator|Text|Query operator. Possible values:<li>== (corresponds to = or in the query)</li><li>=== (corresponds to === or IS in the query), @ is not wildcard</li><li>!= (corresponds to # and != in the query)</li><li>!== (corresponds to !== or IS NOT in the query), @ is not wildcard</li><li><</li><li><=</li><li>></li><li>>=</li><li>IN</li><li>%% (corresponds to % in the query)</li>|
-|result|Variant|Value to be handled by the computed attribute|
+|operator|Text|Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Possible values:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>%% (contains keyword)</li>|
+|result|Variant|Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).|
 
+> If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`. 
 
+#### Examples
+
+- Query on the *fullName* computed attribute. The result is returned as Text (query string).
+
+```4d
+Function query fullName($event : Object)-> $result : Text
+    var $vals : Collection
+    var $oper; $result : Text
+
+    $vals:=Split string($event.value; " "; sk ignore empty strings)
+    $oper:=$event.operator
+    $result:="" 
+
+    If (($oper="==") | ($oper="==="))
+
+        If ($vals.length>0)
+            $result:="firstName "+$oper+" '"+$vals[0]+"'" 
+            If ($vals.length>1)
+                $result:=$result+" and lastName "+$oper+" '"+$vals[1]+"'" 
+            End if 
+        Else 
+            $result:="firstName == '' and lastName == ''" 
+        End if 
+
+    Else 
+        If (($oper="!=") | ($oper="!=="))
+
+            If ($vals.length>0)
+                $result:="firstName "+$oper+" '"+$vals[0]+"'" 
+                If ($vals.length>1)
+                    $result:=$result+" or lastName "+$oper+" '"+$vals[1]+"'" 
+                End if 
+            Else 
+                $result:="firstName != '' or lastName != ''" 
+            End if 
+        Else 
+            $result:="firstName "+$oper+" '"+$vals[0]+"'" 
+        End if 
+
+    End if 
+
+```
+
+Calling code, for example:
+
+```4d
+$emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
+```
+
+- This function handles queries on the *age* computed attribute and returns an object with parameters:
+
+```4d
+Function query age($event : Object)->$result : Object
+	
+	var $operator : Text
+	var $age : Integer
+	var $_ages : Collection
+	
+	$operator:=$event.operator
+	
+	If ($operator="in")
+		
+		Case of 
+			: (Value type($event.value)=Is collection)
+				$_ages:=$event.value 
+				
+			: (Value type($event.value)=Is text)
+				$_ages:=JSON Parse($event.value)
+		End case 
+		
+	Else 
+		
+		$age:=Num($event.value)  // integer
+		$d1:=Add to date(Current date; -$age-1; 0; 0)
+		$d2:=Add to date($d1; 1; 0; 0)
+		$parameters:=New collection($d1; $d2)
+	End if 
+	
+	Case of 
+			
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+			
+		: ($operator=">=")
+			$query:="birthday <= :2"
+			
+			//... other operators			
+			
+		: ($operator="in")
+			
+			If ($_ages.length<=3)
+				
+				$parameters:=New collection
+				$phIndex:=1
+				
+				$query:=""
+				For ($i; 0; $_ages.length-1)
+					
+					$ph1:=":"+String($phIndex)  //-> ":1"
+					$ph2:=":"+String($phIndex+1)  //-> ":2"
+					
+					$phIndex:=$phIndex+2  // next will be :3 :4, :5 :6, etc.
+					
+					$d1:=Add to date(Current date; -$_ages[$i]-1; 0; 0)
+					$d2:=Add to date($d1; 1; 0; 0)
+					
+					$parameters.push($d1)
+					$parameters.push($d2)
+					
+					If ($i>0)
+						$query:=$query+" or "
+					End if 
+					$query:=$query+"(birthday > "+$ph1+" and birthday <= "+$ph2+")"  // > :1 and <= :2
+				End for 
+				
+			Else   // let 4d do the job !!!
+				$event.result:=Null
+			End if 
+			
+		Else 
+			$event.result:=Null
+	End case 
+	
+	
+	If (Undefined($event.result))
+		$result:=New object
+		$result.query:=$query
+		$result.parameters:=$parameters
+	End if
+
+```  
 
 ### `Function orderBy <attributeName>`
 
 #### Syntax
 
+```4d
+Function orderBy <attributeName>($event : Object)
+Function orderBy <attributeName>($event : Object)-> $result : Text
 
+// code
+```
+
+The `orderBy` function executes whenever the computed attribute needs to be ordered. It allows sorting the computed attribute. For example, you can sort *fullName* on first names then last names, or conversely.
+When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+
+> Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**. 
+
+The *$event* parameter contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|attributeName|Text|Computed attribute name|
+|dataClassName|Text|Dataclass name|
+|kind|Text|"orderBy"|
+|value|Variant|Value to be handled by the computed attribute|
+|operator|Text|<li>"desc" (descending)</li><li>"asc" (ascending, default)</li>|
+|result|Variant|Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default sort (always sequential for computed attributes).|
+
+You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. 
+
+> If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`. 
 
 
 ### Example
 
+```4d
+Function OrderBy fullName($event : Object)-> $result : Text
+
+    If ($event.operator="desc")
+        $result:="firstName desc, lastName desc" 
+    Else 
+        $result:="firstName, lastName" 
+    End if
+```
 
 
 ## Exposed vs non-exposed functions
