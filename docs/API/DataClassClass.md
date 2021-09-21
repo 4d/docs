@@ -14,6 +14,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 |---|
 |[<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
 |[<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
+|[<!-- INCLUDE DataClassClass.exposed.Syntax -->](#exposed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.exposed.Summary --> |
 |[<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
 |[<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
 |[<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
@@ -147,7 +148,26 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.exposed.Desc -->
+## .exposed
 
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v19 R3|Added|
+</details>
+
+
+<!-- REF DataClassClass.exposed.Syntax -->
+**.exposed** : Boolean<!-- END REF -->
+
+
+#### Description
+
+The `.exposed` property is <!-- REF DataClassClass.exposed.Summary -->true if the dataclass is exposed in REST<!-- END REF -->.
+
+
+<!-- END REF -->
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection() 
@@ -290,6 +310,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $emp.__NEW:=True
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
+
 
 
 
