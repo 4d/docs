@@ -81,10 +81,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 #### Description
 
-The `.exposed` property <!-- REF DataClassAttributeClass.exposed.Summary -->is true if the attribute is exposed in REST<!-- END REF -->.
-
+The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
 
 <!-- END REF -->
+
 
 
 
@@ -349,7 +349,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 #### Description
 
-The `.readOnly` property <!-- REF DataClassAttributeClass.readOnly.Summary -->is true if the attribute is read-only<!-- END REF -->.
+The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
 
 For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only. 
 
