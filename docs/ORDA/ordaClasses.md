@@ -290,7 +290,7 @@ Similarly, computed attributes can be included in **sorts**. When a computed att
 
 You create a computed attribute by defining a `get` accessor in the [entity class](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
 
-Other computed attribute functions (`set`, `query` and `orderBy`) are also defined in the entity class. They are optional.  
+Other computed attribute functions (`set`, `query`, and `orderBy`) can also be defined in the entity class. They are optional.
 
 Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. 
 
