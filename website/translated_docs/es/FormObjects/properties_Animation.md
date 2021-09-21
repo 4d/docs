@@ -6,7 +6,7 @@ title: Animación
 ---
 ## Vuelve a la primera secuencia
 
-Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la última imagen y vuelve a hacer clic, aparece la primera imagen, y así sucesivamente.
 
 
 #### Gramática JSON
@@ -22,9 +22,9 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 
 ---
-## Switch back when released
+## Retorna cuando se libera
 
-Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en el botón. Muestra la segunda imagen hasta que se suelta el botón del ratón. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
 
 
 #### Gramática JSON
