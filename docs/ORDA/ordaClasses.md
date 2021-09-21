@@ -622,7 +622,7 @@ You can return the `orderBy` string either in the `$event.result` object propert
 ### Example
 
 ```4d
-Function OrderBy fullName($event : Object)-> $result : Text
+Function orderBy fullName($event : Object)-> $result : Text
 
     If ($event.operator="desc")
         $result:="firstName desc, lastName desc" 
