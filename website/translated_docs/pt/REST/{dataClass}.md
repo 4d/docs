@@ -48,19 +48,19 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Data   | Registro de hora da última modificação da entidade                                                            |
 | __STAMP     | Número | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
-Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company/name,address`
 
 
 
-### Example
+### Exemplo
 
-Return all the data for a specific dataclass.
+Retorna todas as datas para uma classe de dados específica.
 
  `GET  /rest/Company`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -134,7 +134,7 @@ Return all the data for a specific dataclass.
                 }
             }
         }
-.....//more entities here 
+.....//mais entidades aqui
     ]
 }
 ````
@@ -142,29 +142,29 @@ Return all the data for a specific dataclass.
 
 ## {dataClass}({key})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+Retorna os dados para a entidade específica definida pela chave primária da classe de dados, *e.g.*, `Company(22) ou Company("IT0911AB2200")`
 
-### Description
+### Descrição
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. A chave é o valor no atributo definida como Chave Primária para sua classe de dados. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
-For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
+Para saber mais sobre os dados retornados, veja [{datastoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company(1)/name,address`
 
-If you want to expand a relation attribute using `$expand`, you do so by specifying it as shown below:
+Se quiser expandir o atributo de relação usando `$expand`, pode fazer isso como mostrado abaixo:
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Example
+### Exemplo
 
-The following request returns all the public data in the Company dataclass whose key is 1.
+A petição abaixo retorna todos os dados públicos na dataclass Company cuja chave é 1.
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -191,77 +191,77 @@ The following request returns all the public data in the Company dataclass whose
 
 ## {dataClass}:{attribute}(value)
 
-Returns the data for one entity in which the attribute's value is defined
+Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
-### Description
+### Descrição
 
-By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
+Passando *dataClass* e um *atributo* junto com o valor, pode recuperar toda a informação pública para essa entidade. O valor é um valor único para o atributo, mas não é a chave primária.
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
-If you want to use a relation attribute using [$attributes]($attributes.md), you do so by specifying it as shown below:
+Se quiser usar um atributo de relação usando [$attributes]($attributes.md), pode fazer isso especificando-o como mostrado abaixo:
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Example
+### Exemplo
 
-The following request returns all the public data of the employee named "Jones".
+A petição abaixo retorna todos os dados públicos do funcionário chamado "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
 
 
 ## {dataClass}/{method} and {dataClass}({key})/{method}
 
-Returns an object or a collection based on a project method.
+Retorna um objeto ou uma coleção baseada em um método projeto.
 
-### Description
+### Descrição
 
-Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
+Os métodos projeto são chamados através de uma classe de dados (tabela) ou uma entidade (registro), e devem retornar ou um objeto ou uma coleção.
 
 `POST  /rest/Employee/getHighSalaries`
 
 `POST  /rest/Employee(52)/getFullName`
 
 
-### 4D Configuration
+### Configuração 4D
 
-To be called in a REST request, a method must:
+Para ser chamado em uma petição REST, um método deve:
 
-- have been declared as "Available through REST server" in 4D,
-- have its master table and scope defined accordingly:
-    -  **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
-    -  **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
-        - **Table** -for methods applied to the whole table (dataclass)
-        - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
-        - **Current selection** -for methods applied to the current selection
+- ter sido declarado como "disponível via o servidor REST" em 4D,
+- ter sua tabela mestre e escopo definidos de forma coerente:
+    -  **Tabela**: tabela 4D (classe de dados) na qual o método é chamado. A tabela deve ser [exposta a REST](configuration.md#exposing-tables-and-fields).
+    -  **Escopo/alcance**: Essa configuração é útil quando o método usar a linguagem clássica 4D e assim precisar ter um contexto de database no lado do servidor.
+        - **Tabela** -para métodos aplicados para a tabela inteira (dataclass)
+        - **Registro atual** -para os métodos aplicados ao registro atual (entidade) utilizando a sintaxe `{dataClass}(key)/{method}`.
+        - **Seleção atual** -para os métodos aplicados à seleção atual
 
-![alt-text](assets/en/REST/MethodProp.png)
+![alt-text](assets/en/REST/methodProp_ex.png)
 
 
-### Passing Parameters to a Method
+### Passar parâmetros a um Método
 
-You can also pass parameters to a method in a POST.
+Também pode passar parâmetros a um método e um POST.
 
 `POST  /rest/Employee/addEmployee`
 
-You can POST data in the body part of the request, for example:
+Pode fazer um POST de dados no corpo da consulta, por exemplo:
 
 ["John","Smith"]
 
 
 
 
-### Examples
+### Exemplos
 
-#### Table scope
+#### Alcance da tabela
 
-Call of a `getAverage` method:
-- on [Employee] table
-- with **Table** scope
+Chamada de um método `getAverage`:
+- na tabela [Employee]
+- com o alcance de **Table**
 
 
 ```4d
@@ -272,7 +272,7 @@ $0:=New object("ageAverage";Average([Employee]age))
 
 `POST  /rest/Employee/getAverage`
 
-Result:
+Resultado:
 ```
 {
     "result": {
@@ -283,11 +283,11 @@ Result:
 
 
 
-#### Current record scope
+#### Alcance do registro atual
 
-Call of a `getFullName` method:
-- on [Employee] table
-- with **Current record** scope
+Chamada de um método `getFullName`:
+- na tabela [Employee]
+- com o alcance de **Current record**
 
 ```4d
     //getFullName  
@@ -296,7 +296,7 @@ $0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
 
 `POST  /rest/Employee(3)/getFullName`
 
-Result:
+Resultado:
 ```
 {
     "result": {
@@ -307,11 +307,11 @@ Result:
 
 
 
-#### Current selection scope
+#### Alcance da seleção atual
 
-Call of a `updateSalary` method:
-- on [Employee] table
-- with **Current selection** scope
+Chamada de um método `updateSalary`:
+- na tabela [Employee]
+- com o alcance de **Current selection**
 
 ```4d
     //updateSalary  
@@ -331,13 +331,13 @@ $0:=New object("updates";$vCount)
 
 `POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
 
-POST data (in the request body): [1.5]
+Datos POST (no corpo da petição): [1.5]
 
-Result:
+Resultado:
 ```
 {
     "result": {
-        "updated": 42
+        "ageAverage": 42
     }
 }
 ```
