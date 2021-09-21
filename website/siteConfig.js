@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: '4D Documentation' /* title for your website */,
   tagline: 'Documentation for 4D Developers',
-  url: 'https://4d.github.io' /* your website url */,
+  url: 'https://doc4d.github.io' /* your website url */,
   //baseUrl: '/doc/' /* base url for your project */,
   //baseUrl: '/docs/' /* base url for your project */,
   baseUrl: '/docs/alpha/' /* base url for your project */,
@@ -34,7 +34,7 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'docs',
   noIndex: false,
-  organizationName: '4D',
+  organizationName: 'doc4d',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -45,11 +45,11 @@ const siteConfig = {
 
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
-    {href: 'https://developer.4d.com/docs', label:'v19 R2 BETA', version :'19R2'},
-    //{href: 'https://developer.4d.com/docs/Rx', label:'v18 R6', version:'18R6'},
-    {href: 'https://developer.4d.com/docs/19', label:'v19', version:'19'},
-	{href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
-    //{href: 'https://developer.4d.com/', label:'Developer Center'},
+    {href: 'https://doc4d.github.io/docs', label:'v19 R2 BETA', version :'19R2'},
+    //{href: 'https://doc4d.github.io/docs/Rx', label:'v18 R6', version:'18R6'},
+    {href: 'https://doc4d.github.io/docs/19', label:'v19', version:'19'},
+	{href: 'https://doc4d.github.io/docs/18', label:'v18', version:'18'},
+    //{href: 'https://doc4d.github.io/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
     //{blog: false, label: 'Blog'},
