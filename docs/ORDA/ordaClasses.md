@@ -218,10 +218,10 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
 Entity classes allow you to define **computed attributes** using specific keywords:
 
-- `Function get` *attribute*
-- `Function set` *attribute*
-- `Function query` *attribute*
-- `Function orderBy` *attribute*
+- `Function get` *attributeName*
+- `Function set` *attributeName*
+- `Function query` *attributeName*
+- `Function orderBy` *attributeName*
 
 For more information, please refer to the [Computed attributes](#computed-attributes) section. 
 
@@ -275,28 +275,26 @@ When creating or editing data model classes, you must pay attention to the follo
 
 ### Overview
 
-A computed attribute is a dataclass attribute with a data type that masks a calculation. [Standard 4D classes](Concepts/classes.md) implement the concept of computed properties with [`Function get` (*getter*) and `Function set` (*setter*)](Concepts/classes.md#function-get-and-function-set) accessors. ORDA dataclass attributes benefit from this feature and extend it with two additional accessors: `Function query` and `Function orderBy`.
+A computed attribute is a dataclass attribute with a data type that masks a calculation. [Standard 4D classes](Concepts/classes.md) implement the concept of computed properties with `get` (*getter*) and `set` (*setter*) [accessor functions](Concepts/classes.md#function-get-and-function-set). ORDA dataclass attributes benefit from this feature and extend it with two additional functions: `query` and `orderBy`.
 
-At the very minimum, a computed attribute requires a `Function get` that describes how its value will be calculated. When a *getter* function is supplied for an attribute, 4D does not create the underlying storage space in the datastore but instead substitutes the function's code each time the attribute is accessed. If the attribute is not accessed, the code never executes.
+At the very minimum, a computed attribute requires a `get` function that describes how its value will be calculated. When a *getter* function is supplied for an attribute, 4D does not create the underlying storage space in the datastore but instead substitutes the function's code each time the attribute is accessed. If the attribute is not accessed, the code never executes.
 
-A computed attribute can also implement a `Function set`, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
+A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
 
-Just like storage attributes, computed attributes may be included in **queries**. Normally, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In many cases this is sufficient. However, computed attributes can implement a `Function query` that substitutes other attributes during the query. This allows computed attributes to be queried quickly by redirecting searches to other attributes, including storage attributes that may already be indexed.
+Just like storage attributes, computed attributes may be included in **queries**. Normally, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In many cases this is sufficient. However, computed attributes can implement a `query` function that substitutes other attributes during the query. This allows computed attributes to be queried quickly by redirecting searches to other attributes, including indexed storage attributes.
 
-Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, this is sufficient in many cases. However, computed attributes can implement a `Function orderBy` that substitutes other attributes during the sort, thus increasing performance. 
+Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, this is sufficient in many cases. However, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance. 
 
 
 ### How to define computed attributes
 
-You create a computed attribute by defining a `get` accessor in the [entity class](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
+You create a computed attribute by defining a `get` accessor in the [**entity class**](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
 
 Other computed attribute functions (`set`, `query`, and `orderBy`) can also be defined in the entity class. They are optional.
 
-Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. 
+Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions. 
 
 > ORDA computed attribute functions can be [**exposed**](#exposed-vs-non-exposed-functions) or not.
-
-Once defined, computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions. 
 
 
 ### `Function get <attributeName>`
