@@ -609,8 +609,8 @@ The *$event* parameter contains the following properties:
 |dataClassName|Text|Dataclass name|
 |kind|Text|"orderBy"|
 |value|Variant|Value to be handled by the computed attribute|
-|operator|Text|<li>"desc" (descending)</li><li>"asc" (ascending, default)</li>|
-|result|Variant|Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default sort (always sequential for computed attributes).|
+|descending|Booelan|`true` for descending order, `false` for ascending order|
+|result|Variant|Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default sort .|
 
 You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. 
 
@@ -622,7 +622,7 @@ You can return the `orderBy` string either in the `$event.result` object propert
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
 
-    If ($event.operator="desc")
+    If ($event.descending=True)
         $result:="firstName desc, lastName desc" 
     Else 
         $result:="firstName, lastName" 
