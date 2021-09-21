@@ -437,8 +437,8 @@ This function supports three syntaxes:
 The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
 > The following features are not supported:
-- calling a `query` function on computed attributes of type Entity class or Entity selection class 
-- using the `order by` keyword in the resulting query string.
+> - calling a `query` function on computed attributes of type Entity class or Entity selection class 
+> - using the `order by` keyword in the resulting query string.
 
 The *$event* parameter contains the following properties:
 
@@ -617,7 +617,7 @@ You can return the `orderBy` string either in the `$event.result` object propert
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`. 
 
 
-### Example
+#### Example
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
