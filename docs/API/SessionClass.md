@@ -12,14 +12,14 @@ For detailed information about the session implementation, please refer to the [
 
 ||
 |---|
-|[**.clearPrivileges()**](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;removes all the privileges associated to the session|
-|[**.expirationDate** : Text](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the expiration date and time of the session cookie|
-|[**.hasPrivilege**( *privilege* : Text ) : Boolean](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns True if the privilege is associated to the session, and False otherwise|
-|[**.idleTimeout** : Integer](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;the inactivity session timeout (in minutes), after which the session is automatically closed by 4D|
-|[**.isGuest()** : Boolean](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns True if the session is a Guest session (i.e. it has no privileges)|
-|[**.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;associates the privilege(s) defined in the parameter to the session|
-|[**.storage** : Object](#storage)<p>&nbsp;&nbsp;&nbsp;&nbsp;a shared object that can be used to store information available to all requests of the web client|
-|[**.userName** : Text](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;the user name associated to the session|
+|[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
+|[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.expirationDate.Summary -->|
+|[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
+|[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
+|[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
+|[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
+|[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
+|[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
 
@@ -32,16 +32,20 @@ For detailed information about the session implementation, please refer to the [
 |v18 R6|Added|
 </details>
 
-**Session** : 4D.Session
+<!-- REF #_command_.Session.Syntax -->
+**Session** : 4D.Session<!-- END REF -->
 
+
+<!-- REF #_command_.Session.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Session|<-|Session object|
+<!-- END REF -->
 
 
 #### Description
 
-The `Session` command returns the `Session` object corresponding to the current scalable user web session. 
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->. 
 
 This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used. 
 
@@ -77,6 +81,7 @@ IP:port/4DACTION/action_Session
 
 
 
+<!-- REF SessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
 
 <details><summary>History</summary>
@@ -86,15 +91,19 @@ IP:port/4DACTION/action_Session
 
 </details>
 
-**.clearPrivileges()**
+<!-- REF #SessionClass.clearPrivileges().Syntax -->
+**.clearPrivileges()**<!-- END REF -->
+
+<!-- REF #SessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+<!-- END REF -->
 
 
 #### Description
 
-The `.clearPrivileges()` function removes all the privileges associated to the session. As a result, the session automatically becomes a Guest session.
+The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. As a result, the session automatically becomes a Guest session.
 
 
 #### Example
@@ -107,9 +116,11 @@ Session.clearPrivileges()
 $isGuest:=Session.isGuest() //$isGuest is True
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF SessionClass.expirationDate.Desc -->
 ## .expirationDate
 
 <details><summary>History</summary>
@@ -119,10 +130,12 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 </details>
 
-**.expirationDate** : Text
+<!-- REF #SessionClass.expirationDate.Syntax -->
+**.expirationDate** : Text<!-- END REF -->
+
 #### Description
 
-The `.expirationDate` property contains the expiration date and time of the session cookie. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified. 
 
@@ -133,10 +146,12 @@ var $expiration : Text
 $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF SessionClass.hasPrivilege().Desc -->
 ## .hasPrivilege()
 
 <details><summary>History</summary>
@@ -145,16 +160,20 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 |v18 R6|Added|
 </details>
 
-**.hasPrivilege**( *privilege* : Text ) : Boolean
+<!-- REF #SessionClass.hasPrivilege().Syntax -->
+**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
+
+<!-- REF #SessionClass.hasPrivilege().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
 |Result|Boolean|<-|True if session has *privilege*, False otherwise|
+<!-- END REF -->
 
 
 #### Description
 
-The `.hasPrivilege()` function returns True if the privilege is associated to the session, and False otherwise. 
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->. 
 
 
 #### Example
@@ -170,7 +189,9 @@ Else
 End if
 ```
 
+<!-- END REF -->
 
+<!-- REF SessionClass.idleTimeout.Desc -->
 ## .idleTimeout
 
 <details><summary>History</summary>
@@ -180,10 +201,12 @@ End if
 
 </details>
 
-**.idleTimeout** : Integer
+<!-- REF #SessionClass.idleTimeout.Syntax -->
+**.idleTimeout** : Integer<!-- END REF -->
+
 #### Description
 
-The `.idleTimeout` property contains the inactivity session timeout (in minutes), after which the session is automatically closed by 4D. 
+The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
 
 If this property is not set, the default value is 60 (1h). 
 
@@ -207,8 +230,10 @@ End if
 
 ```
 
+<!-- END REF -->
 
 
+<!-- REF SessionClass.isGuest().Desc -->
 ## .isGuest()
 
 <details><summary>History</summary>
@@ -218,14 +243,18 @@ End if
 
 </details>
 
-**.isGuest()** : Boolean
+<!-- REF #SessionClass.isGuest().Syntax -->
+**.isGuest()** : Boolean<!-- END REF -->
+
+<!-- REF #SessionClass.isGuest().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if session is a Guest one, False otherwise|
+<!-- END REF -->
 
 #### Description
 
-The `.isGuest()` function returns True if the session is a Guest session (i.e. it has no privileges).
+The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
 
 #### Example
@@ -239,8 +268,10 @@ End if
 ```
 
 
+<!-- END REF -->
 
 
+<!-- REF SessionClass.setPrivileges().Desc -->
 ## .setPrivileges()
 
 <details><summary>History</summary>
@@ -250,16 +281,20 @@ End if
 
 </details>
 
-**.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )
+<!-- REF #SessionClass.setPrivileges().Syntax -->
+**.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
+
+<!-- REF #SessionClass.setPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|->|Privilege name|
 |privileges|Collection|->|Collection of privilege names|
 |settings|Object|->|Object with a "privileges" property (string or collection)|
+<!-- END REF -->
 
 #### Description
 
-The `.setPrivileges()` function associates the privilege(s) defined in the parameter to the session.
+The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
@@ -299,7 +334,9 @@ End if
 ```
 
 
+<!-- END REF -->
 
+<!-- REF SessionClass.storage.Desc -->
 ## .storage
 
 <details><summary>History</summary>
@@ -309,10 +346,12 @@ End if
 
 </details>
 
-**.storage** : Object
+<!-- REF #SessionClass.storage.Syntax -->
+**.storage** : Object<!-- END REF -->
+
 #### Description
 
-The `.storage` property contains a shared object that can be used to store information available to all requests of the web client. 
+The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->. 
 
 When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server. 
 
@@ -333,11 +372,13 @@ End if
 
 ```
 
+<!-- END REF -->
 
 
 
 
 
+<!-- REF SessionClass.userName.Desc -->
 ## .userName
 
 <details><summary>History</summary>
@@ -347,10 +388,12 @@ End if
 
 </details>
 
-**.userName** : Text
+<!-- REF #SessionClass.userName.Syntax -->
+**.userName** : Text<!-- END REF -->
+
 #### Description
 
-The `.userName` property contains the user name associated to the session. You can use it to identify the user within your code.
+The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. You can use it to identify the user within your code.
 
 This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 
@@ -358,6 +401,7 @@ This property is **read only**.
 
 
 
+<!-- END REF -->
 
 
 <style> h2 { background: #d9ebff;}</style>

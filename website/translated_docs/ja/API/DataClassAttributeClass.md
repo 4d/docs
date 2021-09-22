@@ -20,21 +20,22 @@ title: DataClassAttribute
 
 |                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**.autoFilled** : Boolean](#autofilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性値が 4Dによって自動生成される場合に true|
-| [**.fieldNumber** : Integer](#fieldnumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性の内部的な 4Dフィールド番号 |
-| [**.fieldType** : Integer](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性の 4Dデータベースタイプ |
-| [**.indexed** : Boolean](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true |
-| [**.inverseName** : Text](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;リレーション先の属性名 |
-| [**.keyWordIndexed** : Boolean](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性にキーワードインデックスが存在すれば **true** |
-| [**.kind** : Text](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性の種類 |
-| [**.mandatory** : Boolean](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性において Null値の入力が拒否されている場合に true |
-| [**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;`dataClassAttribute` オブジェクトの名称 |
-| [**.relatedDataClass** : Text](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性にリレートされているデータクラスの名称 |
-| [**.type** : Text](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性の概念的な値タイプ |
-| [**.unique** : Boolean](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;属性値が重複不可の場合に true |
+| [<!-- INCLUDE DataClassAttributeClass.autoFilled.Syntax -->](#autofilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.autoFilled.Summary -->|
+| [<!-- INCLUDE DataClassAttributeClass.fieldNumber.Syntax -->](#fieldnumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldNumber.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.inverseName.Syntax -->](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.inverseName.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.unique.Syntax -->](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.unique.Summary --> |
 
 
 
+<!-- REF DataClassAttributeClass.autoFilled.Desc -->
 ## .autoFilled
 
 <details><summary>履歴</summary>
@@ -44,11 +45,13 @@ title: DataClassAttribute
 </details>
 
 
-**.autoFilled** : Boolean
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
+**.autoFilled** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.autoFilled` プロパティは、 属性値が 4Dによって自動生成される場合に trueです。 このプロパティは以下の 4Dフィールドプロパティに対応しています:
+`.autoFilled` プロパティは、 <!-- REF DataClassAttributeClass.autoFilled.Summary -->属性値が 4Dによって自動生成される場合に true<!-- END REF -->です。 このプロパティは以下の 4Dフィールドプロパティに対応しています:
 
 *   数値型フィールドの "自動インクリメント"
 *   UUID (文字型)フィールドの "自動UUID"
@@ -57,10 +60,12 @@ title: DataClassAttribute
 > 汎用的なプログラミングのために、`.autoFilled` が返されない場合でも **Bool** (dataClassAttribute.autoFilled) と書くことで、有効な値 (false) を受け取ることができます。
 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
 
 <details><summary>履歴</summary>
@@ -70,20 +75,24 @@ title: DataClassAttribute
 </details>
 
 
-**.fieldNumber** : Integer
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
+**.fieldNumber** : Integer<!-- END REF -->
+
 
 #### 説明
 
-`.fieldNumber` プロパティは、 属性の内部的な 4Dフィールド番号を格納します。
+`.fieldNumber` プロパティは、 <!-- REF DataClassAttributeClass.fieldNumber.Summary -->属性の内部的な 4Dフィールド番号<!-- END REF -->を格納します。
 
 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.fieldNumber` が返されない場合でも **Num** (dataClassAttribute.fieldNumber) と書くことで、有効な値 (0) を受け取ることができます。
 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.fieldType.Desc -->
 ## .fieldType
 
 <details><summary>履歴</summary>
@@ -93,11 +102,13 @@ title: DataClassAttribute
 </details>
 
 
-**.fieldType** : Integer
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->
+**.fieldType** : Integer<!-- END REF -->
+
 
 #### 説明
 
-`.fieldType` プロパティは、 属性の 4Dデータベースタイプを格納します。 これは属性の種類 (kind) によります ([`.kind`](#kind) 参照)。
+`.fieldType` プロパティは、 <!-- REF DataClassAttributeClass.fieldType.Summary -->属性の 4Dデータベースタイプ<!-- END REF -->を格納します。 これは属性の種類 (kind) によります ([`.kind`](#kind) 参照)。
 
 **とりうる値:**
 
@@ -107,11 +118,13 @@ title: DataClassAttribute
 | relatedEntity           | 38 (Is object)     |                                                                               |
 | relatedEntities         | 42 (Is collection) |                                                                               |
 
+<!-- END REF -->
 
 #### 参照
 
 [`.type`](#type)
 
+<!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
 
 <details><summary>履歴</summary>
@@ -121,19 +134,23 @@ title: DataClassAttribute
 </details>
 
 
-**.indexed** : Boolean
+<!-- REF DataClassAttributeClass.indexed.Syntax -->
+**.indexed** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.indexed` プロパティは、 属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に trueです。
+`.indexed` プロパティは、 <!-- REF DataClassAttributeClass.indexed.Summary -->属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true<!-- END REF -->です。
 
 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.indexed` が返されない場合でも **Bool** (dataClassAttribute.indexed) と書くことで、有効な値 (false) を受け取ることができます。
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.inverseName.Desc -->
 ## .inverseName
 
 <details><summary>履歴</summary>
@@ -143,19 +160,23 @@ title: DataClassAttribute
 </details>
 
 
-**.inverseName** : Text
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->
+**.inverseName** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.inverseName` プロパティは、 リレーション先の属性名を格納します。
+`.inverseName` プロパティは、 <!-- REF DataClassAttributeClass.inverseName.Summary -->リレーション先の属性名<!-- END REF -->を格納します。
 
 `.kind` が "storage" の場合には、このプロパティは返されません。 .kind は "relatedEntity" または "relatedEntities" でなくてはなりません。
 > 汎用的なプログラミングのために、`.inverseName` が返されない場合でも **String** (dataClassAttribute.inverseName) と書くことで、有効な値 ("") を受け取ることができます。  
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.keyWordIndexed.Desc -->
 ## .keyWordIndexed
 
 <details><summary>履歴</summary>
@@ -165,18 +186,22 @@ title: DataClassAttribute
 </details>
 
 
-**.keyWordIndexed** : Boolean
+<!-- REF DataClassAttributeClass.keyWordIndexed.Syntax -->
+**.keyWordIndexed** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.keyWordIndexed` プロパティは、 属性にキーワードインデックスが存在すれば **true**です。
+`.keyWordIndexed` プロパティは、 <!-- REF DataClassAttributeClass.keyWordIndexed.Summary -->属性にキーワードインデックスが存在すれば **true**<!-- END REF -->です。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.keyWordIndexed` が返されない場合でも **Bool** (dataClassAttribute.keyWordIndexed) と書くことで、有効な値 (false) を受け取ることができます。
 
+<!-- END REF -->
 
 
 
+<!-- REF DataClassAttributeClass.kind.Desc -->
 ## .kind
 
 <details><summary>履歴</summary>
@@ -186,11 +211,13 @@ title: DataClassAttribute
 </details>
 
 
-**.kind** : Text
+<!-- REF DataClassAttributeClass.kind.Syntax -->
+**.kind** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.kind` プロパティは、 属性の種類を格納します。 以下のいずれかの値が返されます:
+`.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類<!-- END REF -->を格納します。 以下のいずれかの値が返されます:
 
 *   "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
 *   "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
@@ -211,10 +238,12 @@ title: DataClassAttribute
 ```
 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.mandatory.Desc -->
 ## .mandatory
 
 <details><summary>履歴</summary>
@@ -224,20 +253,24 @@ title: DataClassAttribute
 </details>
 
 
-**.mandatory** : Boolean
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->
+**.mandatory** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.mandatory` プロパティは、 属性において Null値の入力が拒否されている場合に trueです。
+`.mandatory` プロパティは、 <!-- REF DataClassAttributeClass.mandatory.Summary -->属性において Null値の入力が拒否されている場合に true<!-- END REF -->です。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.mandatory` が返されない場合でも **Bool** (dataClassAttribute.mandatory) と書くことで、有効な値 (false) を受け取ることができます。
 > **警告**: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。 フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。
 
+<!-- END REF -->
 
 
 
 
+<!-- REF DataClassAttributeClass.name.Desc -->
 ## .name
 
 <details><summary>履歴</summary>
@@ -247,11 +280,13 @@ title: DataClassAttribute
 </details>
 
 
-**.name** : Text
+<!-- REF DataClassAttributeClass.name.Syntax -->
+**.name** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.name` プロパティは、 `dataClassAttribute` オブジェクトの名称を文字列として返します。
+`.name` プロパティは、 <!-- REF DataClassAttributeClass.name.Summary -->`dataClassAttribute` オブジェクトの名称<!-- END REF -->を文字列として返します。
 
 #### 例題
 
@@ -260,9 +295,11 @@ title: DataClassAttribute
  $attName:=ds.Employee.lastname.name //$attName="lastname"
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
 
 <details><summary>履歴</summary>
@@ -273,12 +310,14 @@ title: DataClassAttribute
 </details>
 
 
-**.relatedDataClass** : Text
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
+**.relatedDataClass** : Text<!-- END REF -->
+
 
 #### 説明
 > このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
 
-`.relatedDataClass` プロパティ、 属性にリレートされているデータクラスの名称を返します。
+`.relatedDataClass` プロパティ、 <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->属性にリレートされているデータクラスの名称<!-- END REF -->を返します。
 
 #### 例題
 
@@ -293,9 +332,11 @@ title: DataClassAttribute
  $relClassN:=ds.Employee.directReports.relatedDataClass //$relClassN="Employee"
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF DataClassAttributeClass.type.Desc -->
 ## .type
 
 <details><summary>履歴</summary>
@@ -305,11 +346,13 @@ title: DataClassAttribute
 </details>
 
 
-**.type** : Text
+<!-- REF DataClassAttributeClass.type.Syntax -->
+**.type** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.type` プロパティは、 属性の概念的な値タイプが格納されており、汎用的なプログラミングに有用です。
+`.type` プロパティは、 <!-- REF DataClassAttributeClass.type.Summary -->属性の概念的な値タイプ<!-- END REF -->が格納されており、汎用的なプログラミングに有用です。
 
 この概念的な値タイプは属性の種類 ([`.kind`](#kind)) によります。
 
@@ -321,12 +364,14 @@ title: DataClassAttribute
 | relatedEntity           | リレートされたデータクラス名                                                    | 例: "Companies"                                                                                                                                                        |
 | relatedEntities         | リレートされたデータクラス名 + "Selection"                                      | 例: "EmployeeSelection"                                                                                                                                                |
 
+<!-- END REF -->
 
 #### 参照
 
 [`.fieldType`](#fieldtype)
 
 
+<!-- REF DataClassAttributeClass.unique.Desc -->
 ## .unique
 
 <details><summary>履歴</summary>
@@ -336,14 +381,17 @@ title: DataClassAttribute
 </details>
 
 
-**.unique** : Boolean
+<!-- REF DataClassAttributeClass.unique.Syntax -->
+**.unique** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.unique` プロパティは、 属性値が重複不可の場合に trueです。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
+`.unique` プロパティは、 <!-- REF DataClassAttributeClass.unique.Summary -->属性値が重複不可の場合に true<!-- END REF -->です。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.unique` が返されない場合でも **Bool** (dataClassAttribute.unique) と書くことで、有効な値 (false) を受け取ることができます。
 
+<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

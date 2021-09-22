@@ -6,6 +6,7 @@ title: Document クラス
 ## 説明
 
 
+<!-- REF document.creationDate.Desc -->
 ## .creationDate
 
 <details><summary>履歴</summary>
@@ -14,17 +15,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.creationDate** : Date
+<!-- REF #document.creationDate.Syntax -->
+**.creationDate** : Date<!-- END REF -->
+
 
 #### 説明
 
-`.creationDate` プロパティは、 ファイルの作成日を返します。
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
  
  
- ## .creationTime
+ <!-- REF document.creationTime.Desc -->
+## .creationTime
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -32,18 +37,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.creationTime** : Time
+<!-- REF #document.creationTime.Syntax -->
+**.creationTime** : Time<!-- END REF -->
+
 
 #### 説明
 
-`.creationTime` プロパティは、 ファイルの作成時刻 を返します (00:00 からの経過秒数の形式)。
+`.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.exists.Desc -->
 ## .exists
 
 <details><summary>履歴</summary>
@@ -52,19 +61,23 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.exists** : Boolean
+<!-- REF #document.exists.Syntax -->
+**.exists** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.exists` プロパティは、 ディスク上にファイルが存在する場合は true を返します(それ以外の場合は false)。
+`.exists` プロパティは、 <!-- REF #document.exists.Summary -->ディスク上にファイルが存在する場合は true を返します<!-- END REF -->(それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
 
+<!-- REF document.extension.Desc -->
 
 ## .extension
 
@@ -74,18 +87,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.extension** : Text
+<!-- REF #document.extension.Syntax -->
+**.extension** : Text<!-- END REF -->
+
 #### 説明
 
-`.extension` プロパティは、 ファイル名の拡張子を返します (あれば)。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
 
+<!-- REF document.fullName.Desc -->
 ## .fullName
 
 <details><summary>履歴</summary>
@@ -94,17 +111,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.fullName** : Text
+<!-- REF #document.fullName.Syntax -->
+**.fullName** : Text<!-- END REF -->
+
 #### 説明
 
-`.fullName` プロパティは、 拡張子 (あれば) を含めたファイルの完全な名称を返します。
+`.fullName` プロパティは、 <!-- REF #document.fullName.Summary -->拡張子 (あれば) を含めたファイルの完全な名称<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.hidden.Desc -->
 ## .hidden
 
 <details><summary>履歴</summary>
@@ -113,18 +134,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.hidden** : Boolean
+<!-- REF #document.hidden.Syntax -->
+**.hidden** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.hidden` プロパティは、 ファイルがシステムレベルで "非表示" に設定されていれば trueを返します (それ以外の場合は false)。
+`.hidden` プロパティは、 <!-- REF #document.hidden.Summary -->ファイルがシステムレベルで "非表示" に設定されていれば true<!-- END REF -->を返します (それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.isAlias.Desc -->
 ## .isAlias
 
 <details><summary>履歴</summary>
@@ -133,17 +158,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.isAlias** : Boolean
+<!-- REF #document.isAlias.Syntax -->
+**.isAlias** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.isAlias` プロパティは、 ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には trueを返し、それ以外の場合には false を返します。
+`.isAlias` プロパティは、 <!-- REF #document.isAlias.Summary -->ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には true<!-- END REF -->を返し、それ以外の場合には false を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
+<!-- REF document.isFile.Desc -->
 ## .isFile
 
 <details><summary>履歴</summary>
@@ -152,17 +181,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.isFile** : Boolean
+<!-- REF #document.isFile.Syntax -->
+**.isFile** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.isFile` プロパティは、 ファイルに対しては常に trueを返します。
+`.isFile` プロパティは、 <!-- REF #document.isFile.Summary -->ファイルに対しては常に true<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
+<!-- REF document.isFolder.Desc -->
 ## .isFolder
 
 <details><summary>履歴</summary>
@@ -171,18 +204,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.isFolder** : Boolean
+<!-- REF #document.isFolder.Syntax -->
+**.isFolder** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.isFolder` プロパティは、 ファイルに対しては常に falseを返します。
+`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.isWritable.Desc -->
 ## .isWritable
 
 <details><summary>履歴</summary>
@@ -191,11 +228,13 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.isWritable** : Boolean
+<!-- REF #document.isWritable.Syntax -->
+**.isWritable** : Boolean<!-- END REF -->
+
 
 #### 説明
 
-`.isWritable` プロパティは、 ファイルがディスク上に存在し、書き込み可能な場合に trueを返します。
+`.isWritable` プロパティは、 <!-- REF #document.isWritable.Summary -->ファイルがディスク上に存在し、書き込み可能な場合に true<!-- END REF -->を返します。
 > このプロパティは 4Dアプリケーションがディスクに書き込めるかどうか (アクセス権限) をチェックし、ファイルの *writable* (書き込み可能) 属性のみ依存するわけではありません。
 
 このプロパティは **読み取り専用** です。
@@ -209,10 +248,12 @@ title: Document クラス
  End if
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.modificationDate.Desc -->
 ## .modificationDate
 
 <details><summary>履歴</summary>
@@ -221,18 +262,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.modificationDate** : Date
+<!-- REF #document.modificationDate.Syntax -->
+**.modificationDate** : Date<!-- END REF -->
+
 
 #### 説明
 
-`.modificationDate` プロパティは、 ファイルの最終変更日を返します。
+`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.modificationTime.Desc -->
 ## .modificationTime
 
 <details><summary>履歴</summary>
@@ -241,17 +286,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.modificationTime** : Time
+<!-- REF #document.modificationTime.Syntax -->
+**.modificationTime** : Time<!-- END REF -->
+
 
 ##### 説明
 
-`.modificationTime` プロパティは、 ファイルの最終変更時刻 を返します (00:00 からの経過秒数の形式)。
+`.modificationTime` プロパティは、 <!-- REF #document.modificationTime.Summary -->ファイルの最終変更時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
+<!-- REF document.name.Desc -->
 ## .name
 
 <details><summary>履歴</summary>
@@ -260,16 +309,20 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.name** : Text
+<!-- REF #document.name.Syntax -->
+**.name** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.name` プロパティは、 拡張子 (あれば) を含まないファイル名を返します。
+`.name` プロパティは、 <!-- REF #document.name.Summary -->拡張子 (あれば) を含まないファイル名<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
+<!-- REF document.original.Desc -->
 ## .original
 
 <details><summary>履歴</summary>
@@ -278,11 +331,13 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.original** : 4D.File<br>**.original** : 4D.Folder
+<!-- REF #document.original.Syntax -->
+**.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
+
 
 #### 説明
 
-`.original` プロパティは、 エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素を返します。 ターゲット要素は以下のいずれかです:
+`.original` プロパティは、 <!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素<!-- END REF -->を返します。 ターゲット要素は以下のいずれかです:
 
 *   File オブジェクト
 *   Folder オブジェクト
@@ -291,10 +346,12 @@ title: Document クラス
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.parent.Desc -->
 ## .parent
 
 <details><summary>履歴</summary>
@@ -303,18 +360,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.parent** : 4D.Folder
+<!-- REF #document.parent.Syntax -->
+**.parent** : 4D.Folder<!-- END REF -->
+
 
 #### 説明
 
-`.parent` プロパティは、 対象ファイルの親フォルダーオブジェクトを返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.path.Desc -->
 ## .path
 
 <details><summary>履歴</summary>
@@ -323,17 +384,21 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.path** : Text
+<!-- REF #document.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.path` プロパティは、 ファイルの POSIXパスを返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
+<!-- REF document.platformPath.Desc -->
 ## .platformPath
 
 <details><summary>履歴</summary>
@@ -342,18 +407,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.platformPath** : Text
+<!-- REF #document.platformPath.Syntax -->
+**.platformPath** : Text<!-- END REF -->
+
 
 #### 説明
 
-`.platformPath` プロパティは、 カレントプラットフォームのシンタックスで表現されたファイルのパスを返します。
+`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパス<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF document.size.Desc -->
 ## .size
 
 <details><summary>履歴</summary>
@@ -362,14 +431,17 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.size** : Real
+<!-- REF #document.size.Syntax -->
+**.size** : Real<!-- END REF -->
+
 
 #### 説明
 
-`.size` プロパティは、 ファイルのサイズ (バイト単位)を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
+`.size` プロパティは、 <!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位)<!-- END REF -->を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
 
 このプロパティは **読み取り専用** です。 
 
+<!-- END REF -->
 
 
 
@@ -380,6 +452,7 @@ title: Document クラス
 
 
 
+<!-- REF document.copyTo().Desc -->
 ## .copyTo()
 
 <details><summary>履歴</summary>
@@ -388,18 +461,22 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File
+<!-- REF #document.copyTo().Syntax -->
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
+<!-- REF #document.copyTo().Params -->
 | 引数                | タイプ       |    | 説明                                |
 | ----------------- | --------- |:--:| --------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | Text      | -> | コピー先フォルダーの名前                      |
 | overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.File   | <- | コピーされたファイル                        |
+<!-- END REF -->
 
 
 #### 説明
 
-`.copyTo()` 関数は、 `File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします 。
+`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -426,9 +503,11 @@ $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
 
- 
+ <!-- END REF -->
 
 
+
+<!-- REF document.getContent().Desc -->
 ## .getContent()
 
 <details><summary>履歴</summary>
@@ -438,15 +517,19 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | 追加            |
 </details>
 
-**.getContent( )** : 4D.Blob
+<!-- REF #document.getContent().Syntax -->
+**.getContent( )** : 4D.Blob<!-- END REF -->
+
+<!-- REF #document.getContent().Params -->
 | 引数  | タイプ     |    | 説明         |
 | --- | ------- | -- | ---------- |
 | 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
+<!-- END REF -->
 
 
 #### 説明
 
-`.getContent()` 関数は、  ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
@@ -464,9 +547,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
  End if
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF document.getIcon().Desc -->
 ## .getIcon()
 
 <details><summary>履歴</summary>
@@ -475,16 +560,20 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | 追加 |
 </details>
 
-**.getIcon**( { *size* : Integer } ) : Picture
+<!-- REF #document.getIcon().Syntax -->
+**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
+<!-- REF #document.getIcon().Params -->
 | 引数   | タイプ     |    | 説明                       |
 | ---- | ------- | -- | ------------------------ |
 | size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
 | 戻り値  | Picture | <- | アイコン                     |
+<!-- END REF -->
 
 
 #### 説明
 
-`.getIcon()` 関数は、 ファイルのアイコンを返します。
+`.getIcon()` 関数は、 <!-- REF #document.getIcon().Summary -->ファイルのアイコンを返します<!-- END REF -->。
 
 任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
@@ -496,9 +585,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 
+<!-- END REF -->
 
 
 
+<!-- REF document.getText().Desc -->
 ## .getText()
 
 <details><summary>履歴</summary>
@@ -507,18 +598,22 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | 追加 |
 </details>
 
-**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text
+<!-- REF #document.getText().Syntax -->
+**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text<!-- END REF -->
 
+
+<!-- REF #document.getText().Params -->
 | 引数          | タイプ     |    | 説明               |
 | ----------- | ------- | -- | ---------------- |
 | charSetName | Text    | -> | 文字セットの名前         |
 | charSetNum  | Integer | -> | 文字セットの番号         |
 | breakMode   | Integer | -> | 改行の処理モード         |
 | 戻り値         | Text    | <- | ドキュメントから取得したテキスト |
+<!-- END REF -->
 
 
 #### 説明
-`.getText()` 関数は、 ファイルのコンテンツをテキストとして返します 。
+`.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->。
 
 任意で、コンテンツの読み取りに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
@@ -571,6 +666,7 @@ id name price vat
 ```
  
 
+<!-- END REF -->
  
  
 

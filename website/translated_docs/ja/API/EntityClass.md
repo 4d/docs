@@ -10,34 +10,35 @@ title: Entity
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [***.attributeName*** : any](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティの属性値を格納します|
-| [**.clone()** : 4D.Entity](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します|
-| [**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;二つのエンティティの中身を比較し、その差異を返します|
-| [**.drop**( {*mode* : Integer} ) : Object](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;データストアのエンティティに格納されているデータを削除します|
-| [**.first()**: 4D.Entity](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します|
-| [**.fromObject**( *filler* : Object )](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;*filler* に指定した内容でエンティティの属性値を設定します|
-| [**.getDataClass()** : 4D.DataClass](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティのデータクラスを返します|
-| [**.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティのプライマリーキー値を返します|
-| [**.getSelection()**: 4D.EntitySelection](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティが所属するエンティティセレクションを返します|
-| [**.getStamp()** : Integer](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp; エンティティのスタンプの値を返します|
-| [**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティセレクション内におけるエンティティの位置を返します|
-| [**.isNew()** : Boolean](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp; 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します|
-| [**.last()** : 4D.Entity](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します|
-| [**.lock**( { *mode* : Integer } ) : Object](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象エンティティが参照するレコードにペシミスティック・ロックをかけます|
-| [**.next()** : 4D.Entity](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します|
-| [**.previous()**  : 4D.Entity](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp; エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します|
-| [**.reload()** : Object](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティの中身をメモリ内にリロードします|
-| [**.save**( { *mode* : Integer } ) : Object](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティの変更内容を保存します|
-| [**.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティからビルトされたオブジェクトを返します|
-| [**.touched()** : Boolean](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします|
-| [**.touchedAttributes()** : Collection](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;メモリに読み込み後に変更されたエンティティの属性名を返します|
-| [**.unlock()** : Object](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象エンティティが参照するレコードのペシミスティック・ロックを解除します|
+| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
+| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
+| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
+| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->|
+| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->|
+| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
+| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
+| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
+| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
+| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
+| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->|
+| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->|
+| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->|
+| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->|
+| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->|
+| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->|
+| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->|
+| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->|
+| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->|
+| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->|
+| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->|
 
 
 
 
 
 
+<!-- REF EntityClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>履歴</summary>
@@ -46,11 +47,13 @@ title: Entity
 | v17   | 追加 |
 </details>
 
-***.attributeName*** : any
+<!-- REF EntityClass.attributeName.Syntax -->
+***.attributeName*** : any<!-- END REF -->
+
 
 #### 説明
 
-データクラス属性はすべてエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 エンティティの属性値を格納します。
+データクラス属性はすべてエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。
@@ -70,10 +73,12 @@ title: Entity
  $myEntity.save() // エンティティを保存します
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.clone().Desc -->
 ## .clone()
 
 <details><summary>履歴</summary>
@@ -83,15 +88,19 @@ title: Entity
 </details>
 
 
-**.clone()** : 4D.Entity
+<!-- REF #EntityClass.clone().Syntax -->
+**.clone()** : 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.clone().Params -->
 | 引数  | タイプ       |    | 説明                  |
 | --- | --------- |:--:| ------------------- |
 | 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
+<!-- END REF -->
 
 
 #### 説明
 
-`.clone()` 関数は、 対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します。 このメソッドを使用するとエンティティを個別に更新することができます。
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
 > エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
@@ -108,11 +117,13 @@ title: Entity
 
 ```
 
+<!-- END REF -->
 
 
 
 
 
+<!-- REF EntityClass.diff().Desc -->
 ## .diff()
 
 <details><summary>履歴</summary>
@@ -121,18 +132,22 @@ title: Entity
 | v17   | 追加 |
 </details>
 
-**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection
+<!-- REF #EntityClass.diff().Syntax -->
+**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
+
+<!-- REF #EntityClass.diff().Params -->
 | 引数                  | タイプ        |    | 説明                  |
 | ------------------- | ---------- |:--:| ------------------- |
 | entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ |
 | attributesToCompare | Collection | -> | 比較する属性の名称           |
 | 戻り値                 | Collection | <- | エンティティ間の差異          |
+<!-- END REF -->
 
 
 #### 説明
 
-`.diff()` 関数は、 二つのエンティティの中身を比較し、その差異を返します。
+`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->二つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
 
 *entityToCompare* には、オリジナルのエンティティと比較をするエンティティを渡します。
 
@@ -308,9 +323,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 ```
 
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.drop().Desc -->
 ## .drop()
 
 <details><summary>履歴</summary>
@@ -320,15 +337,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.drop**( {*mode* : Integer} ) : Object
+<!-- REF #EntityClass.drop().Syntax -->
+**.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
+
+<!-- REF #EntityClass.drop().Params -->
 | 引数   | タイプ     |    | 説明                                                           |
 | ---- | ------- |:--:| ------------------------------------------------------------ |
 | mode | Integer | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
 | 戻り値  | Object  | <- | ドロップの結果                                                      |
+<!-- END REF -->
 
 #### 説明
 
-`.drop()` 関数は、データクラスに対応するテーブルにおいて、 データストアのエンティティに格納されているデータを削除します。 エンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、データクラスに対応するテーブルにおいて、 <!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 エンティティそのものはメモリ内に残るという点に注意してください。
 
 マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
@@ -409,10 +430,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  End case
 ``` 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.first().Desc -->
 ## .first()
 
 <details><summary>履歴</summary>
@@ -422,14 +445,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.first()**: 4D.Entity
+<!-- REF #EntityClass.first().Syntax -->
+**.first()**: 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.first().Params -->
 | 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
-`.first()` 関数は、 対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します。
+`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -443,9 +470,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $firstEmployee:=$employee.first() // $firstEmployee は、$employees エンティティセレクションの先頭エンティティです
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.fromObject().Desc -->
 ## .fromObject()
 
 <details><summary>履歴</summary>
@@ -455,14 +484,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.fromObject**( *filler* : Object )
+<!-- REF #EntityClass.fromObject().Syntax -->
+**.fromObject**( *filler* : Object )<!-- END REF -->
+
+<!-- REF #EntityClass.fromObject().Params -->
 | 引数     | タイプ    |    | 説明                    |
 | ------ | ------ |:--:| --------------------- |
 | filler | Object | -> | エンティティの属性値を設定するオブジェクト |
+<!-- END REF -->
 
 #### 説明
 
-`.fromObject()` 関数は、 *filler* に指定した内容でエンティティの属性値を設定します。
+`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
 > このコマンドは、元のエンティティを変更します。
 
 オブジェクトとエンティティ間のマッピングは属性名でおこなわれます:
@@ -526,10 +559,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 ```
 
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.getDataClass().Desc -->
 ## .getDataClass()
 
 <details><summary>履歴</summary>
@@ -539,14 +574,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.getDataClass()** : 4D.DataClass
+<!-- REF #EntityClass.getDataClass().Syntax -->
+**.getDataClass()** : 4D.DataClass<!-- END REF -->
+
+<!-- REF #EntityClass.getDataClass().Params -->
 | 引数  | タイプ          |    | 説明                             |
 | --- | ------------ |:--:| ------------------------------ |
 | 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト |
+<!-- END REF -->
 
 #### 説明
 
-`.getDataClass()` 関数は、 エンティティのデータクラスを返します。 この関数は汎用的なコードを書くのに有用です。
+`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
 
 
 #### 例題
@@ -567,10 +606,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $status:=$entityNew.save() // 複製したエンティティを保存します
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.getKey().Desc -->
 ## .getKey()
 
 <details><summary>履歴</summary>
@@ -580,17 +621,21 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer
+<!-- REF #EntityClass.getKey().Syntax -->
+**.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+
+<!-- REF #EntityClass.getKey().Params -->
 | 引数   | タイプ     |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
 | 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                   |
 | 戻り値  | Integer | <- | エンティティの数値型プライマリーキーの値                                     |
 
+<!-- END REF -->
 
 #### 説明
 
-`.getKey()` 関数は、 エンティティのプライマリーキー値を返します。
+`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
 
 プライマリーキーは数値 (倍長整数) あるいは文字列です。 *mode* 引数として `dk key as string` オプションを渡すことで、実際のプライマリーキーの型に関係なく、返されるプライマリーキー値の型を文字列に "強制" することができます。
 
@@ -605,10 +650,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  ALERT("プライマリーキー: "+$employee.getKey(dk key as string))
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
 
 <details><summary>履歴</summary>
@@ -618,14 +665,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.getSelection()**: 4D.EntitySelection
+<!-- REF #EntityClass.getSelection().Syntax -->
+**.getSelection()**: 4D.EntitySelection<!-- END REF -->
+
+<!-- REF #EntityClass.getSelection().Params -->
 | 引数  | タイプ                |    | 説明                                      |
 | --- | ------------------ |:--:| --------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
-`.getSelection()` 関数は、 エンティティが所属するエンティティセレクションを返します。
+`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -644,9 +695,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  ALERT("エンティティセレクションには "+String($emp.getSelection().length)+" 件のエンティティが含まれています")
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.getStamp().Desc -->
 ## .getStamp()
 
 <details><summary>履歴</summary>
@@ -656,14 +709,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.getStamp()** : Integer
+<!-- REF #EntityClass.getStamp().Syntax -->
+**.getStamp()** : Integer<!-- END REF -->
+
+<!-- REF #EntityClass.getStamp().Params -->
 | 引数  | タイプ     |    | 説明                                   |
 | --- | ------- |:--:| ------------------------------------ |
 | 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
+<!-- END REF -->
 
 #### 説明
 
-`.getStamp()` 関数は、  エンティティのスタンプの値を返します。
+`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
 
 内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
@@ -686,10 +743,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $stamp:=$entity.getStamp() //$stamp=2
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.indexOf().Desc -->
 ## .indexOf()
 
 <details><summary>履歴</summary>
@@ -699,15 +758,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer
+<!-- REF #EntityClass.indexOf().Syntax -->
+**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
+
+<!-- REF #EntityClass.indexOf().Params -->
 | 引数              | タイプ                |    | 説明                            |
 | --------------- | ------------------ |:--:| ----------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション |
 | 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置      |
+<!-- END REF -->
 
 #### 説明
 
-`.indexOf()` 関数は、 エンティティセレクション内におけるエンティティの位置を返します。
+`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
 
 *entitySelection* 引数が渡されなかった場合はデフォルトで、所属エンティティセレクション内でのエンティティの位置が返されます。 *entitySelection* 引数を渡した場合は、指定されたエンティティセレクション内でのエンティティの位置を返します。
 
@@ -730,10 +793,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  ALERT("The index of the entity is "+String($employee.indexOf())) // -1
 ```
 
+<!-- END REF -->
 
 
 
 
+<!-- REF EntityClass.isNew().Desc -->
 ## .isNew()
 
 <details><summary>履歴</summary>
@@ -743,14 +808,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.isNew()** : Boolean
+<!-- REF #EntityClass.isNew().Syntax -->
+**.isNew()** : Boolean<!-- END REF -->
+
+<!-- REF #EntityClass.isNew().Params -->
 | 引数  | タイプ     |    | 説明                                         |
 | --- | ------- |:--:| ------------------------------------------ |
 | 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
+<!-- END REF -->
 
 #### 説明
 
-`.isNew()` 関数は、  対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します。 そうでない場合には、false を返します。
+`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
 
 
 #### 例題
@@ -766,9 +835,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  End if
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.last().Desc -->
 ## .last()
 
 <details><summary>履歴</summary>
@@ -778,14 +849,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.last()** : 4D.Entity
+<!-- REF #EntityClass.last().Syntax -->
+**.last()** : 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.last().Params -->
 | 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
-`.last()` 関数は、 対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します。
+`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -801,9 +876,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $lastEmployee:=$employee.last() // $lastEmployee は、$employees エンティティセレクションの最終エンティティです
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.lock().Desc -->
 ## .lock()
 
 <details><summary>履歴</summary>
@@ -813,15 +890,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.lock**( { *mode* : Integer } ) : Object
+<!-- REF #EntityClass.lock().Syntax -->
+**.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
+
+<!-- REF #EntityClass.lock().Params -->
 | 引数   | タイプ     |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
 | 戻り値  | Object  | <- | ロックの結果                                                   |
+<!-- END REF -->
 
 #### 説明
 
-`.lock()` 関数は、 対象エンティティが参照するレコードにペシミスティック・ロックをかけます。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
+`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
@@ -908,9 +989,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  End case
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.next().Desc -->
 ## .next()
 
 <details><summary>履歴</summary>
@@ -920,14 +1003,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.next()** : 4D.Entity
+<!-- REF #EntityClass.next().Syntax -->
+**.next()** : 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.next().Params -->
 | 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
-`.next()` 関数は、 エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します。
+`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -945,8 +1032,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 ```
 
+<!-- END REF -->
 
 
+<!-- REF EntityClass.previous().Desc -->
 ## .previous()
 
 <details><summary>履歴</summary>
@@ -956,14 +1045,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.previous()**  : 4D.Entity
+<!-- REF #EntityClass.previous().Syntax -->
+**.previous()**  : 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.previous().Params -->
 | 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
-`.previous()` 関数は、  エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します。
+`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -980,9 +1073,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $previousEmployee:=$employee.previous() // $previousEmployee は、$employees エンティティセレクションの先頭エンティティです
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.reload().Desc -->
 ## .reload( )
 
 <details><summary>履歴</summary>
@@ -992,14 +1087,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.reload()** : Object
+<!-- REF #EntityClass.reload().Syntax -->
+**.reload()** : Object<!-- END REF -->
+
+<!-- REF #EntityClass.reload().Params -->
 | 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
 | 戻り値 | Object | <- | ステータスオブジェクト |
+<!-- END REF -->
 
 #### 説明
 
-`.reload()` 関数は、データストアのデータクラスに対応するテーブルに保存されている情報に応じて、 エンティティの中身をメモリ内にリロードします。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
+`.reload()` 関数は、データストアのデータクラスに対応するテーブルに保存されている情報に応じて、 <!-- REF #EntityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
 
 **戻り値**
 
@@ -1038,8 +1137,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  End case
 ```
 
+<!-- END REF -->
 
 
+<!-- REF EntityClass.save().Desc -->
 ## .save()
 
 <details><summary>履歴</summary>
@@ -1049,15 +1150,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.save**( { *mode* : Integer } ) : Object
+<!-- REF #EntityClass.save().Syntax -->
+**.save**( { *mode* : Integer } ) : Object<!-- END REF -->
+
+<!-- REF #EntityClass.save().Params -->
 | 引数   | タイプ     |    | 説明                               |
 | ---- | ------- |:--:| -------------------------------- |
 | mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
 | 戻り値  | Object  | <- | 保存の結果                            |
+<!-- END REF -->
 
 #### 説明
 
-`.save()` 関数は、データクラスに対応するテーブル内に、 エンティティの変更内容を保存します 。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
+`.save()` 関数は、データクラスに対応するテーブル内に、 <!-- REF #EntityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
 
 保存処理は、少なくとも一つのエンティティ属性が "touched" である (更新されている) 場合にのみ実行されます ([`.touched()`](#touched) および [`.touchedAttributes()`](#touchedattributes) 関数参照)。 そうでない場合、関数は何もしません (トリガーは呼び出されません)。
 
@@ -1166,9 +1271,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  End case
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.toObject().Desc -->
 ## .toObject()
 
 <details><summary>履歴</summary>
@@ -1178,17 +1285,21 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-**.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object
+<!-- REF #EntityClass.toObject().Syntax -->
+**.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
+
+<!-- REF #EntityClass.toObject().Params -->
 | 引数           | タイプ        |    | 説明                                                                                            |
 | ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------- |
 | filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                               |
 | filterCol    | Collection | -> | 取得する属性のコレクション                                                                                 |
 | options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
 | 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト                                                                         |
+<!-- END REF -->
 
 #### 説明
 
-`.toObject()` 関数は、 エンティティからビルトされたオブジェクトを返します。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
@@ -1447,9 +1558,11 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 }
 ```
 
+<!-- END REF -->
 
 
 
+<!-- REF EntityClass.touched().Desc -->
 ## .touched( )
 
 <details><summary>履歴</summary>
@@ -1459,14 +1572,18 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-**.touched()** : Boolean
+<!-- REF #EntityClass.touched().Syntax -->
+**.touched()** : Boolean<!-- END REF -->
+
+<!-- REF #EntityClass.touched().Params -->
 | 引数  | タイプ     |    | 説明                                                   |
 | --- | ------- |:--:| ---------------------------------------------------- |
 | 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
+<!-- END REF -->
 
 #### 説明
 
-`.touched()` 関数は、 エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします。
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
 
 属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
@@ -1486,8 +1603,10 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  End if // そうでない場合はエンティティを保存する必要はありません
 ```
 
+<!-- END REF -->
 
 
+<!-- REF EntityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
 
 <details><summary>履歴</summary>
@@ -1497,14 +1616,18 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-**.touchedAttributes()** : Collection
+<!-- REF #EntityClass.touchedAttributes().Syntax -->
+**.touchedAttributes()** : Collection<!-- END REF -->
+
+<!-- REF #EntityClass.touchedAttributes().Params -->
 | 引数  | タイプ        |    | 説明                      |
 | --- | ---------- |:--:| ----------------------- |
 | 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション |
+<!-- END REF -->
 
 #### 説明
 
-`.touchedAttributes()` 関数は、 メモリに読み込み後に変更されたエンティティの属性名を返します。
+`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
 この関数は、種類 ([kind](DataClassAttributeClass.md#kind)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
@@ -1556,8 +1679,10 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 *   employer はリレートエンティティ (`relatedEntity`) 型です
 *   employerID は、employer リレートエンティティの外部キーです
 
+<!-- END REF -->
 
 
+<!-- REF EntityClass.unlock().Desc -->
 ## .unlock()
 
 <details><summary>履歴</summary>
@@ -1567,14 +1692,18 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-**.unlock()** : Object
+<!-- REF #EntityClass.unlock().Syntax -->
+**.unlock()** : Object<!-- END REF -->
+
+<!-- REF #EntityClass.unlock().Params -->
 | 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
 | 戻り値 | Object | <- | ステータスオブジェクト |
+<!-- END REF -->
 
 #### 説明
 
-`.unlock()` 関数は、データストアおよび、データクラスに対応するテーブル内の、 対象エンティティが参照するレコードのペシミスティック・ロックを解除します 。
+`.unlock()` 関数は、データストアおよび、データクラスに対応するテーブル内の、 <!-- REF #EntityClass.unlock().Summary -->対象エンティティが参照するレコードのペシミスティック・ロックを解除します<!-- END REF --> 。
 
 > 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
@@ -1612,6 +1741,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  End if
 ```
 
+<!-- END REF -->
 
 
 
