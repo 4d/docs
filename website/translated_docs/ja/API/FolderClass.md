@@ -18,32 +18,32 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Folder オブジェクト
 
-|                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
-| [<!-- INCLUDE #FolderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.create().Summary -->|
-| [<!-- INCLUDE #FolderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.createAlias().Summary --> |
-| [<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
-| [<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
-| [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->|
-| [<!-- INCLUDE #directory.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
-| [<!-- INCLUDE #directory.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
-| [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
-| [<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
-| [<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->|
-| [<!-- INCLUDE #directory.isAlias.Syntax -->](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isAlias.Summary -->|
-| [<!-- INCLUDE #directory.isFile.Syntax -->](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFile.Summary -->|
-| [<!-- INCLUDE #directory.isFolder.Syntax -->](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFolder.Summary -->|
-| [<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isPackage.Summary -->|
-| [<!-- INCLUDE #directory.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationDate.Summary -->|
-| [<!-- INCLUDE #directory.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationTime.Summary -->|
-| [<!-- INCLUDE #directory.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.name.Summary -->|
-| [<!-- INCLUDE #directory.original.Syntax -->](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.original.Summary -->|
-| [<!-- INCLUDE #directory.parent.Syntax -->](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
-| [<!-- INCLUDE #directory.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
-| [<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
-| [<!-- INCLUDE #FolderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.moveTo().Summary -->|
-| [<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.rename().Summary -->|
+|                                                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `Folder` object into the specified *destinationFolder* |
+| [**.create()** : Boolean](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object                                                                             |
+| [**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)            |
+| [**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the folder                                                                                                                  |
+| [**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation time of the folder                                                                                                                  |
+| [**.delete**( { *option* : Integer } )](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder                                                                                                                        |
+| [**.exists** : Boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder exists on disk                                                                                                                         |
+| [**.extension** : Text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name (if any)                                                                                                      |
+| [**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder, including its extension (if any)                                                                                    |
+| [**.getIcon**( { *size* : Integer } ) : Picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the icon of the folder                                                                                                  |
+| [**.hidden** : Boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp; true if the folder is set as "hidden" at the system level                                                                                                |
+| [**.isAlias** : Boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a `Folder` object                                                                                                                  |
+| [**.isFile** : Boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a folder                                                                                                                             |
+| [**.isFolder** : Boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **true** for a folder                                                                                                                          |
+| [**.isPackage** : Boolean](#ispackage)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder is a package on macOS  (and exists on disk)                                                                                      |
+| [**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp; the date of the folder's last modification                                                                                              |
+| [**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the folder's last modification                                                                                               |
+| [**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp; the name of the folder, without extension (if any)                                                                                                              |
+| [**.original** : 4D.Folder](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the same Folder object as the folder                                                                                                                |
+| [**.parent** : 4D.Folder](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the folder                                                                                                                  |
+| [**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the folder                                                                                                                                     |
+| [**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the folder expressed with the current platform syntax                                                                                |
+| [**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*   |
+| [**.rename**( *newName* : Text ) : 4D.Folder](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object                                    |
 
 
 
@@ -55,24 +55,20 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->
-**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder
 
-
-<!-- REF FolderClass.Folder.Params -->
 | 引数             | タイプ       |    | 説明                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
-| path           | Text      | -> | フォルダーパス                                        |
-| folderConstant | Integer   | -> | 4Dフォルダー定数                                      |
-| pathType       | Integer   | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| path           | テキスト      | -> | フォルダーパス                                        |
+| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
+| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
 | 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                  |
-<!-- END REF -->
 
 
 #### 説明
 
-`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+The `Folder` command creates and returns a new object of the `4D.Folder` type. このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -118,21 +114,65 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder
+
+#### 説明
+
+The `4D.Folder.new()` function creates and returns a new object of the `4D.Folder` type. この関数の機能は、[`Folder`](#folder) コマンドと同一です。
+
+> `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。
+
+
+## .copyTo()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder
+| 引数                | タイプ       |    | 説明                                |
+| ----------------- | --------- |:--:| --------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
+| newName           | テキスト      | -> | コピー先フォルダーの名前                      |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| 戻り値               | 4D.Folder | <- | コピーされたフォルダー                       |
 
 
 #### 説明
 
-`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
+The `.copyTo()` function copies the `Folder` object into the specified *destinationFolder*.
 
-> `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。 
+*destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
+
+デフォルトで、フォルダーは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+
+*destinationFolder* 引数が指定するフォルダー内に同じ名前のフォルダーが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
+
+| 定数             | 値 | 説明                 |
+| -------------- | - | ------------------ |
+| `fk overwrite` | 4 | 既存要素があれば、それを上書きします |
 
 
-<!-- INCLUDE directory.copyTo().Desc -->
+**戻り値**
+
+コピーされた `Folder` オブジェクト。
+
+#### 例題
+
+ユーザーのドキュメントフォルダーにあるピクチャーフォルダーを、データベースフォルダー内にコピーします。
+
+```4d
+var $userImages; $copiedImages : 4D.Folder
+$userImages:=Folder(fk documents folder+"/Pictures/")
+$copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
+```
 
 
 
-<!-- REF folder.create().Desc -->
+
+
 ## .create()
 
 <details><summary>履歴</summary>
@@ -143,20 +183,16 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 
-<!--REF #FolderClass.create().Syntax -->
-**.create()** : Boolean<!-- END REF -->
-
-<!--REF #FolderClass.create().Params -->
-| 引数  | タイプ     |    | 説明                                     |
-| --- | ------- | -- | -------------------------------------- |
-| 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
-<!-- END REF -->
+**.create()** : Boolean
+| 引数  | タイプ |    | 説明                                     |
+| --- | --- | -- | -------------------------------------- |
+| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
 
 
 
 #### 説明
 
-`.create()` 関数は、 <!-- REF #FolderClass.create().Summary -->`Folder` オブジェクトのプロパティに基づいてディスク上にフォルダーを作成します<!-- END REF -->。
+The `.create()` function creates a folder on disk according to the properties of the `Folder` object.
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 フォルダーがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
@@ -187,12 +223,10 @@ Else
 End if
 ```
 
-<!-- END REF -->
 
 
 
 
-<!-- REF folder.createAlias().Desc -->
 ## .createAlias()
 
 <details><summary>履歴</summary>
@@ -203,23 +237,19 @@ End if
 
 
 
-<!--REF #FolderClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File
 
-
-<!--REF #FolderClass.createAlias().Params -->
 | 引数                | タイプ       |    | 説明                       |
 | ----------------- | --------- | -- | ------------------------ |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
-| aliasName         | Text      | -> | エイリアスまたはショートカットの名称       |
-| aliasType         | Integer   | -> | エイリアスリンクのタイプ             |
+| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | 整数        | -> | エイリアスリンクのタイプ             |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照  |
-<!-- END REF -->
 
 
 #### 説明
 
-`.createAlias()` 関数は、*destinationFolder* オブジェクトで指定されたフォルダー内に、*aliasName* が指定する名称で、対象フォルダーへの <!-- REF #FolderClass.createAlias().Summary -->エイリアス (macOS) またはショートカット (Windows) を作成します<!-- END REF --> 。
+The `.createAlias()` function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 *aliasName* には、作成するエイリアスまたはショートカットの名前を渡します。
 
@@ -244,17 +274,48 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
 $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
-<!-- END REF -->
 
 
-<!-- INCLUDE directory.creationDate.Desc -->
+## .creationDate
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.creationDate** : Date
+
+#### 説明
+
+The `.creationDate` property returns the creation date of the folder.
+
+このプロパティは **読み取り専用** です。
 
 
-<!-- INCLUDE directory.creationTime.Desc -->
+
+
+## .creationTime
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.creationTime** : Time
+
+
+#### 説明
+
+The `.creationTime` property returns the creation time of the folder (expressed as a number of seconds beginning at 00:00).
+
+このプロパティは **読み取り専用** です。
 
 
 
-<!-- REF folder.delete().Desc -->
+
+
 ## .delete()
 
 <details><summary>履歴</summary>
@@ -265,21 +326,17 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 
-<!--REF #FolderClass.delete().Syntax -->
-**.delete**( { *option* : Integer } )<!-- END REF -->
+**.delete**( { *option* : Integer } )
 
-
-<!-- REF #FolderClass.delete().Params -->
-| 引数    | タイプ     |    | 説明            |
-| ----- | ------- | -- | ------------- |
-| オプション | Integer | -> | フォルダー削除のオプション |
-<!-- END REF -->
+| 引数    | タイプ |    | 説明            |
+| ----- | --- | -- | ------------- |
+| オプション | 整数  | -> | フォルダー削除のオプション |
 
 
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #FolderClass.delete().Summary -->フォルダーを削除します<!-- END REF -->。
+The `.delete()` function deletes the folder.
 
 セキュリティ上の理由から、option 引数を渡さなかった場合はデフォルトで、`.delete()` は空のフォルダーしか削除しません。 空でないフォルダーを削除するには、以下の定数のいずれか一つを option 引数として渡す必要があります:
 
@@ -299,78 +356,418 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 *   このフォルダー、またはその中のフォルダーのどいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 削除が中止された場合、`GET LAST ERROR STACK` コマンドを使用して原因となったファイルの名前とパスを取得することができます。
 *   フォルダーが存在しない場合、コマンドは何もせず、エラーは返されません。 <br /><br /> (*) Windowsの場合: -54 (ロックされたファイルを書き込みのために開こうとした)<br /> macOSの場合: -45 (ファイルはロックされていたか不正なパス名)
 
-<!-- END REF -->
- 
- 
-
-<!-- INCLUDE directory.exists.Desc -->
 
 
 
-<!-- INCLUDE directory.extension.Desc -->
+## .exists
 
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
 
+**.exists** : Boolean
 
-<!-- INCLUDE directory.file().Desc -->
+#### 説明
 
+The `.exists` property returns true if the folder exists on disk, and false otherwise.
 
-
-<!-- INCLUDE directory.files().Desc -->
-
-
-
-<!-- INCLUDE directory.folder().Desc -->
-
-
-
-<!-- INCLUDE directory.folders().Desc -->
-
-
-
-<!-- INCLUDE directory.fullName.Desc -->
-
-
-
-<!-- INCLUDE directory.getIcon().Desc -->
-
-
-
-<!-- INCLUDE directory.hidden.Desc -->
+このプロパティは **読み取り専用** です。
 
 
 
 
-<!-- INCLUDE directory.isAlias.Desc -->
+
+## .extension
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.extension** : Text
+
+#### 説明
+
+The `.extension` property returns the extension of the folder name (if any). 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+
+このプロパティは **読み取り専用** です。
 
 
 
 
-<!-- INCLUDE directory.isFile.Desc -->
+
+## .file()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.file**( *path* : Text ) : 4D.File
+| 引数   | タイプ     |    | 説明                              |
+| ---- | ------- | -- | ------------------------------- |
+| path | テキスト    | -> | ファイルのPOSIX相対パス名                 |
+| 戻り値  | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null) |
+
+#### 説明
+
+The `.file()` function creates a `File` object inside the `Folder` object and returns its reference.
+
+*path* には、返すべきファイルの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
+
+**戻り値**
+
+`File` オブジェクト (無効な *path* の場合には null)。
+
+#### 例題
+
+```4d
+var $myPDF : 4D.File
+$myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
+```
 
 
 
 
-<!-- INCLUDE directory.isFolder.Desc -->
+
+## .files()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.files**( { *options* : Integer } ) : Collection
+| 引数      | タイプ    |    | 説明                 |
+| ------- | ------ | -- | ------------------ |
+| options | 整数     | -> | ファイルリストのオプション      |
+| 戻り値     | コレクション | <- | 子ファイルオブジェクトのコレクション |
+
+#### 説明
+
+The `.files()` function returns a collection of `File` objects contained in the folder.
+> エイリアスまたはシンボリックリンクは解決されません。
+
+*options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
+
+| 定数                    | 値 | 説明                                          |
+| --------------------- | - | ------------------------------------------- |
+| `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのファイル/フォルダーが含まれます |
+| `fk ignore invisible` | 8 | 非表示設定のファイルやフォルダーは表示されません                    |
+
+**戻り値**
+
+`File` オブジェクトのコレクション。
+
+#### 例題 1
+
+データベースフォルダー内に非表示ファイルがないかどうかを調べます:
+
+```4d
+ var $all; $noInvisible : Collection
+ $all:=Folder(fk database folder).files()
+ $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
+ If($all.length#$noInvisible.length)
+    ALERT("データベースフォルダーには非表示のファイルが存在します。")
+ End if
+```
+
+#### 例題 2
+
+ドキュメントフォルダー内にある、非表示でないファイルをすべて取得します:
+
+```4d
+ var $recursive : Collection
+ $recursive:=Folder(fk documents folder).files(fk recursive+fk ignore invisible)
+```
 
 
 
 
-<!-- INCLUDE directory.isPackage.Desc -->
+
+## .folder()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.folder**( *path* : Text ) : 4D.Folder
+| 引数   | タイプ       |    | 説明                                            |
+| ---- | --------- | -- | --------------------------------------------- |
+| path | テキスト      | -> | ファイルのPOSIX相対パス名                               |
+| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null) |
+
+#### 説明
+
+The `.folder()` function creates a `Folder` object inside the parent `Folder` object and returns its reference.
+
+*path* には、返すべきフォルダーの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
+
+**戻り値**
+
+`Folder` オブジェクト (無効な *path* の場合には null)。
+
+#### 例題
+
+```4d
+ var $mypicts : 4D.Folder
+ $mypicts:=Folder(fk documents folder).folder("Pictures")
+```
 
 
 
 
-<!-- INCLUDE directory.modificationDate.Desc -->
+
+## .folders()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.folders**( { *options* : Integer } ) : Collection
+| 引数      | タイプ    |    | 説明                  |
+| ------- | ------ | -- | ------------------- |
+| options | 整数     | -> | フォルダーリストのオプション      |
+| 戻り値     | コレクション | <- | 子フォルダーオブジェクトのコレクション |
+
+#### 説明
+
+The `.folders()` function returns a collection of `Folder` objects contained in the parent folder.
+
+*options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるフォルダーのみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
+
+| 定数                    | 値 | 説明                                          |
+| --------------------- | - | ------------------------------------------- |
+| `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのファイル/フォルダーが含まれます |
+| `fk ignore invisible` | 8 | 非表示設定のファイルやフォルダーは表示されません                    |
+
+**戻り値**
+
+`Folder` オブジェクトのコレクション。
+
+#### 例題
+
+データベースフォルダー内にあるすべてのフォルダーおよびサブフォルダーのコレクションを取得します:
+
+```4d
+ var $allFolders : Collection
+ $allFolders:=Folder("/PACKAGE").folders(fk recursive)
+```
 
 
 
 
-<!-- INCLUDE directory.modificationTime.Desc -->
+
+## .fullName
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.fullName** : Text
+
+#### 説明
+
+The `.fullName` property returns the full name of the folder, including its extension (if any).
+
+このプロパティは **読み取り専用** です。
 
 
 
 
-<!-- REF folder.moveTo().Desc -->
+
+## .getIcon()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.getIcon**( { *size* : Integer } ) : Picture
+| 引数   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | アイコン                     |
+
+
+#### 説明
+
+The `.getIcon()` function returns the icon of the folder.
+
+任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
+
+フォルダーがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。
+
+**戻り値**
+
+フォルダーアイコンの [ピクチャー](Concepts/dt_picture.md)。
+
+
+
+
+
+## .hidden
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.hidden** : Boolean
+
+#### 説明
+
+The `.hidden` property returns  true if the folder is set as "hidden" at the system level, and false otherwise.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .isAlias
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.isAlias** : Boolean
+
+
+#### 説明
+
+The `.isAlias` property returns always **false** for a `Folder` object.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .isFile
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.isFile** : Boolean
+
+#### 説明
+
+The `.isFile` property returns always **false** for a folder.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .isFolder
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.isFolder** : Boolean
+
+#### 説明
+
+The `.isFolder` property returns always **true** for a folder.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .isPackage
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.isPackage** : Boolean
+
+#### 説明
+
+The `.isPackage` property returns true if the folder is a package on macOS  (and exists on disk). それ以外の場合は false を返します。
+
+Windows 上においては、`.isPackage` は常に **false** を返します。
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .modificationDate
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.modificationDate** : Date
+
+#### 説明
+
+The `.modificationDate` property returns  the date of the folder's last modification.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .modificationTime
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.modificationTime** : Time
+
+#### 説明
+
+The `.modificationTime` property returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00).
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
 ## .moveTo()
 
 <details><summary>履歴</summary>
@@ -380,21 +777,17 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 </details>
 
 
-<!--REF #FolderClass.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
-
-<!--REF #FolderClass.moveTo().Params -->
+**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder
 | 引数                | タイプ       |    | 説明               |
 | ----------------- | --------- | -- | ---------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
-| newName           | Text      | -> | 移動先でのフォルダーの完全な名称 |
+| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称 |
 | 戻り値               | 4D.Folder | <- | 移動したフォルダー        |
-<!-- END REF -->
 
 
 #### 説明
 
-`.moveTo( )` 関数は、 <!-- REF #FolderClass.moveTo().Summary -->`Folder` オブジェクト (ソースフォルダー) を *destinationFolder* が指定する移行先へと移動すると同時に、*newName* を指定した場合は名称も変更します<!-- END REF -->。
+The `.moveTo( )` function moves or renames the `Folder` object (source folder) into the specified *destinationFolder*.
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -414,33 +807,117 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
  $tomove:=$docs.folder("Pictures")
  $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
-<!-- END REF -->
 
 
-<!-- INCLUDE directory.name.Desc -->
+## .name
 
-
-
-
-<!-- INCLUDE directory.original.Desc -->
-
-
-
-
-<!-- INCLUDE directory.parent.Desc -->
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
 
 
 
+**.name** : Text
 
-<!-- INCLUDE directory.path.Desc -->
+#### 説明
+
+The `.name` property returns  the name of the folder, without extension (if any).
+
+このプロパティは **読み取り専用** です。
 
 
 
-<!-- INCLUDE directory.platformPath.Desc -->
 
 
 
-<!-- REF folder.rename().Desc --> 
+## .original
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.original** : 4D.Folder
+
+#### 説明
+
+The `.original` property returns the same Folder object as the folder.
+
+このプロパティは **読み取り専用** です。
+> このプロパティは、フォルダーやファイルを処理する汎用的なコードを書くために使用できます。
+
+
+
+
+
+
+## .parent
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.parent** : 4D.Folder
+
+#### 説明
+
+The `.parent` property returns the parent folder object of the folder. パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+
+親フォルダーが存在しない場合 (root) は、このプロパティは null値を返します。
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
+## .path
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.path** : Text
+
+#### 説明
+
+The `.path` property returns the POSIX path of the folder. パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+## .platformPath
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.platformPath** : Text
+
+#### 説明
+
+The `.platformPath` property returns the path of the folder expressed with the current platform syntax.
+
+このプロパティは **読み取り専用** です。
+
+
+
+
+
+
 ## .rename()
 
 <details><summary>履歴</summary>
@@ -449,22 +926,18 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.rename().Syntax -->
-**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+**.rename**( *newName* : Text ) : 4D.Folder
 
-
-<!--REF #FolderClass.rename().Params -->
 | 引数      | タイプ       |    | 説明             |
 | ------- | --------- | -- | -------------- |
-| newName | Text      | -> | フォルダーの新しい完全な名称 |
+| newName | テキスト      | -> | フォルダーの新しい完全な名称 |
 | 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |
-<!-- END REF -->
 
 
 
 #### 説明
 
-`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->。
+The `.rename()` function renames the folder with the name you passed in *newName* and returns the renamed `Folder` object.
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
@@ -480,6 +953,5 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
  var $toRename : 4D.Folder
  $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
-<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

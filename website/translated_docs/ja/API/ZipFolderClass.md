@@ -7,31 +7,31 @@ title: ZIPFolder
 [Folder](FolderClass.md) クラスの次のプロパティや関数は `ZIPFolder` オブジェクトにおいて利用可能です:
 
 
-| ZIPFolder で利用可能な [Folder](FolderClass.md) API                                                    | 説明                                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| [<!-- INCLUDE #directory.copyTo().Syntax -->](FolderClass.md#copyto)                   |                                                                          |
-| [<!-- INCLUDE #directory.creationDate.Syntax -->](FolderClass.md#creationdate)         | アーカイブ内のフォルダーと `root` フォルダーの日付が異なる場合があります                                 |
-| [<!-- INCLUDE #directory.creationTime.Syntax -->](FolderClass.md#creationtime)         | アーカイブ内のフォルダーと `root` フォルダーの時刻が異なる場合があります                                 |
-| [<!-- INCLUDE #directory.exists.Syntax -->](FolderClass.md#exists)                     |                                                                          |
-| [<!-- INCLUDE #directory.extension.Syntax -->](FolderClass.md#extension)               |                                                                          |
-| [<!-- INCLUDE #directory.file().Syntax -->](FolderClass.md#file)                       |                                                                          |
-| [<!-- INCLUDE #directory.files().Syntax -->](FolderClass.md#files)                     |                                                                          |
-| [<!-- INCLUDE #directory.folder().Syntax -->](FolderClass.md#folder)                   |                                                                          |
-| [<!-- INCLUDE #directory.folders().Syntax -->](FolderClass.md#folders)                 |                                                                          |
-| [<!-- INCLUDE #directory.fullName.Syntax -->](FolderClass.md#fullname)                 |                                                                          |
-| [<!-- INCLUDE #directory.getIcon().Syntax -->](FolderClass.md#geticon)                 |                                                                          |
-| [<!-- INCLUDE #directory.hidden.Syntax -->](FolderClass.md#hidden)                     |                                                                          |
-| [<!-- INCLUDE #directory.isAlias.Syntax -->](FolderClass.md#isalias)                   |                                                                          |
-| [<!-- INCLUDE #directory.isFile.Syntax -->](FolderClass.md#isfile)                     |                                                                          |
-| [<!-- INCLUDE #directory.isFolder.Syntax -->](FolderClass.md#isfolder)                 |                                                                          |
-| [<!-- INCLUDE #directory.isPackage.Syntax -->](FolderClass.md#ispackage)               |                                                                          |
-| [<!-- INCLUDE #directory.modificationDate.Syntax -->](FolderClass.md#modificationdate) | アーカイブ内のフォルダーと `root` フォルダーの日付が異なる場合があります                                 |
-| [<!-- INCLUDE #directory.modificationTime.Syntax -->](FolderClass.md#modificationtime) | アーカイブ内のフォルダーと `root` フォルダーの時刻が異なる場合があります                                 |
-| [<!-- INCLUDE #directory.name.Syntax -->](FolderClass.md#name)                         |                                                                          |
-| [<!-- INCLUDE #directory.original.Syntax -->](FolderClass.md#original)                 |                                                                          |
-| [<!-- INCLUDE #directory.parent.Syntax -->](FolderClass.md#parent)                     | アーカイブの仮想 `root` フォルダーは親を持ちません。 しかしながら、アーカイブ内のフォルダーは root 以外の親を持つ場合があります。 |
-| [<!-- INCLUDE #directory.path.Syntax -->](FolderClass.md#path)                         | アーカイブを起点とした相対パスを返します                                                     |
-| [<!-- INCLUDE #directory.platformPath.Syntax -->](FolderClass.md#platformpath)         |                                                                          |
+| ZIPFolder で利用可能な [Folder](FolderClass.md) API                                                                                          | 説明                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder](FolderClass.md#copyto) |                                                                          |
+| [**.creationDate** : Date](FolderClass.md#creationdate)                                                                                | アーカイブ内のフォルダーと `root` フォルダーの日付が異なる場合があります                                 |
+| [**.creationTime** : Time](FolderClass.md#creationtime)                                                                                | アーカイブ内のフォルダーと `root` フォルダーの時刻が異なる場合があります                                 |
+| [**.exists** : Boolean](FolderClass.md#exists)                                                                                         |                                                                          |
+| [**.extension** : Text](FolderClass.md#extension)                                                                                      |                                                                          |
+| [**.file**( *path* : Text ) : 4D.File](FolderClass.md#file)                                                                            |                                                                          |
+| [**.files**( { *options* : Integer } ) : Collection](FolderClass.md#files)                                                             |                                                                          |
+| [**.folder**( *path* : Text ) : 4D.Folder](FolderClass.md#folder)                                                                      |                                                                          |
+| [**.folders**( { *options* : Integer } ) : Collection](FolderClass.md#folders)                                                         |                                                                          |
+| [**.fullName** : Text](FolderClass.md#fullname)                                                                                        |                                                                          |
+| [**.getIcon**( { *size* : Integer } ) : Picture](FolderClass.md#geticon)                                                               |                                                                          |
+| [**.hidden** : Boolean](FolderClass.md#hidden)                                                                                         |                                                                          |
+| [**.isAlias** : Boolean](FolderClass.md#isalias)                                                                                       |                                                                          |
+| [**.isFile** : Boolean](FolderClass.md#isfile)                                                                                         |                                                                          |
+| [**.isFolder** : Boolean](FolderClass.md#isfolder)                                                                                     |                                                                          |
+| [**.isPackage** : Boolean](FolderClass.md#ispackage)                                                                                   |                                                                          |
+| [**.modificationDate** : Date](FolderClass.md#modificationdate)                                                                        | アーカイブ内のフォルダーと `root` フォルダーの日付が異なる場合があります                                 |
+| [**.modificationTime** : Time](FolderClass.md#modificationtime)                                                                        | アーカイブ内のフォルダーと `root` フォルダーの時刻が異なる場合があります                                 |
+| [**.name** : Text](FolderClass.md#name)                                                                                                |                                                                          |
+| [**.original** : 4D.Folder](FolderClass.md#original)                                                                                   |                                                                          |
+| [**.parent** : 4D.Folder](FolderClass.md#parent)                                                                                       | アーカイブの仮想 `root` フォルダーは親を持ちません。 しかしながら、アーカイブ内のフォルダーは root 以外の親を持つ場合があります。 |
+| [**.path** : Text](FolderClass.md#path)                                                                                                | アーカイブを起点とした相対パスを返します                                                     |
+| [**.platformPath** : Text](FolderClass.md#platformpath)                                                                                |                                                                          |
 
 
 <style> h2 { background: #d9ebff;}</style>
