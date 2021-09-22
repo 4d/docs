@@ -32,9 +32,9 @@ End if
 
 ### 概要
 
-|                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
+|                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**.root** : 4D.ZipFolder](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;a virtual folder providing access to the contents of the ZIP archive |
 
 
 ## ZIP Create archive
@@ -45,24 +45,20 @@ End if
 | v18   | 追加 |
 </details>
 
-<!-- REF #_command_.ZIP Create archive.Syntax -->
-**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
-
-<!-- REF #_command_.ZIP Create archive.Params -->
+**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object
 | 引数              | タイプ       |    | 説明                                                                             |
 | --------------- | --------- |:--:| ------------------------------------------------------------------------------ |
 | fileToZip       | 4D.File   | -> | 圧縮する File または Folder オブジェクト                                                    |
 | folderToZip     | 4D.Folder | -> | 圧縮する File または Folder オブジェクト                                                    |
-| zipStructure    | Object    | -> | 圧縮する File または Folder オブジェクト                                                    |
+| zipStructure    | オブジェクト    | -> | 圧縮する File または Folder オブジェクト                                                    |
 | destinationFile | 4D.File   | -> | アーカイブの保存先ファイル                                                                  |
-| options         | Integer   | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | Object    | <- | ステータスオブジェクト                                                                    |
-<!-- END REF -->
+| options         | 整数        | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
+| 戻り値             | オブジェクト    | <- | ステータスオブジェクト                                                                    |
 
 
 #### 説明
 
-`ZIP Create archive` コマンドは、 <!-- REF #_command_.ZIP Create archive.Summary -->圧縮された ZIPArchive オブジェクトを作成し、その処理のステータスを返します<!-- END REF -->。
+The `ZIP Create archive` command creates a compressed ZIP archive object and returns the status of the operation.
 
 第1引数として、4D.File、4D.Folder、あるいは zipStructure オブジェクトを渡すことができます。
 
@@ -272,21 +268,21 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 | v18   | 追加 |
 </details>
 
-<!-- REF #_command_.ZIP Read archive.Syntax -->
-**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
+**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive 
 
-<!-- REF #_command_.ZIP Read archive.Params -->
 | 引数       | タイプ           |    | 説明                      |
 | -------- | ------------- |:--:| ----------------------- |
 | zipFile  | 4D.File       | -> | ZIPアーカイブファイル            |
-| password | Text          | -> | ZIPアーカイブのパスワード (必要であれば) |
+| password | テキスト          | -> | ZIPアーカイブのパスワード (必要であれば) |
 | 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト             |
-<!-- END REF -->
+
+
+
 
 
 #### 説明
 
-`ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
+The `ZIP Read archive` command retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object.
 
 
 
@@ -362,13 +358,13 @@ root フォルダーから取り出します:
 
 ## .root
 
-<!-- REF #ZipArchiveClass.root.Syntax -->
-**.root** : 4D.ZipFolder<!-- END REF -->
+**.root** : 4D.ZipFolder
+
 
 
 #### 説明
 
-`.root` プロパティは、 <!-- REF #ZipArchiveClass.root.Summary -->ZIPアーカイブのコンテンツにアクセスするためのバーチャルフォルダー<!-- END REF -->を格納します。
+The `.root` property contains a virtual folder providing access to the contents of the ZIP archive.
 
 `root` フォルダーとそのコンテンツは、[ZipFile](ZipFileClass.md) および [ZipFolder](ZipFolderClass.md) の関数とプロパティを使用することで操作可能です。
 
