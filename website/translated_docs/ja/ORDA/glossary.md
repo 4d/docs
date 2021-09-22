@@ -26,6 +26,11 @@ title: 用語集
 
 ユーザークラス関数のコード。
 
+
+## Computed attribute
+
+A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+
 ## データモデルクラス
 
 データモデルオブジェクトに関連して提供される拡張クラス。
@@ -199,3 +204,7 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 ## 記号
 
 "オプティミステック" ロックテクノロジーにおいて使用されるものです。 すべてのエンティティにはスタンプと呼ばれる内部カウンターがあり、エンティティが保存されるたびにインクリメントされていきます。 エンティティ内のスタンプとディスク上に保存されているエンティティのスタンプを自動的に比較することで、4D は同じエンティティへの書き込みの衝突を防いでいます。
+
+## Storage attribute
+
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.
