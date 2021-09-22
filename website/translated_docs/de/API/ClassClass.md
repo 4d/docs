@@ -11,15 +11,14 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 ### Summary
 
 
-|                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
+|                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the name of the `4D.Class` object                                                                                                 |
+| [**.new**( *param* : any { *;...paramN* } ) : 4D.Class](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates and returns a `cs.className` object which is a new instance of the class on which it is called |
+| [**.superclass** : 4D.Class](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the parent class of the class                                                                                      |
 
 
 
-<!-- REF ClassClass.name.Desc -->
 ## .name
 
 <details><summary>History</summary>
@@ -29,20 +28,16 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 </details>
 
-<!-- REF #ClassClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
-
+**.name** : Text
 #### Beschreibung
 
-The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Es wird zwischen Groß- und Kleinschreibung unterschieden.
+The `.name` property contains the name of the `4D.Class` object. Es wird zwischen Groß- und Kleinschreibung unterschieden.
 
-This property is **read-only**. 
-
-<!-- END REF -->
+This property is **read-only**.
 
 
 
-<!-- REF ClassClass.new().Desc -->
+
 ## .new()
 
 <details><summary>History</summary>
@@ -51,20 +46,16 @@ This property is **read-only**.
 | v18 R3  | Added   |
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
-
-<!-- REF #ClassClass.new().Params -->
+**.new**( *param* : any { *;...paramN* } ) : 4D.Class
 | Parameter | Typ      |    | Beschreibung                                     |
 | --------- | -------- |:--:| ------------------------------------------------ |
 | param     | any      | -> | Parameter(s) to pass to the constructor function |
 | Ergebnis  | 4D.Class | <- | New object of the class                          |
-<!-- END REF -->
 
 
 #### Beschreibung
 
-The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
+The `.new()` function creates and returns a `cs.className` object which is a new instance of the class on which it is called. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
 You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
 
@@ -100,11 +91,9 @@ $person:=cs.Person.new("John";"Doe";40)
 ```
 
 
-<!-- END REF -->
 
 
 
-<!-- REF ClassClass.superclass.Desc -->
 ## .superclass
 
 <details><summary>History</summary>
@@ -114,12 +103,10 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #ClassClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
-
+**.superclass** : 4D.Class
 #### Beschreibung
 
-The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
+The `.superclass` property returns the parent class of the class. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
 A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
@@ -141,6 +128,5 @@ $sup:=cs.MyFile.superclass //File
 
 
 **See also:** [Super](Concepts/classes.md#super)
-<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
