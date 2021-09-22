@@ -471,7 +471,7 @@ $result:=$param1+" "+$param2
  $class.concate() // Displays " "
 ```
 
-> On the other hand, you can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
 
 Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
 
