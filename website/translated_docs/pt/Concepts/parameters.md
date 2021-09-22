@@ -28,7 +28,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 The input parameters are separated by semicolons (;).
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Os mesmos princípios são usados quando métodos forem executados através de comandos dedicados, por exemplo:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
@@ -36,13 +36,13 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //in the context of a subform
 ```
 
-Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. As instruções põe o valor devolvido por `Length` em uma variável chamada *MyLength*. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. Only one single output parameter can be declared per method or class function.
+Qualquer subrotina pode retornar um valor. Only one single output parameter can be declared per method or class function.
 
 Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
 
@@ -61,7 +61,7 @@ Function add($x : Integer)
 
 
 
-## Named parameters
+## Parâmetros com nomes
 
 Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
@@ -202,7 +202,7 @@ In this example, `$0` is first assigned the value of `$1`, then used as paramete
 
 You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
 
-- tables
+- tabelas
 - arrays
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
@@ -266,7 +266,7 @@ To declare generic parameters, you use a compiler directive to which you pass ${
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
 
 > The number in the declaration has to be a constant and not a variable.
 
@@ -326,7 +326,7 @@ See [Interpreted and compiled modes](interpreted.md) page for more information.
 
 A declaração de parâmetros também é obrigatóiria nos contextos abaixo (esses contextos não são compatíveis com declarações em um método "Compiler"):
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
 // On Web Connection
@@ -335,9 +335,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 > You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. For example:
 
 ```4d
  C_LONGINT($0)
@@ -407,9 +407,9 @@ No método `ChangeAge` pode escrever:
 ```
 
 Isso oferece uma poderosa maneira de definir [parâmetros opcionais](#optional-parameters) (ver também abaixo). Para manejar os parâmetros que faltam, pode:
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
+- veja se todos os parâmetros esperados são fornecidos comparando-os com o valor `Null`, ou
+- pré-definir os valores dos parâmetros, ou
+- usá-los como valores vazios.
 
 No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e produzirão erross se faltarão. Para evitar isso, pode escrever:
 
@@ -444,7 +444,7 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 
 
 
-## Optional parameters
+## Parâmetros opcionais
 
 No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. Pode fazer a chamada de duas maneiras:
 
@@ -488,7 +488,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 
 
 
-## Values or references
+## Valores ou referências
 
 When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. For example:
 
@@ -535,7 +535,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
 Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" This is described in the [Returning values](#returning-values) paragraph.
 
 
-### Particular cases: objects and collections
+### Casos particulares: objetos e coleções
 
 Deve prestar atenção ao fato de que os tipos de dados Objeto e Coleção só podem ser manejados através de uma referência (ou seja, um  *ponteiro* interno).
 

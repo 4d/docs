@@ -42,7 +42,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 | ---------- | -------------- | ------------------------------------------------------------------------------------ |
 | textFormat | cadena         | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -91,7 +91,7 @@ The table below shows choices available:
 | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -251,7 +251,7 @@ The following table shows how different formats affect the display of numbers. T
 | ------------ | -------------- | -------------------------------------------------------------- |
 | numberFormat | cadena         | Numbers (including a decimal point or minus sign if necessary) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
@@ -315,7 +315,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | cadena         | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -351,7 +351,7 @@ The table below shows the Time field display formats and gives examples:
 | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -376,7 +376,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 | booleanFormat | cadena         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -398,7 +398,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 | ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -420,7 +420,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 | ------- | -------------- | ---------------- |
 | display | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
 
@@ -457,7 +457,7 @@ In this case as well, the [Title](#title) property is also available so that the
 | ---------- | -------------- | ---------------- |
 | threeState | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -479,7 +479,7 @@ In that cases, the title of the check box can be entered using this property.
 | ------------ | -------------- | ---------------------------------- |
 | controlTitle | cadena         | Any custom label for the check box |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -520,7 +520,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
@@ -543,7 +543,7 @@ You can handle the Visible property for most form objects. This property simplif
 | ---------- | -------------- | ------------------- |
 | visibility | cadena         | "visible", "hidden" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -603,7 +603,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 | -------- | -------------- | -------------------------------------------------- |
 | wordwrap | cadena         | "automatic" (excluding list box), "normal", "none" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 

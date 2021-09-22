@@ -29,7 +29,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 | ------------------ | -------------- | ---------------- |
 | automaticInsertion | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -52,7 +52,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 | list       | list, collection | A list of possible values (hierarchical lists only) |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -69,13 +69,13 @@ List of static values to use as labels for the tab control object.
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Tab Control](tabControl.md)
 
 
 ---
-## Current item
+## Elemento actual
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
@@ -87,7 +87,7 @@ Specifies a variable or expression that will be assigned the collection element/
 | ----------------- | -------------- | ----------------- |
 | currentItemSource | cadena         | Object expression |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box ](listbox_overview.md#overview)
 
 
@@ -95,7 +95,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 ---
 
-## Current item position
+## Posición elemento actual
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
@@ -111,7 +111,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 | ------------------------- | -------------- | ----------------- |
 | currentItemPositionSource | cadena         | Number expression |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box ](listbox_overview.md)
 
 
@@ -135,7 +135,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 | dataSourceTypeHint | cadena         | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
 
@@ -171,7 +171,7 @@ Using the **Selected item reference** option requires compliance with the follow
 > Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Drop-down Lists](dropdownList_Overview.md) associated to lists
 
@@ -196,7 +196,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 | ------ | -------------- | ---------------------------------------------------------------- |
 | values | colección      | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column (array type only)](listbox_overview.md#list-box-columns)
 
@@ -244,7 +244,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 | ---------- | -------------- | ----------------------------------------------------------------------- |
 | dataSource | cadena         | A 4D variable, field name, or an arbitrary complex language expression. |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -266,7 +266,7 @@ All database tables can be used, regardless of whether the form is related to a 
 | ------ | -------------- | ---------------- |
 | table  | number         | Table number     |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box](listbox_overview.md#overview)
 
 
@@ -299,7 +299,7 @@ Using this property requires compliance with the following principles:
 | ------ | -------------- | -------------------- |
 | saveAs | cadena         | "value", "reference" |
 
-#### Objects Supported
+#### Objetos soportados
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
@@ -320,7 +320,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 | ------------------- | -------------- | --------------------- |
 | selectedItemsSource | cadena         | Collection expression |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box ](listbox_overview.md#overview)
 
 
@@ -338,5 +338,5 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 | -------------- | -------------- | -------------------- |
 | namedSelection | cadena         | Named selection name |
 
-#### Objects Supported
+#### Objetos soportados
 [List Box](listbox_overview.md#overview)

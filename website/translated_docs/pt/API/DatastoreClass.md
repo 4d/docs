@@ -317,7 +317,7 @@ The returned object contains the following properties:
 | ----------- | ----------- | ------------- | ------- | ---------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Boolean | True if the data file is encrypted                                                 |
 | keyProvided |             |               | Boolean | True if the encryption key matching the encrypted data file is provided(*).        |
-| tables      |             |               | Object  | Object containing as many properties as there are encryptable or encrypted tables. |
+| tabelas     |             |               | Object  | Object containing as many properties as there are encryptable or encrypted tables. |
 |             | *tableName* |               | Object  | Encryptable or Encrypted table                                                     |
 |             |             | name          | Text    | Name of the table                                                                  |
 |             |             | num           | Number  | Table number                                                                       |

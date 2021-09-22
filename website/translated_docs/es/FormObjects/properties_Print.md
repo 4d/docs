@@ -31,6 +31,6 @@ The print options are:
 | printFrame |     cadena     | "fixed", "variable", (subform only) "fixedMultiple" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)

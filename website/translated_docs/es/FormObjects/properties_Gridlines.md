@@ -14,7 +14,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 | -------------------- | -------------- | ------------------------------------------ |
 | horizontalLineStroke | color          | any css value, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -32,6 +32,6 @@ Defines the color of the vertical lines in a list box (gray by default).
 | ------------------ | -------------- | ------------------------------------------ |
 | verticalLineStroke | color          | any css value, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)

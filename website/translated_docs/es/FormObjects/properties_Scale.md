@@ -14,7 +14,7 @@ Enables the "barber shop" variant for the thermometer.
 |:---------------:|:--------------:| ----------------------------------------------------------- |
 | [max](#maximum) |     number     | NOT passed = enabled; passed = disabled (basic thermometer) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Barber shop](progressIndicator.md#barber-shop)
 
@@ -31,7 +31,7 @@ Displays/Hides the graduations next to the labels.
 |:---------------:|:--------------:| ---------------- |
 | showGraduations |    booleano    | "true", "false"  |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -49,7 +49,7 @@ Scale display measurement.
 | graduationStep |    integer     | mínimo: 0        |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -70,7 +70,7 @@ Specifies the location of an object's displayed text.
 |:---------------:|:--------------:| ---------------------------------------- |
 | labelsPlacement |     cadena     | "none", "top", "bottom", "left", "right" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -90,7 +90,7 @@ Maximum value of an indicator.
 |:------:|:---------------:| ----------------------------------- |
 |  max   | string / number | minimum: 0 (for numeric data types) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -107,7 +107,7 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 |:------:|:---------------:| ----------------------------------- |
 |  min   | string / number | minimum: 0 (for numeric data types) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -126,7 +126,7 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 |  step  |    integer     | minimum: 1       |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 

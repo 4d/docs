@@ -56,7 +56,7 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 - un objet de classe Datastore peut appeler des fonctions de la [classe générique ORDA Datastore](API/DataStoreClass.md).
 - un objet de classe Dataclass peut appeler des fonctions de la [classe générique ORDA Dataclass](API/DataClassClass.md).
 - un objet de classe Entity selection peut appeler des fonctions de la [classe générique ORDA Entity selection](API/EntitySelectionClass.md).
-- un objet de classe Datastore peut appeler des fonctions de la [classe générique ORDA Datastore](API/EntityClass.md).
+- un objet de classe Entity peut appeler des fonctions de la [classe générique ORDA Entity](API/EntityClass.md).
 
 
 

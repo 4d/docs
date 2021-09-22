@@ -14,7 +14,7 @@ Webプロセスに対してプリエンプティブモードの使用が可能�
 
 *   4D Server あるいはローカルモードの 4D を使用している (リモートモードでの 4D はプリエンプティブモードをサポートしていません)
 
-*   コンパイル済みデータベースを使用している
+*   use of a compiled database (except [on 4D Server when sessions are enabled](sessions.md#preemptive-mode))
 
 *   データベースの **プリエンプティブプロセスを使用** 設定がチェックされている(以下参照)
 

@@ -217,10 +217,10 @@
         "title": "デバッガー"
       },
       "Debugging/debugging-remote": {
-        "title": "Debugging from remote machines"
+        "title": "リモートマシンからのデバッグ"
       },
       "Desktop/building": {
-        "title": "アプリケーションビルド"
+        "title": "プロジェクトパッケージのビルド"
       },
       "Desktop/clientServer": {
         "title": "クライアント/サーバー管理"
@@ -880,7 +880,7 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
-      "Debugging": "Debugging",
+      "Debugging": "デバッガー",
       "Access Rights": "アクセス権限",
       "Preferences": "環境設定",
       "Administration": "管理",
@@ -896,7 +896,7 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build Application": "アプリケーションビルド"
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -922,7 +922,7 @@
     "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
-    "Debugging|no description given": "Debugging",
+    "Debugging|no description given": "デバッガー",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",

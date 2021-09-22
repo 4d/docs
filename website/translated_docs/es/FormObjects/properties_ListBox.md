@@ -16,12 +16,12 @@ Collection of columns of the list box.
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
-## Detail Form Name
+## Nombre formulario detallado
 `Selection type list box`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
@@ -37,7 +37,7 @@ The specified form is displayed:
 | ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | cadena         | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -47,7 +47,7 @@ The specified form is displayed:
 
 
 ---
-## Double-click on row
+## Doble clic en línea
 `Selection type list box`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
@@ -67,7 +67,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 | ---------------------- | -------------- | ----------------------------------- |
 | doubleClickInRowAction | cadena         | "editSubrecord", "displaySubrecord" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -91,7 +91,7 @@ This property is used to specify the set to be used to manage highlighted record
 | ------------ | -------------- | ---------------- |
 | highlightSet | cadena         | Name of the set  |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -130,7 +130,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 | ----------------- | -------------- | ---------------- |
 | lockedColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -145,7 +145,7 @@ Number of columns that cannot be moved during execution.
 | ----------------- | -------------- | ---------------- |
 | staticColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -166,7 +166,7 @@ Sets the number of columns of the list box.
 | ----------- | -------------- | ---------------- |
 | columnCount | integer        | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -222,7 +222,7 @@ Note that setting properties for an element overrides any other values for this 
 | ---------------- | -------------- | ---------------------- |
 | rowControlSource | cadena         | Row control array name |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -244,6 +244,6 @@ Designates the option for allowing users to select rows:
 | ------------- | -------------- | ---------------------------- |
 | selectionMode | cadena         | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)

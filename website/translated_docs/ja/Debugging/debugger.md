@@ -3,99 +3,99 @@ id: debugger
 title: デバッガー
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
+デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーでは、メソッドをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
 
 
-## Calling the Debugger
+## デバッガーの呼び出し
 
-There are multiple ways to get the Debugger to display:
+デバッガーを開くには、次のような方法があります:
 
-* Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-* Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
-* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Method editor
-* Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
+* [シンタックスエラーウィンドウ](basics.md#シンタックスエラーウィンドウ) で **トレース** ボタンをクリックする。
+* [`TRACE`](https://doc.4d.com/4dv19/help/command/ja/page157.html) コマンドを使用する。
+* メソッド実行ウィンドウで **デバッグ** ボタンをクリックする、またはメソッドエディターで **実行してデバッグ** ボタンを選択する。
+* メソッド実行中に **Alt+Shift+右クリック** (Windows) または **Ctrl+Option+Cmd+クリック** (Macintosh) をおこない、表示されるポップアップウィンドウ内でトレースするプロセスを選択する:
 
 ![open-debugger](assets/en/Debugging/openDebugger.png)
 
-* Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
-* Adding a break point in the Method Editor window or in the Break and Catch pages of the Runtime Explorer.
+* ランタイムエクスプローラーのプロセスページにてプロセスを選択した後、**トレース** ボタンをクリックする。
+* メソッドエディターウィンドウ、またはランタイムエクスプローラーのブレークおよびキャッチページでブレークポイントを作成する。
 
-When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
+デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-* *Clients_BuildLogo* is the method being traced
-* The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
+* 現在トレースされているメソッドは *Clients_BuildLogo* メソッドです。
+* デバッガーウィンドウが表示されているのは、キャッチコマンドの対象に設定された `C_PICTURE` コマンドへの呼び出しが検出されたためです。
 
 
-Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
+新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
 
-The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+デバッガーウィンドウは、一般的にそのコードが実行されているマシン上に表示されます。 シングルユーザー版アプリケーションの場合、デバッガーは常にアプリケーションを実行しているマシン上に表示されます。 クライアント/サーバー版アプリケーションの場合は:
 
-- on the remote 4D for code running locally
-- on the server machine for code running on the server (for example, a method with the **execute on server** option).
+- ローカルで実行されているコードの場合には、リモート4D 上に表示されます。
+- サーバー上で実行されているコード (**サーバー上で実行** オプションがつけられたメソッド) の場合には、サーバーマシン上に表示されます。
 
-> If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
+> ヘッドレスモードで実行中のサーバーでは、デバッガーウィンドウを表示することはできません。この場合はリモートデバッガーを使用する必要があります。 [リモートマシンからのデバッグ](./debugging-remote.md) 参照。
 
-## Tool bar Buttons
+## ツールバーボタン
 
-The debugger's tool bar includes several buttons, associated with default shortcuts:
+デバッガーウィンドウの上部にある実行制御ツールバーには、デフォルトショートカットが設定された複数のボタンがあります:
 
 ![execution-control-toolbar-buttons](assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+> デフォルトのショートカットは、環境設定ダイアログボックスのショートカットページで変更できます。
 
-#### No Trace
+#### トレース終了
 
-Tracing stops and normal method execution resumes.
+トレースが停止され、通常のメソッド実行が再開されます。
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
+> **Shift** + **F5** または **Shift** を押しながら **トレース終了** ボタンをクリックすると、実行が再開されます。 この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
 
-#### Step Over
+#### 次行に進む
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+現在のメソッド行 (プログラムカウンターと呼ばれる黄色い矢印で示されている行) が実行されます。 その後、デバッガは次の行に移動します。
 
-The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 呼び出されるサブルーチンや関数もトレースしたい場合には、**呼び出しメソッドもトレース** ボタンを使用します。
 
-In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは **トレース終了** ボタンと同じように振る舞います。
 
-#### Step Into
+#### 呼び出しメソッドもトレース
 
-When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
+別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+デバッガーウィンドウの [呼び出し連鎖エリア](#呼び出し連鎖エリア) では、新しく呼び出されたメソッドがカレント (一番上) となります。
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
 
-#### Abort
+#### 中断
 
-Stops method execution, and returns to the state before the method started executing:
-* When tracing a form or object method executing in response to an event: Stops and returns to the form.
-* When tracing a method executing from within the Application environment: Stops and returns to the environment.
+メソッドは中断され、メソッドの実行を開始する前の状態に戻ります。
+* イベントに対して実行しているフォームメソッドまたはオブジェクトメソッドをトレースしている場合には、いずれの場合にも停止され、フォームに戻ります。
+* アプリケーションモードから実行しているメソッドをトレースしていた場合には、停止後そのモードに戻ります。
 
-#### Abort and Edit
+#### 中断＆編集
 
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
+メソッドは中断されます。 メソッドエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
+> **Tip**: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。
 
 #### 編集
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Method Editor.
+メソッドは一時停止されます。 メソッドエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。
 
-If you use this button to modify a method, the modifications are only effective the next time it executes.
+このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Tip**: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。
 
-#### Save Settings
+#### 設定保存
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
-* the size and position of the window
-* the position of the division lines and the contents of the area that evaluates the expressions
+現在のデバッガウィンドウの構成を、デフォルト構成として保存します。 構成には次の内容が含まれます:
+* ウィンドウのサイズと位置
+* 分割線の配置および式評価エリアの内容
 
-These parameters are stored in the project.
+これらは、プロジェクト内に保存されます。
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines]()).
+このアクションはリモートデバッグモードでは利用できません ([リモートマシンからのデバッグ](./debugging-remote.md) 参照)。
 
 ## Watch Pane
 
