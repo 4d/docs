@@ -10,21 +10,21 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 ### Summary
 
-|                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
-| [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
-| [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
-| [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
-| [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
-| [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getInfo().Summary --> |
-| [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.new().Summary --> |
-| [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.newSelection().Summary --> |
-| [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.query().Summary --> |
+|                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [***.attributeName*** : DataClassAttribute](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;objects that are available directly as properties                                                                                                                                                                                                                                   |
+| [**.all** ( { *settings* : Object } ) : 4D.EntitySelection](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;queries the datastore to find all the entities related to the dataclass and returns them as an entity selection                                                                                                                                                               |
+| [**.exposed** : Boolean](#exposed)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the dataclass is exposed in REST                                                                                                                                                                                                                                                                     |
+| [**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection                                                                               |
+| [**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;queries the dataclass to retrieve the entity matching the *primaryKey* parameter                                                                                                |
+| [**.getDataStore()** : cs.DataStore](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the datastore for the specified dataclass                                                                                                                                                                                                                                           |
+| [**.getInfo()** : Object ](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns an object providing information about the dataclass                                                                                                                                                                                                                                                |
+| [**.new()** : 4D.Entity ](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates in memory and returns a new blank entity related to the Dataclass                                                                                                                                                                                                                                       |
+| [**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection ](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a new, blank, non-shareable entity selection, related to the dataclass, in memory                                                                                                                                                                 |
+| [**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection ](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) |
 
 
 
-<!-- REF DataClassClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>History</summary>
@@ -33,13 +33,11 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 | v17     | Added   |
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->
-***.attributeName*** : DataClassAttribute<!-- END REF -->
-
+***.attributeName*** : DataClassAttribute
 
 #### Descripción
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+The attributes of dataclasses are objects that are available directly as properties of these classes.
 
 The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
@@ -91,11 +89,9 @@ Considering the following table properties:
   //indexed:true,keyWordIndexed:false,autoFilled:true,mandatory:false,unique:true}
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>History</summary>
@@ -106,20 +102,16 @@ Considering the following table properties:
 </details>
 
 
-<!-- REF #DataClassClass.all().Syntax -->
-**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
-
-<!-- REF #DataClassClass.all().Params -->
+**.all** ( { *settings* : Object } ) : 4D.EntitySelection
 | Parameter  | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| parámetros | Object             | -> | Build option: context                               |
+| parámetros | Objeto             | -> | Build option: context                               |
 | Resultado  | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+The `.all( )` function queries the datastore to find all the entities related to the dataclass and returns them as an entity selection.
 
 The entities are returned in the default order, which is initially the order in which they were created. Note however that, if entities have been deleted and new ones added, the default order does not reflect the creation order anymore.
 
@@ -144,11 +136,24 @@ In the optional *settings* parameter, you can pass an object containing addition
 ```
 
 
-<!-- END REF -->
+
+## .exposed
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19 R3  | Added   |
+</details>
+
+
+**.exposed** : Boolean
+
+#### Descripción
+
+The `.exposed` property is true if the dataclass is exposed in REST.
 
 
 
-<!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
 
 <details><summary>History</summary>
@@ -158,22 +163,18 @@ In the optional *settings* parameter, you can pass an object containing addition
 | v17     | Added                               |
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->
-**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection
 
-
-<!-- REF #DataClassClass.fromCollection().Params -->
 | Parameter  | Tipo               |    | Descripción                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
-| objectCol  | Collection         | -> | Collection of objects to be mapped with entities |
-| parámetros | Object             | -> | Build option: context                            |
+| objectCol  | Colección          | -> | Collection of objects to be mapped with entities |
+| parámetros | Objeto             | -> | Build option: context                            |
 | Resultado  | 4D.EntitySelection | <- | Entity selection filled from the collection      |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+The `.fromCollection()` function updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection.
 
 In the *objectCol* parameter, pass a collection of objects to create new or update existing entities of the dataclass. The property names must be the same as attribute names in the dataclass. If a property name does not exist in the dataclass, it is ignored. If an attribute value is not defined in the collection, its value is null.
 
@@ -292,6 +293,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 
 
+
 ```
 
 #### Example 5
@@ -344,10 +346,8 @@ In this example, the first entity will be created and saved but the second will 
 
 [**.toCollection()**](EntitySelectionClass.md#tocollection)
 
-<!-- END REF -->
 
 
-<!-- REF DataClassClass.get().Desc -->
 ## .get()
 
 <details><summary>History</summary>
@@ -357,21 +357,17 @@ In this example, the first entity will be created and saved but the second will 
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->
-**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
+**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity
 
-
-<!-- REF #DataClassClass.get().Params -->
 | Parameter  | Tipo            |    | Descripción                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| parámetros | Object          | -> | Build option: context                       |
+| parámetros | Objeto          | -> | Build option: context                       |
 | Resultado  | 4D.Entity       | <- | Entity matching the designated primary key  |
-<!-- END REF -->
 
 #### Descripción
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+The `.get()` function queries the dataclass to retrieve the entity matching the *primaryKey* parameter.
 
 In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
 
@@ -383,9 +379,9 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 
 In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                         |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propiedad | Tipo  | Descripción                                                                                                                                                                                                                                                                                         |
+| --------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Texto | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 
@@ -420,13 +416,11 @@ This example illustrates the use of the *context* property:
 
  $e4:=ds.Employee.get(4;$settings2)
  completeSummary($e4) //In completeSummary method, the optimization associated to context "summary" is applied
-``` 
- 
-
-<!-- END REF -->
+```
 
 
-<!-- REF DataClassClass.getDataStore().Desc -->
+
+
 ## .getDataStore()
 
 <details><summary>History</summary>
@@ -435,19 +429,15 @@ This example illustrates the use of the *context* property:
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #DataClassClass.getDataStore().Syntax -->
-**.getDataStore()** : cs.DataStore<!-- END REF -->
-
-<!-- REF #DataClassClass.getDataStore().Params -->
+**.getDataStore()** : cs.DataStore
 | Parameter | Tipo         |    | Descripción                |
 | --------- | ------------ |:--:| -------------------------- |
 | Resultado | cs.DataStore | <- | Datastore of the dataclass |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore( )` function returns the datastore for the specified dataclass.
 
 The datastore can be:
 
@@ -476,11 +466,9 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
  $duplicates:=$dataStore[$dataClassName].query("name=:1";$pet.name)
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF DataClassClass.getInfo().Desc -->
 ## .getInfo()
 
 <details><summary>History</summary>
@@ -489,27 +477,23 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #DataClassClass.getInfo().Syntax -->
-**.getInfo()** : Object <!-- END REF -->
-
-<!-- REF #DataClassClass.getInfo().Params -->
+**.getInfo()** : Object
 | Parameter | Tipo   |    | Descripción                  |
 | --------- | ------ | -- | ---------------------------- |
-| Resultado | Object | <- | Information on the dataclass |
-<!-- END REF -->
+| Resultado | Objeto | <- | Information on the dataclass |
 
 
 #### Descripción
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
+The `.getInfo( )` function returns an object providing information about the dataclass. This function is useful for setting up generic code.
 
 **Returned object**
 
-| Propiedad   | Tipo    | Descripción                              |
-| ----------- | ------- | ---------------------------------------- |
-| name        | Text    | Name of the dataclass                    |
-| primaryKey  | Text    | Name of the primary key of the dataclass |
-| tableNumber | Integer | Internal 4D table number                 |
+| Propiedad   | Tipo   | Descripción                              |
+| ----------- | ------ | ---------------------------------------- |
+| name        | Texto  | Name of the dataclass                    |
+| primaryKey  | Texto  | Name of the primary key of the dataclass |
+| tableNumber | Entero | Internal 4D table number                 |
 
 
 
@@ -549,11 +533,9 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  $dataClassAttribute:=ds.Employee[$pk] // If needed the attribute matching the primary key is accessible
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF DataClassClass.new().Desc -->
 ## .new()
 
 <details><summary>History</summary>
@@ -562,19 +544,15 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 | v17     | Added   |
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->
-**.new()** : 4D.Entity <!-- END REF -->
-
-<!-- REF #DataClassClass.new().Params -->
+**.new()** : 4D.Entity
 | Parameter | Tipo      |    | Descripción                       |
 | --------- | --------- | -- | --------------------------------- |
 | Resultado | 4D.Entity | <- | New entity matching the Dataclass |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+The `.new( )` function creates in memory and returns a new blank entity related to the Dataclass.
 
 The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
 
@@ -594,13 +572,11 @@ This example creates a new entity in the "Log" Dataclass and records information
  $entity.info:="New entry" //store some information
  $entity.save() //save the entity
 ```
- 
-<!-- END REF -->
 
 
 
 
-<!-- REF DataClassClass.newSelection().Desc -->
+
 ## .newSelection()
 
 <details><summary>History</summary>
@@ -609,20 +585,16 @@ This example creates a new entity in the "Log" Dataclass and records information
 | v17     | Added   |
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->
-**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
-
-<!-- REF #DataClassClass.newSelection().Params -->
+**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection
 | Parameter | Tipo               |    | Descripción                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | Entero             | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | Resultado | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection( )` function creates a new, blank, non-shareable entity selection, related to the dataclass, in memory.
 
 > For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -640,13 +612,11 @@ When created, the entity selection does not contain any entities (`mySelection.l
  $USelection:=ds.Employee.newSelection() //create an unordered empty entity selection
  $OSelection:=ds.Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
 ```
- 
-
-<!-- END REF -->
 
 
 
-<!-- REF DataClassClass.query().Desc -->
+
+
 ## .query()
 
 <details><summary>History</summary>
@@ -657,10 +627,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | v17     | Added                              |
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
-
-<!-- REF #DataClassClass.query().Params -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection
 | Parameter     | Tipo               |    | Descripción                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texto              | -> | Search criteria as string                                                                                                   |
@@ -668,12 +635,11 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
 | querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
 | Resultado     | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
-<!-- END REF -->
 
 
 #### Descripción
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query( )` function searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s), for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
@@ -898,15 +864,15 @@ Additional examples are provided in example 3.
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
-| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object  | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
-| attributes    | Object  | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
-| args          | Objeto  | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| allowFormulas | Boolean | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| context       | Text    | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
-| queryPlan     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
-| queryPath     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
+| Propiedad     | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                    |
+| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| args          | Objeto   | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| allowFormulas | Booleano | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| context       | Texto    | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                 |
+| queryPlan     | Booleano | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                                |
+| queryPath     | Booleano | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                              |
 
 **About queryPlan and queryPath**
 
@@ -1219,6 +1185,5 @@ We want to disallow formulas, for example when the user enters their query:
 #### Ver también
 
 [`.query()`](EntitySelectionClass.md#query) for entity selections
-<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
