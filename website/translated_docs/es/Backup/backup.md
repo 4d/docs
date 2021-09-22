@@ -1,5 +1,5 @@
 ---
-id: copia de seguridad
+id: backup
 title: Copia de seguridad
 ---
 
