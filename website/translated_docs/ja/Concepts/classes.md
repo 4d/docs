@@ -8,29 +8,32 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) を受け継ぐことができます。
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
 たとえば、次のように `Person` クラスを定義した場合:
 
 ```4d  
-// クラス: Person.4dm
+//Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
+Function get fullName() -> $fullName : text
+    $fullName:=This.firstName+" "+This.lastName
+
 Function sayHello()->$welcome : Text
-    $welcome:="Hello "+This.firstName+" "+This.lastName
+    $welcome:="Hello "+This.fullName
 ```
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
 ```
-var $person : cs.Person // Person クラスのオブジェクト
+var $person : cs.Person //object of Person class  
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
-// $person:{firstName: "John"; lastName: "Doe" }
+// $person:{firstName: "John"; lastName: "Doe"; fullName: "John Doe"}
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
@@ -103,6 +106,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 - `4D` - ビルトインクラスストア
 
 
+
 ### `cs`
 
 #### cs -> classStore
@@ -170,7 +174,8 @@ Class オブジェクトは [共有オブジェクト](shared.md) です。し�
 クラス定義内では、専用の 4Dキーワードが使用できます:
 
 - `Function <Name>`: オブジェクトのクラス関数を定義します。
-- `Class constructor`: オブジェクトのプロパティを定義します。
+- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
+- `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>`: 継承を定義します。
 
 
@@ -273,7 +278,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
+> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 For example:
 > 
 > ```4d
 > Function add($x : Integer)
@@ -287,18 +292,18 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-#### 例題
+#### Example
 
 
 
 ```4d
-// クラス: Rectangle
-Class Constructor($width : Integer; $height : Integer)
+// Class: Rectangle
+Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
-// 関数定義
+// Function definition
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
@@ -307,7 +312,8 @@ Function getArea()->$result : Integer
 
 
 ```4d
-// プロジェクトメソッドにて
+// In a project method
+
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -319,17 +325,104 @@ $area:=$rect.getArea() //5000
 
 
 
+### `Function get` and `Function set`
+
+
+
+#### Syntax
+
+
+
+```4d
+Function get <name>()->$result : type
+// code
+```
+
+
+
+
+```4d
+Function set <name>($parameterName : type)
+// code
+```
+
+
+`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+
+- when the property is read, the `Function get` is executed,
+- when the property is written, the `Function set` is executed.
+
+If the property is not accessed, the code never executes.
+
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property. 
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). 
+
+`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+
+When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read. 
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of the following types:
+
+- Text
+- Boolean
+- Date
+- Number
+- Object
+- Collection
+- Image
+- Blob
+
+
+
+> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+
+
+
+#### Examples
+
+
+
+```4d  
+//Class: Person.4dm
+
+Class constructor($firstname : Text; $lastname : Text)
+    This.firstName:=$firstname
+    This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+    $fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : text )
+    $p:=Position(" "; $fullName)
+    This.firstName:=Substring($fullName; 1; $p-1)
+    This.lastName:=Substring($fullName; $p+1)
+
+```
+
+
+
+
+```4d
+//in a project method
+$fullName:=$person.fullName // Function get fullName() is called
+$person.fullName:="John Smith" // Function set fullName() is called
+```
+
+
+
+
 
 ### `Class Constructor`
 
 
 
-#### シンタックス
+#### Syntax
 
 
 
 ```4d
-// クラス: MyClass
+// Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // コード
 ```
