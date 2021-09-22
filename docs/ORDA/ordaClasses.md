@@ -281,9 +281,9 @@ At the very minimum, a computed attribute requires a `get` function that describ
 
 A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
 
-Just like storage attributes, computed attributes may be included in **queries**. Normally, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In many cases this is sufficient. However, computed attributes can implement a `query` function that substitutes other attributes during the query. This allows computed attributes to be queried quickly by redirecting searches to other attributes, including indexed storage attributes.
+Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In some cases this is sufficient. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
 
-Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, this is sufficient in many cases. However, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance. 
+Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance. 
 
 
 ### How to define computed attributes
@@ -333,20 +333,18 @@ The *$event* parameter contains the following properties:
 - *fullName* computed attribute:
 
 ```4d
-Function get fullName($event : Object)-> $result : Text
+Function get fullName($event : Object)-> $fullName : Text
 
-  If (This.firstName=Null) & (This.lastName=Null)
-    $event.result:=Null //only way to return a null value
-  Else
-    If (This.firstName=Null)
-        $result:=This.lastName
-    Else 
-        If (This.lastname=Null)
-            $result:=This.firstName
-        Else 
-            $result:=This.firstName+" "+This.lastName
-        End if 
-    End if 
+  Case of 	
+	: (This.firstName=Null) & (This.lastName=Null)
+		$fullName:=""
+	: (This.firstName=Null)
+		$fullName:=This.lastName
+	: (This.lastName=Null)
+		$fullName:=This.firstName
+	Else 
+		$fullName:=This.firstName+" "+This.lastName
+	End case 
 ```
 
 - A computed attribute can be based upon a related attribute:
@@ -398,15 +396,10 @@ The *$event* parameter contains the following properties:
 
 ```4d
 Function set fullName($value : Text; $event : Object)
-    var $vals : Collection
-    $vals:=Split string($value; " "; sk ignore empty strings)
-    If ($vals.length>0)
-        This.firstName:=$vals[0]
-    End if 
-    If ($vals.length>1)
-        This.lastName:=$vals[1]
-    End if 
-  End if 
+	var $p : Integer
+    $p:=Position(" "; $value) 		
+	This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
+	This.lastname:=Substring($value; $p+1)
 ```
 
 
@@ -512,68 +505,26 @@ Function query age($event : Object)->$result : Object
 	var $_ages : Collection
 	
 	$operator:=$event.operator
-	
-	If ($operator="in")
-		
-		Case of 
-			: (Value type($event.value)=Is collection)
-				$_ages:=$event.value 
-				
-			: (Value type($event.value)=Is text)
-				$_ages:=JSON Parse($event.value)
-		End case 
-		
-	Else 
-		
-		$age:=Num($event.value)  // integer
-		$d1:=Add to date(Current date; -$age-1; 0; 0)
-		$d2:=Add to date($d1; 1; 0; 0)
-		$parameters:=New collection($d1; $d2)
-	End if 
+			
+	$age:=Num($event.value)  // integer
+	$d1:=Add to date(Current date; -$age-1; 0; 0)
+	$d2:=Add to date($d1; 1; 0; 0)
+	$parameters:=New collection($d1; $d2)
 	
 	Case of 
 			
 		: ($operator="==")
 			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
 			
+		: ($operator="===") 
+			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+
 		: ($operator=">=")
 			$query:="birthday <= :2"
 			
 			//... other operators			
 			
-		: ($operator="in")
 			
-			If ($_ages.length<=3)
-				
-				$parameters:=New collection
-				$phIndex:=1
-				
-				$query:=""
-				For ($i; 0; $_ages.length-1)
-					
-					$ph1:=":"+String($phIndex)  //-> ":1"
-					$ph2:=":"+String($phIndex+1)  //-> ":2"
-					
-					$phIndex:=$phIndex+2  // next will be :3 :4, :5 :6, etc.
-					
-					$d1:=Add to date(Current date; -$_ages[$i]-1; 0; 0)
-					$d2:=Add to date($d1; 1; 0; 0)
-					
-					$parameters.push($d1)
-					$parameters.push($d2)
-					
-					If ($i>0)
-						$query:=$query+" or "
-					End if 
-					$query:=$query+"(birthday > "+$ph1+" and birthday <= "+$ph2+")"  // > :1 and <= :2
-				End for 
-				
-			Else   // let 4d do the job !!!
-				$event.result:=Null
-			End if 
-			
-		Else 
-			$event.result:=Null
 	End case 
 	
 	
@@ -584,6 +535,18 @@ Function query age($event : Object)->$result : Object
 	End if
 
 ```  
+
+Calling code, for example:
+
+```4d
+// people aged between 20 and 21 years (-1 day)
+$twenty:=people.query("age = 20")  // calls the "==" case
+
+// people aged 20 years today
+$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+
+```
+
 
 ### `Function orderBy <attributeName>`
 
