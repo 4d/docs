@@ -6,7 +6,7 @@
     "tagline": "Documentation for 4D Developers",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Cópia de segurança"
       },
       "Backup/log": {
         "title": "Log file (.journal)"
