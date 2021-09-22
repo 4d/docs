@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses fonctions.
+Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -20,8 +20,11 @@ Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
+Function get fullName() -> $fullName : text
+    $fullName:=This.firstName+" "+This.lastName
+
 Function sayHello()->$welcome : Text
-    $welcome:="Hello "+This.firstName+" "+This.lastName
+    $welcome:="Hello "+This.fullName
 ```
 
 Dans une méthode, créons une "Personne" :
@@ -30,7 +33,7 @@ Dans une méthode, créons une "Personne" :
 var $person : cs.Person //object of Person class  
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
-// $person:{firstName: "John"; lastName: "Doe" }
+// $person:{firstName: "John"; lastName: "Doe"; fullName: "John Doe"}
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
@@ -103,6 +106,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 - `cs` pour le class store intégré
 
 
+
 ### `cs`
 
 #### cs -> classStore
@@ -166,7 +170,8 @@ Lorsque 4D ne trouve pas de fonction ou de propriété dans une classe, il la re
 Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
 - `Fonction <Name>` pour définir les fonctions de classe des objets.
-- `Class constructor` pour définir les propriétés des objets.
+- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
+- `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` pour définir l'héritage.
 
 
@@ -273,6 +278,73 @@ $rect:=cs.Rectangle.new(50;100)
 $area:=$rect.getArea() //5000
 ```
 
+
+### `Function get` and `Function set`
+
+#### Syntax
+
+```4d
+Function get <name>()->$result : type
+// code
+```
+
+```4d
+Function set <name>($parameterName : type)
+// code
+```
+
+`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+
+- when the property is read, the `Function get` is executed,
+- when the property is written, the `Function set` is executed.
+
+If the property is not accessed, the code never executes.
+
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+
+`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+
+When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of the following types:
+
+- Text
+- Boolean
+- Date
+- Number
+- Object
+- Collection
+- Image
+- Blob
+
+> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+
+#### Examples
+
+```4d  
+//Class: Person.4dm
+
+Class constructor($firstname : Text; $lastname : Text)
+    This.firstName:=$firstname
+    This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+    $fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : text )
+    $p:=Position(" "; $fullName)
+    This.firstName:=Substring($fullName; 1; $p-1)
+    This.lastName:=Substring($fullName; $p+1)
+
+```
+
+```4d
+//in a project method
+$fullName:=$person.fullName // Function get fullName() is called
+$person.fullName:="John Smith" // Function set fullName() is called
+```
 
 
 ### `Class Constructor`
