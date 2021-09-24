@@ -51,9 +51,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Gramática JSON
 
-| Nombre                       | Tipos de datos | Valores posibles                   |
-| ---------------------------- | -------------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | cadena         | "addSubrecord" or "" to do nothing |
+| Nombre                       | Tipos de datos | Valores posibles                  |
+| ---------------------------- | -------------- | --------------------------------- |
+| doubleClickInEmptyAreaAction | cadena         | "addSubrecord" o "" to do nothing |
 
 #### Objetos soportados
 
@@ -139,7 +139,7 @@ Specifies the table that the list subform belongs to (if any).
 
 | Nombre | Tipos de datos | Valores posibles                  |
 | ------ | -------------- | --------------------------------- |
-| table  | cadena         | 4D table name, or "" if no table. |
+| tabla  | cadena         | 4D table name, or "" if no table. |
 
 #### Objetos soportados
 
