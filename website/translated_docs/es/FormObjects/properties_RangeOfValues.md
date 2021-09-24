@@ -17,7 +17,7 @@ The default value can only be used if the [data source type](properties_Object.m
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
-| Stamp | Meaning         |
+| Sello | Meaning         |
 | ----- | --------------- |
 | #D    | Current date    |
 | #H    | Current time    |
@@ -50,7 +50,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 | Nombre       | Tipos de datos | Valores posibles                 |
 | ------------ | -------------- | -------------------------------- |
-| excludedList | list           | A list of values to be excluded. |
+| excludedList | lista          | A list of values to be excluded. |
 
 #### Objetos soportados
 
@@ -71,7 +71,7 @@ Making a list required does not automatically display the list when the field is
 
 | Nombre       | Tipos de datos | Valores posibles            |
 | ------------ | -------------- | --------------------------- |
-| requiredList | list           | A list of mandatory values. |
+| requiredList | lista          | A list of mandatory values. |
 
 #### Objetos soportados
 
