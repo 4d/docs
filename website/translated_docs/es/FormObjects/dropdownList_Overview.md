@@ -18,7 +18,7 @@ An [array](Concepts/arrays.md) is a list of values in memory that is referenced 
 
 Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Enter a list of default values in the object properties by selecting "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
 * Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:
 
