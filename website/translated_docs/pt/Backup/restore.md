@@ -1,12 +1,12 @@
 ---
-id: restore
-title: Restore
+id: restaurar
+title: Restaurar
 ---
 
-4D lhe permite restaurar conjuntos inteiros de dados de um banco de dados no caso de que se apresente um incidente, independentemente da causa do mesmo. Two primary categories of incidents can occur:
+4D lhe permite restaurar conjuntos inteiros de dados de um banco de dados no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
 
-- A parada inesperada do banco enquanto estiver em uso. This incident can occur because of a power outage, system element failure, etc. Nesse caso, dependendo do estado atual da cache de dados no momento do incidente, a restauração do banco de dados pode requerer diferentes operações:
-    - Se a cache estiver vazia, o banco de dados abre normalmente. Quaisquer mudanças feitas no banco de dados foram registradas. This case does not require any particular operation.
+- A parada inesperada do banco enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Nesse caso, dependendo do estado atual da cache de dados no momento do incidente, a restauração do banco de dados pode requerer diferentes operações:
+    - Se a cache estiver vazia, o banco de dados abre normalmente. Quaisquer mudanças feitas no banco de dados foram registradas. Este caso não exige nenhuma operação particular
     - If the cache contains operations, the data file is intact but it requires integrating the current log file.
     - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
 
