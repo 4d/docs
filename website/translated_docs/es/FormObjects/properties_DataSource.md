@@ -43,7 +43,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 | Nombre     | Tipos de datos   | Valores posibles                                    |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
+| lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 
 #### Objetos soportados
@@ -214,7 +214,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| table  | number         | Table number     |
+| tabla  | number         | Table number     |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)
