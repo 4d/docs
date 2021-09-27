@@ -236,7 +236,7 @@ La mayoría de los atributos del objeto formulario pueden ser definidos dentro d
     - `method`
     - `type`
     - `class`
-    - `event`
+    - `evento`
     - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
 Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).

@@ -76,10 +76,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明        |
-| ----- | ----------------------------------------------------------------------- |:--:| --------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値  |
-| 戻り値   | コレクション                                                                  | <- | 新しいコレクション |
+| 引数    | タイプ                                                                     |    | 説明             |
+| ----- | ----------------------------------------------------------------------- |:--:| -------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値       |
+| 戻り値   | コレクション                                                                  | <- | New collection |
 <!-- END REF -->
 
 
@@ -160,10 +160,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明          |
-| ----- | ------------------------------------------------------------------- |:--:| ----------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値  |
-| 戻り値   | コレクション                                                              | <- | 新規の共有コレクション |
+| 引数    | タイプ                                                                 |    | 説明                    |
+| ----- | ------------------------------------------------------------------- |:--:| --------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値            |
+| 戻り値   | コレクション                                                              | <- | New shared collection |
 <!-- END REF -->
 
 

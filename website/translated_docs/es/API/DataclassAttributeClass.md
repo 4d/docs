@@ -39,9 +39,9 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 ## .autoFilled
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -69,9 +69,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .fieldNumber
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -96,9 +96,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .fieldType
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -126,9 +126,9 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 ## .indexed
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -152,9 +152,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .inverseName
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -178,9 +178,9 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 ## .keyWordIndexed
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -203,9 +203,9 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .kind
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -245,9 +245,9 @@ Given the following table and relation:
 ## .mandatory
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -272,9 +272,9 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .name
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -301,9 +301,9 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 ## .relatedDataClass
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 
 </details>
 
@@ -338,9 +338,9 @@ Given the following tables and relations:
 ## .type
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 
@@ -356,11 +356,11 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **Possible values:**
 
-| dataClassAttribute.kind | type                                                     | Comment                                                                                                                  |
-| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                   | Ex: "Companies"                                                                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix              | Ex: "EmployeeSelection"                                                                                                  |
+| dataClassAttribute.kind | type                                                    | Comment                                                                                                                                    |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| storage                 | "number", "date", "object", "bool", "image", o "string" | "number" se devuelve para cualquier tipo numérico, incluyendo la duración. "string" se devuelve para los tipos de campo uuid, alfa y texto |
+| relatedEntity           | related dataClass name                                  | Ex: "Companies"                                                                                                                            |
+| relatedEntities         | related dataClass name + "Selection" suffix             | Ex: "EmployeeSelection"                                                                                                                    |
 
 <!-- END REF -->
 
@@ -371,9 +371,9 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 ## .unique
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 

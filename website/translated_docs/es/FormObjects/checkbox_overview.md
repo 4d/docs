@@ -44,34 +44,34 @@ Sólo las acciones que pueden representar un estado verdadero/falso (acciones "m
 
 | Acciones soportadas                 | Condiciones de uso (si las hay) |
 | ----------------------------------- | ------------------------------- |
-| avoidPageBreakInsideEnabled         | 4D Write Pro areas only         |
+| avoidPageBreakInsideEnabled         | Área 4D Write Pro únicamente    |
 | fontItalic                          |                                 |
 | fontBold                            |                                 |
 | fontLinethrough                     |                                 |
-| fontSubscript                       | 4D Write Pro areas only         |
-| fontSuperscript                     | 4D Write Pro areas only         |
+| fontSubscript                       | Área 4D Write Pro únicamente    |
+| fontSuperscript                     | Área 4D Write Pro únicamente    |
 | fontUnderline                       |                                 |
-| font/showDialog                     | Mac only                        |
-| htmlWYSIWIGEnabled                  | 4D Write Pro areas only         |
-| section/differentFirstPage          | 4D Write Pro areas only         |
-| section/differentLeftRightPages     | 4D Write Pro areas only         |
+| font/showDialog                     | Mac únicamente                  |
+| htmlWYSIWIGEnabled                  | Área 4D Write Pro únicamente    |
+| section/differentFirstPage          | Área 4D Write Pro únicamente    |
+| section/differentLeftRightPages     | Área 4D Write Pro únicamente    |
 | spell/autoCorrectionEnabled         |                                 |
-| spell/autoDashSubstitutionsEnabled  | Mac only                        |
-| spell/autoLanguageEnabled           | Mac only                        |
-| spell/autoQuoteSubstitutionsEnabled | Mac only                        |
+| spell/autoDashSubstitutionsEnabled  | Mac únicamente                  |
+| spell/autoLanguageEnabled           | Mac únicamente                  |
+| spell/autoQuoteSubstitutionsEnabled | Mac únicamente                  |
 | spell/autoSubstitutionsEnabled      |                                 |
 | spell/enabled                       |                                 |
-| spell/grammarEnabled                | Mac only                        |
-| spell/showDialog                    | Mac only                        |
+| spell/grammarEnabled                | Mac únicamente                  |
+| spell/showDialog                    | Mac únicamente                  |
 | spell/visibleSubstitutions          |                                 |
-| visibleBackground                   | 4D Write Pro areas only         |
-| visibleFooters                      | 4D Write Pro areas only         |
-| visibleHeaders                      | 4D Write Pro areas only         |
-| visibleHiddenChars                  | 4D Write Pro areas only         |
-| visibleHorizontalRuler              | 4D Write Pro areas only         |
-| visiblePageFrames                   | 4D Write Pro areas only         |
+| visibleBackground                   | Área 4D Write Pro únicamente    |
+| visibleFooters                      | Área 4D Write Pro únicamente    |
+| visibleHeaders                      | Área 4D Write Pro únicamente    |
+| visibleHiddenChars                  | Área 4D Write Pro únicamente    |
+| visibleHorizontalRuler              | Área 4D Write Pro únicamente    |
+| visiblePageFrames                   | Área 4D Write Pro únicamente    |
 | visibleReferences                   |                                 |
-| widowAndOrphanControlEnabled        | 4D Write Pro areas only         |
+| widowAndOrphanControlEnabled        | Área 4D Write Pro únicamente    |
 
 For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
 

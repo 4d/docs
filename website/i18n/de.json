@@ -102,7 +102,7 @@
         "title": "ZIPFolder"
       },
       "Backup/backup": {
-        "title": "Backup"
+        "title": "Cópia de segurança"
       },
       "Backup/log": {
         "title": "Log file (.journal)"

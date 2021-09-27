@@ -10,7 +10,7 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Setting location                        | Scope                                    | Involved web server                             |
+| Setting location                        | Alcance                                  | Involved web server                             |
 | --------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
 | [webServer object](webServerObject.md)  | Temporary (current session)              | Any web server, including component web servers |
 | `WEB SET OPTION` or a `WEB XXX` command | Temporary (current session)              | Main server                                     |
@@ -18,7 +18,7 @@ There are different ways to configure the 4D web server settings, depending on t
 
 > Some settings are not available from all locations.
 
-## Cache
+## Caché
 
 | Can be set with     | Nombre                                  | Comentarios |
 | ------------------- | --------------------------------------- | ----------- |
@@ -568,7 +568,7 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 | webServer object | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
 | `WEB SET OPTION` | `Web session cookie path`                                      |             |
 
-"path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+Campo "path" de la cookie de sesión. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
 
 ## Session Cookie SameSite
 

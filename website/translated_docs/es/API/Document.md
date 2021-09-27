@@ -10,9 +10,9 @@ title: Document Class
 ## .creationDate
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
@@ -32,9 +32,9 @@ This property is **read-only**.
 ## .creationTime
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
@@ -56,9 +56,9 @@ This property is **read-only**.
 ## .exists
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.exists.Syntax -->
@@ -82,9 +82,9 @@ This property is **read-only**.
 ## .extension
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.extension.Syntax -->
@@ -106,9 +106,9 @@ This property is **read-only**.
 ## .fullName
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.fullName.Syntax -->
@@ -129,9 +129,9 @@ This property is **read-only**.
 ## .hidden
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.hidden.Syntax -->
@@ -153,9 +153,9 @@ This property is **read-only**.
 ## .isAlias
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.isAlias.Syntax -->
@@ -176,9 +176,9 @@ This property is **read-only**.
 ## .isFile
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.isFile.Syntax -->
@@ -199,9 +199,9 @@ This property is **read-only**.
 ## .isFolder
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.isFolder.Syntax -->
@@ -223,9 +223,9 @@ This property is **read-only**.
 ## .isWritable
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.isWritable.Syntax -->
@@ -257,9 +257,9 @@ This property is **read-only**.
 ## .modificationDate
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->
@@ -281,9 +281,9 @@ This property is **read-only**.
 ## .modificationTime
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->
@@ -304,9 +304,9 @@ This property is **read-only**.
 ## .name
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.name.Syntax -->
@@ -326,9 +326,9 @@ This property is **read-only**.
 ## .original
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.original.Syntax -->
@@ -355,9 +355,9 @@ This property is **read-only**.
 ## .parent
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.parent.Syntax -->
@@ -379,9 +379,9 @@ This property is **read-only**.
 ## .path
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.path.Syntax -->
@@ -402,9 +402,9 @@ This property is **read-only**.
 ## .platformPath
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.platformPath.Syntax -->
@@ -426,9 +426,9 @@ This property is **read-only**.
 ## .size
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.size.Syntax -->
@@ -456,9 +456,9 @@ This property is **read-only**.
 ## .copyTo()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.copyTo().Syntax -->
@@ -511,9 +511,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
@@ -554,9 +554,9 @@ To save a document's contents in a `BLOB` field:
 ## .getIcon()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
@@ -592,9 +592,9 @@ File icon [picture](../Concepts/picture.html).
 ## .getText()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #document.getText().Syntax -->

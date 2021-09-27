@@ -49,7 +49,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 | Nombre     | Tipos de datos   | Valores posibles                                    |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
+| lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 
 #### Objetos soportados
@@ -264,7 +264,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| table  | number         | Table number     |
+| tabla  | number         | Table number     |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)

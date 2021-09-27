@@ -30,7 +30,7 @@ You can modify the following print settings:
 | paperName   | cadena         | "A4", "US Letter"...                                                                 |
 | paperWidth  | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
 | paperHeight | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | cadena         | "landscape" (default is "portrait")                                                  |
+| orientation | cadena         | "landscape" (por defecto es "portrait")                                              |
 | scale       | number         | mínimo: 0                                                                            |
 
 

@@ -6,7 +6,7 @@ title: Propiedades de los menús
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
 
 
-## Title
+## Título
 
 The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
 
@@ -23,13 +23,13 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Descripción                 | Usage                                                         |
+| Character   | Descripción                 | Utilización                                                   |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
 | <B          | less than B                 | Bold font                                                     |
 | <I          | less than I                 | Italic font                                                   |
 | <U          | less than U                 | Underline font                                                |
-| !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
+| !+caracter  | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
 | /+character | slash+character             | Add character as shortcut                                     |
 
 
@@ -118,11 +118,11 @@ These reserved key combinations are listed in the following table:
 
 | Key (Windows)   | Key (macOS)        | Operación   |
 | --------------- | ------------------ | ----------- |
-| Ctrl+C          | Command+C          | Copy        |
-| Ctrl+Q          | Command+Q          | Quit        |
-| Ctrl+V          | Command+V          | Paste       |
-| Ctrl+X          | Command+X          | Cut         |
-| Ctrl+Z          | Command+Z          | Undo        |
+| Ctrl+C          | Command+C          | Copiar      |
+| Ctrl+Q          | Command+Q          | Salir       |
+| Ctrl+V          | Command+V          | Pegar       |
+| Ctrl+X          | Command+X          | Cortar      |
+| Ctrl+Z          | Command+Z          | Deshacer    |
 | Ctrl+. (period) | Command+. (period) | Stop action |
 
 To assign a keyboard shortcut in the Menu editor:

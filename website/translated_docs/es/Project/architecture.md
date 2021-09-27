@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 - MyProject
     - Componentes
-    - Data
+    - Datos
         - Logs
         - Settings
     - Documentation

@@ -255,9 +255,9 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 [Área 4D Write Pro](writeProArea_overview.md)
 
 ---
-## Show page frame
+## Mostrar el marco de la página
 
-Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+Muestra/oculta el marco de la página cuando [modo visualización de página ](#view-mode) está definido como "Página".
 
 
 #### Gramática JSON
@@ -274,9 +274,9 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 
 ---
-## Show references
+## Mostrar las referencias
 
-Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como *referencias*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
 
 For example, you have inserted the current date along with a format, the date is displayed:
 
