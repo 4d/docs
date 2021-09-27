@@ -40,10 +40,10 @@ En las bases proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pue
 
 |                                                               | 4D Developer (monopuesto)    | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+| Adding/editing users and groups                               | sí                           | sí        |
+| Assigning user/group access to servers                        | sí                           | sí        |
+| User identification                                           | no (all users are Designer)  | sí        |
+| Access control once the Designer has been assigned a password | no (all access are Designer) | sí        |
 
 
 
