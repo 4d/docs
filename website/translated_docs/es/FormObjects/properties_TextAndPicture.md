@@ -78,9 +78,9 @@ Designates the placement of an icon in relation to the form object.
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles        |
-| ------------- | -------------- | ----------------------- |
-| iconPlacement | cadena         | "none", "left", "right" |
+| Nombre        | Tipos de datos | Valores posibles                  |
+| ------------- | -------------- | --------------------------------- |
+| iconPlacement | cadena         | "ninguno", "izquierda", "derecha" |
 
 #### Objetos soportados
 

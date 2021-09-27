@@ -16,9 +16,9 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### Gramática JSON
 
-| Nombre               | Tipos de datos | Valores posibles        |
-| -------------------- | -------------- | ----------------------- |
-| methodsAccessibility | cadena         | "none" (default), "all" |
+| Nombre               | Tipos de datos | Valores posibles            |
+| -------------------- | -------------- | --------------------------- |
+| methodsAccessibility | cadena         | "none" (por defecto), "all" |
 
 #### Objetos soportados
 
