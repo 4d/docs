@@ -124,11 +124,11 @@ New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
-| Line                                               | Descripción                                                                                                                                          |
+| Línea                                              | Descripción                                                                                                                                          |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "\<!-- Type your summary here -->"      | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
 | ## Description                                    | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Example                                        | Heading level 2, you can use this area to show sample code                                                                                           |
+| ## Ejemplo                                        | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
 
@@ -218,12 +218,12 @@ GetLogo (size) -> logo
 This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = smallest size, 5 = largest size.
 
-## Example
+## Ejemplo
 
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obtener el logo más grande
 $logo:=GetLogo(5)
 ```
 

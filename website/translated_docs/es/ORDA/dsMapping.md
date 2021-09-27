@@ -209,8 +209,8 @@ $e:=ds.Employee.all() //assigns the resulting entity selection reference to the 
 
 Entity selections can be:
 
-- "shareable" or "non-shareable",
-- "sorted" or "unsorted".
+- "compartible" o "no compartible",
+- " ordenadas" o "no ordenadas".
 
 These points are discussed below.
 

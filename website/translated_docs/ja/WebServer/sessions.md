@@ -53,13 +53,13 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
 
-### Preemptive mode
+### プリエンプティブモード
 
-On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web server code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
+4D Server上では、**インタプリタモードであっても**、Webサーバーセッションは自動的にプリエンプティブプロセスで処理されます。 そのため、Webのコードは [プリエンプティブ実行に準拠](preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> To debug the web server code on 4D Server, you need to open a [4D on the same machine as 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) and connect to the server. With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+> Web のコードを 4D Server (インタープリターモード) でデバッグするには、[4D Server と同じマシン上で 4D](Desktop/clientServer.md#4D-と-4D-Server-の同じマシン上での使用) を起動後、サーバーに接続し、4D アプリケーション上で開発環境 (エクスプローラー等) を開きます。 これにより、すべてのプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
-
+シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 
 ## 情報の共有
 

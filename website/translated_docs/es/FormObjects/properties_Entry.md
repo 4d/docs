@@ -40,9 +40,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                      |
-| ----------- | -------------- | ------------------------------------- |
-| contextMenu | cadena         | "automatic" (used if missing), "none" |
+| Nombre      | Tipos de datos | Valores posibles                          |
+| ----------- | -------------- | ----------------------------------------- |
+| contextMenu | cadena         | "automatic" (se utiliza si falta), "none" |
 
 #### Objetos soportados
 
@@ -99,26 +99,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | Descripción                                                                                                                                  |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
-| &9                              | Allow only numbers.                                                                                                                          |
-| &A                              | Allow only capital letters.                                                                                                                  |
-| &a                              | Allow only letters (uppercase and lowercase).                                                                                                |
-| &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
-| ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
-| !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
-| !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
-| !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
-| !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
-| !0&9##-##-##-##                 | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
-| !_&9(###)!0###-####             | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
-| !0&9###-###-###                 | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                  | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
-| ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
-| &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
+| Entry Filter                           | Descripción                                                                                                                                  |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                                     | Allow any letters, but convert to uppercase.                                                                                                 |
+| &9                                     | Allow only numbers.                                                                                                                          |
+| &A                                     | Allow only capital letters.                                                                                                                  |
+| &a                                     | Allow only letters (uppercase and lowercase).                                                                                                |
+| &@                                     | Allow only alphanumeric characters. No special characters.                                                                                   |
+| ~a##                                   | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
+| !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
+| !0&9 Día: ## Mes: ## Año: ##           | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
+| !0&9##:##                              | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
+| !0&9## Horas ## Minutos ## Segundos    | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
+| !0&9Horas: ## Minutas: ## Segundos: ## | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
+| !0&9##-##-##-##                        | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
+| !_&9(###)!0###-####                    | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
+| !0&9###-###-###                        | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
+| !0&9###-##-###                         | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
+| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
+| &"a-z;0-9; ;,;.;-"                     | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
+| &"0-9;.;-"                             | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
 
 
 #### Gramática JSON
@@ -212,9 +212,9 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles                                  |
-| --------- | -------------- | ------------------------------------------------- |
-| multiline | texto          | "yes", "no", "automatic" (default if not defined) |
+| Nombre    | Tipos de datos | Valores posibles                                       |
+| --------- | -------------- | ------------------------------------------------------ |
+| multiline | texto          | "yes", "no", "automatic" (por defecto si no se define) |
 
 
 #### Objetos soportados

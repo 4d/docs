@@ -76,7 +76,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 | Properties               | Tipo                                 | Descripción                                                                |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | mixed                                | Optional - Values to modify                                                |
+| Attributes of the entity | mixto                                | Optional - Values to modify                                                |
 | __DATACLASS              | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
@@ -102,7 +102,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 | Properties               | Tipo     | Descripción                                                                          |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed    | Optional - Values to modify                                                          |
+| Attributes of the entity | mixto    | Optional - Values to modify                                                          |
 | __DATASET                | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
 | __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 

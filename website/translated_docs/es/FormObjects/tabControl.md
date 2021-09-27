@@ -35,7 +35,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
         "top": 160,  
         "width": 100,   
         "height": 20,   
-        "labelsPlacement": "bottom" //define the direction
+        "labelsPlacement": "bottom" //define la orientación
     }
 ```
 

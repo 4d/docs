@@ -31,7 +31,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 *   **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
 
 * **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option).
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 
 
 ## User Sessions

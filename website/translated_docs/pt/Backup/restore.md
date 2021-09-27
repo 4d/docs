@@ -1,12 +1,12 @@
 ---
-id: restore
-title: Restore
+id: restaurar
+title: Restaurar
 ---
 
-4D allows you to restore entire sets of application data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
+4D lhe permite restaurar conjuntos inteiros de dados de aplicações no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
 
-- The unexpected stoppage of an application while in use. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the application can require different operations:
-    - If the cache was empty, the application opens normally. Any changes made in the application were recorded. This case does not require any particular operation.
+- A parada inesperada de uma aplicação enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Nesse caso, dependendo do estado atual da cache de dados no momento do incidente, a restauração da aplicação pode requerer diferentes operações:
+    - Se a cache estiver vazia, a aplicação abre normalmente. Quaisquer mudanças feitas na aplicação foram registradas. Este caso não exige nenhuma operação particular
     - If the cache contains operations, the data file is intact but it requires integrating the current log file.
     - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
 

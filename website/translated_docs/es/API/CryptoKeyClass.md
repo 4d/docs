@@ -50,9 +50,9 @@ ASSERT($status.success)
 ## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -90,9 +90,9 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 ## .curve
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -109,9 +109,9 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 ## .decrypt()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -158,9 +158,9 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 ## .encrypt()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -199,9 +199,9 @@ The returned value is an encrypted message.
 ## .getPrivateKey()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -227,9 +227,9 @@ The returned value is the private key.
 ## .getPublicKey()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -254,9 +254,9 @@ The returned value is the public key.
 ## .pem
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -272,9 +272,9 @@ The returned value is the public key.
 ## .sign()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
@@ -312,9 +312,9 @@ The utf8 representation of the *message* string.
 <!-- END REF -->
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -328,9 +328,9 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- END REF -->
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 
@@ -344,9 +344,9 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 ## .verify()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R4  | Añadidos |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->

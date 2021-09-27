@@ -35,7 +35,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 | Version | Changes                      |
 | ------- | ---------------------------- |
 | v18     | Support of localID parameter |
-| v17     | Added                        |
+| v17     | Añadidos                     |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
@@ -107,9 +107,9 @@ Using the main datastore on the 4D database:
 ## Open datastore
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18     | Añadidos |
 </details>
 
 <!-- REF #_command_.Open datastore.Syntax -->
@@ -213,9 +213,9 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 ## *.dataclassName*
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF DataStoreClass.dataclassName.Syntax -->
@@ -249,9 +249,9 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 ## .cancelTransaction()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18     | Añadidos |
 </details>
 
 
@@ -287,9 +287,9 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 ## .encryptionStatus()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.encryptionStatus().Syntax -->
@@ -361,9 +361,9 @@ You want to know the number of encrypted tables in the current data file:
 ## .getInfo()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -432,9 +432,9 @@ On a remote datastore:
 ## .getRequestLog()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R6  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.getRequestLog().Syntax -->
@@ -471,9 +471,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 ## .isAdminProtected()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R6  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.isAdminProtected().Syntax -->
@@ -505,9 +505,9 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 ## .makeSelectionsAlterable()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R5  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
@@ -539,9 +539,9 @@ When this function is not called, new entity selections can be shareable, depend
 ## .provideDataKey()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.provideDataKey().Syntax -->
@@ -617,9 +617,9 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 ## .setAdminProtection()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R6  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
@@ -660,9 +660,9 @@ You create a *protectDataFile* project method to call before deployments for exa
 ## .startRequestLog()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R6  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.startRequestLog().Syntax -->
@@ -738,9 +738,9 @@ You want to log ORDA client requests in memory:
 ## .startTransaction()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18     | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.startTransaction().Syntax -->
@@ -806,9 +806,9 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 ## .stopRequestLog()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R6  | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.stopRequestLog().Syntax -->
@@ -841,9 +841,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 ## .validateTransaction()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18     | Añadidos |
 </details>
 
 <!-- REF #DataStoreClass.validateTransaction().Syntax -->

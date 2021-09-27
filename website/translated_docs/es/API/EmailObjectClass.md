@@ -326,9 +326,9 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propiedad      | Tipo     | Valor                               |
-| -------------- | -------- | ----------------------------------- |
-| .\<keyword\> | booleano | Keyword to set (value must be true) |
+| Propiedad       | Tipo     | Valor                               |
+| --------------- | -------- | ----------------------------------- |
+| . \<keyword\> | booleano | Keyword to set (value must be true) |
 
 Reserved keywords:
 * $draft - Indicates a message is a draft
@@ -496,9 +496,9 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 ## MAIL Convert from MIME
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18     | Añadidos |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
@@ -584,7 +584,7 @@ $status:=$transporter.send($email)
 <details><summary>History</summary>
 | Version | Changes  |
 | ------- | -------- |
-| v17 R4  | Added    |
+| v17 R4  | Añadidos |
 | v17 R5  | Modified |
 </details>
 

@@ -28,9 +28,9 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 ## .*attributeName*
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -102,7 +102,7 @@ Considering the following table properties:
 | Version | Changes                             |
 | ------- | ----------------------------------- |
 | v17 R5  | Support of the *settings* parameter |
-| v17     | Added                               |
+| v17     | Añadidos                            |
 </details>
 
 
@@ -155,7 +155,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Version | Changes                             |
 | ------- | ----------------------------------- |
 | v17 R5  | Support of the *settings* parameter |
-| v17     | Added                               |
+| v17     | Añadidos                            |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -200,7 +200,7 @@ The objects of *objectCol* may contain one or more nested object(s) featuring on
 The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
 > The content of the related entities cannot be created / updated through this mechanism.
 
-**Stamp**
+**Sello**
 
 If a \_\_STAMP attribute is given, a check is performed with the stamp in the datastore and an error can be returned ("Given stamp does not match current one for record# XX of table XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
 
@@ -351,9 +351,9 @@ In this example, the first entity will be created and saved but the second will 
 ## .get()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -430,9 +430,9 @@ This example illustrates the use of the *context* property:
 ## .getDataStore()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -484,9 +484,9 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ## .getInfo()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -557,9 +557,9 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 ## .new()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -604,9 +604,9 @@ This example creates a new entity in the "Log" Dataclass and records information
 ## .newSelection()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -654,7 +654,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | ------- | ---------------------------------- |
 | v17 R6  | Support of Formula parameters      |
 | v17 R5  | Support of placeholders for values |
-| v17     | Added                              |
+| v17     | Añadidos                           |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->

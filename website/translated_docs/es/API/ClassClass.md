@@ -23,9 +23,9 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 ## .name
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R3  | Añadidos |
 
 </details>
 
@@ -46,9 +46,9 @@ This property is **read-only**.
 ## .new()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R3  | Añadidos |
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
@@ -108,9 +108,9 @@ $person:=cs.Person.new("John";"Doe";40)
 ## .superclass
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R3  | Añadidos |
 
 </details>
 

@@ -398,7 +398,7 @@ The typical sequence of events generated during data entry or modification is as
 | Its value is modified                                                           | Todos                       | On Before Keystroke                                                                                                                                                                                            |
 |                                                                                 | Todos                       | On After Keystroke                                                                                                                                                                                             |
 |                                                                                 | Todos                       | On After Edit                                                                                                                                                                                                  |
-| A user validates and leaves the cell                                            | List box de tipo selección  | Save                                                                                                                                                                                                           |
+| A user validates and leaves the cell                                            | List box de tipo selección  | Guardar                                                                                                                                                                                                        |
 |                                                                                 | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
 |                                                                                 | List box de tipo selección  | On Data Change(*)                                                                                                                                                                                              |
 |                                                                                 | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
@@ -856,7 +856,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 *   "text": for a text value
 *   "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
-*   "integer": for an integer value
+*   "integer": para un valor entero
 *   "boolean": for a True/False value
 *   "color": to define a background color
 *   "event": to display a button with a label.
@@ -870,7 +870,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | texto                                                                                          |
-| event     | button with label                              |                                                                                                |
+| evento    | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
 You set the cell display and options using specific attributes in each object (see below).
@@ -882,13 +882,13 @@ You cannot set display formats or entry filters for columns of object-type list 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
 | texto      | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
+| real       | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
 |            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" and "-"           |
+| integer    | same as defined in object                                  | "0-9" y "-"             |
 |            |                                                            | "0-9" if min>=0         |
 | Booleano   | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
-| event      | N/A                                                        | N/A                     |
+| evento     | N/A                                                        | N/A                     |
 
 ### Atributos
 
@@ -896,25 +896,25 @@ Cada elemento del array de objetos es un objeto que puede contener uno o más at
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | texto | real | integer | booleano | color | event |
-| --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ----- |
-| *Atributos*           | *Descripción*                           |       |      |         |          |       |       |
-| value                 | cell value (input or output)            | x     | x    | x       |          |       |       |
-| min                   | minimum value                           |       | x    | x       |          |       |       |
-| max                   | maximum value                           |       | x    | x       |          |       |       |
-| behavior              | "threeStates" value                     |       |      | x       |          |       |       |
-| requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |       |
-| choiceList            | combo box defined in object             | x     | x    | x       |          |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |          |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |          |       |       |
-| saveAs                | "reference" o "value"                   | x     | x    | x       |          |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |          |       |       |
-| choiceListName        | 4D list name, display combo box         | x     | x    | x       |          |       |       |
-| unitList              | array of X elements                     | x     | x    | x       |          |       |       |
-| unitReference         | index of selected element               | x     | x    | x       |          |       |       |
-| unitsListReference    | 4D list ref for units                   | x     | x    | x       |          |       |       |
-| unitsListName         | 4D list name for units                  | x     | x    | x       |          |       |       |
-| alternateButton       | add an alternate button                 | x     | x    | x       | x        | x     |       |
+|                       | valueType                               | texto | real | integer | booleano | color | evento |
+| --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
+| *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
+| value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
+| min                   | minimum value                           |       | x    | x       |          |       |        |
+| max                   | maximum value                           |       | x    | x       |          |       |        |
+| behavior              | "threeStates" value                     |       |      | x       |          |       |        |
+| requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |        |
+| choiceList            | combo box defined in object             | x     | x    | x       |          |       |        |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |          |       |        |
+| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |          |       |        |
+| saveAs                | "reference" o "value"                   | x     | x    | x       |          |       |        |
+| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |          |       |        |
+| choiceListName        | 4D list name, display combo box         | x     | x    | x       |          |       |        |
+| unitList              | array of X elements                     | x     | x    | x       |          |       |        |
+| unitReference         | index of selected element               | x     | x    | x       |          |       |        |
+| unitsListReference    | 4D list ref for units                   | x     | x    | x       |          |       |        |
+| unitsListName         | 4D list name for units                  | x     | x    | x       |          |       |        |
+| alternateButton       | add an alternate button                 | x     | x    | x       | x        | x     |        |
 
 #### value
 

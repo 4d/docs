@@ -91,9 +91,9 @@ $employees:=Create entity selection([Employee])
 ## &#91;*index*&#93;
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -144,9 +144,9 @@ Note that the corresponding entity is reloaded from the datastore.
 ## .*attributeName*
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF EntitySelectionClass.attributeName.Syntax -->
@@ -227,7 +227,7 @@ The resulting object is an entity selection of Employee with duplications remove
 | Version | Changes                                   |
 | ------- | ----------------------------------------- |
 | v18 R5  | Only supports alterable entity selections |
-| v17     | Added                                     |
+| v17     | Añadidos                                  |
 </details>
 
 
@@ -292,9 +292,9 @@ Calls to the function can be chained:
 ## .and()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF #EntitySelectionClass.and().Syntax -->
@@ -333,10 +333,10 @@ If the original entity selection and the parameter are not related to the same d
   //The $employees entity selection contains the entity
   //with primary key 710 and other entities
   //for ex. "Colin Hetrick" / "Grady Harness" / "Sherlock Holmes" (primary key 710)
- $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
+ $employee:=ds.Employee.get(710) // Devuelve "Sherlock Holmes"
 
- $result:=$employees.and($employee) //$result is an entity selection containing   
-  //only the entity with primary key 710 ("Sherlock Holmes")
+ $result:=$employees.and($employee) //$result es una selección de entidades que contiene   
+  //sólo la entidad con llave primaria 710 ("Sherlock Holmes")
 ```
 
 
@@ -361,7 +361,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 | Version | Changes                                     |
 | ------- | ------------------------------------------- |
 | v18 R6  | Returns undefined if empty entity selection |
-| v17     | Added                                       |
+| v17     | Añadidos                                    |
 
 </details>
 
@@ -411,9 +411,9 @@ We want to obtain a list of employees whose salary is higher than the average sa
 ## .contains()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -459,9 +459,9 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 ## .count()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -504,9 +504,9 @@ We want to find out the total number of employees for a company without counting
 ## .copy()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R5  | Añadidos |
 
 </details>
 
@@ -567,9 +567,9 @@ Then this entity selection is updated with products and you want to share the pr
 ## .distinct()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -595,7 +595,7 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 1.  booleans
 2.  strings
 3.  numbers
-4.  dates
+4.  fechas
 
 You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
 
@@ -629,9 +629,9 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ## .drop()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -689,9 +689,9 @@ Example with the `dk stop dropping on first error` option:
 ## .extract()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R3  | Añadidos |
 
 </details>
 
@@ -792,9 +792,9 @@ Given the following table and relation:
 ## .first()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -849,9 +849,9 @@ There is, however, a difference between both statements when the selection is em
 ## .getDataClass()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 
 </details>
 
@@ -900,9 +900,9 @@ The following generic code duplicates all entities of the entity selection:
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R5  | Añadidos |
 
 </details>
 
@@ -942,9 +942,9 @@ Form.products.add(Form.product)
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -995,9 +995,9 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 ## .last()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1043,9 +1043,9 @@ If the entity selection is empty, the function returns Null.
 ## .length
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1078,7 +1078,7 @@ Entity selections always have a `.length` property.
 <details><summary>History</summary>
 | Version | Changes                                     |
 | ------- | ------------------------------------------- |
-| v17     | Added                                       |
+| v17     | Añadidos                                    |
 | v18 R6  | Returns undefined if empty entity selection |
 
 </details>
@@ -1130,7 +1130,7 @@ We want to find the highest salary among all the female employees:
 <details><summary>History</summary>
 | Version | Changes                                     |
 | ------- | ------------------------------------------- |
-| v17     | Added                                       |
+| v17     | Añadidos                                    |
 | v18 R6  | Returns undefined if empty entity selection |
 
 
@@ -1178,9 +1178,9 @@ In this example, we want to find the lowest salary among all the female employee
 ## .minus()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1220,9 +1220,9 @@ If the original entity selection and the parameter are not related to the same d
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
- $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
+ $employee:=ds.Employee.get(710) // Devuelve "Sherlock Holmes"
 
- $result:=$employees.minus($employee) //$result contains "Colin Hetrick", "Grady Harness"
+ $result:=$employees.minus($employee) //$result contiene "Colin Hetrick", "Grady Harness"
 ```
 
 
@@ -1244,9 +1244,9 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 ## .or()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1304,9 +1304,9 @@ If the original entity selection and the parameter are not related to the same d
 ## .orderBy()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1379,9 +1379,9 @@ You can add as many objects in the criteria collection as necessary.
 ## .orderByFormula( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R6  | Añadidos |
 
 </details>
 
@@ -1504,7 +1504,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 | ------- | ---------------------------------- |
 | v17 R6  | Support of Formula parameters      |
 | v17 R5  | Support of placeholders for values |
-| v17     | Added                              |
+| v17     | Añadidos                           |
 
 </details>
 
@@ -1558,9 +1558,9 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 ## .queryPath
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1582,9 +1582,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .queryPlan
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1605,9 +1605,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .refresh()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v18 R3  | Añadidos |
 
 </details>
 
@@ -1685,9 +1685,9 @@ A list box displays the Form.students entity selection and several clients work 
 ## .slice()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1744,9 +1744,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 ## .sum( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 
 </details>
@@ -1795,9 +1795,9 @@ $sum:=$sel.sum("salary")
 ## .toCollection( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 

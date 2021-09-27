@@ -16,9 +16,9 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 ## 4D.Blob.new()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R2  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v19 R2  | Añadidos |
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
@@ -49,9 +49,9 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 ## .slice()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R2  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v19 R2  | Añadidos |
 </details>
 
 <!-- REF #Blob.slice().Syntax -->

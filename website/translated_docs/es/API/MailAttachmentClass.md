@@ -88,7 +88,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | xml       | application/xml               |
 | htm, html | text/html                     |
 | mp3       | audio/mpeg                    |
-| *other*   | application/octet-stream      |
+| *otro*    | application/octet-stream      |
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
@@ -266,9 +266,9 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 ## .platformPath
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v19     | Añadidos |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->

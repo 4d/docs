@@ -6,7 +6,7 @@ title: Forms Page
  
 This page lets you set the default operation and display of the 4D Form editor.
 
-## Move
+## Mover
 
 This group of options sets parameters for moving objects using the keyboard or the mouse in the Form editor.
 

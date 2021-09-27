@@ -296,7 +296,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ---
 
-## Title
+## Título
 
 Allows inserting a label on an object. The font and the style of this label can be specified.
 
@@ -338,8 +338,8 @@ There are several types of calculations available. The following table shows whi
 | --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
 | Minimum               | X   | X     | X     | X    | X    |      | Same as column type |
 | Maximum               | X   | X     | X     | X    | X    |      | Same as column type |
-| Sum                   | X   |       |       | X    | X    |      | Same as column type |
-| Count                 | X   | X     | X     | X    | X    | X    | Entero largo        |
+| Suma                  | X   |       |       | X    | X    |      | Same as column type |
+| Conteo                | X   | X     | X     | X    | X    | X    | Entero largo        |
 | Average               | X   |       |       | X    |      |      | Real                |
 | Standard deviation(*) | X   |       |       | X    |      |      | Real                |
 | Variance(*)           | X   |       |       | X    |      |      | Real                |

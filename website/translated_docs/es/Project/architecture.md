@@ -7,7 +7,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 - MyProject
     - `Componentes`
-    - `Data`
+    - `Datos`
         - `Logs`
         - `Settings`
     - `Documentation`
@@ -149,7 +149,7 @@ The Resources folder contains any custom project resource files and folders. In 
 (*) only if the project was exported from a .4db binary database.
 
 
-## `Data`
+## `Datos`
 
 The data folder contains the data file and all files and folders relating to the data.
 

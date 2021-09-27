@@ -42,9 +42,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 ## .*attributeName*
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
@@ -82,9 +82,9 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 ## .clone()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 
@@ -127,9 +127,9 @@ This function can only be used with entities already saved in the database. It c
 ## .diff()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
@@ -331,9 +331,9 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 ## .drop()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -439,9 +439,9 @@ Example with `dk force drop if stamp changed` option:
 ## .first()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -478,9 +478,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .fromObject()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -568,9 +568,9 @@ You could also use a related entity given as an object:
 ## .getDataClass()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17 R5  | Añadidos |
 
 </details>
 
@@ -615,9 +615,9 @@ The following generic code duplicates any entity:
 ## .getKey()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -659,9 +659,9 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 ## .getSelection()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -703,9 +703,9 @@ If the entity does not belong to an entity selection, the function returns Null.
 ## .getStamp()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -752,9 +752,9 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 ## .indexOf()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -802,9 +802,9 @@ The resulting value is included between 0 and the length of the entity selection
 ## .isNew()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -843,9 +843,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 ## .last()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -884,9 +884,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .lock()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -997,9 +997,9 @@ Example with `dk reload if stamp changed` option:
 ## .next()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1039,9 +1039,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 ## .previous()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1081,9 +1081,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 ## .reload( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1144,9 +1144,9 @@ The object returned by `.reload( )` contains the following properties:
 ## .save()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1279,9 +1279,9 @@ Updating an entity with `dk auto merge` option:
 ## .toObject()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1566,9 +1566,9 @@ Returns:
 ## .touched( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1610,9 +1610,9 @@ In this example, we check to see if it is necessary to save the entity:
 ## .touchedAttributes( )
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
@@ -1686,9 +1686,9 @@ In this case:
 ## .unlock()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes  |
+| ------- | -------- |
+| v17     | Añadidos |
 
 </details>
 
