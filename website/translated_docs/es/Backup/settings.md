@@ -34,7 +34,7 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
     - **Cada X semana(s) a las x**: permite programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Cuando esta opción está marcada, debe introducir el día(s) de la semana y la hora que debe comenzar la copia de seguridad. Si lo desea, puede seleccionar varios días de la semana. Por ejemplo, puede utilizar esta opción para definir dos copias de seguridad semanales: una el miércoles y otra el viernes.
     - **Cada X mes(es), X día a x**: Permite programar copias de seguridad de forma mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Cuando esta opción está marcada, debe indicar el día de cada mes y la hora a la cual debe comenzar la copia de seguridad.
 
-> Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
+> Los cambios de la hora estándar a la hora de verano podrían afectar temporalmente al programador automático y activar la siguiente copia de seguridad con un cambio de hora de una hora. Esto ocurre sólo una vez y las siguientes copias de seguridad se ejecutan a la hora prevista.
 
 
 ## Configuración
@@ -43,7 +43,7 @@ La página Copia de seguridad/Configuración de las Propiedades de la base permi
 
 ![](assets/en/Backup/backup03.png)
 
-> **4D Server:** These parameters can only be set from the 4D Server machine.
+> **4D Server:** estos parámetros sólo se pueden configurar desde la máquina 4D Server.
 
 ### Contenido
 Esta área le permite determinar qué archivos y/o carpetas deben copiarse durante la siguiente copia de seguridad.
@@ -71,7 +71,7 @@ La opción **Utilizar el archivo de historial**, cuando está marcada, indica qu
 
 Por defecto, toda base creada con 4D utiliza un archivo de historial (opción seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la base. When you check this option, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la base.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la base. Al marcar esta opción, un mensaje de advertencia le informa de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la base.
 
 
 ## Copia de seguridad y restitución
