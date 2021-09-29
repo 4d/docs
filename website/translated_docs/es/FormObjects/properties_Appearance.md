@@ -393,7 +393,7 @@ Valores disponibles:
 ---
 ## View mode
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+Sets the mode for displaying the 4D Write Pro document in the form area. Hay tres valores disponibles:
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties
