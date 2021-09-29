@@ -87,9 +87,9 @@ The table below shows choices available:
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                 |
-| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                              |
+| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (puede combinarse con otros valores posibles) |
 
 #### Objetos soportados
 
@@ -347,9 +347,9 @@ The table below shows the Time field display formats and gives examples:
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                         |
-| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                      |
+| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (puede combinarse con otros valores posibles) |
 
 #### Objetos soportados
 
@@ -599,9 +599,9 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                                   |
-| -------- | -------------- | -------------------------------------------------- |
-| wordwrap | cadena         | "automatic" (excluding list box), "normal", "none" |
+| Nombre   | Tipos de datos | Valores posibles                                    |
+| -------- | -------------- | --------------------------------------------------- |
+| wordwrap | cadena         | "automatic" (excluyendo list box), "normal", "none" |
 
 #### Objetos soportados
 
