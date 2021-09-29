@@ -763,11 +763,11 @@ ARRAY OBJECT(obColumn;0) //column array
 
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
-*   "text": for a text value
+*   "text": para un valor de texto
 *   "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
 *   "integer": para un valor entero
 *   "boolean": for a True/False value
-*   "color": to define a background color
+*   "color": para definir un color de fondo
 *   "event": to display a button with a label.
 
 4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
