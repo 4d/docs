@@ -54,7 +54,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 
 ---
-## Enterable
+## Editable
 
 The Enterable attribute indicates whether users can enter values into the object.
 
@@ -65,9 +65,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles |
-| --------- | -------------- | ---------------- |
-| enterable | booleano       | true, false      |
+| Nombre   | Tipos de datos | Valores posibles |
+| -------- | -------------- | ---------------- |
+| editable | booleano       | true, false      |
 
 #### Objetos soportados
 
@@ -190,9 +190,9 @@ By default, the object uses the current keyboard layout.
 
 
 ---
-## Multiline
+## Multilínea
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. Puede tener tres valores diferentes: Sí, No, Automático (por defecto).
 
 #### Automático
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
@@ -210,9 +210,9 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles                                       |
-| --------- | -------------- | ------------------------------------------------------ |
-| multiline | texto          | "yes", "no", "automatic" (por defecto si no se define) |
+| Nombre     | Tipos de datos | Valores posibles                                       |
+| ---------- | -------------- | ------------------------------------------------------ |
+| multilínea | texto          | "yes", "no", "automatic" (por defecto si no se define) |
 
 
 #### Objetos soportados
@@ -257,7 +257,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Ver también
 
-[Help tip](properties_Help.md)
+[Mensaje de ayuda](properties_Help.md)
 
 
 
@@ -281,7 +281,7 @@ This property keeps the selection visible within the object after it has lost th
 
 
 ---
-## Shortcut
+## Atajo
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 
