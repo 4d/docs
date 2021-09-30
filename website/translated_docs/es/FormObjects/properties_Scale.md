@@ -23,7 +23,7 @@ Enables the "barber shop" variant for the thermometer.
 ---
 ## Display graduation
 
-Displays/Hides the graduations next to the labels.
+Muestra/Oculta las graduaciones junto a las etiquetas.
 
 #### Gramática JSON
 
@@ -61,7 +61,7 @@ Scale display measurement.
 Specifies the location of an object's displayed text.
 
 * None - no label is displayed
-* Top - Displays labels to the left of or above an indicator
+* Arriba - Muestra las etiquetas a la izquierda o sobre el indicador
 * Bottom - Displays labels to the right of or below an indicator
 
 #### Gramática JSON
@@ -77,7 +77,7 @@ Specifies the location of an object's displayed text.
 
 
 ---
-## Maximum
+## Máximo
 
 Maximum value of an indicator.
 
@@ -97,7 +97,7 @@ Maximum value of an indicator.
 
 
 ---
-## Minimum
+## Mínimo
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 
@@ -117,7 +117,7 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 ---
 ## Step
 
-Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
+Intervalo mínimo aceptado entre los valores durante el uso. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
 #### Gramática JSON
 
