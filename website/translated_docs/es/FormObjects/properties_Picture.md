@@ -4,7 +4,7 @@ title: Imagen
 ---
 
 ---
-## Pathname
+## Ruta de acceso
 
 Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
 
