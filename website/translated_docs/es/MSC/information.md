@@ -6,7 +6,7 @@ sidebar_label: Página de información
 
 The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
 
-## Program
+## Programa
 
 This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
 
