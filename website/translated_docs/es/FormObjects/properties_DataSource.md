@@ -36,14 +36,14 @@ When the **automatic insertion** option is not selected (default), the value ent
 ---
 ## Choice List
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos   | Valores posibles                                    |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
-| lista      | list, collection | A list of possible values (hierarchical lists only) |
+| Nombre     | Tipos de datos   | Valores posibles                                              |
+| ---------- | ---------------- | ------------------------------------------------------------- |
+| choiceList | list, collection | A list of possible values                                     |
+| lista      | list, collection | Una lista de valores posibles (listas jerárquicas únicamente) |
 
 
 #### Objetos soportados
