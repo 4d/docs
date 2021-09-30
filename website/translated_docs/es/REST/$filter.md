@@ -67,7 +67,7 @@ You can search in the object by writing the following:
 
 ## Comparator
 
-The comparator must be one of the following values:
+El comparador debe ser uno de los siguientes valores:
 
 | Comparator | Descripción              |
 | ---------- | ------------------------ |
