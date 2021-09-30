@@ -391,7 +391,7 @@ Valores disponibles:
 [Horizontal scroll bar](#horizontal-scroll-bar)
 
 ---
-## View mode
+## Modo de visualización
 
 Sets the mode for displaying the 4D Write Pro document in the form area. Hay tres valores disponibles:
 
