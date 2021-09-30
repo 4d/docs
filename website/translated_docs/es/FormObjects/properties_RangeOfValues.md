@@ -69,9 +69,9 @@ Making a list required does not automatically display the list when the field is
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles            |
-| ------------ | -------------- | --------------------------- |
-| requiredList | lista          | A list of mandatory values. |
+| Nombre       | Tipos de datos | Valores posibles                   |
+| ------------ | -------------- | ---------------------------------- |
+| requiredList | lista          | Una lista de valores obligatorios. |
 
 #### Objetos soportados
 

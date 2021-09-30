@@ -8,14 +8,14 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 ## Descripción
 When you call this request for your project, you retrieve information in the following properties:
 
-| Propiedad      | Tipo      | Descripción                                                                         |
-| -------------- | --------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Número    | 4D Server's cache size.                                                             |
-| usedCache      | Número    | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Número    | Number of entity selections.                                                        |
-| entitySet      | Colección | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Colección | A collection containing information about progress indicator information.           |
-| sessionInfo    | Colección | A collection in which each object contains information about each user session.     |
+| Propiedad      | Tipo       | Descripción                                                                         |
+| -------------- | ---------- | ----------------------------------------------------------------------------------- |
+| cacheSize      | Número     | 4D Server's cache size.                                                             |
+| usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Número     | Number of entity selections.                                                        |
+| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
+| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
+| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
 
 ### entitySet
 For each entity selection currently stored in 4D Server's cache, the following information is returned:

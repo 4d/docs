@@ -21,14 +21,14 @@ If you want to pass an Object attribute, you must pass one of its property. Por 
 You can use any of the following keywords:
 
 
-| Keyword | Descripción                                                                                                                                                                           |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
-| average | Get the average on a numerical attribute                                                                                                                                              |
-| count   | Obtener el número total en la colección o en la clase de datos (en ambos casos hay que especificar un atributo)                                                                       |
-| min     | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
-| max     | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
-| sum     | Get the sum on a numerical attribute                                                                                                                                                  |
+| Palabras clave | Descripción                                                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $all           | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
+| average        | Get the average on a numerical attribute                                                                                                                                              |
+| count          | Obtener el número total en la colección o en la clase de datos (en ambos casos hay que especificar un atributo)                                                                       |
+| min            | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
+| max            | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
+| sum            | Get the sum on a numerical attribute                                                                                                                                                  |
 
 
 ## Ejemplo

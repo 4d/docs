@@ -65,7 +65,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 | Nombre    | Tipos de datos | Valores posibles |
 | --------- | -------------- | ---------------- |
-| urlSource | cadena         | A URL.           |
+| urlSource | cadena         | Una URL.         |
 
 #### Objetos soportados
 

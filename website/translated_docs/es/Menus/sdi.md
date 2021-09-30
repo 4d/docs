@@ -56,7 +56,7 @@ To handle this case, 4D applications executed in SDI mode include a mechanism to
 
 > When a menu with an associated *quit* standard action is called, the application quits and all windows are closed, wherever the menu was called from.
 
-## Language
+## Lenguaje
 
 Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
 

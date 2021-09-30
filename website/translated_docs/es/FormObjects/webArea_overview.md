@@ -154,7 +154,7 @@ Cuando se ejecuta el formulario, las funciones estándar de la interfaz del nave
 - **El menú contextual**: es posible utilizar el [menú contextual](properties_Entry.md#context-menu) estándar del sistema con el área web. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D. Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor del ratón muestra un icono "prohibido" <img src="assets/es/FormObjects/forbidden.png" alt=" />. Tiene que utilizar el comando `WA SET PREFERENCE` para permitir explícitamente soltar URLs o archivos en el área.
 
-### Subforms
+### Subformularios
 Por razones relacionadas con los mecanismos de redibujado de ventanas, la inserción de un área web en un subformulario está sujeta a las siguientes restricciones:
 
 - The subform must not be able to scroll

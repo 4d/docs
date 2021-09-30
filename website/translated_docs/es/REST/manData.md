@@ -64,7 +64,7 @@ For example, to get the highest salary:
 
 `/rest/Employee/salary/?$compute=sum`
 
-To compute all values and return a JSON object:
+Para calcular todos los valores y devolver un objeto JSON:
 
 `/rest/Employee/salary/?$compute=$all`
 

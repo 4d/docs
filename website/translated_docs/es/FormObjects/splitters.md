@@ -30,7 +30,7 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
     "top": 160,   
     "width": 100,  
     "height": 20,  
-    "splitterMode": "move"  //pusher
+    "splitterMode": "move"  //pulsador
     }
 ```
 

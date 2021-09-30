@@ -121,7 +121,7 @@ Each state is represented by a different picture. In the source picture, the sta
 The following states are represented:
 1. button not clicked / check box unchecked (variable value=0)
 2. button clicked / check box checked (variable value=1)
-3. roll over
+3. pasar por encima
 4. disabled
 
 
@@ -174,7 +174,7 @@ Here are the results using the various options for this property:
 | **Arriba**    | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Derecha**   | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Abajo**     | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered**  | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
+| **Centrado**  | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
 

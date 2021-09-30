@@ -267,7 +267,7 @@ En el método `ChangeAge` puede escribir:
 Esto ofrece una poderosa manera de definir [parámetros opcionales](#optional-parameters) (ver también abajo). Para manejar los parámetros que faltan, puede:
 - verificar si se suministran todos los parámetros esperados comparándolos con el valor `Null`, o
 - predefinir los valores de los parámetros, o
-- use them as empty values.
+- utilizarlos como valores vacíos.
 
 En el método `ChangeAge` anterior, las propiedades Age y Name son obligatorias y producirían errores si faltaran. Para evitar este caso, puede escribir simplemente:
 
