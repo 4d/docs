@@ -8,7 +8,7 @@ You can get several information from the REST server:
 - the exposed datastores and their attributes
 - the REST server cache contents, including user sessions.
 
-## Catalog
+## Catálogo
 
 Utilice los parámetros [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), o [`$catalog/$all`]($catalog.md#catalogall) para obtener la lista de [las clases de datos expuestas y sus atributos](configuration.md#exposing-tables-and-fields).
 
