@@ -14,11 +14,11 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 
 ## Utilizar un array
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. Una lista desplegable muestra un array como una lista de valores cuando se hace clic en ella.
 
 Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
 * Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:
 
