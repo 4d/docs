@@ -31,7 +31,7 @@ El usuario puede seleccionar una o varias líneas utilizando los atajos estánda
 Un list box se compone de cuatro partes distintas:
 
 *   el objeto list box en su totalidad,
-*   columns,
+*   las columnas,
 *   column headers, and
 *   column footers.
 
@@ -777,7 +777,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| booleano  | check box                                      | drop-down menu (required list)                                                                 |
+| booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
 | color     | background color                               | texto                                                                                          |
 | evento    | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
@@ -795,7 +795,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" y "-"             |
 |            |                                                            | "0-9" if min>=0         |
-| Booleano   | check box                                                  | N/A                     |
+| Booleano   | casilla de selección                                       | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | evento     | N/A                                                        | N/A                     |
 
@@ -827,7 +827,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+Cell values are stored in the "value" attribute. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
  ARRAY OBJECT(obColumn;0) //array columna 
@@ -895,7 +895,7 @@ Cuando un atributo "choiceList" o "requiredList" está presente dentro del objet
 *   If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
-> The widget values are defined through an array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
+> Los valores del widget se definen a través de un array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
 
 Ejemplos:
 
