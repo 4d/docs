@@ -83,7 +83,7 @@ Assigning the value to the variable generates the `On Data Change` form event in
 
 The object can be created automatically or be the parent container variable, if explicitely named and typed as Object (see below). In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
 
-For example, in your subform, field labels are stored in the bound object so that you can display different languages:
+Por ejemplo, en su subformulario, las etiquetas de los campos se almacenan en el objeto vinculado para poder mostrar diferentes lenguajes:
 
 ![](assets/en/FormObjects/subforms4.png)
 
