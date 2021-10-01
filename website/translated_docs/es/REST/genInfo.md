@@ -17,7 +17,7 @@ To get the collection of all exposed dataclasses along with their attributes:
 `GET /rest/$catalog/$all`
 
 
-## Cache info
+## Información de la caché
 
 Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
 
