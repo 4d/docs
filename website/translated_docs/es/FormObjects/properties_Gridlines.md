@@ -4,17 +4,17 @@ title: Rejillas
 ---
 
 ---
-## Horizontal Line Color
+## Color líneas horizontales
 
 Defines the color of the horizontal lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                 | Data Type | Possible Values                            |
-| -------------------- | --------- | ------------------------------------------ |
-| horizontalLineStroke | color     | any css value, "'transparent", "automatic" |
+| Nombre               | Tipos de datos | Valores posibles                           |
+| -------------------- | -------------- | ------------------------------------------ |
+| horizontalLineStroke | color          | any css value, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -22,16 +22,16 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 
 ---
-## Vertical Line Color
+## Color líneas verticales
 
 Defines the color of the vertical lines in a list box (gray by default).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Data Type | Possible Values                            |
-| ------------------ | --------- | ------------------------------------------ |
-| verticalLineStroke | color     | any css value, "'transparent", "automatic" |
+| Nombre             | Tipos de datos | Valores posibles                           |
+| ------------------ | -------------- | ------------------------------------------ |
+| verticalLineStroke | color          | any css value, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)

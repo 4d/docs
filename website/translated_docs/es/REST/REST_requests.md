@@ -18,9 +18,9 @@ While all REST requests must contain the URI and Resource parameters, the Output
 As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Por ejemplo:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
-> You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
+> Puede colocar todos los valores entre comillas en caso de ambigüedad. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
 
-The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+The parameters allow you to manipulate data in dataclasses in your 4D project. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 
@@ -31,7 +31,7 @@ With each REST request, the server returns the status and a response (with or wi
 ### Request Status
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
-| Status                    | Descripción                                                                |
+| Estado                    | Descripción                                                                |
 | ------------------------- | -------------------------------------------------------------------------- |
 | 0                         | Request not processed (server might not be started).                       |
 | 200 OK                    | Request processed without error.                                           |

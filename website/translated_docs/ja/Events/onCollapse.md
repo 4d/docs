@@ -3,15 +3,15 @@ id: onCollapse
 title: On Collapse
 ---
 
-| Code | Can be called by                                                                                         | 定義                                                                                                           |
-| ---- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 44   | [Hierarchical List](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md) | An element of the hierarchical list or hierarchical list box has been collapsed using a click or a keystroke |
+| コード | 呼び出し元                                                                                       | 定義                                        |
+| --- | ------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| 44  | [階層リスト](FormObjects/list_overview.md#overview) - [リストボックス](FormObjects/listbox_overview.md) | クリックやキーストロークで階層リストまたは階層リストボックスの要素が折りたたまれた |
 
 
 ## 説明
 
-- [Hierarchical list](FormObjects/list_overview.md): This event is generated every time an element of the hierarchical list is collapsed with a mouse click or keystroke.
-- [Hierarchical list boxes](FormObjects/listbox_overview.md#hierarchical-list-boxes): This event is generated when a row of the hierarchical list box is collapsed.
+- [階層リスト](FormObjects/list_overview.md): このイベントは、マウスクリックやキーストロークで階層リストの要素が折りたたまれるたびに呼び出されます。
+- [階層リストボックス](FormObjects/listbox_overview.md#階層リストボックス): このイベントは、階層リストボックスの行が折りたたまれたときに生成されます。
 
 
 ### 参照

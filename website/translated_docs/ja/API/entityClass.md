@@ -1,6 +1,6 @@
 ---
-id: entityClass
-title: Entity
+id: EntityClass
+title: エンティティ
 ---
 
 レコードとテーブルの関係と同様に、[エンティティ](ORDA/dsMapping.md#エンティティ) は [データクラス](ORDA/dsMapping.md#データクラス) のインスタンスです。 エンティティはデータクラスと同じ属性を持つほか、データ値や、特有のプロパティおよび関数を持ちます。
@@ -10,35 +10,35 @@ title: Entity
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE entityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.attributeName.Summary -->|
-| [<!-- INCLUDE #entityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.clone().Summary -->|
-| [<!-- INCLUDE #entityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.diff().Summary -->|
-| [<!-- INCLUDE #entityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.drop().Summary -->|
-| [<!-- INCLUDE #entityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.first().Summary -->|
-| [<!-- INCLUDE #entityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.fromObject().Summary -->|
-| [<!-- INCLUDE #entityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getDataClass().Summary -->|
-| [<!-- INCLUDE #entityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getKey().Summary -->|
-| [<!-- INCLUDE #entityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getSelection().Summary -->|
-| [<!-- INCLUDE #entityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getStamp().Summary -->|
-| [<!-- INCLUDE #entityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.indexOf().Summary -->|
-| [<!-- INCLUDE #entityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.isNew().Summary -->|
-| [<!-- INCLUDE #entityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.last().Summary -->|
-| [<!-- INCLUDE #entityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.lock().Summary -->|
-| [<!-- INCLUDE #entityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.next().Summary -->|
-| [<!-- INCLUDE #entityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.previous().Summary -->|
-| [<!-- INCLUDE #entityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.reload().Summary -->|
-| [<!-- INCLUDE #entityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.save().Summary -->|
-| [<!-- INCLUDE #entityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.toObject().Summary -->|
-| [<!-- INCLUDE #entityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.touched().Summary -->|
-| [<!-- INCLUDE #entityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.touchedAttributes().Summary -->|
-| [<!-- INCLUDE #entityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.unlock().Summary -->|
+| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
+| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
+| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
+| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->|
+| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->|
+| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
+| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
+| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
+| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
+| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
+| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->|
+| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->|
+| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->|
+| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->|
+| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->|
+| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->|
+| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->|
+| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->|
+| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->|
+| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->|
+| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->|
 
 
 
 
 
 
-<!-- REF entityClass.attributeName.Desc -->
+<!-- REF EntityClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>履歴</summary>
@@ -47,16 +47,16 @@ title: Entity
 | v17   | 追加 |
 </details>
 
-<!-- REF entityClass.attributeName.Syntax -->
+<!-- REF EntityClass.attributeName.Syntax -->
 ***.attributeName*** : any<!-- END REF -->
 
 
 #### 説明
 
-データクラス属性はすべてエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF entityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
+データクラス属性はすべてエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
-この属性値タイプは属性の種類 ([](dataclassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。
+この属性値タイプは属性の種類 ([](DataClassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。
 
 *   *attributeName* で指定した属性がストレージ型の場合: `.attributeName`は *attributeName* と同じ型の値を返します。
 *   *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
@@ -78,7 +78,7 @@ title: Entity
 
 
 
-<!-- REF entityClass.clone().Desc -->
+<!-- REF EntityClass.clone().Desc -->
 ## .clone()
 
 <details><summary>履歴</summary>
@@ -88,11 +88,11 @@ title: Entity
 </details>
 
 
-<!-- REF #entityClass.clone().Syntax -->
+<!-- REF #EntityClass.clone().Syntax -->
 **.clone()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.clone().Params -->
-| 参照  | タイプ       |    | 説明                  |
+<!-- REF #EntityClass.clone().Params -->
+| 引数  | タイプ       |    | 説明                  |
 | --- | --------- |:--:| ------------------- |
 | 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
 <!-- END REF -->
@@ -100,7 +100,7 @@ title: Entity
 
 #### 説明
 
-`.clone()` 関数は、 <!-- REF #entityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
 > エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
@@ -123,7 +123,7 @@ title: Entity
 
 
 
-<!-- REF entityClass.diff().Desc -->
+<!-- REF EntityClass.diff().Desc -->
 ## .diff()
 
 <details><summary>履歴</summary>
@@ -132,22 +132,22 @@ title: Entity
 | v17   | 追加 |
 </details>
 
-<!-- REF #entityClass.diff().Syntax -->
+<!-- REF #EntityClass.diff().Syntax -->
 **.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
 
-<!-- REF #entityClass.diff().Params -->
-| 参照                  | タイプ       |    | 説明                  |
-| ------------------- | --------- |:--:| ------------------- |
-| entityToCompare     | 4D.Entity | -> | 対象エンティティと比較するエンティティ |
-| attributesToCompare | コレクション    | -> | 比較する属性の名称           |
-| 戻り値                 | コレクション    | <- | エンティティ間の差異          |
+<!-- REF #EntityClass.diff().Params -->
+| 引数                  | タイプ        |    | 説明                  |
+| ------------------- | ---------- |:--:| ------------------- |
+| entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ |
+| attributesToCompare | Collection | -> | 比較する属性の名称           |
+| 戻り値                 | Collection | <- | エンティティ間の差異          |
 <!-- END REF -->
 
 
 #### 説明
 
-`.diff()` 関数は、 <!-- REF #entityClass.diff().Summary -->二つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
+`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->二つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
 
 *entityToCompare* には、オリジナルのエンティティと比較をするエンティティを渡します。
 
@@ -155,15 +155,15 @@ title: Entity
 
 エンティティの差異は、以下のプロパティを持つオブジェクトのコレクションとして返されます:
 
-| プロパティ名        | タイプ     | 説明                     |
-| ------------- | ------- | ---------------------- |
-| attributeName | String  | 属性名                    |
-| value         | 属性の型による | オリジナルエンティティの属性値        |
-| otherValue    | 属性の型による | *entityToCompare* の属性値 |
+| プロパティ名        | タイプ           | 説明                     |
+| ------------- | ------------- | ---------------------- |
+| attributeName | String        | 属性名                    |
+| value         | any - 属性の型による | オリジナルエンティティの属性値        |
+| otherValue    | any - 属性の型による | *entityToCompare* の属性値 |
 
 コレクションに含まれるのは異なる値を持っていた属性のみです。 差異が見つからない場合、`diff()` は空のコレクションを返します。
 
-この関数は、種類 ([kind](dataclassAttributeClass.md#kind)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
+この関数は、種類 ([kind](DataClassAttributeClass.md#kind)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
 
 比較するどちらかのエンティティが **Null** である場合、エラーが生成されます。
 
@@ -327,7 +327,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.drop().Desc -->
+<!-- REF EntityClass.drop().Desc -->
 ## .drop()
 
 <details><summary>履歴</summary>
@@ -337,19 +337,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.drop().Syntax -->
+<!-- REF #EntityClass.drop().Syntax -->
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.drop().Params -->
-| 参照   | タイプ    |    | 説明                                                           |
-| ---- | ------ |:--:| ------------------------------------------------------------ |
-| mode | 整数     | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
-| 戻り値  | オブジェクト | <- | ドロップの結果                                                      |
+<!-- REF #EntityClass.drop().Params -->
+| 引数   | タイプ     |    | 説明                                                           |
+| ---- | ------- |:--:| ------------------------------------------------------------ |
+| mode | Integer | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
+| 戻り値  | Object  | <- | ドロップの結果                                                      |
 <!-- END REF -->
 
 #### 説明
 
-`.drop()` 関数は、データクラスに対応するテーブルにおいて、 <!-- REF #entityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 エンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、データクラスに対応するテーブルにおいて、 <!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 エンティティそのものはメモリ内に残るという点に注意してください。
 
 マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
@@ -361,35 +361,35 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.drop( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ         |                     | タイプ           | 説明                                                                       |
-| ------------- | ------------------- | ------------- | ------------------------------------------------------------------------ |
-| success       |                     | boolean       | ドロップが成功した場合には true、それ以外は false                                           |
-|               |                     |               | ***エラーの場合にのみ利用可能:***                                                     |
-| status(*)     |                     | number        | エラーコード、以下参照                                                              |
-| statusText(*) |                     | text          | エラーの詳細、以下参照                                                              |
-|               |                     |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
-| LockKindText  |                     | text          | "Locked by record"                                                       |
-| lockInfo      |                     | object        | ロック元についての情報                                                              |
-|               | task_id             | number        | プロセスID                                                                   |
-|               | user_name           | text          | マシン上でのセッションユーザー名                                                         |
-|               | user4d_id           | text          | 4Dデータベースディレクトリでのユーザー名                                                    |
-|               | host_name           | text          | マシン名                                                                     |
-|               | task_name           | text          | プロセス名                                                                    |
-|               | client_version      | text          |                                                                          |
-|               |                     |               | ***深刻なエラーの場合にのみ利用可能 (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):*** |
-| errors        |                     | オブジェクトのコレクション |                                                                          |
-|               | message             | text          | エラーメッセージ                                                                 |
-|               | component signature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
-|               | errCode             | number        | エラーコード                                                                   |
+| プロパティ         |                     | タイプ                 | 説明                                                                       |
+| ------------- | ------------------- | ------------------- | ------------------------------------------------------------------------ |
+| success       |                     | boolean             | ドロップが成功した場合には true、それ以外は false                                           |
+|               |                     |                     | ***エラーの場合にのみ利用可能:***                                                     |
+| status(*)     |                     | number              | エラーコード、以下参照                                                              |
+| statusText(*) |                     | text                | エラーの詳細、以下参照                                                              |
+|               |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
+| LockKindText  |                     | text                | "Locked by record"                                                       |
+| lockInfo      |                     | object              | ロック元についての情報                                                              |
+|               | task_id             | number              | プロセスID                                                                   |
+|               | user_name           | text                | マシン上でのセッションユーザー名                                                         |
+|               | user4d_alias        | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|               | host_name           | text                | マシン名                                                                     |
+|               | task_name           | text                | プロセス名                                                                    |
+|               | client_version      | text                |                                                                          |
+|               |                     |                     | ***深刻なエラーの場合にのみ利用可能 (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):*** |
+| errors        |                     | Object の Collection |                                                                          |
+|               | message             | text                | エラーメッセージ                                                                 |
+|               | component signature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|               | errCode             | number              | エラーコード                                                                   |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 結果 | 説明                                                                                                                                                                            |
-| ----------------------------------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><p>**割り当てられた statusText**: "エンティティはもう存在しません" |
-| `dk status locked`                        | 3  | エンティティはペシミスティック・ロックでロックされています。<br>**割り当てられた statusText**: "既にロックされています"                                                                                                 |
-| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br>**割り当てられた statusText**: "その他のエラー"                                                                                   |
-| `dk status stamp has changed`             | 2  | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "スタンプが変更されています"</li> |
+| 定数                                        | 値 | 説明                                                                                                                                                                            |
+| ----------------------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><p>**割り当てられた statusText**: "エンティティはもう存在しません" |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<br>**割り当てられた statusText**: "既にロックされています"                                                                                                 |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br>**割り当てられた statusText**: "その他のエラー"                                                                                   |
+| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "スタンプが変更されています"</li> |
 
 
 #### 例題 1
@@ -435,7 +435,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.first().Desc -->
+<!-- REF EntityClass.first().Desc -->
 ## .first()
 
 <details><summary>履歴</summary>
@@ -445,18 +445,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.first().Syntax -->
+<!-- REF #EntityClass.first().Syntax -->
 **.first()**: 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.first().Params -->
-| 参照  | タイプ       |    | 説明                                        |
+<!-- REF #EntityClass.first().Params -->
+| 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
 
-`.first()` 関数は、 <!-- REF #entityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
+`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -474,7 +474,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.fromObject().Desc -->
+<!-- REF EntityClass.fromObject().Desc -->
 ## .fromObject()
 
 <details><summary>履歴</summary>
@@ -484,24 +484,25 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.fromObject().Syntax -->
+<!-- REF #EntityClass.fromObject().Syntax -->
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
-<!-- REF #entityClass.fromObject().Params -->
-| 参照     | タイプ    |    | 説明                    |
+<!-- REF #EntityClass.fromObject().Params -->
+| 引数     | タイプ    |    | 説明                    |
 | ------ | ------ |:--:| --------------------- |
-| filler | オブジェクト | -> | エンティティの属性値を設定するオブジェクト |
+| filler | Object | -> | エンティティの属性値を設定するオブジェクト |
 <!-- END REF -->
 
 #### 説明
 
-`.fromObject()` 関数は、 <!-- REF #entityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
+`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
 > このコマンドは、元のエンティティを変更します。
 
 オブジェクトとエンティティ間のマッピングは属性名でおこなわれます:
 
 *   オブジェクトのプロパティがデータクラスに存在しない場合、それは無視されます。
 *   データタイプは同じである必要があります。 オブジェクトとデータクラス間で型が合致しない場合、4D は可能であればデータを変換しようとし ([`データタイプの変換`](Concepts/data-types.md#データタイプの変換)) 参照)、それ以外の場合にはその属性は更新されません。
+*   プライマリーキーはそのまま、あるいは "__KEY" プロパティを (プライマリーキー値とともに) 使って指定することができます。 その値のエンティティがデータクラス内に存在しない場合には、[.save()](#save) が呼び出されたときに指定値を使ってエンティティが作成されます。 プライマリーキーを指定していない場合、エンティティは作成され、データベースのルールに基づいてプライマリーキー値が割り当てられます。 自動インクリメント機能はプライマリーキーが null の場合にのみ計算されます。
 
 *filler* 引数のオブジェクトは、以下の条件のいずれかを満たしている場合にはリレートエンティティを扱うことができます:
 
@@ -563,7 +564,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.getDataClass().Desc -->
+<!-- REF EntityClass.getDataClass().Desc -->
 ## .getDataClass()
 
 <details><summary>履歴</summary>
@@ -573,18 +574,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.getDataClass().Syntax -->
+<!-- REF #EntityClass.getDataClass().Syntax -->
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
-<!-- REF #entityClass.getDataClass().Params -->
-| 参照  | タイプ          |    | 説明                             |
+<!-- REF #EntityClass.getDataClass().Params -->
+| 引数  | タイプ          |    | 説明                             |
 | --- | ------------ |:--:| ------------------------------ |
 | 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト |
 <!-- END REF -->
 
 #### 説明
 
-`.getDataClass()` 関数は、 <!-- REF #entityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
+`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
 
 
 #### 例題
@@ -610,7 +611,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.getKey().Desc -->
+<!-- REF EntityClass.getKey().Desc -->
 ## .getKey()
 
 <details><summary>履歴</summary>
@@ -620,21 +621,21 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.getKey().Syntax -->
+<!-- REF #EntityClass.getKey().Syntax -->
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
-<!-- REF #entityClass.getKey().Params -->
-| 参照   | タイプ  |    | 説明                                                       |
-| ---- | ---- |:--:| -------------------------------------------------------- |
-| mode | 整数   | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| 戻り値  | テキスト | <- | エンティティのテキスト型プライマリーキーの値                                   |
-| 戻り値  | 整数   | <- | エンティティの数値型プライマリーキーの値                                     |
+<!-- REF #EntityClass.getKey().Params -->
+| 引数   | タイプ     |    | 説明                                                       |
+| ---- | ------- |:--:| -------------------------------------------------------- |
+| mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
+| 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                   |
+| 戻り値  | Integer | <- | エンティティの数値型プライマリーキーの値                                     |
 
 <!-- END REF -->
 
 #### 説明
 
-`.getKey()` 関数は、 <!-- REF #entityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
+`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
 
 プライマリーキーは数値 (倍長整数) あるいは文字列です。 *mode* 引数として `dk key as string` オプションを渡すことで、実際のプライマリーキーの型に関係なく、返されるプライマリーキー値の型を文字列に "強制" することができます。
 
@@ -654,7 +655,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.getSelection().Desc -->
+<!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
 
 <details><summary>履歴</summary>
@@ -664,18 +665,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.getSelection().Syntax -->
+<!-- REF #EntityClass.getSelection().Syntax -->
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
-<!-- REF #entityClass.getSelection().Params -->
-| 参照  | タイプ                |    | 説明                                      |
+<!-- REF #EntityClass.getSelection().Params -->
+| 引数  | タイプ                |    | 説明                                      |
 | --- | ------------------ |:--:| --------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
 
-`.getSelection()` 関数は、 <!-- REF #entityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
+`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -698,7 +699,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.getStamp().Desc -->
+<!-- REF EntityClass.getStamp().Desc -->
 ## .getStamp()
 
 <details><summary>履歴</summary>
@@ -708,18 +709,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.getStamp().Syntax -->
+<!-- REF #EntityClass.getStamp().Syntax -->
 **.getStamp()** : Integer<!-- END REF -->
 
-<!-- REF #entityClass.getStamp().Params -->
-| 参照  | タイプ |    | 説明                                   |
-| --- | --- |:--:| ------------------------------------ |
-| 戻り値 | 整数  | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
+<!-- REF #EntityClass.getStamp().Params -->
+| 引数  | タイプ     |    | 説明                                   |
+| --- | ------- |:--:| ------------------------------------ |
+| 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
 <!-- END REF -->
 
 #### 説明
 
-`.getStamp()` 関数は、 <!-- REF #entityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
+`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
 
 内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
@@ -747,7 +748,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.indexOf().Desc -->
+<!-- REF EntityClass.indexOf().Desc -->
 ## .indexOf()
 
 <details><summary>履歴</summary>
@@ -757,19 +758,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.indexOf().Syntax -->
+<!-- REF #EntityClass.indexOf().Syntax -->
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
-<!-- REF #entityClass.indexOf().Params -->
-| 参照              | タイプ                |    | 説明                            |
+<!-- REF #EntityClass.indexOf().Params -->
+| 引数              | タイプ                |    | 説明                            |
 | --------------- | ------------------ |:--:| ----------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション |
-| 戻り値             | 整数                 | <- | エンティティセレクション内でのエンティティの位置      |
+| 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置      |
 <!-- END REF -->
 
 #### 説明
 
-`.indexOf()` 関数は、 <!-- REF #entityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
+`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
 
 *entitySelection* 引数が渡されなかった場合はデフォルトで、所属エンティティセレクション内でのエンティティの位置が返されます。 *entitySelection* 引数を渡した場合は、指定されたエンティティセレクション内でのエンティティの位置を返します。
 
@@ -797,7 +798,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.isNew().Desc -->
+<!-- REF EntityClass.isNew().Desc -->
 ## .isNew()
 
 <details><summary>履歴</summary>
@@ -807,18 +808,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.isNew().Syntax -->
+<!-- REF #EntityClass.isNew().Syntax -->
 **.isNew()** : Boolean<!-- END REF -->
 
-<!-- REF #entityClass.isNew().Params -->
-| 参照  | タイプ |    | 説明                                         |
-| --- | --- |:--:| ------------------------------------------ |
-| 戻り値 | ブール | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
+<!-- REF #EntityClass.isNew().Params -->
+| 引数  | タイプ     |    | 説明                                         |
+| --- | ------- |:--:| ------------------------------------------ |
+| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
 <!-- END REF -->
 
 #### 説明
 
-`.isNew()` 関数は、 <!-- REF #entityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
+`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
 
 
 #### 例題
@@ -838,7 +839,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.last().Desc -->
+<!-- REF EntityClass.last().Desc -->
 ## .last()
 
 <details><summary>履歴</summary>
@@ -848,18 +849,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.last().Syntax -->
+<!-- REF #EntityClass.last().Syntax -->
 **.last()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.last().Params -->
-| 参照  | タイプ       |    | 説明                                        |
+<!-- REF #EntityClass.last().Params -->
+| 引数  | タイプ       |    | 説明                                        |
 | --- | --------- |:--:| ----------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
 
-`.last()` 関数は、 <!-- REF #entityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
+`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -879,7 +880,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.lock().Desc -->
+<!-- REF EntityClass.lock().Desc -->
 ## .lock()
 
 <details><summary>履歴</summary>
@@ -889,19 +890,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.lock().Syntax -->
+<!-- REF #EntityClass.lock().Syntax -->
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.lock().Params -->
-| 参照   | タイプ    |    | 説明                                                       |
-| ---- | ------ |:--:| -------------------------------------------------------- |
-| mode | 整数     | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
-| 戻り値  | オブジェクト | <- | ロックの結果                                                   |
+<!-- REF #EntityClass.lock().Params -->
+| 引数   | タイプ     |    | 説明                                                       |
+| ---- | ------- |:--:| -------------------------------------------------------- |
+| mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
+| 戻り値  | Object  | <- | ロックの結果                                                   |
 <!-- END REF -->
 
 #### 説明
 
-`.lock()` 関数は、 <!-- REF #entityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
+`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
@@ -918,39 +919,39 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.lock( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ            |                     | タイプ           | 説明                                                                       |
-| ---------------- | ------------------- | ------------- | ------------------------------------------------------------------------ |
-| success          |                     | boolean       | ロックに成功した場合 (あるいはエンティティがすでにカレントプロセスでロックされていた場合) には true、それ以外は false       |
-|                  |                     |               | ***`dk reload if stamp changed` オプションが使用されていた場合にのみ利用可能:***               |
-| **wasReloaded**  |                     | boolean       | エンティティがリロードされ、かつリロードに成功した場合には true、それ以外は false                           |
-|                  |                     |               | ***エラーの場合にのみ利用可能:***                                                     |
-| status(\*)     |                     | number        | エラーコード、以下参照                                                              |
-| statusText(\*) |                     | text          | エラーの詳細、以下参照                                                              |
-|                  |                     |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
-| lockKindText     |                     | text          | "Locked by record"                                                       |
-| lockInfo         |                     | object        | ロック元についての情報                                                              |
-|                  | task_id             | number        | プロセスID                                                                   |
-|                  | user_name           | text          | マシン上でのセッションユーザー名                                                         |
-|                  | user4d_alias        | text          | 4D ユーザーの名前またはエイリアス                                                       |
-|                  | user4d_id           | number        | 4DデータベースディレクトリでのユーザーID                                                   |
-|                  | host_name           | text          | マシン名                                                                     |
-|                  | task_name           | text          | プロセス名                                                                    |
-|                  | client_version      | text          |                                                                          |
-|                  |                     |               | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
-| errors           |                     | オブジェクトのコレクション |                                                                          |
-|                  | message             | text          | エラーメッセージ                                                                 |
-|                  | component signature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
-|                  | errCode             | number        | エラーコード                                                                   |
+| プロパティ            |                     | タイプ                 | 説明                                                                       |
+| ---------------- | ------------------- | ------------------- | ------------------------------------------------------------------------ |
+| success          |                     | boolean             | ロックに成功した場合 (あるいはエンティティがすでにカレントプロセスでロックされていた場合) には true、それ以外は false       |
+|                  |                     |                     | ***`dk reload if stamp changed` オプションが使用されていた場合にのみ利用可能:***               |
+| **wasReloaded**  |                     | boolean             | エンティティがリロードされ、かつリロードに成功した場合には true、それ以外は false                           |
+|                  |                     |                     | ***エラーの場合にのみ利用可能:***                                                     |
+| status(\*)     |                     | number              | エラーコード、以下参照                                                              |
+| statusText(\*) |                     | text                | エラーの詳細、以下参照                                                              |
+|                  |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
+| lockKindText     |                     | text                | "Locked by record"                                                       |
+| lockInfo         |                     | object              | ロック元についての情報                                                              |
+|                  | task_id             | number              | プロセスID                                                                   |
+|                  | user_name           | text                | マシン上でのセッションユーザー名                                                         |
+|                  | user4d_alias        | text                | 4D ユーザーの名前またはエイリアス                                                       |
+|                  | user4d_id           | number              | 4DデータベースディレクトリでのユーザーID                                                   |
+|                  | host_name           | text                | マシン名                                                                     |
+|                  | task_name           | text                | プロセス名                                                                    |
+|                  | client_version      | text                |                                                                          |
+|                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
+| errors           |                     | Object の Collection |                                                                          |
+|                  | message             | text                | エラーメッセージ                                                                 |
+|                  | component signature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|                  | errCode             | number              | エラーコード                                                                   |
 
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 結果 | 説明                                                                                                                                                                                             |
-| ----------------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
-| `dk status locked`                        | 3  | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                      |
-| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                        |
-| `dk status stamp has changed`             | 2  | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています" |
+| 定数                                        | 値 | 説明                                                                                                                                                                                             |
+| ----------------------------------------- | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                      |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                        |
+| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています" |
 
 
 #### 例題 1
@@ -992,7 +993,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.next().Desc -->
+<!-- REF EntityClass.next().Desc -->
 ## .next()
 
 <details><summary>履歴</summary>
@@ -1002,18 +1003,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.next().Syntax -->
+<!-- REF #EntityClass.next().Syntax -->
 **.next()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.next().Params -->
-| 参照  | タイプ       |    | 説明                                         |
+<!-- REF #EntityClass.next().Params -->
+| 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
 
-`.next()` 関数は、 <!-- REF #entityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
+`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1034,7 +1035,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 <!-- END REF -->
 
 
-<!-- REF entityClass.previous().Desc -->
+<!-- REF EntityClass.previous().Desc -->
 ## .previous()
 
 <details><summary>履歴</summary>
@@ -1044,18 +1045,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.previous().Syntax -->
+<!-- REF #EntityClass.previous().Syntax -->
 **.previous()**  : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.previous().Params -->
-| 参照  | タイプ       |    | 説明                                         |
+<!-- REF #EntityClass.previous().Params -->
+| 引数  | タイプ       |    | 説明                                         |
 | --- | --------- |:--:| ------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
 
-`.previous()` 関数は、 <!-- REF #entityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
+`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1076,7 +1077,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.reload().Desc -->
+<!-- REF EntityClass.reload().Desc -->
 ## .reload( )
 
 <details><summary>履歴</summary>
@@ -1086,18 +1087,18 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.reload().Syntax -->
+<!-- REF #EntityClass.reload().Syntax -->
 **.reload()** : Object<!-- END REF -->
 
-<!-- REF #entityClass.reload().Params -->
-| 参照  | タイプ    |    | 説明          |
+<!-- REF #EntityClass.reload().Params -->
+| 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
-| 戻り値 | オブジェクト | <- | ステータスオブジェクト |
+| 戻り値 | Object | <- | ステータスオブジェクト |
 <!-- END REF -->
 
 #### 説明
 
-`.reload()` 関数は、データストアのデータクラスに対応するテーブルに保存されている情報に応じて、 <!-- REF #entityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
+`.reload()` 関数は、データストアのデータクラスに対応するテーブルに保存されている情報に応じて、 <!-- REF #EntityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
 
 **戻り値**
 
@@ -1111,10 +1112,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 結果 | 説明                                                                                                                                                               |
-| ----------------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>***割り当てられた statusText***: "エンティティはもう存在しません" |
-| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br>***割り当てられた statusText***: "その他のエラー"                                                                    |
+| 定数                                        | 値 | 説明                                                                                                                                                               |
+| ----------------------------------------- | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>***割り当てられた statusText***: "エンティティはもう存在しません" |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br>***割り当てられた statusText***: "その他のエラー"                                                                    |
 
 
 #### 例題
@@ -1139,7 +1140,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 <!-- END REF -->
 
 
-<!-- REF entityClass.save().Desc -->
+<!-- REF EntityClass.save().Desc -->
 ## .save()
 
 <details><summary>履歴</summary>
@@ -1149,19 +1150,19 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.save().Syntax -->
+<!-- REF #EntityClass.save().Syntax -->
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.save().Params -->
-| 参照   | タイプ    |    | 説明                               |
-| ---- | ------ |:--:| -------------------------------- |
-| mode | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
-| 戻り値  | オブジェクト | <- | 保存の結果                            |
+<!-- REF #EntityClass.save().Params -->
+| 引数   | タイプ     |    | 説明                               |
+| ---- | ------- |:--:| -------------------------------- |
+| mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
+| 戻り値  | Object  | <- | 保存の結果                            |
 <!-- END REF -->
 
 #### 説明
 
-`.save()` 関数は、データクラスに対応するテーブル内に、 <!-- REF #entityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
+`.save()` 関数は、データクラスに対応するテーブル内に、 <!-- REF #EntityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
 
 保存処理は、少なくとも一つのエンティティ属性が "touched" である (更新されている) 場合にのみ実行されます ([`.touched()`](#touched) および [`.touchedAttributes()`](#touchedattributes) 関数参照)。 そうでない場合、関数は何もしません (トリガーは呼び出されません)。
 
@@ -1176,40 +1177,40 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.save()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ        |                    | タイプ           | 説明                                                                       |
-| ------------ | ------------------ | ------------- | ------------------------------------------------------------------------ |
-| success      |                    | boolean       | 保存に成功した場合には true、それ以外は false                                             |
-|              |                    |               | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                            |
-| autoMerged   |                    | boolean       | 自動マージが実行された場合には true、それ以外は false                                         |
-|              |                    |               | ***エラーの場合にのみ利用可能***:                                                     |
-| status       |                    | number        | エラーコード、[以下参照](#status-と-statustext)                                      |
-| statusText   |                    | text          | エラーの詳細、[以下参照](#status-と-statustext)                                      |
-|              |                    |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                         |
-| lockKindText |                    | text          | "Locked by record"                                                       |
-| lockInfo     |                    | object        | ロック元についての情報                                                              |
-|              | task_id            | number        | プロセスID                                                                   |
-|              | user_name          | text          | マシン上でのセッションユーザー名                                                         |
-|              | user4d_id          | text          | 4Dデータベースディレクトリでのユーザー名                                                    |
-|              | host_name          | text          | マシン名                                                                     |
-|              | task_name          | text          | プロセス名                                                                    |
-|              | client_version     | text          |                                                                          |
-|              |                    |               | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
-| errors       |                    | オブジェクトのコレクション |                                                                          |
-|              | message            | text          | エラーメッセージ                                                                 |
-|              | componentSignature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
-|              | errCode            | number        | エラーコード                                                                   |
+| プロパティ        |                    | タイプ                 | 説明                                                                       |
+| ------------ | ------------------ | ------------------- | ------------------------------------------------------------------------ |
+| success      |                    | boolean             | 保存に成功した場合には true、それ以外は false                                             |
+|              |                    |                     | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                            |
+| autoMerged   |                    | boolean             | 自動マージが実行された場合には true、それ以外は false                                         |
+|              |                    |                     | ***エラーの場合にのみ利用可能***:                                                     |
+| status       |                    | number              | エラーコード、[以下参照](#status-と-statustext)                                      |
+| statusText   |                    | text                | エラーの詳細、[以下参照](#status-と-statustext)                                      |
+|              |                    |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                         |
+| lockKindText |                    | text                | "Locked by record"                                                       |
+| lockInfo     |                    | object              | ロック元についての情報                                                              |
+|              | task_id            | number              | プロセスID                                                                   |
+|              | user_name          | text                | マシン上でのセッションユーザー名                                                         |
+|              | user4d_alias       | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|              | host_name          | text                | マシン名                                                                     |
+|              | task_name          | text                | プロセス名                                                                    |
+|              | client_version     | text                |                                                                          |
+|              |                    |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
+| errors       |                    | Object の Collection |                                                                          |
+|              | message            | text                | エラーメッセージ                                                                 |
+|              | componentSignature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|              | errCode            | number              | エラーコード                                                                   |
 
 ##### status と statusText
 
 エラー時には Result オブジェクトの `status` あるいは `statusText` プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 結果 | 説明                                                                                                                                                                                                       |
-| ----------------------------------------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6  | (`dk auto merge` オプションが使用されたときのみ) エンティティを保存するときに自動マージオプションが失敗しました。<p><p>**割り当てられた statusText**: "自動マージ失敗"                                                |
-| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
-| `dk status locked`                        | 3  | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                                |
-| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                                  |
-| `dk status stamp has changed`             | 2  | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています" |
+| 定数                                        | 値 | 説明                                                                                                                                                                                                       |
+| ----------------------------------------- | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status automerge failed`              | 6 | (`dk auto merge` オプションが使用されたときのみ) エンティティを保存するときに自動マージオプションが失敗しました。<p><p>**割り当てられた statusText**: "自動マージ失敗"                                                |
+| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                                |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                                  |
+| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています" |
 
 
 #### 例題 1
@@ -1274,7 +1275,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 
-<!-- REF entityClass.toObject().Desc -->
+<!-- REF EntityClass.toObject().Desc -->
 ## .toObject()
 
 <details><summary>履歴</summary>
@@ -1284,27 +1285,27 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 </details>
 
-<!-- REF #entityClass.toObject().Syntax -->
+<!-- REF #EntityClass.toObject().Syntax -->
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.toObject().Params -->
-| 参照           | タイプ    |    | 説明                                                                                            |
-| ------------ | ------ |:--:| --------------------------------------------------------------------------------------------- |
-| filterString | テキスト   | -> | 取得する属性 (カンマ区切り)                                                                               |
-| filterCol    | コレクション | -> | 取得する属性のコレクション                                                                                 |
-| options      | 整数     | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
-| 戻り値          | オブジェクト | <- | エンティティを元にビルドされたオブジェクト                                                                         |
+<!-- REF #EntityClass.toObject().Params -->
+| 引数           | タイプ        |    | 説明                                                                                            |
+| ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                               |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                 |
+| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト                                                                         |
 <!-- END REF -->
 
 #### 説明
 
-`.toObject()` 関数は、 <!-- REF #entityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
 *   すべてのストレージエンティティ属性
-*   リレートエンティティ型の属性 ([kind](dataclassAttributeClass.md#kind) が `relatedEntity`) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。
-*   リレートエンティティズ型の属性 ([kind](dataclassAttributeClass.md#kind) が `relatedEntities`): 属性は返されません。
+*   リレートエンティティ型の属性 ([kind](DataClassAttributeClass.md#kind) が `relatedEntity`) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。
+*   リレートエンティティズ型の属性 ([kind](DataClassAttributeClass.md#kind) が `relatedEntities`): 属性は返されません。
 
 
 最初の引数として、取得するエンティティ属性を渡します。 以下のものを渡すことができます:
@@ -1561,7 +1562,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 
-<!-- REF entityClass.touched().Desc -->
+<!-- REF EntityClass.touched().Desc -->
 ## .touched( )
 
 <details><summary>履歴</summary>
@@ -1571,22 +1572,22 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-<!-- REF #entityClass.touched().Syntax -->
+<!-- REF #EntityClass.touched().Syntax -->
 **.touched()** : Boolean<!-- END REF -->
 
-<!-- REF #entityClass.touched().Params -->
-| 参照  | タイプ |    | 説明                                                   |
-| --- | --- |:--:| ---------------------------------------------------- |
-| 戻り値 | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
+<!-- REF #EntityClass.touched().Params -->
+| 引数  | タイプ     |    | 説明                                                   |
+| --- | ------- |:--:| ---------------------------------------------------- |
+| 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
 <!-- END REF -->
 
 #### 説明
 
-`.touched()` 関数は、 <!-- REF #entityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
 
 属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
-この関数は、([`.new( )`](dataclassClass.md#new) で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、`.touched()` 関数は true を返します。 たとえば、プライマリーキーを計算するために [`.getKey()`](#getkey) を呼び出した場合、`.touched()` メソッドは true を返します。
+この関数は、([`.new( )`](DataClassClass.md#new) で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、`.touched()` 関数は true を返します。 たとえば、プライマリーキーを計算するために [`.getKey()`](#getkey) を呼び出した場合、`.touched()` メソッドは true を返します。
 
 #### 例題
 
@@ -1605,7 +1606,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- END REF -->
 
 
-<!-- REF entityClass.touchedAttributes().Desc -->
+<!-- REF EntityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
 
 <details><summary>履歴</summary>
@@ -1615,20 +1616,20 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-<!-- REF #entityClass.touchedAttributes().Syntax -->
+<!-- REF #EntityClass.touchedAttributes().Syntax -->
 **.touchedAttributes()** : Collection<!-- END REF -->
 
-<!-- REF #entityClass.touchedAttributes().Params -->
-| 参照  | タイプ    |    | 説明                      |
-| --- | ------ |:--:| ----------------------- |
-| 戻り値 | コレクション | <- | 変更された属性の名前、あるいは空のコレクション |
+<!-- REF #EntityClass.touchedAttributes().Params -->
+| 引数  | タイプ        |    | 説明                      |
+| --- | ---------- |:--:| ----------------------- |
+| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション |
 <!-- END REF -->
 
 #### 説明
 
-`.touchedAttributes()` 関数は、 <!-- REF #entityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
+`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
-この関数は、種類 ([kind](dataclassAttributeClass.md#kind)) が `storage` あるいは `relatedEntity` である属性に適用されます。
+この関数は、種類 ([kind](DataClassAttributeClass.md#kind)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
 リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。
 
@@ -1681,7 +1682,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- END REF -->
 
 
-<!-- REF entityClass.unlock().Desc -->
+<!-- REF EntityClass.unlock().Desc -->
 ## .unlock()
 
 <details><summary>履歴</summary>
@@ -1691,18 +1692,18 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 </details>
 
-<!-- REF #entityClass.unlock().Syntax -->
+<!-- REF #EntityClass.unlock().Syntax -->
 **.unlock()** : Object<!-- END REF -->
 
-<!-- REF #entityClass.unlock().Params -->
-| 参照  | タイプ    |    | 説明          |
+<!-- REF #EntityClass.unlock().Params -->
+| 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
-| 戻り値 | オブジェクト | <- | ステータスオブジェクト |
+| 戻り値 | Object | <- | ステータスオブジェクト |
 <!-- END REF -->
 
 #### 説明
 
-`.unlock()` 関数は、データストアおよび、データクラスに対応するテーブル内の、 <!-- REF #entityClass.unlock().Summary -->対象エンティティが参照するレコードのペシミスティック・ロックを解除します<!-- END REF --> 。
+`.unlock()` 関数は、データストアおよび、データクラスに対応するテーブル内の、 <!-- REF #EntityClass.unlock().Summary -->対象エンティティが参照するレコードのペシミスティック・ロックを解除します<!-- END REF --> 。
 
 > 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
@@ -1721,9 +1722,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 `.unlock()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ   | タイプ | 説明                                                                                                                                     |
-| ------- | --- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| success | ブール | ロック解除が成功した場合には true、それ以外は false ドロップされたエンティティや、ロックされてないレコード、あるいは他のプロセスや他のエンティティによってロックされたレコードに対してロック解除を実行した場合、success には false が返されます。 |
+| プロパティ   | タイプ     | 説明                                                                                                                                     |
+| ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| success | Boolean | ロック解除が成功した場合には true、それ以外は false ドロップされたエンティティや、ロックされてないレコード、あるいは他のプロセスや他のエンティティによってロックされたレコードに対してロック解除を実行した場合、success には false が返されます。 |
 
 #### 例題
 

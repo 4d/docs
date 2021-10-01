@@ -1,5 +1,5 @@
 ---
-id: copia de seguridad
+id: backup
 title: Página de respaldo
 sidebar_label: Página de respaldo
 ---

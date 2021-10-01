@@ -28,8 +28,8 @@ Functions are called on the corresponding object on the server datastore.
 
 | Class function                                                     | Sintaxis                                                                    |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
 | [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
@@ -50,33 +50,33 @@ You can send parameters to functions defined in ORDA user classes. On the server
 
 The following rules apply:
 
-- Parameters must be passed in the **body of the POST request**
-- Parameters must be enclosed within a collection (JSON format)
+- Los parámetros deben pasarse en el **cuerpo de la petición POST**
+- Los parámetros deben estar incluidos en una colección (formato JSON)
 - All scalar data types supported in JSON collections can be passed as parameters.
 - Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
 See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
 
 
-### Scalar value parameter
+### Parámetro de valor escalar
 
-Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parámetros en el cuerpo:** ["Aguada","Paris"]
 
 All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
 
 
-### Entity parameter
+### Parámetro de entidad
 
-Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
+Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
 | Properties               | Tipo                                 | Descripción                                                                |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | mixed                                | Optional - Values to modify                                                |
+| Attributes of the entity | mixto                                | Opcional - Valores a modificar                                             |
 | __DATACLASS              | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
@@ -102,7 +102,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 | Properties               | Tipo     | Descripción                                                                          |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed    | Optional - Values to modify                                                          |
+| Attributes of the entity | mixto    | Opcional - Valores a modificar                                                       |
 | __DATASET                | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
 | __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 

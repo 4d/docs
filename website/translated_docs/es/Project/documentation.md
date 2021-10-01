@@ -37,24 +37,24 @@ All documentation files are stored in the `Documentation` folder, located at the
 
 The `Documentation` folder architecture is the following:
 
-- **Documentation**
-    + **Clases**
+- `Documentation`
+    + `Clases`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **Formularios**
+    + `Formularios`
         * loginDial.md
         * ...
-    + **Métodos**
+    + `Métodos`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + `Triggers`
         * table1.md
         * ...
 
@@ -124,11 +124,11 @@ New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
-| Line                                               | Descripción                                                                                                                                          |
+| Línea                                              | Descripción                                                                                                                                          |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "\<!-- Type your summary here -->"      | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
 | ## Description                                    | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Example                                        | Heading level 2, you can use this area to show sample code                                                                                           |
+| ## Ejemplo                                        | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
 
@@ -189,7 +189,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > For more information, see the [GitHug Markdown guide](https://guides.github.com/features/mastering-markdown/).
 
@@ -218,15 +218,15 @@ GetLogo (size) -> logo
 This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = smallest size, 5 = largest size.
 
-## Example
+## Ejemplo
 
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obtener el logo más grande
 $logo:=GetLogo(5)
 ```
 
-- Explorer view: ![](assets/en/Project/explorer_Doc.png)
+- Vista del Explorador: ![](assets/en/Project/explorer_Doc.png)
 
-- Code editor view: ![](assets/en/Project/comments-explo5.png)
+- Vista del Editor de código: ![](assets/en/Project/comments-explo5.png)

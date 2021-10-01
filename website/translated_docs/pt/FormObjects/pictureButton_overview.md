@@ -26,7 +26,7 @@ Picture buttons can be used in two ways:
 Clicking the object changes the picture.
 
 
-## Using picture buttons
+## Usar os botões imagem
 
 You can implement a picture button in the following manner:
 

@@ -3,7 +3,7 @@ id: looping
 title: Estructuras repetitivas (bucles)
 ---
 
-Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+Las estructuras en bucle repiten una secuencia de instrucciones hasta que se cumple una condición o se alcanza un número de veces.
 
 
 ## While...End while
@@ -127,7 +127,7 @@ El bucle `For...End for` es un bucle controlado por un contador:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
+La mayoría de los bucles `For...End for` que escribirá en sus proyectos se parecerán a los que se presentan en estos ejemplos.
 
 ### Disminuir la variable contador
 
@@ -375,7 +375,7 @@ Quiere pasar los nombres a mayúsculas en el siguiente objeto:
     "age": 20
 }
 ```
-You can write:
+Puede escribir:
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)

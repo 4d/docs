@@ -57,12 +57,12 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 
 An object with two properties:
 
-| Property | Tipo  | Descripción                |
-| -------- | ----- | -------------------------- |
-| name     | Texto | Display name (can be null) |
-| email    | Texto | Email address              |
+| Propiedad | Tipo | Descripción                |
+| --------- | ---- | -------------------------- |
+| name      | Text | Display name (can be null) |
+| email     | Text | Email address              |
 
-#### Colección
+#### Collection
 
 A collection of address objects.
 
@@ -145,14 +145,14 @@ The `.bodyStructure` property contains the <!-- REF #emailObjectClass.bodyStruct
 
 The `.bodyStructure` object contains the following properties:
 
-| Property    | Tipo                  | Valor                                                                                                                                                   |
+| Propiedad   | Tipo                  | Valor                                                                                                                                                   |
 | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | partID      | Texto                 | Identifies the part uniquely within the email                                                                                                           |
 | type        | Texto                 | (mandatory) Value of the Content-Type header field of the part                                                                                          |
 | charset     | Texto                 | Value of the charset parameter of the Content-Type header field                                                                                         |
 | encoding    | Texto                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
 | disposition | Texto                 | Value of the Content-Disposition header field of the part                                                                                               |
-| language    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
+| lenguaje    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
 | location    | Texto                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
 | subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
 | headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
@@ -172,10 +172,10 @@ The `.bodyValues` property contains the <!-- REF #emailObjectClass.bodyValues.Su
 
 The `.bodyValues` object contains the following properties:
 
-| Property                   | Tipo     | Valor                                                                                                                                       |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | texto    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| Propiedad                  | Tipo    | Valor                                                                                                                                       |
+| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | Value of the body part                                                                                                                      |
+| *partID*.isEncodingProblem | boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
 
@@ -247,10 +247,10 @@ The `.headers` property contains a <!-- REF #emailObjectClass.headers.Summary --
 
 Every object of the headers collection can contain the following properties:
 
-| Property | Tipo  | Valor                                                                                                                                                                |
-| -------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].name  | texto | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
-| [].value | texto | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
+| Propiedad | Tipo | Valor                                                                                                                                                                |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [].name   | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header. |
+| [].value  | text | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                    |
 
 
 
@@ -323,7 +323,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 <table spaces-before="0">
   <tr>
     <th>
-      Property
+      Propiedad
     </th>
     
     <th>
@@ -337,11 +337,11 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
   
   <tr>
     <td>
-      .\<keyword\>
+      . \<keyword\>
     </td>
     
     <td>
-      booleano
+      boolean
     </td>
     
     <td>

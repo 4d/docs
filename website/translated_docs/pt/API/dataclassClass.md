@@ -1,5 +1,5 @@
 ---
-id: dataclassClass
+id: DataClassClass
 title: DataClass
 ---
 
@@ -12,19 +12,19 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE dataclassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassClass.attributeName.Summary --> |
-| [<!-- INCLUDE #dataclassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.all().Summary -->|
-| [<!-- INCLUDE #dataclassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.fromCollection().Summary --> |
-| [<!-- INCLUDE #dataclassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.get().Summary --> |
-| [<!-- INCLUDE #dataclassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.getDataStore().Summary --> |
-| [<!-- INCLUDE #dataclassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.getInfo().Summary --> |
-| [<!-- INCLUDE #dataclassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.new().Summary --> |
-| [<!-- INCLUDE #dataclassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.newSelection().Summary --> |
-| [<!-- INCLUDE #dataclassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.query().Summary --> |
+| [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
+| [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
+| [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
+| [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getInfo().Summary --> |
+| [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.new().Summary --> |
+| [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.newSelection().Summary --> |
+| [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.query().Summary --> |
 
 
 
-<!-- REF dataclassClass.attributeName.Desc -->
+<!-- REF DataClassClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>History</summary>
@@ -33,15 +33,15 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 | v17     | Added   |
 </details>
 
-<!-- REF dataclassClass.attributeName.Syntax -->
+<!-- REF DataClassClass.attributeName.Syntax -->
 ***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 
 #### Description
 
-The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
-The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
+The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
 #### Example 1
@@ -95,7 +95,7 @@ Considering the following table properties:
 
 
 
-<!-- REF dataclassClass.all().Desc -->
+<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>History</summary>
@@ -106,10 +106,10 @@ Considering the following table properties:
 </details>
 
 
-<!-- REF #dataclassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-<!-- REF #dataclassClass.all().Params -->
+<!-- REF #DataClassClass.all().Params -->
 | Parameter | Type               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
 | settings  | Object             | -> | Build option: context                               |
@@ -119,7 +119,7 @@ Considering the following table properties:
 
 #### Description
 
-The `.all( )` function <!-- REF #dataclassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
 
 The entities are returned in the default order, which is initially the order in which they were created. Note however that, if entities have been deleted and new ones added, the default order does not reflect the creation order anymore.
 
@@ -148,7 +148,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 
-<!-- REF dataclassClass.fromCollection().Desc -->
+<!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
 
 <details><summary>History</summary>
@@ -158,11 +158,11 @@ In the optional *settings* parameter, you can pass an object containing addition
 | v17     | Added                               |
 </details>
 
-<!-- REF #dataclassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->
 **.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 
-<!-- REF #dataclassClass.fromCollection().Params -->
+<!-- REF #DataClassClass.fromCollection().Params -->
 | Parameter | Type               |    | Description                                      |
 | --------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol | Collection         | -> | Collection of objects to be mapped with entities |
@@ -173,7 +173,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 #### Description
 
-The `.fromCollection()` function <!-- REF #dataclassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
 
 In the *objectCol* parameter, pass a collection of objects to create new or update existing entities of the dataclass. The property names must be the same as attribute names in the dataclass. If a property name does not exist in the dataclass, it is ignored. If an attribute value is not defined in the collection, its value is null.
 
@@ -291,6 +291,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 
 
+
 ```
 
 #### Example 5
@@ -341,12 +342,12 @@ In this example, the first entity will be created and saved but the second will 
 
 #### See also
 
-[**.toCollection()**](entitySelectionClass.md#tocollection)
+[**.toCollection()**](EntitySelectionClass.md#tocollection)
 
 <!-- END REF -->
 
 
-<!-- REF dataclassClass.get().Desc -->
+<!-- REF DataClassClass.get().Desc -->
 ## .get()
 
 <details><summary>History</summary>
@@ -356,11 +357,11 @@ In this example, the first entity will be created and saved but the second will 
 
 </details>
 
-<!-- REF #dataclassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->
 **.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 
-<!-- REF #dataclassClass.get().Params -->
+<!-- REF #DataClassClass.get().Params -->
 | Parameter  | Type            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
@@ -370,9 +371,9 @@ In this example, the first entity will be created and saved but the second will 
 
 #### Description
 
-The `.get()` function <!-- REF #dataclassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
 
-In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](entityClass.md#getkey) function with the `dk key as string` parameter.
+In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
 
 If no entity is found with *primaryKey*, a **Null** entity is returned.
 
@@ -425,7 +426,7 @@ This example illustrates the use of the *context* property:
 <!-- END REF -->
 
 
-<!-- REF dataclassClass.getDataStore().Desc -->
+<!-- REF DataClassClass.getDataStore().Desc -->
 ## .getDataStore()
 
 <details><summary>History</summary>
@@ -434,10 +435,10 @@ This example illustrates the use of the *context* property:
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #dataclassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
-<!-- REF #dataclassClass.getDataStore().Params -->
+<!-- REF #DataClassClass.getDataStore().Params -->
 | Parameter | Type         |    | Description                |
 | --------- | ------------ |:--:| -------------------------- |
 | Result    | cs.DataStore | <- | Datastore of the dataclass |
@@ -446,7 +447,7 @@ This example illustrates the use of the *context* property:
 
 #### Description
 
-The `.getDataStore( )` function <!-- REF #dataclassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
 
 The datastore can be:
 
@@ -479,7 +480,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 
 
-<!-- REF dataclassClass.getInfo().Desc -->
+<!-- REF DataClassClass.getInfo().Desc -->
 ## .getInfo()
 
 <details><summary>History</summary>
@@ -488,10 +489,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #dataclassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->
 **.getInfo()** : Object <!-- END REF -->
 
-<!-- REF #dataclassClass.getInfo().Params -->
+<!-- REF #DataClassClass.getInfo().Params -->
 | Parameter | Type   |    | Description                  |
 | --------- | ------ | -- | ---------------------------- |
 | Result    | Object | <- | Information on the dataclass |
@@ -500,7 +501,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 #### Description
 
-The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
+The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
 
 **Returned object**
 
@@ -552,7 +553,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 
 
-<!-- REF dataclassClass.new().Desc -->
+<!-- REF DataClassClass.new().Desc -->
 ## .new()
 
 <details><summary>History</summary>
@@ -561,10 +562,10 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 | v17     | Added   |
 </details>
 
-<!-- REF #dataclassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->
 **.new()** : 4D.Entity <!-- END REF -->
 
-<!-- REF #dataclassClass.new().Params -->
+<!-- REF #DataClassClass.new().Params -->
 | Parameter | Type      |    | Description                       |
 | --------- | --------- | -- | --------------------------------- |
 | Result    | 4D.Entity | <- | New entity matching the Dataclass |
@@ -573,11 +574,15 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 #### Description
 
-The `.new( )` function <!-- REF #dataclassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
 
-The entity object is created in memory and is not saved in the database until the [`.save( )`](entityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
+The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
+
+All attributes of the entity are initialized with the **null** value.
+
+> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
 
 #### Example
 
@@ -595,7 +600,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 
 
-<!-- REF dataclassClass.newSelection().Desc -->
+<!-- REF DataClassClass.newSelection().Desc -->
 ## .newSelection()
 
 <details><summary>History</summary>
@@ -604,10 +609,10 @@ This example creates a new entity in the "Log" Dataclass and records information
 | v17     | Added   |
 </details>
 
-<!-- REF #dataclassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-<!-- REF #dataclassClass.newSelection().Params -->
+<!-- REF #DataClassClass.newSelection().Params -->
 | Parameter | Type               |    | Description                                                                                                                                   |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | Integer            | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
@@ -617,14 +622,14 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 #### Description
 
-The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
 > For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
 
 If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](entitySelectionClass.md#add) function.
+When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
 
 
 #### Example
@@ -641,7 +646,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 
 
-<!-- REF dataclassClass.query().Desc -->
+<!-- REF DataClassClass.query().Desc -->
 ## .query()
 
 <details><summary>History</summary>
@@ -652,10 +657,10 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | v17     | Added                              |
 </details>
 
-<!-- REF #dataclassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-<!-- REF #dataclassClass.query().Params -->
+<!-- REF #DataClassClass.query().Params -->
 | Parameter     | Type               |    | Description                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Text               | -> | Search criteria as string                                                                                                   |
@@ -668,7 +673,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 #### Description
 
-The `.query( )` function <!-- REF #dataclassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
@@ -690,7 +695,7 @@ where:
 *   **formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.
 
     *   **Text**: the formula string must be preceeded by the `eval( )` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
-    *   **Object**: the [formula object](formulaClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](formulaClass.md#formula) or [`Formula from string`](formulaClass.md#formula-from-string) command.
+    *   **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
 > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
 > * If the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.
 
@@ -1213,7 +1218,7 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### See also
 
-[`.query()`](entitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) for entity selections
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -1,5 +1,5 @@
 ---
-id: zipArchiveClass
+id: ZipArchiveClass
 title: ZIPArchive
 ---
 
@@ -7,7 +7,7 @@ title: ZIPArchive
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
-- 4D [`ZIPFile`](zipFileClass.md) and [`ZIPFolder`](zipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
+- 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 
 ### Beispiel
@@ -34,7 +34,7 @@ End if
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #zipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #zipArchiveClass.root.Summary -->|
+| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
 
 
 ## ZIP Create archive
@@ -290,7 +290,7 @@ The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->r
 
 
 
-> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](document.md#copyto) or [folder.copyTo()](directory.md#copyto).
+> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
 
 Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically. 
 
@@ -362,16 +362,17 @@ To extract from the root folder:
 
 ## .root
 
-<!-- REF #zipArchiveClass.root.Syntax -->
+<!-- REF #ZipArchiveClass.root.Syntax -->
 **.root** : 4D.ZipFolder<!-- END REF -->
 
 
 #### Beschreibung
 
-The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
-The `root` folder and its contents can be manipulated with the [ZipFile](zipFileClass.md) and [ZipFolder](zipFolderClass.md) functions and properties.
+The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
 
-This property is **read-only**. 
+This property is **read-only**.
+
 
 <style> h2 { background: #d9ebff;}</style>

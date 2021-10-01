@@ -36,13 +36,13 @@ and the user enters "proportion", the field displays:
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values                                                                      |
-| ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | cadena    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| Nombre     | Tipos de datos | Valores posibles                                                                              |
+| ---------- | -------------- | --------------------------------------------------------------------------------------------- |
+| textFormat | cadena         | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", formatos personalizados |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -72,7 +72,7 @@ The table below shows choices available:
 | System date long                | systemLong   | Wednesday, March 25, 2020     |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
 | Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
-| Internal date long              | long         | March 25, 2020                |
+| Internal date long              | largo        | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
 | ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
@@ -85,13 +85,13 @@ The table below shows choices available:
 > Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | cadena    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                              |
+| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (puede combinarse con otros valores posibles) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -215,7 +215,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-| Format Entered                         | Positive         | Negative      | Zero                         |
+| Format Entered                         | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
 | ###                                    | <<<              | <<<           |                              |
 | ####                                   | 1234             | <<<<          |                              |
@@ -245,13 +245,13 @@ The following table shows how different formats affect the display of numbers. T
 | &5                                     | 1.23450e+3       | -1.23450e+3   | 0.00000                      |
 | &xml                                   | 1234.5           | -1234.5       | 0                            |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values                                                |
-| ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | cadena    | Numbers (including a decimal point or minus sign if necessary) |
+| Nombre       | Tipos de datos | Valores posibles                                               |
+| ------------ | -------------- | -------------------------------------------------------------- |
+| numberFormat | cadena         | Numbers (including a decimal point or minus sign if necessary) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
@@ -309,13 +309,13 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | cadena    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| Nombre        | Tipos de datos | Valores posibles                                                                                      |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| pictureFormat | cadena         | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -331,7 +331,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
+| Format name                  | JSON string  | Comentarios                                                                                                                                      | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -345,13 +345,13 @@ The table below shows the Time field display formats and gives examples:
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | cadena    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                         |
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | cadena         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -369,14 +369,14 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 - **Text when True** - the text to be displayed when the value is "true"
 - **Text when False** - the text to be displayed when the value is "false"
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | cadena    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Nombre        | Tipos de datos | Valores posibles                                                         |
+| ------------- | -------------- | ------------------------------------------------------------------------ |
+| booleanFormat | cadena         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
@@ -384,7 +384,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 
 ---
-## Display Type
+## Tipo de visualización
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -392,13 +392,13 @@ Boolean and number (numeric or integer) columns can be displayed as check boxes.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values                                                                                                                                                 |
-| ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | cadena    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                                                |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -414,13 +414,13 @@ When this property is enabled, the object is not drawn on the form, however it c
 In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | booleano  | true, false     |
+| Nombre  | Tipos de datos | Valores posibles |
+| ------- | -------------- | ---------------- |
+| display | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
 
@@ -435,7 +435,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 
 
-Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+Allows a check box object to accept a third state. La variable asociada a la casilla de selección devuelve el valor 2 cuando la casilla está en el tercer estado.
 
 
 #### Three-states check boxes in list box columns
@@ -451,13 +451,13 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | booleano  | true, false     |
+| Nombre     | Tipos de datos | Valores posibles |
+| ---------- | -------------- | ---------------- |
+| threeState | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -465,7 +465,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 
 ---
-## Title
+## Título
 
 This property is available for a list box column if:
 - the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
@@ -473,13 +473,13 @@ This property is available for a list box column if:
 
 In that cases, the title of the check box can be entered using this property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values                    |
-| ------------ | --------- | ---------------------------------- |
-| controlTitle | cadena    | Any custom label for the check box |
+| Nombre       | Tipos de datos | Valores posibles                   |
+| ------------ | -------------- | ---------------------------------- |
+| controlTitle | cadena         | Any custom label for the check box |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -512,15 +512,15 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 - For Pop-up type Boolean formats, labels are truncated with an ellipsis,
 - For Check box type Boolean formats, labels are always clipped.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values        |
-| ------------ | --------- | ---------------------- |
-| truncateMode | cadena    | "withEllipsis", "none" |
+| Nombre       | Tipos de datos | Valores posibles       |
+| ------------ | -------------- | ---------------------- |
+| truncateMode | cadena         | "withEllipsis", "none" |
 
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
@@ -529,7 +529,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 
 ---
-## Visibility
+## Visibilidad
 
 This property allows hiding by default the object in the Application environment.
 
@@ -537,13 +537,13 @@ You can handle the Visible property for most form objects. This property simplif
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values     |
-| ---------- | --------- | ------------------- |
-| visibility | cadena    | "visible", "hidden" |
+| Nombre     | Tipos de datos | Valores posibles    |
+| ---------- | -------------- | ------------------- |
+| visibility | cadena         | "visible", "hidden" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -597,13 +597,13 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 ![](assets/en/FormObjects/wordwrap1.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name     | Data Type | Possible Values                                    |
-| -------- | --------- | -------------------------------------------------- |
-| wordwrap | cadena    | "automatic" (excluding list box), "normal", "none" |
+| Nombre   | Tipos de datos | Valores posibles                                    |
+| -------- | -------------- | --------------------------------------------------- |
+| wordwrap | cadena         | "automatic" (excluyendo list box), "normal", "none" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 

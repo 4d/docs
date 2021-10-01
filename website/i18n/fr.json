@@ -6,7 +6,7 @@
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Explorateur de données Web"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -788,7 +788,7 @@
         "title": "Allowing project methods"
       },
       "WebServer/authentication": {
-        "title": "Authentication"
+        "title": "Authentification"
       },
       "WebServer/errorPages": {
         "title": "Custom HTTP Error Pages"
@@ -838,7 +838,7 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
-      "Web Development": "Web Development",
+      "Web Development": "Développement Web",
       "REST Server": "Serveur REST",
       "Client/Server": "Client/Server",
       "Forms": "Formulaires",
@@ -864,7 +864,7 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
-    "Web Development|no description given": "Web Development",
+    "Web Development|no description given": "Développement Web",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
@@ -873,10 +873,10 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
-    "Preferences|no description given": "Preferences",
+    "Preferences|no description given": "Préférences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

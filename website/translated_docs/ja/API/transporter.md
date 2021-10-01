@@ -1,5 +1,5 @@
 ---
-id: transporter
+id: Transporter
 title: Transporter クラス
 ---
 
@@ -62,7 +62,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                    |
+| 値        | 定数                             | 説明                    |
 | -------- | ------------------------------ | --------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
 | LOGIN    | `IMAP authentication login`    | LOGIN プロトコルを使用した認証    |
@@ -93,7 +93,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                          |
+| 値        | 定数                             | 説明                          |
 | -------- | ------------------------------ | --------------------------- |
 | APOP     | `POP3 authentication APOP`     | APOP プロトコルを使用した認証 (POP3 のみ) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | CRAM-MD5 プロトコルを使用した認証       |
@@ -125,7 +125,7 @@ title: Transporter クラス
 
 とりうる値:
 
-| 結果       | 定数                             | 説明                    |
+| 値        | 定数                             | 説明                    |
 | -------- | ------------------------------ | --------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
 | LOGIN    | `SMTP authentication login`    | LOGIN プロトコルを使用した認証    |
@@ -160,7 +160,7 @@ title: Transporter クラス
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                           |
+| 定数                       | 値                              | 説明                                                                                           |
 | ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                    |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                                    |
@@ -218,7 +218,7 @@ title: Transporter クラス
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                       |
+| 定数                       | 値                              | 説明                                                                                       |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                               |
@@ -270,9 +270,9 @@ title: Transporter クラス
 
 `SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。 拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
 
-*   **SMTP 接続** - [4DSMTPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4165231)
-*   **POP3 接続** - [4DPOP3Log.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4837674)
-*   **IMAP 接続** - [4DIMAPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#5040475)
+*   **SMTP 接続** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **POP3 接続** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **IMAP 接続** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 
 
@@ -364,7 +364,7 @@ title: Transporter クラス
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| 参照  | タイプ    |    | 説明                         |
+| 引数  | タイプ    |    | 説明                         |
 | --- | ------ |:--:| -------------------------- |
 | 戻り値 | オブジェクト | <- | transporter オブジェクト接続のステータス |
 <!-- END REF -->

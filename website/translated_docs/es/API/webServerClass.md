@@ -15,7 +15,7 @@ Web server objects are instantiated with the [`WEB Server`](#web-server) command
 They provide the following properties and functions:
 
 
-### Summary
+### Resumen
 |                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #webServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.accessKeyDefined.Summary -->|
@@ -34,10 +34,10 @@ They provide the following properties and functions:
 
 ## WEB Server
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R3  | Añadidos       |
 </details>
 
 <!-- REF #_command_.WEB Server.Syntax -->
@@ -46,10 +46,10 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Tipo         |    | Descripción                                                    |
-| --------- | ------------ | -- | -------------------------------------------------------------- |
-| option    | Entero       | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultado | 4D.WebServer | <- | Web server object                                              |
+| Parámetros | Tipo         |    | Descripción                                                    |
+| ---------- | ------------ | -- | -------------------------------------------------------------- |
+| option     | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
+| Resultado  | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -57,7 +57,7 @@ The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the d
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
-| Constant                       | Valor | Comment                                                  |
+| Constante                      | Valor | Comentario                                               |
 | ------------------------------ | ----- | -------------------------------------------------------- |
 | `Web server database`          | 1     | Current database Web server (default if omitted)         |
 | `Web server host database`     | 2     | Web server of the host database of a component           |
@@ -80,10 +80,10 @@ From your component, you want to know if the Web server of the host database is 
 
 ## WEB Server list
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R3  | Añadidos       |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->
@@ -92,13 +92,13 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Tipo      |    | Descripción                                    |
-| --------- | --------- | -- | ---------------------------------------------- |
-| Resultado | Colección | <- | Collection of the available Web server objects |
+| Parámetros | Tipo       |    | Descripción                                    |
+| ---------- | ---------- | -- | ---------------------------------------------- |
+| Resultado  | Collection | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
-The `WEB Server list` command<!-- REF #_command_.WEB Server list. Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos del servidor web disponibles en la aplicación 4D<!-- END REF -->.
 
 A 4D application can contain anywhere from one to several Web servers:
 
@@ -313,7 +313,7 @@ Default value: 63072000 (2 years).
 
 The <!-- REF #webServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).
 
-Possible values:
+Valores posibles:
 
 *   1 to 9 (where 1 is the fastest compression and 9 the highest).
 *   -1 = set a compromise between speed and rate of compression.
@@ -520,7 +520,7 @@ The <!-- REF #webServerClass.logRecording.Summary -->log requests (logweb.txt) r
 
 The <!-- REF #webServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
 
-Possible values: 10 - 32000
+Valores posibles: 500000 - 2147483648
 
 Default = 100
 
@@ -538,7 +538,7 @@ Default = 100
 
 The <!-- REF #webServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.
 
-Possible values: 500000 - 2147483648
+Valores posibles: 500000 - 2147483648
 
 <!-- END REF -->
 
@@ -567,7 +567,7 @@ The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneo
 
 The <!-- REF #webServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
-Possible values:
+Valores posibles:
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1
@@ -714,10 +714,10 @@ The <!-- REF #webServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 ## .start()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R3  | Añadidos       |
 </details>
 
 <!-- REF #webServerClass.start().Syntax -->
@@ -727,7 +727,7 @@ The <!-- REF #webServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #webServerClass.start().Params -->
 
-| Parameter  | Tipo   |    | Descripción                           |
+| Parámetros | Tipo   |    | Descripción                           |
 | ---------- | ------ | -- | ------------------------------------- |
 | parámetros | Objeto | -> | Web server settings to set at startup |
 | Resultado  | Objeto | <- | Status of the web server startup      |
@@ -747,13 +747,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Tipo      | Descripción                                                          |
-| -------- | ----------------------- | --------- | -------------------------------------------------------------------- |
-| success  |                         | Booleano  | True if the web server was correctly started, False otherwise        |
-| errors   |                         | Colección | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Número    | 4D error code                                                        |
-|          | \[].message            | Texto     | Description of the 4D error                                          |
-|          | \[].componentSignature | Texto     | Signature of the internal component which returned the error         |
+| Propiedad |                         | Tipo       | Descripción                                                          |
+| --------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
+| success   |                         | Booleano   | True if the web server was correctly started, False otherwise        |
+| errors    |                         | Collection | 4D error stack (not returned if the web server started successfully) |
+|           | \[].errCode            | Número     | 4D error code                                                        |
+|           | \[].message            | Texto      | Description of the 4D error                                          |
+|           | \[].componentSignature | Texto      | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Ejemplo
@@ -778,10 +778,10 @@ The function returns an object describing the Web server launch status. This obj
 
 ## .stop()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R3  | Añadidos       |
 </details>
 
 <!-- REF #webServerClass.stop().Syntax -->
@@ -789,9 +789,9 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #webServerClass.stop().Params -->
 
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |  | ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
 
  <!-- END REF -->
 

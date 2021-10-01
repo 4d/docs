@@ -1,5 +1,5 @@
 ---
-id: collectionClass
+id: CollectionClass
 title: Collection
 ---
 

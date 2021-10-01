@@ -1,5 +1,5 @@
 ---
-id: smtpTransporterClass
+id: SMTPTransporterClass
 title: SMTPTransporter
 ---
 
@@ -21,16 +21,16 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 | [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->|
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
-| [<!-- INCLUDE #smtpTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.keepAlive.Summary -->|
+| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->|
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-| [<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.send().Summary -->|
+| [<!-- INCLUDE #SMTPTransporterClass.send().Syntax -->](#send)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.send().Summary -->|
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
 
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Desc -->
+<!-- REF SMTPTransporterClass.SMTP New transporter.Desc -->
 ## SMTP New transporter
 
 <details><summary>履歴</summary>
@@ -45,7 +45,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| 参照     | タイプ                |    | 説明                                                   |
+| 引数     | タイプ                |    | 説明                                                   |
 | ------ | ------------------ |:--:| ---------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                            |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブエジェクト) |
@@ -74,7 +74,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                    |
 | [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP) |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                                  |
-| [<!-- INCLUDE #smtpTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.keepAlive.Summary -->| True                                  |
+| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->| True                                  |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                                    |
 | **password** : Text<p>サーバーとの認証のためのユーザーパスワード *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                             | なし                                    |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 587                                   |
@@ -125,7 +125,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| 参照     | タイプ                |    | 説明                                                   |
+| 引数     | タイプ                |    | 説明                                                   |
 | ------ | ------------------ |:--:| ---------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                            |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブエジェクト) |
@@ -207,13 +207,13 @@ SMTPステータスコードについての詳細は [こちらのページ](htt
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #smtpTransporterClass.keepAlive.Syntax -->
+<!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
 **.keepAlive** : Boolean<!-- END REF -->
 
 
 #### 説明
 
-`.keepAlive` プロパティは、 <!-- REF #smtpTransporterClass.keepAlive.Summary -->`transporter` オブジェクトが抹消されるまで、SMTP接続が維持されなければならない場合に **true**<!-- END REF -->、それ以外は **False** を格納します。 `SMTP New transporter` コマンドで `transporter` オブジェクトを作成する際に使用する `server` オブジェクトにおいて、 `keepAlive` プロパティが指定されなかった場合のデフォルトは **true** です。
+`.keepAlive` プロパティは、 <!-- REF #SMTPTransporterClass.keepAlive.Summary -->`transporter` オブジェクトが抹消されるまで、SMTP接続が維持されなければならない場合に **true**<!-- END REF -->、それ以外は **False** を格納します。 `SMTP New transporter` コマンドで `transporter` オブジェクトを作成する際に使用する `server` オブジェクトにおいて、 `keepAlive` プロパティが指定されなかった場合のデフォルトは **true** です。
 
 SMTP接続は、以下の場合に自動的に閉じられます:
 
@@ -244,27 +244,46 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | v17 R4 | 追加             |
 </details>
 
-<!-- REF #smtpTransporterClass.send().Syntax -->
+<!-- REF #SMTPTransporterClass.send().Syntax -->
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
-<!-- REF #smtpTransporterClass.send().Params -->
-| 参照   | タイプ    |    | 説明                                           |
+<!-- REF #SMTPTransporterClass.send().Params -->
+| 引数   | タイプ    |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
-| mail | オブジェクト | -> | 送信する [メール](emailObjectClass.md#email-オブジェクト) |
+| mail | オブジェクト | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
 | 戻り値  | オブジェクト | <- | SMTP ステータス                                   |
 <!-- END REF -->
 
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #smtpTransporterClass.send().Summary -->[*mail*](emailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
+`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが false であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。そ例外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、`SMTP New transporter` コマンドの説明を参照してください。
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが false であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。そ例外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
 
-*mail*には、送信する有効な [`Email` オブジェクト](emailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
+*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
 
+#### 返されるオブジェクト
+
+この関数は、SMTP ステータスを表すオブジェクトを返します. このオブジェクトには、次のプロパティが格納されることがあります:
+
+| プロパティ      | タイプ     | 説明                                      |
+| ---------- | ------- | --------------------------------------- |
+| success    | boolean | 送信に成功した場合は true、それ以外は false             |
+| status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
+| statusText | text    | SMTPから返されるステータスメッセージ                    |
+
+SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、`GET LAST ERROR STACK` コマンドを使用します。
+
+この場合、結果のステータスオブジェクトには以下の値が含まれます:
+
+| プロパティ      | 値                      |
+| ---------- | ---------------------- |
+| success    | False                  |
+| status     | 0                      |
+| statusText | "Failed to send email" |
 
 
 <!-- INCLUDE transporter.sendTimeOut.Desc -->

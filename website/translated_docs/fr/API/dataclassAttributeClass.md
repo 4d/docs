@@ -76,7 +76,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 
 <!-- REF dataclassAttributeClass.fieldNumber.Syntax -->
-**.fieldNumber** : Entier<!-- END REF -->
+**.fieldNumber** : Integer<!-- END REF -->
 
 
 #### Description
@@ -359,8 +359,8 @@ Le type de valeur conceptuelle dépend de l'attribut [`.kind`](#kind).
 | dataClassAttribute.kind | type                                                     | Commentaire                                                                                                                                   |
 | ----------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | storage                 | "number", "date", "object", "bool", "image", ou "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
-| relatedEntity           | nom de dataClass associé                                 | Ex : "Companies"                                                                                                                              |
-| relatedEntities         | nom de dataClass associé + suffixe "Selection"           | Ex : "EmployeeSelection"                                                                                                                      |
+| relatedEntity           | related dataClass name                                   | Ex : "Companies"                                                                                                                              |
+| relatedEntities         | related dataClass name + "Selection" suffix              | Ex : "EmployeeSelection"                                                                                                                      |
 
 <!-- END REF -->
 

@@ -8,20 +8,20 @@ Returns information about the entity sets currently stored in 4D Server's cache 
 ## Descripción
 When you call this request for your project, you retrieve information in the following properties:
 
-| Property       | Tipo      | Descripción                                                                         |
-| -------------- | --------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Número    | 4D Server's cache size.                                                             |
-| usedCache      | Número    | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Número    | Number of entity selections.                                                        |
-| entitySet      | Colección | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Colección | A collection containing information about progress indicator information.           |
-| sessionInfo    | Colección | A collection in which each object contains information about each user session.     |
+| Propiedad      | Tipo       | Descripción                                                                         |
+| -------------- | ---------- | ----------------------------------------------------------------------------------- |
+| cacheSize      | Número     | 4D Server's cache size.                                                             |
+| usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Número     | Number of entity selections.                                                        |
+| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
+| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
+| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
 
 ### entitySet
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Property      | Tipo     | Descripción                                                                                                                                                                                                                                                         |
+| Propiedad     | Tipo     | Descripción                                                                                                                                                                                                                                                         |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | Cadena   | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | dataClass     | Cadena   | Name of the dataclass.                                                                                                                                                                                                                                              |
@@ -38,7 +38,7 @@ For information about how to create an entity selection, refer to `$method=entit
 
 For each user session, the following information is returned in the *sessionInfo* collection:
 
-| Property   | Tipo   | Descripción                                                  |
+| Propiedad  | Tipo   | Descripción                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
 | sessionID  | Cadena | A UUID that references the session.                          |
 | userName   | Cadena | The name of the user who runs the session.                   |

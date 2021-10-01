@@ -34,20 +34,20 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 <!-- REF pop3TransporterClass.POP3 New transporter.Desc -->
 ## POP3 New transporter
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #_command_.POP3 New transporter.Syntax -->
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | objeto             | -> | Mail server information                             |
-| Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | objeto             | -> | Mail server information                             |
+| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 
@@ -61,14 +61,14 @@ In the *server* parameter, pass an object containing the following properties:
 | *server*                                                                                                                                                                                                                                                                                                                                                        | Default value (if omitted)                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | none                                                                |
+| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                             |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | none                                                                |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
+| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | ninguno                                                             |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
 
 
 #### Resultado
@@ -105,10 +105,10 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 **4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
-| Resultado | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objeto             | -> | Mail server information                             |
+| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 #### Descripción
@@ -159,19 +159,19 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 ## .delete()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.delete().Syntax -->
 **.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.delete().Params -->
-| Parameter | Tipo   |    | Descripción                     |
-| --------- | ------ |:--:| ------------------------------- |
-| msgNumber | Entero | -> | Number of the message to delete |
+| Parámetros | Tipo    |    | Descripción                     |
+| ---------- | ------- |:--:| ------------------------------- |
+| msgNumber  | Integer | -> | Number of the message to delete |
 <!-- END REF -->
 
 
@@ -206,19 +206,19 @@ Executing this method does not actually remove any email. The flagged email will
 
 ## .getBoxInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.getBoxInfo().Syntax -->
 **.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getBoxInfo().Params -->
-| Parameter | Tipo   |    | Descripción    |
-| --------- | ------ |:--:| -------------- |
-| Resultado | Objeto | <- | boxInfo object |
+| Parámetros | Tipo   |    | Descripción    |
+| ---------- | ------ |:--:| -------------- |
+| Resultado  | Objeto | <- | boxInfo object |
 <!-- END REF -->
 
 
@@ -228,7 +228,7 @@ The `.getBoxInfo()` function <!-- REF #pop3TransporterClass.getBoxInfo().Summary
 
 The `boxInfo` object returned contains the following properties:
 
-| Property  | Tipo   | Descripción                       |
+| Propiedad | Tipo   | Descripción                       |
 | --------- | ------ | --------------------------------- |
 | mailCount | Número | Number of messages in the mailbox |
 | size      | Número | Message size in bytes             |
@@ -258,20 +258,20 @@ The `boxInfo` object returned contains the following properties:
 
 ## .getMail()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.getMail().Syntax -->
 **.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMail().Params -->
-| Parameter | Tipo   |    | Descripción                                      |
-| --------- | ------ |:--:| ------------------------------------------------ |
-| msgNumber | Entero | -> | Number of the message in the list                |
-| Resultado | Objeto | <- | [Email object](emailObjectClass.md#email-object) |
+| Parámetros | Tipo    |    | Descripción                                      |
+| ---------- | ------- |:--:| ------------------------------------------------ |
+| msgNumber  | Integer | -> | Number of the message in the list                |
+| Resultado  | Objeto  | <- | [Email object](emailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -318,20 +318,20 @@ You want to know the sender of the first mail of the mailbox:
 
 ## .getMailInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.getMailInfo().Syntax -->
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfo().Params -->
-| Parameter | Tipo   |    | Descripción                       |
-| --------- | ------ |:--:| --------------------------------- |
-| msgNumber | Entero | -> | Number of the message in the list |
-| Resultado | Objeto | <- | mailInfo object                   |
+| Parámetros | Tipo    |    | Descripción                       |
+| ---------- | ------- |:--:| --------------------------------- |
+| msgNumber  | Integer | -> | Number of the message in the list |
+| Resultado  | Objeto  | <- | mailInfo object                   |
 <!-- END REF -->
 
 
@@ -343,10 +343,10 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The `mailInfo` object returned contains the following properties:
 
-| Property | Tipo   | Descripción              |
-| -------- | ------ | ------------------------ |
-| size     | Número | Message size in bytes    |
-| id       | Texto  | Unique ID of the message |
+| Propiedad | Tipo   | Descripción              |
+| --------- | ------ | ------------------------ |
+| size      | Número | Message size in bytes    |
+| id        | Texto  | Unique ID of the message |
 
 The method returns **Null** if:
 
@@ -381,19 +381,19 @@ The method returns **Null** if:
 
 ## .getMailInfoList()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Syntax -->
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Params -->
-| Parameter | Tipo      |    | Descripción                      |
-| --------- | --------- |:--:| -------------------------------- |
-| Resultado | Colección | <- | Collection of `mailInfo` objects |
+| Parámetros | Tipo       |    | Descripción                      |
+| ---------- | ---------- |:--:| -------------------------------- |
+| Resultado  | Collection | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
 
 
@@ -403,7 +403,7 @@ The `.getMailInfoList()` function <!-- REF #pop3TransporterClass.getMailInfoList
 
 Each `mailInfo` object in the returned collection contains the following properties:
 
-| Property     | Tipo   | Descripción                                                        |
+| Propiedad    | Tipo   | Descripción                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
 | \[ ].size   | Número | Message size in bytes                                              |
 | \[ ].number | Número | Message number                                                     |
@@ -450,20 +450,20 @@ You want to know the total number and size of emails in the mailbox:
 
 ## .getMIMEAsBlob()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R3  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.getMIMEAsBlob().Syntax -->
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMIMEAsBlob().Params -->
-| Parameter | Tipo   |    | Descripción                                           |
-| --------- | ------ |:--:| ----------------------------------------------------- |
-| msgNumber | Entero | -> | Number of the message in the list                     |
-| Resultado | Blob   | <- | Blob of the MIME string returned from the mail server |
+| Parámetros | Tipo    |    | Descripción                                           |
+| ---------- | ------- |:--:| ----------------------------------------------------- |
+| msgNumber  | Integer | -> | Number of the message in the list                     |
+| Resultado  | Blob    | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 
 
@@ -528,19 +528,19 @@ You want to know the total number and size of emails in the mailbox:
 <!-- REF pop3TransporterClass.undeleteAll().Desc -->
 ## .undeleteAll()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R2  | Añadidos       |
 </details>
 
 <!-- REF #pop3TransporterClass.undeleteAll().Syntax -->
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.undeleteAll().Params -->
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
 <!-- END REF -->
 
 

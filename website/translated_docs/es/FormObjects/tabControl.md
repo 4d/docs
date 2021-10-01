@@ -15,18 +15,18 @@ The screens can represent pages in a multi-page form or an object that changes w
 
 Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
-Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+Cada pestaña puede mostrar etiquetas o rótulos y un pequeño icono. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
 
 ![](assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+When you create a tab control, 4D manages the spacing and placement of the tabs. Sólo tiene que suministrar las etiquetas en forma de array, o los iconos y etiquetas en forma de lista jerárquica.
 
 If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
 
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
 
-### JSON Example:
+### Ejemplo JSON:
 
 ```4d
     "myTab": {
@@ -35,13 +35,13 @@ Under macOS, in addition to the standard position (top), the tab controls can al
         "top": 160,  
         "width": 100,   
         "height": 20,   
-        "labelsPlacement": "bottom" //define the direction
+        "labelsPlacement": "bottom" //define la orientación
     }
 ```
 
 
 
-## Adding labels to a tab control
+## Añadir etiquetas a un control de pestañas
 
 There are several ways to supply the labels for a tab control:
 
@@ -89,5 +89,5 @@ When you assign the `gotoPage` [standard action](properties_Action.md#standard-a
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
 
 
-## Supported Properties
+## Propiedades soportadas
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 

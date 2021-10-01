@@ -3,23 +3,23 @@ id: onRowResize
 title: On Row Resize
 ---
 
-| Code | Can be called by                                        | Definition                                               |
-| ---- | ------------------------------------------------------- | -------------------------------------------------------- |
-| 60   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The height of a row is modified by a user with the mouse |
+| Code | Puede ser llamado por                                   | Definición                                                       |
+| ---- | ------------------------------------------------------- | ---------------------------------------------------------------- |
+| 60   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | La altura de una línea es modificada por un usuario con el ratón |
 
 
 ## Descripción
 
-This event is generated when the height of a row is modified by a user in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Este evento se genera cuando la altura de una línea es modificada por un usuario en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Property    | Tipo         | Descripción                                                      |
-| ----------- | ------------ | ---------------------------------------------------------------- |
-| code        | entero largo | 60                                                               |
-| description | texto        | "On Row Resize"                                                  |
-| objectName  | texto        | 4D View Pro area name                                            |
-| sheetName   | texto        | Name of the sheet of the event                                   |
-| range       | objeto       | Cell range of the rows whose heights have changed                |
-| header      | booleano     | True if the column header row (first row) is resized, else false |
+| Propiedad   | Tipo         | Descripción                                                                               |
+| ----------- | ------------ | ----------------------------------------------------------------------------------------- |
+| code        | entero largo | 60                                                                                        |
+| description | texto        | "On Row Resize"                                                                           |
+| objectName  | texto        | Nombre del área 4D View Pro                                                               |
+| sheetName   | texto        | Nombre de la hoja del evento                                                              |
+| range       | objeto       | Rango de celdas de las líneas cuyo alto ha cambiado                                       |
+| header      | booleano     | True si la línea de la columna de encabezado (primera línea) se redimensiona, si no false |
 
 #### Ejemplo
 

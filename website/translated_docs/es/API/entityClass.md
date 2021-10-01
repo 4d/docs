@@ -6,7 +6,7 @@ title: Entity
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
-### Summary
+### Resumen
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,10 +41,10 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 <!-- REF entityClass.attributeName.Desc -->
 ## .*attributeName*
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 </details>
 
 <!-- REF entityClass.attributeName.Syntax -->
@@ -81,10 +81,10 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 <!-- REF entityClass.clone().Desc -->
 ## .clone()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 </details>
 
 
@@ -92,9 +92,9 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.clone().Params -->
-| Parameter | Tipo      |    | Descripción                       |
-| --------- | --------- |:--:| --------------------------------- |
-| Resultado | 4D.Entity | <- | New entity referencing the record |
+| Parámetros | Tipo      |    | Descripción                       |
+| ---------- | --------- |:--:| --------------------------------- |
+| Resultado  | 4D.Entity | <- | New entity referencing the record |
 <!-- END REF -->
 
 
@@ -126,10 +126,10 @@ This function can only be used with entities already saved in the database. It c
 <!-- REF entityClass.diff().Desc -->
 ## .diff()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 </details>
 
 <!-- REF #entityClass.diff().Syntax -->
@@ -137,11 +137,11 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #entityClass.diff().Params -->
-| Parameter           | Tipo      |    | Descripción                                    |
-| ------------------- | --------- |:--:| ---------------------------------------------- |
-| entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
-| attributesToCompare | Colección | -> | Name of attributes to be compared              |
-| Resultado           | Colección | <- | Differences between the entities               |
+| Parámetros          | Tipo       |    | Descripción                                    |
+| ------------------- | ---------- |:--:| ---------------------------------------------- |
+| entityToCompare     | 4D.Entity  | -> | Entity to be compared with the original entity |
+| attributesToCompare | Collection | -> | Name of attributes to be compared              |
+| Resultado           | Collection | <- | Differences between the entities               |
 <!-- END REF -->
 
 
@@ -157,7 +157,7 @@ The differences are returned as a collection of objects whose properties are:
 
 | Property name | Tipo                            | Descripción                                 |
 | ------------- | ------------------------------- | ------------------------------------------- |
-| attributeName | Cadena                          | Name of the attribute                       |
+| attributeName | String                          | Name of the attribute                       |
 | value         | any - Depends on attribute type | Value of the attribute in the entity        |
 | otherValue    | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 
@@ -330,10 +330,10 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 <!-- REF entityClass.drop().Desc -->
 ## .drop()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -341,10 +341,10 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.drop().Params -->
-| Parameter | Tipo   |    | Descripción                                                                     |
-| --------- | ------ |:--:| ------------------------------------------------------------------------------- |
-| mode      | Entero | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Resultado | Objeto | <- | Result of drop operation                                                        |
+| Parámetros | Tipo    |    | Descripción                                                                     |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
+| Resultado  | Object  | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### Descripción
@@ -361,30 +361,30 @@ Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode
 
 The object returned by `.drop( )` contains the following properties:
 
-| Property      |                     | Tipo                  | Descripción                                                                                                           |
+| Propiedad     |                     | Tipo                  | Descripción                                                                                                           |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
+| success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
 | status(*)     |                     | number                | Error code, see below                                                                                                 |
-| statusText(*) |                     | texto                 | Description of the error, see below                                                                                   |
+| statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
 |               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
-| LockKindText  |                     | texto                 | "Locked by record"                                                                                                    |
-| lockInfo      |                     | objeto                | Information about the lock origin                                                                                     |
+| LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
+| lockInfo      |                     | object                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
-|               | user_name           | texto                 | Session user name on the machine                                                                                      |
-|               | user4d_id           | texto                 | User name in the 4D database directory                                                                                |
-|               | host_name           | texto                 | Machine name                                                                                                          |
-|               | task_name           | texto                 | Process name                                                                                                          |
-|               | client_version      | texto                 |                                                                                                                       |
+|               | user_name           | text                  | Session user name on the machine                                                                                      |
+|               | user4d_alias        | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
+|               | host_name           | text                  | Machine name                                                                                                          |
+|               | task_name           | text                  | Process name                                                                                                          |
+|               | client_version      | text                  |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
-|               | message             | texto                 | Error message                                                                                                         |
-|               | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                          |
+|               | message             | text                  | Error message                                                                                                         |
+|               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
 |               | errCode             | number                | Error code                                                                                                            |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Valor | Comment                                                                                                                                                                                                                                |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                             |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li><p>**Associated statusText**: "Entity does not exist anymore" |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br>**Associated statusText**: "Already locked"                                                                                                                                       |
@@ -438,10 +438,10 @@ Example with `dk force drop if stamp changed` option:
 <!-- REF entityClass.first().Desc -->
 ## .first()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -449,9 +449,9 @@ Example with `dk force drop if stamp changed` option:
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.first().Params -->
-| Parameter | Tipo      |    | Descripción                                                          |
-| --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Resultado | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
+| Parámetros | Tipo      |    | Descripción                                                          |
+| ---------- | --------- |:--:| -------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Descripción
@@ -477,10 +477,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF entityClass.fromObject().Desc -->
 ## .fromObject()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -488,9 +488,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #entityClass.fromObject().Params -->
-| Parameter | Tipo   |    | Descripción                          |
-| --------- | ------ |:--:| ------------------------------------ |
-| filler    | Objeto | -> | Object from which to fill the entity |
+| Parámetros | Tipo   |    | Descripción                          |
+| ---------- | ------ |:--:| ------------------------------------ |
+| filler     | Object | -> | Object from which to fill the entity |
 <!-- END REF -->
 
 #### Descripción
@@ -566,10 +566,10 @@ You could also use a related entity given as an object:
 <!-- REF entityClass.getDataClass().Desc -->
 ## .getDataClass()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 
 </details>
 
@@ -577,9 +577,9 @@ You could also use a related entity given as an object:
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #entityClass.getDataClass().Params -->
-| Parameter | Tipo         |    | Descripción                                  |
-| --------- | ------------ |:--:| -------------------------------------------- |
-| Resultado | 4D.DataClass | <- | DataClass object to which the entity belongs |
+| Parámetros | Tipo         |    | Descripción                                  |
+| ---------- | ------------ |:--:| -------------------------------------------- |
+| Resultado  | 4D.DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
 
 #### Descripción
@@ -613,10 +613,10 @@ The following generic code duplicates any entity:
 <!-- REF entityClass.getKey().Desc -->
 ## .getKey()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -624,11 +624,11 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getKey().Params -->
-| Parameter | Tipo   |    | Descripción                                                                             |
-| --------- | ------ |:--:| --------------------------------------------------------------------------------------- |
-| mode      | Entero | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Resultado | Texto  | <- | Value of the text primary key of the entity                                             |
-| Resultado | Entero | <- | Value of the numeric primary key of the entity                                          |
+| Parámetros | Tipo    |    | Descripción                                                                             |
+| ---------- | ------- |:--:| --------------------------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
+| Resultado  | Text    | <- | Value of the text primary key of the entity                                             |
+| Resultado  | Integer | <- | Value of the numeric primary key of the entity                                          |
 
 <!-- END REF -->
 
@@ -657,10 +657,10 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- REF entityClass.getSelection().Desc -->
 ## .getSelection()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -668,9 +668,9 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entityClass.getSelection().Params -->
-| Parameter | Tipo               |    | Descripción                                                      |
-| --------- | ------------------ |:--:| ---------------------------------------------------------------- |
-| Resultado | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
+| Parámetros | Tipo               |    | Descripción                                                      |
+| ---------- | ------------------ |:--:| ---------------------------------------------------------------- |
+| Resultado  | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
 
 #### Descripción
@@ -701,10 +701,10 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- REF entityClass.getStamp().Desc -->
 ## .getStamp()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -712,9 +712,9 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getStamp().Params -->
-| Parameter | Tipo   |    | Descripción                                             |
-| --------- | ------ |:--:| ------------------------------------------------------- |
-| Resultado | Entero | <- | Stamp of the entity (0 if entity has just been created) |
+| Parámetros | Tipo    |    | Descripción                                             |
+| ---------- | ------- |:--:| ------------------------------------------------------- |
+| Resultado  | Integer | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
 
 #### Descripción
@@ -750,10 +750,10 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <!-- REF entityClass.indexOf().Desc -->
 ## .indexOf()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -761,10 +761,10 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.indexOf().Params -->
-| Parameter       | Tipo               |    | Descripción                                                        |
+| Parámetros      | Tipo               |    | Descripción                                                        |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
-| Resultado       | Entero             | <- | Position of the entity in an entity selection                      |
+| Resultado       | Integer            | <- | Position of the entity in an entity selection                      |
 <!-- END REF -->
 
 #### Descripción
@@ -800,10 +800,10 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- REF entityClass.isNew().Desc -->
 ## .isNew()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -811,9 +811,9 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.isNew().Params -->
-| Parameter | Tipo     |    | Descripción                                                               |
-| --------- | -------- |:--:| ------------------------------------------------------------------------- |
-| Resultado | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Parámetros | Tipo    |    | Descripción                                                               |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------- |
+| Resultado  | Boolean | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### Descripción
@@ -841,10 +841,10 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 <!-- REF entityClass.last().Desc -->
 ## .last()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -852,9 +852,9 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.last().Params -->
-| Parameter | Tipo      |    | Descripción                                                         |
-| --------- | --------- |:--:| ------------------------------------------------------------------- |
-| Resultado | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
+| Parámetros | Tipo      |    | Descripción                                                         |
+| ---------- | --------- |:--:| ------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Descripción
@@ -882,10 +882,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF entityClass.lock().Desc -->
 ## .lock()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -893,10 +893,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.lock().Params -->
-| Parameter | Tipo   |    | Descripción                                                          |
-| --------- | ------ |:--:| -------------------------------------------------------------------- |
-| mode      | Entero | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Resultado | Objeto | <- | Result of lock operation                                             |
+| Parámetros | Tipo    |    | Descripción                                                          |
+| ---------- | ------- |:--:| -------------------------------------------------------------------- |
+| mode       | Integer | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
+| Resultado  | Object  | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### Descripción
@@ -918,34 +918,34 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 The object returned by `.lock( )` contains the following properties:
 
-| Property         |                     | Tipo                  | Descripción                                                                                                         |
+| Propiedad        |                     | Tipo                  | Descripción                                                                                                         |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | booleano              | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
+| success          |                     | boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
-| **wasReloaded**  |                     | booleano              | true if the entity was reloaded with success, false otherwise.                                                      |
+| **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
 | status(\*)     |                     | number                | Error code, see below                                                                                               |
-| statusText(\*) |                     | texto                 | Description of the error, see below                                                                                 |
+| statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
 |                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
-| lockKindText     |                     | texto                 | "Locked by record"                                                                                                  |
-| lockInfo         |                     | objeto                | Information about the lock origin                                                                                   |
+| lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
+| lockInfo         |                     | object                | Information about the lock origin                                                                                   |
 |                  | task_id             | number                | Process ID                                                                                                          |
-|                  | user_name           | texto                 | Session user name on the machine                                                                                    |
-|                  | user4d_alias        | texto                 | Name or alias of the 4D user                                                                                        |
+|                  | user_name           | text                  | Session user name on the machine                                                                                    |
+|                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
 |                  | user4d_id           | number                | User id in the 4D database directory                                                                                |
-|                  | host_name           | texto                 | Machine name                                                                                                        |
-|                  | task_name           | texto                 | Process name                                                                                                        |
-|                  | client_version      | texto                 |                                                                                                                     |
+|                  | host_name           | text                  | Machine name                                                                                                        |
+|                  | task_name           | text                  | Process name                                                                                                        |
+|                  | client_version      | text                  |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
-|                  | message             | texto                 | Error message                                                                                                       |
-|                  | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                        |
+|                  | message             | text                  | Error message                                                                                                       |
+|                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
 |                  | errCode             | number                | Error code                                                                                                          |
 
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
 
-| Constant                                  | Valor | Comment                                                                                                                                                                                                                                                 |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                              |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when dk force drop if stamp changed option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity does not exist anymore"                                           |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"                                                                                                            |
@@ -995,10 +995,10 @@ Example with `dk reload if stamp changed` option:
 <!-- REF entityClass.next().Desc -->
 ## .next()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1006,9 +1006,9 @@ Example with `dk reload if stamp changed` option:
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.next().Params -->
-| Parameter | Tipo      |    | Descripción                                                          |
-| --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Resultado | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
+| Parámetros | Tipo      |    | Descripción                                                          |
+| ---------- | --------- |:--:| -------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Descripción
@@ -1037,10 +1037,10 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- REF entityClass.previous().Desc -->
 ## .previous()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1048,9 +1048,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.previous().Params -->
-| Parameter | Tipo      |    | Descripción                                                              |
-| --------- | --------- |:--:| ------------------------------------------------------------------------ |
-| Resultado | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
+| Parámetros | Tipo      |    | Descripción                                                              |
+| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
+| Resultado  | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### Descripción
@@ -1079,10 +1079,10 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF entityClass.reload().Desc -->
 ## .reload( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1090,9 +1090,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.reload().Params -->
-| Parameter | Tipo   |    | Descripción   |
-| --------- | ------ |:--:| ------------- |
-| Resultado | Objeto | <- | Status object |
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ |:--:| ------------- |
+| Resultado  | Object | <- | Status object |
 <!-- END REF -->
 
 #### Descripción
@@ -1103,15 +1103,15 @@ The `.reload()` function <!-- REF #entityClass.reload().Summary -->reloads the c
 
 The object returned by `.reload( )` contains the following properties:
 
-| Property         | Tipo     | Descripción                                                                                                                                           |
-| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
-| status(\*)     | number   | Error code, see below                                                                                                                                 |
-| statusText(\*) | texto    | Description of the error, see below                                                                                                                   |
+| Propiedad        | Tipo    | Descripción                                                                                                                                           |
+| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
+| status(\*)     | number  | Error code, see below                                                                                                                                 |
+| statusText(\*) | text    | Description of the error, see below                                                                                                                   |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Valor | Comment                                                                                                                                                                                                                   |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>***Associated statusText***: "Entity does not exist anymore" |
 | `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br>***Associated statusText***: "Other error"                                                                           |
@@ -1142,10 +1142,10 @@ The object returned by `.reload( )` contains the following properties:
 <!-- REF entityClass.save().Desc -->
 ## .save()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1153,10 +1153,10 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.save().Params -->
-| Parameter | Tipo   |    | Descripción                                       |
-| --------- | ------ |:--:| ------------------------------------------------- |
-| mode      | Entero | -> | `dk auto merge`: Enables the automatic merge mode |
-| Resultado | Objeto | <- | Result of save operation                          |
+| Parámetros | Tipo    |    | Descripción                                       |
+| ---------- | ------- |:--:| ------------------------------------------------- |
+| mode       | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
+| Resultado  | Object  | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### Descripción
@@ -1176,11 +1176,11 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Property     |                    | Tipo                  | Descripción                                                                                                             |
+| Propiedad    |                    | Tipo                  | Descripción                                                                                                             |
 | ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| success      |                    | booleano              | True if the save action is successful, False otherwise.                                                                 |
+| success      |                    | boolean               | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
-| autoMerged   |                    | booleano              | True if an auto merge was done, False otherwise.                                                                        |
+| autoMerged   |                    | boolean               | True if an auto merge was done, False otherwise.                                                                        |
 |              |                    |                       | ***Available only in case of error***:                                                                                  |
 | status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
 | statusText   |                    | texto                 | Description of the error, [see below](#status-and-statustext)                                                           |
@@ -1189,7 +1189,7 @@ The object returned by `.save()` contains the following properties:
 | lockInfo     |                    | objeto                | Information about the lock origin                                                                                       |
 |              | task_id            | number                | Process id                                                                                                              |
 |              | user_name          | texto                 | Session user name on the machine                                                                                        |
-|              | user4d_id          | texto                 | User name in the 4D database directory                                                                                  |
+|              | user4d_alias       | texto                 | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | texto                 | Machine name                                                                                                            |
 |              | task_name          | texto                 | Process name                                                                                                            |
 |              | client_version     | texto                 |                                                                                                                         |
@@ -1203,7 +1203,7 @@ The object returned by `.save()` contains the following properties:
 
 The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
-| Constant                                  | Valor | Comment                                                                                                                                                                                                                                                           |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status automerge failed`              | 6     | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.<p><p>**Associated statusText**: "Auto merge failed"                                                        |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                            |
@@ -1248,7 +1248,7 @@ Updating an entity without `dk auto merge` option:
  End case
 ```
 
-#### Example 3
+#### Ejemplo 3
 
 Updating an entity with `dk auto merge` option:
 
@@ -1277,10 +1277,10 @@ Updating an entity with `dk auto merge` option:
 <!-- REF entityClass.toObject().Desc -->
 ## .toObject()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1288,12 +1288,12 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.toObject().Params -->
-| Parameter    | Tipo      |    | Descripción                                                                                             |
-| ------------ | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | Texto     | -> | Attribute(s) to extract (comma-separated string)                                                        |
-| filterCol    | Colección | -> | Collection of attribute(s) to extract                                                                   |
-| options      | Entero    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Resultado    | Objeto    | <- | Object built from the entity                                                                            |
+| Parámetros   | Tipo       |    | Descripción                                                                                             |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------- |
+| filterString | Texto      | -> | Attribute(s) to extract (comma-separated string)                                                        |
+| filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                   |
+| options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
+| Resultado    | Objeto     | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
 #### Descripción
@@ -1339,7 +1339,7 @@ Without filter parameter:
 employeeObject:=employeeSelected.toObject()
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1372,7 +1372,7 @@ Extracting the primary key and the stamp:
 employeeObject:=employeeSelected.toObject("";dk with primary key+dk with stamp)
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1397,7 +1397,7 @@ Returns:
 }
 ```
 
-#### Example 3
+#### Ejemplo 3
 
 Expanding all the properties of `relatedEntities`:
 
@@ -1466,7 +1466,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 }
 ```
 
-#### Example 4
+#### Ejemplo 4
 
 Extracting some properties of `relatedEntities`:
 
@@ -1474,7 +1474,7 @@ Extracting some properties of `relatedEntities`:
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1493,7 +1493,7 @@ Returns:
 }
 ```
 
-#### Example 5
+#### Ejemplo 5
 
 Extracting a `relatedEntity` with simple form:
 
@@ -1502,7 +1502,7 @@ Extracting a `relatedEntity` with simple form:
  employeeObject:=employeeSelected.toObject($coll)
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1513,7 +1513,7 @@ Returns:
 }
 ```
 
-#### Example 6
+#### Ejemplo 6
 
 Extracting all the properties of a `relatedEntity`:
 
@@ -1521,7 +1521,7 @@ Extracting all the properties of a `relatedEntity`:
  employeeObject:=employeeSelected.toObject("employer.*")
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1535,7 +1535,7 @@ Returns:
 }
 ```
 
-#### Example 7
+#### Ejemplo 7
 
 Extracting some properties of a `relatedEntity`:
 
@@ -1546,7 +1546,7 @@ Extracting some properties of a `relatedEntity`:
  employeeObject:=employeeSelected.toObject($col)
 ```
 
-Returns:
+Devuelve:
 
 ```4d
 {
@@ -1564,10 +1564,10 @@ Returns:
 <!-- REF entityClass.touched().Desc -->
 ## .touched( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1575,9 +1575,9 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.touched().Params -->
-| Parameter | Tipo     |    | Descripción                                                                           |
-| --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
-| Resultado | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Parámetros | Tipo     |    | Descripción                                                                           |
+| ---------- | -------- |:--:| ------------------------------------------------------------------------------------- |
+| Resultado  | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### Descripción
@@ -1608,10 +1608,10 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- REF entityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1619,9 +1619,9 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #entityClass.touchedAttributes().Params -->
-| Parameter | Tipo      |    | Descripción                                      |
-| --------- | --------- |:--:| ------------------------------------------------ |
-| Resultado | Colección | <- | Names of touched attributes, or empty collection |
+| Parámetros | Tipo       |    | Descripción                                      |
+| ---------- | ---------- |:--:| ------------------------------------------------ |
+| Resultado  | Collection | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
 
 #### Descripción
@@ -1684,10 +1684,10 @@ In this case:
 <!-- REF entityClass.unlock().Desc -->
 ## .unlock()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
 
 </details>
 
@@ -1695,9 +1695,9 @@ In this case:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.unlock().Params -->
-| Parameter | Tipo   |    | Descripción   |
-| --------- | ------ |:--:| ------------- |
-| Resultado | Objeto | <- | Status object |
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ |:--:| ------------- |
+| Resultado  | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Descripción
@@ -1721,9 +1721,9 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Property | Tipo     | Descripción                                                                                                                                                                                        |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success  | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
+| Propiedad | Tipo     | Descripción                                                                                                                                                                                        |
+| --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success   | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
 #### Ejemplo
 

@@ -4,24 +4,24 @@ title: Imagen
 ---
 
 ---
-## Pathname
+## Ruta de acceso
 
 Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
 
 Two main locations can be used for static picture path:
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|  Name  | Data Type | Possible Values                             |
-|:------:|:---------:| ------------------------------------------- |
-| imagen |   texto   | Relative or filesystem path in POSIX syntax |
+| Nombre | Tipos de datos | Valores posibles                            |
+|:------:|:--------------:| ------------------------------------------- |
+| imagen |     texto      | Relative or filesystem path in POSIX syntax |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
@@ -62,12 +62,12 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | cadena    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Nombre        | Tipos de datos | Valores posibles                                         |
+| ------------- | -------------- | -------------------------------------------------------- |
+| pictureFormat | cadena         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Static Picture](staticPicture.md)

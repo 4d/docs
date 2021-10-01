@@ -25,7 +25,7 @@ You can use any of the following keywords:
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
 | average | Get the average on a numerical attribute                                                                                                                                              |
-| count   | Get the total number in the collection or dataclass (in both cases you must specify an attribute)                                                                                     |
+| count   | Obter o número total na coleção ou na classe de dados (em ambos os casos há que especificar um atributo)                                                                              |
 | min     | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
 | max     | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
 | sum     | Get the sum on a numerical attribute                                                                                                                                                  |

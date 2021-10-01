@@ -80,7 +80,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-### Summary
+### Resumen
 
 
 |                                                                                                                                                                                         |
@@ -97,17 +97,17 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ## New signal
 
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF signalClass.New signal.Params -->
-| Parameter   | Tipo      |    | Descripción                            |
+| Parámetros  | Tipo      |    | Descripción                            |
 | ----------- | --------- |:--:| -------------------------------------- |
 | description | Texto     | -> | Description for the signal             |
 | Resultado   | 4D.Signal | <- | Native object encapsulating the signal |
@@ -169,10 +169,10 @@ The ***doSomething*** method could be like:
 <!-- REF signalClass.description.Desc -->
 ## .description
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #signalClass.description.Syntax -->
@@ -193,10 +193,10 @@ This property is **read-write**.
 <!-- REF signalClass.signaled.Desc -->
 ## .signaled
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 
 </details>
 
@@ -216,19 +216,19 @@ This property is **read-only**.
 <!-- REF signalClass.trigger().Desc -->
 ## .trigger()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #signalClass.trigger().Syntax -->
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #signalClass.trigger().Params -->
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
 <!-- END REF -->
 
 
@@ -245,20 +245,20 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 <!-- REF signalClass.wait().Desc -->
 ## .wait()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #signalClass.wait().Syntax -->
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #signalClass.wait().Params -->
-| Parameter | Tipo     |    | Descripción                                    |
-| --------- | -------- | -- | ---------------------------------------------- |
-| timeout   | Real     | -> | Maximum waiting time for the signal in seconds |
-| Resultado | Booleano | <- | State of the `.signaled` property              |
+| Parámetros | Tipo     |    | Descripción                                    |
+| ---------- | -------- | -- | ---------------------------------------------- |
+| timeout    | Real     | -> | Maximum waiting time for the signal in seconds |
+| Resultado  | Booleano | <- | State of the `.signaled` property              |
 <!-- END REF -->
 
 

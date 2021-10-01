@@ -1,15 +1,15 @@
 ---
 id: whatsNew
-title: Les nouveautés
+title: What's New
 ---
 
-Voici la liste des nouvelles fonctionnalités 4D ou des fonctionnalités modifiées couvertes dans cette documentation.
+The list of new or modified 4D features that are covered in this documentation.
 
 ## 4D v18 R6
 
-- [Classe Entity Selection](API/entitySelectionClass.md) : les fonctions `.average()`, `.max()` et `.min()` retournent désormais *undefined* si la sélection d'entité est vide.
-- [Messagerie IMAP](API/imapTransporterClass.md), [messagerie POP3](API/pop3TransporterClass.md) et [messagerie SMTP](API/smtpTransporterClass.md) : la propriété `authenticationMode` active OAuth 2.0
-- [Messagerie IMAP](API/imapTransporterClass.md) : nouvelles fonctions `.expunge()` et `.append()`
+- [Entity Selection Class](API/entitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
+- [IMAP Mail](API/imapTransporterClass.md), [POP3 Mail](API/pop3TransporterClass.md) and [SMTP Mail](API/smtpTransporterClass.md): `authenticationMode` property enables OAuth 2.0
+- [IMAP Mail](API/imapTransporterClass.md): new `.expunge()` and `.append()` functions
 - New [WebAdmin](Admin/webAdmin.md) web server component
 - New [DataExplorer](Admin/dataExplorer) interface
-- Nouvelles [sessions utilisateur](WebServer/sessions.md) Web et [leur API](API/sessionClass.md).
+- New web [user sessions](WebServer/sessions.md) and [their API](API/sessionClass.md).

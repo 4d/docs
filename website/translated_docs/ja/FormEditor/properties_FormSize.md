@@ -4,79 +4,79 @@ title: フォームサイズ
 ---
 
  
-4D lets you set the size of both the form and the [window](properties_WindowSize.md). These properties are interdependent and your application interface results from their interaction.
+4Dでは、フォームと [ウィンドウ](properties_WindowSize.md) の両方のサイズを設定することができます。 これらのプロパティは相互に依存しており、アプリケーションのインターフェースはこれらの相互作用によってもたらされます。
 
-Size options depend on the value of the **Size based on** option.
+サイズオプションは、**サイズを決めるもの** オプションの値に依存します。
 
 ---
-## Size based on
+## サイズを決めるもの
 
 
-*   **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor. Margin**](#hor-margin) and [**Vert. Margin**](#vert-margin) fields. <p> You can choose this option when you want to use active objects placed in an offscreen area (*i.e.*, outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.
+*   **自動サイズ**: フォームサイズは、すべてのオブジェクトを表示するために必要なサイズと、[**水平 マージン**](#水平-マージン) および [**垂直 マージン**](#垂直-マージン) フィールドへ入力されたマージン値 (ピクセル単位) を合計したものになります。 <p> 自動サイズのウィンドウを用いて、オフスクリーンエリア (ウィンドウの矩形境界線の外側のエリア) に配置したアクティブオブジェクトを使用したい場合にこのオプションを選択することができます。 このオプションを選択すると、これらのオブジェクトによりウィンドウサイズが変更されなくなります。
 
 
-*   **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
+*   **サイズを設定**: フォームサイズは [**幅**](#幅) および [**高さ**](#高さ) フィールドに入力された値 (ピクセル単位) により決まります 。
 
-*   **\<object name>**: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
+*   **オブジェクト名**: フォームサイズは、選択したフォームオブジェクトの位置により決まります。 たとえば、表示されるエリアの右下部分に置かれているオブジェクトを選択した場合は、左上端が起点であり、右下端が選択したオブジェクトの右下端となる矩形にマージン値を加算したものがフォームサイズになります。
 
 
-> For output forms, only the [**Hor. margin**](#hor-margin) or [**Width**](width) fields are available.
+> 出力フォームの場合は [**水平 マージン**](#水平-マージン) または [**幅**](幅) フィールドだけが利用可能です。
 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                                 |
-| -------------- | ------ | ----------------------------------------------------- |
-| formSizeAnchor | string | Name of object to use to defined the size of the form |
+| 名称             | データタイプ | とりうる値                        |
+| -------------- | ------ | ---------------------------- |
+| formSizeAnchor | string | フォームサイズを定義するために使用するオブジェクトの名前 |
 
 ---
 ## 高さ
 
-Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+[フォームサイズ](#サイズを決めるもの) が **サイズを設定** の場合のフォームの高さ (ピクセル単位) です。
 
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値         |
-| ------ | ------ | ------------- |
-| height | number | integer value |
+| 名称     | データタイプ | とりうる値 |
+| ------ | ------ | ----- |
+| height | number | 整数値   |
 
 
 ---
-## Hor. Margin
-Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or **\<object name>**
+## 水平 マージン
+[フォームサイズ](#サイズを決めるもの)が **自動サイズ** または **オブジェクト名** の場合に、フォームの右マージンに追加する値 (ピクセル単位) です。
 
-This value also determines the right-hand margins of forms used in the Label editor.
+この値は、ラベルエディターで使用されるフォームの右マージンも決定します。
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値         |
-| ----------- | ------ | ------------- |
-| rightMargin | number | integer value |
+| 名称          | データタイプ | とりうる値 |
+| ----------- | ------ | ----- |
+| rightMargin | number | 整数値   |
 
 
 ---
 
-## Vert. Margin
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or **\<object name>**.
+## 垂直 マージン
+[フォームサイズ](#サイズを決めるもの)が **自動サイズ** または **オブジェクト名** の場合に、フォームの下マージンに追加する値 (ピクセル単位) です。
 
-This value also determines the top margins of forms used in the Label editor.
+この値は、ラベルエディターで使用されるフォームの上マージンも決定します。
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値         |
-| ------------ | ------ | ------------- |
-| bottomMargin | number | integer value |
+| 名称           | データタイプ | とりうる値 |
+| ------------ | ------ | ----- |
+| bottomMargin | number | 整数値   |
 
 
 ---
 ## 幅
 
-Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+[フォームサイズ](#サイズを決めるもの) が **サイズを設定** の場合のフォームの幅 (ピクセル単位) です。
 
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値         |
-| ----- | ------ | ------------- |
-| width | number | integer value |
+| 名称    | データタイプ | とりうる値 |
+| ----- | ------ | ----- |
+| width | number | 整数値   |

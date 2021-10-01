@@ -3,7 +3,7 @@ id: branching
 title: Estructuras condicionales
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, en función del resultado.
 
 
 ## If...Else...End if

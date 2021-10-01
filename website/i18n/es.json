@@ -21,7 +21,7 @@
         "title": "Class"
       },
       "API/collectionClass": {
-        "title": "Colección"
+        "title": "Collection"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -69,7 +69,7 @@
         "title": "POP3Transporter"
       },
       "API/sessionClass": {
-        "title": "Session"
+        "title": "Sesión"
       },
       "API/signalClass": {
         "title": "Signal"
@@ -135,7 +135,7 @@
         "title": "Booleano"
       },
       "Concepts/collection": {
-        "title": "Colección"
+        "title": "Collection"
       },
       "Concepts/date": {
         "title": "Fecha"
@@ -424,7 +424,7 @@
         "title": "Imprimir"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "Tamaño de la ventana"
       },
       "FormObjects/buttonOverview": {
         "title": "Botón"

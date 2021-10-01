@@ -1,13 +1,13 @@
 ---
 id: sessionClass
-title: Session
+title: Sesión
 ---
 
 Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.
 
 For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
 
-### Summary
+### Resumen
 
 
 |                                                                                                                                                                                                           |
@@ -23,12 +23,12 @@ For detailed information about the session implementation, please refer to the [
 
 
 
-## Session
+## Sesión
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
@@ -36,9 +36,9 @@ For detailed information about the session implementation, please refer to the [
 
 
 <!-- REF #_command_.Session.Params -->
-| Parameter | Tipo       |    | Descripción    |
-| --------- | ---------- |:--:| -------------- |
-| Resultado | 4D.Session | <- | Session object |
+| Parámetros | Tipo       |    | Descripción    |
+| ---------- | ---------- |:--:| -------------- |
+| Resultado  | 4D.Session | <- | Session object |
 <!-- END REF -->
 
 
@@ -83,10 +83,10 @@ IP:port/4DACTION/action_Session
 <!-- REF sessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -94,9 +94,9 @@ IP:port/4DACTION/action_Session
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #sessionClass.clearPrivileges().Params -->
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
 <!-- END REF -->
 
 
@@ -122,10 +122,10 @@ $isGuest:=Session.isGuest() //$isGuest is True
 <!-- REF sessionClass.expirationDate.Desc -->
 ## .expirationDate
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -153,20 +153,20 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- REF sessionClass.hasPrivilege().Desc -->
 ## .hasPrivilege()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 </details>
 
 <!-- REF #sessionClass.hasPrivilege().Syntax -->
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #sessionClass.hasPrivilege().Params -->
-| Parameter | Tipo     |    | Descripción                                      |
-| --------- | -------- |:--:| ------------------------------------------------ |
-| privilege | Texto    | <- | Name of the privilege to verify                  |
-| Resultado | Booleano | <- | True if session has *privilege*, False otherwise |
+| Parámetros | Tipo     |    | Descripción                                      |
+| ---------- | -------- |:--:| ------------------------------------------------ |
+| privilege  | Texto    | <- | Name of the privilege to verify                  |
+| Resultado  | Booleano | <- | True if session has *privilege*, False otherwise |
 <!-- END REF -->
 
 
@@ -193,10 +193,10 @@ End if
 <!-- REF sessionClass.idleTimeout.Desc -->
 ## .idleTimeout
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -235,10 +235,10 @@ End if
 <!-- REF sessionClass.isGuest().Desc -->
 ## .isGuest()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -246,9 +246,9 @@ End if
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #sessionClass.isGuest().Params -->
-| Parameter | Tipo     |    | Descripción                                     |
-| --------- | -------- |:--:| ----------------------------------------------- |
-| Resultado | Booleano | <- | True if session is a Guest one, False otherwise |
+| Parámetros | Tipo     |    | Descripción                                     |
+| ---------- | -------- |:--:| ----------------------------------------------- |
+| Resultado  | Booleano | <- | True if session is a Guest one, False otherwise |
 <!-- END REF -->
 
 #### Descripción
@@ -273,10 +273,10 @@ End if
 <!-- REF sessionClass.setPrivileges().Desc -->
 ## .setPrivileges()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -284,11 +284,11 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #sessionClass.setPrivileges().Params -->
-| Parameter  | Tipo      |    | Descripción                                                |
-| ---------- | --------- |:--:| ---------------------------------------------------------- |
-| privilege  | Texto     | -> | Privilege name                                             |
-| privileges | Colección | -> | Collection of privilege names                              |
-| parámetros | Objeto    | -> | Object with a "privileges" property (string or collection) |
+| Parámetros | Tipo       |    | Descripción                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------- |
+| privilege  | Texto      | -> | Privilege name                                             |
+| privileges | Collection | -> | Collection of privilege names                              |
+| parámetros | Objeto     | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
 
 #### Descripción
@@ -301,7 +301,7 @@ The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -
 
 - In the *settings* parameter, pass an object containing the following properties:
 
-| Property   | Tipo               | Descripción                                        |
+| Propiedad  | Tipo               | Descripción                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
 | userName   | Texto              | User name to associate to the session (optional)   |
@@ -338,10 +338,10 @@ End if
 <!-- REF sessionClass.storage.Desc -->
 ## .storage
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 
@@ -378,10 +378,10 @@ End if
 <!-- REF sessionClass.userName.Desc -->
 ## .userName
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 
 </details>
 

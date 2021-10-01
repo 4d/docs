@@ -190,35 +190,77 @@ text[text|=Hello]
 
 ## スタイルシート宣言
 
+### メディアクエリ
+
+メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
+
+メディアクエリは、メディア特性と値によって構成されます (例: \<media feature>:\<value> )。
+
+
+使用可能なメディア特性:
+
+*   `prefers-color-scheme`
+
+
+使用可能なメディア特性の値:
+
+*   **light**<br>ライトモード
+*   **dark**<br>ダークモード
+
+> カラースキームは macOS でのみサポートされています。
+
+##### 例題
+
+ライトモード (デフォルト) およびダークモードにおける、テキストとテキスト背景の色指定を CSS によっておこないます:
+
+```
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
+  }
+}
+```
+
+
+### オブジェクト属性
+
 多くのフォームオブジェクト属性をスタイルシートによって指定することができますが、次の属性は除外されます:
-    - "method"
-    - "type"
-    - "class"
-    - "event"
-    - choiceList, excludedList, labels, list, requiredList (リストタイプ)
+    - `method`
+    - `type`
+    - `class`
+    - `event`
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (リストタイプ)
 
-フォームオブジェクトの属性は、それらの JSON 名を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。 詳細についてはデザインリファレンスの [ダイナミックフォーム ](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.ja.html) を参照ください。
+フォームオブジェクトの属性は、それらの [JSON名](FormObjects/properties_Reference.md)を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。
 
-### 属性マッピング
+#### 属性マッピング
 
 次の属性については、4D の名称または CSS の名称を使用することができます:
 
-| 4D             | CSS              |
-| -------------- | ---------------- |
-| borderStyle    | border-style     |
-| fill           | background-color |
-| fontFamily     | font-family      |
-| fontSize       | font-size        |
-| fontStyle      | font-style       |
-| fontWeight     | font-weight      |
-| stroke         | color            |
-| textAlign      | text-align       |
-| textDecoration | text-decoration  |
-| verticalAlign  | vertical-align   |
-> CSS の属性名を使用する場合、4D に特有の値 (*例* "sunken" (くぼみ)) はサポートされません。
+| 4D               | CSS                |
+| ---------------- | ------------------ |
+| `borderStyle`    | `border-style`     |
+| `fill`           | `background-color` |
+| `fontFamily`     | `font-family`      |
+| `fontSize`       | `font-size`        |
+| `fontStyle`      | `font-style`       |
+| `fontWeight`     | `font-weight`      |
+| `stroke`         | `color`            |
+| `textAlign`      | `text-align`       |
+| `textDecoration` | `text-decoration`  |
+| `verticalAlign`  | `vertical-align`   |
+> CSS の属性名を使用する場合、4D に特有の値 (*例* `sunken` (くぼみ)) はサポートされません。
 
 
-### 特殊な属性値
+#### 特殊な属性値
 
 - `icon`, `picture`, および `customBackgroundPicture` のように、値として画像のパスを受け付ける属性の場合、次のように書きます:
 

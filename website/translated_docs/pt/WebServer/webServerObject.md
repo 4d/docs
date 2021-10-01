@@ -14,7 +14,7 @@ For example, if you installed two components in your main application, you can s
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/webServerClass.md).
+Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
 > The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
@@ -35,7 +35,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv value is 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](API/webServerClass.md#web-server) command:
+To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
 
 ```4d
     //create an object variable of the 4D.WebServer class
@@ -64,14 +64,14 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Web server functions
 
-A [web server class object](API/webServerClass.md#web-server-object) contains the following functions:
+A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
 | Funções                                  | Parameter         | Return value    | Description           |
 | ---------------------------------------- | ----------------- | --------------- | --------------------- |
-| [`start()`](API/webServerClass.md#start) | settings (object) | status (object) | Starts the web server |
-| [`stop()`](API/webServerClass.md#start)  | -                 | -               | Stops the web server  |
+| [`start()`](API/WebServerClass.md#start) | settings (object) | status (object) | Starts the web server |
+| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |
 
-To start and stop a web server, just call the [`start()`](API/webServerClass.md#start) and [`stop()`](API/webServerClass.md#stop) functions of the web server object:
+To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
 
 ```4d
 var $status : Object
@@ -88,18 +88,18 @@ $status:=webServer.stop()
 
 ## Web server properties
 
-A web server object contains [various properties](API/webServerClass.md#web-server-object) which configure the web server.
+A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
 
 These properties are defined:
 
-1. using the `settings` parameter of the [`.start()`](API/webServerClass.md#start) function (except for read-only properties, see below),
+1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
 2. if not used, using the `WEB SET OPTION` command (host applications only),
 3. if not used, in the settings of the host application or the component.
 
 - If the web server is not started, the properties contain the values that will be used at the next web server startup.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/webServerClass.md#start) function.
+- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/webServerClass.md#start) function.
+> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
 
 ## Scope of the 4D Web commands

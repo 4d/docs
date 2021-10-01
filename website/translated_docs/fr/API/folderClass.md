@@ -60,13 +60,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF folderClass.Folder.Params -->
-| Paramètres     | Type        |    | Description                                     |
-| -------------- | ----------- |:--:| ----------------------------------------------- |
-| path           | Texte       | -> | Folder path                                     |
-| folderConstant | Entier long | -> | 4D folder constant                              |
-| pathType       | Entier long | -> | `fk posix path` (default) or `fk platform path` |
-| *              |             | -> | * to return folder of host database             |
-| Résultat       | 4D.Folder   | <- | New folder object                               |
+| Paramètres     | Type      |    | Description                                     |
+| -------------- | --------- |:--:| ----------------------------------------------- |
+| path           | Text      | -> | Folder path                                     |
+| folderConstant | Integer   | -> | 4D folder constant                              |
+| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
+| *              |           | -> | * to return folder of host database             |
+| Résultat       | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
 
 
@@ -149,7 +149,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!--REF #folderClass.create().Params -->
 | Paramètres | Type    |    | Description                                                  |
 | ---------- | ------- | -- | ------------------------------------------------------------ |
-| Résultat   | Booléen | <- | True if the folder was created successfully, false otherwise |
+| Résultat   | Boolean | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
@@ -208,12 +208,12 @@ End if
 
 
 <!--REF #folderClass.createAlias().Params -->
-| Paramètres        | Type        |    | Description                                  |
-| ----------------- | ----------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte       | -> | Name of the alias or shortcut                |
-| aliasType         | Entier long | -> | Type of the alias link                       |
-| Résultat          | 4D.File     | <- | Alias or shortcut reference                  |
+| Paramètres        | Type      |    | Description                                  |
+| ----------------- | --------- | -- | -------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
+| Résultat          | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #folderClass.delete().Params -->
-| Paramètres | Type        |    | Description            |
-| ---------- | ----------- | -- | ---------------------- |
-| option     | Entier long | -> | Folder deletion option |
+| Paramètres | Type    |    | Description            |
+| ---------- | ------- | -- | ---------------------- |
+| option     | Integer | -> | Folder deletion option |
 <!-- END REF -->
 
 
@@ -387,7 +387,7 @@ When `Delete with contents` is passed:
 | Paramètres        | Type      |    | Description                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | Texte     | -> | Full name for the moved folder |
+| newName           | Text      | -> | Full name for the moved folder |
 | Résultat          | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
 
@@ -456,7 +456,7 @@ You want to move and rename a folder:
 <!--REF #folderClass.rename().Params -->
 | Paramètres | Type      |    | Description                  |
 | ---------- | --------- | -- | ---------------------------- |
-| newName    | Texte     | -> | New full name for the folder |
+| newName    | Text      | -> | New full name for the folder |
 | Résultat   | 4D.Folder | <- | Renamed folder               |
 <!-- END REF -->
 

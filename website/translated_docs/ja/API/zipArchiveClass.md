@@ -1,5 +1,5 @@
 ---
-id: zipArchiveClass
+id: ZipArchiveClass
 title: ZIPArchive
 ---
 
@@ -7,7 +7,7 @@ title: ZIPArchive
 4D ZIP アーカイブは、一つ以上のファイルまたはフォルダーを格納している `File` または `Folder` オブジェクトで、元のサイズより小さくなるように圧縮されているものをいいます。 これらのアーカイブは ".zip" 拡張子を持つように作成され、ディスクスペースの確保や、サイズ制限があるメディア (例: メールまたはネットワークなど) 経由のファイル転送を容易にする用途に使用できます。
 
 - 4D ZIPアーカイブは [ZIP Create archive](#zip-create-archive) コマンドで作成します。
-- 4D [`ZIPFile`](zipFileClass.md) および [`ZIPFolder`](zipFolderClass.md) インスタンスは、[ZIP Read archive](#zip-read-archive) コマンドによって返されるオブジェクトの [`root`](#root) プロパティ (`ZIPFolder`) を通して利用可能です。
+- 4D [`ZIPFile`](ZipFileClass.md) および [`ZIPFolder`](ZipFolderClass.md) インスタンスは、[ZIP Read archive](#zip-read-archive) コマンドによって返されるオブジェクトの [`root`](#root) プロパティ (`ZIPFolder`) を通して利用可能です。
 
 
 ### 例題
@@ -34,7 +34,7 @@ End if
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #zipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #zipArchiveClass.root.Summary -->|
+| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
 
 
 ## ZIP Create archive
@@ -49,7 +49,7 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| 参照              | タイプ       |    | 説明                                                                             |
+| 引数              | タイプ       |    | 説明                                                                             |
 | --------------- | --------- |:--:| ------------------------------------------------------------------------------ |
 | fileToZip       | 4D.File   | -> | 圧縮する File または Folder オブジェクト                                                    |
 | folderToZip     | 4D.Folder | -> | 圧縮する File または Folder オブジェクト                                                    |
@@ -276,7 +276,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| 参照       | タイプ           |    | 説明                      |
+| 引数       | タイプ           |    | 説明                      |
 | -------- | ------------- |:--:| ----------------------- |
 | zipFile  | 4D.File       | -> | ZIPアーカイブファイル            |
 | password | テキスト          | -> | ZIPアーカイブのパスワード (必要であれば) |
@@ -290,7 +290,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 
 
 
-> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](document.md#copyto) あるいは [folder.copyTo()](directory.md#copyto) などの関数を使用します。
+> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
 *zipFile* 引数として、圧縮された ZIPアーカイブを参照している `4D.File` オブジェクトを渡します。 ターゲットのアーカイブファイルは `ZIP Read archive` が実行を終えるまで (全コンテンツ/参照が取得/解放されるまで) は開いた状態となり、その後自動的に閉じられます。 
 
@@ -362,16 +362,17 @@ root フォルダーから取り出します:
 
 ## .root
 
-<!-- REF #zipArchiveClass.root.Syntax -->
+<!-- REF #ZipArchiveClass.root.Syntax -->
 **.root** : 4D.ZipFolder<!-- END REF -->
 
 
 #### 説明
 
-`.root` プロパティは、 <!-- REF #zipArchiveClass.root.Summary -->ZIPアーカイブのコンテンツにアクセスするためのバーチャルフォルダー<!-- END REF -->を格納します。
+`.root` プロパティは、 <!-- REF #ZipArchiveClass.root.Summary -->ZIPアーカイブのコンテンツにアクセスするためのバーチャルフォルダー<!-- END REF -->を格納します。
 
-`root` フォルダーとそのコンテンツは、[ZipFile](zipFileClass.md) および [ZipFolder](zipFolderClass.md) の関数とプロパティを使用することで操作可能です。
+`root` フォルダーとそのコンテンツは、[ZipFile](ZipFileClass.md) および [ZipFolder](ZipFolderClass.md) の関数とプロパティを使用することで操作可能です。
 
-このプロパティは **読み取り専用** です。 
+このプロパティは **読み取り専用** です。
+
 
 <style> h2 { background: #d9ebff;}</style>

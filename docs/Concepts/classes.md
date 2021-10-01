@@ -104,7 +104,7 @@ Available classes are accessible from their class stores. Two class stores are a
 - `4D` for built-in class store
 
  
-### cs 
+### `cs`
 
 #### cs -> classStore
 
@@ -122,7 +122,7 @@ You want to create a new instance of an object of `myClass`:
 $instance:=cs.myClass.new()
 ```
 
-### 4D
+### `4D`
 
 #### 4D -> classStore
 
@@ -130,7 +130,7 @@ $instance:=cs.myClass.new()
 |---|---|---|---|
 |classStore|object|<-|4D class store|
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoKeyClass.md).
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
 #### Example
 
@@ -145,11 +145,11 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## Class object
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
 
-- [`name`](API/classClass.md#name) string
-- [`superclass`](API/classClass.md#superclass) object (null if none)
-- [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
+- [`name`](API/ClassClass.md#name) string
+- [`superclass`](API/ClassClass.md#superclass) object (null if none)
+- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
 
@@ -157,9 +157,9 @@ A class object is a [shared object](shared.md) and can therefore be accessed fro
 
 ### Inheritance
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/classClass.md#superclass). 
+If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass). 
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/classClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass). 
+When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass). 
 
 
 ## Class keywords
@@ -171,7 +171,7 @@ Specific 4D keywords can be used in class definitions:
 - `Class extends <ClassName>` to define inheritance.
 
 
-### Function
+### `Function`
 
 #### Syntax
 
@@ -180,7 +180,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class. 
+Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class. 
 
 In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -209,8 +209,8 @@ In the application code, class functions are called as member methods of the obj
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "4D.Function" class member method:
-	- [`apply()`](API/formulaClass.md#apply)
-	- [`call()`](API/formulaClass.md#call)
+	- [`apply()`](API/FunctionClass.md#apply)
+	- [`call()`](API/FunctionClass.md#call)
 	
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: 
 > - the compiler does not generate any error (which is different compared to regular methods),
@@ -272,6 +272,7 @@ Function getArea()->$result : Integer
 
 ```4d
 // In a project method
+
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -281,7 +282,7 @@ $area:=$rect.getArea() //5000
 
 
 
-### Class constructor
+### `Class Constructor`
 
 #### Syntax
 
@@ -293,7 +294,7 @@ Class Constructor({$parameterName : type; ...})
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.  
 
-In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
 
@@ -319,7 +320,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-### Class extends \<ClassName>
+### `Class extends <ClassName>`
 
 #### Syntax
 
@@ -347,6 +348,7 @@ This example creates a class called `Square` from a class called `Polygon`.
  
 ```4d
 //Class: Square
+
 //path: Classes/Square.4dm 
 
 Class extends Polygon
@@ -365,7 +367,7 @@ Class constructor ($side : Integer)
 		$0:=This.height*This.width
 ```
 
-### Super
+### `Super`
 
 
 #### Super {( param{;...;paramN} )} {-> Object} 
@@ -472,7 +474,7 @@ $square:=cs.Square.new()
 $message:=$square.description() //I have 4 sides which are all equal
 ```
 
-### This
+### `This`
 
 #### This -> Object
 
@@ -491,7 +493,7 @@ $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/classClass.md#new) function), its `This` is bound to the new object being constructed.
+When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
@@ -537,14 +539,14 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 Several commands of the 4D language allows you to handle class features.
 
 
-### OB Class
+### `OB Class`
 
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter. 
 
 
-### OB Instance of
+### `OB Instance of`
 
 #### OB Instance of ( object ; class ) -> Boolean
 

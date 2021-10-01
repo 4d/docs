@@ -54,15 +54,17 @@ class Index extends React.Component {
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
-	  test: <translate>Testjp</translate>,
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
 	cs: <translate>Client/Server</translate>,
     tls: <translate>TLS Protocol (HTTPS)</translate>,
+	  debugging: <translate>Debugging</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Access Rights</translate>,
+	  	 debugLogFiles: <translate>Description of log files</translate>,
+	   cli: <translate>Command Line Interface</translate>,
 	  preferences:<translate>Preferences</translate>
     };
 
@@ -86,22 +88,26 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-				  [${subContents.langRef}](https://doc.4d.com/4Dv18R6/4D/18-R6/4D-Language-Reference.100-5197421.en.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv19/4D/19/4D-Language-Reference.100-5391516.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
+				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
+                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
-                  imageAlt: 'Web',
+                  imageAlt: 'Core',
                   title: <translate>Core Development</translate>,
                 },
                 {
                   content: `[${subContents.webAdmin}](${siteConfig.baseUrl}${this.props.language}/Admin/webAdmin.html)<br>
-				  [${subContents.dataExplorer}](${siteConfig.baseUrl}${this.props.language}/Admin/dataExplorer.html)<br>
-				  [${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
-                  [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
-                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
-				  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
+				[${subContents.dataExplorer}](${siteConfig.baseUrl}${this.props.language}/Admin/dataExplorer.html)<br>
+				[${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
+				[${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)<br>
+	            [${subContents.cli}](${siteConfig.baseUrl}${this.props.language}/Admin/cli.html)<br>
+				[${subContents.debugLogFiles}](${siteConfig.baseUrl}${this.props.language}/Admin/debugLogFiles.html)<br>
+				[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
+                [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
@@ -125,7 +131,8 @@ class Index extends React.Component {
                   title: <translate>Web applications</translate>,
                 },
                 {
-                  content: `[4D for iOS](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
+                  content: `[Go Mobile with 4D](https://developer.4d.com/go-mobile)<br>
+				  [4D for iOS (archive)](https://developer.4d.com/4d-for-ios/docs/${this.props.language}/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_MobileApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Mobile',
@@ -153,7 +160,7 @@ class Index extends React.Component {
           </Container>
  		<div className="doc-updates">
           <a
-            href={`${siteConfig.baseUrl}${language}/ReleaseNotes/whatsNew`}>
+            href={`${siteConfig.baseUrl}${language}/Notes/updates`}>
             <translate>Documentation updates</translate>
           </a></div>
        </div>

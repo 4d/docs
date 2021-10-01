@@ -9,13 +9,13 @@ title: Glosario
 
 
 
-## Attribute
+## Atributo
 
 An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
 
 *   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
 *   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## AttributePath
 
@@ -71,7 +71,7 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy
+## Copia profunda
 
 A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
@@ -113,7 +113,7 @@ Since entities are managed as references, data is loaded only when necessary, i.
 
 The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
 
-## Method
+## Método
 
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
 
@@ -146,10 +146,10 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
-## Property
+## Propiedad
 
 See [Attribute](#attribute).
-> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 
@@ -184,7 +184,7 @@ Entity selections may refer to related entities according to the relation attrib
 
 A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
 
-## Session
+## Sesión
 
 When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
 
@@ -196,6 +196,6 @@ Inactive sessions are automatically closed after a timeout. The default timeout 
 
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
-## Stamp
+## Sello
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.

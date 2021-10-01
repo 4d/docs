@@ -4,34 +4,34 @@ title: ウィンドウサイズ
 ---
 
 
-## Fixed Height
+## 固定高さ
 
 
-If you select this option, the window height will be locked and it will not be possible for the user to resize it.
+このオプションを選択するとウィンドウの高さが固定され、ユーザーは変更できなくなります。
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Height and Maximum Height](#maximum-height-minimum-height) properties can be used to determine the resizing limits.
+このオプションを選択しない場合、フォームのウィンドウの高さを変更することができます。 この場合 [最小高さと最大高さ](#最大高さ-最小高さ) 入力エリアを使用し、変更できるサイズを制限できます。
 
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値               |
+| 名称            | データタイプ | とりうる値               |
 | ------------- | ------ | ------------------- |
 | windowSizingY | string | "fixed", "variable" |
 
 
 ---
 
-## Fixed Width
+## 固定幅
 
 
-If you select this option, the window width will be locked and it will not be possible for the user to resize it.
+このオプションを選択するとウィンドウの幅が固定され、ユーザーは変更できなくなります。
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Width and Maximum Width](#maximum-width-minimum-width) properties can be used to determine the resizing limits.
+このオプションを選択しない場合、フォームのウィンドウの高さを変更することができます。 この場合 [最小幅と最大幅](#最大幅-最小幅) 入力エリアを使用し、変更できるサイズを制限できます。
 
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値               |
+| 名称            | データタイプ | とりうる値               |
 | ------------- | ------ | ------------------- |
 | windowSizingX | string | "fixed", "variable" |
 
@@ -39,27 +39,27 @@ If this option is not selected, the width of the form window can be modified. In
 
 
 
-## Maximum Height, Minimum Height
+## 最大高さ, 最小高さ
 
-Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed Height](#fixed-height) option is not set.
+[固定高さ](#固定高さ) オプションが設定されていない場合の、サイズ変更可能なフォームウィンドウの最大および最小の高さ (ピクセル単位) です。
 
 ##### JSON 文法
 
-| 名               | データタイプ | とりうる値         |
-| --------------- | ------ | ------------- |
-| windowMinHeight | number | integer value |
-| windowMaxHeight | number | integer value |
+| 名称              | データタイプ | とりうる値 |
+| --------------- | ------ | ----- |
+| windowMinHeight | number | 整数値   |
+| windowMaxHeight | number | 整数値   |
 
 
-## Maximum Width, Minimum Width
+## 最大幅, 最小幅
 
-Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed Width](#fixed-width) option is not set.
+[固定幅](#固定幅) オプションが設定されていない場合の、サイズ変更可能なフォームウィンドウの最大および最小の幅 (ピクセル単位) です。
 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値         |
-| -------------- | ------ | ------------- |
-| windowMinWidth | number | integer value |
-| windowMaxWidth | number | integer value |
+| 名称             | データタイプ | とりうる値 |
+| -------------- | ------ | ----- |
+| windowMinWidth | number | 整数値   |
+| windowMaxWidth | number | 整数値   |
 

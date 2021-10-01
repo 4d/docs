@@ -34,7 +34,7 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
     - **Cada X semana(s) a las x**: permite programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Cuando esta opción está marcada, debe introducir el día(s) de la semana y la hora que debe comenzar la copia de seguridad. Si lo desea, puede seleccionar varios días de la semana. Por ejemplo, puede utilizar esta opción para definir dos copias de seguridad semanales: una el miércoles y otra el viernes.
     - **Cada X mes(es), X día a x**: Permite programar copias de seguridad de forma mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Cuando esta opción está marcada, debe indicar el día de cada mes y la hora a la cual debe comenzar la copia de seguridad.
 
-> Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
+> Los cambios de la hora estándar a la hora de verano podrían afectar temporalmente al programador automático y activar la siguiente copia de seguridad con un cambio de hora de una hora. Esto ocurre sólo una vez y las siguientes copias de seguridad se ejecutan a la hora prevista.
 
 
 ## Configuración
@@ -43,7 +43,7 @@ La página Copia de seguridad/Configuración de las Propiedades permite designar
 
 ![](assets/en/Backup/backup03.png)
 
-> **4D Server:** These parameters can only be set from the 4D Server machine.
+> **4D Server:** estos parámetros sólo se pueden configurar desde la máquina 4D Server.
 
 ### Contenido
 Esta área le permite determinar qué archivos y/o carpetas deben copiarse durante la siguiente copia de seguridad.
@@ -73,7 +73,7 @@ La opción **Utilizar el archivo de historial**, cuando está marcada, indica qu
 
 Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> Activating a new log file requires the data of the application to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the application.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. Al marcar esta opción, un mensaje de advertencia le informa de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
 
 
 ## Copia de seguridad y restitución
@@ -97,7 +97,7 @@ La modificación de las opciones de copia de seguridad y restauración es opcion
     - **Reintentar después de X segundo(s), minuto(s) u hora(s)**: cuando se marca esta opción, se ejecuta un nuevo intento de copia de seguridad después del periodo de espera. Este mecanismo permite anticipar ciertas circunstancias que pueden bloquear la copia de seguridad. Puede establecer un periodo de espera en segundos, minutos u horas utilizando el menú correspondiente. Si el nuevo intento también falla, se genera un error y se anota el fallo en el área de estado de la última copia de seguridad y en el archivo del diario de copias de seguridad.
     - **Cancelar la operación después de X intentos**: este parámetro se utiliza para definir el número máximo de intentos de copia de seguridad fallidos. Si la copia de seguridad no se ha realizado con éxito una vez alcanzado el número máximo de intentos establecido, se cancela y se genera el error 1401 ("Se ha alcanzado el número máximo de intentos de copia de seguridad; la copia de seguridad automática está temporalmente desactivada"). En este caso, no se intentará realizar una nueva copia de seguridad automática mientras no se haya reiniciado la aplicación o se haya realizado con éxito una copia de seguridad manual. Este parámetro es útil para evitar un caso en el que un problema prolongado (que requiera la intervención humana) que impidiera la realización de una copia de seguridad hubiera llevado a la aplicación a intentar repetidamente la copia de seguridad en detrimento de su rendimiento general. Por defecto, este parámetro no está seleccionado.
 
-> 4D considers a backup as failed if the application was not launched at the time when the scheduled automatic backup was set to be carried out.
+> 4D considera que una copia de seguridad ha fallado si la aplicación no se ha iniciado en el momento en que se ha programado la realización de la copia de seguridad automática.
 
 ### Archivo
 Estas opciones se aplican a los archivos de copia de seguridad principales y a los archivos de copia de seguridad del historial.
@@ -107,11 +107,11 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 - **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
     - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.
     - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
-    - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
+    - **Compactado**: la tasa de compresión máxima se aplica a los archivos. Los ficheros de archivos ocupan el menor espacio posible en el disco, pero la copia de seguridad se ralentiza notablemente.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
-    - **Interlacing Rate**: Interlacing consists of storing data in non-adjacent sectors in order to limit risks in the case of sector damage. The higher the rate, the higher the security; however, data processing will use more memory.
-    - **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
+- **Tasa de entrelazamiento y tasa de redundancia** 4D genera archivos mediante algoritmos específicos que se basan en mecanismos de optimización (entrelazamiento) y seguridad (redundancia). Puedes configurar estos mecanismos en función de sus necesidades. Los menús asociados a estas opciones contienen índices de **Bajo**, **Medio**, **Alto** y **Ninguno** (por defecto).
+    - **Tasa de entrelazamiento**: el entrelazamiento consiste en almacenar los datos en sectores no adyacentes para limitar los riesgos en caso de daño de los sectores. Cuanto mayor sea la tasa, mayor será la seguridad; sin embargo, el procesamiento de datos utilizará más memoria.
+    - **Tasa de redundancia**: la redundancia permite asegurar los datos presentes en un fichero repitiendo varias veces la misma información. Cuanto mayor sea la tasa de redundancia, mayor será la seguridad de los archivos; sin embargo, el almacenamiento será más lento y el tamaño de los archivos aumentará en consecuencia.
 
 
 ### Restauración automática
@@ -124,6 +124,6 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> En el caso de una restauración automática, sólo se restauran los siguientes elementos: - Archivo .4DD - archivo .4DIndx - Archivo .4DSyncData - Archivo .4DSyncHeader - Carpeta de datos externos
 > 
-> If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).
+> Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).

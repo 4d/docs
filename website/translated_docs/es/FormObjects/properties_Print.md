@@ -24,13 +24,13 @@ The print options are:
 > This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|    Name    | Data Type | Possible Values                                     |
-|:----------:|:---------:| --------------------------------------------------- |
-| printFrame |  cadena   | "fixed", "variable", (subform only) "fixedMultiple" |
+|   Nombre   | Tipos de datos | Valores posibles                                                |
+|:----------:|:--------------:| --------------------------------------------------------------- |
+| printFrame |     cadena     | "fixed", "variable", (subformulario únicamente) "fixedMultiple" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)

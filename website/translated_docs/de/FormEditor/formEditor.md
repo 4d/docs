@@ -8,28 +8,44 @@ title: Form Editor
 
 ## Interface
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time. The rulers on the side and bottom help you position objects in the form. You can change measurement units so that it displays inches, centimeters, or pixels.
+The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time.
 
-### Showing/hiding Form elements
+### Display options
 
-You can show or hide most interface elements in the Form editor. This feature allows you to show only the elements that you need to create or view in a form, or only the tools that you want to use. This option is always applied to the Form editor’s current window. For example, it is useful to show the output control lines when you are working on an output form.
+You can show or hide several interface elements on the current page of the form:
 
-To show or hide an element in the Form editor:
+- **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
+- **Page 0**: Objects from [page 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
+- **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
+- **Rulers**: Rulers of the Form editor’s window.
+- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
+- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
+- **Limits**: Form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
+> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
 
-1.  Choose **Display** from the Form menu. OR Use the **Display** command in the context menu that appears in the Form editor’s window (right-click in the window without clicking on an object). A hierarchical submenu appears listing all the elements that you can show or hide:<p>![](assets/en/FormEditor/showHideElements.png)<p>A check mark placed next to the element indicates that it will be shown. To hide an element, select the element so that the check mark disappears.
+#### Default display
 
-2.  Select the element that you want to show or hide.<p>Here is a description of the commands in this menu:
-    *   **Inherited form**: Shows or hides inherited form objects (if there is an inherited form) on the current page of the form. For more information, refer to Using inherited forms.
-    *   **Page 0**: Shows or hides the objects from page 0 on the form’s current page. This option allows you to distinguish between the objects on the form’s current page and those on page 0. For more information about pages in forms, refer to the Creating a multi-page form section.
-    *   **Paper**: Shows or hides the borders of the printing page, which are shown as gray lines. This option may have no apparent effect when the Limits (see below) option is selected. If the size of the form is smaller than the printing page, the page’s borders are shown outside of the form’s viewing area and therefore do not appear. Refer to Printing a form.
-    *   **Rulers**: Shows or hides the rulers in the Form editor’s window.
-    *   **Markers**: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
-    *   **Marker Labels**: Shows or hides the marker labels, available only when the output control lines are displayed. For more information, refer to the Moving output control lines paragraph.
-    *   **Limits**: Shows or hides the form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
-> The **Size Based on**, **Hor margin** and **Vert margin** settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change. For more information on form properties, refer to the [Form properties](jsonReference.html) section.
+When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
+
+- the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
+- the current [form type](properties_FormProperties.md#form-type):
+    - Markers and marker labels are always displayed by default on list forms
+    - Paper is displayed by default on "for printing" forms.
+
+#### Display/Hide elements
+
+You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
+
+![](assets/en/FormEditor/showHideElements.png)
 
 
-### Using the toolbar
+### Rulers
+
+The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
+
+Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
+
+### Toolbar
 
 The toolbar of the Form editor offers a set of tools to manipulate and modify the form. Each window has its own toolbar.
 
@@ -40,12 +56,12 @@ The toolbar contains the following elements:
 | Icon                                          | Name                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/FormEditor/execute.png)         | Execute the form                                     | Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                     |
-| ![](assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                 |
+| ![](assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                  |
 | ![](assets/en/FormEditor/zOrder.png)          | [Entry order](#data-entry-order)                     | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                       |
 | ![](assets/en/FormEditor/moving.png)          | [Moving](#moving-objects)                            | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.                                                                                        |
 | ![](assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                        | Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.                                                                                                  |
-| ![](assets/en/FormEditor/alignment.png)       | [Alignment](#aligning-objects)                       | This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                            |
-| ![](assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                        |
+| ![](assets/en/FormEditor/alignment.png)       | [Alignment](#aligning-objects)                       | This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                             |
+| ![](assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None                                                                                                                         |
 | ![](assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                                             |
 | ![](assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                             |
 | ![](assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
@@ -55,23 +71,23 @@ The toolbar contains the following elements:
 | ![](assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
 | ![](assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
 
-### Using the object bar
+### Object bar
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
 
-| Button                                  | Group                                                                                                                                                                                                                                                                    | Key |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |:---:|
-| ![](assets/en/FormEditor/text.png)      | [Text](../FormObjects/text.md) / [Group Box](../FormObjects/groupBox.md)                                                                                                                                                                                                 |  T  |
-| ![](assets/en/FormEditor/input.png)     | [Input](../FormObjects/input_overview.md)                                                                                                                                                                                                                                |  F  |
-| ![](assets/en/FormEditor/listbox.png)   | [Hierarchical List](../FormObjects/list_overview.md) / [List Box](../FormObjects/listbox_overview.md)                                                                                                                                                                    |  L  |
-| ![](assets/en/FormEditor/combo.png)     | [Combo Box](../FormObjects/comboBox_overview.md) / [Drop-down List](../FormObjects/dropdownList_overview.md) / [Picture Pop-up Menu](../FormObjects/picturePopupMenu_overview.md)                                                                                        |  P  |
-| ![](assets/en/FormEditor/button.png)    | [Button](../FormObjects/button_overview.md) / [Picture Button](../FormObjects/pictureButton_overview.md) / [Button Grid](../FormObjects/buttonGrid_overview.md)                                                                                                          |  B  |
-| ![](assets/en/FormEditor/radio.png)     | [Radio Button](../FormObjects/radio_overview.md)                                                                                                                                                                                                                         |  R  |
-| ![](assets/en/FormEditor/checkbox.png)  | [Check Box](../FormObjects/checkbox_overview.md)                                                                                                                                                                                                                         |  C  |
-| ![](assets/en/FormEditor/indicator.png) | [Progress Indicator](../FormObjects/progressIndicator.md) / [Ruler](../FormObjects/ruler.md) / [Stepper](../FormObjects/stepper.md) / [Spinner](../FormObjects/spinner.md)                                                                                               |  I  |
-| ![](assets/en/FormEditor/rectangle.png) | [Rectangle](../FormObjects/shapesOverview.html#rectangle) / [Line](../FormObjects/shapesOverview.html#line) / [Oval](../FormObjects/shapesOverview.html#oval)                                                                                                            |  S  |
-| ![](assets/en/FormEditor/splitter.png)  | [Splitter](../en/FormObjects/splitters.md) / [Tab Control](../FormObjects/tabControl.md)                                                                                                                                                                                 |  D  |
-| ![](assets/en/FormEditor/plugin.png)    | [Plug-in Area](../FormObjects/pluginArea_overview.md) / [Subform](../FormObjects/subform_overview.md) / [Web Area](../FormObjects/webArea_overview.md) / [4D Write Pro](../FormObjects/writeProArea_overview.md) / [4D View Pro](../FormObjects/viewProArea_overview.md) |  X  |
+| Button                                  | Group                                                                                                                                                                                                                                                     | Key |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---:|
+| ![](assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        |  T  |
+| ![](assets/en/FormEditor/input.png)     | [Input](FormObjects/input_overview.md)                                                                                                                                                                                                                    |  F  |
+| ![](assets/en/FormEditor/listbox.png)   | [Hierarchical List](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)                                                                                                                                                           |  L  |
+| ![](assets/en/FormEditor/combo.png)     | [Combo Box](FormObjects/comboBox_overview.md) / [Drop-down List](FormObjects/dropdownList_Overview.md) / [Picture Pop-up Menu](FormObjects/picturePopupMenu_overview.md)                                                                                  |  P  |
+| ![](assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    |  B  |
+| ![](assets/en/FormEditor/radio.png)     | [Radio Button](FormObjects/radio_overview.md)                                                                                                                                                                                                             |  R  |
+| ![](assets/en/FormEditor/checkbox.png)  | [Check Box](FormObjects/checkbox_overview.md)                                                                                                                                                                                                             |  C  |
+| ![](assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            |  I  |
+| ![](assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         |  S  |
+| ![](assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)                                                                                                                                                                           |  D  |
+| ![](assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |  X  |
 
 To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
 
@@ -81,7 +97,7 @@ The current variant of the theme is the object that will be inserted in the form
 
 You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
 
-### Using the Property List
+### Property List
 
 Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font.
 
@@ -179,6 +195,7 @@ The "Duplicate Many" dialog box appears when you select one or more object(s) an
 *   For lines and columns, define the offset that you wish to leave between each copy.<p>The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object.<p>For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
 *   If you wish to create a matrix of variables, select the **Number Variables** option and select the direction in which the variables are to be numbered, either by line(s) or by column(s). This option is active only when the selected object is a variable. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
+
 
 ### Moving objects
 

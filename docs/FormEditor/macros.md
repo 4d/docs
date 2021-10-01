@@ -26,7 +26,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
 
-```
+```js
 {
    "macros": {
       "Add Hello World button": {
@@ -40,7 +40,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 3. Within the `AddButton` class, write the following function:
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
 	
 	var $btnHello : Object
@@ -116,7 +116,7 @@ Here is the description of the JSON file contents:
 |macros|||object|list of defined macros|
 ||`<macroName>`||object|macro definition|
 |||class|string|macro class name|
-|||`<customProperty>`|any|(optional) custom value to retrieve in the constructor|
+|||`<customProperty>`|any|(optional) custom value to retrieve in the constructor
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
@@ -160,7 +160,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 ### Class constructor
 
-#### Class constructor($macro : object)
+#### Class constructor($macro : Object)
 
 |Parameter|Type|Description|
 |---|---|---|
@@ -191,7 +191,7 @@ In the `formMacros.json` file:
 
 You can write: 
 
-```code4d  
+```4d  
 // Class "AlignOnTarget"
 Class constructor($macro : Object)
     This.myParameter:=$macro.myParam //left
@@ -201,32 +201,32 @@ Class constructor($macro : Object)
 
 ### onInvoke()
 
-#### onInvoke($editor : object) -> $result : object
+#### onInvoke($editor : Object) -> $result : Object
 
 |Parameter|Type|Description|
 |---|---|---|
-|$editor|Object|Form properties|
-|$result|Object|Form properties modified by the macro (optional)|
+|$editor|Object|Form Editor Macro Proxy object containing the form properties|
+|$result|Object|Form Editor Macro Proxy object returning properties modified by the macro (optional)|
 
 The `onInvoke` function is automatically executed each time the macro is called. 
 
-When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties. 
+When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. You can then execute any operation on these properties. 
 
 Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require. 
 
-Here are the properties of the `$editor` object:
+Here are the properties returned in the *$editor* parameter:
 
 |Property|Type|Description|
 |---|---|---|
-|$editor.form|Object|The entire form
-|$editor.file|File|File object of the form file|
-|$editor.name|String|Name of the form|
-|$editor.table|number|Table number of the form, 0 for project form|
-|$editor.currentPageNumber|number|The number of the current page|
-|$editor.currentPage|Object|The current page, containing all the form objects and the entry order of the page|
-|$editor.currentSelection|Collection|Collection of names of selected objects|
-|$editor.formProperties|Object|Properties of the current form|
-|$editor.target|string|Name of the object under the mouse when clicked on a macro|
+|$editor.editor.form|Object|The entire form
+|$editor.editor.file|File|File object of the form file|
+|$editor.editor.name|String|Name of the form|
+|$editor.editor.table|number|Table number of the form, 0 for project form|
+|$editor.editor.currentPageNumber|number|The number of the current page|
+|$editor.editor.currentPage|Object|The current page, containing all the form objects and the entry order of the page|
+|$editor.editor.currentSelection|Collection|Collection of names of selected objects|
+|$editor.editor.formProperties|Object|Properties of the current form|
+|$editor.editor.target|string|Name of the object under the mouse when clicked on a macro|
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
@@ -240,6 +240,13 @@ Here are the properties that you can pass in the `$result` object if you want th
 |editor.activeView |String |Active view name|
 
 
+For example, if objects of the current page and groups have been modified, you can write:
+
+```4d
+	$result:=New object("currentPage"; $editor.editor.currentPage ; \ 
+			"editor"; New object("groups"; $editor.editor.form.editor.groups))
+
+``` 
 
 
 #### `method` attribute
@@ -269,7 +276,7 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 
 You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
-```code4d
+```4d
 Function onInvoke($editor : Object)->$result : Object
 	var $name : Text
 	
@@ -292,7 +299,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 ### onError()
 
-#### onError($editor : object; $resultMacro : Object ; $error : Collection)
+#### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
 |Parameter||Type|Description|
 |---|---|---|---|

@@ -3,28 +3,28 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Can be called by                      | 定義                                                                                   |
-| ---- | ------------------------------------- | ------------------------------------------------------------------------------------ |
-| 39   | [ボタン](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
+| コード | 呼び出し元                                 | 定義                                |
+| --- | ------------------------------------- | --------------------------------- |
+| 39  | [ボタン](FormObjects/button_overview.md) | ボタンがクリックされ、特定の時間以上マウスボタンが押され続けている |
 
 
 ## 説明
 
-This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
+このイベントはボタンがクリックされ、一定時間以上マウスボタンが押され続けていると生成されます。 理論上、このイベントが生成されるためのクリック保持時間は、システムの環境設定に設定されたダブルクリックの間隔最大時間に等しくなります。
 
-This event can be generated for the following button styles:
+このイベントは、次のボタンスタイルで生成することができます:
 
-- [ツールバー](FormObjects/button_overview.md#toolbar)
-- [ベベル](FormObjects/button_overview.md#bevel)
-- [角の丸いベベル](FormObjects/button_overview.md#rounded-bevel)
-- [OS Xグラデーション](FormObjects/button_overview.md#os-x-gradient)
-- [OS Xテクスチャー](FormObjects/button_overview.md#os-x-textured)
+- [ツールバー](FormObjects/button_overview.md#ツールバー)
+- [ベベル](FormObjects/button_overview.md#ベベル)
+- [角の丸いベベル](FormObjects/button_overview.md#角の丸いベベル)
+- [OS Xグラデーション](FormObjects/button_overview.md#OS-Xグラデーション)
+- [OS Xテクスチャー](FormObjects/button_overview.md#OS-Xテクスチャー)
 - [Office XP](FormObjects/button_overview.md#office-xp)
-- [ヘルプ](FormObjects/button_overview.md#help)
-- [サークル](FormObjects/button_overview.md#circle)
-- [カスタム](FormObjects/button_overview.md#custom)
+- [ヘルプ](FormObjects/button_overview.md#ヘルプ)
+- [サークル](FormObjects/button_overview.md#サークル)
+- [カスタム](FormObjects/button_overview.md#カスタム)
 
-This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+このイベントは一般的に、ロングクリック時にポップアップメニューを表示するために使用します。 ユーザーがロングクリックが有効になる時間前にマウスボタンを離すと、[`On Clicked`](onClicked.md) イベントが (有効であれば) 生成されます。
 
 ### 参照
 [`On Alternative Click`](onAlternativeClick.md)

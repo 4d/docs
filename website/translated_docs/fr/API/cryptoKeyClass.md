@@ -60,7 +60,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | Paramètres | Type         |    | Description                                                                 |
 | ---------- | ------------ | -- | --------------------------------------------------------------------------- |
-| settings   | Objet        | -> | Paramètres pour générer ou charger une paire de clés                        |
+| settings   | Object       | -> | Paramètres pour générer ou charger une paire de clés                        |
 | result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
 
 
@@ -73,10 +73,10 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 | Propriété       | Type    | Description                                       |
 | --------------- | ------- | ------------------------------------------------- |
-| [curve](#curve) | Texte   | Name of ECDSA curve                               |
-| [pem](#pem)     | Texte   | Définition PEM d'une clé de chiffrement à charger |
+| [curve](#curve) | text    | Name of ECDSA curve                               |
+| [pem](#pem)     | text    | Définition PEM d'une clé de chiffrement à charger |
 | [size](#size)   | integer | Size of RSA key in bits                           |
-| [type](#type)   | Texte   | Type of the key: "RSA", "ECDSA", or "PEM"</li>    |
+| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM"</li>    |
 
 
 #### *cryptoKey*
@@ -117,11 +117,11 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF #cryptokey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #cryptokey.decrypt().Params -->
-| Paramètres | Type  |    | Description                                                                       |
-| ---------- | ----- | -- | --------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
-| options    | Objet | -> | Options de décodage                                                               |
-| Résultat   | Objet | <- | Statut                                                                            |
+| Paramètres | Type   |    | Description                                                                       |
+| ---------- | ------ | -- | --------------------------------------------------------------------------------- |
+| message    | Text   | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
+| options    | Object | -> | Options de décodage                                                               |
+| Résultat   | Object | <- | Statut                                                                            |
 <!-- END REF -->
 
 
@@ -131,11 +131,11 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *options*
 
-| Propriété         | Type  | Description                                                                                                                                                             |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                         |
-| encodingEncrypted | Texte | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
-| encodingDecrypted | Texte | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
+| Propriété         | Type | Description                                                                                                                                                             |
+| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                         |
+| encodingEncrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
+| encodingDecrypted | text | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 
 
 #### *Résultat*
@@ -145,7 +145,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
 | success   | boolean    | True si le message a été déchiffré avec succès                              |
-| result    | Texte      | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
+| result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
 
@@ -166,11 +166,11 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 <!-- REF #cryptokey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #cryptokey.encrypt().Params -->
-| Paramètres | Type  |    | Description                                                                     |
-| ---------- | ----- | -- | ------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
-| options    | Objet | -> | Options de chiffrement                                                          |
-| Résultat   | Texte | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
+| Paramètres | Type   |    | Description                                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
+| message    | Text   | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
+| options    | Object | -> | Options de chiffrement                                                          |
+| Résultat   | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
 <!-- END REF -->
 
 La fonction `.encrypt()` <!-- REF #cryptokey.encrypt().Summary -->crypte le paramètre *message* à l'aide de la clé **publique**<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
@@ -179,11 +179,11 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 ##### *options*
 
-| Propriété         | Type  | Description                                                                                                                                                                   |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                               |
-| encodingEncrypted | Texte | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
-| encodingDecrypted | Texte | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
+| Propriété         | Type | Description                                                                                                                                                                   |
+| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                               |
+| encodingEncrypted | text | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
+| encodingDecrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
 
 
 #### *Résultat*
@@ -208,9 +208,9 @@ La valeur retournée est un message chiffré.
 
 
 <!-- REF #cryptokey.getPrivateKey().Params -->
-| Paramètres | Type  |    | Description                |
-| ---------- | ----- | -- | -------------------------- |
-| Résultat   | Texte | <- | Clé primaire au format PEM |
+| Paramètres | Type |    | Description                |
+| ---------- | ---- | -- | -------------------------- |
+| Résultat   | Text | <- | Clé primaire au format PEM |
 <!-- END REF -->
 
 La fonction `.getPrivateKey()`  <!-- REF #cryptokey.getPrivateKey().Summary -->retourne la clé privée de l'objet `cryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.
@@ -235,9 +235,9 @@ La valeur retournée est la clé privée.
 <!-- REF #cryptokey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #cryptokey.getPublicKey().Params -->
-| Paramètres | Type  |    | Description                |
-| ---------- | ----- | -- | -------------------------- |
-| Résultat   | Texte | <- | Clé publique au format PEM |
+| Paramètres | Type |    | Description                |
+| ---------- | ---- | -- | -------------------------- |
+| Résultat   | Text | <- | Clé publique au format PEM |
 <!-- END REF -->
 
 
@@ -279,11 +279,11 @@ La valeur retournée est la clé publique.
 <!-- REF #cryptokey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #cryptokey.sign().Params -->
-| Paramètres | Type  |    | Description                                                                |
-| ---------- | ----- | -- | -------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaîne message à signer                                                    |
-| options    | Objet | -> | Options de signature                                                       |
-| Résultat   | Texte | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
+| Paramètres | Type   |    | Description                                                                |
+| ---------- | ------ | -- | -------------------------------------------------------------------------- |
+| message    | Text   | -> | Chaîne message à signer                                                    |
+| options    | Object | -> | Options de signature                                                       |
+| Résultat   | Text   | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 <!-- END REF -->
 
 La fonction `.sign()` <!-- REF #cryptokey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés d'objet `cryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
@@ -294,10 +294,10 @@ La `cryptoKey` doit contenir une clé **privée** valide.
 
 | Propriété         | Type    | Description                                                                                                                                                                                                            |
 | ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte   | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
-| encodingEncrypted | Texte   | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                             |
+| hash              | text    | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
+| encodingEncrypted | text    | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                             |
 | pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                            |
-| encoding          | Texte   | ERepresentation to be used for result signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                       |
+| encoding          | text    | ERepresentation to be used for result signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                       |
 
 
 #### *Résultat*
@@ -351,12 +351,12 @@ Défini uniquement pour les clés RSA : <!-- REF #cryptokey.size.Summary -->la t
 <!-- REF #cryptokey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #cryptokey.verify().Params -->
-| Paramètres | Type  |    | Description                                                                                     |
-| ---------- | ----- | -- | ----------------------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaîne message utilisée pour générer la signature                                               |
-| signature  | Texte | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
-| options    | Objet | -> | Options de signature                                                                            |
-| Résultat   | Objet | <- | Statut de la vérification                                                                       |
+| Paramètres | Type   |    | Description                                                                                     |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------- |
+| message    | Text   | -> | Chaîne message utilisée pour générer la signature                                               |
+| signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
+| options    | Object | -> | Options de signature                                                                            |
+| Résultat   | Object | <- | Statut de la vérification                                                                       |
 <!-- END REF -->
 
 La fonction `.verify()` <!-- REF #cryptokey.verify().Summary -->vérifie la signature base64 par rapport à la représentation utf8 du *message*<!-- END REF --> à l'aide des clés d'objet `cryptoKey` et des *options* fournies.
@@ -368,9 +368,9 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 
 | Propriété | Type    | Description                                                                                                                                                                                                            |
 | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash      | Texte   | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
+| hash      | text    | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
 | pss       | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                          |
-| encoding  | Texte   | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                |
+| encoding  | text    | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                |
 
 
 #### *Résultat*

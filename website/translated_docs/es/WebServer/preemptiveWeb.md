@@ -14,7 +14,7 @@ The use of preemptive mode for web processes is only available in the following 
 
 *   use of 4D Server or 4D local mode (4D in remote mode does not support preemptive mode)
 
-*   use of a compiled database
+*   use of a compiled database (except [on 4D Server when sessions are enabled](sessions.md#preemptive-mode))
 
 *   **Use preemptive processes** database setting checked (see below)
 
@@ -88,7 +88,7 @@ The following 4D Web Server URLs are thread-safe and can be used in preemptive m
 
 Both the Runtime Explorer and the 4D Server administration window display a specific icon for preemptive web processes:
 
-| Process type          | Icon                                     |
+| Process type          | Icono                                    |
 | --------------------- | ---------------------------------------- |
 | Preemptive web method | ![](assets/en/WebServer/processIcon.png) |
 

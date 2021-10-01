@@ -4,17 +4,17 @@ title: Encabezados
 ---
 
 ---
-## Display Headers
+## Mostrar encabezados
 
 This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| showHeaders | booleano  | true, false     |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| showHeaders | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -22,7 +22,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 
 ---
-## Height
+## Altura
 
 This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 
@@ -40,7 +40,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```
     "List Box": {
@@ -53,17 +53,17 @@ Note that converting back and forth may lead to an end result that is different 
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values                 |
-| ------------ | --------- | ------------------------------- |
-| headerHeight | cadena    | positive decimal+px &#124; em ) |
+| Nombre       | Tipos de datos | Valores posibles                |
+| ------------ | -------------- | ------------------------------- |
+| headerHeight | cadena         | positive decimal+px &#124; em ) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
-#### See also
+#### Ver también
 
 [Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)

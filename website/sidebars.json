@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -20,37 +20,41 @@
           "Concepts/control-flow","Concepts/branching","Concepts/looping"
         ]
       },
-	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
+	"Tags/tags","Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
   "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],
   "Class API Reference":
   [
 	"API/overview",
-	"API/classClass",
-	"API/collectionClass",
-	"API/cryptoClass",
-	"API/dataclassClass",
-	"API/dataclassAttributeClass",
-	"API/datastoreClass",
-	"API/emails",
-	"API/entityClass",
-	"API/entitySelectionClass",
-	"API/fileClass",
-	"API/folderClass",
-	"API/formulaClass",
-	"API/imapTransporterClass",
-	"API/pop3TransporterClass",
-	"API/sessionClass",
-	"API/signalClass",
-	"API/smtpTransporterClass",
-	"API/webServerClass",
-	"API/zipArchiveClass",
-	"API/zipFileClass",
-	"API/zipFolderClass"
+	"API/BlobClass",
+	"API/ClassClass",
+	"API/CollectionClass",
+	"API/CryptoKeyClass",
+	"API/DataClassClass",
+	"API/DataClassAttributeClass",
+	"API/DataStoreClass",
+	"API/EmailObjectClass",
+	"API/EntityClass",
+	"API/EntitySelectionClass",
+	"API/FileClass",
+	"API/FolderClass",
+	"API/FunctionClass",
+	"API/IMAPTransporterClass",
+	"API/MailAttachmentClass",
+	"API/POP3TransporterClass",
+	"API/SessionClass",
+	"API/SignalClass",
+	"API/SMTPTransporterClass",
+	"API/WebServerClass",
+	"API/ZipArchiveClass",
+	"API/ZipFileClass",
+	"API/ZipFolderClass"
 	],
+  "Debugging":["Debugging/basics","Debugging/debugger","Debugging/breakpoints", "Debugging/debugging-remote"],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls"],
+  "Preferences":["Preferences/overview","Preferences/general","Preferences/structure","Preferences/forms","Preferences/methods","Preferences/shortcuts"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/debugLogFiles","Admin/cli"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServer",
@@ -65,8 +69,7 @@
 	"WebServer/authentication",
 	"WebServer/sessions",
 	"WebServer/preemptiveWeb"],
-	"REST Server": [
-		{
+  "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",
         "ids": [
@@ -88,7 +91,7 @@
 		  ]
 		}
 	],
-    "Client/Server":["Desktop/clientServer"],
+  "Client/Server":["Desktop/clientServer"],
   "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/macros","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
@@ -207,7 +210,8 @@
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
-     "Build application":["Desktop/building"]
+   "Build application":["Desktop/building"]
+
 
   }
 }

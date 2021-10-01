@@ -15,7 +15,7 @@ Monitoring the 4D web server is easy and can be done using the 4D Server adminis
 
 The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
 
-## Security
+## Seguridad
 
 Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. The 4D web server security is based upon the following elements:
 

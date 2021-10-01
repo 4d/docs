@@ -15,7 +15,7 @@ A radio button is selected:
 
 
 
-## Configuring radio buttons
+## Configuração de botões radio
 
 Radio buttons are used in coordinated sets: only one button at a time can be selected in the set. In order to operate in a coordinated manner, a set of radio buttons must share the same [Radio Group](properties_Object.md#radio-group) property.
 
@@ -148,7 +148,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 
 
-## Supported properties
+## Propriedades compatíveis
 
 All radio buttons share the same set of basic properties:
 

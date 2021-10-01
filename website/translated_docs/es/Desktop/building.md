@@ -44,7 +44,7 @@ Default parameters are used the first time the Build Application dialog box is u
 
 XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
 
-### Log file
+### Archivo de historial
 
 When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. The log file stores the following information for each build:
 
@@ -235,11 +235,7 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 
 #### Current version
 
-Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
-
-#### Data linking mode
-
-This option lets you choose the linking mode between the merged application and the local data file.
+Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. El intervalo de compatibilidad de las aplicaciones del cliente y del servidor se define mediante el uso de [llaves XML](#build-application-settings) específicas).
 
 #### Data linking mode
 
@@ -294,9 +290,7 @@ On the client side, when the “old” client application tries to connect to th
 
 In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
 
-To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
-
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box.
+To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. Por ejemplo, si la nueva versión de la aplicación cliente-servidor es 6, puede estipular que toda aplicación cliente con un número de versión inferior a 6 no podrá conectarse.
 
 The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
 
@@ -323,9 +317,7 @@ The contents of these folders vary depending on the current platform:
 *   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
 *   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
 
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
-
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. </blockquote></li> </ul>
+    > The macOS packages built contain the same items as the Windows subfolders. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
 
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
 
@@ -342,7 +334,7 @@ Items must be installed:
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 
-*   **on macOS**
+*   **en macOS**
     *   **Server application** - next to the *\<ApplicationName>Server* software package.
     *   **Client application** - next to the *\<ApplicationName>Client* software package.
 
@@ -442,7 +434,7 @@ The Licences & Certificate page can be used to:
 
 ![](assets/en/Admin/buildappCertif.png)
 
-### Licenses
+### Licencias
 
 This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 

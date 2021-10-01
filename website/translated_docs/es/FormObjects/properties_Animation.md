@@ -4,36 +4,36 @@ title: Animación
 ---
 
 ---
-## Loop back to first frame
+## Vuelve a la primera secuencia
 
-Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la última imagen y vuelve a hacer clic, aparece la primera imagen, y así sucesivamente.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                 | Data Type | Possible Values |
-| -------------------- | --------- | --------------- |
-| loopBackToFirstFrame | booleano  | true, false     |
+| Nombre               | Tipos de datos | Valores posibles |
+| -------------------- | -------------- | ---------------- |
+| loopBackToFirstFrame | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 
 
 
 ---
-## Switch back when released
+## Retorna cuando se libera
 
-Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en el botón. Muestra la segunda imagen hasta que se suelta el botón del ratón. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                   | Data Type | Possible Values |
-| ---------------------- | --------- | --------------- |
-| switchBackWhenReleased | booleano  | true, false     |
+| Nombre                 | Tipos de datos | Valores posibles |
+| ---------------------- | -------------- | ---------------- |
+| switchBackWhenReleased | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 
@@ -42,17 +42,17 @@ Displays the first picture all the time except when the user clicks the button. 
 
 
 ---
-## Switch continuously on clicks
+## Desplazamiento continuo en clics
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchContinuously | booleano  | true, false     |
+| Nombre             | Tipos de datos | Valores posibles |
+| ------------------ | -------------- | ---------------- |
+| switchContinuously | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 
@@ -64,13 +64,13 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| frameDelay | integer   | minimum: 0      |
+| Nombre     | Tipos de datos | Valores posibles |
+| ---------- | -------------- | ---------------- |
+| frameDelay | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 
@@ -83,13 +83,13 @@ Enables cycling through the contents of the picture button at the specified spee
 
 Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchWhenRollover | booleano  | true, false     |
+| Nombre             | Tipos de datos | Valores posibles |
+| ------------------ | -------------- | ---------------- |
+| switchWhenRollover | booleano       | true, false      |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 
@@ -99,19 +99,19 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 
 ---
-## Use Last frame as disabled
+## Utilizar el último cuadro como desactivado
 
 Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                   | Data Type | Possible Values |
-|:---------------------- | --------- | --------------- |
-| useLastFrameAsDisabled | booleano  | true, false     |
+| Nombre                 | Tipos de datos | Valores posibles |
+|:---------------------- | -------------- | ---------------- |
+| useLastFrameAsDisabled | booleano       | true, false      |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Botón Imagen](pictureButton_overview.md)
 

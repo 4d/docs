@@ -4,7 +4,7 @@ title: Ayuda
 ---
 
 ---
-## Help Tip
+## Mensaje de ayuda
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
@@ -20,13 +20,13 @@ You can either:
 > In macOS, displaying help tips is not supported in pop-up type windows.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-|  Name   | Data Type | Possible Values                       |
-|:-------:|:---------:| ------------------------------------- |
-| tooltip |   texto   | additional information to help a user |
+| Nombre  | Tipos de datos | Valores posibles                      |
+|:-------:|:--------------:| ------------------------------------- |
+| tooltip |     texto      | additional information to help a user |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
 
@@ -45,7 +45,7 @@ When different tips are associated with the same object in several locations, th
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
 
-#### See also
+#### Ver también
 
 [Placeholder](properties_Entry.md#placeholder)
 

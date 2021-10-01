@@ -4,20 +4,20 @@ title: Texto e Imagen
 ---
 
 ---
-## Background pathname
+## Ruta de acceso fondo
 
 Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
 
 The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                    | Data Type | Possible Values                                                                                              |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | cadena    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Nombre                  | Tipos de datos | Valores posibles                                                                                             |
+| ----------------------- | -------------- | ------------------------------------------------------------------------------------------------------------ |
+| customBackgroundPicture | cadena         | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -30,14 +30,14 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 General appearance of the button. The button style also plays a part in the availability of certain options.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name  | Data Type | Possible Values                                                                                                                                                    |
-|:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   texto   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| Nombre | Tipos de datos | Valores posibles                                                                                                                                                   |
+|:------:|:--------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| style  |     texto      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -57,13 +57,13 @@ This parameter is useful, for example, when the background picture contains bord
 | With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
 > This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderX | number    | For use with "custom" style. Minimum: 0 |
+| Nombre        | Tipos de datos | Valores posibles                       |
+| ------------- | -------------- | -------------------------------------- |
+| customBorderX | number         | For use with "custom" style. Mínimo: 0 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -76,13 +76,13 @@ This parameter is useful, for example, when the background picture contains bord
 
 Designates the placement of an icon in relation to the form object.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values         |
-| ------------- | --------- | ----------------------- |
-| iconPlacement | cadena    | "none", "left", "right" |
+| Nombre        | Tipos de datos | Valores posibles                  |
+| ------------- | -------------- | --------------------------------- |
+| iconPlacement | cadena         | "ninguno", "izquierda", "derecha" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box Header](listbox_overview.md#list-box-headers)
 
@@ -91,19 +91,19 @@ Designates the placement of an icon in relation to the form object.
 
 
 ---
-## Icon Offset
+## Desplazamiento icono
 
 Sets a custom offset value in pixels, which will be used when the button is clicked
 
 The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| customOffset | number    | minimum: 0      |
+| Nombre       | Tipos de datos | Valores posibles |
+| ------------ | -------------- | ---------------- |
+| customOffset | number         | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -121,17 +121,17 @@ Each state is represented by a different picture. In the source picture, the sta
 The following states are represented:
 1. button not clicked / check box unchecked (variable value=0)
 2. button clicked / check box checked (variable value=1)
-3. roll over
+3. pasar por encima
 4. disabled
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| iconFrames | number    | minimum: 1      |
+| Nombre     | Tipos de datos | Valores posibles |
+| ---------- | -------------- | ---------------- |
+| iconFrames | number         | minimum: 1       |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -148,13 +148,13 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 > When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name | Data Type | Possible Values                              |
-| ---- | --------- | -------------------------------------------- |
-| icon | imagen    | Relative or filesystem path in POSIX syntax. |
+| Nombre | Tipos de datos | Valores posibles                             |
+| ------ | -------------- | -------------------------------------------- |
+| icon   | imagen         | Relative or filesystem path in POSIX syntax. |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
@@ -168,21 +168,21 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Descripción                                                                                                                                      | Ejemplo                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Right**    | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bottom**   | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
+| Option        | Descripción                                                                                                                                      | Ejemplo                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| **Izquierda** | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Arriba**    | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Derecha**   | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Abajo**     | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centrado**  | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                            |
-| ------------- | --------- | ------------------------------------------ |
-| textPlacement | cadena    | "left", "top", "right", "bottom", "center" |
+| Nombre        | Tipos de datos | Valores posibles                           |
+| ------------- | -------------- | ------------------------------------------ |
+| textPlacement | cadena         | "left", "top", "right", "bottom", "center" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
 
@@ -198,13 +198,13 @@ This parameter is useful, for example, when the background picture contains bord
 
 > This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderY | number    | For use with "custom" style. Minimum: 0 |
+| Nombre        | Tipos de datos | Valores posibles                       |
+| ------------- | -------------- | -------------------------------------- |
+| customBorderY | number         | For use with "custom" style. Mínimo: 0 |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
 
@@ -240,13 +240,13 @@ Each option specifies the relation between the button and the attached pop-up me
 It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name           | Data Type | Possible Values                                                                                      |
-|:-------------- | --------- | ---------------------------------------------------------------------------------------------------- |
-| popupPlacement | cadena    | <li>"none"<li>"linked"<li>"separated" |
+| Nombre         | Tipos de datos | Valores posibles                                                                                     |
+|:-------------- | -------------- | ---------------------------------------------------------------------------------------------------- |
+| popupPlacement | cadena         | <li>"none"<li>"linked"<li>"separated" |
 
 
-#### Objects Supported
+#### Objetos soportados
 
 [Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

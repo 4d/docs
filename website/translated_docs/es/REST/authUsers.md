@@ -5,7 +5,7 @@ title: Usuarios y sesiones
 
 REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+Como primer paso para abrir una sesión REST en el servidor 4D, el usuario que envía la solicitud debe estar autenticado.
 
 
 ## Authenticating users
@@ -14,7 +14,7 @@ You log in a user to your application by calling [`$directory/login`]($directory
 
 ## Opening sessions
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/sessionClass.md). Subsequent REST requests will reuse the same session cookie.
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 

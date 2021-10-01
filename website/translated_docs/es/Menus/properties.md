@@ -6,7 +6,7 @@ title: Propiedades de los menús
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
 
 
-## Title
+## Título
 
 The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
 
@@ -19,22 +19,22 @@ Using the 4D language, you set the title property through the *itemText* paramet
 
 ### Using control characters
 
-You can set some properties of the menu commands by using control characters (metacharacters) directly in the menu command labels. For instance, you can assign the keyboard shortcut Ctrl+G (Windows) or Command+G (macOS) for a menu command by placing the "/G" characters in the label of the menu item label.
+Puede definir algunas propiedades de los comandos de menú utilizando caracteres de control (metacaracteres) directamente en las etiquetas de los comandos de menú. For instance, you can assign the keyboard shortcut Ctrl+G (Windows) or Command+G (macOS) for a menu command by placing the "/G" characters in the label of the menu item label.
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Descripción                 | Usage                                                         |
+| Caracter    | Descripción                 | Utilización                                                   |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
-| <B          | less than B                 | Bold font                                                     |
+| <B          | less than B                 | Negrita                                                       |
 | <I          | less than I                 | Italic font                                                   |
 | <U          | less than U                 | Underline font                                                |
-| !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
+| !+caracter  | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
 | /+character | slash+character             | Add character as shortcut                                     |
 
 
 
-## Parameter
+## Parámetros
 
 You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
 
@@ -77,7 +77,7 @@ When this option is checked, 4D does not trigger the "validation" of the field w
 
 This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
 
-## Options
+## Opciones
 
 ### Separator lines
 
@@ -116,14 +116,14 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operación   |
-| --------------- | ------------------ | ----------- |
-| Ctrl+C          | Command+C          | Copy        |
-| Ctrl+Q          | Command+Q          | Quit        |
-| Ctrl+V          | Command+V          | Paste       |
-| Ctrl+X          | Command+X          | Cut         |
-| Ctrl+Z          | Command+Z          | Undo        |
-| Ctrl+. (period) | Command+. (period) | Stop action |
+| Key (Windows)  | Key (macOS)       | Operación   |
+| -------------- | ----------------- | ----------- |
+| Ctrl+C         | Comando+C         | Copiar      |
+| Ctrl+Q         | Command+Q         | Salir       |
+| Ctrl+V         | Command+V         | Pegar       |
+| Ctrl+X         | Command+X         | Cortar      |
+| Ctrl+Z         | Command+Z         | Deshacer    |
+| Ctrl+. (punto) | Command+. (punto) | Stop action |
 
 To assign a keyboard shortcut in the Menu editor:
 

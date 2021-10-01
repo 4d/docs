@@ -6,7 +6,7 @@ sidebar_label: Página de información
 
 The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
 
-## Program
+## Programa
 
 This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
 
@@ -17,7 +17,7 @@ The central part of the window indicates the name and location of the project an
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. For more information about the location of this folder, refer to the `Get 4D folder` command. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
 
-## Tables
+## Tablas
 
 This page provides an overview of the tables in your database:
 
@@ -37,7 +37,7 @@ The page lists all the tables of the database (including invisible tables) as we
 
 
 
-## Data
+## Datos
 
 The **Data** page provides information about the available and used storage space in the data file.
 > This page cannot be accessed in maintenance mode

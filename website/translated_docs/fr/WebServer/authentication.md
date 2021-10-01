@@ -1,12 +1,12 @@
 ---
 id: authentication
-title: Authentication
+title: Authentification
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
 
 
-## Authentication modes
+## Modes d’authentification
 
 The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 
@@ -157,7 +157,7 @@ The `$3` parameter receives the IP address of the browser’s machine. This info
 
 #### $4 - Server IP address
 
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
 
 
 #### $5 and $6 - User Name and Password
