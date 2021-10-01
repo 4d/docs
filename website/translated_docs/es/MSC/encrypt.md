@@ -9,7 +9,7 @@ You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the 
 A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 > Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). Si intenta realizar esta operación en modo estándar, un diálogo de advertencia le informará de que la base se cerrará y se reiniciará en modo de mantenimiento
 
-**Warning:**
+**Atención:**
 - Cifrar una base es una operación de larga duración. It displays a progress indicator (which could be interrupted by the user). Tenga en cuenta también que una operación de encriptación de la base siempre incluye un paso de compactación.
 - Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
 
@@ -66,7 +66,7 @@ This operation is useful when you need to change the current encryption data key
 2. Enter the current data encryption key.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Decrypt all data
+### Desencriptar todos los datos
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
 1. Click on **Decrypt all data**.
@@ -86,7 +86,7 @@ You can save the encryption key each time a new passphrase has been provided:
 
 Successive encryption keys can be stored on the same device.
 
-## Log file
+## Archivo de historial
 Una vez finalizada una operación de encriptación, 4D genera un archivo en la carpeta Logs de la base. Se crea en formato XML y se llama "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" o "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 An Open log file button is displayed on the MSC page each time a new log file has been generated.

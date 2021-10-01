@@ -21,13 +21,13 @@ El generador de aplicaciones le permite:
 Generar un paquete de proyecto puede realizarse utilizando:
 
 - el comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
-- or the [Build Application window](#application-builder).
+- o la [Ventana Generador de aplicaciones](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+Para mostrar la caja de diálogo Generar la aplicación, seleccione **Diseño** > **Generar la aplicación...** en la barra de menús.
 
 ![](assets/en/Project/buildappProj.png)
 
-The Build Application dialog includes several pages that can be accessed using tabs:
+La caja de diálogo del generador de aplicaciones incluye varias páginas a las que se puede acceder mediante pestañas:
 
 ![](assets/en/Project/appbuilderProj.png)
 
@@ -35,42 +35,42 @@ The Build Application dialog includes several pages that can be accessed using t
 La generación de la base sólo puede efectuarse una vez compilada la base de datos. Si selecciona este comando sin haber compilado previamente la base de datos, o si el código compilado no se corresponde con el código interpretado, aparece una caja de diálogo de advertencia que indica que la base de datos debe ser (re)compilada.
 
 
-### Build application settings
+### Parámetros del generador de aplicaciones
 
 Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo de la aplicación llamada "buildApp.4DSettings", ubicado en la carpeta Settings de la base de datos.
 
-Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
+Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) manual.
+Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html).
 
-### Log file
+### Archivo de historial
 
-Cuando se crea una aplicación, 4D genera un archivo de historial en la carpeta **Logs**. The log file stores the following information for each build:
-- The start and end of building of targets,
-- The name and full access path of the files generated,
-- The date and time of the build,
+Cuando se crea una aplicación, 4D genera un archivo de historial en la carpeta **Logs**. El archivo de historial almacena la siguiente información para cada generación:
+- El inicio y el fin de la generación de objetivos,
+- El nombre y la ruta de acceso completa de los archivos generados,
+- La fecha y la hora de la generación,
 - Todos los errores que se han producido.
 
 
 
-## Application name and destination folder
+## Nombre de la aplicación y carpeta de destino
 
 ![](assets/en/Project/buidappstructureProj.png)
 
-Enter the name of the application in **Application Name**.
+Introduzca el nombre de la aplicación en **Nombre de la aplicación**.
 
-Specify the folder for the built application in **Destination Folder**. If the specified folder does not already exist, 4D will create a *Build* folder for you.
+Especifique la carpeta para la aplicación generada en la **Carpeta de destino**. Si la carpeta especificada no existe todavía, 4D creará una carpeta *Build*.
 
 
 
-## Compiled structure page
+## Página de estructura compilada
 
-This tab allows you to build a standard compiled structure file and/or a compiled component:
+Esta pestaña le permite generar un archivo de estructura compilado estándar y/o un componente compilado:
 
 ![](assets/en/Project/appbuilderProj.png)
 
 
-### Build compiled structure
+### Generar una estructura compilada
 
 Genera una base de datos que sólo contiene código compilado.
 
@@ -78,19 +78,19 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta *Compiled Database*. Si
 
 *\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. Los archivos.4dz pueden ser utilizados por 4D Server, la licencia 4D Volume (aplicaciones fusionadas) y 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
+> Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Los archivos.4dz pueden ser utilizados por 4D Server, la licencia 4D Volume (aplicaciones fusionadas) y 4D Developer. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
 
 
-#### Include related folders
+#### Incluir las carpetas asociadas
 
 Cuando se marca esta opción, todas las carpetas relacionadas con la base de datos se copian en la carpeta Build como carpetas *Components* y *Resources*. Para más información sobre estas carpetas, consulte [Arquitectura de la base de datos](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
 
 
-### Build component
+### Generar un componente
 
-Builds a compiled component from the structure.
+Genera un componente compilado a partir de la estructura.
 
-A component is a standard 4D project in which specific functionalities have been developed. Una vez configurado e instalado el componente en otra base 4D (la base local), sus funcionalidades son accesibles desde la base local. Para más información sobre los componentes, consulte la documentación "Desarrollar e instalar componentes 4D ".
+Un componente es un proyecto estándar 4D en el que se han desarrollado funcionalidades específicas. Una vez configurado e instalado el componente en otra base 4D (la base local), sus funcionalidades son accesibles desde la base local. Para más información sobre los componentes, consulte la documentación "Desarrollar e instalar componentes 4D ".
 Si ha llamado a su aplicación, *MiComponente*, 4D creará una carpeta Components que contiene la carpeta *MiComponente.4dbase*: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
 
 La carpeta *MyComponent.4dbase* contiene:
@@ -114,7 +114,7 @@ Los siguientes elementos son necesarios para la generación:
 
 En Windows, esta funcionalidad crea un archivo ejecutable (.exe). En macOS, se encarga de la creación de paquetes de software.
 
-El principio consiste en fusionar el archivo 4D Volume Desktop con un archivo de estructura compilado. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. Para más información sobre este punto, consulte la documentación comercial y de [4D Store](http://www.4d.com/).
+El principio consiste en fusionar el archivo 4D Volume Desktop con un archivo de estructura compilado. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Para más información sobre este punto, consulte la documentación comercial y de [4D Store](http://www.4d.com/).
 
 Puede definir un archivo de datos por defecto o permitir a los usuarios crear y utilizar su propio archivo de datos (consulte la sección [Gestión de archivos de datos en las aplicaciones finales](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
 
@@ -137,9 +137,9 @@ Una vez seleccionada la carpeta, se muestra su nombre de ruta completo y, si rea
 
 Esta opción permite elegir el modo de vinculación entre la aplicación fusionada y el archivo de datos local. Existen dos modos de vinculación de datos:
 
-*   **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el último archivo de datos abierto correspondiente al archivo de estructura. This allows you to move the application package freely on the disk. Esta opción debe utilizarse generalmente para las aplicaciones fusionadas, a menos que necesite específicamente duplicar la aplicación.
+*   **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el último archivo de datos abierto correspondiente al archivo de estructura. Esto le permite mover el paquete de aplicaciones libremente en el disco. Esta opción debe utilizarse generalmente para las aplicaciones fusionadas, a menos que necesite específicamente duplicar la aplicación.
 
-*   **Ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath. xml* e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. En caso contrario, se abrirá el último archivo de datos abierto (modo por defecto).
+*   **Ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath. xml* e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Si se encuentra una entrada de este tipo, se abre su correspondiente archivo de datos (definido a través de su atributo "dataFilePath"). En caso contrario, se abrirá el último archivo de datos abierto (modo por defecto).
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#último-archivo-de-datos-abierto).
 
@@ -161,12 +161,12 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
     Todos estos elementos deben mantenerse en la misma carpeta para que el ejecutable funcione.</ul>
 
 *   *macOS*
-    -   Un paquete de software llamado MyProject.app que contiene tu aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Nota**: en macOS, el comando [Archivo de aplicación](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) del lenguaje 4D devuelve el nombre de la ruta del archivo ApplicationName (ubicado en la carpeta Contents:macOS del paquete de software) y no el del archivo .comp (carpeta Contents:Resources del paquete de software).
+    -   Un paquete de software llamado MyProject.app que contiene tu aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins-and-components). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses-and-certificate). **Nota**: en macOS, el comando [Archivo de aplicación](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) del lenguaje 4D devuelve el nombre de la ruta del archivo ApplicationName (ubicado en la carpeta Contents:macOS del paquete de software) y no el del archivo .comp (carpeta Contents:Resources del paquete de software).
 
 
 #### Personalización de la carpeta 4D Volume Desktop
 
-Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > *Final Application*. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. Puede, por ejemplo:
+Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > *Final Application*. A continuación, podrá personalizar el contenido de la carpeta 4D Volume Desktop original según sus necesidades. Puede, por ejemplo:
 
 *   Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
 *   Añadir una carpeta *PlugIns* personalizada;
@@ -209,7 +209,7 @@ Una vez construida, una aplicación cliente/servidor se compone de dos partes pe
 También se personaliza la aplicación cliente/servidor y se simplifica su manejo:
 
 - Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación del servidor. No es necesario seleccionar la base de datos.
-- Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir una base de datos en una caja de diálogo de conexión. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación 4D estándar, se devuelve un mensaje de error y la conexión es imposible.
+- Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir una base de datos en una caja de diálogo de conexión. El cliente se dirige al servidor usando su nombre, cuando el cliente y el servidor están en la misma subred, o utilizando su dirección IP, que se define utilizando la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, [se pueden implementar mecanismos alternativos específicos](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación 4D estándar, se devuelve un mensaje de error y la conexión es imposible.
 - Se puede configurar una aplicación cliente/servidor para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-in-the-server-application).
 - También es posible automatizar la actualización de la parte servidor mediante el uso de una secuencia de comandos del lenguaje ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) y [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
@@ -217,7 +217,7 @@ También se personaliza la aplicación cliente/servidor y se simplifica su manej
 
 ### Construir aplicación de servidor
 
-Marque esta opción para generar la parte del servidor de su aplicación durante la fase de construcción. You must designate the location on your disk of the 4D Server application to be used. Este 4D Server debe corresponder a la plataforma actual (que también será la plataforma de la aplicación del servidor).
+Marque esta opción para generar la parte del servidor de su aplicación durante la fase de construcción. Debe designar la ubicación en su disco de la aplicación 4D Server que va a utilizar. Este 4D Server debe corresponder a la plataforma actual (que también será la plataforma de la aplicación del servidor).
 
 #### Ubicación de 4D Server
 
@@ -225,15 +225,15 @@ Haga clic en el botón **[...]** y utilice la caja de diálogo *Buscar carpeta* 
 
 #### Versión actual
 
-Se utiliza para indicar el número de versión actual de la aplicación generada. You may then accept or reject connections by client applications according to their version number. El intervalo de compatibilidad de las aplicaciones clientes y servidor se define mediante [llaves XML](#build-application-settings)).
+Se utiliza para indicar el número de versión actual de la aplicación generada. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. El intervalo de compatibilidad de las aplicaciones clientes y servidor se define mediante [llaves XML](#build-application-settings)).
 
 #### Modo de enlace de datos
 
 Esta opción permite elegir el modo de vinculación entre la aplicación fusionada y el archivo de datos local. Existen dos modos de vinculación de datos:
 
-*   **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el último archivo de datos abierto correspondiente al archivo de estructura. This allows you to move the application package freely on the disk. Esta opción debe utilizarse generalmente para las aplicaciones fusionadas, a menos que necesite específicamente duplicar la aplicación.
+*   **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el último archivo de datos abierto correspondiente al archivo de estructura. Esto le permite mover el paquete de aplicaciones libremente en el disco. Esta opción debe utilizarse generalmente para las aplicaciones fusionadas, a menos que necesite específicamente duplicar la aplicación.
 
-*   **Ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath. xml* e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. En caso contrario, se abrirá el último archivo de datos abierto (modo por defecto).
+*   **Ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath. xml* e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Si se encuentra una entrada de este tipo, se abre su correspondiente archivo de datos (definido a través de su atributo "dataFilePath"). En caso contrario, se abrirá el último archivo de datos abierto (modo por defecto).
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto.](#last-data-file-opened)
 
@@ -244,11 +244,11 @@ Marcando esta opción se genera la parte cliente de su aplicación durante la fa
 
 #### 4D Volume Desktop
 
-Debe designar la ubicación en su disco de la aplicación 4D Volume Desktop a utilizar. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. Para más información sobre este punto, consulte [Personalizar las carpetas 4D Server y/o 4D Client](#customizing-4d-server-and-or-4d-client-folders).
+Debe designar la ubicación en su disco de la aplicación 4D Volume Desktop a utilizar. Este 4D Volume Desktop debe corresponder a la plataforma actual (que será también la plataforma de la aplicación cliente). Si quiere generar una versión de la aplicación cliente para la plataforma "concurrente", debe realizar una operación de generación adicional utilizando una aplicación 4D que se ejecute en esa plataforma. Esto sólo es necesario para la versión inicial de la aplicación cliente, ya que las actualizaciones posteriores se pueden gestionar directamente en la misma plataforma utilizando el mecanismo de actualización automática. Para más información sobre este punto, consulte [Personalizar las carpetas 4D Server y/o 4D Client](#customizing-4d-server-and-or-4d-client-folders).
 
 > El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D Developer v18, debe seleccionar un 4D Volume Desktop v18.
 
-Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. Los diferentes escenarios propuestos se describen en el párrafo [Gestión de las conexiones para las aplicaciones clientes](#management-of-client-connections).
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Para más información sobre este archivo, consulte la descripción del comando `BUILD APPLICATION`. También puede implementar mecanismos específicos en caso de fallo de la conexión. Los diferentes escenarios propuestos se describen en el párrafo [Gestión de las conexiones para las aplicaciones clientes](#management-of-client-connections).
 
 #### Copia de las aplicaciones clientes en la aplicación servidor
 
@@ -273,14 +273,14 @@ Para activar las notificaciones de actualización de la aplicación cliente, bas
 
 Del lado del cliente, cuando la aplicación cliente "antigua" intenta conectarse a la aplicación servidor actualizada, se muestra una caja de diálogo en la máquina cliente, indicando que hay una nueva versión disponible. El usuario puede actualizar su versión o cancelar la caja de diálogo.
 
-*   Si el usuario hace clic en **Aceptar**, la nueva versión se descarga en el equipo cliente a través de la red. Once the download is complete, the old client application is closed and the new version is launched and connects to the server. La versión antigua de la aplicación se pone entonces en la papelera de reciclaje de la máquina.
+*   Si el usuario hace clic en **Aceptar**, la nueva versión se descarga en el equipo cliente a través de la red. Una vez finalizada la descarga, se cierra la aplicación cliente antigua y se lanza la nueva versión, que se conecta al servidor. La versión antigua de la aplicación se pone entonces en la papelera de reciclaje de la máquina.
 *   Si el usuario hace clic en **Cancelar**, la actualización se cancela; si la versión antigua de la aplicación cliente no está en el rango de versiones aceptadas por el servidor (consulte el siguiente párrafo), la aplicación se cierra y la conexión es imposible. En caso contrario (por defecto), se establece la conexión.
 
 #### Forzar las actualizaciones automáticas
 
 En algunos casos, es posible que desee evitar que las aplicaciones cliente puedan cancelar la descarga de actualizaciones. Por ejemplo, si ha utilizado una nueva versión de la aplicación fuente 4D Server, la nueva versión de la aplicación cliente debe instalarse absolutamente en cada máquina cliente.
 
-Para forzar la actualización, simplemente excluya el número de versión actual de las aplicaciones clientes (X-1 y anteriores) en el rango de número de versión compatible con la aplicación servidor. In this case, the update mechanism will not allow non-updated client applications to connect. Por ejemplo, si la nueva versión de la aplicación cliente-servidor es la 6, puede estipular que toda aplicación cliente con un número de versión inferior a la 6 no podrá conectarse.
+Para forzar la actualización, simplemente excluya el número de versión actual de las aplicaciones clientes (X-1 y anteriores) en el rango de número de versión compatible con la aplicación servidor. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten. Por ejemplo, si la nueva versión de la aplicación cliente-servidor es la 6, puede estipular que toda aplicación cliente con un número de versión inferior a la 6 no podrá conectarse.
 
 El [número de versión actual](build-server-application) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de los números autorizados se definen en el proyecto de la aplicación mediante unas llaves [XML](#build-application-settings) específicas.
 
@@ -300,16 +300,16 @@ Hay muchas causas posibles de este error. Cuando le aparezca este mensaje, es ac
 Una vez construida la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Cliente Servidor ejecutable**. Esta carpeta contiene dos subcarpetas, *<ApplicationName>Client* y *<ApplicationName>Server*.
 > Estas carpetas no se generan si se produce un error. En este caso, abra el [archivo-de-historial](#archivo-de-registro) para conocer la causa del error.
 
-La carpeta *<ApplicationName>Client* contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de la aplicación. This folder must be installed on each client machine. La carpeta *<ApplicationName>Server* contiene la parte servidor de la aplicación.
+La carpeta *<ApplicationName>Client* contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de la aplicación. Esta carpeta debe instalarse en cada máquina cliente. La carpeta *<ApplicationName>Server* contiene la parte servidor de la aplicación.
 
 El contenido de estas carpetas varía en función de la plataforma actual:
 
 *   *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, llamado  *\<ApplicationName>Client.exe* para la parte cliente y *\<ApplicationName>Server.exe* para la parte servidor, así como los archivos .rsr correspondientes. Las carpetas también contienen varios archivos y carpetas necesarios para el funcionamiento de las aplicaciones y los elementos personalizados que pueden estar en las carpetas 4D Volume Desktop y 4D Server de origen.
-*   *macOS* - Cada carpeta contiene sólo el paquete de aplicaciones, llamado\<ApplicationName> Client para la parte cliente y \<ApplicationName> Server para la parte servidor. Each package contains all the necessary items for the application to work. En macOS, se lanza un paquete haciendo doble clic en él.
+*   *macOS* - Cada carpeta contiene sólo el paquete de aplicaciones, llamado\<ApplicationName> Client para la parte cliente y \<ApplicationName> Server para la parte servidor. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, se lanza un paquete haciendo doble clic en él.
 
-    > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Se puede visualizar su contenido (**Control+clic** sobre el icono) para poder modificarlo..
+    > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Se puede visualizar su contenido (**Control+clic** sobre el icono) para poder modificarlo.
 
-Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete *<ApplicationName>Server*. This subfolder contains the client application in macOS and/or Windows format as a compressed file. Este archivo se utiliza durante la actualización automática de las aplicaciones clientes.
+Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete *<ApplicationName>Server*. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Este archivo se utiliza durante la actualización automática de las aplicaciones clientes.
 
 #### Personalizar la carpeta 4D Volume Desktop
 
@@ -347,7 +347,7 @@ La página enumera los elementos cargados por la aplicación 4D actual:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    Columna **Active** - Indica que los elementos se integrarán en el paquete de aplicaciones creado. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+*    Columna **Active** - Indica que los elementos se integrarán en el paquete de aplicación creado. Todos los elementos están marcados por defecto. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
 
@@ -377,7 +377,7 @@ The Licences & Certificate page can be used to:
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available deployment licenses that you can integrate into your application. Por defecto, la lista está vacía. Debe añadir explícitamente su licencia *4D Developer Professional*, así como cada licencia *4D Desktop Volume* que se vaya a utilizar en la aplicación generada. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
@@ -496,7 +496,7 @@ With your compiled applications, 4D automatically uses the last data file opened
 
 Esto puede ser inadecuado si se quiere duplicar una aplicación fusionada que pretende utilizar diferentes archivos de datos. Las aplicaciones duplicadas en realidad comparten la carpeta de preferencias del usuario de la aplicación y, por lo tanto, siempre utilizan el mismo archivo de datos - incluso si el archivo de datos se cambia de nombre, porque se abre el último archivo utilizado para la aplicación.
 
-4D permite, por tanto, vincular la ruta del archivo de datos a la ruta de la aplicación. In this case, the data file will be linked using a specific path and will not just be the last file opened. Asocie sus datos **por la ruta de aplicación**.
+4D permite, por tanto, vincular la ruta del archivo de datos a la ruta de la aplicación. En este caso, el archivo de datos se relacionará con una ruta específica y no será simplemente el último archivo abierto. Asocie sus datos **por la ruta de aplicación**.
 
 Este modo le permite duplicar sus aplicaciones fusionadas sin romper el vínculo con el archivo de datos. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
@@ -523,7 +523,7 @@ More specifically, the following cases are covered:
 
 To define and use a default data file:
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. Este archivo debe suministrarse junto con todos los demás archivos necesarios, dependiendo de la configuración de la base: índice (.4DIndx), Blobs externos, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. Este archivo debe suministrarse junto con todos los demás archivos necesarios, dependiendo de la configuración de la base: índice (.4DIndx), Blobs externos, journal, etc. Es su responsabilidad proveer un archivo de datos válido por defecto. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 - When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
 The following graphic illustrates this feature:
@@ -560,7 +560,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 Este mecanismo aborda el caso de que el servidor de destino primario no esté disponible temporalmente por alguna razón (modo mantenimiento, por ejemplo). When this case occurs for the first time, the server selection dialog box is displayed (if allowed, see below) and the user can manually select an alternate server, whose path is then saved if the connection is successful. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. The mechanism addresses cases of temporary unavailability.  
+> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. El mecanismo aborda los casos de indisponibilidad temporal.  
 > - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
 
 

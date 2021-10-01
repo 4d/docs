@@ -4,7 +4,7 @@ title: Corte
 ---
 
 ---
-## Columns
+## Columnas
 
 Sets the number of columns in a thumbnail table.
 

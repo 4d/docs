@@ -11,8 +11,8 @@ Define which format to use to display images. By default, the best format for th
 
 | Tipo | Descripción                    |
 | ---- | ------------------------------ |
-| GIF  | GIF format                     |
-| PNG  | PNG format                     |
+| GIF  | Formato GIF                    |
+| PNG  | Formato PNG                    |
 | JPEG | JPEG format                    |
 | TIFF | TIFF format                    |
 | best | Best format based on the image |

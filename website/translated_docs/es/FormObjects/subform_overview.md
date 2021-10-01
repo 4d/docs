@@ -20,7 +20,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 *   **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
 
 
-## List subforms
+## Sub-formularios en lista
 
 A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
@@ -33,7 +33,7 @@ You can also allow the user to enter data in the List form. Depending on the con
 > 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
 
 
-## Page subforms
+## Sub-formularios en página
 
 Page subforms can display the data of the current subrecord or any type of pertinent value depending on the context (variables, pictures, and so on). One of the main advantages of using page subforms is that they can include advanced functionalities and can interact directly with the parent form (widgets). Page subforms also have their own specific properties and events; you can manage them entirely by programming.
 
@@ -83,7 +83,7 @@ Assigning the value to the variable generates the `On Data Change` form event in
 
 The object can be created automatically or be the parent container variable, if explicitely named and typed as Object (see below). In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
 
-For example, in your subform, field labels are stored in the bound object so that you can display different languages:
+Por ejemplo, en su subformulario, las etiquetas de los campos se almacenan en el objeto vinculado para poder mostrar diferentes lenguajes:
 
 ![](assets/en/FormObjects/subforms4.png)
 

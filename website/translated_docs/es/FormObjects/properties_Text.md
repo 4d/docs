@@ -86,11 +86,11 @@ This property allows you to specify either the **font theme** or the **font fami
 > **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
 
 
-### Font Theme
+### Tema de fuente
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. Estos parámetros dependen de:
 
-- the platform,
+- la plataforma,
 - the system language,
 - and the type of form object.
 
@@ -120,7 +120,7 @@ Three font themes are available:
 
 
 
-### Font Family
+### Familia de fuentes
 
 There are two types of font family names:
 
@@ -152,9 +152,9 @@ Allows defining the object's font size in points.
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                      |
-| -------- | -------------- | ------------------------------------- |
-| fontSize | integer        | Font size in points. Minimum value: 0 |
+| Nombre   | Tipos de datos | Valores posibles                     |
+| -------- | -------------- | ------------------------------------ |
+| fontSize | integer        | Font size in points. Valor mínimo: 0 |
 
 #### Objetos soportados
 
@@ -305,16 +305,16 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                |
+| Nombre de propiedad | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | cadena   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| fill                | cadena   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
+| stroke              | cadena   | Color de la fuente. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                              |
+| fill                | cadena   | Color de fondo. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                  |
 | fontStyle           | cadena   | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
 | fontWeight          | cadena   | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
 | textDecoration      | cadena   | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
 | unselectable        | booleano | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
 | disabled            | booleano | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.\<columnName> | objeto   | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
+| cell.\<columnName> | objeto   | Allows applying the property to a single column. Pase en \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
@@ -378,7 +378,7 @@ Entonces, el método *Color* contendría:
 
 
 ---
-## Multi-style
+## Multistyle
 
 Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas \<SPAN> HTML presentes en el área.</p> 
 
@@ -439,7 +439,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 <hr />
 <h2 spaces-before="0">
-  Orientation
+  Orientación
 </h2>
 
 <p spaces-before="0">
@@ -449,7 +449,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 <table spaces-before="0">
   <tr>
     <th>
-      Orientation value
+      Valor de orientación
     </th>
     
     <th>
@@ -459,7 +459,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
   
   <tr>
     <td>
-      0 (default)
+      0 (por defecto)
     </td>
     
     <td>

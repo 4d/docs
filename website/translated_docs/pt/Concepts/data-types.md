@@ -22,7 +22,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Null](Concepts/dt_null_undefined.md)          | -                        | Sim                     | -                            |
 | [Ponteiro](Concepts/dt_pointer.md)             | -                        | Sim                     | `C_POINTER`, `ARRAY POINTER` |
 | [Imagem](Concepts/dt_picture.md)               | Sim                      | Sim                     | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                    | Yes                      | Sim                     | `C_BLOB`, `ARRAY BLOB`       |
+| [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | `C_BLOB`, `ARRAY BLOB`       |
 | [Objeto](Concepts/dt_object.md)                | Sim                      | Sim                     | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Coleção](Concepts/dt_collection.md)           | -                        | Sim                     | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)           | -                        | Sim                     | `C_VARIANT`                  |
@@ -52,11 +52,11 @@ The following table illustrates these default values:
 | Booleen    | False                                                                               | True                    | True (varies)                |
 | Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
 | Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Time       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| Hora       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
 | Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
 | Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
 | Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text       | ""                                                                                  | ""                      | ""                           |
+| Texto      | ""                                                                                  | ""                      | ""                           |
 | Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
 | Object     | null                                                                                | null                    | null                         |
 | Collection | null                                                                                | null                    | null                         |

@@ -1,5 +1,5 @@
 ---
-id: generalidades
+id: overview
 title: Generalidades
 ---
 
@@ -8,7 +8,7 @@ Un proyecto 4D contiene todo el código fuente de una aplicación de base de dat
 Los proyectos 4D se crean y gestionan utilizando la aplicación 4D Developer. Los archivos de proyecto se utilizan para crear archivos de despliegue de la aplicación final, que pueden ser abiertos con 4D Server o con una licencia 4D Volume (aplicaciones fusionadas).
 
 
-## Project files
+## Archivos del proyecto
 
 Los archivos de proyecto 4D se abren y editan con las aplicaciones estándar de la plataforma 4D. Dispone de editores completos para gestionar los archivos, como un editor de estructuras, un editor de métodos, un editor de formularios, un editor de menú...
 

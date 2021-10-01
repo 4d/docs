@@ -1,5 +1,5 @@
 ---
-id: generalidades
+id: overview
 title: Generalidades
 ---
 
@@ -49,7 +49,7 @@ En las bases proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pue
 
 
 
-## Toolbox editor
+## Editor de la caja de herramientas
 
 The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 

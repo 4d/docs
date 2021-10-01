@@ -3,7 +3,7 @@ id: installation
 title: Instalación y activación
 ---
 
-Welcome to 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
+¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 
 ## Required configuration
@@ -101,7 +101,7 @@ Your 4D application is now activated.
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
 
-## Adding licenses
+## Añadir las licencias
 
 You can add new licenses, for example to extend the capacities of your application, at any time.
 
@@ -154,7 +154,7 @@ You can use projects to organize your licenses according to your needs:
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Symptoms                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Síntomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -163,7 +163,7 @@ If the installation or activation process fails, please check the following tabl
 If this information does not help you resolve your problem, please contact 4D or your local distributor.
 
 
-## Contacts
+## Contactos
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 

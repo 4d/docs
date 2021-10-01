@@ -4,7 +4,7 @@ title: Subformulario
 ---
 
 ---
-## Allow Deletion
+## Autorizar la eliminación
 
 Specifies if the user can delete subrecords in a list subform.
 
@@ -22,7 +22,7 @@ Specifies if the user can delete subrecords in a list subform.
 ---
 ## Formulario detallado
 
-You use this property to declare the detail form to use in the subform. It can be:
+You use this property to declare the detail form to use in the subform. Puede ser:
 
 - a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
   You can select a component form name when it is published in the component.
@@ -65,7 +65,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 ---
 ## Doble clic en línea
 
-`List subform`
+`Sub-formularios lista`
 
 Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
 
@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## Editable en lista
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
 

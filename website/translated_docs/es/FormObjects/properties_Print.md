@@ -4,7 +4,7 @@ title: Imprimir
 ---
 
 ---
-## Print frame
+## Impresión marco
 
 This property handles the print mode for objects whose size can vary from one record to another depending on their contents. These objects can be set to print with either a fixed or variable frame. Fixed frame objects print within the confines of the object as it was created on the form. Variable frame objects expand during printing to include the entire contents of the object. Note that the width of objects printed as a variable size is not affected by this property; only the height varies automatically based on the contents of the object.
 
@@ -26,9 +26,9 @@ The print options are:
 
 #### Gramática JSON
 
-|   Nombre   | Tipos de datos | Valores posibles                                    |
-|:----------:|:--------------:| --------------------------------------------------- |
-| printFrame |     cadena     | "fixed", "variable", (subform only) "fixedMultiple" |
+|   Nombre   | Tipos de datos | Valores posibles                                                |
+|:----------:|:--------------:| --------------------------------------------------------------- |
+| printFrame |     cadena     | "fixed", "variable", (subformulario únicamente) "fixedMultiple" |
 
 
 #### Objetos soportados

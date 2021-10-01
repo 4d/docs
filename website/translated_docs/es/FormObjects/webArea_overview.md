@@ -27,12 +27,12 @@ Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedd
 
 La selección del motor de renderizado web anidado le permite llamar a los métodos 4D desde el área web.
 
-### Access 4D methods
+### Acceder a los métodos 4D
 Cuando se selecciona la propiedad [Acceder a los métodos 4D](properties_WebArea.md#access-4d-methods), se puede llamar a los métodos 4D desde un área Web.
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
-### $4d object
+### Objeto $4d
 
 El [motor de renderizado web incrustado de 4D](#use-embedded-web-rendering-engine) suministra al área un objeto JavaScript llamado $4d que puede asociar a cualquier método proyecto 4D utilizando la notación objeto ".".
 
@@ -146,7 +146,7 @@ Además, las áreas web soportan los siguientes eventos de formulario genéricos
 
 ## Reglas de las áreas web
 
-### User interface
+### Interfaz de usuario
 
 Cuando se ejecuta el formulario, las funciones estándar de la interfaz del navegador están disponibles para el usuario en el área web, lo que permite la interacción con otras áreas del formulario:
 
@@ -154,7 +154,7 @@ Cuando se ejecuta el formulario, las funciones estándar de la interfaz del nave
 - **El menú contextual**: es posible utilizar el [menú contextual](properties_Entry.md#context-menu) estándar del sistema con el área web. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D. Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor del ratón muestra un icono "prohibido" <img src="assets/es/FormObjects/forbidden.png" alt=" />. Tiene que utilizar el comando `WA SET PREFERENCE` para permitir explícitamente soltar URLs o archivos en el área.
 
-### Subforms
+### Subformularios
 Por razones relacionadas con los mecanismos de redibujado de ventanas, la inserción de un área web en un subformulario está sujeta a las siguientes restricciones:
 
 - The subform must not be able to scroll

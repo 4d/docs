@@ -36,14 +36,14 @@ When the **automatic insertion** option is not selected (default), the value ent
 ---
 ## Choice List
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos   | Valores posibles                                    |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
-| lista      | list, collection | A list of possible values (hierarchical lists only) |
+| Nombre     | Tipos de datos   | Valores posibles                                              |
+| ---------- | ---------------- | ------------------------------------------------------------- |
+| choiceList | list, collection | A list of possible values                                     |
+| lista      | list, collection | Una lista de valores posibles (listas jerárquicas únicamente) |
 
 
 #### Objetos soportados
@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Gramática JSON
 
-| Nombre            | Tipos de datos | Valores posibles  |
-| ----------------- | -------------- | ----------------- |
-| currentItemSource | cadena         | Object expression |
+| Nombre            | Tipos de datos | Valores posibles     |
+| ----------------- | -------------- | -------------------- |
+| currentItemSource | cadena         | Expresión del objeto |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md#overview)
@@ -101,9 +101,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### Gramática JSON
 
-| Nombre                    | Tipos de datos | Valores posibles  |
-| ------------------------- | -------------- | ----------------- |
-| currentItemPositionSource | cadena         | Number expression |
+| Nombre                    | Tipos de datos | Valores posibles   |
+| ------------------------- | -------------- | ------------------ |
+| currentItemPositionSource | cadena         | Expresión numérica |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md)

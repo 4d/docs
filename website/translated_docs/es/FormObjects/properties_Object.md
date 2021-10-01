@@ -6,7 +6,7 @@ title: Objetos
 ---
 ## Tipo
 
- `MANDATORY SETTING`
+ `PARÁMETRO OBLIGATORIO`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
@@ -67,7 +67,7 @@ You can use an expression as data source for an object. Any valid 4D expression 
 
 
 
-### Dynamic variables
+### Variables dinámicas
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
@@ -147,7 +147,7 @@ However, this property has a typing function in the following specific cases:
 
 
 ---
-## CSS Class
+## Clase CSS
 
 A list of space-separated words used as class selectors in css files.
 
@@ -297,17 +297,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   |       | X     | X    | X    |      | Same as column type |
-| Maximum               | X   |       | X     | X    | X    |      | Same as column type |
-| Suma                  | X   |       | X     |      | X    |      | Same as column type |
-| Conteo                | X   | X     | X     | X    | X    | X    | Entero largo        |
-| Average               | X   |       |       | X    |      |      | Real                |
-| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
-| Variance(*)           | X   |       |       | X    |      |      | Real                |
-| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
-| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Imágenes | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ------------------- |
+| Mínimo                | X   |       | X     | X    | X    |          | Same as column type |
+| Máximo                | X   |       | X     | X    | X    |          | Same as column type |
+| Suma                  | X   |       | X     |      | X    |          | Same as column type |
+| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo        |
+| Promedio              | X   |       |       | X    |      |          | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |          | Real                |
+| Variance(*)           | X   |       |       | X    |      |          | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |          | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera          |
 
 (*) Only for array type list boxes.
 
@@ -324,4 +324,4 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Objetos soportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Pie de list box](listbox_overview.md#list-box-footers)

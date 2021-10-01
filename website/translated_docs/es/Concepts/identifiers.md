@@ -30,7 +30,7 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 **Nota:** el área "SQL" del Inspector en el editor de estructuras indica automáticamente cualquier carácter no autorizado en el nombre de una tabla o campo.
 
 
-## Tables
+## Tablas
 
 Una tabla se designa colocando su nombre entre paréntesis: [...]. Un nombre de tabla puede contener hasta 31 caracteres.
 
