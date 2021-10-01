@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19 R2"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transporter Class · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Descripción"/><meta name="docsearch:language" content="es"/><meta property="og:title" content="Transporter Class · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Descripción"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R2</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/Transporter.html">English</a></li><li><a href="/docs/ja/API/Transporter.html">日本語</a></li><li><a href="/docs/de/API/Transporter.html">Deutsch</a></li><li><a href="/docs/fr/API/Transporter.html">Français</a></li><li><a href="/docs/pt/API/Transporter.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19 R3 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transporter Class · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Descripción"/><meta name="docsearch:language" content="es"/><meta property="og:title" content="Transporter Class · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="## Descripción"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/Transporter.html">English</a></li><li><a href="/docs/ja/API/Transporter.html">日本語</a></li><li><a href="/docs/de/API/Transporter.html">Deutsch</a></li><li><a href="/docs/fr/API/Transporter.html">Français</a></li><li><a href="/docs/pt/API/Transporter.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -12,10 +12,10 @@
         });
       </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/Transporter.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Transporter Class</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h2>
 <h2><a class="anchor" aria-hidden="true" id="acceptunsecureconnection"></a><a href="#acceptunsecureconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.acceptUnsecureConnection</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -46,10 +46,10 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="authenticationmode"></a><a href="#authenticationmode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -63,7 +63,7 @@
 <p>Possible values are:</p>
 <table>
 <thead>
-<tr><th>Valor</th><th>Constantes</th><th>Comment</th></tr>
+<tr><th>Valor</th><th>Constantes</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td>CRAM-MD5</td><td><code>IMAP authentication CRAM MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
@@ -74,10 +74,10 @@
 </table>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="authenticationmode-1"></a><a href="#authenticationmode-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -91,7 +91,7 @@
 <p>Possible values are:</p>
 <table>
 <thead>
-<tr><th>Valor</th><th>Constantes</th><th>Comment</th></tr>
+<tr><th>Valor</th><th>Constantes</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td>APOP</td><td><code>POP3 authentication APOP</code></td><td>Authentication using APOP protocol (POP3 only)</td></tr>
@@ -103,10 +103,10 @@
 </table>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="authenticationmode-2"></a><a href="#authenticationmode-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.authenticationMode</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -120,7 +120,7 @@
 <p>Possible values are:</p>
 <table>
 <thead>
-<tr><th>Valor</th><th>Constantes</th><th>Comment</th></tr>
+<tr><th>Valor</th><th>Constantes</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td>CRAM-MD5</td><td><code>SMTP authentication CRAM MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
@@ -131,10 +131,10 @@
 </table>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="bodycharset"></a><a href="#bodycharset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.bodyCharset</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v18</td><td>Support for UTF8 base64</td></tr>
@@ -150,10 +150,10 @@
 <li>attachment filename(s),</li>
 <li>email name.</li>
 </ul>
-<p><strong>Possible values:</strong></p>
+<p><strong>Valores posibles:</strong></p>
 <table>
 <thead>
-<tr><th>Constant</th><th>Valor</th><th>Comment</th></tr>
+<tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><em>headerCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; Quoted-printable if possible, otherwise UTF-8 &amp; Quoted-printable</li><li><em>bodyCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; 7-bit if possible, otherwise UTF-8 &amp; Quoted-printable</li></ul></td></tr>
@@ -164,10 +164,10 @@
 </table>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="connectiontimeout"></a><a href="#connectiontimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.connectionTimeOut</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R5</td><td>Añadidos</td></tr>
@@ -179,10 +179,10 @@
 <p>The <code>.connectionTimeOut</code> property contains the maximum wait time (in seconds) allowed to establish a connection to the server. By default, if the property has not been set in the server object (used to create the transporter object with <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, or <code>IMAP New transporter</code>), the value is 30.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="headercharset"></a><a href="#headercharset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.headerCharset</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R5</td><td>Añadidos</td></tr>
@@ -197,10 +197,10 @@
 <li>attachment filename(s),</li>
 <li>email name.</li>
 </ul>
-<p><strong>Possible values:</strong></p>
+<p><strong>Valores posibles:</strong></p>
 <table>
 <thead>
-<tr><th>Constant</th><th>Valor</th><th>Comment</th></tr>
+<tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><em>headerCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; Quoted-printable if possible, otherwise UTF-8 &amp; Quoted-printable</li><li><em>bodyCharset</em>: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; 7-bit if possible, otherwise UTF-8 &amp; Quoted-printable</li></ul></td></tr>
@@ -211,10 +211,10 @@
 </table>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="host"></a><a href="#host" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.host</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R5</td><td>Añadidos</td></tr>
@@ -226,10 +226,10 @@
 <p>The <code>.host</code> property contains the name or the IP address of the host server. Used for mail transactions (SMTP, POP3, IMAP).</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="logfile"></a><a href="#logfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.logFile</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R5</td><td>Añadidos</td></tr>
@@ -247,10 +247,10 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="port"></a><a href="#port" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.port</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -267,10 +267,10 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sendtimeout"></a><a href="#sendtimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sendTimeOut</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -282,10 +282,10 @@
 <p>The <code>.sendTimeOut</code> property contains  the maximum wait time (in seconds) of a call to <code>.send( )</code> before a timeout occurs. By default, if the <code>.sendTimeOut</code> property has not been set in the <code>server</code> object, the value 100 is used.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.user</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -297,10 +297,10 @@
 <p>The <code>.user</code> property contains  the user name used for authentication on the mail server.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="checkconnection"></a><a href="#checkconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.checkConnection()</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
 <tr><td>v17 R4</td><td>Añadidos</td></tr>
@@ -310,7 +310,7 @@
 <p><strong>.checkConnection()</strong> : Object</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
+<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the transporter object connection</td></tr>
@@ -351,6 +351,6 @@
                 apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
-                algoliaOptions: {"facetFilters":["language:es","version:19 R2"]}
+                algoliaOptions: {"facetFilters":["language:es","version:19 R3 BETA"]}
               });
             </script></body></html>
