@@ -25,7 +25,7 @@ The attached debugger is called whenever a 4D Server encounters:
 * a break point
 * a `TRACE` command
 * a caught command
-* an error
+* un error
 
 Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.
 

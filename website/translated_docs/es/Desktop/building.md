@@ -1,6 +1,6 @@
 ---
 id: building
-title: Building a project package
+title: Generador de aplicaciones
 ---
 
 4D includes an application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
@@ -17,14 +17,17 @@ The application builder allows you to:
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. Sin embargo, puede crear aplicaciones específicas que soporten modificaciones locales utilizando la llave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
 
-## Build application overview
+## Generalidades
 
 Building a project package can be carried out using:
 
 - either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command,
-- or the [Build Application window](#application-builder).
+- or the [Build Application dialog](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+
+### Build application dialog
+
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -45,7 +48,7 @@ Default parameters are used the first time the Build Application dialog box is u
 
 XML keys provide additional options besides those displayed in the Build Application dialog box. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
 
-### Log file
+### Archivo de historial
 
 When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. The log file stores the following information for each build:
 
@@ -58,7 +61,6 @@ When an application is built, 4D generates a log file named *BuildApp.log.xml* i
 Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
 
 > Use the `Get 4D file(Build application log file)` command to get the log file location.
-
 
 
 ## Application name and destination folder
@@ -86,9 +88,11 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.
+A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
 > When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 #### Include related folders
@@ -96,7 +100,7 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 When you check this option, any folders related to the project are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
 
 
-### Build component
+### Generar un componente
 
 Builds a compiled component from the structure.
 
@@ -157,7 +161,7 @@ This option lets you choose the linking mode between the merged application and 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 
-#### Generated files
+#### Archivos generados
 
 When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
 
@@ -242,6 +246,20 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 
 Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. El intervalo de compatibilidad de las aplicaciones del cliente y del servidor se define mediante el uso de [llaves XML](#build-application-settings) específicas).
 
+#### Allow connection of Silicon Mac clients
+
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application:
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+#### Compiled structure location
+
+Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
+
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
@@ -297,7 +315,7 @@ You can check the **Allow automatic update...** option for client applications r
 
 This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-| Current server platform | Required file                                                | Details                                                                                                                                                                    |
+| Current server platform | Required file                                                | Detalles                                                                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
 | Windows                 | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
@@ -337,7 +355,7 @@ There are many possible causes for this error. When you get this message, it is 
 *   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 
-### Generated files
+### Archivos generados
 
 Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
@@ -362,11 +380,11 @@ If the server and/or client part of your double-clickable application is used as
 - Default Web root folder (WebFolder).
 
 Items must be installed:
-*   **on Windows**
+*   **en Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 
-*   **on macOS**
+*   **en macOS**
     *   **Server application** - next to the *\<ApplicationName>Server* software package.
     *   **Client application** - next to the *\<ApplicationName>Client* software package.
 
@@ -468,7 +486,7 @@ The Licences & Certificate page can be used to:
 
 ![](assets/en/Admin/buildappCertif.png)
 
-### Licenses
+### Licencias
 
 This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 

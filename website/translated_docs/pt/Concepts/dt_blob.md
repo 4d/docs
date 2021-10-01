@@ -20,9 +20,9 @@ Each blob type has its advantages. Use the following table to determine which on
 
 |                                      | Blob | 4D.Blob |
 | ------------------------------------ |:----:|:-------:|
-| Alterable                            | Yes  |   No    |
-| Shareable in objects and collections |  No  |   Yes   |
-| Passed by reference\*              |  No  |   Yes   |
+| Alterable                            | Sim  |   No    |
+| Shareable in objects and collections |  No  |   Sim   |
+| Passed by reference\*              |  No  |   Sim   |
 | Performance when accessing bytes     |  +   |    -    |
 | Maximum size                         | 2GB  | Memory  |
 

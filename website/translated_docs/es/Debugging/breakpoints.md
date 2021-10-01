@@ -34,7 +34,7 @@ You can edit the behavior of a breakpoint using the Breakpoint Properties window
 
 ![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Method Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
+This window is available from the Method Editor or the [Source Code Pane](debugger.md#source-code-pane). Puede:
 
 - right-click a line and select **Edit Breakpoint** in the contextual menu, or
 - `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.

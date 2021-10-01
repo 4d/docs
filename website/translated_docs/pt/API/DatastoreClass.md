@@ -44,7 +44,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 <!-- REF #_command_.ds.Params -->
 | Parameter | Type         |    | Description                                |
 | --------- | ------------ | -- | ------------------------------------------ |
-| localID   | Text         | -> | Local ID of the remote datastore to return |
+| localID   | Texto        | -> | Local ID of the remote datastore to return |
 | Result    | cs.DataStore | <- | Reference to the datastore                 |
 <!-- END REF -->
 
@@ -60,12 +60,7 @@ You can also get a reference on an open remote datastore by passing its local id
 
 If no *localID* datastore is found, the command returns **Null**.
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
-
-*   A datastore only references tables with a single primary key. Tables without a primary key or with composite primary keys are not referenced.
-*   BLOB type attributes are not managed in the datastore.
-
-
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 #### Example 1
 
@@ -119,7 +114,7 @@ Using the main datastore on the 4D database:
 | Parameter      | Type         |    | Description                                                               |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Connection properties used to reach the remote datastore                  |
-| localID        | Text         | -> | Id to assign to the opened datastore on the local application (mandatory) |
+| localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
 | Result         | cs.DataStore | <- | Datastore object                                                          |
 <!-- END REF -->
 
@@ -138,6 +133,8 @@ If no matching database is found, `Open datastore` returns **Null**.
 
 *localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
 
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+
 Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
 
 ```4d
@@ -150,12 +147,12 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 
 | Property    | Type    | Description                                                                                                                                                                                                                                                            |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text    | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Text    | User name                                                                                                                                                                                                                                                              |
-| password    | Text    | User password                                                                                                                                                                                                                                                          |
+| hostname    | Texto   | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
+| user        | Texto   | User name                                                                                                                                                                                                                                                              |
+| password    | Texto   | User password                                                                                                                                                                                                                                                          |
 | idleTimeout | Longint | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
 | tls         | Boolean | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Text    | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| type        | Texto   | Must be "4D Server"                                                                                                                                                                                                                                                    |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -319,7 +316,7 @@ The returned object contains the following properties:
 | keyProvided |             |               | Boolean | True if the encryption key matching the encrypted data file is provided(*).        |
 | tabelas     |             |               | Object  | Object containing as many properties as there are encryptable or encrypted tables. |
 |             | *tableName* |               | Object  | Encryptable or Encrypted table                                                     |
-|             |             | name          | Text    | Name of the table                                                                  |
+|             |             | name          | Texto   | Name of the table                                                                  |
 |             |             | num           | Number  | Table number                                                                       |
 |             |             | isEncryptable | Boolean | True if the table is declared encryptable in the structure file                    |
 |             |             | isEncrypted   | Boolean | True if the records of the table are encrypted in the data file                    |
@@ -551,7 +548,7 @@ When this function is not called, new entity selections can be shareable, depend
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | Parameter     | Type   |    | Description                           |
 | ------------- | ------ | -- | ------------------------------------- |
-| curPassPhrase | Text   | -> | Current encryption passphrase         |
+| curPassPhrase | Texto  | -> | Current encryption passphrase         |
 | curDataKey    | Object | -> | Current data encryption key           |
 | Result        | Object | <- | Result of the encryption key matching |
 <!-- END REF -->
@@ -582,11 +579,11 @@ The result of the command is described in the returned object:
 | success    |                          | Boolean    | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |            | Properties below are returned only if success is *FALSE*                        |
 | status     |                          | Number     | Error code (4 if the provided encryption key is wrong)                          |
-| statusText |                          | Text       | Error message                                                                   |
+| statusText |                          | Texto      | Error message                                                                   |
 | errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
-|            | \[ ].componentSignature | Text       | Internal component name                                                         |
+|            | \[ ].componentSignature | Texto      | Internal component name                                                         |
 |            | \[ ].errCode            | Number     | Error number                                                                    |
-|            | \[ ].message            | Text       | Error message                                                                   |
+|            | \[ ].message            | Texto      | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 

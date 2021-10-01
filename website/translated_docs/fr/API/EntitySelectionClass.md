@@ -38,6 +38,7 @@ Entity selections can be created from existing selections using various function
 | [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->|
@@ -111,7 +112,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
+> > > > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -1680,6 +1681,73 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 
+<!-- REF EntitySelectionClass.selected().Desc -->
+## .selected()
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R3  | Ajoutées      |
+
+</details>
+
+<!-- REF #EntitySelectionClass.selected().Syntax -->
+**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.selected().Params -->
+| Paramètres       | Type               |    | Description                                                                       |
+| ---------------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
+| selectedEntities | 4D.EntitySelection | -> | Entity selection with entities for which to know the rank in the entity selection |
+| Résultat         | Objet              | <- | Range(s) of selected entities in entity selection                                 |
+<!-- END REF -->
+
+#### Description
+
+The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+> This function does not modify the original entity selection.
+
+Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+
+#### Résultat
+
+The returned object contains the following properties:
+
+| Propriété      | Type        | Description                     |
+| -------------- | ----------- | ------------------------------- |
+| ranges         | Collection  | Collection of range objects     |
+| ranges[].start | Entier long | First entity index in the range |
+| ranges[].end   | Entier long | Last entity index in the range  |
+
+If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
+
+The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+
+#### Exemple
+
+```4d
+var $invoices; $cashSel; $creditSel : cs.Invoices
+var $result1; $result2 : Object
+
+$invoices:=ds.Invoices.all()
+
+$cashSelection:=ds.Invoices.query("payment = :1"; "Cash")
+$creditSel:=ds.Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
+
+$result1:=$invoices.selected($cashSelection)
+$result2:=$invoices.selected($creditSel)
+
+//$result1 = {ranges:[{start:0;end:0},{start:3;end:3},{start:6;end:6}]}
+//$result2 = {ranges:[{start:0;end:1},{start:3;end:4},{start:6;end:7}]}
+
+```
+
+<!-- END REF -->
+
+
+
+
+
+
 
 <!-- REF EntitySelectionClass.slice().Desc -->
 ## .slice()
@@ -1768,7 +1836,7 @@ La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retourne la
 
 `.sum()` returns 0 if the entity selection is empty.
 
-The sum can only be done on values of number type. If the *attributePath* is an object property, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
+The sum can only be done on values of number type. The sum can only be done on values of number type. In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
 
 An error is returned if:
 
@@ -1893,6 +1961,7 @@ Returns:
         },
         "manager": {
             "__KEY": 412
+
         }
     },
     {

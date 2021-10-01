@@ -10,10 +10,10 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
   For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Propiedad                  | JSON name              | Valor |
+  | Propiedad                  | Nombre JSON            | Valor |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
-  | Columns                    | columnCount            | 4     |
+  | Columnas                   | columnCount            | 4     |
   | Switch back when Released  | switchBackWhenReleased | true  |
   | Switch when Roll Over      | switchWhenRollover     | true  |
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |

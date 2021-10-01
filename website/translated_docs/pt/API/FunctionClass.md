@@ -257,7 +257,7 @@ Calling a formula using object notation:
 <!-- REF #_command_.Formula from string.Params -->
 | Parameter     | Type        |    | Description                             |
 | ------------- | ----------- |:--:| --------------------------------------- |
-| formulaString | Text        | -> | Text formula to be returned as object   |
+| formulaString | Texto       | -> | Text formula to be returned as object   |
 | Result        | 4D.Function | <- | Native object encapsulating the formula |
 <!-- END REF -->
 

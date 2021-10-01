@@ -14,6 +14,7 @@ title: データクラス
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
 | [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
+| [<!-- INCLUDE DataClassClass.exposed.Syntax -->](#exposed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.exposed.Summary --> |
 | [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
 | [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
 | [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
@@ -146,7 +147,26 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.exposed.Desc -->
+## .exposed
 
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
+</details>
+
+
+<!-- REF DataClassClass.exposed.Syntax -->
+**.exposed** : Boolean<!-- END REF -->
+
+
+#### 説明
+
+`.exposed` プロパティは、 <!-- REF DataClassClass.exposed.Summary -->データクラスが REST で公開されている場合に true<!-- END REF -->です。
+
+
+<!-- END REF -->
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -165,8 +185,8 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.fromCollection().Params -->
 | 引数        | タイプ                |    | 説明                        |
 | --------- | ------------------ |:--:| ------------------------- |
-| objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション |
-| settings  | Object             | -> | ビルドオプション: context         |
+| objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション |
+| settings  | オブジェクト             | -> | ビルドオプション: context         |
 | 戻り値       | 4D.EntitySelection | <- | コレクションから作成したエンティティセレクション  |
 <!-- END REF -->
 
@@ -292,6 +312,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
+
 ```
 
 #### 例題 5
@@ -362,11 +383,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 <!-- REF #DataClassClass.get().Params -->
-| 引数         | タイプ              |    | 説明                      |
-| ---------- | ---------------- |:--:| ----------------------- |
-| primaryKey | Integer または Text | -> | 取得するエンティティのプライマリーキー値    |
-| settings   | Object           | -> | ビルドオプション: context       |
-| 戻り値        | 4D.Entity        | <- | 指定したプライマリーキーに合致するエンティティ |
+| 引数         | タイプ       |    | 説明                      |
+| ---------- | --------- |:--:| ----------------------- |
+| primaryKey | 整数または文字列  | -> | 取得するエンティティのプライマリーキー値    |
+| settings   | オブジェクト    | -> | ビルドオプション: context       |
+| 戻り値        | 4D.Entity | <- | 指定したプライマリーキーに合致するエンティティ |
 <!-- END REF -->
 
 #### 説明
@@ -495,7 +516,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.getInfo().Params -->
 | 引数  | タイプ    |    | 説明        |
 | --- | ------ | -- | --------- |
-| 戻り値 | Object | <- | データクラスの情報 |
+| 戻り値 | オブジェクト | <- | データクラスの情報 |
 <!-- END REF -->
 
 
@@ -615,7 +636,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.newSelection().Params -->
 | 引数        | タイプ                |    | 説明                                                                                                      |
 | --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
-| keepOrder | Integer            | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
+| keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                 |
 <!-- END REF -->
 
@@ -663,10 +684,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.query().Params -->
 | 引数            | タイプ                |    | 説明                                                                                   |
 | ------------- | ------------------ | -- | ------------------------------------------------------------------------------------ |
-| queryString   | Text               | -> | 検索条件 (文字列)                                                                           |
-| formula       | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                           |
+| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
 | value         | any                | -> | プレースホルダー用の値                                                                          |
-| querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
+| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション                |
 <!-- END REF -->
 
@@ -898,15 +919,15 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                             |
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                              |
 | attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
-| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                              |
-| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                         |
-| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                             |
-| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                             |
-| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                       |
+| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                               |
+| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                          |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                              |
+| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                              |
+| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                        |
 
 **queryPlan と queryPath について**
 

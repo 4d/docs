@@ -351,6 +351,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
+
+
 ## Wrong parameter type
 
 Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
@@ -453,9 +455,21 @@ ALERT("Are you sure?";"Yes I am") //2 parâmetros
 ALERT("Time is over") //1 parâmetro
 ```
 
-Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. O problema com os parâmetros opcionais é como manejar o caso em que alguns deles estejam faltando no método chamado, nunca deveria produzir um erro. Uma boa prática é atribuir valores padrão aos parâmetros não utilizados.
+4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). For example:
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
+> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
 
 Utilizando o comando `Count parameters` desde dentro do método chamado, pode detectar o número real de parâmetros e realizar diferentes operações dependendo do que tenha recebido.
 
@@ -485,6 +499,7 @@ APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $pat
 APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 
 

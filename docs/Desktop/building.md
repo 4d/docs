@@ -1,6 +1,6 @@
 ---
 id: building
-title: Building a project package
+title: Build Application
 ---
 
 4D includes an application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications. 
@@ -17,14 +17,17 @@ The application builder allows you to:
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
 
 
-## Build application overview
+## Overview
 
 Building a project package can be carried out using:
 
 - either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command, 
-- or the [Build Application window](#application-builder). 
+- or the [Build Application dialog](#application-builder). 
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+
+### Build application dialog
+
+To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
 ![](assets/en/Project/buildappProj.png)
 
@@ -60,7 +63,6 @@ Checking this file may help you saving time during the subsequent deployment ste
 > Use the `Get 4D file(Build application log file)` command to get the log file location. 
 
 
-
 ## Application name and destination folder
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -86,9 +88,11 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
+A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
 
 > When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 #### Include related folders
@@ -244,7 +248,21 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 #### Current version
 
 Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).	
- 
+
+#### Allow connection of Silicon Mac clients
+
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders). 
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application: 
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+#### Compiled structure location
+
+Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
+
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:

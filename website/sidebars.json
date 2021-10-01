@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler","Project/components"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -54,7 +54,7 @@
   "Debugging":["Debugging/basics","Debugging/debugger","Debugging/breakpoints", "Debugging/debugging-remote"],
   "Access Rights":["Users/overview","Users/editing"],
   "Preferences":["Preferences/overview","Preferences/general","Preferences/structure","Preferences/forms","Preferences/methods","Preferences/shortcuts"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/debugLogFiles","Admin/cli"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/server-admin","Admin/licenses","Admin/tls","Admin/debugLogFiles","Admin/cli"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServer",
@@ -210,7 +210,7 @@
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
-   "Build application":["Desktop/building"]
+   "Build Application":["Desktop/building"]
 
 
   }

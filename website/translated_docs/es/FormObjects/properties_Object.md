@@ -6,7 +6,7 @@ title: Objetos
 ---
 ## Tipo
 
- `MANDATORY SETTING`
+ `PARÁMETRO OBLIGATORIO`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
@@ -47,7 +47,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 
 ---
-## Save value
+## Guardar valor
 
 This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
 
@@ -55,12 +55,12 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                        | Saved value                                                                            |
+| Objeto                                        | Valor guardado                                                                         |
 | --------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Check Box](checkbox_overview.md)             | Value of associated variable (0, 1, 2)                                                 |
 | [Lista desplegable](dropdownList_Overview.md) | Number of selected row                                                                 |
 | [Botón radio](radio_overview.md)              | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)                  | Number of selected tab                                                                 |
+| [Control de pestañas](tabControl.md)          | Number of selected tab                                                                 |
 
 
 #### Gramática JSON
@@ -104,7 +104,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 
 
-### Dynamic variables
+### Variables dinámicas
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
@@ -184,7 +184,7 @@ However, this property has a typing function in the following specific cases:
 
 
 ---
-## CSS Class
+## Clase CSS
 
 A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
 
@@ -334,17 +334,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Texto | Fecha | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ----- | ----- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   | X     | X     | X    | X    |      | Same as column type |
-| Maximum               | X   | X     | X     | X    | X    |      | Same as column type |
-| Suma                  | X   |       |       | X    | X    |      | Same as column type |
-| Conteo                | X   | X     | X     | X    | X    | X    | Entero largo        |
-| Average               | X   |       |       | X    |      |      | Real                |
-| Standard deviation(*) | X   |       |       | X    |      |      | Real                |
-| Variance(*)           | X   |       |       | X    |      |      | Real                |
-| Sum squares(*)        | X   |       |       | X    |      |      | Real                |
-| Custom ("none")       | X   | X     | X     | X    | X    | X    | Any                 |
+| Calculation           | Num | Texto | Fecha | Hora | Bool | Imágenes | footer var type     |
+| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ------------------- |
+| Mínimo                | X   | X     | X     | X    | X    |          | Same as column type |
+| Máximo                | X   | X     | X     | X    | X    |          | Same as column type |
+| Suma                  | X   |       |       | X    | X    |          | Same as column type |
+| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo        |
+| Promedio              | X   |       |       | X    |      |          | Real                |
+| Standard deviation(*) | X   |       |       | X    |      |          | Real                |
+| Variance(*)           | X   |       |       | X    |      |          | Real                |
+| Sum squares(*)        | X   |       |       | X    |      |          | Real                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera          |
 
 (*) Only for array type list boxes.
 
@@ -352,7 +352,7 @@ There are several types of calculations available. The following table shows whi
 
 Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
-*Null* values are not taken into account for any calculations.
+*Null* no se tienen en cuenta para ningún cálculo.
 
 If the column contains different types of values (collection-based column for example):
 
@@ -376,7 +376,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Objetos soportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Pie de list box](listbox_overview.md#list-box-footers)
 
 
 

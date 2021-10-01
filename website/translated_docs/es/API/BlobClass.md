@@ -5,7 +5,7 @@ title: Blob
 
 The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
-### Summary
+### Resumen
 
 |                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,10 +15,10 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 ## 4D.Blob.new()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v19 R2  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R2  | Añadidos       |
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
@@ -26,10 +26,10 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parameter | Tipo            |    | Descripción  |
-| --------- | --------------- |:--:| ------------ |
-| blob      | Blob or 4D.Blob | -> | Blob to copy |
-| Resultado | 4D.Blob         | <- | New 4D.Blob  |
+| Parámetros | Tipo           |    | Descripción  |
+| ---------- | -------------- |:--:| ------------ |
+| blob       | Blob o 4D.Blob | -> | Blob to copy |
+| Resultado  | 4D.Blob        | <- | New 4D.Blob  |
 <!-- END REF -->
 
 #### Descripción
@@ -48,21 +48,21 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 ## .slice()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v19 R2  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R2  | Añadidos       |
 </details>
 
 <!-- REF #Blob.slice().Syntax -->
 **.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #Blob.slice().Params -->
-| Parameter | Tipo    |    | Descripción                                                            |
-| --------- | ------- |:--:| ---------------------------------------------------------------------- |
-| start     | Real    | -> | index of the first byte to include in the new `4D.Blob`.               |
-| end       | Real    | -> | index of the first byte that will not be included in the new `4D.Blob` |
-| Resultado | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                            |
+| ---------- | ------- |:--:| ---------------------------------------------------------------------- |
+| start      | Real    | -> | index of the first byte to include in the new `4D.Blob`.               |
+| end        | Real    | -> | index of the first byte that will not be included in the new `4D.Blob` |
+| Resultado  | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
 
 |
 
@@ -85,6 +85,18 @@ $is4DBlob:=OB Instance of($myBlob; 4D.Blob);   //True
 
 $myString:=Convert to text($myBlob; "UTF-8")
 // $myString contains "Hello, World!"
+
+// Create a new 4D.Blob from $myBlob
+$myNewBlob:=$myBlob.slice(0; 5)
+
+$myString:=Convert to text($myNewBlob; "UTF-8")
+// $myString contains "Hello"
+
+// Create a new 4D.Blob from $myBlob
+$myNewBlob:=$myBlob.slice(0; 5)
+
+$myString:=Convert to text($myNewBlob; "UTF-8")
+// $myString contains "Hello"
 
 // Create a new 4D.Blob from $myBlob
 $myNewBlob:=$myBlob.slice(0; 5)

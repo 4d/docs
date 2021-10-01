@@ -27,6 +27,11 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 Code for the user class function(s). 
 
+
+## Computed attribute
+
+A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+
 ## Data model class
 
 Extended class available for a data model object. 
@@ -201,3 +206,7 @@ A shallow copy only duplicates the structure of elements, and keeps the same int
 ## Stamp 
  
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+
+## Storage attribute
+
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.

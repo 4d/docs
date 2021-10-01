@@ -103,13 +103,13 @@ ON EVENT CALL("HANDLE EVENTS")
 
 
 
-## Tables and Fields
+## Tablas y campos
 
 Una tabla se designa colocando su nombre entre paréntesis: \[...]. Para designar un campo hay que especificar primero la tabla a la que pertenece (el nombre del campo sigue inmediatamente al nombre de la tabla).
 
 Un nombre de tabla y un nombre de campo pueden contener hasta 31 caracteres.
 
-- A table or field name must begin with a letter, an underscore, or a dollar ("$")
+- Un nombre de tabla o campo debe comenzar con una letra, un guión bajo o un signo dólar ("$")
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
 - Deben respetarse reglas adicionales cuando la base deba manejarse vía SQL: sólo se aceptan los caracteres _0123456789abcdefghijklmnopqrstuvwxyz, y el nombre no debe incluir ninguna palabra clave SQL (comando, atributo, etc.).

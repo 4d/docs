@@ -1,6 +1,6 @@
 ---
-id: debugger
-title: Debugger
+id: depurador
+title: Depurador
 ---
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
@@ -115,7 +115,7 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 
 #### Line Objects
 
-This theme lets you keep track of the values of the objects or expressions:
+Este tema le permite seguir los valores de los objetos o expresiones:
 
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
 * used in the previous line of code
@@ -158,13 +158,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Descripción                                                  | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sí                          |
-| Process      | List of process variables used by the current process        | Sí                          |
-| Local        | List of local variables used by the method being traced      | Sí                          |
-| Parámetros   | List of parameters received by the method                    | Sí                          |
-| Self         | Pointer to the current object, when tracing an Object Method | No                          |
+| Subtheme     | Descripción                                                  | ¿Se pueden modificar los valores? |
+| ------------ | ------------------------------------------------------------ | --------------------------------- |
+| Interprocess | List of interprocess variables being used at this point      | Sí                                |
+| Process      | List of process variables used by the current process        | Sí                                |
+| Local        | List of local variables used by the method being traced      | Sí                                |
+| Parámetros   | List of parameters received by the method                    | Sí                                |
+| Self         | Pointer to the current object, when tracing an Object Method | No                                |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -190,13 +190,13 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 #### Semaphores
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
 #### Procesos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
-#### Tables and Fields
+#### Tablas y campos
 
 This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
@@ -408,7 +408,7 @@ Specific shortcuts allow you to find strings identical to the one selected:
 
 The search is carried out only if you select at least one character in the Source code pane.
 
-## Shortcuts
+## Atajos
 
 This section lists all the shortcuts available in the debugger window.
 

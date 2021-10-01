@@ -99,8 +99,10 @@ For example, to set a storage attribute:
  $entity:=ds.Employee.get(1) //get employee attribute with ID 1
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
+ $entity.save() //save the modifications
 ```
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+
+> Database Blob fields ([scalar blobs](Concepts/blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
 
@@ -124,7 +126,7 @@ Each employee can be a manager and can have a manager. To get the manager of the
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Asignar los valores a los atributos de relación
 
 In the ORDA architecture, relation attributes directly contain data related to entities:
 
@@ -188,7 +190,7 @@ You can simultaneously create and use as many different entity selections as you
 
 An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
-#### Properties
+#### Propiedades
 
 A **shareable** entity selection has the following characteristics:
 
@@ -206,13 +208,13 @@ An **alterable** entity selection has the following characteristics:
 
 #### How are they defined?
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
+The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g.
 
 
 A new entity selection is **shareable** in the following cases:
 
 - the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
+- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
 Ejemplo:
@@ -234,7 +236,7 @@ $toModify:=ds.Company.all().copy() //$toModify is alterable
 
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
-- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
 - the new entity selection is based upon a relation:
     - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
     - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
@@ -373,7 +375,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 > Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
 
-### Pessimistic lock
+### Bloqueo pesimista
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 

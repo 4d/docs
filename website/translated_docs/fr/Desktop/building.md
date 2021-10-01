@@ -1,6 +1,6 @@
 ---
 id: building
-title: Générer un package projet
+title: Générateur d'application
 ---
 
 4D inclut un générateur d’application pour créer un package de projet (version finale). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.
@@ -17,16 +17,18 @@ Le générateur d'applications vous permet de :
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. Vous pouvez néanmoins créer des applications spécifiques qui prennent en charge les modifications locales en utilisant la clé XML du `PackProject` (voir [doc.4d.com](https://doc.4d.com)).
 
 
-## Aperçu du générateur d'application
+## Aperçu
 
 Générer un package de projet peut être réalisée à l'aide de :
 
 - soit la commande
 `BUILD APPLICATION<code></a>,</li>
-<li>soit la<a href="#application-builder"> fenêtre Générateur d'application</a>.</li>
+<li>or the <a href="#application-builder">Build Application dialog</a>.</li>
 </ul>
 
-<p spaces-before="0">Pour afficher la boîte de dialogue du générateur d'application, sélectionnez <strong x-id="1">Développement</strong> > <strong x-id="1">Générer l'application...</strong> dans la barre de menus.</p>
+<h3 spaces-before="0">Build application dialog</h3>
+
+<p spaces-before="0">To display the Build application dialog, select <strong x-id="1">Design</strong> &#062; <strong x-id="1">Build Application...</strong> from the menu bar.</p>
 
 <p spaces-before="0"><img src="assets/en/Project/buildappProj.png" alt="" /></p>
 
@@ -38,32 +40,34 @@ Générer un package de projet peut être réalisée à l'aide de :
 
 <h3 spaces-before="0">Paramètres du générateur d'application</h3>
 
-<p spaces-before="0">Chaque paramètre de générateur d'application est stocké en tant que clé XML dans le fichier de l'application nommé <code>buildApp.4DSettings`, situé dans le dossier `Settings` du projet.</p> 
+<p spaces-before="0">Dans le fichier <em x-id="3">buildApp.4DSettings</em> de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :</p>
+
+<p spaces-before="0">Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur <strong x-id="1">Construire</strong> ou <strong x-id="1">Enregistrer les paramètres</strong>. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande <a href="https://doc.4d.com/4dv19/help/command/en/page871.html">BUILD APPLICATION</a>.</p>
+
+<p spaces-before="2">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
+
+<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
+
+<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel <a href="https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html">4D Clés XML BuildApplication</a>.</p>
+
+<h3 spaces-before="0">Fichier d'historique</h3>
+
+<p spaces-before="0">Lorsqu'une application est créée, 4D génère un fichier journal nommé <em x-id="3">BuildApp.log.xml</em> dans le dossier <strong x-id="1">Logs</strong> du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :</p>
+
+<ul>
+<li>Le début et la fin de la génération des cibles,</li>
+<li>Le nom et le chemin d'accès complet des fichiers générés,</li>
+<li>La date et l'heure de la génération,</li>
+<li>Toutes les erreurs qui se sont produites,</li>
+<li>Tout problème de signature (par exemple, un plug-in non signé).</li>
+</ul>
+
+<p spaces-before="0">La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. </p>
+
+<blockquote spaces-before="0">
+  <p spaces-before="0">Utilisez la commande <code>Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. </p> </blockquote> 
   
-  Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
   
-  Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
-  
-  
-
-### Fichier d'historique
-
-Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
-
-- Le début et la fin de la génération des cibles,
-- Le nom et le chemin d'accès complet des fichiers générés,
-- La date et l'heure de la génération,
-- Toutes les erreurs qui se sont produites,
-- Tout problème de signature (par exemple, un plug-in non signé).
-
-La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. 
-
-
-
-> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. 
-
-
-
 
 
 ## Nom de l'application et dossier de destination
@@ -95,13 +99,13 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-
-
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.  
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.  
 
 
 
 > When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the *4D XML Keys Backup* manual on [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 
@@ -302,6 +306,24 @@ Utilisée pour indiquer le numéro de version courante de l'application génér�
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. 
+
+
+
+#### Allow connection of Silicon Mac clients
+
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+
+To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders). 
+
+Then, you can copy that structure to your Windows machine, and use it to build the server application: 
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+
+
+#### Compiled structure location
+
+Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
 
 
 

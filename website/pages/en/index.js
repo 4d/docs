@@ -57,6 +57,8 @@ class Index extends React.Component {
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
+    serverAdmin: <translate>4D Server Administration Window</translate>,
+	components: <translate>4D Components Library</translate>,
 	cs: <translate>Client/Server</translate>,
     tls: <translate>TLS Protocol (HTTPS)</translate>,
 	  debugging: <translate>Debugging</translate>,
@@ -93,7 +95,8 @@ class Index extends React.Component {
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
 				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
                   [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
-				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)<br>
+				  [${subContents.components}](${siteConfig.baseUrl}${this.props.language}/Project/components.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Core',
@@ -102,6 +105,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.webAdmin}](${siteConfig.baseUrl}${this.props.language}/Admin/webAdmin.html)<br>
 				[${subContents.dataExplorer}](${siteConfig.baseUrl}${this.props.language}/Admin/dataExplorer.html)<br>
+				[${subContents.serverAdmin}](${siteConfig.baseUrl}${this.props.language}/Admin/server-admin.html)<br>
 				[${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
 				[${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)<br>
 	            [${subContents.cli}](${siteConfig.baseUrl}${this.props.language}/Admin/cli.html)<br>

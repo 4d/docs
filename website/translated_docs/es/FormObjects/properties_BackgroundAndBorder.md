@@ -188,7 +188,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange

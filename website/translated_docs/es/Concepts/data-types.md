@@ -14,8 +14,8 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Fecha](Concepts/dt_date.md)                  | Sí                       | Sí                         | `Fecha`                                                 | `C_DATE`, `ARRAY DATE`                                          |
 | [Hora](Concepts/dt_time.md)                   | Sí                       | Sí                         | `Hora`                                                  | `C_TIME`, `ARRAY TIME`                                          |
 | [Booleano](Concepts/dt_boolean.md)            | Sí                       | Sí                         | `Booleano`                                              | `C_BOOLEAN`, `ARRAY BOOLEAN`                                    |
-| [Entero](Concepts/dt_number.md)               | Sí                       | Convertido en entero largo | `Entero`                                                | `ARRAY INTEGER`                                                 |
-| [Entero largo](Concepts/dt_number.md)         | Sí                       | Sí                         | `Entero`                                                | `C_LONGINT`, `ARRAY LONGINT`                                    |
+| [Integer](Concepts/dt_number.md)              | Sí                       | Convertido en entero largo | `Integer`                                               | `ARRAY INTEGER`                                                 |
+| [Entero largo](Concepts/dt_number.md)         | Sí                       | Sí                         | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                    |
 | [Entero largo 64 bits](Concepts/dt_number.md) | Sí (SQL)                 | Convertido en real         | -                                                       | -                                                               |
 | [Real](Concepts/dt_number.md)                 | Sí                       | Sí                         | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                          |
 | [Indefinido](Concepts/dt_null_undefined.md)   | -                        | Sí                         | -                                                       | -                                                               |
@@ -24,7 +24,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Imagen](Concepts/dt_picture.md)              | Sí                       | Sí                         | `Imagen`                                                | `C_PICTURE`, `ARRAY PICTURE`                                    |
 | [BLOB](Concepts/dt_blob.md)                   | Sí                       | Sí                         | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                          |
 | [Objeto](Concepts/dt_object.md)               | Sí                       | Sí                         | `Objeto`                                                | `C_OBJECT`, `ARRAY OBJECT`                                      |
-| [Colección](Concepts/dt_collection.md)        | -                        | Sí                         | `Colección`                                             | `C_COLLECTION`                                                  |
+| [Collection](Concepts/dt_collection.md)       | -                        | Sí                         | `Collection`                                            | `C_COLLECTION`                                                  |
 | [Variant](Concepts/dt_variant.md)(2)          | -                        | Sí                         | `Variant`                                               | `C_VARIANT`                                                     |
 
 (1) Tenga en cuenta que ORDA maneja los campos de la base a través de objetos (entidades) y por lo tanto, sólo soporta los tipos de datos disponibles para estos objetos. Para más información, consulte la descripción del tipo de datos [Objeto](Concepts/dt_object.md).
@@ -59,7 +59,7 @@ La siguiente tabla ilustra estos valores por defecto:
 | Texto        | ""                                                                                      | ""                          | ""                          |
 | Blob         | Tamaño Blob=0                                                                           | Tamaño Blob=0               | Tamaño Blob=0               |
 | Objeto       | null                                                                                    | null                        | null                        |
-| Colección    | null                                                                                    | null                        | null                        |
+| Collection   | null                                                                                    | null                        | null                        |
 | Variant      | indefinido                                                                              | indefinido                  | indefinido                  |
 
 

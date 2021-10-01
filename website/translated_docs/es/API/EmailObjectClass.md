@@ -68,7 +68,7 @@ An object with two properties:
 | name      | Texto | Display name (can be null) |
 | email     | Texto | Email address              |
 
-#### Colección
+#### Collection
 
 A collection of address objects.
 
@@ -158,7 +158,7 @@ The `.bodyStructure` object contains the following properties:
 | charset     | Texto                 | Value of the charset parameter of the Content-Type header field                                                                                         |
 | encoding    | Texto                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
 | disposition | Texto                 | Value of the Content-Disposition header field of the part                                                                                               |
-| language    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
+| lenguaje    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
 | location    | Texto                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
 | subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
 | headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
@@ -495,20 +495,20 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 ## MAIL Convert from MIME
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18     | Añadidos       |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
 **MAIL Convert from MIME**( *mime* : Blob ) : Object<br>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
-| Parameter | Tipo       |    | Descripción   |
-| --------- | ---------- |:--:| ------------- |
-| mime      | Blob, Text | -> | Email in MIME |
-| Resultado | Objeto     | <- | Email object  |
+| Parámetros | Tipo       |    | Descripción   |
+| ---------- | ---------- |:--:| ------------- |
+| mime       | Blob, Text | -> | Email in MIME |
+| Resultado  | Objeto     | <- | Email object  |
 <!-- END REF -->
 
 #### Descripción
@@ -581,22 +581,22 @@ $status:=$transporter.send($email)
 
 ## MAIL Convert to MIME
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R4  | Añadidos |
-| v17 R5  | Modified |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
+| v17 R5  | Modified       |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
 **MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
-| Parameter | Tipo   |    | Descripción                       |
-| --------- | ------ |:--:| --------------------------------- |
-| mail      | Objeto | -> | Email object                      |
-| options   | Objeto | -> | Charset and encoding mail options |
-| Resultado | Texto  | <- | Email object converted to MIME    |
+| Parámetros | Tipo   |    | Descripción                       |
+| ---------- | ------ |:--:| --------------------------------- |
+| mail       | Objeto | -> | Email object                      |
+| options    | Objeto | -> | Charset and encoding mail options |
+| Resultado  | Texto  | <- | Email object converted to MIME    |
 <!-- END REF -->
 
 #### Descripción
@@ -608,10 +608,10 @@ In *mail*, pass the content and the structure details of the email to convert. T
 
 In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
 
-| Propiedad     | Tipo  | Descripción                                                                                                                                                                                                               |
-| ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Texto | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values:<p><p><table><tr><th>Constant</th><th>Valor</th><th>Comment</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
-| bodyCharset   | Texto | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                        |
+| Propiedad     | Tipo  | Descripción                                                                                                                                                                                                                |
+| ------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| headerCharset | Texto | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valores posibles:<p><p><table><tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
+| bodyCharset   | Texto | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                         |
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 
@@ -637,14 +637,16 @@ $mime:=[#current_title_incode]($mail)
 
 // Contents of $mime:
 // MIME-Version: 1.0
-// Date: Thu, 11 Oct 2018 15:42:25 GMT
+// Date:
+Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>
 // Sender: tsales@massmarket.com
 // From: tsales@massmarket.com
 // To: noreply@4d.com
 // To: test@4d.com
 // Content-Type: multipart/alternative; boundary="E0AE5773D5E95245BBBD80DD0687E218"
-// Subject: Terrific Sale! This week only!
+// Subject: Terrific Sale!
+This week only!
 //
 // --E0AE5773D5E95245BBBD80DD0687E218
 // Content-Type: text/plain; charset="UTF-8"

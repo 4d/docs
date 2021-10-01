@@ -40,9 +40,10 @@ End if
 ## ZIP Create archive
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+| Version | Changes                                                               |
+| ------- | --------------------------------------------------------------------- |
+| v19 R3  | Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property |
+| v18     | Added                                                                 |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -150,11 +151,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Typ      | Beschreibung                                                                                                                            |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Property   | Typ      | Beschreibung                                                                                                                             |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Text     | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Ganzzahl | Status code                                                                                                                             |
-| success    | Boolean  | True if archive created successfully, else false                                                                                        |
+| status     | Ganzzahl | Status code                                                                                                                              |
+| success    | Boolean  | True if archive created successfully, else false                                                                                         |
 
 
 
@@ -260,6 +261,27 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 
 
+
+
+#### Example 5
+
+You want to use an alternative compression algorithm with a high compression level:
+
+
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 //default is 4
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
+```
 
 
 

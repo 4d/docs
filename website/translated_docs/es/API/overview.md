@@ -1,5 +1,5 @@
 ---
-id: generalidades
+id: overview
 title: Class API Overview
 ---
 

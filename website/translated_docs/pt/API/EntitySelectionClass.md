@@ -38,6 +38,7 @@ Entity selections can be created from existing selections using various function
 | [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->|
@@ -68,9 +69,9 @@ If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is
 
 In the optional *settings* parameter, you can pass an object containing the following property:
 
-| Property | Type | Description                                                                                                       |
-| -------- | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Text | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Property | Type  | Description                                                                                                       |
+| -------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Example
@@ -369,10 +370,10 @@ We want to have a selection of employees named "Jones" who live in New York:
 **.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.average().Params -->
-| Parameter     | Type |    | Description                                                                                |
-| ------------- | ---- |:--:| ------------------------------------------------------------------------------------------ |
-| attributePath | Text | -> | Attribute path to be used for calculation                                                  |
-| Result        | Real | <- | Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection) |
+| Parameter     | Type  |    | Description                                                                                |
+| ------------- | ----- |:--:| ------------------------------------------------------------------------------------------ |
+| attributePath | Texto | -> | Attribute path to be used for calculation                                                  |
+| Result        | Real  | <- | Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection) |
 <!-- END REF -->
 
 #### Description
@@ -469,10 +470,10 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 **.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.count().Params -->
-| Parameter     | Type |    | Description                                                       |
-| ------------- | ---- |:--:| ----------------------------------------------------------------- |
-| attributePath | Text | -> | Path of the attribute to be used for calculation                  |
-| Result        | Real | <- | Number of non null *attributePath* values in the entity selection |
+| Parameter     | Type  |    | Description                                                       |
+| ------------- | ----- |:--:| ----------------------------------------------------------------- |
+| attributePath | Texto | -> | Path of the attribute to be used for calculation                  |
+| Result        | Real  | <- | Number of non null *attributePath* values in the entity selection |
 <!-- END REF -->
 
 #### Description
@@ -579,7 +580,7 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- REF #EntitySelectionClass.distinct().Params -->
 | Parameter     | Type       |    | Description                                                      |
 | ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Path of attribute whose distinct values you want to get          |
+| attributePath | Texto      | -> | Path of attribute whose distinct values you want to get          |
 | option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
 | Result        | Collection | <- | Collection with only distinct values                             |
 <!-- END REF -->
@@ -702,8 +703,8 @@ Example with the `dk stop dropping on first error` option:
 <!-- REF #EntitySelectionClass.extract().Params -->
 | Parameter     | Type       |    | Description                                                                             |
 | ------------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
-| attributePath | Text       | -> | Attribute path whose values must be extracted to the new collection                     |
-| targetPath    | Text       | -> | Target attribute path or attribute name                                                 |
+| attributePath | Texto      | -> | Attribute path whose values must be extracted to the new collection                     |
+| targetPath    | Texto      | -> | Target attribute path or attribute name                                                 |
 | option        | Integer    | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
 | Result        | Collection | <- | Collection containing extracted values                                                  |
 <!-- END REF -->
@@ -1088,10 +1089,10 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parameter     | Type |    | Description                                      |
-| ------------- | ---- |:--:| ------------------------------------------------ |
-| attributePath | Text | -> | Path of the attribute to be used for calculation |
-| Result        | any  | <- | Highest value of attribute                       |
+| Parameter     | Type  |    | Description                                      |
+| ------------- | ----- |:--:| ------------------------------------------------ |
+| attributePath | Texto | -> | Path of the attribute to be used for calculation |
+| Result        | any   | <- | Highest value of attribute                       |
 <!-- END REF -->
 
 #### Description
@@ -1140,10 +1141,10 @@ We want to find the highest salary among all the female employees:
 **.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| Parameter     | Type |    | Description                                      |
-| ------------- | ---- |:--:| ------------------------------------------------ |
-| attributePath | Text | -> | Path of the attribute to be used for calculation |
-| Result        | any  | <- | Lowest value of attribute                        |
+| Parameter     | Type  |    | Description                                      |
+| ------------- | ----- |:--:| ------------------------------------------------ |
+| attributePath | Texto | -> | Path of the attribute to be used for calculation |
+| Result        | any   | <- | Lowest value of attribute                        |
 <!-- END REF -->
 
 #### Description
@@ -1316,7 +1317,7 @@ If the original entity selection and the parameter are not related to the same d
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 | Parameter   | Type               |    | Description                                                           |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| pathString  | Text               | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
+| pathString  | Texto              | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
 | pathObjects | Collection         | -> | Collection of criteria objects                                        |
 | Result      | 4D.EntitySelection | <- | New entity selection in the specified order                           |
 <!-- END REF -->
@@ -1391,7 +1392,7 @@ You can add as many objects in the criteria collection as necessary.
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 | Parameter     | Type               |    | Description                                 |
 | ------------- | ------------------ |:--:| ------------------------------------------- |
-| formulaString | Text               | -> | Formula string                              |
+| formulaString | Texto              | -> | Formula string                              |
 | formulaObj    | Object             | -> | Formula object                              |
 | sortOrder     | Integer            | -> | `dk ascending` (default) or `dk descending` |
 | settings      | Object             | -> | Parameter(s) for the formula                |
@@ -1514,7 +1515,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- REF #EntitySelectionClass.query().Params -->
 | Parameter     | Type               |    | Description                                                                                                                                                   |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Search criteria as string                                                                                                                                     |
+| queryString   | Texto              | -> | Search criteria as string                                                                                                                                     |
 | formula       | Object             | -> | Search criteria as formula object                                                                                                                             |
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
 | querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
@@ -1680,6 +1681,73 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 
+<!-- REF EntitySelectionClass.selected().Desc -->
+## .selected()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19 R3  | Added   |
+
+</details>
+
+<!-- REF #EntitySelectionClass.selected().Syntax -->
+**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.selected().Params -->
+| Parameter        | Type               |    | Description                                                                       |
+| ---------------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
+| selectedEntities | 4D.EntitySelection | -> | Entity selection with entities for which to know the rank in the entity selection |
+| Result           | Object             | <- | Range(s) of selected entities in entity selection                                 |
+<!-- END REF -->
+
+#### Description
+
+The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+> This function does not modify the original entity selection.
+
+Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+
+#### Result
+
+The returned object contains the following properties:
+
+| Property       | Type       | Description                     |
+| -------------- | ---------- | ------------------------------- |
+| ranges         | Collection | Collection of range objects     |
+| ranges[].start | Integer    | First entity index in the range |
+| ranges[].end   | Integer    | Last entity index in the range  |
+
+If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
+
+The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+
+#### Example
+
+```4d
+var $invoices; $cashSel; $creditSel : cs.Invoices
+var $result1; $result2 : Object
+
+$invoices:=ds.Invoices.all()
+
+$cashSelection:=ds.Invoices.query("payment = :1"; "Cash")
+$creditSel:=ds.Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
+
+$result1:=$invoices.selected($cashSelection)
+$result2:=$invoices.selected($creditSel)
+
+//$result1 = {ranges:[{start:0;end:0},{start:3;end:3},{start:6;end:6}]}
+//$result2 = {ranges:[{start:0;end:1},{start:3;end:4},{start:6;end:7}]}
+
+```
+
+<!-- END REF -->
+
+
+
+
+
+
 
 <!-- REF EntitySelectionClass.slice().Desc -->
 ## .slice()
@@ -1755,10 +1823,10 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| Parameter     | Type |    | Description                                      |
-| ------------- | ---- |:--:| ------------------------------------------------ |
-| attributePath | Text | -> | Path of the attribute to be used for calculation |
-| Result        | Real | <- | Sum of entity selection values                   |
+| Parameter     | Type  |    | Description                                      |
+| ------------- | ----- |:--:| ------------------------------------------------ |
+| attributePath | Texto | -> | Path of the attribute to be used for calculation |
+| Result        | Real  | <- | Sum of entity selection values                   |
 <!-- END REF -->
 
 #### Description
@@ -1807,7 +1875,7 @@ $sum:=$sel.sum("salary")
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 | Parameter    | Type       |    | Description                                                                          |
 | ------------ | ---------- |:--:| ------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | String with entity attribute path(s) to extract                                      |
+| filterString | Texto      | -> | String with entity attribute path(s) to extract                                      |
 | filterCol    | Collection | -> | Collection of entity attribute path(s) to extract                                    |
 | options      | Integer    | -> | `dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp |
 | begin        | Integer    | -> | Designates the starting index                                                        |
@@ -1893,6 +1961,7 @@ Returns:
         },
         "manager": {
             "__KEY": 412
+
         }
     },
     {

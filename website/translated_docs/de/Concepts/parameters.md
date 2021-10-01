@@ -351,6 +351,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
+
+
 ## Wrong parameter type
 
 Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
@@ -453,9 +455,21 @@ ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
 
-Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. Das Problem bei optionalen Parametern ist, wie sie sich verwalten lassen, wenn welche in der aufgerufenen Methode fehlen - das sollte nie einen Fehler produzieren. Eine gute Praxis ist, den nicht-verwendeten Parametern Standardwerte zuzuweisen.
+4D methods and functions also accept such optional parameters. Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). Beispiel:
 
-> Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
+> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
 
 Über den Befehl `Count parameters` in der aufgerufenen Methode können Sie die aktuelle Anzahl der Parameter abfragen und je nach dem, was Sie bekommen, unterschiedliche Operationen ausführen.
 
@@ -485,6 +499,7 @@ APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
+> Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
 
 

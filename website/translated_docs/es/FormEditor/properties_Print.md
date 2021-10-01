@@ -12,8 +12,8 @@ Allows defining specific print settings for the form. This feature is useful to 
 
 You can modify the following print settings:
 
-*   Paper format
-*   Paper orientation
+*   Formato del papel
+*   Orientación del papel
 *   Page scaling
 
 

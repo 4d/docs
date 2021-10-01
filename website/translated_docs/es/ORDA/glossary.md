@@ -26,6 +26,11 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 Code for the user class function(s).
 
+
+## Computed attribute
+
+A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+
 ## Data model class
 
 Extended class available for a data model object.
@@ -71,7 +76,7 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy
+## Copia profunda
 
 A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
@@ -184,7 +189,7 @@ Entity selections may refer to related entities according to the relation attrib
 
 A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
 
-## Session
+## Sesión
 
 When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
 
@@ -199,3 +204,7 @@ A shallow copy only duplicates the structure of elements, and keeps the same int
 ## Sello
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+
+## Storage attribute
+
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.

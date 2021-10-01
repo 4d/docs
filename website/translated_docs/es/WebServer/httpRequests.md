@@ -35,7 +35,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $3         | Texto | <- | IP address of the web client (browser)       |
 | $4         | Texto | <- | IP address of the server                     |
 | $5         | Texto | <- | User name                                    |
-| $6         | Texto | <- | Password                                     |
+| $6         | Texto | <- | Contraseña                                   |
 
 
 You must declare these parameters as shown below:

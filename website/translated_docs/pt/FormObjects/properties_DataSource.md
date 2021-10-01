@@ -216,7 +216,7 @@ A 4D expression to be associated with a column. You can enter:
     *   String
     *   Numeric
     *   Date
-    *   Time
+    *   Hora
     *   Picture
     *   Boolean  
       You can use fields from the Master Table or from other tables.

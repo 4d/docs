@@ -33,8 +33,8 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF SMTPTransporterClass.SMTP New transporter.Desc -->
 ## SMTP New transporter
 
-<details><summary>History</summary>
-| Version | Changes                                      |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones                               |
 | ------- | -------------------------------------------- |
 | v18     | New logFile property                         |
 | v17 R5  | New bodyCharset and headerCharset properties |
@@ -45,10 +45,10 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
-| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objeto             | -> | Mail server information                             |
+| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 
@@ -65,10 +65,10 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                          | Default value (if omitted)                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                  | Default value (if omitted)                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object. | ninguno                                                             |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object. | ninguno                                                             |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP)                               |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
@@ -76,7 +76,7 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->| True                                                                |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
-| **password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.                                                                                                                                                                                               | ninguno                                                             |
+| **password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.                                                                                                                                                                                                                                                       | ninguno                                                             |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 587                                                                 |
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->| 100                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
@@ -125,10 +125,10 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
-| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objeto             | -> | Mail server information                             |
+| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Descripción
@@ -201,10 +201,10 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 ## .keepAlive
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
@@ -237,8 +237,8 @@ The SMTP connection is automatically closed:
 
 ## .send()
 
-<details><summary>History</summary>
-| Version | Changes                  |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones           |
 | ------- | ------------------------ |
 | v17 R5  | Support of mime contents |
 | v17 R4  | Añadidos                 |
@@ -248,10 +248,10 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Parameter | Tipo   |    | Descripción                                       |
-| --------- | ------ |:--:| ------------------------------------------------- |
-| mail      | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultado | Objeto | <- | SMTP status                                       |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ |:--:| ------------------------------------------------- |
+| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
+| Resultado  | Objeto | <- | SMTP status                                       |
 <!-- END REF -->
 
 

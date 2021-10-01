@@ -17,6 +17,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "Admin/server-admin": {
+        "title": "4D Server Administration Window"
+      },
       "Admin/tls": {
         "title": "TLS Protocol (HTTPS)"
       },
@@ -220,7 +223,7 @@
         "title": "Debugging from remote machines"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -718,6 +721,9 @@
       "Project/compiler": {
         "title": "Compilation"
       },
+      "Project/components": {
+        "title": "4D Components Library"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -896,7 +902,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {
@@ -920,6 +926,8 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "4D Server Administration Window|no description given": "4D Server Administration Window",
+    "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Debugging|no description given": "Debugging",

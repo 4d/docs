@@ -10,9 +10,9 @@ A progress indicator (also called "thermometer") is designed to display or set n
 
 ## Utilizar los indicadores
 
-You can use indicators either to display or set values. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
+Los indicadores se pueden utilizar tanto para visualizar como para definir valores. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
 
-The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
+The variable associated with the indicator controls the display. Los valores se introducen o utilizan en el indicador mediante métodos. For example, a method for a field or enterable object could be used to control a progress indicator:
 
 ```4d
  vTherm:=[Employees]Salary

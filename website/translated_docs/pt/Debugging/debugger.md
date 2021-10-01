@@ -160,10 +160,10 @@ This theme is composed of the following subthemes:
 
 | Subtheme     | Description                                                  | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Yes                         |
-| Process      | List of process variables used by the current process        | Yes                         |
-| Local        | List of local variables used by the method being traced      | Yes                         |
-| Parameters   | List of parameters received by the method                    | Yes                         |
+| Interprocess | List of interprocess variables being used at this point      | Sim                         |
+| Process      | List of process variables used by the current process        | Sim                         |
+| Local        | List of local variables used by the method being traced      | Sim                         |
+| Parameters   | List of parameters received by the method                    | Sim                         |
 | Self         | Pointer to the current object, when tracing an Object Method | No                          |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.

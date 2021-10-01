@@ -39,17 +39,17 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 ---
 ## Choice List
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
 You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos   | Valores posibles                                    |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
-| lista      | list, collection | A list of possible values (hierarchical lists only) |
+| Nombre     | Tipos de datos   | Valores posibles                                              |
+| ---------- | ---------------- | ------------------------------------------------------------- |
+| choiceList | list, collection | A list of possible values                                     |
+| lista      | list, collection | Una lista de valores posibles (listas jerárquicas únicamente) |
 
 
 #### Objetos soportados
@@ -83,9 +83,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Gramática JSON
 
-| Nombre            | Tipos de datos | Valores posibles  |
-| ----------------- | -------------- | ----------------- |
-| currentItemSource | cadena         | Object expression |
+| Nombre            | Tipos de datos | Valores posibles     |
+| ----------------- | -------------- | -------------------- |
+| currentItemSource | cadena         | Expresión del objeto |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md#overview)
@@ -107,9 +107,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### Gramática JSON
 
-| Nombre                    | Tipos de datos | Valores posibles  |
-| ------------------------- | -------------- | ----------------- |
-| currentItemPositionSource | cadena         | Number expression |
+| Nombre                    | Tipos de datos | Valores posibles   |
+| ------------------------- | -------------- | ------------------ |
+| currentItemPositionSource | cadena         | Expresión numérica |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md)

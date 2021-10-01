@@ -164,7 +164,7 @@ Sin embargo, en algunas circunstancias, puede ser necesario trabajar con arrays 
 | Blob            | (1+número de elementos) * 12 + Suma del tamaño de cada blob              |
 | Booleano        | (31+número de elementos)\N8                                             |
 | Fecha           | (1+número de elementos) * 6                                              |
-| Entero          | (1+número de elementos) * 2                                              |
+| Integer         | (1+número de elementos) * 2                                              |
 | Entero largo    | (1+número de elementos) * 4                                              |
 | Objeto          | (1+número de elementos) * 8 + Suma del tamaño de cada objeto             |
 | Imagen          | (1+número de elementos) * 8 + Suma del tamaño de cada imagen             |

@@ -5,6 +5,22 @@ title: ドキュメンテーション更新情報
 
 このドキュメントのおもな更新内容のリストです。 4D製品の新機能についての一般的な情報は、[doc.4d.com](https://doc.4d.com) の **リリースノート** を参照ください。
 
+
+## 4D v19 R3
+
+- クラス: [計算プロパティ](Concepts/classes.md#function-get-と-function-set) が利用可能に。
+- ORDAクラス: [計算属性](ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](ORDA/ordaClasses.md#function-query-attributename) や [orderBy](ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
+- 新しい ORDAデータクラス属性: [`exposed`](API/DataClassAttributeClass.md#exposed) および [`readOnly`](API/DataClassAttributeClass.md#readonly)。
+- [ZIPアーカイブ](API/ZipArchiveClass.md#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
+- A [new build option](Desktop/building.md#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
+- macOS で [ダークモードをサポート](Preferences/general.md#アピアランス-macOSのみ)。
+- [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter), および [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter): **OAuth2 トークンオブジェクト** をサポート。
+- Users can now load a [log configuration file](Admin/debugLogFiles.md#using-a-log-configuration-file) using a button in the [server administration window](/Admin/server-admin.md#load-logs-configuration-file).
+- 4Dランゲージで [任意パラメーター](Concepts/parameters.md#任意パラメーター) をより柔軟に扱えるようになりました。
+- Webサーバーセッションのデバッグが [4D Server 上で容易になりました](WebServer/sessions.md#プリエンプティブモード)。
+- The new [4D NetKit](Project/components.md#list-of-4d-components) component allows you to connect to third-party APIs such as Microsoft Graph.
+
+
 ## 4D v19 R2
 
 - 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](Preferences/general.md#gitignore-ファイルを作成する) が作成可能

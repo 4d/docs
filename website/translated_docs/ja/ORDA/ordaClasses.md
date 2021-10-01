@@ -26,7 +26,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 - 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
 
-- デフォルトでは、データモデルクラス関数はすべて、リモートアプリケーションに対し **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数は [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
+- デフォルトでは、データモデルクラス関数は ([計算属性関数](#計算属性) を含め) すべて、リモートアプリケーションに対して **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数は [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
 
 ![](assets/en/ORDA/api.png)
 
@@ -133,6 +133,8 @@ Function GetBestOnes()
     $best:=ds.Company.GetBestOnes()
 ```
 
+> [計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
+
 
 #### リモートデータストアの例
 
@@ -214,6 +216,15 @@ ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラス�
 - **クラス名**: *DataClassName*Entity (*DataClassName* はテーブル名です)
 - **例**: cs.CityEntity
 
+Entity クラスでは、専用のキーワードを使用して **計算属性** を定義することができます:
+
+- `Function get` *attributeName*
+- `Function set` *attributeName*
+- `Function query` *attributeName*
+- `Function orderBy` *attributeName*
+
+詳細については、[計算属性](#計算属性) を参照してください。
+
 #### 例題
 
 ```4d
@@ -257,6 +268,349 @@ End if
 - データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
 - **`4D`** [クラスストア](Concepts/classes.md#クラスストア) のネイティブな ORDA クラス関数を、データモデルユーザークラス関数でオーバーライドすることはできません。
+
+
+## 計算属性
+
+
+### 概要
+
+計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 [標準的な 4Dクラス](Concepts/classes.md)は、`get` (*ゲッター*) および `set` (*セッター*) [アクセサー関数](Concepts/classes.md#function-get-と-function-set) を用いて、計算プロパティの概念を実装しています。 ORDA のデータクラス属性はこれを利用し、さらに `query` と `orderBy` の 2つの関数で機能を拡張しています。
+
+計算属性には最低限、その値がどのように算出されるかを記述した `get` 関数が必要です。 属性に*ゲッター*関数が定義されている場合、4D は対応するストレージスペースをデータストアに作成せず、代わりに属性がアクセスされるたびに関数のコードを実行します。 属性がアクセスされなければ、コードも実行されません。
+
+計算属性は、その属性に値が割り当てられたときに実行される `set` 関数を実装することもできます。 *セッター*関数は、割り当てられた値をどのように処理するかを記述します。通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。
+
+ストレージ属性と同様に、計算属性も **クエリ** に含めることができます。 デフォルトでは、ORDA のクエリで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 場合によっては、これで十分です。 しかし、特にクライアント/サーバーにおいてはパフォーマンスを向上させるため、実際のデータクラス属性に基づいた `query` 関数を計算属性に実装することで、それらのインデックスの恩恵を受けることができます。
+
+同様に、計算属性を **並べ替え** に含めることもできます。 デフォルトでは、ORDA の並べ替えで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 クエリと同様に、実際のデータクラス属性に基づいた `orderBy` 関数を計算属性に実装することで、パフォーマンスを向上させることができます。
+
+
+### 計算属性の定義
+
+計算属性を作成するには、データクラスの [**Entity クラス**](#entity-クラス) に `get` アクセサー関数を定義します。 計算属性は、データクラス属性およびエンティティ属性として自動的に利用可能になります。
+
+その他の計算属性の関数 (`set`、`query`、`orderBy`) も、Entityクラスに定義することができます。 これらの関数の定義は任意です。
+
+計算属性の関数内において、[`This`](Concepts/classes.md#this) はエンティティを指します。 計算属性は、他のデータクラス属性と同様に使用することができます。つまり、[Entity クラス](API/EntityClass.md) や [EntitySelection クラス](API/EntitySelectionClass.md) の関数によっても同様に処理されます。
+
+> ORDA の計算属性は、デフォルトでは [**公開**](#公開vs非公開関数) されません。 計算属性を公開するには、**get 関数** の定義に `exposed` キーワードを追加します。
+
+> **get および set関数**は、クライアント/サーバー処理を最適化するために、[**local**](#ローカル関数) プロパティを持つこともできます。
+
+
+### `Function get <attributeName>`
+
+#### シンタックス
+
+```4d
+{local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
+// コード
+```
+*ゲッター* 関数は、*attributeName* 計算属性を宣言するために必須です。 *attributeName* がアクセスされるたびに、4D は `Function get` のコードを評価し、*$result* 値を返します。
+
+> 計算属性は、他の計算属性の値を使用することができます。 再帰的な呼び出しはエラーになります。
+
+*ゲッター* 関数は、*$result* パラメーターに基づいて、計算属性のデータ型を定義します。 以下の結果の型が可能です:
+
+- スカラー (テキスト、ブール、日付、時間、数値)
+- オブジェクト
+- ピクチャー
+- BLOB
+- エンティティ (例: cs.EmployeeEntity)
+- エンティティセレクション (例: cs.EmployeeSelection)
+
+*$event* パラメーターは、以下のプロパティが含みます:
+
+| プロパティ         | タイプ   | 説明                                                |
+| ------------- | ----- | ------------------------------------------------- |
+| attributeName | テキスト  | 計算属性の名称                                           |
+| dataClassName | テキスト  | データクラスの名称                                         |
+| kind          | テキスト  | "get"                                             |
+| result        | バリアント | 任意。 スカラー属性が Null を返すようにするには、このプロパティを Null値で追加します。 |
+
+
+#### 例題
+
+- *fullName* 計算属性:
+
+```4d
+Function get fullName($event : Object)-> $fullName : Text
+
+  Case of   
+    : (This.firstName=Null) & (This.lastName=Null)
+        $event.result:=Null // Null値を返すには result を使用します
+    : (This.firstName=Null)
+        $fullName:=This.lastName
+    : (This.lastName=Null)
+        $fullName:=This.firstName
+    Else 
+        $fullName:=This.firstName+" "+This.lastName
+    End case 
+```
+
+- 計算属性は、エンティティにリレートされた属性に基づいて定義することができます。
+
+```4d
+Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
+    $result:=This.manager.manager
+
+```
+
+- 計算属性は、エンティティセレクションにリレートされた属性に基づいて定義することができます。
+
+```4d
+Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
+    If (This.manager.manager=Null)
+        $result:=ds.Employee.newSelection()
+    Else 
+        $result:=This.manager.directReports.minus(this)
+    End if
+```
+
+### `Function set <attributeName>`
+
+#### シンタックス
+
+```4d
+{local} Function set <attributeName>($value : type {; $event : Object})
+// コード
+```
+
+*セッター* 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
+
+*$value* パラメーターは、属性に割り当てられた値を受け取ります。
+
+*$event* パラメーターは、以下のプロパティが含みます:
+
+| プロパティ         | タイプ   | 説明               |
+| ------------- | ----- | ---------------- |
+| attributeName | テキスト  | 計算属性の名称          |
+| dataClassName | テキスト  | データクラスの名称        |
+| kind          | テキスト  | "set"            |
+| value         | バリアント | 計算属性によって処理されるべき値 |
+
+#### 例題
+
+```4d
+Function set fullName($value : Text; $event : Object)
+    var $p : Integer
+    $p:=Position(" "; $value)       
+    This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
+    This.lastname:=Substring($value; $p+1)
+```
+
+
+
+### `Function query <attributeName>`
+
+#### シンタックス
+
+```4d
+Function query <attributeName>($event : Object)
+Function query <attributeName>($event : Object) -> $result : Text
+Function query <attributeName>($event : Object) -> $result : Object
+// コード
+```
+
+このメソッドは 3種類のシンタックスを受け入れます:
+
+- 最初のシンタックスでは、`$event.result` オブジェクトプロパティを通じてクエリ全体を処理します。
+- 2番目と 3番目のシンタックスでは、関数は *$result* に値を返します:
+    - *$result* がテキストの場合、それは有効なクエリ文字列でなければなりません。
+    - *$result* がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
+
+    | プロパティ              | タイプ    | 説明                                  |
+    | ------------------ | ------ | ----------------------------------- |
+    | $result.query      | テキスト   | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
+    | $result.parameters | コレクション | プレースホルダーに渡す値                        |
+
+`query` 関数は、計算属性を使用するクエリが開始されるたびに実行されます。 インデックス付きの属性を利用することで、クエリをカスタマイズしたり最適化したりすることができます。 計算属性に対して `query` 関数が実装されていない場合、検索は常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
+
+> 以下の機能はサポートされていません:<br /> - エンティティ、またはエンティティセレクション型の計算属性に対する `query` 関数の呼び出し<br /> - 結果のクエリ文字列における `order by` キーワードの使用
+
+*$event* パラメーターは、以下のプロパティが含みます:
+
+| プロパティ         | タイプ   | 説明                                                                                                                                                                                                                                                                                                                              |
+| ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | テキスト  | 計算属性の名称                                                                                                                                                                                                                                                                                                                         |
+| dataClassName | テキスト  | データクラスの名称                                                                                                                                                                                                                                                                                                                       |
+| kind          | テキスト  | "query"                                                                                                                                                                                                                                                                                                                         |
+| value         | バリアント | 計算属性によって処理されるべき値                                                                                                                                                                                                                                                                                                                |
+| operator      | テキスト  | クエリ演算子 ([`query` クラス関数も参照ください](API/DataClassClass.md#query))。 とりうる値:<li>== (と等しい; @ はワイルドカード)</li><li>=== (と等しい; @ はワイルドカードでない)</li><li>!= (と等しくない; @ はワイルドカード)</li><li>!== (と等しくない; @ はワイルドカードでない)</li><li>&lt; (小さい)</li><li><= (less than or equal to)</li><li>&gt; (大きい)</li><li>&gt;= (以上)</li><li>IN (含まれる)</li><li>% (キーワードを含む)</li> |
+| result        | バリアント | 計算属性によって処理されるべき値。 4D がデフォルトクエリ (計算属性では常にシーケンシャル) を実行するようにしたい場合は、このプロパティに `Null` を渡します。                                                                                                                                                                                                                                          |
+
+> 関数が *$result* に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
+
+#### 例題
+
+- *fullName* 計算属性のクエリ:
+
+```4d
+Function query fullName($event : Object)->$result : Object
+
+    var $fullname; $firstname; $lastname; $query : Text
+    var $operator : Text
+    var $p : Integer
+    var $parameters : Collection
+
+    $operator:=$event.operator
+    $fullname:=$event.value
+
+    $p:=Position(" "; $fullname) 
+    If ($p>0)
+        $firstname:=Substring($fullname; 1; $p-1)+"@"
+        $lastname:=Substring($fullname; $p+1)+"@"
+        $parameters:=New collection($firstname; $lastname) // 2要素のコレクション
+    Else 
+        $fullname:=$fullname+"@"
+        $parameters:=New collection($fullname) // 1要素のコレクション
+    End if 
+
+    Case of 
+    : ($operator="==") | ($operator="===")
+        If ($p>0)
+            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+        Else 
+            $query:="firstName = :1 or lastName = :1"
+        End if 
+    : ($operator="!=")
+        If ($p>0)
+            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+        Else 
+            $query:="firstName != :1 and lastName != :1"
+        End if 
+    End case 
+
+    $result:=New object("query"; $query; "parameters"; $parameters)
+```
+
+> ユーザーのテキスト入力に基づくクエリでは、セキュリティ上の理由からプレースホルダーを使用することが推奨されています ([`query()` の説明](API/DataClassClass.md#query) 参照)。
+
+呼び出しコードの例:
+
+```4d
+$emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
+```
+
+- この関数は *age (年齢)* 計算属性に対するクエリを処理し、パラメーターを含むオブジェクトを返します:
+
+```4d
+Function query age($event : Object)->$result : Object
+
+    var $operator : Text
+    var $age : Integer
+    var $_ages : Collection
+
+    $operator:=$event.operator
+
+    $age:=Num($event.value)  // 整数
+    $d1:=Add to date(Current date; -$age-1; 0; 0)
+    $d2:=Add to date($d1; 1; 0; 0)
+    $parameters:=New collection($d1; $d2)
+
+    Case of 
+
+        : ($operator="==")
+            $query:="birthday > :1 and birthday <= :2"  // d1 より大きい、かつ d2 以下
+
+        : ($operator="===") 
+
+            $query:="birthday = :2"  // d2 = 2つ目の算出値 (= 誕生日)
+
+        : ($operator=">=")
+            $query:="birthday <= :2"
+
+            //... その他の演算子           
+
+
+    End case 
+
+
+    If (Undefined($event.result))
+        $result:=New object
+        $result.query:=$query
+        $result.parameters:=$parameters
+    End if
+
+```
+
+呼び出しコードの例:
+
+```4d
+// 20歳以上で 21歳未満の人
+$twenty:=people.query("age = 20")  // "==" のケースを呼び出します
+
+// 本日満 20歳になった人
+$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ 
+
+```
+
+
+### `Function orderBy <attributeName>`
+
+#### シンタックス
+
+```4d
+Function orderBy <attributeName>($event : Object)
+Function orderBy <attributeName>($event : Object)-> $result : Text
+
+// コード
+```
+
+`orderBy` 関数は、計算属性で並べ替えされるたびに実行されます。 これにより、計算属性で並べ替えることができます。 たとえば、*fullName* を名字、名前の順にソートしたり、逆に名字、名前の順にソートすることができます。 計算属性に対して `orderBy` 関数が実装されていない場合、並べ替えは常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
+
+> Entity クラス、または EntitySelection クラス型の計算属性に対する `orderBy` 関数の呼び出しは **サポートされていません**。
+
+*$event* パラメーターは、以下のプロパティが含みます:
+
+| プロパティ         | タイプ   | 説明                                                   |
+| ------------- | ----- | ---------------------------------------------------- |
+| attributeName | テキスト  | 計算属性の名称                                              |
+| dataClassName | テキスト  | データクラスの名称                                            |
+| kind          | テキスト  | "orderBy"                                            |
+| value         | バリアント | 計算属性によって処理されるべき値                                     |
+| operator      | テキスト  | "desc" または "asc" (デフォルト)                             |
+| descending    | ブール   | 降順の場合は `true`, 昇順の場合は `false`                        |
+| result        | バリアント | 計算属性によって処理されるべき値。 4D にデフォルトソートを実行させるには、`Null` を渡します。 |
+
+> `operator` と `descending` プロパティのどちらを使っても構いません。 これは、基本的にプログラミングのスタイルの問題です (例題参照)。
+
+`orderBy` 文字列は、`$event.result` オブジェクトプロパティまたは関数の戻り値である *$result* のどちらでにも返すことができます。 関数が *$result* に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
+
+
+#### 例題
+
+次のような条件分岐のコードを書くことができます:
+
+```4d
+Function orderBy fullName($event : Object)-> $result : Text
+    If ($event.descending=True)
+        $result:="firstName desc, lastName desc" 
+    Else 
+        $result:="firstName, lastName" 
+    End if
+```
+
+また、次のような短縮コードを書くこともできます:
+
+```4d
+Function orderBy fullName($event : Object)-> $result : Text
+    $result:="firstName "+$event.operator+", "lastName "+$event.operator
+
+```
+
+場合によっては条件分岐のコードが必要です:
+
+```4d
+Function orderBy age($event : Object)-> $result : Text
+    If ($event.descending=True)
+        $result:="birthday asc" 
+    Else 
+        $result:="birthday desc" 
+    End if
+
+```
 
 
 

@@ -131,7 +131,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### Objetos soportados
 
-[Rectangle](shapes_overview.md#rectangle)
+[Rectángulo](shapes_overview.md#rectangle)
 
 
 

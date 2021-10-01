@@ -27,18 +27,18 @@ ASSERT($status.success)
 
 
 ### Summary
-|                                                                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
-| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> |
-| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary -->|
-| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary -->|
-| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
-| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
-| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> |
-| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> |
-| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> |
-| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary -->|
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary --></p>       |
+| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> </p>                   |
+| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary --></p>             |
+| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary --></p>             |
+| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary --></p> |
+| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary --></p>   |
+| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> </p>                   |
+| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> </p>                     |
+| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> </p>                     |
+| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary --></p>               |
 
 
 
@@ -105,7 +105,6 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- END REF -->
 
 
-<!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
 <details><summary>History</summary>
@@ -120,10 +119,11 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF #CryptoKey.decrypt().Params -->
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
-| message   | Text   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
+| message   | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
 | options   | Object | -> | Decoding options                                                              |
 | Result    | Object | <- | Status                                                                        |
 <!-- END REF -->
+
 
 
 The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -151,7 +151,6 @@ The function returns a status object with `success` property set to `true` if th
 
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
-<!-- END REF -->
 
 
 <!-- REF CryptoKey.encrypt().Desc -->
@@ -169,9 +168,9 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF #CryptoKey.encrypt().Params -->
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
-| message   | Text   | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
+| message   | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
 | options   | Object | -> | Encoding options                                                              |
-| Result    | Text   | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
+| Result    | Texto  | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
 <!-- END REF -->
 
 The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -209,9 +208,9 @@ The returned value is an encrypted message.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parameter | Type |    | Description               |
-| --------- | ---- | -- | ------------------------- |
-| Result    | Text | <- | Private key in PEM format |
+| Parameter | Type  |    | Description               |
+| --------- | ----- | -- | ------------------------- |
+| Result    | Texto | <- | Private key in PEM format |
 <!-- END REF -->
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
@@ -236,9 +235,9 @@ The returned value is the private key.
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parameter | Type |    | Description              |
-| --------- | ---- | -- | ------------------------ |
-| Result    | Text | <- | Public key in PEM format |
+| Parameter | Type  |    | Description              |
+| --------- | ----- | -- | ------------------------ |
+| Result    | Texto | <- | Public key in PEM format |
 <!-- END REF -->
 
 
@@ -282,9 +281,9 @@ The returned value is the public key.
 <!-- REF #CryptoKey.sign().Params -->
 | Parameter | Type   |    | Description                                                                     |
 | --------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message   | Text   | -> | Message string to sign                                                          |
+| message   | Texto  | -> | Message string to sign                                                          |
 | options   | Object | -> | Signing options                                                                 |
-| Result    | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Result    | Texto  | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
@@ -354,8 +353,8 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.verify().Params -->
 | Parameter | Type   |    | Description                                                                                       |
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
-| message   | Text   | -> | Message string that was used to produce the signature                                             |
-| signature | Text   | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
+| message   | Texto  | -> | Message string that was used to produce the signature                                             |
+| signature | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
 | options   | Object | -> | Signing options                                                                                   |
 | Result    | Object | <- | Status of the verification                                                                        |
 <!-- END REF -->

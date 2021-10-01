@@ -42,6 +42,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
+| v19 R3  | Ajoutées      |
 | v18     | Ajoutées      |
 </details>
 
@@ -150,11 +151,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Propriété  | Type        | Description                                                                                                                             |
-| ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriété  | Type        | Description                                                                                                                              |
+| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texte       | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Entier long | Status code                                                                                                                             |
-| success    | Booléen     | True if archive created successfully, else false                                                                                        |
+| status     | Entier long | Status code                                                                                                                              |
+| success    | Booléen     | True if archive created successfully, else false                                                                                         |
 
 
 
@@ -260,6 +261,27 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 
 
+
+
+#### Example 5
+
+You want to use an alternative compression algorithm with a high compression level:
+
+
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 //default is 4
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
+```
 
 
 

@@ -21,6 +21,7 @@ title: DataClassAttribute
 |                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE DataClassAttributeClass.autoFilled.Syntax -->](#autofilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.autoFilled.Summary -->|
+| [<!-- INCLUDE DataClassAttributeClass.exposed.Syntax -->](#exposed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.exposed.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.fieldNumber.Syntax -->](#fieldnumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldNumber.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
@@ -29,6 +30,7 @@ title: DataClassAttribute
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.unique.Syntax -->](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.unique.Summary --> |
@@ -59,6 +61,26 @@ title: DataClassAttribute
 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.autoFilled` が返されない場合でも **Bool** (dataClassAttribute.autoFilled) と書くことで、有効な値 (false) を受け取ることができます。
 
+
+<!-- END REF -->
+
+<!-- REF DataClassAttributeClass.exposed.Desc -->
+## .exposed
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
+</details>
+
+
+<!-- REF DataClassAttributeClass.exposed.Syntax -->
+**.exposed** : Boolean<!-- END REF -->
+
+
+#### 説明
+
+`.exposed` プロパティは、 <!-- REF DataClassAttributeClass.exposed.Summary -->属性が REST で公開されている場合に true<!-- END REF -->です。
 
 <!-- END REF -->
 
@@ -96,9 +118,9 @@ title: DataClassAttribute
 ## .fieldType
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容        |
+| ------ | --------- |
+| v19 R3 | 計算属性をサポート |
 </details>
 
 
@@ -112,15 +134,19 @@ title: DataClassAttribute
 
 **とりうる値:**
 
-| dataClassAttribute.kind | fieldType          | 説明                                                                            |
-| ----------------------- | ------------------ | ----------------------------------------------------------------------------- |
-| storage                 | 対応する 4Dフィールド型      | [`Type`](https://doc.4d.com/4Dv18R6/4D/18-R6/Type.301-5198890.ja.html) コマンド参照 |
-| relatedEntity           | 38 (Is object)     |                                                                               |
-| relatedEntities         | 42 (Is collection) |                                                                               |
+| dataClassAttribute.kind | fieldType                                                                                                      |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------- |
+| storage                 | 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照                    |
+| relatedEntity           | 38 (`Is object`)                                                                                               |
+| relatedEntities         | 42 (`Is collection`)                                                                                           |
+| calculated              | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>エンティティセレクション: 42 (`Is collection)` |
+
 
 <!-- END REF -->
 
+#### 参照
 
+[`.type`](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -203,9 +229,9 @@ title: DataClassAttribute
 ## .kind
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容               |
+| ------ | ---------------- |
+| v19 R3 | "calculated" を追加 |
 </details>
 
 
@@ -218,6 +244,7 @@ title: DataClassAttribute
 `.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類<!-- END REF -->を格納します。 以下のいずれかの値が返されます:
 
 *   "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
+*   "calculated": 計算属性。[`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
 *   "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 *   "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
@@ -297,6 +324,32 @@ title: DataClassAttribute
 
 
 
+<!-- REF DataClassAttributeClass.readOnly.Desc -->
+## .readOnly
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
+
+
+</details>
+
+
+<!-- REF DataClassAttributeClass.readOnly.Syntax -->
+**.readOnly** : Boolean<!-- END REF -->
+
+
+#### 説明
+
+`.readOnly` プロパティは、 <!-- REF DataClassAttributeClass.readOnly.Summary -->読み取り専用属性の場合に true<!-- END REF -->です。
+
+たとえば、[`set` 関数](ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。 
+
+<!-- END REF -->
+
+
+
 <!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
 
@@ -304,6 +357,7 @@ title: DataClassAttribute
 | バージョン  | 内容 |
 | ------ | -- |
 | v17 R5 | 追加 |
+
 
 </details>
 
@@ -338,9 +392,9 @@ title: DataClassAttribute
 ## .type
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容        |
+| ------ | --------- |
+| v19 R3 | 計算属性をサポート |
 </details>
 
 
@@ -356,15 +410,18 @@ title: DataClassAttribute
 
 **とりうる値:**
 
-| dataClassAttribute.kind | type                                                  | 説明                                                                       |
-| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", "string" | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 |
-| relatedEntity           | リレートされたデータクラス名                                        | 例: "Companies"                                                           |
-| relatedEntities         | リレートされたデータクラス名 + "Selection"                          | 例: "EmployeeSelection"                                                   |
+| dataClassAttribute.kind | type                                                                                                              | 説明                                                                                                                                                                    |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "blob", "bool", "date", "image", "number", "object", または "string"                                                 | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 "blob" 属性は [BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) で、[Blob クラス](BlobClass.md) によって扱われます。 |
+| relatedEntity           | リレートされたデータクラス名                                                                                                    | 例: "Companies"                                                                                                                                                        |
+| relatedEntities         | リレートされたデータクラス名 + "Selection"                                                                                      | 例: "EmployeeSelection"                                                                                                                                                |
+| calculated              | <li>ストレージ: データ型 ("blob", "number", など)</li><li>エンティティ: データクラス名</li><li>エンティティセレクション: データクラス名 + "Selection" |                                                                                                                                                                       |
 
 <!-- END REF -->
 
+#### 参照
 
+[`.fieldType`](#fieldtype)
 
 
 <!-- REF DataClassAttributeClass.unique.Desc -->

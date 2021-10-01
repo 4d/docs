@@ -9,7 +9,7 @@ title: Gestión de usuarios y grupos 4D
 
 ## Designer and Administrator
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. The Designer can:
+The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. El diseñador puede:
 - access all application servers without restriction,
 - create users and groups,
 - assign access privileges to groups,
@@ -28,7 +28,7 @@ The Administrator cannot:
 
 Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
-- Designer icon: ![](assets/en/Users/iconDesigner.png)
+- Icono Diseñador: ![](assets/en/Users/iconDesigner.png)
 - Administrator icon: ![](assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
@@ -69,21 +69,21 @@ The list of users displays all the users, including the [Designer and the Admini
 
 The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
 
-### Deleting a user
+### Eliminar un usuario
 
 
 To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
 
 Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
 
-### User properties
+### Propiedades de los usuarios
 
 - **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.
 
 
-## Groups editor
+## Editor de grupos
 
 The editor for groups is located in the Toolbox of 4D.
 

@@ -26,6 +26,11 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 
 Code pour la (les) fonction(s) de classe utilisateurs.
 
+
+## Computed attribute
+
+A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+
 ## Data model class
 
 Classe étendue disponible pour un objet modèle de données.
@@ -199,3 +204,7 @@ Une copie superficielle (shallow copy) ne fait que dupliquer la structure des é
 ## Stamp
 
 Utilisé dans la technologie du verrouillage "optimiste". Toutes les entités ont un compteur interne, le marqueur, qui est incrémenté chaque fois que l'entité est sauvegardée. En comparant automatiquement les marqueurs entre une entité sauvegardée et sa version stockée sur disque, 4D peut empêcher les modifications simultanées sur les mêmes entités.
+
+## Storage attribute
+
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.

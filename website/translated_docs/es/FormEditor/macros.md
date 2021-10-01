@@ -20,7 +20,7 @@ Macros can been defined for the host project or for components within the projec
 
 When called, a macro overrides any previously specified behaviors.
 
-## Hands-on example
+## Ejemplo práctico
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
@@ -92,7 +92,7 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 
 
-## Declaring macros
+## Declaración de macros
 
 The structure of the `formMacros.json` file is the following:
 
@@ -112,8 +112,8 @@ Here is the description of the JSON file contents:
 | Atributo |                     |                          | Tipo   | Descripción                                            |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros   |                     |                          | objeto | list of defined macros                                 |
-|          | `<macroName>` |                          | objeto | macro definition                                       |
-|          |                     | class                    | cadena | macro class name                                       |
+|          | `<macroName>` |                          | objeto | definición de la macro                                 |
+|          |                     | class                    | cadena | nombre de clase de la macro                            |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
@@ -160,9 +160,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parameter | Tipo   | Descripción                                              |
-| --------- | ------ | -------------------------------------------------------- |
-| $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
+| Parámetros | Tipo   | Descripción                                              |
+| ---------- | ------ | -------------------------------------------------------- |
+| $macro     | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -201,10 +201,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parameter | Tipo   | Descripción                                                                          |
-| --------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
-| $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| Parámetros | Tipo   | Descripción                                                                          |
+| ---------- | ------ | ------------------------------------------------------------------------------------ |
+| $editor    | Objeto | Form Editor Macro Proxy object containing the form properties                        |
+| $result    | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -214,28 +214,28 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties returned in the *$editor* parameter:
 
-| Propiedad                        | Tipo      | Descripción                                                                       |
-| -------------------------------- | --------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Objeto    | The entire form                                                                   |
-| $editor.editor.file              | File      | File object of the form file                                                      |
-| $editor.editor.name              | Cadena    | Name of the form                                                                  |
-| $editor.editor.table             | number    | Table number of the form, 0 for project form                                      |
-| $editor.editor.currentPageNumber | number    | The number of the current page                                                    |
-| $editor.editor.currentPage       | Objeto    | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Colección | Collection of names of selected objects                                           |
-| $editor.editor.formProperties    | Objeto    | Properties of the current form                                                    |
-| $editor.editor.target            | cadena    | Name of the object under the mouse when clicked on a macro                        |
+| Propiedad                        | Tipo       | Descripción                                                                       |
+| -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
+| $editor.editor.form              | Objeto     | The entire form                                                                   |
+| $editor.editor.file              | File       | File object of the form file                                                      |
+| $editor.editor.name              | Cadena     | Name of the form                                                                  |
+| $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
+| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
+| $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
+| $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
+| $editor.editor.formProperties    | Objeto     | Properties of the current form                                                    |
+| $editor.editor.target            | cadena     | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Propiedad         | Tipo      | Descripción                                                 |
-| ----------------- | --------- | ----------------------------------------------------------- |
-| currentPage       | Objeto    | currentPage including objects modified by the macro, if any |
-| currentSelection  | Colección | currentSelection if modified by the macro                   |
-| formProperties    | Objeto    | formProperties if modified by the macro                     |
-| editor.groups     | Objeto    | group info, if groups are modified by the macro             |
-| editor.views      | Objeto    | view info, if views are modified by the macro               |
-| editor.activeView | Cadena    | Active view name                                            |
+| Propiedad         | Tipo       | Descripción                                                 |
+| ----------------- | ---------- | ----------------------------------------------------------- |
+| currentPage       | Objeto     | currentPage including objects modified by the macro, if any |
+| currentSelection  | Collection | currentSelection if modified by the macro                   |
+| formProperties    | Objeto     | formProperties if modified by the macro                     |
+| editor.groups     | Objeto     | group info, if groups are modified by the macro             |
+| editor.views      | Objeto     | view info, if views are modified by the macro               |
+| editor.activeView | Cadena     | Active view name                                            |
 
 
 For example, if objects of the current page and groups have been modified, you can write:
@@ -300,14 +300,14 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Tipo      | Descripción                              |
-| ------------ | --------------------- | --------- | ---------------------------------------- |
-| $editor      |                       | Objeto    | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Objeto    | Object returned by [onInvoke](#oninvoke) |
-| $error       |                       | Colección | Error stack                              |
-|              | [].errCode            | Número    | Error code                               |
-|              | [].message            | Texto     | Description of the error                 |
-|              | [].componentSignature | Texto     | Internal component signature             |
+| Parámetros   |                       | Tipo       | Descripción                              |
+| ------------ | --------------------- | ---------- | ---------------------------------------- |
+| $editor      |                       | Objeto     | Object send to [onInvoke](#oninvoke)     |
+| $resultMacro |                       | Objeto     | Object returned by [onInvoke](#oninvoke) |
+| $error       |                       | Collection | Error stack                              |
+|              | [].errCode            | Número     | Error code                               |
+|              | [].message            | Texto      | Description of the error                 |
+|              | [].componentSignature | Texto      | Internal component signature             |
 
 The `onError` function is executed when the macros processor encounters an error.
 

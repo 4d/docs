@@ -17,7 +17,7 @@ title: ログファイルの詳細
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 *   [ORDA クライアントリクエストのログファイル](#ordaクライアントリクエスト)
 
-注: サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。たとえば、"4DRequestsLogServer.txt" のようにです。
+> サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。たとえば、"4DRequestsLogServer.txt" のようにです。
 
 これらのログファイルは、デバッグ中に時系列を確立しエントリー間のつながりを分かりやすくするために、いくつかのフィールドを共有しています:
 
@@ -189,19 +189,12 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 それぞれのイベントに対して、以下のフィールドが記録されます:
 
-| カラム番号 | フィールド名                          | 説明                                                                                                                                                                                                                                                                                                                                                                     |
-| ----- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | sequence_number                 | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                                                                                                                                                                                                                                                         |
-| 2     | time                            | ISO 8601フォーマットの日付と時間 (YYYY-MM-DDTHH:MM:SS.mmm)                                                                                                                                                                                                                                                                                                                         |
-| 3     | ProcessID                       | プロセスID                                                                                                                                                                                                                                                                                                                                                                 |
-| 4     | unique_processID                | 固有プロセスID                                                                                                                                                                                                                                                                                                                                                               |
-| 5     | stack_level                     | スタックレベル                                                                                                                                                                                                                                                                                                                                                                |
-| 6     | operation_type                  | ログオペレーションタイプ。 この値は絶対値を取ることがあります:<p><ol><li>コマンド</li><li>メソッド (プロジェクトメソッド、データベースメソッド、等)</li><li>メッセージ ([LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドによって送信されたもののみ)</li><li>プラグインメッセージ</li><li>プラグインイベント</li><li>プラグインコマンド</li><li>プラグインコールバック</li><li>タスク</li><li>メンバーメソッド (コレクションまたはオブジェクトに割り当てられているメソッド)</li></ol></p>スタックレベルを閉じる時には、`operation_type`、`operation` および `operation_parameters` カラムには `stack_opening_sequence_number` カラムに記録された開始スタックレベルと同じ値が記録されます。 たとえば:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>1行目と 2行目はスタックレベルを開き、3行目と 4行目はスタックレベルを閉じます。 6、7、8カラム目の値は、終了スタックレベル行において繰り返されます。 10カラム目にはスタックレベル開始番号、つまり 3行目の 122 と 4行目の 121 が格納されます。 |
-| 7     | operation                       | 以下のいずれかを表す可能性があります (オペレーションタイプによる):<li>ランゲージコマンドID (type=1 の場合)</li><li>メソッド名 (type=2 の場合)</li><li>pluginIndex;pluginCommand の組み合わせ (type=4、5、6 または 7 の場合)。 '3;2' のような形式で格納されます。</li><li>タスク接続UUID (type=8 の場合)</li>                                                                                                                                                                                                                              |
-| 8     | operation_parameters            | コマンド、メソッド、プラグインに渡された引数                                                                                                                                                                                                                                                                                                                                                 |
-| 9     | form_event                      | フォームイベント (あれば)。その他の場合には空になります (フォームメソッドまたはオブジェクトメソッド内でコードが実行された場合に使用されると考えて下さい)                                                                                                                                                                                                                                                                                        |
-| 10    | stack_opening_sequence_number | スタックレベルを閉じる時のみ: 開始スタックレベルに対応するシーケンス番号                                                                                                                                                                                                                                                                                                                                  |
-| 11    | stack_level_execution_time    | スタックレベルを閉じる時のみ: 現在記録されているアクションの経過時間をマイクロ秒単位で表します (上記ログの123 行目と124 行目の 10番目のカラムを参照ください)                                                                                                                                                                                                                                                                                 |
+| カラム番号 | フィールド名          | 説明                             |
+| ----- | --------------- | ------------------------------ |
+| 1     | sequence_number | ログセッション内で固有かつシーケンシャルなオペレーション番号 |
+
+|2| time| ISO 8601フォーマットの日付と時間 (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|プロセスID| |4| unique_processID|固有プロセスID| |5| stack_level|スタックレベル |6| operation_type| ログオペレーションタイプ。 この値は絶対値を取ることがあります:<p><ol><li>コマンド</li><li>メソッド (プロジェクトメソッド、データベースメソッド、等)</li><li>メッセージ ([LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドによって送信されたもののみ)</li><li>プラグインメッセージ</li><li>プラグインイベント</li><li>プラグインコマンド</li><li>プラグインコールバック</li><li>タスク</li><li>メンバーメソッド (コレクションまたはオブジェクトに割り当てられているメソッド)</li></ol></p>スタックレベルを閉じる時には、`operation_type`、`operation` および `operation_parameters` カラムには `stack_opening_sequence_number` カラムに記録された開始スタックレベルと同じ値が記録されます。 たとえば:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>1行目と 2行目はスタックレベルを開き、3行目と 4行目はスタックレベルを閉じます。 6、7、8カラム目の値は、終了スタックレベル行において繰り返されます。 10カラム目にはスタックレベル開始番号、つまり 3行目の 122 と 4行目の 121 が格納されます。| |7|operation|以下のいずれかを表す可能性があります (オペレーションタイプによる):<li>ランゲージコマンドID (type=1 の場合)</li><li>メソッド名 (type=2 の場合)</li><li>pluginIndex;pluginCommand の組み合わせ (type=4、5、6 または 7 の場合)。 '3;2' のような形式で格納されます。</li><li>タスク接続UUID (type=8 の場合)</li>
+|8|operation_parameters|コマンド、メソッド、プラグインに渡された引数| |9|form_event|フォームイベント (あれば)。その他の場合には空になります (フォームメソッドまたはオブジェクトメソッド内でコードが実行された場合に使用されると考えて下さい)| |10|stack_opening_sequence_number|スタックレベルを閉じる時のみ: 開始スタックレベルに対応するシーケンス番号| |11|stack_level_execution_time|スタックレベルを閉じる時のみ: 現在記録されているアクションの経過時間をマイクロ秒単位で表します (上記ログの123 行目と124 行目の 10番目のカラムを参照ください)|
 
 ## 4DDiagnosticLog.txt
 
@@ -320,11 +313,198 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 各リクエストに対して、以下のフィールドが記録されます:
 
-| フィールド名         | 説明                             | 例題                                                      |
-| -------------- | ------------------------------ | ------------------------------------------------------- |
-| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号 | 104                                                     |
-| url            | クライアントの ORDAリクエストURL           | "rest/Persons(30001)"                                   |
-| startTime      | 開始日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.346Z"                              |
-| endTime        | 終了日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.371Z"                              |
-| duration       | クライアント処理時間 (ミリ秒)               | 25                                                      |
-| response       | サーバーレスポンスオブジェクト                | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| フィールド名         | 説明                             | 例題                                                        |
+| -------------- | ------------------------------ | --------------------------------------------------------- |
+| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号 | 104                                                       |
+| url            | クライアントの ORDAリクエストURL           | "rest/Persons(30001)"                                     |
+| startTime      | 開始日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.346Z"                                |
+| endTime        | 終了日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.371Z"                                |
+| duration       | クライアント処理時間 (ミリ秒)               | 25                                                        |
+| response       | サーバーレスポンスオブジェクト                | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+
+
+
+## Using a log configuration file
+
+You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
+
+### How to enable the file
+
+There are several ways to enable the log configuration file:
+
+- On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](Admin/server-admin.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
+- You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. In this case, the file must be named `logConfig.json`. It is enabled at project startup (only on the server in client/server).
+- With a built application, you can copy the `logConfig.json` file in the following folder:
+    + Windows: `Users\[userName]\AppData\Roaming\[application]`
+    + macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+
+> If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder: - Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server` - macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
+
+### JSON file description
+
+The log configuration file is a `.json` file that can contain the following properties:
+
+```json
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Logs Configuration File",
+    "description": "A file that controls the state of different types of logs in 4D clients and servers",
+    "type": "object",
+    "properties": {
+        "forceLoggingConfiguration": {
+            "description": "Forcing the logs configuration described in the file ingoring changes coming from code or user interface",
+            "type": "boolean",
+            "default": true
+        },
+        "requestLogs": {
+            "description": "Configuration for request logs",
+            "type": "object",
+            "properties": {
+                "clientState": {
+                    "description": "Enable/Disable client request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "serverState": {
+                    "description": "Enable/Disable server request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "debugLogs": {
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "commandList": {
+                    "description": "Commands to log or not log",
+                    "type": "array",
+                    "items": {
+                        "type": "string" 
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "state": {
+                    "description": "integer to specify type of debuglog and options",
+
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "diagnosticLogs":{
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "state":{
+                    "description": "Enable/Disable diagnostic logs 0 or 1 (0 = do not record, 1 = record)",
+                    "type": "integer",
+                    "minimum": 0    
+                }
+            }
+          },
+        "httpDebugLogs": {
+            "description": "Configuration for http debug logs",
+            "type": "object",
+            "properties": {
+                "level": {
+                    "description": "Configure http request logs",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 7
+                },
+                "state": {
+                    "description": "Enable/Disable recording of web requests",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                }
+            }
+        },
+        "POP3Logs": {
+            "description": "Configuration for POP3 logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable POP3 logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "SMTPLogs": {
+            "description": "Configuration for SMTP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "IMAPLogs": {
+            "description": "Configuration for IMAP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "type": "integer" 
+                }
+            }
+        },
+        "ORDALogs": {
+            "description": "Configuration for ORDA logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable ORDA logs (0 or 1)",
+                    "type": "integer" 
+                },
+                "filename": {
+                    "type": "string" 
+                }
+            }
+        }
+    }
+}
+```
+
+### 例題
+
+Here is an example of log configuration file:
+
+```json
+{
+    "forceLoggingConfiguration": false,
+    "requestLogs": {
+        "clientState": 1,
+        "serverState": 1
+    },
+    "debugLogs": {
+        "commandList":["322","311","112"],
+        "state": 4
+    },
+    "diagnosticLogs":{
+        "state" : 1
+    },
+    "httpDebugLogs": {
+        "level": 5,
+        "state" : 1
+    },
+    "POP3Logs": {
+        "state" : 1 
+    },
+    "SMTPLogs": {
+        "state" : 1 
+    },
+    "IMAPLogs": {
+        "state" : 1 
+    },
+    "ORDALogs": {
+        "state" : 1,
+        "filename": "ORDALog.txt"
+    }
+}
+```

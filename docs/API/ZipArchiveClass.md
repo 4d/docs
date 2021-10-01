@@ -42,6 +42,7 @@ End if
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
 |v18|Added|
 </details>
 
@@ -74,7 +75,8 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 
 |Property|Type|Description|
 |---|---|---|
-|compression|Text|<li>`ZIP Compression none`: No compression</li><li>`ZIP Compression standard`: Standard compression (default)</li>|
+|compression|Text|<li>`ZIP Compression standard`: Deflate compression (default)</li><li>`ZIP Compression LZMA`: LZMA compression</li><li>`ZIP Compression XZ`: XZ compression</li><li>`ZIP Compression none`: No compression</li>|
+|level|Integer|Compression level. Possible values: 1 to 10. Default values if omitted: <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li>|
 |encryption|Text|The encryption to use if a password is set:<li>`ZIP Encryption AES128`: AES encryption using 128-bit key.</li><li>`ZIP Encryption AES192`: AES encryption using 192-bit key.</li><li>`ZIP Encryption AES256`: AES encryption using 256-bit key (default if password is set).</li><li>`ZIP Encryption none`: Data is not encrypted (default if no password is set)</li>|
 |password|Text|A password to use if encryption is required.|
 |files|Collection|<li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><html><table><tr><td>Property</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File or 4D.Folder<td>File or Folder</td></tr><tr><td>destination</td><td>Text</td><td>(optional) - Specify a relative filepath to change the organization of the contents of the archive</td></tr><tr><td>option</td><td>number</td><td>(optional) - `ZIP Ignore invisible files` or 0 to compress all of the file</td></tr></table></html>|
@@ -174,7 +176,23 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 ```
  
 
+#### Example 5
 
+You want to use an alternative compression algorithm with a high compression level:
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 //default is 4
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
+```
 
 ## ZIP Read archive
 
