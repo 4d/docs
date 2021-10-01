@@ -5,7 +5,7 @@ title: Manipulación de datos
 
 Todos [los atributos, clases](configuration.md#exposing-tables-and-fields) y métodos del datastore expuestos pueden ser accedidos a través de REST. Los nombres de clases de datos, atributos y métodos son sensibles a las mayúsculas y minúsculas; sin embargo, los datos de las búsquedas no lo son.
 
-## Querying data
+## Buscar datos
 
 To query data directly, you can do so using the [`$filter`]($filter.md) function. For example, to find a person named "Smith", you could write:
 
@@ -114,7 +114,7 @@ You can apply this filter in the following ways:
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Specific entity        | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
+| Entidad específica     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
 | Entity selection       | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
@@ -130,7 +130,7 @@ You can apply this technique to:
 - Specific entities
 - Entity sets
 
-#### Dataclass Example
+#### Ejemplo con una dataclass
 
 Las siguientes peticiones devuelven sólo el nombre y el apellido de la clase de datos People (ya sea toda la clase de datos o una selección de entidades basada en la búsqueda definida en `$filter`).
 
@@ -197,7 +197,7 @@ Las siguientes peticiones devuelven sólo el nombre y el apellido de la clase de
 ````
 
 
-#### Entity Example
+#### Ejemplo de entidad
 The following request returns only the first name and last name attributes from a specific entity in the People dataclass:
 
  `GET  /rest/People(3)/firstName,lastName/`
