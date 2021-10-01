@@ -7,7 +7,7 @@ Shapes are [static objects](formObjects_overview.md#active-and-static-objects) t
 
 4D forms support the following basic shapes:
 
-- rectangles
+- rectángulos
 - líneas
 - óvalos
 
@@ -51,7 +51,7 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
 
 
 
-#### JSON Examples:
+#### Ejemplos JSON:
 
 ```
     "myLine": {

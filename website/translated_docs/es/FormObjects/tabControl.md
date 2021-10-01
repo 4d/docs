@@ -82,7 +82,7 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### Acción Goto Page
 
 When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
 

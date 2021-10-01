@@ -66,7 +66,7 @@ This operation is useful when you need to change the current encryption data key
 2. Enter the current data encryption key.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Decrypt all data
+### Desencriptar todos los datos
 This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
 
 1. Click on **Decrypt all data**.

@@ -21,7 +21,7 @@ Enables the "barber shop" variant for the thermometer.
 
 
 ---
-## Display graduation
+## Mostrar graduación
 
 Muestra/Oculta las graduaciones junto a las etiquetas.
 

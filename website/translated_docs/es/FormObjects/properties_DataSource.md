@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Gramática JSON
 
-| Nombre            | Tipos de datos | Valores posibles  |
-| ----------------- | -------------- | ----------------- |
-| currentItemSource | cadena         | Object expression |
+| Nombre            | Tipos de datos | Valores posibles     |
+| ----------------- | -------------- | -------------------- |
+| currentItemSource | cadena         | Expresión del objeto |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md#overview)
@@ -101,9 +101,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### Gramática JSON
 
-| Nombre                    | Tipos de datos | Valores posibles  |
-| ------------------------- | -------------- | ----------------- |
-| currentItemPositionSource | cadena         | Number expression |
+| Nombre                    | Tipos de datos | Valores posibles   |
+| ------------------------- | -------------- | ------------------ |
+| currentItemPositionSource | cadena         | Expresión numérica |
 
 #### Objetos soportados
 [List Box ](listbox_overview.md)

@@ -9,7 +9,7 @@ title:
 
 Los nombres de las clases de datos pueden utilizarse directamente en las peticiones REST para trabajar con entidades, selecciones de entidades o métodos de la clase de datos.
 
-## Available syntaxes
+## Sintaxis disponible
 
 | Sintaxis                                                                   | Ejemplo                     | Descripción                                                                                              |
 | -------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------- |

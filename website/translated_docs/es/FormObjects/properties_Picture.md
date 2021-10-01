@@ -70,4 +70,4 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### Objetos soportados
 
-[Static Picture](staticPicture.md)
+[Imagen estática](staticPicture.md)

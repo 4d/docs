@@ -62,7 +62,7 @@ This request will return all employees whose salary field is higher than 10000.
 
 If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
 
-### Exposing tables
+### Exponer las tablas
 
 By default, all tables are exposed in REST.
 
@@ -75,7 +75,7 @@ To remove the REST exposure for a table:
 2. Uncheck the **Expose as REST resource** option: ![alt-text](assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
 
 
-### Exposing fields
+### Exponer los campos
 
 By default, all 4D database fields are exposed in REST.
 

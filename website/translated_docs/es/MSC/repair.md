@@ -10,7 +10,7 @@ This page is used to repair the data file when it has been damaged. Generalmente
 > Repairing is only available in maintenance mode. Si intenta realizar esta operación en modo estándar, un diálogo de advertencia le informará de que la base se cerrará y se reiniciará en modo de mantenimiento.
 > When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
 
-## File overview
+## Archivos
 
 ### Data file to be repaired
 Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Si realiza una [reparación estándar](#standard_repair), debe seleccionar un archivo de datos que sea compatible con el archivo de estructura abierto. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
@@ -18,11 +18,11 @@ Pathname of the current data file. The **[...]** button can be used to specify a
 ### Original files backup folder
 By default, the original data file will be duplicated before the repair operation. Se colocará en una subcarpeta llamada "Archivos reemplazados (reparando)" en la carpeta de la base. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
 
-### Repaired files
+### Archivos reparados
 4D creates a new blank data file at the location of the original file. El archivo original se traslada a la carpeta llamada "\Replaced Files (Repairing) fecha hora" cuya ubicación se establece en el área de "Carpeta de copia de seguridad de los archivos originales" (carpeta de la base por defecto). The blank file is filled with the recovered data.
 
 
-## Standard repair
+## Reparación estándar
 
 Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
 
@@ -51,7 +51,7 @@ The "Records found in the data file" area includes two tables summarizing the in
 - The second table lists the tables of the project file.
 
 
-### Manual assigning
+### Asignación manual
 If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
 
 ![](assets/en/MSC/mscrepair3.png)
