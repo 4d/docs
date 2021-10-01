@@ -3,7 +3,7 @@ id: installation
 title: Instalación y activación
 ---
 
-Welcome to 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
+¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 
 ## Required configuration
@@ -101,7 +101,7 @@ Your 4D application is now activated.
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
 
-## Adding licenses
+## Añadir las licencias
 
 You can add new licenses, for example to extend the capacities of your application, at any time.
 
