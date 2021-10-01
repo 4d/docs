@@ -7,7 +7,7 @@ title: '$catalog'
 The catalog describes all the dataclasses and attributes available in the datastore.
 
 
-## Available syntaxes
+## Sintaxis disponible
 
 | Sintaxis                                      | Ejemplo              | Descripción                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
@@ -193,8 +193,8 @@ The information you retrieve concerns the following:
 
 *   Dataclass
 *   Attribute(s)
-*   Method(s) if any
-*   Primary key
+*   Método(s) si lo hay
+*   Llave primaria
 
 ### DataClass
 
@@ -216,7 +216,7 @@ Here are the properties for each exposed attribute that are returned:
 
 | Propiedad   | Tipo     | Descripción                                                                                                                                                           |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | Cadena   | Attribute name.                                                                                                                                                       |
+| name        | Cadena   | El nombre del atributo.                                                                                                                                               |
 | kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                                            |
 | fieldPos    | Número   | Position of the field in the database table).                                                                                                                         |
 | scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                     |
