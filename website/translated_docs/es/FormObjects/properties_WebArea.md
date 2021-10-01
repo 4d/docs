@@ -4,7 +4,7 @@ title: Área Web
 ---
 
 ---
-## Access 4D methods
+## Acceder a los métodos 4D
 
 You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
 
@@ -26,7 +26,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 
 ---
-## Progression
+## Variable Progression
 
 Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 
