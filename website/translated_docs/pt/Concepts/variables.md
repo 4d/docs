@@ -63,9 +63,9 @@ The following table lists all supported `varType` values:
 
 | varType        | Contents                              |
 | -------------- | ------------------------------------- |
-| Text           | Text value                            |
+| Texto          | Text value                            |
 | Date           | Date value                            |
-| Time           | Time value                            |
+| Hora           | Time value                            |
 | Boolean        | Boolean value                         |
 | Integer        | Long integer value                    |
 | Real           | Real value                            |

@@ -38,31 +38,34 @@ Générer un package de projet peut être réalisée à l'aide de :
 
 <h3 spaces-before="0">Paramètres du générateur d'application</h3>
 
-<p spaces-before="0">Chaque paramètre de générateur d'application est stocké en tant que clé XML dans le fichier de l'application nommé <code>buildApp.4DSettings`, situé dans le dossier `Settings` du projet.</p> 
+<p spaces-before="0">Dans le fichier <em x-id="3">buildApp.4DSettings</em> de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :</p>
+
+<p spaces-before="0">Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur <strong x-id="1">Construire</strong> ou <strong x-id="1">Enregistrer les paramètres</strong>. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande <a href="https://doc.4d.com/4dv19/help/command/en/page871.html">BUILD APPLICATION</a>.</p>
+
+<p spaces-before="2">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
+
+<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
+
+<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel <a href="https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html">4D Clés XML BuildApplication</a>.</p>
+
+<h3 spaces-before="0">Fichier d'historique</h3>
+
+<p spaces-before="0">Lorsqu'une application est créée, 4D génère un fichier journal nommé <em x-id="3">BuildApp.log.xml</em> dans le dossier <strong x-id="1">Logs</strong> du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :</p>
+
+<ul>
+<li>Le début et la fin de la génération des cibles,</li>
+<li>Le nom et le chemin d'accès complet des fichiers générés,</li>
+<li>La date et l'heure de la génération,</li>
+<li>Toutes les erreurs qui se sont produites,</li>
+<li>Tout problème de signature (par exemple, un plug-in non signé).</li>
+</ul>
+
+<p spaces-before="0">La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. </p>
+
+<blockquote spaces-before="0">
+  <p spaces-before="0">Utilisez la commande <code>Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. </p> </blockquote> 
   
-  Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
   
-  Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
-  
-  
-
-### Fichier d'historique
-
-Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
-
-- Le début et la fin de la génération des cibles,
-- Le nom et le chemin d'accès complet des fichiers générés,
-- La date et l'heure de la génération,
-- Toutes les erreurs qui se sont produites,
-- Tout problème de signature (par exemple, un plug-in non signé).
-
-La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. 
-
-
-
-> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. 
-
-
 
 
 

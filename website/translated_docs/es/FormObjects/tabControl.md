@@ -15,11 +15,11 @@ The screens can represent pages in a multi-page form or an object that changes w
 
 Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
-Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+Cada pestaña puede mostrar etiquetas o rótulos y un pequeño icono. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
 
 ![](assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+When you create a tab control, 4D manages the spacing and placement of the tabs. Sólo tiene que suministrar las etiquetas en forma de array, o los iconos y etiquetas en forma de lista jerárquica.
 
 If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
 
@@ -41,9 +41,9 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 
 
-## Adding labels to a tab control
+## Añadir etiquetas a un control de pestañas
 
-To supply the labels for a tab control, you can use:
+Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 - un objeto
 - a choice list
@@ -53,11 +53,11 @@ To supply the labels for a tab control, you can use:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
-| Propiedad      | Tipo      | Descripción                                                                                                                           |
-| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Colección | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number    | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | Texto     | Currently selected value                                                                                                              |
+| Propiedad      | Tipo       | Descripción                                                                                                                           |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
+| `currentValue` | Texto      | Currently selected value                                                                                                              |
 
 The initialization code must be executed before the form is presented to the user.
 
@@ -112,7 +112,7 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### Acción Goto Page
 
 When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
 

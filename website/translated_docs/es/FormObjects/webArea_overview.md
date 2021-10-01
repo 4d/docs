@@ -26,13 +26,13 @@ You can choose between [two rendering engines](properties_WebArea.md#use-embedde
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the web area.
 
-### Access 4D methods
+### Acceder a los métodos 4D
 
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
 
 > This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-### $4d object
+### Objeto $4d
 
 
 The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
@@ -148,7 +148,7 @@ In addition, web areas support the following generic form events:
 
 ## Reglas de las áreas web
 
-### User interface
+### Interfaz de usuario
 
 When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
 
@@ -156,7 +156,7 @@ When the form is executed, standard browser interface functions are available to
 - **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
 
-### Subforms
+### Subformularios
 
 For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 

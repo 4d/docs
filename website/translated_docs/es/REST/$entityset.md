@@ -6,7 +6,7 @@ title: '$entityset'
 After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
 
-## Available syntaxes
+## Sintaxis disponible
 
 | Sintaxis                                                                                                   | Ejemplo                                                                            | Descripción                                                  |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -40,10 +40,10 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Tipo   | Descripción                                                    |
+| Parámetros       | Tipo   | Descripción                                                    |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | Cadena | One of the logical operators to test with the other entity set |
-| $otherCollection | Cadena | Entity set ID                                                  |
+| $otherCollection | Cadena | ID del conjunto de entidades                                   |
 
 
 

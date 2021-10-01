@@ -269,7 +269,7 @@ To declare generic parameters, you use a compiler directive to which you pass ${
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Les types de $1, $2 et $3 pourront être quelconques.
 
 > The number in the declaration has to be a constant and not a variable.
 

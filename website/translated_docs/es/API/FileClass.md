@@ -28,7 +28,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
 | [<!-- INCLUDE #document.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
 | [<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->|
-| [<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
+| [<!-- INCLUDE #document.getContent().Syntax -->](#getContent)<p><!-- INCLUDE #document.getContent().Summary -->|
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 | [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
@@ -55,10 +55,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ## File
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -66,11 +66,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Tipo    |    | Descripción                                     |
+| Parámetros   | Tipo    |    | Descripción                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
-| fileConstant | Entero  | -> | 4D file constant                                |
-| pathType     | Entero  | -> | `fk posix path` (default) or `fk platform path` |
+| fileConstant | Integer | -> | 4D file constant                                |
+| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
 | Resultado    | 4D.File | <- | New file object                                 |
 <!-- END REF -->
@@ -88,7 +88,7 @@ In the *path* parameter, pass a file path string. You can use a custom string or
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Valor | Comment                                                                                 |
+| Constante        | Valor | Comentario                                                                              |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -97,7 +97,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
 
-| Constant                          | Valor | Comment                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19    | Backup history file (see Configuration and trace files). Stored in the backup destination folder.                                                                                                                                                                                                                                                                                                        |
 | Backup log file                   | 13    | Current backup journal file. Stored in the application Logs folder.                                                                                                                                                                                                                                                                                                                                      |
@@ -129,10 +129,10 @@ If the command is called from a component, pass the optional * parameter to get 
 
 ## 4D.File.new()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R6  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
@@ -152,10 +152,10 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!-- REF file.create().Desc -->
 ## .create()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 <!--REF file.create().Note -->
@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Tipo     |    | Descripción                                                |
-| --------- | -------- | -- | ---------------------------------------------------------- |
-| Resultado | Booleano | <- | True if the file was created successfully, false otherwise |
+| Parámetros | Tipo     |    | Descripción                                                |
+| ---------- | -------- | -- | ---------------------------------------------------------- |
+| Resultado  | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Descripción
@@ -199,21 +199,21 @@ Creation of a preferences file in the database folder:
 <!-- REF file.createAlias().Desc -->
 ## .createAlias()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parameter         | Tipo      |    | Descripción                                  |
+| Parámetros        | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Entero    | -> | Type of the alias link                       |
+| aliasType         | Integer   | -> | Type of the alias link                       |
 | Resultado         | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
@@ -226,7 +226,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Valor | Comment                    |
+| Constante          | Valor | Comentario                 |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -263,10 +263,10 @@ You want to create an alias to a file in your database folder:
 <!-- REF file.delete().Desc -->
 ## .delete()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -275,9 +275,9 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parameter | Tipo |  | Descripción                     |
-| --------- | ---- |  | ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
 <!-- END REF -->
 
 
@@ -322,19 +322,19 @@ You want to delete a specific file in the database folder:
 <!-- REF file.getAppInfo().Desc -->
 ## .getAppInfo()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v19     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19     | Añadidos       |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter | Tipo   |    | Descripción                                           |
-| --------- | ------ | -- | ----------------------------------------------------- |
-| Resultado | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
+| Parámetros | Tipo   |    | Descripción                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| Resultado  | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -441,10 +441,10 @@ ALERT($info.Copyright)
 <!-- REF file.moveTo().Desc -->
 ## .moveTo()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -452,7 +452,7 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parameter         | Tipo      |    | Descripción                  |
+| Parámetros        | Tipo      |    | Descripción                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | Texto     | -> | Full name for the moved file |
@@ -509,10 +509,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- REF file.rename().Desc -->
 ## .rename()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -520,10 +520,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parameter | Tipo    |    | Descripción                |
-| --------- | ------- | -- | -------------------------- |
-| newName   | Texto   | -> | New full name for the file |
-| Resultado | 4D.File | <- | Renamed file               |
+| Parámetros | Tipo    |    | Descripción                |
+| ---------- | ------- | -- | -------------------------- |
+| newName    | Texto   | -> | New full name for the file |
+| Resultado  | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
 #### Descripción
@@ -553,19 +553,19 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- REF file.setAppInfo().Desc -->
 ## .setAppInfo()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v19     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19     | Añadidos       |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Tipo   |    | Descripción                                                      |
-| --------- | ------ | -- | ---------------------------------------------------------------- |
-| info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
+| Parámetros | Tipo   |    | Descripción                                                      |
+| ---------- | ------ | -- | ---------------------------------------------------------------- |
+| info       | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -637,10 +637,10 @@ $infoPlistFile.setAppInfo($info)
 <!-- REF file.setContent().Desc -->
 ## .setContent()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -648,9 +648,9 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parameter | Tipo |    | Descripción               |
-| --------- | ---- | -- | ------------------------- |
-| content   | BLOB | -> | New contents for the file |
+| Parámetros | Tipo |    | Descripción               |
+| ---------- | ---- | -- | ------------------------- |
+| content    | BLOB | -> | New contents for the file |
 <!-- END REF -->
 
 
@@ -675,10 +675,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 ## .setText()
 
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -687,12 +687,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Tipo   |    | Descripción                                                |
-| ----------- | ------ | -- | ---------------------------------------------------------- |
-| texto       | Texto  | -> | Text to store in the file                                  |
-| charSetName | Texto  | -> | Name of character set                                      |
-| charSetNum  | Entero | -> | Number of character set                                    |
-| breakMode   | Entero | -> | Processing mode for line breaks|<!-- END REF -->
+| Parámetros  | Tipo    |    | Descripción                                                |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| texto       | Texto   | -> | Text to store in the file                                  |
+| charSetName | Texto   | -> | Name of character set                                      |
+| charSetNum  | Integer | -> | Number of character set                                    |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 
@@ -715,7 +715,7 @@ If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the 
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 
-| Constant                      | Valor | Comment                                                                                                                                                        |
+| Constante                     | Valor | Comentario                                                                                                                                                     |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | No processing                                                                                                                                                  |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |

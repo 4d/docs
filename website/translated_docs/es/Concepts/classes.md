@@ -50,7 +50,7 @@ Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 
 Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el siguiente archivo:
 
-- Project folder
+- Carpeta Project
     + Project
         * Sources
             - Clases
@@ -107,7 +107,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 #### cs -> classStore
 
-| Parameter  | Tipo   |    | Descripción                                       |
+| Parámetros | Tipo   |    | Descripción                                       |
 | ---------- | ------ | -- | ------------------------------------------------- |
 | classStore | objeto | <- | Class store usuario para el proyecto o componente |
 
@@ -125,7 +125,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | Tipo   |    | Descripción    |
+| Parámetros | Tipo   |    | Descripción    |
 | ---------- | ------ | -- | -------------- |
 | classStore | objeto | <- | Class store 4D |
 
@@ -144,7 +144,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Un objeto class tiene las propiedades y funciones siguientes:
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Un objeto class tiene las propiedades y funciones siguientes:
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
@@ -179,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Las funciones de clase son propiedades específicas de la clase. Las funciones de clase son propiedades específicas de la clase.
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 

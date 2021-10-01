@@ -27,7 +27,7 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 
 You can then start developing your project.
 
-## Opening a project
+## Abrir un proyecto
 
 To open an existing project from 4D:
 
@@ -39,7 +39,7 @@ To open an existing project from 4D:
     - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
     - *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
-### Options
+### Opciones
 
 In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
 
@@ -53,11 +53,11 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 4D offers several ways to open projects directly and bypass the Open dialog:
 
-- via menu options:
+- mediante las opciones de menú:
     -   *Menu bar* - **File** > **Open Recent Projects / {project name}**
     -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
 
-- via preferences:
+- vía las preferencias:
     -   Set the **At startup** general preference to **Open last used project**.
 
 - using a `.4DLink` file.
@@ -96,7 +96,7 @@ That folder is divided into two subfolders:
 4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 
 
-## File saving
+## Guardado de archivos
 
 When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 

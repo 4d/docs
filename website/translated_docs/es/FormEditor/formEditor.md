@@ -19,9 +19,9 @@ You can show or hide several interface elements on the current page of the form:
 - **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
 - **Rulers**: Rulers of the Form editor’s window.
 - **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
+- **Etiquetas de los marcadores**: etiquetas de los marcadores, disponibles sólo cuando se muestran las líneas de control de salida. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
 - **Limits**: Form’s limits. Cuando se selecciona esta opción, el formulario se muestra en el editor de formularios tal y como aparece en el modo Aplicación. De esta manera puede ajustar su formulario sin tener que cambiar al modo Aplicación para ver el resultado.
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Cuando se utilizan estos parámetros, los límites se basan en los objetos del formulario. Cuando se modifica el tamaño de un objeto que se encuentra junto al límite del formulario, el rectángulo de delimitación se modifica para reflejar ese cambio.
+> > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Cuando se utilizan estos parámetros, los límites se basan en los objetos del formulario. Cuando se modifica el tamaño de un objeto que se encuentra junto al límite del formulario, el rectángulo de delimitación se modifica para reflejar ese cambio.
 
 #### Default display
 
@@ -39,7 +39,7 @@ You can display or hide elements at any moment in the Form editor’s current wi
 ![](assets/en/FormEditor/showHideElements.png)
 
 
-### Rulers
+### Reglas
 
 Las reglas laterales e inferiores le ayudan a posicionar los objetos en el formulario. They can be [displayed or hidden](#display-options).
 
@@ -95,7 +95,7 @@ The current variant of the theme is the object that will be inserted in the form
 
 ![](assets/en/FormEditor/objectBar.png)
 
-You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
+You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). Esta función facilita la creación de varios objetos sucesivos del mismo tipo. Para cancelar una selección continua, haga clic en otro objeto o herramienta.
 
 ### Lista de propiedades
 
@@ -103,7 +103,7 @@ Both forms and form objects have properties that control access to the form, the
 
 Puede visualizar y modificar las propiedades de los objetos y formularios utilizando la lista de propiedades. Muestra las propiedades del formulario o de los objetos en función de lo que se seleccione en la ventana del editor.
 
-To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
+To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. También puede mostrarlo haciendo doble clic en una área vacía del formulario.
 
 #### Accesos directos de navegación
 
@@ -416,7 +416,7 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 Select one of the following preview modes from the menu:
 
-| Toolbar Icon                         | CSS Preview Mode | Descripción                                                                                                   |
+| Icono barra de herramientas          | CSS Preview Mode | Descripción                                                                                                   |
 | ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/FormEditor/cssNo.png)  | Ninguno          | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
 | ![](assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
@@ -549,7 +549,7 @@ A continuación se describe cada tipo de escudo:
 | ![](assets/en/FormEditor/viewNumber.png)     | Vista actual                       | Para todos los objetos de la vista actual                                                                                                        |
 | ![](assets/en/FormEditor/cssShield.png)      | [Hoja de estilo](stylesheets.html) | Para objetos con uno o más valores de atributos reemplazados por una hoja de estilo.                                                             |
 | ![](assets/en/FormEditor/filter.png)         | Filtro                             | Para los objetos introducibles con un filtro de entrada asociado                                                                                 |
-| ![](assets/en/FormEditor/helpTip.png)        | Help Tip                           | Para los objetos con un mensaje de ayuda asociado                                                                                                |
+| ![](assets/en/FormEditor/helpTip.png)        | Mensaje de ayuda                   | Para los objetos con un mensaje de ayuda asociado                                                                                                |
 | ![](assets/en/FormEditor/localized.png)      | Localizado                         | Para los objetos cuya etiqueta proviene de una referencia (etiqueta que empieza por ":"). La referencia puede ser de tipo recurso (STR#) o XLIFF |
 | ![](assets/en/FormEditor/noShields.png)      | Sin marcas                         | No aparecen marcas                                                                                                                               |
 

@@ -168,7 +168,7 @@
         "title": "String"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "Hora"
       },
       "Concepts/variant": {
         "title": "Variant"
@@ -550,7 +550,7 @@
         "title": "Subform"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "Texto"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Text and Picture"
@@ -586,7 +586,7 @@
         "title": "Tab Controls"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "Texto"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro area"

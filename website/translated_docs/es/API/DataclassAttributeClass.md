@@ -16,7 +16,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-### Summary
+### Resumen
 
 |                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,10 +38,10 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 <!-- REF DataClassAttributeClass.autoFilled.Desc -->
 ## .autoFilled
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -53,7 +53,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
 
-*   "Autoincrement", for numeric type fields
+*   "Autoincremento", para campos de tipo numérico
 *   "Auto UUID", for UUID (alpha type) fields.
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
@@ -68,10 +68,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -95,10 +95,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.fieldType.Desc -->
 ## .fieldType
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -110,9 +110,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see [`.kind`](#kind)).
 
-**Possible values:**
+**Valores posibles:**
 
-| dataClassAttribute.kind | fieldType                   | Comment            |
+| dataClassAttribute.kind | fieldType                   | Comentario         |
 | ----------------------- | --------------------------- | ------------------ |
 | storage                 | Corresponding 4D field type | See `Type` command |
 | relatedEntity           | 38 (Is object)              |                    |
@@ -125,10 +125,10 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -151,10 +151,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.inverseName.Desc -->
 ## .inverseName
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -177,10 +177,10 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 <!-- REF DataClassAttributeClass.keyWordIndexed.Desc -->
 ## .keyWordIndexed
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -202,10 +202,10 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- REF DataClassAttributeClass.kind.Desc -->
 ## .kind
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -244,10 +244,10 @@ Given the following table and relation:
 <!-- REF DataClassAttributeClass.mandatory.Desc -->
 ## .mandatory
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -271,10 +271,10 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- REF DataClassAttributeClass.name.Desc -->
 ## .name
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -300,10 +300,10 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 <!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 
 </details>
 
@@ -337,10 +337,10 @@ Given the following tables and relations:
 <!-- REF DataClassAttributeClass.type.Desc -->
 ## .type
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -354,9 +354,9 @@ The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains t
 
 The conceptual value type depends on the attribute [`.kind`](#kind).
 
-**Possible values:**
+**Valores posibles:**
 
-| dataClassAttribute.kind | type                                                    | Comment                                                                                                                                    |
+| dataClassAttribute.kind | type                                                    | Comentario                                                                                                                                 |
 | ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | storage                 | "number", "date", "object", "bool", "image", o "string" | "number" se devuelve para cualquier tipo numérico, incluyendo la duración. "string" se devuelve para los tipos de campo uuid, alfa y texto |
 | relatedEntity           | related dataClass name                                  | Ex: "Companies"                                                                                                                            |
@@ -370,10 +370,10 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 <!-- REF DataClassAttributeClass.unique.Desc -->
 ## .unique
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 

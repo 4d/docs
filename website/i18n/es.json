@@ -9,7 +9,7 @@
         "title": "Command Line Interface"
       },
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Explorador de datos Web"
       },
       "Admin/debugLogFiles": {
         "title": "Description of log files"
@@ -27,7 +27,7 @@
         "title": "Class"
       },
       "API/CollectionClass": {
-        "title": "Colección"
+        "title": "Collection"
       },
       "API/CryptoKeyClass": {
         "title": "CryptoKey"
@@ -78,7 +78,7 @@
         "title": "POP3Transporter"
       },
       "API/SessionClass": {
-        "title": "Session"
+        "title": "Sesión"
       },
       "API/SignalClass": {
         "title": "Signal"
@@ -144,7 +144,7 @@
         "title": "Booleano"
       },
       "Concepts/collection": {
-        "title": "Colección"
+        "title": "Collection"
       },
       "Concepts/date": {
         "title": "Fecha"
@@ -680,10 +680,10 @@
         "title": "Utilizar un almacén de datos remoto"
       },
       "Preferences/forms": {
-        "title": "Forms Page"
+        "title": "Página formulario"
       },
       "Preferences/general": {
-        "title": "General Page"
+        "title": "Página general"
       },
       "Preferences/methods": {
         "title": "Methods Page"
@@ -906,7 +906,7 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
     "Description of log files|no description given": "Description of log files",

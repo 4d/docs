@@ -49,10 +49,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ## Folder
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
@@ -60,11 +60,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Tipo      |    | Descripción                                     |
+| Parámetros     | Tipo      |    | Descripción                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Texto     | -> | Folder path                                     |
-| folderConstant | Entero    | -> | 4D folder constant                              |
-| pathType       | Entero    | -> | `fk posix path` (default) or `fk platform path` |
+| folderConstant | Integer   | -> | 4D folder constant                              |
+| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
 | Resultado      | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
@@ -82,7 +82,7 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Valor | Comment                                                                                 |
+| Constante        | Valor | Comentario                                                                              |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -91,7 +91,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Constant                   | Valor | Comment                                                                                             |
+| Constante                  | Valor | Comentario                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
 | fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
@@ -112,10 +112,10 @@ If the command is called from a component, pass the optional * parameter to get 
 
 ## 4D.Folder.new()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R6  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R6  | Añadidos       |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
@@ -135,10 +135,10 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!-- REF folder.create().Desc -->
 ## .create()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -147,9 +147,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Tipo     |    | Descripción                                                  |
-| --------- | -------- | -- | ------------------------------------------------------------ |
-| Resultado | Booleano | <- | True if the folder was created successfully, false otherwise |
+| Parámetros | Tipo     |    | Descripción                                                  |
+| ---------- | -------- | -- | ------------------------------------------------------------ |
+| Resultado  | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
@@ -195,10 +195,10 @@ End if
 <!-- REF folder.createAlias().Desc -->
 ## .createAlias()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -208,11 +208,11 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Tipo      |    | Descripción                                  |
+| Parámetros        | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Entero    | -> | Type of the alias link                       |
+| aliasType         | Integer   | -> | Type of the alias link                       |
 | Resultado         | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
@@ -225,7 +225,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Valor | Comment                    |
+| Constante          | Valor | Comentario                 |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -257,10 +257,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF folder.delete().Desc -->
 ## .delete()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Tipo   |    | Descripción            |
-| --------- | ------ | -- | ---------------------- |
-| option    | Entero | -> | Folder deletion option |
+| Parámetros | Tipo    |    | Descripción            |
+| ---------- | ------- | -- | ---------------------- |
+| option     | Integer | -> | Folder deletion option |
 <!-- END REF -->
 
 
@@ -283,7 +283,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constant               | Valor | Comment                                          |
+| Constante              | Valor | Comentario                                       |
 | ---------------------- | ----- | ------------------------------------------------ |
 | `Delete only if empty` | 0     | Deletes folder only when it is empty             |
 | `Delete with contents` | 1     | Deletes folder along with everything it contains |
@@ -373,10 +373,10 @@ When `Delete with contents` is passed:
 <!-- REF folder.moveTo().Desc -->
 ## .moveTo()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 
@@ -384,7 +384,7 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Tipo      |    | Descripción                    |
+| Parámetros        | Tipo      |    | Descripción                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
@@ -443,10 +443,10 @@ You want to move and rename a folder:
 <!-- REF folder.rename().Desc --> 
 ## .rename()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R5  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
@@ -454,10 +454,10 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Tipo      |    | Descripción                  |
-| --------- | --------- | -- | ---------------------------- |
-| newName   | Texto     | -> | New full name for the folder |
-| Resultado | 4D.Folder | <- | Renamed folder               |
+| Parámetros | Tipo      |    | Descripción                  |
+| ---------- | --------- | -- | ---------------------------- |
+| newName    | Texto     | -> | New full name for the folder |
+| Resultado  | 4D.Folder | <- | Renamed folder               |
 <!-- END REF -->
 
 

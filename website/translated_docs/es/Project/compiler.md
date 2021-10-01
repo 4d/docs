@@ -140,10 +140,10 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 #### Compilation Target
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v19     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19     | Añadidos       |
 </details>
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
@@ -153,7 +153,7 @@ This setting allows you to select the processor family for which your 4D project
 
 Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
-| *Option*                                         | *on Windows Intel/AMD*                                                                    | *on macOS Intel*                                                                            | *on macOS Silicon*                                                                          |
+| *Option*                                         | *on Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *on macOS Silicon*                                                                          |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
 | **My processor (processor)**                     | Code for Intel/AMD                                                                        | Code for Intel/AMD                                                                          | Code for Apple Silicon                                                                      |
@@ -288,8 +288,8 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 
 |                | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
 | -------------- |:-------------------:|:---------------------:|:-----------------------:|
-| On Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
-| On Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
+| En Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
+| Intel Mac      |      &#10003;       |       &#10003;        |        &#10003;         |
 | On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 
 

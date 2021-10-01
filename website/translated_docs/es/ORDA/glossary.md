@@ -71,7 +71,7 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy
+## Copia profunda
 
 A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
@@ -184,7 +184,7 @@ Entity selections may refer to related entities according to the relation attrib
 
 A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
 
-## Session
+## Sesión
 
 When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
 

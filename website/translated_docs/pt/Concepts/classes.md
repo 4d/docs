@@ -93,7 +93,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
     - a class function is a code block
     - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
     - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format.
+- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>. \<FunctionName> format.
 
 ## Class stores
 

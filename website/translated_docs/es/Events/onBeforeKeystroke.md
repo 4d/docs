@@ -7,9 +7,9 @@ title: On Before Keystroke
 | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 17   | [Área 4D Write Pro ](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Formulario - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna list box](FormObjects/listbox_overview.md#list-box-columns) | Un personaje está a punto de ser introducido en el objeto que tiene el foco. `Get edited text` devuelve el texto del objeto **sin** este carácter. |
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes                                                                                                          |
+| Versión | Modificaciones                                                                                                   |
 | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | v18 R5  | - Support in non-enterable list boxes<p>- The event is now triggered after IME validation |
 </details>

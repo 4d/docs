@@ -468,7 +468,7 @@ This property is **read-only**.
 | Parameter         | Type      |    | Description                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Text      | -> | Name for the copy                           |
+| newName           | Texto     | -> | Name for the copy                           |
 | overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
 | Result            | 4D.File   | <- | Copied file                                 |
 <!-- END REF -->
@@ -604,10 +604,10 @@ File icon [picture](../Concepts/picture.html).
 <!-- REF #document.getText().Params -->
 | Parameter   | Type    |    | Description                     |
 | ----------- | ------- | -- | ------------------------------- |
-| charSetName | Text    | -> | Name of character set           |
+| charSetName | Texto   | -> | Name of character set           |
 | charSetNum  | Integer | -> | Number of character set         |
 | breakMode   | Integer | -> | Processing mode for line breaks |
-| Result      | Text    | <- | Text from the document          |
+| Result      | Texto   | <- | Text from the document          |
 <!-- END REF -->
 
 

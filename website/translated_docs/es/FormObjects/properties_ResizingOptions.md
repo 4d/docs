@@ -123,15 +123,15 @@ When this property is not applied to the splitter, the result is as follows:
 
 
 ---
-## Resizable
+## Redimensionable
 
 Designates if the size of the column can be modified by the user.
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles |
-|:--------- |:--------------:|:----------------:|
-| resizable |    booleano    | "true", "false"  |
+| Nombre          | Tipos de datos | Valores posibles |
+|:--------------- |:--------------:|:----------------:|
+| redimensionable |    booleano    | "true", "false"  |
 
 #### Objetos soportados
 

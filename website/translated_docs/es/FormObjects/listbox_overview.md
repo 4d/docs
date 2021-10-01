@@ -32,7 +32,7 @@ El usuario puede seleccionar una o varias líneas utilizando los atajos estánda
 Un list box se compone de cuatro partes distintas:
 
 *   el objeto list box en su totalidad,
-*   columns,
+*   las columnas,
 *   column headers, and
 *   column footers.
 
@@ -563,7 +563,7 @@ Priority and inheritance principles are observed when the same property is set a
 
 | Priority level | Setting location                                                     |
 | -------------- | -------------------------------------------------------------------- |
-| high priority  | Cell (if multi-style text)                                           |
+| alta prioridad | Cell (if multi-style text)                                           |
 |                | Column arrays/methods                                                |
 |                | List box arrays/methods                                              |
 |                | Column properties                                                    |
@@ -601,10 +601,10 @@ To restore the original appearance of the list box, you can:
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
-| Propiedad        | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                           |
-| ---------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Background color | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Color de fuente  | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
+| Propiedad       | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                           |
+| --------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Color de fondo  | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
+| Color de fuente | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
  Font style|
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
@@ -624,7 +624,7 @@ Printing a list box in preview mode consists of directly printing the list box a
 
 In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
 
-In this mode:
+En este modo:
 
 - The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
@@ -854,11 +854,11 @@ ARRAY OBJECT(obColumn;0) //column array
 
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
-*   "text": for a text value
+*   "text": para un valor de texto
 *   "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
 *   "integer": para un valor entero
 *   "boolean": for a True/False value
-*   "color": to define a background color
+*   "color": para definir un color de fondo
 *   "event": to display a button with a label.
 
 4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
@@ -868,8 +868,8 @@ When a list box column is associated with an object array, the way a cell is dis
 | texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| booleano  | check box                                      | drop-down menu (required list)                                                                 |
-| color     | background color                               | texto                                                                                          |
+| booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
+| color     | color de fondo                                 | texto                                                                                          |
 | evento    | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
@@ -886,7 +886,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 |            |                                                            | "0-9" and "." if min>=0 |
 | integer    | same as defined in object                                  | "0-9" y "-"             |
 |            |                                                            | "0-9" if min>=0         |
-| Booleano   | check box                                                  | N/A                     |
+| Booleano   | casilla de selección                                       | N/A                     |
 | color      | N/A                                                        | N/A                     |
 | evento     | N/A                                                        | N/A                     |
 
@@ -900,7 +900,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
 | *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
 | value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
-| min                   | minimum value                           |       | x    | x       |          |       |        |
+| min                   | valor mínimo                            |       | x    | x       |          |       |        |
 | max                   | maximum value                           |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
 | requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |        |
@@ -918,7 +918,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+Cell values are stored in the "value" attribute. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
  ARRAY OBJECT(obColumn;0) //array columna 
@@ -986,7 +986,7 @@ Cuando un atributo "choiceList" o "requiredList" está presente dentro del objet
 *   If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
-> The widget values are defined through an array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
+> Los valores del widget se definen a través de un array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
 
 Ejemplos:
 
@@ -1168,7 +1168,7 @@ OB SET($ob;"label";"Edit...")
 ![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
 
-### Event management
+### Gestión de eventos
 Several events can be handled while using an object list box array:
 
 *   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:

@@ -30,7 +30,7 @@ This log file records standard requests carried out by the 4D Server machine or 
 
 How to start this log:
 
-*   on the server:
+*   en el servidor:
 
 ```4d
 SET DATABASE PARAMETER(4D Server log recording;1)
@@ -54,7 +54,7 @@ This file starts with the following headers:
 *   Hostname of the server that hosts the application
 *   User Login Name: login on the OS of the user that ran the 4D application on the server.
 
-#### Contents
+#### Contenido
 
 For each request, the following fields are logged:
 
@@ -83,7 +83,7 @@ This log file records information on each process created on the 4D Server machi
 
 How to start this log:
 
-*   on the server:
+*   en el servidor:
 
 ```4d
 SET DATABASE PARAMETER(4D Server log recording;1) //server side
@@ -105,7 +105,7 @@ This file starts with the following headers:
 *   User Login Name: login on the OS of the user that ran the 4D application on the server.
 
 
-#### Contents
+#### Contenido
 
 For each process, the following fields are logged:
 
@@ -135,7 +135,7 @@ How to start this log:
 
 ```4d
 WEB SET OPTION(Web debug log;wdl enable without body)  
-//other values are available
+//otros valores están disponibles
 ```
 
 The following fields are logged for both Request and Response:
@@ -197,7 +197,7 @@ The following fields are logged for each event:
 | 3        | ProcessID                       | Process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | 4        | unique_processID                | Unique process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 5        | stack_level                     | Stack level                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 6        | operation_type                  | Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th. |
+| 6        | operation_type                  | Log operation type. This value may be an absolute value:<p><ol><li>Comando</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th. |
 | 7        | operation                       | May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 8        | operation_parameters            | Parameters passed to commands, methods, or plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 9        | form_event                      | Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -278,7 +278,7 @@ The log files can be produced in two versions:
     $transporter:=IMAP New transporter($server)
     ```
 
-#### Contents
+#### Contenido
 
 For each request, the following fields are logged:
 

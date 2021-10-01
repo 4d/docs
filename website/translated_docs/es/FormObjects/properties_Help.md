@@ -4,7 +4,7 @@ title: Ayuda
 ---
 
 ---
-## Help Tip
+## Mensaje de ayuda
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
@@ -41,7 +41,7 @@ You can also associate help messages with form objects in two other ways:
 When different tips are associated with the same object in several locations, the following priority order is applied:
 
 1. structure level (lowest priority)
-2. form editor level
+2. editor de formulario
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
 

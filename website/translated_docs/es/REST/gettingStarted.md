@@ -7,7 +7,7 @@ title: Comencemos
 
 The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+This section is intended to help familiarize you with REST functionality by means of a simple example. Vamos a:
 - create and configure a basic 4D application project
 - access data from the 4D project through REST using a standard browser.
 

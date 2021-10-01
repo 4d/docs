@@ -3,7 +3,7 @@ id: gettingStarted
 title: Comencemos
 ---
 
-This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
+This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. ¡Empecemos!
 
 
 ## Hello World Example
@@ -17,7 +17,7 @@ To start the 4D web server:
 1. Launch your 4D application and create a new, empty 4D project.
 2. In the **Run** menu, select **Start Web Server**.
 
-That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+¡Eso es todo! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
 
 ### Displaying the default home page
 

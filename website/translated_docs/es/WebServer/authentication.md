@@ -101,7 +101,7 @@ The `On Web Authentication` database method is NOT called:
 | $3         | Texto    | <- | IP address of the web client (browser)            |
 | $4         | Texto    | <- | IP address of the server                          |
 | $5         | Texto    | <- | User name                                         |
-| $6         | Texto    | <- | Password                                          |
+| $6         | Texto    | <- | Contraseña                                        |
 | $0         | Booleano | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:

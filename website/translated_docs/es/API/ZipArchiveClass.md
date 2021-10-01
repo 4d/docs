@@ -30,7 +30,7 @@ If($zipFile.extension=".txt")
 End if
 ```
 
-### Summary
+### Resumen
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,23 +39,23 @@ End if
 
 ## ZIP Create archive
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18     | Añadidos       |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parameter       | Tipo      |    | Descripción                                          |
+| Parámetros      | Tipo      |    | Descripción                                          |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
 | zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
-| options         | Entero    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Resultado       | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
@@ -129,7 +129,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
   
   <tr>
     <td>
-      callback
+      retrollamada
     </td>
     
     <td>
@@ -153,7 +153,7 @@ The returned status object contains the following properties:
 | Propiedad  | Tipo     | Descripción                                                                                                                             |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Entero   | Status code                                                                                                                             |
+| status     | Integer  | Status code                                                                                                                             |
 | success    | Booleano | True if archive created successfully, else false                                                                                        |
 
 
@@ -200,7 +200,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### Ejemplo 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -239,7 +239,7 @@ To compress a ZIP archive structure with a password and progress bar:
 
 
 
-#### Example 4
+#### Ejemplo 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
 
@@ -266,21 +266,21 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 ## ZIP Read archive
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18     | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18     | Añadidos       |
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parameter | Tipo          |    | Descripción                 |
-| --------- | ------------- |:--:| --------------------------- |
-| zipFile   | 4D.File       | -> | Zip archive file            |
-| password  | Texto         | -> | ZIP archive password if any |
-| Resultado | 4D.ZipArchive | <- | Archive object              |
+| Parámetros | Tipo          |    | Descripción                 |
+| ---------- | ------------- |:--:| --------------------------- |
+| zipFile    | 4D.File       | -> | Zip archive file            |
+| contraseña | Texto         | -> | ZIP archive password if any |
+| Resultado  | 4D.ZipArchive | <- | Archive object              |
 <!-- END REF -->
 
 

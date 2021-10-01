@@ -26,7 +26,7 @@ ASSERT($status.success)
 ```
 
 
-### Summary
+### Resumen
 |                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
@@ -49,17 +49,17 @@ ASSERT($status.success)
 
 ## 4D.CryptoKey.new()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parameter  | Tipo         |    | Descripción                                                            |
+| Parámetros | Tipo         |    | Descripción                                                            |
 | ---------- | ------------ | -- | ---------------------------------------------------------------------- |
 | parámetros | Objeto       | -> | Settings to generate or load a key pair                                |
 | result     | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
@@ -89,10 +89,10 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 <!-- REF CryptoKey.curve -->
 ## .curve
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -108,21 +108,21 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| Parameter | Tipo   |    | Descripción                                                                   |
-| --------- | ------ | -- | ----------------------------------------------------------------------------- |
-| message   | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options   | Objeto | -> | Decoding options                                                              |
-| Resultado | Objeto | <- | Status                                                                        |
+| Parámetros | Tipo   |    | Descripción                                                                   |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------- |
+| message    | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
+| options    | Objeto | -> | Decoding options                                                              |
+| Resultado  | Objeto | <- | Estado                                                                        |
 <!-- END REF -->
 
 
@@ -157,21 +157,21 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF CryptoKey.encrypt().Desc -->
 ## .encrypt()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parameter | Tipo   |    | Descripción                                                                   |
-| --------- | ------ | -- | ----------------------------------------------------------------------------- |
-| message   | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
-| options   | Objeto | -> | Encoding options                                                              |
-| Resultado | Texto  | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
+| Parámetros | Tipo   |    | Descripción                                                                   |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------- |
+| message    | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
+| options    | Objeto | -> | Encoding options                                                              |
+| Resultado  | Texto  | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
 <!-- END REF -->
 
 The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -198,10 +198,10 @@ The returned value is an encrypted message.
 <!-- REF CryptoKey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
@@ -209,9 +209,9 @@ The returned value is an encrypted message.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parameter | Tipo  |    | Descripción               |
-| --------- | ----- | -- | ------------------------- |
-| Resultado | Texto | <- | Private key in PEM format |
+| Parámetros | Tipo  |    | Descripción               |
+| ---------- | ----- | -- | ------------------------- |
+| Resultado  | Texto | <- | Private key in PEM format |
 <!-- END REF -->
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
@@ -226,19 +226,19 @@ The returned value is the private key.
 <!-- REF CryptoKey.getPublicKey().Desc -->
 ## .getPublicKey()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parameter | Tipo  |    | Descripción              |
-| --------- | ----- | -- | ------------------------ |
-| Resultado | Texto | <- | Public key in PEM format |
+| Parámetros | Tipo  |    | Descripción              |
+| ---------- | ----- | -- | ------------------------ |
+| Resultado  | Texto | <- | Public key in PEM format |
 <!-- END REF -->
 
 
@@ -253,10 +253,10 @@ The returned value is the public key.
 <!-- REF CryptoKey.pem.Desc -->
 ## .pem
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
@@ -271,20 +271,20 @@ The returned value is the public key.
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parameter | Tipo   |    | Descripción                                                                     |
-| --------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message   | Texto  | -> | Message string to sign                                                          |
-| options   | Objeto | -> | Signing options                                                                 |
-| Resultado | Texto  | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Parámetros | Tipo   |    | Descripción                                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
+| message    | Texto  | -> | Message string to sign                                                          |
+| options    | Objeto | -> | Signing options                                                                 |
+| Resultado  | Texto  | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
@@ -311,10 +311,10 @@ The utf8 representation of the *message* string.
 ## .size
 <!-- END REF -->
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -327,10 +327,10 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 ## .type
 <!-- END REF -->
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 
@@ -343,21 +343,21 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v18 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v18 R4  | Añadidos       |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
-| Parameter | Tipo   |    | Descripción                                                                                       |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
-| message   | Texto  | -> | Message string that was used to produce the signature                                             |
-| signature | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options   | Objeto | -> | Signing options                                                                                   |
-| Resultado | Objeto | <- | Status of the verification                                                                        |
+| Parámetros | Tipo   |    | Descripción                                                                                       |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
+| message    | Texto  | -> | Message string that was used to produce the signature                                             |
+| signature  | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
+| options    | Objeto | -> | Signing options                                                                                   |
+| Resultado  | Objeto | <- | Status of the verification                                                                        |
 <!-- END REF -->
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.

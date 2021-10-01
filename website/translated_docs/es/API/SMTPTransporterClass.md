@@ -33,8 +33,8 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF SMTPTransporterClass.SMTP New transporter.Desc -->
 ## SMTP New transporter
 
-<details><summary>History</summary>
-| Version | Changes                                      |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones                               |
 | ------- | -------------------------------------------- |
 | v18     | New logFile property                         |
 | v17 R5  | New bodyCharset and headerCharset properties |
@@ -45,10 +45,10 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
-| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objeto             | -> | Mail server information                             |
+| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 
@@ -125,10 +125,10 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parameter | Tipo               |    | Descripción                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| server    | Objeto             | -> | Mail server information                             |
-| Resultado | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objeto             | -> | Mail server information                             |
+| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Descripción
@@ -201,10 +201,10 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 ## .keepAlive
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R4  | Añadidos |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R4  | Añadidos       |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
@@ -237,8 +237,8 @@ The SMTP connection is automatically closed:
 
 ## .send()
 
-<details><summary>History</summary>
-| Version | Changes                  |
+<details><summary>Histórico</summary>
+| Versión | Modificaciones           |
 | ------- | ------------------------ |
 | v17 R5  | Support of mime contents |
 | v17 R4  | Añadidos                 |
@@ -248,10 +248,10 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Parameter | Tipo   |    | Descripción                                       |
-| --------- | ------ |:--:| ------------------------------------------------- |
-| mail      | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultado | Objeto | <- | SMTP status                                       |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ |:--:| ------------------------------------------------- |
+| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
+| Resultado  | Objeto | <- | SMTP status                                       |
 <!-- END REF -->
 
 

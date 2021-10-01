@@ -21,7 +21,7 @@ An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_coll
 
 | Propiedad      | Tipo               | Descripción                                                                                                                                                                                                                                       |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Colección          | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the combo box is empty |
+| `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the combo box is empty |
 | `currentValue` | same as Collection | Text entered by the user                                                                                                                                                                                                                          |
 
 If the object contains other properties, they are ignored.
@@ -46,7 +46,7 @@ When the form is executed, 4D automatically manages the combo box during input o
 Please refer to **Using a choice** in the [drop-down list page](dropdownList_Overview.md#using-a-choice-list) for more information.
 
 
-## Options
+## Opciones
 
 Combo box type objects accept two specific options:
 

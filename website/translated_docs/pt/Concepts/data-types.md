@@ -9,23 +9,23 @@ Although they are usually equivalent, some data types available at the database 
 
 | Data Types                                 | Database support(1) | Language support     | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
 | ------------------------------------------ | ------------------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                                                       | -                                                                |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | Text                                                    | `C_TEXT`, `ARRAY TEXTO`                                          |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | Date                                                    | `C_DATE`, `ARRAY DATE`                                           |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | Time                                                    | `C_TIME`, `ARRAY TIME`                                           |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | Boolean                                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | Integer                                                 | `ARRAY INTEGER`                                                  |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
+| [Alphanumeric](dt_string.md)               | Sim                 | Converted to text    | -                                                       | -                                                                |
+| [Texto](Concepts/dt_string.md)             | Sim                 | Sim                  | Texto                                                   | `C_TEXT`, `ARRAY TEXTO`                                          |
+| [Date](Concepts/dt_date.md)                | Sim                 | Sim                  | Date                                                    | `C_DATE`, `ARRAY DATE`                                           |
+| [Hora](Concepts/dt_time.md)                | Sim                 | Sim                  | Hora                                                    | `C_TIME`, `ARRAY TIME`                                           |
+| [Boolean](Concepts/dt_boolean.md)          | Sim                 | Sim                  | Boolean                                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
+| [Integer](Concepts/dt_number.md)           | Sim                 | Converted to longint | Integer                                                 | `ARRAY INTEGER`                                                  |
+| [Longint](Concepts/dt_number.md)           | Sim                 | Sim                  | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                                                       | -                                                                |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | Real                                                    | `C_REAL`, `ARRAY REAL`                                           |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                                                       | -                                                                |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                                                       | -                                                                |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | Pointer                                                 | `C_POINTER`, `ARRAY POINTER`                                     |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | Picture                                                 | `C_PICTURE`, `ARRAY PICTURE`                                     |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | Blob                                                    | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | Object                                                  | `C_OBJECT`, `ARRAY OBJECT`                                       |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | Collection                                              | `C_COLLECTION`                                                   |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | Variant                                                 | `C_VARIANT`                                                      |
+| [Real](Concepts/dt_number.md)              | Sim                 | Sim                  | Real                                                    | `C_REAL`, `ARRAY REAL`                                           |
+| [Undefined](Concepts/dt_null_undefined.md) | -                   | Sim                  | -                                                       | -                                                                |
+| [Null](Concepts/dt_null_undefined.md)      | -                   | Sim                  | -                                                       | -                                                                |
+| [Pointer](Concepts/dt_pointer.md)          | -                   | Sim                  | Pointer                                                 | `C_POINTER`, `ARRAY POINTER`                                     |
+| [Picture](Concepts/dt_picture.md)          | Sim                 | Sim                  | Picture                                                 | `C_PICTURE`, `ARRAY PICTURE`                                     |
+| [BLOB](Concepts/dt_blob.md)                | Sim                 | Sim                  | Blob                                                    | `C_BLOB`, `ARRAY BLOB`                                           |
+| [Object](Concepts/dt_object.md)            | Sim                 | Sim                  | Object                                                  | `C_OBJECT`, `ARRAY OBJECT`                                       |
+| [Collection](Concepts/dt_collection.md)    | -                   | Sim                  | Collection                                              | `C_COLLECTION`                                                   |
+| [Variant](Concepts/dt_variant.md)(2)       | -                   | Sim                  | Variant                                                 | `C_VARIANT`                                                      |
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
 
@@ -52,11 +52,11 @@ The following table illustrates these default values:
 | Booleen    | False                                                                               | True                    | True (varies)                |
 | Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
 | Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Time       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| Hora       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
 | Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
 | Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
 | Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text       | ""                                                                                  | ""                      | ""                           |
+| Texto      | ""                                                                                  | ""                      | ""                           |
 | Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
 | Object     | null                                                                                | null                    | null                         |
 | Collection | null                                                                                | null                    | null                         |
@@ -71,10 +71,10 @@ The following table lists the basic data types, the data types to which they can
 
 | Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
 | -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Time    | Bool       |
+| String (1)           |           | Num       | Date    | Hora    | Bool       |
 | Number (2)           | String    |           |         |         | Bool       |
 | Date                 | String    |           |         |         | Bool       |
-| Time                 | String    |           |         |         | Bool       |
+| Hora                 | String    |           |         |         | Bool       |
 | Boolean              |           | Num       |         |         |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.

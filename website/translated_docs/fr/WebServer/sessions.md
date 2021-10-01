@@ -15,7 +15,7 @@ Web server user sessions allow to:
 > **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
 
 
-## Enabling sessions
+## Activation des sessions
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
@@ -62,7 +62,7 @@ On 4D Server, Web server sessions are automatically handled through preemptive p
 With 4D single-user, interpreted code is always run in cooperative mode.
 
 
-## Sharing information
+## Partage d'informations
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 

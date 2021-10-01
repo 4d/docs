@@ -62,7 +62,7 @@ To do so, you just have to click on the **Clear Cache** button in the Web/Option
 
 
 
-## Runtime Explorer
+## Explorador de ejecución
 
 The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
 
@@ -86,13 +86,13 @@ Website administration URLS allow you to control the website published on your s
 
 The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
 
-| Elemento               | Descripción                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| Cache Current Size     | Current size of web server cache (in bytes)                  |
-| Cache Max Size         | Maximum size of cache (in bytes)                             |
-| Cached Object Max Size | Maximum size of each object in the cache (in bytes)          |
-| Cache Use              | Percentage of cache used                                     |
-| Cached Objects         | Number of objects found in the cache, **including pictures** |
+| Elemento                  | Descripción                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| Cache Current Size        | Current size of web server cache (in bytes)                  |
+| Tamaño máximo de la caché | Maximum size of cache (in bytes)                             |
+| Cached Object Max Size    | Maximum size of each object in the cache (in bytes)          |
+| Cache Use                 | Percentage of cache used                                     |
+| Cached Objects            | Number of objects found in the cache, **including pictures** |
 
 This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
 > The `WEB GET STATISTICS` command allows you to also obtain information about how the cache is being used for static pages.
@@ -101,14 +101,14 @@ This information can allow you to check the functioning of your server and event
 
 The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
-| Elemento               | Descripción                                                            |
-| ---------------------- | ---------------------------------------------------------------------- |
-| Cache Current Size     | Current size of web server cache (in bytes)                            |
-| Cache Max Size         | Maximum size of cache (in bytes)                                       |
-| Cached Object Max Size | Maximum size of each object in the cache (in bytes)                    |
-| Cache Use              | Percentage of cache used                                               |
-| Cached Objects         | Number of objects found in the cache, **without pictures**             |
-| Filtered Objects       | Number of objects in cache not counted by URL, in particular, pictures |
+| Elemento                  | Descripción                                                            |
+| ------------------------- | ---------------------------------------------------------------------- |
+| Cache Current Size        | Current size of web server cache (in bytes)                            |
+| Tamaño máximo de la caché | Maximum size of cache (in bytes)                                       |
+| Cached Object Max Size    | Maximum size of each object in the cache (in bytes)                    |
+| Cache Use                 | Percentage of cache used                                               |
+| Cached Objects            | Number of objects found in the cache, **without pictures**             |
+| Objetos filtrados         | Number of objects in cache not counted by URL, in particular, pictures |
 
 
 ### /4DCACHECLEAR
@@ -196,7 +196,7 @@ The following table lists the fields available for each format (in alphabetical 
 > Dates and times are given in GMT.
 
 
-#### Backup Frequency
+#### Frecuencia del backup
 
 Since a *logweb.txt* file can become considerably large, it is possible to set up an automatic archiving mechanism. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
 

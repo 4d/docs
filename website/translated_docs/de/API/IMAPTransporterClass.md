@@ -526,6 +526,10 @@ Else
 ALERT("Error: "+$status.statusText)
 End if
 End if
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 ```
 
 <!-- END REF -->
@@ -710,6 +714,10 @@ $status:=$transporter.deleteBox($name)
 
 If ($status.success)
     ALERT("Mailbox deletion successful!")
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
     Else
     ALERT("Error: "+$status.statusText)
     End if
@@ -1146,6 +1154,8 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
         // ...
     End for each
  End if
+    End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -1564,6 +1574,10 @@ $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
    ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
  End if

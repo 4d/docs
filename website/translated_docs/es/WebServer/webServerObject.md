@@ -66,9 +66,9 @@ webServer:=WEB Server(Web server receiving request)
 
 A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
-| Funciones                                | Parameter         | Return value    | Descripción           |
+| Funciones                                | Parámetros        | Return value    | Descripción           |
 | ---------------------------------------- | ----------------- | --------------- | --------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (object) | status (object) | Starts the web server |
+| [`start()`](API/WebServerClass.md#start) | settings (object) | status (objeto) | Starts the web server |
 | [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |
 
 To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
@@ -106,7 +106,7 @@ These properties are defined:
 
 The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
-| Command                         | Alcance                              |
+| Comando                         | Alcance                              |
 | ------------------------------- | ------------------------------------ |
 | `SET DATABASE PARAMETER`        | Host application web server          |
 | `WEB CLOSE SESSION`             | Web server that received the request |
