@@ -5,7 +5,7 @@ title: '$method'
 
 This parameter allows you to define the operation to execute with the returned entity or entity selection.
 
-## Available syntaxes
+## Sintaxis disponible
 
 | Sintaxis                                        | Ejemplo                                                                                         | Descripción                                                                                                |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -213,7 +213,7 @@ To update a specific entity, you use the following URL:
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**Datos POST:**
 
 ```
 {
@@ -230,7 +230,7 @@ If you want to create an entity, you can POST the attributes using this URL:
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**Datos POST:**
 
 ```
 { 
@@ -243,7 +243,7 @@ You can also create and update multiple entities at the same time using the same
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**Datos POST:**
 
 ```
 [{ 
