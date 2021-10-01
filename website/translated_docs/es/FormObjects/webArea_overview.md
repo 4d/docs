@@ -27,12 +27,12 @@ Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedd
 
 La selección del motor de renderizado web anidado le permite llamar a los métodos 4D desde el área web.
 
-### Access 4D methods
+### Acceder a los métodos 4D
 Cuando se selecciona la propiedad [Acceder a los métodos 4D](properties_WebArea.md#access-4d-methods), se puede llamar a los métodos 4D desde un área Web.
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
-### $4d object
+### Objeto $4d
 
 El [motor de renderizado web incrustado de 4D](#use-embedded-web-rendering-engine) suministra al área un objeto JavaScript llamado $4d que puede asociar a cualquier método proyecto 4D utilizando la notación objeto ".".
 
@@ -146,7 +146,7 @@ Además, las áreas web soportan los siguientes eventos de formulario genéricos
 
 ## Reglas de las áreas web
 
-### User interface
+### Interfaz de usuario
 
 Cuando se ejecuta el formulario, las funciones estándar de la interfaz del navegador están disponibles para el usuario en el área web, lo que permite la interacción con otras áreas del formulario:
 
