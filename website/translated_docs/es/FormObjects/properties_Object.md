@@ -6,7 +6,7 @@ title: Objetos
 ---
 ## Tipo
 
- `MANDATORY SETTING`
+ `PARÁMETRO OBLIGATORIO`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
@@ -67,7 +67,7 @@ You can use an expression as data source for an object. Any valid 4D expression 
 
 
 
-### Dynamic variables
+### Variables dinámicas
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
@@ -324,4 +324,4 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Objetos soportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Pie de list box](listbox_overview.md#list-box-footers)
