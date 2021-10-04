@@ -35,33 +35,22 @@ Although they are usually equivalent, some data types available at the database 
 
 When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned. 
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings: 
+The default value depends on the variable type:
 
-- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set:
-	- in interpreted mode: to zero
-	- in compiled mode, depending on the **Initialize local variables** option of the Database settings:
-		- "to zero": to zero (see above),
-		- "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-		- "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. 
-**Note:** 4D recommends to use "to zero".
-
-The following table illustrates these default values:
-
-|Type	|Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero")|Local compiled "random"	|Local compiled "no"|  
-|---|---|---|---|
-|Booleen	|False	|True	|True (varies)|
-|Date	|00-00-00	|00-00-00	|00-00-00|
-|Longint|0	|1919382119	|909540880 (varies)|
-|Time|00:00:00	|533161:41:59	|249345:34:24 (varies)|
-|Picture	|picture size=0	|picture size=0	|picture size=0|
-|Real|0	|1.250753659382e+243	|1.972748538022e-217 (varies)
-|Pointer|Nil=true	|Nil=true	|Nil=true|
-|Text|""	|""	|""|
-|Blob|Blob size=0	|Blob size=0	|Blob size=0|
-|Object|null	|null	|null|
-|Collection|null	|null	|null|
-|Variant|undefined	|undefined	|undefined|
+|Type|Default value|  
+|---|---|
+|Booleen	|False	|
+|Date	|00-00-00	|
+|Longint|0	|
+|Time|00:00:00	|
+|Picture|picture size=0	|
+|Real|0	|
+|Pointer|Nil=true|
+|Text|""|
+|Blob|Blob size=0|
+|Object|null|
+|Collection|null|
+|Variant|undefined|
 
 
 ## Converting data types

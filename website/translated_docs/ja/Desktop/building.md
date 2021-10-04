@@ -246,19 +246,19 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 生成されるアプリケーションのバージョン番号を指定します。 このバージョン番号をもとに、クライアントアプリケーションからの接続を受け入れたり拒否したりできます。 クライアントとサーバーアプリケーションで互換性のある番号の範囲は [XML キー](#アプリケーションビルド設定) で設定します。
 
-#### Allow connection of Silicon Mac clients
+#### Silicon macOS クライアントからの接続を許可
 
-When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+Windows でサーバーアプリケーションをビルドする際、Apple Silicon クライアントが接続できるようにするには、このオプションをチェックします。 その後、Apple Silicon/Intel用にコンパイルされたストラクチャーへのパスを指定します。
 
-To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
+Windows でビルドされたサーバーアプリケーションに Apple Silicon クライアントが接続できるようにするには、まず macOS 上で Apple Silicon と Intel 向けにコンパイルされたプロジェクトを用いてクライアントアプリケーションをビルドする必要があります。 これにより、**[コンパイル済みストラクチャーをビルド](#コンパイル済みストラクチャーをビルド)** オプションで作成したものと同じコンパイル済みストラクチャーが自動的に作成されます (関連フォルダーは含まれません)。
 
-Then, you can copy that structure to your Windows machine, and use it to build the server application:
+その後、そのストラクチャーを Windowsマシンにコピーし、それを使ってサーバーアプリケーションをビルドすることができます:
 
 ![](assets/en/Desktop/allow-mac-clients.png)
 
-#### Compiled structure location
+#### コンパイル済みストラクチャーの場所
 
-Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
+Windows用サーバーアプリケーションのビルドに使用される Apple Silicon/Intel クライアントアプリケーションのコンパイル済みストラクチャーへのパス ([Silicon macOS クライアントからの接続を許可](#Silicon-macOS-クライアントからの接続を許可) 参照)。
 
 #### データリンクモードの基準
 

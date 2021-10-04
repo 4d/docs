@@ -1695,32 +1695,32 @@ A list box displays the Form.students entity selection and several clients work 
 **.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.selected().Params -->
-| Parámetros       | Tipo               |    | Descripción                                                                       |
-| ---------------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
-| selectedEntities | 4D.EntitySelection | -> | Entity selection with entities for which to know the rank in the entity selection |
-| Resultado        | Objeto             | <- | Range(s) of selected entities in entity selection                                 |
+| Parámetros       | Tipo               |    | Descripción                                                                                        |
+| ---------------- | ------------------ |:--:| -------------------------------------------------------------------------------------------------- |
+| selectedEntities | 4D.EntitySelection | -> | Selección de entidades con entidades para las cuales conocer el rango en la selección de entidades |
+| Resultado        | Objeto             | <- | Rango(s) de entidades seleccionadas en la selección de entidades                                   |
 <!-- END REF -->
 
 #### Descripción
 
-The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
-> This function does not modify the original entity selection.
+La función `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->devuelve un objeto que describe la(s) posición(es) de *selectedEntities* en la selección de entidades original<!-- END REF -->.
+> Esta función no modifica la selección de entidades original.
 
-Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+Pase en el parámetro *selectedEntities* una selección de entidades que contenga entidades de las que desee conocer la posición en la selección de entidades original. *selectedEntities* debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - "La selección de entidades procede de una clase de datos incompatible".
 
 #### Resultado
 
-The returned object contains the following properties:
+El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad      | Tipo       | Descripción                     |
-| -------------- | ---------- | ------------------------------- |
-| ranges         | Collection | Collection of range objects     |
-| ranges[].start | Integer    | First entity index in the range |
-| ranges[].end   | Integer    | Last entity index in the range  |
+| Propiedad      | Tipo       | Descripción                             |
+| -------------- | ---------- | --------------------------------------- |
+| ranges         | Collection | Colección de objetos de rango           |
+| ranges[].start | Integer    | Primer índice de entidad en el rango    |
+| ranges[].end   | Integer    | Último índice de la entidad en el rango |
 
-If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
+Si una propiedad `ranges` contiene una sola entidad, `start` = `end`. El índice comienza en 0.
 
-The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+La función devuelve una colección vacía en la propiedad `ranges` si la selección de entidades original o la selección de entidades *selectedEntities* está vacía.
 
 #### Ejemplo
 

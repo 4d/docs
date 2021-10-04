@@ -35,32 +35,22 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 
 Werden Variablen über eine Compiler Direktive typisiert, empfangen sie einen Standardwert, den sie während der Arbeitssitzung beibehalten, solange sie nicht zugewiesen werden.
 
-Der Standardwert richtet sich nach Typ und Kategorie der Variablen, der Kontext seiner Ausführung (interpretiert oder kompiliert), sowie im kompilierten Modus die Optionen, die auf der Seite Compiler der Datenbank-Eigenschaften definiert wurden:
+The default value depends on the variable type:
 
-- Prozess- und Interprozessvariablen werden immer "auf Leer" gesetzt, d.h. je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), 0 für Zahl, etc.
-- Lokale Variablen werden wie folgt gesetzt:
-    - Im interpretierten Modus: auf Leer
-    - Im kompilierten Modus je nach der Option **Lokale Variablen initialisieren** auf der Seite Compiler der Einstellungen:
-        - "auf Leer": auf Leer (siehe oben)
-        - " auf zufälligen Wert": 0x72677267 für Zahlen und Uhrzeiten, immer Wahr für Boolean, dasselbe wie "auf Null" für die anderen
-        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Hinweis:** 4D empfiehlt, "auf Leer" zu verwenden.
-
-Nachfolgende Übersicht erläutert diese Standardwerte:
-
-| Typ            | Interprozess/Prozess (interpretiert/kompiliert), Lokal (interpretiert/kompiliert "auf Null") | Lokal kompiliert "zufälliger Wert" | Lokal kompiliert "Nein"        |
-| -------------- | -------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------ |
-| Boolean        | Falsch                                                                                       | Wahr                               | Wahr (variiert)                |
-| Datum          | 00-00-00                                                                                     | 00-00-00                           | 00-00-00                       |
-| Lange Ganzzahl | 0                                                                                            | 1919382119                         | 909540880 (variiert)           |
-| Zeit           | 00:00:00                                                                                     | 533161:41:59                       | 249345:34:24 (variiert)        |
-| Bild           | Bildgröße=0                                                                                  | Bildgröße=0                        | Bildgröße=0                    |
-| Zahl           | 0                                                                                            | 1.250753659382e+243                | 1.972748538022e-217 (variiert) |
-| Zeiger         | Nil=wahr                                                                                     | Nil=wahr                           | Nil=wahr                       |
-| Text           | ""                                                                                           | ""                                 | ""                             |
-| Blob           | Größe des BLOB=0                                                                             | Größe des BLOB=0                   | Größe des BLOB=0               |
-| Objekt         | Null                                                                                         | Null                               | Null                           |
-| Collection     | Null                                                                                         | Null                               | Null                           |
-| Variant        | Undefiniert                                                                                  | Undefiniert                        | Undefiniert                    |
+| Typ            | Default value    |
+| -------------- | ---------------- |
+| Boolean        | Falsch           |
+| Datum          | 00-00-00         |
+| Lange Ganzzahl | 0                |
+| Zeit           | 00:00:00         |
+| Bild           | Bildgröße=0      |
+| Zahl           | 0                |
+| Zeiger         | Nil=wahr         |
+| Text           | ""               |
+| Blob           | Größe des BLOB=0 |
+| Objekt         | Null             |
+| Collection     | Null             |
+| Variant        | Undefiniert      |
 
 
 ## Datentypen konvertieren

@@ -19,16 +19,16 @@ When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Op
 
 ### Reglas generales
 
-The following rules are applied for any conversions:
+Se aplican las siguientes reglas para todas las conversiones:
 
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
-    *   Tables without a primary key
-    *   Tables with composite primary keys.
+* Los nombres de tabla, campo y relación se mapean a los nombres de propiedad de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
+*   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las siguientes tablas no están referenciadas:
+    *   Tablas sin llave primaria
+    *   Tablas con llaves primarias compuestas.
 *   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> El mapeo ORDA no tiene en cuenta:  
+> - la opción "Invisible" para tablas o campos, - la estructura virtual definida mediante `SET TABLE TITLES` o `SET FIELD TITLES`, - la propiedad "Manual" o "Automática" de las relaciones.
 
 
 ### Rules for remote access control

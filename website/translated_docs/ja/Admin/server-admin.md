@@ -305,18 +305,18 @@ Windows または macOS上で、4D Server をインターフェースありで�
 
 **レポートを表示** (リモートのデスクトップクライアントから処理を実行した場合は **レポートをダウンロード**) ボタンをクリックすると、システムウィンドウが開いて、リクエストログファイルが表示されます。
 
-#### Load logs configuration file
+#### ログ設定ファイルを読み込む
 
-This button allows you to load a special server [log configuration file](debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
+このボタンを押すと、特殊な [ログ設定ファイル](debugLogFiles.md#using-a-log-configuration-file) (`.json` ファイル) をサーバーに読み込むことができます。 この特殊ファイルは、特定のケースを監視・調査するために 4Dテクニカルサービスが提供することがあります。
 
 
-#### Pause logging
+#### ログを停止する
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+このボタンを押すと、サーバーで開始されたログを記録する処理がすべて中断されます。 この機能は、サーバーの処理を一時的に軽くするのに便利です。
 
-When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
+ログが停止されると、ボタンのタイトルが **ログを再開する** に変わり、これを押すことでログの記録を再開することができます。
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+> ログの停止や再開は、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドでおこなうこともできます。
 
 
 ## アプリケーションサーバーページ

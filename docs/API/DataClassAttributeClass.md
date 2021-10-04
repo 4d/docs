@@ -26,7 +26,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 |[<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.inverseName.Syntax -->](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.inverseName.Summary --> |
-|[<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Summary --> |
+|[<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
@@ -204,8 +204,8 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Desc -->
-## .keyWordIndexed  
+<!-- REF DataClassAttributeClass.keywordIndexed.Desc -->
+## .keywordIndexed  
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -214,17 +214,17 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 </details>
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Syntax -->
-**.keyWordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
+**.keywordIndexed** : Boolean<!-- END REF -->
 
 
 #### Description
 
-The `.keyWordIndexed` property <!-- REF DataClassAttributeClass.keyWordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.  
+The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.  
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.keyWordIndexed) to get a valid value (false) even if `.keyWordIndexed` is not returned.
+>For generic programming, you can use **Bool**(dataClassAttribute.keywordIndexed) to get a valid value (false) even if `.keywordIndexed` is not returned.
 
 <!-- END REF -->
 

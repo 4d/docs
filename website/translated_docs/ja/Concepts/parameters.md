@@ -456,7 +456,7 @@ ALERT("Are you sure?";"Yes I am") // 2つの引数
 ALERT("Time is over") // 1つの引数
 ```
 
-4Dメソッドや関数も、このような任意パラメーターを受け入れます。 You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). たとえば:
+4Dメソッドや関数も、このような任意パラメーターを受け入れます。 任意の数のパラメーターを宣言することができます。 宣言されているよりも少ない引数をメソッドや関数に渡した場合、指定されなかったパラメーターは、[そのタイプに応じたデフォルト値](data-types.md#デフォルト値) として、呼び出されたコードの中で処理されます。 たとえば:
 
 ```4d
 // myClass クラスの "concate" 関数
@@ -470,7 +470,7 @@ $result:=$param1+" "+$param2
  $class.concate() // スペースのみ: " "
 ```
 
-> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+> 宣言されているよりも多い数のパラメーターをメソッドや関数に渡すこともできます。 呼び出されたコードにおいて、これらは [${N} シンタックス](#parameter-indirection-n) を使うことで利用可能です。
 
 `Count parameters` コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。
 
