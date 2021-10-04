@@ -96,38 +96,24 @@
 <p>(2) バリアントは実際のところ <em>データ</em> タイプではなく、あらゆるデータタイプの値を格納することのできる <em>変数</em> タイプです。</p>
 <h2><a class="anchor" aria-hidden="true" id="デフォルト値"></a><a href="#デフォルト値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>デフォルト値</h2>
 <p>コンパイラー指示子によって変数の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッションの間はその値を保ち続けます。</p>
-<p>デフォルトの値は、変数の型とカテゴリ、その実行コンテキスト (インタープリターかコンパイルか) に加え、コンパイルモードではデータベース設定のコンパイラーページで定義されたコンパイルオプションによって決まります:</p>
-<ul>
-<li>プロセス変数およびインタープロセス変数は常に &quot;ゼロにする&quot; に設定されます。つまり、型によって、&quot;0&quot;、空の文字列、空のBlob、Nilポインター、空の日付 (00-00-00)、ということです。</li>
-<li>ローカル変数は以下の様に設定されます:
-<ul>
-<li>インタープリタモード: ゼロにする</li>
-<li>コンパイルモードにおいては、データベース設定の<strong>ローカル変数初期化オプション</strong>によって異なります:
-<ul>
-<li>&quot;ゼロにする&quot; が選択されている場合にはゼロになります。</li>
-<li>&quot;ランダム値にする&quot; が選択されている場合には、数値と時間については0x72677267、ブールについては常に true、他のものについては &quot;ゼロにする&quot; の場合と同じです。</li>
-<li>&quot;なし&quot; が選択されている場合には、変数は初期化されず、メモリにある値が採用されます。それは、別の変数に以前使われた値かもしれません。 <strong>注:</strong> 4D では &quot;ゼロにする&quot; の設定を推奨しています。</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>以下の表はこれらのデフォルトの値をあらわしたものです:</p>
+<p>The default value depends on the variable type:</p>
 <table>
 <thead>
-<tr><th>タイプ</th><th>インタープロセス変数 / プロセス変数 / インタープリターモードのローカル変数 / コンパイルモードで &quot;ゼロにする&quot; のローカル変数</th><th>コンパイルモードで &quot;ランダム値にする&quot; のローカル変数</th><th>コンパイルモードで &quot;なし&quot; のローカル変数</th></tr>
+<tr><th>タイプ</th><th>デフォルト値</th></tr>
 </thead>
 <tbody>
-<tr><td>ブール</td><td>False</td><td>True</td><td>True (場合による)</td></tr>
-<tr><td>日付</td><td>00-00-00</td><td>00-00-00</td><td>00-00-00</td></tr>
-<tr><td>倍長整数</td><td>0</td><td>1919382119</td><td>909540880 (場合による)</td></tr>
-<tr><td>時間</td><td>00:00:00</td><td>533161:41:59</td><td>249345:34:24 (場合による)</td></tr>
-<tr><td>ピクチャー</td><td>ピクチャーサイズ=0</td><td>ピクチャーサイズ=0</td><td>ピクチャーサイズ=0</td></tr>
-<tr><td>実数</td><td>0</td><td>1.250753659382e+243</td><td>1.972748538022e-217 (場合による)</td></tr>
-<tr><td>ポインター</td><td>Nil=true</td><td>Nil=true</td><td>Nil=true</td></tr>
-<tr><td>テキスト</td><td>&quot;&quot;</td><td>&quot;&quot;</td><td>&quot;&quot;</td></tr>
-<tr><td>BLOB</td><td>Blob サイズ=0</td><td>Blob サイズ=0</td><td>Blob サイズ=0</td></tr>
-<tr><td>オブジェクト</td><td>null</td><td>null</td><td>null</td></tr>
-<tr><td>コレクション</td><td>null</td><td>null</td><td>null</td></tr>
-<tr><td>バリアント</td><td>未定義</td><td>未定義</td><td>未定義</td></tr>
+<tr><td>ブール</td><td>False</td></tr>
+<tr><td>日付</td><td>00-00-00</td></tr>
+<tr><td>倍長整数</td><td>0</td></tr>
+<tr><td>時間</td><td>00:00:00</td></tr>
+<tr><td>ピクチャー</td><td>ピクチャーサイズ=0</td></tr>
+<tr><td>実数</td><td>0</td></tr>
+<tr><td>ポインター</td><td>Nil=true</td></tr>
+<tr><td>テキスト</td><td>&quot;&quot;</td></tr>
+<tr><td>BLOB</td><td>Blob サイズ=0</td></tr>
+<tr><td>オブジェクト</td><td>null</td></tr>
+<tr><td>コレクション</td><td>null</td></tr>
+<tr><td>バリアント</td><td>未定義</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="データタイプの変換"></a><a href="#データタイプの変換" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>データタイプの変換</h2>

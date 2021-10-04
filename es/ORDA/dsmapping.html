@@ -76,20 +76,20 @@
 </ul>
 <p><img src="/docs/assets/en/ORDA/datastoreMapping.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="reglas-generales"></a><a href="#reglas-generales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reglas generales</h3>
-<p>The following rules are applied for any conversions:</p>
+<p>Se aplican las siguientes reglas para todas las conversiones:</p>
 <ul>
-<li>Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the <a href="/docs/es/Concepts/identifiers.html">object naming conventions</a> section.</li>
-<li>A datastore only references tables with a single primary key. The following tables are not referenced:
+<li>Los nombres de tabla, campo y relación se mapean a los nombres de propiedad de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección <a href="/docs/es/Concepts/identifiers.html">Convenciones de denominación de objetos</a>.</li>
+<li>Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las siguientes tablas no están referenciadas:
 <ul>
-<li>Tables without a primary key</li>
-<li>Tables with composite primary keys.</li>
+<li>Tablas sin llave primaria</li>
+<li>Tablas con llaves primarias compuestas.</li>
 </ul></li>
 <li>BLOB fields are automatically available as attributes of the <a href="/docs/es/Concepts/blob.html#blob-types">Blob object</a> type.</li>
 </ul>
 <blockquote>
-<p>ORDA mapping does not take into account:</p>
+<p>El mapeo ORDA no tiene en cuenta:</p>
 <ul>
-<li>the &quot;Invisible&quot; option for tables or fields, - the virtual structure defined through <code>SET TABLE TITLES</code> or <code>SET FIELD TITLES</code>, - the &quot;Manual&quot; or &quot;Automatic&quot; property of relations.</li>
+<li>la opción &quot;Invisible&quot; para tablas o campos, - la estructura virtual definida mediante <code>SET TABLE TITLES</code> o <code>SET FIELD TITLES</code>, - la propiedad &quot;Manual&quot; o &quot;Automática&quot; de las relaciones.</li>
 </ul>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="rules-for-remote-access-control"></a><a href="#rules-for-remote-access-control" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rules for remote access control</h3>

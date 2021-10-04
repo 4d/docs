@@ -100,7 +100,7 @@
 <tr><td><a href="#querypath"><strong>.queryPath</strong> : Text</a><p>    contains a detailed description of the query as it was actually performed by 4D</td></tr>
 <tr><td><a href="#queryplan"><strong>.queryPlan</strong> : Text</a><p>     contains a detailed description of the query just before it is executed (i.e., the planned query)</td></tr>
 <tr><td><a href="#refresh"><strong>.refresh()</strong></a><p>    immediately &quot;invalidates&quot; the entity selection data in the local ORDA cache</td></tr>
-<tr><td><a href="#selected"><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    returns an object describing the position(s) of <em>selectedEntities</em> in the original entity selection</td></tr>
+<tr><td><a href="#selected"><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    devuelve un objeto que describe la(s) posición(es) de <em>selectedEntities</em> en la selección de entidades original</td></tr>
 <tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    returns a portion of an entity selection into a new entity selection</td></tr>
 <tr><td><a href="#sum"><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    returns the sum for all <em>attributePath</em> values in the entity selection</td></tr>
 <tr><td><a href="#tocollection"><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    creates and returns a collection where each element is an object containing a set of properties and values</td></tr>
@@ -1405,30 +1405,30 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>Entity selection with entities for which to know the rank in the entity selection</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Range(s) of selected entities in entity selection</td></tr>
+<tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>Selección de entidades con entidades para las cuales conocer el rango en la selección de entidades</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Rango(s) de entidades seleccionadas en la selección de entidades</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.selected()</code> function returns an object describing the position(s) of <em>selectedEntities</em> in the original entity selection.</p>
+<p>La función <code>.selected()</code> devuelve un objeto que describe la(s) posición(es) de <em>selectedEntities</em> en la selección de entidades original.</p>
 <blockquote>
-<p>This function does not modify the original entity selection.</p>
+<p>Esta función no modifica la selección de entidades original.</p>
 </blockquote>
-<p>Pass in the <em>selectedEntities</em> parameter an entity selection containing entities for which you want to know the position in the original entity selection. <em>selectedEntities</em> must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - &quot;The entity selection comes from an incompatible dataclass&quot; is raised.</p>
+<p>Pase en el parámetro <em>selectedEntities</em> una selección de entidades que contenga entidades de las que desee conocer la posición en la selección de entidades original. <em>selectedEntities</em> debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - &quot;La selección de entidades procede de una clase de datos incompatible&quot;.</p>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The returned object contains the following properties:</p>
+<p>El objeto devuelto contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>ranges</td><td>Collection</td><td>Collection of range objects</td></tr>
-<tr><td>ranges[].start</td><td>Integer</td><td>First entity index in the range</td></tr>
-<tr><td>ranges[].end</td><td>Integer</td><td>Last entity index in the range</td></tr>
+<tr><td>ranges</td><td>Collection</td><td>Colección de objetos de rango</td></tr>
+<tr><td>ranges[].start</td><td>Integer</td><td>Primer índice de entidad en el rango</td></tr>
+<tr><td>ranges[].end</td><td>Integer</td><td>Último índice de la entidad en el rango</td></tr>
 </tbody>
 </table>
-<p>If a <code>ranges</code> property contains a single entity, <code>start</code> = <code>end</code>. Index starts at 0.</p>
-<p>The function returns an empty collection in the <code>ranges</code> property if the original entity selection or the <em>selectedEntities</em> entity selection is empty.</p>
+<p>Si una propiedad <code>ranges</code> contiene una sola entidad, <code>start</code> = <code>end</code>. El índice comienza en 0.</p>
+<p>La función devuelve una colección vacía en la propiedad <code>ranges</code> si la selección de entidades original o la selección de entidades <em>selectedEntities</em> está vacía.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-19"></a><a href="#ejemplo-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$invoices</span>; <span class="hljs-variable">$cashSel</span>; <span class="hljs-variable">$creditSel </span>: cs.Invoices<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variable">$result2 </span>: Object

@@ -96,38 +96,24 @@
 <p>(2) Le variant n'est pas un type de <em>données</em> un type de <em>variable</em> qui peut contenir une valeur de n'importe quel autre type.</p>
 <h2><a class="anchor" aria-hidden="true" id="valeurs-par-défaut"></a><a href="#valeurs-par-défaut" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Valeurs par défaut</h2>
 <p>Au moment de leur typage via une directive de compilation, les variables reçoivent une valeur par défaut, qu'elles conserveront au cours de la session tant qu'elles n'auront pas été affectées.</p>
-<p>La valeur par défaut dépend du type et de la catégorie de la variable, du contexte d'exécution (interprété ou compilé), ainsi que, pour le mode compilé, des options de compilation définies dans la Page Compilateur des Propriétés de la base :</p>
-<ul>
-<li>Les variables process et interprocess sont toujours positionnées &quot;à zéro&quot; (qui signifie selon les cas 0, chaîne vide, blob vide, pointeur nil, date 00-00-00…)</li>
-<li>Les variables locales sont positionnées :
-<ul>
-<li>en mode interprété : à zéro</li>
-<li>en mode compilé, dépendant de l'option <strong>Initialiser les variables locales</strong> des Propriétés de la base :
-<ul>
-<li>à zéro lorsque &quot;à zéro&quot; est sélectionné,</li>
-<li>à une valeur arbitraire fixe lorsque &quot;à une valeur aberrante&quot; est sélectionné (0x72677267 pour les numériques et les heures, toujours vrai pour les booléens), équivalent de &quot;à zéro&quot; pour les autres,</li>
-<li>à &quot;non&quot; : pas d'initialisation, c'est-à-dire que tout ce qui est dans la RAM est utilisé pour les variables; c'est le cas des valeurs déjà utilisées pour les autres variables. <strong>Note :</strong> Il est recommandé d'utiliser &quot;à zéro&quot;.</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>Le tableau suivant illustre ces valeurs par défaut :</p>
+<p>The default value depends on the variable type:</p>
 <table>
 <thead>
-<tr><th>Type</th><th>Interprocess/Process (interprété/compilé), Local (interprété/compilé &quot;à zéro&quot;)</th><th>Local compilé &quot;aberrant&quot;</th><th>Local compilé &quot;non&quot;</th></tr>
+<tr><th>Type</th><th>Valeur par défaut</th></tr>
 </thead>
 <tbody>
-<tr><td>Booléen</td><td>Faux</td><td>Vrai</td><td>True (varie)</td></tr>
-<tr><td>Date</td><td>00-00-00</td><td>00-00-00</td><td>00-00-00</td></tr>
-<tr><td>Entier long</td><td>0</td><td>1919382119</td><td>909540880 (varie)</td></tr>
-<tr><td>Heure</td><td>00:00:00</td><td>533161:41:59</td><td>249345:34:24 (varie)</td></tr>
-<tr><td>Image</td><td>picture size=0</td><td>picture size=0</td><td>picture size=0</td></tr>
-<tr><td>Réel</td><td>0</td><td>1.250753659382e+243</td><td>1.972748538022e-217 (varie)</td></tr>
-<tr><td>Pointeur</td><td>Nil=true</td><td>Nil=true</td><td>Nil=true</td></tr>
-<tr><td>Texte</td><td>&quot;&quot;</td><td>&quot;&quot;</td><td>&quot;&quot;</td></tr>
-<tr><td>Blob</td><td>Blob size=0</td><td>Blob size=0</td><td>Blob size=0</td></tr>
-<tr><td>Objet</td><td>null</td><td>null</td><td>null</td></tr>
-<tr><td>Collection</td><td>null</td><td>null</td><td>null</td></tr>
-<tr><td>Variant</td><td>indéfini</td><td>indéfini</td><td>indéfini</td></tr>
+<tr><td>Booléen</td><td>Faux</td></tr>
+<tr><td>Date</td><td>00-00-00</td></tr>
+<tr><td>Entier long</td><td>0</td></tr>
+<tr><td>Heure</td><td>00:00:00</td></tr>
+<tr><td>Image</td><td>picture size=0</td></tr>
+<tr><td>Réel</td><td>0</td></tr>
+<tr><td>Pointeur</td><td>Nil=true</td></tr>
+<tr><td>Texte</td><td>&quot;&quot;</td></tr>
+<tr><td>Blob</td><td>Blob size=0</td></tr>
+<tr><td>Objet</td><td>null</td></tr>
+<tr><td>Collection</td><td>null</td></tr>
+<tr><td>Variant</td><td>indéfini</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="convertir-les-types-de-données"></a><a href="#convertir-les-types-de-données" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Convertir les types de données</h2>

@@ -357,7 +357,7 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ALERT</span>(<span class="hljs-string">"Are you sure?"</span>;<span class="hljs-string">"Yes I am"</span>) <span class="hljs-comment">// 2つの引数</span>
 <span class="hljs-function">ALERT</span>(<span class="hljs-string">"Time is over"</span>) <span class="hljs-comment">// 1つの引数</span>
 </code></pre>
-<p>4Dメソッドや関数も、このような任意パラメーターを受け入れます。 You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, <a href="/docs/ja/Concepts/data-types.html#default-values">according to their type</a>. たとえば:</p>
+<p>4Dメソッドや関数も、このような任意パラメーターを受け入れます。 任意の数のパラメーターを宣言することができます。 宣言されているよりも少ない引数をメソッドや関数に渡した場合、指定されなかったパラメーターは、<a href="/docs/ja/Concepts/data-types.html#デフォルト値">そのタイプに応じたデフォルト値</a> として、呼び出されたコードの中で処理されます。 たとえば:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// myClass クラスの "concate" 関数</span><span class="hljs-keyword">
 Function</span><span class="hljs-function"> concate </span>(<span class="hljs-variable">$param1 </span>: Text ; <span class="hljs-variable">$param2 </span>: Text)-&gt;<span class="hljs-variable">$result </span>: Text
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$param1</span>+<span class="hljs-string">" "</span>+<span class="hljs-variable">$param2</span>
@@ -368,7 +368,7 @@ Function</span><span class="hljs-function"> concate </span>(<span class="hljs-va
  <span class="hljs-variable">$class</span>.<span class="hljs-function">concate</span>() <span class="hljs-comment">// スペースのみ: " "</span>
 </code></pre>
 <blockquote>
-<p>You can also call a method or function with more parameters than declared. They will be available within the called code through the <a href="#parameter-indirection-n">${N} syntax</a>.</p>
+<p>宣言されているよりも多い数のパラメーターをメソッドや関数に渡すこともできます。 呼び出されたコードにおいて、これらは <a href="#parameter-indirection-n">${N} シンタックス</a> を使うことで利用可能です。</p>
 </blockquote>
 <p><code>Count parameters</code> コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。</p>
 <p>次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。</p>

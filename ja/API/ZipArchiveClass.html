@@ -103,7 +103,7 @@ End if</span>
 <tr><th>バージョン</th><th>内容</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R3</td><td>Added <code>ZIP Compression LZMA</code>, <code>ZIP Compression xy</code>, <code>.level</code> property</td></tr>
+<tr><td>v19 R3</td><td><code>ZIP Compression LZMA</code>, <code>ZIP Compression XZ</code>, <code>.level</code> プロパティを追加</td></tr>
 <tr><td>v18</td><td>追加</td></tr>
 </tbody>
 </table>
@@ -118,7 +118,7 @@ End if</span>
 <tr><td>folderToZip</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>圧縮する File または Folder オブジェクト</td></tr>
 <tr><td>zipStructure</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>圧縮する File または Folder オブジェクト</td></tr>
 <tr><td>destinationFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>アーカイブの保存先ファイル</td></tr>
-<tr><td>options</td><td>整数</td><td style="text-align:center">-&gt;</td><td><em>folderToZip</em> オプション: <code>ZIP Without enclosing folder</code> (外側のフォルダーを除外して ZIP圧縮をおこなう)</td></tr>
+<tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><em>folderToZip</em> オプション: <code>ZIP Without enclosing folder</code> (外側のフォルダーを除外して ZIP圧縮をおこなう)</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>ステータスオブジェクト</td></tr>
 </tbody>
 </table>
@@ -166,7 +166,7 @@ End if</span>
 
 &lt;tr&gt;
   &lt;td&gt;
-    オプション
+    option
   &lt;/td&gt;
   
   &lt;td&gt;
@@ -204,7 +204,7 @@ $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュ
 </thead>
 <tbody>
 <tr><td>statusText</td><td>テキスト</td><td>エラーメッセージ (あれば):<li>ZIPアーカイブを開けません</li><li>ZIPアーカイブを作成できません</li><li>暗号化にはパスワードが必要です</td></tr>
-<tr><td>status</td><td>整数</td><td>ステータスコード</td></tr>
+<tr><td>status</td><td>Integer</td><td>ステータスコード</td></tr>
 <tr><td>success</td><td>ブール</td><td>アーカイブが正常に作成された場合には true、それ以外は false</td></tr>
 </tbody>
 </table>
@@ -266,7 +266,7 @@ $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュ
  <span class="hljs-variable">$err</span>:=<span class="hljs-function">ZIP Create archive</span>(<span class="hljs-variable">$zip</span>;<span class="hljs-variable">$destination</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 5</h4>
-<p>You want to use an alternative compression algorithm with a high compression level:</p>
+<p>高い圧縮レベルの代替圧縮アルゴリズムを使用します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$destination </span>: 4D.File<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$zip</span>; <span class="hljs-variable">$err </span>: Object
 
@@ -274,7 +274,7 @@ var</span> <span class="hljs-variable">$zip</span>; <span class="hljs-variable">
 <span class="hljs-variable">$zip</span>.files:=New collection
 <span class="hljs-variable">$zip</span>.files.<span class="hljs-function">push</span>(<span class="hljs-function">Folder</span>(fk desktop folder).<span class="hljs-function">folder</span>(<span class="hljs-string">"images"</span>))
 <span class="hljs-variable">$zip</span>.compression:=ZIP Compression LZMA
-<span class="hljs-variable">$zip</span>.level:=<span class="hljs-number">7</span> <span class="hljs-comment">//default is 4</span>
+<span class="hljs-variable">$zip</span>.level:=<span class="hljs-number">7</span> <span class="hljs-comment">// デフォルト値は 4 です</span>
 
 <span class="hljs-variable">$destination</span>:=<span class="hljs-function">Folder</span>(fk desktop folder).<span class="hljs-function">file</span>(<span class="hljs-string">"images.zip"</span>)
 <span class="hljs-variable">$err</span>:=<span class="hljs-function">ZIP Create archive</span>(<span class="hljs-variable">$zip</span>; <span class="hljs-variable">$destination</span>)
