@@ -96,38 +96,24 @@
 <p>(2) Variant ist derzeit kein <em>Daten-</em>, sondern ein <em>Variablentyp</em>, der den Wert eines anderen Datentyps enthalten kann.</p>
 <h2><a class="anchor" aria-hidden="true" id="standardwerte"></a><a href="#standardwerte" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standardwerte</h2>
 <p>Werden Variablen über eine Compiler Direktive typisiert, empfangen sie einen Standardwert, den sie während der Arbeitssitzung beibehalten, solange sie nicht zugewiesen werden.</p>
-<p>Der Standardwert richtet sich nach Typ und Kategorie der Variablen, der Kontext seiner Ausführung (interpretiert oder kompiliert), sowie im kompilierten Modus die Optionen, die auf der Seite Compiler der Datenbank-Eigenschaften definiert wurden:</p>
-<ul>
-<li>Prozess- und Interprozessvariablen werden immer &quot;auf Leer&quot; gesetzt, d.h. je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), 0 für Zahl, etc.</li>
-<li>Lokale Variablen werden wie folgt gesetzt:
-<ul>
-<li>Im interpretierten Modus: auf Leer</li>
-<li>Im kompilierten Modus je nach der Option <strong>Lokale Variablen initialisieren</strong> auf der Seite Compiler der Einstellungen:
-<ul>
-<li>&quot;auf Leer&quot;: auf Leer (siehe oben)</li>
-<li>&quot; auf zufälligen Wert&quot;: 0x72677267 für Zahlen und Uhrzeiten, immer Wahr für Boolean, dasselbe wie &quot;auf Null&quot; für die anderen</li>
-<li>&quot;Nein&quot;: keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. <strong>Hinweis:</strong> 4D empfiehlt, &quot;auf Leer&quot; zu verwenden.</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>Nachfolgende Übersicht erläutert diese Standardwerte:</p>
+<p>The default value depends on the variable type:</p>
 <table>
 <thead>
-<tr><th>Typ</th><th>Interprozess/Prozess (interpretiert/kompiliert), Lokal (interpretiert/kompiliert &quot;auf Null&quot;)</th><th>Lokal kompiliert &quot;zufälliger Wert&quot;</th><th>Lokal kompiliert &quot;Nein&quot;</th></tr>
+<tr><th>Typ</th><th>Default value</th></tr>
 </thead>
 <tbody>
-<tr><td>Boolean</td><td>Falsch</td><td>Wahr</td><td>Wahr (variiert)</td></tr>
-<tr><td>Datum</td><td>00-00-00</td><td>00-00-00</td><td>00-00-00</td></tr>
-<tr><td>Lange Ganzzahl</td><td>0</td><td>1919382119</td><td>909540880 (variiert)</td></tr>
-<tr><td>Zeit</td><td>00:00:00</td><td>533161:41:59</td><td>249345:34:24 (variiert)</td></tr>
-<tr><td>Bild</td><td>Bildgröße=0</td><td>Bildgröße=0</td><td>Bildgröße=0</td></tr>
-<tr><td>Zahl</td><td>0</td><td>1.250753659382e+243</td><td>1.972748538022e-217 (variiert)</td></tr>
-<tr><td>Zeiger</td><td>Nil=wahr</td><td>Nil=wahr</td><td>Nil=wahr</td></tr>
-<tr><td>Text</td><td>&quot;&quot;</td><td>&quot;&quot;</td><td>&quot;&quot;</td></tr>
-<tr><td>Blob</td><td>Größe des BLOB=0</td><td>Größe des BLOB=0</td><td>Größe des BLOB=0</td></tr>
-<tr><td>Objekt</td><td>Null</td><td>Null</td><td>Null</td></tr>
-<tr><td>Collection</td><td>Null</td><td>Null</td><td>Null</td></tr>
-<tr><td>Variant</td><td>Undefiniert</td><td>Undefiniert</td><td>Undefiniert</td></tr>
+<tr><td>Boolean</td><td>Falsch</td></tr>
+<tr><td>Datum</td><td>00-00-00</td></tr>
+<tr><td>Lange Ganzzahl</td><td>0</td></tr>
+<tr><td>Zeit</td><td>00:00:00</td></tr>
+<tr><td>Bild</td><td>Bildgröße=0</td></tr>
+<tr><td>Zahl</td><td>0</td></tr>
+<tr><td>Zeiger</td><td>Nil=wahr</td></tr>
+<tr><td>Text</td><td>&quot;&quot;</td></tr>
+<tr><td>Blob</td><td>Größe des BLOB=0</td></tr>
+<tr><td>Objekt</td><td>Null</td></tr>
+<tr><td>Collection</td><td>Null</td></tr>
+<tr><td>Variant</td><td>Undefiniert</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="datentypen-konvertieren"></a><a href="#datentypen-konvertieren" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datentypen konvertieren</h2>
