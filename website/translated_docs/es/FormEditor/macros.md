@@ -20,7 +20,7 @@ Macros can been defined for the host project or for components within the projec
 
 When called, a macro overrides any previously specified behaviors.
 
-## Hands-on example
+## Ejemplo práctico
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
@@ -92,7 +92,7 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 
 
-## Declaring macros
+## Declaración de macros
 
 The structure of the `formMacros.json` file is the following:
 
@@ -112,8 +112,8 @@ Here is the description of the JSON file contents:
 | Atributo |                     |                          | Tipo   | Descripción                                            |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros   |                     |                          | objeto | list of defined macros                                 |
-|          | `<macroName>` |                          | objeto | macro definition                                       |
-|          |                     | class                    | cadena | macro class name                                       |
+|          | `<macroName>` |                          | objeto | definición de la macro                                 |
+|          |                     | class                    | cadena | nombre de clase de la macro                            |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.

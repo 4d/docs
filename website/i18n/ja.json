@@ -5,14 +5,8 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
-      "Admin/cli": {
-        "title": "コマンドライン・インターフェース"
-      },
       "Admin/dataExplorer": {
         "title": "Webデータエクスプローラー"
-      },
-      "Admin/debugLogFiles": {
-        "title": "ログファイルの詳細"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -23,85 +17,79 @@
       "Admin/webAdmin": {
         "title": "Web 管理"
       },
-      "API/BlobClass": {
-        "title": "BLOB"
-      },
-      "API/ClassClass": {
+      "API/classClass": {
         "title": "Class"
       },
-      "API/CollectionClass": {
+      "API/collectionClass": {
         "title": "Collection"
       },
-      "API/CryptoKeyClass": {
+      "API/cryptoClass": {
         "title": "CryptoKey"
       },
-      "API/DataClassAttributeClass": {
+      "API/dataclassAttributeClass": {
         "title": "DataClassAttribute"
       },
-      "API/DataClassClass": {
+      "API/dataclassClass": {
         "title": "DataClass"
       },
-      "API/DataStoreClass": {
+      "API/datastoreClass": {
         "title": "DataStore"
       },
-      "API/Directory": {
+      "API/directory": {
         "title": "Directory クラス"
       },
-      "API/Document": {
+      "API/document": {
         "title": "Document クラス"
       },
-      "API/EmailObjectClass": {
+      "API/emails": {
         "title": "Email"
       },
-      "API/EntityClass": {
+      "API/entityClass": {
         "title": "Entity"
       },
-      "API/EntitySelectionClass": {
+      "API/entitySelectionClass": {
         "title": "EntitySelection"
       },
-      "API/FileClass": {
+      "API/fileClass": {
         "title": "File"
       },
-      "API/FolderClass": {
+      "API/folderClass": {
         "title": "Folder"
       },
-      "API/FunctionClass": {
+      "API/formulaClass": {
         "title": "Formula"
       },
-      "API/IMAPTransporterClass": {
+      "API/imapTransporterClass": {
         "title": "IMAPTransporter"
-      },
-      "API/MailAttachmentClass": {
-        "title": "MailAttachment"
       },
       "API/overview": {
         "title": "クラス API の概要"
       },
-      "API/POP3TransporterClass": {
+      "API/pop3TransporterClass": {
         "title": "POP3Transporter"
       },
-      "API/SessionClass": {
+      "API/sessionClass": {
         "title": "Session"
       },
-      "API/SignalClass": {
+      "API/signalClass": {
         "title": "Signal"
       },
-      "API/SMTPTransporterClass": {
+      "API/smtpTransporterClass": {
         "title": "SMTPTransporter"
       },
-      "API/Transporter": {
+      "API/transporter": {
         "title": "Transporter クラス"
       },
-      "API/WebServerClass": {
+      "API/webServerClass": {
         "title": "WebServer"
       },
-      "API/ZipArchiveClass": {
+      "API/zipArchiveClass": {
         "title": "ZIPArchive"
       },
-      "API/ZipFileClass": {
+      "API/zipFileClass": {
         "title": "ZIPFile"
       },
-      "API/ZipFolderClass": {
+      "API/zipFolderClass": {
         "title": "ZIPFolder"
       },
       "Backup/backup": {
@@ -206,18 +194,6 @@
       },
       "Concepts/variables": {
         "title": "変数"
-      },
-      "Debugging/basics": {
-        "title": "画面の説明"
-      },
-      "Debugging/breakpoints": {
-        "title": "ブレークポイントとキャッチコマンド"
-      },
-      "Debugging/debugger": {
-        "title": "デバッガー"
-      },
-      "Debugging/debugging-remote": {
-        "title": "リモートマシンからのデバッグ"
       },
       "Desktop/building": {
         "title": "プロジェクトパッケージのビルド"
@@ -427,7 +403,7 @@
         "title": "ピクチャー"
       },
       "FormEditor/action": {
-        "title": "アクション"
+        "title": "動作"
       },
       "FormEditor/propertiesForm": {
         "title": "フォームプロパティ"
@@ -670,9 +646,6 @@
         "title": "検査ページ",
         "sidebar_label": "検査ページ"
       },
-      "Notes/updates": {
-        "title": "ドキュメンテーション更新情報"
-      },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
       },
@@ -694,29 +667,8 @@
       "ORDA/datastores": {
         "title": "リモートデータストアの利用"
       },
-      "Preferences/forms": {
-        "title": "フォームページ"
-      },
-      "Preferences/general": {
-        "title": "一般ページ"
-      },
-      "Preferences/methods": {
-        "title": "メソッドページ"
-      },
-      "Preferences/overview": {
-        "title": "概要"
-      },
-      "Preferences/shortcuts": {
-        "title": "ショートカットページ"
-      },
-      "Preferences/structure": {
-        "title": "ストラクチャーページ"
-      },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
-      },
-      "Project/compiler": {
-        "title": "コンパイル"
       },
       "Project/creating": {
         "title": "プロジェクトを開発する"
@@ -726,6 +678,9 @@
       },
       "Project/overview": {
         "title": "概要"
+      },
+      "ReleaseNotes/whatsNew": {
+        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -823,9 +778,6 @@
       "REST/REST_requests": {
         "title": "RESTリクエストについて"
       },
-      "Tags/tags": {
-        "title": "変換タグ"
-      },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
@@ -870,8 +822,9 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
-      "v19": "v19",
+      "What's New": "新着情報",
+      "v19 BETA": "v19 BETA",
+      "v18 R6": "v18 R6",
       "v18": "v18"
     },
     "categories": {
@@ -880,9 +833,7 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
-      "Debugging": "デバッガー",
       "Access Rights": "アクセス権限",
-      "Preferences": "環境設定",
       "Administration": "管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
@@ -922,12 +873,9 @@
     "Web Administration|no description given": "Web 管理",
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLSプロトコル (HTTPS)",
-    "Debugging|no description given": "デバッガー",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
-    "Description of log files|no description given": "ログファイルの詳細",
-    "Command Line Interface|no description given": "コマンドライン・インターフェース",
     "Preferences|no description given": "環境設定",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",

@@ -11,7 +11,7 @@ The following project elements accept documentation:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formularios
-- Tables and Fields
+- Tablas y campos
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -103,7 +103,7 @@ The 4D code editor displays a part of a method's documentation in its help tip.
 
 ![](assets/en/Project/codeEditor_Comments.png)
 
-If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, the code editor displays (by priority):
+Si un archivo llamado "\<MethodName>.md" existe en la carpeta "\<package>/documentation" folder, the code editor displays (by priority):
 
 - Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 
@@ -126,13 +126,13 @@ New documentation files are created with the following default contents:
 
 | Línea                                              | Descripción                                                                                                                                          |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"      | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
+| "\<!-- Type your summary here -->"      | Comentario HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                     |
 | ## Description                                    | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
 | ## Ejemplo                                        | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
 
-### Supported Markdown
+### Markdown soportado
 - The title tag is supported:
 ```
 # Title 1

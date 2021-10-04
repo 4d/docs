@@ -400,7 +400,7 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 Select one of the following preview modes from the menu:
 
-| Toolbar Icon                         | CSS Preview Mode | Descripción                                                                                                   |
+| Icono barra de herramientas          | CSS Preview Mode | Descripción                                                                                                   |
 | ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/FormEditor/cssNo.png)  | Ninguno          | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
 | ![](assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |

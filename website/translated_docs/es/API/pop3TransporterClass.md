@@ -479,7 +479,7 @@ The method returns an empty BLOB if:
 *   the message was marked for deletion using `.delete()`.
 
 
-**Returned BLOB**
+**BLOB devuelto**
 
 `.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](emailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
 

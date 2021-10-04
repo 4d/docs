@@ -11,7 +11,7 @@ You can create menus and menu bars:
 You can combine both features and use menus created in structure as templates to define menus in memory.
 
 
-## Default menu bar
+## Barra de menús por defecto
 
 A custom application must contain at least one menu bar with one menu. By default, when you create a new project, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. The default menu bar includes standard menus and a command for returning to the Design mode.
 
@@ -27,7 +27,7 @@ The default menu bar includes three menus:
 You can modify this menu bar as desired or create additional ones.
 
 
-## Creating menus
+## Crear menús
 
 ### Using the Menu editor
 
@@ -41,7 +41,7 @@ When menus are handled by means of *MenuRef* references, there is no difference 
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
-## Adding items
+## Añadir líneas
 For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
 
 ### Using the Menu editor
@@ -75,7 +75,7 @@ To delete a menu bar, menu or menu item:
 Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
 
 
-## Attaching menus
+## Adjuntar los menús
 
 Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
 
@@ -94,7 +94,7 @@ A menu can be attached to a menu bar or to another menu.
 - To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
   ![](assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
 
-#### Detaching menus
+#### Quitar los menús
 
 You can detach a menu from a menu bar or a sub-menu from a menu at any time. The detached menu is then no longer available in the menu bar or sub-menu as the case may be, but it is still present in the list of menus.
 

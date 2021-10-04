@@ -5,7 +5,7 @@ title: Manipulación de datos
 
 All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](ClassFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
 
-## Querying data
+## Buscar datos
 
 To query data directly, you can do so using the [`$filter`]($filter.md) function. For example, to find a person named "Smith", you could write:
 
@@ -91,7 +91,7 @@ You can apply this filter in the following ways:
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Specific entity        | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
+| Entidad específica     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
 | Entity selection       | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
@@ -107,7 +107,7 @@ You can apply this technique to:
 - Specific entities
 - Entity sets
 
-#### Dataclass Example
+#### Ejemplo con una dataclass
 
 Las siguientes peticiones devuelven sólo el nombre y el apellido de la clase de datos People (ya sea toda la clase de datos o una selección de entidades basada en la búsqueda definida en `$filter`).
 
@@ -174,7 +174,7 @@ Las siguientes peticiones devuelven sólo el nombre y el apellido de la clase de
 ````
 
 
-#### Entity Example
+#### Ejemplo de entidad
 
 The following request returns only the first name and last name attributes from a specific entity in the People dataclass:
 

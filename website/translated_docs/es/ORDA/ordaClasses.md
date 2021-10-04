@@ -409,12 +409,12 @@ End if
 ## Support in 4D projects
 
 
-### Class files
+### Archivos de clase (class files)
 
 An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
 
 
-### Creating classes
+### Crear clases
 
 4D automatically pre-creates empty classes in memory for each available data model object.
 

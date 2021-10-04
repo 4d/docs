@@ -6,7 +6,7 @@
     "tagline": "Documentación para desarrolladores 4D",
     "docs": {
       "Admin/dataExplorer": {
-        "title": "Web Data Explorer"
+        "title": "Explorador de datos Web"
       },
       "Admin/licenses": {
         "title": "Gestión de licencias 4D"
@@ -873,7 +873,7 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
-    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
     "Preferences|no description given": "Preferencias",

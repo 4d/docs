@@ -188,7 +188,7 @@ You can simultaneously create and use as many different entity selections as you
 
 An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
-#### Properties
+#### Propiedades
 
 A **shareable** entity selection has the following characteristics:
 
@@ -373,7 +373,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 > Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
 
-### Pessimistic lock
+### Bloqueo pesimista
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 

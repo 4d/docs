@@ -111,7 +111,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 
 | Placeholder | Effect for leading or trailing zero |
 | ----------- | ----------------------------------- |
-| #           | Displays nothing                    |
+| #           | No muestra nada                     |
 | 0           | Displays 0                          |
 | ^           | Displays a space (1)                |
 | *           | Displays an asterisk                |
@@ -195,7 +195,7 @@ You can display a number in hexadecimal using the following display formats:
 *   `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
 *   `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
-### XML notation
+### Notación XML
 
 The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
 
@@ -261,7 +261,7 @@ The following table shows how different formats affect the display of numbers. T
 
 
 ---
-## Picture Format
+## Formato imagen
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
@@ -331,7 +331,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comentarios                                                                                                                                      | Example for 04:30:25          |
+| Format name                  | Cadena JSON  | Comentarios                                                                                                                                      | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -442,7 +442,7 @@ Allows a check box object to accept a third state. La variable asociada a la cas
 
 List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
 *   0 = unchecked box,
-*   1 = checked box,
+*   1 = casilla seleccionada,
 *   2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
 *   -1 = invisible check box,
 *   -2 = unchecked box, not enterable,

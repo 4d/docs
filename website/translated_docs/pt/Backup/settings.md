@@ -34,7 +34,7 @@ The options found on this tab let you set and configure scheduled automatic back
     - **Every X week(s) day at x**: Allows programming backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must enter the day(s) of the week and the time when the backup should start. You can select several days of the week, if desired. For example, you can use this option to set two weekly backups: one on Wednesday and one on Friday.
     - **Every X month(s), Xth Day at x**: Allows programming backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup should start.
 
-> Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
+> As mudanças de hora padrão para hora de verão podem afetar temporariamente ao programador automático e ativar a próxima cópia de segurança com uma diferença de uma hora. Isso acontece só uma vez e os próximos backups rodam na hora prevista.
 
 
 ## Configuration
@@ -43,7 +43,7 @@ The Backup/Configuration page of the Structure Settings lets you set the backup 
 
 ![](assets/en/Backup/backup03.png)
 
-> **4D Server:** These parameters can only be set from the 4D Server machine.
+> **4D Server:** estes parâmetros só podem ser configurados desde a máquina 4D Server.
 
 ### Content
 This area allows you to set which files and/or folders to copy during the next backup.

@@ -62,7 +62,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF FolderClass.Folder.Params -->
 | Parameter      | Type      |    | Description                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Text      | -> | Folder path                                     |
+| path           | Texto     | -> | Folder path                                     |
 | folderConstant | Integer   | -> | 4D folder constant                              |
 | pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
@@ -211,7 +211,7 @@ End if
 | Parameter         | Type      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Text      | -> | Name of the alias or shortcut                |
+| aliasName         | Texto     | -> | Name of the alias or shortcut                |
 | aliasType         | Integer   | -> | Type of the alias link                       |
 | Result            | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
@@ -387,7 +387,7 @@ When `Delete with contents` is passed:
 | Parameter         | Type      |    | Description                    |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | Text      | -> | Full name for the moved folder |
+| newName           | Texto     | -> | Full name for the moved folder |
 | Result            | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
 
@@ -456,7 +456,7 @@ You want to move and rename a folder:
 <!--REF #FolderClass.rename().Params -->
 | Parameter | Type      |    | Description                  |
 | --------- | --------- | -- | ---------------------------- |
-| newName   | Text      | -> | New full name for the folder |
+| newName   | Texto     | -> | New full name for the folder |
 | Result    | 4D.Folder | <- | Renamed folder               |
 <!-- END REF -->
 

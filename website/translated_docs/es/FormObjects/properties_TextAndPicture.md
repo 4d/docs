@@ -25,7 +25,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 
 ---
-## Button Style
+## Estilos de botón
 
 General appearance of the button. The button style also plays a part in the availability of certain options.
 
@@ -45,15 +45,15 @@ General appearance of the button. The button style also plays a part in the avai
 
 
 ---
-## Horizontal Margin
+## Margen horizontal
 
 This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| With / Without       | Ejemplo                                                   |
+| Con / Sin            | Ejemplo                                                   |
 | -------------------- | --------------------------------------------------------- |
-| Without margin       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
+| Sin margen           | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
 > This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
 
@@ -72,7 +72,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 ---
 
-## Icon Location
+## Ubicación del icono
 
 Designates the placement of an icon in relation to the form object.
 
@@ -84,7 +84,7 @@ Designates the placement of an icon in relation to the form object.
 
 #### Objetos soportados
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Encabezado de list box](listbox_overview.md#list-box-headers)
 
 
 
@@ -110,7 +110,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 
 ---
-## Number of States
+## Número de estados
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
 
@@ -140,7 +140,7 @@ The following states are represented:
 
 
 ---
-## Picture pathname
+## Ruta de acceso de la imagen
 
 Sets the path of the picture that will be used as icon for the object.
 
@@ -190,7 +190,7 @@ Here are the results using the various options for this property:
 
 
 ---
-## Vertical Margin
+## Margen vertical
 
 This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
 
@@ -212,7 +212,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 
 ---
-## With pop-up menu
+## Con menú pop-up
 
 This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
 

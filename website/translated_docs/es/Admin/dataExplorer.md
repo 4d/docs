@@ -1,6 +1,6 @@
 ---
 id: dataExplorer
-title: Web Data Explorer
+title: Explorador de datos Web
 ---
 
 > **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.

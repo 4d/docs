@@ -180,7 +180,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 [Área 4D View Pro](viewProArea_overview.md)
 
 ---
-## Show headers
+## Mostrar los encabezados
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 

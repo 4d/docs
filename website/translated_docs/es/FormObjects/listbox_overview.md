@@ -563,7 +563,7 @@ Priority and inheritance principles are observed when the same property is set a
 
 | Priority level | Setting location                                                     |
 | -------------- | -------------------------------------------------------------------- |
-| high priority  | Cell (if multi-style text)                                           |
+| alta prioridad | Cell (if multi-style text)                                           |
 |                | Column arrays/methods                                                |
 |                | List box arrays/methods                                              |
 |                | Column properties                                                    |
@@ -601,10 +601,10 @@ To restore the original appearance of the list box, you can:
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
-| Propiedad        | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                           |
-| ---------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Background color | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Color de fuente  | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
+| Propiedad       | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                           |
+| --------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Color de fondo  | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
+| Color de fuente | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
  Font style|
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
@@ -624,7 +624,7 @@ Printing a list box in preview mode consists of directly printing the list box a
 
 In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
 
-In this mode:
+En este modo:
 
 - The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
@@ -869,7 +869,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
-| color     | background color                               | texto                                                                                          |
+| color     | color de fondo                                 | texto                                                                                          |
 | evento    | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
@@ -900,7 +900,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
 | *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
 | value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
-| min                   | minimum value                           |       | x    | x       |          |       |        |
+| min                   | valor mínimo                            |       | x    | x       |          |       |        |
 | max                   | maximum value                           |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
 | requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |        |
@@ -1168,7 +1168,7 @@ OB SET($ob;"label";"Edit...")
 ![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
 
-### Event management
+### Gestión de eventos
 Several events can be handled while using an object list box array:
 
 *   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:

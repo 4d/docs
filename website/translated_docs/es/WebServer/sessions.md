@@ -15,7 +15,7 @@ Web server user sessions allow to:
 > **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
 
 
-## Enabling sessions
+## Activación de sesiones
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
@@ -83,7 +83,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 - a new session cookie is associated to the session
 
 
-## Privileges
+## Privilegios
 
 Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 

@@ -93,7 +93,7 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 When you check this option, any folders related to the project are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
 
 
-### Build component
+### Generar un componente
 
 Builds a compiled component from the structure.
 
@@ -154,7 +154,7 @@ This option lets you choose the linking mode between the merged application and 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 
-#### Generated files
+#### Archivos generados
 
 When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
 
@@ -305,7 +305,7 @@ There are many possible causes for this error. When you get this message, it is 
 *   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 
-### Generated files
+### Archivos generados
 
 Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
@@ -330,7 +330,7 @@ If the server and/or client part of your double-clickable application is used as
 - Default Web root folder (WebFolder).
 
 Items must be installed:
-*   **on Windows**
+*   **en Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 

@@ -155,11 +155,11 @@ In *attributesToCompare*, you can designate specific attributes to compare. If p
 
 The differences are returned as a collection of objects whose properties are:
 
-| Property name | Tipo                            | Descripción                                 |
-| ------------- | ------------------------------- | ------------------------------------------- |
-| attributeName | String                          | Name of the attribute                       |
-| value         | any - Depends on attribute type | Value of the attribute in the entity        |
-| otherValue    | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
+| Nombre de propiedad | Tipo                            | Descripción                                 |
+| ------------------- | ------------------------------- | ------------------------------------------- |
+| attributeName       | String                          | Name of the attribute                       |
+| value               | any - Depends on attribute type | Value of the attribute in the entity        |
+| otherValue          | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 
 Only attributes with different values are included in the collection. If no differences are found, `.diff()` returns an empty collection.
 

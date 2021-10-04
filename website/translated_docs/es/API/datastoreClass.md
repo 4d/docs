@@ -62,7 +62,7 @@ If no *localID* datastore is found, the command returns **Null**.
 
 Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
 
-*   A datastore only references tables with a single primary key. Tables without a primary key or with composite primary keys are not referenced.
+*   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Tables without a primary key or with composite primary keys are not referenced.
 *   BLOB type attributes are not managed in the datastore.
 
 

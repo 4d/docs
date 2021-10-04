@@ -12,7 +12,7 @@ You use this type of object to indicate that an operation such as establishing a
 Cuando se ejecuta el formulario, el objeto no se anima. La animación se gestiona pasando un valor a su [variable o expresión asociada](properties_Object.md#variable-or-expression):
 
 * 1 (o cualquier valor diferente de 0) = Iniciar la animación,
-* 0 = Stop animation
+* 0 = Detener la animación
 
 ### Propiedades soportadas
 

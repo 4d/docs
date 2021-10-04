@@ -28,7 +28,7 @@ If you want the data to be returned in an array instead of JSON, use the [`$asAr
 ## REST Status and Response
 With each REST request, the server returns the status and a response (with or without an error).
 
-### Request Status
+### Estado de la petición
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
 | Estado                    | Descripción                                                                |

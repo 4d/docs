@@ -71,7 +71,7 @@ Your 4D application is now activated.
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
 
-## Adding licenses
+## Añadir las licencias
 
 You can add new licenses, for example to extend the capacities of your application, at any time.
 

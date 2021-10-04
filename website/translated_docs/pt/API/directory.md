@@ -437,7 +437,7 @@ This property is **read-only**.
 | Parameter         | Type      |    | Description                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Text      | -> | Name for the copy                           |
+| newName           | Texto     | -> | Name for the copy                           |
 | overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
 | Result            | 4D.Folder | <- | Copied file or folder                       |
 <!-- END REF -->
@@ -492,7 +492,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 | Parameter | Type    |    | Description                          |
 | --------- | ------- | -- | ------------------------------------ |
-| path      | Text    | -> | Relative POSIX file pathname         |
+| path      | Texto   | -> | Relative POSIX file pathname         |
 | Result    | 4D.File | <- | `File` object (null if invalid path) |
 <!-- END REF -->
 
@@ -593,7 +593,7 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- REF #directory.folder().Params -->
 | Parameter | Type      |    | Description                                    |
 | --------- | --------- | -- | ---------------------------------------------- |
-| path      | Text      | -> | Relative POSIX file pathname                   |
+| path      | Texto     | -> | Relative POSIX file pathname                   |
 | Result    | 4D.Folder | <- | Created folder object (null if invalid *path*) |
 <!-- END REF -->
 
