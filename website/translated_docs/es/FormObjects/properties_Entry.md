@@ -102,7 +102,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | Entry Filter                           | Descripción                                                                                                                                           |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                                     | Allow any letters, but convert to uppercase.                                                                                                          |
-| &9                                     | Allow only numbers.                                                                                                                                   |
+| &9                                     | Permitir sólo números.                                                                                                                                |
 | &A                                     | Allow only capital letters.                                                                                                                           |
 | &a                                     | Allow only letters (uppercase and lowercase).                                                                                                         |
 | &@                                     | Allow only alphanumeric characters. No special characters.                                                                                            |
