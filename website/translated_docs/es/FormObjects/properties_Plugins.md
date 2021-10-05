@@ -4,7 +4,7 @@ title: Plug-ins
 ---
 
 ---
-## Advanced Properties
+## Propiedades avanzadas
 
 If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
 
