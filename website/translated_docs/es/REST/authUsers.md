@@ -4,7 +4,7 @@ title: Usuarios y sesiones
 ---
 
 
-## Authenticating users
+## Autenticación de los usuarios
 
 Como primer paso para abrir una sesión REST en el servidor 4D, el usuario que envía la solicitud debe estar autenticado.
 

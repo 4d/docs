@@ -84,13 +84,13 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 The editor for groups is located in the Toolbox of 4D.
 
-### Configuring groups
+### Configurar grupos
 
 You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
 
 Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
 
-To create a group:
+Para crear un grupo:
 
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
 

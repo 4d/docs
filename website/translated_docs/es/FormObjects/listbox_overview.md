@@ -32,7 +32,7 @@ Un list box se compone de cuatro partes distintas:
 
 *   el objeto list box en su totalidad,
 *   las columnas,
-*   column headers, and
+*   los encabezados de las columnas, y
 *   column footers.
 
 ![](assets/en/FormObjects/listbox_parts.png)
@@ -1081,9 +1081,9 @@ OB SET($ob;"label";"Edit...")
 Several events can be handled while using an object list box array:
 
 *   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
-    *   in a text input zone
-    *   in a drop-down list
-    *   in a combo box area
+    *   en un área de entrada de texto
+    *   en una lista desplegable
+    *   en un área combo box
     *   in a unit button (switch from value x to value x+1)
     *   in a check box (switch between checked/unchecked)
 *   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.

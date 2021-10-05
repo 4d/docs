@@ -240,7 +240,7 @@ The following request returns only the first name and last name attributes from 
 }
 ````
 
-#### Entity Set Example
+#### Ejemplo de conjunto de entidades
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 

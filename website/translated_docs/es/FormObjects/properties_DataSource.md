@@ -4,7 +4,7 @@ title: Fuente de datos
 ---
 
 ---
-## Automatic Insertion
+## Inserción automática
 
 When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles     |
-| -------------- | -------------- | -------------------- |
-| namedSelection | cadena         | Named selection name |
+| Nombre         | Tipos de datos | Valores posibles       |
+| -------------- | -------------- | ---------------------- |
+| namedSelection | cadena         | Nombre de la selección |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)
