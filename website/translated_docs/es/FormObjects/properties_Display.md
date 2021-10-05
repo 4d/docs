@@ -175,7 +175,7 @@ Notice that the presence of the second semicolon instructs 4D to use nothing to 
 
 In this case, the display for zero would be $0.00.
 
-### Scientific notation
+### Notación científica
 
 If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
 
@@ -188,7 +188,7 @@ would display 759.62 as:
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
-### Hexadecimal formats
+### Formatos hexadecimales
 
 You can display a number in hexadecimal using the following display formats:
 
@@ -331,7 +331,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | Cadena JSON  | Comentarios                                                                                                                                      | Example for 04:30:25          |
+| Format name                  | Cadena JSON  | Comentarios                                                                                                                                      | Ejemplo para 04:30:25         |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
