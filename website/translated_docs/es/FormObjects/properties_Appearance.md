@@ -300,7 +300,7 @@ With the Show references property on, the reference is displayed:
 [Área 4D Write Pro](writeProArea_overview.md)
 
 ---
-## Show vertical ruler
+## Mostrar regla vertical
 
 Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
 
