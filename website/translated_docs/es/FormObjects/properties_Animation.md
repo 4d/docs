@@ -79,7 +79,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 
 ---
-## Switch when roll over
+## Cambiar cuando se pasa por encima el cursor
 
 Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
 
