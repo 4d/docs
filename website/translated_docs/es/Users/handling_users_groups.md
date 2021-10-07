@@ -15,19 +15,19 @@ The most powerful user is named **Designer**. Ningún aspecto de la base de dato
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
-The Administrator can:
+El administrador puede:
 - create users and groups,
 - access the 4D Server Administration window and monitor
 - access the MSC window to monitor backup, restore, or server.
 
 The Administrator cannot:
-- edit the Designer user
+- modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la base. In particular, the Administrator cannot access to the Design mode if it is restricted. El administrador debe formar parte de uno o varios grupos para tener privilegios de acceso en la base. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Tanto el Diseñador como el Administrador están disponibles por defecto en todas las bases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Icono Diseñador: ![](assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](assets/en/Users/iconAdmin.png)
+- Icono del Administrador: ![](assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
@@ -35,7 +35,7 @@ The Designer and Administrator can each create up to 16,000 groups and 16,000 us
 
 
 
-## Users editor
+## Editor de usuarios
 
 The editor for users is located in the Toolbox of 4D.
 
@@ -57,7 +57,7 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4D adds a new user to the list, named "New userX" by default.
 
-3. Enter the user name. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Introduzca el nombre de usuario. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
