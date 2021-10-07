@@ -31,7 +31,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 | Propiedad | Tipo   | Descripción                                                                       |
 | --------- | ------ | --------------------------------------------------------------------------------- |
-| name      | Cadena | Name of the dataclass.                                                            |
+| name      | Cadena | Nombre de la dataclass.                                                           |
 | uri       | Cadena | A URI allowing you to obtain information about the |dataclass and its attributes. |
 | dataURI   | Cadena | A URI that allows you to view the data in the dataclass.                          |
 
@@ -73,7 +73,7 @@ Para más información sobre lo que se devuelve para cada clase de datos y sus a
 
 ### Ejemplo
 
-`GET  /rest/$catalog/$all`
+`GET /rest/$catalog/$all`
 
 **Result**:
 
@@ -192,7 +192,7 @@ Calling `$catalog/{dataClass}` for a specific dataclass will return the followin
 The information you retrieve concerns the following:
 
 *   Dataclass
-*   Attribute(s)
+*   Atributo(s)
 *   Método(s) si lo hay
 *   Llave primaria
 
@@ -203,14 +203,14 @@ The following properties are returned for an exposed dataclass:
 
 | Propiedad      | Tipo   | Descripción                                                                                                         |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
-| name           | Cadena | Name of the dataclass                                                                                               |
+| name           | Cadena | Nombre de la dataclass                                                                                              |
 | collectionName | Cadena | Name of an entity selection on the dataclass                                                                        |
 | tableNumber    | Número | Table number in the 4D database                                                                                     |
 | scope          | Cadena | Alcance de la clase de datos (tenga en cuenta que sólo se muestran las clases de datos cuyo **Alcance** es público) |
 | dataURI        | Cadena | A URI to the data in the dataclass                                                                                  |
 
 
-### Attribute(s)
+### Atributo(s)
 
 Here are the properties for each exposed attribute that are returned:
 
