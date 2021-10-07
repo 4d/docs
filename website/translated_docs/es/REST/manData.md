@@ -110,13 +110,13 @@ You can always define which attributes to return in the REST response after an i
 
 You can apply this filter in the following ways:
 
-| Objeto                 | Sintaxis                                            | Ejemplo                                                       |
-| ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
-| Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Entidad específica     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
-|                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
-| Entity selection       | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
+| Objeto                  | Sintaxis                                            | Ejemplo                                                       |
+| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| Dataclass               | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
+| Collection de entidades | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
+| Entidad específica      | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
+|                         | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
+| Entity selection        | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
@@ -127,7 +127,7 @@ Here are a few examples, showing you how to specify which attributes to return d
 You can apply this technique to:
 
 - Dataclasses (all or a collection of entities in a dataclass)
-- Specific entities
+- Entidades específicas
 - Entity sets
 
 #### Ejemplo con una dataclass
