@@ -34,7 +34,7 @@ Here is a description of the data returned:
 
 | Propiedad     | Tipo       | Descripción                                                                                                                                                                                     |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | Cadena     | Name of the dataclass.                                                                                                                                                                          |
+| __entityModel | Cadena     | Nombre de la dataclass.                                                                                                                                                                         |
 | __COUNT       | Número     | Número de entidades en la clase de datos.                                                                                                                                                       |
 | __SENT        | Número     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
 | __FIRST       | Número     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
