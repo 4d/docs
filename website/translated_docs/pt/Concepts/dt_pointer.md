@@ -16,7 +16,7 @@ You can use pointers to reference tables, fields, variables, arrays, array eleme
 | Type          | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
 | Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
+| Campo         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
