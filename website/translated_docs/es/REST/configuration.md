@@ -43,7 +43,7 @@ Por defecto, el menú muestra **<Anyone>**, lo que significa que los accesos RES
 
 > In order for this setting to take effect, the `On REST Authentication` database method must not be defined. Si existe, 4D ignora los parámetros de acceso definidos en las propiedades de la base.
 
-### Using the On REST Authentication database method
+### Método base On REST Authentication
 The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. Puede utilizar la lista de usuarios de la base 4D o puede utilizar su propia tabla de identificadores. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 
