@@ -303,14 +303,14 @@ A sequencia típica de eventos gerados durante a entrada de dados ou modificaç�
 | ----------------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Uma célula troca para modo editar (ação de usuário ou uma chamada ao comando `EDIT ITEM`) | Todos                       | On Before Data Entry                                                                                                                                                                                           |
 |                                                                                           | Todos                       | On Getting Focus                                                                                                                                                                                               |
-| Its value is modified                                                                     | All                         | On Before Keystroke                                                                                                                                                                                            |
-|                                                                                           | All                         | On After Keystroke                                                                                                                                                                                             |
-|                                                                                           | All                         | On After Edit                                                                                                                                                                                                  |
+| Its value is modified                                                                     | Todos                       | On Before Keystroke                                                                                                                                                                                            |
+|                                                                                           | Todos                       | On After Keystroke                                                                                                                                                                                             |
+|                                                                                           | Todos                       | On After Edit                                                                                                                                                                                                  |
 | A user validates and leaves the cell                                                      | Selection list boxes        | Save                                                                                                                                                                                                           |
 |                                                                                           | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
 |                                                                                           | Selection list boxes        | On Data Change(*)                                                                                                                                                                                              |
 |                                                                                           | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
-|                                                                                           | All                         | On Losing Focus                                                                                                                                                                                                |
+|                                                                                           | Todos                       | On Losing Focus                                                                                                                                                                                                |
 
 (*) With entity selection list boxes, in the On Data Change event:
 - the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
@@ -418,7 +418,7 @@ You can write in the *UI_SetColor* method:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 //  fundo verde
  Else
     $color:=lk inherited
  End if
