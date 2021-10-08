@@ -173,7 +173,7 @@ Notice that the presence of the second semicolon instructs 4D to use nothing to 
 
     ￥###,##0.00;(￥###,##0.00)
 
-In this case, the display for zero would be $0.00.
+En este caso, la visualización del cero sería $0.00.
 
 ### Notación científica
 
@@ -193,7 +193,7 @@ The scientific notation format is the only format that will automatically round 
 You can display a number in hexadecimal using the following display formats:
 
 *   `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-*   `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+*   `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
 
 ### Notación XML
 
