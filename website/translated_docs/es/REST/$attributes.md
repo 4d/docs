@@ -17,7 +17,7 @@ You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity select
 
 - If `$attributes` is specified for **related entity** attributes:
     - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-    - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
+    - `$attributes=relatedEntity.*`: se devuelven todos los atributos de la entidad relacionada
     - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
 
 
