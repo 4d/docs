@@ -183,7 +183,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=-255 // valor por defecto
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
