@@ -119,10 +119,10 @@ These reserved key combinations are listed in the following table:
 | Llave (Windows) | Llave (macOS)     | Operación         |
 | --------------- | ----------------- | ----------------- |
 | Ctrl+C          | Comando+C         | Copiar            |
-| Ctrl+Q          | Command+Q         | Salir             |
-| Ctrl+V          | Command+V         | Pegar             |
-| Ctrl+X          | Command+X         | Cortar            |
-| Ctrl+Z          | Command+Z         | Deshacer          |
+| Ctrl+Q          | Comando+Q         | Salir             |
+| Ctrl+V          | Comando+V         | Pegar             |
+| Ctrl+X          | Comando+X         | Cortar            |
+| Ctrl+Z          | Comando+Z         | Deshacer          |
 | Ctrl+. (punto)  | Comando+. (punto) | Detener la acción |
 
 To assign a keyboard shortcut in the Menu editor:
