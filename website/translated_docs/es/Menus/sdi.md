@@ -15,7 +15,7 @@ The SDI mode is available in the following execution environment only:
 - Windows
 - Merged stand-alone or client 4D application
 
-## Enabling the SDI mode
+## Activación del modo SDI
 
 Enabling and using the SDI mode in your application require the following steps:
 
@@ -38,7 +38,7 @@ Menus are added above windows without modifiying their contents size:
 
 Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
 
-#### About the splash screen
+#### Sobre la pantalla de inicio
 
 - Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en la Configuración de la base de datos, la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.

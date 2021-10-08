@@ -354,7 +354,7 @@ A tabela abaixo resume as convenções de nomes em 4D.
 | Identificador                  | Tamanho Máx | Example                    |
 | ------------------------------ | ----------- | -------------------------- |
 | Table                          | 31          | [Invoices]                 |
-| Field                          | 31          | [Employees]Last Name       |
+| Campo                          | 31          | [Employees]Last Name       |
 | Variável/array interprocesso   | <> + 31     | <>vlNextProcessID          |
 | Variável/Array processo        | 31          | vsCurrentName              |
 | Variável/Array local           | $ + 31      | $vlLocalCounter            |

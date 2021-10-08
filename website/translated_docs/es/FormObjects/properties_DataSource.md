@@ -34,7 +34,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 
 ---
-## Choice List
+## Lista de selección
 
 Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
@@ -65,7 +65,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Pestañas](tabControl.md)
 
 
 ---

@@ -21,7 +21,7 @@ Se pueden asociar dos variables específicas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar la URL que muestra el área web
 - [`Progresión`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-### Web rendering engine
+### Motor de renderización web
 
 Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área web, dependiendo de las particularidades de su aplicación.
 

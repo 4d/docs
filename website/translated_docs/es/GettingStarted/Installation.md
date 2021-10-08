@@ -6,7 +6,7 @@ title: Instalación y activación
 ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 
-## Required configuration
+## Configuración requerida
 
 Consulte la [página de descarga del producto](https://us.4d.com/product-download) en el sitio web de 4D para conocer la configuración mínima de Mac / Windows para su serie 4D.
 
@@ -67,7 +67,7 @@ Then enter the license number of the product you want to activate. This number i
 ![](assets/en/getStart/activ2.png)
 
 
-### Deferred Activation
+### Activación diferida
 
 If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
 
@@ -96,7 +96,7 @@ With the license file loaded, click on **Next**.
 
 Your 4D application is now activated.
 
-### Emergency Activation
+### Activación de emergencia
 
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 

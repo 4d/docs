@@ -11,7 +11,7 @@ Si diferentes personas utilizan una base de datos, lo que suele ocurrir en la ar
 
 
 
-## Assigning group access
+## Asignación de acceso a grupos
 
 4D’s password access system is based on users and groups. Se crean usuarios y se les asignan contraseñas, se colocan los usuarios en grupos y se les asignan a cada grupo derechos de acceso apropiados a las partes de la base.
 
@@ -42,7 +42,7 @@ En las bases proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pue
 | ------------------------------------------------------------- | ---------------------------- | --------- |
 | Adding/editing users and groups                               | sí                           | sí        |
 | Assigning user/group access to servers                        | sí                           | sí        |
-| User identification                                           | no (all users are Designer)  | sí        |
+| Identificación del usuario                                    | no (all users are Designer)  | sí        |
 | Access control once the Designer has been assigned a password | no (all access are Designer) | sí        |
 
 
@@ -59,7 +59,7 @@ The editors for users and groups are located in the toolbox of 4D. These editors
 
 
 
-## Directory.json file
+## Archivo directory.json
 
 Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico de la base llamado **directory.json**.
 

@@ -4,7 +4,7 @@ title: Entrada
 ---
 
 ---
-## Auto Spellcheck
+## Corrección ortográfica automática
 
 4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
@@ -75,7 +75,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 
 ---
-## Entry Filter
+## Filtro de entrada
 
 An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
 
@@ -95,27 +95,27 @@ Most of the time, you can use one of the [built-in filters](#default-entry-filte
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 
-### Default entry filters
+### Filtros de entrada por defecto
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                           | Descripción                                                                                                                                           |
+| Filtro de entrada                      | Descripción                                                                                                                                           |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                                     | Allow any letters, but convert to uppercase.                                                                                                          |
 | &9                                     | Permitir sólo números.                                                                                                                                |
 | &A                                     | Allow only capital letters.                                                                                                                           |
 | &a                                     | Allow only letters (uppercase and lowercase).                                                                                                         |
-| &@                                     | Allow only alphanumeric characters. No special characters.                                                                                            |
+| &@                                     | Allow only alphanumeric characters. No hay caracteres especiales.                                                                                     |
 | ~a##                                   | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                  |
-| !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                         |
-| !0&9 Día: ## Mes: ## Año: ##           | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                              |
+| !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Permitir cualquier número.                                                                 |
+| !0&9 Día: ## Mes: ## Año: ##           | Custom date entry format. Display zeros in entry spaces. Permitir cualquier número. Two entries after each word.                                      |
 | !0&9##:##                              | Formato de entrada de hora. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
 | !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
 | !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
 | !0&9##-##-##-##                        | Local telephone number format. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####                    | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                  |
 | !0&9###-###-###                        | Long distance telephone number. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                         | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                             |
+| !0&9###-##-###                         | Social Security number. Display zeros in entry spaces. Permitir cualquier número.                                                                     |
 | ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                         |
 | &"a-z;0-9; ;,;.;-"                     | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                  |
 | &"0-9;.;-"                             | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
