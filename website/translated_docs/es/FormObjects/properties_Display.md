@@ -4,7 +4,7 @@ title: Visualización
 ---
 
 ---
-## Alpha Format
+## Formato Alfa
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
 
@@ -34,7 +34,7 @@ and the user enters "proportion", the field displays:
 
     (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No se pierde ninguna información.
 
 #### Gramática JSON
 
@@ -98,7 +98,7 @@ The table below shows choices available:
 
 
 ---
-## Number Format
+## Formato de número
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
@@ -123,7 +123,7 @@ For example, if you want to display three-digit numbers, you could use the forma
 
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
+> No matter what the display format, 4D accepts and stores the number entered in the field. No se pierde ninguna información.
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
@@ -158,7 +158,7 @@ Spaces are treated as characters in number display formats.
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
-    Positive;Negative;Zero
+    Positivo;Negativo;Cero
 
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
@@ -215,7 +215,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-| Format Entered                         | Positivo         | Negativo      | Cero                         |
+| Formato introducido                    | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
 | ###                                    | <<<              | <<<           |                              |
 | ####                                   | 1234             | <<<<          |                              |
@@ -269,7 +269,7 @@ The truncation and scaling options do not affect the picture itself. The content
 
 ### Scaled to fit
 
-`JSON grammar: "scaled"`
+`Gramática JSON: "scaled"`
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
@@ -301,7 +301,7 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 ### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -324,7 +324,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 
 ---
-## Time Format
+## Formato Hora
 
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
@@ -400,14 +400,14 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
 
 
 ---
-## Not rendered
+## No renderizado
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
@@ -481,14 +481,14 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
 
 ---
 
-## Truncate with ellipsis
+## Truncar con puntos suspensivos
 
 Controls the display of values when list box columns are too narrow to show their full contents.
 
@@ -560,7 +560,7 @@ You can handle the Visible property for most form objects. This property simplif
 Manages the display of contents when it exceeds the width of the object.
 
 #### Checked for list box/Yes for input
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
