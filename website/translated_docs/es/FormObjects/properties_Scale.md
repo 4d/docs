@@ -38,7 +38,7 @@ Muestra/Oculta las graduaciones junto a las etiquetas.
 
 
 ---
-## Graduation step
+## Paso en la graduación
 
 Scale display measurement.
 
@@ -56,7 +56,7 @@ Scale display measurement.
 
 
 ---
-## Label Location
+## Posición de la etiqueta
 
 Specifies the location of an object's displayed text.
 
