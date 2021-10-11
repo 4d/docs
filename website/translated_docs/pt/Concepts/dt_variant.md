@@ -8,12 +8,12 @@ Variant is a variable type which allows encapsulating data of any valid regular 
 A variant type variable can contain a value of the following data types:
 
 - BLOB
-- boolean
+- booleano
 - collection
 - date
 - longint
 - object
-- picture
+- imagem
 - pointer
 - real
 - text
