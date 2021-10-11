@@ -25,7 +25,7 @@ Además de recuperar una sola entidad en una clase de datos utilizando [{dataCla
 Antes de devolver la colección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
 
-## Navigating data
+## Navegación de datos
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
