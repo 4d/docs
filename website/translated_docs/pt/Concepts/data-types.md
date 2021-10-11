@@ -53,12 +53,12 @@ The following table illustrates these default values:
 | Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
 | Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
 | Hora       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
+| Imagem     | picture size=0                                                                      | picture size=0          | picture size=0               |
 | Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| Ponteiro   | Nil=true                                                                            | Nil=true                | Nil=true                     |
 | Texto      | ""                                                                                  | ""                      | ""                           |
 | Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Object     | null                                                                                | null                    | null                         |
+| Objeto     | null                                                                                | null                    | null                         |
 | Collection | null                                                                                | null                    | null                         |
 | Variant    | undefined                                                                           | undefined               | undefined                    |
 
@@ -75,7 +75,7 @@ The following table lists the basic data types, the data types to which they can
 | Number (2)           | String    |           |         |         | Bool       |
 | Date                 | String    |           |         |         | Bool       |
 | Hora                 | String    |           |         |         | Bool       |
-| Boolean              |           | Num       |         |         |            |
+| Booleano             |           | Num       |         |         |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
 
