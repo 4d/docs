@@ -8,7 +8,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 ## Available syntaxes
 
-| Syntax                                                                                                     | Example                                                                            | Description                                                  |
+| Sintaxe                                                                                                    | Exemplo                                                                            | Description                                                  |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Retrieves an existing entity set                             |
 | [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
@@ -29,7 +29,7 @@ Because entity sets have a time limit on them (either by default or after callin
 
 When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
 
-### Example
+### Exemplo
 
 After you create an entity set, the entity set ID is returned along with the data. You call this ID in the following manner:
 
@@ -82,7 +82,7 @@ The syntax is as follows:
 
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
-### Example
+### Exemplo
 In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
