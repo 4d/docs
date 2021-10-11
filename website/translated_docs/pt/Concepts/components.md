@@ -173,7 +173,7 @@ Um [método de gestião de erros](Concepts/error-handling.md) instalado pelo com
 
 Um componente não pode usar as tabelas e campos definidos na estrutura 4D do banco de dados matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Um banco de dados externo é um banco 4D que é independente do banco 4D principal, mas que pode trabalhar com o banco principal. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
 
-### Example
+### Exemplo
 
 O código abaixo está incluído em um componente e realiza três ações básicas com um banco externo:
 
