@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Imagem
 ---
 
 ---
@@ -16,9 +16,9 @@ Two main locations can be used for static picture path:
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                             |
-|:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+|  Name  | Data Type | Possible Values                             |
+|:------:|:---------:| ------------------------------------------- |
+| imagem |   text    | Relative or filesystem path in POSIX syntax |
 
 
 #### Objects Supported
