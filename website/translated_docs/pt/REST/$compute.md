@@ -31,7 +31,7 @@ You can use any of the following keywords:
 | sum     | Get the sum on a numerical attribute                                                                                                                                                  |
 
 
-## Example
+## Exemplo
 
 If you want to get all the computations for an attribute of type Number, you can write:
 
