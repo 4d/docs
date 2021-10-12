@@ -275,7 +275,7 @@ En pocas palabras, las expresiones devuelven un valor. De hecho, al utilizar el 
 
 Las expresiones se componen de casi todas las demás partes del lenguaje: comandos, operadores, variables, campos, propiedades de objetos y elementos de colección. Se utilizan expresiones para escribir líneas de código, que a su vez se utilizan para construir métodos. El lenguaje utiliza expresiones siempre que necesita un dato.
 
-Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una expresión puede ser utilizada por sí misma. It includes:
+Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una expresión puede ser utilizada por sí misma. Incluye:
 
 - Editor de fórmulas (apply formula, query with formula, order by formula)
 - El comando `EXECUTE FORMULA`

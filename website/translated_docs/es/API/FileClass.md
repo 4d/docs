@@ -177,7 +177,7 @@ The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file 
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Returned value**
+**Valor devuelto**
 
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
@@ -235,7 +235,7 @@ By default on macOS, the function creates a standard alias. You can also create 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 
-**Returned object**
+**Objeto devuelto**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -457,7 +457,7 @@ ALERT($info.Copyright)
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | Texto     | -> | Full name for the moved file |
-| Resultado         | 4D.File   | <- | Moved file                   |
+| Resultado         | 4D.File   | <- | Archivo movido               |
 <!-- END REF -->
 
 
@@ -470,7 +470,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The moved `File` object.
 
@@ -536,7 +536,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The renamed `File` object.
 

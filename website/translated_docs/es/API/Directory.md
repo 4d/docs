@@ -1,6 +1,6 @@
 ---
 id: Directory
-title: Directory Class
+title: Clase Directory
 ---
 
 ## Descripción
@@ -458,7 +458,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 | `fk overwrite` | 4     | Overwrite existing elements, if any |
 
 
-**Returned value**
+**Valor devuelto**
 
 The copied `Folder` object.
 
@@ -502,7 +502,7 @@ The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` ob
 
 In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.
 
-**Returned value**
+**Valor devuelto**
 
 A `File` object or null if *path* is invalid.
 
@@ -548,7 +548,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 | `fk recursive`        | 1     | The collection contains files or folders of the specified folder and its subfolders |
 | `fk ignore invisible` | 8     | Invisible files or folders are not listed                                           |
 
-**Returned value**
+**Valor devuelto**
 
 Collection of `File` objects.
 
@@ -603,7 +603,7 @@ The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Fold
 
 In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
 
-**Returned value**
+**Valor devuelto**
 
 A `Folder` object or null if *path* is invalid.
 
@@ -648,7 +648,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 | `fk recursive`        | 1     | The collection contains files or folders of the specified folder and its subfolders |
 | `fk ignore invisible` | 8     | Invisible files or folders are not listed                                           |
 
-**Returned value**
+**Valor devuelto**
 
 Collection of `Folder` objects.
 
@@ -693,7 +693,7 @@ The optional *size* parameter specifies the dimensions in pixels of the returned
 
 If the folder does not exist on disk, a default blank icon is returned.
 
-**Returned value**
+**Valor devuelto**
 
 Folder icon [picture](Concepts/dt_picture.md).
 

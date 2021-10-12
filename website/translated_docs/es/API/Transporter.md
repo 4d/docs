@@ -1,6 +1,6 @@
 ---
 id: Transporter
-title: Transporter Class
+title: Clase Transporter
 ---
 
 ## Descripción
@@ -60,7 +60,7 @@ The `.authenticationMode` property contains <!-- REF #transporter.authentication
 
 By default, the most secured mode supported by the server is used.
 
-Possible values are:
+Los valores posibles son:
 
 | Valor    | Constantes                     | Comentario                             |
 | -------- | ------------------------------ | -------------------------------------- |
@@ -91,7 +91,7 @@ The `.authenticationMode` property contains the authentication mode used to open
 
 By default, the most secured mode supported by the server is used.
 
-Possible values are:
+Los valores posibles son:
 
 | Valor    | Constantes                     | Comentario                                     |
 | -------- | ------------------------------ | ---------------------------------------------- |
@@ -123,7 +123,7 @@ The `.authenticationMode` property contains the authentication mode used to open
 
 By default, the most secured mode supported by the server is used.
 
-Possible values are:
+Los valores posibles son:
 
 | Valor    | Constantes                     | Comentario                             |
 | -------- | ------------------------------ | -------------------------------------- |
@@ -375,7 +375,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 
-#### Returned object
+#### Objeto devuelto
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 

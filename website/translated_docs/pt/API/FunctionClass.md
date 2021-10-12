@@ -169,7 +169,7 @@ A simple formula:
  var $o : Object
  $o:=New object("f";$f)
 
- $result:=$o.f() // returns 3
+ $result:=$o.f() // devoluções 3
 ```
 
 #### Example 2

@@ -50,7 +50,7 @@ If you modify any of the entity's attributes in the entity set, the values will 
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
+Usando [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), pode combinar dois conjuntos de entidade que foram previamente criados. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -242,7 +242,7 @@ If you want to save a BLOB stored in your dataclass, you can write the following
 
 ## Retrieving only one entity
 
-You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
+Pode usar a sintaxe[`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. For example, you can write:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

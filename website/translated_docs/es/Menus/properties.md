@@ -106,7 +106,7 @@ You can also add the **Shift** key as well as the **Alt** key (Windows) or **Opt
 
 - En macOS:
     - Comando+caracter
-    - Command+Shift+character
+    - Comando+Mayús+caracter
     - Command+Option+character
     - Command+Shift+Option+character
 
@@ -119,11 +119,11 @@ These reserved key combinations are listed in the following table:
 | Llave (Windows) | Llave (macOS)     | Operación         |
 | --------------- | ----------------- | ----------------- |
 | Ctrl+C          | Comando+C         | Copiar            |
-| Ctrl+Q          | Command+Q         | Salir             |
-| Ctrl+V          | Command+V         | Pegar             |
-| Ctrl+X          | Command+X         | Cortar            |
-| Ctrl+Z          | Command+Z         | Deshacer          |
-| Ctrl+. (punto)  | Command+. (punto) | Detener la acción |
+| Ctrl+Q          | Comando+Q         | Salir             |
+| Ctrl+V          | Comando+V         | Pegar             |
+| Ctrl+X          | Comando+X         | Cortar            |
+| Ctrl+Z          | Comando+Z         | Deshacer          |
+| Ctrl+. (punto)  | Comando+. (punto) | Detener la acción |
 
 To assign a keyboard shortcut in the Menu editor:
 
@@ -167,7 +167,7 @@ You can associate an icon with a menu item. It will displayed directly in the me
 
 ![](assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Una vez definido, el icono del elemento aparece en el área de vista previa:
 
 ![](assets/en/Menus/iconpreview.png)
 

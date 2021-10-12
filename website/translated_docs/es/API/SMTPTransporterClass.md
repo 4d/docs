@@ -47,7 +47,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF #_command_.SMTP New transporter.Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objeto             | -> | Mail server information                             |
+| server     | Objeto             | -> | Información del servidor de correo                  |
 | Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -73,7 +73,7 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP)                               |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP)                               |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                       |
 | [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->| True                                                                |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
 | **password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.                                                                                                                                                                                                                                                       | ninguno                                                             |
@@ -127,7 +127,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objeto             | -> | Mail server information                             |
+| server     | Objeto             | -> | Información del servidor de correo                  |
 | Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -265,7 +265,7 @@ The method creates the SMTP connection if it is not already alive. If the `.keep
 In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
 
-#### Returned object
+#### Objeto devuelto
 
 The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
 

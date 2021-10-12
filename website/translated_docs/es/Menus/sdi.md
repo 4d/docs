@@ -8,14 +8,14 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 
 > The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
-## SDI mode availability
+## Disponibilidad del modo SDI
 
 The SDI mode is available in the following execution environment only:
 
 - Windows
 - Merged stand-alone or client 4D application
 
-## Enabling the SDI mode
+## Activación del modo SDI
 
 Enabling and using the SDI mode in your application require the following steps:
 
@@ -38,7 +38,7 @@ Menus are added above windows without modifiying their contents size:
 
 Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
 
-#### About the splash screen
+#### Sobre la pantalla de inicio
 
 - If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.

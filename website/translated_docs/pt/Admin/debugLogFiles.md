@@ -19,16 +19,16 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 
 > When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
 
-Log files share some fields so that you can establish a chronology and make connections between entries while debugging:
+Arquivos de Histórico compartilham alguns campos para que possa estabelecer uma cronologia e fazer conexões entre entradas quando depurar:
 
 *   `sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
 *   `connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. It allows you to easily identify the remote client that launched each process.
 
 ## 4DRequestsLog.txt
 
-This log file records standard requests carried out by the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
+Esses arquivos de histórico gravam petições normais realizadas pela máquina 4D Server ou a máquina remota 4D que executaram o comando (excluindo petições Web).
 
-How to start this log:
+Como iniciar esse log:
 
 *   on the server:
 
@@ -44,11 +44,11 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //remote side
 ```
-> This statement also starts the [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt) log file.
+> Esta declaração também começa um arquivo de histórico [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
 
 #### Headers
 
-This file starts with the following headers:
+Este arquivo começa com os cabeçalhos abaixo:
 
 *   Log Session Identifier
 *   Hostname of the server that hosts the application
@@ -56,7 +56,7 @@ This file starts with the following headers:
 
 #### Contents
 
-For each request, the following fields are logged:
+Para cada petição, os campos abaixo estão logados:
 
 | Field name                                 | Description                                                                                                                                                                                                      |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,15 +73,15 @@ For each request, the following fields are logged:
 | task_kind                                  | Preemptive or cooperative (respectively 'p' or 'c')                                                                                                                                                              |
 | rtt                                        | Time estimate in microseconds for the client to send the request and the server to acknowledge it. A to D and E to H in image below.<p><li>Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.</li><li>For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0.</li> |
 
-Request flow:
+Fluxo de petição:
 
 ![](assets/en/Admin/logRequestFlow.PNG)
 
 ## 4DRequestsLog_ProcessInfo.txt
 
-This log file records information on each process created on the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
+Este arquivo de histórico registra a informação em cada processo criado na máquina 4D Server ou na máquina remota 4D que executa o comando (excluindo petições Web).
 
-How to start this log:
+Como iniciar esse log:
 
 *   on the server:
 
@@ -94,11 +94,11 @@ SET DATABASE PARAMETER(4D Server log recording;1) //server side
 ```4d
 SET DATABASE PARAMETER(Client Log Recording;1) //remote side
 ```
-> This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
+> Esta declaração também começa o arquivo de histórico [4DRequestsLog.txt](#4drequestslogtxt).
 
 #### Headers
 
-This file starts with the following headers:
+Este arquivo começa com os cabeçalhos abaixo:
 
 *   Log Session Identifier
 *   Hostname of the server that hosts the application
@@ -107,7 +107,7 @@ This file starts with the following headers:
 
 #### Contents
 
-For each process, the following fields are logged:
+Para cada processo, os campos abaixo são registrados:
 
 | Field name                        | Description                                                    |
 | --------------------------------- | -------------------------------------------------------------- |
@@ -131,7 +131,7 @@ For each process, the following fields are logged:
 
 This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-How to start this log:
+Como iniciar esse log:
 
 ```4d
 WEB SET OPTION(Web debug log;wdl enable without body)  
@@ -151,9 +151,9 @@ The following fields are logged for both Request and Response:
 
 ## 4DDebugLog.txt (standard)
 
-This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.
+Esses registros de histórico gravam cada evento que ocorreu ao nível de programação de 4D. Modo padrão oferece uma vista básica de eventos.
 
-How to start this log:
+Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
@@ -163,7 +163,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2)
 //standard, current process only
 ```
 
-The following fields are logged for each event:
+Os campos abaixo estão registrados para cada evento:
 
 | Column # | Description                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------- |
@@ -176,9 +176,9 @@ The following fields are logged for each event:
 
 ## 4DDebugLog.txt (tabular)
 
-This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).
+Esse arquivo de histórico registra cada evento que ocorrer ao nível de programação 4D em um formato tabulado e compacto que inclui informação adicional (comparado ao formato padrão).
 
-How to start this log:
+Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
@@ -188,26 +188,26 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 //extended, current process only
 ```
 
-The following fields are logged for each event:
+Os campos abaixo estão registrados para cada evento:
 
 | Column # | Field name      | Description                                                   |
 | -------- | --------------- | ------------------------------------------------------------- |
 | 1        | sequence_number | Unique and sequential operation number in the logging session |
 
-|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>
+|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. Esse valor pode ser um valor absoluto:<p><ol><li>Command</li><li>Método (método de projeto, método de banco de dados, etc)</li><li>Mensagem (enviada só pelo comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarefa</li><li>Método membro (método anexado à coleção ou a um objeto)</li></ol></p>Quando fechar um nível de stack, as colunas `operation_type`, `operation` e `operation_parameters` tem o mesmo valor que o nível de stack registrado na coluna `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>A primeira e segunda linha abrem o nível de stack, a terceira e quarta linha fecham o nível de stack. Valores nas colunas 6, 7 e 8 são repetidos na linha do nível de stack ao fechar. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>uma ID de comando de linguagem (quando tipo =1)</li><li>um nome de método (quando tipo =2)</li><li>uma combinação de pluginIndex;pluginCommand (quando tipo=4, 5, 6 ou 7). Pode conter algo como '3;2'</li><li>uma UUID task connection (quando tipo = 8)</li>
 |8|operation_parameters|Parameters passed to commands, methods, or plugins| |9|form_event|Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)| |10|stack_opening_sequence_number|Only for the closing stack levels: Sequence number of the corresponding opening stack level| |11|stack_level_execution_time|Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)|
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. Pode incluir informação personalizada nesse arquivo usando o comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html)
 
-How to start this log:
+Como iniciar esse log:
 
 ```4d
  SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording
 ```
 
-The following fields are logged for each event:
+Os campos abaixo estão registrados para cada evento:
 
 | Field Name         | Description                                                   |
 | ------------------ | ------------------------------------------------------------- |
@@ -218,17 +218,17 @@ The following fields are logged for each event:
 | messageLevel       | Info, Warning, Error                                          |
 | message            | Description of the log entry                                  |
 
-Depending on the event, various other fields can also be logged, such as task, socket, etc.
+Dependendo do evento, vários outros campos podem ser registrados, como task, socket, etc.
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt
 
-These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
+Esses históricos registram cada troca entre a aplicação 4D e o servidor de mail (SMTP, POP3, IMAP) que foram iniciados pelos comandos abaixo:
 
 *   SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
 *   POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
 *   IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
 
-The log files can be produced in two versions:
+Os arquivos de histórico podem ser produzidos em duas versões:
 
 *   a regular version:
     *   named 4DSMTPLog.txt, 4DPOP3Log.txt, or 4DIMAPLog.txt
@@ -273,7 +273,7 @@ The log files can be produced in two versions:
 
 #### Contents
 
-For each request, the following fields are logged:
+Para cada petição, os campos abaixo estão logados:
 
 | Column # | Description                                                   |
 | -------- | ------------------------------------------------------------- |
@@ -285,9 +285,9 @@ For each request, the following fields are logged:
 
 ## ORDA client requests
 
-This log records each ORDA request sent from a remote machine. You can direct log information to memory or to a file on disk. The name and location of this log file are your choice.
+Esse registro grava cada petição ORDA enviada de uma máquina remota. Pode dirigir informação de histórico a uma memória ou a um arquivo em disco. O nome e rota desse arquivo pode ser escolhido.
 
-How to start this log:
+Como iniciar esse log:
 
 ```4d
 //to be executed on a remote machine
@@ -295,7 +295,7 @@ ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 //can be also sent to memory
 ```
 
-If you want to use the unique sequence number in ORDA request log, you need to trigger it:
+Se quiser usar esse número de sequência único em histórico de petições ORDA, necessita ativá-lo:
 
 ```4d
 //to be executed on a remote machine
@@ -310,7 +310,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 //disabling sequence number
 ```
 
-The following fields are logged for each request:
+Os campos abaixo são registrados para cada petição:
 
 | Field name     | Description                                                   | Example                                                   |
 | -------------- | ------------------------------------------------------------- | --------------------------------------------------------- |

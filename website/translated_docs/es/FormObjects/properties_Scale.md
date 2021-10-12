@@ -123,7 +123,7 @@ Intervalo mínimo aceptado entre los valores durante el uso. For numeric stepper
 
 | Nombre | Tipos de datos | Valores posibles |
 |:------:|:--------------:| ---------------- |
-|  step  |    integer     | minimum: 1       |
+|  step  |    integer     | mínimo: 1        |
 
 
 #### Objetos soportados

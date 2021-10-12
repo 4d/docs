@@ -150,7 +150,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. A chave é o valor no atributo definida como Chave Primária para sua classe de dados. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
-For more information about the data returned, refer to [{DataStoreClass}](#datastoreclass).
+Para saber mais sobre os dados retornados, veja [{DataStoreClass}](#datastoreclass).
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 

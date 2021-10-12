@@ -236,7 +236,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mailObj        | Objet | -> | Email object                    |
 | destinationBox | Texte | -> | Mailbox to receive Email object |
 | options        | Objet | -> | Object containing charset info  |
-| Résultat       | Objet | <- | Status of the delete operation  |
+| Résultat       | Objet | <- | Status of the append operation  |
 <!-- END REF -->
 
 
@@ -1496,6 +1496,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
 <!-- END REF -->
+
 
 
 

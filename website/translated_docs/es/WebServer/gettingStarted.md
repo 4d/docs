@@ -6,7 +6,7 @@ title: Comencemos
 This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. ¡Empecemos!
 
 
-## Hello World Example
+## Ejemplo Hello World
 
 Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
 
@@ -29,7 +29,7 @@ The default home page is displayed:
 
 ![](assets/en/WebServer/defaultHomePage.png)
 
-### Displaying Hello World
+### Mostrar Hello World
 
 1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
 
@@ -93,7 +93,7 @@ http://localhost/friends.shtml
 
 ![](assets/en/WebServer/hello3bis.png)
 
-### REST request
+### Petición REST
 
 If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
 
@@ -216,7 +216,7 @@ $webUser.save()
 
 
 
-### Authenticating users
+### Autenticación de los usuarios
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
 

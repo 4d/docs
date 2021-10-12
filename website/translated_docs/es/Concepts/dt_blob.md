@@ -101,7 +101,7 @@ var $myBlobVar: Blob
 ```
 
 ```4d
-// Pass a pointer to the blob as a parameter to your own method,
+// Pasa un puntero al blob como parámetro a su propio método,
 COMPUTE BLOB(->$myBlobVar)
 ```
 

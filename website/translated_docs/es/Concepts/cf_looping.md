@@ -375,7 +375,7 @@ Quiere pasar los nombres a mayúsculas en el siguiente objeto:
     "age": 20
 }
 ```
-You can write:
+Puede escribir:
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)

@@ -29,7 +29,7 @@ The attached debugger is called whenever a 4D Server encounters:
 
 Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.
 
-Note that:
+Note que:
 * The code executed in the `On Server Startup Database` Method cannot be debugged remotely. It can only be debugged on the server side
 * If no debugger is attached, the running code is not stopped by debugging commands
 

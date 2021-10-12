@@ -38,7 +38,7 @@ Attachment objects provide the following read-only properties and functions:
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| zIPFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
 | blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |
@@ -71,7 +71,7 @@ You can use the optional *type* parameter to explicitly set the `content-type` o
 
 By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. The following rules are applied for the main MIME types:
 
-| Extension | Content-Type                  |
+| Extensión | Content-Type                  |
 | --------- | ----------------------------- |
 | jpg, jpeg | image/jpeg                    |
 | png       | image/png                     |
@@ -183,7 +183,7 @@ $transporter.send($email)
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| zIPFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
 | blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |

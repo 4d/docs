@@ -801,7 +801,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *methodName* receives the following parameters:
 
 *   in *$1.value*: element value to be evaluated
-*   in *$2*: param
+*   *$2*: param
 *   in *$N...*: paramN...
 
 *methodName* sets the following parameter(s):
@@ -1030,7 +1030,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *   in *$1.value*: element value to be filtered
 *   in *$2*: *param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1125,7 +1125,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *   in *$1.value:* element value to be evaluated
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1224,7 +1224,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *   in *$1.value*: element value to be evaluated
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -2579,8 +2579,8 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *methodName* receives the following parameters:
 
 *   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: param2...paramN
+*   *$2*: param
+*   *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 

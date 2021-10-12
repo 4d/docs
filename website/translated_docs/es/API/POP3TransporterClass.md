@@ -46,7 +46,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 <!-- REF POP3TransporterClass.POP3 New transporter.Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | objeto             | -> | Mail server information                             |
+| server     | objeto             | -> | Información del servidor de correo                  |
 | Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -64,7 +64,7 @@ In the *server* parameter, pass an object containing the following properties:
 | .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                             |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
 | **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                                                                                      | ninguno                                                             |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
@@ -107,7 +107,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objeto             | -> | Mail server information                             |
+| server     | Objeto             | -> | Información del servidor de correo                  |
 | Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ The method returns Null if:
 *   the message was marked for deletion using `.delete( )`.
 
 
-**Returned object**
+**Objeto devuelto**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
 
@@ -406,7 +406,7 @@ Each `mailInfo` object in the returned collection contains the following propert
 | Propiedad    | Tipo   | Descripción                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
 | \[ ].size   | Número | Message size in bytes                                              |
-| \[ ].number | Número | Message number                                                     |
+| \[ ].number | Número | Número del mensaje                                                 |
 | \[ ].id     | Texto  | Unique ID of the message (useful if you store the message locally) |
 
 If the mailbox does not contain a message, an empty collection is returned.

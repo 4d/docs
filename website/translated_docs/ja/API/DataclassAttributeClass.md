@@ -26,7 +26,7 @@ title: DataClassAttribute
 | [<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.inverseName.Syntax -->](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.inverseName.Summary --> |
-| [<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
@@ -200,8 +200,8 @@ title: DataClassAttribute
 
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Desc -->
-## .keyWordIndexed
+<!-- REF DataClassAttributeClass.keywordIndexed.Desc -->
+## .keywordIndexed
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -210,16 +210,16 @@ title: DataClassAttribute
 </details>
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Syntax -->
-**.keyWordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
+**.keywordIndexed** : Boolean<!-- END REF -->
 
 
 #### 説明
 
-`.keyWordIndexed` プロパティは、 <!-- REF DataClassAttributeClass.keyWordIndexed.Summary -->属性にキーワードインデックスが存在すれば **true**<!-- END REF -->です。
+`.keywordIndexed` プロパティは、 <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->属性にキーワードインデックスが存在すれば **true**<!-- END REF -->です。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
-> 汎用的なプログラミングのために、`.keyWordIndexed` が返されない場合でも **Bool** (dataClassAttribute.keyWordIndexed) と書くことで、有効な値 (false) を受け取ることができます。
+> 汎用的なプログラミングのために、`.keywordIndexed` が返されない場合でも **Bool** (dataClassAttribute.keywordIndexed) と書くことで、有効な値 (false) を受け取ることができます。
 
 <!-- END REF -->
 

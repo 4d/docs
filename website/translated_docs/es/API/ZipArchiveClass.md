@@ -92,10 +92,10 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
     </td>
     
     <td>
-      4D.File or 4D.Folder
+      4D.File o 4D.Folder
       
       <td>
-        File or Folder
+        File o Folder
       </td></tr>
       
       <tr>
@@ -219,7 +219,7 @@ To compress a ZIP archive structure with a password and progress bar:
  $zip.password:="password"
  $zip.callback:=Formula(myFormulaCompressingMethod($1))
 
- progID:=Progress New //we use the 4D Progress component
+ progID:=Progress New //utilizamos el componente 4D Progress
 
  $status:=ZIP Create archive($zip;$destination)
 
@@ -277,7 +277,7 @@ $zip:=New object
 $zip.files:=New collection
 $zip.files.push(Folder(fk desktop folder).folder("images"))
 $zip.compression:=ZIP Compression LZMA
-$zip.level:=7 //default is 4
+$zip.level:=7 //por defecto es 4
 
 $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
@@ -300,7 +300,7 @@ $err:=ZIP Create archive($zip; $destination)
 <!-- REF #_command_.ZIP Read archive.Params -->
 | Parámetros | Tipo          |    | Descripción                 |
 | ---------- | ------------- |:--:| --------------------------- |
-| zipFile    | 4D.File       | -> | Zip archive file            |
+| zIPFile    | 4D.File       | -> | Zip archive file            |
 | contraseña | Texto         | -> | ZIP archive password if any |
 | Resultado  | 4D.ZipArchive | <- | Archive object              |
 <!-- END REF -->

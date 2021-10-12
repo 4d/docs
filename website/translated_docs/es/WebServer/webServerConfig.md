@@ -70,7 +70,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 > The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
 
-## CORS Settings
+## Parámetros CORS
 
 | Can be set with     | Nombre                                                  | Comentarios                                                                    |
 | ------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -175,7 +175,7 @@ When disabled (default), all cross site requests sent with CORS are ignored.
 For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
 
 #### Ver también
-[CORS Settings](#cors-settings)
+[Parámetros CORS](#cors-settings)
 
 ## Enable HTTP
 
@@ -255,7 +255,7 @@ In the framework of optimized HTTP exchanges, size threshold for requests below 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
 
-## HTTP Port
+## Puerto HTTP
 
 | Can be set with     | Nombre                                       | Comentarios |
 | ------------------- | -------------------------------------------- | ----------- |
@@ -381,7 +381,7 @@ Starts or stops the recording of requests received by the 4D web server in the *
 
 This setting allows you to select the format of this file. Available values are:
 
-| Valor | Format name          | Descripción                                                                                                                                                                                                              |
+| Valor | Nombre del formato   | Descripción                                                                                                                                                                                                              |
 | ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0     | No Log File          | Por defecto                                                                                                                                                                                                              |
 | 1     | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
@@ -419,7 +419,7 @@ This limit is used to avoid web server saturation due to incoming requests that 
 Valores posibles: 500 000 a 2 147 483 648.
 
 
-## Maximum Session Number
+## Número máximo de sesiones
 
 | Can be set with  | Nombre                                             | Comentarios |
 | ---------------- | -------------------------------------------------- | ----------- |
@@ -443,7 +443,7 @@ Valores posibles:
 
 - 1 = TLSv1_0
 - 2 = TLSv1_1
-- 3 = TLSv1_2 (default)
+- 3 = TLSv1_2 (por defecto)
 - 4 = TLSv1_3
 
 If modified, the server must be restarted to use the new value.
@@ -462,9 +462,9 @@ Name of the web server application. Useful when component web servers are starte
 
 ## OpenSSL Version
 
-| Can be set with  | Nombre                                                   | Comentarios |
-| ---------------- | -------------------------------------------------------- | ----------- |
-| objeto webServer | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Read-only   |
+| Can be set with  | Nombre                                                   | Comentarios  |
+| ---------------- | -------------------------------------------------------- | ------------ |
+| objeto webServer | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Sólo lectura |
 
 Version of the OpenSSL library used.
 
@@ -503,7 +503,7 @@ Por ejemplo:
 *   “Disallow: /%23%23” - robots are not allowed to access URLs beginning with /%23%23.
 *   “Disallow: /GIFS/’ - robots are not allowed to access the /GIFS/ folder or its subfolders.
 
-Another example:
+Otro ejemplo:
 
 ```code4d
    User-Agent: *
@@ -559,7 +559,7 @@ Value of the "domain" field of the session cookie. Useful for controlling the sc
 | objeto webServer | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |             |
 | `WEB SET OPTION` | `Web session cookie name`                                      |             |
 
-Name of the cookie used for saving the session ID. Default = "4DSID".
+Name of the cookie used for saving the session ID. Por defecto = "4DSID".
 
 
 ## Session Cookie Path
@@ -629,7 +629,7 @@ In return, you must make sure in this case to systematically initialize the vari
 When this option is checked, the web server sends extended characters “as is” in semi-dynamic pages, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
 
 
-#### Keep-Alive Connections
+#### Conexiones Keep-Alive
 
 The 4D Web Server can use keep-alive connections. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.
 

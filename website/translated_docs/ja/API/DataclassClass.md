@@ -185,8 +185,8 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.fromCollection().Params -->
 | 引数        | タイプ                |    | 説明                        |
 | --------- | ------------------ |:--:| ------------------------- |
-| objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション |
-| settings  | オブジェクト             | -> | ビルドオプション: context         |
+| objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション |
+| settings  | Object             | -> | ビルドオプション: context         |
 | 戻り値       | 4D.EntitySelection | <- | コレクションから作成したエンティティセレクション  |
 <!-- END REF -->
 
@@ -386,7 +386,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | 引数         | タイプ       |    | 説明                      |
 | ---------- | --------- |:--:| ----------------------- |
 | primaryKey | 整数または文字列  | -> | 取得するエンティティのプライマリーキー値    |
-| settings   | オブジェクト    | -> | ビルドオプション: context       |
+| settings   | Object    | -> | ビルドオプション: context       |
 | 戻り値        | 4D.Entity | <- | 指定したプライマリーキーに合致するエンティティ |
 <!-- END REF -->
 
@@ -516,7 +516,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.getInfo().Params -->
 | 引数  | タイプ    |    | 説明        |
 | --- | ------ | -- | --------- |
-| 戻り値 | オブジェクト | <- | データクラスの情報 |
+| 戻り値 | Object | <- | データクラスの情報 |
 <!-- END REF -->
 
 
@@ -636,7 +636,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.newSelection().Params -->
 | 引数        | タイプ                |    | 説明                                                                                                      |
 | --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
-| keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
+| keepOrder | Integer            | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                 |
 <!-- END REF -->
 
@@ -684,10 +684,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.query().Params -->
 | 引数            | タイプ                |    | 説明                                                                                   |
 | ------------- | ------------------ | -- | ------------------------------------------------------------------------------------ |
-| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                           |
-| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
+| queryString   | Text               | -> | 検索条件 (文字列)                                                                           |
+| formula       | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
 | value         | any                | -> | プレースホルダー用の値                                                                          |
-| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
+| querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション                |
 <!-- END REF -->
 

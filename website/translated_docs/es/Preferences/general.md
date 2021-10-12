@@ -20,7 +20,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 ### Automatic form creation
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
 ### Window tabbing (macOS only)
 

@@ -6,7 +6,7 @@
     "tagline": "Documentación para desarrolladores 4D",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "Interfaz de línea de comando"
       },
       "Admin/dataExplorer": {
         "title": "Explorador de datos Web"
@@ -24,7 +24,7 @@
         "title": "Protocolo TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Administración Web"
       },
       "API/BlobClass": {
         "title": "Blob"
@@ -48,7 +48,7 @@
         "title": "DataStore"
       },
       "API/Directory": {
-        "title": "Directory Class"
+        "title": "Clase Directory"
       },
       "API/Document": {
         "title": "Document Class"
@@ -78,7 +78,7 @@
         "title": "MailAttachment"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "Generalidades - API de clases"
       },
       "API/POP3TransporterClass": {
         "title": "POP3Transporter"
@@ -93,7 +93,7 @@
         "title": "SMTPTransporter"
       },
       "API/Transporter": {
-        "title": "Transporter Class"
+        "title": "Clase Transporter"
       },
       "API/WebServerClass": {
         "title": "WebServer"
@@ -436,7 +436,7 @@
         "title": "Propiedades de los formularios"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "Tamaño formulario"
       },
       "FormEditor/jsonReference": {
         "title": "Lista de propiedades JSON"
@@ -689,7 +689,7 @@
         "title": "Clases del modelo de datos"
       },
       "ORDA/overview": {
-        "title": "What is ORDA?"
+        "title": "¿Qué es ORDA?"
       },
       "ORDA/quickTour": {
         "title": "Un recorrido rápido en ORDA"
@@ -719,10 +719,10 @@
         "title": "Arquitectura de un proyecto"
       },
       "Project/compiler": {
-        "title": "Compilation"
+        "title": "Compilación"
       },
       "Project/components": {
-        "title": "4D Components Library"
+        "title": "Librería de componentes 4D"
       },
       "Project/creating": {
         "title": "Working with a project"
@@ -857,7 +857,7 @@
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "Sesiones usuario"
       },
       "WebServer/templates": {
         "title": "Template pages"
@@ -925,9 +925,9 @@
     "Backup and Restore|no description given": "Copia de seguridad y restauración",
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Administración Web",
     "4D Server Administration Window|no description given": "4D Server Administration Window",
-    "4D Components Library|no description given": "4D Components Library",
+    "4D Components Library|no description given": "Librería de componentes 4D",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
     "Debugging|no description given": "Depuración",
@@ -935,7 +935,7 @@
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
     "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Command Line Interface|no description given": "Interfaz de línea de comando",
     "Preferences|no description given": "Preferencias",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",

@@ -11,7 +11,7 @@ The Data Explorer provides a web interface to view and query data in your projec
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
 
-## Access Configuration
+## Configuración
 
 The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
 
@@ -148,7 +148,7 @@ The filter is of the "starts with" type. For example, entering "Jim" will show "
 
 You can also use the wildcard character (@) to replace one or more starting characters. Por ejemplo:
 
-| A filter with | Finds                                              |
+| Un filtro con | Finds                                              |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | Todos los valores que contienen "do"               |

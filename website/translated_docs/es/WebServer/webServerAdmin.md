@@ -57,7 +57,7 @@ This command lets you verify that the web server, home page display, etc. work c
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
 
-To do so, you can:
+Para ello, puede:
 
 -   4D: click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
 -   4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](Admin/server-admin.md#http-server-page).
@@ -84,7 +84,7 @@ The **Watch** page (**Web** heading) in the Runtime Explorer displays web server
 
 Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
 
-> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST is always available.
+> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está siempre disponible.
 
 
 ### /4DSTATS
@@ -124,10 +124,10 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Descripción                          | Ejemplo                                                                                                                         |
+| Campo HTTP | Descripción                          | Ejemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Fecha      | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| Server     | 4D/Número de versión                 | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
 | User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
 
@@ -149,14 +149,14 @@ This log file records each HTTP request and each response in raw mode. Whole req
 
 The following fields are logged for both Request and Response:
 
-| Field name     | Descripción                                                   |
-| -------------- | ------------------------------------------------------------- |
-| SocketID       | ID of socket used for communication                           |
-| PeerIP         | IPv4 address of host (client)                                 |
-| PeerPort       | Port used by host (client)                                    |
-| TimeStamp      | Timestamp in milliseconds (since system startup)              |
-| ConnectionID   | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber | Unique and sequential operation number in the logging session |
+| Nombre del campo | Descripción                                                   |
+| ---------------- | ------------------------------------------------------------- |
+| SocketID         | ID of socket used for communication                           |
+| PeerIP           | IPv4 address of host (client)                                 |
+| PeerPort         | Port used by host (client)                                    |
+| TimeStamp        | Timestamp in milliseconds (since system startup)              |
+| ConnectionID     | Connection UUID (UUID of VTCPSocket used for communication)   |
+| SequenceNumber   | Unique and sequential operation number in the logging session |
 
 
 ### logweb.txt
@@ -169,7 +169,7 @@ Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):
 
-| Field name           | Descripción                                                                                                                                                         |
+| Nombre del campo     | Descripción                                                                                                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                       |
 | rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                        |

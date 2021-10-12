@@ -17,7 +17,7 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 
-### Email Object
+### Objeto Email
 
 Email objects provide the following properties:
 
@@ -49,7 +49,7 @@ Email objects provide the following properties:
 | [<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
 
 
-### Email Addresses
+### Direcciones de correo electrónico
 
 All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) accept a value of text, object, or collection type.
 
@@ -178,10 +178,10 @@ The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Su
 
 The `.bodyValues` object contains the following properties:
 
-| Propiedad                  | Tipo     | Valor                                                                                                                                       |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | texto    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| Propiedad                  | Tipo     | Valor                                                                                                                                        |
+| -------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | texto    | Value of the body part                                                                                                                       |
+| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. Falso por defecto |
 
 
 
@@ -330,12 +330,12 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 | --------------- | -------- | ----------------------------------- |
 | . \<keyword\> | booleano | Keyword to set (value must be true) |
 
-Reserved keywords:
-* $draft - Indicates a message is a draft
-* $seen - Indicates a message has been read
-* $flagged - Indicates a message needs special attention (e.g., Urgent)
-* $answered - Indicates a message has been replied to
-* $deleted - Indicates a message to delete
+Palabras clave reservadas:
+* $draft - Indica que un mensaje es un borrador
+* $seen - Indica que se ha leído un mensaje
+* $flagged - Indica que un mensaje necesita atención especial (por ejemplo, urgente)
+* $answered - Indica que se ha respondido un mensaje
+* $deleted - Indica un mensaje a eliminar
 
 #### Ejemplo
 
@@ -507,7 +507,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
 | Parámetros | Tipo       |    | Descripción   |
 | ---------- | ---------- |:--:| ------------- |
-| mime       | Blob, Text | -> | Email in MIME |
+| mime       | Blob, Text | -> | Email en MIME |
 | Resultado  | Objeto     | <- | Email object  |
 <!-- END REF -->
 
@@ -518,9 +518,9 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
-#### Returned object
+#### Objeto devuelto
 
-Email object.
+Objeto Email.
 
 #### Ejemplo 1
 
@@ -585,7 +585,7 @@ $status:=$transporter.send($email)
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17 R4  | Añadidos       |
-| v17 R5  | Modified       |
+| v17 R5  | Modificado     |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->

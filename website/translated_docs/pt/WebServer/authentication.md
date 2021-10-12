@@ -165,7 +165,7 @@ The `$4` parameter receives the IP address used to call the web server. 4D allow
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
 
-#### $0 parameter
+#### Parâmetro $0
 
 The `On Web Authentication` database method returns a boolean in $0:
 

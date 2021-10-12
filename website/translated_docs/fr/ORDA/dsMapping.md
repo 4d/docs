@@ -212,12 +212,9 @@ var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe
 $e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-Les sélections d'entités peuvent être :
+Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
 
-- "partageables" or "non partageables",
-- "triées" ou "non triées".
-
-Ces points sont décrits ci-dessous.
+> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 

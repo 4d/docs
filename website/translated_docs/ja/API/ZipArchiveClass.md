@@ -54,10 +54,10 @@ End if
 | --------------- | --------- |:--:| ------------------------------------------------------------------------------ |
 | fileToZip       | 4D.File   | -> | 圧縮する File または Folder オブジェクト                                                    |
 | folderToZip     | 4D.Folder | -> | 圧縮する File または Folder オブジェクト                                                    |
-| zipStructure    | オブジェクト    | -> | 圧縮する File または Folder オブジェクト                                                    |
+| zipStructure    | Object    | -> | 圧縮する File または Folder オブジェクト                                                    |
 | destinationFile | 4D.File   | -> | アーカイブの保存先ファイル                                                                  |
 | options         | Integer   | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | オブジェクト    | <- | ステータスオブジェクト                                                                    |
+| 戻り値             | Object    | <- | ステータスオブジェクト                                                                    |
 <!-- END REF -->
 
 
@@ -104,7 +104,7 @@ End if
         </td>
         
         <td>
-          テキスト
+          Text
         </td>
         
         <td>
@@ -153,9 +153,9 @@ End if
 
 | プロパティ      | タイプ     | 説明                                                                                                           |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------ |
-| statusText | テキスト    | エラーメッセージ (あれば):<li>ZIPアーカイブを開けません</li><li>ZIPアーカイブを作成できません</li><li>暗号化にはパスワードが必要です |
+| statusText | Text    | エラーメッセージ (あれば):<li>ZIPアーカイブを開けません</li><li>ZIPアーカイブを作成できません</li><li>暗号化にはパスワードが必要です |
 | status     | Integer | ステータスコード                                                                                                     |
-| success    | ブール     | アーカイブが正常に作成された場合には true、それ以外は false                                                                          |
+| success    | Boolean | アーカイブが正常に作成された場合には true、それ以外は false                                                                          |
 
 
 
@@ -301,7 +301,7 @@ $err:=ZIP Create archive($zip; $destination)
 | 引数       | タイプ           |    | 説明                      |
 | -------- | ------------- |:--:| ----------------------- |
 | zipFile  | 4D.File       | -> | ZIPアーカイブファイル            |
-| password | テキスト          | -> | ZIPアーカイブのパスワード (必要であれば) |
+| password | Text          | -> | ZIPアーカイブのパスワード (必要であれば) |
 | 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト             |
 <!-- END REF -->
 

@@ -524,11 +524,11 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
 
-**Returned object**
+**Objeto devuelto**
 
 | Propiedad   | Tipo    | Descripción                              |
 | ----------- | ------- | ---------------------------------------- |
-| name        | Texto   | Name of the dataclass                    |
+| name        | Texto   | Nombre de la dataclass                   |
 | primaryKey  | Texto   | Name of the primary key of the dataclass |
 | tableNumber | Integer | Internal 4D table number                 |
 
@@ -730,7 +730,7 @@ donde:
     | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
     | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
-    | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
+    | Diferente de                         | #, !=       | Supports the wildcard (@)                                                                                      |
     |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
     | Menor que                            | <           |                                                                                                                |
     | Mayor que                            | >           |                                                                                                                |
@@ -756,7 +756,7 @@ donde:
 *   **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-**Using quotes**
+**Utilizar comillas**
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por ejemplo:
 
@@ -824,13 +824,13 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
 ```4d
-$vSingles:=ds.Person.query("spouse = :1";Null) // will NOT work
+$vSingles:=ds.Person.query("spouse = :1";Null) // NO funcionará
 ```
 
 You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
 
 ```4d
- $vSingles:=ds.Person.query("spouse = null") //correct syntax
+ $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
 
@@ -976,7 +976,7 @@ Query with a NOT statement:
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
 ```
 
-Queries with dates:
+Búsquedas con fechas:
 
 ```4d
 $entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
@@ -1176,7 +1176,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Sólo se da como criterio un objeto `Formula`:
 
 ```4d
  var $es : cs.StudentsSelection

@@ -34,7 +34,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 > Para una visión general de las funciones de seguridad de 4D, consulte la [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/).
 
 
-## User Sessions
+## Sesiones usuario
 
 The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
 
@@ -49,7 +49,7 @@ REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
 
 The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
 
-## Templates and URLs
+## Plantillas y URLs
 
 The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
 

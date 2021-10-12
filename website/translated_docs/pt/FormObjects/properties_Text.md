@@ -17,7 +17,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 ## Bold
@@ -746,7 +746,7 @@ Esta propriedade ativa a possibilidade de usar estilos específicos na área sel
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a>
+  <a href="input_overview.md">Entrada</a>
 </p>
 
 

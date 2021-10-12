@@ -59,8 +59,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 <!-- REF IMAPTransporterClass.IMAP New transporter.Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objeto             | -> | Mail server information                             |
-| Resultado  | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
+| server     | Objeto             | -> | Información del servidor de correo                  |
+| Resultado  | 4D.IMAPTransporter | <- | [Objeto IMAP Transporter](#imap-transporter-object) |
 <!-- END REF -->
 
 
@@ -77,7 +77,7 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
 | .**password** : Text<p>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                      | ninguno                                                             |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                 |
@@ -119,8 +119,8 @@ End if
 <!-- REF #4D.IMAPTransporter.new().Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objeto             | -> | Mail server information                             |
-| Resultado  | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
+| server     | Objeto             | -> | Información del servidor de correo                  |
+| Resultado  | 4D.IMAPTransporter | <- | [Objeto IMAP Transporter](#imap-transporter-object) |
 <!-- END REF -->
 
 #### Descripción
@@ -178,7 +178,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 > * The interpretation of keyword flags may vary per mail client.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -236,7 +236,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mailObj        | Objeto | -> | Email object                    |
 | destinationBox | Texto  | -> | Mailbox to receive Email object |
 | options        | Objeto | -> | Object containing charset info  |
-| Resultado      | Objeto | <- | Status of the delete operation  |
+| Resultado      | Objeto | <- | Status of the append operation  |
 <!-- END REF -->
 
 
@@ -265,7 +265,7 @@ Possible charsets:
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & base64                               |
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -378,7 +378,7 @@ You can pass:
 The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -483,7 +483,7 @@ In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/
 In the `name` parameter, pass the name of the new mailbox.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -571,7 +571,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -672,7 +672,7 @@ In the `name` parameter, pass the name of the mailbox to delete.
 > * The ability to delete a mailbox depends on the mail server.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -748,7 +748,7 @@ var $server,$boxInfo,$result : Object
 
 The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -797,7 +797,7 @@ $status:=$transporter.expunge()
 <details><summary>Histórico</summary>
 | Versión | Modificaciones   |
 | ------- | ---------------- |
-| v18 R5  | name is optional |
+| v18 R5  | name es opcional |
 | v18 R4  | Añadidos         |
 </details>
 
@@ -819,7 +819,7 @@ The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -1276,7 +1276,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 > This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -1458,7 +1458,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 Note que los valores falsos se ignoran.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -1499,6 +1499,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 
+
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
 
@@ -1529,7 +1530,7 @@ In the `currentName` parameter, pass the name of the mailbox to be renamed.
 Pass the new name for the mailbox in the `newName` parameter.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -1761,7 +1762,7 @@ The optional `state` parameter defines the type of access to the mailbox. The po
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
-**Returned object**
+**Objeto devuelto**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -1817,7 +1818,7 @@ The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -
 
 In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 
@@ -1890,7 +1891,7 @@ The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summa
 
 In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
 
-**Returned object**
+**Objeto devuelto**
 
 The function returns an object describing the IMAP status:
 

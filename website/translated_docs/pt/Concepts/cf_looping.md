@@ -275,8 +275,8 @@ Aqui são dois exemplos:
 A sintaxe da estrutura condicional `For each...End for each` é:
 
 ```4d
- For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
-    statement(s)
+ For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
+    instruction(s)
  End for each
 ```
 

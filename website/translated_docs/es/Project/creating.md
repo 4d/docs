@@ -8,7 +8,7 @@ title: Working with a project
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
-## Creating a project
+## Crear un proyecto
 
 New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
 
@@ -74,7 +74,7 @@ You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application
 A .4DLink file of "remote project" type can be copied and used on several machines.
 > It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
 
-## About 4DLink Files
+## Sobre 4DLink Files
 
 Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
 

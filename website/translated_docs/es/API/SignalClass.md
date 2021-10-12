@@ -5,7 +5,7 @@ title: Signal
 
 Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
 
-> Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
+> Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Sólo el proceso que define el semáforo puede eliminarlo.
 
 
 ### Signal Object
@@ -26,7 +26,7 @@ Note that to avoid blocking situations, the `.wait()` can also return after a de
 Signal objects are created with the [New signal](#new-signal) command.
 
 
-### Working with signals
+### Trabajar con señales
 
 In 4D, you create a new signal object by calling the [`New signal`](#new-signal) command. Once created, this signal must be passed as a parameter to the `New process` or `CALL WORKER` commands so that they can modify it when they have finished the task you want to wait for.
 
@@ -128,7 +128,7 @@ Optionally, in the *description* parameter you can pass a custom text describing
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
 
 
-**Returned value**
+**Valor devuelto**
 
 A new [`4D.Signal` object](#signal-object).
 
@@ -146,7 +146,7 @@ Here is a typical example of a worker that sets a signal:
  If($signaled)
     ALERT("myworker finished the work. Result: "+$signal.myresult)
  Else
-    ALERT("myworker has not finished in less than 1s")
+    ALERT("myworker no ha terminado en menos de 1s")
  End if
 ```
 

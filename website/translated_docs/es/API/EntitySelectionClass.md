@@ -716,8 +716,8 @@ The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->re
 *attributePath* can refer to:
 
 *   a scalar dataclass attribute,
-*   related entity,
-*   related entities.
+*   entidad relacionada,
+*   entidades relacionadas.
 
 If *attributePath* is invalid, an empty collection is returned.
 
@@ -1330,7 +1330,7 @@ The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->re
 
 You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
 
-*   *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:
+*   *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. La sintaxis es:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
@@ -1987,7 +1987,7 @@ Devuelve:
 
 #### Ejemplo 2
 
-Example with options:
+Ejemplo con opciones:
 
 ```4d
 var $employeesCollection : Collection
@@ -2119,7 +2119,7 @@ devuelve:
 
 #### Ejemplo 5
 
-Example with *filterCol* parameter:
+Ejemplo con el parámetro *filterCol*:
 
 ```4d
 var $employeesCollection; $coll : Collection

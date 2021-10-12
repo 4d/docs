@@ -4,7 +4,7 @@ title: Fuente de datos
 ---
 
 ---
-## Automatic Insertion
+## Inserción automática
 
 When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
 
@@ -37,7 +37,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 
 ---
-## Choice List
+## Lista de selección
 
 Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
@@ -71,7 +71,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Pestañas](tabControl.md)
 
 
 ---
@@ -334,9 +334,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles     |
-| -------------- | -------------- | -------------------- |
-| namedSelection | cadena         | Named selection name |
+| Nombre         | Tipos de datos | Valores posibles       |
+| -------------- | -------------- | ---------------------- |
+| namedSelection | cadena         | Nombre de la selección |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)

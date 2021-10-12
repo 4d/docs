@@ -3,7 +3,7 @@ id: basics
 title: Basics
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+Los errores son comunes. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
 
 The 4D development environment provides several debugging tools for all types of errors.
 
@@ -46,7 +46,7 @@ Sometimes the piece of code that displays the error may be different than the co
 
 ### Runtime Errors
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+In Application mode, you might obtain errors that you don't see in interpreted mode. Aquí un ejemplo:
 
 ![runtime-error](assets/en/Debugging/runtimeError.png)
 
@@ -84,13 +84,13 @@ The syntax error window proposes several options:
 
 ## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Method Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Method Editor, and try to figure out what's going by looking at the code. ¡No lo haga! You will save plenty of time and energy by always using the **Debugger**.
 
 The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
 
 Another reason to use the Debugger is for developing code. Sometimes you may write an algorithm that is more complex than usual. Despite all feelings of accomplishment, you can't be totally sure that your coding is 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
-## Breaks
+## Rupturas
 
 In the debugging process, you may need to skip the tracing of some parts of the code until a certain line. Or, you may want to trace the code when a given expression has a certain value (e.g. "$myVar > 1000"), or every time a specific 4D command is called.
 

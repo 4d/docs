@@ -8,7 +8,7 @@ REST requests can benefit from [web user sessions](WebServer/sessions.md), provi
 Como primer paso para abrir una sesión REST en el servidor 4D, el usuario que envía la solicitud debe estar autenticado.
 
 
-## Authenticating users
+## Autenticación de los usuarios
 
 You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
 

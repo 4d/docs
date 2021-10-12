@@ -51,7 +51,7 @@ Attachment objects provide the following read-only properties and functions:
 
 #### Description
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
+O comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 To define the attachment, you can use:
 
@@ -196,7 +196,7 @@ $transporter.send($email)
 
 #### Description
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
 
 
 ## .cid
@@ -207,7 +207,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 #### Description
 
-The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
+A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> a ID do anexo<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
 
 
 ## .disposition
@@ -218,7 +218,7 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 #### Description
 
-The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Two values are available:
+A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho `Content-Disposition`<!-- END REF -->. Two values are available:
 
 *   "inline": the attachment is rendered within the message contents, at the "cid" location. The rendering depends on the mail client.
 *   "attachment": the attachment is provided as a link in the message.
@@ -230,15 +230,15 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 **.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type    |    | Description               |
-| --------- | ------- |:--:| ------------------------- |
-| Result    | 4D.Blob | <- | Content of the attachment |
+| Parameter | Type    |    | Description       |
+| --------- | ------- |:--:| ----------------- |
+| Result    | 4D.Blob | <- | Conteúdo do anexo |
 <!-- END REF -->
 
 
 #### Description
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Pode usar esse método com objetos anexos recebidos pelo comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
 
 

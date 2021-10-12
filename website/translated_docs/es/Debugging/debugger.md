@@ -37,7 +37,7 @@ The Debugger window is usually displayed on the machine where the code is execut
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
 
-## Tool bar Buttons
+## Botones barra de herramientas
 
 The debugger's tool bar includes several buttons, associated with default shortcuts:
 
@@ -135,7 +135,7 @@ $c:=a+b
     | -- | ---------- |
     |    |            |
 
-    The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
 
@@ -143,7 +143,7 @@ $c:=a+b
     | -- | ---------- |
     | $b | Indefinido |
 
-    The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
@@ -152,7 +152,7 @@ $c:=a+b
     | $a | 1          |
     | $b | 2          |
 
-    The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 #### Variables
 
@@ -172,7 +172,7 @@ To display the variable types and their internal names, right click and check th
 
 ![show-types-menu-item](assets/en/Debugging/showTypes.png)
 
-Here's the result:
+Aquí está el resultado:
 
 ![dynamic-variable-names](assets/en/Debugging/dynamicVariableNames.png)
 
@@ -188,7 +188,7 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
-#### Semaphores
+#### Semáforos
 
 This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
@@ -256,7 +256,7 @@ In the image above:
 * `secondMethod` has received three parameters from `firstMethod`:
     * $1 is a pointer to the `[Employee]` table
     * $2 is a pointer to the `ID` field in the  `[Employee]` table
-    * $3 is an alphanumeric parameter whose value is "Z"
+    * $3 es un parámetro alfanumérico cuyo valor es "Z"
 
 You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
@@ -278,7 +278,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * variable
 * puntero
 * calculation
-* 4D command
+* Comando 4D
 * method
 * and anything else that returns a value
 

@@ -6,7 +6,7 @@ title: Menu item properties
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
 
 
-## Title
+## Título
 
 The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
 
@@ -123,7 +123,7 @@ These reserved key combinations are listed in the following table:
 | Ctrl+V          | Command+V          | Paste       |
 | Ctrl+X          | Command+X          | Cut         |
 | Ctrl+Z          | Command+Z          | Undo        |
-| Ctrl+. (period) | Command+. (period) | Stop action |
+| Ctrl+. (period) | Comando+. (period) | Stop action |
 
 To assign a keyboard shortcut in the Menu editor:
 

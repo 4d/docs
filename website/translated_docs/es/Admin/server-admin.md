@@ -55,7 +55,7 @@ The "Details" area repeats part of the information displayed in the graphic area
 - **Network**: Instantaneous number of bytes sent and received by the machine (server or client). This value is updated constantly. The number of bytes received by can also be displayed dynamically in the graphic area.
 
 
-## Users Page
+## Página Usuarios
 
 The **Users** page lists the 4D users connected to the server.
 
@@ -166,7 +166,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
     - 4D process - blank,
     - User process - 4D user name,
     - Web process - URL path,
-- Name of the process,
+- Nombre del proceso,
 - Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
 - Current state of the process,
 - Running time (in seconds) of the process since its creation,
@@ -179,7 +179,7 @@ Each process is identified by an icon as well as a type. The color and form of t
 | icon                                    | type                                                                                                                                                      |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/Admin/server-icon-1.png)  | Application server                                                                                                                                        |
-| ![](assets/en/Admin/server-icon-2.png)  | SQL Server                                                                                                                                                |
+| ![](assets/en/Admin/server-icon-2.png)  | Servidor SQL                                                                                                                                              |
 | ![](assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                             |
 | ![](assets/en/Admin/server-icon-4.png)  | Servidor Web                                                                                                                                              |
 | ![](assets/en/Admin/server-icon-5.png)  | SOAP Server                                                                                                                                               |
@@ -192,10 +192,10 @@ Each process is identified by an icon as well as a type. The color and form of t
 | ![](assets/en/Admin/server-icon-12.png) | 4D client process (process running on the connected 4D)                                                                                                   |
 | ![](assets/en/Admin/server-icon-13.png) | Stored procedure (process launched by a connected 4D and running on the server)                                                                           |
 | ![](assets/en/Admin/server-icon-14.png) | Web method (launched by a 4DACTION for example)                                                                                                           |
-| ![](assets/en/Admin/server-icon-15.png) | Web method (preemptive)                                                                                                                                   |
+| ![](assets/en/Admin/server-icon-15.png) | Método web (apropiativo)                                                                                                                                  |
 | ![](assets/en/Admin/server-icon-16.png) | SOAP method (launched by a Web Service)                                                                                                                   |
 | ![](assets/en/Admin/server-icon-17.png) | SOAP method (preemptive)                                                                                                                                  |
-| ![](assets/en/Admin/server-icon-18.png) | Logger                                                                                                                                                    |
+| ![](assets/en/Admin/server-icon-18.png) | Logger (registrador)                                                                                                                                      |
 | ![](assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                   |
 | ![](assets/en/Admin/server-icon-20.png) | TCP session manager                                                                                                                                       |
 | ![](assets/en/Admin/server-icon-21.png) | Other process                                                                                                                                             |
@@ -226,7 +226,7 @@ The page also has five control buttons that act on the selected process(es). Not
 - **Watch users**: used to display, on the [Users page](#users-page), all the processes of the selected user(s). This button is active when at least one user process is selected.
 
 
-## Maintenance Page
+## Página Mantenimiento
 
 The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
 

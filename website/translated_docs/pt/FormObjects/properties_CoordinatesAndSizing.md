@@ -77,7 +77,7 @@ Left coordinate of the object on the form.
 
 
 ---
-## Right
+## Direita
 
 Right coordinate of the object in the form.
 
@@ -95,7 +95,7 @@ Right coordinate of the object in the form.
 
 
 ---
-## Top
+## Topo
 
 Top coordinate of the object in the form.
 

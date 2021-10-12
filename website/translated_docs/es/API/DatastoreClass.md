@@ -152,7 +152,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | contraseña  | Texto        | User password                                                                                                                                                                                                                                                          |
 | idleTimeout | Entero largo | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
 | tls         | Booleano     | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Texto        | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| type        | Texto        | Debe ser "4D Server"                                                                                                                                                                                                                                                   |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -306,7 +306,7 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 > Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
 
-**Returned value**
+**Valor devuelto**
 
 The returned object contains the following properties:
 
@@ -316,7 +316,7 @@ The returned object contains the following properties:
 | keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
 | tablas      |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
 |             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
-|             |             | name          | Texto    | Name of the table                                                                  |
+|             |             | name          | Texto    | Nombre de la tabla                                                                 |
 |             |             | num           | Número   | Table number                                                                       |
 |             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
 |             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
@@ -336,7 +336,7 @@ You want to know the number of encrypted tables in the current data file:
 
  $status:=dataStore.encryptionStatus()
 
- If($status.isEncrypted) //the database is encrypted
+ If($status.isEncrypted) //la base está encriptada
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
@@ -377,7 +377,7 @@ You want to know the number of encrypted tables in the current data file:
 
 The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. This function is useful for setting up generic code.
 
-**Returned object**
+**Objeto devuelto**
 
 | Propiedad  | Tipo     | Descripción                                                                                                                                                     |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -395,16 +395,16 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 ```4d
  var $info : Object
 
- $info:=ds.getInfo() //Executed on 4D Server or 4D
+ $info:=ds.getInfo() //Ejecutado en 4D Server o 4D
   //{"type":"4D","networked":false,"localID":""}
 
- $info:=ds.getInfo() // Executed on 4D remote
+ $info:=ds.getInfo() // Ejecutado en 4D remoto
   //{"type":"4D","networked":true,"localID":""}
 ```
 
 #### Ejemplo 2
 
-On a remote datastore:
+En un almacén de datos remoto:
 
 ```4d
   var $remoteDS : cs.DataStore
@@ -450,7 +450,7 @@ The `.getRequestLog()` function <!-- REF #DataStoreClass.getRequestLog().Summary
 
 This function must be called on a remote 4D, otherwise it returns an empty collection. It is designed for debugging purposes in client/server configurations.
 
-**Returned value**
+**Valor devuelto**
 
 Collection of stacked request objects. The most recent request has index 0.
 
@@ -459,7 +459,7 @@ For a description of the ORDA request log format, please refer to the [**ORDA cl
 
 #### Ejemplo
 
-See Example 2 of [`.startRequestLog()`](#startrequestlog).
+Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -582,7 +582,7 @@ The result of the command is described in the returned object:
 | statusText |                          | Texto      | Error message                                                                   |
 | errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
 |            | \[ ].componentSignature | Texto      | Internal component name                                                         |
-|            | \[ ].errCode            | Número     | Error number                                                                    |
+|            | \[ ].errCode            | Número     | Número de error                                                                 |
 |            | \[ ].message            | Texto      | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
@@ -827,7 +827,7 @@ This function must be called on a remote 4D, otherwise it does nothing. It is de
 
 #### Ejemplo
 
-See examples for [`.startRequestLog()`](#startrequestlog).
+Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 

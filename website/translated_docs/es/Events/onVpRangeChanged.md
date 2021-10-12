@@ -3,25 +3,25 @@ id: onVpRangeChanged
 title: On VP Range Changed
 ---
 
-| Code | Puede ser llamado por                                   | Definición                                                                                            |
-| ---- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| 61   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | The 4D View Pro cell range has changed (e.g., a formula calculation, value removed from a cell, etc.) |
+| Code | Puede ser llamado por                                   | Definición                                                                                                             |
+| ---- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 61   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | El rango de celdas 4D View Pro ha cambiado (por ejemplo, un cálculo de fórmula, un valor eliminado de una celda, etc.) |
 
 
 ## Descripción
 
 
-This event is generated when a change occurs within a cell range in the 4D View Pro document.
+Este evento se genera cuando se produce un cambio dentro de un rango de celdas en el documento 4D View Pro.
 
-The object returned by the FORM Event command contains:
+El objeto devuelto por el comando FORM Event contiene:
 
-| Propiedad    | Tipo         | Descripción                                                                                                                                                                                                                                                                  |
-| ------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | texto        | Nombre del área 4D View Pro                                                                                                                                                                                                                                                  |
-| code         | entero largo | On VP Range Changed                                                                                                                                                                                                                                                          |
-| description  | texto        | "On VP Range Changed"                                                                                                                                                                                                                                                        |
-| sheetName    | texto        | Nombre de la hoja del evento                                                                                                                                                                                                                                                 |
-| range        | objeto       | Cell range of the change                                                                                                                                                                                                                                                     |
-| changedCells | objeto       | Range containing only the changed cells. It can be a combined range.                                                                                                                                                                                                         |
-| action       | texto        | The type of operation generating the event:<p><p><li>"clear" - A clear range value operation</li><li>"dragDrop" - Una operación de arrastrar y soltar</li><li>"dragFill" - Una operación de llenado por arrastre</li><li>"evaluateFormula" - Definición de una fórmula en un rango de celdas especificado</li><li>"pegar" - Una operación de pegado</li><li>"setArrayFormula" - Definición de una fórmula en un rango de celdas especificado</li><li>"sort" - Ordenar un rango de celdas</li> |
-> See also [On After Edit](onAfterEdit.md).	
+| Propiedad    | Tipo         | Descripción                                                                                                                                                                                                                                                                 |
+| ------------ | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName   | texto        | Nombre del área 4D View Pro                                                                                                                                                                                                                                                 |
+| code         | entero largo | On VP Range Changed                                                                                                                                                                                                                                                         |
+| description  | texto        | "On VP Range Changed"                                                                                                                                                                                                                                                       |
+| sheetName    | texto        | Nombre de la hoja del evento                                                                                                                                                                                                                                                |
+| range        | objeto       | Rango de celdas del cambio                                                                                                                                                                                                                                                  |
+| changedCells | objeto       | Rango que contiene sólo las celdas modificadas. Puede ser una gama combinada.                                                                                                                                                                                               |
+| action       | texto        | El tipo de operación que genera el evento:<p><p><li>"clear" - operación para borrar el valor de un rango</li><li>"dragDrop" - Una operación de arrastrar y soltar</li><li>"dragFill" - Una operación de llenado por arrastre</li><li>"evaluateFormula" - Definición de una fórmula en un rango de celdas especificado</li><li>"pegar" - Una operación de pegado</li><li>"setArrayFormula" - Definición de una fórmula en un rango de celdas especificado</li><li>"sort" - Ordenar un rango de celdas</li> |
+> Ver también [On After Edit](onAfterEdit.md).	

@@ -380,9 +380,9 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
-    /* 
-    other comments
+comentarios  
+    /*
+    outros comentarios
     */
 */
 ...

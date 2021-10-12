@@ -1,6 +1,6 @@
 ---
 id: compiler
-title: Compilation
+title: Compilación
 ---
 
 You can compile your projects, i.e., translate all of your methods into machine language. Compiling a project lets you check the consistency of the code and accelerate its execution, as well as making it possible to obfuscate the code in its entirety. Compilation is an indispensable step between the development of projects using 4D and their deployment as stand-alone applications.
@@ -153,7 +153,7 @@ This setting allows you to select the processor family for which your 4D project
 
 Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
-| *Option*                                         | *on Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *on macOS Silicon*                                                                          |
+| *Option*                                         | *on Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *macOS Silicon*                                                                             |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
 | **My processor (processor)**                     | Code for Intel/AMD                                                                        | Code for Intel/AMD                                                                          | Code for Apple Silicon                                                                      |
@@ -184,7 +184,7 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 ## Compilation tools
 
-### Symbol file
+### Archivo Symbol
 
 If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the project folder during compilation. It is divided into several parts:
 
@@ -193,7 +193,7 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 These two lists contain four columns:
 
 - Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
-- Type of the variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Tipo de la variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
 - Number of dimensions if the variable is an array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
@@ -286,11 +286,11 @@ To do this, you must surround the code to be excluded from range checking with t
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
-|                | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
-| -------------- |:-------------------:|:---------------------:|:-----------------------:|
-| En Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
-| Intel Mac      |      &#10003;       |       &#10003;        |        &#10003;         |
-| On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
+|             | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
+| ----------- |:-------------------:|:---------------------:|:-----------------------:|
+| En Windows  |      &#10003;       |       &#10003;        |        &#10007;         |
+| Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
+| Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 
 
 Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.

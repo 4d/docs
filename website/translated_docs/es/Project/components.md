@@ -1,11 +1,11 @@
 ---
 id: componentes
-title: 4D Components Library
+title: Librería de componentes 4D
 ---
 
 4D includes an extended library of built-in 4D components. A [component](Concepts/components.md) provides additional functionalities to your 4D projects.
 
-## List of 4D Components
+## Lista de Componentes 4D
 
 | Component Name                                                                         | Descripción                                                                                            |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -15,7 +15,7 @@ title: 4D Components Library
 | [4D SVG](https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html)          | Create and manipulate common svg graphic objects                                                       |
 | [4D ViewPro](https://doc.4d.com/4Dv19/4D/19/4D-View-Pro-Reference.100-5442901.en.html) | Spreadsheet features in your forms                                                                     |
 | [4D Widgets](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html)            | Manage DatePicker, TimePicker, SearchPicker 4D widgets                                                 |
-| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface)                   | Manage 4D Write Pro palettes                                                                           |
+| [Interfaz 4D WritePro](https://github.com/4d/4D-WritePro-Interface)                    | Manage 4D Write Pro palettes                                                                           |
 
 
 > You can develop and install your own 4D components. See [this section](Concepts/components.md) for more information.
