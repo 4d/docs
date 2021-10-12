@@ -30,7 +30,7 @@ And no entities were found, the following query path would be returned, if you w
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Respuesta**:
 
 ```
 __queryPath: {
