@@ -225,7 +225,7 @@ The appearance and location of this symbol depends on the button style and the c
 
 To attach a pop-up menu symbol to a button, there are two display options available:
 
-|                        Linked                        |                        Separado                         |
+|                       Enlazado                       |                        Separado                         |
 |:----------------------------------------------------:|:-------------------------------------------------------:|
 | ![](assets/en/FormObjects/property_popup_linked.png) | ![](assets/en/FormObjects/property_popup_separated.png) |
 > The actual availability of a "separated" mode depends on the style of the button and the platform.
