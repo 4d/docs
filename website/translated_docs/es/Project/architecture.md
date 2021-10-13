@@ -100,7 +100,7 @@ Project development file, used to designate and launch the project. This file ca
 | ---------------------------------------------------- | -------------------------------------------------------- | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)     | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                         | imagen  |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                  | texto   |
+| *n*/Input/*formName*/method.4dm                      | Método del formulario de entrada de la tabla             | texto   |
 | *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. Un archivo por método objeto  | texto   |
 | *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)    | json    |
 | *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                        | imagen  |

@@ -24,7 +24,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| automaticInsertion | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -167,7 +167,7 @@ A 4D expression to be associated with a column. You can enter:
     *   Numeric
     *   Date
     *   Hora
-    *   Picture
+    *   Imagem
     *   Boolean  
       You can use fields from the Master Table or from other tables.
 
@@ -176,8 +176,8 @@ A 4D expression to be associated with a column. You can enter:
     *   String
     *   Numeric
     *   Date
-    *   Picture
-    *   Boolean
+    *   Imagem
+    *   Booleano
 
     For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   

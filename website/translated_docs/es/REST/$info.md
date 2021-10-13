@@ -10,7 +10,7 @@ When you call this request for your project, you retrieve information in the fol
 
 | Propiedad      | Tipo       | Descripción                                                                         |
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Número     | 4D Server's cache size.                                                             |
+| cacheSize      | Número     | Tamaño de la caché del servidor 4D.                                                 |
 | usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
 | entitySetCount | Número     | Number of entity selections.                                                        |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |
@@ -21,14 +21,14 @@ When you call this request for your project, you retrieve information in the fol
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Propiedad     | Tipo     | Descripción                                                                                                                                                                                                                                                         |
-| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | Cadena   | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| dataClass     | Cadena   | Nombre de la dataclass.                                                                                                                                                                                                                                             |
-| selectionSize | Número   | Number of entities in the entity selection.                                                                                                                                                                                                                         |
-| sorted        | Booleano | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Fecha    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Fecha    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| Propiedad     | Tipo     | Descripción                                                                                                                                                                                                                                                               |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | Cadena   | A UUID that references the entity set.                                                                                                                                                                                                                                    |
+| dataClass     | Cadena   | Nombre de la dataclass.                                                                                                                                                                                                                                                   |
+| selectionSize | Número   | Number of entities in the entity selection.                                                                                                                                                                                                                               |
+| sorted        | Booleano | Devuelve true si el conjunto fue ordenado ( utilizando `$orderby`) o false si no está ordenado.                                                                                                                                                                           |
+| refreshed     | Fecha    | When the entity set was created or the last time it was used.                                                                                                                                                                                                             |
+| expires       | Fecha    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. Este valor es de dos horas por defecto o lo que hayas definido utilizando `$timeout`. |
 
 For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 > 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.

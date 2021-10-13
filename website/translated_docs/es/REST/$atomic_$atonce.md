@@ -8,7 +8,7 @@ Allows the actions in the REST request to be in a transaction. If there are no e
 
 
 ## Descripción
-When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atonce`.
+When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. Puede utilizar `$atomic` o `$atonce`.
 
 
 ## Ejemplo

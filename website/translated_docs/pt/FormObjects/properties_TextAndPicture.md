@@ -51,7 +51,7 @@ This property allows setting the size (in pixels) of the horizontal margins of t
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| With / Without       | Example                                                   |
+| With / Without       | Exemplo                                                   |
 | -------------------- | --------------------------------------------------------- |
 | Without margin       | ![](assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](assets/en/FormObjects/property_horizontalMargin2.png) |
@@ -152,7 +152,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 | Name | Data Type | Possible Values                              |
 | ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
+| icon | imagem    | Relative or filesystem path in POSIX syntax. |
 
 #### Objects Supported
 
@@ -168,10 +168,10 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Description                                                                                                                                      | Example                                                        |
+| Option       | Description                                                                                                                                      | Exemplo                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Direita**  | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Bottom**   | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |

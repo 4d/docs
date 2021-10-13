@@ -71,11 +71,11 @@ El comparador debe ser uno de los siguientes valores:
 
 | Comparador | Descripción              |
 | ---------- | ------------------------ |
-| =          | equals to                |
+| =          | igual a                  |
 | !=         | diferente de             |
 | >          | mayor que                |
 | >=         | greater than or equal to |
-| <          | less than                |
+| <          | menor que                |
 | <=         | less than or equal to    |
 | begin      | begins with              |
 

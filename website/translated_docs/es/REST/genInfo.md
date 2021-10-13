@@ -21,7 +21,7 @@ To get the collection of all exposed dataclasses along with their attributes:
 
 Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
 
-## queryPath and queryPlan
+## queryPath y queryPlan
 
 Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
 

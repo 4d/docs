@@ -150,11 +150,11 @@ You can use projects to organize your licenses according to your needs:
 ![](assets/en/getStart/licens6.png)
 
 
-## Troubleshooting
+## Solución de problemas
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Síntomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Síntomas                                                      | Causas posibles                                            | Solution(s)                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -175,7 +175,7 @@ For the US:
 For the UK:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Teléfono: 01625 536178
 
 
 Encuentre la comunidad de desarrolladores de 4D en línea aquí: [https://discuss.4d.com](https://discuss.4d.com).

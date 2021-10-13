@@ -139,14 +139,14 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Description                                                                                             |
+| Sintaxe                   | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
 | [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
-#### Examples
+#### Exemplos
 
 All objects with the `borderStyle` attribute will have purple lines:
 

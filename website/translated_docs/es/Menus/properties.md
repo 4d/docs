@@ -60,7 +60,7 @@ You can assign a project method and/or a standard action to a selected menu comm
 
 Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
 
-### Start a new process
+### Iniciar un nuevo proceso
 The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
 
 When the **Start a New Process** option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The **Start a New Process** option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.
@@ -119,10 +119,10 @@ These reserved key combinations are listed in the following table:
 | Llave (Windows) | Llave (macOS)     | Operación         |
 | --------------- | ----------------- | ----------------- |
 | Ctrl+C          | Comando+C         | Copiar            |
-| Ctrl+Q          | Command+Q         | Salir             |
-| Ctrl+V          | Command+V         | Pegar             |
-| Ctrl+X          | Command+X         | Cortar            |
-| Ctrl+Z          | Command+Z         | Deshacer          |
+| Ctrl+Q          | Comando+Q         | Salir             |
+| Ctrl+V          | Comando+V         | Pegar             |
+| Ctrl+X          | Comando+X         | Cortar            |
+| Ctrl+Z          | Comando+Z         | Deshacer          |
 | Ctrl+. (punto)  | Comando+. (punto) | Detener la acción |
 
 To assign a keyboard shortcut in the Menu editor:
