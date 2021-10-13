@@ -114,7 +114,7 @@
 </thead>
 <tbody>
 <tr><td>dsTable</td><td>テーブル</td><td style="text-align:center">-&gt;</td><td>エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル</td></tr>
-<tr><td>settings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
+<tr><td>settings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>指定したテーブルに対応するデータクラスのエンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -128,7 +128,7 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>context</td><td>テキスト</td><td>エンティティセレクションに適用されている <a href="/docs/ja/ORDA/entities.html#クライアントサーバーの最適化">最適化コンテキスト</a> のラベル。</td></tr>
+<tr><td>context</td><td>Text</td><td>エンティティセレクションに適用されている <a href="/docs/ja/ORDA/entities.html#クライアントサーバーの最適化">最適化コンテキスト</a> のラベル。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -355,8 +355,8 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
-<tr><td>戻り値</td><td>実数</td><td style="text-align:center">&lt;-</td><td>エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します)</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
+<tr><td>戻り値</td><td>Real</td><td style="text-align:center">&lt;-</td><td>エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -397,7 +397,7 @@
 </thead>
 <tbody>
 <tr><td>entity</td><td>4D.Entity</td><td style="text-align:center">-&gt;</td><td>評価するエンティティ</td></tr>
-<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>エンティティがエンティティセレクションに属している場合には true、そうでない場合は false</td></tr>
+<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>エンティティがエンティティセレクションに属している場合には true、そうでない場合は false</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -434,8 +434,8 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
-<tr><td>戻り値</td><td>実数</td><td style="text-align:center">&lt;-</td><td>エンティティセレクション内の <em>attributePath</em> が null でない値の個数</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
+<tr><td>戻り値</td><td>Real</td><td style="text-align:center">&lt;-</td><td>エンティティセレクション内の <em>attributePath</em> が null でない値の個数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -473,7 +473,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>オプション</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>ck shared</code>: 共有可能なエンティティセレクションを返します</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck shared</code>: 共有可能なエンティティセレクションを返します</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションのコピー</td></tr>
 </tbody>
 </table>
@@ -526,9 +526,9 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>重複しない値を取得する属性のパス</td></tr>
-<tr><td>オプション</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>重複しない値のみを格納したコレクション</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>重複しない値を取得する属性のパス</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>重複しない値のみを格納したコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -573,7 +573,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk stop dropping on first error</code>: 最初のドロップ不可エンティティで実行を止めます</td></tr>
+<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk stop dropping on first error</code>: 最初のドロップ不可エンティティで実行を止めます</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>成功した場合には空のエンティティセレクション、そうでない場合にはドロップ不可エンティティを格納したエンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -621,10 +621,10 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>新しいコレクションに抽出する値の属性パス</td></tr>
-<tr><td>targetPath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>抽出先の属性パスあるいは属性名</td></tr>
-<tr><td>オプション</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code>: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>抽出した値を格納したコレクション</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>新しいコレクションに抽出する値の属性パス</td></tr>
+<tr><td>targetPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>抽出先の属性パスあるいは属性名</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code>: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>抽出した値を格納したコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -787,7 +787,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションが追加可能であれば true、それ以外の場合には false</td></tr>
+<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションが追加可能であれば true、それ以外の場合には false</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -818,7 +818,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>順列ありエンティティセレクションの場合には true、そうでない場合は false</td></tr>
+<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>順列ありエンティティセレクションの場合には true、そうでない場合は false</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -916,7 +916,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
 <tr><td>戻り値</td><td>any</td><td style="text-align:center">&lt;-</td><td>属性の最大値</td></tr>
 </tbody>
 </table>
@@ -954,7 +954,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
 <tr><td>戻り値</td><td>any</td><td style="text-align:center">&lt;-</td><td>属性の最小値</td></tr>
 </tbody>
 </table>
@@ -1093,8 +1093,8 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>pathString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>エンティティセレクションの属性パスと並べ替えの指定</td></tr>
-<tr><td>pathObjects</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>条件オブジェクトのコレクション</td></tr>
+<tr><td>pathString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>エンティティセレクションの属性パスと並べ替えの指定</td></tr>
+<tr><td>pathObjects</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>条件オブジェクトのコレクション</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>指定された順番に並べ替えられた新規エンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -1161,10 +1161,10 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>formulaString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>フォーミュラ文字列</td></tr>
-<tr><td>formulaObj</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>フォーミュラオブジェクト</td></tr>
-<tr><td>sortOrder</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk ascending</code> (デフォルト) または <code>dk descending</code></td></tr>
-<tr><td>settings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>フォーミュラに渡す引数</td></tr>
+<tr><td>formulaString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>フォーミュラ文字列</td></tr>
+<tr><td>formulaObj</td><td>Object</td><td style="text-align:center">-&gt;</td><td>フォーミュラオブジェクト</td></tr>
+<tr><td>sortOrder</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk ascending</code> (デフォルト) または <code>dk descending</code></td></tr>
+<tr><td>settings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>フォーミュラに渡す引数</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>順列ありの新規エンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -1268,10 +1268,10 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>queryString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>検索条件 (文字列)</td></tr>
-<tr><td>formula</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>検索条件 (フォーミュラオブジェクト)</td></tr>
+<tr><td>queryString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>検索条件 (文字列)</td></tr>
+<tr><td>formula</td><td>Object</td><td style="text-align:center">-&gt;</td><td>検索条件 (フォーミュラオブジェクト)</td></tr>
 <tr><td>value</td><td>any</td><td style="text-align:center">-&gt;</td><td>プレースホルダー用の値</td></tr>
-<tr><td>querySettings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
+<tr><td>querySettings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td><em>queryString</em> または <em>formula</em> に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション</td></tr>
 <tr><td></td></tr>
 </tbody>
@@ -1404,7 +1404,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </thead>
 <tbody>
 <tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1420,9 +1420,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>ranges</td><td>コレクション</td><td>レンジオブジェクトのコレクション</td></tr>
-<tr><td>ranges[].start</td><td>整数</td><td>レンジ内の先頭エンティティのインデックス (位置)</td></tr>
-<tr><td>ranges[].end</td><td>整数</td><td>レンジ内の最終エンティティのインデックス (位置)</td></tr>
+<tr><td>ranges</td><td>Collection</td><td>レンジオブジェクトのコレクション</td></tr>
+<tr><td>ranges[].start</td><td>Integer</td><td>レンジ内の先頭エンティティのインデックス (位置)</td></tr>
+<tr><td>ranges[].end</td><td>Integer</td><td>レンジ内の最終エンティティのインデックス (位置)</td></tr>
 </tbody>
 </table>
 <p><code>ranges</code> プロパティに 1件のエンティティしか含まれない場合、<code>start</code> = <code>end</code> です。 インデックスは 0 起点です。</p>
@@ -1460,8 +1460,8 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>startFrom</td><td>整数</td><td style="text-align:center">-&gt;</td><td>処理を開始するインデックス)</td></tr>
-<tr><td>end</td><td>整数</td><td style="text-align:center">-&gt;</td><td>終了インデックス (含まれない)</td></tr>
+<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>処理を開始するインデックス)</td></tr>
+<tr><td>end</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>終了インデックス (含まれない)</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>抜粋エンティティを格納した新しいエンティティセレクション (シャロウ・コピー)</td></tr>
 </tbody>
 </table>
@@ -1507,8 +1507,8 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>attributePath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
-<tr><td>戻り値</td><td>実数</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションの値の合計</td></tr>
+<tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用する属性パス</td></tr>
+<tr><td>戻り値</td><td>Real</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションの値の合計</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1545,12 +1545,12 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>filterString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティの属性パスの文字列</td></tr>
-<tr><td>filterCol</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティの属性パスのコレクション</td></tr>
-<tr><td>options</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: プライマリーキーを追加<br><code>dk with stamp</code>: スタンプを追加</td></tr>
-<tr><td>begin</td><td>整数</td><td style="text-align:center">-&gt;</td><td>開始インデックス</td></tr>
-<tr><td>howMany</td><td>整数</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティ数</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションの属性と値を格納したオブジェクトのコレクション</td></tr>
+<tr><td>filterString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティの属性パスの文字列</td></tr>
+<tr><td>filterCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティの属性パスのコレクション</td></tr>
+<tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: プライマリーキーを追加<br><code>dk with stamp</code>: スタンプを追加</td></tr>
+<tr><td>begin</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>開始インデックス</td></tr>
+<tr><td>howMany</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>抽出するエンティティ数</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>エンティティセレクションの属性と値を格納したオブジェクトのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-31"></a><a href="#説明-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>

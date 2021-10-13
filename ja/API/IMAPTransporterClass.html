@@ -123,7 +123,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>server</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>メールサーバー情報</td></tr>
+<tr><td>server</td><td>Object</td><td style="text-align:center">-&gt;</td><td>メールサーバー情報</td></tr>
 <tr><td>戻り値</td><td>4D.IMAPTransporter</td><td style="text-align:center">&lt;-</td><td><a href="#imap-transporter-オブジェクト">IMAP transporter オブジェクト</a></td></tr>
 </tbody>
 </table>
@@ -178,7 +178,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>server</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>メールサーバー情報</td></tr>
+<tr><td>server</td><td>Object</td><td style="text-align:center">-&gt;</td><td>メールサーバー情報</td></tr>
 <tr><td>戻り値</td><td>4D.IMAPTransporter</td><td style="text-align:center">&lt;-</td><td><a href="#imap-transporter-オブジェクト">IMAP transporter オブジェクト</a></td></tr>
 </tbody>
 </table>
@@ -234,9 +234,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgIDs</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ</td></tr>
-<tr><td>keywords</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>追加するキーワードフラグ</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>addFlags処理のステータス</td></tr>
+<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ</td></tr>
+<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>追加するキーワードフラグ</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>addFlags処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -262,11 +262,11 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>$draft</td><td>ブール</td><td>メッセージに &quot;draft&quot; フラグを追加するには true</td></tr>
-<tr><td>$seen</td><td>ブール</td><td>メッセージに &quot;seen&quot; フラグを追加するには true</td></tr>
-<tr><td>$flagged</td><td>ブール</td><td>True to add the &quot;flagged&quot; flag to the message</td></tr>
-<tr><td>$answered</td><td>ブール</td><td>メッセージに &quot;answered&quot; フラグを追加するには true</td></tr>
-<tr><td>$deleted</td><td>ブール</td><td>メッセージに &quot;deleted&quot; フラグを追加するには true</td></tr>
+<tr><td>$draft</td><td>Boolean</td><td>メッセージに &quot;draft&quot; フラグを追加するには true</td></tr>
+<tr><td>$seen</td><td>Boolean</td><td>メッセージに &quot;seen&quot; フラグを追加するには true</td></tr>
+<tr><td>$flagged</td><td>Boolean</td><td>True to add the &quot;flagged&quot; flag to the message</td></tr>
+<tr><td>$answered</td><td>Boolean</td><td>メッセージに &quot;answered&quot; フラグを追加するには true</td></tr>
+<tr><td>$deleted</td><td>Boolean</td><td>メッセージに &quot;deleted&quot; フラグを追加するには true</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -282,12 +282,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-1"></a><a href="#例題-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -327,10 +327,10 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mailObj</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>Email オブジェクト</td></tr>
-<tr><td>destinationBox</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>Emailオブジェクトを受信するメールボックス</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>文字セット情報を格納したオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>delete処理のステータス</td></tr>
+<tr><td>mailObj</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Email オブジェクト</td></tr>
+<tr><td>destinationBox</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Emailオブジェクトを受信するメールボックス</td></tr>
+<tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>文字セット情報を格納したオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>append処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -343,8 +343,8 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>headerCharset</td><td>テキスト</td><td>メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
-<tr><td>bodyCharset</td><td>テキスト</td><td>メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
+<tr><td>headerCharset</td><td>Text</td><td>メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
+<tr><td>bodyCharset</td><td>Text</td><td>メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
 </tbody>
 </table>
 <p>使用可能な文字セット:</p>
@@ -366,12 +366,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -436,7 +436,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>transporter オブジェクト接続のステータス</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>transporter オブジェクト接続のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -505,10 +505,10 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgsIDs</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
-<tr><td>allMsgs</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
-<tr><td>destinationBox</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージのコピー先のメールボックス</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>copy処理のステータス</td></tr>
+<tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
+<tr><td>destinationBox</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メッセージのコピー先のメールボックス</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>copy処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -526,12 +526,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -593,8 +593,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>新規メールボックスの名称</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>createBox処理のステータス</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>新規メールボックスの名称</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>createBox処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -613,12 +613,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-3"></a><a href="#例題-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -662,9 +662,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgsIDs</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
-<tr><td>allMsgs</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>delete処理のステータス</td></tr>
+<tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>delete処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -682,12 +682,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-2"></a><a href="#例題-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -749,8 +749,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>削除するメールボックスの名称</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>deleteBox処理のステータス</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>削除するメールボックスの名称</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>deleteBox処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -770,12 +770,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-4"></a><a href="#例題-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -821,7 +821,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>expunge処理のステータス</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>expunge処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -833,12 +833,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -882,8 +882,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>boxInfo オブジェクト</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>boxInfo オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -926,8 +926,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>parameters</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>引数のオブジェクト</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>mailbox オブジェクトのコレクション</td></tr>
+<tr><td>parameters</td><td>Object</td><td style="text-align:center">-&gt;</td><td>引数のオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>mailbox オブジェクトのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -938,7 +938,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>isSubscribed</td><td>ブール</td><td><li><strong>True</strong>: 購読しているメールボックスのみを返します。</li><li> <strong>False</strong>: すべての利用可能なメールボックスを返します</li></td></tr>
+<tr><td>isSubscribed</td><td>Boolean</td><td><li><strong>True</strong>: 購読しているメールボックスのみを返します。</li><li> <strong>False</strong>: すべての利用可能なメールボックスを返します</li></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-1"></a><a href="#戻り値-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
@@ -991,7 +991,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>テキスト</td><td style="text-align:center">&lt;-</td><td>階層区切り文字</td></tr>
+<tr><td>戻り値</td><td>Text</td><td style="text-align:center">&lt;-</td><td>階層区切り文字</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1039,10 +1039,10 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>整数</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
-<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>メッセージ管理オプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト">Email オブジェクト</a></td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
+<tr><td>msgID</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
+<tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>メッセージ管理オプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト">Email オブジェクト</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1109,11 +1109,11 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>ids</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>メッセージID のコレクション</td></tr>
-<tr><td>startMsg</td><td>整数</td><td style="text-align:center">-&gt;</td><td>先頭メッセージのシーケンス番号</td></tr>
-<tr><td>endMsg</td><td>整数</td><td style="text-align:center">-&gt;</td><td>最後のメッセージのシーケンス番号</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>メッセージ管理オプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>次のコレクションを格納したオブジェクト:<br><ul><li><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト">Email オブジェクト</a> のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul></td></tr>
+<tr><td>ids</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>メッセージID のコレクション</td></tr>
+<tr><td>startMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>先頭メッセージのシーケンス番号</td></tr>
+<tr><td>endMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>最後のメッセージのシーケンス番号</td></tr>
+<tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>メッセージ管理オプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>次のコレクションを格納したオブジェクト:<br><ul><li><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト">Email オブジェクト</a> のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1135,8 +1135,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>updateSeen</td><td>ブール</td><td>true 時には、指定されたメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true</td></tr>
-<tr><td>withBody</td><td>ブール</td><td>true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true</td></tr>
+<tr><td>updateSeen</td><td>Boolean</td><td>true 時には、指定されたメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true</td></tr>
+<tr><td>withBody</td><td>Boolean</td><td>true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -1152,7 +1152,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>list</td><td>コレクション</td><td><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト"><code>Email</code></a> オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。</td></tr>
+<tr><td>list</td><td>Collection</td><td><a href="/docs/ja/API/EmailObjectClass.html#email-オブジェクト"><code>Email</code></a> オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。</td></tr>
 </tbody>
 </table>
 <p>|notFound |コレクション| 次の要素のコレクション:<br><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>すべてのメッセージが見つかった場合には、空のコレクションが返されます。|</p>
@@ -1199,9 +1199,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>整数</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
-<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
-<tr><td>updateSeen</td><td>ブール</td><td style="text-align:center">-&gt;</td><td>true 時には、メールボックス内でメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
+<tr><td>msgID</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
+<tr><td>updateSeen</td><td>Boolean</td><td style="text-align:center">-&gt;</td><td>true 時には、メールボックス内でメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。</td></tr>
 <tr><td>戻り値</td><td>BLOB</td><td style="text-align:center">&lt;-</td><td>メールサーバーから返された MIME文字列の BLOB</td></tr>
 </tbody>
 </table>
@@ -1298,10 +1298,10 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgsIDs</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
-<tr><td>allMsgs</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
-<tr><td>destinationBox</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージの移動先のメールボックス</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>move処理のステータス</td></tr>
+<tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID のコレクション (テキスト)</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code>: 選択されたメールボックスの全メッセージ</td></tr>
+<tr><td>destinationBox</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メッセージの移動先のメールボックス</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>move処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1322,12 +1322,12 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-3"></a><a href="#例題-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -1389,9 +1389,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>startMsg</td><td>整数</td><td style="text-align:center">-&gt;</td><td>先頭メッセージのシーケンス番号</td></tr>
-<tr><td>endMsg</td><td>整数</td><td style="text-align:center">-&gt;</td><td>最後のメッセージのシーケンス番号</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>固有ID のコレクション</td></tr>
+<tr><td>startMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>先頭メッセージのシーケンス番号</td></tr>
+<tr><td>endMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>最後のメッセージのシーケンス番号</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>固有ID のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1439,9 +1439,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>msgIDs</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ</td></tr>
-<tr><td>keywords</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>削除するキーワードフラグ</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>removeFlags処理のステータス</td></tr>
+<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ</td></tr>
+<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>削除するキーワードフラグ</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>removeFlags処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1467,11 +1467,11 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>$draft</td><td>ブール</td><td>メッセージの &quot;draft&quot; フラグを削除するには true</td></tr>
-<tr><td>$seen</td><td>ブール</td><td>メッセージの &quot;seen&quot; フラグを削除するには true</td></tr>
-<tr><td>$flagged</td><td>ブール</td><td>メッセージの &quot;flagged&quot; フラグを削除するには true</td></tr>
-<tr><td>$answered</td><td>ブール</td><td>メッセージの &quot;answered&quot; フラグを削除するには true</td></tr>
-<tr><td>$deleted</td><td>ブール</td><td>メッセージの &quot;deleted&quot; フラグを削除するには true</td></tr>
+<tr><td>$draft</td><td>Boolean</td><td>メッセージの &quot;draft&quot; フラグを削除するには true</td></tr>
+<tr><td>$seen</td><td>Boolean</td><td>メッセージの &quot;seen&quot; フラグを削除するには true</td></tr>
+<tr><td>$flagged</td><td>Boolean</td><td>メッセージの &quot;flagged&quot; フラグを削除するには true</td></tr>
+<tr><td>$answered</td><td>Boolean</td><td>メッセージの &quot;answered&quot; フラグを削除するには true</td></tr>
+<tr><td>$deleted</td><td>Boolean</td><td>メッセージの &quot;deleted&quot; フラグを削除するには true</td></tr>
 </tbody>
 </table>
 <p>false値は無視されます。</p>
@@ -1482,12 +1482,12 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-13"></a><a href="#例題-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1527,9 +1527,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>currentName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>カレントメールボックスの名称</td></tr>
-<tr><td>newName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>新しいメールボックス名</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>renameBox処理のステータス</td></tr>
+<tr><td>currentName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>カレントメールボックスの名称</td></tr>
+<tr><td>newName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>新しいメールボックス名</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>renameBox処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1543,12 +1543,12 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-14"></a><a href="#例題-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1612,8 +1612,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>searchCriteria</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>検索条件</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>メッセージ番号のコレクション</td></tr>
+<tr><td>searchCriteria</td><td>Text</td><td style="text-align:center">-&gt;</td><td>検索条件</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>メッセージ番号のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1720,9 +1720,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
-<tr><td>state</td><td>整数</td><td style="text-align:center">-&gt;</td><td>メールボックスのアクセス状態</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>boxInfo オブジェクト</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
+<tr><td>state</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>メールボックスのアクセス状態</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>boxInfo オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1755,7 +1755,7 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td>メールボックスの名称</td></tr>
+<tr><td>name</td><td>Text</td><td>メールボックスの名称</td></tr>
 <tr><td>mailCount</td><td>number</td><td>メールボックス内のメッセージの数</td></tr>
 <tr><td>mailRecent</td><td>number</td><td>&quot;recent&quot; フラグがついたメッセージの数</td></tr>
 </tbody>
@@ -1788,8 +1788,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>subscribe処理のステータス</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>subscribe処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1802,12 +1802,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-16"></a><a href="#例題-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1852,8 +1852,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>unsubscribe処理のステータス</td></tr>
+<tr><td>name</td><td>Text</td><td style="text-align:center">-&gt;</td><td>メールボックスの名称</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>unsubscribe処理のステータス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1866,12 +1866,12 @@ End if</span>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
-<tr><td></td><td>[].errcode</td><td>数値</td><td>4Dエラーコード</td></tr>
-<tr><td></td><td>[].message</td><td>テキスト</td><td>4Dエラーの詳細</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>テキスト</td><td>エラーを返した内部コンポーネントの署名</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>処理が正常に終わった場合には true、それ以外は false</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Number</td><td>4Dエラーコード</td></tr>
+<tr><td></td><td>[].message</td><td>Text</td><td>4Dエラーの詳細</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Text</td><td>エラーを返した内部コンポーネントの署名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-17"></a><a href="#例題-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>

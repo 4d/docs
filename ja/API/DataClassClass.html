@@ -207,8 +207,8 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>objectCol</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>エンティティにマップするオブジェクトのコレクション</td></tr>
-<tr><td>settings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
+<tr><td>objectCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>エンティティにマップするオブジェクトのコレクション</td></tr>
+<tr><td>settings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>コレクションから作成したエンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -377,7 +377,7 @@
 </thead>
 <tbody>
 <tr><td>primaryKey</td><td>整数または文字列</td><td style="text-align:center">-&gt;</td><td>取得するエンティティのプライマリーキー値</td></tr>
-<tr><td>settings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
+<tr><td>settings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>ビルドオプション: context</td></tr>
 <tr><td>戻り値</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>指定したプライマリーキーに合致するエンティティ</td></tr>
 </tbody>
 </table>
@@ -481,7 +481,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>データクラスの情報</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>データクラスの情報</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -576,7 +576,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>keepOrder</td><td>整数</td><td>-&gt;</td><td><code>dk keep ordered</code>: 順列ありのエンティティセレクションを作成します<br><code>dk non ordered</code> (あるいは省略時): 順列なしのエンティティセレクションを作成します</td></tr>
+<tr><td>keepOrder</td><td>Integer</td><td>-&gt;</td><td><code>dk keep ordered</code>: 順列ありのエンティティセレクションを作成します<br><code>dk non ordered</code> (あるいは省略時): 順列なしのエンティティセレクションを作成します</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td>&lt;-</td><td>データクラスの空の新規エンティティセレクション</td></tr>
 </tbody>
 </table>
@@ -611,10 +611,10 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>queryString</td><td>テキスト</td><td>-&gt;</td><td>検索条件 (文字列)</td></tr>
-<tr><td>formula</td><td>オブジェクト</td><td>-&gt;</td><td>検索条件 (フォーミュラオブジェクト)</td></tr>
+<tr><td>queryString</td><td>Text</td><td>-&gt;</td><td>検索条件 (文字列)</td></tr>
+<tr><td>formula</td><td>Object</td><td>-&gt;</td><td>検索条件 (フォーミュラオブジェクト)</td></tr>
 <tr><td>value</td><td>any</td><td>-&gt;</td><td>プレースホルダー用の値</td></tr>
-<tr><td>querySettings</td><td>オブジェクト</td><td>-&gt;</td><td>クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
+<tr><td>querySettings</td><td>Object</td><td>-&gt;</td><td>クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
 <tr><td>戻り値</td><td>4D.EntitySelection</td><td>&lt;-</td><td><em>queryString</em> または <em>formula</em> に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション</td></tr>
 </tbody>
 </table>

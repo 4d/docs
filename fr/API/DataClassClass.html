@@ -233,7 +233,7 @@
 </ul></li>
 </ul>
 <blockquote>
-<p>The &quot;__KEY&quot; property containing a value is taken into account only when the &quot;__NEW&quot; property is set to <strong>false</strong> (or is omitted) and a corresponding entity exists. In all other cases, the &quot;__KEY&quot; property value is ignored, primary key value must be passed &quot;as is&quot;.</p>
+<p>The nested objects featuring related entities must contain a &quot;__KEY&quot; property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a __KEY property allows independence from the primary key attribute name.</p>
 </blockquote>
 <p><strong>Related entities</strong></p>
 <p>The objects of <em>objectCol</em> may contain one or more nested object(s) featuring one or more related entities, which can be useful to create or update links between entities.</p>
@@ -796,7 +796,9 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 <li>if the <code>Formula</code> object is <strong>null</strong>, the errror 1626 (&quot;Expecting a text or formula&quot;) is generated, that you call intercept using a method installed with <code>ON ERR CALL</code>.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>For security reasons, formula calls within <code>query(</code>) member methods can be disallowed. See <em>querySettings</em> parameter description.</p>
+</blockquote>
 </blockquote>
 <p><strong>Passing parameters to formulas</strong></p>
 <p>Any <em>formula</em> called by the <code>query()</code> class function can receive parameters:</p>

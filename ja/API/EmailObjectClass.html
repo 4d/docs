@@ -126,8 +126,8 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>テキスト</td><td>表示名 (null も可能)</td></tr>
-<tr><td>email</td><td>テキスト</td><td>メールアドレス</td></tr>
+<tr><td>name</td><td>Text</td><td>表示名 (null も可能)</td></tr>
+<tr><td>email</td><td>Text</td><td>メールアドレス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="コレクション"></a><a href="#コレクション" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>コレクション</h4>
@@ -177,13 +177,13 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>値</th></tr>
 </thead>
 <tbody>
-<tr><td>partID</td><td>テキスト</td><td>メールのパートを固有に識別する ID</td></tr>
-<tr><td>type</td><td>テキスト</td><td>(必須) パートの Content-Type ヘッダーフィールドの値</td></tr>
-<tr><td>charset</td><td>テキスト</td><td>Content-Type ヘッダーフィールドの Charset の値</td></tr>
-<tr><td>encoding</td><td>テキスト</td><td><code>isEncodingProblem=true</code> の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)</td></tr>
-<tr><td>disposition</td><td>テキスト</td><td>パートの Content-Disposition ヘッダーフィールドの値</td></tr>
+<tr><td>partID</td><td>Text</td><td>メールのパートを固有に識別する ID</td></tr>
+<tr><td>type</td><td>Text</td><td>(必須) パートの Content-Type ヘッダーフィールドの値</td></tr>
+<tr><td>charset</td><td>Text</td><td>Content-Type ヘッダーフィールドの Charset の値</td></tr>
+<tr><td>encoding</td><td>Text</td><td><code>isEncodingProblem=true</code> の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)</td></tr>
+<tr><td>disposition</td><td>Text</td><td>パートの Content-Disposition ヘッダーフィールドの値</td></tr>
 <tr><td>language</td><td>Text の Collection</td><td>パートの Content-Language ヘッダーフィールドの、<a href="https://tools.ietf.org/html/rfc3282">RFC3282</a> で定義されている言語タグの一覧 (あれば)</td></tr>
-<tr><td>location</td><td>テキスト</td><td>パートの Content-Location ヘッダーフィールドの、<a href="https://tools.ietf.org/html/rfc2557">RFC2557</a> で定義されている URI (あれば)</td></tr>
+<tr><td>location</td><td>Text</td><td>パートの Content-Location ヘッダーフィールドの、<a href="https://tools.ietf.org/html/rfc2557">RFC2557</a> で定義されている URI (あれば)</td></tr>
 <tr><td>subParts</td><td>Object の Collection</td><td>それぞれの子の本文パート (<em>EmailBodyPart</em> オブジェクトのコレクション)</td></tr>
 <tr><td>headers</td><td>Object の Collection</td><td>パート内の全ヘッダーフィールドの、メッセージ内で出現する順の一覧 (<em>EmailHeader</em> オブジェクトのコレクション。<a href="#headers">headers</a> プロパティ参照)</td></tr>
 </tbody>
@@ -346,7 +346,7 @@
 </thead>
 <tbody>
 <tr><td>mime</td><td>Blob, Text</td><td style="text-align:center">-&gt;</td><td>MIME形式のメール</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>Email オブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Email オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -420,9 +420,9 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mail</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>Email オブジェクト</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>文字セットとエンコーディングのメールオプション</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td style="text-align:center">&lt;-</td><td>MIME に変換された Emailオブジェクト</td></tr>
+<tr><td>mail</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Email オブジェクト</td></tr>
+<tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>文字セットとエンコーディングのメールオプション</td></tr>
+<tr><td>戻り値</td><td>Text</td><td style="text-align:center">&lt;-</td><td>MIME に変換された Emailオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -437,8 +437,8 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>headerCharset</td><td>テキスト</td><td>メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<p><p><table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (<strong>デフォルト値</strong>)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table></td></tr>
-<tr><td>bodyCharset</td><td>テキスト</td><td>メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)</td></tr>
+<tr><td>headerCharset</td><td>Text</td><td>メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<p><p><table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (<strong>デフォルト値</strong>)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table></td></tr>
+<tr><td>bodyCharset</td><td>Text</td><td>メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)</td></tr>
 </tbody>
 </table>
 <p><em>options</em> 引数が省略された場合、ヘッダーおよび本文においては mail mode UTF8 設定が使用されます。</p>

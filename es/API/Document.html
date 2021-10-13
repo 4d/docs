@@ -315,7 +315,7 @@
 <tr><td>destinationFolder</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>Destination folder</td></tr>
 <tr><td>newName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Name for the copy</td></tr>
 <tr><td>overwrite</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk overwrite</code> to replace existing elements</td></tr>
-<tr><td>Resultado</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>Copied file</td></tr>
+<tr><td>Resultado</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>Archivo copiado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-19"></a><a href="#descripción-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -331,7 +331,7 @@
 <tr><td><code>fk overwrite</code></td><td>4</td><td>Overwrite existing elements, if any</td></tr>
 </tbody>
 </table>
-<p><strong>Returned value</strong></p>
+<p><strong>Valor devuelto</strong></p>
 <p>The copied <code>File</code> object.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to copy a picture <em>file</em> from the user's document folder to the application folder:</p>
@@ -346,7 +346,7 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R2</td><td>Returns 4D.Blob</td></tr>
+<tr><td>v19 R2</td><td>Devuelve 4D.Blob</td></tr>
 <tr><td>v17 R5</td><td>Añadidos</td></tr>
 </tbody>
 </table>
@@ -357,12 +357,12 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>4D.Blob</td><td>&lt;-</td><td>File content</td></tr>
+<tr><td>Resultado</td><td>4D.Blob</td><td>&lt;-</td><td>Contenido del archivo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.getContent()</code> function  returns a <code>4D.Blob</code> object containing the entire content of a file. For information on BLOBs, please refer to the <a href="/docs/es/Concepts/blob.html">BLOB</a> section.</p>
-<p><strong>Returned value</strong></p>
+<p><strong>Valor devuelto</strong></p>
 <p>A <code>4D.Blob</code> object.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To save a document's contents in a <code>BLOB</code> field:</p>
@@ -397,7 +397,7 @@
 <p>The <code>.getIcon()</code> function returns the icon of the file.</p>
 <p>The optional <em>size</em> parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the &quot;large icon&quot; version is returned.</p>
 <p>If the file does not exist on disk, a default blank icon is returned.</p>
-<p><strong>Returned value</strong></p>
+<p><strong>Valor devuelto</strong></p>
 <p>File icon <a href="../Concepts/picture.html">picture</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="gettext"></a><a href="#gettext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getText()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -447,7 +447,7 @@
 </tbody>
 </table>
 <p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>
-<p><strong>Returned value</strong></p>
+<p><strong>Valor devuelto</strong></p>
 <p>Text of the file.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>Given the following text document (fields are separated by tabs):</p>
@@ -456,10 +456,10 @@
 <span class="hljs-number">2</span> café <span class="hljs-number">1.05</span>€ <span class="hljs-number">19.6</span>
 </code></pre>
 <p>When you execute this code:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Billing.txt"</span>) <span class="hljs-comment">//UTF-8 by default</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Billing.txt"</span>) <span class="hljs-comment">//UTF-8 por defecto</span>
  <span class="hljs-variable">$txt</span>:=<span class="hljs-variable">$myFile</span>.<span class="hljs-function">getText</span>()
 </code></pre>
-<p>... you get:</p>
+<p>... obtiene:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"</span>
   <span class="hljs-comment">// \t = tab</span>
   <span class="hljs-comment">// \r = CR</span>

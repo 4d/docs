@@ -205,12 +205,10 @@ OB GET PROPERTY <span class="hljs-constructor">NAMES(<span class="hljs-params">d
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$e </span>: cs.EmployeeSelection <span class="hljs-comment">//déclare une variable objet $e de type de classe EmployeeSelection</span>
 <span class="hljs-variable">$e</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">//assigne la référence de la sélection d'entité résultante à la variable $e</span>
 </code></pre>
-<p>Les sélections d'entités peuvent être :</p>
-<ul>
-<li>&quot;partageables&quot; or &quot;non partageables&quot;,</li>
-<li>&quot;triées&quot; ou &quot;non triées&quot;.</li>
-</ul>
-<p>Ces points sont décrits ci-dessous.</p>
+<p>Entity selections can be &quot;sorted&quot; or &quot;unsorted&quot; (<a href="#ordered-or-unordered-entity-selection">see below</a>).</p>
+<blockquote>
+<p>Entity selections can also be &quot;shareable&quot; or &quot;non-shareable&quot;, depending on <a href="/docs/fr/ORDA/entities.html#shareable-or-alterable-entity-selections">how they have been created</a>.</p>
+</blockquote>
 <p>L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myentitysel</span>:=<span class="hljs-function">OB Copy</span>(ds.Employee.<span class="hljs-function">all</span>()) <span class="hljs-comment">//retourne null</span>
 </code></pre>

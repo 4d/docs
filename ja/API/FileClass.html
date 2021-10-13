@@ -129,9 +129,9 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>path</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>ファイルパス</td></tr>
-<tr><td>fileConstant</td><td>整数</td><td style="text-align:center">-&gt;</td><td>4Dファイル定数</td></tr>
-<tr><td>pathType</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (デフォルト) または <code>fk platform path</code></td></tr>
+<tr><td>path</td><td>Text</td><td style="text-align:center">-&gt;</td><td>ファイルパス</td></tr>
+<tr><td>fileConstant</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>4Dファイル定数</td></tr>
+<tr><td>pathType</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (デフォルト) または <code>fk platform path</code></td></tr>
 <tr><td>*</td><td></td><td style="text-align:center">-&gt;</td><td>ホストデータベースのファイルを返すには * を渡します</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>新規ファイルオブジェクト</td></tr>
 </tbody>
@@ -221,8 +221,8 @@
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>宛先フォルダー</td></tr>
-<tr><td>newName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>コピー先フォルダーの名前</td></tr>
-<tr><td>overwrite</td><td>整数</td><td style="text-align:center">-&gt;</td><td>既存要素を上書きするには <code>fk overwrite</code> を渡します</td></tr>
+<tr><td>newName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>コピー先フォルダーの名前</td></tr>
+<tr><td>overwrite</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>既存要素を上書きするには <code>fk overwrite</code> を渡します</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>コピーされたファイル</td></tr>
 </tbody>
 </table>
@@ -265,7 +265,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>ブール</td><td>&lt;-</td><td>ファイルが正常に作成された場合に true、それ以外の場合は false</td></tr>
+<tr><td>戻り値</td><td>Boolean</td><td>&lt;-</td><td>ファイルが正常に作成された場合に true、それ以外の場合は false</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -299,8 +299,8 @@
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>エイリアスまたはショートカットの作成先フォルダー</td></tr>
-<tr><td>aliasName</td><td>テキスト</td><td>-&gt;</td><td>エイリアスまたはショートカットの名称</td></tr>
-<tr><td>aliasType</td><td>整数</td><td>-&gt;</td><td>エイリアスリンクのタイプ</td></tr>
+<tr><td>aliasName</td><td>Text</td><td>-&gt;</td><td>エイリアスまたはショートカットの名称</td></tr>
+<tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>エイリアスリンクのタイプ</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>エイリアスまたはショートカットのファイル参照</td></tr>
 </tbody>
 </table>
@@ -447,7 +447,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>.exe/.dll のバージョンリソースや .plist ファイルの中身</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>.exe/.dll のバージョンリソースや .plist ファイルの中身</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -466,14 +466,14 @@
 <tr><th>プロパティ</th><th>タイプ</th></tr>
 </thead>
 <tbody>
-<tr><td>InternalName</td><td>テキスト</td></tr>
-<tr><td>ProductName</td><td>テキスト</td></tr>
-<tr><td>CompanyName</td><td>テキスト</td></tr>
-<tr><td>LegalCopyright</td><td>テキスト</td></tr>
-<tr><td>ProductVersion</td><td>テキスト</td></tr>
-<tr><td>FileDescription</td><td>テキスト</td></tr>
-<tr><td>FileVersion</td><td>テキスト</td></tr>
-<tr><td>OriginalFilename</td><td>テキスト</td></tr>
+<tr><td>InternalName</td><td>Text</td></tr>
+<tr><td>ProductName</td><td>Text</td></tr>
+<tr><td>CompanyName</td><td>Text</td></tr>
+<tr><td>LegalCopyright</td><td>Text</td></tr>
+<tr><td>ProductVersion</td><td>Text</td></tr>
+<tr><td>FileDescription</td><td>Text</td></tr>
+<tr><td>FileVersion</td><td>Text</td></tr>
+<tr><td>OriginalFilename</td><td>Text</td></tr>
 </tbody>
 </table>
 <p><strong>.plist ファイルの場合に返されるオブジェクト</strong></p>
@@ -545,8 +545,8 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>size</td><td>整数</td><td>-&gt;</td><td>取得するピクチャーの一辺の長さ (ピクセル単位)</td></tr>
-<tr><td>戻り値</td><td>ピクチャー</td><td>&lt;-</td><td>アイコン</td></tr>
+<tr><td>size</td><td>Integer</td><td>-&gt;</td><td>取得するピクチャーの一辺の長さ (ピクセル単位)</td></tr>
+<tr><td>戻り値</td><td>Picture</td><td>&lt;-</td><td>アイコン</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -572,10 +572,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>charSetName</td><td>テキスト</td><td>-&gt;</td><td>文字セットの名前</td></tr>
-<tr><td>charSetNum</td><td>整数</td><td>-&gt;</td><td>文字セットの番号</td></tr>
-<tr><td>breakMode</td><td>整数</td><td>-&gt;</td><td>改行の処理モード</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>ドキュメントから取得したテキスト</td></tr>
+<tr><td>charSetName</td><td>Text</td><td>-&gt;</td><td>文字セットの名前</td></tr>
+<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>文字セットの番号</td></tr>
+<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>改行の処理モード</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>ドキュメントから取得したテキスト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -752,7 +752,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>宛先フォルダー</td></tr>
-<tr><td>newName</td><td>テキスト</td><td>-&gt;</td><td>移動先でのファイルの完全な名称</td></tr>
+<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>移動先でのファイルの完全な名称</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>移動したファイル</td></tr>
 </tbody>
 </table>
@@ -864,7 +864,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>newName</td><td>テキスト</td><td>-&gt;</td><td>ファイルの新しい完全な名称</td></tr>
+<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>ファイルの新しい完全な名称</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>名称変更されたファイル</td></tr>
 </tbody>
 </table>
@@ -896,7 +896,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>info</td><td>オブジェクト</td><td>-&gt;</td><td>.exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ</td></tr>
+<tr><td>info</td><td>Object</td><td>-&gt;</td><td>.exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -915,14 +915,14 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>プロパティ</th><th>タイプ</th></tr>
 </thead>
 <tbody>
-<tr><td>InternalName</td><td>テキスト</td></tr>
-<tr><td>ProductName</td><td>テキスト</td></tr>
-<tr><td>CompanyName</td><td>テキスト</td></tr>
-<tr><td>LegalCopyright</td><td>テキスト</td></tr>
-<tr><td>ProductVersion</td><td>テキスト</td></tr>
-<tr><td>FileDescription</td><td>テキスト</td></tr>
-<tr><td>FileVersion</td><td>テキスト</td></tr>
-<tr><td>OriginalFilename</td><td>テキスト</td></tr>
+<tr><td>InternalName</td><td>Text</td></tr>
+<tr><td>ProductName</td><td>Text</td></tr>
+<tr><td>CompanyName</td><td>Text</td></tr>
+<tr><td>LegalCopyright</td><td>Text</td></tr>
+<tr><td>ProductVersion</td><td>Text</td></tr>
+<tr><td>FileDescription</td><td>Text</td></tr>
+<tr><td>FileVersion</td><td>Text</td></tr>
+<tr><td>OriginalFilename</td><td>Text</td></tr>
 </tbody>
 </table>
 <p>値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。</p>
@@ -997,10 +997,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>text</td><td>テキスト</td><td>-&gt;</td><td>ファイルに保存するテキスト</td></tr>
-<tr><td>charSetName</td><td>テキスト</td><td>-&gt;</td><td>文字セットの名前</td></tr>
-<tr><td>charSetNum</td><td>整数</td><td>-&gt;</td><td>文字セットの番号</td></tr>
-<tr><td>breakMode</td><td>整数</td><td>-&gt;</td><td>改行の処理モード</td></tr>
+<tr><td>text</td><td>Text</td><td>-&gt;</td><td>ファイルに保存するテキスト</td></tr>
+<tr><td>charSetName</td><td>Text</td><td>-&gt;</td><td>文字セットの名前</td></tr>
+<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>文字セットの番号</td></tr>
+<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>改行の処理モード</td></tr>
 <tr><td></td></tr>
 </tbody>
 </table>

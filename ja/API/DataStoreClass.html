@@ -109,7 +109,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>localID</td><td>テキスト</td><td>-&gt;</td><td>参照を取得したいリモートデータストアのローカルID</td></tr>
+<tr><td>localID</td><td>Text</td><td>-&gt;</td><td>参照を取得したいリモートデータストアのローカルID</td></tr>
 <tr><td>戻り値</td><td>cs.DataStore</td><td>&lt;-</td><td>データストア参照</td></tr>
 </tbody>
 </table>
@@ -164,8 +164,8 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>connectionInfo</td><td>オブジェクト</td><td>-&gt;</td><td>リモートデータストアへの接続に使用する接続プロパティ</td></tr>
-<tr><td>localID</td><td>テキスト</td><td>-&gt;</td><td>ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須)</td></tr>
+<tr><td>connectionInfo</td><td>Object</td><td>-&gt;</td><td>リモートデータストアへの接続に使用する接続プロパティ</td></tr>
+<tr><td>localID</td><td>Text</td><td>-&gt;</td><td>ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須)</td></tr>
 <tr><td>戻り値</td><td>cs.DataStore</td><td>&lt;-</td><td>データストアオブジェクト</td></tr>
 </tbody>
 </table>
@@ -194,12 +194,12 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>hostname</td><td>テキスト</td><td>リモートデータストアの名前または IPアドレス + &quot;:&quot; + ポート番号 (ポート番号は必須)</td></tr>
-<tr><td>user</td><td>テキスト</td><td>ユーザー名</td></tr>
-<tr><td>password</td><td>テキスト</td><td>ユーザーパスワード</td></tr>
+<tr><td>hostname</td><td>Text</td><td>リモートデータストアの名前または IPアドレス + &quot;:&quot; + ポート番号 (ポート番号は必須)</td></tr>
+<tr><td>user</td><td>Text</td><td>ユーザー名</td></tr>
+<tr><td>password</td><td>Text</td><td>ユーザーパスワード</td></tr>
 <tr><td>idleTimeout</td><td>倍長整数</td><td>アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、<a href="datastores.md#セッションの終了"><strong>セッションの終了</strong></a> を参照ください。</td></tr>
-<tr><td>tls</td><td>ブール</td><td>安全な接続を使用します(*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。</td></tr>
-<tr><td>type</td><td>テキスト</td><td>&quot;4D Server&quot; でなければなりません</td></tr>
+<tr><td>tls</td><td>Boolean</td><td>安全な接続を使用します(*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。</td></tr>
+<tr><td>type</td><td>Text</td><td>&quot;4D Server&quot; でなければなりません</td></tr>
 </tbody>
 </table>
 <p>(*) tls が true だった場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:</p>
@@ -299,7 +299,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>カレントデータストアと、各テーブルの暗号化についての情報</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>カレントデータストアと、各テーブルの暗号化についての情報</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -314,14 +314,14 @@
 <tr><th>プロパティ</th><th></th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>isEncrypted</td><td></td><td></td><td>ブール</td><td>データファイルが暗号化されていれば true</td></tr>
-<tr><td>keyProvided</td><td></td><td></td><td>ブール</td><td>暗号化されたデータファイルに合致する暗号化キーが提供されていれば true (*)</td></tr>
-<tr><td>tables</td><td></td><td></td><td>オブジェクト</td><td>暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト</td></tr>
-<tr><td></td><td><em>tableName</em></td><td></td><td>オブジェクト</td><td>暗号化可能または暗号化されたテーブル</td></tr>
-<tr><td></td><td></td><td>name</td><td>テキスト</td><td>テーブル名</td></tr>
-<tr><td></td><td></td><td>num</td><td>数値</td><td>テーブル番号</td></tr>
-<tr><td></td><td></td><td>isEncryptable</td><td>ブール</td><td>ストラクチャーファイルにおいて、テーブルが暗号化可能と宣言されていれば true</td></tr>
-<tr><td></td><td></td><td>isEncrypted</td><td>ブール</td><td>データファイルにおいて、テーブルのレコードが暗号化されていれば true</td></tr>
+<tr><td>isEncrypted</td><td></td><td></td><td>Boolean</td><td>データファイルが暗号化されていれば true</td></tr>
+<tr><td>keyProvided</td><td></td><td></td><td>Boolean</td><td>暗号化されたデータファイルに合致する暗号化キーが提供されていれば true (*)</td></tr>
+<tr><td>tables</td><td></td><td></td><td>Object</td><td>暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト</td></tr>
+<tr><td></td><td><em>tableName</em></td><td></td><td>Object</td><td>暗号化可能または暗号化されたテーブル</td></tr>
+<tr><td></td><td></td><td>name</td><td>Text</td><td>テーブル名</td></tr>
+<tr><td></td><td></td><td>num</td><td>Number</td><td>テーブル番号</td></tr>
+<tr><td></td><td></td><td>isEncryptable</td><td>Boolean</td><td>ストラクチャーファイルにおいて、テーブルが暗号化可能と宣言されていれば true</td></tr>
+<tr><td></td><td></td><td>isEncrypted</td><td>Boolean</td><td>データファイルにおいて、テーブルのレコードが暗号化されていれば true</td></tr>
 </tbody>
 </table>
 <p>(*) 暗号化キーは、以下の手段のいずれかで提供されます:</p>
@@ -366,7 +366,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>データストアのプロパティ</td></tr>
+<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>データストアのプロパティ</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -427,7 +427,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>オブジェクトのコレクション (要素毎に一つのリクエストを記述します)</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>オブジェクトのコレクション (要素毎に一つのリクエストを記述します)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -455,7 +455,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)</td></tr>
+<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -504,9 +504,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>curPassPhrase</td><td>テキスト</td><td>-&gt;</td><td>カレントのパスフレーズ</td></tr>
-<tr><td>curDataKey</td><td>オブジェクト</td><td>-&gt;</td><td>カレントのデータ暗号化キー</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>暗号化キーのチェックの結果</td></tr>
+<tr><td>curPassPhrase</td><td>Text</td><td>-&gt;</td><td>カレントのパスフレーズ</td></tr>
+<tr><td>curDataKey</td><td>Object</td><td>-&gt;</td><td>カレントのデータ暗号化キー</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>暗号化キーのチェックの結果</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -531,14 +531,14 @@
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>ブール</td><td>提供された暗号化キーが暗号化データと合致すれば true、それ以外は false</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>提供された暗号化キーが暗号化データと合致すれば true、それ以外は false</td></tr>
 <tr><td></td><td></td><td></td><td>以下のプロパティは、success が <em>FALSE</em> であった場合にのみ返されます。</td></tr>
-<tr><td>status</td><td></td><td>数値</td><td>エラーコード (提供された暗号化キーが間違っていた場合には 4)</td></tr>
-<tr><td>statusText</td><td></td><td>テキスト</td><td>エラーメッセージ</td></tr>
-<tr><td>errors</td><td></td><td>コレクション</td><td>エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>テキスト</td><td>内部コンポーネント名</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>数値</td><td>エラー番号</td></tr>
-<tr><td></td><td>[ ].message</td><td>テキスト</td><td>エラーメッセージ</td></tr>
+<tr><td>status</td><td></td><td>Number</td><td>エラーコード (提供された暗号化キーが間違っていた場合には 4)</td></tr>
+<tr><td>statusText</td><td></td><td>Text</td><td>エラーメッセージ</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>Text</td><td>内部コンポーネント名</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>Number</td><td>エラー番号</td></tr>
+<tr><td></td><td>[ ].message</td><td>Text</td><td>エラーメッセージ</td></tr>
 </tbody>
 </table>
 <p><em>curPassphrase</em> および <em>curDataKey</em> のどちらの引数も渡されなかった場合、<code>.provideDataKey()</code> は <strong>null</strong> を返します (この場合エラーは生成されません)。</p>
@@ -573,7 +573,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>status</td><td>ブール</td><td>-&gt;</td><td><code>webAdmin</code>ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)</td></tr>
+<tr><td>status</td><td>Boolean</td><td>-&gt;</td><td><code>webAdmin</code>ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -604,7 +604,7 @@
 </thead>
 <tbody>
 <tr><td>file</td><td>4D.File</td><td>-&gt;</td><td>File オブジェクト</td></tr>
-<tr><td>reqNum</td><td>整数</td><td>-&gt;</td><td>メモリ内に保管するリクエストの数</td></tr>
+<tr><td>reqNum</td><td>Integer</td><td>-&gt;</td><td>メモリ内に保管するリクエストの数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>

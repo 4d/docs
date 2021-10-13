@@ -118,7 +118,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>settings</td><td>オブジェクト</td><td>-&gt;</td><td>キーペアを生成・ロードするための設定</td></tr>
+<tr><td>settings</td><td>Object</td><td>-&gt;</td><td>キーペアを生成・ロードするための設定</td></tr>
 <tr><td>result</td><td>4D.CryptoKey</td><td>&lt;-</td><td>暗号化キーペアをカプセル化したオブジェクト</td></tr>
 </tbody>
 </table>
@@ -168,9 +168,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>message</td><td>テキスト</td><td>-&gt;</td><td><code>options.encodingEncrypted</code> を使ってデコードし復号するメッセージ文字列</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>デコーディングオプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>ステータス</td></tr>
+<tr><td>message</td><td>Text</td><td>-&gt;</td><td><code>options.encodingEncrypted</code> を使ってデコードし復号するメッセージ文字列</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>デコーディングオプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>ステータス</td></tr>
 </tbody>
 </table>
 <p><code>.decrypt()</code> 関数は、 <strong>秘密</strong> 鍵を使って <em>message</em> を復号します。 使用されるアルゴリズムはキーの種類に依存します。</p>
@@ -216,9 +216,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>message</td><td>テキスト</td><td>-&gt;</td><td><code>options.encodingDecrypted</code> を使ってエンコードし暗号化するメッセージ文字列</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>エンコーディングオプション</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ</td></tr>
+<tr><td>message</td><td>Text</td><td>-&gt;</td><td><code>options.encodingDecrypted</code> を使ってエンコードし暗号化するメッセージ文字列</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>エンコーディングオプション</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ</td></tr>
 </tbody>
 </table>
 <p><code>.encrypt()</code> 関数は、 <strong>公開</strong> 鍵を使って <em>message</em> を暗号化します。 使用されるアルゴリズムはキーの種類に依存します。</p>
@@ -253,7 +253,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>PEM 形式の秘密鍵</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>PEM 形式の秘密鍵</td></tr>
 </tbody>
 </table>
 <p><code>.getPrivateKey()</code> 関数は、  <code>CryptoKey</code> オブジェクトの秘密鍵を返します (PEM形式)。無い場合は空の文字列を返します。</p>
@@ -276,7 +276,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>PEM 形式の公開鍵</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>PEM 形式の公開鍵</td></tr>
 </tbody>
 </table>
 <p><code>.getPublicKey()</code> 関数は、 <code>CryptoKey</code> オブジェクトの公開鍵を返します (PEM形式)。無い場合は空の文字列を返します。</p>
@@ -306,9 +306,9 @@
 <tr><td>v18 R4</td><td>追加</td></tr>
 <tr><td></details>.<strong>sign</strong> (<em>message</em> : Text ; <em>options</em> : Text) : Text</td><td>引数</td><td>タイプ</td><td></td><td>説明</td></tr>
 <tr><td>-------</td><td>------</td><td>--</td><td>-----------------------------------------------</td></tr>
-<tr><td>message</td><td>テキスト</td><td>-&gt;</td><td>署名をするメッセージ</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>署名オプション</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>&quot;encoding&quot; オプションに応じて Base64 または Base64URL 形式の署名</td><td><code>.sign()</code> 関数は、<code>CryptoKey</code> オブジェクトキーおよび指定された <em>options</em> を使って、utf8 形式の <em>message</em> 文字列を署名します</td></tr>
+<tr><td>message</td><td>Text</td><td>-&gt;</td><td>署名をするメッセージ</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>署名オプション</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>&quot;encoding&quot; オプションに応じて Base64 または Base64URL 形式の署名</td><td><code>.sign()</code> 関数は、<code>CryptoKey</code> オブジェクトキーおよび指定された <em>options</em> を使って、utf8 形式の <em>message</em> 文字列を署名します</td></tr>
 </tbody>
 </table>
 <p>。 <code>options.encoding</code> 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。</p>
@@ -354,10 +354,10 @@
 <tr><td>v18 R4</td><td>追加</td></tr>
 <tr><td></details><strong>.verify</strong>( <em>message</em> : Text ; <em>signature</em> : Text ; <em>options</em> : Object) : object</td><td>引数</td><td>タイプ</td><td></td><td>説明</td></tr>
 <tr><td>---------</td><td>------</td><td>--</td><td>-----------------------------------------------------------</td></tr>
-<tr><td>message</td><td>テキスト</td><td>-&gt;</td><td>署名生成時に使われたメッセージ文字列</td></tr>
-<tr><td>signature</td><td>テキスト</td><td>-&gt;</td><td>検証の対象である、<code>options.encoding</code> に応じて Base64 または Base64URL 形式の署名</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>署名オプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>検証ステータス</td><td><code>.verify()</code> 関数は、<code>CryptoKey</code> オブジェクトキーおよび指定された <em>options</em> を使って、utf8 形式の message 文字列の署名を検証します</td></tr>
+<tr><td>message</td><td>Text</td><td>-&gt;</td><td>署名生成時に使われたメッセージ文字列</td></tr>
+<tr><td>signature</td><td>Text</td><td>-&gt;</td><td>検証の対象である、<code>options.encoding</code> に応じて Base64 または Base64URL 形式の署名</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>署名オプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>検証ステータス</td><td><code>.verify()</code> 関数は、<code>CryptoKey</code> オブジェクトキーおよび指定された <em>options</em> を使って、utf8 形式の message 文字列の署名を検証します</td></tr>
 </tbody>
 </table>
 <p>。</p>

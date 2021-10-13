@@ -136,7 +136,7 @@
 </thead>
 <tbody>
 <tr><td>value</td><td>Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer</td><td style="text-align:center">-&gt;</td><td>コレクションの値</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>New collection</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>新しいコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -197,7 +197,7 @@
 </thead>
 <tbody>
 <tr><td>value</td><td>Number, Text, Date, Time, Boolean, Shared object, Shared collection</td><td style="text-align:center">-&gt;</td><td>共有コレクションの値</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>New shared collection</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>新規の共有コレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-1"></a><a href="#説明-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -404,7 +404,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>オプション</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck resolve pointers</code>: コピー前にポインターを解決する<br><code>ck shared</code>: 共有コレクションを返す</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck resolve pointers</code>: コピー前にポインターを解決する<br><code>ck shared</code>: 共有コレクションを返す</td></tr>
 <tr><td>groupWithCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>結果のコレクションとグループする共有コレクション</td></tr>
 <tr><td>groupWithObj</td><td>Object</td><td style="text-align:center">-&gt;</td><td>結果のコレクションとグループする共有オブジェクト</td></tr>
 <tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>元のコレクションのディープ・コピー</td></tr>
@@ -418,7 +418,7 @@
 <p>任意の <em>option</em> パラメーターには、以下のどちらか (あるいは両方) の定数を渡すことができます:</p>
 <table>
 <thead>
-<tr><th>オプション</th><th>説明</th></tr>
+<tr><th>option</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td><code>ck resolve pointers</code></td><td>オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、<code>ck resolve pointers</code> 定数を渡すことで、コピー時にポインターを解決することができます。 この場合、コレクション内の各ポインターはコピー時に解決され、解決済みの値が使用されます。</td></tr>
@@ -602,7 +602,7 @@ End use</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>オプション</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
 <tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>重複しない値を取得する属性のパス</td></tr>
 <tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>重複しない値のみを格納した新規コレクション</td></tr>
 </tbody>
@@ -644,7 +644,7 @@ End use</span>
 </thead>
 <tbody>
 <tr><td>collection2</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>比較するコレクション</td></tr>
-<tr><td>オプション</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck diacritical</code>: アクセント等の発音区別符号を無視しない評価 (たとえば &quot;A&quot; # &quot;a&quot;)</td></tr>
 <tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>コレクションが同一の場合には true、それ以外は false</td></tr>
 </tbody>
 </table>
@@ -766,7 +766,7 @@ End if</span>
 <tbody>
 <tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>新しいコレクションに抽出する値のオブジェクトプロパティパス</td></tr>
 <tr><td>targetpath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>抽出先のプロパティパスあるいはプロパティ名</td></tr>
-<tr><td>オプション</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code>: 返されるコレクションに null プロパティを含めます (デフォルトでは無視されます)。 <em>targetPath</em> を渡した場合には、この引数は無視されます。</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code>: 返されるコレクションに null プロパティを含めます (デフォルトでは無視されます)。 <em>targetPath</em> を渡した場合には、この引数は無視されます。</td></tr>
 <tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>抽出した値を格納した新しいコレクション</td></tr>
 </tbody>
 </table>
@@ -1218,7 +1218,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>delimiter</td><td>Text</td><td style="text-align:center">-&gt;</td><td>要素間に用いる区切り文字</td></tr>
-<tr><td>オプション</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck ignore null or empty</code>: 戻り値に null と空の文字列を含めない</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck ignore null or empty</code>: 戻り値に null と空の文字列を含めない</td></tr>
 <tr><td>戻り値</td><td>Text</td><td style="text-align:center">&lt;-</td><td>区切り文字を使ってコレクションの全要素をつなげた文字列</td></tr>
 </tbody>
 </table>

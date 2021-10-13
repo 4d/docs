@@ -93,17 +93,25 @@
 <tr><td><a href="#max"><strong>.max</strong>( <em>attributePath</em> : Text ) : any</a><p>    returns the highest (or maximum) value among all the values of <em>attributePath</em> in the entity selection</td></tr>
 <tr><td><a href="#min"><strong>.min</strong>( <em>attributePath</em> : Text ) : any</a><p>     returns the lowest (or minimum) value among all the values of attributePath in the entity selection</td></tr>
 <tr><td><a href="#minus"><strong>.minus</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.minus</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    excludes from the entity selection to which it is applied the <em>entity</em> or the entities of <em>entitySelection</em> and returns the resulting entity selection</td></tr>
-<tr><td><a href="#or"><strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combines the entity selection with the <em>entity</em> or <em>entitySelection</em> parameter using the logical (not exclusive) OR operator</td></tr>
-<tr><td><a href="#orderby"><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</a><p>    returns a new ordered entity selection containing all entities of the entity selection in the order specified by <em>pathString</em> or <em>pathObjects</em> criteria</td></tr>
-<tr><td><a href="#orderbyformula"><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</a><p>    returns a new, ordered entity selection</td></tr>
+<tr><td>[<strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</td></tr>
+<tr><td>](#or)<p>    combines the entity selection with the <em>entity</em> or <em>entitySelection</em> parameter using the logical (not exclusive) OR operator</td></tr>
+<tr><td>[<strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</td></tr>
+<tr><td>](#orderby)<p>    returns a new ordered entity selection containing all entities of the entity selection in the order specified by <em>pathString</em> or <em>pathObjects</em> criteria</td></tr>
+<tr><td>[<strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</td></tr>
+<tr><td>](#orderbyformula)<p>    returns a new, ordered entity selection</td></tr>
 <tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</a><p>    searches for entities that meet the search criteria specified in <em>queryString</em> or <em>formula</em> and (optionally) <em>value</em>(s) among all the entities in the entity selection</td></tr>
 <tr><td><a href="#querypath"><strong>.queryPath</strong> : Text</a><p>    contains a detailed description of the query as it was actually performed by 4D</td></tr>
-<tr><td><a href="#queryplan"><strong>.queryPlan</strong> : Text</a><p>     contains a detailed description of the query just before it is executed (i.e., the planned query)</td></tr>
-<tr><td><a href="#refresh"><strong>.refresh()</strong></a><p>    immediately &quot;invalidates&quot; the entity selection data in the local ORDA cache</td></tr>
-<tr><td><a href="#selected"><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    returns an object describing the position(s) of <em>selectedEntities</em> in the original entity selection</td></tr>
-<tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    retourne une partie d'une sélection d'entité dans une nouvelle sélection d'entité</td></tr>
-<tr><td><a href="#sum"><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    retourne la somme de toutes les valeurs d'<em>attributPath</em> dans la sélection d'entités</td></tr>
-<tr><td><a href="#tocollection"><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    crée et retourne une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurs</td></tr>
+<tr><td><a href="#queryplan"><strong>.queryPlan</strong> : Text</a><p>    contains a detailed description of the query just before it is executed (i.e., the planned query)</td></tr>
+<tr><td>[<strong>.refresh()</strong></td></tr>
+<tr><td>](#refresh)<p>    immediately &quot;invalidates&quot; the entity selection data in the local ORDA cache</td></tr>
+<tr><td>[<strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</td></tr>
+<tr><td>](#selected)<p>    returns an object describing the position(s) of <em>selectedEntities</em> in the original entity selection</td></tr>
+<tr><td>[<strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</td></tr>
+<tr><td>](#slice)<p>    retourne une partie d'une sélection d'entité dans une nouvelle sélection d'entité</td></tr>
+<tr><td>[<strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</td></tr>
+<tr><td>](#sum)<p>    retourne la somme de toutes les valeurs d'<em>attributPath</em> dans la sélection d'entités</td></tr>
+<tr><td>[<strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></td></tr>
+<tr><td>](#tocollection)<p>    crée et retourne une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurs</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="create-entity-selection"></a><a href="#create-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create entity selection</h2>
@@ -158,13 +166,15 @@
 <p><em>index</em> can be any number between 0 and <code>.length</code>-1.</p>
 <ul>
 <li>If <em>index</em> is out of range, an error is returned.</li>
-<li>If <em>index</em> corresponds to a dropped entity, a Null value is returned.</li>
+<li>If <em>attributeName</em> kind is <code>storage</code>: <code>.attributeName</code> returns a collection of values of the same type as <em>attributeName</em>.</li>
 </ul>
 <blockquote>
 <blockquote>
 <blockquote>
 <blockquote>
+<blockquote>
 <p><strong>Warning</strong>: <code>EntitySelection[index]</code> is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like <a href="/docs/fr/API/EntityClass.html#lock"><code>.lock()</code></a> or <a href="/docs/fr/API/EntityClass.html#save"><code>.save()</code></a>. To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :</p>
+</blockquote>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -315,10 +325,10 @@
 <p>The <code>.and()</code> function combines the entity selection with an <em>entity</em> or <em>entitySelection</em> parameter using the logical AND operator; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.</p>
 <ul>
 <li>If you pass <em>entity</em> as parameter, you combine this entity with the entity selection. If the entity belongs to the entity selection, a new entity selection containing only the entity is returned. Otherwise, an empty entity selection is returned.</li>
-<li>If you pass <em>entitySelection</em> as parameter, you combine both entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. If there is no intersecting entity, an empty entity selection is returned.</li>
+<li>If you pass <em>entity</em> as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.</li>
 </ul>
 <blockquote>
-<p>You can compare <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered and/or unordered entity selections</a>. The resulting selection is always unordered.</p>
+<p>If the current selection is sorted, an <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered</a> entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.</p>
 </blockquote>
 <p>If the original entity selection or the <em>entitySelection</em> parameter is empty, or if the <em>entity</em> is Null, an empty entity selection is returned.</p>
 <p>If the original entity selection and the parameter are not related to the same dataclass, an error is raised.</p>
@@ -1004,10 +1014,10 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p>The <code>.minus()</code> function excludes from the entity selection to which it is applied the <em>entity</em> or the entities of <em>entitySelection</em> and returns the resulting entity selection.</p>
 <ul>
 <li>If you pass <em>entity</em> as parameter, the function creates a new entity selection without <em>entity</em> (if <em>entity</em> belongs to the entity selection). If <em>entity</em> was not included in the original entity selection, a new reference to the entity selection is returned.</li>
-<li>If you pass <em>entitySelection</em> as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to <em>entitySelection</em>.</li>
+<li>La fonction <code>.sum()</code>retourne la somme de toutes les valeurs d'<em>attributPath</em> dans la sélection d'entités.</li>
 </ul>
 <blockquote>
-<p>You can compare <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered and/or unordered entity selections</a>. The resulting selection is always unordered.</p>
+<p>If the current selection is sorted, an <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered</a> entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.</p>
 </blockquote>
 <p>If the original entity selection or both the original entity selection and the <em>entitySelection</em> parameter are empty, an empty entity selection is returned.</p>
 <p>If <em>entitySelection</em> is empty or if <em>entity</em> is Null, a new reference to the original entity selection is returned.</p>
@@ -1030,43 +1040,38 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  <span class="hljs-variable">$sel1</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"name =:1"</span>;<span class="hljs-string">"Jones"</span>)
  <span class="hljs-variable">$sel2</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"city=:1"</span>;<span class="hljs-string">"New York"</span>)
  <span class="hljs-variable">$sel3</span>:=<span class="hljs-variable">$sel1</span>.<span class="hljs-function">and</span>(<span class="hljs-variable">$sel2</span>).<span class="hljs-function">minus</span>(ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"gender='male'"</span>))
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="or"></a><a href="#or" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.or()</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>entity</td><td>4D.Entity</td><td style="text-align:center">-&gt;</td><td>Entity to intersect with</td></tr>
-<tr><td>entitySelection</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>Entity selection to intersect with</td></tr>
-<tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>New entity selection or new reference to the original entity selection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-21"></a><a href="#description-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.or()</code> function combines the entity selection with the <em>entity</em> or <em>entitySelection</em> parameter using the logical (not exclusive) OR operator; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.</p>
-<ul>
-<li>If you pass <em>entity</em> as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.</li>
-<li>If you pass <em>entitySelection</em> as parameter, you compare entity selections. A new entity selection containing the entities belonging to the original entity selection or <em>entitySelection</em> is returned (or is not exclusive, entities referenced in both selections are not duplicated in the resulting selection).</li>
-</ul>
-<blockquote>
-<p>You can compare <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered and/or unordered entity selections</a>. The resulting selection is always unordered.</p>
-</blockquote>
-<p>If the original entity selection and the <em>entitySelection</em> parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to <em>entitySelection</em> or an entity selection containing only <em>entity</em> is returned.</p>
-<p>If <em>entitySelection</em> is empty or if <em>entity</em> is Null, a new reference to the original entity selection is returned.</p>
-<p>If the original entity selection and the parameter are not related to the same dataclass, an error is raised.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees1</span>; <span class="hljs-variable">$employees2</span>; <span class="hljs-variable">$result </span>: cs.EmployeeSelection
+<span class="hljs-comment">```## .or()</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17     | Ajoutées      |
+
+&lt;/details&gt;**.or**( *entity* : 4D.Entity ) : 4D.EntitySelection&lt;br&gt;**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection
+
+| Paramètres      | Type               |    | Description                                                            |
+| --------------- | ------------------ |:--:| ---------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -&gt; | Entity to intersect with                                               |
+| entitySelection | 4D.EntitySelection | -&gt; | Entity selection to intersect with                                     |
+| Résultat        | 4D.EntitySelection | &lt;- | New entity selection or new reference to the original entity selection |#### Description
+
+The <span class="hljs-comment">`.or()` functioncombines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.</span>
+
+*<span class="hljs-keyword">   If</span> you pass *entitySelection* as parameter, you compare entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
+*<span class="hljs-keyword">   If</span> the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.<span class="hljs-keyword"> If</span> the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+&gt;<span class="hljs-keyword"> If</span> the current selection is sorted, an [ordered](/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection)<span class="hljs-function"> entity selection is created </span>(the order of the current selection is kept).<span class="hljs-keyword"> If</span> the current selection is unsorted, an unordered entity selection is created.<span class="hljs-keyword">
+
+If</span> the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.<span class="hljs-keyword"> If</span> the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.<span class="hljs-keyword">
+
+If</span> *entitySelection* is empty or if *entity* is <span class="hljs-literal">Null</span>, a new reference to the original entity selection is returned.<span class="hljs-keyword">
+
+If</span> the original entity selection and the parameter are not related to the same dataclass, an error is raised.
+
+
+#### Exemple <span class="hljs-number">1</span>
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees1</span>; <span class="hljs-variable">$employees2</span>; <span class="hljs-variable">$result </span>: cs.EmployeeSelection
  <span class="hljs-variable">$employees1</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>) <span class="hljs-comment">//Returns "Colin Hetrick","Grady Harness"</span>
  <span class="hljs-variable">$employees2</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName = :1"</span>;<span class="hljs-string">"C@"</span>) <span class="hljs-comment">//Returns "Colin Hetrick", "Cath Kidston"</span>
  <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$employees1</span>.or(<span class="hljs-variable">$employees2</span>) <span class="hljs-comment">//$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"</span>
@@ -1079,44 +1084,31 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
   <span class="hljs-comment">//It matches the employee "Mary Smith"</span>
 
  <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$employees</span>.or(<span class="hljs-variable">$employee</span>) <span class="hljs-comment">//$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="orderby"></a><a href="#orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderBy()</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>pathString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Attribute path(s) and sorting instruction(s) for the entity selection</td></tr>
-<tr><td>pathObjects</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of criteria objects</td></tr>
-<tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>New entity selection in the specified order</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-22"></a><a href="#description-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.orderBy()</code> function returns a new ordered entity selection containing all entities of the entity selection in the order specified by <em>pathString</em> or <em>pathObjects</em> criteria.</p>
-<blockquote>
-<ul>
-<li>This method does not modify the original entity selection.</li>
-</ul>
-</blockquote>
-<ul>
-<li>For more information, please refer to the <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">Ordered or unordered entity selection</a> section.</li>
-</ul>
-<p>You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:</p>
-<ul>
-<li><em>pathString</em> (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:</li>
-</ul>
-<pre><code class="hljs css language-4d"><span class="hljs-string">"attributePath1 {desc or asc}, attributePath2 {desc or asc},..."</span>
+<span class="hljs-comment">```## .orderBy()</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17     | Ajoutées      |
+
+&lt;/details&gt;**.orderBy**( *pathString* : Text ) : 4D.EntitySelection&lt;br&gt;**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection
+
+| Paramètres  | Type               |    | Description                                                           |
+| ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
+| pathString  | Texte              | -&gt; |<span class="hljs-function"> Attribute path</span>(s)<span class="hljs-function"> and sorting instruction</span>(s) for the entity selection |
+| pathObjects | Collection         | -&gt; | Collection of criteria objects                                        |
+| Résultat    | 4D.EntitySelection | &lt;- | New entity selection in the specified order                           |#### Description
+
+The <span class="hljs-comment">`.orderBy()` functionreturns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria.</span>
+&gt; * <span class="hljs-literal">This</span> method does not modify the original entity selection.
+*<span class="hljs-keyword">   For</span> more information, please refer to the [Ordered or unordered entity selection](/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection) section.
+
+You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
+
+*   *pathString* (Text) :<span class="hljs-function"> This parameter contains a formula made of 1 to x attribute paths and </span>(optionally) sort orders, separated by commas. The syntax is:
+
+<span class="hljs-comment">```4d</span>
+<span class="hljs-string">"attributePath1 {desc or asc}, attributePath2 {desc or asc},..."</span>
 </code></pre>
 <p>The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass &quot;asc&quot; to sort in ascending order or &quot;desc&quot; in descending order.</p>
 <ul>
@@ -1147,60 +1139,51 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  <span class="hljs-variable">$orderColl</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"propertyPath"</span>;<span class="hljs-string">"manager.lastName"</span>))
  <span class="hljs-variable">$orderColl</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"propertyPath"</span>;<span class="hljs-string">"salary"</span>))
  <span class="hljs-variable">$sortedEntitySelection</span>:=<span class="hljs-variable">$entitySelection</span>.<span class="hljs-function">orderBy</span>(<span class="hljs-variable">$orderColl</span>)
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="orderbyformula-"></a><a href="#orderbyformula-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderByFormula( )</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17 R6</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>formulaString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Formula string</td></tr>
-<tr><td>formulaObj</td><td>Objet</td><td style="text-align:center">-&gt;</td><td>Formula object</td></tr>
-<tr><td>sortOrder</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk ascending</code> (default) or <code>dk descending</code></td></tr>
-<tr><td>settings</td><td>Objet</td><td style="text-align:center">-&gt;</td><td>Parameter(s) for the formula</td></tr>
-<tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>New ordered entity selection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-23"></a><a href="#description-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.orderByFormula()</code> function returns a new, ordered entity selection containing all entities of the entity selection in the order defined through the <em>formulaString</em> or <em>formulaObj</em> and, optionally, <em>sortOrder</em> and <em>settings</em> parameters.</p>
-<blockquote>
-<p>This function does not modify the original entity selection.</p>
-</blockquote>
-<p>You can use either a <em>formulaString</em> or a <em>formulaObj</em> parameter:</p>
-<ul>
-<li><em>formulaString</em>: you pass a 4D expression such as &quot;Year of(this.birthDate)&quot;.</li>
-<li><em>formulaObj</em>: pass a valid formula object created using the <code>Formula</code> or <code>Formula from string</code> command.</li>
-</ul>
-<p>The <em>formulaString</em> or <em>formulaObj</em> is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection. The result must be of a sortable type (boolean, date, number, text, time, null).</p>
-<blockquote>
-<p>A null result is always the smallest value.</p>
-</blockquote>
-<p>By default if you omit the <em>sortOrder</em> parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the <em>sortOrder</em> parameter:</p>
-<table>
-<thead>
-<tr><th>Constant</th><th>Valeur</th><th>Commentaire</th></tr>
-</thead>
-<tbody>
-<tr><td>dk ascending</td><td>0</td><td>Ascending sort order (default)</td></tr>
-<tr><td>dk descending</td><td>1</td><td>Descending sort order</td></tr>
-</tbody>
-</table>
-<p>Within the <em>formulaString</em> or <em>formulaObj</em>, the processed entity and thus its attributes are available through the <code>This</code> command (for example, <code>This.lastName</code>).</p>
-<p>You can pass parameter(s) to the formula using the <code>args</code> property (object) of the <code>settings</code> parameter: the formula receives the <code>settings.args</code> object in $1.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-6"></a><a href="#exemple-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>Sorting students using a formula provided as text:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es1</span>; <span class="hljs-variable">$es2 </span>: cs.StudentsSelection
+<span class="hljs-comment">```## .orderByFormula( )</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17 R6  | Ajoutées      |
+
+&lt;/details&gt;**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection&lt;br&gt;**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection
+
+| Paramètres    | Type               |    | Description                                 |
+| ------------- | ------------------ |:--:| ------------------------------------------- |
+| formulaString | Texte              | -&gt; | Formula string                              |
+| formulaObj    | Objet              | -&gt; | Formula object                              |
+| sortOrder     | Entier long        | -&gt; |<span class="hljs-function"> `dk ascending` </span>(default) or <span class="hljs-comment">`dk descending` |</span>
+| settings      | Objet              | -&gt; |<span class="hljs-function"> Parameter</span>(s) for the formula                |
+| Résultat      | 4D.EntitySelection | &lt;- | New ordered entity selection                | #### Description
+
+The <span class="hljs-comment">`.orderByFormula()` functionreturns a new, ordered entity selectioncontaining all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.</span>
+&gt; <span class="hljs-literal">This</span> function does not modify the original entity selection.
+
+You can use either a *formulaString* or a *formulaObj* parameter:
+
+- *formulaString*: you pass a 4D expression such as <span class="hljs-string">"Year of(this.birthDate)"</span>.
+- *formulaObj*: pass a valid formula object created using the <span class="hljs-comment">`Formula` or `Formula from string` command.</span>
+
+The *formulaString* or *formulaObj* is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection.<span class="hljs-function"> The result must be of a sortable type </span>(boolean, date, number, text, time, null).
+&gt; A null result is always the smallest value.
+
+By default if you omit the *sortOrder* parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
+
+| Constant      | Valeur | Commentaire                    |
+| ------------- | ------ | ------------------------------ |
+| dk ascending  | <span class="hljs-number">0</span>      |<span class="hljs-function"> Ascending sort order </span>(default) |
+| dk descending | <span class="hljs-number">1</span>      | Descending sort order          |
+
+Within the *formulaString* or *formulaObj*,<span class="hljs-function"> the processed entity and thus its attributes are available through the `This` command </span>(for example, <span class="hljs-comment">`This.lastName`).</span>
+
+<span class="hljs-function">You can pass parameter</span>(s)<span class="hljs-function"> to the formula using the `args` property </span>(object) of the <span class="hljs-comment">`settings` parameter: the formula receives the `settings.args` object in $1.</span>
+
+#### Exemple <span class="hljs-number">1</span>
+
+Sorting students using a formula provided as text:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$es1</span>; <span class="hljs-variable">$es2 </span>: cs.StudentsSelection
  <span class="hljs-variable">$es1</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"nationality=:1"</span>;<span class="hljs-string">"French"</span>)
  <span class="hljs-variable">$es2</span>:=<span class="hljs-variable">$es1</span>.<span class="hljs-function">orderByFormula</span>(<span class="hljs-string">"length(this.lastname)"</span>) <span class="hljs-comment">//ascending by default</span>
  <span class="hljs-variable">$es2</span>:=<span class="hljs-variable">$es1</span>.<span class="hljs-function">orderByFormula</span>(<span class="hljs-string">"length(this.lastname)"</span>;dk descending)
@@ -1252,54 +1235,46 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  End for each</span>
 
  <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$average</span>/<span class="hljs-variable">$sum</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="query"></a><a href="#query" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.query()</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17 R6</td><td>Support of Formula parameters</td></tr>
-<tr><td>v17 R5</td><td>Support of placeholders for values</td></tr>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>queryString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Search criteria as string</td></tr>
-<tr><td>formula</td><td>Objet</td><td style="text-align:center">-&gt;</td><td>Search criteria as formula object</td></tr>
-<tr><td>value</td><td>any</td><td style="text-align:center">-&gt;</td><td>Value(s) to use for indexed placeholder(s)</td></tr>
-<tr><td>querySettings</td><td>Objet</td><td style="text-align:center">-&gt;</td><td>Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
-<tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>New entity selection made up of entities from entity selection meeting the search criteria specified in <em>queryString</em> or <em>formula</em></td></tr>
-<tr><td></td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-24"></a><a href="#description-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.query()</code> function searches for entities that meet the search criteria specified in <em>queryString</em> or <em>formula</em> and (optionally) <em>value</em>(s) among all the entities in the entity selection, and returns a new object of type <code>EntitySelection</code> containing all the entities that are found. Lazy loading is applied.</p>
-<blockquote>
-<p>This function does not modify the original entity selection.</p>
-</blockquote>
-<p>If no matching entities are found, an empty <code>EntitySelection</code> is returned.</p>
-<p>For detailed information on how to build a query using <em>queryString</em>, <em>value</em>, and <em>querySettings</em> parameters, please refer to the DataClass <a href="/docs/fr/API/DataClassClass.html#query"><code>.query()</code></a> function description.</p>
-<blockquote>
-<p>By default if you omit the <strong>order by</strong> statement in the <em>queryString</em>, the returned entity selection is <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">not ordered</a>. Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).</p>
-</blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-7"></a><a href="#exemple-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$entitySelectionTemp </span>: cs.EmployeeSelection
+<span class="hljs-comment">```## .query()</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications                      |
+| ------- | ---------------------------------- |
+| v17 R6  | Support of Formula parameters      |
+| v17 R5  | Support of placeholders for values |
+| v17     | Ajoutées                           |
+
+&lt;/details&gt;**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection &lt;br&gt;**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection
+| Paramètres    | Type               |    | Description                                                                                                                                                   |
+| ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Texte              | -&gt; | Search criteria as string                                                                                                                                     |
+| formula       | Objet              | -&gt; | Search criteria as formula object                                                                                                                             |
+| value         | any                | -&gt; |<span class="hljs-function"> Value</span>(s)<span class="hljs-function"> to use for indexed placeholder</span>(s)                                                                                                                    |
+| querySettings | Objet              | -&gt; | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
+| Résultat      | 4D.EntitySelection | &lt;- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*||
+
+#### Description
+
+The <span class="hljs-comment">`.query()` functionsearches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.</span>
+&gt; <span class="hljs-literal">This</span> function does not modify the original entity selection.<span class="hljs-keyword">
+
+If</span> no matching entities are found, an empty <span class="hljs-comment">`EntitySelection` is returned.</span><span class="hljs-keyword">
+
+For</span> detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [<span class="hljs-comment">`.query()`](/docs/fr/API/DataClassClass.html#query) function description.</span>
+&gt; By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode,<span class="hljs-function"> it behaves like an ordered entity selection </span>(entities are added at the end of the selection).
+
+#### Exemple <span class="hljs-number">1</span>
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$entitySelectionTemp </span>: cs.EmployeeSelection
  <span class="hljs-variable">$entitySelectionTemp</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"M@"</span>)
  Form.emps:=<span class="hljs-variable">$entitySelectionTemp</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"manager.lastName = :1"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-6"></a><a href="#exemple-2-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>More examples of queries can be found in the DataClass <a href="/docs/fr/API/DataClassClass.html#query"><code>.query()</code></a> page.</p>
 <h4><a class="anchor" aria-hidden="true" id="voir-également-1"></a><a href="#voir-également-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir également</h4>
-<p><a href="/docs/fr/API/DataClassClass.html#query"><code>.query()</code></a> for dataclass</p>
-<h2><a class="anchor" aria-hidden="true" id="querypath"></a><a href="#querypath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPath</h2>
+<p><a href="/docs/fr/API/DataClassClass.html#query"><code>.query()</code></a> for dataclass## .queryPath</p>
 <p><details><summary>Historique</summary></p>
 <table>
 <thead>
@@ -1309,12 +1284,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><td>v17</td><td>Ajoutées</td></tr>
 </tbody>
 </table>
-<p></details></p>
-<p><strong>.queryPath</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="description-25"></a><a href="#description-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.queryPath</code> property contains a detailed description of the query as it was actually performed by 4D. This property is available for <code>EntitySelection</code> objects generated through queries if the <code>&quot;queryPath&quot;:true</code> property was passed in the <em>querySettings</em> parameter of the <a href="#query"><code>.query()</code></a> function.</p>
-<p>For more information, refer to the <strong>querySettings parameter</strong> paragraph in the Dataclass<a href="DataClassClass.html#query"><code>.query()</code></a> page.</p>
-<h2><a class="anchor" aria-hidden="true" id="queryplan"></a><a href="#queryplan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPlan</h2>
+<p></details><strong>.queryPath</strong> : Text#### Description</p>
+<p>The <code>.queryPath</code> propertycontains a detailed description of the query as it was actually performed by 4D. This property is available for <code>EntitySelection</code> objects generated through queries if the <code>&quot;queryPath&quot;:true</code> property was passed in the <em>querySettings</em> parameter of the <a href="#query"><code>.query()</code></a> function.</p>
+<p>For more information, refer to the <strong>querySettings parameter</strong> paragraph in the Dataclass<a href="DataClassClass.html#query"><code>.query()</code></a> page.## .queryPlan</p>
 <p><details><summary>Historique</summary></p>
 <table>
 <thead>
@@ -1324,12 +1296,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><td>v17</td><td>Ajoutées</td></tr>
 </tbody>
 </table>
-<p></details></p>
-<p><strong>.queryPlan</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="description-26"></a><a href="#description-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.queryPlan</code> property  contains a detailed description of the query just before it is executed (i.e., the planned query). This property is available for <code>EntitySelection</code> objects generated through queries if the <code>&quot;queryPlan&quot;:true</code> property was passed in the <em>querySettings</em> parameter of the <a href="#query"><code>.query()</code></a> function.</p>
-<p>For more information, refer to the <strong>querySettings parameter</strong> paragraph in the Dataclass<a href="DataClassClass.html#query"><code>.query()</code></a> page.</p>
-<h2><a class="anchor" aria-hidden="true" id="refresh"></a><a href="#refresh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.refresh()</h2>
+<p></details><strong>.queryPlan</strong> : Text#### Description</p>
+<p>The <code>.queryPlan</code> propertycontains a detailed description of the query just before it is executed (i.e., the planned query). This property is available for <code>EntitySelection</code> objects generated through queries if the <code>&quot;queryPlan&quot;:true</code> property was passed in the <em>querySettings</em> parameter of the <a href="#query"><code>.query()</code></a> function.</p>
+<p>For more information, refer to the <strong>querySettings parameter</strong> paragraph in the Dataclass<a href="DataClassClass.html#query"><code>.query()</code></a> page.## .refresh()</p>
 <p><details><summary>Historique</summary></p>
 <table>
 <thead>
@@ -1339,18 +1308,16 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><td>v18 R3</td><td>Ajoutées</td></tr>
 </tbody>
 </table>
-<p></details></p>
-<p><strong>.refresh()</strong>
-| Paramètres | Type |  | Description                     |
+<p></details><strong>.refresh()</strong></p>
+<p>| Paramètres | Type |  | Description                     |
 | ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |</p>
-<h4><a class="anchor" aria-hidden="true" id="description-27"></a><a href="#description-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+|            |      |  | Does not require any parameters | #### Description</p>
 <blockquote>
 <p>This function only works with a remote datastore (client / server or <code>Open datastore</code> connection).</p>
 </blockquote>
-<p>The <code>.refresh()</code> function immediately &quot;invalidates&quot; the entity selection data in the local ORDA cache so that the next time 4D requires the entity selection, it will be reloaded from the database.</p>
+<p>The <code>.refresh()</code> functionimmediately &quot;invalidates&quot; the entity selection data in the local ORDA cacheso that the next time 4D requires the entity selection, it will be reloaded from the database.</p>
 <p>By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-8"></a><a href="#exemple-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>In this example, classic and ORDA code modify the same data simultaneously:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//On a 4D remote</span><span class="hljs-keyword">
 
@@ -1389,50 +1356,43 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
   <span class="hljs-comment">// On client #1:</span>
  Form.students.<span class="hljs-function">refresh</span>() <span class="hljs-comment">// Invalidates the ORDA cache for the Form.students entity selection</span>
   <span class="hljs-comment">// The list box content is refreshed from the database with update made by client #2</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="selected"></a><a href="#selected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.selected()</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v19 R3</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>Entity selection with entities for which to know the rank in the entity selection</td></tr>
-<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>Range(s) of selected entities in entity selection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-28"></a><a href="#description-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.selected()</code> function returns an object describing the position(s) of <em>selectedEntities</em> in the original entity selection.</p>
-<blockquote>
-<p>This function does not modify the original entity selection.</p>
-</blockquote>
-<p>Pass in the <em>selectedEntities</em> parameter an entity selection containing entities for which you want to know the position in the original entity selection. <em>selectedEntities</em> must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - &quot;The entity selection comes from an incompatible dataclass&quot; is raised.</p>
-<h4><a class="anchor" aria-hidden="true" id="résultat"></a><a href="#résultat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
-<p>The returned object contains the following properties:</p>
-<table>
-<thead>
-<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>ranges</td><td>Collection</td><td>Collection of range objects</td></tr>
-<tr><td>ranges[].start</td><td>Entier long</td><td>First entity index in the range</td></tr>
-<tr><td>ranges[].end</td><td>Entier long</td><td>Last entity index in the range</td></tr>
-</tbody>
-</table>
-<p>If a <code>ranges</code> property contains a single entity, <code>start</code> = <code>end</code>. Index starts at 0.</p>
-<p>The function returns an empty collection in the <code>ranges</code> property if the original entity selection or the <em>selectedEntities</em> entity selection is empty.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-18"></a><a href="#exemple-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$invoices</span>; <span class="hljs-variable">$cashSel</span>; <span class="hljs-variable">$creditSel </span>: cs.Invoices<span class="hljs-keyword">
+<span class="hljs-comment">```## .selected()</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R3  | Ajoutées      |
+
+&lt;/details&gt;**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object
+
+| Paramètres       | Type               |    | Description                                                                       |
+| ---------------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
+| selectedEntities | 4D.EntitySelection | -&gt; | Entity selection with entities for which to know the rank in the entity selection |
+| Résultat         | Objet              | &lt;- |<span class="hljs-function"> Range</span>(s) of selected entities in entity selection                                 |#### Description
+
+The <span class="hljs-comment">`.selected()` functionreturns an object describing the position(s) of *selectedEntities* in the original entity selection.</span>
+&gt; <span class="hljs-literal">This</span> function does not modify the original entity selection.
+
+Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error <span class="hljs-number">1587</span> - <span class="hljs-string">"The entity selection comes from an incompatible dataclass"</span> is raised.
+
+#### Résultat
+
+The returned object contains the following properties:
+
+| Propriété      | Type        | Description                     |
+| -------------- | ----------- | ------------------------------- |
+| ranges         | Collection  | Collection of range objects     |
+| ranges[].start | Entier long | First entity index in the range |
+| ranges[].end   | Entier long | Last entity index in the range  |<span class="hljs-keyword">
+
+If</span> a <span class="hljs-comment">`ranges` property contains a single entity, `start` = `end`. Index starts at 0.</span>
+
+The function returns an empty collection in the <span class="hljs-comment">`ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.</span>
+
+#### Exemple
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$invoices</span>; <span class="hljs-variable">$cashSel</span>; <span class="hljs-variable">$creditSel </span>: cs.Invoices<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variable">$result2 </span>: Object
 
 <span class="hljs-variable">$invoices</span>:=ds.Invoices.<span class="hljs-function">all</span>()
@@ -1446,45 +1406,39 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <span class="hljs-comment">//$result1 = {ranges:[{start:0;end:0},{start:3;end:3},{start:6;end:6}]}</span>
 <span class="hljs-comment">//$result2 = {ranges:[{start:0;end:1},{start:3;end:4},{start:6;end:7}]}</span>
 
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="slice"></a><a href="#slice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.slice()</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>startFrom</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Index to start the operation at (included)</td></tr>
-<tr><td>end</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>End index (not included)</td></tr>
-<tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>New entity selection containing sliced entities (shallow copy)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-29"></a><a href="#description-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La fonction <code>.slice()</code> retourne une partie d'une sélection d'entité dans une nouvelle sélection d'entité, sélectionnée de l'index <em>startFrom</em> à l'index de <em>fin</em> (<em>fin</em> non incluse) ou à la dernière entité de la sélection d'entité. This method returns a shallow copy of the entity selection (it uses the same entity references).</p>
-<blockquote>
-<p>This function does not modify the original entity selection.</p>
-</blockquote>
-<p>The returned entity selection contains the entities specified by <em>startFrom</em> and all subsequent entities up to, but not including, the entity specified by <em>end</em>. If only the <em>startFrom</em> parameter is specified, the returned entity selection contains all entities from <em>startFrom</em> to the last entity of the original entity selection.</p>
-<ul>
-<li>If <em>startFrom</em> &lt; 0, it is recalculated as <em>startFrom:=startFrom+length</em> (it is considered as the offset from the end of the entity selection). If the calculated value &lt; 0, <em>startFrom</em> is set to 0.</li>
-<li>If <em>startFrom &gt;= length</em>, the function returns an empty entity selection.</li>
-<li>If <em>end</em> &lt; 0, it is recalculated as <em>end:=end+length</em>.</li>
-<li>If <em>end &lt; startFrom</em> (passed or calculated values), the method does nothing.</li>
-</ul>
-<p>If the entity selection contains entities that were dropped in the meantime, they are also returned.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-9"></a><a href="#exemple-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>You want to get a selection of the first 9 entities of the entity selection:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sel</span>; <span class="hljs-variable">$sliced </span>: cs.EmployeeSelection
+<span class="hljs-comment">```## .slice()</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17     | Ajoutées      |
+
+&lt;/details&gt;**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection
+
+| Paramètres | Type               |    | Description                                                    |
+| ---------- | ------------------ |:--:| -------------------------------------------------------------- |
+| startFrom  | Entier long        | -&gt; |<span class="hljs-function"> Index to start the operation at </span>(included)                     |
+| end        | Entier long        | -&gt; |<span class="hljs-function"> End index </span>(not included)                                       |
+| Résultat   | 4D.EntitySelection | &lt;- |<span class="hljs-function"> New entity selection containing sliced entities </span>(shallow copy) |#### Description
+
+La fonction <span class="hljs-comment">`.slice()`retourne une partie d'une sélection d'entité dans une nouvelle sélection d'entité, sélectionnée de l'index *startFrom* à l'index de *fin* (*fin* non incluse) ou à la dernière entité de la sélection d'entité. This method returns a shallow copy of the entity selection (it uses the same entity references).</span>
+&gt; <span class="hljs-literal">This</span> function does not modify the original entity selection.
+
+The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*.<span class="hljs-keyword"> If</span> only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+
+*<span class="hljs-keyword">   If</span> *startFrom* &lt; <span class="hljs-number">0</span>, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection).<span class="hljs-keyword"> If</span> the calculated value &lt; <span class="hljs-number">0</span>, *startFrom* is set to <span class="hljs-number">0.</span>
+*<span class="hljs-keyword">   If</span> *startFrom &gt;= length*, the function returns an empty entity selection.
+*<span class="hljs-keyword">   If</span> *end* &lt; <span class="hljs-number">0</span>, it is recalculated as *end:=end+length*.
+*<span class="hljs-keyword">   If</span> *end &lt; startFrom* (passed or calculated values), the method does nothing.<span class="hljs-keyword">
+
+If</span> the entity selection contains entities that were dropped in the meantime, they are also returned.
+
+#### Exemple <span class="hljs-number">1</span>
+
+You want to get a selection of the first <span class="hljs-number">9</span> entities of the entity selection:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$sel</span>; <span class="hljs-variable">$sliced </span>: cs.EmployeeSelection
 <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &gt; :1"</span>;<span class="hljs-number">50000</span>)
 <span class="hljs-variable">$sliced</span>:=<span class="hljs-variable">$sel</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">9</span>) <span class="hljs-comment">//
 </span></code></pre>
@@ -1493,103 +1447,111 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$slice </span>: cs.EmployeeSelection
 <span class="hljs-variable">$slice</span>:=ds.Employee.<span class="hljs-function">all</span>().<span class="hljs-function">slice</span>(<span class="hljs-number">-1</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//tries to return entities from index 9 to 8, but since 9 &gt; 8, returns an empty entity selection</span>
 
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="sum-"></a><a href="#sum-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sum( )</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>attributePath</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Path of the attribute to be used for calculation</td></tr>
-<tr><td>Résultat</td><td>Réel</td><td style="text-align:center">&lt;-</td><td>Sum of entity selection values</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-30"></a><a href="#description-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La fonction <code>.sum()</code> retourne la somme de toutes les valeurs d'<em>attributPath</em> dans la sélection d'entités.</p>
-<p><code>.sum()</code> returns 0 if the entity selection is empty.</p>
-<p>The sum can only be done on values of number type. The sum can only be done on values of number type. In this case, if <em>attributePath</em> leads to a property that does not exist in the object or does not contain any numeric values, <code>.sum()</code> returns 0.</p>
-<p>An error is returned if:</p>
-<ul>
-<li><em>attributePath</em> is not a numerical or an object attribute,</li>
-<li><em>attributePath</em> is a related attribute,</li>
-<li><em>attributePath</em> is not found in the entity selection dataclass.</li>
-</ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-19"></a><a href="#exemple-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sel </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .sum( )</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17     | Ajoutées      |
+
+
+&lt;/details&gt;**.sum**( *attributePath* : Text ) : Real
+
+| Paramètres    | Type  |    | Description                                      |
+| ------------- | ----- |:--:| ------------------------------------------------ |
+| attributePath | Texte | -&gt; | Path of the attribute to be used for calculation |
+| Résultat      | Réel  | &lt;- | Sum of entity selection values                   |#### Description
+
+
+La fonction <span class="hljs-comment">`.sum()`retourne la somme de toutes les valeurs d'*attributPath* dans la sélection d'entités.</span>
+
+<span class="hljs-comment">`.sum()` returns 0 if the entity selection is empty.</span>
+
+The sum can only be done on values of number type. The sum can only be done on values of number type. In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, <span class="hljs-comment">`.sum()` returns 0.</span>
+
+An error is returned if:
+
+*   *attributePath* is not a numerical or an object attribute,
+*   *attributePath* is a related attribute,
+*   *attributePath* is not found in the entity selection dataclass.
+
+
+
+#### Exemple
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$sel </span>: cs.EmployeeSelection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$sum </span>: Real
 
 <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt; :1"</span>;<span class="hljs-number">20000</span>)
 <span class="hljs-variable">$sum</span>:=<span class="hljs-variable">$sel</span>.<span class="hljs-function">sum</span>(<span class="hljs-string">"salary"</span>)
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="tocollection-"></a><a href="#tocollection-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.toCollection( )</h2>
-<p><details><summary>Historique</summary></p>
-<table>
-<thead>
-<tr><th>Version</th><th>Modifications</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Ajoutées</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></p>
-<table>
-<thead>
-<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>filterString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>String with entity attribute path(s) to extract</td></tr>
-<tr><td>filterCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of entity attribute path(s) to extract</td></tr>
-<tr><td>options</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: adds the primary key<br><code>dk with stamp</code>: adds the stamp</td></tr>
-<tr><td>begin</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Designates the starting index</td></tr>
-<tr><td>howMany</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Number of entities to extract</td></tr>
-<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of objects containing attributes and values of entity selection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La fonction <code>.toCollection()</code> crée et retourne une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurs correspondant aux noms et valeurs d'attribut pour la sélection d'entité.</p>
-<p>If no filter parameter is passed or the first parameter contains an empty string or &quot;*&quot;, all the attributes are extracted. Les attributs avec la propriété <a href="/docs/fr/API/DataClassAttributeClass.html#kind">kind</a> définie sur &quot;relatedEntity&quot; sont extraits avec la forme simple : un objet avec la propriété __KEY (clé primaire). Attributes with kind property as &quot;relatedEntities&quot; are not extracted.</p>
-<p>Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:</p>
-<ul>
-<li><em>filterString</em> --a string with property paths separated with commas: &quot;propertyPath1, propertyPath2, ...&quot;.</li>
-<li><em>filterCol</em> --a collection of strings containing property paths: [&quot;propertyPath1&quot;,&quot;propertyPath2&quot;,...]</li>
-</ul>
-<p>If a filter is specified for an attribute of the <code>relatedEntity</code> kind:</p>
-<ul>
-<li>propertyPath = &quot;relatedEntity&quot; -&gt; it is extracted with simple form</li>
-<li>propertyPath = &quot;relatedEntity.*&quot; -&gt; all the properties are extracted</li>
-<li>propertyPath = &quot;relatedEntity.propertyName1, relatedEntity.propertyName2, ...&quot; -&gt; only those properties are extracted</li>
-</ul>
-<p>If a filter is specified for an attribute of the <code>relatedEntities</code> kind:</p>
-<ul>
-<li>propertyPath = &quot;relatedEntities.*&quot; -&gt; all the properties are extracted</li>
-<li>propertyPath = &quot;relatedEntities.propertyName1, relatedEntities.propertyName2, ...&quot; -&gt; only those properties are extracted</li>
-</ul>
-<p>In the <em>options</em> parameter, you can pass the <code>dk with primary key</code> and/or <code>dk with stamp</code> selector(s) to add the entity's primary keys and/or stamps in extracted objects.</p>
-<p>The <em>begin</em> parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.</p>
-<p>The <em>howMany</em> parameter lets you specify the number of entities to extract, starting with the one specified in <em>begin</em>. Dropped entities are not returned but are taken into account according to <em>howMany</em>. For example, if <em>howMany</em>= 3 and there is 1 dropped entity, only 2 entities are extracted.</p>
-<p>If <em>howMany</em> &gt; length of the entity selection, the method returns (length - <em>begin</em>) objects.</p>
-<p>An empty collection is returned if:</p>
-<ul>
-<li>the entity selection is empty, or</li>
-<li><em>begin</em> is greater than the length of the entity selection.</li>
-</ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-10"></a><a href="#exemple-1-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>The following structure will be used throughout all examples of this section:</p>
-<p><img src="/docs/assets/en/API/dataclassAttribute4.png" alt=""></p>
-<p>Example without filter or options parameter:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employeesCollection </span>: Collection<span class="hljs-keyword">
+<span class="hljs-comment">```## .toCollection( )</span>
+
+&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
+| Version | Modifications |
+| ------- | ------------- |
+| v17     | Ajoutées      |
+
+&lt;/details&gt;**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*&lt;br&gt;**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*&lt;br&gt;**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*
+
+| Paramètres   | Type        |    | Description                                                                          |
+| ------------ | ----------- |:--:| ------------------------------------------------------------------------------------ |
+| filterString | Texte       | -&gt; |<span class="hljs-function"> String with entity attribute path</span>(s) to extract                                      |
+| filterCol    | Collection  | -&gt; |<span class="hljs-function"> Collection of entity attribute path</span>(s) to extract                                    |
+| options      | Entier long | -&gt; | <span class="hljs-comment">`dk with primary key`: adds the primary key&lt;br&gt;`dk with stamp`: adds the stamp |</span>
+| begin        | Entier long | -&gt; | Designates the starting index                                                        |
+| howMany      | Entier long | -&gt; | Number of entities to extract                                                        |
+| Résultat     | Collection  | &lt;- | Collection of objects containing attributes and values of entity selection           | #### Description
+
+La fonction <span class="hljs-comment">`.toCollection()`crée et retourne une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurscorrespondant aux noms et valeurs d'attribut pour la sélection d'entité.</span><span class="hljs-keyword">
+
+If</span> no filter parameter is passed or the first parameter contains an empty string or <span class="hljs-string">"*"</span>, all the attributes are extracted. Les attributs avec la propriété [kind](/docs/fr/API/DataClassAttributeClass.html#kind) définie sur <span class="hljs-string">"relatedEntity"</span> sont extraits avec la forme simple :<span class="hljs-function"> un objet avec la propriété \_\_KEY </span>(clé primaire). Attributes with kind property as <span class="hljs-string">"relatedEntities"</span> are not extracted.
+
+Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:
+
+*   *filterString* --a string with property paths separated with commas: <span class="hljs-string">"propertyPath1, propertyPath2, ..."</span>.
+*   *filterCol* --a collection of strings containing property paths: \[<span class="hljs-string">"propertyPath1"</span>,<span class="hljs-string">"propertyPath2"</span>,...]<span class="hljs-keyword">
+
+
+If</span> a filter is specified for an attribute of the <span class="hljs-comment">`relatedEntity` kind:</span>
+
+*   propertyPath = <span class="hljs-string">"relatedEntity"</span> -&gt; it is extracted with simple form
+*   propertyPath = <span class="hljs-string">"relatedEntity.*"</span> -&gt; all the properties are extracted
+*   propertyPath = <span class="hljs-string">"relatedEntity.propertyName1, relatedEntity.propertyName2, ..."</span> -&gt; only those properties are extracted<span class="hljs-keyword">
+
+
+If</span> a filter is specified for an attribute of the <span class="hljs-comment">`relatedEntities` kind:</span>
+
+*   propertyPath = <span class="hljs-string">"relatedEntities.*"</span> -&gt; all the properties are extracted
+*   propertyPath = <span class="hljs-string">"relatedEntities.propertyName1, relatedEntities.propertyName2, ..."</span> -&gt; only those properties are extracted
+
+
+
+In the *options* parameter, you can pass the <span class="hljs-comment">`dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.</span>
+
+The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between <span class="hljs-number">0</span> and entity selection length<span class="hljs-number">-1.</span>
+
+The *howMany* parameter lets you specify the number of entities to extract, starting with the one specified in *begin*. Dropped entities are not returned but are taken into account according to *howMany*.<span class="hljs-keyword"> For</span> example, if *howMany*= <span class="hljs-number">3</span> and there is <span class="hljs-number">1</span> dropped entity, only <span class="hljs-number">2</span> entities are extracted.<span class="hljs-keyword">
+
+If</span> *howMany* &gt; length of the entity selection,<span class="hljs-function"> the method returns </span>(length - *begin*) objects.
+
+An empty collection is returned if:
+
+*   the entity selection is empty, or
+*   *begin* is greater than the length of the entity selection.
+
+
+#### Exemple <span class="hljs-number">1</span>
+
+The following structure will be used throughout all examples of this section:
+
+![](/docs/assets/en/API/dataclassAttribute4.png)
+
+
+Example without filter or options parameter:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employeesCollection </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 
  <span class="hljs-variable">$employeesCollection</span>:=New collection
@@ -1988,7 +1950,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 ]
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/EntityClass.html"><span class="arrow-prev">← </span><span>Entity</span></a><a class="docs-next button" href="/docs/fr/API/FileClass.html"><span>File</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-entity-selection">Create entity selection</a></li><li><a href="#91index93">[<em>index</em>]</a></li><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#add">.add()</a></li><li><a href="#and">.and()</a></li><li><a href="#average">.average()</a></li><li><a href="#contains">.contains()</a></li><li><a href="#count">.count()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#first">.first()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#isalterable">.isAlterable()</a></li><li><a href="#isordered">.isOrdered()</a></li><li><a href="#last">.last()</a></li><li><a href="#length">.length</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#minus">.minus()</a></li><li><a href="#or">.or()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbyformula-">.orderByFormula( )</a></li><li><a href="#query">.query()</a></li><li><a href="#querypath">.queryPath</a></li><li><a href="#queryplan">.queryPlan</a></li><li><a href="#refresh">.refresh()</a></li><li><a href="#selected">.selected()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#sum-">.sum( )</a></li><li><a href="#tocollection-">.toCollection( )</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/EntityClass.html"><span class="arrow-prev">← </span><span>Entity</span></a><a class="docs-next button" href="/docs/fr/API/FileClass.html"><span>File</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-entity-selection">Create entity selection</a></li><li><a href="#91index93">[<em>index</em>]</a></li><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#add">.add()</a></li><li><a href="#and">.and()</a></li><li><a href="#average">.average()</a></li><li><a href="#contains">.contains()</a></li><li><a href="#count">.count()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#first">.first()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#isalterable">.isAlterable()</a></li><li><a href="#isordered">.isOrdered()</a></li><li><a href="#last">.last()</a></li><li><a href="#length">.length</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#minus">.minus()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
