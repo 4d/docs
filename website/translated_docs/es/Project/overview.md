@@ -3,7 +3,7 @@ id: overview
 title: Generalidades
 ---
 
-Un proyecto 4D contiene todo el código fuente de una aplicación de base de datos 4D, desde la estructura de la base de datos hasta la interfaz de usuario, pasando por los formularios, los menús, la configuración del usuario o cualquier recurso necesario. A 4D project is primarily made of text-based files.
+Un proyecto 4D contiene todo el código fuente de una aplicación de base de datos 4D, desde la estructura de la base de datos hasta la interfaz de usuario, pasando por los formularios, los menús, la configuración del usuario o cualquier recurso necesario. Un proyecto 4D se compone principalmente de archivos texto.
 
 Los proyectos 4D se crean y gestionan utilizando la aplicación 4D Developer. Los archivos de proyecto se utilizan para crear archivos de despliegue de la aplicación final, que pueden ser abiertos con 4D Server o con una licencia 4D Volume (aplicaciones fusionadas).
 
