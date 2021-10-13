@@ -203,12 +203,10 @@ OB GET PROPERTY <span class="hljs-constructor">NAMES(<span class="hljs-params">d
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$e </span>: cs.EmployeeSelection <span class="hljs-comment">// EmployeeSelection クラスのオブジェクト変数として $e を宣言します</span>
 <span class="hljs-variable">$e</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">// 結果のエンティティセレクションへの参照を $e に代入します</span>
 </code></pre>
-<p>エンティティセレクションには次の種類が存在します:</p>
-<ul>
-<li>&quot;共有可能&quot; または &quot;共有不可&quot;</li>
-<li>&quot;順列あり&quot; または &quot;順列なし&quot;</li>
-</ul>
-<p>詳細は後述を参照ください。</p>
+<p>エンティティセレクションは &quot;順列あり&quot; あるいは &quot;順列なし&quot; 状態のどちらかです (<a href="#エンティティセレクションの順列あり順列なし">後述参照</a>)。</p>
+<blockquote>
+<p>また、<a href="/docs/Rx/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">どのように作成されたか</a> に応じて、エンティティセレクションは &quot;共有可能&quot; あるいは &quot;追加可能&quot; 状態のどちらかです。</p>
+</blockquote>
 <p>エンティティセレクションオブジェクト自身は、オブジェクトとしてコピーすることはできません:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myentitysel</span>:=<span class="hljs-function">OB Copy</span>(ds.Employee.<span class="hljs-function">all</span>()) <span class="hljs-comment">// null を返します</span>
 </code></pre>

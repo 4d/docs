@@ -90,7 +90,7 @@
 <li><p>プロジェクトの <code>.4dproject</code> ファイルを選択し、<strong>開く</strong> をクリックします。<p> デフォルトで、プロジェクトはカレントデータファイルとともに開かれます。 ほかにも、次のファイルタイプを選択できます:</p>
 <ul>
 <li><em>圧縮されたプロジェクトファイル</em>: <code>.4dz</code> 拡張子 - 運用プロジェクト</li>
-<li><em>ショートカットファイル</em>: <code>.4DLink</code> 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)</li>
+<li><em>ショートカットファイル</em>: <code>.4dlink</code> 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)</li>
 <li><em>バイナリファイル</em>: <code>.4db</code> または <code>.4dc</code> 拡張子 - 従来の 4D データベース形式</li>
 </ul></li>
 </ol>
@@ -105,7 +105,7 @@
 <li><p><strong>データファイル</strong> - プロジェクトで使用するデータファイルを指定できます。 デフォルトでは、<strong>現在のデータファイル</strong> オプションが選択されています。</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="プロジェクトを開く-その他の方法"></a><a href="#プロジェクトを開く-その他の方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プロジェクトを開く (その他の方法)</h2>
-<p>4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法がいくつかあります:</p>
+<p>4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法が 2つあります:</p>
 <ul>
 <li><p>メニューを使用:</p>
 <ul>
@@ -116,49 +116,22 @@
 <ul>
 <li>4D 環境設定の <strong>開始時</strong> オプションに <strong>最後に使用したデータベースを開く</strong> を指定します。</li>
 </ul></li>
-<li><p><code>.4DLink</code> ファイルを使用</p></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="4dlinkファイルを使ってプロジェクトを開く"></a><a href="#4dlinkファイルを使ってプロジェクトを開く" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DLinkファイルを使ってプロジェクトを開く</h3>
-<p>4Dアプリケーションを起動し、ターゲットの 4Dプロジェクトを開くのに <a href="#4DLinkファイルについて"><code>.4DLink</code> ファイル</a> が利用できます。 これをおこなうには 2つの方法があります:</p>
-<ul>
-<li><code>.4DLink</code> をダブルクリック、あるいは 4Dアプリケーションにドラッグ＆ドロップする</li>
-<li><strong>ファイル</strong> ＞ <strong>最近使用したプロジェクトを開く</strong> のサブメニューを開き、プロジェクトを選択する</li>
-</ul>
-<p><img src="/docs/Rx/assets/en/Project/4Dlinkfiles.png" alt="最近使用したファイルを開く"></p>
-<p>&quot;リモートプロジェクト&quot; タイプの .4DLinkファイルは、他のマシンにコピーして使用することができます。</p>
-<blockquote>
-<p>4D と 4D Server の接続ダイアログで 4DLinkファイルを選択することもできます (ローカルプロジェクトの開始のみ)。</p>
-</blockquote>
-<h2><a class="anchor" aria-hidden="true" id="4dlinkファイルについて"></a><a href="#4dlinkファイルについて" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DLinkファイルについて</h2>
-<p><code>.4DLink</code> 拡張子が付いたファイルは XMLファイルで、ローカルまたはリモート4Dプロジェクトの開始を簡略化・自動化するための設定を格納します。</p>
-<p><code>.4DLink</code> ファイルは、4Dプロジェクトのアドレスや接続識別子を保存し、プロジェクトを開くための操作を短縮します。</p>
-<p>ローカルプロジェクトを初めて開くとき、またはサーバーに初めて接続するとき、4D は <code>.4DLink</code> ファイルを自動生成します。 このファイルは、次の場所にあるローカル環境設定フォルダーに置かれます:</p>
-<ul>
-<li>Windows 7 以上: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\</li>
-<li>OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/</li>
-</ul>
-<p>XX はアプリケーションのバージョン番号を意味します。 たとえば、4D v19 なら &quot;Favorites v19&quot; となります。</p>
-<p>このフォルダーには、2つのサブフォルダーがあります:</p>
-<ul>
-<li><strong>Local</strong> フォルダーには、ローカルプロジェクトの開始に使用できる <code>.4DLink</code> ファイルが格納されます。</li>
-<li><strong>Remote</strong> フォルダーには、最近のリモートプロジェクトの <code>4DLink</code> ファイルが置かれます。</li>
-</ul>
-<p><code>.4DLink</code> ファイルは XMLエディターで作成することもできます。</p>
-<p><code>.4DLink</code> ファイルを構築するために使用できる XMLキーを定義した DTD が4D より提供されます。 この DTD は database_link.dtd という名前で、4Dアプリケーションの \Resources\DTD\ サブフォルダーにあります。</p>
 <h2><a class="anchor" aria-hidden="true" id="ファイルの保存"></a><a href="#ファイルの保存" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ファイルの保存</h2>
 <p>4D でプロジェクトを開発するにあたって、ストラクチャー要素やメソッド、フォームの作成・変更・保存には 4D のビルトインエディターを利用することができます。 <strong>保存</strong> メニューを選択するか、エディターウィンドウがフォーカスを得た/失ったときに、編集内容がディスクに保存されます。</p>
 <p>このエディターの作業対象はディスク上のファイルなため、同じファイルが同時に編集されていたり削除されていたりといった場合には競合が発生します。 たとえば、一つのメソッドをメソッドエディターで編集しつつ、標準のテキストエディターでも開いて変更した場合に競合が起こりえます。</p>
 <p>4D のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:</p>
 <ul>
 <li>開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます: <img src="/docs/Rx/assets/en/Project/lockicon.png" alt=""></li>
-<li>開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します:</li>
+<li>開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します: <img src="/docs/Rx/assets/en/Project/projectReload.png" alt="">
+<ul>
+<li><strong>はい</strong>: 編集内容を破棄してリロードします</li>
+<li><strong>いいえ</strong>: 編集内容で上書き保存します</li>
+<li><strong>キャンセル</strong>: 保存しません</li>
+</ul></li>
 </ul>
-<p><img src="/docs/Rx/assets/en/Project/projectReload.png" alt="">
-- <strong>はい</strong>: 編集内容を破棄してリロードします
-- <strong>いいえ</strong>: 編集内容で上書き保存します
-- <strong>キャンセル</strong>: 保存しません</p>
 <p>この機能はすべてのビルトインエディター (ストラクチャー、フォーム、メソッド、設定、ツールボックス) において有効化されています).</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/Project/overview.html"><span class="arrow-prev">← </span><span>概要</span></a><a class="docs-next button" href="/docs/Rx/ja/Project/architecture.html"><span>プロジェクトのアーキテクチャー</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#プロジェクトの作成">プロジェクトの作成</a></li><li><a href="#プロジェクトを開く">プロジェクトを開く</a><ul class="toc-headings"><li><a href="#オプション">オプション</a></li></ul></li><li><a href="#プロジェクトを開く-その他の方法">プロジェクトを開く (その他の方法)</a><ul class="toc-headings"><li><a href="#4dlinkファイルを使ってプロジェクトを開く">4DLinkファイルを使ってプロジェクトを開く</a></li></ul></li><li><a href="#4dlinkファイルについて">4DLinkファイルについて</a></li><li><a href="#ファイルの保存">ファイルの保存</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/Project/overview.html"><span class="arrow-prev">← </span><span>概要</span></a><a class="docs-next button" href="/docs/Rx/ja/Project/architecture.html"><span>プロジェクトのアーキテクチャー</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#プロジェクトの作成">プロジェクトの作成</a></li><li><a href="#プロジェクトを開く">プロジェクトを開く</a><ul class="toc-headings"><li><a href="#オプション">オプション</a></li></ul></li><li><a href="#プロジェクトを開く-その他の方法">プロジェクトを開く (その他の方法)</a></li><li><a href="#ファイルの保存">ファイルの保存</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

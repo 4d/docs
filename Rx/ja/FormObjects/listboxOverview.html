@@ -489,23 +489,22 @@
 <h2><a class="anchor" aria-hidden="true" id="ソートの管理"></a><a href="#ソートの管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ソートの管理</h2>
 <p>ヘッダーがクリックされると、リストボックスはデフォルトで標準的なカラムの並べ替えを自動的におこないます。 標準的な並べ替えとは、列の値を英数字順に並べ替え、続けてクリックされると昇順/降順を交互に切り替えます。 すべての列は常に自動で同期されます。</p>
 <p>リストボックスの <a href="/docs/Rx/ja/FormObjects/propertiesAction.html#ソート可">ソート可</a> プロパティの選択を解除すると、ユーザーによる標準の並べ替えを禁止することができます。</p>
-<p>開発者は、<code>LISTBOX SORT COLUMNS</code> コマンドを使用するか、または <code>On Header Click</code> と <code>On After Sort</code> フォームイベント (<a href="https://doc.4d.com/4dv19/help/command/ja/page1606.html"><code>FORM Event</code></a> コマンド参照) を 4D の配列管理コマンドと組み合わせて、独自の並べ替えを設定することができます。</p>
+<p>開発者は、<code>LISTBOX SORT COLUMNS</code> コマンドを使用するか、または <code>On Header Click</code> と <code>On After Sort</code> フォームイベント (<code>FORM Event</code>コマンド参照) を 4D の配列管理コマンドを組み合わせて、独自の並べ替えを設定することができます。</p>
 <blockquote>
-<p><a href="/docs/Rx/ja/FormObjects/propertiesAction.html#ソート可">ソート可</a> プロパティは、ユーザーによる標準の並べ替えにのみ影響します。<a href="https://doc.4d.com/4dv19/help/command/ja/page916.html"><code>LISTBOX SORT COLUMNS</code></a> コマンドは、このプロパティを考慮しません。</p>
+<p><a href="/docs/Rx/ja/FormObjects/propertiesAction.html#ソート可">ソート可</a> プロパティは、ユーザーによる標準の並べ替えにのみ影響します。<code>LISTBOX SORT COLUMNS</code> コマンドは、このプロパティを考慮しません。</p>
 </blockquote>
 <p><a href="/docs/Rx/ja/FormObjects/propertiesObject.html#変数あるいは式">列ヘッダー変数</a>の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。</p>
 <ul>
-<li><p>変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません。<br>
+<li><p>変数が 0 のとき、列は並べ替えられておらず、矢印は表示されていません;<br>
 <img src="/docs/Rx/assets/en/FormObjects/sorticon0.png" alt=""></p></li>
-<li><p>変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています。 <img src="/docs/Rx/assets/en/FormObjects/sorticon1.png" alt=""></p></li>
-<li><p>変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。 <img src="/docs/Rx/assets/en/FormObjects/sorticon2.png" alt=""></p></li>
+<li><p>変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています;<br>
+<img src="/docs/Rx/assets/en/FormObjects/sorticon1.png" alt=""></p></li>
+<li><p>変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。<br>
+<img src="/docs/Rx/assets/en/FormObjects/sorticon2.png" alt=""></p></li>
 </ul>
-<blockquote>
-<p>列ヘッダー変数には、宣言された、あるいは動的な <a href="/docs/Rx/ja/Concepts/variables.html">変数</a> のみを使用できます。 その他の <a href="/docs/Rx/ja/Concepts/quick-tour.html#式">式</a> (例: <code>Form.sortValue</code>) はサポートされていません。</p>
-</blockquote>
 <p>変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。</p>
 <blockquote>
-<p><a href="https://doc.4d.com/4dv19/help/command/ja/page236.html"><code>OBJECT SET FORMAT</code></a> コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。</p>
+<p><code>OBJECT SET FORMAT</code> コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="スタイルとカラー、表示の管理"></a><a href="#スタイルとカラー、表示の管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スタイルとカラー、表示の管理</h2>
 <p>リストボックスの背景色、フォントカラー、そしてフォントスタイルを設定するためにはいくつかの方法があります:</p>
