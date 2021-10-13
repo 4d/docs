@@ -11,7 +11,7 @@ Le formulaire multi-pages suivant utilise un onglet :
 
 Pour passer d’un écran à l’autre, l’utilisateur clique simplement sur l’onglet correspondant.
 
-Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. Dans ce cas, la commande [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) ou l’action standard `gotoPage` devra être appelée lorsque l’utilisateur cliquera sur l’onglet.
 
 Un onglet peut aussi être utilisé pour contrôler les données qui sont affichées dans un sous-formulaire. On peut, par exemple, implémenter un rolodex à l’aide d’un onglet. Chaque onglet afficherait alors une des lettres de l’alphabet et l’action de l’onglet serait de charger les informations correspondantes à la lettre sur lequel l’utilisateur a cliqué.
 
@@ -43,40 +43,10 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
 
 ## Ajouter les intitulés dans un onglet
 
-To supply the labels for a tab control, you can use:
+Pour placer des intitulés dans un onglet, plusieurs possibilités se présentent à vous :
 
-- un objet
-- a choice list
-- an array
-
-### Using an object
-
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
-
-| Propriété      | Type       | Description                                                                                                                           |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | Texte      | Currently selected value                                                                                                              |
-
-The initialization code must be executed before the form is presented to the user.
-
-In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
-
-```4d
-Form.tabControl:=New object
-Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
-Form.tabControl.index:=2 //start on page 3
-```
-
-
-### Utiliser une énumération
-
-You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
-
-### Using a Text array
-
-Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. Par exemple, vous pouvez placer ce code dans l’événement formulaire `Sur chargement`.
+*   Vous pouvez associer à l’onglet [une liste de valeurs](properties_DataSource.md#choice-list-static-list), accessible via une collection (liste statique) ou un pointeur JSON ("$ref") vers une liste json. Les icônes associées à des éléments de liste dans l'éditeur de listes seront affichées dans l'onglet.
+*   Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. Par exemple, vous pouvez placer ce code dans l’événement formulaire `Sur chargement`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -84,20 +54,20 @@ Vous pouvez créer un tableau Texte qui contient les noms de chaque page du form
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
+> Vous pouvez aussi stocker les noms des pages dans une liste hiérarchique et utiliser la commande `Load list` pour charger les valeurs dans le tableau.
 
 
-## Goto page features
+## Gérer les onglets par programmation
 
 ### Commande FORM GOTO PAGE
 
-You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
+Vous pouvez utiliser la commande [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) dans la méthode objet de l’onglet pour naviguer parmi les pages du formulaire :
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
+Cette commande devra être exécutée dans l’événement formulaire `Sur clic`. Il est préférable d’effacer le tableau dans l’événement formulaire `Sur libération`.
 
 Vous pouvez, par exemple, écrire le code suivant :
 
@@ -115,11 +85,9 @@ Vous pouvez, par exemple, écrire le code suivant :
 ### Action Goto Page
 
 Lorsque vous associez l’[](properties_Action.md#standard-action)action standard
-
  `gotoPage` à un objet de type Onglet, 4D affiche automatiquement la page du formulaire correspondant au numéro de l’onglet sélectionné. </p> 
 
 Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 du formulaire courant (si elle existe). 
-
 
 
 

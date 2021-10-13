@@ -81,7 +81,7 @@ Conversely, for security reasons, by default a component cannot execute project 
 
 Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Par exemple :
 
-```4d
+```4d 
 // Host Method
 component_method("host_method_name")
 ```
@@ -308,4 +308,7 @@ By default, all the project methods of a matrix project installed as a component
 To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
 
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
-- The other project methods of the matrix project will never appear.
+- The other project methods of the matrix project will never appear. 
+
+
+

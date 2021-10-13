@@ -27,15 +27,17 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 "埋め込みWebレンダリングエンジンを使用" プロパティを選択している場合、"4Dメソッドコールを許可" プロパティが選択可能になります。
 
 ### 4Dメソッドコールを許可
-
 [4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
 ### $4dオブジェクトの使用
 
 
-[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+
+
+
+[4Dの埋め込みWebレンダリングエンジン](#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
@@ -58,7 +60,6 @@ $4d.4DMethodName(param1,paramN,function(result){})
 > デフォルトとして、4Dは UTF-8 文字コードで動作しています。 (アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。文字コードが UTF-8 でない場合、文字が正しく表示されない可能性があります。 この場合、以下の 1行を HTMLページに追加して文字コードを宣言してください:<br /> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### 例題 1
-
 `today` という名の 4Dプロジェクトメソッドがあり、そのメソッドは引数を受け付けず、カレントの日付を文字列として返す場合について考えてみます。
 
 `today` メソッドの 4Dコードです:
@@ -130,20 +131,20 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 特定のフォームイベントは、Webエリアをプログラミングで管理するこを目的としています。すなわち、リンクの起動に関連しています:
 
-- [`On Begin URL Loading`](Events/onBeginUrlLoading.md)
-- [`On URL Resource Loading`](Events/onUrlResourceLoading.md)
-- [`On End URL Loading`](Events/onEndUrlLoading.md)
-- [`On URL Loading Error`](Events/onUrlLoadingError.md)
-- [`On URL Filtering`](Events/onUrlFiltering.md)
-- [`On Open External Link`](Events/onOpenExternalLink.md)
-- [`On Window Opening Denied`](Events/onWindowOpeningDenied.md)
+- `On Begin URL Loading`
+- `On URL Resource Loading`
+- `On End URL Loading`
+- `On URL Loading Error`
+- `On URL Filtering`
+- `On Open External Link`
+- `On Window Opening Denied`
 
 更に、Webエリアは以下の汎用フォームイベントをサポートしています:
 
-- [`On Load`](Events/onLoad.md)
-- [`On Unload`](Events/onUnload.md)
-- [`On Getting Focus`](Events/onGettingFocus.md)
-- [`On Losing Focus`](Events/onLosingFocus.md)
+- `On Load`
+- `On Unload`
+- `On Getting Focus`
+- `On Losing Focus`
 
 
 ## Webエリアのルール
@@ -157,7 +158,6 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 - **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。 セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは "禁止" アイコン ![](assets/en/FormObjects/forbidden.png) を表示します。 エリアへのファイルや URL のドロップを許可するには、`WA SET PREFERENCE` コマンドを使用して明示的にドロップを許可する必要があります。
 
 ### サブフォーム
-
 ウィンドウの再描画機構に関わる理由から、サブフォームに Webエリアを挿入する場合には以下の制約がつきます:
 
 - サブフォームをスクロール可能にしてはいけません。
@@ -167,19 +167,19 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 
 ### Webエリアと Webサーバーのコンフリクト (Windows)
-
 Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。自身の Webサーバーにアクセスできないということです。
+
+### Webプラグインと Javaアプレット
+Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 ### プロトコルの挿入 (macOS)
 macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。 つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 
 ## Webインスペクターへのアクセス
-
 オフスクリーンの Webエリアや、フォームのWeb エリア内において、Webインスペクターを見たり使用したりすることができます。 Webインスペクターは、埋め込みWebエンジンによって提供されているデバッガーです。 Webページの情報の、コードとフローを解析します。
 
 ### Webインスペクターの表示
-
 Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
 - **`WA OPEN WEB INSPECTOR` コマンドの実行**<br> このコマンドはスクリーン上 (フォームオブジェクト) の、またはオフスクリーンの Webエリアに対して直接使用することができます。 オフスクリーンの Webエリアの場合、そのエリアは [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) を使用している必要があります (Webインスペクターはこの設定でのみ利用可能です)。
@@ -196,7 +196,6 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 詳細は `WA SET PREFERENCE` コマンドの説明を参照してください。
 
 ### Webインスペクターの使用
-
 上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。
 
 > この Webインスペクターは、埋め込みWebレンダリングエンジンに含まれています。 このデバッガーの機能の詳細に関しては、Webレンダリングエンジンにより提供されているドキュメントを参照してください。

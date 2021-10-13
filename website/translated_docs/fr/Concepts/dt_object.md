@@ -10,13 +10,13 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 - Une valeur de propriété peut être du type suivant :
     - Numérique (réel, entier long, etc.)
     - Texte
-    - null
-    - boolean
+    - Null
+    - Booléen
     - Pointeur (stocké tel quel, évalué à l’aide de la commande `JSON Stringify` ou lors d’une copie),
     - Date (type date ou chaîne au format date ISO)
     - Objet(1) (les objets peuvent être imbriqués sur plusieurs niveaux)
     - Image(2)
-    - collection
+    - Collection
 
 (1) Les objets ORDA tels que les [entités](ORDA/dsMapping.md#entity) ou les [sélections d'entités](ORDA/dsMapping.md#entity-selection) ne peuvent pas être stockés dans les **champs objet**; ils sont néanmoins entièrement pris en charge dans les **variables objet** en mémoire.
 

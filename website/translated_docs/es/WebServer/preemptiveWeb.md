@@ -14,7 +14,7 @@ The use of preemptive mode for web processes is only available in the following 
 
 *   use of 4D Server or 4D local mode (4D in remote mode does not support preemptive mode)
 
-*   use of a compiled database (except [on 4D Server when sessions are enabled](sessions.md#preemptive-mode))
+*   use of a compiled database
 
 *   **Use preemptive processes** database setting checked (see below)
 
@@ -69,7 +69,7 @@ The web-related database methods are thread-safe and can be used in preemptive m
 Of course, the code executed by these methods must also be thread-safe.
 
 
-### Web Server URLs
+### URLs del servidor web
 
 The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
 

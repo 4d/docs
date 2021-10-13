@@ -70,7 +70,7 @@ Within the custom error method, you have access to several information that will
 - the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 
-#### Example
+#### Exemplo
 
 Here is a simple error-handling system:
 

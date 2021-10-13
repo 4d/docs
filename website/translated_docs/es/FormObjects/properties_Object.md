@@ -58,9 +58,9 @@ Here is the list of objects whose value can be saved:
 | Objeto                                        | Valor guardado                                                                         |
 | --------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Check Box](checkbox_overview.md)             | Value of associated variable (0, 1, 2)                                                 |
-| [Lista desplegable](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Lista desplegable](dropdownList_Overview.md) | Número de línea seleccionada                                                           |
 | [Botón radio](radio_overview.md)              | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Control de pestañas](tabControl.md)          | Number of selected tab                                                                 |
+| [Control de pestañas](tabControl.md)          | Número de pestaña seleccionada                                                         |
 
 
 #### Gramática JSON
@@ -124,10 +124,10 @@ In the 4D code, dynamic variables can be accessed using a pointer obtained with 
 There are two advantages with this mechanism:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+- Por otra parte, puede utilizarse para limitar el uso de la memoria. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
-### Array List Box
+### List box array
 
 For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
@@ -135,9 +135,9 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos          | Valores posibles                                                                                                                                                                                                                                                                                                                      |
-| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
+| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                                                                      |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | cadena o array de cadenas | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
 
 #### Objetos soportados
@@ -149,7 +149,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 ---
-## Expression Type
+## Tipo de expresión
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
@@ -249,7 +249,7 @@ Specify the type of list box.
 
 
 ---
-## Plug-in Kind
+## Tipo de plug-in
 
 Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
@@ -305,7 +305,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| texto  | cadena         | any text         |
+| texto  | cadena         | todo texto       |
 
 #### Objetos soportados
 
@@ -325,17 +325,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Texto | Fecha | Hora | Bool | Imágenes | footer var type     |
-| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ------------------- |
-| Mínimo                | X   |       | X     | X    | X    |          | Same as column type |
-| Máximo                | X   |       | X     | X    | X    |          | Same as column type |
-| Suma                  | X   |       | X     |      | X    |          | Same as column type |
-| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo        |
-| Promedio              | X   |       |       | X    |      |          | Real                |
-| Standard deviation(*) | X   |       |       | X    |      |          | Real                |
-| Variance(*)           | X   |       |       | X    |      |          | Real                |
-| Sum squares(*)        | X   |       |       | X    |      |          | Real                |
-| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera          |
+| Cálculo               | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
+| Mínimo                | X   |       | X     | X    | X    |          | Same as column type                 |
+| Máximo                | X   |       | X     | X    | X    |          | Same as column type                 |
+| Suma                  | X   |       | X     |      | X    |          | Same as column type                 |
+| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo                        |
+| Promedio              | X   |       |       | X    |      |          | Real                                |
+| Standard deviation(*) | X   |       |       | X    |      |          | Real                                |
+| Variance(*)           | X   |       |       | X    |      |          | Real                                |
+| Suma de cuadrados(*)  | X   |       |       | X    |      |          | Real                                |
+| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 
 (*) Only for array type list boxes.
 

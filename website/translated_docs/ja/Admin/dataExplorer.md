@@ -3,7 +3,7 @@ id: dataExplorer
 title: Webデータエクスプローラー
 ---
 
-> **プレビュー**: Webデータエクスプローラーは、プレビュー機能として提供されています。 運用環境でこの機能を使用することは推奨されません。 最終的な実装は若干異なる可能性があります。
+> **プレビュー**: Webデータエクスプローラーは、プレビュー機能として提供されています。 運用環境でこの機能を使用することは推奨されません。最終的な実装は若干異なる可能性があります。
 
 
 データエクスプローラーは、プロジェクトのデータストアにあるデータを表示・クエリするための Webインターフェースを提供します。 このツールを使用すると、すべてのエンティティを簡単に照会し、属性値に基づいて検索・並べ替え・フィルターすることができます。 このツールは、開発プロセスのどの段階においても、データを管理し、問題を迅速に特定するのに役立ちます。
@@ -18,7 +18,7 @@ title: Webデータエクスプローラー
 - **設定**: データエクスプローラーの設定は、[`WebAdmin` Webサーバーの設定](webAdmin.md#webadmin-設定) を再利用します。
 - **認証**: データエクスプローラーへのアクセスは、[認証されたセッションユーザー](webAdmin.md#認証とセッション) が、"WebAdmin" 権限を持っている場合に許可されます。 **データエクスプローラー** のメニュー項目 (後述参照) からデータエクスプローラーにアクセスした場合、認証は自動的におこなわれます。
 
-> データエクスプローラーへのアクセスは、[`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) 関数を使って無効化できます。
+> データエクスプローラーへのアクセスは、[`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) 関数を使って無効化できます。
 
 
 ## データエクスプローラーを開く
@@ -169,7 +169,7 @@ title: Webデータエクスプローラー
 firstname=="Jim"
 ```
 
-[`query()` 関数の説明](API/DataClassClass.md#query) にある ORDA クエリ式を利用することができますが、次の制限および相違点があります:
+[`query()` 関数の説明](API/dataclassClass.md#query) にある ORDA クエリ式を利用することができますが、次の制限および相違点があります:
 
 - セキュリティ上、`eval()` を使った式を実行することはできません。
 - プレースホルダーは使用できません。値の指定された *クエリ文字列* を使用しなくてはなりません。
@@ -181,7 +181,7 @@ firstname=="Jim"
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-[`queryPlan`](API/DataClassClass.md#queryplan) と [`queryPath`](API/DataClassClass.md#querypath) を両方表示するには `v` アイコンをクリックします。 このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
+[`queryPlan`](API/dataclassClass.md#queryplan) と [`queryPath`](API/dataclassClass.md#querypath) を両方表示するには `v` アイコンをクリックします。 このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
 
 ![alt-text](assets/en/Admin/dataExplorer12.png)
 

@@ -54,11 +54,11 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | On Load                       | Oui                                | Oui                | Tous les objets             |
 | On Unload                     | Oui                                | Oui                | Tous les objets             |
 | Sur validation                | Oui                                | Oui                | Tous les objets             |
-| Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
-| Sur avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sue après frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
+| On Clicked                    | Oui                                | Oui                | Objets concernés uniquement |
+| On Double Clicked             | Oui                                | Oui                | Objets concernés uniquement |
+| On Before Keystroke           | Oui                                | Oui                | Objets concernés uniquement |
+| On After Keystroke            | Oui                                | Oui                | Objets concernés uniquement |
+| On After Edit                 | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
 | Sur activation                | Jamais                             | Oui                | Aucun                       |

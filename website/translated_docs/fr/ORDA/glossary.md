@@ -79,7 +79,7 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 `ds` est la commande de langage 4D qui retourne une référence d'objet [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
-## Entity
+## Entité (entity)
 
 Une entité est un objet qui correspond à un modèle de dataclass. Une entité contient les mêmes attributs que la dataclass.
 
@@ -87,7 +87,7 @@ Une entité peut être vue comme une instance de la dataclass, comme un enregist
 
 Pour plus d'informations, voir le chapitre Entités.
 
-## Entity selection
+## Sélection d'entités (entity selection)
 
 Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
 
@@ -196,6 +196,6 @@ Les sessions inactives sont automatiquement fermées après un délai. Le timeou
 
 Une copie superficielle (shallow copy) ne fait que dupliquer la structure des éléments et conserve les mêmes références internes. Après une copie superficielle, deux collections partageront les éléments individuels. Voir également Copie profonde.
 
-## Stamp
+## Marqueur (stamp)
 
 Utilisé dans la technologie du verrouillage "optimiste". Toutes les entités ont un compteur interne, le marqueur, qui est incrémenté chaque fois que l'entité est sauvegardée. En comparant automatiquement les marqueurs entre une entité sauvegardée et sa version stockée sur disque, 4D peut empêcher les modifications simultanées sur les mêmes entités.

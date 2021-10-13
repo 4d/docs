@@ -17,7 +17,7 @@ Una variable de tipo variant puede contener un valor de los tipos de datos sigui
 - puntero
 - real
 - texto
-- time
+- hora
 - null
 - indefinido
 

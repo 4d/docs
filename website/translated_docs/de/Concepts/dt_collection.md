@@ -55,14 +55,14 @@ Beispiel:
 
 Sie können zwei Arten von Collections erstellen:
 
-- regular (non-shared) Collections mit dem Befehl [`New collection`](API/CollectionClass.md#new-collection). Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
-- shared Collections mit dem Befehl [`New shared collection`](API/CollectionClass.md#new-shared-collection). Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Collections wird über [`Use...End use`](Concepts/shared.md#useend-use) Strukturen gesteuert.
+- regular (non-shared) Collections mit dem Befehl [`New collection`](API/collectionClass.md#new-collection). Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
+- shared Collections mit dem Befehl [`New shared collection`](API/collectionClass.md#new-shared-collection). Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Collections wird über [`Use...End use`](Concepts/shared.md#useend-use) Strukturen gesteuert.
 
 Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
 ## Collection Funktionen
 
-Referenzen auf 4D Collection können spezifische Klassenfunktionen nutzen, manchmal auch *Member Functions* genannt. Collection-Funktionen sind im Abschnitt [Class API Reference](API/CollectionClass.md) aufgelistet.
+Referenzen auf 4D Collection können spezifische Klassenfunktionen nutzen, manchmal auch *Member Functions* genannt. Collection-Funktionen sind im Abschnitt [Class API Reference](API/collectionClass.md) aufgelistet.
 
 Beispiel:
 

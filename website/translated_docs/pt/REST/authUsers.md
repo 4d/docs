@@ -14,12 +14,12 @@ You log in a user to your application by calling [`$directory/login`]($directory
 
 ## Opening sessions
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/sessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 
 
-## Example
+## Exemplo
 
 In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
 

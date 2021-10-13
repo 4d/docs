@@ -61,24 +61,24 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType        | Contents                              |
+| varType        | Conteúdos                             |
 | -------------- | ------------------------------------- |
 | Texto          | Text value                            |
 | Date           | Date value                            |
 | Hora           | Time value                            |
-| Boolean        | Boolean value                         |
+| Booleano       | Boolean value                         |
 | Integer        | Long integer value                    |
 | Real           | Real value                            |
-| Pointer        | Pointer value                         |
-| Picture        | Picture value                         |
+| Ponteiro       | Pointer value                         |
+| Imagem         | Picture value                         |
 | Blob           | BLOB value                            |
 | Collection     | Collection value                      |
 | Variant        | Variant value                         |
-| Object         | Object with default class (4D.Object) |
+| Objeto         | Object with default class (4D.Object) |
 | 4D.*className* | Object of the 4D class name           |
 | cs.*className* | Object of the user class name         |
 
-#### Examples
+#### Exemplos
 
 - To declare local and process basic variables:
 

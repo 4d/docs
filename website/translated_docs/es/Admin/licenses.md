@@ -24,7 +24,7 @@ With 4D, select the **License Manager...** command from the **Help** menu of the
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
-### Instant Activation
+### Activación inmediata
 
 Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
 
@@ -37,7 +37,7 @@ Then enter the license number of the product you want to activate. This number i
 ![](assets/en/getStart/activ2.png)
 
 
-### Deferred Activation
+### Activación diferida
 
 If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
 
@@ -66,7 +66,7 @@ With the license file loaded, click on **Next**.
 
 Your 4D application is now activated.
 
-### Emergency Activation
+### Activación de emergencia
 
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
@@ -120,11 +120,11 @@ You can use projects to organize your licenses according to your needs:
 ![](assets/en/getStart/licens6.png)
 
 
-## Troubleshooting
+## Solución de problemas
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Síntomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Síntomas                                                      | Causas posibles                                            | Solution(s)                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -145,4 +145,4 @@ For the US:
 For the UK:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Teléfono: 01625 536178

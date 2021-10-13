@@ -15,7 +15,7 @@
         "title": "Protocolo TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Administración Web"
       },
       "API/classClass": {
         "title": "Class"
@@ -36,7 +36,7 @@
         "title": "DataStore"
       },
       "API/directory": {
-        "title": "Directory Class"
+        "title": "Clase Directory"
       },
       "API/document": {
         "title": "Document Class"
@@ -63,7 +63,7 @@
         "title": "IMAPTransporter"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "Generalidades - API de clases"
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
@@ -78,7 +78,7 @@
         "title": "SMTPTransporter"
       },
       "API/transporter": {
-        "title": "Transporter Class"
+        "title": "Clase Transporter"
       },
       "API/webServerClass": {
         "title": "WebServer"
@@ -394,7 +394,7 @@
         "title": "Acerca de los formularios 4D"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "Macros del editor de formularios"
       },
       "FormEditor/objectLibrary": {
         "title": "Librerías de objetos"
@@ -409,7 +409,7 @@
         "title": "Propiedades de los formularios"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "Tamaño formulario"
       },
       "FormEditor/jsonReference": {
         "title": "Lista de propiedades JSON"
@@ -647,7 +647,7 @@
         "sidebar_label": "Página Verificación"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "Objeto del modelo de datos"
       },
       "ORDA/entities": {
         "title": "Trabajar con los datos"
@@ -659,7 +659,7 @@
         "title": "Clases del modelo de datos"
       },
       "ORDA/overview": {
-        "title": "What is ORDA?"
+        "title": "¿Qué es ORDA?"
       },
       "ORDA/quickTour": {
         "title": "Un recorrido rápido en ORDA"
@@ -680,7 +680,7 @@
         "title": "Generalidades"
       },
       "ReleaseNotes/whatsNew": {
-        "title": "What's New"
+        "title": "Novedades"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -803,10 +803,10 @@
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "Sesiones usuario"
       },
       "WebServer/templates": {
-        "title": "Template pages"
+        "title": "Páginas de plantillas"
       },
       "WebServer/webServer": {
         "title": "Generalidades"
@@ -822,7 +822,7 @@
       }
     },
     "links": {
-      "What's New": "What's New",
+      "What's New": "Novedades",
       "v19 BETA": "v19 BETA",
       "v18 R6": "v18 R6",
       "v18": "v18"
@@ -870,7 +870,7 @@
     "Backup and Restore|no description given": "Copia de seguridad y restauración",
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Administración Web",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
     "Web Data Explorer|no description given": "Explorador de datos Web",

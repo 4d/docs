@@ -1,9 +1,9 @@
 ---
 id: templates
-title: Template pages
+title: Páginas de plantillas
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of transformation tags such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
 
@@ -16,7 +16,7 @@ For example, if you write in an HTML page:
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 
 
-## Tags for templates
+## Etiquetas para las plantillas
 
 The following 4D tags are available:
 
@@ -28,10 +28,11 @@ The following 4D tags are available:
 - 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
 - 4DCODE, to insert 4D code,
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
-- 4DLOOP and 4DENDLOOP, to make loops in the HTML code,
-- 4DEACH and 4DENDEACH, to loop in collections, entity selections, or object properties.
+- 4DLOOP and 4DENDLOOP, to make loops in the HTML code.
 
-These tags are described in the [Transformation Tags](Tags/tags.md) page.
+These tags are described in the [4D Transformation Tags](https://doc.4d.com/4Dv18R5/4D/18-R5/4D-Transformation-Tags.300-5128433.en.html) page on doc.4d.com.
+
+> For security reasons, any 4D project method called from a 4D tag must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 
 It is possible to mix tags. For example, the following HTML code is allowed:
 
@@ -44,7 +45,6 @@ It is possible to mix tags. For example, the following HTML code is allowed:
    <!--#4DINCLUDE banner1.html-->   (Subpage insertion)
 <!--#4DENDIF-->   (End if)
 <!--#4DIF (myvar=2)-->
-
    <!--#4DINCLUDE banner2.html-->
 <!--#4DENDIF-->
 
@@ -71,7 +71,7 @@ You can also carry out parsing outside of the Web context when you use the `PROC
 
 Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
 
-| Action / Command                               | Content analysis of the sent pages                    | Support of $ syntax(*)                                | Character set used for parsing tags                                                                                                                                                                         |
+| Acción / Comando                               | Content analysis of the sent pages                    | Support of $ syntax(*)                                | Character set used for parsing tags                                                                                                                                                                         |
 | ---------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pages called via URLs                          | X, except for pages with “.htm” or “.html” extensions | X, except for pages with “.htm” or “.html” extensions | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND FILE`                                | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
@@ -82,9 +82,18 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 
 (*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
 
-## Accessing 4D methods via the Web
 
-Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+### Recursive processing
+
+4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
+
+```html
+<!--#4DHTML [Mail]Letter_type-->
+```
+
+If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.
+
+This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted. For more information about this point, refer to the following section.
 
 
 ## Prevention of malicious code insertion
@@ -93,4 +102,4 @@ Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4D
 
 In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
 
-In addition, according to the [principle of recursion](Tags/tags.md#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
+In addition, according to the [principle of recursion](#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "&lt;!--#4DEVAL QUIT 4D--&gt;" which will not be transformed.

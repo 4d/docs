@@ -5,7 +5,7 @@ title: Un recorrido rápido en ORDA
 
 Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
 
-## Exploring the datastore
+## Explorar el datastore
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
@@ -31,7 +31,7 @@ ds.Company.city //returns the name of the city
 
 > In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
 
-> ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA es sensible a las mayúsculas y minúsculas. `ds.company.city` will not refer to the ds.Company.city attribute.
 
 You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
@@ -62,7 +62,7 @@ A new entity object contains a "copy" of all attributes of its parent dataclass,
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID se llena automáticamente
 ```
 
 Right now, the entity only exists in memory. To store it in the data file, you need to save it using the `save()` member method:
@@ -98,7 +98,7 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4D adds a new user to the list, named "New userX" by default.
 
-3. Enter the user name. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Introduzca el nombre de usuario. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
@@ -125,13 +125,13 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 The editor for groups is located in the Toolbox of 4D.
 
-### Configuring groups
+### Configurar grupos
 
 You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
 
 Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
 
-To create a group:
+Para crear un grupo:
 
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
 

@@ -31,7 +31,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| rowHeightAuto | boolean   | true, false     |
+| rowHeightAuto | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -77,7 +77,7 @@ Left coordinate of the object on the form.
 
 
 ---
-## Right
+## Direita
 
 Right coordinate of the object in the form.
 
@@ -95,7 +95,7 @@ Right coordinate of the object in the form.
 
 
 ---
-## Top
+## Topo
 
 Top coordinate of the object in the form.
 

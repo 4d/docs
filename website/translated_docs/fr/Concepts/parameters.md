@@ -50,7 +50,7 @@ Les valeurs d'entrée et de sortie sont [évaluées](#values-or-references) au m
 - [sequentially numbered variables](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. Par exemple :
+Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Par exemple :
 
 ```4d
 Function add($x : Integer)
@@ -76,7 +76,6 @@ Voici quelques exemples :
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
-
 ```4d  
  //myProjectMethod
 #DECLARE ($i : Integer) -> $myResult : Object
@@ -93,7 +92,7 @@ Les règles suivantes s'appliquent :
 
 For example, when you call a `getArea()` function with two parameters:
 
-```4d
+```
 $area:=$o.getArea(50;100)
 ```
 
@@ -104,7 +103,7 @@ In the class function code, the value of each parameter is copied into the corre
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-> If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
+> Si le type n'est pas défini, le paramètre sera défini comme `Variant`.
 
 All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
 
@@ -210,74 +209,70 @@ You can use any [expression](quick-tour.md#expression-types) as sequential param
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
-## Parameter indirection (${N})
+### Indirections sur les paramètres
 
-4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
+Les méthodes projets 4D acceptent un grand nombre de paramètres de même type, commençant par la droite. Ce principe est appelé **l'indirection des paramètres**. L'utilisation de la commande `Count parameters` vous permet d'adresser ces paramètres avec la boucle `For...End for` ainsi que la syntaxe de l'indirection des paramètres.
 
+> Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
 
-
-### Using generic parameters
-
-For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.
-
-Here is the method, named `MySum`:
+Dans l'exemple qui suit, la méthode projet `ENVOYER PAQUET` accepte le paramètre de temps suivi d'un nombre de variables des paramètres de texte :
 
 ```4d
- #DECLARE($format : Text) -> $result : Text
- $sum:=0
- For($i;2;Count parameters)
-    $sum:=$sum+${$i}
+  //SEND PACKETS Project Method
+  //SEND PACKETS ( Time ; Text { ; Text2... ; TextN } )
+  //SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )
+
+ C_TIME($1)
+ C_TEXT(${2})
+ C_LONGINT($vlPacket)
+
+ For($vlPacket;2;Count parameters)
+    SEND PACKET($1;${$vlPacket})
  End for
- $result:=String($sum;$format)
 ```
 
-The method's parameters must be passed in the correct order, first the format and then a variable number of values:
+Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste. A l’intérieur de la méthode, l’adressage par indirection se fait sous la forme : ${$i}, $i étant une variable numérique. ${$i} est appelé **paramètre générique**.
+
+Illustrons notre propos par un exemple : écrivons une fonction qui prend des valeurs, fait leur somme et renvoie cette somme formatée suivant un format qui peut varier avec les valeurs. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.
+
+Un appel à cette fonction se fera de la façon suivante :
 
 ```4d
- Result:=MySum("##0.00";125,2;33,5;24) //"182.70"
- Result:=MySum("000";1;2;200) //"203"
+ Résultat:=LaSomme("##0,00";125,2;33,5;24)
+
 ```
 
-Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. Par exemple :
+La méthode appelante récupérera dans ce cas la chaîne : 182,70, somme des nombres passés, formatée suivant le format spécifié. Les paramètres de la fonction doivent être passés dans un ordre précis : le format d’abord et ensuite les valeurs, dont le nombre peut varier d’un appel à l’autre.
+
+Examinons maintenant la fonction que nous appelons `LaSomme` :
+```4d
+ $Somme:=0
+ For($i;2;Nombre de paramètres)
+    $Somme:=$Somme+${$i}
+ End for
+ $0:=String($Somme;$1)
+```
+
+Cette fonction pourra être appelée de diverses manières :
 
 ```4d
-//foo method
-#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
-For($i;1;Count parameters)
-    ALERT("param "+String($i)+" = "+String(${$i}))
-End for
+ Résultat:=LaSomme("##0,00";125,2;33,5;24)
+ Résultat:=LaSomme("000";1;18;4;23;17)
 ```
 
-This method can be called:
+
+De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Pour déclarer ces paramètres, utilisez une directive de compilateur à laquelle vous passez ${N} comme paramètre, où N est le premier paramètre générique.
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+ C_LONGINT(${4})
 ```
 
-> Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste.
-
-
-### Déclaration des paramètres génériques
-
-De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
-
-To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
-
-```4d
- C_TEXT(${4})
-```
-
-> Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
-
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Les types de $1, $2 et $3 pourront être quelconques.
+La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type Entier long. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type Entier long, même si pour vous, par exemple, il était de type Réel.
 
 > The number in the declaration has to be a constant and not a variable.
 
 
-
-
-
-## Déclaration des paramètres pour le mode compilé
+### Déclaration des paramètres pour le mode compilé
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
@@ -289,7 +284,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 
-When using the [sequential variable syntax](#sequential-parameters), you need to make sure all parameters are properly declared. Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
+When using the sequential variable syntax, you need to make sure all parameters are properly declared. Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
 
 ```4d
   // Méthode projet ajoutCapitale
@@ -354,34 +349,6 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Wrong parameter type
-
-Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
-
-```4d
-// method1
-#DECLARE($value : Text)
-```
-
-```4d
-// method2
-method1(42) //wrong type, text expected
-```
-
-This case is handled by 4D depending on the context:
-
-- in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
-- in interpreted projects:
-    + if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-    + if the parameter was declared using the [sequential syntax](#sequential-parameters) (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
-
-
-
-
-
-## Variables d'entrée/de sortie
-
-Dans une sous-méthode, vous pouvez utiliser les paramètres $1, $2... comme n'importe quelle autre variable locale. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
 
 
 
@@ -444,6 +411,14 @@ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre code existant. Cela fonctionnera toujours dans l'ancienne version, mais le cas échéant, vous pouvez utiliser une autre valeur que 10 ans.
 
 Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dans l'exemple ci-dessus, tous les paramètres sont optionnels et peuvent être donnés, dans n'importe quel ordre.
+
+
+
+
+## Variables d'entrée/de sortie
+
+Dans une sous-méthode, vous pouvez utiliser les paramètres $1, $2... comme n'importe quelle autre variable locale. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
+
 
 
 

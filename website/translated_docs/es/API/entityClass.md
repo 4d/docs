@@ -955,7 +955,7 @@ The object returned by `.lock( )` contains the following properties:
 
 #### Ejemplo 1
 
-Example with error:
+Ejemplo con error:
 
 ```4d
  var $employee : cs.EmployeeEntity

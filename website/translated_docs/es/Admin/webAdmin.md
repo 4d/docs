@@ -1,6 +1,6 @@
 ---
 id: webAdmin
-title: Web Administration
+title: Administración Web
 ---
 
 
@@ -38,7 +38,7 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 > If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
 
 
-### Start and stop
+### Iniciar y detener
 
 If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
 
@@ -52,14 +52,14 @@ The menu item becomes **Stop Server** when the server is launched; select **Stop
 
 ## WebAdmin Settings
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed.
+Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via an url is not allowed.
 
 You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
 
 > If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
 
 
-### Settings dialog box
+### Caja de diálogo de parámetros
 
 To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
 
@@ -82,25 +82,25 @@ When this option is checked, you will be able to connect to the `WebAdmin` web s
 - Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
 
 
-#### HTTP Port
+#### Puerto HTTP
 
-Port number to use for connections through HTTP to the `WebAdmin` web server when the **Accept HTTP connections on localhost** option is checked. Default value is 7080.
+Port number to use for connections through HTTP to the `WebAdmin` web server when the **Accept HTTP connections on localhost** option is checked. El valor por defecto es 7080.
 
 
-#### Accept HTTPS
+#### Aceptar HTTPS
 
 When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked.
 
-#### HTTPS Port
+#### Puerto HTTPS
 
-Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. Default value is 7443.
+Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. El valor por defecto es 7443.
 
 
 #### Certificate folder path
 
 Path of the folder where the TLS certificate files are located. By default, the certificate folder path is empty and 4D or 4D Server uses the certificate files embedded in the 4D application (custom certificates must be stored next to the project folder).
 
-#### Debug log mode
+#### Modo de registro de depuración
 
 Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
 
@@ -112,7 +112,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
+Defining an access key is mandatory to unlock access to the `WebAdmin` web server through an URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through an URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
 
 ![alt-text](assets/en/Admin/accessKey.png)
 
@@ -131,7 +131,14 @@ When running a 4D or 4D Server application headless, you can set and use the def
 
 To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
 
-Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the [Command line interface](cli.md) to support this feature.
+Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the *Command Line Interface* to support this feature:
+
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Valor     | Descripción                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--webadmin-settings-file`                                                                                                                                                                   | File path | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                           |
+| `--webadmin-access-key`                                                                                                                                                                      | Cadena    | Access key for the WebAdmin web server                                                                                                                                                                                                                                                               |
+| `--webadmin-auto-start`                                                                                                                                                                      | Booleano  | Status of the automatic startup for the WebAdmin web server                                                                                                                                                                                                                                          |
+| `--webadmin-store-settings`                                                                                                                                                                  |           | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `WebAdmin.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary |
 
 > The access key is not stored in clear in the `.4DSettings` file.
 
@@ -147,7 +154,7 @@ Ejemplo:
 
 ## Authentication and Session
 
-- When a web management page is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
+- When a web management page is accessed by entering an URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
 
 - When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
 

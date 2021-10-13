@@ -8,16 +8,16 @@ title: Working with a project
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
-## Creating a project
+## Crear un proyecto
 
 New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
 
 To create a new project:
 
-1. Launch 4D or 4D Server.
+1. Lance 4D o 4D Server.
 2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>O<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**.<p> This name will be used:
+3. Enter the name of your project folder and click **Save**.<p> Este nombre se utilizará:
     - as the name of the entire project folder,
     - as the name of the .4DProject file at the first level of the "Project" folder.
 

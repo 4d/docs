@@ -10,9 +10,9 @@ Permet de définir une couleur d'arrière-plan différente pour les lignes / col
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                                               |
-| ------------- | --------------- | --------------------------------------------------------------- |
-| alternateFill | string          | any css value; "transparent"; "automatic"; "automaticAlternate" |
+| Nom           | Type de données | Valeurs possibles                          |
+| ------------- | --------------- | ------------------------------------------ |
+| alternateFill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
@@ -110,7 +110,6 @@ Contrôle l'affichage des lignes vides supplémentaires ajoutées au bas d'un ob
 Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de l'objet list box est alors laissé vide :
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
-
 
 #### Grammaire JSON
 

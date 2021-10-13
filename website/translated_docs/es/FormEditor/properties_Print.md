@@ -14,7 +14,7 @@ You can modify the following print settings:
 
 *   Formato del papel
 *   Orientación del papel
-*   Page scaling
+*   Escala de la página
 
 
 > Available options depend on the system configuration.

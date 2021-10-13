@@ -38,7 +38,7 @@ Radio [button styles](properties_TextAndPicture.md#button-style) control radio b
 4D provides radio buttons in the following predefined styles:
 
 
-### Regular
+### Clássico
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
@@ -56,7 +56,7 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
 
-### Toolbar
+### Barra de ferramentas
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 

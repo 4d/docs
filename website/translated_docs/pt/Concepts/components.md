@@ -192,7 +192,7 @@ SAVE RECORD($tablepointer->)
 
 A component cannot use the tables and fields defined in the 4D structure of the matrix project. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. An external database is a 4D project that is independent from the main 4D project, but that you can work with from the main 4D project. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
 
-### Example
+### Exemplo
 
 O código abaixo está incluído em um componente e realiza três ações básicas com um banco externo:
 

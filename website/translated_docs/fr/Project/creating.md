@@ -27,6 +27,7 @@ Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet e
 
 Vous pouvez alors commencer à développer votre projet.
 
+
 ## Opening a project
 
 To open an existing project from 4D:
@@ -36,7 +37,7 @@ To open an existing project from 4D:
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
     - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
-    - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+    - *Fichiers de raccourcis* : extension `.4dlink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
     - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D hérités
 
 ### Options
@@ -49,9 +50,12 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
+
+
+
 ## Raccourcis d’ouverture des projets
 
-4D offers several ways to open projects directly and bypass the Open dialog:
+4D propose deux façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
 - via les options du menu :
     -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
@@ -59,41 +63,6 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 
 - via les préférences :
     -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
-
-- using a `.4DLink` file.
-
-### Opening a Project with a 4DLink file
-
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. There are two ways to do this:
-
-- double-click or drag and drop the `.4DLink` file onto the 4D application
-- go to **File** > **Open Recent Projects** and select a project
-
-![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
-
-A .4DLink file of "remote project" type can be copied and used on several machines.
-> It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
-
-## About 4DLink Files
-
-Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
-
-`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
-
-4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
-
-- Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
-
-XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
-
-That folder is divided into two subfolders:
-- the **Local** folder contains the `.4DLink` files that can be used to open local projects
-- the **Remote** folder contains the `.4DLink` files of recent remote projects
-
-`.4DLink` files can also be created with an XML editor.
-
-4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 
 
 ## Enregistrement des fichiers
@@ -104,10 +73,8 @@ Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuven
 
 Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
-- si un fichier ouvert est en lecture seule dans le système d'exploitation, une icône verrouillée s'affiche dans l'éditeur : ![](assets/en/Project/lockicon.png)
-- si un fichier ouvert est édité simultanément à partir de différents emplacements, 4D affichera une boîte de dialogue d'alerte lorsque vous tenterez d'enregistrer les modifications :
-
-![](assets/en/Project/projectReload.png)
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
     - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
     - **Non** : enregistrer les modifications et écraser l'autre version
     - **Annuler** : ne pas enregistrer

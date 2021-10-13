@@ -58,7 +58,7 @@ Project development file, used to designate and launch the project. This file ca
 | folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
 | menus.json              | Definiciones de los menús                                                                                                                                                                                                                                                                                                                                                                                           | JSON    |
 | settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
-| tips.json               | Defined tips                                                                                                                                                                                                                                                                                                                                                                                                        | JSON    |
+| tips.json               | Mensajes de ayuda definidos                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
 | lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                                    | JSON    |
 | filters.json            | Filtros definidos                                                                                                                                                                                                                                                                                                                                                                                                   | JSON    |
 | styleSheets.css         | Hojas de estilo CSS                                                                                                                                                                                                                                                                                                                                                                                                 | CSS     |
@@ -66,17 +66,17 @@ Project development file, used to designate and launch the project. This file ca
 | styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                           | CSS     |
 
 
-#### DatabaseMethods folder
+#### Carpeta DatabaseMethods
 
-| Contenido                | Descripción                                                           | Formato |
-| ------------------------ | --------------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | texto   |
+| Contenido                | Descripción                                                         | Formato |
+| ------------------------ | ------------------------------------------------------------------- | ------- |
+| *databaseMethodName*.4dm | Database methods defined in the project. Un archivo por método base | texto   |
 
 #### Carpeta Methods
 
-| Contenido        | Descripción                                                 | Formato |
-| ---------------- | ----------------------------------------------------------- | ------- |
-| *methodName*.4dm | Project methods defined in the project. One file per method | texto   |
+| Contenido        | Descripción                                                   | Formato |
+| ---------------- | ------------------------------------------------------------- | ------- |
+| *methodName*.4dm | Project methods defined in the project. Un archivo por método | texto   |
 
 #### Carpeta Classes
 
@@ -85,38 +85,38 @@ Project development file, used to designate and launch the project. This file ca
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | texto   |
 
 
-#### Forms folder
+#### Carpeta Forms
 
-| Contenido                                 | Descripción                                | Formato |
-| ----------------------------------------- | ------------------------------------------ | ------- |
-| *formName*/form.4DForm                    | Project form description                   | json    |
-| *formName*/method.4dm                     | Project form method                        | texto   |
-| *formName*/Images/*pictureName*           | Project form static picture                | imagen  |
-| *formName*/ObjectMethods/*objectName*.4dm | Métodos objeto. One file per object method | texto   |
+| Contenido                                 | Descripción                                  | Formato |
+| ----------------------------------------- | -------------------------------------------- | ------- |
+| *formName*/form.4DForm                    | Project form description                     | json    |
+| *formName*/method.4dm                     | Método formulario proyecto                   | texto   |
+| *formName*/Images/*pictureName*           | Project form static picture                  | imagen  |
+| *formName*/ObjectMethods/*objectName*.4dm | Métodos objeto. Un archivo por método objeto | texto   |
 
 #### Carpeta TableForms
 
-| Contenido                                            | Descripción                                            | Formato |
-| ---------------------------------------------------- | ------------------------------------------------------ | ------- |
-| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | imagen  |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                | texto   |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | texto   |
-| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json    |
-| *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | imagen  |
-| *n*/Output/*formName*/method.4dm                     | Output table form method                               | texto   |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | texto   |
+| Contenido                                            | Descripción                                              | Formato |
+| ---------------------------------------------------- | -------------------------------------------------------- | ------- |
+| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)     | json    |
+| *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                         | imagen  |
+| *n*/Input/*formName*/method.4dm                      | Método del formulario de entrada de la tabla             | texto   |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. Un archivo por método objeto  | texto   |
+| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)    | json    |
+| *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                        | imagen  |
+| *n*/Output/*formName*/method.4dm                     | Output table form method                                 | texto   |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. Un archivo por método objeto | texto   |
 
 #### Carpeta Triggers
 
-| Contenido     | Descripción                                                                                | Formato |
-| ------------- | ------------------------------------------------------------------------------------------ | ------- |
-| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | texto   |
+| Contenido     | Descripción                                                                                          | Formato |
+| ------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+| table_*n*.4dm | Trigger methods defined in the project. Un archivo de activación por tabla (n es el número de tabla) | texto   |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
 
-### Trash folder
+### Carpeta Trash
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
@@ -174,7 +174,7 @@ This folder contains **user settings files for data** used for application admin
 The Logs folder contains all log files used by the project. Log files include, in particular:
 
 - database conversion,
-- web server requests,
+- peticiones del servidor web,
 - backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
 - depuración de comandos,
 - 4D Server requests (generated on client machines and on the server).
@@ -205,7 +205,7 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 | formWindowPositions.json   | Current user window positions for forms                   | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows    | JSON    |
 | debuggerCatches.json       | Caught calls to commands                                  | JSON    |
-| recentTables.json          | Ordered list of tables                                    | JSON    |
+| recentTables.json          | Lista ordenada de tablas                                  | JSON    |
 | preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal | XML     |
 
 

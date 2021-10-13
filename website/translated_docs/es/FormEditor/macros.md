@@ -1,6 +1,6 @@
 ---
 id: macros
-title: Form Editor Macros
+title: Macros del editor de formularios
 ---
 
 
@@ -9,8 +9,8 @@ The 4D Form editor supports macros. A macro is a set of instructions to perform 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
 *   Create and execute 4D code
-*   Display dialogs
-*   Select form objects
+*   Mostrar las cajas de diálogo
+*   Seleccione los objetos de formulario
 *   Add / delete / modify forms, form objects as well as their properties
 *   Modify project files (update, delete)
 
@@ -151,7 +151,7 @@ Macros are instantiated at application startup. Consequently, if you modify the 
 
 
 
-## Macro Functions
+## Funciones macro
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 
@@ -187,7 +187,7 @@ In the `formMacros.json` file:
 }
 ```
 
-You can write:
+Puede escribir:
 
 ```code4d  
 // Class "AlignOnTarget"
@@ -203,7 +203,7 @@ Class constructor($macro : Object)
 
 | Parámetros | Tipo   | Descripción                                      |
 | ---------- | ------ | ------------------------------------------------ |
-| $editor    | Objeto | Form properties                                  |
+| $editor    | Objeto | Propiedades del formulario                       |
 | $result    | Objeto | Form properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
@@ -216,9 +216,9 @@ Here are the properties of the `$editor` object:
 
 | Propiedad                 | Tipo       | Descripción                                                                       |
 | ------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.form              | Objeto     | The entire form                                                                   |
+| $editor.form              | Objeto     | Formulario completo                                                               |
 | $editor.file              | File       | File object of the form file                                                      |
-| $editor.name              | Cadena     | Name of the form                                                                  |
+| $editor.name              | Cadena     | Nombre del formulario                                                             |
 | $editor.table             | number     | Table number of the form, 0 for project form                                      |
 | $editor.currentPageNumber | number     | The number of the current page                                                    |
 | $editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
@@ -235,7 +235,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | formProperties    | Objeto     | formProperties if modified by the macro                     |
 | editor.groups     | Objeto     | group info, if groups are modified by the macro             |
 | editor.views      | Objeto     | view info, if views are modified by the macro               |
-| editor.activeView | Cadena     | Active view name                                            |
+| editor.activeView | Cadena     | Nombres de vistas activos                                   |
 
 
 
@@ -255,13 +255,13 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
-#### `$4dId` property in `currentPage.objects`
+#### Propiedad `$4dId` en `currentPage.objects`
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+La propiedad `$4dId` define un ID único para cada objeto de la página actual. Esta clave es utilizada por el procesador de macros para controlar los cambios en `$result.currentPage`:
 
-- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
-- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+- si la llave `$4dId` falta tanto en el formulario y en un objeto en `$result`, el objeto se crea.
+- si la llave `$4dId` existe en el formulario pero falta en `$result`, el objeto se elimina.
+- si la llave `$4dId` existe tanto en el formulario y en un objeto en `$result`, el objeto se modifica.
 
 
 #### Ejemplo
@@ -284,7 +284,7 @@ Function onInvoke($editor : Object)->$result : Object
         ALERT("Please select a form object.")
     End if 
 
-    // Notify to 4D the modification
+    // Notificar la modificación a 4D
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 

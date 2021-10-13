@@ -9,7 +9,7 @@ This section describes the built-in 4D class API as well as the associated const
 
 - properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
 
-## Writing conventions
+## Convenciones de escritura
 
 The following conventions are used in the function syntax:
 

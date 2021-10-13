@@ -50,7 +50,7 @@ Los valores de entrada y salida son [evaluados](#values-or-references) en el mom
 - [variables numeradas secuencialmente](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Por ejemplo:
+Las sintaxis de variables [nombre](#named-parameters) y [secuencial](#sequential-parameters) se pueden mezclar sin restricción para declarar parámetros. Por ejemplo:
 
 ```4d
 ```4d

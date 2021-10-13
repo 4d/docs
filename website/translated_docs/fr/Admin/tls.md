@@ -37,7 +37,7 @@ You can control the level of security of your web server by defining the [minimu
 ## How to get a certificate?
 
 A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Les navigateurs Web autorisent uniquement les certificats émis par une autorité de certification référencée dans leurs propriétés.
+> Wes browsers authorize only the certificates issued by a certification authority referenced in their properties.
 
 ![](assets/en/WebServer/tls2.png)
 
@@ -61,31 +61,15 @@ The 4D server can now work in a secured mode. A certificate is valid between 3 m
 
 ## Installation et activation
 
-### Installer des fichiers `key.pem` et `cert.pem`
+### `key.pem` and `cert.pem` files
 
-Pour pouvoir utiliser le protocole TLS avec le serveur, vous devez installer **key.pem** (document contenant la clé de chiffrement privée) et **cert.pem** (document contenant le certificat) au(x) emplacement(s) approprié(s). Différents emplacements sont nécessaires en fonction du serveur sur lequel vous souhaitez utiliser TLS.
-> Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+To be able to use the TLS protocol with the server, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location:
 
-#### Avec le serveur Web
-
-Pour être utilisés par le serveur web de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés :
-
-- avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder)
-- avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
+- with 4D in local mode or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder)
+- with 4D in remote mode, these files must be located in the client database folder on the remote machine (for more information about the location of this folder, see the `Get 4D folder` command).
 
 You must copy these files manually on the remote machine.
-
-#### Avec le serveur d'applications (applications de bureau client-serveur)
-
-Pour être utilisés par le serveur d'applications de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés :
-
-- dans le dossier [**Resources**](Project/architecture.md#resources) de l'application 4D Server
-- et dans le dossier **Resources** de chaque application 4D distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
-
-#### Avec le serveur SQL
-
-Pour être utilisés par le serveur SQL de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés à côté du [dossier du projet](Project/architecture.md#project-folder).
-
+> Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
 
 ### Enabling TLS
 
@@ -95,7 +79,7 @@ The installation of **key.pem** and **cert.pem** files makes it possible to use 
 - With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
 - With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box.
 
-> Le serveur web 4D prend également en charge l'[option HSTS](WebServer/webServerConfig.md#enable-hsts) pour déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS. sécurisées.
+> The 4D web server also supports HSTS option to prevent a browser from
 
 ## Perfect Forward Secrecy (PFS)
 

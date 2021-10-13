@@ -155,7 +155,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | contraseña  | Text    | User password                                                                                                                                                                                                                                                          |
 | idleTimeout | Longint | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
 | tls         | Boolean | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Text    | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| type        | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                   |
 
 (*) If tls is true, the HTTPS protocol is used if:
 

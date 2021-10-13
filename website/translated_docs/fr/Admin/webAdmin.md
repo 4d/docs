@@ -52,7 +52,7 @@ The menu item becomes **Stop Server** when the server is launched; select **Stop
 
 ## WebAdmin Settings
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed.
+Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via an url is not allowed.
 
 You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
 
@@ -112,7 +112,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
+Defining an access key is mandatory to unlock access to the `WebAdmin` web server through an URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through an URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
 
 ![alt-text](assets/en/Admin/accessKey.png)
 
@@ -131,7 +131,14 @@ When running a 4D or 4D Server application headless, you can set and use the def
 
 To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
 
-Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
+Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the *Command Line Interface* to support this feature:
+
+| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Valeur    | Description                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--webadmin-settings-file`                                                                                                                                                                   | File path | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                           |
+| `--webadmin-access-key`                                                                                                                                                                      | Chaine    | Access key for the WebAdmin web server                                                                                                                                                                                                                                                               |
+| `--webadmin-auto-start`                                                                                                                                                                      | Booléen   | Status of the automatic startup for the WebAdmin web server                                                                                                                                                                                                                                          |
+| `--webadmin-store-settings`                                                                                                                                                                  |           | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `WebAdmin.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary |
 
 > The access key is not stored in clear in the `.4DSettings` file.
 
@@ -147,7 +154,7 @@ Exemple :
 
 ## Authentication and Session
 
-- When a web management page is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
+- When a web management page is accessed by entering an URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
 
 - When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
 

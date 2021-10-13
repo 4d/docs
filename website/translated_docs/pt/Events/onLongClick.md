@@ -14,7 +14,7 @@ This event is generated when a button receives a click and the mouse button is h
 
 This event can be generated for the following button styles:
 
-- [Toolbar](FormObjects/button_overview.md#toolbar)
+- [Barra de ferramentas](FormObjects/button_overview.md#toolbar)
 - [Bevel](FormObjects/button_overview.md#bevel)
 - [Rounded Bevel](FormObjects/button_overview.md#rounded-bevel)
 - [OS X Gradient](FormObjects/button_overview.md#os-x-gradient)

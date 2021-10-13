@@ -37,24 +37,24 @@ title: ドキュメンテーション
 
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
-- `Documentation`
-    + `Classes`
+- **Documentation**
+    + **Classes**
         * myClass.md
-    + `DatabaseMethods`
+    + **DatabaseMethods**
         * onStartup.md
         * ...
-    + `Forms`
+    + **Forms**
         * loginDial.md
         * ...
-    + `Methods`
+    + **Methods**
         * myMethod.md
         * ...
-    + `TableForms`
+    + **TableForms**
         * **1**
             - input.md
             - ...
         * ...
-    + `Triggers`
+    + **Triggers**
         * table1.md
         * ...
 

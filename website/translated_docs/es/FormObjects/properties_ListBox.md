@@ -22,7 +22,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 ## Nombre formulario detallado
-`Selection type list box`
+`List box del tipo selección`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
 
@@ -48,7 +48,7 @@ The specified form is displayed:
 
 ---
 ## Doble clic en línea
-`Selection type list box`
+`List box del tipo selección`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
 
@@ -77,7 +77,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## Conjunto resaltado
 
-`Selection type list box`
+`List box del tipo selección`
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
@@ -87,9 +87,9 @@ This property is used to specify the set to be used to manage highlighted record
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles |
-| ------------ | -------------- | ---------------- |
-| highlightSet | cadena         | Name of the set  |
+| Nombre       | Tipos de datos | Valores posibles    |
+| ------------ | -------------- | ------------------- |
+| highlightSet | cadena         | Nombre del conjunto |
 
 #### Objetos soportados
 
@@ -164,7 +164,7 @@ Sets the number of columns of the list box.
 
 | Nombre      | Tipos de datos | Valores posibles |
 | ----------- | -------------- | ---------------- |
-| columnCount | integer        | minimum: 1       |
+| columnCount | integer        | mínimo: 1        |
 
 #### Objetos soportados
 
@@ -184,11 +184,11 @@ You can set the "hidden", "disabled" and "selectable" interface properties for e
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
-| Constante                | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
-| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                        |
+| Constante                | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Valor por defecto: Activado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Valor por defecto: Visible |
+| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                            |
 
 To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
 
@@ -218,9 +218,9 @@ Note that setting properties for an element overrides any other values for this 
 
 #### Gramática JSON
 
-| Nombre           | Tipos de datos | Valores posibles       |
-| ---------------- | -------------- | ---------------------- |
-| rowControlSource | cadena         | Row control array name |
+| Nombre           | Tipos de datos | Valores posibles                      |
+| ---------------- | -------------- | ------------------------------------- |
+| rowControlSource | cadena         | Nombre del array de control de líneas |
 
 #### Objetos soportados
 

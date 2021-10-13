@@ -23,7 +23,7 @@ All parameters must be passed in **headers** of a POST method:
 | session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
 
 
-### Example
+### Exemplo
 
 ```4d
 C_TEXT($response;$body_t)

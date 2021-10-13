@@ -61,22 +61,22 @@ var $myVar // バリアント型変数
 
 サポートされている `varType` 値の一覧です:
 
-| varType                | 内容                           |
-| ---------------------- | ---------------------------- |
-| `Text`                 | テキスト値                        |
-| `Date`                 | 日付値                          |
-| `Time`                 | 時間値                          |
-| `Boolean`              | ブール値                         |
-| `Integer`              | 倍長整数値                        |
-| `Real`                 | 実数値                          |
-| `Pointer`              | ポインター値                       |
-| `Picture`              | ピクチャー値                       |
-| `BLOB`                 | BLOB値                        |
-| `Collection`           | コレクション値                      |
-| `Variant`              | バリアント値                       |
-| `Object`               | デフォルトクラス (4D.Object) のオブジェクト |
-| `4D.<className>` | 4Dクラス名のオブジェクト                |
-| `cs.<className>` | ユーザークラス名のオブジェクト              |
+| varType        | 内容                           |
+| -------------- | ---------------------------- |
+| Text           | テキスト値                        |
+| Date           | 日付値                          |
+| Time           | 時間値                          |
+| Boolean        | ブール値                         |
+| Integer        | 倍長整数値                        |
+| Real           | 実数値                          |
+| Pointer        | ポインター値                       |
+| Picture        | ピクチャー値                       |
+| Blob           | BLOB値                        |
+| Collection     | コレクション値                      |
+| Variant        | バリアント値                       |
+| Object         | デフォルトクラス (4D.Object) のオブジェクト |
+| 4D.*className* | 4Dクラス名のオブジェクト                |
+| cs.*className* | ユーザークラス名のオブジェクト              |
 
 #### 例題
 

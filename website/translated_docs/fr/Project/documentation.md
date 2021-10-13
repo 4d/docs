@@ -37,24 +37,24 @@ Tous les fichiers de documentation sont stockés dans le dossier `Documentation`
 
 L'architecture du dossier `Documentation` est la suivante :
 
-- `Documentation`
-    + `Classes`
+- **Documentation**
+    + **Classes**
         * myClass.md
-    + `DatabaseMethods`
+    + **DatabaseMethods**
         * onStartup.md
         * ...
-    + `Formulaires`
+    + **Formulaires**
         * loginDial.md
         * ...
-    + `Méthodes`
+    + **Méthodes**
         * myMethod.md
         * ...
-    + `TableForms`
+    + **TableForms**
         * **1**
             - input.md
             - ...
         * ...
-    + `Triggers`
+    + **Triggers**
         * table1.md
         * ...
 

@@ -37,7 +37,7 @@ Para passar um BLOB a seus próprios métodos, pode também definir um ponteiro 
 
 Pode atribuir BLOBS um para o outro.
 
-**Example:**
+**Exemplo:**
 ```4d
   ` Declare two variables of type BLOB
  C_BLOB(vBlobA;vBlobB)
@@ -51,7 +51,7 @@ Entretanto, nenhum operador pode ser aplicado aos BLOBs.
 
 ## Addressing BLOB contents
 
-Cada byte de um BLOB pode ser dirigido individualmente utilizando os símbolos de colchetes {...}. Dentro de um BLOB, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB. Example:
+Cada byte de um BLOB pode ser dirigido individualmente utilizando os símbolos de colchetes {...}. Dentro de um BLOB, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB. Exemplo:
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(vBlob)

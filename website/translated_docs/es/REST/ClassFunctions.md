@@ -20,16 +20,16 @@ $city:=ds.City.getCity("Aguada")
 
 > Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
-## Function calls
+## Llamadas de las funciones
 
 Functions must always be called using REST **POST** requests (a GET request will receive an error).
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Sintaxis                                                                    |
+| Función de clase                                                   | Sintaxis                                                                    |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
 | [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
@@ -336,7 +336,7 @@ You run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Cuerpo de la petición:
 
 ```
 [{
@@ -375,7 +375,7 @@ You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Cuerpo de la petición:
 ```
 [{
 "__DATACLASS":"Students",
@@ -412,7 +412,7 @@ You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Cuerpo de la petición:
 ```
 [{
 "__DATACLASS":"Students",
@@ -490,7 +490,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### Receiving an entity selection as parameter
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). En realidad, actualiza el atributo *finalExam* con el valor recibido ($2). It returns the primary keys of the updated entities.
 
 ```
 // Students class
@@ -531,7 +531,7 @@ Then you can run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Body of the request:
+Cuerpo de la petición:
 
 ```
 [

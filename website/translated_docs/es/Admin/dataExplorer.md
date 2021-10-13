@@ -3,22 +3,22 @@ id: dataExplorer
 title: Explorador de datos Web
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.
+> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
 
 
-The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any step of the development process.
+The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any steps of the development process.
 
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
 
-## Access Configuration
+## Configuración
 
 The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
 
 - **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
 - **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
 
-> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) function.
+> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
 
 
 ## Opening the Data Explorer
@@ -58,7 +58,7 @@ The Data Explorer supports the following web browsers:
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
 
-### Basics
+### Básicos
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 
@@ -103,7 +103,7 @@ You can reorder the displayed entity list according to attribute values. All typ
 - You can sort attributes on several levels. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
 
 
-### Query on attributes
+### Consultas basadas en atributos
 
 In this mode, you can filter entities by entering values to find (or to exclude) in the areas above the attribute list. You can filter on one or several attributes. The entity list is automatically updated when you type in.
 
@@ -148,7 +148,7 @@ The filter is of the "starts with" type. For example, entering "Jim" will show "
 
 You can also use the wildcard character (@) to replace one or more starting characters. Por ejemplo:
 
-| A filter with | Finds                                              |
+| Un filtro con | Finds                                              |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | Todos los valores que contienen "do"               |
@@ -169,7 +169,7 @@ You can enter advanced queries that are not available as attribute queries. For 
 firstname=="Jim"
 ```
 
-You can use any ORDA query expression as [documented with the `query()` function](API/DataClassClass.md#query), with the following limitations or differences:
+You can use any ORDA query expression as [documented with the `query()` function](API/dataclassClass.md#query), with the following limitations or differences:
 
 - For security, you cannot execute formulas using `eval()`.
 - Placeholders cannot be used; you have to write a *queryString* with values.
@@ -181,7 +181,7 @@ For example, with the Employee dataclass, you can write:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/DataClassClass.md#queryplan) and [`queryPath`](API/DataClassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
+You can click on the `v` icon to display both [`queryPlan`](API/dataclassClass.md#queryplan) and [`queryPath`](API/dataclassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
 
 ![alt-text](assets/en/Admin/dataExplorer12.png)
 

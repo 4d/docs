@@ -5,23 +5,6 @@ title: Form Properties
 
 ---
 
-## Color Scheme
-> Color scheme property is only applied on macOS.
-
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
-
-*   dark - light text on a dark background
-*   light - dark text on a light background
-> A defined color scheme can not be overridden by a CSS.
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
-
----
-
 ## Pages
 
 Each form has is made of at least two pages:
@@ -129,7 +112,7 @@ Only project forms can be specified as published subforms.
 
 | Name   | Data Type | Possible Values |
 | ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
+| shared | booleano  | true, false     |
 
 
 ---
@@ -148,7 +131,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 | Name             | Data Type | Possible Values |
 | ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
+| memorizeGeometry | booleano  | true, false     |
 
 #### See also
 [**Save Value**](FormObjects/properties_Object.md#save-value)

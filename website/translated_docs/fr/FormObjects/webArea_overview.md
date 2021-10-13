@@ -27,15 +27,17 @@ Vous pouvez choisir entre [deux moteurs de rendus](properties_WebArea.md#use-emb
 Le moteur de rendu Web vous permet d'appeler des méthodes 4D à partir de la zone web.
 
 ### Accéder aux méthodes 4D
-
 Lorsque la propriété [Accès méthodes 4D](properties_WebArea.md#access-4d-methods) est cochée, vous pouvez appeler des méthodes 4D à partir d'une zone web.
 
-> This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> Cette propriété n'est disponible que si la zone web [utilise le moteur de rendu web intégré](#use-embedded-web-rendering-engine).
 
 ### Objet $4d
 
 
-The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+
+
+
+Le [moteur de rendu Web intégré 4D](#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
@@ -58,7 +60,6 @@ $4d.4DMethodName(param1,paramN,function(result){})
 > Par défaut, 4D opère en UTF-8. Lorsque vous retournez du texte contenant des caractères étendus, tels que des caractères avec des accents, assurez-vous que l'encodage de la page affiché dans la zone Web est déclaré en UTF-8, sinon les caractères risquent de ne pas être retournés correctement. Dans ce cas, ajoutez la ligne suivante dans la page HTML pour déclarer l'encodage : `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemple 1
-
 Considérons une méthode projet 4D nommée `today` qui ne reçoit pas de paramètres et qui retourne la date courante dans une chaîne.
 
 Code 4D de la méthode `today` :
@@ -130,20 +131,20 @@ Quatre actions standard sont disponibles pour gérer automatiquement les zones W
 
 Des événements formulaire spécifiques sont destinés à la gestion programmée des zones web, concernant notamment l'activation des liens :
 
-- [`On Begin URL Loading`](Events/onBeginUrlLoading.md)
-- [`On URL Resource Loading`](Events/onUrlResourceLoading.md)
-- [`On End URL Loading`](Events/onEndUrlLoading.md)
-- [`On URL Loading Error`](Events/onUrlLoadingError.md)
-- [`On URL Filtering`](Events/onUrlFiltering.md)
-- [`On Open External Link`](Events/onOpenExternalLink.md)
-- [`On Window Opening Denied`](Events/onWindowOpeningDenied.md)
+- `On Begin URL Loading`
+- `On URL Resource Loading`
+- `On End URL Loading`
+- `On URL Loading Error`
+- `On URL Filtering`
+- `On Open External Link`
+- `On Window Opening Denied`
 
 En outre, les zones web prennent en charge les événements formulaire génériques suivants :
 
-- [`On Load`](Events/onLoad.md)
-- [`On Unload`](Events/onUnload.md)
-- [`On Getting Focus`](Events/onGettingFocus.md)
-- [`On Losing Focus`](Events/onLosingFocus.md)
+- `On Load`
+- `On Unload`
+- `On Getting Focus`
+- `On Losing Focus`
 
 
 ## Notes d'utilisation des zones Web
@@ -157,7 +158,6 @@ Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’
 - **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone web ou entre une zone web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). La possibilité de déposer des URL ou des fichiers dans la zone web doit être explicitement autorisée à l'aide de la commande `WA SET PREFERENCE`.
 
 ### Sous-formulaires
-
 Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insertion d'une zone web dans un sous-formulaire est soumise aux contraintes suivantes :
 
 - Le sous-formulaire ne doit pas pouvoir défiler,
@@ -167,19 +167,19 @@ Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insert
 
 
 ### Conflit Zone Web et serveur Web (Windows)
-
 Sous Windows, il est déconseillé d’accéder via une zone web au serveur Web de l’application 4D contenant la zone car cette configuration peut provoquer un conflit paralysant l’application. Bien entendu, un 4D distant peut accéder au serveur Web du 4D Server, mais pas à son propre serveur web.
+
+### Plugins Web et applets Java
+(*) L'usage de plugins web et d'applets Java est toutefois déconseillé dans les zones web car ils peuvent déstabiliser une opération menée par 4D, notamment au niveau de la gestion d'événement.
 
 ### Insertion du protocole (macOS)
 Les URLs manipulés par programmation dans les zones web sous macOS doivent débuter par le protocole. Par exemple, vous devez passer la chaîne "http://www.monsite.fr" et non uniquement "www.monsite.fr".
 
 
 ## Accès à l’inspecteur web
-
 Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos formulaires ou dans les zones web hors écran. L’inspecteur web est un débogueur, proposé par le moteur de rendu Web intégré. Il permet d’analyser le code et les flux d’information des pages web.
 
 ### Afficher l’inspecteur web
-
 Pour afficher l'inspecteur web, vous pouvez soit exécuter la commande `WA OPEN WEB INSPECTOR`, soit utiliser le menu contextuel de la zone web.
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br> This command can be used directly with onscreen (form object) and offscreen web areas. Dans le cas d'une zone web hors écran, [le moteur de rendu web intégré doit être sélectionné](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone (l’inspecteur web n’est disponible que dans cette configuration).
@@ -196,7 +196,6 @@ Pour afficher l'inspecteur web, vous pouvez soit exécuter la commande `WA OPEN 
 Pour plus d'informations, reportez-vous à la description de la commande `WA SET PREFERENCE`.
 
 ### Utilisation de l’Inspecteur web
-
 Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de nouvelles options telles que **Inspect Element** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone web est alors affiché.
 
 > L’inspecteur web est inclus dans le moteur de rendu web intégré. Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu web utilisé.

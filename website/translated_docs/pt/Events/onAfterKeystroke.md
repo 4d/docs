@@ -7,11 +7,11 @@ title: On After Keystroke
 | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character. |
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes                                                                                                          |
-| ------- | ---------------------------------------------------------------------------------------------------------------- |
-| v18 R5  | - Support in non-enterable list boxes<p>- The event is now triggered after IME validation |
+| Versão | Mudanças                                                                                                         |
+| ------ | ---------------------------------------------------------------------------------------------------------------- |
+| v18 R5 | - Support in non-enterable list boxes<p>- The event is now triggered after IME validation |
 </details>
 
 

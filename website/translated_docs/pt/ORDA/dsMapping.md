@@ -200,19 +200,16 @@ The entity properties are however enumerable:
 
 An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
-Example:
+Exemplo:
 
 ```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
 $e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
 ```
 
-Entity selections can be:
+Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
 
-- "shareable" or "non-shareable",
-- "sorted" or "unsorted".
-
-These points are discussed below.
+> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
 
 The entity selection object itself cannot be copied as an object:
 

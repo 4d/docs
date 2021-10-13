@@ -13,7 +13,7 @@ Returns the distinct values for a specific attribute in a collection (*e.g.*, `C
 
 You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate the selection before it's placed in an array.
 
-## Example
+## Exemplo
 In our example below, we want to retrieve the distinct values for a company name starting with the letter "a":
 
  `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`

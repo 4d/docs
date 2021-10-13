@@ -1,12 +1,12 @@
 ---
 id: dsmapping
-title: Data Model Objects
+title: Objeto del modelo de datos
 ---
 
 The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
 
 
-## Structure mapping
+## Cartografía de la estructura
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
@@ -40,7 +40,7 @@ This option must be selected at the 4D structure level for each table and each f
 ![](assets/en/ORDA/ExposeDataclass.png)
 
 
-### Data model update
+### Actualización del modelo de datos
 
 Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
 
@@ -77,7 +77,7 @@ A datastore references only a single local or remote database.
 The datastore object itself cannot be copied as an object:
 
 ```4d 
-$mydatastore:=OB Copy(ds) //returns null
+$mydatastore:=OB Copy(ds) //devuelve null
 ```
 
 
@@ -104,7 +104,7 @@ For example, consider the following table in the 4D structure:
 
 ![](assets/en/ORDA/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
+The `Company` table is automatically available as a dataclass in the `ds` datastore. Puede escribir:
 
 ```4d 
 var $compClass : cs.Company //declares a $compClass object variable of the Company class
@@ -114,14 +114,14 @@ $compClass:=ds.Company //assigns the Company dataclass reference to $compClass
 A dataclass object can contain:
 
 *   attributes
-*   relation attributes
+*   atributos relacionales
 
 The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
 
 The dataclass object itself cannot be copied as an object:
 
 ```4d 
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds.Employee) //devuelve null
 ```
 
 The dataclass properties are however enumerable:
@@ -207,12 +207,9 @@ var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSel
 $e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
 ```
 
-Entity selections can be:
+Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
 
-- "compartible" o "no compartible",
-- " ordenadas" o "no ordenadas".
-
-These points are discussed below.
+> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
 
 The entity selection object itself cannot be copied as an object:
 

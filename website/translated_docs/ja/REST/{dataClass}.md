@@ -16,7 +16,7 @@ title:
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
 | [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
+| [**{dataClass}/{dataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
 | [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
 | [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Entityクラス関数を実行します                        |
 
@@ -163,7 +163,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-返されるデータについての詳細は [{DataClass}](#dataclass) を参照ください。
+返されるデータについての詳細は [{dataClass}](#dataclass) を参照ください。
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 

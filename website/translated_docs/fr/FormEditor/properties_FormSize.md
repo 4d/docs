@@ -82,7 +82,7 @@ Cette valeur détermine également les marges droites des formulaires utilisés 
 
 
 
-## Marge hor.
+## Marge ver.
 
 Valeur à ajouter (en pixels) à la marge inférieure du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou **\<object name>**. 
 

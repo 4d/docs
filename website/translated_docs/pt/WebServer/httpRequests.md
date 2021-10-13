@@ -24,7 +24,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
-### Syntax
+### Sintaxe
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
@@ -35,7 +35,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $3         | Texto | <- | IP address of the web client (browser)       |
 | $4         | Texto | <- | IP address of the server                     |
 | $5         | Texto | <- | User name                                    |
-| $6         | Texto | <- | Password                                     |
+| $6         | Texto | <- | Senha                                        |
 
 
 You must declare these parameters as shown below:
@@ -130,7 +130,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Exemplo
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -172,7 +172,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Exemplo
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 

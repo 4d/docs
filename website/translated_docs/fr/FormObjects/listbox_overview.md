@@ -527,24 +527,24 @@ By default, a list box automatically handles standard column sorts when the head
 
 You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
 
-Le développeur peut mettre en place des tris personnalisés à l'aide de la commande `LISTBOX SORT COLUMNS` et/ou en combinant les événements formulaire `On Header Click` et `On After Sort` (voir la commande [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html)) et les commandes 4D correspondantes.
+The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
 
-> La propriété [Sortable](properties_Action.md#sortable) affecte uniquement les tris utilisateur standard ; la commande [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) ne prend pas en compte cette propriété.
+> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
-- Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.  
+- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
   ![](assets/en/FormObjects/sorticon0.png)
 
-- Si la variable est définie sur 1, la colonne est triée par ordre croissant et la flèche de tri s'affiche. ![](assets/en/FormObjects/sorticon1.png)
+- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
+  ![](assets/en/FormObjects/sorticon1.png)
 
-- Si la variable est définie sur 2, la colonne est triée par ordre décroissant et la flèche de tri s'affiche. ![](assets/en/FormObjects/sorticon2.png)
+- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
+  ![](assets/en/FormObjects/sorticon2.png)
 
-> Seules les [variables](Concepts/variables.md) déclarées ou dynamiques peuvent être utilisées comme variables d'en-tête de colonne. Les autres types d'[expressions](Concepts/quick-tour.md#expressions) telles que `Form.sortValue` ne sont pas pris en charge.
+You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
 
-Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. The column sort itself is not modified in this case; it is up to the developer to handle it.
-
-> Seules les [list box de type tableau](#array-list-boxes) peuvent être hiérarchiques.
+> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display

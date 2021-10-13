@@ -10,9 +10,9 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                 |
-| ------------- | --------- | --------------------------------------------------------------- |
-| alternateFill | string    | any css value; "transparent"; "automatic"; "automaticAlternate" |
+| Name          | Data Type | Possible Values                           |
+| ------------- | --------- | ----------------------------------------- |
+| alternateFill | string    | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -111,12 +111,11 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
-
 #### JSON Grammar
 
 | Name               | Data Type | Possible Values |
 | ------------------ | --------- | --------------- |
-| hideExtraBlankRows | boolean   | true, false     |
+| hideExtraBlankRows | booleano  | true, false     |
 
 #### Objects Supported
 

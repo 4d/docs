@@ -28,8 +28,8 @@ $city:=ds.City.getCity("Aguada")
 
 | クラス関数                                                          | シンタックス                                                                      |
 | -------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/datastoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
 | [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
 |                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
 |                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |

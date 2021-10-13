@@ -71,7 +71,7 @@ title: 入力
 
 #### 対象オブジェクト
 
-[4D Write Pro エリア](writeProArea_overview.md) - [チェックボックス](checkbox_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 ---
@@ -130,8 +130,6 @@ title: 入力
 
 #### 対象オブジェクト
 
-[チェックボックス](checkbox_overview.md) -
-
 コンボボックス - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)</p> 
 
 
@@ -153,9 +151,7 @@ title: 入力
 
 > [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。 
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス
-<p>
-<p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス <p> <p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>選択されているが、フォーカスを表示していないチェックボックス
 

@@ -15,7 +15,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Name       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| spellcheck | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -67,11 +67,11 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Name      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+| enterable | booleano  | true, false     |
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 
 ---
@@ -130,7 +130,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Objects Supported
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -145,9 +145,7 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
-<p>
-<p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected <p> <p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
 
@@ -159,7 +157,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 | Name      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
-| focusable | boolean   | true, false     |
+| focusable | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -219,7 +217,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 
@@ -273,7 +271,7 @@ This property keeps the selection visible within the object after it has lost th
 
 | Name          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
-| showSelection | boolean   | true, false     |
+| showSelection | booleano  | true, false     |
 
 
 #### Objects Supported
@@ -299,11 +297,11 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 | Name            | Data Type | Possible Values                                                                                                                                                                                                                                                                             |
 | --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean   | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean   | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean   | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutAccel   | booleano  | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | booleano  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | booleano  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | booleano  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | booleano  | true, false                                                                                                                                                                                                                                                                                 |
 |                 |           |                                                                                                                                                                                                                                                                                             |
 | shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
@@ -329,7 +327,7 @@ When this option is not enabled, users must first select the cell row and then c
 
 | Name            | Data Type | Possible Values |
 | --------------- | --------- | --------------- |
-| singleClickEdit | boolean   | true, false     |
+| singleClickEdit | booleano  | true, false     |
 
 #### Objects Supported
 

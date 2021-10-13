@@ -22,9 +22,9 @@ Documentation is displayed in the preview area (right-side panel) of the Explore
 It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
 
-## Documentation files
+## Archivos documentación
 
-### Documentation file name
+### Nombre del archivo de documentación
 
 Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
@@ -37,24 +37,24 @@ All documentation files are stored in the `Documentation` folder, located at the
 
 The `Documentation` folder architecture is the following:
 
-- `Documentation`
-    + `Clases`
+- **Documentation**
+    + **Clases**
         * myClass.md
-    + `DatabaseMethods`
+    + **DatabaseMethods**
         * onStartup.md
         * ...
-    + `Formularios`
+    + **Formularios**
         * loginDial.md
         * ...
-    + `Métodos`
+    + **Métodos**
         * myMethod.md
         * ...
-    + `TableForms`
+    + **TableForms**
         * **1**
             - input.md
             - ...
         * ...
-    + `Triggers`
+    + **Triggers**
         * table1.md
         * ...
 
@@ -66,7 +66,7 @@ The `Documentation` folder architecture is the following:
 
 ## Documentation in the Explorer
 
-### Viewing documentation
+### Ver la documentación
 
 To view documentation in the Explorer window:
 

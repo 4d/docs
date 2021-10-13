@@ -12,7 +12,7 @@ title: On Close Box
 
 The `On Close Box` event is generated when the user clicks on the clos box of the window.
 
-### Example
+### Exemplo
 
 This example shows how to respond to a close window event with a form used for record data entry:
 

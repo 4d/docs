@@ -5,23 +5,6 @@ title: Propiedades de los formularios
 
 ---
 
-## Color Scheme
-> Color scheme property is only applied on macOS.
-
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
-
-*   dark - light text on a dark background
-*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> El número de caracteres para el título de una ventana está limitado a 31.
-
-#### Gramática JSON
-
-| Nombre      | Tipos de datos | Valores posibles |
-| ----------- | -------------- | ---------------- |
-| colorScheme | cadena         | "dark", "light"  |
-
----
-
 ## Pages
 
 Cada formulario consta de al menos dos páginas:
@@ -66,13 +49,13 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                | Gramática JSON   | Descripción                                                   | Supported with              |
-| ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulario detallado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
-| List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| Ninguno                  | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Form Type                      | Gramática JSON   | Descripción                                                   | Soportado con               |
+| ------------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
+| Formulario detallado           | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| Detail Form for Printing       | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
+| List Form                      | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
+| Formulario de lista imprimible | listPrinter      | A printed report that list records                            | Formularios tabla           |
+| Ninguno                        | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
 
 #### Gramática JSON
@@ -101,7 +84,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 ---
 
 
-## Inherited Form Table
+## Tablas de formulario heredadas
 
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 

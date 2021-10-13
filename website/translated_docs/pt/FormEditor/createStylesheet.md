@@ -138,14 +138,14 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Description                                                                                             |
+| Sintaxe                   | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
 | [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
-#### Examples
+#### Exemplos
 
 All objects with the `borderStyle` attribute will have purple lines:
 
@@ -190,77 +190,35 @@ text[text|=Hello]
 
 ## Declarações de folhas de estilo
 
-### Media Queries
-
-Media queries are used to apply color schemes to an application.
-
-A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
-
-
-Available media features:
-
-*   `prefers-color-scheme`
-
-
-Available media feature expressions:
-
-*   **light**<br>For using a light scheme
-*   **dark**<br>For using a dark scheme
-
-> Color schemes are only supported on macOS.
-
-##### Example
-
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
-
-```
-@media (prefers-color-scheme: light) {
- .textScheme {
-   fill: LightGrey;
-   stroke: Black;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .textScheme {
-    fill: DarkSlateGray;
-    stroke: LightGrey;
-  }
-}
-```
-
-
-### Object Attributes
-
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
-    - `method`
-    - `type`
-    - `class`
-    - `event`
-    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+    - "method"
+    - "type"
+    - "class"
+    - "event"
+    - choiceList, excludedList, labels, list, requiredList (list type)
 
-Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
 
-#### Mapa de atributos
+### Mapa de atributos
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
-| 4D               | CSS                |
-| ---------------- | ------------------ |
-| `borderStyle`    | `border-style`     |
-| `fill`           | `background-color` |
-| `fontFamily`     | `font-family`      |
-| `fontSize`       | `font-size`        |
-| `fontStyle`      | `font-style`       |
-| `fontWeight`     | `font-weight`      |
-| `stroke`         | `color`            |
-| `textAlign`      | `text-align`       |
-| `textDecoration` | `text-decoration`  |
-| `verticalAlign`  | `vertical-align`   |
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+| 4D             | CSS              |
+| -------------- | ---------------- |
+| borderStyle    | border-style     |
+| fill           | background-color |
+| fontFamily     | font-family      |
+| fontSize       | font-size        |
+| fontStyle      | font-style       |
+| fontWeight     | font-weight      |
+| stroke         | color            |
+| textAlign      | text-align       |
+| textDecoration | text-decoration  |
+| verticalAlign  | vertical-align   |
+> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
 
 
-#### Valores de atributos específicos
+### Valores de atributos específicos
 
 - For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 

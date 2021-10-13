@@ -61,22 +61,22 @@ Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
 Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
-| varTyp                 | Inhalt                                |
-| ---------------------- | ------------------------------------- |
-| `Text`                 | Textwert                              |
-| `Datum`                | Datumswert                            |
-| `Zeit`                 | Zeitwert                              |
-| `Boolean`              | Boolean Wert                          |
-| `Ganzzahl`             | Wert Lange Ganzzahl                   |
-| `Zahl`                 | Zahlenwert                            |
-| `Zeiger`               | Zeigerwert                            |
-| `Bild`                 | Bildwert                              |
-| `Blob`                 | BLOB Wert                             |
-| `Collection`           | Collection Wert                       |
-| `Variant`              | Variant Wert                          |
-| `Objekt`               | Objekt mit Standardklasse (4D.Objekt) |
-| `4D.<className>` | Objekt des 4D Klassennamens           |
-| `cs.<className>` | Objekt des Benutzerklassennamens      |
+| varTyp         | Inhalt                                |
+| -------------- | ------------------------------------- |
+| Text           | Textwert                              |
+| Datum          | Datumswert                            |
+| Zeit           | Zeitwert                              |
+| Boolean        | Boolean Wert                          |
+| Ganzzahl       | Wert Lange Ganzzahl                   |
+| Zahl           | Zahlenwert                            |
+| Zeiger         | Zeigerwert                            |
+| Bild           | Bildwert                              |
+| Blob           | BLOB Wert                             |
+| Collection     | Collection Wert                       |
+| Variant        | Variant Wert                          |
+| Objekt         | Objekt mit Standardklasse (4D.Objekt) |
+| 4D.*className* | Objekt des 4D Klassennamens           |
+| cs.*className* | Objekt des Benutzerklassennamens      |
 
 #### Beispiele
 
