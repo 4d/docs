@@ -70,7 +70,7 @@
 <p>たとえば、選択中の社員より給与の高い社員一覧を返す <code>getNextWithHigherSalary()</code> 関数を <code>EmployeeEntity</code> クラスに作成したとします。 この関数は簡単に呼び出すことができます:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$nextHigh</span>:=ds.<span class="hljs-function">Employee</span>(<span class="hljs-number">1</span>).<span class="hljs-function">getNextWithHigherSalary</span>()
 </code></pre>
-<p>これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます:</p>
+<p>これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます (<a href="#リモートデータストアの例">リモートデータストアの例</a> を参照ください):</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//$cityManager はリモートデータストアへの参照です</span>
 Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class="hljs-function">getCityName</span>(Form.comp.zipcode)
 </code></pre>
@@ -92,7 +92,7 @@ Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class
 </thead>
 <tbody>
 <tr><td>cs.DataStore</td><td>cs.DataStore</td><td><a href="API/DataStoreClass.md#ds"><code>ds</code></a> コマンド</td></tr>
-<tr><td>cs.<em>DataClassName</em></td><td>cs.Employee</td><td><a href="API/DataStoreClass.md#dataclassname"><code>dataStore.DataClassName</code></a>, <code>dataStore[&quot;DataClassName&quot;]</code></td></tr>
+<tr><td>cs.<em>DataClassName</em></td><td>cs.Employee</td><td><a href="API/DataStoreClass.md#dataclassname"><code>dataStore.DataClassName</code></a>, <code>dataStore[DataClassName]</code></td></tr>
 <tr><td>cs.<em>DataClassName</em>Entity</td><td>cs.EmployeeEntity</td><td><a href="API/DataClassClass.md#get"><code>dataClass.get()</code></a>, <a href="API/DataClassClass.md#new"><code>dataClass.new()</code></a>, <a href="API/EntitySelectionClass.md#first"><code>entitySelection.first()</code></a>, <a href="API/EntitySelectionClass.md#last"><code>entitySelection.last()</code></a>, <a href="API/EntityClass.md#previous"><code>entity.previous()</code></a>, <a href="API/EntityClass.md#next"><code>entity.next()</code></a>, <a href="API/EntityClass.md#first"><code>entity.first()</code></a>, <a href="API/EntityClass.md#last"><code>entity.last()</code></a>, <a href="API/EntityClass.md#clone"><code>entity.clone()</code></a></td></tr>
 <tr><td>cs.<em>DataClassName</em>Selection</td><td>cs.EmployeeSelection</td><td><a href="API/DataClassClass.md#query"><code>dataClass.query()</code></a>, <a href="API/EntitySelectionClass.md#query"><code>entitySelection.query()</code></a>, <a href="API/DataClassClass.md#all"><code>dataClass.all()</code></a>, <a href="API/DataClassClass.md#fromcollection"><code>dataClass.fromCollection()</code></a>, <a href="API/DataClassClass.md#newselection"><code>dataClass.newSelection()</code></a>, <a href="API/EntitySelectionClass.md#drop"><code>entitySelection.drop()</code></a>, <a href="API/EntityClass.md#getselection"><code>entity.getSelection()</code></a>, <a href="API/EntitySelectionClass.md#and"><code>entitySelection.and()</code></a>, <a href="API/EntitySelectionClass.md#minus"><code>entitySelection.minus()</code></a>, <a href="API/EntitySelectionClass.md#or"><code>entitySelection.or()</code></a>, <a href="API/EntitySelectionClass.md#or"><code>entitySelection.orderBy()</code></a>, <a href="API/EntitySelectionClass.md#orderbyformula"><code>entitySelection.orderByFormula()</code></a>, <a href="API/EntitySelectionClass.md#slice"><code>entitySelection.slice()</code></a>, <code>Create entity selection</code></td></tr>
 </tbody>

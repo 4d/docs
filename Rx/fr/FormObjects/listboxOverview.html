@@ -489,22 +489,23 @@
 <h2><a class="anchor" aria-hidden="true" id="managing-sorts"></a><a href="#managing-sorts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing sorts</h2>
 <p>By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.</p>
 <p>You can prevent standard user sorts by deselecting the <a href="/docs/Rx/fr/FormObjects/propertiesAction.html#sortable">Sortable</a> property of the list box.</p>
-<p>The developer can set up custom sorts using the <code>LISTBOX SORT COLUMNS</code> command and/or combining the <code>On Header Click</code> and <code>On After Sort</code> form events (see the <code>FORM Event</code> command) and relevant 4D commands.</p>
+<p>Le développeur peut mettre en place des tris personnalisés à l'aide de la commande <code>LISTBOX SORT COLUMNS</code> et/ou en combinant les événements formulaire <code>On Header Click</code> et <code>On After Sort</code> (voir la commande <a href="https://doc.4d.com/4dv19/help/command/en/page1606.html"><code>FORM Event</code></a>) et les commandes 4D correspondantes.</p>
 <blockquote>
-<p>The <a href="/docs/Rx/fr/FormObjects/propertiesAction.html#sortable">Sortable</a> property only affects the standard user sorts; the <code>LISTBOX SORT COLUMNS</code> command does not take this property into account.</p>
+<p>La propriété <a href="/docs/Rx/fr/FormObjects/propertiesAction.html#sortable">Sortable</a> affecte uniquement les tris utilisateur standard ; la commande <a href="https://doc.4d.com/4dv19/help/command/en/page916.html"><code>LISTBOX SORT COLUMNS</code></a> ne prend pas en compte cette propriété.</p>
 </blockquote>
 <p>The value of the <a href="/docs/Rx/fr/FormObjects/propertiesObject.html#variable-or-expression">column header variable</a> allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.</p>
 <ul>
-<li><p>If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;<br>
+<li><p>Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.<br>
 <img src="/docs/Rx/assets/en/FormObjects/sorticon0.png" alt=""></p></li>
-<li><p>If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;<br>
-<img src="/docs/Rx/assets/en/FormObjects/sorticon1.png" alt=""></p></li>
-<li><p>If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.<br>
-<img src="/docs/Rx/assets/en/FormObjects/sorticon2.png" alt=""></p></li>
+<li><p>Si la variable est définie sur 1, la colonne est triée par ordre croissant et la flèche de tri s'affiche. <img src="/docs/Rx/assets/en/FormObjects/sorticon1.png" alt=""></p></li>
+<li><p>Si la variable est définie sur 2, la colonne est triée par ordre décroissant et la flèche de tri s'affiche. <img src="/docs/Rx/assets/en/FormObjects/sorticon2.png" alt=""></p></li>
 </ul>
-<p>You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.</p>
 <blockquote>
-<p>The <code>OBJECT SET FORMAT</code> command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.</p>
+<p>Seules les <a href="/docs/Rx/fr/Concepts/variables.html">variables</a> déclarées ou dynamiques peuvent être utilisées comme variables d'en-tête de colonne. Les autres types d'<a href="/docs/Rx/fr/Concepts/quick-tour.html#expressions">expressions</a> telles que <code>Form.sortValue</code> ne sont pas pris en charge.</p>
+</blockquote>
+<p>Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de &quot;forcer&quot; l'affichage de la flèche de tri. The column sort itself is not modified in this case; it is up to the developer to handle it.</p>
+<blockquote>
+<p>Seules les <a href="#array-list-boxes">list box de type tableau</a> peuvent être hiérarchiques.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="managing-row-colors-styles-and-display"></a><a href="#managing-row-colors-styles-and-display" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing row colors, styles, and display</h2>
 <p>There are several different ways to set background colors, font colors and font styles for list boxes:</p>

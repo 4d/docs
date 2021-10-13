@@ -86,38 +86,38 @@
 <tr><td><a href="#defaulthomepage"><strong>.defaultHomepage</strong> : Text</a><p>    name of the default home page</td></tr>
 <tr><td><a href="#hstsenabled"><strong>.HSTSEnabled</strong> : Boolean</a><p>    HTTP Strict Transport Security (HSTS) status</td></tr>
 <tr><td><a href="#hstsmaxage"><strong>.HSTSMaxAge</strong> : Number</a><p>    maximum length of time (in seconds) that HSTS is active for each new client connection</td></tr>
-<tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)</td></tr>
-<tr><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    size threshold (bytes) for requests below which exchanges should not be compressed</td></tr>
-<tr><td><a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP protocol state</td></tr>
-<tr><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    listening IP port number for HTTP</td></tr>
-<tr><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activation of <code>HTTP TRACE</code></td></tr>
-<tr><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    HTTPS protocol state</td></tr>
-<tr><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS</td></tr>
-<tr><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    life duration (in minutes) of the inactive legacy session processes</td></tr>
-<tr><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    life duration (in minutes) of inactive legacy sessions (duration set in cookie)</td></tr>
-<tr><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    IP address on which the 4D Web Server will receive HTTP requests</td></tr>
-<tr><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    web server running state</td></tr>
-<tr><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True if legacy sessions are enabled in the web server, False otherwise</td></tr>
-<tr><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value</td></tr>
-<tr><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    maximum number of concurrent web processes supported by the web server</td></tr>
-<tr><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process</td></tr>
-<tr><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    maximum number of simultaneous legacy sessions</td></tr>
-<tr><td><a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    minimum TLS version accepted for connections</td></tr>
-<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    name of the web server application</td></tr>
-<tr><td><a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    version of the OpenSSL library used</td></tr>
-<tr><td><a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS availability on the server</td></tr>
-<tr><td><a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    path of web server root folder</td></tr>
-<tr><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True if scalable sessions are used in the web server, and False otherwise</td></tr>
-<tr><td><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; field of the session cookie</td></tr>
-<tr><td><a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    name of the cookie used for storing the session ID</td></tr>
-<tr><td><a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; field of the session cookie</td></tr>
-<tr><td><a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot; session cookie value</td></tr>
-<tr><td><a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies</td></tr>
-<tr><td>[</td></tr>
-<tr><td><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object](#start)<p>    starts the web server on which it is applied</td></tr>
-<tr><td><a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied</td></tr>
 </tbody>
 </table>
+<p>|<a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)|
+|<a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    size threshold (bytes) for requests below which exchanges should not be compressed|
+|<a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP protocol state|
+|<a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    listening IP port number for HTTP|
+|<a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activation of <code>HTTP TRACE</code>|
+|<a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    HTTPS protocol state|
+|<a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS|
+|<a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    life duration (in minutes) of the inactive legacy session processes|
+|<a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    life duration (in minutes) of inactive legacy sessions (duration set in cookie)|
+|<a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    IP address on which the 4D Web Server will receive HTTP requests|
+|<a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    web server running state|
+|<a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True if legacy sessions are enabled in the web server, False otherwise|
+|<a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value|
+|<a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    maximum number of concurrent web processes supported by the web server|
+|<a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process|
+|<a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    maximum number of simultaneous legacy sessions|
+|<a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    minimum TLS version accepted for connections|
+|<a href="#name"><strong>.name</strong> : Text</a><p>    name of the web server application|
+|<a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    version of the OpenSSL library used|
+|<a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS availability on the server|
+|<a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    path of web server root folder|
+|<a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True if scalable sessions are used in the web server, and False otherwise|
+<a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; field of the session cookie|
+|<a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    name of the cookie used for storing the session ID|
+|<a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; field of the session cookie|
+|<a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot; session cookie value|
+|<a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies|
+|<a href="#start">
+<strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    starts the web server on which it is applied|
+|<a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied|</p>
 <h2><a class="anchor" aria-hidden="true" id="web-server"></a><a href="#web-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB Server</h2>
 <p><details><summary>History</summary></p>
 <table>
