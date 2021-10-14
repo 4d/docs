@@ -70,21 +70,21 @@ Por razones de seguridad, es posible que desee exponer sólo ciertas tablas de s
 
 Para eliminar la exposición REST de una tabla:
 
-1. Display the Table Inspector in the Structure editor and select the table you want to modify.
+1. Visualice el inspector de tablas en el editor de estructuras y seleccione la tabla que desea modificar.
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
+2. Desmarque la opción **Exponer como recurso REST**: ![alt-text](assets/es/REST/table.png) Haga esto para cada tabla cuya exposición deba ser modificada.
 
 
 ### Exponer los campos
 
-By default, all 4D database fields are exposed in REST.
+Por defecto, todos los campos de una base 4D se exponen en REST.
 
-You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field.
+Es posible que no quiera exponer ciertos campos de sus tablas a REST. Por ejemplo, es posible que no quiera exponer el campo [Employees]Salary.
 
-To remove the REST exposure for a field:
+Para eliminar la exposición REST de un campo:
 
-1. Display the Field Inspector in the Structure editor and select the field you want to modify.
+1. Visualice el inspector de campo en el editor de estructuras y seleccione el campo a modificar.
 
-2. Uncheck the **Expose as REST resource** for the field. ![alt-text](assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. Desmarque la opción **Exponer como recurso REST** para el campo. ![alt-text](assets/en/REST/field.png) Repita esta operación para cada campo cuya exposición deba modificarse.
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> Para que un campo sea accesible a través de REST, la tabla padre también debe serlo. Si la tabla padre no está expuesta, ninguno de sus campos lo estará, independientemente de su estado.
