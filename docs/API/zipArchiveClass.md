@@ -34,7 +34,7 @@ End if
 
 ||
 |---|
-|[<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
+|[**.root** : 4D.ZipFolder](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;a virtual folder providing access to the contents of the ZIP archive|
 
 
 ## ZIP Create archive
@@ -45,10 +45,7 @@ End if
 |v18|Added|
 </details>
 
-<!-- REF #_command_.ZIP Create archive.Syntax -->
-**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
-
-<!-- REF #_command_.ZIP Create archive.Params -->
+**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |fileToZip|4D.File|->|File or Folder object to compress|
@@ -57,12 +54,11 @@ End if
 |destinationFile|4D.File|->|Destination file for the archive|
 |options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
 |Result|Object|<-|Status object|
-<!-- END REF -->
 
 
 #### Description
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+The `ZIP Create archive` command creates a compressed ZIP archive object and returns the status of the operation.
 
 You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
 
@@ -184,21 +180,17 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 |v18|Added|
 </details>
 
-<!-- REF #_command_.ZIP Read archive.Syntax -->
-**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
-
-<!-- REF #_command_.ZIP Read archive.Params -->
+**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |zipFile|4D.File|->|Zip archive file|
 |password|Text|->|ZIP archive password if any|
 |Result|4D.ZipArchive|<-|Archive object|
-<!-- END REF -->
 
 
 #### Description
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object.
 
 > This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
 
@@ -257,13 +249,11 @@ To extract from the root folder:
 
 ## .root
 
-<!-- REF #ZipArchiveClass.root.Syntax -->
-**.root** : 4D.ZipFolder<!-- END REF -->
-
+**.root** : 4D.ZipFolder
 
 #### Description
 
-The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+The `.root` property contains a virtual folder providing access to the contents of the ZIP archive.
 
 The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
 

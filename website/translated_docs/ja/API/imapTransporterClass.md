@@ -12,31 +12,31 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 |                                                                                                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.addFlags().Syntax -->](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.addFlags().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.append().Syntax -->](#append)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.append().Summary -->|
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
-| [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.expunge().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.expunge().Syntax -->](#expunge)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.expunge().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getMail().Syntax -->](#getmail)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMail().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getMails().Syntax -->](#getmails)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMails().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Summary -->|
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.move().Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.numToID().Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.numToID().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.removeFlags().Syntax -->](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.removeFlags().Summary -->|
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.searchMails().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.searchMails().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
+| [**.acceptUnsecureConnection** : Boolean](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;暗号化されていない接続の確立が許可されてれば **true**|
+| [**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;`msgIDs` のメッセージに対して、`keywords` で指定したフラグを追加します|
+| [**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object](#append)<p>&nbsp;&nbsp;&nbsp;&nbsp;`destinationBox` に指定したメールボックスに、`mailObj` のメールを追加します|
+| [**.authenticationMode** : Text](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;メールサーバーのセッションを開くのに使用される認証モード|
+| [**.checkConnection()** : Object](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp; transporter オブジェクトが保存する情報を使用して接続をチェックします|
+| [**.checkConnectionDelay** : Integer](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;サーバー接続をチェックするまでの最長時間 (秒単位)|
+| [**.connectionTimeOut** : Integer](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;サーバー接続の確立までに待機する最長時間 (秒単位)|
+| [**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へとコピーします|
+| [**.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;"deleted" フラグがつけられたメッセージをすべてIMAP メールサーバーから削除します|
+| [**.expunge()** : Object](#expunge)<p>&nbsp;&nbsp;&nbsp;&nbsp;"deleted" フラグがつけられたメッセージをすべてIMAP メールサーバーから削除します|
+| [**.getBoxInfo**( { *name* : Text }) : Object](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;*name* が指定するメールボックスに対応する `boxInfo` オブジェクトを返します|
+| [**.getBoxList()** : Collection](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します|
+| [**.getDelimiter()** : Text](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;メールボックス名で階層レベルを区切るのに使用される文字を返します|
+| [**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object](#getmail)<p>&nbsp;&nbsp;&nbsp;&nbsp;`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します|
+| [**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object](#getmails)<p>&nbsp;&nbsp;&nbsp;&nbsp;`Email` オブジェクトのコレクションを格納したオブジェクトを返します|
+| [**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob](#getmimeasblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します|
+| [**.host** : Text](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;ホストサーバーの名前または IPアドレス|
+| [**.logFile** : Text](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;メール接続に対して定義された拡張ログファイル (あれば) へのフルパス|
+| [**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へと移動します|
+| [**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;*startMsg* および *endMsg* で指定された連続した範囲のメッセージのシーケンス番号を IMAP固有IDへと変換します|
+| [**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;`msgIDs` のメッセージに対して、`keywords` で指定したフラグを削除します|
+| [**.port** : Integer](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp; メール通信に使用されるポート番号|
+| [**.searchMails**( *searchCriteria* : Text ) : Collection](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します|
+| [**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;*name* に指定したメールボックスをカレントメールボックスとして選択します|
+| [**.user** : Text](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp; メールサーバーでの認証に使用されたユーザー名|
 
 
 
@@ -48,35 +48,31 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #_command_.IMAP New transporter.Syntax -->
-**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF imapTransporterClass.IMAP New transporter.Params -->
+**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter
 | 引数     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                           |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト) |
-<!-- END REF -->
 
 
 #### 説明
 
-`IMAP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.IMAP New transporter.Summary -->新規の IMAP接続を設定します<!-- END REF --> 。戻り値は、新しい *IMAP transporter* オブジェクトです。 返された transporter オブジェクトは、通常メールの受信に使用されます。
+`IMAP New transporter` コマンドは、*server* 引数の指定に応じて 新規の IMAP接続を設定します 。戻り値は、新しい *IMAP transporter* オブジェクトです。 返された transporter オブジェクトは、通常メールの受信に使用されます。
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
 | *server*                                                                                                                                                                                                                                                                                       | デフォルト値 (省略時)                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                            |
+| [**.acceptUnsecureConnection** : Boolean](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;暗号化されていない接続の確立が許可されてれば **true**| False                            |
 | .**accessTokenOAuth2**: Text<p>OAuth 2 認証の資格情報を表すテキスト文字列。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| サーバーがサポートするもっともセキュアな認証モードが使用されます |
-| [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->| 300                              |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                               |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                             |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                               |
+| [**.authenticationMode** : Text](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;メールサーバーのセッションを開くのに使用される認証モード| サーバーがサポートするもっともセキュアな認証モードが使用されます |
+| [**.checkConnectionDelay** : Integer](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;サーバー接続をチェックするまでの最長時間 (秒単位)| 300                              |
+| [**.connectionTimeOut** : Integer](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;サーバー接続の確立までに待機する最長時間 (秒単位)| 30                               |
+| [**.host** : Text](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;ホストサーバーの名前または IPアドレス| *必須*                             |
+| [**.logFile** : Text](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;メール接続に対して定義された拡張ログファイル (あれば) へのフルパス| なし                               |
 | .**password** : Text<p>サーバーとの認証のためのユーザーパスワード *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                            | なし                               |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                              |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                               |
+| [**.port** : Integer](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp; メール通信に使用されるポート番号| 993                              |
+| [**.user** : Text](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp; メールサーバーでの認証に使用されたユーザー名| なし                               |
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
 
 
@@ -108,24 +104,48 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 ## 4D.IMAPTransporter.new()
 
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->
-**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF #4D.IMAPTransporter.new().Params -->
+**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter
 | 引数     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | メールサーバー情報                                           |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト) |
-<!-- END REF -->
 
 #### 説明
 
-`4D.IMAPTransporter.new()` 関数は、 <!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](#imap-new-transporter) コマンドと同一です。
+`4D.IMAPTransporter.new()` 関数は、 新規の `4D.IMAPTransporter`型オブジェクトを作成して返します。 この関数の機能は、[`IMAP New transporter`](#imap-new-transporter) コマンドと同一です。
  
-<!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
+## .acceptUnsecureConnection
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+</details>
+
+**.acceptUnsecureConnection** : Boolean
+
+#### 説明
+
+`.acceptUnsecureConnection` プロパティは、暗号化された接続が不可能な場合に、 暗号化されていない接続の確立が許可されてれば **true** を格納します。
+
+暗号化されていない接続が許可されていない場合には **false** が格納されており、その場合に暗号化された接続が不可能な場合にはエラーが返されます。
+
+使用可能なセキュアなポートは次のとおりです:
+
+- SMTP
+    - 465: SMTPS
+    - 587 または 25: STARTTLS アップグレードがされた SMTP (サーバーがサポートしていれば)
+
+- IMAP
+    - 143: IMAP 非暗号化ポート
+    - 993: STARTTLS アップグレードがされた IMAP (サーバーがサポートしていれば)
+
+- POP3
+    - 110: POP3 非暗号化ポート
+    - 995: STARTTLS アップグレードがされた POP3 (サーバーがサポートしていれば)
 
 
-<!-- REF imapTransporterClass.addFlags().Desc -->
+
 ## .addFlags()
 
 <details><summary>履歴</summary>
@@ -134,21 +154,17 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.addFlags().Syntax -->
-**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.addFlags().Params -->
+**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object
 | 引数       | タイプ    |    | 説明                                                                                                        |
 | -------- | ------ |:--:| --------------------------------------------------------------------------------------------------------- |
 | msgIDs   | コレクション | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | オブジェクト | -> | 追加するキーワードフラグ                                                                                              |
 | 戻り値      | オブジェクト | <- | addFlags処理のステータス                                                                                          |
-<!-- END REF -->
 
 
 #### 説明
 
-`.addFlags()` 関数は、 <!-- REF #imapTransporterClass.addFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを追加します<!-- END REF -->。
+`.addFlags()` 関数は、 `msgIDs` のメッセージに対して、`keywords` で指定したフラグを追加します。
 
 `msgIDs` には、以下のいずれかを渡すことができます:
 
@@ -210,10 +226,8 @@ $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
 
-<!-- END REF -->
 
 
-<!-- REF imapTransporterClass.append().Desc -->
 ## .append()
 
 <details><summary>履歴</summary>
@@ -222,22 +236,18 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.append().Syntax -->
-**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.append().Params -->
+**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object
 | 引数             | タイプ    |    | 説明                      |
 | -------------- | ------ |:--:| ----------------------- |
 | mailObj        | オブジェクト | -> | Email オブジェクト            |
 | destinationBox | テキスト   | -> | Emailオブジェクトを受信するメールボックス |
 | options        | オブジェクト | -> | 文字セット情報を格納したオブジェクト      |
 | 戻り値            | オブジェクト | <- | delete処理のステータス          |
-<!-- END REF -->
 
 
 #### 説明
 
-`.append()` 関数は、 <!-- REF #imapTransporterClass.append().Summary -->`destinationBox` に指定したメールボックスに、`mailObj` のメールを追加します<!-- END REF -->。
+`.append()` 関数は、 `destinationBox` に指定したメールボックスに、`mailObj` のメールを追加します。
 
 `mailObj` には、Email オブジェクトを渡します。 メールプロパティに関する包括的な詳細については、[Email オブジェクト](emails.html#email-オブジェクト) を参照ください。  `.append()` 関数は Email オブジェクトの `keywords` 属性内のキーワードタグをサポートします。
 
@@ -296,7 +306,6 @@ $msg.keywords["$draft"]:=True // // メッセージに下書きフラグをつ�
 $status:=$imap.append($msg; "Drafts")
 ```
 
-<!-- END REF -->
 
 
 
@@ -306,13 +315,72 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
-<!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
+## .authenticationMode
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+</details>
+
+**.authenticationMode** : Text
+#### 説明
+
+`.authenticationMode` プロパティは、 メールサーバーのセッションを開くのに使用される認証モードを格納します。
+
+デフォルトでは、サーバーによってサポートされている最も安全なモードが使用されます。
+
+とりうる値:
+
+| 値        | 定数                             | 説明                    |
+| -------- | ------------------------------ | --------------------- |
+| CRAM-MD5 | `IMAP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
+| LOGIN    | `IMAP authentication login`    | LOGIN プロトコルを使用した認証    |
+| OAUTH2   | `IMAP authentication OAUTH2`   | OAuth2 プロトコルを使用した認証   |
+| PLAIN    | `IMAP authentication plain`    | PLAIN プロトコルを使用した認証    |
 
 
 
 
 
-<!-- INCLUDE transporter.checkConnection().Desc -->
+
+
+## .checkConnection()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+</details>
+
+**.checkConnection()** : Object
+| 引数  | タイプ    |    | 説明                         |
+| --- | ------ |:--:| -------------------------- |
+| 戻り値 | オブジェクト | <- | transporter オブジェクト接続のステータス |
+
+
+#### 説明
+
+`.checkConnection()` 関数は、  transporter オブジェクトが保存する情報を使用して接続をチェックします。必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。
+
+
+#### 返されるオブジェクト
+
+この関数はメールサーバーにリクエストを送信し、メールステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+
+| プロパティ      |                          | タイプ        | 説明                                                |
+| ---------- | ------------------------ | ---------- | ------------------------------------------------- |
+| success    |                          | boolean    | チェックが成功した場合には true、それ以外は false                    |
+| status     |                          | number     | (SMTPのみ) メールサーバーから返されたコード (メール処理に関係ない問題の場合には 0)   |
+| statusText |                          | text       | メールサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| errors     |                          | collection | 4Dエラースタック (メールサーバーレスポンスが受信できた場合には返されません)          |
+|            | \[ ].errCode            | number     | 4Dエラーコード                                          |
+|            | \[ ].message            | text       | 4Dエラーの詳細                                          |
+|            | \[ ].componentSignature | text       | エラーを返した内部コンポーネントの署名                               |
+
+
+
+
 
 
 
@@ -324,22 +392,34 @@ $status:=$imap.append($msg; "Drafts")
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.checkConnectionDelay.Syntax -->
-**.checkConnectionDelay** : Integer<!-- END REF -->
-
+**.checkConnectionDelay** : Integer
 
 #### 説明
 
-`.checkConnectionDelay` 関数は、 <!-- REF #imapTransporterClass.checkConnectionDelay.Summary -->サーバー接続をチェックするまでの最長時間 (秒単位)<!-- END REF -->を格納します。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
+`.checkConnectionDelay` 関数は、 サーバー接続をチェックするまでの最長時間 (秒単位)を格納します。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。 
 
 
 
-<!-- INCLUDE transporter.connectionTimeOut.Desc -->
+## .connectionTimeOut
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.connectionTimeOut** : Integer
+
+
+#### 説明
+
+`.connectionTimeOut` プロパティは、 サーバー接続の確立までに待機する最長時間 (秒単位)を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される `server` オブジェクトにおいて、 このプロパティが指定されなかった場合のデフォルトは 30 です。
 
 
 
-<!-- REF imapTransporterClass.copy().Desc -->
+
+
 ## .copy()
 
 <details><summary>履歴</summary>
@@ -348,22 +428,18 @@ $status:=$imap.append($msg; "Drafts")
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.copy().Syntax -->
-**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.copy().Params -->
+**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object
 | 引数             | タイプ     |    | 説明                              |
 | -------------- | ------- |:--:| ------------------------------- |
 | msgsIDs        | コレクション  | -> | メッセージの固有ID のコレクション (テキスト)       |
 | allMsgs        | Integer | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
 | destinationBox | テキスト    | -> | メッセージのコピー先のメールボックス              |
 | 戻り値            | オブジェクト  | <- | copy処理のステータス                    |
-<!-- END REF -->
 
 
 #### 説明
 
-`.copy()` 関数は、 <!-- REF #imapTransporterClass.copy().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へとコピーします<!-- END REF -->。
+`.copy()` 関数は、 *msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へとコピーします。
 
 以下のものを渡すことができます:
 
@@ -441,11 +517,9 @@ $status:=$imap.append($msg; "Drafts")
  $status:=$transporter.copy(IMAP all;"documents")
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.delete().Desc -->
 ## .delete()
 
 <details><summary>履歴</summary>
@@ -454,21 +528,17 @@ $status:=$imap.append($msg; "Drafts")
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.delete().Syntax -->
-**.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.delete().Params -->
+**.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object
 | 引数      | タイプ     |    | 説明                              |
 | ------- | ------- |:--:| ------------------------------- |
 | msgsIDs | コレクション  | -> | メッセージの固有ID のコレクション (テキスト)       |
 | allMsgs | Integer | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
 | 戻り値     | オブジェクト  | <- | delete処理のステータス                  |
-<!-- END REF -->
 
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #imapTransporterClass.delete().Summary -->`msgsIDs` または `allMsgs` が指定するメッセージに対して "削除済み" フラグを設定します<!-- END REF -->。
+`.delete()` 関数は、 `msgsIDs` または `allMsgs` が指定するメッセージに対して "削除済み" フラグを設定します。
 
 以下のものを渡すことができます:
 
@@ -546,10 +616,8 @@ $status:=$imap.append($msg; "Drafts")
  $status:=$transporter.delete(IMAP all)
 ```
 
-<!-- END REF -->
 
 
-<!-- REF imapTransporterClass.expunge().Desc -->
 ## .expunge()
 
 <details><summary>履歴</summary>
@@ -558,18 +626,14 @@ $status:=$imap.append($msg; "Drafts")
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.expunge().Syntax -->
-**.expunge()** : Object<!-- END REF -->
-
-<!-- REF imapTransporterClass.expunge().Params -->
+**.expunge()** : Object
 | 引数  | タイプ    |    | 説明              |
 | --- | ------ |:--:| --------------- |
 | 戻り値 | オブジェクト | <- | expunge処理のステータス |
-<!-- END REF -->
 
 #### 説明
 
-`.expunge()` 関数は、 <!-- REF #imapTransporterClass.expunge().Summary -->"deleted" フラグがつけられたメッセージをすべてIMAP メールサーバーから削除します<!-- END REF --> 。"deleted" フラグは [`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
+`.expunge()` 関数は、 "deleted" フラグがつけられたメッセージをすべてIMAP メールサーバーから削除します 。"deleted" フラグは [`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
 
 **返されるオブジェクト**
 
@@ -611,10 +675,8 @@ $status:=$transporter.delete($ids)
 $status:=$transporter.expunge()
 ```
 
-<!-- END REF -->
 
 
-<!-- REF imapTransporterClass.getBoxInfo().Desc -->
 ## .getBoxInfo()
 
 <details><summary>履歴</summary>
@@ -624,20 +686,16 @@ $status:=$transporter.expunge()
 | v18 R4 | 追加        |
 </details>
 
-<!-- REF #imapTransporterClass.getBoxInfo().Syntax -->
-**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.getBoxInfo().Params -->
+**.getBoxInfo**( { *name* : Text }) : Object
 | 引数   | タイプ    |    | 説明             |
 | ---- | ------ |:--:| -------------- |
 | name | テキスト   | -> | メールボックスの名称     |
 | 戻り値  | オブジェクト | <- | boxInfo オブジェクト |
-<!-- END REF -->
 
 
 #### 説明
 
-`.getBoxInfo()` 関数は、 <!-- REF #imapTransporterClass.getBoxInfo().Summary -->*name* が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 この関数は、[`.selectBox()`](#selectbox) と同じ情報を返しますが、カレントメールボックスは変えません。
+`.getBoxInfo()` 関数は、 *name* が指定するメールボックスに対応する `boxInfo` オブジェクトを返します。 この関数は、[`.selectBox()`](#selectbox) と同じ情報を返しますが、カレントメールボックスは変えません。
 
 任意の *name* パラメーターには、アクセスするメールボックスの名称を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
 
@@ -664,12 +722,10 @@ $status:=$transporter.expunge()
  ALERT("INBOX には "+String($info.mailRecent)+" 件の最近のメールがあります。")
 ```
 
-<!-- END REF -->
 
 
 
 
-<!-- REF imapTransporterClass.getBoxList().Desc -->
 ## .getBoxList()
 
 <details><summary>履歴</summary>
@@ -678,19 +734,15 @@ $status:=$transporter.expunge()
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.getBoxList().Syntax -->
-**.getBoxList()** : Collection<!-- END REF -->
-
-<!-- REF #imapTransporterClass.getBoxList().Params -->
+**.getBoxList()** : Collection
 | 引数  | タイプ    |    | 説明                    |
 | --- | ------ |:--:| --------------------- |
 | 戻り値 | コレクション | <- | mailbox オブジェクトのコレクション |
-<!-- END REF -->
 
 
 #### 説明
 
-`.getBoxList()` 関数は、 <!-- REF #imapTransporterClass.getBoxList().Summary -->利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します<!-- END REF -->。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
+`.getBoxList()` 関数は、 利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 #### 戻り値
 
@@ -726,11 +778,9 @@ $status:=$transporter.expunge()
  End for each
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.getDelimiter().Desc -->
 ## .getDelimiter()
 
 <details><summary>履歴</summary>
@@ -739,19 +789,15 @@ $status:=$transporter.expunge()
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.getDelimiter().Syntax -->
-**.getDelimiter()** : Text<!-- END REF -->
-
-<!-- REF #imapTransporterClass.getDelimiter().Params -->
+**.getDelimiter()** : Text
 | 引数  | タイプ  |    | 説明      |
 | --- | ---- |:--:| ------- |
 | 戻り値 | テキスト | <- | 階層区切り文字 |
-<!-- END REF -->
 
 
 #### 説明
 
-`.getDelimiter()` 関数は、 <!-- REF #imapTransporterClass.getDelimiter().Summary -->メールボックス名で階層レベルを区切るのに使用される文字を返します<!-- END REF -->。
+`.getDelimiter()` 関数は、 メールボックス名で階層レベルを区切るのに使用される文字を返します。
 
 この区切り文字は以下のように使用することができます:
 
@@ -784,11 +830,9 @@ $status:=$transporter.expunge()
  End for each
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.getMail().Desc -->
 ## .getMail()
 
 <details><summary>履歴</summary>
@@ -797,22 +841,18 @@ $status:=$transporter.expunge()
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.getMail().Syntax -->
-**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.getMail().Params -->
+**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object
 | 引数        | タイプ     |    | 説明                                               |
 | --------- | ------- |:--:| ------------------------------------------------ |
 | msgNumber | Integer | -> | メッセージのシーケンス番号                                    |
 | msgID     | テキスト    | -> | メッセージの固有ID                                       |
 | options   | オブジェクト  | -> | メッセージ管理オプション                                     |
 | 戻り値       | オブジェクト  | <- | [Email オブジェクト](emailObjectClass.md#email-オブジェクト) |
-<!-- END REF -->
 
 
 #### 説明
 
-`.getMail()` 関数は、 <!-- REF #imapTransporterClass.getMail().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 `IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 最初の引数として、次のいずれかを渡すことができます:
 
@@ -859,11 +899,9 @@ ID = 1のメッセージを取得します:
  $mail:=$transporter.getMail(1)
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.getMails().Desc -->
 ## .getMails()
 
 <details><summary>履歴</summary>
@@ -872,10 +910,7 @@ ID = 1のメッセージを取得します:
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.getMails().Syntax -->
-**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.getMails().Params -->
+**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object
 | 引数       | タイプ     |    | 説明                                                       |
 | -------- | ------- |:--:| -------------------------------------------------------- |
 | ids      | コレクション  | -> | メッセージID のコレクション                                          |
@@ -883,12 +918,11 @@ ID = 1のメッセージを取得します:
 | endMsg   | Integer | -> | 最後のメッセージのシーケンス番号                                         |
 | options  | オブジェクト  | -> | メッセージ管理オプション                                             |
 | 戻り値      | オブジェクト  | <- | 次のコレクションを格納したオブジェクト:<br><ul><li>[Email オブジェクト](emailObjectClass.md#email-オブジェクト) のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
-<!-- END REF -->
 
 
 #### 説明
 
-`.getMails()` 関数は、 <!-- REF #imapTransporterClass.getMails().Summary -->`Email` オブジェクトのコレクションを格納したオブジェクトを返します<!-- END REF -->。
+`.getMails()` 関数は、 `Email` オブジェクトのコレクションを格納したオブジェクトを返します。
 
 **第一シンタックス:**
 
@@ -963,11 +997,9 @@ ID = 1のメッセージを取得します:
  End if
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.getMIMEAsBlob().Desc -->
 ## .getMIMEAsBlob()
 
 <details><summary>履歴</summary>
@@ -976,24 +1008,20 @@ ID = 1のメッセージを取得します:
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.getMIMEAsBlob().Syntax -->
-**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
+**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob
 
-
-<!-- REF #imapTransporterClass.getMIMEAsBlob().Params -->
 | 引数         | タイプ     |    | 説明                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------- |
 | msgNumber  | Integer | -> | メッセージのシーケンス番号                                                 |
 | msgID      | テキスト    | -> | メッセージの固有ID                                                    |
 | updateSeen | ブール     | -> | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 |
 | 戻り値        | BLOB    | <- | メールサーバーから返された MIME文字列の BLOB                                   |
-<!-- END REF -->
 
 
 
 #### 説明
 
-`.getMIMEAsBlob()` 関数は、 <!-- REF #imapTransporterClass.getMIMEAsBlob().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
+`.getMIMEAsBlob()` 関数は、 `IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します。
 
 最初の引数として、次のいずれかを渡すことができます:
 
@@ -1039,20 +1067,55 @@ ID = 1のメッセージを取得します:
  $blob:=$transporter.getMIMEAsBlob(1)
 ```
 
-<!-- END REF -->
 
 
 
-<!-- INCLUDE transporter.host.Desc -->
+## .host
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.host** : Text
+
+#### 説明
+
+`.host` プロパティは、 ホストサーバーの名前または IPアドレスを格納します。 この情報はメール通信 (SMTP、POP3、IMAP) に使用されます。
 
 
 
 
-<!-- INCLUDE transporter.logFile.Desc -->
+
+
+## .logFile
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
+</details>
+
+**.logFile** : Text
+
+#### 説明
+
+`.logFile` プロパティは、 メール接続に対して定義された拡張ログファイル (あれば) へのフルパスを格納します。 パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
+
+`SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。 拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
+
+*   **SMTP 接続** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **POP3 接続** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **IMAP 接続** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 
 
-<!-- REF imapTransporterClass.move().Desc -->
+
+
+
+
+
 ## .move()
 
 <details><summary>履歴</summary>
@@ -1061,22 +1124,18 @@ ID = 1のメッセージを取得します:
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.move().Syntax -->
-**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.move().Params -->
+**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object
 | 引数             | タイプ     |    | 説明                              |
 | -------------- | ------- |:--:| ------------------------------- |
 | msgsIDs        | コレクション  | -> | メッセージの固有ID のコレクション (テキスト)       |
 | allMsgs        | Integer | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
 | destinationBox | テキスト    | -> | メッセージの移動先のメールボックス               |
 | 戻り値            | オブジェクト  | <- | move処理のステータス                    |
-<!-- END REF -->
 
 
 #### 説明
 
-`.move()` 関数は、 <!-- REF #imapTransporterClass.move().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へと移動します<!-- END REF -->。
+`.move()` 関数は、 *msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へと移動します。
 
 以下のものを渡すことができます:
 
@@ -1155,11 +1214,9 @@ ID = 1のメッセージを取得します:
  $status:=$transporter.move(IMAP all;"documents")
 ```
 
-<!-- END REF -->
 
 
 
-<!-- REF imapTransporterClass.numToID().Desc -->
 ## .numToID()
 
 <details><summary>履歴</summary>
@@ -1168,21 +1225,17 @@ ID = 1のメッセージを取得します:
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.numToID().Syntax -->
-**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
-
-<!-- REF #imapTransporterClass.numToID().Params -->
+**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection
 | 引数       | タイプ     |    | 説明               |
 | -------- | ------- |:--:| ---------------- |
 | startMsg | Integer | -> | 先頭メッセージのシーケンス番号  |
 | endMsg   | Integer | -> | 最後のメッセージのシーケンス番号 |
 | 戻り値      | コレクション  | <- | 固有ID のコレクション     |
-<!-- END REF -->
 
 
 #### 説明
 
-`.numToID()` 関数は、現在選択されているメールボックスにおいて、 <!-- REF #imapTransporterClass.numToID().Summary -->*startMsg* および *endMsg* で指定された連続した範囲のメッセージのシーケンス番号を IMAP固有IDへと変換します<!-- END REF --> 。
+`.numToID()` 関数は、現在選択されているメールボックスにおいて、 *startMsg* および *endMsg* で指定された連続した範囲のメッセージのシーケンス番号を IMAP固有IDへと変換します 。
 
 *startMsg* には、連続したレンジの最初のメッセージの番号に対応する *倍長整数* の値を渡します。 負の値 (*startMsg* <= 0) を渡した場合、メールボックスの最初のメッセージが連続レンジの先頭メッセージとして扱われます。
 
@@ -1219,10 +1272,8 @@ ID = 1のメッセージを取得します:
  $status:=$transporter.delete($mailIds)
 ```
 
-<!-- END REF -->
 
 
-<!-- REF imapTransporterClass.removeFlags().Desc -->
 ## .removeFlags()
 
 <details><summary>履歴</summary>
@@ -1231,21 +1282,17 @@ ID = 1のメッセージを取得します:
 | v18 R6 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.removeFlags().Syntax -->
-**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.removeFlags().Params -->
+**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object
 | 引数       | タイプ    |    | 説明                                                                                                        |
 | -------- | ------ |:--:| --------------------------------------------------------------------------------------------------------- |
 | msgIDs   | コレクション | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br> テキスト: メッセージの固有ID<br> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | オブジェクト | -> | 削除するキーワードフラグ                                                                                              |
 | 戻り値      | オブジェクト | <- | removeFlags処理のステータス                                                                                       |
-<!-- END REF -->
 
 
 #### 説明
 
-`.removeFlags()` 関数は、 <!-- REF #imapTransporterClass.removeFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを削除します<!-- END REF -->。
+`.removeFlags()` 関数は、 `msgIDs` のメッセージに対して、`keywords` で指定したフラグを削除します。
 
 `msgIDs` には、以下のいずれかを渡すことができます:
 
@@ -1307,14 +1354,31 @@ $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
-<!-- END REF -->
 
 
 
-<!-- INCLUDE transporter.port.Desc -->
+## .port
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+</details>
+
+**.port** : Integer
+
+#### 説明
+
+`.port` プロパティは、  メール通信に使用されるポート番号を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
+
+*   **SMTP** - 587
+*   **POP3** - 995
+*   **IMAP** - 993
 
 
-<!-- REF imapTransporterClass.searchMails().Desc -->
+
+
+
 ## .searchMails()
 
 <details><summary>履歴</summary>
@@ -1323,22 +1387,18 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.searchMails().Syntax -->
-**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
-
-<!-- REF #imapTransporterClass.searchMails().Params -->
+**.searchMails**( *searchCriteria* : Text ) : Collection
 | 引数             | タイプ    |    | 説明             |
 | -------------- | ------ |:--:| -------------- |
 | searchCriteria | テキスト   | -> | 検索条件           |
 | 戻り値            | コレクション | <- | メッセージ番号のコレクション |
-<!-- END REF -->
 
 
 #### 説明
 
 > この関数は、[IMAP プロトコル](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) の仕様に基づいています。
 
-`.searchMails()` 関数は、 <!-- REF #imapTransporterClass.searchMails().Summary -->カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します<!-- END REF -->。 *searchCriteria* 引数には、一つ以上の検索キーを格納します。
+`.searchMails()` 関数は、 カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します。 *searchCriteria* 引数には、一つ以上の検索キーを格納します。
 
 *searchCriteria* はテキスト型の引数で、一つ以上の検索キー (詳細は後述の [利用可能な検索キー](#利用可能な検索キー) 参照) を格納し、検索する値を渡します (渡さない場合もあります)。 検索キーは単一または複数の項目からなります。 たとえば:
 
@@ -1443,10 +1503,8 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 **OR** <search-key1> <search-key2>: いずれかの検索キーに合致するメッセージ  
 
 
-<!-- END REF -->
 
 
-<!-- REF imapTransporterClass.selectBox().Desc -->
 ## .selectBox()
 
 <details><summary>履歴</summary>
@@ -1455,21 +1513,17 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.selectBox().Syntax -->
-**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
-
-<!-- REF #imapTransporterClass.selectBox().Params -->
+**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object
 | 引数    | タイプ    |    | 説明             |
 | ----- | ------ |:--:| -------------- |
 | name  | テキスト   | -> | メールボックスの名称     |
 | state | 整数     | -> | メールボックスのアクセス状態 |
 | 戻り値   | オブジェクト | <- | boxInfo オブジェクト |
-<!-- END REF -->
 
 
 #### 説明
 
-`.selectBox()` 関数は、 <!-- REF #imapTransporterClass.selectBox().Summary -->*name* に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
+`.selectBox()` 関数は、 *name* に指定したメールボックスをカレントメールボックスとして選択します。 この関数を使用するとメールボックスに関する情報を取得することができます。
 > カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
 
 *name* には、アクセスするメールボックスの名前を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
@@ -1510,12 +1564,24 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
  $boxInfo:=$transporter.selectBox("INBOX")
 ```
 
-<!-- END REF -->
 
 
 
 
-<!-- INCLUDE transporter.user.Desc -->
+## .user
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R4 | 追加 |
+</details>
+
+**.user** : Text
+
+#### 説明
+`.user` プロパティは、  メールサーバーでの認証に使用されたユーザー名を格納します。 
+
+
 
 
 

@@ -18,37 +18,37 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ||
 |---|
-|[<!-- INCLUDE #document.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
-|[<!-- INCLUDE #FileClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.create().Summary -->|
-|[<!-- INCLUDE #FileClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.createAlias().Summary -->|
-|[<!-- INCLUDE #document.creationDate.Syntax -->](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->|
-|[<!-- INCLUDE #document.creationTime.Syntax -->](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->|
-|[<!-- INCLUDE #FileClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.delete().Summary -->|
-|[<!-- INCLUDE #document.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
-|[<!-- INCLUDE #document.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
-|[<!-- INCLUDE #document.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
-|[<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->|
-|[<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
-|[<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
-|[<!-- INCLUDE #document.getText().Syntax -->](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
-|[<!-- INCLUDE #document.hidden.Syntax -->](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
-|[<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
-|[<!-- INCLUDE #document.isFile.Syntax -->](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
-|[<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
-|[<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
-|[<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
-|[<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
-|[<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->|
-|[<!-- INCLUDE #document.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
-|[<!-- INCLUDE #document.original.Syntax -->](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
-|[<!-- INCLUDE #document.parent.Syntax -->](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
-|[<!-- INCLUDE #document.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
-|[<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->|
-|[<!-- INCLUDE #FileClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.rename().Summary -->|
-|[<!-- INCLUDE #FileClass.setAppInfo().Syntax -->](#setappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setAppInfo().Summary -->|
-|[<!-- INCLUDE #FileClass.setContent().Syntax -->](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setContent().Summary -->|
-|[<!-- INCLUDE #FileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setText().Summary -->|
-|[<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
+|[**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
+|[**.create()** : Boolean ](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
+|[**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
+|[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the file|
+|[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation  time of the file|
+|[**.delete( )**](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
+|[**.exists** : Boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
+|[**.extension** : Text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
+|[**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full name of the file, including its extension (if any)|
+|[**.getAppInfo**() : Object](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of a **.exe**, **.dll** or **.plist** file information as an object|
+|[**.getContent( )** : 4D.Blob](#getcontent)<p>returns a `4D.Blob` object containing the entire content of a file|
+|[**.getIcon**( { *size* : Integer } ) : Picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
+|[**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
+|[**.hidden** : Boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
+|[**.isAlias** : Boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
+|[**.isFile** : Boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
+|[**.isFolder** : Boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
+|[**.isWritable** : Boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
+|[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
+|[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
+|[**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
+|[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name of the file without extension (if any)|
+|[**.original** : 4D.File<br>**.original** : 4D.Folder](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
+|[**.parent** : 4D.Folder](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
+|[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the file|
+|[**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the file expressed with the current platform syntax|
+|[**.rename**( *newName* : Text ) : 4D.File](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
+|[**.setAppInfo**( *info* : Object )](#setappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file|
+|[**.setContent** ( *content* : Blob ) ](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
+|[**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) ](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
+|[**.size** : Real](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
 
 
 
@@ -60,11 +60,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added|
 </details>
 
-<!-- REF #_command_.File.Syntax -->
-**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File
 
-
-<!-- REF #_command_.File.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|->|File path|
@@ -72,12 +69,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
 |Result|4D.File|<-|New file object|
-<!-- END REF -->
 
 
 #### Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+The `File` command creates and returns a new object of the `4D.File` type. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -134,21 +130,65 @@ If the command is called from a component, pass the optional * parameter to get 
 |v18 R6|Added
 </details>
 
-<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
-
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File
 
 #### Description
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+The `4D.File.new()` function creates and returns a new object of the `4D.File` type. It is identical to the [`File`](#file) command (shortcut).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
 
-<!-- INCLUDE document.copyTo().Desc -->
+## .copyTo()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|destinationFolder | 4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.File|<-|Copied file|
+
+
+#### Description
+
+The `.copyTo()` function copies the `File` object into the specified *destinationFolder* .
+
+The *destinationFolder* must exist on disk, otherwise an error is generated.  
+
+By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+
+If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+
+|Constant|Value|Comment|
+|---|---|---|
+|`fk overwrite`|4|Overwrite existing elements, if any|
+
+
+**Returned value**
+
+The copied `File` object.
+
+#### Example
+
+You want to copy a picture *file* from the user's document folder to the application folder:
+
+```4d
+var $source; $copy : Object
+$source:=Folder(fk documents folder).file("Pictures/photo.png")
+$copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
+```
+
+ 
 
 
 
-<!-- REF file.create().Desc -->
 ## .create()
 
 <details><summary>History</summary>
@@ -157,22 +197,16 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 |v17 R5|Added
 </details>
 
-<!--REF file.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
+**Not available for ZIP archives**
 
-
-<!--REF #FileClass.create().Syntax -->
-**.create()** : Boolean <!-- END REF -->
-
-<!--REF #FileClass.create().Params -->
+**.create()** : Boolean 
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Boolean|<-|True if the file was created successfully, false otherwise|
-<!-- END REF -->
 
 #### Description
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+The `.create()` function creates a file on disk according to the properties of the `File` object.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -189,13 +223,11 @@ Creation of a preferences file in the database folder:
  var $created : Boolean
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
-<!-- END REF -->
 
 
 
 
 
-<!-- REF file.createAlias().Desc -->
 ## .createAlias()
 
 <details><summary>History</summary>
@@ -205,22 +237,18 @@ Creation of a preferences file in the database folder:
 </details>
 
 
-<!--REF #FileClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
-
-<!--REF #FileClass.createAlias().Params -->
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
 |Result|4D.File|<-|Alias or shortcut file reference|
-<!-- END REF -->
 
 
 #### Description
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -246,21 +274,51 @@ You want to create an alias to a file in your database folder:
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
-<!-- END REF -->
 
 
 
 
-<!-- INCLUDE document.creationDate.Desc -->
+## .creationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationDate** : Date
+
+#### Description
+
+The `.creationDate` property returns the creation date of the file.
+
+This property is **read-only**. 
 
 
 
 
-<!-- INCLUDE document.creationTime.Desc -->
+
+
+## .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationTime** : Time
+
+#### Description
+
+The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
 
 
 
-<!-- REF file.delete().Desc -->
+
+
 ## .delete()
 
 <details><summary>History</summary>
@@ -270,20 +328,16 @@ You want to create an alias to a file in your database folder:
 </details>
 
 
-<!--REF #FileClass.delete().Syntax -->
-**.delete( )**<!-- END REF -->
+**.delete( )**
 
-
-<!-- REF #FileClass.delete().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
 | |  ||Does not require any parameters|
-<!-- END REF -->
 
 
 #### Description
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+The `.delete()` function deletes the file.
 
 If the file is currently open, an error is generated.
 
@@ -302,25 +356,70 @@ You want to delete a specific file in the database folder:
     ALERT("User preference file deleted.")
  End if
 ```
-<!-- END REF -->
 
 
 
 
-<!-- INCLUDE document.exists.Desc -->
+## .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.exists** : Boolean
+
+#### Description
+
+The `.exists` property returns true if the file exists on disk, and false otherwise.
+
+This property is **read-only**. 
 
 
 
 
-<!-- INCLUDE document.extension.Desc -->
+
+
+
+## .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.extension** : Text
+#### Description
+
+The `.extension` property returns the extension of the file name (if any). An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+
+This property is **read-only**. 
 
 
 
 
-<!-- INCLUDE document.fullName.Desc -->
 
 
-<!-- REF file.getAppInfo().Desc -->
+## .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.fullName** : Text
+#### Description
+
+The `.fullName` property returns the full name of the file, including its extension (if any).
+
+This property is **read-only**. 
+
+
+
+
 ## .getAppInfo()
 
 <details><summary>History</summary>
@@ -329,19 +428,15 @@ You want to delete a specific file in the database folder:
 |v19|Added
 </details>
 
-<!--REF #FileClass.getAppInfo().Syntax -->
-**.getAppInfo**() : Object<!-- END REF -->
-
-<!--REF #FileClass.getAppInfo().Params -->
+**.getAppInfo**() : Object
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
-<!-- END REF -->
 
 
 #### Description
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+The `.getAppInfo()` function returns the contents of a **.exe**, **.dll** or **.plist** file information as an object.
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated). 
 
@@ -390,56 +485,314 @@ ALERT($info.Copyright)
 
 [.setAppInfo()](#setappinfo)
 
-<!-- END REF -->
 
 
-<!-- INCLUDE document.getContent().Desc -->
+## .getContent()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v19 R2|Returns 4D.Blob
+|v17 R5|Added
+</details>
+
+**.getContent( )** : 4D.Blob
+|Parameter|Type||Description|
+|---|----|---|---|
+|Result | 4D.Blob |<-|File content|
 
 
+#### Description
 
+The `.getContent()` function  returns a `4D.Blob` object containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
-<!-- INCLUDE document.getIcon().Desc -->
+**Returned value**
 
+A `4D.Blob` object.
 
-<!-- INCLUDE document.getText().Desc -->
+#### Example
 
+To save a document's contents in a `BLOB` field:
 
-
-
-<!-- INCLUDE document.hidden.Desc -->
-
-
-
-<!-- INCLUDE document.isAlias.Desc -->
-
-
-
-<!-- INCLUDE document.isFile.Desc -->
-
-
-
-
-<!-- INCLUDE document.isFolder.Desc -->
-
-
-
-
-<!-- INCLUDE document.isWritable.Desc -->
-
-
-
-
-<!-- INCLUDE document.modificationDate.Desc -->
+```4d
+ var $vPath : Text
+ $vPath:=Select document("";"*";"Select a document";0)
+ If(OK=1) //If a document has been chosen
+    [aTable]aBlobField:=File($vPath;fk platform path).getContent()
+ End if
+```
 
 
 
 
-<!-- INCLUDE document.modificationTime.Desc -->
+
+
+## .getIcon()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.getIcon**( { *size* : Integer } ) : Picture
+|Parameter|Type||Description|
+|---|----|---|---|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
+
+
+#### Description
+
+The `.getIcon()` function returns the icon of the file.
+
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
+
+If the file does not exist on disk, a default blank icon is returned.  
+
+**Returned value**
+
+File icon [picture](../Concepts/picture.html).
 
 
 
 
-<!-- REF file.moveTo().Desc -->
+
+
+## .getText()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|charSetName |Text |-> |Name of character set|
+|charSetNum |Integer |-> |Number of character set|
+|breakMode|Integer |-> |Processing mode for line breaks|
+|Result |Text  |<- |Text from the document|
+
+
+#### Description
+The `.getText()` function returns the contents of the file as text .
+
+Optionally, you can designate the character set to be used for reading the contents. You can pass either:
+
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+
+If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored). 
+If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
+
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
+
+|Constant | Value| Comment|
+|---|---|---|
+|`Document unchanged`|0|No processing|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
+|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
+|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
+
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+
+**Returned value**
+
+Text of the file.
+
+#### Example
+
+Given the following text document (fields are separated by tabs):
+
+```4d
+id name price vat
+3 thé 1.06€ 19.6
+2 café 1.05€ 19.6
+```
+
+When you execute this code:
+ 
+
+```4d
+ $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
+ $txt:=$myFile.getText()
+```
+... you get:
+
+```4d
+  // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
+  // \t = tab
+  // \r = CR
+```
+ 
+
+
+
+
+
+
+## .hidden
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.hidden** : Boolean
+
+#### Description
+
+The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+
+
+## .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isAlias** : Boolean
+
+#### Description
+
+The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+
+
+## .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFile** : Boolean
+
+#### Description
+
+The `.isFile` property returns always true for a file. 
+
+This property is **read-only**. 
+
+
+
+
+
+
+## .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFolder** : Boolean
+
+#### Description
+
+The `.isFolder` property returns always false for a file. 
+
+This property is **read-only**. 
+
+
+
+
+
+
+## .isWritable
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isWritable** : Boolean
+
+#### Description
+
+The `.isWritable` property returns true if the file exists on disk and is writable. 
+
+>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file. 
+
+This property is **read-only**. 
+
+**Example**  
+
+```4d
+ $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
+ If($myFile.isWritable)
+    $myNewFile:=$myFile.setText("Added text")
+ End if
+```
+
+
+
+
+
+
+## .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationDate** : Date
+
+#### Description
+
+The `.modificationDate` property returns the date of the file's last modification. 
+
+This property is **read-only**. 
+
+
+
+
+
+
+## .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationTime** : Time
+
+##### Description
+
+The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+
+
+
+
+
 ## .moveTo()
 
 <details><summary>History</summary>
@@ -449,21 +802,17 @@ ALERT($info.Copyright)
 </details>
 
 
-<!--REF #FileClass.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
-
-<!--REF #FileClass.moveTo().Params -->
+**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|4D.Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
 |Result|4D.File|<-|Moved file|
-<!-- END REF -->
 
 
 #### Description
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo()` function moves or renames the `File` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -482,32 +831,115 @@ $DocFolder:=Folder(fk documents folder)
 $myFile:=$DocFolder.file("Current/Infos.txt")
 $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
-<!-- END REF -->
 
 
 
 
-<!-- INCLUDE document.name.Desc -->
+## .name
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.name** : Text
+
+#### Description
+
+The `.name` property returns the name of the file without extension (if any). 
+
+This property is **read-only**. 
 
 
 
-<!-- INCLUDE document.original.Desc -->
+
+
+## .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.original** : 4D.File<br>**.original** : 4D.Folder
+
+#### Description
+
+The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
+
+*	a file object 
+*	a folder object 
+
+For non-alias files, the property returns the same file object as the file.
+
+This property is **read-only**. 
 
 
 
-<!-- INCLUDE document.parent.Desc -->
+
+
+## .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.parent** : 4D.Folder
+
+#### Description
+
+The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+This property is **read-only**. 
 
 
 
-<!-- INCLUDE document.path.Desc -->
+
+
+## .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.path** : Text
+
+#### Description
+
+The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
 
 
 
-<!-- INCLUDE document.platformPath.Desc -->
+
+
+## .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.platformPath** : Text
+
+#### Description
+
+The `.platformPath` property returns the path of the file expressed with the current platform syntax.
+
+This property is **read-only**. 
 
 
 
-<!-- REF file.rename().Desc -->
+
+
 ## .rename()
 
 <details><summary>History</summary>
@@ -517,19 +949,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 
-<!--REF #FileClass.rename().Syntax -->
-**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
-
-<!--REF #FileClass.rename().Params -->
+**.rename**( *newName* : Text ) : 4D.File
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
 |Result|4D.File|<-|Renamed file|
-<!-- END REF -->
 
 #### Description
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename()` function renames the file with the name you passed in *newName* and returns the renamed `File` object.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -548,10 +976,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
  $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)
 ```
-<!-- END REF -->
 
 
-<!-- REF file.setAppInfo().Desc -->
 ## .setAppInfo()
 
 <details><summary>History</summary>
@@ -560,19 +986,15 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |v19|Added
 </details>
 
-<!--REF #FileClass.setAppInfo().Syntax -->
-**.setAppInfo**( *info* : Object )<!-- END REF -->
-
-<!--REF #FileClass.setAppInfo().Params -->
+**.setAppInfo**( *info* : Object )
 |Parameter|Type||Description|
 |---|---|---|---|
 |info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
-<!-- END REF -->
 
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file.
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
@@ -635,7 +1057,6 @@ $infoPlistFile.setAppInfo($info)
 
 [.getAppInfo()](#getappinfo)
 
-<!-- REF file.setContent().Desc -->
 ## .setContent()
 
 <details><summary>History</summary>
@@ -645,19 +1066,15 @@ $infoPlistFile.setAppInfo($info)
 </details>
 
 
-<!--REF #FileClass.setContent().Syntax -->
-**.setContent** ( *content* : Blob ) <!-- END REF -->
-
-<!--REF #FileClass.setContent().Params -->
+**.setContent** ( *content* : Blob ) 
 |Parameter|Type||Description|
 |---|---|---|---|
 |content|BLOB|->|New contents for the file|
-<!-- END REF -->
 
 
 #### Description
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
 #### Example
@@ -666,13 +1083,11 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
  $myFile.setContent([aTable]aBlobField)
 ```
-<!-- END REF -->
 
 
 
 
 
-<!-- REF file.setText().Desc -->
 ## .setText()
 
 
@@ -683,21 +1098,17 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 </details>
 
 
-<!--REF #FileClass.setText().Syntax -->
-**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) 
 
-
-<!--REF #FileClass.setText().Params -->
 |Parameter|Type||Description|
 |---------|----|---|--------|
 |text|Text|->|Text to store in the file|
 |charSetName|Text|->|Name of character set|
 |charSetNum|Integer|->|Number of character set|
-|breakMode|Integer|->|Processing mode for line breaks|<!-- END REF -->
-
+|breakMode|Integer|->|Processing mode for line breaks|
 #### Description
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+The `.setText()` function writes *text* as the new contents of the file.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
@@ -732,13 +1143,28 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
-<!-- END REF -->
 
 
 
 
 
-<!-- INCLUDE document.size.Desc -->
+## .size
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.size** : Real
+
+#### Description
+
+The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
+
+This property is **read-only**. 
+
+
 
 
 

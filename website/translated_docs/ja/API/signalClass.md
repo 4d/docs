@@ -85,15 +85,14 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #signalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.description.Summary -->|
-| [<!-- INCLUDE #signalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.signaled.Summary --> |
-| [<!-- INCLUDE #signalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.trigger().Summary --> |
-| [<!-- INCLUDE #signalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.wait().Summary --> |
+| [**.description** : Text](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;`Signal` オブジェクトのカスタムな詳細|
+| [**.signaled** : Boolean](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;`Signal` オブジェクトの現在の状態 |
+| [**.trigger( )**](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;シグナルオブジェクトの `signaled` プロパティを **true** に設定します |
+| [**.wait**( { *timeout* : Real } ) : Boolean ](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます |
 
 
 
 
-<!-- REF signalClass.New signal.Desc -->
 ## New signal
 
 
@@ -103,20 +102,16 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
-**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF signalClass.New signal.Params -->
+**New signal** { ( *description* : Text ) } : 4D.Signal
 | 引数          | タイプ       |    | 説明                   |
 | ----------- | --------- |:--:| -------------------- |
 | description | テキスト      | -> | シグナルの詳細              |
 | 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト |
-<!-- END REF -->
 
 
 #### 説明
 
-`New signal` コマンドは、 <!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
+`New signal` コマンドは、 `4D.Signal` オブジェクトを作成します。
 
 シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。そのため、以下のようなことが可能になります:
 
@@ -163,10 +158,8 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
  $signal.trigger() // 処理が完了しました
 ```
 
-<!-- END REF -->
 
 
-<!-- REF signalClass.description.Desc -->
 ## .description
 
 <details><summary>履歴</summary>
@@ -175,22 +168,18 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.description.Syntax -->
-**.description** : Text<!-- END REF -->
-
+**.description** : Text
 #### 説明
 
-`.description` プロパティは、 <!-- REF #signalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
+`.description` プロパティは、 `Signal` オブジェクトのカスタムな詳細を格納します。
 
 `.description` は、Signal オブジェクトの作成時、あるいはその他のタイミングでも設定することができます。 ただし、`Signal` オブジェクトは共有オブジェクトであるため、`.description` プロパティに書き込む際には必ず `Use...End use` 構文を使わなくてはならない点に留意が必要です。
 
 **読み書き可能** プロパティです。 
 
-<!-- END REF -->
 
 
 
-<!-- REF signalClass.signaled.Desc -->
 ## .signaled
 
 <details><summary>履歴</summary>
@@ -200,20 +189,16 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 </details>
 
-<!-- REF #signalClass.signaled.Syntax -->
-**.signaled** : Boolean<!-- END REF -->
-
+**.signaled** : Boolean
 #### 説明
 
-`.signaled` プロパティは、 <!-- REF #signalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
+`.signaled` プロパティは、 `Signal` オブジェクトの現在の状態を格納します。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
 
 このプロパティは **読み取り専用** です。 
 
-<!-- END REF -->
 
 
 
-<!-- REF signalClass.trigger().Desc -->
 ## .trigger()
 
 <details><summary>履歴</summary>
@@ -222,27 +207,21 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.trigger().Syntax -->
-**.trigger( )**<!-- END REF -->
-
-<!-- REF #signalClass.trigger().Params -->
+**.trigger( )**
 | 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
-<!-- END REF -->
 
 
 #### 説明
 
-`.trigger( )` 関数は、 <!-- REF #signalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
+`.trigger( )` 関数は、 シグナルオブジェクトの `signaled` プロパティを **true** に設定します 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
 
 Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は何もしません。
 
-<!-- END REF -->
 
 
 
-<!-- REF signalClass.wait().Desc -->
 ## .wait()
 
 <details><summary>履歴</summary>
@@ -251,20 +230,16 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.wait().Syntax -->
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
-
-<!-- REF #signalClass.wait().Params -->
+**.wait**( { *timeout* : Real } ) : Boolean 
 | 引数      | タイプ |    | 説明                   |
 | ------- | --- | -- | -------------------- |
 | timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
 | 戻り値     | ブール | <- | `.signaled` プロパティの状態 |
-<!-- END REF -->
 
 
 #### 説明
 
-`.wait( )` 関数は、 <!-- REF #signalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
+`.wait( )` 関数は、 シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます。
 
 コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
 > **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
@@ -275,6 +250,5 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 > Signal オブジェクトを待機しているプロセスの状態は `Waiting for internal flag` です。
 
 
-<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

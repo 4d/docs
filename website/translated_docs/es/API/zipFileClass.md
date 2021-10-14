@@ -7,26 +7,26 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 | Available [File](fileClass.md) APIs for ZIPFile                                               | Comentario                             |
 | --------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto)                   |                                        |
-| [<!-- INCLUDE #document.creationDate.Syntax -->](fileClass.md#creationdate)         |                                        |
-| [<!-- INCLUDE #document.creationTime.Syntax -->](fileClass.md#creationtime)         |                                        |
-| [<!-- INCLUDE #document.exists.Syntax -->](fileClass.md#exists)                     |                                        |
-| [<!-- INCLUDE #document.extension.Syntax -->](fileClass.md#extension)               |                                        |
-| [<!-- INCLUDE #document.fullName.Syntax -->](fileClass.md#fullname)                 |                                        |
-| [<!-- INCLUDE #document.getContent().Syntax -->](fileClass.md#getcontent)           |                                        |
-| [<!-- INCLUDE #document.getIcon().Syntax -->](fileClass.md#geticon)                 |                                        |
-| [<!-- INCLUDE #document.getText().Syntax -->](fileClass.md#gettext)                 |                                        |
-| [<!-- INCLUDE #document.hidden.Syntax -->](fileClass.md#hidden)                     |                                        |
-| [<!-- INCLUDE #document.isAlias.Syntax -->](fileClass.md#isalias)                   |                                        |
-| [<!-- INCLUDE #document.isFile.Syntax -->](fileClass.md#isfile)                     |                                        |
-| [<!-- INCLUDE #document.isFolder.Syntax -->](fileClass.md#ifFolder)                 |                                        |
-| [<!-- INCLUDE #document.isWritable.Syntax -->](fileClass.md#iswritable)             | Always false with ZIP archive          |
-| [<!-- INCLUDE #document.modificationDate.Syntax -->](fileClass.md#modificationdate) |                                        |
-| [<!-- INCLUDE #document.modificationTime.Syntax -->](fileClass.md#modificationtime) |                                        |
-| [<!-- INCLUDE #document.name.Syntax -->](fileClass.md#name)                         |                                        |
-| [<!-- INCLUDE #document.original.Syntax -->](fileClass.md#original)                 |                                        |
-| [<!-- INCLUDE #document.parent.Syntax -->](fileClass.md#parent)                     |                                        |
-| [<!-- INCLUDE #document.path.Syntax -->](fileClass.md#path)                         | Returns a path relative to the archive |
-| [<!-- INCLUDE #document.platformPath.Syntax -->](fileClass.md#platformpath)         |                                        |
+| [**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File](fileClass.md#copyto)                   |                                        |
+| [**.creationDate** : Date](fileClass.md#creationdate)         |                                        |
+| [**.creationTime** : Time](fileClass.md#creationtime)         |                                        |
+| [**.exists** : Boolean](fileClass.md#exists)                     |                                        |
+| [**.extension** : Text](fileClass.md#extension)               |                                        |
+| [**.fullName** : Text](fileClass.md#fullname)                 |                                        |
+| [**.getContent( )** : Blob](fileClass.md#getcontent)           |                                        |
+| [**.getIcon**( { *size* : Integer } ) : Picture](fileClass.md#geticon)                 |                                        |
+| [**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text](fileClass.md#gettext)                 |                                        |
+| [**.hidden** : Boolean](fileClass.md#hidden)                     |                                        |
+| [**.isAlias** : Boolean](fileClass.md#isalias)                   |                                        |
+| [**.isFile** : Boolean](fileClass.md#isfile)                     |                                        |
+| [**.isFolder** : Boolean](fileClass.md#ifFolder)                 |                                        |
+| [**.isWritable** : Boolean](fileClass.md#iswritable)             | Always false with ZIP archive          |
+| [**.modificationDate** : Date](fileClass.md#modificationdate) |                                        |
+| [**.modificationTime** : Time](fileClass.md#modificationtime) |                                        |
+| [**.name** : Text](fileClass.md#name)                         |                                        |
+| [**.original** : 4D.File<br>**.original** : 4D.Folder](fileClass.md#original)                 |                                        |
+| [**.parent** : 4D.Folder](fileClass.md#parent)                     |                                        |
+| [**.path** : Text](fileClass.md#path)                         | Returns a path relative to the archive |
+| [**.platformPath** : Text](fileClass.md#platformpath)         |                                        |
 
 <style> h2 { background: #d9ebff;}</style>
