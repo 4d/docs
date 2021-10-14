@@ -1,0 +1,49 @@
+div#menu .contextualMenu {
+  width: 200px;
+  z-index: 1;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: none;
+  background-color:Menu;
+  transition: 0.2s display ease-in;
+  border-radius: 10px;
+}
+
+div#menu .menu-options {
+  list-style: none;
+  padding: 0px 0;
+  z-index: 1;
+  margin: 0px 0 !important;
+}
+
+.menu-option-up, 
+.menu-option-middle, 
+.menu-option-bottom{
+  z-index: 1;
+  font: menu;
+  padding: 5px 5px 5px 10px;
+  cursor: pointer;
+  margin: 0px 0 !important;
+}
+
+.menu-option-up:hover,
+.menu-option-middle:hover,
+.menu-option-bottom:hover{
+  color:HighlightText;
+  background-color:Highlight;
+}
+
+.menu-option-up:hover
+{
+  border-radius: 10px 10px 0px 0px;
+}
+
+.menu-option-bottom:hover
+{
+  border-radius: 0px 0px 10px 10px;
+}
+
+textarea#clipboard {
+  position: absolute;
+  left: -9999px;
+}
