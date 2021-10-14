@@ -104,7 +104,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><code>certificateFolder</code></td><td>Text property but can be a <a href="API/FolderClass.md"><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function.</td></tr>
+<tr><td>webServer object</td><td><code>certificateFolder</code></td><td>La propriété Text, mais il peut s'agir d'un objet <a href="API/folderClass.md"><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code>.</td></tr>
 </tbody>
 </table>
 <p>Folder where the TLS certificate files for the web server are located.</p>
@@ -134,7 +134,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#ciphersuite"><code>cipherSuite</code></a></td><td>Texte</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#ciphersuite"><code>cipherSuite</code></a></td><td>Texte</td></tr>
 </tbody>
 </table>
 <p>Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Peut être une séquence de chaînes séparées par des deux-points (par exemple &quot;ECDHE-RSA-AES128 -...&quot;). Voir la <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">page des chiffrements</a> sur le site OpenSSL.</p>
@@ -147,7 +147,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#corssettings"><code>CORSSettings</code></a></td><td>Collection of objects (List of allowed hosts and methods for the CORS service)</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#corssettings"><code>CORSSettings</code></a></td><td>Collection of objects (List of allowed hosts and methods for the CORS service)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web CORS settings</code></td><td>Collection of objects (List of allowed hosts and methods for the CORS service)</td></tr>
 <tr><td>Settings dialog box</td><td>Options (II) page/Domain names and HTTP methods allowed</td><td>Click on the [+] button to add an allowed domain name and its method(s)</td></tr>
 </tbody>
@@ -208,7 +208,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#defaulthomepage"><code>defaultHomepage</code></a></td><td>Texte</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#defaulthomepage"><code>defaultHomepage</code></a></td><td>Texte</td></tr>
 <tr><td><code>WEB SET HOME PAGE</code></td><td></td><td>Can be different for each web process</td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/Default Home Page</td><td></td></tr>
 </tbody>
@@ -230,7 +230,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#corsenabled"><code>CORSEnabled</code></a></td><td>Boolean, true to enable the CORS (false by default)</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#corsenabled"><code>CORSEnabled</code></a></td><td>Boolean, true to enable the CORS (false by default)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web CORS enabled</code></td><td>0 (disabled, default) or 1 (enabled)</td></tr>
 <tr><td>Settings dialog box</td><td>Options (II) page/Enable CORS</td><td>Unchecked by default</td></tr>
 </tbody>
@@ -246,7 +246,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpenabled"><code>HTTPEnabled</code></a></td><td>boolean</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpenabled"><code>HTTPEnabled</code></a></td><td>boolean</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP enabled</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/Enable HTTP</td><td></td></tr>
 </tbody>
@@ -258,7 +258,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpsenabled"><code>HTTPSEnabled</code></a></td><td>boolean</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpsenabled"><code>HTTPSEnabled</code></a></td><td>boolean</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTPS enabled</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/Enable HTTPS</td><td></td></tr>
 </tbody>
@@ -270,7 +270,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#hstsenabled"><code>HSTSEnabled</code></a></td><td>Boolean, true to enable HSTS (default is false)</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#hstsenabled"><code>HSTSEnabled</code></a></td><td>Boolean, true to enable HSTS (default is false)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HSTS enabled</code></td><td>0 (disabled, default) or 1 (enabled)</td></tr>
 </tbody>
 </table>
@@ -289,7 +289,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#hstsmaxage"><code>HSTSMaxAge</code></a></td><td>number in seconds</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#hstsmaxage"><code>HSTSMaxAge</code></a></td><td>number in seconds</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HSTS max age</code></td><td>number in seconds</td></tr>
 </tbody>
 </table>
@@ -303,7 +303,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpcompressionlevel"><code>HTTPCompressionLevel</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpcompressionlevel"><code>HTTPCompressionLevel</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP compression level</code></td><td>Applies to Web and Web Service</td></tr>
 </tbody>
 </table>
@@ -315,7 +315,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpcompressionthreshold"><code>HTTPCompressionThreshold</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpcompressionthreshold"><code>HTTPCompressionThreshold</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP compression threshold</code></td><td></td></tr>
 </tbody>
 </table>
@@ -327,7 +327,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpport"><code>HTTPPort</code></a></td><td>number</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpport"><code>HTTPPort</code></a></td><td>number</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web port ID</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/HTTP Port</td><td></td></tr>
 </tbody>
@@ -347,7 +347,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httptrace"><code>HTTPTrace</code></a></td><td>Boolean, default = false</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httptrace"><code>HTTPTrace</code></a></td><td>Boolean, default = false</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP TRACE</code></td><td>Integer, default = 0 (disabled)</td></tr>
 </tbody>
 </table>
@@ -358,7 +358,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#httpsport"><code>HTTPSPort</code></a></td><td>number</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#httpsport"><code>HTTPSPort</code></a></td><td>number</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTPS port ID</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/HTTPS Port</td><td></td></tr>
 </tbody>
@@ -370,7 +370,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#inactiveprocesstimeout"><code>inactiveProcessTimeout</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#inactiveprocesstimeout"><code>inactiveProcessTimeout</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web inactive process timeout</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Options (I) page/Inactive Process Timeout</td><td>Slider</td></tr>
 </tbody>
@@ -383,7 +383,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#inactivesessiontimeout"><code>inactiveSessionTimeout</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#inactivesessiontimeout"><code>inactiveSessionTimeout</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web inactive session timeout</code></td><td></td></tr>
 </tbody>
 </table>
@@ -395,7 +395,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#ipaddresstolisten"><code>IPAddressToListen</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#ipaddresstolisten"><code>IPAddressToListen</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web IP address to listen</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/IP Address</td><td>Pop up menu</td></tr>
 </tbody>
@@ -421,7 +421,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#keepsession"><code>keepSession</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#keepsession"><code>keepSession</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web keep session</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Options (I) page/Automatic Session Management</td><td></td></tr>
 </tbody>
@@ -437,7 +437,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#logrecording"><code>logRecording</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#logrecording"><code>logRecording</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web log recording</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Log (type) page/Log Format</td><td>Pop up menu</td></tr>
 </tbody>
@@ -465,7 +465,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#maxconcurrentprocesses"><code>maxConcurrentProcesses</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#maxconcurrentprocesses"><code>maxConcurrentProcesses</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web max concurrent processes</code></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Options (I) page/Maximum Concurrent Web Processes</td><td></td></tr>
 </tbody>
@@ -478,7 +478,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#maxrequestsize"><code>maxRequestSize</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#maxrequestsize"><code>maxRequestSize</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web maximum requests size</code></td><td></td></tr>
 </tbody>
 </table>
@@ -491,7 +491,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#maxsessions"><code>maxSessions</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#maxsessions"><code>maxSessions</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web max sessions</code></td><td></td></tr>
 </tbody>
 </table>
@@ -503,7 +503,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#mintlsversion"><code>minTLSVersion</code></a></td><td>number</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#mintlsversion"><code>minTLSVersion</code></a></td><td>number</td></tr>
 </tbody>
 </table>
 <p>Version TLS minimale acceptée pour les connexions. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.</p>
@@ -524,7 +524,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#name"><code>name</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#name"><code>name</code></a></td><td></td></tr>
 </tbody>
 </table>
 <p>Name of the web server application. Useful when component web servers are started.</p>
@@ -534,7 +534,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#opensslversion"><code>openSSLVersion</code></a></td><td>Read-only</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#opensslversion"><code>openSSLVersion</code></a></td><td>Read-only</td></tr>
 </tbody>
 </table>
 <p>Version of the OpenSSL library used.</p>
@@ -544,7 +544,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#perfectforwardsecrecy"><code>perfectForwardSecrecy</code></a></td><td>Boolean, read-only</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#perfectforwardsecrecy"><code>perfectForwardSecrecy</code></a></td><td>Boolean, read-only</td></tr>
 </tbody>
 </table>
 <p>True if PFS is available on the web server (see <a href="/docs/Rx/fr/Admin/tls.html#perfect-forward-secrecy-pfs">TLS</a> section).</p>
@@ -577,7 +577,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#rootfolder"><code>rootFolder</code></a></td><td>Text property but can be a <a href="API/FolderClass.md"><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function</td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#rootfolder"><code>rootFolder</code></a></td><td>Propriété Text, mais il peut s'agir d'un objet <a href="API/folderClass.md"><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code></td></tr>
 <tr><td><code>WEB SET ROOT FOLDER</code></td><td></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/Default HTML Root</td><td></td></tr>
 </tbody>
@@ -606,7 +606,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#sessioncookiedomain"><code>sessionCookieDomain</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#sessioncookiedomain"><code>sessionCookieDomain</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie domain</code></td><td></td></tr>
 </tbody>
 </table>
@@ -617,7 +617,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#sessioncookiename"><code>sessionCookieName</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#sessioncookiename"><code>sessionCookieName</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie name</code></td><td></td></tr>
 </tbody>
 </table>
@@ -628,43 +628,20 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#sessioncookiepath"><code>sessionCookiePath</code></a></td><td></td></tr>
+<tr><td>webServer object</td><td><a href="API/webServerClass.md#sessioncookiepath"><code>sessionCookiePath</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie path</code></td><td></td></tr>
 </tbody>
 </table>
 <p>Champ &quot;path&quot; du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur &quot;/4DACTION&quot; pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.</p>
-<h2><a class="anchor" aria-hidden="true" id="session-cookie-samesite"></a><a href="#session-cookie-samesite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session Cookie SameSite</h2>
-<table>
-<thead>
-<tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
-</thead>
-<tbody>
-<tr><td>webServer object</td><td><a href="API/WebServerClass.md#sessioncookiesamesite"><code>sessionCookieSameSite</code></a></td><td></td></tr>
-</tbody>
-</table>
-<p>Value of the <code>SameSite</code> attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery (<a href="https://developer.mozilla.org/en-US/docs/Glossary/CSRF">CSRF</a>) attacks.</p>
-<blockquote>
-<p>For a detailed description of the <code>SameSite</code> attribute, please refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">Mozilla documentation</a> or <a href="https://web.dev/samesite-cookies-explained/">this web.dev page</a>.</p>
-</blockquote>
-<p>Trois valeurs sont disponibles :</p>
-<ul>
-<li>&quot;Strict&quot; (default <code>SameSite</code> attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.</li>
-<li>&quot;Lax&quot;: Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).</li>
-<li>&quot;None&quot;: Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When &quot;None&quot; value is used, the cookie <code>Secure</code> attribute must also be set (or the cookie will be blocked).</li>
-</ul>
-<p>The <code>Secure</code> attribute value of the session cookie is automatically set to &quot;True&quot; if the connection is HTTPS (whatever the <code>SameSite</code> attribute value).</p>
-<blockquote>
-<p>It is not recommended to set <code>SameSite=None</code> on a HTTP server since the <code>Secure</code> attribute will be missing (used in HTTPS only) and cookies will be blocked.</p>
-</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="session-ip-address-validation"></a><a href="#session-ip-address-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session IP Address Validation</h2>
+<p>Peut être défini avec|Nom|Commentaires| |---|---|---| |objet webServer|<a href="API/webServerClass.md#sessionipaddressvalidation"><code>sessionIPAddressValidation</code></a>|| |<code>WEB SET OPTION</code>|<code>La session Web active la validation d'adresse IP</code>||</p>
+<p>IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application.</p>
+<p>When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).</p>
+<p>Possible values: 0 (disabled) or 1 (enabled, default).</p>
 <h2><a class="anchor" aria-hidden="true" id="deprecated-settings"></a><a href="#deprecated-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deprecated Settings</h2>
 <p>The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.</p>
 <h4><a class="anchor" aria-hidden="true" id="allow-database-access-through-4dsync-urls"></a><a href="#allow-database-access-through-4dsync-urls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Allow database Access through 4DSYNC URLs</h4>
 <p>This option controls the support of HTTP synchronization requests containing deprecated <em>/4DSYNC</em> URLs.</p>
-<h4><a class="anchor" aria-hidden="true" id="session-ip-address-validation"></a><a href="#session-ip-address-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session IP Address Validation</h4>
-<blockquote>
-<p>This option is not not available in <a href="/docs/Rx/fr/WebServer/sessions.html">scalable sessions mode</a> (there is no validation).</p>
-</blockquote>
-<p>IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).</p>
 <h4><a class="anchor" aria-hidden="true" id="reuse-temporary-contexts-in-remote-mode"></a><a href="#reuse-temporary-contexts-in-remote-mode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reuse temporary contexts (in remote mode)</h4>
 <p>Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.</p>
 <p>When the <strong>Reuse Temporary Contexts</strong> option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.</p>
@@ -687,7 +664,7 @@
 <li><p><strong>Number of requests by connection</strong>: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p> The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p></li>
 <li><p><strong>Timeout</strong>: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p> If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.</p></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/WebServer/webServer.html"><span class="arrow-prev">← </span><span>Aperçu</span></a><a class="docs-next button" href="/docs/Rx/fr/WebServer/webServerAdmin.html"><span>Administration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#where-to-configure-settings">Where to configure settings?</a></li><li><a href="#cache">Cache</a></li><li><a href="#certificate-folder">Certificate folder</a></li><li><a href="#character-set">Character Set</a></li><li><a href="#cipher-list">Cipher list</a></li><li><a href="#cors-settings">CORS Settings</a></li><li><a href="#debug-log">Debug log</a></li><li><a href="#defaut-home-page">Defaut Home page</a></li><li><a href="#enable-cors-service">Enable CORS Service</a></li><li><a href="#enable-http">Enable HTTP</a></li><li><a href="#enable-https">Enable HTTPS</a></li><li><a href="#enable-hsts">Enable HSTS</a></li><li><a href="#hsts-max-age">HSTS Max Age</a></li><li><a href="#http-compression-level">HTTP Compression Level</a></li><li><a href="#http-compression-threshold">HTTP Compression Threshold</a></li><li><a href="#http-port">HTTP Port</a></li><li><a href="#http-trace">HTTP Trace</a></li><li><a href="#https-port">HTTPS Port</a></li><li><a href="#inactive-process-timeout">Inactive Process Timeout</a></li><li><a href="#inactive-session-timeout">Inactive Session Timeout</a></li><li><a href="#ip-address-to-listen">IP Address to listen</a></li><li><a href="#keep-session">Keep Session</a></li><li><a href="#log-recording">Log Recording</a></li><li><a href="#maximum-concurrent-web-processes">Maximum Concurrent Web Processes</a></li><li><a href="#maximum-request-size">Maximum Request Size</a></li><li><a href="#maximum-session-number">Maximum Session Number</a></li><li><a href="#minimum-tls-version">Minimum TLS Version</a></li><li><a href="#nom">Nom</a></li><li><a href="#openssl-version">OpenSSL Version</a></li><li><a href="#perfect-forward-secrecy">Perfect Forward Secrecy</a></li><li><a href="#robotstxt">Robots.txt</a></li><li><a href="#root-folder">Root Folder</a></li><li><a href="#session-cookie-domain">Session Cookie Domain</a></li><li><a href="#session-cookie-name">Session Cookie Name</a></li><li><a href="#session-cookie-path">Session Cookie Path</a></li><li><a href="#session-cookie-samesite">Session Cookie SameSite</a></li><li><a href="#deprecated-settings">Deprecated Settings</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/WebServer/webServer.html"><span class="arrow-prev">← </span><span>Aperçu</span></a><a class="docs-next button" href="/docs/Rx/fr/WebServer/webServerAdmin.html"><span>Administration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#where-to-configure-settings">Where to configure settings?</a></li><li><a href="#cache">Cache</a></li><li><a href="#certificate-folder">Certificate folder</a></li><li><a href="#character-set">Character Set</a></li><li><a href="#cipher-list">Cipher list</a></li><li><a href="#cors-settings">CORS Settings</a></li><li><a href="#debug-log">Debug log</a></li><li><a href="#defaut-home-page">Defaut Home page</a></li><li><a href="#enable-cors-service">Enable CORS Service</a></li><li><a href="#enable-http">Enable HTTP</a></li><li><a href="#enable-https">Enable HTTPS</a></li><li><a href="#enable-hsts">Enable HSTS</a></li><li><a href="#hsts-max-age">HSTS Max Age</a></li><li><a href="#http-compression-level">HTTP Compression Level</a></li><li><a href="#http-compression-threshold">HTTP Compression Threshold</a></li><li><a href="#http-port">HTTP Port</a></li><li><a href="#http-trace">HTTP Trace</a></li><li><a href="#https-port">HTTPS Port</a></li><li><a href="#inactive-process-timeout">Inactive Process Timeout</a></li><li><a href="#inactive-session-timeout">Inactive Session Timeout</a></li><li><a href="#ip-address-to-listen">IP Address to listen</a></li><li><a href="#keep-session">Keep Session</a></li><li><a href="#log-recording">Log Recording</a></li><li><a href="#maximum-concurrent-web-processes">Maximum Concurrent Web Processes</a></li><li><a href="#maximum-request-size">Maximum Request Size</a></li><li><a href="#maximum-session-number">Maximum Session Number</a></li><li><a href="#minimum-tls-version">Minimum TLS Version</a></li><li><a href="#nom">Nom</a></li><li><a href="#openssl-version">OpenSSL Version</a></li><li><a href="#perfect-forward-secrecy">Perfect Forward Secrecy</a></li><li><a href="#robotstxt">Robots.txt</a></li><li><a href="#root-folder">Root Folder</a></li><li><a href="#session-cookie-domain">Session Cookie Domain</a></li><li><a href="#session-cookie-name">Session Cookie Name</a></li><li><a href="#session-cookie-path">Session Cookie Path</a></li><li><a href="#session-ip-address-validation">Session IP Address Validation</a></li><li><a href="#deprecated-settings">Deprecated Settings</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

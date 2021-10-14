@@ -66,8 +66,8 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/entitySelectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">EntitySelection</h1></header><article><div><span><p>エンティティセレクションとは、同じ <a href="/docs/Rx/ja/ORDA/dsmapping.html#データクラス">データクラス</a> に所属する一つ以上の <a href="/docs/Rx/ja/ORDA/dsmapping.html#エンティティ">エンティティ</a> への参照を格納しているオブジェクトのことです。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。</p>
-<p><a href="/docs/Rx/ja/API/DataClassClass.html#all"><code>.all()</code></a>、<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>.query()</code></a> などの <a href="/docs/Rx/ja/API/DataClassClass.html"><code>DataClass</code> クラス</a> の関数や、<a href="#and"><code>.and()</code></a>、<a href="#orderby"><code>orderBy()</code></a> など <code>EntitySelectionClass</code> クラス自身の関数を用いて、既存のセレクションからエンティティセレクションを作成することができます 。 また、<a href="/docs/Rx/ja/API/DataClassClass.html#newselection"><code>dataClass.newSelection()</code></a> 関数または <a href="#create-new-selection"><code>Create entity selection</code></a> コマンドを使用して、空のエンティティセレクションを作成することもできます。</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/EntitySelectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">EntitySelection</h1></header><article><div><span><p>エンティティセレクションとは、同じ <a href="/docs/Rx/ja/ORDA/dsmapping.html#データクラス">データクラス</a> に所属する一つ以上の <a href="/docs/Rx/ja/ORDA/dsmapping.html#エンティティ">エンティティ</a> への参照を格納しているオブジェクトのことです。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。</p>
+<p><a href="dataclassClass.md#all"><code>.all()</code></a>、<a href="dataclassClass.md#query"><code>.query()</code></a> などの <a href="dataclassClass.md"><code>DataClass</code> クラス</a> の関数や、<a href="#and"><code>.and()</code></a>、<a href="#orderby"><code>orderBy()</code></a> など <code>EntitySelectionClass</code> クラス自身の関数を用いて、既存のセレクションからエンティティセレクションを作成することができます 。 また、<a href="dataclassClass.md#newselection"><code>dataClass.newSelection()</code></a> 関数または <a href="#create-new-selection"><code>Create entity selection</code></a> コマンドを使用して、空のエンティティセレクションを作成することもできます。</p>
 <h3><a class="anchor" aria-hidden="true" id="概要"></a><a href="#概要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
 <table>
 <thead>
@@ -120,7 +120,7 @@
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>Create entity selection</code> コマンドは、<em>dsTable</em> で指定したテーブルに対応するデータクラスの <a href="/docs/Rx/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">追加可能な</a> 新規エンティティセレクションを、同テーブルのカレントセレクションに基づいてビルドして返します。</p>
 <p>ソートされたカレントセレクションの場合、<a href="/docs/Rx/ja/ORDA/dsmapping.html#エンティティセレクションの順列あり順列なし">順列のある</a> エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。 カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。</p>
-<p><a href="/docs/Rx/ja/API/DataStoreClass.html#ds"><code>ds</code></a> において <em>dsTable</em> が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。</p>
+<p><a href="API/datastoreClass.md#ds"><code>ds</code></a> において <em>dsTable</em> が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。</p>
 <p>任意の <em>settings</em> には、以下のプロパティを持つオブジェクトを渡せます:</p>
 <table>
 <thead>
@@ -138,7 +138,7 @@
 <span class="hljs-comment">// Employee データクラスの全エンティティへの参照が格納されています</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="参照"></a><a href="#参照" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
-<p><a href="/docs/Rx/ja/API/DataClassClass.html#newselection"><code>dataClass.newSelection()</code></a></p>
+<p><a href="dataclassClass.md#newselection"><code>dataClass.newSelection()</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="91index93"></a><a href="#91index93" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>[<em>index</em>]</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -160,7 +160,7 @@
 <li><em>index</em> がドロップされたエンティティに対応していた場合、Null値が返されます。</li>
 </ul>
 <blockquote>
-<p><strong>警告</strong>: <code>EntitySelection[index]</code> は代入不可の式です。これは、<a href="/docs/Rx/ja/API/EntityClass.html#lock"><code>.lock()</code></a> や <a href="/docs/Rx/ja/API/EntityClass.html#save"><code>.save()</code></a> などの関数において、編集可能なエンティティ参照として使用することはできない、ということを意味します。 エンティティを操作するには、戻り値を変数などの代入可能な式に割り当てる必要があります。 例:</p>
+<p><strong>警告</strong>: <code>EntitySelection[index]</code> は代入不可の式です。これは、<a href="entityClass.md#lock"><code>.lock()</code></a> や <a href="entityClass.md#save"><code>.save()</code></a> などの関数において、編集可能なエンティティ参照として使用することはできない、ということを意味します。 エンティティを操作するには、戻り値を変数などの代入可能な式に割り当てる必要があります。 例:</p>
 </blockquote>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">// エンティティセレクションを作成</span>
   <span class="hljs-comment">// 無効なコード: </span>
@@ -191,7 +191,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-2"></a><a href="#説明-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p>データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、 エンティティセレクション内の属性値の &quot;投影&quot; を返します。 戻り値は、属性の種類 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>storage</code> あるいは <code>relation</code>) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。</p>
+<p>データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、 エンティティセレクション内の属性値の &quot;投影&quot; を返します。 戻り値は、属性の種類 (<a href="dataclassAttributeClass.md#kind">kind</a> が <code>storage</code> あるいは <code>relation</code>) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。</p>
 <ul>
 <li><em>attributeName</em> で指定した属性がストレージ型の場合: <code>.attributeName</code>は <em>attributeName</em> と同じ型の値のコレクションを返します。</li>
 <li><em>attributeName</em> で指定した属性がリレートエンティティ型の場合: <code>.attributeName</code> は <em>attributeName</em> と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。</li>
@@ -252,7 +252,7 @@
 <blockquote>
 <p>このコマンドは、元のエンティティセレクションを変更します。</p>
 </blockquote>
-<p><strong>警告:</strong> エンティティセレクションは <em>追加可能</em> のものでなければなりません。つまり <a href="/docs/Rx/ja/API/DataClassClass.html#newselection"><code>.newSelection()</code></a> あるいは <code>Create entity selection</code> などで作成されたものでなければならないということです。そうでない場合、<code>.add()</code> はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については <a href="/docs/Rx/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">共有可能/追加可能なエンティティセレクション</a> を参照ください。</p>
+<p><strong>警告:</strong> エンティティセレクションは <em>追加可能</em> のものでなければなりません。つまり <a href="dataclassClass.md#newselection"><code>.newSelection()</code></a> あるいは <code>Create entity selection</code> などで作成されたものでなければならないということです。そうでない場合、<code>.add()</code> はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については <a href="/docs/Rx/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">共有可能/追加可能なエンティティセレクション</a> を参照ください。</p>
 <ul>
 <li>エンティティセレクションが順列ありの場合、<em>entity</em> 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。</li>
 <li>エンティティセレクションが順列なしの場合、<em>entity</em> 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。</li>
@@ -640,15 +640,15 @@
 <p>このシンタックスを使用すると、<code>.extract()</code> はエンティティセレクションの中の、<em>attributePath</em> 引数で指定された値のコレクションを作成して返します。</p>
 <p>デフォルトで、<em>attributePath</em> で指定された値が <em>null</em> または未定義のエンティティは、返されるコレクション内では無視されます。 <em>option</em> パラメーターに <code>ck keep null</code> 定数を渡すと、これらの値は返されるコレクションに <strong>null</strong> 要素として格納されます。</p>
 <ul>
-<li><a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntity&quot; であるデータクラス属性は、エンティティのコレクションとして取得されます (重複したものも保持されます)。</li>
-<li><a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntities&quot; であるデータクラス属性は、エンティティセレクションのコレクションとして取得されます。</li>
+<li><a href="dataclassAttributeClass.md#kind">.kind</a> = &quot;relatedEntity&quot; であるデータクラス属性は、エンティティのコレクションとして取得されます (重複したものも保持されます)。</li>
+<li><a href="dataclassAttributeClass.md#kind">.kind</a> = &quot;relatedEntities&quot; であるデータクラス属性は、エンティティセレクションのコレクションとして取得されます。</li>
 </ul>
 <p><strong>.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection</strong></p>
 <p>このシンタックスを使用すると、<code>.extract()</code> は <em>attributePath</em> 引数で指定されたプロパティを持つコレクションを作成して返します。 このコレクションのそれぞれの要素は、<em>targetPath</em> 引数のプロパティと、対応する<em>attributePath</em> 引数のプロパティを格納したオブジェクトです。 Null値はそのまま保持されます (このシンタックスでは <em>option</em> に引数を渡しても無視されます)。</p>
 <p>複数の <em>attributePath</em> 引数が渡した場合、それぞれに対して <em>targetPath</em> 引数を渡す必要があります。 有効な [<em>attributePath</em>, <em>targetPath</em>] のペアのみが取得されます。</p>
 <ul>
-<li><a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntity&quot; であるデータクラス属性は、エンティティとして取得されます。</li>
-<li><a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntities&quot; であるデータクラス属性は、エンティティセレクションとして取得されます。</li>
+<li><a href="dataclassAttributeClass.md#kind">.kind</a> = &quot;relatedEntity&quot; であるデータクラス属性は、エンティティとして取得されます。</li>
+<li><a href="dataclassAttributeClass.md#kind">.kind</a> = &quot;relatedEntities&quot; であるデータクラス属性は、エンティティセレクションとして取得されます。</li>
 </ul>
 <blockquote>
 <p>エンティティのコレクションにおいて、[ ] 記法を使用してアクセスしたエンティティは、データベースからは再読み込みされません。</p>
@@ -921,7 +921,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.max()</code> 関数は、 <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します。 実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。</p>
-<p><em>attributePath</em> に、異なる型の値を格納しているオブジェクト属性を渡した場合、<code>.max()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します(<a href="/docs/Rx/ja/API/CollectionClass.html#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
+<p><em>attributePath</em> に、異なる型の値を格納しているオブジェクト属性を渡した場合、<code>.max()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します(<a href="collectionClass.md#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
 <p>エンティティセレクションが空の場合、または <em>attributePath</em> 引数がオブジェクト属性内に見つからない場合には、<code>.max()</code> は <strong>undefined</strong> を返します。</p>
 <p>以下の場合には、エラーが返されます:</p>
 <ul>
@@ -959,7 +959,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.min()</code> 関数は、  <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します。  実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (<strong>null</strong>値は除く)。</p>
-<p><em>attributePath</em> に、異なる型の値を格納しているオブジェクト属性を渡した場合、<code>.min()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します(<a href="/docs/Rx/ja/API/CollectionClass.html#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
+<p><em>attributePath</em> に、異なる型の値を格納しているオブジェクト属性を渡した場合、<code>.min()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します(<a href="collectionClass.md#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
 <p>エンティティセレクションが空の場合、または <em>attributePath</em> 引数がオブジェクト属性内に見つからない場合には、<code>.min()</code> は <strong>undefined</strong> を返します。</p>
 <p>以下の場合には、エラーが返されます:</p>
 <ul>
@@ -1281,7 +1281,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
 <p>エンティティが見つからない場合、空のエンティティセレクションが返されます。</p>
-<p><em>queryString</em> および <em>value</em> や <em>querySettings</em> パラメーターを使ってクエリをビルドする方法の詳細については、DataClass<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>.query()</code></a> 関数を参照ください。</p>
+<p><em>queryString</em> および <em>value</em> や <em>querySettings</em> パラメーターを使ってクエリをビルドする方法の詳細については、DataClass<a href="dataclassClass.md#query"><code>.query()</code></a> 関数を参照ください。</p>
 <blockquote>
 <p><em>queryString</em> 内で <strong>order by</strong> ステートメントを省略した場合のデフォルトでは、返されるエンティティセレクションは、<a href="/docs/Rx/ja/ORDA/dsmapping.html#エンティティセレクションの順列あり順列なし">順列なし</a>のものになります。 しかしながら、クライアント/サーバーモードにおいては、順列ありのエンティティセレクションのように振る舞う (エンティティはセレクションの終わりに追加されていく) 点に注意してください。</p>
 </blockquote>
@@ -1291,9 +1291,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  Form.emps:=<span class="hljs-variable">$entitySelectionTemp</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"manager.lastName = :1"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-2-6"></a><a href="#例題-2-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
-<p>追加のクエリ例については、<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>DataClass.query()</code></a> を参照してください。</p>
+<p>追加のクエリ例については、<a href="dataclassClass.md#query"><code>DataClass.query()</code></a> を参照してください。</p>
 <h4><a class="anchor" aria-hidden="true" id="参照-1"></a><a href="#参照-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
-<p>データクラスの <a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>.query()</code></a></p>
+<p>データクラスの <a href="dataclassClass.md#query"><code>.query()</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="querypath"></a><a href="#querypath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPath</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -1497,7 +1497,7 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.toCollection()</code> 関数は、エンティティセレクションの各エンティティの属性名と値に対応する プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します 。</p>
-<p>filterString および filterCol 引数が省略されるか、空の文字列が渡されるか、あるいは &quot;*&quot; が渡された場合、すべての属性が抽出されます。 &quot;<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a>&quot; プロパティが &quot;relatedEntity&quot; の属性は単純な形式で取得されます: __KEY プロパティ (プライマリーキー) を持ったオブジェクト。 &quot;relatedEntities&quot; 型の &quot;kind&quot; プロパティの属性は抽出されません。</p>
+<p>filterString および filterCol 引数が省略されるか、空の文字列が渡されるか、あるいは &quot;*&quot; が渡された場合、すべての属性が抽出されます。 &quot;<a href="dataclassAttributeClass.md#kind">kind</a>&quot; プロパティが &quot;relatedEntity&quot; の属性は単純な形式で取得されます: __KEY プロパティ (プライマリーキー) を持ったオブジェクト。 &quot;relatedEntities&quot; 型の &quot;kind&quot; プロパティの属性は抽出されません。</p>
 <p>抽出するエンティティ属性を限定したい場合には、それを指定する引数を渡すことができます。 2つのシンタックスを使用できます:</p>
 <ul>
 <li><em>filterString</em>: プロパティパスをカンマで区切った文字列: &quot;propertyPath1, propertyPath2, ...&quot;</li>

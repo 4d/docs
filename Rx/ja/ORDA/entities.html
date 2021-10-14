@@ -188,38 +188,38 @@
 <h2><a class="anchor" aria-hidden="true" id="エンティティセレクションの作成"></a><a href="#エンティティセレクションの作成" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エンティティセレクションの作成</h2>
 <p>以下の方法で、<a href="/docs/Rx/ja/ORDA/dsmapping.html#エンティティセレクション">エンティティセレクション</a> 型のオブジェクトを作成することができます:</p>
 <ul>
-<li><a href="API/DataClassClass.md#query">データクラス</a> または <a href="API/EntitySelectionClass.md#query">既存のエンティティセレクション</a> のエンティティに対してクエリを実行する;</li>
-<li><a href="API/DataClassClass.md#all"><code>.all( )</code></a> DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;</li>
-<li><code>Create entity selection</code> コマンドあるいは <a href="API/DataClassClass.md#newselection"><code>.newSelection( )</code></a> DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;</li>
-<li><a href="API/EntitySelectionClass.md#copy"><code>.copy( )</code></a> EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;</li>
-<li><a href="API/EntitySelectionClass.md">EntitySelectionクラス</a> の様々な関数の中から、<a href="API/EntitySelectionClass.md#or"><code>.or( )</code></a> のように新しいエンティティセレクションを返すものを使用する;</li>
+<li><a href="API/dataclassClass.md#query">データクラス</a> または <a href="API/entitySelectionClass.md#query">既存のエンティティセレクション</a> のエンティティに対してクエリを実行する;</li>
+<li><a href="API/dataclassClass.md#all"><code>.all( )</code></a> DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;</li>
+<li><code>Create entity selection</code> コマンドあるいは <a href="API/dataclassClass.md#newselection"><code>.newSelection( )</code></a> DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;</li>
+<li><a href="API/entitySelectionClass.md#copy"><code>.copy( )</code></a> EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;</li>
+<li><a href="API/entitySelectionClass.md">EntitySelectionクラス</a> の様々な関数の中から、<a href="API/entitySelectionClass.md#or"><code>.or( )</code></a> のように新しいエンティティセレクションを返すものを使用する;</li>
 <li>&quot;リレートエンティティズ&quot; 型のリレーション属性を使用する (以下参照)</li>
 </ul>
 <p>データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。</p>
 <h3><a class="anchor" aria-hidden="true" id="共有可能追加可能なエンティティセレクション"></a><a href="#共有可能追加可能なエンティティセレクション" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>共有可能/追加可能なエンティティセレクション</h3>
-<p>エンティティセレクションには 2種類あります: <strong>共有可能 (shareable)</strong> (複数のプロセスで読み込み可能、ただし追加不可) のものと、<strong>追加可能 (alterable)</strong> (<a href="API/EntitySelectionClass.md#add"><code>add()</code></a> 関数が使用可能、ただしカレントプロセスでのみ利用可) のものです:</p>
+<p>エンティティセレクションには 2種類あります: <strong>共有可能 (shareable)</strong> (複数のプロセスで読み込み可能、ただし追加不可) のものと、<strong>追加可能 (alterable)</strong> (<a href="API/entitySelectionClass.md#add"><code>add()</code></a> 関数が使用可能、ただしカレントプロセスでのみ利用可) のものです:</p>
 <h4><a class="anchor" aria-hidden="true" id="プロパティ"></a><a href="#プロパティ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プロパティ</h4>
 <p><strong>共有可能</strong> なエンティティセレクションは以下のような特徴を持ちます:</p>
 <ul>
 <li>共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で引数として受け渡しすることができます。</li>
 <li>複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、<em>ロック識別子</em> を持っていないということです)。</li>
-<li>新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、<a href="API/EntitySelectionClass.md#add"><code>.add( )</code></a> 関数を呼び出す前に、<a href="API/EntitySelectionClass.md#copy"><code>.copy( )</code></a> 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。</li>
+<li>新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、<a href="API/entitySelectionClass.md#add"><code>.add( )</code></a> 関数を呼び出す前に、<a href="API/entitySelectionClass.md#copy"><code>.copy( )</code></a> 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。</li>
 </ul>
 <blockquote>
-<p>大多数のエンティティセレクション関数 (<a href="API/EntitySelectionClass.md#slice"><code>.slice()</code></a>, <a href="API/EntitySelectionClass.md#and"><code>.and()</code></a> 等) は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。</p>
+<p>大多数のエンティティセレクション関数 (<a href="API/entitySelectionClass.md#slice"><code>.slice()</code></a>, <a href="API/entitySelectionClass.md#and"><code>.and()</code></a> 等) は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。</p>
 </blockquote>
 <p><strong>追加可能</strong> なエンティティセレクションは以下のような特徴を持ちます:</p>
 <ul>
 <li>プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。</li>
-<li>新規エンティティを受け取ることができます (つまり、<a href="API/EntitySelectionClass.md#add"><code>.add()</code></a> 関数を使用できます)。</li>
+<li>新規エンティティを受け取ることができます (つまり、<a href="API/entitySelectionClass.md#add"><code>.add()</code></a> 関数を使用できます)。</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="共有可能追加可能エンティティセレクションの定義"></a><a href="#共有可能追加可能エンティティセレクションの定義" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>共有可能/追加可能エンティティセレクションの定義</h4>
-<p>エンティティセレクションが <strong>共有可能</strong> または <strong>追加可能</strong> のいずれの特性を持つかは、そのエンティティセレクションの作成時に定義され、あとから変更することはできません。 エンティティセレクションの特性は、<a href="API/EntitySelectionClass.md#isalterable">.isAlterable()</a> 関数または <code>OB Is shared</code> コマンドを使って確認することができます。</p>
+<p>エンティティセレクションが <strong>共有可能</strong> または <strong>追加可能</strong> のいずれの特性を持つかは、そのエンティティセレクションの作成時に定義され、あとから変更することはできません。 エンティティセレクションの特性は、<a href="API/entitySelectionClass.md#isalterable">.isAlterable()</a> 関数または <code>OB Is shared</code> コマンドを使って確認することができます。</p>
 <p>新規のエンティティセレクションは次の場合に <strong>共有可能</strong> です:</p>
 <ul>
-<li>データクラスに対して呼び出された ORDAクラス関数によって生成された場合: <a href="API/DataClassClass.md#all">dataClass.all()</a>, <a href="API/DataClassClass.md#fromcollection">dataClass.fromCollection()</a>, <a href="API/DataClassClass.md#query">dataClass.query()</a> 等。</li>
-<li>リレーション属性をもとに生成され、<a href="API/EntityClass.md#attributename">entity.<em>attributeName</em></a> (例: &quot;company.employees&quot;) の <em>attributeName</em> が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属していない場合。</li>
-<li><code>ck shared</code> オプションを指定したうえで、<a href="API/EntitySelectionClass.md#copy"><code>entitySelection.copy()</code></a> または <code>OB Copy</code> を使用し、明示的に共有可能としてコピーされた場合。</li>
+<li>データクラスに対して呼び出された ORDAクラス関数によって生成された場合: <a href="API/dataclassClass.md#all">dataClass.all()</a>, <a href="API/dataclassClass.md#fromcollection">dataClass.fromCollection()</a>, <a href="API/dataclassClass.md#query">dataClass.query()</a> 等。</li>
+<li>リレーション属性をもとに生成され、<a href="API/entityClass.md#attributename">entity.<em>attributeName</em></a> (例: &quot;company.employees&quot;) の <em>attributeName</em> が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属していない場合。</li>
+<li><code>ck shared</code> オプションを指定したうえで、<a href="API/entitySelectionClass.md#copy"></a>entitySelection.copy( )`` または <code>OB Copy</code> を使用し、明示的に共有可能としてコピーされた場合。</li>
 </ul>
 <p>例:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$myComp</span>:=ds.Company.<span class="hljs-function">get</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">// $myComp はエンティティセレクションに属していません</span>
@@ -227,20 +227,20 @@
 </code></pre>
 <p>新規のエンティティセレクションは次の場合に <strong>追加可能</strong> です:</p>
 <ul>
-<li><a href="API/DataClassClass.md#newselection"><code>dataClass.newSelection()</code></a> 関数または <code>Create entity selection</code> コマンドを使用して新規作成された空のエンティティセレクションの場合。</li>
-<li><code>ck shared</code> オプションを指定せずに、<a href="API/EntitySelectionClass.md#copy"><code>entitySelection.copy()</code></a> または <code>OB Copy</code> を使用し、明示的に追加可能としてコピーされた場合。</li>
+<li><a href="API/dataclassClass.md#newselection"><code>dataClass.newSelection( )</code></a> 関数または <code>Create entity selection</code> コマンドを使用して新規作成された空のエンティティセレクションの場合。</li>
+<li><code>ck shared</code> オプションを指定せずに、<a href="API/entitySelectionClass.md#copy"></a>entitySelection.copy( )`` または <code>OB Copy</code> を使用し、明示的に追加可能としてコピーされた場合。</li>
 </ul>
 <p>例:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$toModify</span>:=ds.Company.<span class="hljs-function">all</span>().<span class="hljs-function">copy</span>() <span class="hljs-comment">// $toModify は追加可能です</span>
 </code></pre>
 <p>新規のエンティティセレクションは次の場合に、元となるエンティティセレクションの特性を <strong>継承</strong> します:</p>
 <ul>
-<li>既存のエンティティセレクションに対して呼び出された ORDAクラス関数 (<a href="API/EntitySelectionClass.md#query">.query()</a>, <a href="API/EntitySelectionClass.md#slice">.slice()</a>, 等) によって生成された場合 .</li>
+<li>既存のエンティティセレクションに対して呼び出された ORDAクラス関数 (<a href="API/entitySelectionClass.md#query">.query()</a>, <a href="API/entitySelectionClass.md#slice">.slice()</a>, 等) によって生成された場合 .</li>
 <li>リレーションに基づいて生成された場合:
 <ul>
-<li><a href="API/EntityClass.md#attributename">entity.<em>attributeName</em></a> (例: &quot;company.employees&quot;) の <em>attributeName</em> が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 (<a href="API/EntityClass.md#getselection">entity.getSelection()</a> エンティティセレクションと同じ特性になります)。</li>
-<li><a href="API/EntitySelectionClass.md#attributename">entitySelection.<em>attributeName</em></a> (例: &quot;employees.employer&quot;) の <em>attributeName</em> がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。</li>
-<li><a href="API/EntitySelectionClass.md#extract">entitySelection.extract()</a> から返されるコレクションがエンティティセレクションを含む場合 (エンティティセレクションと同じ特性になります)。</li>
+<li><a href="API/entityClass.md#attributename">entity.<em>attributeName</em></a> (例: &quot;company.employees&quot;) の <em>attributeName</em> が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 (<a href="API/entityClass.md#getselection">entity.getSelection()</a> エンティティセレクションと同じ特性になります)。</li>
+<li><a href="API/entitySelectionClass.md#attributename">entitySelection.<em>attributeName</em></a> (例: &quot;employees.employer&quot;) の <em>attributeName</em> がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。</li>
+<li><a href="API/entitySelectionClass.md#extract">entitySelection.extract()</a> から返されるコレクションがエンティティセレクションを含む場合 (エンティティセレクションと同じ特性になります)。</li>
 </ul></li>
 </ul>
 <p>例:</p>

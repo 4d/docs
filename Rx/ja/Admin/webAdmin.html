@@ -142,7 +142,18 @@
 <p>すべての <a href="#webadmin-設定">WebAdmin 設定</a> は、<code>WebAdmin.4DSettings</code> ファイルに保存されます。 4D および 4D Server アプリケーション毎にデフォルトの <code>WebAdmin.4DSettings</code> ファイルが 1つ存在し、同じホストマシン上で複数のアプリケーションを運用することができます。</p>
 <p>4D および 4D Server アプリケーションをヘッドレスで実行している場合、デフォルトの <code>WebAdmin.4DSettings</code> ファイルを設定して使用するか、カスタムの <code>.4DSettings</code> ファイルを指定することができます。</p>
 <p>ファイルの内容を設定するには、インターフェースを持つ 4Dアプリケーションの<a href="#設定ダイアログボックス">WebAdmin設定ダイアログ</a> を使用し、その後ヘッドレスで実行します。 このとき、デフォルトの <code>WebAdmin.4DSettings</code> ファイルが使用されます。</p>
-<p>また、カスタムの <code>.4DSettings</code> ファイル (xml形式) を設定し、デフォルトファイルの代わりに使用することもできます。 この機能をサポートするために、<a href="/docs/Rx/ja/Admin/cli.html">コマンドライン・インターフェース</a> ではいくつかの専用の引数が用意されています。</p>
+<p>また、カスタムの <code>.4DSettings</code> ファイル (xml形式) を設定し、デフォルトファイルの代わりに使用することもできます。 この機能をサポートするために、<em>コマンドライン・インターフェース</em> ではいくつかの専用の引数が用意されています:</p>
+<table>
+<thead>
+<tr><th>引数                              </th><th>値</th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td><code>--webadmin-settings-file</code></td><td>ファイルパス</td><td>WebAdmin Webサーバー 用のカスタム WebAdmin <code>.4DSettings</code> ファイルのパス</td></tr>
+<tr><td><code>--webadmin-access-key</code></td><td>String</td><td>WebAdmin Webサーバー 用のアクセスキー</td></tr>
+<tr><td><code>--webadmin-auto-start</code></td><td>ブール</td><td>WebAdmin Webサーバー 用の自動スタートアップ設定の状態</td></tr>
+<tr><td><code>--webadmin-store-settings</code></td><td></td><td>アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの <code>WebAdmin.4DSettings</code> ファイル、または <code>--webadmin-settings-path</code> パラメーターで指定されたカスタムファイル) に保存します。 必要に応じて <code>--webadmin-store-settings</code> 引数を使用して、これらの設定を保存します。</td></tr>
+</tbody>
+</table>
 <blockquote>
 <p><code>.4DSettings</code> ファイルにおいて、アクセスキーは平文では保存されません。</p>
 </blockquote>

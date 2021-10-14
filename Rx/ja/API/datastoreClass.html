@@ -66,7 +66,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/datastoreClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DataStore</h1></header><article><div><span><p><a href="/docs/Rx/ja/ORDA/dsmapping.html#datastore">データストア</a> とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 <code>Datastore</code> オブジェクトは以下のコマンドによって返されます:</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/DataStoreClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DataStore</h1></header><article><div><span><p><a href="/docs/Rx/ja/ORDA/dsmapping.html#datastore">データストア</a> とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 <code>Datastore</code> オブジェクトは以下のコマンドによって返されます:</p>
 <ul>
 <li><a href="#ds">ds</a>: メインデータストアへのショートカット</li>
 <li><a href="#open-datastore">Open datastore</a>: リモートデータストアを開きます</li>
@@ -488,7 +488,7 @@
 <p>この関数は、<code>OB Copy</code> または <a href="#copy"><code>.copy()</code></a> に <code>ck shared</code> オプションを明示的に使用して作成されたエンティティセレクションには適用されません。</p>
 </blockquote>
 <blockquote>
-<p><strong>互換性に関する注記</strong>: このメソッドは 4D v18 R5 より前のバージョンから変換されたプロジェクトで、<a href="/docs/Rx/ja/API/EntitySelectionClass.html#add">.add()</a> の呼び出しを使用しているものにおいてのみ使用してください。 このコンテキストにおいては、<code>.makeSelectionsAlterable()</code> を使用することで、既存プロジェクト内で以前の 4D のふるまいを再現し、時間を節約できます。 逆に、4D v18 R5 以降のバージョンで作成された新規プロジェクトにおいては、この関数の使用は <strong>推奨されていません</strong>。エンティティセレクションを共有可能にできないため、パフォーマンスとスケーラビリティの観点で妨げになるからです。</p>
+<p><strong>互換性に関する注記</strong>: このメソッドは 4D v18 R5 より前のバージョンから変換されたプロジェクトで、<a href="entitySelectionClass.md#add">.add()</a> の呼び出しを使用しているものにおいてのみ使用してください。 このコンテキストにおいては、<code>.makeSelectionsAlterable()</code> を使用することで、既存プロジェクト内で以前の 4D のふるまいを再現し、時間を節約できます。 逆に、4D v18 R5 以降のバージョンで作成された新規プロジェクトにおいては、この関数の使用は <strong>推奨されていません</strong>。エンティティセレクションを共有可能にできないため、パフォーマンスとスケーラビリティの観点で妨げになるからです。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="providedatakey"></a><a href="#providedatakey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.provideDataKey()</h2>
 <p><details><summary>履歴</summary></p>

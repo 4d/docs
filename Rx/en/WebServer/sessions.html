@@ -72,7 +72,7 @@
 <li>handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are <strong>scalable</strong>),</li>
 <li>share data between the processes of a web client,</li>
 <li>associate privileges to user sessions,</li>
-<li>handle access through a <code>Session</code> object and the <a href="API/SessionClass.md">Session API</a>.</li>
+<li>handle access through a <code>Session</code> object and the <a href="/docs/Rx/en/API/SessionClass.html">Session API</a>.</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.</p>
@@ -85,7 +85,7 @@
 </ul>
 <p>This option is selected by default in new projects. It can however be disabled by selecting the <strong>No sessions</strong> option, in which case the web session features are disabled (no <code>Session</code> object is available).</p>
 <ul>
-<li>Using the <a href="API/WebServerClass.md#scalablesession"><code>.scalableSession</code></a> property of the Web Server object (to pass in the <em>settings</em> parameter of the <a href="API/WebServerClass.md#start"><code>.start()</code></a> function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).</li>
+<li>Using the <a href="/docs/Rx/en/API/WebServerClass.html#scalablesession"><code>.scalableSession</code></a> property of the Web Server object (to pass in the <em>settings</em> parameter of the <a href="/docs/Rx/en/API/WebServerClass.html#start"><code>.start()</code></a> function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).</li>
 </ul>
 <blockquote>
 <p>The <code>WEB SET OPTION</code> command can also set the session mode for the main Web server.</p>
@@ -97,7 +97,7 @@
 <h2><a class="anchor" aria-hidden="true" id="session-implementation"></a><a href="#session-implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session implementation</h2>
 <p>When <a href="#enabling-sessions">sessions are enabled</a>, automatic mechanisms are implemented, based upon a private cookie set by 4D itself: &quot;4DSID_<em>AppName</em>&quot;, where <em>AppName</em> is the name of the application project. This cookie references the current web session for the application.</p>
 <blockquote>
-<p>The cookie name can be get using the <a href="API/WebServerClass.md#sessioncookiename"><code>.sessionCookieName</code></a> property.</p>
+<p>The cookie name can be get using the <a href="/docs/Rx/en/API/WebServerClass.html#sessioncookiename"><code>.sessionCookieName</code></a> property.</p>
 </blockquote>
 <ol>
 <li><p>In each web client request, the Web server checks for the presence and the value of the private &quot;4DSID_<em>AppName</em>&quot; cookie.</p></li>
@@ -108,9 +108,9 @@
 <li>a new session with a private &quot;4DSID_<em>AppName</em>&quot; cookie is created on the web server</li>
 <li>a new Guest <code>Session</code> object is created and is dedicated to the scalable web session.</li>
 </ul>
-<p>The current <code>Session</code> object can then be accessed through the <a href="API/SessionClass.md#session"><code>Session</code></a> command in the code of any web processes.</p>
+<p>The current <code>Session</code> object can then be accessed through the <a href="/docs/Rx/en/API/SessionClass.html#session"><code>Session</code></a> command in the code of any web processes.</p>
 <p><img src="/docs/Rx/assets/en/WebServer/schemaSession.png" alt="alt-text"></p>
-<p>Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, <a href="/docs/Rx/en/Concepts/variables.html#process-variables">process variables</a> must be cleared by your code at the end of its execution (using <a href="https://doc.4d.com/4dv18/help/command/en/page89.html"><code>CLEAR VARIABLE</code></a> for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why <strong>it is recommended</strong> to use the <a href="API/SessionClass.md">Session</a> object when you want to keep session related information.</p>
+<p>Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, <a href="/docs/Rx/en/Concepts/variables.html#process-variables">process variables</a> must be cleared by your code at the end of its execution (using <a href="https://doc.4d.com/4dv18/help/command/en/page89.html"><code>CLEAR VARIABLE</code></a> for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why <strong>it is recommended</strong> to use the <a href="/docs/Rx/en/API/SessionClass.html">Session</a> object when you want to keep session related information.</p>
 <h3><a class="anchor" aria-hidden="true" id="preemptive-mode"></a><a href="#preemptive-mode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preemptive mode</h3>
 <p>On 4D Server, Web server sessions are automatically handled through preemptive processes, <strong>even in interpreted mode</strong>. You need to make sure that your web code is <a href="/docs/Rx/en/WebServer/preemptiveWeb.html#writing-thread-safe-web-server-code">compliant with a preemptive execution</a>.</p>
 <blockquote>
@@ -118,7 +118,7 @@
 </blockquote>
 <p>With 4D single-user, interpreted code is always run in cooperative mode.</p>
 <h2><a class="anchor" aria-hidden="true" id="sharing-information"></a><a href="#sharing-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sharing information</h2>
-<p>Each <code>Session</code> object provides a <a href="API/SessionClass.md#storage"><code>.storage</code></a> property which is a <a href="/docs/Rx/en/Concepts/shared.html">shared object</a>. This property allows you to share information between all processes handled by the session.</p>
+<p>Each <code>Session</code> object provides a <a href="/docs/Rx/en/API/SessionClass.html#storage"><code>.storage</code></a> property which is a <a href="/docs/Rx/en/Concepts/shared.html">shared object</a>. This property allows you to share information between all processes handled by the session.</p>
 <h2><a class="anchor" aria-hidden="true" id="session-lifetime"></a><a href="#session-lifetime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session lifetime</h2>
 <p>A scalable web session is closed when:</p>
 <ul>
@@ -126,16 +126,16 @@
 <li>the timeout of the session cookie has been reached.</li>
 </ul>
 <p>The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.</p>
-<p>This timeout can be set using the <a href="API/SessionClass.md#idletimeout"><code>.idleTimeout</code></a> property of the <code>Session</code> object (the timeout cannot be less than 60 minutes).</p>
-<p>When a scalable web session is closed, if the <a href="API/SessionClass.md#session"><code>Session</code></a> command is called afterwards:</p>
+<p>This timeout can be set using the <a href="/docs/Rx/en/API/SessionClass.html#idletimeout"><code>.idleTimeout</code></a> property of the <code>Session</code> object (the timeout cannot be less than 60 minutes).</p>
+<p>When a scalable web session is closed, if the <a href="/docs/Rx/en/API/SessionClass.html#session"><code>Session</code></a> command is called afterwards:</p>
 <ul>
 <li>the <code>Session</code> object does not contain privileges (it is a Guest session)</li>
-<li>the <a href="API/SessionClass.md#storage"><code>.storage</code></a> property is empty</li>
+<li>the <a href="/docs/Rx/en/API/SessionClass.html#storage"><code>.storage</code></a> property is empty</li>
 <li>a new session cookie is associated to the session</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="privileges"></a><a href="#privileges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Privileges</h2>
 <p>Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.</p>
-<p>You can assign privileges usign the <a href="API/SessionClass.md#setprivileges"><code>.setPrivileges()</code></a> function. In your code, you can check the session's privileges to allow or deny access using the <a href="API/SessionClass.md#hasprivilege"><code>.hasPrivilege()</code></a> function. By default, new sessions do not have any privilege: they are <strong>guest</strong> sessions (<a href="API/SessionClass.md#isguest"><code>.isGuest()</code></a> function returns true).</p>
+<p>You can assign privileges usign the <a href="/docs/Rx/en/API/SessionClass.html#setprivileges"><code>.setPrivileges()</code></a> function. In your code, you can check the session's privileges to allow or deny access using the <a href="/docs/Rx/en/API/SessionClass.html#hasprivilege"><code>.hasPrivilege()</code></a> function. By default, new sessions do not have any privilege: they are <strong>guest</strong> sessions (<a href="/docs/Rx/en/API/SessionClass.html#isguest"><code>.isGuest()</code></a> function returns true).</p>
 <blockquote>
 <p>In the current implementation (v18 R6), only the &quot;WebAdmin&quot; privilege is available.</p>
 </blockquote>
@@ -156,7 +156,7 @@ End if</span>
 <pre><code class="hljs"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost:8044/authenticate.shtml</span>
 </code></pre>
 <blockquote>
-<p>In a production environment, it it necessary to use a <a href="API/WebServerClass.md#httpsenabled">HTTPS connection</a> to avoid any uncrypted information to circulate on the network.</p>
+<p>In a production environment, it it necessary to use a <a href="/docs/Rx/en/API/WebServerClass.html#httpsenabled">HTTPS connection</a> to avoid any uncrypted information to circulate on the network.</p>
 </blockquote>
 <ol start="2">
 <li>The <code>authenticate.shtml</code> page is a form containing <em>userId</em> et <em>password</em> input fields and sending a 4DACTION POST action:</li>

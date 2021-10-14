@@ -70,7 +70,7 @@
 <p>たとえば、選択中の社員より給与の高い社員一覧を返す <code>getNextWithHigherSalary()</code> 関数を <code>EmployeeEntity</code> クラスに作成したとします。 この関数は簡単に呼び出すことができます:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$nextHigh</span>:=ds.<span class="hljs-function">Employee</span>(<span class="hljs-number">1</span>).<span class="hljs-function">getNextWithHigherSalary</span>()
 </code></pre>
-<p>これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます (<a href="#リモートデータストアの例">リモートデータストアの例</a> を参照ください):</p>
+<p>これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//$cityManager はリモートデータストアへの参照です</span>
 Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class="hljs-function">getCityName</span>(Form.comp.zipcode)
 </code></pre>
@@ -91,10 +91,10 @@ Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class
 <tr><th>クラス</th><th>例</th><th>次によってインスタンス化されます</th></tr>
 </thead>
 <tbody>
-<tr><td>cs.DataStore</td><td>cs.DataStore</td><td><a href="API/DataStoreClass.md#ds"><code>ds</code></a> コマンド</td></tr>
-<tr><td>cs.<em>DataClassName</em></td><td>cs.Employee</td><td><a href="API/DataStoreClass.md#dataclassname"><code>dataStore.DataClassName</code></a>, <code>dataStore[DataClassName]</code></td></tr>
-<tr><td>cs.<em>DataClassName</em>Entity</td><td>cs.EmployeeEntity</td><td><a href="API/DataClassClass.md#get"><code>dataClass.get()</code></a>, <a href="API/DataClassClass.md#new"><code>dataClass.new()</code></a>, <a href="API/EntitySelectionClass.md#first"><code>entitySelection.first()</code></a>, <a href="API/EntitySelectionClass.md#last"><code>entitySelection.last()</code></a>, <a href="API/EntityClass.md#previous"><code>entity.previous()</code></a>, <a href="API/EntityClass.md#next"><code>entity.next()</code></a>, <a href="API/EntityClass.md#first"><code>entity.first()</code></a>, <a href="API/EntityClass.md#last"><code>entity.last()</code></a>, <a href="API/EntityClass.md#clone"><code>entity.clone()</code></a></td></tr>
-<tr><td>cs.<em>DataClassName</em>Selection</td><td>cs.EmployeeSelection</td><td><a href="API/DataClassClass.md#query"><code>dataClass.query()</code></a>, <a href="API/EntitySelectionClass.md#query"><code>entitySelection.query()</code></a>, <a href="API/DataClassClass.md#all"><code>dataClass.all()</code></a>, <a href="API/DataClassClass.md#fromcollection"><code>dataClass.fromCollection()</code></a>, <a href="API/DataClassClass.md#newselection"><code>dataClass.newSelection()</code></a>, <a href="API/EntitySelectionClass.md#drop"><code>entitySelection.drop()</code></a>, <a href="API/EntityClass.md#getselection"><code>entity.getSelection()</code></a>, <a href="API/EntitySelectionClass.md#and"><code>entitySelection.and()</code></a>, <a href="API/EntitySelectionClass.md#minus"><code>entitySelection.minus()</code></a>, <a href="API/EntitySelectionClass.md#or"><code>entitySelection.or()</code></a>, <a href="API/EntitySelectionClass.md#or"><code>entitySelection.orderBy()</code></a>, <a href="API/EntitySelectionClass.md#orderbyformula"><code>entitySelection.orderByFormula()</code></a>, <a href="API/EntitySelectionClass.md#slice"><code>entitySelection.slice()</code></a>, <code>Create entity selection</code></td></tr>
+<tr><td>cs.DataStore</td><td>cs.DataStore</td><td><a href="/docs/Rx/ja/API/DataStoreClass.html#ds"><code>ds</code></a> コマンド</td></tr>
+<tr><td>cs.<em>DataClassName</em></td><td>cs.Employee</td><td><a href="/docs/Rx/ja/API/DataStoreClass.html#dataclassname"><code>dataStore.DataClassName</code></a>, <code>dataStore[&quot;DataClassName&quot;]</code></td></tr>
+<tr><td>cs.<em>DataClassName</em>Entity</td><td>cs.EmployeeEntity</td><td><a href="/docs/Rx/ja/API/DataClassClass.html#get"><code>dataClass.get()</code></a>, <a href="/docs/Rx/ja/API/DataClassClass.html#new"><code>dataClass.new()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#first"><code>entitySelection.first()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#last"><code>entitySelection.last()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#previous"><code>entity.previous()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#next"><code>entity.next()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#first"><code>entity.first()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#last"><code>entity.last()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#clone"><code>entity.clone()</code></a></td></tr>
+<tr><td>cs.<em>DataClassName</em>Selection</td><td>cs.EmployeeSelection</td><td><a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>dataClass.query()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#query"><code>entitySelection.query()</code></a>, <a href="/docs/Rx/ja/API/DataClassClass.html#all"><code>dataClass.all()</code></a>, <a href="/docs/Rx/ja/API/DataClassClass.html#fromcollection"><code>dataClass.fromCollection()</code></a>, <a href="/docs/Rx/ja/API/DataClassClass.html#newselection"><code>dataClass.newSelection()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#drop"><code>entitySelection.drop()</code></a>, <a href="/docs/Rx/ja/API/EntityClass.html#getselection"><code>entity.getSelection()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#and"><code>entitySelection.and()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#minus"><code>entitySelection.minus()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#or"><code>entitySelection.or()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#or"><code>entitySelection.orderBy()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#orderbyformula"><code>entitySelection.orderByFormula()</code></a>, <a href="/docs/Rx/ja/API/EntitySelectionClass.html#slice"><code>entitySelection.slice()</code></a>, <code>Create entity selection</code></td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -102,10 +102,10 @@ Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class
 </blockquote>
 <p>ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます:</p>
 <ul>
-<li>Datastore クラスオブジェクトは、<a href="API/DataStoreClass.md">ORDA Datastore 汎用クラス</a> の関数を呼び出すことができます。</li>
-<li>Datastore クラスオブジェクトは、<a href="API/DataClassClass.md">ORDA DataClass 汎用クラス</a> の関数を呼び出すことができます。</li>
-<li>EntitySelection クラスオブジェクトは <a href="API/EntitySelectionClass.md">ORDA EntitySelection 汎用クラス</a> の関数を呼び出すことができます。</li>
-<li>Entity クラスオブジェクトは <a href="API/EntityClass.md">ORDA Entity 汎用クラス</a> の関数を呼び出すことができます。</li>
+<li>Datastore クラスオブジェクトは、<a href="/docs/Rx/ja/API/DataStoreClass.html">ORDA Datastore 汎用クラス</a> の関数を呼び出すことができます。</li>
+<li>Datastore クラスオブジェクトは、<a href="/docs/Rx/ja/API/DataClassClass.html">ORDA DataClass 汎用クラス</a> の関数を呼び出すことができます。</li>
+<li>EntitySelection クラスオブジェクトは <a href="/docs/Rx/ja/API/EntitySelectionClass.html">ORDA EntitySelection 汎用クラス</a> の関数を呼び出すことができます。</li>
+<li>Entity クラスオブジェクトは <a href="/docs/Rx/ja/API/EntityClass.html">ORDA Entity 汎用クラス</a> の関数を呼び出すことができます。</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="クラスの説明"></a><a href="#クラスの説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>クラスの説明</h2>
 <p><details><summary>履歴</summary></p>

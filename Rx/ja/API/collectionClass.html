@@ -66,7 +66,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/collectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Collection</h1></header><article><div><span><p>Collectionクラスは <a href="/docs/Rx/ja/Concepts/collection.html">コレクション</a> 型の変数を扱います。</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/CollectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Collection</h1></header><article><div><span><p>Collectionクラスは <a href="/docs/Rx/ja/Concepts/collection.html">コレクション</a> 型の変数を扱います。</p>
 <p>コレクションは次のように初期化します:</p>
 <table>
 <thead>
@@ -1143,7 +1143,7 @@ End if</span>
 <p><em>queryString</em> 引数には、以下のシンタックスを使用します:</p>
 <pre><code class="hljs css language-4d">propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 </code></pre>
-<p><em>queryString</em> および <em>value</em> パラメーターの詳細については、<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>dataClass.query()</code></a> 関数を参照ください。</p>
+<p><em>queryString</em> および <em>value</em> パラメーターの詳細については、<a href="dataclassClass.md#query"><code>dataClass.query()</code></a> 関数を参照ください。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-14"></a><a href="#例題-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$icol </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
@@ -1732,7 +1732,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <p><em>queryString</em> 引数には、以下のシンタックスを使用します:</p>
 <pre><code class="hljs css language-4d">propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 </code></pre>
-<p><em>queryString</em> および <em>value</em> や <em>querySettings</em> パラメーターを使ってクエリをビルドする方法の詳細については、<a href="DataClassClass.md#query"><code>DataClass.query()</code></a> 関数を参照ください。</p>
+<p><em>queryString</em> および <em>value</em> や <em>querySettings</em> パラメーターを使ってクエリをビルドする方法の詳細については、<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>DataClass.query()</code></a> 関数を参照ください。</p>
 <blockquote>
 <p><em>queryString</em> 引数および <em>formula</em> オブジェクト引数の使用に関わらず、フォーミュラは <code>collection.query()</code> 関数でサポートされていません。</p>
 </blockquote>
@@ -1775,7 +1775,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
   <span class="hljs-comment">//$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] (今日が 01/10/2018 の場合)</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-3-5"></a><a href="#例題-3-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3</h4>
-<p>追加のクエリ例については、<a href="/docs/Rx/ja/API/DataClassClass.html#query"><code>dataClass.query()</code></a> を参照してください。</p>
+<p>追加のクエリ例については、<a href="dataclassClass.md#query"><code>dataClass.query()</code></a> を参照してください。</p>
 <h2><a class="anchor" aria-hidden="true" id="reduce"></a><a href="#reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reduce()</h2>
 <p><details><summary>履歴</summary></p>
 <table>

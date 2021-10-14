@@ -76,7 +76,7 @@
 <tr><td><a href="#dataClass"><strong>{dataClass}</strong></a></td><td><code>/Employee</code></td><td>データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します</td></tr>
 <tr><td><a href="#dataclasskey"><strong>{dataClass}({key})</strong></a></td><td><code>/Employee(22)</code></td><td>データクラスのプライマリーキーによって特定されるエンティティのデータを返します</td></tr>
 <tr><td><a href="#dataclassattributevalue"><strong>{dataClass}:{attribute}(value)</strong></a></td><td><code>/Employee:firstName(John)</code></td><td>指定した属性値を持つ 1件のエンティティのデータを返します</td></tr>
-<tr><td><a href="/docs/Rx/ja/REST/classFunctions.html#function-calls"><strong>{dataClass}/{DataClassClassFunction}</strong></a></td><td><code>/City/getCity</code></td><td>DataClassクラス関数を実行します</td></tr>
+<tr><td><a href="/docs/Rx/ja/REST/classFunctions.html#function-calls"><strong>{dataClass}/{dataClassClassFunction}</strong></a></td><td><code>/City/getCity</code></td><td>DataClassクラス関数を実行します</td></tr>
 <tr><td><a href="/docs/Rx/ja/REST/classFunctions.html#function-calls"><strong>{dataClass}({EntitySelectionClassFunction}</strong></a></td><td><code>/City/getPopulation/?$filter=&quot;ID&lt;3&quot;</code></td><td>EntitySelectionクラス関数を実行します</td></tr>
 <tr><td><a href="/docs/Rx/ja/REST/classFunctions.html#function-calls"><strong>{dataClass}({key})/{EntityClassFunction}</strong></a></td><td><code>City(2)/getPopulation</code></td><td>Entityクラス関数を実行します</td></tr>
 </tbody>
@@ -198,7 +198,7 @@
 <p>データクラスのプライマリーキーによって特定されるエンティティのデータを返します (<em>例</em>: <code>Company(22)</code> または </code>Company(&quot;IT0911AB2200&quot;)</code> など)。</p>
 <h3><a class="anchor" aria-hidden="true" id="説明-1"></a><a href="#説明-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h3>
 <p>データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの <strong><a href="https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230">主キーを設定、削除する</a></strong> を参照ください。</p>
-<p>返されるデータについての詳細は <a href="#dataclass">{DataClass}</a> を参照ください。</p>
+<p>返されるデータについての詳細は <a href="#dataclass">{dataClass}</a> を参照ください。</p>
 <p>取得する属性を指定するには、次のシンタックスを使っておこないます: <a href="/docs/Rx/ja/REST/manData.html#取得する属性の選択">{attribute1, attribute2, ...}</a>。 たとえば:</p>
 <p><code>GET /rest/Company(1)/name,address</code></p>
 <p><code>$expand</code> を使ってリレーション属性を展開するには、次のように指示します:</p>
