@@ -104,7 +104,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><code>certificateFolder</code></td><td>Text property but can be a <a href="/docs/19/fr/API/FolderClass.html"><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function.</td></tr>
+<tr><td>webServer object</td><td><code>certificateFolder</code></td><td>La propriété Text, mais il peut s'agir d'un objet <a href="/docs/19/fr/API/FolderClass.html"><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code>.</td></tr>
 </tbody>
 </table>
 <p>Folder where the TLS certificate files for the web server are located.</p>
@@ -577,7 +577,7 @@
 <tr><th>Can be set with</th><th>Nom</th><th>Commentaires</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="/docs/19/fr/API/WebServerClass.html#rootfolder"><code>rootFolder</code></a></td><td>Text property but can be a <a href="/docs/19/fr/API/FolderClass.html"><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function</td></tr>
+<tr><td>webServer object</td><td><a href="/docs/19/fr/API/WebServerClass.html#rootfolder"><code>rootFolder</code></a></td><td>La propriété Text, mais il peut s'agir d'un objet <a href="/docs/19/fr/API/FolderClass.html"><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code></td></tr>
 <tr><td><code>WEB SET ROOT FOLDER</code></td><td></td><td></td></tr>
 <tr><td>Settings dialog box</td><td>Configuration page/Default HTML Root</td><td></td></tr>
 </tbody>
@@ -642,19 +642,19 @@
 <tr><td>webServer object</td><td><a href="/docs/19/fr/API/WebServerClass.html#sessioncookiesamesite"><code>sessionCookieSameSite</code></a></td><td></td></tr>
 </tbody>
 </table>
-<p>Value of the <code>SameSite</code> attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery (<a href="https://developer.mozilla.org/en-US/docs/Glossary/CSRF">CSRF</a>) attacks.</p>
+<p>Valeur de l'attribut <code>SameSite</code> du cookie de session. Cet attribut vous permet de déclarer si votre cookie doit être limité à un contexte de première partie ou de même site, comme une protection contre certaines attaques CSRF (<a href="https://developer.mozilla.org/en-US/docs/Glossary/CSRF">cross-site request forgery</a>).</p>
 <blockquote>
-<p>For a detailed description of the <code>SameSite</code> attribute, please refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">Mozilla documentation</a> or <a href="https://web.dev/samesite-cookies-explained/">this web.dev page</a>.</p>
+<p>Pour une description détaillée de l'attribut <code>SameSite</code>, veuillez vous reporter à la <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">documentation de Mozilla</a> ou à <a href="https://web.dev/samesite-cookies-explained/">cette page de développement web</a>.</p>
 </blockquote>
 <p>Trois valeurs sont disponibles :</p>
 <ul>
-<li>&quot;Strict&quot; (default <code>SameSite</code> attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.</li>
+<li>&quot;Strict&quot; (valeur par défaut de l'attribut<code>SameSite</code> pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.</li>
 <li>&quot;Lax&quot;: Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).</li>
 <li>&quot;None&quot;: Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When &quot;None&quot; value is used, the cookie <code>Secure</code> attribute must also be set (or the cookie will be blocked).</li>
 </ul>
-<p>The <code>Secure</code> attribute value of the session cookie is automatically set to &quot;True&quot; if the connection is HTTPS (whatever the <code>SameSite</code> attribute value).</p>
+<p>La valeur de l'attribut <code>Secure</code> du cookie de session est automatiquement définie sur &quot;True&quot; si la connexion est HTTPS (quelle que soit la valeur de l'attribut <code>SameSite</code>).</p>
 <blockquote>
-<p>It is not recommended to set <code>SameSite=None</code> on a HTTP server since the <code>Secure</code> attribute will be missing (used in HTTPS only) and cookies will be blocked.</p>
+<p>Il n'est pas recommandé de définir <code>SameSite=None</code> sur un serveur HTTP car l'attribut <code>Secure</code> sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="session-ip-address-validation"></a><a href="#session-ip-address-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session IP Address Validation</h2>
 <p>Can be set with|Name|Comments| |---|---|---| |webServer object|<a href="/docs/19/fr/API/WebServerClass.html#sessionipaddressvalidation"><code>sessionIPAddressValidation</code></a>|| |<code>WEB SET OPTION</code>|<code>Web session enable IP address validation</code>||</p>

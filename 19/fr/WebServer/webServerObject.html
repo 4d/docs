@@ -137,16 +137,16 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 <p>Un objet serveur Web contient <a href="/docs/19/fr/API/WebServerClass.html#web-server-object">diverses propriétés</a> qui configurent le serveur Web.</p>
 <p>Ces propriétés sont définies :</p>
 <ol>
-<li>using the <code>settings</code> parameter of the <a href="/docs/19/fr/API/WebServerClass.html#start"><code>.start()</code></a> function (except for read-only properties, see below),</li>
+<li>à l'aide du <code>paramètre</code> &lt;0&gt;settings&lt;/0&gt; de la fonction <a href="/docs/19/fr/API/WebServerClass.html#start"><code>.start()</code></a> (sauf pour les propriétés en lecture seule, voir ci-dessous),</li>
 <li>si elles ne sont pas utilisées, à l'aide de la commande <code>WEB SET OPTION</code> (applications hôtes uniquement),</li>
 <li>si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.</li>
 </ol>
 <ul>
 <li>Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.</li>
-<li>If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the <code>settings</code> parameter of the <a href="/docs/19/fr/API/WebServerClass.html#start"><code>.start()</code></a> function.</li>
+<li>Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre <code>settings</code> de la fonction <a href="/docs/19/fr/API/WebServerClass.html#start"><code>.start()</code></a>.</li>
 </ul>
 <blockquote>
-<p><em>isRunning</em>, <em>name</em>, <em>openSSLVersion</em>, and <em>perfectForwardSecrecy</em> are read-only properties that cannot be predefined in the <code>settings</code> object parameter for the <a href="/docs/19/fr/API/WebServerClass.html#start"><code>start()</code></a> function.</p>
+<p><em>isRunning</em>, <em>name</em>, <em>openSSLVersion</em> et <em>perfectForwardSecrecy</em> sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet <code>settings</code> pour la fonction <a href="/docs/19/fr/API/WebServerClass.html#start"><code>start()</code></a>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="portée-des-commandes-4d-web"></a><a href="#portée-des-commandes-4d-web" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Portée des commandes 4D Web</h2>
 <p>Le langage 4D contient <a href="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">plusieurs commandes</a> permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.</p>
