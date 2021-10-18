@@ -86,7 +86,7 @@
 </code></pre>
 <p>Dans une sous-méthode, vous pouvez utiliser les paramètres $1, $2... comme n'importe quelle autre variable locale. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple <code>Trouver dans champ</code>), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple <code>$mavar:=$1</code>).</p>
 <p>Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des commandes consacrées, comme par exemple :</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">EXECUTE METHOD IN SUBFORM</span>(<span class="hljs-string">"Cal2"</span>;<span class="hljs-string">"SetCalendarDate"</span>;*;<span class="hljs-literal">!05/05/10!</span>)  
+<pre><code class="hljs css language-4d"><span class="hljs-function">EXECUTE METHOD IN SUBFORM</span>(<span class="hljs-string">"Cal2"</span>;<span class="hljs-string">"SetCalendarDate"</span>;*;<span class="hljs-literal">!05/05/10!</span>)<span class="hljs-function">  </span>
 <span class="hljs-comment">//passez la date du !05/05/10! comme paramètre de SetCalendarDate</span>
 <span class="hljs-comment">// dans le contexte d'un sous-formulaire</span>
 </code></pre>
@@ -166,7 +166,7 @@
     <span class="hljs-variable">$0</span>:=<span class="hljs-number">0</span>
     ...<span class="hljs-keyword">
     If</span>(<span class="hljs-variable">$DataType</span>=Is picture)
-       <span class="hljs-variable">$0</span>:=<span class="hljs-number">-1</span><span class="hljs-keyword">
+       <span class="hljs-variable">$0</span>:=-<span class="hljs-number">1</span><span class="hljs-keyword">
     End if</span>
     ...<span class="hljs-keyword">
  End if</span>
@@ -215,7 +215,7 @@
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$person</span>)
  <span class="hljs-variable">$person</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"Age"</span>;<span class="hljs-number">40</span>)
 <span class="hljs-function"> ChangeAge</span>(<span class="hljs-variable">$person</span>)
-<span class="hljs-function"> ALERT</span>(<span class="hljs-function">Chaine</span>(<span class="hljs-function">OB Lire</span>(<span class="hljs-variable">$person</span>;<span class="hljs-string">"Age"</span>)))  
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">Chaine</span>(<span class="hljs-function">OB Lire</span>(<span class="hljs-variable">$person</span>;<span class="hljs-string">"Age"</span>)))<span class="hljs-function">  </span>
 </code></pre>
 <p>La méthode <code>ChangeAge</code> ajoute 10 à l'attribut Age de l'objet reçu</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
@@ -232,12 +232,12 @@
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$person</span>)
  <span class="hljs-variable">$person</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"Age"</span>;<span class="hljs-number">40</span>)
 <span class="hljs-function"> ChangeAge</span>(<span class="hljs-variable">$person</span>)
-<span class="hljs-function"> ALERT</span>(<span class="hljs-function">Chaine</span>(<span class="hljs-function">OB Lire</span>(<span class="hljs-variable">$person</span>;<span class="hljs-string">"Age"</span>)))  
+<span class="hljs-function"> ALERT</span>(<span class="hljs-function">Chaine</span>(<span class="hljs-function">OB Lire</span>(<span class="hljs-variable">$person</span>;<span class="hljs-string">"Age"</span>)))<span class="hljs-function">  </span>
 </code></pre>
 <p>Dans la méthode <code>ChangeAge</code>, vous pouvez écrire :</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
- <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span>
+ <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span><span class="hljs-function">  </span>
  <span class="hljs-variable">$para</span>.Age:=<span class="hljs-variable">$para</span>.Age+<span class="hljs-number">10</span>
 <span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$para</span>.Nom+<span class="hljs-string">" a "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" ans."</span>)
 </code></pre>
@@ -250,7 +250,7 @@
 <p>Dans la méthode <code>ChangeAge</code> ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//ChangeAge</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
- <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span>
+ <span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span><span class="hljs-function">  </span>
  <span class="hljs-variable">$para</span>.Age:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-number">10</span>
 <span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Nom+<span class="hljs-string">" a "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" ans."</span>)
 </code></pre>
@@ -261,11 +261,11 @@
 
 <span class="hljs-comment">//ChangeAge</span>
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$para</span>)
-<span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1  </span><span class="hljs-keyword">
-If</span> (<span class="hljs-variable">$para</span>.toAdd=<span class="hljs-literal">Null</span>)
+<span class="hljs-variable">$para</span>:=<span class="hljs-variable">$1</span><span class="hljs-keyword">  
+If</span><span class="hljs-function"> </span>(<span class="hljs-variable">$para</span>.toAdd=<span class="hljs-literal">Null</span>)
     <span class="hljs-variable">$para</span>.toAdd:=<span class="hljs-number">10</span><span class="hljs-keyword">
 End if</span>
-<span class="hljs-variable">$para</span>.Age:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-variable">$para</span>.toAdd
+<span class="hljs-variable">$para</span>.Age:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-variable">$para</span>.<span class="hljs-function">toAdd</span>
 <span class="hljs-function">ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Nom)+<span class="hljs-string">" a "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$para</span>.Age)+<span class="hljs-string">" ans."</span>)
 </code></pre>
 <p>Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre code existant. Cela fonctionnera toujours dans l'ancienne version, mais le cas échéant, vous pouvez utiliser une autre valeur que 10 ans.</p>
@@ -310,34 +310,34 @@ End if</span>
   <span class="hljs-comment">//SEND PACKETS ( docRef ; Data { ; Data2... ; DataN } )</span>
 
 <span class="hljs-function"> C_TIME</span>(<span class="hljs-variable">$1</span>)
-<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">${2}</span>)
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$</span>{<span class="hljs-number">2</span>})
 <span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlPacket</span>)<span class="hljs-keyword">
 
  For</span>(<span class="hljs-variable">$vlPacket</span>;<span class="hljs-number">2</span>;Count parameters)
-<span class="hljs-function">    SEND PACKET</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">${</span><span class="hljs-variable">$vlPacket}</span>)<span class="hljs-keyword">
+<span class="hljs-function">    SEND PACKET</span>(<span class="hljs-variable">$1</span>;<span class="hljs-variable">$</span>{<span class="hljs-variable">$vlPacket</span>})<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste. A l’intérieur de la méthode, l’adressage par indirection se fait sous la forme : ${$i}, $i étant une variable numérique. ${$i} est appelé <strong>paramètre générique</strong>.</p>
 <p>Illustrons notre propos par un exemple : écrivons une fonction qui prend des valeurs, fait leur somme et renvoie cette somme formatée suivant un format qui peut varier avec les valeurs. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.</p>
 <p>Un appel à cette fonction se fera de la façon suivante :</p>
-<pre><code class="hljs css language-4d"> Résultat:=<span class="hljs-function">LaSomme</span>(<span class="hljs-string">"##0,00"</span>;<span class="hljs-number">125</span>,<span class="hljs-number">2</span>;<span class="hljs-number">33</span>,<span class="hljs-number">5</span>;<span class="hljs-number">24</span>)
+<pre><code class="hljs css language-4d"> Résultat:=<span class="hljs-function">LaSomme</span>(<span class="hljs-string">"##0,00"</span>;<span class="hljs-number">125,2</span>;<span class="hljs-number">33,5</span>;<span class="hljs-number">24</span>)
 
 </code></pre>
 <p>La méthode appelante récupérera dans ce cas la chaîne : 182,70, somme des nombres passés, formatée suivant le format spécifié. Les paramètres de la fonction doivent être passés dans un ordre précis : le format d’abord et ensuite les valeurs, dont le nombre peut varier d’un appel à l’autre.</p>
 <p>Examinons maintenant la fonction que nous appelons <code>LaSomme</code> :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$Somme</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">2</span>;Nombre de paramètres)
-    <span class="hljs-variable">$Somme</span>:=<span class="hljs-variable">$Somme</span>+<span class="hljs-variable">${</span><span class="hljs-variable">$i}</span><span class="hljs-keyword">
+    <span class="hljs-variable">$Somme</span>:=<span class="hljs-variable">$Somme</span>+<span class="hljs-variable">$</span>{<span class="hljs-variable">$i</span>}<span class="hljs-keyword">
  End for</span>
  <span class="hljs-variable">$0</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$Somme</span>;<span class="hljs-variable">$1</span>)
 </code></pre>
 <p>Cette fonction pourra être appelée de diverses manières :</p>
-<pre><code class="hljs css language-4d"> Résultat:=<span class="hljs-function">LaSomme</span>(<span class="hljs-string">"##0,00"</span>;<span class="hljs-number">125</span>,<span class="hljs-number">2</span>;<span class="hljs-number">33</span>,<span class="hljs-number">5</span>;<span class="hljs-number">24</span>)
+<pre><code class="hljs css language-4d"> Résultat:=<span class="hljs-function">LaSomme</span>(<span class="hljs-string">"##0,00"</span>;<span class="hljs-number">125,2</span>;<span class="hljs-number">33,5</span>;<span class="hljs-number">24</span>)
  Résultat:=<span class="hljs-function">LaSomme</span>(<span class="hljs-string">"000"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">18</span>;<span class="hljs-number">4</span>;<span class="hljs-number">23</span>;<span class="hljs-number">17</span>)
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="déclaration-des-paramètres-génériques"></a><a href="#déclaration-des-paramètres-génériques" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Déclaration des paramètres génériques</h3>
 <p>De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Pour déclarer ces paramètres, utilisez une directive de compilateur à laquelle vous passez ${N} comme paramètre, où N est le premier paramètre générique.</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">${4}</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$</span>{<span class="hljs-number">4</span>})
 </code></pre>
 <p>La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type Entier long. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type Entier long, même si pour vous, par exemple, il était de type Réel.</p>
 <p><strong>Note :</strong> Le nombre, dans la déclaration, doit toujours être une constante et jamais une variable.</p>

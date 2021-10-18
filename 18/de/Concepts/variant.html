@@ -100,7 +100,7 @@
 <p>Sie können Variablen vom Typ Variant immer verwenden, wo Variablen erwartet werden. Sie müssen nur sicherstellen, dass der Datentyp des Variableninhalts vom erwarteten Typ ist. Beim Zugriff auf Variablen vom Typ Variant wird nur ihr aktueller Wert berücksichtigt. Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$v</span>)
 <span class="hljs-variable">$v</span>:=<span class="hljs-string">"hello world"</span>
-<span class="hljs-variable">$v2</span>:=<span class="hljs-variable">$v </span><span class="hljs-comment">//assign variable to another variable</span>
+<span class="hljs-variable">$v2</span>:=<span class="hljs-variable">$v</span> <span class="hljs-comment">//assign variable to another variable</span>
 
 <span class="hljs-variable">$t</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$v</span>) <span class="hljs-comment">// 12 (Is variant)</span>
 <span class="hljs-variable">$t2</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$v2</span>) <span class="hljs-comment">// 2 (Is text)</span>
@@ -108,9 +108,9 @@
 <p>Mit Variant lassen sich Parameter in Methoden ($0, $1,...) deklarieren, die von unterschiedlichem Typ sein können. In diesem Fall können Sie Code schreiben, der den Typ des Parameterwertes testet, zum Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$1</span>)<span class="hljs-keyword">
 Case of</span>
-: (<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is longint)
+:<span class="hljs-function"> </span>(<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is longint)
 ...
-: (<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is text)
+:<span class="hljs-function"> </span>(<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>)=Is text)
 ...<span class="hljs-keyword">
 End case</span>
 </code></pre>

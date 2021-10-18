@@ -83,7 +83,7 @@
 <h3><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"¿Añadir un nuevo registro?"</span>) <span class="hljs-comment">//¿El usuario quiere añadir un registro?</span><span class="hljs-keyword">
  While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//Bucle mientras el usuario quiera</span>
-<span class="hljs-function">    ADD RECORD</span>([aTable]) /Añadir un nuevo registro<span class="hljs-keyword">
+<span class="hljs-function">    ADD RECORD</span>([aTable]) /Añ<span class="hljs-function">adir un nuevo registro</span><span class="hljs-keyword">
  End while</span> <span class="hljs-comment">//El bucle siempre termina con End while</span>
 </code></pre>
 <p>En este ejemplo, el valor de la variable sistema <code>OK</code> es definido por el comando <code>CONFIRM</code> antes de que se inicie el bucle. Si el usuario hace clic en el botón <strong>OK</strong> de la caja de diálogo de confirmación, la variable del sistema <code>OK</code> toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema <code>OK</code> toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando <code>ADD RECORD</code> permite continuar la ejecución del bucle porque se define la variable sistema <code>OK</code> en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema <code>OK</code> toma el valor 0 y el bucle se detiene.</p>
@@ -133,7 +133,7 @@
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
   <span class="hljs-comment">//Hacer algo con el elemento</span>
-    anArray{<span class="hljs-variable">$vlElem}</span>:=...<span class="hljs-keyword">
+    anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="3">
@@ -164,22 +164,22 @@
 <ol start="5">
 <li>El siguiente ejemplo ejecuta 100 iteraciones:</li>
 </ol>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Hacer algo</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="6">
 <li>El siguiente ejemplo recorre todos los elementos del array anArray:</li>
 </ol>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Hacer algo con el elemento</span>
-    anArray{<span class="hljs-variable">$vlElem}</span>:=...<span class="hljs-keyword">
+    anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="7">
 <li>El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:</li>
 </ol>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-function">Length</span>(vtSomeText);<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-function">Length</span>(vtSomeText);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Hacer algo con el carácter si es un TAB</span><span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
@@ -205,7 +205,7 @@
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">2</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">2</span>)
   <span class="hljs-comment">//Hacer algo con el elemento #2,#4...#2n</span>
-    anArray{<span class="hljs-variable">$vlElem}</span>:=...<span class="hljs-keyword">
+    anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="comparación-de-estructuras-de-bucle"></a><a href="#comparación-de-estructuras-de-bucle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparación de estructuras de bucle</h3>
@@ -249,9 +249,9 @@
   <span class="hljs-comment">//...</span>
   <span class="hljs-comment">//Hacer algo con la línea</span>
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
-    For</span>(<span class="hljs-variable">$vlSubElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray{<span class="hljs-variable">$vlElem}</span>))
+    For</span>(<span class="hljs-variable">$vlSubElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray{<span class="hljs-variable">$vlElem</span>}))
   <span class="hljs-comment">//Hacer algo con el elemento</span>
-       anArray{<span class="hljs-variable">$vlElem}{</span><span class="hljs-variable">$vlSubElem}</span>:=...<span class="hljs-keyword">
+       anArray{<span class="hljs-variable">$vlElem</span>}{<span class="hljs-variable">$vlSubElem</span>}:=...<span class="hljs-keyword">
     End for</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
@@ -268,7 +268,7 @@
              If</span>(<span class="hljs-function">Type</span>(<span class="hljs-variable">$vpField</span>-&gt;)=Is date)
                 <span class="hljs-variable">$vlElem</span>:=<span class="hljs-variable">$vlElem</span>+<span class="hljs-number">1</span>
 <span class="hljs-function">                INSERT IN ARRAY</span>(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-variable">$vlElem</span>)
-                <span class="hljs-variable">$apDateFields{</span><span class="hljs-variable">$vlElem}</span>:=<span class="hljs-variable">$vpField</span><span class="hljs-keyword">
+                <span class="hljs-variable">$apDateFields</span>{<span class="hljs-variable">$vlElem</span>}:=<span class="hljs-variable">$vpField</span><span class="hljs-keyword">
              End if</span><span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        End for</span><span class="hljs-keyword">
@@ -278,7 +278,7 @@
 <h2><a class="anchor" aria-hidden="true" id="for-eachend-for-each"></a><a href="#for-eachend-for-each" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each...End for each</h2>
 <p>La sintaxis de la estructura condicional <code>For each...End for each</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(Current_Item;Expression{;begin{;end}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Boolean_Expression)}
-<span class="hljs-function">    instrucción</span>(es)<span class="hljs-keyword">
+    instrucció<span class="hljs-function">n</span>(es)<span class="hljs-keyword">
  End for each</span>
 </code></pre>
 <p>La estructura <code>For each...End for each</code> ejecuta un <em>Current_item</em> especificado sobre todos los valores de <em>Expression</em>. El tipo <em>Current_item</em> depende del tipo <em>Expression</em>. El bucle <code>For each...End for each</code> puede iterar a través de tres tipos de <em>Expression</em>:</p>
@@ -348,7 +348,7 @@
 <p>Quiere aumentar el salario de todos los empleados británicos en una selección de entidades:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(emp)<span class="hljs-keyword">
  For each</span>(emp;ds.Employees.<span class="hljs-function">query</span>(<span class="hljs-string">"country='UK'"</span>))
-    emp.salary:=emp.salary*<span class="hljs-number">1</span>,<span class="hljs-number">03</span>
+    emp.salary:=emp.salary*<span class="hljs-number">1,03</span>
     emp.<span class="hljs-function">save</span>()<span class="hljs-keyword">
  End for each</span>
 </code></pre>
@@ -360,10 +360,10 @@
 <pre><code class="hljs css language-4d">{
     <span class="hljs-string">"firstname"</span>: <span class="hljs-string">"gregory"</span>,
     <span class="hljs-string">"lastname"</span>: <span class="hljs-string">"badikora"</span>,
-    <span class="hljs-string">"age"</span>: <span class="hljs-number">20</span>
+    <span class="hljs-string">"age"</span>:<span class="hljs-function"> 20</span>
 }
 </code></pre>
-<p>You can write:</p>
+<p>Puede escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(property;vObject)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Value type</span>(vObject[property])=Is text)
        vObject[property]:=<span class="hljs-function">Uppercase</span>(vObject[property])<span class="hljs-keyword">
@@ -399,7 +399,7 @@
     <span class="hljs-variable">$col2</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$item</span>)<span class="hljs-keyword">
  End for each</span>
   <span class="hljs-comment">//$col2=[1,2,3,"a","b","c"]</span><span class="hljs-keyword">
- For each</span>(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$col</span>;<span class="hljs-number">-2</span>;<span class="hljs-number">-1</span>)
+ For each</span>(<span class="hljs-variable">$item</span>;<span class="hljs-variable">$col</span>;-<span class="hljs-number">2</span>;-<span class="hljs-number">1</span>)
     <span class="hljs-variable">$col2</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$item</span>)<span class="hljs-keyword">
  End for each</span>
   <span class="hljs-comment">//$col2=[1,2,3,"a","b","c","d"]</span>

@@ -107,15 +107,15 @@
 </code></pre>
 <p>Arbeiten Sie ohne Unterroutinen, müssen Sie den Code jedes Mal schreiben, wenn Sie einen Kundendatensatz ändern wollen. Passiert das in Ihrer Anwendung an zehn Stellen, müssen Sie den Code zehnmal schreiben. Mit Unterroutinen schreiben Sie den Code nur einmal. Das ist der erste Vorteil von Unterroutinen - die Menge an Code reduzieren.</p>
 <p>Wir legen den oben beschriebenen Code in einer Methode mit Namen <code>MODIFY CUSTOMER</code> an. Soll diese Methode in einer anderen Methode ausgeführt werden, müssen Sie nur den Namen einsetzen. Wollen Sie beispielsweise einen Kundendatensatz ändern und dann den Datensatz drucken, schreiben Sie folgende Methode:</p>
-<pre><code class="hljs css language-4d"> MODIFY CUSTOMER
+<pre><code class="hljs css language-4d"><span class="hljs-function"> MODIFY CUSTOMER</span>
 <span class="hljs-function"> PRINT SELECTION</span>([Customers])
 </code></pre>
 <p>Das vereinfacht Ihre Methode drastisch. Im Beispiel müssen Sie nicht wissen, wie die Methode <code>MODIFY CUSTOMER</code> arbeitet, sondern nur was sie tut. Dies ist der zweite Vorteil von Unterroutinen - Ihre Methoden klarer gliedern. Sie erweitern sozusagen die 4D Programmiersprache.</p>
 <p>Wollen Sie in dieser Beispielanwendung die Methode zum Auffinden von Kunden ändern, müssen Sie nur eine und nicht zehn Methoden ändern. Ein weiterer Vorteil von Unterroutinen - Methoden lassen sich schnell ändern.</p>
 <p>Mit Unterroutinen machen Sie Ihren Code modular. Das bedeutet, Sie unterteilen Ihren Code in Module (Unterroutinen), die jeweils einen logischen Vorgang (task) ausführen. Betrachten Sie folgenden Code aus einer Anwendung für Kontoführung:</p>
-<pre><code class="hljs css language-4d"> FIND CLEARED CHECKS <span class="hljs-comment">` Find the cleared checks</span>
- RECONCILE ACCOUNT <span class="hljs-comment">` Reconcile the account</span>
- PRINT CHECK BOOK REPORT <span class="hljs-comment">` Print a checkbook report</span>
+<pre><code class="hljs css language-4d"> FIND CLEARED CHECKS `<span class="hljs-function"> Find the cleared checks</span>
+ RECONCILE ACCOUNT `<span class="hljs-function"> Reconcile the account</span>
+ PRINT CHECK BOOK REPORT `<span class="hljs-function"> Print a checkbook report</span>
 </code></pre>
 <p>Auch für jemanden, der die Anwendung nicht kennt, ist klar, was der Code ausführt. Er muss nicht jede Unterroutine untersuchen, die evtl. aus vielen Zeilen besteht und komplexe Operationen ausführt. Wichtig ist, dass die Tasks ausgeführt werden. Wir empfehlen, den Code möglichst in logische Vorgänge oder Module aufzuteilen.</p>
 <h3><a class="anchor" aria-hidden="true" id="an-objekt-gebundene-methode"></a><a href="#an-objekt-gebundene-methode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>An Objekt gebundene Methode</h3>
@@ -148,12 +148,12 @@
 <p>In Kombination mit der Funktion <code>This</code> können Sie mit solchen Objektmethoden leistungsstarken generischen Code schreiben. Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName2 method</span>
 <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
-<span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.lastName
+<span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.<span class="hljs-function">lastName</span>
 </code></pre>
 <p>Die Methode arbeitet dann wie ein neues berechnetes Attribut, dass sich in andere Attribute einfügen lässt:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"Jim"</span>;<span class="hljs-string">"lastName"</span>;<span class="hljs-string">"Wesson"</span>)
-<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName2) <span class="hljs-comment">//add the method  </span>
+<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName<span class="hljs-number">2</span>) <span class="hljs-comment">//add the method  </span>
 
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.<span class="hljs-function">fullName</span>()
 <span class="hljs-comment">//$result = "Jim Wesson"</span>
@@ -195,8 +195,8 @@
 <span class="hljs-function">          QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
           <span class="hljs-variable">$vlQueryResult</span>:=<span class="hljs-function">Records in selection</span>([Friends and Relatives])<span class="hljs-keyword">
           If</span>(<span class="hljs-variable">$vlQueryResult</span>&gt;<span class="hljs-number">0</span>)
-             <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]Name
-             <span class="hljs-variable">$vsName</span>:=[Friends and Relatives]Name<span class="hljs-keyword">
+             <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]<span class="hljs-function">Name</span>
+             <span class="hljs-variable">$vsName</span>:=[Friends and Relatives]<span class="hljs-function">Name</span><span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        Until</span>(<span class="hljs-variable">$vlQueryResult</span>=<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">", does this for a living!"</span>
@@ -216,9 +216,9 @@
  End if</span>
 </code></pre>
 <p>mit der rekursiven Methode <code>Genealogy of</code>:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">` Genealogy of project method</span>
-<span class="hljs-function">  ` Genealogy of </span>( String ) -&gt; Text
-<span class="hljs-function">  ` Genealogy of </span>( Name ) -&gt; Part of sentence
+<pre><code class="hljs css language-4d">  `<span class="hljs-function"> Genealogy of project method</span>
+  `<span class="hljs-function"> Genealogy of </span>( String ) -&gt;<span class="hljs-function"> Text</span>
+  `<span class="hljs-function"> Genealogy of </span>( Name ) -&gt;<span class="hljs-function"> Part of sentence</span>
 
  <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
 <span class="hljs-function"> QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">

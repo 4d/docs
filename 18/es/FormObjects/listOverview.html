@@ -82,7 +82,7 @@
 <p>El <strong>objeto de lenguaje</strong> está referenciado por un ID interno único de tipo Entero largo, designado por <em>ListRef</em> en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: <code>New list</code>, <code>Copy list</code>, <code>Load list</code>, <code>BLOB to list</code>. Sólo hay una instancia del objeto lenguaje en la memoria y cualquier modificación realizada en este objeto se traslada inmediatamente a todos los lugares donde se utiliza.</p>
 <p>El <strong>objeto de formulario</strong> no es necesariamente único: puede haber varias representaciones de la misma lista jerárquica en el mismo formulario o en otros diferentes. Al igual que con otros objetos formulario, se especifica el objeto en el lenguaje utilizando la sintaxis (*; &quot;NomLista&quot;, etc.).</p>
 <p>Conecte el &quot;objeto lenguaje &quot; lista jerárquica con el &quot;objeto de formulario&quot; lista jerárquica por medio de la variable que contiene el valor RefLista. Por ejemplo, si has asociado la $mylist <a href="/docs/18/es/FormObjects/propertiesObject.html#variable-or-expression">variable</a> al objeto formulario, puede escribir:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$mylist</span>:=New list
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$mylist</span>:=<span class="hljs-function">New list</span>
 </code></pre>
 <p>Cada representación de la lista tiene sus propias características específicas y comparte características comunes con todas las demás representaciones. Las siguientes características son específicas de cada representación de la lista:</p>
 <ul>

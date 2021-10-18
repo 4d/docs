@@ -87,7 +87,7 @@
 <p>Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. Sin embargo, sólo se puede instalar un método por proceso.</p>
 <p>Un método de gestión de errores instalado por el comando <code>ON ERR CALL</code> sólo se aplica a la base de datos en ejecución. En el caso de un error generado por un <strong>componente</strong>, no se llama al método <code>ON ERR CALL</code> de gestión de errores de la base local, y viceversa.</p>
 <p>El comando <code>Method called on error</code> permite conocer el nombre del método instalado por <code>ON ERR CALL</code> para el proceso actual. Es particularmente útil en el contexto de los componentes porque permite cambiar temporalmente y luego restaurar el método de captura de errores de la base de datos local:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$methCurrent</span>:=Method called on error
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$methCurrent</span>:=<span class="hljs-function">Method called on error</span>
 <span class="hljs-function"> ON ERR CALL</span>(<span class="hljs-string">"NewMethod"</span>)
   <span class="hljs-comment">//Si no se puede abrir el documento, se genera un error</span>
  <span class="hljs-variable">$ref</span>:=<span class="hljs-function">Open document</span>(<span class="hljs-string">"MyDocument"</span>)
@@ -127,7 +127,7 @@
 <p>Si desea principalmente que la caja de diálogo de error estándar esté oculta, puede instalar un método de gestión de errores vacío. La variable sistema <code>Error</code> puede ser probada en cualquier método, es decir, fuera del método de gestión de errores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ON ERR CALL</span>(<span class="hljs-string">"emptyMethod"</span>) <span class="hljs-comment">//emptyMethod existe pero está vacío</span>
 <span class="hljs-variable">$doc</span>:=<span class="hljs-function">Open document</span>( <span class="hljs-string">"myFile.txt"</span>)<span class="hljs-keyword">
-If</span> (Error=<span class="hljs-number">-43</span>)
+If</span><span class="hljs-function"> </span>(Error=-<span class="hljs-number">43</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"File not found."</span>)<span class="hljs-keyword">
 End if</span>
 <span class="hljs-function">ON ERR CALL</span>(<span class="hljs-string">""</span>)

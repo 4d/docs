@@ -108,15 +108,15 @@ The maximum size of a project method is limited to 2 GB of text or 32,000 lines 
 </code></pre>
 <p>If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your custom database where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.</p>
 <p>If the previously described code was a method called <code>MODIFY CUSTOMER</code>, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:</p>
-<pre><code class="hljs css language-4d"> MODIFY CUSTOMER
+<pre><code class="hljs css language-4d"><span class="hljs-function"> MODIFY CUSTOMER</span>
 <span class="hljs-function"> PRINT SELECTION</span>([Customers])
 </code></pre>
 <p>This capability simplifies your methods dramatically. In the example, you do not need to know how the <code>MODIFY CUSTOMER</code> method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.</p>
 <p>If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.</p>
 <p>Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account database:</p>
-<pre><code class="hljs css language-4d"> FIND CLEARED CHECKS <span class="hljs-comment">` Find the cleared checks</span>
- RECONCILE ACCOUNT <span class="hljs-comment">` Reconcile the account</span>
- PRINT CHECK BOOK REPORT <span class="hljs-comment">` Print a checkbook report</span>
+<pre><code class="hljs css language-4d"> FIND CLEARED CHECKS `<span class="hljs-function"> Find the cleared checks</span>
+ RECONCILE ACCOUNT `<span class="hljs-function"> Reconcile the account</span>
+ PRINT CHECK BOOK REPORT `<span class="hljs-function"> Print a checkbook report</span>
 </code></pre>
 <p>Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.</p>
 <h3><a class="anchor" aria-hidden="true" id="methods-attached-to-objects"></a><a href="#methods-attached-to-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods attached to objects</h3>
@@ -149,12 +149,12 @@ The maximum size of a project method is limited to 2 GB of text or 32,000 lines 
 <p>Combined with the <code>This</code>function, such object methods allow writing powerful generic code. For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName2 method</span>
 <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
-<span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.lastName
+<span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.<span class="hljs-function">lastName</span>
 </code></pre>
 <p>Then the method acts like a new, calculated attribute that can be added to other attributes:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$o</span>)
 <span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"Jim"</span>;<span class="hljs-string">"lastName"</span>;<span class="hljs-string">"Wesson"</span>)
-<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName2) <span class="hljs-comment">//add the method  </span>
+<span class="hljs-variable">$o</span>.fullName:=<span class="hljs-function">Formula</span>(fullName<span class="hljs-number">2</span>) <span class="hljs-comment">//add the method  </span>
 
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$o</span>.<span class="hljs-function">fullName</span>()
 <span class="hljs-comment">//$result = "Jim Wesson"</span>
@@ -196,8 +196,8 @@ The maximum size of a project method is limited to 2 GB of text or 32,000 lines 
 <span class="hljs-function">          QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$vsName</span>)
           <span class="hljs-variable">$vlQueryResult</span>:=<span class="hljs-function">Records in selection</span>([Friends and Relatives])<span class="hljs-keyword">
           If</span>(<span class="hljs-variable">$vlQueryResult</span>&gt;<span class="hljs-number">0</span>)
-             <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]Name
-             <span class="hljs-variable">$vsName</span>:=[Friends and Relatives]Name<span class="hljs-keyword">
+             <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">" who is the child of "</span>+[Friends and Relatives]<span class="hljs-function">Name</span>
+             <span class="hljs-variable">$vsName</span>:=[Friends and Relatives]<span class="hljs-function">Name</span><span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        Until</span>(<span class="hljs-variable">$vlQueryResult</span>=<span class="hljs-number">0</span>)
        <span class="hljs-variable">$vtTheWholeStory</span>:=<span class="hljs-variable">$vtTheWholeStory</span>+<span class="hljs-string">", does this for a living!"</span>
@@ -217,9 +217,9 @@ The maximum size of a project method is limited to 2 GB of text or 32,000 lines 
  End if</span>
 </code></pre>
 <p>with the recursive function <code>Genealogy of</code> listed here:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">` Genealogy of project method</span>
-<span class="hljs-function">  ` Genealogy of </span>( String ) -&gt; Text
-<span class="hljs-function">  ` Genealogy of </span>( Name ) -&gt; Part of sentence
+<pre><code class="hljs css language-4d">  `<span class="hljs-function"> Genealogy of project method</span>
+  `<span class="hljs-function"> Genealogy of </span>( String ) -&gt;<span class="hljs-function"> Text</span>
+  `<span class="hljs-function"> Genealogy of </span>( Name ) -&gt;<span class="hljs-function"> Part of sentence</span>
 
  <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>
 <span class="hljs-function"> QUERY</span>([Friends and Relatives];[Friends and Relatives]ChildrensName=<span class="hljs-variable">$1</span>)<span class="hljs-keyword">

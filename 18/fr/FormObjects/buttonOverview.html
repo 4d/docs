@@ -93,9 +93,9 @@
         <span class="hljs-string">"defaultButton"</span>:<span class="hljs-string">"true"</span>  <span class="hljs-comment">//définit le bouton comme choix par défaut</span>
         <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   <span class="hljs-comment">//texte à faire apparaître dans le bouton</span>
         <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>, <span class="hljs-comment">//Action à exécuter</span>
-        <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,  <span class="hljs-comment">//Position gauche dans le formulaire  </span>
-        <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>, <span class="hljs-comment">//Position supérieure dans le formulaire  </span>
-        <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,  <span class="hljs-comment">//largeur du bouton</span>
+        <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span>  <span class="hljs-comment">//Position gauche dans le formulaire  </span>
+        <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span> <span class="hljs-comment">//Position supérieure dans le formulaire  </span>
+        <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>  <span class="hljs-comment">//largeur du bouton</span>
         <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span> <span class="hljs-comment">//hauteur du bouton</span>
         }
 </code></pre>
@@ -107,15 +107,15 @@
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--1"></a><a href="#exemple-json--1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
 <pre><code class="hljs css language-4d">
     <span class="hljs-string">"myButton"</span>: {
-                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,   
-                <span class="hljs-string">"style"</span>:<span class="hljs-string">"flat"</span>, 
-                <span class="hljs-string">"defaultButton"</span>:<span class="hljs-string">"true"</span>  
-                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,   
-                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>, 
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,         
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,   
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>    
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,<span class="hljs-function">   </span>
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"flat"</span>,<span class="hljs-function"> </span>
+                <span class="hljs-string">"defaultButton"</span>:<span class="hljs-string">"true"</span><span class="hljs-function">  </span>
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,<span class="hljs-function">   </span>
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Annuler"</span>,<span class="hljs-function"> </span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">         </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span><span class="hljs-function">         </span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span><span class="hljs-function">   </span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20    </span>
                 }
 </code></pre>
 <p>Seuls les styles Classique et A plat proposent la propriété <a href="/docs/18/fr/FormObjects/propertiesAppearance.html#default-button">Bouton par défaut</a>.</p>
@@ -133,13 +133,13 @@
 <pre><code class="hljs css language-4d">    <span class="hljs-string">"myButton"</span>: {
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
                 <span class="hljs-string">"style"</span>:<span class="hljs-string">"toolbar"</span>,
-                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,       
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,<span class="hljs-function">       </span>
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"separated"</span>
-                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,     
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,             
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,             
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,           
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>        
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,<span class="hljs-function">     </span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">             </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span><span class="hljs-function">             </span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span><span class="hljs-function">           </span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20        </span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bevel"></a><a href="#bevel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bevel</h3>
@@ -156,13 +156,13 @@
 <pre><code class="hljs css language-4d">    <span class="hljs-string">"myButton"</span>: {
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
                 <span class="hljs-string">"style"</span>:<span class="hljs-string">"bevel"</span>,
-                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,       
+                <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,<span class="hljs-function">       </span>
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"linked"</span>
                 <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bevel-arrondi"></a><a href="#bevel-arrondi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bevel arrondi</h3>
@@ -182,10 +182,10 @@
                 <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"none"</span> /
                 <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">         </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="os-x-gradient"></a><a href="#os-x-gradient" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OS X Gradient</h3>
@@ -204,11 +204,11 @@
                 <span class="hljs-string">"style"</span>:<span class="hljs-string">"gradientBevel"</span>,
                 <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"linked"</span>
-                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,     
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,<span class="hljs-function">     </span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="os-x-texture"></a><a href="#os-x-texture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OS X Texture</h3>
@@ -228,10 +228,10 @@
                 <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"separated"</span>
                 <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,         
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">         </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="office-xp"></a><a href="#office-xp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Office XP</h3>
@@ -251,10 +251,10 @@
                 <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
                 <span class="hljs-string">"popupPlacement"</span>:<span class="hljs-string">"none"</span>
                 <span class="hljs-string">"action"</span>: <span class="hljs-string">"Cancel"</span>,
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,     
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="aide"></a><a href="#aide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aide</h3>
@@ -263,13 +263,13 @@
 <h4><a class="anchor" aria-hidden="true" id="exemple-json--8"></a><a href="#exemple-json--8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple JSON :</h4>
 <pre><code class="hljs css language-4d">    <span class="hljs-string">"myButton"</span>: {
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"button"</span>,
-                <span class="hljs-string">"style"</span>:<span class="hljs-string">"help"</span>,     
+                <span class="hljs-string">"style"</span>:<span class="hljs-string">"help"</span>,<span class="hljs-function">     </span>
                 <span class="hljs-string">"text"</span>: <span class="hljs-string">"OK"</span>,
                 <span class="hljs-string">"dropping"</span>: <span class="hljs-string">"custom"</span>,
-                <span class="hljs-string">"left"</span>: <span class="hljs-number">60</span>,
-                <span class="hljs-string">"top"</span>: <span class="hljs-number">160</span>,     
-                <span class="hljs-string">"width"</span>: <span class="hljs-number">100</span>,
-                <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span>
+                <span class="hljs-string">"left"</span>: <span class="hljs-number">60,</span>
+                <span class="hljs-string">"top"</span>: <span class="hljs-number">160,</span><span class="hljs-function">     </span>
+                <span class="hljs-string">"width"</span>: <span class="hljs-number">100,</span>
+                <span class="hljs-string">"height"</span>:<span class="hljs-function"> 20</span>
                 }
 </code></pre>
 <blockquote>

@@ -75,7 +75,7 @@
 <h2><a class="anchor" aria-hidden="true" id="assigner-des-valeurs"></a><a href="#assigner-des-valeurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigner des valeurs</h2>
 <p>Vous pouvez donner des valeurs aux variables, aux champs, aux éléments de tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle assigner une valeur (ou affecter une valeur) et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs ou aux éléments de tableaux.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">//assigne 3 à la variable MyNumber</span>
-[Products]Size:=<span class="hljs-variable">$MyNumber </span><span class="hljs-comment">//assigne la variable MyNumber au champ [Products]Size</span>
+[Products]Size:=<span class="hljs-variable">$MyNumber</span> <span class="hljs-comment">//assigne la variable MyNumber au champ [Products]Size</span>
 arrDays{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Mardi"</span> <span class="hljs-comment">//assigne la chaîne "Mardi" au 2ème élément arrDays</span>
 MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigne le résultat de la fonction (4) à MyVar</span>
 <span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">//assigne une date littérale</span>
@@ -107,7 +107,7 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 </code></pre>
 <p>4D SVG est un exemple de composant utilitaire qui augmente les capacités de votre application :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//faire un dessin</span>
-svgRef:=SVG_New
+svgRef:=<span class="hljs-function">SVG_New</span>
 objectRef:=<span class="hljs-function">SVG_New_arc</span>(svgRef;<span class="hljs-number">100</span>;<span class="hljs-number">100</span>;<span class="hljs-number">90</span>;<span class="hljs-number">90</span>;<span class="hljs-number">180</span>)
 </code></pre>
 <p>4D SVG est inclus dans 4D.</p>
@@ -155,10 +155,10 @@ End for</span>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vName</span>:=employee[<span class="hljs-string">"nom"</span>]
 </code></pre>
 <p>Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].<span class="hljs-function">age</span>
 </code></pre>
 <p>A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :</p>
-<pre><code class="hljs"><span class="hljs-variable">$f</span>:=New object
+<pre><code class="hljs"><span class="hljs-variable">$f</span>:=<span class="hljs-function">New object</span>
 <span class="hljs-variable">$f</span>.message:=<span class="hljs-function">New formula</span>(<span class="hljs-function">ALERT</span>(<span class="hljs-string">"Hello world!"</span>))
 <span class="hljs-variable">$f</span>.<span class="hljs-function">message</span>() <span class="hljs-comment">//affiche "Hello world!"</span>
 <span class="hljs-variable">$f</span>.<span class="hljs-function">message</span>() <span class="hljs-comment">//affiche "Hello world!"</span>
@@ -249,7 +249,7 @@ Form.pageTotal- Form.pageNumber:=<span class="hljs-number">10</span> <span class
 <p>Le langage 4D fournit une mise en oeuvre avancée des pointeurs, pour vous permettre d'écrire un code puissant et modulaire. Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des variables, des tableaux et des éléments de tableaux.</p>
 <p>Un pointeur sur un élément est créé en ajoutant un symbole &quot;-&gt;&quot; avant le nom de l'élément, et peut être déréférencé en ajoutant le symbole &quot;-&gt;&quot; après le nom du pointeur.</p>
 <pre><code class="hljs css language-4d">MaVar:=<span class="hljs-string">"Bonjour"</span>
-MonPointeur-&gt;-&gt;MaVar
+MonPointeur-&gt;-&gt;<span class="hljs-function">MaVar</span>
 <span class="hljs-function">ALERT</span>(MonPointeur-&gt;)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="commentaires"></a><a href="#commentaires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commentaires</h2>
@@ -274,14 +274,14 @@ For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number
 <ul>
 <li>Les <strong>lignes de commentaires en ligne</strong> - peuvent être insérées n'importe où dans le code. Exemple :</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> <span class="hljs-comment">/* ligne de commentaire */</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> <span class="hljs-comment">/* ligne de commentaire */</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
     ...<span class="hljs-keyword">
 End for</span>
 </code></pre>
 <ul>
 <li>Les <strong>blocs de commentaires multi-lignes</strong> permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
 <span class="hljs-comment">/*
 commentaires  
     /* 

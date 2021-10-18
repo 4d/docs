@@ -74,7 +74,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>cacheSize</td><td>Número</td><td>4D Server's cache size.</td></tr>
+<tr><td>cacheSize</td><td>Número</td><td>Tamaño de la caché del servidor 4D.</td></tr>
 <tr><td>usedCache</td><td>Número</td><td>How much of 4D Server's cache has been used.</td></tr>
 <tr><td>entitySetCount</td><td>Número</td><td>Number of entity selections.</td></tr>
 <tr><td>entitySet</td><td>Collection</td><td>A collection in which each object contains information about each entity selection.</td></tr>
@@ -90,11 +90,11 @@
 </thead>
 <tbody>
 <tr><td>id</td><td>Cadena</td><td>A UUID that references the entity set.</td></tr>
-<tr><td>dataClass</td><td>Cadena</td><td>Name of the dataclass.</td></tr>
+<tr><td>dataClass</td><td>Cadena</td><td>Nombre de la dataclass.</td></tr>
 <tr><td>selectionSize</td><td>Número</td><td>Number of entities in the entity selection.</td></tr>
-<tr><td>sorted</td><td>Booleano</td><td>Returns true if the set was sorted (using <code>$orderby</code>) or false if it's not sorted.</td></tr>
+<tr><td>sorted</td><td>Booleano</td><td>Devuelve true si el conjunto fue ordenado ( utilizando <code>$orderby</code>) o false si no está ordenado.</td></tr>
 <tr><td>refreshed</td><td>Fecha</td><td>When the entity set was created or the last time it was used.</td></tr>
-<tr><td>expires</td><td>Fecha</td><td>When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using <code>$timeout</code>.</td></tr>
+<tr><td>expires</td><td>Fecha</td><td>When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. Este valor es de dos horas por defecto o lo que hayas definido utilizando <code>$timeout</code>.</td></tr>
 </tbody>
 </table>
 <p>For information about how to create an entity selection, refer to <code>$method=entityset</code>. If you want to remove the entity selection from 4D Server's cache, use <code>$method=release</code>.</p>

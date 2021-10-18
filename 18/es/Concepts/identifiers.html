@@ -108,7 +108,7 @@
 <p>Una variable interproceso se designa precediendo el nombre de la variable con los símbolos (&lt;&gt;): un signo &quot;menor que&quot; seguido de un signo &quot;mayor que&quot;.</p>
 <p>El nombre de una variable interproceso puede tener hasta 31 caracteres, sin incluir los símbolos &lt;&gt;.</p>
 <p>Ejemplos:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;vlProcessID</span>:=Current process
+<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;vlProcessID</span>:=<span class="hljs-function">Current process</span>
 <span class="hljs-variable">&lt;&gt;vsKey</span>:=<span class="hljs-function">Char</span>(KeyCode)<span class="hljs-keyword">
 If</span>(<span class="hljs-variable">&lt;&gt;vtName</span>#<span class="hljs-string">""</span>)
 </code></pre>
@@ -159,43 +159,43 @@ If</span>(<span class="hljs-variable">$vsTempVar</span>=<span class="hljs-string
 <p>La referencia a un elemento de un array local, proceso o interproceso se realiza mediante llaves (&quot;{ }&quot;). El elemento al que se hace referencia se indica con una expresión numérica.</p>
 <p>Ejemplos:</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">//El elemento al que se hace referencia se indica con una expresión numérica.</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">&lt;&gt;asKeywords{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">&lt;&gt;atSubjects{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray{Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray</span>)}
+If</span>(<span class="hljs-variable">&lt;&gt;asKeywords</span>{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+<span class="hljs-variable">&lt;&gt;atSubjects</span>{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray</span>{<span class="hljs-function">Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray</span>)}
 
     <span class="hljs-comment">//Direccionar un elemento de un array proceso</span><span class="hljs-keyword">
 If</span>(asKeywords{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
-atSubjects{<span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-function">aiBigArray{Size of array</span>(aiBigArray)}
+atSubjects{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=aiBigArray{<span class="hljs-function">Size of array</span>(aiBigArray)}
 
     <span class="hljs-comment">//Direccionar un elemento de un array local</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">$asKeywords{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">$atSubjects{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray{Size of array</span>(<span class="hljs-variable">$aiBigArray</span>)}
+If</span>(<span class="hljs-variable">$asKeywords</span>{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+<span class="hljs-variable">$atSubjects</span>{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray</span>{<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$aiBigArray</span>)}
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="elementos-de-arrays-de-dos-dimensiones"></a><a href="#elementos-de-arrays-de-dos-dimensiones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elementos de arrays de dos dimensiones</h3>
 <p>La referencia a un elemento de un array de dos dimensiones se realiza utilizando las llaves ({…}) dos veces. El elemento al que se hace referencia se denota mediante dos expresiones numéricas en dos pares de llaves.</p>
 <p>Ejemplos:</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">//Direccionamiento de un elemento de un array interproceso de dos dimensiones </span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">&lt;&gt;asKeywords{</span><span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">&lt;&gt;atSubjects{10}{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray{</span><span class="hljs-variable">$vlSet}{Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray{</span><span class="hljs-variable">$vlSet}</span>)}
+If</span>(<span class="hljs-variable">&lt;&gt;asKeywords</span>{<span class="hljs-variable">$vlNextRow</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+<span class="hljs-variable">&lt;&gt;atSubjects</span>{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray</span>{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray</span>{<span class="hljs-variable">$vlSet</span>})}
 
     <span class="hljs-comment">//Direccionar un elemento de una array proceso de dos dimensiones</span><span class="hljs-keyword">
-If</span>(asKeywords{<span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-atSubjects{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=aiBigArray{<span class="hljs-variable">$vlSet}{Size of array</span>(aiBigArray{<span class="hljs-variable">$vlSet}</span>)}
+If</span>(asKeywords{<span class="hljs-variable">$vlNextRow</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+atSubjects{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=aiBigArray{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Size of array</span>(aiBigArray{<span class="hljs-variable">$vlSet</span>})}
 
     <span class="hljs-comment">//Direccionar un elemento de un array local de dos dimensiones</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">$asKeywords{</span><span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">$atSubjects{10}{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray{</span><span class="hljs-variable">$vlSet}{Size of array</span>(<span class="hljs-variable">$aiBigArray{</span><span class="hljs-variable">$vlSet}</span>)}
+If</span>(<span class="hljs-variable">$asKeywords</span>{<span class="hljs-variable">$vlNextRow</span>}{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
+<span class="hljs-variable">$atSubjects</span>{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem</span>}:=[Topics]<span class="hljs-function">Subject</span>
+<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray</span>{<span class="hljs-variable">$vlSet</span>}{<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$aiBigArray</span>{<span class="hljs-variable">$vlSet</span>})}
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="atributos-de-objetos"></a><a href="#atributos-de-objetos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Atributos de objetos</h2>
 <p>Cuando la notación objeto está activada, se designa un atributo de objeto (también llamado propiedad de objeto) colocando un punto (&quot;.&quot;) entre el nombre del objeto (o del atributo) y el nombre del atributo. Un nombre de atributo puede contener hasta 255 caracteres y es sensible a las mayúsculas y minúsculas.</p>
 <p>Ejemplos:</p>
 <pre><code class="hljs css language-4d">myObject.myAttribute:=<span class="hljs-string">"10"</span>
-<span class="hljs-variable">$value</span>:=<span class="hljs-variable">$clientObj</span>.data.address.city
+<span class="hljs-variable">$value</span>:=<span class="hljs-variable">$clientObj</span>.data.address.<span class="hljs-function">city</span>
 </code></pre>
 <p><strong>Nota:</strong> se aplican reglas adicionales a los nombres de atributos de objetos (deben ajustarse a la especificación ECMAScript). Para más información, consulte <a href="/docs/18/es/Concepts/object.html#object-property-identifiers">Identificadores de propiedades de objetos</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="formularios"></a><a href="#formularios" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formularios</h2>
@@ -216,7 +216,7 @@ If</span>(<span class="hljs-variable">$asKeywords{</span><span class="hljs-varia
 <p><strong>Nota:</strong> un método proyecto que no devuelve un resultado también se llama un procedimiento. Un método proyecto que devuelve un resultado también se denomina función.</p>
 <p>Ejemplos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>(New client)
-DELETE DUPLICATED VALUES
+<span class="hljs-function">DELETE DUPLICATED VALUES</span>
 <span class="hljs-function">APPLY TO SELECTION</span>([Employees];INCREASE SALARIES)
 </code></pre>
 <p><strong>Consejo:</strong> es una buena técnica de programación adoptar la misma convención de nomenclatura que la utilizada por 4D para los métodos integrados. Utilice mayúsculas para nombrar sus métodos; sin embargo, si un método es una función, ponga en mayúscula el primer carácter de su nombre. De este modo, cuando vuelva a abrir una base para su mantenimiento después de unos meses, ya sabrá si un método devuelve un resultado simplemente mirando su nombre en la ventana del Explorador.</p>

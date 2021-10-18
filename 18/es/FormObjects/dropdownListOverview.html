@@ -78,12 +78,12 @@
 <li><p>Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:</p></li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(<span class="hljs-variable">$aCities</span>;<span class="hljs-number">6</span>)
-  <span class="hljs-variable">$aCities{1}</span>:=<span class="hljs-string">"Philadelphia"</span>
-  <span class="hljs-variable">$aCities{2}</span>:=<span class="hljs-string">"Pittsburg"</span>
-  <span class="hljs-variable">$aCities{3}</span>:=<span class="hljs-string">"Grand Blanc"</span>
-  <span class="hljs-variable">$aCities{4}</span>:=<span class="hljs-string">"Bad Axe"</span>
-  <span class="hljs-variable">$aCities{5}</span>:=<span class="hljs-string">"Frostbite Falls"</span>
-  <span class="hljs-variable">$aCities{6}</span>:=<span class="hljs-string">"Green Bay"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Philadelphia"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Pittsburg"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Grand Blanc"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Bad Axe"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">5</span>}:=<span class="hljs-string">"Frostbite Falls"</span>
+  <span class="hljs-variable">$aCities</span>{<span class="hljs-number">6</span>}:=<span class="hljs-string">"Green Bay"</span>
 </code></pre>
 <p>En este caso, el nombre de la variable asociada al objeto del formulario debe ser <em>$aCities</em>. This code could be placed in the form method and be executed when the <code>On Load</code> form event runs.</p>
 <ul>
@@ -96,13 +96,13 @@
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  Case of</span>
     :(Form event=On Load)
 <span class="hljs-function">       LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)<span class="hljs-keyword">
-       If</span>(<span class="hljs-function">Record number</span>([People])&lt;<span class="hljs-number">0</span>) <span class="hljs-comment">`nuevo registro</span>
-          aCities:=<span class="hljs-number">3</span> <span class="hljs-comment">`mostrar un valor por defecto</span><span class="hljs-keyword">
-       Else</span> <span class="hljs-comment">`registro existente, mostrar valor almacenado</span>
+       If</span>(<span class="hljs-function">Record number</span>([People])&lt;<span class="hljs-number">0</span>) `<span class="hljs-function">nuevo registro</span>
+          aCities:=<span class="hljs-number">3</span> `<span class="hljs-function">mostrar un valor por defecto</span><span class="hljs-keyword">
+       Else</span> `registro existente,<span class="hljs-function"> mostrar valor almacenado</span>
           aCities:=<span class="hljs-function">Find in array</span>(aCities;City)<span class="hljs-keyword">
        End if</span>
-    :(Form event=On Clicked) <span class="hljs-comment">`el usuario modifica la selección</span>
-       City:=aCities{aCities} <span class="hljs-comment">`el campo obtiene un nuevo valor</span>
+    :(Form event=On Clicked) `el usuario modifica la selecció<span class="hljs-function">n</span>
+       City:=aCities{aCities} `<span class="hljs-function">el campo obtiene un nuevo valor</span>
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)

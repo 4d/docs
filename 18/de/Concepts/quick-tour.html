@@ -75,7 +75,7 @@
 <h2><a class="anchor" aria-hidden="true" id="werte-zuweisen"></a><a href="#werte-zuweisen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Werte zuweisen</h2>
 <p>Daten lassen sich in Variablen, Felder, Array Elemente etc. setzen und daraus kopieren. Daten in eine Variable setzen heißt, der Variablen die Daten zuweisen. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern oder Array Elementen Daten zuzuweisen.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">//assigns 3 to MyNumber variable  </span>
-[Products]Size:=<span class="hljs-variable">$MyNumber </span><span class="hljs-comment">//assigns MyNumber variable to [Products]Size field</span>
+[Products]Size:=<span class="hljs-variable">$MyNumber</span> <span class="hljs-comment">//assigns MyNumber variable to [Products]Size field</span>
 arrDays{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Tuesday"</span> <span class="hljs-comment">//assigns "Tuesday" string to the 2nd arrDays element</span>
 MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigns the result of the function (4) to MyVar</span>
 <span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">//assigns a date literal</span>
@@ -107,7 +107,7 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 </code></pre>
 <p>4D SVG ist ein Beispiel für eine Utility-Komponente, welche die Funktionsweise Ihrer Anwendung erweitert:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//drawing a picture</span>
-svgRef:=SVG_New
+svgRef:=<span class="hljs-function">SVG_New</span>
 objectRef:=<span class="hljs-function">SVG_New_arc</span>(svgRef;<span class="hljs-number">100</span>;<span class="hljs-number">100</span>;<span class="hljs-number">90</span>;<span class="hljs-number">90</span>;<span class="hljs-number">180</span>)
 </code></pre>
 <p>4D SVG ist in 4D enthalten.</p>
@@ -155,12 +155,12 @@ End for</span>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vName</span>:=employee[<span class="hljs-string">"name"</span>]
 </code></pre>
 <p>Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, akzeptiert Objektnotation eine Folge von Symbolen, um auf Untereigenschaften zuzugreifen, wie zum Beispiel:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].<span class="hljs-function">age</span>
 </code></pre>
 <p>Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftsnamen Klammern () anfügen, um die Methode auszuführen:</p>
-<pre><code class="hljs"><span class="hljs-built_in">$f</span>:=<span class="hljs-keyword">New</span> object
-<span class="hljs-built_in">$f</span>.message:=<span class="hljs-keyword">New</span> formula(ALERT(<span class="hljs-string">"Hello world!"</span>))
-<span class="hljs-built_in">$f</span>.message() <span class="hljs-comment">//displays "Hello world!"</span>
+<pre><code class="hljs"><span class="hljs-variable">$f</span>:=<span class="hljs-function">New object</span>
+<span class="hljs-variable">$f</span>.message:=<span class="hljs-function">New formula</span>(<span class="hljs-function">ALERT</span>(<span class="hljs-string">"Hello world!"</span>))
+<span class="hljs-variable">$f</span>.<span class="hljs-function">message</span>() <span class="hljs-comment">//displays "Hello world!"</span>
 </code></pre>
 <p>Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_COLLECTION</span>(myColl)
@@ -248,7 +248,7 @@ Form.pageTotal- Form.pageNumber:=<span class="hljs-number">10</span> <span class
 <p>Die 4D Programmiersprache bietet eine fortschrittliche Implementierung von Zeigern zum Schreiben von leistungsfähigem und modularem Code. Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und Array Elemente verweisen.</p>
 <p>Ein Zeiger wird mit dem Symbol &quot;-&gt;&quot; vor dem Elementnamen erstellt und durch das Symbol &quot;-&gt;&quot; nach dem Elementnamen wieder aufgelöst (dereferenziert).</p>
 <pre><code class="hljs css language-4d">MyVar:=<span class="hljs-string">"Hello"</span>
-MyPointer:=-&gt;MyVar
+MyPointer:=-&gt;<span class="hljs-function">MyVar</span>
 <span class="hljs-function">ALERT</span>(MyPointer-&gt;)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="kommentare"></a><a href="#kommentare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kommentare</h2>
@@ -273,13 +273,13 @@ For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number
 <ul>
 <li><strong>Eingebundene Kommentare</strong> können überall im Code eingefügt werden. Beispiel:</li>
 </ul>
-<pre><code class="hljs css language-4d">Für <span class="hljs-comment">/* eingebundenen Kommentar */</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)...<span class="hljs-keyword">
+<pre><code class="hljs css language-4d">Für <span class="hljs-comment">/* eingebundenen Kommentar */</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)...<span class="hljs-keyword">
 End for</span>
 </code></pre>
 <ul>
 <li><strong>Mehrzeilige Kommentarblöcke</strong> können eine unbegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span><span class="hljs-function"> </span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
 <span class="hljs-comment">/*
 comments  
     /*

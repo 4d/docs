@@ -117,10 +117,10 @@
 <span class="hljs-variable">$name</span>:=<span class="hljs-string">"Smith"</span>
 <span class="hljs-variable">$age</span>:=<span class="hljs-number">50</span>
 
-<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$name </span><span class="hljs-comment">//texte cible pour le pointeur</span>
+<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$name</span> <span class="hljs-comment">//texte cible pour le pointeur</span>
 <span class="hljs-variable">$p</span>-&gt;:=<span class="hljs-string">"Wesson"</span> <span class="hljs-comment">//assigne une valeur texte</span>
 
-<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$age  </span>
+<span class="hljs-variable">$p</span>:=-&gt;<span class="hljs-variable">$age</span><span class="hljs-function">  </span>
 <span class="hljs-comment">// nouvelle cible de type différent pour le pointeur</span>
 <span class="hljs-variable">$p</span>-&gt;:=<span class="hljs-number">55</span> <span class="hljs-comment">//assigne une valeur numérique</span>
 </code></pre>
@@ -129,7 +129,7 @@
   <span class="hljs-comment">// $1 = pointeur vers un type de variable flexible, numérique, text, heure, booléen</span>
 
 <span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$1</span>)
-<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$result</span>)  
+<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$result</span>)<span class="hljs-function">  </span>
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$0</span>)
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>-&gt;)
 <span class="hljs-variable">$0</span>:=<span class="hljs-function">Length</span>(<span class="hljs-variable">$result</span>)

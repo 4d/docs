@@ -184,13 +184,13 @@
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(vResult=<span class="hljs-number">1</span>)
        ... <span class="hljs-comment">//statement(s)</span>
-    :((vResult=<span class="hljs-number">1</span>) &amp; (vCondition#<span class="hljs-number">2</span>)) <span class="hljs-comment">//este caso nunca será detectado</span>
+    :((vResult=<span class="hljs-number">1</span>) &amp;<span class="hljs-function"> </span>(vCondition#<span class="hljs-number">2</span>)) <span class="hljs-comment">//este caso nunca será detectado</span>
        ... <span class="hljs-comment">//statement(s)</span><span class="hljs-keyword">
  End case</span>
 </code></pre>
 <p>En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba &quot;vResult=1&quot; ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
-    :((vResult=<span class="hljs-number">1</span>) &amp; (vCondition#<span class="hljs-number">2</span>)) <span class="hljs-comment">//este caso será detectado primero</span>
+    :((vResult=<span class="hljs-number">1</span>) &amp;<span class="hljs-function"> </span>(vCondition#<span class="hljs-number">2</span>)) <span class="hljs-comment">//este caso será detectado primero</span>
        ... <span class="hljs-comment">//statement(s)</span>
     :(vResult=<span class="hljs-number">1</span>)
        ... <span class="hljs-comment">//statement(s)</span><span class="hljs-keyword">

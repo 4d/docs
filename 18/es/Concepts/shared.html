@@ -87,8 +87,8 @@
 <p>Sin embargo, todas las instrucciones de modificación en un objeto compartido o colección deben estar rodeadas por las palabras clave <code>Use...End use</code>, de lo contrario se genera un error.</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$s_obj</span>:=<span class="hljs-function">New shared object</span>(<span class="hljs-string">"prop1"</span>;<span class="hljs-string">"alpha"</span>)<span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$s_obj</span>)
-    <span class="hljs-variable">$s_obj</span>.prop1:=<span class="hljs-string">"omega"</span>
- End<span class="hljs-keyword"> Use</span>
+    <span class="hljs-variable">$s_obj</span>.prop<span class="hljs-number">1</span>:=<span class="hljs-string">"omega"</span>
+<span class="hljs-function"> End Use</span>
 </code></pre>
 <p>Un objeto/una colección compartido(a) sólo puede modificarse por un proceso a la vez. <code>Use</code> bloquea el objeto/colección compartido para otros hilos, mientras que el último <code>End use</code> desbloquea todos los objetos y colecciones. Intentar modificar un objeto/colección compartido sin al menos un <code>Use...End use</code> genera un error. Cuando un proceso llama a <code>Use...End use</code> en un objeto/colección compartido que ya está en uso por otro proceso, simplemente se pone en espera hasta que el <code>End use</code> lo desbloquee (no se genera ningún error). En consecuencia, las instrucciones dentro de las estructuras <code>Use...End use</code> deben ejecutarse rápidamente y desbloquear los elementos lo antes posible. Por lo tanto, se recomienda enfáticamente evitar modificar un objeto o colección compartido directamente desde la interfaz, por ejemplo, a través de una caja de diálogo.</p>
 <p>La asignación de objetos/colecciones compartidos a propiedades o elementos de otros objetos/colecciones compartidos está permitida y crea <strong>grupos compartidos</strong>. Un grupo compartido se crea automáticamente cuando un objeto/colección compartido se define como valor de propiedad o elemento de otro objeto/colección compartido. Los grupos compartidos permiten anidar objetos y colecciones compartidos, pero imponen reglas adicionales:</p>
@@ -111,7 +111,7 @@
 <h2><a class="anchor" aria-hidden="true" id="useend-use"></a><a href="#useend-use" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use...End use</h2>
 <p>La sintaxis de la estructura <code>Use...End use</code> es:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Use</span>(Shared_object_or_Shared_collection)
-<span class="hljs-function">    instrucción</span>(es)<span class="hljs-keyword">
+    instrucció<span class="hljs-function">n</span>(es)<span class="hljs-keyword">
  End use</span>
 </code></pre>
 <p>La estructura <code>Use...End use</code> define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro <em>Shared_object_or_Shared_collection</em> bajo la protección de un semáforo interno. <em>Shared_object_or_Shared_collection</em> puede ser cualquier objeto o colección compartido válido.</p>
@@ -131,14 +131,14 @@
  ... <span class="hljs-comment">//llenar el array con los elementos a contar</span>
  <span class="hljs-variable">$nbItems</span>:=<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$_items</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$inventory</span>)
- <span class="hljs-variable">$inventory</span>:=New shared object<span class="hljs-keyword">
+ <span class="hljs-variable">$inventory</span>:=<span class="hljs-function">New shared object</span><span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$inventory</span>)
     <span class="hljs-variable">$inventory</span>.nbItems:=<span class="hljs-variable">$nbItems</span><span class="hljs-keyword">
  End use</span>
 
   <span class="hljs-comment">//Crear procesos</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$nbItems</span>)
-    <span class="hljs-variable">$ps</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"HowMany"</span>;<span class="hljs-number">0</span>;<span class="hljs-string">"HowMany_"</span>+<span class="hljs-variable">$_items{</span><span class="hljs-variable">$i}</span>;<span class="hljs-variable">$_items{</span><span class="hljs-variable">$i}</span>;<span class="hljs-variable">$inventory</span>)
+    <span class="hljs-variable">$ps</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"HowMany"</span>;<span class="hljs-number">0</span>;<span class="hljs-string">"HowMany_"</span>+<span class="hljs-variable">$_items</span>{<span class="hljs-variable">$i</span>};<span class="hljs-variable">$_items</span>{<span class="hljs-variable">$i</span>};<span class="hljs-variable">$inventory</span>)
   <span class="hljs-comment">//$inventory object sent by reference</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
@@ -147,30 +147,30 @@
 <span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$what</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$2</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$inventory</span>)
- <span class="hljs-variable">$what</span>:=<span class="hljs-variable">$1 </span><span class="hljs-comment">//para una mejor legibilidad</span>
+ <span class="hljs-variable">$what</span>:=<span class="hljs-variable">$1</span> <span class="hljs-comment">//para una mejor legibilidad</span>
  <span class="hljs-variable">$inventory</span>:=<span class="hljs-variable">$2</span>
 
  <span class="hljs-variable">$count</span>:=<span class="hljs-function">CountMethod</span>(<span class="hljs-variable">$what</span>) <span class="hljs-comment">//método para contar productos</span><span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$inventory</span>) <span class="hljs-comment">//utilizar el objeto compartido</span>
-    <span class="hljs-variable">$inventory</span>[<span class="hljs-variable">$what</span>]:=<span class="hljs-variable">$count  </span><span class="hljs-comment">//guardar los resultados de este artículo</span><span class="hljs-keyword">
+    <span class="hljs-variable">$inventory</span>[<span class="hljs-variable">$what</span>]:=<span class="hljs-variable">$count</span>  <span class="hljs-comment">//guardar los resultados de este artículo</span><span class="hljs-keyword">
  End use</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h2>
 <p>Los siguientes ejemplos ilustran las reglas específicas para el manejo de los grupos compartidos:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$ob1</span>:=New shared object
- <span class="hljs-variable">$ob2</span>:=New shared object<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$ob1</span>:=<span class="hljs-function">New shared object</span>
+ <span class="hljs-variable">$ob2</span>:=<span class="hljs-function">New shared object</span><span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$ob1</span>)
-    <span class="hljs-variable">$ob1</span>.a:=<span class="hljs-variable">$ob2  </span><span class="hljs-comment">//se crea el grupo 1</span><span class="hljs-keyword">
+    <span class="hljs-variable">$ob1</span>.a:=<span class="hljs-variable">$ob2</span>  <span class="hljs-comment">//se crea el grupo 1</span><span class="hljs-keyword">
  End use</span>
 
- <span class="hljs-variable">$ob3</span>:=New shared object
- <span class="hljs-variable">$ob4</span>:=New shared object<span class="hljs-keyword">
+ <span class="hljs-variable">$ob3</span>:=<span class="hljs-function">New shared object</span>
+ <span class="hljs-variable">$ob4</span>:=<span class="hljs-function">New shared object</span><span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$ob3</span>)
-    <span class="hljs-variable">$ob3</span>.a:=<span class="hljs-variable">$ob4  </span><span class="hljs-comment">//se crea el grupo 2</span><span class="hljs-keyword">
+    <span class="hljs-variable">$ob3</span>.a:=<span class="hljs-variable">$ob4</span>  <span class="hljs-comment">//se crea el grupo 2</span><span class="hljs-keyword">
  End use</span><span class="hljs-keyword">
 
  Use</span>(<span class="hljs-variable">$ob1</span>) <span class="hljs-comment">//utilizar un objeto del grupo 1</span>
-    <span class="hljs-variable">$ob1</span>.b:=<span class="hljs-variable">$ob4  </span><span class="hljs-comment">//ERROR</span>
+    <span class="hljs-variable">$ob1</span>.b:=<span class="hljs-variable">$ob4</span>  <span class="hljs-comment">//ERROR</span>
   <span class="hljs-comment">//$ob4 ya pertenece a otro grupo</span>
   <span class="hljs-comment">//la asignación no está permitida</span><span class="hljs-keyword">
  End use</span><span class="hljs-keyword">
@@ -180,7 +180,7 @@
  End use</span><span class="hljs-keyword">
 
  Use</span>(<span class="hljs-variable">$ob1</span>) <span class="hljs-comment">//utilizar un objeto del grupo 1</span>
-    <span class="hljs-variable">$ob1</span>.b:=<span class="hljs-variable">$ob4  </span><span class="hljs-comment">//ERROR</span>
+    <span class="hljs-variable">$ob1</span>.b:=<span class="hljs-variable">$ob4</span>  <span class="hljs-comment">//ERROR</span>
   <span class="hljs-comment">//$ob4 aún pertenece al grupo 2</span>
   <span class="hljs-comment">//la asignación no está permitida</span><span class="hljs-keyword">
  End use</span>

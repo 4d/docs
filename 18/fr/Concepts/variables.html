@@ -79,13 +79,13 @@
 <pre><code class="hljs css language-4d"> MaDate:=Current date+<span class="hljs-number">30</span> <span class="hljs-comment">//MaDate est créée et prend la valeur de la date courante plus 30 jours</span>
 </code></pre>
 <p>Une fois créée, vous pouvez utiliser une variable partout dans votre base. Par exemple, vous pouvez la stocker dans un champ du même type :</p>
-<pre><code class="hljs css language-4d"> [MaTable]MonChamp:=MonTexte
+<pre><code class="hljs css language-4d"> [MaTable]MonChamp:=<span class="hljs-function">MonTexte</span>
 </code></pre>
 <p>Voici quelques déclarations de variables simples :</p>
 <pre><code class="hljs css language-4d">
 <span class="hljs-function"> C_BLOB</span>(vxMyBlob) <span class="hljs-comment">// La variable process vxMyBlob est déclarée comme variable de type BLOB</span>
 <span class="hljs-function"> C_DATE</span>(<span class="hljs-variable">$vdCurDate</span>) <span class="hljs-comment">// La variable locale $vdCurDate est déclarée comme variable de type Date</span>
-<span class="hljs-function"> C_C_LONGINT</span>(vg1;vg2;vg3) <span class="hljs-comment">// Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long</span>
+<span class="hljs-function"> C_C_LONGINT</span>(vg<span class="hljs-number">1</span>;vg<span class="hljs-number">2</span>;vg<span class="hljs-number">3</span>) <span class="hljs-comment">// Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$vObj</span>) <span class="hljs-comment">// La variable locale $vObj est déclarée comme variable de type Objet</span>
 <span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$vCol</span>) <span class="hljs-comment">// La variable locale $vCol est déclarée comme variable de type Collection</span>
 <span class="hljs-function">ARRAY LONGINT</span>(alAnArray;<span class="hljs-number">10</span>) <span class="hljs-comment">//La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments</span>
@@ -97,7 +97,7 @@
 </code></pre>
 <p>crée la variable <em>MonNombre</em> et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.</p>
 <p>Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer <em>MonNombre</em> à droite de l’opérateur d’assignation :</p>
-<pre><code class="hljs css language-4d">[Produits]Taille:=MonNombre
+<pre><code class="hljs css language-4d">[Produits]Taille:=<span class="hljs-function">MonNombre</span>
 </code></pre>
 <p>Dans ce cas, <em>[Produits]Taille</em> vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.</p>
 <p>Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :</p>

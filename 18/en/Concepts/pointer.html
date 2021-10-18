@@ -89,7 +89,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyVar</span>:=<span class="hljs-string">"Hello"</span>
 </code></pre>
 <p>$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$MyPointer</span>)  
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$MyPointer</span>)<span class="hljs-function">  </span>
 <span class="hljs-variable">$MyPointer</span>:=-&gt;<span class="hljs-variable">$MyVar</span>
 </code></pre>
 <p>The -&gt; symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.</p>
@@ -113,11 +113,11 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="pointer-operators"></a><a href="#pointer-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointer operators</h2>
 <p>With:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">` vPtrA and vPtrB point to the same object</span>
- vPtrA:=-&gt;anObject
- vPtrB:=-&gt;anObject
-  <span class="hljs-comment">` vPtrC points to another object</span>
- vPtrC:=-&gt;anotherObject
+<pre><code class="hljs css language-4d">  `<span class="hljs-function"> vPtrA and vPtrB point to the same object</span>
+ vPtrA:=-&gt;<span class="hljs-function">anObject</span>
+ vPtrB:=-&gt;<span class="hljs-function">anObject</span>
+  `<span class="hljs-function"> vPtrC points to another object</span>
+ vPtrC:=-&gt;<span class="hljs-function">anotherObject</span>
 </code></pre>
 <table>
 <thead>
@@ -143,7 +143,7 @@
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="pointers-to-fields"></a><a href="#pointers-to-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to fields</h3>
 <p>Anywhere that the language expects to see a field, you can use a dereferenced pointer to reference the field. You create a pointer to a field by using a line like this:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$FieldPtr</span>:=-&gt;[aTable]<span class="hljs-literal">This</span>Field
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$FieldPtr</span>:=-&gt;[aTable]<span class="hljs-literal">This</span><span class="hljs-function">Field</span>
 </code></pre>
 <p>You can also get a pointer to a field by using the <code>Field</code> command, for example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$FieldPtr</span>:=<span class="hljs-function">Field</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
@@ -176,7 +176,7 @@
 <h3><a class="anchor" aria-hidden="true" id="pointers-to-array-elements"></a><a href="#pointers-to-array-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to array elements</h3>
 <p>You can create a pointer to an array element. For example, the following lines create an array and assign a pointer to the first array element to a variable called $ElemPtr:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY REAL</span>(<span class="hljs-variable">$anArray</span>;<span class="hljs-number">10</span>) <span class="hljs-comment">//Create an array</span>
-<span class="hljs-variable">$ElemPtr</span>:=-&gt;<span class="hljs-variable">$anArray{1} </span><span class="hljs-comment">//Create a pointer to the array element</span>
+<span class="hljs-variable">$ElemPtr</span>:=-&gt;<span class="hljs-variable">$anArray</span>{<span class="hljs-number">1</span>} <span class="hljs-comment">//Create a pointer to the array element</span>
 </code></pre>
 <p>You could use the dereferenced pointer to assign a value to the element, like this:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$ElemPtr</span>-&gt;:=<span class="hljs-number">8</span>
@@ -184,7 +184,7 @@
 <h3><a class="anchor" aria-hidden="true" id="pointers-to-arrays"></a><a href="#pointers-to-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pointers to arrays</h3>
 <p>You can create a pointer to an array. For example, the following lines create an array and assign a pointer to the array to a variable called $ArrPtr:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY REAL</span>(<span class="hljs-variable">$anArray</span>;<span class="hljs-number">10</span>) <span class="hljs-comment">//Create an array</span>
-<span class="hljs-variable">$ArrPtr</span>:=-&gt;<span class="hljs-variable">$anArray </span><span class="hljs-comment">//Create a pointer to the array</span>
+<span class="hljs-variable">$ArrPtr</span>:=-&gt;<span class="hljs-variable">$anArray</span> <span class="hljs-comment">//Create a pointer to the array</span>
 </code></pre>
 <p>It is important to understand that the pointer points to the array; it does not point to an element of the array. For example, you can use the dereferenced pointer from the preceding lines like this:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">SORT ARRAY</span>(<span class="hljs-variable">$ArrPtr</span>-&gt;;&gt;) <span class="hljs-comment">//Sort the array</span>
@@ -210,7 +210,7 @@
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$MyVar</span>:=<span class="hljs-string">"Hello"</span>
  <span class="hljs-variable">$PointerOne</span>:=-&gt;<span class="hljs-variable">$MyVar</span>
  <span class="hljs-variable">$PointerTwo</span>:=-&gt;<span class="hljs-variable">$PointerOne</span>
- (<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;:=<span class="hljs-string">"Goodbye"</span>
+<span class="hljs-function"> </span>(<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;:=<span class="hljs-string">"Goodbye"</span>
 <span class="hljs-function"> ALERT</span>((<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;)
 </code></pre>
 <p>It displays an alert box with the word “Goodbye” in it.</p>

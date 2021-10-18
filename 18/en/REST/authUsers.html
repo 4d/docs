@@ -89,21 +89,21 @@
 
 <span class="hljs-function">APPEND TO ARRAY</span>(headerValues;<span class="hljs-string">"kind user"</span>)
 <span class="hljs-function">APPEND TO ARRAY</span>(headerValues;<span class="hljs-string">"60"</span>)
-<span class="hljs-function">APPEND TO ARRAY</span>(headerValues;<span class="hljs-function">Generate digest</span>(<span class="hljs-string">"test"</span>;4D digest))
+<span class="hljs-function">APPEND TO ARRAY</span>(headerValues;<span class="hljs-function">Generate digest</span>(<span class="hljs-string">"test"</span>;<span class="hljs-number">4</span>D digest))
 
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$response</span>)
-<span class="hljs-variable">$response</span>:=New object
- 
+<span class="hljs-variable">$response</span>:=<span class="hljs-function">New object</span>
+<span class="hljs-function"> </span>
 <span class="hljs-comment">//This request opens a session for the user "kind user"</span>
-<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP POST method;<span class="hljs-string">"127.0.0.1:8044/rest/$directory/login"</span>;<span class="hljs-string">""</span>;\  
+<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP POST method;<span class="hljs-string">"127.0.0.1:8044/rest/$directory/login"</span>;<span class="hljs-string">""</span>;\<span class="hljs-function">  </span>
     <span class="hljs-variable">$response</span>;headerNames;headerValues;*)
- 
- 
+<span class="hljs-function"> </span>
+<span class="hljs-function"> </span>
 <span class="hljs-comment">//Build new arrays for headers with only the cookie WASID4D</span>
 <span class="hljs-function">buildHeader</span>(-&gt;headerNames;-&gt;headerValues)
 
 <span class="hljs-comment">//This other request will not open a new session</span>
-<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP GET method;<span class="hljs-string">"127.0.0.1:8044/rest/$catalog"</span>;<span class="hljs-string">""</span>;\  
+<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP GET method;<span class="hljs-string">"127.0.0.1:8044/rest/$catalog"</span>;<span class="hljs-string">""</span>;\<span class="hljs-function">  </span>
     <span class="hljs-variable">$response</span>;headerNames;headerValues;*)
 </code></pre>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// buildHeader project method  </span>
@@ -116,7 +116,7 @@
 <span class="hljs-function">COPY ARRAY</span>(<span class="hljs-variable">$2</span>-&gt;;<span class="hljs-variable">$headerValues</span>)
 
 <span class="hljs-variable">$indexCookie</span>:=<span class="hljs-function">Find in array</span>(<span class="hljs-variable">$headerValues</span>;<span class="hljs-string">"WASID4D@"</span>)
-<span class="hljs-variable">$cookie</span>:=<span class="hljs-variable">$headerValues{</span><span class="hljs-variable">$indexCookie}</span>
+<span class="hljs-variable">$cookie</span>:=<span class="hljs-variable">$headerValues</span>{<span class="hljs-variable">$indexCookie</span>}
 <span class="hljs-variable">$start</span>:=<span class="hljs-function">Position</span>(<span class="hljs-string">"WASID4D"</span>;<span class="hljs-variable">$cookie</span>)
 <span class="hljs-variable">$end</span>:=<span class="hljs-function">Position</span>(<span class="hljs-string">";"</span>;<span class="hljs-variable">$cookie</span>)
 <span class="hljs-variable">$uuid</span>:=<span class="hljs-function"> Substring</span>(<span class="hljs-variable">$cookie</span>;<span class="hljs-variable">$start</span>;<span class="hljs-variable">$end</span>-<span class="hljs-variable">$start</span>)
@@ -124,8 +124,8 @@
 <span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$headerNames</span>;<span class="hljs-number">1</span>)
 <span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$headerValues</span>;<span class="hljs-number">1</span>)
 
-<span class="hljs-variable">$headerNames{1}</span>:=<span class="hljs-string">"Cookie"</span>
-<span class="hljs-variable">$headerValues{1}</span>:=<span class="hljs-variable">$uuid</span>
+<span class="hljs-variable">$headerNames</span>{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Cookie"</span>
+<span class="hljs-variable">$headerValues</span>{<span class="hljs-number">1</span>}:=<span class="hljs-variable">$uuid</span>
 
 <span class="hljs-function">COPY ARRAY</span>(<span class="hljs-variable">$headerNames</span>;<span class="hljs-variable">$1</span>-&gt;)
 <span class="hljs-function">COPY ARRAY</span>(<span class="hljs-variable">$headerValues</span>;<span class="hljs-variable">$2</span>-&gt;)

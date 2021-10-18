@@ -83,7 +83,7 @@
 <p><a href="/docs/18/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="nombre-formulario-detallado"></a><a href="#nombre-formulario-detallado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre formulario detallado</h2>
-<p><code>Selection type list box</code></p>
+<p><code>List box del tipo selección</code></p>
 <p>Specifies the form to use for modifying or displaying individual records of the list box.</p>
 <p>The specified form is displayed:</p>
 <ul>
@@ -103,7 +103,7 @@
 <p><a href="/docs/18/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="doble-clic-en-línea"></a><a href="#doble-clic-en-línea" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Doble clic en línea</h2>
-<p><code>Selection type list box</code></p>
+<p><code>List box del tipo selección</code></p>
 <p>Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:</p>
 <ul>
 <li><strong>Do nothing</strong> (default): Double-clicking a row does not trigger any automatic action.</li>
@@ -128,7 +128,7 @@
 <p><a href="/docs/18/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="conjunto-resaltado"></a><a href="#conjunto-resaltado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conjunto resaltado</h2>
-<p><code>Selection type list box</code></p>
+<p><code>List box del tipo selección</code></p>
 <p>This property is used to specify the set to be used to manage highlighted records in the list box (when the <strong>Arrays</strong> data source is selected, a Boolean array with the same name as the list box is used).</p>
 <p>4D creates a default set named <em>ListBoxSetN</em> where <em>N</em> starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example <em>$LBSet</em>, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.</p>
 <blockquote>
@@ -143,7 +143,7 @@
 <tr><th>Nombre</th><th>Tipos de datos</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>highlightSet</td><td>cadena</td><td>Name of the set</td></tr>
+<tr><td>highlightSet</td><td>cadena</td><td>Nombre del conjunto</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-3"></a><a href="#objetos-soportados-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
@@ -209,7 +209,7 @@
 <tr><th>Nombre</th><th>Tipos de datos</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>columnCount</td><td>integer</td><td>minimum: 1</td></tr>
+<tr><td>columnCount</td><td>integer</td><td>mínimo: 1</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-6"></a><a href="#objetos-soportados-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
@@ -225,23 +225,23 @@
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td>lk row is disabled</td><td>2</td><td>The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled</td></tr>
-<tr><td>lk row is hidden</td><td>1</td><td>The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly <code>LISTBOX Get number of rows</code> or <code>LISTBOX GET CELL POSITION</code>, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, <code>LISTBOX Get number of rows</code> returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible</td></tr>
+<tr><td>lk row is disabled</td><td>2</td><td>The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Valor por defecto: Activado</td></tr>
+<tr><td>lk row is hidden</td><td>1</td><td>The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly <code>LISTBOX Get number of rows</code> or <code>LISTBOX GET CELL POSITION</code>, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, <code>LISTBOX Get number of rows</code> returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Valor por defecto: Visible</td></tr>
 <tr><td>lk row is not selectable</td><td>4</td><td>The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the <a href="/docs/18/es/FormObjects/propertiesEntry.html#single-click-edit">Single-Click Edit</a> option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is &quot;None&quot;. Default value: Selectable</td></tr>
 </tbody>
 </table>
 <p>To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:</p>
-<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">10</span>}:=lk row is not selectable
+<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">10</span>}:=<span class="hljs-function">lk row is not selectable</span>
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_styles5.png" alt=""></p>
 <p>You can define several interface properties at once:</p>
-<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">8</span>}:=lk row is not selectable + lk row is disabled
+<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">8</span>}:=lk row is not selectable +<span class="hljs-function"> lk row is disabled</span>
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_styles6.png" alt=""></p>
 <p>Note that setting properties for an element overrides any other values for this element (if not reset). Por ejemplo:</p>
-<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">6</span>}:=lk row is disabled + lk row is not selectable
+<pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">6</span>}:=lk row is disabled +<span class="hljs-function"> lk row is not selectable</span>
  <span class="hljs-comment">//define la línea 6 como desactivada Y no seleccionable</span>
- aLControlArr{<span class="hljs-number">6</span>}:=lk row is disabled
+ aLControlArr{<span class="hljs-number">6</span>}:=<span class="hljs-function">lk row is disabled</span>
  <span class="hljs-comment">//define la línea 6 como desactivada pero seleccionable nuevamente</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-7"></a><a href="#gramática-json-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
@@ -250,7 +250,7 @@
 <tr><th>Nombre</th><th>Tipos de datos</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>rowControlSource</td><td>cadena</td><td>Row control array name</td></tr>
+<tr><td>rowControlSource</td><td>cadena</td><td>Nombre del array de control de líneas</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-7"></a><a href="#objetos-soportados-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>

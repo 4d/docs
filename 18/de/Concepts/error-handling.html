@@ -87,7 +87,7 @@
 <p>Sie können eine einzige Fehlerverwaltungsmethode für die gesamte Anwendung definieren oder für jedes Modul eine eigene Methode. Sie können jedoch immer nur eine Methode pro Prozess installieren.</p>
 <p>Eine Fehlerverwaltungsmethode, die über den Befehl <code>ON ERR CALL</code> eingerichtet wurde, gilt nur für die laufende Anwendung. Erzeugt eine <strong>Komponente</strong> einen Fehler, wird nicht die Fehlerverwaltungsmethode <code>ON ERR CALL</code> der Host-Datenbank aufgerufen, und umgekehrt.</p>
 <p>Mit dem Befehl <code>Method called on error</code> erfahren Sie den Namen der Methode, die über den Befehl <code>ON ERR CALL</code> für den aktuellen Prozess installiert wurde. Er ist besonders hilfreich im Zusammenhang mit Komponenten, da Sie damit die Fehlerverwaltungsmethode der Host Datenbank zeitweise ändern und dann wiederherstellen können:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$methCurrent</span>:=Method called on error
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$methCurrent</span>:=<span class="hljs-function">Method called on error</span>
 <span class="hljs-function"> ON ERR CALL</span>(<span class="hljs-string">"NewMethod"</span>)
   <span class="hljs-comment">//If the document cannot be opened, an error is generated</span>
  <span class="hljs-variable">$ref</span>:=<span class="hljs-function">Open document</span>(<span class="hljs-string">"MyDocument"</span>)
@@ -127,7 +127,7 @@
 <p>Wollen Sie hauptsächlich, dass das Dialogfenster für Standardfehler ausgeblendet wird, können Sie eine leere Fehlerverwaltungsmethode installieren. Die Systemvariable <code>Error</code> lässt sich in jeder Methode testen, z.B. auch außerhalb der Fehlerverwaltungsmethode:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ON ERR CALL</span>(<span class="hljs-string">"emptyMethod"</span>) <span class="hljs-comment">//emptyMethod exists but is empty</span>
 <span class="hljs-variable">$doc</span>:=<span class="hljs-function">Open document</span>( <span class="hljs-string">"myFile.txt"</span>)<span class="hljs-keyword">
-If</span> (Error=<span class="hljs-number">-43</span>)
+If</span><span class="hljs-function"> </span>(Error=-<span class="hljs-number">43</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"File not found."</span>)<span class="hljs-keyword">
 End if</span>
 <span class="hljs-function">ON ERR CALL</span>(<span class="hljs-string">""</span>)

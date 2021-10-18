@@ -114,7 +114,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$content</span>)
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$response</span>)
 
-<span class="hljs-variable">$content</span>:=<span class="hljs-string">"[\"Toni\",\"Dickey\"]"</span> 
+<span class="hljs-variable">$content</span>:=<span class="hljs-string">"[\"Toni\",\"Dickey\"]"</span><span class="hljs-function"> </span>
 
 <span class="hljs-variable">$statusCode</span>:=<span class="hljs-function">HTTP Request</span>(HTTP POST method;<span class="hljs-string">"127.0.0.1:8044/rest/Employee/findPerson"</span>;<span class="hljs-variable">$content</span>;<span class="hljs-variable">$response</span>)
 </code></pre>

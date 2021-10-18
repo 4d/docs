@@ -90,7 +90,7 @@
  atNames{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Jane"</span>
  atNames{<span class="hljs-number">5</span>}:=<span class="hljs-string">"John"</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-number">5</span>)
-<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"The element #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" is equal to: "</span>+atNames{<span class="hljs-variable">$vlElem}</span>)<span class="hljs-keyword">
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"The element #"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlElem</span>)+<span class="hljs-string">" is equal to: "</span>+atNames{<span class="hljs-variable">$vlElem</span>})<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (<code>For...End for</code>, <code>Repeat...Until</code> or <code>While...End while</code>), compact pieces of code can address all or part of the elements in an array.</p>
@@ -135,7 +135,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-variable">$vlLastField</span>)
 <span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlFieldNumber</span>)
   <span class="hljs-comment">// Create as many rows (empty and without columns) as there are tables</span>
- <span class="hljs-variable">$vlLastTable</span>:=Get last table number
+ <span class="hljs-variable">$vlLastTable</span>:=<span class="hljs-function">Get last table number</span>
 <span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">&lt;&gt;apFields</span>;<span class="hljs-variable">$vlLastTable</span>;<span class="hljs-number">0</span>) <span class="hljs-comment">//2D array with X rows and zero columns</span>
   <span class="hljs-comment">// For each table</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$vlLastTable</span>)<span class="hljs-keyword">
@@ -147,9 +147,9 @@
           If</span>(<span class="hljs-function">Is field number valid</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>))
              <span class="hljs-variable">$vlColumnNumber</span>:=<span class="hljs-variable">$vlColumnNumber</span>+<span class="hljs-number">1</span>
   <span class="hljs-comment">//Insert a column in a row of the table underway</span>
-<span class="hljs-function">             INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}</span>;<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
+<span class="hljs-function">             INSERT IN ARRAY</span>(<span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>};<span class="hljs-variable">$vlColumnNumber</span>;<span class="hljs-number">1</span>)
   <span class="hljs-comment">//Assign the "cell" with the pointer</span>
-             <span class="hljs-variable">&lt;&gt;apFields{</span><span class="hljs-variable">$vlTable}{</span><span class="hljs-variable">$vlColumnNumber}</span>:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
+             <span class="hljs-variable">&lt;&gt;apFields</span>{<span class="hljs-variable">$vlTable</span>}{<span class="hljs-variable">$vlColumnNumber</span>}:=<span class="hljs-function">Field</span>(<span class="hljs-variable">$vlTable</span>;<span class="hljs-variable">$vlField</span>)<span class="hljs-keyword">
           End if</span><span class="hljs-keyword">
        End for</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
@@ -157,14 +157,14 @@
 </code></pre>
 <p>Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Get the pointers to the fields for the table currently displayed at the screen:</span>
-<span class="hljs-function"> COPY ARRAY</span>(<span class="hljs-function">◊apFields{Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
+<span class="hljs-function"> COPY ARRAY</span>(◊apFields{<span class="hljs-function">Table</span>(Current form table)};<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>)
   <span class="hljs-comment">// Initialize Boolean and Date fields</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>))<span class="hljs-keyword">
     Case of</span>
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is date)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=Current date
-       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;)=Is Boolean)
-          <span class="hljs-variable">$apTheFieldsIamWorkingOn{</span><span class="hljs-variable">$vlElem}</span>-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is date)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-function">Current date</span>
+       :(<span class="hljs-function">Type</span>(<span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;)=Is Boolean)
+          <span class="hljs-variable">$apTheFieldsIamWorkingOn</span>{<span class="hljs-variable">$vlElem</span>}-&gt;:=<span class="hljs-literal">True</span><span class="hljs-keyword">
     End case</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
