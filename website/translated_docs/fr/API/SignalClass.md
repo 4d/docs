@@ -100,7 +100,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
@@ -141,7 +141,7 @@ Here is a typical example of a worker that sets a signal:
  $signal:=New signal("This is my first signal")
 
  CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //wait for 1 second max
+ $signaled:=$signal.wait(1) //patienter 1 seconde au maximum
 
  If($signaled)
     ALERT("myworker finished the work. Result: "+$signal.myresult)
@@ -158,9 +158,8 @@ The ***doSomething*** method could be like:
   //any processing
   //...
  Use($signal)
-    $signal.myresult:=$processingResult  //return the result
- End use
- $signal.trigger() // The work is finished
+    $signal.myresult:=$processingResult  //retourner le résulat
+ $signal.trigger() // L'opération est terminée
 ```
 
 <!-- END REF -->
@@ -172,7 +171,7 @@ The ***doSomething*** method could be like:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #SignalClass.description.Syntax -->
@@ -196,7 +195,7 @@ This property is **read-write**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -219,16 +218,16 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #SignalClass.trigger().Syntax -->
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 
@@ -248,7 +247,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #SignalClass.wait().Syntax -->
@@ -267,12 +266,12 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
-> **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
+> **Attention** : L'appel de `.wait( )` sans *timeout* dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
 The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
-> The state of a process that waits for a signal is `Waiting for internal flag`.
+> L'état d'un process qui attend un signal est `En attente d'un marqueur interne`.
 
 
 <!-- END REF -->

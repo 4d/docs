@@ -12,7 +12,7 @@ title: Classe Transporter
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->
@@ -48,7 +48,7 @@ Available secured ports are:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
@@ -79,7 +79,7 @@ Possible values are:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 
@@ -111,7 +111,7 @@ Possible values are:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 
@@ -143,7 +143,7 @@ Possible values are:
 | Version | Modifications           |
 | ------- | ----------------------- |
 | v18     | Support for UTF8 base64 |
-| v17 R5  | Ajoutées                |
+| v17 R5  | Ajout                   |
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
@@ -178,7 +178,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
@@ -201,7 +201,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
@@ -236,7 +236,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #transporter.host.Syntax -->
@@ -257,7 +257,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
@@ -288,7 +288,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.port.Syntax -->
@@ -316,7 +316,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->
@@ -337,7 +337,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.user.Syntax -->
@@ -357,7 +357,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->

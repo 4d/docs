@@ -6,7 +6,7 @@
     "tagline": "Documentación para desarrolladores 4D",
     "docs": {
       "Admin/cli": {
-        "title": "Command Line Interface"
+        "title": "Interfaz de línea de comando"
       },
       "Admin/dataExplorer": {
         "title": "Explorador de datos Web"
@@ -21,7 +21,7 @@
         "title": "Protocolo TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Administración Web"
       },
       "API/ClassClass": {
         "title": "Class"
@@ -42,7 +42,7 @@
         "title": "DataStore"
       },
       "API/Directory": {
-        "title": "Directory Class"
+        "title": "Clase Directory"
       },
       "API/Document": {
         "title": "Document Class"
@@ -72,7 +72,7 @@
         "title": "MailAttachment"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "Generalidades - API de clases"
       },
       "API/POP3TransporterClass": {
         "title": "POP3Transporter"
@@ -87,7 +87,7 @@
         "title": "SMTPTransporter"
       },
       "API/Transporter": {
-        "title": "Transporter Class"
+        "title": "Clase Transporter"
       },
       "API/WebServerClass": {
         "title": "WebServer"
@@ -403,7 +403,7 @@
         "title": "Acerca de los formularios 4D"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "Macros del editor de formularios"
       },
       "FormEditor/objectLibrary": {
         "title": "Librerías de objetos"
@@ -418,7 +418,7 @@
         "title": "Propiedades de los formularios"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "Tamaño formulario"
       },
       "FormEditor/jsonReference": {
         "title": "Lista de propiedades JSON"
@@ -659,7 +659,7 @@
         "title": "Actualizaciones de la documentación"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "Objeto del modelo de datos"
       },
       "ORDA/entities": {
         "title": "Trabajar con los datos"
@@ -671,7 +671,7 @@
         "title": "Clases del modelo de datos"
       },
       "ORDA/overview": {
-        "title": "What is ORDA?"
+        "title": "¿Qué es ORDA?"
       },
       "ORDA/quickTour": {
         "title": "Un recorrido rápido en ORDA"
@@ -701,7 +701,7 @@
         "title": "Arquitectura de un proyecto"
       },
       "Project/compiler": {
-        "title": "Compilation"
+        "title": "Compilación"
       },
       "Project/creating": {
         "title": "Working with a project"
@@ -809,7 +809,7 @@
         "title": "Acerca de las peticiones REST"
       },
       "Tags/tags": {
-        "title": "Transformation tags"
+        "title": "Etiquetas de transformación"
       },
       "Users/editing": {
         "title": "Gestión de usuarios y grupos 4D"
@@ -836,10 +836,10 @@
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "Sesiones usuario"
       },
       "WebServer/templates": {
-        "title": "Template pages"
+        "title": "Páginas de plantillas"
       },
       "WebServer/webServer": {
         "title": "Generalidades"
@@ -903,14 +903,14 @@
     "Backup and Restore|no description given": "Copia de seguridad y restauración",
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Administración Web",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
     "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
     "Description of log files|no description given": "Description of log files",
-    "Command Line Interface|no description given": "Command Line Interface",
+    "Command Line Interface|no description given": "Interfaz de línea de comando",
     "Preferences|no description given": "Preferencias",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",

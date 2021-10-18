@@ -46,8 +46,8 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 - un objeto
-- a choice list
-- an array
+- una lista de selección
+- un array
 
 ### Using an object
 
@@ -74,7 +74,7 @@ Form.tabControl.index:=2 //start on page 3
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 
-### Using a Text array
+### Utilizar un array Text
 
 You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 
@@ -89,7 +89,7 @@ You can create a Text array that contains the names of each page of the form. Th
 
 ## Goto page features
 
-### FORM GOTO PAGE command
+### Comandoe FORM GOTO PAGE
 
 You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
 

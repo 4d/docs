@@ -52,7 +52,7 @@ ASSERT($status.success)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -92,7 +92,7 @@ The returned `CryptoKey` object encapsulates an encryption key pair. C'est un ob
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
@@ -111,7 +111,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -160,7 +160,7 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -201,7 +201,7 @@ La valeur retournée est un message chiffré.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -229,7 +229,7 @@ La valeur retournée est la clé privée.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -256,7 +256,7 @@ La valeur retournée est la clé publique.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -274,7 +274,7 @@ La valeur retournée est la clé publique.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
@@ -314,7 +314,7 @@ Représentation utf8 de la chaîne *message*.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -330,7 +330,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 
@@ -346,7 +346,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->

@@ -7,7 +7,7 @@ This page contains various options to configure the general operation of your 4D
 
 ## Opciones
 
-### At startup
+### Al inicio
 
 This option allows you to configure the default 4D display at startup, when the user launches only the application.
 
@@ -20,7 +20,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 ### Automatic form creation
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
 #### Window tabbing (macOS only)
 
@@ -28,8 +28,8 @@ Starting with macOS Sierra, Mac applications can benefit from the Automatic Wind
 
 You can benefit from this feature in the following environments (with 4D 64-bit versions only):
 
-*   Method Editor windows
-*   Form Editor windows
+*   Ventana del editor de métodos
+*   Ventana del editor de formularios
 
 All windows from these editors can be put in tab form:
 
@@ -67,7 +67,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 ## When creating a new project
 
-### Use Log File
+### Utilizar archivo historial
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
@@ -87,7 +87,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 
-## Documentation location
+## Ubicación de la documentation
 
 This area configures access to the 4D HTML documentation displayed in the current browser:
 
@@ -103,7 +103,7 @@ Indicates the location of the static HTML documentation. By default, this is the
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
 
-### Web Site
+### Sitio Web
 
 URL access to the on-line documentation for the version on 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
 

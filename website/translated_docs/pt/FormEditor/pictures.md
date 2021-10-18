@@ -40,7 +40,7 @@ High resolution displays have a higher pixel density than traditional standard d
 
 When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
 
-| Display Type        | Scale Factor                                   | Example                                                                  |
+| Display Type        | Scale Factor                                   | Exemplo                                                                  |
 | ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------ |
 | Standard Resolution | 1:1 pixel density.                             | **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
 | High Resolution     | Pixel density increased by a factor of 2 or 3. | <table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>                                                |

@@ -109,7 +109,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 <!-- REF SignalClass.New signal.Params -->
 | 引数          | タイプ       |    | 説明                   |
 | ----------- | --------- |:--:| -------------------- |
-| description | テキスト      | -> | シグナルの詳細              |
+| description | Text      | -> | シグナルの詳細              |
 | 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト |
 <!-- END REF -->
 
@@ -255,10 +255,10 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| 引数      | タイプ |    | 説明                   |
-| ------- | --- | -- | -------------------- |
-| timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
-| 戻り値     | ブール | <- | `.signaled` プロパティの状態 |
+| 引数      | タイプ     |    | 説明                   |
+| ------- | ------- | -- | -------------------- |
+| timeout | Real    | -> | シグナルの最大待機時間 (秒単位)    |
+| 戻り値     | Boolean | <- | `.signaled` プロパティの状態 |
 <!-- END REF -->
 
 

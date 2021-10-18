@@ -30,7 +30,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -42,7 +42,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
 The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
-> Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
+> Les objets de l'attribut Dataclass peuvent être modifiés, mais la structure sous-jacente de la base de données ne sera pas altérée.
 
 #### Exemple 1
 
@@ -77,7 +77,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
   //42=Is collection
 ```
 
-#### Example 3
+#### Exemple 3
 
 Considering the following table properties:
 
@@ -102,7 +102,7 @@ Considering the following table properties:
 | Version | Modifications                       |
 | ------- | ----------------------------------- |
 | v17 R5  | Support of the *settings* parameter |
-| v17     | Ajoutées                            |
+| v17     | Ajout                               |
 </details>
 
 
@@ -112,7 +112,7 @@ Considering the following table properties:
 <!-- REF #DataClassClass.all().Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| settings   | Object             | -> | Build option: context                               |
+| settings   | Object             | -> | Option de création : contexte                       |
 | Résultat   | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
@@ -155,7 +155,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Version | Modifications                       |
 | ------- | ----------------------------------- |
 | v17 R5  | Support of the *settings* parameter |
-| v17     | Ajoutées                            |
+| v17     | Ajout                               |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -166,7 +166,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Paramètres | Type               |    | Description                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol  | Collection         | -> | Collection of objects to be mapped with entities |
-| settings   | Object             | -> | Build option: context                            |
+| settings   | Object             | -> | Option de création : contexte                    |
 | Résultat   | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
@@ -191,7 +191,7 @@ For each object of *objectCol*:
     *   If the primary key is given (as is) and exists, an error is sent
     *   If the primary key is given (as is) and does not exist, the entity is created
     *   If the primary is not given, the entity is created and the primary key value is assigned with respect to standard database rules.
-> The "\_\_KEY" property containing a value is taken into account only when the "\_\_NEW" property is set to **false** (or is omitted) and a corresponding entity exists. In all other cases, the "\_\_KEY" property value is ignored, primary key value must be passed "as is".
+> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
 
 **Related entities**
 
@@ -253,7 +253,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 3
+#### Exemple 3
 
 We want to simply create a new entity from a collection:
 
@@ -352,7 +352,7 @@ In this example, the first entity will be created and saved but the second will 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | Paramètres | Type            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | Object          | -> | Build option: context                       |
+| settings   | Object          | -> | Option de création : contexte               |
 | Résultat   | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -431,7 +431,7 @@ This example illustrates the use of the *context* property:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -485,7 +485,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -538,7 +538,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  $es:=ds.Clients.query(":pk in :receivedIds";$settings)
 ```
 
-#### Example 3
+#### Exemple 3
 
 ```4d 
  var $pk : Text
@@ -558,7 +558,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -601,7 +601,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -649,7 +649,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | ------- | ---------------------------------- |
 | v17 R6  | Support of Formula parameters      |
 | v17 R5  | Support of placeholders for values |
-| v17     | Ajoutées                           |
+| v17     | Ajout                              |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
@@ -867,7 +867,7 @@ The formula must have been created using the `Formula` or `Formula from string` 
 *   the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 *   within the *formula*, the entity is available through the `This` object.
 *   if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
-> For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
+> > For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
 
 **Passing parameters to formulas**
 
@@ -1130,7 +1130,7 @@ Query with named placeholders for attributes and values:
  End if
 ```
 
-#### Example 3
+#### Exemple 3
 
 These examples illustrate the various ways to use formulas with or without parameters in your queries.
 

@@ -10,7 +10,7 @@ title: Editor de formularios
 
 La interfaz del editor de formularios muestra cada formulario JSON en su propia ventana, que tiene una barra de herramientas y otra de objetos. Puede tener varios formularios abiertos al mismo tiempo.
 
-### Display options
+### Opciones de visualización
 
 You can show or hide several interface elements on the current page of the form:
 
@@ -23,7 +23,7 @@ You can show or hide several interface elements on the current page of the form:
 - **Limits**: Form’s limits. Cuando se selecciona esta opción, el formulario se muestra en el editor de formularios tal y como aparece en el modo Aplicación. De esta manera puede ajustar su formulario sin tener que cambiar al modo Aplicación para ver el resultado.
 > > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Cuando se utilizan estos parámetros, los límites se basan en los objetos del formulario. Cuando se modifica el tamaño de un objeto que se encuentra junto al límite del formulario, el rectángulo de delimitación se modifica para reflejar ese cambio.
 
-#### Default display
+#### Visualización por defecto
 
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
@@ -416,11 +416,11 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 Select one of the following preview modes from the menu:
 
-| Icono barra de herramientas          | CSS Preview Mode | Descripción                                                                                                   |
-| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| ![](assets/en/FormEditor/cssNo.png)  | Ninguno          | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
-| ![](assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
-| ![](assets/en/FormEditor/cssMac.png) | macOS            | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.   |
+| Icono barra de herramientas          | Modo de vista previa CSS | Descripción                                                                                                   |
+| ------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/FormEditor/cssNo.png)  | Ninguno                  | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
+| ![](assets/en/FormEditor/cssWin.png) | Windows                  | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
+| ![](assets/en/FormEditor/cssMac.png) | macOS                    | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.   |
 > If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.

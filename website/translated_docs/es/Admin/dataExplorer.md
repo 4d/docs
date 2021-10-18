@@ -11,7 +11,7 @@ The Data Explorer provides a web interface to view and query data in your projec
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
 
-## Access Configuration
+## Configuración
 
 The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
 
@@ -58,7 +58,7 @@ The Data Explorer supports the following web browsers:
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
 
-### Basics
+### Básicos
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 
@@ -103,7 +103,7 @@ You can reorder the displayed entity list according to attribute values. All typ
 - You can sort attributes on several levels. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
 
 
-### Query on attributes
+### Consultas basadas en atributos
 
 In this mode, you can filter entities by entering values to find (or to exclude) in the areas above the attribute list. You can filter on one or several attributes. The entity list is automatically updated when you type in.
 
@@ -148,7 +148,7 @@ The filter is of the "starts with" type. For example, entering "Jim" will show "
 
 You can also use the wildcard character (@) to replace one or more starting characters. Por ejemplo:
 
-| A filter with | Finds                                              |
+| Un filtro con | Finds                                              |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | Todos los valores que contienen "do"               |

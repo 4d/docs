@@ -11,7 +11,7 @@ If more than one person uses an application, which is usually the case in client
 
 
 
-## Assigning group access
+## Asignación de acceso a grupos
 
 4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
 
@@ -38,11 +38,11 @@ To disable the password access system, you just need to remove the Designer pass
 
 In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. The following table lists the main users and groups features and their availability:
 
-|                                                               | 4D (single-user)             | 4D Server |
+|                                                               | 4D (monopuesto)              | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
 | Adding/editing users and groups                               | sí                           | sí        |
 | Assigning user/group access to servers                        | sí                           | sí        |
-| User identification                                           | no (all users are Designer)  | sí        |
+| Identificación del usuario                                    | no (all users are Designer)  | sí        |
 | Access control once the Designer has been assigned a password | no (all access are Designer) | sí        |
 
 
@@ -59,7 +59,7 @@ The editors for users and groups are located in the toolbox of 4D. These editors
 
 
 
-## Directory.json file
+## Archivo directory.json
 
 Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
 
@@ -68,5 +68,5 @@ This file can be stored at the following locations:
 - in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the application.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
 
-> If users and groups management is not active, the **directory.json** is not created.
+> If 4D password access control is not enabled, the **directory.json** is not created.
 

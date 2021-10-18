@@ -53,12 +53,12 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| Property  | Type    | Description                                         |
-| --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
-| copy      | boolean | Specifies if the source range is copied or not      |
-| insert    | boolean | Specifies if the source range is inserted or not    |
+| Property  | Type     | Description                                         |
+| --------- | -------- | --------------------------------------------------- |
+| fromRange | object   | Range of source cell range (being dragged)          |
+| toRange   | object   | Range of the destination cell range (drop location) |
+| copy      | booleano | Specifies if the source range is copied or not      |
+| insert    | booleano | Specifies if the source range is inserted or not    |
 
 
 #### action = DragFillBlock
@@ -85,7 +85,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | pasteData   | object  | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
 
 
-#### Example
+#### Exemplo
 
 Here is an example handling an `On After Edit` event:
 

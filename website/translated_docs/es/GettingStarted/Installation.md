@@ -6,7 +6,7 @@ title: Instalación
 ¡Bienvenido a 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
 
 
-## Required configuration
+## Configuración requerida
 
 The [Product Download](https://us.4d.com/product-download) page on the 4D website provides information about the minimum macOS / Windows system requirements for your 4D series.
 

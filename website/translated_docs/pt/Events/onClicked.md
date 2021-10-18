@@ -42,7 +42,7 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | sheetName   | text    | Name of the sheet of the event |
 | range       | object  | Cell range                     |
 
-#### Example
+#### Exemplo
 
 ```4d
  If(FORM Event.code=On Clicked)

@@ -74,7 +74,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 | Propiedad       | Tipo    | Descripción                                    |
 | --------------- | ------- | ---------------------------------------------- |
-| [curve](#curve) | texto   | Name of ECDSA curve                            |
+| [curve](#curve) | texto   | Nombre de la curva ECDSA                       |
 | [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
 | [size](#size)   | integer | Size of RSA key in bits                        |
 | [type](#type)   | texto   | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
@@ -121,7 +121,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 | Parámetros | Tipo   |    | Descripción                                                                   |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message    | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options    | Objeto | -> | Decoding options                                                              |
+| options    | Objeto | -> | Opciones de decodificación                                                    |
 | Resultado  | Objeto | <- | Estado                                                                        |
 <!-- END REF -->
 
@@ -132,11 +132,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### *options*
 
-| Propiedad         | Tipo  | Descripción                                                                                                                                                    |
-| ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                         |
-| encodingEncrypted | texto | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a descifrar. Puede ser "Base64", o "Base64URL". Default is "Base64". |
-| encodingDecrypted | texto | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".                    |
+| Propiedad         | Tipo  | Descripción                                                                                                                                                        |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                             |
+| encodingEncrypted | texto | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a descifrar. Puede ser "Base64", o "Base64URL". Por defecto es "Base64". |
+| encodingDecrypted | texto | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Por defecto es "UTF-8".                    |
 
 
 #### *Resultado*
@@ -170,7 +170,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 | Parámetros | Tipo   |    | Descripción                                                                   |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message    | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
-| options    | Objeto | -> | Encoding options                                                              |
+| options    | Objeto | -> | Opciones de codificación                                                      |
 | Resultado  | Texto  | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
 <!-- END REF -->
 
@@ -180,11 +180,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 ##### *options*
 
-| Propiedad         | Tipo  | Descripción                                                                                                                                               |
-| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
-| encodingEncrypted | texto | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
-| encodingDecrypted | texto | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
+| Propiedad         | Tipo  | Descripción                                                                                                                                                   |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                        |
+| encodingEncrypted | texto | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                       |
+| encodingDecrypted | texto | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Por defecto es "UTF-8". |
 
 
 #### *Resultado*
@@ -236,9 +236,9 @@ The returned value is the private key.
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parámetros | Tipo  |    | Descripción              |
-| ---------- | ----- | -- | ------------------------ |
-| Resultado  | Texto | <- | Public key in PEM format |
+| Parámetros | Tipo  |    | Descripción                  |
+| ---------- | ----- | -- | ---------------------------- |
+| Resultado  | Texto | <- | Llave pública en formato PEM |
 <!-- END REF -->
 
 
@@ -246,7 +246,7 @@ The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->ret
 
 #### *Resultado*
 
-The returned value is the public key.
+El valor devuelto es la llave pública.
 <!-- END REF -->
 
 ---
@@ -283,7 +283,7 @@ The returned value is the public key.
 | Parámetros | Tipo   |    | Descripción                                                                     |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message    | Texto  | -> | Message string to sign                                                          |
-| options    | Objeto | -> | Signing options                                                                 |
+| options    | Objeto | -> | Opciones de firma                                                               |
 | Resultado  | Texto  | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
@@ -296,9 +296,9 @@ The `CryptoKey` must contain a valid **private** key.
 | Propiedad         | Tipo     | Descripción                                                                                                                                                                                      |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash              | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
-| encodingEncrypted | texto    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                                              |
+| encodingEncrypted | texto    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                                                          |
 | pss               | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                                               |
-| encoding          | texto    | ERepresentation to be used for result signature. Los valores posibles son "Base64" o "Base64URL". Default is "Base64".                                                                           |
+| encoding          | texto    | ERepresentation to be used for result signature. Los valores posibles son "Base64" o "Base64URL". Por defecto es "Base64".                                                                       |
 
 
 #### *Resultado*
@@ -356,7 +356,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
 | message    | Texto  | -> | Message string that was used to produce the signature                                             |
 | signature  | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options    | Objeto | -> | Signing options                                                                                   |
+| options    | Objeto | -> | Opciones de firma                                                                                 |
 | Resultado  | Objeto | <- | Status of the verification                                                                        |
 <!-- END REF -->
 
@@ -371,7 +371,7 @@ The `CryptoKey` must contain a valid **public** key.
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash      | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
 | pss       | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                                               |
-| encoding  | texto    | Representación de la firma facilitada. Puede ser "Base64" o "Base64URL". Default is "Base64".                                                                                                    |
+| encoding  | texto    | Representación de la firma facilitada. Puede ser "Base64" o "Base64URL". Por defecto es "Base64".                                                                                                |
 
 
 #### *Resultado*

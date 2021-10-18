@@ -106,7 +106,7 @@ These properties are defined:
 
 The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
-| Command                         | Scope                                |
+| Comando                         | Scope                                |
 | ------------------------------- | ------------------------------------ |
 | `SET DATABASE PARAMETER`        | Host application web server          |
 | `WEB CLOSE SESSION`             | Web server that received the request |

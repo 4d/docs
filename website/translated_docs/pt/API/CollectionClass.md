@@ -4,9 +4,9 @@ title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+A classe Collection gerencia variáveis de tipo [Collection](Concepts/dt_collection.md).
 
-A collection is initialized with:
+Uma coleção se inicializa com:
 
 |                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,15 +14,15 @@ A collection is initialized with:
 | [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-### Example
+### Exemplo
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection //criação de uma variável 4D de tipo coleção
+ $colVar:=New collection //initialização da coleção e atribuição à variável 4D
 ```
 
 
-### Summary
+### Resumo
 
 
 |                                                                                                                                                                                                  |
@@ -69,52 +69,52 @@ A collection is initialized with:
 
 
 
-## `New collection`
+## `Nova coleção`
 
 
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| Parameter | Type                                                                    |    | Description           |
-| --------- | ----------------------------------------------------------------------- |:--:| --------------------- |
-| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| Result    | Collection                                                              | <- | New collection        |
+| Parâmetros | Tipo                                                                    |    | Descrição               |
+| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection |
+| Resultado  | Collection                                                              | <- | Nova coleção            |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+O comando `Nova coleção` <!-- REF #_command_.New collection.Summary --> cria uma nova coleção vazia ou pré-completada<!-- END REF --> e devolve sua referência.
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
+Se não passar nenhum parâmetro, `New collection` cria uma coleção vazia e retorna sua referência.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
+> Lembre que as declarações `var : Collection` ou `C_COLLECTION` declaram uma variável do tipo `Collection` mas não criam novas coleções.
 
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
+Opcionalmente pode pré-preencher a nova coleção passando um ou mais parâmetros *value*.
 
-Otherwise, you can add or modify elements subsequently through assignment. For example:
+Pode também adicionar ou modificar elementos subsequentemente através de assignação. Por exemplo:
 
 ```4d
  myCol[10]:="My new element"
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Se o novo índice de elemento estiver além do último elemento existente da coleção, a coelção é redimensionada automaticamente e todos os elementos intermediários são atribuídos ao valor **null**.
 
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
+Pode passar qualquer número de valores de qualquer tipo compatível (número, texto, data, imagem, ponteiro, objeto, coleção....). Diferente de arrays, coleções podem misturar dados de tipos diferentes.
 
-You must pay attention to the following conversion issues:
+Pode prestar atenção aos problemas de conversão abaixo:
 
-*   If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*   If you pass a time, it is stored as a number of milliseconds (Real).
+*   Se passar um ponteiro, é mantido "tal qual": é avaliado usando o comando `JSON Stringify`
+*   Datas são armazenadas no formato "aaaa-mm-dd" ou strings com o formato "AAAA-MM-DDTHH:mm:ss.SSSZ", de acordo com a configuração atual "dates inside objects"/datas dentro de objetos. Quando converter datas 4D em texto antes de armazená-las em uma coleção, como padrão o programa considera a zona horária local. Pode modificar esse comportamento usando o seletor `Dates inside objects` do comando `SET DATABASE PARAMETER`.
+*   Se passar a hora, é armazenada como um número de milissegundos (Real).
 
-#### Example 1
+#### Exemplo 1
 
 
 
-You want to create a new empty collection and assign it to a 4D collection variable:
+Se quiser criar uma nova coleção vazia e atribuí-la à uma variável coleção 4D:
 
 ```4d
  var $myCol : Collection
@@ -122,9 +122,9 @@ You want to create a new empty collection and assign it to a 4D collection varia
   //$myCol=[]
 ```
 
-#### Example 2
+#### Exemplo 2
 
-You want to create a prefilled collection:
+Se quiser criar uma coleção pré-prenchida:
 
 ```4d
  var $filledColl : Collection
@@ -132,9 +132,9 @@ You want to create a prefilled collection:
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Example 3
+#### Exemplo 3
 
-You create a new collection and then add a new element:
+Pode criar uma nova coleção e adicionar um novo elemento:
 
 ```4d
  var $coll : Collection
@@ -148,56 +148,56 @@ You create a new collection and then add a new element:
 
 
 
-## `New shared collection`
+## `Nova coleção partilhada`
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionada |
 </details>
 
 <!-- REF #_command_.New shared collection.Syntax -->
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parameter | Type                                                                |    | Description                  |
-| --------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
-| value     | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| Result    | Collection                                                          | <- | New shared collection        |
+| Parâmetros | Tipo                                                                |    | Descrição                        |
+| ---------- | ------------------------------------------------------------------- |:--:| -------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida |
+| Resultado  | Collection                                                          | <- | Nova collection compartida       |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção vazia ou pré-preenchida partilhada<!-- END REF --> e retorna sua referência.
 
-Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
-> For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
+Adicionar um elemento para essa coleção deve ser rodeada pela estrutura [`Use...End`](Concepts/shared.md#useend-use), senão um erro é gerado. Ler um elemento sem a estrutura é entretanto possível.
+> Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
 
-If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
+Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
+> Lembre que declarações`var : Collection` ou `C_COLLECTION` declaram uma variável do tipo `Collection` mas não cria qualquer coleção.
 
-Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
+Opcionalmente pode preencher automaticamente a nova coleção partilhada passando um ou vários *valores*como parâmetros. Também pode adicionar ou modificar elementos através de atribuição de notação de objetos (ver exemplo).
 
-If the new element index is beyond the last existing element of the shared collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Se o novo índice elemento for além do último elemento existente da coleção partilhada, a coleção é automaticamente redimensionada e todos os novos elementos intermediários são atribuídos um valor**null**.
 
-You can pass any number of values of the following supported types:
+Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 
-*   number (real, longint...). Number values are always stored as reals.
+*   número (real, longint....). Valores numéricos são sempre armazenados como reais.
 *   text
-*   boolean
-*   date
-*   time (stored as number of milliseconds - real)
+*   booleano
+*   data
+*   hora (armazenada como número de milissegundos - real)
 *   null
-*   shared object(*)
-*   shared collection(*)
-> Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+*   objeto compartido(*)
+*   collection compartida(*)
+> Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
-(*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
+(*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja o guia **4D Developer**'.
 
-#### Example
+#### Exemplo
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -211,10 +211,10 @@ You can pass any number of values of the following supported types:
 <!-- REF collection.average().Desc -->
 ## .average()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.average().Syntax -->
@@ -222,32 +222,32 @@ You can pass any number of values of the following supported types:
 
 
 <!-- REF #collection.average().Params -->
-| Parameter    | Type            |    | Description                                     |
-| ------------ | --------------- |:--:| ----------------------------------------------- |
-| propertyPath | Texto           | -> | Object property path to be used for calculation |
-| Result       | Real, Undefined | <- | Arithmetic mean (average) of collection values  |
+| Parâmetros   | Tipo            |    | Descrição                                            |
+| ------------ | --------------- |:--:| ---------------------------------------------------- |
+| propertyPath | Texto           | -> | Rota de propriedade objeto a ser usado para cálculos |
+| Resultado    | Real, Undefined | <- | Média aritmética dos valores coleção                 |
 <!-- END REF -->
 
 
 
-#### Description
+#### Descrição
 
-The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
-
-
-
-Only numerical elements are taken into account for the calculation (other element types are ignored).
-
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
-
-`.average()` returns `undefined` if:
-
-*   the collection is empty,
-*   the collection does not contain numerical elements,
-*   *propertyPath* is not found in the collection.
+A função `.average()` <!-- REF #collection.average().Summary -->retorna a média aritmética de valores definidos da instância da collection<!-- END REF -->.
 
 
-#### Example 1
+
+Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
+
+Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade objeto para levar em consideração.
+
+`.average()` retorna `undefined` se:
+
+*   a coleção estiver vazia,
+*   a coleção não contiver elementos numéricos,
+*   *propertyPath* não for encontrada na collection.
+
+
+#### Exemplo 1
 
 ```4d
  var $col : Collection
@@ -255,7 +255,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
  $vAvg:=$col.average() //12
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $col : Collection
@@ -273,28 +273,28 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- REF collection.clear().Desc -->
 ## .clear()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.clear().Syntax -->
 **.clear()** : Collection<!-- END REF -->
 
 <!-- REF #collection.clear().Params -->
-| Parameter | Type       |    | Description                                   |
-| --------- | ---------- |:--:| --------------------------------------------- |
-| Result    | Collection | <- | Original collection with all elements removed |
+| Parâmetros | Tipo       |    | Descrição                                            |
+| ---------- | ---------- |:--:| ---------------------------------------------------- |
+| Resultado  | Collection | <- | Collection original com todos os elementos removidos |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.clear()` function <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
-> This function modifies the original collection.
+A função `.clear()` <!-- REF #collection.clear().Summary -->remove todos os elementos da instância collection e retorna uma collection vazia<!-- END REF -->.
+> Essa função modifica a coleção original.
 
-#### Example
+#### Exemplo
 
 ```4d
 var $col : Collection
@@ -312,10 +312,10 @@ $vSize:=$col.length //$vSize=0
 <!-- REF collection.combine().Desc -->
 ## .combine()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.combine().Syntax -->
@@ -323,28 +323,28 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| Parameter | Type       |    | Description                                                                   |
-| --------- | ---------- |:--:| ----------------------------------------------------------------------------- |
-| col2      | Collection | -> | Collection to combine                                                         |
-| index     | Integer    | -> | Position to which insert elements to combine in collection (default=length+1) |
-| Result    | Collection | <- | Original collection containing combined element(s)                            |
+| Parâmetros | Tipo       |    | Descrição                                                                           |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
+| col2       | Collection | -> | Collection a combinar                                                               |
+| index      | Integer    | -> | Posição para a qual inserir elementos para combinar em coleção (padrão = length +1) |
+| Resultado  | Collection | <- | Collection original contendo elementos combinados                                   |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
-> This function modifies the original collection.
+A função `.combine()` <!-- REF #collection.combine().Summary -->insere elementos *col2* no final da posição especificada *index* na instância da coleção e retorna a coleção editada<!-- END REF -->. Diferente da função `.insert()`, `.combine()` adiciona cada valor de *col2* na collection original, e não como um único elemento da coleção.
+> Essa função modifica a collection original.
 
-By default, *col2* elements are added at the end of the orginal collection. You can pass in *index* the position where you want the *col2* elements to be inserted in the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+Como padrão, elementos *col2* são adicionados ao final da collection original. Pode passar em *index* a posição onde quiser que os elmentos *col2* sejam inseridos na coleção.
+> **Aviso**: Lembre que elementos coleção são numerados a partir de 0.
 
-*   If *index* > the length of the collection, the actual starting *index* will be set to the length of the collection.
-*   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, *index* is set to 0.
+*   Se *index* > o tamanho da coleção, o início real de *index* será estabelecido para o tamanho da coleção.
+*   Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
+*   Se o valor calculado for negativo, *index* será estabelecido como 0.
 
 
-#### Example
+#### Exemplo
 
 ```4d
 var $c; $fruits : Collection
@@ -362,32 +362,32 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 <!-- REF collection.concat().Desc -->
 ## .concat()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.concat().Syntax -->
 **.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
-| Parameter | Type                                                           |    | Description                                                                                                       |
-| --------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| value     | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
-| Result    | Collection                                                     | <- | New collection with value(s) added to the original collection                                                     |
+| Parâmetros | Tipo                                                           |    | Descrição                                                                                                               |
+| ---------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------- |
+| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Valores a concatenar. Se *value* for uma coleção, todos os elementos da coleção são adicionados para a coleção original |
+| Resultado  | Collection                                                     | <- | Nova coleção com valores adicionados à coleção original                                                                 |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the *value* parameter added to the end<!-- END REF -->.
-> This function does not modify the original collection.
+A função `.concat()` <!-- REF #collection.concat().Summary -->retorna uma nova coleção contendo os elementos da coleção original com todos os elementos do parâmetro *value* adicionado ao final<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
+Se *value* for uma coleção, todos os elementos são adicionados como novos elementos no final da coleção original. Se *value* não for a coleção, será adicionado ao novo elemento.
 
 
-#### Example
+#### Exemplo
 
 ```4d
 var $c : Collection
@@ -406,11 +406,11 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 <!-- REF collection.copy().Desc -->
 ## .copy()
 
-<details><summary>History</summary>
-| Version | Changes                                            |
-| ------- | -------------------------------------------------- |
-| v18 R3  | New *ck shared* option. New *groupWith* parameters |
-| v16 R6  | Added                                              |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                                           |
+| ------ | -------------------------------------------------- |
+| v18 R3 | New *ck shared* option. New *groupWith* parameters |
+| v16 R6 | Added                                              |
 </details>
 
 <!-- REF #collection.copy().Syntax -->
@@ -418,33 +418,33 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| Parameter    | Type       |    | Description                                                                                              |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| option       | Integer    | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
-| groupWithCol | Collection | -> | Shared collection to be grouped with the resulting collection                                            |
-| groupWithObj | Object     | -> | Shared object to be grouped with the resulting collection                                                |
-| Result       | Collection | <- | Deep copy of the original collection                                                                     |
+| Parâmetros   | Tipo       |    | Descrição                                                                                                       |
+| ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------------------------- |
+| option       | Integer    | -> | `ck resolve pointers`: resolve ponteiros antes de copiar,<br>`ck shared`: retorna uma coleção partilihada |
+| groupWithCol | Collection | -> | Coleção partilhada a ser agrupada com a coleção resultante                                                      |
+| groupWithObj | Objeto     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                       |
+| Resultado    | Collection | <- | Cópia profunda da collection original                                                                           |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
-> This function does not modify the original collection.
+A função `.copy()` <!-- REF #collection.copy().Summary --> retorna uma cópia profunda da instância collection<!-- END REF -->.***Deep copy*** significa que objetos ou collections dentro da coleção original são duplicadas e não partilham qualquer referência com a collection retornada.
+> Essa função não modifica a coleção original.
 
-If passed, the *option* parameter can contain one of the following constants (or both):
+Se passado, o parâmetro *option* pode conter uma das constantes abaixo (ou ambas):
 
-| option                | Description                                                                                                                                                                                                                                                                                                         |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the ck resolve pointers. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.      |
-| `ck shared`           | By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below). |
+| option                | Descrição                                                                                                                                                                                                                                                                                                                   |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | Se a collection original contém valores tipo ponteiro, por padrão a cópia também contém os ponteiros. Entretanto pode resolver ponteiros quando copiar por passando os ck resolve pointers. Nesse caso, cada ponteiro presenta na coleção é avaliada quando copiar e seu valor de dereferencia é usado.                     |
+| `ck shared`           | Como padrão, copy() retorna uma colleciton regular (não partilhado), mesmo se o comando for aplicado para a collection shared. Passe a constante ck shared para criar uma collection shared. Nesse caso, pode usar o parâmetro groupWith para associar a collection partilhada com outra collection ou objeto (ver abaixo). |
 
-The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
+Os parâmetros *groupWithCol* ou *groupWithObj* permite determinar uma collection ou um objeto com o qual a coleção resultante deveria ser associada.
 
 
-#### Example 1
+#### Exemplo 1
 
-We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. To do this, we must create a shared copy of the collection (*$sharedLastnames*).
+Se quiser copiar a collection comum (não partilhada) *$lastnames* no objeto partilhado *$sharedObject*. Para fazer isso, precisa criar uma cópia partilhada da coleção (*$sharedLastnames*).
 
 ```4d
 var $sharedObject : Object
@@ -454,20 +454,20 @@ var $text : Text
 $sharedObject:=New shared object
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames é uma collection regular
 
-$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames is a shared collection
+$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames é uma collection partilhada
 
-//Now we can put $sharedLastnames into $sharedObject
+//Agora podemos colocar $sharedLastnames em $sharedObject
 Use($sharedObject)
     $sharedObject.lastnames:=$sharedLastnames
 End use
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
-We want to combine *$sharedColl1* and *$sharedColl2*. Since they belong to different shared groups, a direct combination would result in an error. Therefore, we must make a shared copy of *$sharedColl1* and designate *$sharedColl2* as a shared group for the copy.
+Se quisermos combinar *$sharedColl1* e *$sharedColl2*. Já que pertencem a grupos partilhados diferentes, uma combinação diferente resultaria em um erro. Por isso precisa fazer uma cópia partilhada de *$sharedColl1* e designar *$sharedColl2* commo um grupo partilhado para a cópia.
 
 ```4d
 var $sharedColl1;$sharedColl2;$copyColl : Collection
@@ -482,27 +482,27 @@ $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
  End use
 ```
 
-#### Example 3
+#### Exemplo 3
 
-We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. To do this, we must create a shared copy beforehand (*$sharedLastnames*).
+Se tiver uma collection comum (*$lastnames*) e se quisermos colocar em**Storage** da aplicação. Para fazer isso, precisamos criar antes uma cópia partilhada (*$sharedLastnames*).
 
 ```4d
 var $lastnames;$sharedLastnames : Collection
 var $text : Text
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames é uma collection normal
 
-$sharedLastnames:=$lastnames.copy(ck shared) // shared copy
+$sharedLastnames:=$lastnames.copy(ck shared) //cópia partilhada
 
 Use(Storage)
     Storage.lastnames:=$sharedLastnames
 End use
 ```
 
-#### Example 4
+#### Exemplo 4
 
-This example illustrates the use of the `ck resolve pointers` option:
+Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 
 ```4d
  var $col : Collection
@@ -515,11 +515,11 @@ This example illustrates the use of the `ck resolve pointers` option:
 
  $col2:=$col.copy()
  $col2[1].beta:="World!"
- ALERT($col[0].alpha+" "+$col2[1].beta) //displays "Hello World!"
+ ALERT($col[0].alpha+" "+$col2[1].beta) //exibe "Hello World!"
 
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
- ALERT($col3[0].alpha+" "+$col3[1].what) //displays "Hello You!"
+ ALERT($col3[0].alpha+" "+$col3[1].what) //exibe "Hello You!"
 ``` 
 
 
@@ -532,10 +532,10 @@ This example illustrates the use of the `ck resolve pointers` option:
 <!-- REF collection.count().Desc -->
 ## .count()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.count().Syntax -->
@@ -543,20 +543,20 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
-| Parameter    | Type  |    | Description                                     |
-| ------------ | ----- |:--:| ----------------------------------------------- |
-| propertyPath | Texto | -> | Object property path to be used for calculation |
-| Result       | Real  | <- | Number of elements in the collection            |
+| Parâmetros   | Tipo  |    | Descrição                                            |
+| ------------ | ----- |:--:| ---------------------------------------------------- |
+| propertyPath | Texto | -> | Rota de propriedade objeto a ser usado para cálculos |
+| Resultado    | Real  | <- | Número de elementos na coleção                       |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.count()` function <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
+A função `.count()` <!-- REF #collection.count().Summary -->retorna o número de elementos não-null na coleção<!-- END REF -->.
 
-If the collection contains objects, you can pass the *propertyPath* parameter. In this case, only elements that contain the *propertyPath* are taken into account.
+Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse caso, só elementos que conterem *propertyPath* serão levados em consideração.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $col : Collection
@@ -580,10 +580,10 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 <!-- REF collection.countValues().Desc -->
 ## .countValues()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.countValues().Syntax -->
@@ -591,30 +591,30 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 <!-- REF #collection.countValues().Params -->
-| Parameter    | Type                                            |    | Description                                     |
-| ------------ | ----------------------------------------------- |:--:| ----------------------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                  |
-| propertyPath | Texto                                           | -> | Object property path to be used for calculation |
-| Result       | Real                                            | <- | Number of occurrences of the value              |
+| Parâmetros   | Tipo                                            |    | Descrição                                            |
+| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------- |
+| value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                       |
+| propertyPath | Texto                                           | -> | Rota de propriedade objeto a ser usado para cálculos |
+| Resultado    | Real                                            | <- | Número de ocorrências do valor                       |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.countValues()` function <!-- REF #collection.countValues().Summary -->returns the number of times value is found in the collection<!-- END REF -->.
+A função `.countValues()` <!-- REF #collection.countValues().Summary -->retorna o número de vezes que o valor foi encontrado na coleção<!-- END REF -->.
 
-You can pass in *value*:
+Pode passar em *value*:
 
-*   a scalar value (text, number, boolean, date),
-*   an object or a collection reference.
+*   um valor escalar (texto, número, booleano, data),
+*   um objeto ou uma referência de coleção.
 
 
-For an element to be found, the type of *value* must be equivalent to the type of the element; the method uses the equality operator.
+Para um elemento ser encontrado, o tipo de *value* deve ser equivalente ao tipo de elemento, o método usa o operador equality.
 
-The optional *propertyPath* parameter allows you to count values inside a collection of objects: pass in *propertyPath* the path of the property whose values you want to count.
-> This function does not modify the original collection.
+O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleção de objetos: passe em *propertyPath* a rota da propriedade cujos valores quer contar.
+> Essa função não modifica a coleção original.
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $col : Collection
@@ -624,7 +624,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $col : Collection
@@ -639,7 +639,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 3
+#### Exemplo 3
 
 ```4d
  var $numbers; $letters : Collection
@@ -661,10 +661,10 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 <!-- REF collection.distinct().Desc -->
 ## .distinct()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.distinct().Syntax -->
@@ -672,24 +672,24 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| Parameter    | Type       |    | Description                                                      |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------- |
-| option       | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| propertyPath | Texto      | -> | Path of attribute whose distinct values you want to get          |
-| Result       | Collection | <- | New collection with only distinct values                         |
+| Parâmetros   | Tipo       |    | Descrição                                                       |
+| ------------ | ---------- |:--:| --------------------------------------------------------------- |
+| option       | Integer    | -> | `ck diacritical`: avaliação diacríticos ("A" # "a" por exemplo) |
+| propertyPath | Texto      | -> | Rota do atributo cujos valores quer obter                       |
+| Resultado    | Collection | <- | Nova coleção com apenas valores distintos                       |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
-> This function does not modify the original collection.
+A função `.distinct()` function <!-- REF #collection.distinct().Summary -->retorna uma coleção que contém apenas valores distintos (diferentes) da coleção original<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+A coleção retornada é ordenada automaticamente. Valores **Null** não são retornados.
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
+Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie minúsculas de maiúsculas ou que diferencie letras acentuadas, passe a constante `ck diacritical` no parâmetro*option*.
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores diferentes você quer obter.
 
 
 
@@ -716,32 +716,32 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 <!-- REF collection.equal().Desc -->
 ## .equal()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.equal().Syntax -->
 **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
-| Parameter   | Type       |    | Description                                                      |
-| ----------- | ---------- |:--:| ---------------------------------------------------------------- |
-| collection2 | Collection | -> | Collection to compare                                            |
-| option      | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Result      | Boolean    | <- | True if collections are identical, false otherwise               |
+| Parâmetros  | Tipo       |    | Descrição                                                       |
+| ----------- | ---------- |:--:| --------------------------------------------------------------- |
+| collection2 | Collection | -> | Coleção a comparar                                              |
+| option      | Integer    | -> | `ck diacritical`: avaliação diacríticos ("A" # "a" por exemplo) |
+| Resultado   | Booleano   | <- | True se as coleções forem idênticas, senão false                |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+A função `.equal()` <!-- REF #collection.equal().Summary -->compara collection com collection2 <!-- END REF -->e retorna **true** se forem idênticos (comparação profunda/deep comparison).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
-> Elements with **Null** values are not equal to Undefined elements.
+Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie maiúsculas de minúsculas e caracteres acentuados, passe a constante`ck diacritical` no parâmetro option.
+> Elementos com valores **Null** não são a mesma coisa que valores Undefined.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $c; $c2 : Collection
@@ -772,73 +772,73 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 <!-- REF collection.every().Desc -->
 ## .every()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.every().Syntax -->
 **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
-| Parameter  | Type    |    | Description                                       |
-| ---------- | ------- |:--:| ------------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the test at                        |
-| methodName | Texto   | -> | Name of the method to call for the test           |
-| param      | Mixed   | -> | Parameter(s) to pass to methodName                |
-| Result     | Boolean | <- | True if all elements successfully passed the test |
+| Parâmetros | Tipo     |    | Descrição                                               |
+| ---------- | -------- |:--:| ------------------------------------------------------- |
+| startFrom  | Integer  | -> | Índice para início do teste em                          |
+| methodName | Texto    | -> | Nome do método para chamar para o teste                 |
+| param      | Mixed    | -> | Parâmetros a passar para methodName                     |
+| Resultados | Booleano | <- | True se todos os elementos passarem o teste com sucesso |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *methodName* method<!-- END REF -->.
-
-
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to true for every element fulfilling the test.
-
-*methodName* receives the following parameters:
-
-*   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: paramN...
-
-*methodName* sets the following parameter(s):
-
-*   *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
-
-In all cases, at the point when the `.every()` function encounters the first collection element returning **false** in *$1.result*, it stops calling *methodName* and returns **false**.
-
-By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
-
-*   If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
-*   If *startFrom* = 0, the whole collection is searched (default).
+A função `.every()` <!-- REF #collection.every().Summary -->retorna **true** se todos os elementos na coleção passarem com sucesso o teste implementado no método fornecido *methodName*<!-- END REF -->.
 
 
-#### Example 1
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. can perform any test, with or without the parameter(s). Esse método recebe um `Object` no primeiro parâmetro($1) e deve estabelecer o *$1.result* como true para todo elemento que cumpre o teste.
+
+*methodName* recebe os parâmetros abaixo:
+
+*   em *$1.value*: valor elemento a ser avaliado
+*   *$2*: param
+*   *$N*: paramN...
+
+*methodName* estabelece os parâmetros abaixo:
+
+*   *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
+*   *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
+
+Em todos os casos, no ponto quanod a função `.every()` encontra o primeiro elemento de coleção retornando **false** em *$1.result*, ele para de chamar *methodName* e retorna **false**.
+
+Como padrão, `.every()` testa a coleção completa. Opcionalmente pode passar em *startFrom* o índice do elemento do qual vai começar o teste.
+
+*   Se *startFrom* >= tamanho da coleção, é retornado **false**, o que significa que a coleção não é testada.
+*   Se *startFrom* < 0, é considerada como offset do final da coleção( *startFrom:=startFrom+length*).
+*   Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
+
+
+#### Exemplo 1
 
 ```4d
 var $c : Collection  
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //retorna true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //retorna false
 ```
 
-With the following ***NumberGreaterThan0*** method:
+Com o método a seguir ***NumberGreaterThan0***:
 
 ```4d
 $1.result:=$1.value>0
 ```
 
-#### Example 2
+#### Exemplo 2
 
-This example tests that all elements of a collection are of the real type:
+Esse exemplo testa que todos os elementos da coleção sejam do tipo real:
 
 ```4d
 var $c : Collection
@@ -851,7 +851,7 @@ $c:=$c.push(New object("name";"Blountsville";"zc";35031))
 $b:=$c.every("TypeLookUp";Is real) //$b=false
 ```
 
-With the following ***TypeLookUp*** method:
+Com o método ***TypeLookUp***:
 
 ```4d
 #DECLARE ($toEval : Object ; $param : Integer) //$1; $2
@@ -868,10 +868,10 @@ End if
 <!-- REF collection.extract().Desc -->
 ## .extract()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.extract().Syntax -->
@@ -879,31 +879,31 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
-| Parameter    | Type       |    | Description                                                                                                                        |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
-| propertyPath | Texto      | -> | Object property path whose values must be extracted to the new collection                                                          |
-| targetpath   | Texto      | -> | Target property path or property name                                                                                              |
-| option       | Integer    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
-| Result       | Collection | <- | New collection containing extracted values                                                                                         |
+| Parâmetros   | Tipo       |    | Descrição                                                                                                                             |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------------------------- |
+| propertyPath | Texto      | -> | Rota de propriedade de objeto cujos valores serão extraídos para nova coleção                                                         |
+| targetpath   | Texto      | -> | Rota de propriedade alvo ou nome propriedade                                                                                          |
+| option       | Inteiro    | -> | `ck keep null`: inclui propriedades null na coleção retornada (ignorado como padrão). Parâmetro ignorado se for passado *targetPath*. |
+| Resultados   | Collection | <- | Nova collection contendo valores extraídos                                                                                            |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
-> This function does not modify the original collection.
+A função `.extract()` <!-- REF #collection.extract().Summary -->cria e retorna uma nova coleção contendo valores *propertyPath* extraídos da coleção original de objetos<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-The contents of the returned collection depends on the *targetPath* parameter:
+Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
 
-*   If the *targetPath* parameter is omitted, `.extract()` populates the new collection with the *propertyPath* values of the original collection.
+*   Se o parâmetro *targetPath* for omitido, `.extract()` preenche a nova coleção com os valores *propertyPath* da coleção original.
 
-    By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
-
-
-*   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+    Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos null na coleção retornada.
 
 
-#### Example 1
+*   Se um ou mais parâmetros *targetPath* forem passados,, `.extract()` preenche a nova coelção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Valores null são mantidos (o parâmetro *option* é ignorado com essa sintaxe).
+
+
+#### Exemplo 1
 
 ```4d
 var $c : Collection
@@ -917,7 +917,7 @@ $c2:=$c.extract("name";ck keep null) //$c2=[Cleveland,null,Blountsville,null]
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 
 ```4d
@@ -943,10 +943,10 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 <!-- REF collection.fill().Desc -->
 ## .fill()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.fill().Syntax -->
@@ -955,32 +955,32 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parameter | Type                                            |    | Description                            |
-| --------- | ----------------------------------------------- |:--:| -------------------------------------- |
-| value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
-| startFrom | Integer                                         | -> | Start index (included)                 |
-| end       | Integer                                         | -> | End index (not included)               |
-| Result    | collection                                      | <- | Original collection with filled values |
+| Parâmetros | Tipo                                            |    | Descrição                                |
+| ---------- | ----------------------------------------------- |:--:| ---------------------------------------- |
+| value      | number, Text, Collection, Object, Date, Boolean | -> | Valores preenchido                       |
+| startFrom  | Integer                                         | -> | Início do índice (incluído)              |
+| end        | Integer                                         | -> | Final do índice (não incluído)           |
+| Resultados | coleção                                         | <- | Coleção original com valores preenchidos |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
-> This function modifies the original collection.
+A função `.fill()` <!-- REF #collection.fill().Summary -->retorna a coleção com o *value* especificado, opcionalmente do índice*startFrom* até o índice *end*, e retorna a coleção resultante<!-- END REF -->.
+> Essa função modifica a coleção original.
 
-*   If the *startFrom* parameter is omitted, *value* is set to all collection elements (*startFrom*=0).
-*   If the *startFrom* parameter is passed and *end* omitted, *value* is set to collection elements starting at *startFrom* to the last element of the collection (*end*=length).
-*   If both the *startFrom* parameter and *end* are passed, *value* is set to collection elements starting at *startFrom* to the element *end*.
+*   Se o parâmetro *startFrom* for omitido, *value* é estabelecido para todos os elementos coleção (*startFrom*=0).
+*   Se o parâmetro *startFrom* for passado e o parâmetro*end* for omitido, *value* é estabelecido para elementos de coleção começando com *startFrom* até o elemento final da coleção (*end*=length).
+*   Se tanto *startFrom* quanto *end* forem passados, *value* é estabelecido para elementos coleção começando em *startFrom* ao elemento *end*.
 
-In case of inconsistency, the following rules apply:
+Em caso de inconsistências, as regras abaixos são seguidas:
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
-*   If *end* < *startFrom* (passed or calculated values), the method does nothing.
+*   Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção). Se o valor calculado for negativo, *startFrom* toma o valor 0.
+*   Se *end* < 0 , é recalculado como sendo *end:=end+length*.
+*   Se *end* < *startFrom* (valores passados ou calculados), o método não faz nada.
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $c : Collection
@@ -1000,10 +1000,10 @@ In case of inconsistency, the following rules apply:
 <!-- REF collection.filter().Desc -->
 ## .filter()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.filter().Syntax -->
@@ -1011,28 +1011,28 @@ In case of inconsistency, the following rules apply:
 
 
 <!-- REF #collection.filter().Params -->
-| Parameter  | Type       |    | Description                                                |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| methodName | Texto      | -> | Name of the function to call to filter the collection      |
-| param      | Mixed      | -> | Parameter(s) to pass to *methodName*                       |
-| Result     | Collection | <- | New collection containing filtered elements (shallow copy) |
+| Parâmetros | Tipo       |    | Descrição                                                     |
+| ---------- | ---------- |:--:| ------------------------------------------------------------- |
+| methodName | Texto      | -> | Nome da função a chamar para filtrar a coleção                |
+| param      | Mixed      | -> | Parâmetros a passar para *methodName*                         |
+| Resultados | Collection | <- | Nova coleção contendo elementos filtrados (cópia superficial) |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+A função `.filter()` <!-- REF #collection.filter().Summary -->retorna uma nova coleção contendo todos os elementos da coleção original para a qual o resultado do método *methodName*for **true**<!-- END REF -->. Essa função retorna uma ***shallow copy***/cópia superficial, o que significa que objetos ou coleções em ambas as coleções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+> Essa função não modifica a coleção original.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. Esse método recebe um `Objeto` no primeiro parâmetro ($1) e deve estabelecer *$1.result* como **true** para cada elemento que preenche a condição e assim, enviado para a nova coleção.
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
-*   in *$1.value*: element value to be filtered
-*   in *$2*: *param*
-*   in *$N...*: param2...paramN
+*   em *$1.value*: valor elemento a ser filtrado
+*   em *$2*: *param*
+*   *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 *   *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
@@ -1094,10 +1094,10 @@ The code for ***TypeLookUp*** is:
 <!-- REF collection.find().Desc -->
 ## .find()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.find().Syntax -->
@@ -1109,7 +1109,7 @@ The code for ***TypeLookUp*** is:
 | ---------- | ------- |:--:| -------------------------------------------- |
 | startFrom  | Integer | -> | Index to start the search at                 |
 | methodName | Texto   | -> | Name of the function to call for the find    |
-| param      | any     | -> | Parameter(s) to pass to *methodName*         |
+| param      | any     | -> | Parâmetros a passar para *methodName*        |
 | Result     | any     | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
@@ -1119,15 +1119,15 @@ The code for ***TypeLookUp*** is:
 The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
 *   in *$1.value:* element value to be evaluated
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
@@ -1191,10 +1191,10 @@ The code for ***FindCity*** is:
 <!-- REF collection.findIndex().Desc -->
 ## .findIndex()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 
@@ -1208,7 +1208,7 @@ The code for ***FindCity*** is:
 | ---------- | ------- |:--:| ---------------------------------------------- |
 | startFrom  | Integer | -> | Index to start the search at                   |
 | methodName | Texto   | -> | Name of the function to call for the find      |
-| param      | any     | -> | Parameter(s) to pass to *methodName*           |
+| param      | any     | -> | Parâmetros a passar para *methodName*          |
 | Result     | Integer | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
 
@@ -1218,15 +1218,15 @@ The code for ***FindCity*** is:
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
 *   in *$1.value*: element value to be evaluated
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
@@ -1237,7 +1237,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Exemplo
 
 You want to find the position of the first city name within a collection:
 
@@ -1272,10 +1272,10 @@ The code for ***FindCity*** method is:
 <!-- REF collection.indexOf().Desc -->
 ## .indexOf()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.indexOf().Syntax -->
@@ -1309,7 +1309,7 @@ Optionally, you can pass the index of collection from which to start the search 
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Exemplo
 
 
 
@@ -1332,10 +1332,10 @@ Optionally, you can pass the index of collection from which to start the search 
 <!-- REF collection.indices().Desc -->
 ## .indices()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.indices().Syntax -->
@@ -1364,7 +1364,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1388,10 +1388,10 @@ For a detailed description of the *queryString* and *value* parameters, please r
 <!-- REF collection.insert().Desc -->
 ## .insert()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.insert().Syntax -->
@@ -1420,7 +1420,7 @@ In *index*, pass the position where you want the element to be inserted in the c
 
 Any type of element accepted by a collection can be inserted, even another collection.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $col : Collection
@@ -1439,10 +1439,10 @@ Any type of element accepted by a collection can be inserted, even another colle
 <!-- REF collection.join().Desc -->
 ## .join()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.join().Syntax -->
@@ -1464,7 +1464,7 @@ The `.join()` function <!-- REF #collection.join().Summary -->converts all eleme
 
 By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1483,10 +1483,10 @@ By default, null or empty elements of the collection are returned in the resulti
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.lastIndexOf().Syntax -->
@@ -1520,7 +1520,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 *   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
 *   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1542,10 +1542,10 @@ Optionally, you can pass the index of collection from which to start a reverse s
 <!-- REF collection.length.Desc -->
 ## .length
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R5 | Added    |
 </details>
 
 <!-- REF #collection.length.Syntax -->
@@ -1559,7 +1559,7 @@ The `.length` property <!-- REF #collection.length.Summary -->returns the number
 
 The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1577,10 +1577,10 @@ The `.length` property is initialized when the collection is created. Adding or 
 <!-- REF collection.map().Desc -->
 ## .map()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.map().Syntax -->
@@ -1601,21 +1601,21 @@ The `.length` property is initialized when the collection is created. Adding or 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
 > This function does not modify the original collection.
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* can perform any operation, with or without the parameter(s).
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
 *   in *$1.value* (any type): element value to be mapped
 *   in *$2* (any type): *param*
 *   in *$N...* (any type): *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 
 *   *$1.result* (any type): new transformed value to add to the resulting collection
 *   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1643,10 +1643,10 @@ Here is the ***Percentage*** method:
 <!-- REF collection.max().Desc -->
 ## .max()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.max().Syntax -->
@@ -1671,7 +1671,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.max()` returns *Undefined*.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1693,10 +1693,10 @@ If the collection is empty, `.max()` returns *Undefined*.
 <!-- REF collection.min().Desc -->
 ## .min()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.min().Syntax -->
@@ -1721,7 +1721,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.min()` returns *Undefined*.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -1743,10 +1743,10 @@ If the collection is empty, `.min()` returns *Undefined*.
 <!-- REF collection.orderBy().Desc -->
 ## .orderBy()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.orderBy().Syntax -->
@@ -1766,7 +1766,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
@@ -1799,7 +1799,7 @@ If the collection contains elements of different types, they are first grouped b
 2.  booleans
 3.  strings
 4.  numbers
-5.  objects
+5.  objetos
 6.  collections
 7.  dates
 
@@ -1882,10 +1882,10 @@ Ordering with a property path:
 <!-- REF collection.orderByMethod().Desc -->
 ## .orderByMethod()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
@@ -1905,7 +1905,7 @@ Ordering with a property path:
 
 The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
@@ -1991,10 +1991,10 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF collection.pop().Desc -->
 ## .pop()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 
@@ -2015,7 +2015,7 @@ The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last ele
 
 When applied to an empty collection, `.pop()` returns ***undefined***.
 
-#### Example
+#### Exemplo
 
 `.pop()`, used in conjunction with [`.push()`](#push), can be used to implement a first-in, last-out stack feature:
 
@@ -2039,10 +2039,10 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- REF collection.push().Desc -->
 ## .push()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.push().Syntax -->
@@ -2097,11 +2097,11 @@ You want to sort the resutling collection:
 <!-- REF collection.query().Desc -->
 ## .query()
 
-<details><summary>History</summary>
-| Version | Changes                  |
-| ------- | ------------------------ |
-| v17 R5  | Support of querySettings |
-| v16 R6  | Added                    |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                 |
+| ------ | ------------------------ |
+| v17 R5 | Support of querySettings |
+| v16 R6 | Added                    |
 </details>
 
 <!-- REF #collection.query().Syntax -->
@@ -2113,14 +2113,14 @@ You want to sort the resutling collection:
 | ------------- | ---------- |:--:| ------------------------------------------------- |
 | queryString   | Texto      | -> | Search criteria                                   |
 | value         | Mixed      | -> | Value(s) to compare when using placeholder(s)     |
-| querySettings | Object     | -> | Query options: parameters, attributes             |
+| querySettings | Objeto     | -> | Query options: parameters, attributes             |
 | Result        | Collection | <- | Element(s) matching queryString in the collection |
 <!-- END REF -->
 
 
 #### Description
 
-The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 The *queryString* parameter uses the following syntax:
@@ -2205,10 +2205,10 @@ More examples of queries can be found in the `dataClass.query()` page.
 <!-- REF collection.reduce().Desc -->
 ## .reduce()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.reduce().Syntax -->
@@ -2220,7 +2220,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | Texto                                           | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                 |
+| param      | expression                                      | -> | Parâmetros a passar para *methodName*                                |
 | Result     | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
 <!-- END REF -->
 
@@ -2235,13 +2235,13 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
 *   in *$1.value*: element value to be processed
 *   in *$2: param*
 *   in *$N...*: *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 *   *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
@@ -2264,7 +2264,7 @@ With the following ***Multiply*** method:
  End if
 ```
 
-#### Example
+#### Exemplo
 
 This example allows reducing several collection elements to a single one:
 
@@ -2295,10 +2295,10 @@ With the following ***Flatten*** method:
 <!-- REF collection.remove().Desc -->
 ## .remove()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.remove().Syntax -->
@@ -2333,7 +2333,7 @@ In *howMany*, pass the number of elements to remove from *index*. If *howMany* i
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2356,10 +2356,10 @@ If you try to remove an element from an empty collection, the method does nothin
 ## .resize()
 
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 
@@ -2386,7 +2386,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2415,10 +2415,10 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- REF collection.reverse().Desc -->
 ## .reverse()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.reverse().Syntax -->
@@ -2433,10 +2433,10 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### Description
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2454,10 +2454,10 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- REF collection.shift().Desc -->
 ## .shift()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.shift().Syntax -->
@@ -2477,7 +2477,7 @@ The `.shift()` function <!-- REF #collection.shift().Summary -->removes the firs
 
 If the collection is empty, this method does nothing.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2498,10 +2498,10 @@ If the collection is empty, this method does nothing.
 <!-- REF collection.slice().Desc -->
 ## .slice()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.slice().Syntax -->
@@ -2511,14 +2511,14 @@ If the collection is empty, this method does nothing.
 | Parameter | Type       |    | Description                                              |
 | --------- | ---------- |:--:| -------------------------------------------------------- |
 | startFrom | Integer    | -> | Index to start the search at (included)                  |
-| end       | Integer    | -> | End index (not included)                                 |
+| end       | Integer    | -> | Final do índice (não incluído)                           |
 | Result    | Collection | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->
 
 
 #### Description
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
@@ -2528,7 +2528,7 @@ The returned collection contains the element specified by *startFrom* and all su
 *   If *end* < 0 , it is recalculated as *end:=end+length*.
 *   If *end < startFrom* (passed or calculated values), the method does nothing.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2549,10 +2549,10 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- REF collection.some().Desc -->
 ## .some()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.some().Syntax -->
@@ -2560,12 +2560,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| Parameter  | Type    |    | Description                                               |
-| ---------- | ------- |:--:| --------------------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the test at                                |
-| methodName | Texto   | -> | Name of the method to call for the test                   |
-| param      | Mixed   | -> | Parameter(s) to pass to *methodName*                      |
-| Result     | Boolean | <- | True if at least one element successfully passed the test |
+| Parameter  | Type     |    | Description                                               |
+| ---------- | -------- |:--:| --------------------------------------------------------- |
+| startFrom  | Integer  | -> | Índice para início do teste em                            |
+| methodName | Texto    | -> | Nome do método para chamar para o teste                   |
+| param      | Mixed    | -> | Parâmetros a passar para *methodName*                     |
+| Result     | Booleano | <- | True if at least one element successfully passed the test |
 <!-- END REF -->
 
 
@@ -2574,15 +2574,15 @@ The returned collection contains the element specified by *startFrom* and all su
 The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. can perform any test, with or without the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
 
-*methodName* receives the following parameters:
+*methodName* recebe os parâmetros abaixo:
 
 *   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: param2...paramN
+*   *$2*: param
+*   *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* estabelece os parâmetros abaixo:
 
 *   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
@@ -2596,7 +2596,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -2630,10 +2630,10 @@ With the following *NumberGreaterThan0* method:
 <!-- REF collection.sort().Desc -->
 ## .sort()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.sort().Syntax -->
@@ -2673,7 +2673,7 @@ If the collection contains elements of different types, they are first grouped b
 2.  booleans
 3.  strings
 4.  numbers
-5.  objects
+5.  objetos
 6.  collections
 7.  dates
 
@@ -2718,20 +2718,20 @@ If the collection contains elements of different types, they are first grouped b
 <!-- REF collection.sum().Desc -->
 ## .sum()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.sum().Syntax -->
 **.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.sum().Params -->
-| Parameter    | Type  |    | Description                                     |
-| ------------ | ----- |:--:| ----------------------------------------------- |
-| propertyPath | Texto | -> | Object property path to be used for calculation |
-| Result       | Real  | <- | Sum of collection values                        |
+| Parameter    | Type  |    | Description                                          |
+| ------------ | ----- |:--:| ---------------------------------------------------- |
+| propertyPath | Texto | -> | Rota de propriedade objeto a ser usado para cálculos |
+| Result       | Real  | <- | Sum of collection values                             |
 <!-- END REF -->
 
 
@@ -2739,9 +2739,9 @@ If the collection contains elements of different types, they are first grouped b
 
 The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
 
-Only numerical elements are taken into account for the calculation (other element types are ignored).
+Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
 
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
+Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade objeto para levar em consideração.
 
 `.sum()` returns 0 if:
 
@@ -2780,10 +2780,10 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- REF collection.unshift().Desc -->
 ## .unshift()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v16 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v16 R6 | Added    |
 </details>
 
 <!-- REF #collection.unshift().Syntax -->
@@ -2805,7 +2805,7 @@ The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
 
 
-#### Example
+#### Exemplo
 
 
 ```4d

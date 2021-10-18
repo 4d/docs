@@ -6,7 +6,7 @@ title: Trabajar con los datos
 In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
 
 
-## Creating an entity
+## Crear una entidad
 
 There are two ways to create a new entity in a dataclass:
 
@@ -28,7 +28,7 @@ $myEntity.save() //save the entity
 ```
 > An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
 
-## Entities and references
+## Entidades y referencias
 
 An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
@@ -47,7 +47,7 @@ This is illustrated by the following graphic:
 
 ![](assets/en/ORDA/entityRef1.png)
 
-Now if you execute:
+Ahora, si se ejecuta:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
@@ -73,7 +73,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
  End for each
 ```
 
-And the method is:
+Y el método es:
 
 ```4d
  $entity:=$1
@@ -88,7 +88,7 @@ You can handle entities like any other object in 4D and pass their references di
 > With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
-## Using entity attributes
+## Uso de los atributos de entidades
 
 Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
@@ -204,7 +204,7 @@ An **alterable** entity selection has the following characteristics:
 - it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
 
 
-#### How are they defined?
+#### ¿Cómo se definen?
 
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g.
 
@@ -311,7 +311,7 @@ All storage attributes (text, number, boolean, date) are available as properties
  $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
-This code returns in *$localEmails* a collection of email addresses as strings.
+Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
 
 ### Entity selections and Relation attributes
 
@@ -328,7 +328,7 @@ In addition to the variety of ways you can query, you can also use relation attr
 The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
 
 
-## Entity Locking
+## Bloqueo de una entidad
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
 
@@ -367,7 +367,7 @@ This can also be illustrated by the following code:
  $result:=$person2.save() //$result.success=false, change not saved
 ```
 
-In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
 
 When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
 

@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| Syntax                                        | Example              | Description                                                                      |
+| Sintaxe                                       | Exemplo              | Description                                                                      |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -36,7 +36,7 @@ Here is a description of the properties returned for each dataclass in your proj
 | dataURI  | String | A URI that allows you to view the data in the dataclass.                          |
 
 
-### Example
+### Exemplo
 
 `GET  /rest/$catalog`
 
@@ -71,7 +71,7 @@ Chamando `$catalog/$all` pode reciber informação detalhada sobre os atributos 
 Para saber mais sobre o que se devolve para cada classe de dados e seus atributos, utilize [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### Exemplo
 
 `GET  /rest/$catalog/$all`
 
@@ -205,7 +205,7 @@ The following properties are returned for an exposed dataclass:
 | -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
 | name           | String | Name of the dataclass                                                                                     |
 | collectionName | String | Name of an entity selection on the dataclass                                                              |
-| tableNumber    | Number | Table number in the 4D database                                                                           |
+| tableNumber    | Número | Table number in the 4D database                                                                           |
 | scope          | String | Alcance da classe de dados (lembre que só são mostradas as classes de dados cujo **Alcance** for público) |
 | dataURI        | String | A URI to the data in the dataclass                                                                        |
 
@@ -214,18 +214,18 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Type    | Description                                                                                                                                                          |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | Attribute name.                                                                                                                                                      |
-| kind        | String  | Attribute type (storage or relatedEntity).                                                                                                                           |
-| fieldPos    | Number  | Position of the field in the database table).                                                                                                                        |
-| scope       | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                    |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                                        |
-| type        | String  | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
-| identifying | Boolean | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                            |
-| path        | String  | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                        |
-| foreignKey  | String  | For a relatedEntity attribute, name of the related attribute.                                                                                                        |
-| inverseName | String  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                       |
+| Property    | Type     | Description                                                                                                                                                          |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | String   | Attribute name.                                                                                                                                                      |
+| kind        | String   | Attribute type (storage or relatedEntity).                                                                                                                           |
+| fieldPos    | Número   | Position of the field in the database table).                                                                                                                        |
+| scope       | String   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                    |
+| indexed     | String   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                                        |
+| type        | String   | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
+| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                            |
+| path        | String   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                        |
+| foreignKey  | String   | For a relatedEntity attribute, name of the related attribute.                                                                                                        |
+| inverseName | String   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                       |
 
 
 ### Primary Key
@@ -233,7 +233,7 @@ Here are the properties for each exposed attribute that are returned:
 O objeto chave devolve o nome do atributo **name** definido como **chave primária** para a classe de dados.
 
 
-### Example
+### Exemplo
 Pode recuperar a informação relativa a uma classe de dados específica.
 
 `GET  /rest/$catalog/Employee`

@@ -1,6 +1,6 @@
 ---
 id: sessions
-title: User sessions
+title: Sesiones usuario
 ---
 
 The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
@@ -62,11 +62,11 @@ On 4D Server, Web server sessions are automatically handled through preemptive p
 With 4D single-user, interpreted code is always run in cooperative mode.
 
 
-## Sharing information
+## Compartir información
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 
-## Session lifetime
+## Fecha de caducidad de la sesión
 
 A scalable web session is closed when:
 

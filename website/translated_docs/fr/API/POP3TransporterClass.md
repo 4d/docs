@@ -37,7 +37,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #_command_.POP3 New transporter.Syntax -->
@@ -162,7 +162,7 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.delete().Syntax -->
@@ -209,7 +209,7 @@ Executing this method does not actually remove any email. The flagged email will
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
@@ -261,7 +261,7 @@ The `boxInfo` object returned contains the following properties:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.getMail().Syntax -->
@@ -321,7 +321,7 @@ You want to know the sender of the first mail of the mailbox:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
@@ -384,7 +384,7 @@ The method returns **Null** if:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
@@ -453,7 +453,7 @@ You want to know the total number and size of emails in the mailbox:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
@@ -531,16 +531,16 @@ You want to know the total number and size of emails in the mailbox:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 

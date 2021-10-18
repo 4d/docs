@@ -25,7 +25,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 | [<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.inverseName.Syntax -->](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.inverseName.Summary --> |
-| [<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keyWordIndexed.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Syntax -->](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.keywordIndexed.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
@@ -159,7 +159,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 
 <!-- REF DataClassAttributeClass.inverseName.Syntax -->
-**.inverseName** : Text<!-- END REF -->
+**.inverseName**: Texto<!-- END REF -->
 
 
 #### Descripción
@@ -174,8 +174,8 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Desc -->
-## .keyWordIndexed
+<!-- REF DataClassAttributeClass.keywordIndexed.Desc -->
+## .keywordIndexed
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
@@ -184,16 +184,16 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 </details>
 
 
-<!-- REF DataClassAttributeClass.keyWordIndexed.Syntax -->
-**.keyWordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
+**.keywordIndexed**: Boolean<!-- END REF -->
 
 
 #### Descripción
 
-The `.keyWordIndexed` property <!-- REF DataClassAttributeClass.keyWordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.keyWordIndexed) to get a valid value (false) even if `.keyWordIndexed` is not returned.
+> For generic programming, you can use **Bool**(dataClassAttribute.keywordIndexed) to get a valid value (false) even if `.keywordIndexed` is not returned.
 
 <!-- END REF -->
 
@@ -224,7 +224,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 #### Ejemplo
 
-Given the following table and relation:
+Dada la siguiente tabla y relación:
 
 ![](/assets/en/API/dataclassAttribute3.png)
 
@@ -309,7 +309,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 
 <!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-**.relatedDataClass** : Text<!-- END REF -->
+**.relatedDataClass**: Text<!-- END REF -->
 
 
 #### Descripción
@@ -319,7 +319,7 @@ The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataCla
 
 #### Ejemplo
 
-Given the following tables and relations:
+Dadas las siguientes tablas y relaciones:
 
 
 ![](assets/en/API/dataclassAttribute4.png)
@@ -359,8 +359,8 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 | dataClassAttribute.kind | type                                                    | Comentario                                                                                                                                 |
 | ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | storage                 | "number", "date", "object", "bool", "image", o "string" | "number" se devuelve para cualquier tipo numérico, incluyendo la duración. "string" se devuelve para los tipos de campo uuid, alfa y texto |
-| relatedEntity           | related dataClass name                                  | Ex: "Companies"                                                                                                                            |
-| relatedEntities         | related dataClass name + "Selection" suffix             | Ex: "EmployeeSelection"                                                                                                                    |
+| relatedEntity           | related dataClass name                                  | Ej.: "Companies"                                                                                                                           |
+| relatedEntities         | related dataClass name + "Selection" suffix             | Ej.: "EmployeeSelection"                                                                                                                   |
 
 <!-- END REF -->
 

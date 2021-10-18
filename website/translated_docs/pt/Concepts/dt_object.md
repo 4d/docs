@@ -1,6 +1,6 @@
 ---
 id: object
-title: Object
+title: Objeto
 ---
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
@@ -11,7 +11,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - text
     - null
-    - boolean
+    - booleano
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - object(1) (objects can be nested on several levels)
@@ -36,7 +36,7 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 
 Os objetos devem ter sido inicializados, por exemplo utilizando o comando `New object`, do contrário ao tentar ler ou modificar suas propriedades se gerará um error de sintaxe.
 
-Example:
+Exemplo:
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -60,7 +60,7 @@ Com a notação de objetos, pode acessar às propriedades dos objetos de duas ma
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+Exemplo:
 ```4d
      employee.name:="Smith"
 ```
@@ -91,14 +91,14 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. Exemplo:
 
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. Exemplo:
 
 ```4d
       // MyMethod1
@@ -127,7 +127,7 @@ Usar notação de objeto com ponteiros é parecido com usar notação de objeto 
 - Access by name:
 > pointerOnObject->["propertyName"]
 
-Example:
+Exemplo:
 
 ```4d
  C_OBJECT(vObj)
@@ -218,7 +218,7 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
 ```
 
 
-## Examples
+## Exemplos
 
 Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretanto note que a notação baseada em comandos continua sendo totalmente compatível.
 

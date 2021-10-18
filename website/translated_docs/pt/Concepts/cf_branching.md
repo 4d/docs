@@ -47,7 +47,7 @@ a expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo s
 
 O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
-### Example
+### Exemplo
 
 ```4d
   // Ask the user to enter a name
@@ -123,7 +123,7 @@ Só são executadas as instruções que seguem o primeiro caso TRUE (até o pró
 
 Pode incluir uma instrução Else depois do último caso. Se todos os casos forem FALSE, as instruções que seguem `Else` serão executadas.
 
-### Example
+### Exemplo
 
 Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma apalavra:
 

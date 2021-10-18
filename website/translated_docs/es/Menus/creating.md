@@ -29,22 +29,22 @@ You can modify this menu bar as desired or create additional ones.
 
 ## Crear menús
 
-### Using the Menu editor
+### Utilizando el editor de menús
 
 1. Select the item you want to create and click the add ![](assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
-### Using the 4D language
+### Utilizando el lenguaje 4D
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Sólo difiere su uso. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
 ## Añadir líneas
 For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
 
-### Using the Menu editor
+### Utilizando el editor de menús
 To add a menu item:
 
 1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
@@ -52,14 +52,14 @@ To add a menu item:
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. It may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see below).
 
 
-### Using the 4D language
+### Utilizando el lenguaje 4D
 
 Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
 
 
 ## Deleting menus and items
 
-### Using the Menu editor
+### Utilizando el editor de menús
 You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
 
 To delete a menu bar, menu or menu item:
@@ -70,7 +70,7 @@ To delete a menu bar, menu or menu item:
 > It is not possible to delete Menu Bar #1.
 
 
-### Using the 4D language
+### Utilizando el lenguaje 4D
 
 Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
 
@@ -86,7 +86,7 @@ You can create sub-menus of sub-menus to a virtually unlimited depth. Note, howe
 At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
 
 
-### Using the Menu editor
+### Utilizando el editor de menús
 
 A menu can be attached to a menu bar or to another menu.
 
@@ -100,6 +100,6 @@ You can detach a menu from a menu bar or a sub-menu from a menu at any time. The
 
 To detach a menu, right-click with the right button on the menu or sub-menu that you want to detach in the central list, then choose the **Detach the menu(...)** or **Detach the sub-menu(...)**
 
-### Using the 4D language
+### Utilizando el lenguaje 4D
 
 Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.  

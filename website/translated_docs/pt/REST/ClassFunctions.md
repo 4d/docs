@@ -26,7 +26,7 @@ Functions must always be called using REST **POST** requests (a GET request will
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Syntax                                                                      |
+| Class function                                                     | Sintaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
@@ -78,7 +78,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
 | __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Boolean                              | Mandatory - True to indicate to the server that the parameter is an entity |
+| __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
@@ -100,11 +100,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | String  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Boolean | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | Type     | Description                                                                          |
+| ------------------------ | -------- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed    | Optional - Values to modify                                                          |
+| __DATASET                | String   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 

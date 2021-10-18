@@ -11,7 +11,7 @@ Allows the actions in the REST request to be in a transaction. If there are no e
 When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atonce`.
 
 
-## Example
+## Exemplo
 We call the following REST request in a transaction.
 
  `POST  /rest/Employee?$method=update&$atomic=true`

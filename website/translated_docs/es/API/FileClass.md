@@ -69,7 +69,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | Parámetros   | Tipo    |    | Descripción                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
-| fileConstant | Integer | -> | 4D file constant                                |
+| fileConstant | Integer | -> | Constante del archivo 4D                        |
 | pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
 | Resultado    | 4D.File | <- | New file object                                 |
@@ -122,7 +122,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | User settings file for data       | 4     | settings.4DSettings file for current data file, stored in Preferences folder next to the data file.                                                                                                                                                                                                                                                                                                      |
 | Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                             |
 
-If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
+If the target *fileConstant* does not exist, a null object is returned. No se produce ningún error.
 
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
@@ -177,7 +177,7 @@ The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file 
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Returned value**
+**Valor devuelto**
 
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
@@ -234,7 +234,7 @@ By default on macOS, the function creates a standard alias. You can also create 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 
-**Returned object**
+**Objeto devuelto**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -456,7 +456,7 @@ ALERT($info.Copyright)
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | Texto     | -> | Full name for the moved file |
-| Resultado         | 4D.File   | <- | Moved file                   |
+| Resultado         | 4D.File   | <- | Archivo movido               |
 <!-- END REF -->
 
 
@@ -469,7 +469,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The moved `File` object.
 
@@ -523,7 +523,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | Parámetros | Tipo    |    | Descripción                |
 | ---------- | ------- | -- | -------------------------- |
 | newName    | Texto   | -> | New full name for the file |
-| Resultado  | 4D.File | <- | Renamed file               |
+| Resultado  | 4D.File | <- | Archivo renombrado         |
 <!-- END REF -->
 
 #### Descripción
@@ -535,7 +535,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 
-**Returned object**
+**Objeto devuelto**
 
 The renamed `File` object.
 
@@ -690,7 +690,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | Parámetros  | Tipo    |    | Descripción                                                |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
 | texto       | Texto   | -> | Text to store in the file                                  |
-| charSetName | Texto   | -> | Name of character set                                      |
+| charSetName | Texto   | -> | Nombre del juego de caracteres                             |
 | charSetNum  | Integer | -> | Number of character set                                    |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
@@ -704,7 +704,7 @@ If the file referenced in the `File` object does not exist on the disk, it is cr
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionally, you can designate the character set to be used for writing the contents. You can pass either:
+Optionally, you can designate the character set to be used for writing the contents. Puede pasar:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
@@ -717,7 +717,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Valor | Comentario                                                                                                                                                     |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                                  |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                   |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |
 | `Document with CRLF`          | 2     | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                |
 | `Document with CR`            | 3     | Line breaks are converted to OS X format: CR (carriage return)                                                                                                 |

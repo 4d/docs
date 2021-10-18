@@ -41,11 +41,11 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 You must declare these parameters as shown below:
 
 ```4d
-//On Web Connection database method
+//Método base On Web Connection
 
  C_TEXT($1;$2;$3;$4;$5;$6)
 
-//Code for the method
+//Código para el métodod
 ```
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
@@ -66,9 +66,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
 
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. La siguiente tabla muestra los valores de $1 en función de la URL introducida en el navegador web:
 
-| URL entered in web browser           | Value of parameter $1    |
+| URL entered in web browser           | Valor del parámetro $1   |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
 | http://123.4.567.89                  | /                        |
@@ -79,7 +79,7 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 
-### $2 - Header and Body of the HTTP request
+### $2 - Encabezado y cuerpo de la petición HTTP
 
 The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
@@ -89,14 +89,14 @@ If your application uses this information, it is up to you to parse the header a
 
 ### $3 - Web client IP address
 
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+El parámetro $3 recibe la dirección IP de la máquina del navegador. This information can allow you to distinguish between intranet and internet connections.
 > 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
 ### $4 - Server IP address
 
 The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
 
-### $5 and $6 - User Name and Password
+### $5 y $6 - Nombre de usuario y contraseña
 
 The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
@@ -115,7 +115,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 **Usage:** URL or Form action.
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
+This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. El método recibirá este parámetro en *$1*.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
@@ -346,7 +346,7 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 
 ## COMPILER_WEB Project Method
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
+The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. Por defecto, el método COMPILER_WEB no existe. You must explicitly create it.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
 

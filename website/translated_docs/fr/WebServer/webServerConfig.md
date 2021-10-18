@@ -35,9 +35,9 @@ You can modify the size of the cache in the **Pages Cache Size** area. The value
 
 ## Certificate folder
 
-| Can be set with  | Nom                 | Commentaires                                                                                                                           |
-| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| webServer object | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| Can be set with  | Nom                 | Commentaires                                                                                                                                                     |
+| ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| webServer object | `certificateFolder` | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()`. |
 
 Folder where the TLS certificate files for the web server are located.
 
@@ -514,11 +514,11 @@ In this case, robots are not allowed to access the entire site.
 
 ## Root Folder
 
-| Can be set with       | Nom                                              | Commentaires                                                                                                                          |
-| --------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| webServer object      | [`rootFolder`](API/WebServerClass.md#rootfolder) | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
-| `WEB SET ROOT FOLDER` |                                                  |                                                                                                                                       |
-| Settings dialog box   | Configuration page/Default HTML Root             |                                                                                                                                       |
+| Can be set with       | Nom                                              | Commentaires                                                                                                                                                    |
+| --------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| webServer object      | [`rootFolder`](API/WebServerClass.md#rootfolder) | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
+| `WEB SET ROOT FOLDER` |                                                  |                                                                                                                                                                 |
+| Settings dialog box   | Configuration page/Default HTML Root             |                                                                                                                                                                 |
 
 Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.
 
@@ -576,19 +576,19 @@ Champ "path" du cookie de session. Utilisé pour contrôler la portée des cooki
 | ---------------- | ---------------------------------------------------------------------- | ------------ |
 | webServer object | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |              |
 
-Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
+Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet de déclarer si votre cookie doit être limité à un contexte de première partie ou de même site, comme une protection contre certaines attaques CSRF ([cross-site request forgery](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)).
 
-> For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
+> Pour une description détaillée de l'attribut `SameSite`, veuillez vous reporter à la [documentation de Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ou à [cette page de développement web](https://web.dev/samesite-cookies-explained/).
 
 Trois valeurs sont disponibles :
 
-- "Strict" (default `SameSite` attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.
+- "Strict" (valeur par défaut de l'attribut` SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
 - "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
 - "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
 
-The `Secure` attribute value of the session cookie is automatically set to "True" if the connection is HTTPS (whatever the `SameSite` attribute value).
+La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
 
-> It is not recommended to set `SameSite=None` on a HTTP server since the `Secure` attribute will be missing (used in HTTPS only) and cookies will be blocked.
+> Il n'est pas recommandé de définir `SameSite=None` sur un serveur HTTP car l'attribut `Secure` sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.
 
 
 

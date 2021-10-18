@@ -1,6 +1,6 @@
 ---
 id: inputOverview
-title: Input
+title: Entrada
 ---
 
 

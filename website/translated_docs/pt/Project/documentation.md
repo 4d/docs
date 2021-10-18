@@ -46,7 +46,7 @@ The `Documentation` folder architecture is the following:
     + **Forms**
         * loginDial.md
         * ...
-    + **Methods**
+    + **Métodos**
         * myMethod.md
         * ...
     + **TableForms**
@@ -153,8 +153,8 @@ _italic_
 - The code block tag (\```4d ... ```) is supported with 4D code highlight:
 
     \``` 4d  
-  C_TEXT($txt)  
-  $txt:="Hello world!"  
+C_TEXT($txt)  
+$txt:="Hello world!"  
   \` ``
 
 
@@ -196,7 +196,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 
 
-## Example
+## Exemplo
 
 In the `WP SwitchToolbar.md` file, you can write:
 

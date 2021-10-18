@@ -17,7 +17,7 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 
-### Email Object
+### Objeto Email
 
 Email objects provide the following properties:
 
@@ -49,7 +49,7 @@ Email objects provide the following properties:
 | [<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
 
 
-### Email Addresses
+### Direcciones de correo electrónico
 
 All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) accept a value of text, object, or collection type.
 
@@ -72,7 +72,7 @@ An object with two properties:
 
 A collection of address objects.
 
-### Handling body part
+### Gestión del cuerpo del correo electrónico
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](SMTPTransporterClass.md#send) function to allow sending simple mails. When both property are filled, the MIME content-type multipart/alternative is used. The email client should then recognize the multipart/alternative part and display the text part or html part as necessary.
 
@@ -158,7 +158,7 @@ The `.bodyStructure` object contains the following properties:
 | charset     | Texto                 | Value of the charset parameter of the Content-Type header field                                                                                         |
 | encoding    | Texto                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
 | disposition | Texto                 | Value of the Content-Disposition header field of the part                                                                                               |
-| lenguaje    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
+| lenguaje    | Colección de textos   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
 | location    | Texto                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
 | subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
 | headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
@@ -178,10 +178,10 @@ The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Su
 
 The `.bodyValues` object contains the following properties:
 
-| Propiedad                  | Tipo     | Valor                                                                                                                                       |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | texto    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| Propiedad                  | Tipo     | Valor                                                                                                                                        |
+| -------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | texto    | Value of the body part                                                                                                                       |
+| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. Falso por defecto |
 
 
 
@@ -330,12 +330,12 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 | --------------- | -------- | ----------------------------------- |
 | . \<keyword\> | booleano | Keyword to set (value must be true) |
 
-Reserved keywords:
-* $draft - Indicates a message is a draft
-* $seen - Indicates a message has been read
-* $flagged - Indicates a message needs special attention (e.g., Urgent)
-* $answered - Indicates a message has been replied to
-* $deleted - Indicates a message to delete
+Palabras clave reservadas:
+* $draft - Indica que un mensaje es un borrador
+* $seen - Indica que se ha leído un mensaje
+* $flagged - Indica que un mensaje necesita atención especial (por ejemplo, urgente)
+* $answered - Indica que se ha respondido un mensaje
+* $deleted - Indica un mensaje a eliminar
 
 #### Ejemplo
 
@@ -507,8 +507,8 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
 | Parámetros | Tipo       |    | Descripción   |
 | ---------- | ---------- |:--:| ------------- |
-| mime       | Blob, Text | -> | Email in MIME |
-| Resultado  | Objeto     | <- | Email object  |
+| mime       | Blob, Text | -> | Email en MIME |
+| Resultado  | Objeto     | <- | Objeto Email  |
 <!-- END REF -->
 
 #### Descripción
@@ -518,9 +518,9 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
-#### Returned object
+#### Objeto devuelto
 
-Email object.
+Objeto Email.
 
 #### Ejemplo 1
 
@@ -585,7 +585,7 @@ $status:=$transporter.send($email)
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17 R4  | Añadidos       |
-| v17 R5  | Modified       |
+| v17 R5  | Modificado     |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
@@ -594,7 +594,7 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parámetros | Tipo   |    | Descripción                       |
 | ---------- | ------ |:--:| --------------------------------- |
-| mail       | Objeto | -> | Email object                      |
+| mail       | Objeto | -> | Objeto Email                      |
 | options    | Objeto | -> | Charset and encoding mail options |
 | Resultado  | Texto  | <- | Email object converted to MIME    |
 <!-- END REF -->

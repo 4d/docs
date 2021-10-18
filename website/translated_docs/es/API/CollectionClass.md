@@ -4,9 +4,9 @@ title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+La clase Collection gestiona variables de tipo [Collection](Concepts/dt_collection.md).
 
-A collection is initialized with:
+Una colección se inicializa con:
 
 |                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,8 +17,8 @@ A collection is initialized with:
 ### Ejemplo
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection //creación de una variable 4D de tipo colección
+ $colVar:=New collection //inicialización de la colección y asignación a la variable 4D
 ```
 
 
@@ -76,37 +76,37 @@ A collection is initialized with:
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| Parámetros | Tipo                                                                    |    | Descripción           |
-| ---------- | ----------------------------------------------------------------------- |:--:| --------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| Resultado  | Collection                                                              | <- | Nueva colección       |
+| Parámetros | Tipo                                                                    |    | Descripción             |
+| ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valor(es) de collection |
+| Resultado  | Collection                                                              | <- | Nueva colección         |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+El comando `Nueva colección` <!-- REF #_command_.New collection.Summary --> crea una nueva colección vacía o precargada<!-- END REF --> y devuelve su referencia.
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
+Si no se pasa ningún parámetro, `New collection` crea una colección vacía y devuelve su referencia.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
+> Tenga en cuenta que las instrucciones `var : Collection` or `C_COLLECTION` declaran una variable de tipo `Collection` pero no crea ninguna colección.
 
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
+Opcionalmente, puede prellenar la nueva colección pasando uno o varios *valores* como parámetro(s).
 
-Otherwise, you can add or modify elements subsequently through assignment. Por ejemplo:
+De lo contrario, puede añadir o modificar elementos posteriormente por asignación. Por ejemplo:
 
 ```4d
  myCol[10]:="My new element"
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Si el nuevo índice del elemento está más allá del último elemento existente de la colección, la colección se redimensiona automáticamente y a todos los nuevos elementos intermedios se les asigna un valor **null**.
 
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
+Puede pasar cualquier número de valores de todos los tipos soportados (number, text, date, picture, pointer, object, collection...). A diferencia de los arrays, las colecciones pueden mezclar datos de diferentes tipos.
 
-You must pay attention to the following conversion issues:
+Debe prestar atención a los siguientes aspectos de la conversión:
 
-*   If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
+*   Si pasa un puntero, se mantiene "tal cual"; se evalúa con el comando `JSON Stringify`
 *   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
@@ -140,7 +140,7 @@ You create a new collection and then add a new element:
  var $coll : Collection
  $coll:=New collection("a";"b";"c")
   //$coll=["a","b","c"]
- $coll[9]:="z" //add a 10th element with value "z"
+ $coll[9]:="z" //añadir un décimo elemento con valor "z"
  $vcolSize:=$coll.length //10
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
@@ -148,7 +148,7 @@ You create a new collection and then add a new element:
 
 
 
-## `New shared collection`
+## `Nueva collection compartida`
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
@@ -160,10 +160,10 @@ You create a new collection and then add a new element:
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parámetros | Tipo                                                                |    | Descripción                  |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| Resultado  | Collection                                                          | <- | New shared collection        |
+| Parámetros | Tipo                                                                |    | Descripción                           |
+| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valor(es) de la collection compartida |
+| Resultado  | Collection                                                          | <- | Nueva collection compartida           |
 <!-- END REF -->
 
 
@@ -176,7 +176,7 @@ Adding an element to this collection must be surrounded by the [`Use...End`](Con
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
 
-You must assign the returned reference to a 4D variable of the Collection type.
+Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
 > Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
 
 Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
@@ -191,8 +191,8 @@ You can pass any number of values of the following supported types:
 *   fecha
 *   time (stored as number of milliseconds - real)
 *   null
-*   shared object(*)
-*   shared collection(*)
+*   objeto compartido(*)
+*   collection compartida(*)
 > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
 (*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
@@ -240,7 +240,7 @@ Only numerical elements are taken into account for the calculation (other elemen
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
 
-`.average()` returns `undefined` if:
+`.average()` devuelve `undefined` if:
 
 *   the collection is empty,
 *   the collection does not contain numerical elements,
@@ -325,7 +325,7 @@ $vSize:=$col.length //$vSize=0
 <!-- REF #collection.combine().Params -->
 | Parámetros | Tipo       |    | Descripción                                                                   |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------------------- |
-| col2       | Collection | -> | Collection to combine                                                         |
+| col2       | Collection | -> | Colección a combinar                                                          |
 | index      | Integer    | -> | Position to which insert elements to combine in collection (default=length+1) |
 | Resultado  | Collection | <- | Original collection containing combined element(s)                            |
 <!-- END REF -->
@@ -382,7 +382,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 #### Descripción
 
 The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the *value* parameter added to the end<!-- END REF -->.
-> This function does not modify the original collection.
+> Esta función no modifica la colección original.
 
 If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
 
@@ -444,7 +444,7 @@ The *groupWithCol* or *groupWithObj* parameters allow you to designate a collect
 
 #### Ejemplo 1
 
-We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. To do this, we must create a shared copy of the collection (*$sharedLastnames*).
+We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. Para ello, debemos crear una copia compartida de la colección (*$sharedLastnames*).
 
 ```4d
 var $sharedObject : Object
@@ -475,7 +475,7 @@ var $sharedColl1;$sharedColl2;$copyColl : Collection
 $sharedColl1:=New shared collection(New shared object("lastname";"Smith"))
 $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
-//$copyColl belongs to the same shared group as $sharedColl2
+//$copyColl pertenece al mismo grupo compartido que $sharedColl2
  $copyColl:=$sharedColl1.copy(ck shared;$sharedColl2)
  Use($sharedColl2)
     $sharedColl2.combine($copyColl)
@@ -484,16 +484,16 @@ $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
 #### Ejemplo 3
 
-We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. To do this, we must create a shared copy beforehand (*$sharedLastnames*).
+We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. Para ello, debemos crear previamente una copia compartida (*$sharedLastnames*).
 
 ```4d
 var $lastnames;$sharedLastnames : Collection
 var $text : Text
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames es una colección clásica
 
-$sharedLastnames:=$lastnames.copy(ck shared) // shared copy
+$sharedLastnames:=$lastnames.copy(ck shared) // copia compartida
 
 Use(Storage)
     Storage.lastnames:=$sharedLastnames
@@ -515,11 +515,11 @@ This example illustrates the use of the `ck resolve pointers` option:
 
  $col2:=$col.copy()
  $col2[1].beta:="World!"
- ALERT($col[0].alpha+" "+$col2[1].beta) //displays "Hello World!"
+ ALERT($col[0].alpha+" "+$col2[1].beta) //muestra "Hello World!"
 
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
- ALERT($col3[0].alpha+" "+$col3[1].what) //displays "Hello You!"
+ ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
 ``` 
 
 
@@ -728,7 +728,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 <!-- REF #collection.equal().Params -->
 | Parámetros  | Tipo       |    | Descripción                                                      |
 | ----------- | ---------- |:--:| ---------------------------------------------------------------- |
-| collection2 | Collection | -> | Collection to compare                                            |
+| collection2 | Collection | -> | Colección a comparar                                             |
 | option      | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
 | Resultado   | Booleano   | <- | True if collections are identical, false otherwise               |
 <!-- END REF -->
@@ -800,9 +800,9 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-*   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: paramN...
+*   en *$1.value*: valor del elemento a evaluar
+*   en *$2*: param
+*   en *$N...*: paramN...
 
 *methodName* sets the following parameter(s):
 
@@ -825,9 +825,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //devuelve true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //devuelve false
 ```
 
 With the following ***NumberGreaterThan0*** method:
@@ -1026,11 +1026,11 @@ The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new 
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
 
-*methodName* receives the following parameters:
+*methodName* recibe los siguientes parámetros:
 
 *   in *$1.value*: element value to be filtered
-*   in *$2*: *param*
-*   in *$N...*: param2...paramN
+*   en *$2*: *param*
+*   en *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1123,9 +1123,9 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-*   in *$1.value:* element value to be evaluated
-*   in *$2: param*
-*   in *$N...*: param2...paramN
+*   en *$1.value:* valor del elemento a evaluar
+*   en *$2: param*
+*   en *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1179,7 +1179,7 @@ The code for ***FindCity*** is:
 ```4d
  var $1 : Object
  var $2 : Text
- $1.result:=$1.value.name=$2 //name is a property name of objects in the collection
+ $1.result:=$1.value.name=$2 //name es un nombre de propiedad de los objetos de la colección
 ``` 
 
 <!-- END REF -->
@@ -1216,15 +1216,15 @@ The code for ***FindCity*** is:
 #### Descripción
 
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
-> This function does not modify the original collection.
+> Esta función no modifica la colección original.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
 *methodName* receives the following parameters:
 
-*   in *$1.value*: element value to be evaluated
-*   in *$2: param*
-*   in *$N...*: param2...paramN
+*   en *$1.value*: valor del elemento a evaluar
+*   en *$2: param*
+*   en *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1298,7 +1298,7 @@ The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
 *   a scalar value (text, number, boolean, date),
-*   the null value,
+*   el valor null,
 *   an object or a collection reference.
 
 *toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
@@ -1509,7 +1509,7 @@ The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->sear
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
 *   a scalar value (text, number, boolean, date),
-*   the null value,
+*   el valor null,
 *   an object or a collection reference.
 
 *toSearch* must match exactly the element to find (the same rules as for the equality operator are applied).
@@ -1527,11 +1527,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
  var $col : Collection
  var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
  $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
- $pos1:=$col.lastIndexOf("e") //returns 12
- $pos2:=$col.lastIndexOf("e";6) //returns 4
- $pos3:=$col.lastIndexOf("e";15) //returns 12
- $pos4:=$col.lastIndexOf("e";-2) //returns 10
- $pos5:=$col.lastIndexOf("x") //returns -1
+ $pos1:=$col.lastIndexOf("e") //devuelve 12
+ $pos2:=$col.lastIndexOf("e";6) //devuelve 4
+ $pos3:=$col.lastIndexOf("e";15) //devuelve 12
+ $pos4:=$col.lastIndexOf("e";-2) //devuelve 10
+ $pos5:=$col.lastIndexOf("x") //devuelve -1
 ``` 
 
 <!-- END REF -->
@@ -1599,21 +1599,21 @@ The `.length` property is initialized when the collection is created. Adding or 
 #### Descripción
 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
-> This function does not modify the original collection.
+> Esta función no modifica la colección original.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
 
 *methodName* receives the following parameters:
 
-*   in *$1.value* (any type): element value to be mapped
+*   en *$1.value* (todo tipo): valor del elemento que se va a asignar
 *   in *$2* (any type): *param*
-*   in *$N...* (any type): *paramN...*
+*   en *$N...* (any type): *paramN...*
 
 *methodName* sets the following parameter(s):
 
 
-*   *$1.result* (any type): new transformed value to add to the resulting collection
-*   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (todo tipo): nuevo valor transformado para añadir a la colección resultante
+*   *$1.stop* (boolean): **true** para detener la retrollamada del método. The returned value is the last calculated.
 
 #### Ejemplo
 
@@ -1713,7 +1713,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 #### Descripción
 
 The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
-> This function does not modify the original collection.
+> Esta función no modifica la colección original.
 
 If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
 
@@ -1911,7 +1911,7 @@ This function returns a *shallow copy*, which means that objects or collections 
 In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
 *   *methodName* will receive the following parameters:
-    *   $1 (object), where:
+    *   $1 (objeto), donde:
         *   *$1.value* (any type): first element value to be compared
         *   *$1.value2* (any type): second element value to be compared
     *   $2...$N (any type): extra parameters
@@ -1964,16 +1964,16 @@ You want to sort a collection by character code or language:
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//utilizando el código de caracteres:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// resultado : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//utilizando el lenguaje:
 $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-The ***sortCollection*** method:
+El método ***sortCollection***:
 
 ```4d
 var$1Object
@@ -2002,16 +2002,16 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 **.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
-| Parámetros | Tipo |    | Descripción                |
-| ---------- | ---- |:--:| -------------------------- |
-| Resultado  | any  | <- | Last element of collection |
+| Parámetros | Tipo |    | Descripción                     |
+| ---------- | ---- |:--:| ------------------------------- |
+| Resultado  | any  | <- | Último elemento de la colección |
 <!-- END REF -->
 
 
 #### Descripción
 
 The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
-> This function modifies the original collection.
+> Esta función modifica la colección original.
 
 When applied to an empty collection, `.pop()` returns ***undefined***.
 
@@ -2023,10 +2023,10 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
  var $stack : Collection
  $stack:=New collection //$stack=[]
  $stack.push(1;2) //$stack=[1,2]
- $stack.pop() //$stack=[1]  Returns 2
+ $stack.pop() //$stack=[1]  Devuelve 2
  $stack.push(New collection(4;5)) //$stack=[[1,[4,5]]
- $stack.pop() //$stack=[1]  Returns [4,5]
- $stack.pop() //$stack=[]  Returns 1
+ $stack.pop() //$stack=[1]  Devuelve [4,5]
+ $stack.pop() //$stack=[]  Devuelve 1
 ```
 
 
@@ -2076,7 +2076,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 #### Ejemplo 2
 
-You want to sort the resutling collection:
+Quiere ordenar la colección resultante:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2121,7 +2121,7 @@ You want to sort the resutling collection:
 #### Descripción
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> Esta función no modifica la colección original.
 
 The *queryString* parameter uses the following syntax:
 
@@ -2188,7 +2188,7 @@ This example returns persons hired more than 90 days ago:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si hoy es 01/10/2018
 ```
 
 
@@ -2237,9 +2237,9 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 
 *methodName* receives the following parameters:
 
-*   in *$1.value*: element value to be processed
-*   in *$2: param*
-*   in *$N...*: *paramN...*
+*   en *$1.value*: valor del elemento a procesar
+*   en *$2: param*
+*   en *$N...*: *paramN...*
 
 *methodName* sets the following parameter(s):
 
@@ -2253,7 +2253,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 ```4d
  C_COLLECTION($c)
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
- $r:=$c.reduce("Multiply";1) //returns 86400
+ $r:=$c.reduce("Multiply";1) //devuelve 86400
 ```
 
 With the following ***Multiply*** method:
@@ -2578,9 +2578,9 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-*   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: param2...paramN
+*   en *$1.value*: valor del elemento a evaluar
+*   en *$2*: param
+*   en *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -2604,9 +2604,9 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
  var $b : Boolean
  $c:=New collection
  $c.push(-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") // returns false
+ $b:=$c.some("NumberGreaterThan0") // devuelve false
  $c.push(1)
- $b:=$c.some("NumberGreaterThan0") // returns true
+ $b:=$c.some("NumberGreaterThan0") // devuelve true
 
  $c:=New collection
  $c.push(1;-5;-3;-1;-4;-6;-2)
@@ -2652,14 +2652,14 @@ With the following *NumberGreaterThan0* method:
 #### Descripción
 
 The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
-> This function modifies the original collection.
+> Esta función modifica la colección original.
 
 If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type.
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
 *   *methodName* will receive the following parameters:
-    *   $1 (object), where:
+    *   $1 (objeto), donde:
         *   *$1.value* (any type): first element value to be compared
         *   *$1.value2* (any type): second element value to be compared
     *   $2...$N (any type): extra parameters
@@ -2700,12 +2700,12 @@ If the collection contains elements of different types, they are first grouped b
 ```4d
  var $col; $col2; $col3 : Collection
  $col:=New collection(33;4;66;1111;222)
- $col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
- $col3:=$col.sort("numberOrder") //alphabetical sort: [1111,222,33,4,66]
+ $col2:=$col.sort() //ordenación numérica: [4,33,66,222,1111]
+ $col3:=$col.sort("numberOrder") //ordenación alfabética: [1111,222,33,4,66]
 ```
 
 ```4d
-  //numberOrder project method
+  //método proyecto numberOrder
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
 ``` 
@@ -2800,7 +2800,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 #### Descripción
 
 The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
-> This function modifies the original collection.
+> Esta función modifica la colección original.
 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
 

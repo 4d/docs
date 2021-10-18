@@ -90,19 +90,19 @@ The `On Web Authentication` database method is NOT called:
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 
-### Syntax
+### Sintaxe
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parameters | Type    |    | Description                                       |
-| ---------- | ------- |:--:| ------------------------------------------------- |
-| $1         | Texto   | <- | URL                                               |
-| $2         | Texto   | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Texto   | <- | IP address of the web client (browser)            |
-| $4         | Texto   | <- | IP address of the server                          |
-| $5         | Texto   | <- | User name                                         |
-| $6         | Texto   | <- | Password                                          |
-| $0         | Boolean | -> | True = request accepted, False = request rejected |
+| Parameters | Type     |    | Description                                       |
+| ---------- | -------- |:--:| ------------------------------------------------- |
+| $1         | Texto    | <- | URL                                               |
+| $2         | Texto    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
+| $3         | Texto    | <- | IP address of the web client (browser)            |
+| $4         | Texto    | <- | IP address of the server                          |
+| $5         | Texto    | <- | User name                                         |
+| $6         | Texto    | <- | Senha                                             |
+| $0         | Booleano | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:
 
@@ -165,7 +165,7 @@ The `$4` parameter receives the IP address used to call the web server. 4D allow
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
 
-#### $0 parameter
+#### Parâmetro $0
 
 The `On Web Authentication` database method returns a boolean in $0:
 
@@ -178,7 +178,7 @@ The `On Web Connection` database method is only executed if the connection has b
 > * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 
 
-### Example
+### Exemplo
 
 Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
 

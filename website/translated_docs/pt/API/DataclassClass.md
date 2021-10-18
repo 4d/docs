@@ -8,7 +8,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,10 +27,10 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 <!-- REF DataClassClass.attributeName.Desc -->
 ## .*attributeName*
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -98,11 +98,11 @@ Considering the following table properties:
 <!-- REF DataClassClass.all().Desc -->
 ## .all()
 
-<details><summary>History</summary>
-| Version | Changes                             |
-| ------- | ----------------------------------- |
-| v17 R5  | Support of the *settings* parameter |
-| v17     | Added                               |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                            |
+| ------ | ----------------------------------- |
+| v17 R5 | Support of the *settings* parameter |
+| v17    | Added                               |
 </details>
 
 
@@ -112,7 +112,7 @@ Considering the following table properties:
 <!-- REF #DataClassClass.all().Params -->
 | Parameter | Type               |    | Description                                         |
 | --------- | ------------------ |:--:| --------------------------------------------------- |
-| settings  | Object             | -> | Build option: context                               |
+| settings  | Objeto             | -> | Build option: context                               |
 | Result    | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
@@ -136,7 +136,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $allEmp : cs.EmployeeSelection
@@ -151,11 +151,11 @@ In the optional *settings* parameter, you can pass an object containing addition
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
 
-<details><summary>History</summary>
-| Version | Changes                             |
-| ------- | ----------------------------------- |
-| v17 R5  | Support of the *settings* parameter |
-| v17     | Added                               |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                            |
+| ------ | ----------------------------------- |
+| v17 R5 | Support of the *settings* parameter |
+| v17    | Added                               |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -166,7 +166,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Parameter | Type               |    | Description                                      |
 | --------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol | Collection         | -> | Collection of objects to be mapped with entities |
-| settings  | Object             | -> | Build option: context                            |
+| settings  | Objeto             | -> | Build option: context                            |
 | Result    | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
@@ -349,10 +349,10 @@ In this example, the first entity will be created and saved but the second will 
 <!-- REF DataClassClass.get().Desc -->
 ## .get()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 
 </details>
 
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | Parameter  | Type            |    | Description                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | Object          | -> | Build option: context                       |
+| settings   | Objeto          | -> | Build option: context                       |
 | Result     | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -428,10 +428,10 @@ This example illustrates the use of the *context* property:
 <!-- REF DataClassClass.getDataStore().Desc -->
 ## .getDataStore()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -454,7 +454,7 @@ The datastore can be:
 *   a remote datastore, opened using the `Open datastore` command.
 
 
-#### Example
+#### Exemplo
 
 The ***SearchDuplicate*** project method searches for duplicated values in any dataclass.
 
@@ -482,10 +482,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF DataClassClass.getInfo().Desc -->
 ## .getInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -494,7 +494,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 | Parameter | Type   |    | Description                  |
 | --------- | ------ | -- | ---------------------------- |
-| Result    | Object | <- | Information on the dataclass |
+| Result    | Objeto | <- | Information on the dataclass |
 <!-- END REF -->
 
 
@@ -555,10 +555,10 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 <!-- REF DataClassClass.new().Desc -->
 ## .new()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -579,7 +579,7 @@ The entity object is created in memory and is not saved in the database until th
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
 
-#### Example
+#### Exemplo
 
 This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
 
@@ -598,10 +598,10 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- REF DataClassClass.newSelection().Desc -->
 ## .newSelection()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -627,7 +627,7 @@ If you want to create an ordered entity selection, pass the `dk keep ordered` se
 When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
 
 
-#### Example
+#### Exemplo
 
 
 ```4d 
@@ -644,12 +644,12 @@ When created, the entity selection does not contain any entities (`mySelection.l
 <!-- REF DataClassClass.query().Desc -->
 ## .query()
 
-<details><summary>History</summary>
-| Version | Changes                            |
-| ------- | ---------------------------------- |
-| v17 R6  | Support of Formula parameters      |
-| v17 R5  | Support of placeholders for values |
-| v17     | Added                              |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                           |
+| ------ | ---------------------------------- |
+| v17 R6 | Support of Formula parameters      |
+| v17 R5 | Support of placeholders for values |
+| v17    | Added                              |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
@@ -659,9 +659,9 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | Parameter     | Type               |    | Description                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texto              | -> | Search criteria as string                                                                                                   |
-| formula       | Object             | -> | Search criteria as formula object                                                                                           |
+| formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
 | value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
+| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
 | Result        | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
 <!-- END REF -->
 
@@ -757,7 +757,7 @@ Two types of placeholders can be used: **indexed placeholders** and **named plac
 | -          | Indexed placeholders                                                                                                                                                                                    | Named placeholders                                                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Definition | Parameters are inserted as :paramIndex (for example :1, :2...) in queryString and their corresponding values are provided by the sequence of value parameter(s). You can use up to 128 value parameters | Parameters are inserted as :paramName (for example :myparam) and their values are provided in the attributes and/or parameters objects in the querySettings parameter |
-| Example    | $r:=class.query(":1=:2";"city";"Chicago")                                                                                                                                                               | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o)                              |
+| Exemplo    | $r:=class.query(":1=:2";"city";"Chicago")                                                                                                                                                               | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o)                              |
 
 You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
@@ -893,15 +893,15 @@ Additional examples are provided in example 3.
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object  | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
-| attributes    | Object  | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
-| args          | Object  | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| allowFormulas | Boolean | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| context       | Texto   | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
-| queryPlan     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
-| queryPath     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
+| Property      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
+| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| args          | Objeto   | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| allowFormulas | Booleano | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| context       | Texto    | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
+| queryPlan     | Booleano | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
+| queryPath     | Booleano | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
 
 **About queryPlan and queryPath**
 

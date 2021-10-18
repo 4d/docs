@@ -7,7 +7,7 @@ Pass "true" to save the BLOB as a document (must also pass `$expand={blobAttribu
 
 ## Descripción
 
-`$binary` allows you to save the BLOB as a document.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
+`$binary` permite guardar el BLOB como un documento.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
 
 When you make the following request:
 

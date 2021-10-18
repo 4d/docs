@@ -25,7 +25,7 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 
@@ -48,7 +48,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
@@ -76,8 +76,8 @@ Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 var $person : cs.Person  
-$person:=cs.Person.new() //create the new instance  
-//$person contains functions of the class
+$person:=cs.Person.new() //créer la nouvelle instance  
+//$person contient les fonctions de la classe
 ```
 
 To create a new instance of the Person class with parameters:
@@ -91,7 +91,7 @@ Class constructor($firstname : Text; $lastname : Text; $age : Integer)
 ```
 
 ```4d
-//In a method
+//Dans une méthode
 var $person : cs.Person  
 $person:=cs.Person.new("John";"Doe";40)  
 //$person.firstName = "John"
@@ -110,7 +110,7 @@ $person:=cs.Person.new("John";"Doe";40)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 

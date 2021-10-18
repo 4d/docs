@@ -595,7 +595,7 @@ In this case, the `4DLOOP` tag works like it does with an array: it makes a loop
 
 This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
 
-Example:
+Exemplo:
 
 ```4d
  ARRAY TEXT($array;2)

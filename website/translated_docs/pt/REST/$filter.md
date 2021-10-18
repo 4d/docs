@@ -79,7 +79,7 @@ The comparator must be one of the following values:
 | <=         | less than or equal to    |
 | begin      | begins with              |
 
-## Examples
+## Exemplos
 
 In the following example, we look for all employees whose last name begins with a "j":
 

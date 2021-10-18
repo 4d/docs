@@ -93,7 +93,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
     - a class function is a code block
     - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
     - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>. \<FunctionName> format.
+- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>. \<FunctionName> formato.
 
 ## Class stores
 
@@ -113,7 +113,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
-#### Example
+#### Exemplo
 
 You want to create a new instance of an object of `myClass`:
 
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 
 The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
-#### Example
+#### Exemplo
 
 You want to create a new key in the `CryptoKey` class:
 
@@ -172,7 +172,7 @@ Specific 4D keywords can be used in class definitions:
 
 ### Function
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 Function <name>({$parameterName : type; ...}){->$parameterName : type}

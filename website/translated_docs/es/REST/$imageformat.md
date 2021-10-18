@@ -3,7 +3,7 @@ id: imageformat
 title: '$imageformat'
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
+Define qué formato de imagen utilizar para recuperar imágenes (por ejemplo, `$imageformat=png`)
 
 ## Descripción
 
@@ -13,8 +13,8 @@ Define which format to use to display images. By default, the best format for th
 | ---- | ------------------------------ |
 | GIF  | Formato GIF                    |
 | PNG  | Formato PNG                    |
-| JPEG | JPEG format                    |
-| TIFF | TIFF format                    |
+| JPEG | Formato JPEG                   |
+| TIFF | Formato TIFF                   |
 | best | Best format based on the image |
 
 Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.

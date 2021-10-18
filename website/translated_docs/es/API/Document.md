@@ -337,10 +337,10 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
+The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
 
 *   a file object
-*   a folder object
+*   un objeto de la carpeta
 
 For non-alias files, the property returns the same file object as the file.
 
@@ -468,9 +468,9 @@ This property is **read-only**.
 | Parámetros        | Tipo      |    | Descripción                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
+| newName           | Texto     | -> | Nombre para la copia                        |
 | overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
-| Resultado         | 4D.File   | <- | Copied file                                 |
+| Resultado         | 4D.File   | <- | Archivo copiado                             |
 <!-- END REF -->
 
 
@@ -489,7 +489,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 | `fk overwrite` | 4     | Overwrite existing elements, if any |
 
 
-**Returned value**
+**Valor devuelto**
 
 The copied `File` object.
 
@@ -520,9 +520,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parámetros | Tipo |    | Descripción  |
-| ---------- | ---- | -- | ------------ |
-| Resultado  | Blob | <- | File content |
+| Parámetros | Tipo |    | Descripción           |
+| ---------- | ---- | -- | --------------------- |
+| Resultado  | Blob | <- | Contenido del archivo |
 <!-- END REF -->
 
 
@@ -530,9 +530,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
-**Returned value**
+**Valor devuelto**
 
-A `Blob`.
+Un `Blob`.
 
 #### Ejemplo
 
@@ -578,7 +578,7 @@ The optional *size* parameter specifies the dimensions in pixels of the returned
 
 If the file does not exist on disk, a default blank icon is returned.
 
-**Returned value**
+**Valor devuelto**
 
 File icon [picture](../Concepts/picture.html).
 
@@ -604,7 +604,7 @@ File icon [picture](../Concepts/picture.html).
 <!-- REF #document.getText().Params -->
 | Parámetros  | Tipo    |    | Descripción                     |
 | ----------- | ------- | -- | ------------------------------- |
-| charSetName | Texto   | -> | Name of character set           |
+| charSetName | Texto   | -> | Nombre del juego de caracteres  |
 | charSetNum  | Integer | -> | Number of character set         |
 | breakMode   | Integer | -> | Processing mode for line breaks |
 | Resultado   | Texto   | <- | Text from the document          |
@@ -614,7 +614,7 @@ File icon [picture](../Concepts/picture.html).
 #### Descripción
 The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
-Optionally, you can designate the character set to be used for reading the contents. You can pass either:
+Optionally, you can designate the character set to be used for reading the contents. Puede pasar:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
@@ -627,7 +627,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Valor | Comentario                                                                                                                                                          |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                                       |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                        |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |
 | `Document with CRLF`          | 2     | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                     |
 | `Document with CR`            | 3     | Line breaks are converted to OS X format: CR (carriage return)                                                                                                      |
@@ -635,9 +635,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-**Returned value**
+**Valor devuelto**
 
-Text of the file.
+Texto del archivo.
 
 #### Ejemplo
 
@@ -653,10 +653,10 @@ When you execute this code:
 
 
 ```4d
- $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
+ $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 por defecto
  $txt:=$myFile.getText()
 ```
-... you get:
+... obtiene:
 
 ```4d
   // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"

@@ -60,7 +60,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Exemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-## Methods
+## Métodos
 
 4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
 
@@ -251,7 +251,7 @@ This.name:="Square"
 ## Operators
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-| Operator | Operation      | Example            |
+| Operator | Operation      | Exemplo            |
 | -------- | -------------- | ------------------ |
 | +        | Addition       | 1 + 2 results in 3 |
 | –        | Subtraction    | 3 – 2 results in 1 |
@@ -262,9 +262,9 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type       | Operation     | Example                                                                                              |
+| Data Type       | Operation     | Exemplo                                                                                              |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
+| Número          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -293,20 +293,20 @@ You refer to an expression by the data type it returns. There are several expres
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
 | “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
 | Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
+| 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
+| 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| myButton                 | Número             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
 | !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
 | ?8:05:30?                | Hora               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
 | ?2:03:04? + ?1:02:03?    | Hora               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Boolean            | This command returns the Boolean value TRUE.                                                                                                                                    |
-| 10 # 20                  | Boolean            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Boolean            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Picture            | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Pointer            | This expression returns a pointer to the field called [People]Name.                                                                                                             |
-| Table (1)                | Pointer            | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Object             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
+| True                     | Booleano           | This command returns the Boolean value TRUE.                                                                                                                                    |
+| 10 # 20                  | Booleano           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
+| “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
+| My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
+| ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
+| Table (1)                | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
+| JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
 | Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
@@ -352,7 +352,7 @@ Both styles of comments can be used simultaneously.
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
 //This is a comment
@@ -367,7 +367,7 @@ For($vCounter;1;100) //Starting loop
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Example:
+- **Inline comments** can be inserted anywhere in the code. Exemplo:
 
 ```4d
 For /* inline comment */ ($vCounter;1;100)
@@ -375,14 +375,14 @@ For /* inline comment */ ($vCounter;1;100)
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Exemplo:
 
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
-    /* 
-    other comments
+comentarios  
+    /*
+    outros comentarios
     */
 */
 ...

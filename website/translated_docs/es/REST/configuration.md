@@ -24,7 +24,7 @@ For security reasons, by default, 4D does not respond to REST requests. If you w
 The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
 
 
-## Configuring REST access
+## Configuración del acceso REST
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
 
@@ -43,7 +43,7 @@ By default, the menu displays **\<Anyone>**, which means that REST accesses are 
 
 > In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.
 
-### Using the On REST Authentication database method
+### Método base On REST Authentication
 The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D application or you can use your own table of identifiers. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 

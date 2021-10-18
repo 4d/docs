@@ -26,7 +26,7 @@ Deletes the current entity, entity collection, or entity selection (created thro
 
 ### Descripción
 
-With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
@@ -35,11 +35,11 @@ You can then write the following REST request to delete the entity whose key is 
 
  `POST  /rest/Employee(22)/?$method=delete`
 
-You can also do a query as well using $filter:
+También se puede hacer una petición de información utilizando $filter:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/{entitySetID}:
+También puede eliminar un conjunto de entidades utilizando $entityset/{entitySetID}:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -59,7 +59,7 @@ Creates an entity set in 4D Server's cache based on the collection of entities d
 
 ### Descripción
 
-When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/{entitySetID}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
+When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. El conjunto de entidades tendrá un número de referencia que puede pasar a `$entityset/{entitySetID}` para acceder a él. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
 
 If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
 
@@ -73,7 +73,7 @@ You can create an entity set that will be stored in 4D Server's cache for only t
 
  `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
+También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
 > `$skip` and `$top/$limit` are not taken into consideration when saving an entity set.
 
 After you create an entity set, the first element, `__ENTITYSET`, is added to the object returned and indicates the URI to use to access the entity set:
@@ -128,7 +128,7 @@ Creates an entity set in 4D Server's cache based on the collection of related en
 
 `$method=subentityset` allows you to sort the data returned by the relation attribute defined in the REST request.
 
-To sort the data, you use the `$subOrderby` property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.
+Para ordenar los datos, se utiliza la propiedad `$subOrderby`. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.
 
 If you want to specify multiple attributes, you can delimit them with a comma, µ, `$subOrderby="lastName desc, firstName asc"`.
 
@@ -198,7 +198,7 @@ To update an entity, you must pass the `__KEY` and `__STAMP` parameters in the o
 
 Triggers are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atonce`. If any errors occur during data validation, none of the entities are saved. You can also use $method=validate to validate the entities before creating or updating them.
+También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a `$atomic/$atonce`. If any errors occur during data validation, none of the entities are saved. También puede utilizar $method=validate para validar las entidades antes de crearlas o actualizarlas.
 
 If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
 > Notes for specific attribute types:

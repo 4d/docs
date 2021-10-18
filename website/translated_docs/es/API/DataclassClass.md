@@ -54,7 +54,7 @@ $compCity:=ds.Company["city"] //returns the city attribute in the Company datacl
 
 #### Ejemplo 2
 
-Considering the following database structure:
+Considerando la siguiente estructura de la base:
 
 ![](assets/en/API/dataclassAttribute.png)
 
@@ -112,7 +112,7 @@ Considering the following table properties:
 <!-- REF #DataClassClass.all().Params -->
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| parámetros | Objeto             | -> | Build option: context                               |
+| parámetros | Objeto             | -> | Opciones de construcción: context                   |
 | Resultado  | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
 <!-- END REF -->
 
@@ -166,7 +166,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 | Parámetros | Tipo               |    | Descripción                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol  | Collection         | -> | Collection of objects to be mapped with entities |
-| parámetros | Objeto             | -> | Build option: context                            |
+| parámetros | Objeto             | -> | Opciones de construcción: context                |
 | Resultado  | 4D.EntitySelection | <- | Entity selection filled from the collection      |
 <!-- END REF -->
 
@@ -179,7 +179,7 @@ In the *objectCol* parameter, pass a collection of objects to create new or upda
 
 The mapping between the objects of the collection and the entities is done on the **attribute names** and **matching types**. If an object's property has the same name as an entity's attribute but their types do not match, the entity's attribute is not filled.
 
-**Create or update mode**
+**Crear o actualizar modos**
 
 For each object of *objectCol*:
 
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | Parámetros | Tipo            |    | Descripción                                 |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| parámetros | Objeto          | -> | Build option: context                       |
+| parámetros | Objeto          | -> | Opciones de construcción: context           |
 | Resultado  | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -448,7 +448,7 @@ This example illustrates the use of the *context* property:
 
 The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
 
-The datastore can be:
+El almacén de datos puede ser:
 
 *   the main datastore, as returned by the `ds` command.
 *   a remote datastore, opened using the `Open datastore` command.
@@ -465,7 +465,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ```
 
 ```4d
-  // SearchDuplicate method
+  // método SearchDuplicate 
   // SearchDuplicate(entity_to_search;dataclass_name)
 
  #DECLARE ($pet : Object ; $dataClassName : Text)
@@ -502,11 +502,11 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
 
-**Returned object**
+**Objeto devuelto**
 
 | Propiedad   | Tipo    | Descripción                              |
 | ----------- | ------- | ---------------------------------------- |
-| name        | Texto   | Name of the dataclass                    |
+| name        | Texto   | Nombre de la dataclass                   |
 | primaryKey  | Texto   | Name of the primary key of the dataclass |
 | tableNumber | Integer | Internal 4D table number                 |
 
@@ -518,7 +518,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  #DECLARE ($entity : Object)  
  var $status : Object
 
- computeEmployeeNumber($entity) //do some actions on entity
+ computeEmployeeNumber($entity) //realizar algunas acciones en la entidad
 
  $status:=$entity.save()
  if($status.success)
@@ -672,7 +672,7 @@ The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches fo
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
-**queryString parameter**
+**parámetro queryString**
 
 The *queryString* parameter uses the following syntax:
 
@@ -704,13 +704,13 @@ donde:
     | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
     | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
-    | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
+    | Diferente de                         | #, !=       | Supports the wildcard (@)                                                                                      |
     |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
     | Menor que                            | <           |                                                                                                                |
     | Mayor que                            | >           |                                                                                                                |
     | Menor o igual que                    | <=          |                                                                                                                |
     | Mayor o igual que                    | >=          |                                                                                                                |
-    | Included in                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
+    | Incluído en                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
     | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
     | Contiene palabra clave               | %           | Keywords can be used in attributes of string or picture type                                                   |
 
@@ -730,7 +730,7 @@ donde:
 *   **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-**Using quotes**
+**Utilizar comillas**
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por ejemplo:
 
@@ -748,13 +748,13 @@ You can use parentheses in the query to give priority to the calculation. For ex
 ```
 
 
-**Using placeholders**
+**Uso de marcadores de posición**
 
 4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
 
 Two types of placeholders can be used: **indexed placeholders** and **named placeholders**:
 
-| -          | Indexed placeholders                                                                                                                                                                                    | Named placeholders                                                                                                                                                    |
+| -          | Marcadores de posición indexados                                                                                                                                                                        | Nombre del marcador de posición                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Definición | Parameters are inserted as :paramIndex (for example :1, :2...) in queryString and their corresponding values are provided by the sequence of value parameter(s). You can use up to 128 value parameters | Parameters are inserted as :paramName (for example :myparam) and their values are provided in the attributes and/or parameters objects in the querySettings parameter |
 | Ejemplo    | $r:=class.query(":1=:2";"city";"Chicago")                                                                                                                                                               | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o)                              |
@@ -798,13 +798,13 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
 ```4d
-$vSingles:=ds.Person.query("spouse = :1";Null) // will NOT work
+$vSingles:=ds.Person.query("spouse = :1";Null) // NO funcionará
 ```
 
 You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
 
 ```4d
- $vSingles:=ds.Person.query("spouse = null") //correct syntax
+ $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
 
@@ -858,7 +858,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 
 
-**formula parameter**
+**parámetro formula**
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
 
@@ -896,7 +896,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 | Propiedad     | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
-| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 | args          | Objeto   | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | allowFormulas | Booleano | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | context       | Texto    | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
@@ -938,7 +938,7 @@ queryPath:
 
 This section provides various examples of queries.
 
-Query on a string:
+Consultas en una cadena:
 
 ```4d
 $entitySelection:=ds.Customer.query("firstName = 'S@'")
@@ -950,7 +950,7 @@ Query with a NOT statement:
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
 ```
 
-Queries with dates:
+Búsquedas con fechas:
 
 ```4d
 $entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
@@ -1150,7 +1150,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Sólo se da como criterio un objeto `Formula`:
 
 ```4d
  var $es : cs.StudentsSelection

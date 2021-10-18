@@ -42,7 +42,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -200,7 +200,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### Exemple 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -269,7 +269,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->

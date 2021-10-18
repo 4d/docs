@@ -40,10 +40,10 @@ In project applications (.4DProject or .4dz files), 4D users and groups can be c
 
 |                                                               | 4D (single-user)             | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+| Adding/editing users and groups                               | sim                          | sim       |
+| Assigning user/group access to servers                        | sim                          | sim       |
+| User identification                                           | no (all users are Designer)  | sim       |
+| Access control once the Designer has been assigned a password | no (all access are Designer) | sim       |
 
 
 
@@ -68,5 +68,5 @@ This file can be stored at the following locations:
 - in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the application.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
 
-> If users and groups management is not active, the **directory.json** is not created.
+> If 4D password access control is not enabled, the **directory.json** is not created.
 

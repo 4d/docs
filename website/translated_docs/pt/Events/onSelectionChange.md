@@ -25,7 +25,7 @@ The current selection of rows or columns is modified. In this context, the [even
 | oldSelections | object  | Cell range before change       |
 | newSelections | object  | Cell range after change        |
 
-#### Example
+#### Exemplo
 
 ```4d
  If(FORM Event.code=On Selection Change)

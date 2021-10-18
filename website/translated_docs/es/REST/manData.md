@@ -25,7 +25,7 @@ Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7B
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 
-## Navigating data
+## Navegación de datos
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
@@ -37,7 +37,7 @@ An entity set (aka *entity selection*) is a collection of entities obtained thro
 
 To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-To access the entity set, you must use `$entityset/{entitySetID}`, for example:
+Para acceder al conjunto de entidades, debe utilizar `$entityset/{entitySetID}`, por ejemplo:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -87,13 +87,13 @@ You can always define which attributes to return in the REST response after an i
 
 You can apply this filter in the following ways:
 
-| Objeto                 | Sintaxis                                            | Ejemplo                                                       |
-| ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
-| Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| Entidad específica     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
-|                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
-| Entity selection       | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
+| Objeto                  | Sintaxis                                            | Ejemplo                                                       |
+| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| Dataclass               | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
+| Collection de entidades | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
+| Entidad específica      | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
+|                         | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
+| Entity selection        | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
@@ -104,8 +104,8 @@ Here are a few examples, showing you how to specify which attributes to return d
 You can apply this technique to:
 
 - Dataclasses (all or a collection of entities in a dataclass)
-- Specific entities
-- Entity sets
+- Entidades específicas
+- Conjuntos de entidades
 
 #### Ejemplo con una dataclass
 
@@ -218,7 +218,7 @@ The following request returns only the first name and last name attributes from 
 }
 ````
 
-#### Entity Set Example
+#### Ejemplo de conjunto de entidades
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 

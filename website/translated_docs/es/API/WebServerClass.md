@@ -75,7 +75,7 @@ They provide the following properties and functions:
 | Parámetros | Tipo         |    | Descripción                                                    |
 | ---------- | ------------ | -- | -------------------------------------------------------------- |
 | option     | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultado  | 4D.WebServer | <- | Web server object                                              |
+| Resultado  | 4D.WebServer | <- | Objeto servidor web                                            |
 
 <!-- END REF -->
 
@@ -448,7 +448,7 @@ Por defecto = 443
 
 The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
-Default = 480 minutes
+Por defecto = 480 minutos
 
 <!-- END REF -->
 
@@ -464,7 +464,7 @@ Default = 480 minutes
 
 The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
 
-Default = 480 minutes
+Por defecto = 480 minutos
 
 <!-- END REF -->
 
@@ -493,7 +493,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 **.isRunning** : Boolean<!-- END REF -->
 
 
-*Read-only property*
+*Propiedad de sólo lectura*
 
 The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
 
@@ -598,7 +598,7 @@ Valores posibles:
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1
-*   3 = TLSv1_2 (default)
+*   3 = TLSv1_2 (por defecto)
 *   4 = TLSv1_3
 
 If modified, the server must be restarted to use the new value.
@@ -615,7 +615,7 @@ If modified, the server must be restarted to use the new value.
 **.name** : Text<!-- END REF -->
 
 
-*Read-only property*
+*Propiedad de sólo lectura*
 
 The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
 
@@ -631,7 +631,7 @@ The <!-- REF #WebServerClass.name.Summary -->name of the web server application<
 **.openSSLVersion** : Text<!-- END REF -->
 
 
-*Read-only property*
+*Propiedad de sólo lectura*
 
 The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
 
@@ -647,7 +647,7 @@ The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 **.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*Read-only property*
+*Propiedad de sólo lectura*
 
 The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
 
@@ -705,7 +705,7 @@ The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of th
 
 The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
 
-*Read-only property*
+*Propiedad de sólo lectura*
 
 <!-- END REF -->
 
@@ -758,6 +758,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->
 **.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
+> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
 
 The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
 
@@ -775,7 +776,6 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
-
 **.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 
@@ -793,12 +793,12 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
 
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
-#### Returned object
+#### Objeto devuelto
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 

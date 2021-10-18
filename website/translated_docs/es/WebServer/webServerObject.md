@@ -32,7 +32,7 @@ The web server object of the host application (default web server) is automatica
 
 ```4d
 $nbSrv:=WEB Server list.length   
-//$nbSrv value is 1
+//el valor de $nbSrv es 1
 ```
 
 To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
@@ -51,7 +51,7 @@ If the application uses components and you want to call:
 - the host application's web server from a component or
 - the server that received the request (whatever the server),
 
-you can also use:
+también se puede utilizar:
 
 ```4d
 var webServer : 4D.WebServer 
@@ -62,14 +62,14 @@ webServer:=WEB Server(Web server receiving request)
 ```
 
 
-## Web server functions
+## Funciones del servidor web
 
 A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
-| Funciones                                | Parámetros        | Return value    | Descripción           |
-| ---------------------------------------- | ----------------- | --------------- | --------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (object) | status (objeto) | Starts the web server |
-| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |
+| Funciones                                | Parámetros       | Valor devuelto  | Descripción             |
+| ---------------------------------------- | ---------------- | --------------- | ----------------------- |
+| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objeto) | Iniciar el servidor web |
+| [`stop()`](API/WebServerClass.md#start)  | -                | -               | Detener el servidor Web |
 
 To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
 
@@ -86,7 +86,7 @@ $status:=webServer.stop()
 ```
 
 
-## Web server properties
+## Propiedades del servidor web
 
 A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
 

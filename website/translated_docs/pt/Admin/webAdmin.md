@@ -135,7 +135,7 @@ Or, you can set a custom `.4DSettings` file (xml format) and use it instead of t
 
 > The access key is not stored in clear in the `.4DSettings` file.
 
-Example:
+Exemplo:
 
 ```
 "%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 

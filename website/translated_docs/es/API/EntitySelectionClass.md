@@ -53,7 +53,7 @@ Entity selections can be created from existing selections using various function
 | Parámetros | Tipo               |    | Descripción                                                                                 |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
 | dsTable    | Tabla              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| parámetros | Object             | -> | Build option: context                                                                       |
+| parámetros | Object             | -> | Opciones de construcción: context                                                           |
 | Resultado  | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
 <!-- END REF -->
 
@@ -715,8 +715,8 @@ The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->re
 *attributePath* can refer to:
 
 *   a scalar dataclass attribute,
-*   related entity,
-*   related entities.
+*   entidad relacionada,
+*   entidades relacionadas.
 
 If *attributePath* is invalid, an empty collection is returned.
 
@@ -746,7 +746,7 @@ If several *attributePath* are given, a *targetPath* must be given for each. Onl
 
 #### Ejemplo
 
-Given the following table and relation:
+Dada la siguiente tabla y relación:
 
 ![](assets/en/API/entityselection.PNG)
 
@@ -1190,7 +1190,7 @@ In this example, we want to find the lowest salary among all the female employee
 <!-- REF #EntitySelectionClass.minus().Params -->
 | Parámetros      | Tipo               |    | Descripción                                                              |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------ |
-| entity          | 4D.Entity          | -> | Entity to substract                                                      |
+| entity          | 4D.Entity          | -> | Entidad a sustraer                                                       |
 | entitySelection | 4D.EntitySelection | -> | Entity selection to substract                                            |
 | Resultado       | 4D.EntitySelection | <- | New entity selection or a new reference on the existing entity selection |
 <!-- END REF -->
@@ -1329,7 +1329,7 @@ The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->re
 
 You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
 
-*   *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:
+*   *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. La sintaxis es:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
@@ -1416,7 +1416,7 @@ By default if you omit the *sortOrder* parameter, the resulting entity selection
 | Constante     | Valor | Comentario                     |
 | ------------- | ----- | ------------------------------ |
 | dk ascending  | 0     | Ascending sort order (default) |
-| dk descending | 1     | Descending sort order          |
+| dk descending | 1     | Orden descendente              |
 
 Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
 
@@ -1918,7 +1918,7 @@ Devuelve:
 
 #### Ejemplo 2
 
-Example with options:
+Ejemplo con opciones:
 
 ```4d
 var $employeesCollection : Collection

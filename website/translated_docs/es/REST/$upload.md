@@ -24,7 +24,7 @@ Then, you upload the selected image to 4D Server using a request such as:
 
 As a result, the server returns an ID that identifies the file:
 
-**Response**:
+**Respuesta**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
@@ -42,7 +42,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Response**:
+**Respuesta**:
 
 The modified entity is returned:
 

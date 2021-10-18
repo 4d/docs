@@ -95,7 +95,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-### Summary
+### Resumo
 
 
 |                                                                                                                                                                               |
@@ -109,11 +109,11 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 ## Formula
 
-<details><summary>History</summary>
-| Version | Changes                          |
-| ------- | -------------------------------- |
-| v17 R6  | Renamed (New formula -> Formula) |
-| v17 R3  | Added                            |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                         |
+| ------ | -------------------------------- |
+| v17 R6 | Renamed (New formula -> Formula) |
+| v17 R3 | Added                            |
 </details>
 
 <!-- REF #_command_.Formula.Syntax -->
@@ -169,7 +169,7 @@ A simple formula:
  var $o : Object
  $o:=New object("f";$f)
 
- $result:=$o.f() // returns 3
+ $result:=$o.f() // devoluções 3
 ```
 
 #### Example 2
@@ -244,11 +244,11 @@ Calling a formula using object notation:
 
 ## Formula from string
 
-<details><summary>History</summary>
-| Version | Changes                                                |
-| ------- | ------------------------------------------------------ |
-| v17 R6  | Renamed New formula from string -> Formula from string |
-| v17 R3  | Added                                                  |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                                               |
+| ------ | ------------------------------------------------------ |
+| v17 R6 | Renamed New formula from string -> Formula from string |
+| v17 R3 | Added                                                  |
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->
@@ -270,7 +270,7 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
 
-#### Example
+#### Exemplo
 
 The following code will create a dialog accepting a formula in text format:
 
@@ -300,10 +300,10 @@ The following code will create a dialog accepting a formula in text format:
 <!-- REF FunctionClass.apply().Desc -->
 ## .apply()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R3 | Added    |
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->
@@ -312,7 +312,7 @@ The following code will create a dialog accepting a formula in text format:
 <!-- REF #FunctionClass.apply().Params -->
 | Parameter     | Type       |    | Description                                                             |
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
-| thisObj       | Object     | -> | Object to be returned by the This command in the formula                |
+| thisObj       | Objeto     | -> | Object to be returned by the This command in the formula                |
 | formulaParams | Collection | -> | Collection of values to be passed as $1...$n when `formula` is executed |
 | Result        | any        | <- | Value from formula execution                                            |
 <!-- END REF -->
@@ -361,10 +361,10 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- REF FunctionClass.call().Desc -->
 ## .call()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R3 | Added    |
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->
@@ -373,7 +373,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- REF #FunctionClass.call().Params -->
 | Parameter | Type   |    | Description                                               |
 | --------- | ------ | -- | --------------------------------------------------------- |
-| thisObj   | Object | -> | Object to be returned by the This command in the formula  |
+| thisObj   | Objeto | -> | Object to be returned by the This command in the formula  |
 | params    | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
 | Result    | any    | <- | Value from formula execution                              |
 <!-- END REF -->
@@ -412,10 +412,10 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 <!-- REF FunctionClass.source.Desc -->
 ## .source
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R2 | Added    |
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->
@@ -428,7 +428,7 @@ The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the so
 
 This property is **read-only**.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $of : 4D.Function

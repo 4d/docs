@@ -59,7 +59,7 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 - single display name+email: "Somebody <somebody@domain.com>"
 - several emails: "Somebody <somebody@domain.com>,me@home.org"
 
-#### Object
+#### Objeto
 
 An object with two properties:
 
@@ -178,10 +178,10 @@ The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Su
 
 The `.bodyValues` object contains the following properties:
 
-| Property                   | Type    | Value                                                                                                                                       |
-| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| Property                   | Type     | Value                                                                                                                                       |
+| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text     | Value of the body part                                                                                                                      |
+| *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
 
@@ -326,9 +326,9 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Property        | Type    | Value                               |
-| --------------- | ------- | ----------------------------------- |
-| . \<keyword\> | boolean | Keyword to set (value must be true) |
+| Property        | Type     | Value                               |
+| --------------- | -------- | ----------------------------------- |
+| . \<keyword\> | booleano | Keyword to set (value must be true) |
 
 Reserved keywords:
 * $draft - Indicates a message is a draft
@@ -337,7 +337,7 @@ Reserved keywords:
 * $answered - Indicates a message has been replied to
 * $deleted - Indicates a message to delete
 
-#### Example
+#### Exemplo
 
 ```
  $mail.keywords["$flagged"]:=True
@@ -495,10 +495,10 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 ## MAIL Convert from MIME
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Parameter | Type       |    | Description   |
 | --------- | ---------- |:--:| ------------- |
 | mime      | Blob, Text | -> | Email in MIME |
-| Result    | Object     | <- | Email object  |
+| Result    | Objeto     | <- | Email object  |
 <!-- END REF -->
 
 #### Description
@@ -581,11 +581,11 @@ $status:=$transporter.send($email)
 
 ## MAIL Convert to MIME
 
-<details><summary>History</summary>
-| Version | Changes  |
-| ------- | -------- |
-| v17 R4  | Added    |
-| v17 R5  | Modified |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R4 | Added    |
+| v17 R5 | Modified |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
@@ -594,8 +594,8 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parameter | Type   |    | Description                       |
 | --------- | ------ |:--:| --------------------------------- |
-| mail      | Object | -> | Email object                      |
-| options   | Object | -> | Charset and encoding mail options |
+| mail      | Objeto | -> | Email object                      |
+| options   | Objeto | -> | Charset and encoding mail options |
 | Result    | Texto  | <- | Email object converted to MIME    |
 <!-- END REF -->
 
@@ -616,7 +616,7 @@ In *options*, you can set a specific charset and encoding configuration for the 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 
 
-#### Example
+#### Exemplo
 
 ```4d
 C_OBJECT($mail)

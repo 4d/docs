@@ -45,7 +45,7 @@ Una clase usuario en 4D está definida por un archivo de método específico (.4
 Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 
 - Un [nombre de clase](identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
-- Class names are case sensitive.
+- Los nombres de clases son sensibles a las mayúsculas y minúsculas.
 - No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
 
 Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el siguiente archivo:
@@ -129,7 +129,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- |
 | classStore | objeto | <- | Class store 4D |
 
-El comando `4D` devuelve la class store 4D integrada disponible. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
+El comando `4D` devuelve la class store 4D integrada disponible. Ofrece acceso a APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Ejemplo
 
@@ -146,9 +146,9 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Un objeto class tiene las propiedades y funciones siguientes:
 
-- [`name`](API/ClassClass.md#name) string
-- [`superclass`](API/ClassClass.md#superclass) object (null if none)
-- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
+- String [`name`](API/ClassClass.md#name)
+- objeto [`superclass`](API/ClassClass.md#superclass) (null si ninguno)
+- función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase.
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
 
@@ -156,9 +156,9 @@ Un objeto de clase es un [objeto compartido](shared.md) y, por tanto, se puede a
 
 ### Herencia
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass).
+Si una clase hereda de otra clase (es decir, se utiliza la palabra clave [Class extends](classes.md#class-extends-classname) en su definición), la clase padre es su [`superclass`](API/ClassClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Cuando 4D no encuentra una función o una propiedad en una clase, la busca en su [`superclass`](API/ClassClass.md#superclass); si no la encuentra, 4D sigue buscando en la superclase de la superclase, y así sucesivamente hasta que no haya más superclase (todos los objetos heredan de la superclase "Object").
 
 
 ## Palabras clave de clase
@@ -477,32 +477,32 @@ La palabra clave `This` devuelve una referencia al objeto actualmente procesado.
 
 En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. For example:
+Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. Por ejemplo:
 
 ```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
+$o:=New object("prop";42; "f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Cuando se utiliza una función [class constructor](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` se vincula al nuevo objeto que se está construyendo.
 
 ```4d
 //Class: ob
 
 Class Constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // Crear propiedades en This como
+    // quiera asignándoles
     This.a:=42 
 ```
 
 ```4d
-// in a 4D method  
+// en un método 4D  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este ejemplo](#example-1).
+> Cuando se llama al constructor de la superclase en un constructor que utiliza la palabra clave [Super](#super), hay que tener en cuenta que `This` no debe llamarse antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](#example-1).
 
 
 En todos los casos, `Esto` se refiere al objeto al que el método fue llamado, como si el método estuviera en el objeto..

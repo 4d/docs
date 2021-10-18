@@ -13,17 +13,17 @@ Although they are usually equivalent, some data types available at the database 
 | [Texto](Concepts/dt_string.md)             | Sim                 | Sim                  | Texto                                                   | `C_TEXT`, `ARRAY TEXTO`                                          |
 | [Date](Concepts/dt_date.md)                | Sim                 | Sim                  | Date                                                    | `C_DATE`, `ARRAY DATE`                                           |
 | [Hora](Concepts/dt_time.md)                | Sim                 | Sim                  | Hora                                                    | `C_TIME`, `ARRAY TIME`                                           |
-| [Boolean](Concepts/dt_boolean.md)          | Sim                 | Sim                  | Boolean                                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
+| [Booleano](Concepts/dt_boolean.md)         | Sim                 | Sim                  | Booleano                                                | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
 | [Integer](Concepts/dt_number.md)           | Sim                 | Converted to longint | Integer                                                 | `ARRAY INTEGER`                                                  |
 | [Longint](Concepts/dt_number.md)           | Sim                 | Sim                  | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
 | [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                                                       | -                                                                |
 | [Real](Concepts/dt_number.md)              | Sim                 | Sim                  | Real                                                    | `C_REAL`, `ARRAY REAL`                                           |
 | [Undefined](Concepts/dt_null_undefined.md) | -                   | Sim                  | -                                                       | -                                                                |
 | [Null](Concepts/dt_null_undefined.md)      | -                   | Sim                  | -                                                       | -                                                                |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Sim                  | Pointer                                                 | `C_POINTER`, `ARRAY POINTER`                                     |
-| [Picture](Concepts/dt_picture.md)          | Sim                 | Sim                  | Picture                                                 | `C_PICTURE`, `ARRAY PICTURE`                                     |
+| [Ponteiro](Concepts/dt_pointer.md)         | -                   | Sim                  | Ponteiro                                                | `C_POINTER`, `ARRAY POINTER`                                     |
+| [Imagem](Concepts/dt_picture.md)           | Sim                 | Sim                  | Imagem                                                  | `C_PICTURE`, `ARRAY PICTURE`                                     |
 | [BLOB](Concepts/dt_blob.md)                | Sim                 | Sim                  | Blob                                                    | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Object](Concepts/dt_object.md)            | Sim                 | Sim                  | Object                                                  | `C_OBJECT`, `ARRAY OBJECT`                                       |
+| [Objeto](Concepts/dt_object.md)            | Sim                 | Sim                  | Objeto                                                  | `C_OBJECT`, `ARRAY OBJECT`                                       |
 | [Collection](Concepts/dt_collection.md)    | -                   | Sim                  | Collection                                              | `C_COLLECTION`                                                   |
 | [Variant](Concepts/dt_variant.md)(2)       | -                   | Sim                  | Variant                                                 | `C_VARIANT`                                                      |
 
@@ -43,12 +43,12 @@ The default value depends on the variable type:
 | Date       | 00-00-00       |
 | Longint    | 0              |
 | Hora       | 00:00:00       |
-| Picture    | picture size=0 |
+| Imagem     | picture size=0 |
 | Real       | 0              |
-| Pointer    | Nil=true       |
+| Ponteiro   | Nil=true       |
 | Texto      | ""             |
 | Blob       | Blob size=0    |
-| Object     | null           |
+| Objeto     | null           |
 | Collection | null           |
 | Variant    | undefined      |
 
@@ -65,7 +65,7 @@ The following table lists the basic data types, the data types to which they can
 | Number (2)           | String    |           |         |         | Bool       |
 | Date                 | String    |           |         |         | Bool       |
 | Hora                 | String    |           |         |         | Bool       |
-| Boolean              |           | Num       |         |         |            |
+| Booleano             |           | Num       |         |         |            |
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
 

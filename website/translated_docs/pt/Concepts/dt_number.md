@@ -38,27 +38,27 @@ Negative numbers are specified with the minus sign (-). For example:
 
 ## Number operators
 
-| Operation                | Syntax           | Returns | Expression | Value |
-| ------------------------ | ---------------- | ------- | ---------- | ----- |
-| Addition                 | Number + Number  | Number  | 2 + 3      | 5     |
-| Subtraction              | Number - Number  | Number  | 3 – 2      | 1     |
-| Multiplication           | Number * Number  | Number  | 5 * 2      | 10    |
-| Division                 | Number / Number  | Number  | 5 / 2      | 2.5   |
-| Longint division         | Number \ Number | Number  | 5 \ 2     | 2     |
-| Modulo                   | Number % Number  | Number  | 5 % 2      | 1     |
-| Exponentiation           | Number ^ Number  | Number  | 2 ^ 3      | 8     |
-| Equality                 | Number = Number  | Boolean | 10 = 10    | True  |
-|                          |                  |         | 10 = 11    | False |
-| Inequality               | Number # Number  | Boolean | 10 #11     | True  |
-|                          |                  |         | 10 # 10    | False |
-| Greater than             | Number > Number  | Boolean | 11 > 10    | True  |
-|                          |                  |         | 10 > 11    | False |
-| Less than                | Number < Number  | Boolean | 10 < 11    | True  |
-|                          |                  |         | 11 < 10    | False |
-| Greater than or equal to | Number >= Number | Boolean | 11 >= 10   | True  |
-|                          |                  |         | 10 >= 11   | False |
-| Less than or equal to    | Number <= Number | Boolean | 10 <= 11   | True  |
-|                          |                  |         | 11 <= 10   | False |
+| Operation                | Sintaxe          | Returns  | Expression | Value |
+| ------------------------ | ---------------- | -------- | ---------- | ----- |
+| Addition                 | Number + Number  | Número   | 2 + 3      | 5     |
+| Subtraction              | Number - Number  | Número   | 3 – 2      | 1     |
+| Multiplication           | Number * Number  | Número   | 5 * 2      | 10    |
+| Division                 | Number / Number  | Número   | 5 / 2      | 2.5   |
+| Longint division         | Number \ Number | Número   | 5 \ 2     | 2     |
+| Modulo                   | Number % Number  | Número   | 5 % 2      | 1     |
+| Exponentiation           | Number ^ Number  | Número   | 2 ^ 3      | 8     |
+| Equality                 | Number = Number  | Booleano | 10 = 10    | True  |
+|                          |                  |          | 10 = 11    | False |
+| Inequality               | Number # Number  | Booleano | 10 #11     | True  |
+|                          |                  |          | 10 # 10    | False |
+| Greater than             | Number > Number  | Booleano | 11 > 10    | True  |
+|                          |                  |          | 10 > 11    | False |
+| Less than                | Number < Number  | Booleano | 10 < 11    | True  |
+|                          |                  |          | 11 < 10    | False |
+| Greater than or equal to | Number >= Number | Booleano | 11 >= 10   | True  |
+|                          |                  |          | 10 >= 11   | False |
+| Less than or equal to    | Number <= Number | Booleano | 10 <= 11   | True  |
+|                          |                  |          | 11 <= 10   | False |
 
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
@@ -103,7 +103,7 @@ Because each bit can equal 0 or 1, you can also think about a Long Integer value
 
 An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
 
-| Operation              | Operator  | Syntax              | Returns              |
+| Operation              | Operator  | Sintaxe             | Returns              |
 | ---------------------- | --------- | ------------------- | -------------------- |
 | Bitwise AND            | &         | Long & Long         | Long                 |
 | Bitwise OR (inclusive) | &#124;    | Long &#124; Long    | Long                 |
@@ -134,9 +134,9 @@ The following table lists the bitwise operators and their effects:
 | Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
 | Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
 
-### Examples
+### Exemplos
 
-| Operation              | Example                         | Result     |
+| Operation              | Exemplo                         | Result     |
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |

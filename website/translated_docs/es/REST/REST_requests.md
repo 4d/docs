@@ -40,7 +40,7 @@ With each REST request, you get the status along with the response. Below are a 
 | 404 Not Found             | The data class is not accessible via REST or the entity set doesn't exist. |
 | 500 Internal Server Error | Error processing the REST request.                                         |
 
-### Response
+### Respuesta
 
 The response (in JSON format) varies depending on the request.
 

@@ -8,7 +8,7 @@ The `CryptoKey` class in the 4D language encapsulates an asymetric encryption ke
 
 This class is available from the `4D` class store.
 
-### Example
+### Exemplo
 
 The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
 
@@ -26,7 +26,7 @@ ASSERT($status.success)
 ```
 
 
-### Summary
+### Resumo
 |                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
@@ -49,10 +49,10 @@ ASSERT($status.success)
 
 ## 4D.CryptoKey.new()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -61,7 +61,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | Parameter | Type         |    | Description                                                            |
 | --------- | ------------ | -- | ---------------------------------------------------------------------- |
-| settings  | Object       | -> | Settings to generate or load a key pair                                |
+| settings  | Objeto       | -> | Settings to generate or load a key pair                                |
 | result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
@@ -89,10 +89,10 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 <!-- REF CryptoKey.curve -->
 ## .curve
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -108,10 +108,10 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -121,8 +121,8 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options   | Object | -> | Decoding options                                                              |
-| Result    | Object | <- | Status                                                                        |
+| options   | Objeto | -> | Decoding options                                                              |
+| Result    | Objeto | <- | Estado                                                                        |
 <!-- END REF -->
 
 
@@ -145,7 +145,7 @@ The function returns a status object with `success` property set to `true` if th
 
 | Property | Type       | Description                                                         |
 | -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
+| success  | booleano   | True if the message has been successfully decrypted                 |
 | result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
 
@@ -157,10 +157,10 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF CryptoKey.encrypt().Desc -->
 ## .encrypt()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -170,7 +170,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 | Parameter | Type   |    | Description                                                                   |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
-| options   | Object | -> | Encoding options                                                              |
+| options   | Objeto | -> | Encoding options                                                              |
 | Result    | Texto  | <- | Message encrypted and encoded using the `options.encodingEncrypted`           |
 <!-- END REF -->
 
@@ -198,10 +198,10 @@ The returned value is an encrypted message.
 <!-- REF CryptoKey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -226,10 +226,10 @@ The returned value is the private key.
 <!-- REF CryptoKey.getPublicKey().Desc -->
 ## .getPublicKey()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -253,10 +253,10 @@ The returned value is the public key.
 <!-- REF CryptoKey.pem.Desc -->
 ## .pem
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -271,10 +271,10 @@ The returned value is the public key.
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
@@ -283,7 +283,7 @@ The returned value is the public key.
 | Parameter | Type   |    | Description                                                                     |
 | --------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string to sign                                                          |
-| options   | Object | -> | Signing options                                                                 |
+| options   | Objeto | -> | Signing options                                                                 |
 | Result    | Texto  | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
@@ -293,12 +293,12 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *options*
 
-| Property          | Type    | Description                                                                                                                                                          |
-| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| encodingEncrypted | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
-| encoding          | text    | ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                      |
+| Property          | Type     | Description                                                                                                                                                          |
+| ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+| encodingEncrypted | text     | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
+| pss               | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+| encoding          | text     | ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                      |
 
 
 #### *Result*
@@ -311,10 +311,10 @@ The utf8 representation of the *message* string.
 ## .size
 <!-- END REF -->
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -327,10 +327,10 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 ## .type
 <!-- END REF -->
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 
@@ -343,10 +343,10 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R4 | Added    |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
@@ -356,8 +356,8 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
 | message   | Texto  | -> | Message string that was used to produce the signature                                             |
 | signature | Texto  | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options   | Object | -> | Signing options                                                                                   |
-| Result    | Object | <- | Status of the verification                                                                        |
+| options   | Objeto | -> | Signing options                                                                                   |
+| Result    | Objeto | <- | Status of the verification                                                                        |
 <!-- END REF -->
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
@@ -367,11 +367,11 @@ The `CryptoKey` must contain a valid **public** key.
 
 #### *options*
 
-| Property | Type    | Description                                                                                                                                                          |
-| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash     | text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
-| encoding | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
+| Property | Type     | Description                                                                                                                                                          |
+| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash     | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+| pss      | booleano | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+| encoding | text     | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
 
 
 #### *Result*
@@ -382,7 +382,7 @@ In case the signature couldn't be verified because it was not signed with the sa
 
 | Property | Type       | Description                                                 |
 | -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
+| success  | booleano   | True if the signature matches the message                   |
 | errors   | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 

@@ -20,6 +20,6 @@ For more information about the image formats, refer to [`$imageformat`]($imagefo
 
 ## Saving a BLOB attribute to disk
 
-Si quieres guardar un BLOB almacenado en su clase de datos, puedes escribir lo siguiente pasando también "true" a $binary:
+Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo siguiente pasando también "true" a $binary:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

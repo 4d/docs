@@ -116,7 +116,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 // Verificar la contraseña hash...
 ```
 
-### Returned value
+### Valor devuelto
 
 El parámetro de retorno de una función se declara añadiendo una flecha (->) y la definición del parámetro después de la lista de parámetros de entrada. Por ejemplo:
 
@@ -169,7 +169,7 @@ En el código del método, el valor de cada parámetro se copia automáticamente
 ```
 
 
-### Returned value
+### Valor devuelto
 
 El valor a devolver se pone automáticamente en la variable local `$0`.
 
@@ -208,7 +208,7 @@ Puede utilizar toda [expresión](quick-tour.md#expression-types) como parámetro
 
 Las expresiones de tablas o arrays sólo pueden pasarse [como referencia utilizando un puntero](dt_pointer.md#pointers-as-parameters-to-methods).
 
-## Parameter indirection (${N})
+## Indirección de parámetros (${N})
 
 4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
 
@@ -352,7 +352,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Wrong parameter type
+## Tipo de parámetro equivocado
 
 Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
 

@@ -5,7 +5,7 @@ title: File
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
-### Example
+### Exemplo
 
 The following example creates a preferences file in the project folder:
 
@@ -55,10 +55,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ## File
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -129,10 +129,10 @@ If the command is called from a component, pass the optional * parameter to get 
 
 ## 4D.File.new()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R6 | Added    |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
@@ -152,10 +152,10 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!-- REF file.create().Desc -->
 ## .create()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!--REF file.create().Note -->
@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Type    |    | Description                                                |
-| --------- | ------- | -- | ---------------------------------------------------------- |
-| Result    | Boolean | <- | True if the file was created successfully, false otherwise |
+| Parameter | Type     |    | Description                                                |
+| --------- | -------- | -- | ---------------------------------------------------------- |
+| Result    | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
 #### Description
@@ -182,7 +182,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
 
-#### Example
+#### Exemplo
 
 Creation of a preferences file in the database folder:
 
@@ -199,10 +199,10 @@ Creation of a preferences file in the database folder:
 <!-- REF file.createAlias().Desc -->
 ## .createAlias()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->
@@ -238,7 +238,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
-#### Example
+#### Exemplo
 
 You want to create an alias to a file in your database folder:
 
@@ -263,10 +263,10 @@ You want to create an alias to a file in your database folder:
 <!-- REF file.delete().Desc -->
 ## .delete()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -290,7 +290,7 @@ If the file is currently open, an error is generated.
 If the file does not exist on disk, the function does nothing (no error is generated).
 > **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
-#### Example
+#### Exemplo
 
 You want to delete a specific file in the database folder:
 
@@ -322,10 +322,10 @@ You want to delete a specific file in the database folder:
 <!-- REF file.getAppInfo().Desc -->
 ## .getAppInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19    | Added    |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->
@@ -334,7 +334,7 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parameter | Type   |    | Description                                           |
 | --------- | ------ | -- | ----------------------------------------------------- |
-| Result    | Object | <- | Contents of .exe/.dll version resource or .plist file |
+| Result    | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -367,7 +367,7 @@ All property values are Text.
 
 The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
-#### Example
+#### Exemplo
 
 ```4d
     // display copyright info of application .exe file (windows)
@@ -441,10 +441,10 @@ ALERT($info.Copyright)
 <!-- REF file.moveTo().Desc -->
 ## .moveTo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -473,7 +473,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 The moved `File` object.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -509,10 +509,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- REF file.rename().Desc -->
 ## .rename()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -539,7 +539,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 The renamed `File` object.
 
-#### Example
+#### Exemplo
 
 You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
@@ -553,10 +553,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- REF file.setAppInfo().Desc -->
 ## .setAppInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19    | Added    |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->
@@ -565,7 +565,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 | Parameter | Type   |    | Description                                                      |
 | --------- | ------ | -- | ---------------------------------------------------------------- |
-| info      | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
+| info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -605,7 +605,7 @@ If a key set in the *info* parameter is already defined in the .plist file, its 
 
 > To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
 
-#### Example
+#### Exemplo
 
 ```4d
   // set copyright and version of a .exe file (Windows)
@@ -637,10 +637,10 @@ $infoPlistFile.setAppInfo($info)
 <!-- REF file.setContent().Desc -->
 ## .setContent()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -659,7 +659,7 @@ $infoPlistFile.setAppInfo($info)
 The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
-#### Example
+#### Exemplo
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
@@ -675,10 +675,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 ## .setText()
 
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -727,7 +727,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 
 
-#### Example
+#### Exemplo
 
 ```4d
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)

@@ -17,17 +17,17 @@ De plus, les fichiers de projet 4D facilitent la programmation générique, la c
 
 ## Développement
 
-Les projets 4D sont développés à l'aide de l'application **4D**. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.
+Les projets 4D sont développés à l'aide de l'application **4D**. Elle fournit un environnement de développement intégré (IDE) pour les projets 4D ainsi qu'un serveur web, un générateur d'application mobile, une exécution d'application, permettant de développer, tester et déboguer le projet.
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
-## Final application
+## Application finale
 
-Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
+Project files can be [compiled](compiler.md) and easily deployed. 4D vous permet de créer trois types d'applications à partir de vos projets :
 
 - [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/4d-for-ios/) applications,
-- [desktop](Desktop/building.md) applications (client/server or single-user).
+- des applications [mobile](https://developer.4d.com/4d-for-ios/),
+- des applications [desktop](Desktop/building.md) (client/serveur ou monoposte).
 
-Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.
+Les applications back-end peuvent être déployées à l'aide de 4D Server, de 4D, ou bien fusionnées avec la licence 4D Volume.

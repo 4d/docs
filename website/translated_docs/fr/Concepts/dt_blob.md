@@ -5,7 +5,7 @@ title: BLOB
 
 Un champ, une variable ou une expression de type BLOB (Binary Large OBjects) est une série contiguë d'octets qui peut être traitée comme un seul objet ou dont les octets peuvent être adressés individuellement. Un BLOB peut être vide (longueur nulle) ou contenir jusqu'à 2147483647 octets (2 Go).
 
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> Par défaut, la taille maximale d'un blob dans 4D est de 2 Go, mais cette taille peut être inférieure en fonction de votre OS et l'espace mémoire disponible.
 
 Lorsque vous travaillez avec un BLOB, il est stocké entièrement en mémoire. Si vous travaillez avec une variable, le BLOB n'existe qu'en mémoire. Si vous travaillez avec un champ de type BLOB, il est chargé en mémoire à partir du disque, comme le reste de l'enregistrement auquel il appartient.
 

@@ -62,7 +62,7 @@ You can use the optional *type* parameter to explicitly set the `content-type` o
 
 By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. The following rules are applied for the main MIME types:
 
-| Extension | Content-Type                  |
+| Extensión | Content-Type                  |
 | --------- | ----------------------------- |
 | jpg, jpeg | image/jpeg                    |
 | png       | image/png                     |

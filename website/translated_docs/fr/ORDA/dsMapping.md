@@ -198,7 +198,7 @@ Les propriétés de l'entité sont toutefois énumérables :
 
 ### Entity selection
 
-Une sélection d'entité est un objet contenant une ou plusieurs référence(s) à des entités appartenant à la même dataclasse. Elle est généralement créée à la suite d'une requête ou retournée à partir d'un attribut relationnel. Une sélection d'entité peut contenir 0, 1 ou X entités de la dataclasse - où X peut représenter le nombre total d'entités contenues dans la dataclasse.
+Une sélection d'entité est un objet contenant une ou plusieurs référence(s) à des entités appartenant à la même dataclasse. Elle est généralement créée à la suite d'une requête ou retournée à partir d'un attribut relationnel. Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
 Exemple :
 
@@ -207,12 +207,9 @@ var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe
 $e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-Les sélections d'entités peuvent être :
+Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
 
-- "partageables" or "non partageables",
-- "triées" ou "non triées".
-
-Ces points sont décrits ci-dessous.
+> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 

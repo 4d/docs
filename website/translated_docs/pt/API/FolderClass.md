@@ -7,7 +7,7 @@ title: Folder
 
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
-### Example
+### Exemplo
 
 The following example creates a "JohnSmith" folder:
 
@@ -49,10 +49,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ## Folder
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
@@ -112,10 +112,10 @@ If the command is called from a component, pass the optional * parameter to get 
 
 ## 4D.Folder.new()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R6 | Added    |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
@@ -135,10 +135,10 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!-- REF folder.create().Desc -->
 ## .create()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -147,9 +147,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Type    |    | Description                                                  |
-| --------- | ------- | -- | ------------------------------------------------------------ |
-| Result    | Boolean | <- | True if the folder was created successfully, false otherwise |
+| Parameter | Type     |    | Description                                                  |
+| --------- | -------- | -- | ------------------------------------------------------------ |
+| Result    | Booleano | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
 
 
@@ -195,10 +195,10 @@ End if
 <!-- REF folder.createAlias().Desc -->
 ## .createAlias()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -236,7 +236,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
-#### Example
+#### Exemplo
 
 You want to create an alias to an archive folder in your database folder:
 
@@ -257,10 +257,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF folder.delete().Desc -->
 ## .delete()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -373,10 +373,10 @@ When `Delete with contents` is passed:
 <!-- REF folder.moveTo().Desc -->
 ## .moveTo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -404,7 +404,7 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 The moved `Folder` object.
 
-#### Example
+#### Exemplo
 
 You want to move and rename a folder:
 
@@ -443,10 +443,10 @@ You want to move and rename a folder:
 <!-- REF folder.rename().Desc --> 
 ## .rename()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
@@ -473,7 +473,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 The renamed `Folder` object.
 
-#### Example
+#### Exemplo
 
 
 ```4d
