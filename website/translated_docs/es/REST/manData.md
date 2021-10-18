@@ -105,7 +105,7 @@ You can apply this technique to:
 
 - Dataclasses (all or a collection of entities in a dataclass)
 - Entidades específicas
-- Entity sets
+- Conjuntos de entidades
 
 #### Ejemplo con una dataclass
 

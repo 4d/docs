@@ -403,7 +403,7 @@
         "title": "ピクチャー"
       },
       "FormEditor/action": {
-        "title": "動作"
+        "title": "アクション"
       },
       "FormEditor/propertiesForm": {
         "title": "フォームプロパティ"
@@ -469,7 +469,7 @@
         "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
-        "title": "動作"
+        "title": "アクション"
       },
       "FormObjects/propertiesAnimation": {
         "title": "アニメーション"

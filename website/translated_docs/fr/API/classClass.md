@@ -13,12 +13,13 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 
 |                                                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;contient le nom de l'objet `4D.Class`|
-| [**.new**( *param* : any { *;...paramN* } ) : 4D.Class](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé |
-| [**.superclass** : 4D.Class](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;retourne la classe parente de la classe |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
 
 
+<!-- REF ClassClass.name.Desc -->
 ## .name
 
 <details><summary>Historique</summary>
@@ -28,16 +29,20 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 
 </details>
 
-**.name** : Text
+<!-- REF #ClassClass.name.Syntax -->
+**.name** : Text<!-- END REF -->
+
 #### Description
 
-La propriété `.name` contient le nom de l'objet `4D.Class`. Les noms de classe sont sensibles à la casse.
+La propriété `.name` <!-- REF #ClassClass.name.Summary -->contient le nom de l'objet `4D.Class`<!-- END REF -->. Les noms de classe sont sensibles à la casse.
 
 Cette propriété est en **lecture seule**. 
 
+<!-- END REF -->
 
 
 
+<!-- REF ClassClass.new().Desc -->
 ## .new()
 
 <details><summary>Historique</summary>
@@ -46,16 +51,20 @@ Cette propriété est en **lecture seule**.
 | v18 R3  | Ajoutées      |
 </details>
 
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class
+<!-- REF #ClassClass.new().Syntax -->
+**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+
+<!-- REF #ClassClass.new().Params -->
 | Paramètres | Type     |    | Description                                      |
 | ---------- | -------- |:--:| ------------------------------------------------ |
 | param      | any      | -> | Parameter(s) to pass to the constructor function |
 | Résultat   | 4D.Class | <- | Nouvel objet de la classe                        |
+<!-- END REF -->
 
 
 #### Description
 
-La fonction `.new()` crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
+La fonction `.new()` <!-- REF #ClassClass.new().Summary -->crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé<!-- END REF -->. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
 You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
 
@@ -91,9 +100,11 @@ $person:=cs.Person.new("John";"Doe";40)
 ```
 
 
+<!-- END REF -->
 
 
 
+<!-- REF ClassClass.superclass.Desc -->
 ## .superclass
 
 <details><summary>Historique</summary>
@@ -103,10 +114,12 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-**.superclass** : 4D.Class
+<!-- REF #ClassClass.superclass.Syntax -->
+**.superclass** : 4D.Class<!-- END REF -->
+
 #### Description
 
-La propriété `.superclass` retourne la classe parente de la classe. Une superclasse peut être un objet `4D.Class`, ou un objet `cs.className`. Si la classe n'a pas de classe parente, la propriété renvoie **null**.
+La propriété `.superclass` <!-- REF #ClassClass.superclass.Summary -->retourne la classe parente de la classe<!-- END REF -->. Une superclasse peut être un objet `4D.Class`, ou un objet `cs.className`. Si la classe n'a pas de classe parente, la propriété renvoie **null**.
 
 Une superclasse de classe utilisateur est déclarée dans une classe à l'aide du mot-clé [`Class extend<superclass>`](Concepts/classes.md#class-extends-classname).
 
@@ -128,5 +141,6 @@ $sup:=cs.MyFile.superclass //File
 
 
 **Voir également :** [Super](Concepts/classes.md#super)
+<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

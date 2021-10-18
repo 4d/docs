@@ -46,7 +46,7 @@ ds.Company.hires //returns the list of employees
 But don't go too fast. Let's see now how to record data in ORDA dataclasses.
 
 
-## Adding data
+## Añadir datos
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.

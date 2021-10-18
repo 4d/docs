@@ -19,28 +19,28 @@ Email objects provide the following properties:
 
 |                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**.attachments** : Collection](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;collection of *attachment* object(s)|
-| [**.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email|
-| [**.bodyStructure** : Object](#bodyStructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)|
-| [**.bodyValues** : Object](#bodyValues)<p>&nbsp;&nbsp;&nbsp;&nbsp;*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)|
-| [**.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection](#cc)<p>&nbsp;&nbsp;&nbsp;&nbsp;Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email|
-| [**.comments** : Text](#comments)<p>&nbsp;&nbsp;&nbsp;&nbsp;additional comments header|
-| [**.from** : Text<br>**.from** : Object<br>**.from** : Collection](#from)<p>&nbsp;&nbsp;&nbsp;&nbsp;Originating [address(es)](#email-addresses) of the email|
-| [**.headers** : Collection](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;collection of `EmailHeader` objects, in the order they appear in the message|
-| [**.htmlBody** : Text](#htmlBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)|
-| [**.id** : Text](#id)<p>&nbsp;&nbsp;&nbsp;&nbsp;unique ID from the IMAP server|
-| [**.inReplyTo** : Text](#inReplyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;message identifier(s) of the original message(s) to which the current message is a reply|
-| [**.keywords** : Object](#keywords)<p>&nbsp;&nbsp;&nbsp;&nbsp;set of keywords as an object, where each property name is a keyword and each value is true|
-| [**.messageId** : Text](#messageId)<p>&nbsp;&nbsp;&nbsp;&nbsp;message identifier header ("message-id")|
-| [**.receivedAt** : Text](#receivedAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)|
-| [**.references** : Collection](#references)<p>&nbsp;&nbsp;&nbsp;&nbsp;Collection of all message-ids of messages in the preceding reply chain|
-| [**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection](#replyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;[addresse(s)](#email-addresses) for responses|
-| [**.sendAt** : Text](#sendAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;Email timestamp in ISO 8601 UTC format|
-| [**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection](#sender)<p>&nbsp;&nbsp;&nbsp;&nbsp;email source [addresse(s)](#email-addresses) of the email|
-| [**.size** : Integer](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;size (expressed in bytes) of the Email object returned by the IMAP server|
-| [**.subject** : Text](#subject)<p>&nbsp;&nbsp;&nbsp;&nbsp;description of topic|
-| [**.textBody** : Text](#textBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)|
-| [**.to** : Text<br>**.to** : Object<br>**.to** : Collection](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;primary recipient [addresse(s)](#email-addresses) of the email|
+| [<!-- INCLUDE #emailObjectClass.attachments.Syntax -->](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.attachments.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.bcc.Syntax -->](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bcc.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.bodyStructure.Syntax -->](#bodyStructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bodyStructure.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.bodyValues.Syntax -->](#bodyValues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bodyValues.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.cc.Syntax -->](#cc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.cc.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.comments.Syntax -->](#comments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.comments.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.from.Syntax -->](#from)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.from.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.headers.Syntax -->](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.headers.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.htmlBody.Syntax -->](#htmlBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.htmlBody.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.id.Syntax -->](#id)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.id.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.inReplyTo.Syntax -->](#inReplyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.inReplyTo.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.keywords.Syntax -->](#keywords)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.keywords.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.messageId.Syntax -->](#messageId)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.messageId.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.receivedAt.Syntax -->](#receivedAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.receivedAt.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.references.Syntax -->](#references)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.references.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.replyTo.Syntax -->](#replyTo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.replyTo.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.sendAt.Syntax -->](#sendAt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.sendAt.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.sender.Syntax -->](#sender)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.sender.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.size.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.subject.Syntax -->](#subject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.subject.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.textBody.Syntax -->](#textBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.textBody.Summary -->|
+| [<!-- INCLUDE #emailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.to.Summary -->|
 
 
 ### Email Addresses
@@ -105,13 +105,15 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 ## .attachments
 
-**.attachments** : Collection
+<!-- REF #emailObjectClass.attachments.Syntax -->
+**.attachments** : Collection<!-- END REF -->
+
 
 #### Descripción
 
 
 
-The `.attachments` property contains a collection of *attachment* object(s).
+The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
 Attachment objects are defined through the [`MAIL New attachment`](https://doc.4d.com/4dv18/help/command/en/page1644.html) command.
 
@@ -120,22 +122,26 @@ Attachment objects are defined through the [`MAIL New attachment`](https://doc.4
 
 ## .bcc 
 
-**.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection
+<!-- REF #emailObjectClass.bcc.Syntax -->
+**.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.bcc` property contains the Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email.
+The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 
 
 ## .bodyStructure
 
-**.bodyStructure** : Object
+<!-- REF #emailObjectClass.bodyStructure.Syntax -->
+**.bodyStructure** : Object<!-- END REF -->
+
 
 #### Descripción
 
-The `.bodyStructure` property contains the *EmailBodyPart* object, i.e. the full MIME structure of the message body (optional). See [Handling body part](#handling-body-part) section.
+The `.bodyStructure` property contains the <!-- REF #emailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyStructure` object contains the following properties:
 
@@ -156,11 +162,13 @@ The `.bodyStructure` object contains the following properties:
 
 ## .bodyValues
 
-**.bodyValues** : Object
+<!-- REF #emailObjectClass.bodyValues.Syntax -->
+**.bodyValues** : Object<!-- END REF -->
+
 
 #### Descripción
 
-The `.bodyValues` property contains the *EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional). See [Handling body part](#handling-body-part) section.
+The `.bodyValues` property contains the <!-- REF #emailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyValues` object contains the following properties:
 
@@ -174,11 +182,13 @@ The `.bodyValues` object contains the following properties:
 
 ## .cc 
 
-**.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection
+<!-- REF #emailObjectClass.cc.Syntax -->
+**.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.cc` property contains the Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email.
+The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 
@@ -187,11 +197,13 @@ The `.cc` property contains the Carbon Copy (CC) additional email recipient [add
 
 ## .comments
 
-**.comments** : Text
+<!-- REF #emailObjectClass.comments.Syntax -->
+**.comments** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.comments` property contains an additional comments header.
+The `.comments` property contains an <!-- REF #emailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
 
 Comments only appear within the header section of the message (keeping the message's body untouched).
 
@@ -202,11 +214,13 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 ## .from 
 
-**.from** : Text<br>**.from** : Object<br>**.from** : Collection
+<!-- REF #emailObjectClass.from.Syntax -->
+**.from** : Text<br>**.from** : Object<br>**.from** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.from` property contains the Originating [address(es)](#email-addresses) of the email.
+The `.from` property contains the <!-- REF #emailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
 
 Each email you send out has both the [sender](#sender) and **from** addresses:
@@ -221,11 +235,13 @@ For better deliverability, it is recommended to use the same from and sender add
 
 ## .headers
 
-**.headers** : Collection
+<!-- REF #emailObjectClass.headers.Syntax -->
+**.headers** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.headers` property contains a collection of `EmailHeader` objects, in the order they appear in the message. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
+The `.headers` property contains a <!-- REF #emailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
 
 > If an `EmailHeader` object property defines a header such as "from" or "cc" which is already set as a property at the mail level, the `EmailHeader` property is ignored.
 
@@ -244,11 +260,13 @@ Every object of the headers collection can contain the following properties:
 
 ## .htmlBody
 
-**.htmlBody** : Text
+<!-- REF #emailObjectClass.htmlBody.Syntax -->
+**.htmlBody** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.htmlBody` property contains the HTML representation of the email message (default charset is UTF-8) (optional, SMTP only). See [Handling body part](#handling-body-part) section.
+The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
 
@@ -258,13 +276,15 @@ The `.htmlBody` property contains the HTML representation of the email message (
 
 ## .id
 
-**.id** : Text
+<!-- REF #emailObjectClass.id.Syntax -->
+**.id** : Text<!-- END REF -->
+
 
 #### Descripción
 
 [IMAP transporter](imapTransporterClass.md) only.
 
-The `.id` property contains the unique ID from the IMAP server.
+The `.id` property contains the <!-- REF #emailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
 
 
 
@@ -273,11 +293,13 @@ The `.id` property contains the unique ID from the IMAP server.
 
 ## .inReplyTo
 
-**.inReplyTo** : Text
+<!-- REF #emailObjectClass.inReplyTo.Syntax -->
+**.inReplyTo** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.inReplyTo` property contains the message identifier(s) of the original message(s) to which the current message is a reply.
+The `.inReplyTo` property contains the <!-- REF #emailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -288,11 +310,13 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 ## .keywords
 
-**.keywords** : Object
+<!-- REF #emailObjectClass.keywords.Syntax -->
+**.keywords** : Object<!-- END REF -->
+
 
 #### Descripción
 
-The `.keywords` property contains a set of keywords as an object, where each property name is a keyword and each value is true.
+The `.keywords` property contains a <!-- REF #emailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
@@ -346,11 +370,13 @@ Reserved keywords:
 
 ## .messageId
 
-**.messageId** : Text
+<!-- REF #emailObjectClass.messageId.Syntax -->
+**.messageId** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.messageId` property contains a message identifier header ("message-id").
+The `.messageId` property contains a <!-- REF #emailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
 
 This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com". This unique ID is used in particular on forums or public mailing lists. In general, mail servers automatically add this header to the messages they send.
 
@@ -358,13 +384,15 @@ This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com
 
 ## .receivedAt 
 
-**.receivedAt** : Text
+<!-- REF #emailObjectClass.receivedAt.Syntax -->
+**.receivedAt** : Text<!-- END REF -->
+
 
 #### Descripción
 
 [IMAP transporter](imapTransporterClass.md) only.
 
-The `.receivedAt` property contains the timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z).
+The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
 
 
 
@@ -373,11 +401,13 @@ The `.receivedAt` property contains the timestamp of the email's arrival on the 
 
 ## .references
 
-**.references** : Collection
+<!-- REF #emailObjectClass.references.Syntax -->
+**.references** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.references` property contains the Collection of all message-ids of messages in the preceding reply chain.
+The `.references` property contains the <!-- REF #emailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -386,11 +416,13 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 ## .replyTo 
 
-**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection
+<!-- REF #emailObjectClass.replyTo.Syntax -->
+**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.replyTo` property contains the [addresse(s)](#email-addresses) for responses.
+The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
 
 
 
@@ -398,22 +430,26 @@ The `.replyTo` property contains the [addresse(s)](#email-addresses) for respons
 
 ## .sendAt
 
-**.sendAt** : Text
+<!-- REF #emailObjectClass.sendAt.Syntax -->
+**.sendAt** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.sendAt` property contains the Email timestamp in ISO 8601 UTC format.
+The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
 
 
 
 
 ## .sender 
 
-**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection
+<!-- REF #emailObjectClass.sender.Syntax -->
+**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.sender` property contains the email source [addresse(s)](#email-addresses) of the email.
+The `.sender` property contains the <!-- REF #emailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 Each email you send out has both the **sender** and **[from](#from)** addresses:
@@ -428,24 +464,28 @@ For better deliverability, it is recommended to use the same from and sender add
 
 ## .size 
 
-**.size** : Integer
+<!-- REF #emailObjectClass.size.Syntax -->
+**.size** : Integer<!-- END REF -->
+
 
 #### Descripción
 
 [IMAP transporter](imapTransporterClass.md) only.
 
-The `.size` property contains the size (expressed in bytes) of the Email object returned by the IMAP server.
+The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
 
 
 
 
 ## .subject
 
-**.subject** : Text
+<!-- REF #emailObjectClass.subject.Syntax -->
+**.subject** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.subject` property contains the description of topic.
+The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
 
 
 
@@ -453,20 +493,24 @@ The `.subject` property contains the description of topic.
 
 ## .textBody
 
-**.textBody** : Text
+<!-- REF #emailObjectClass.textBody.Syntax -->
+**.textBody** : Text<!-- END REF -->
+
 
 #### Descripción
 
-The `.textBody` property contains the Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only). See [Handling body part](#handling-body-part) section.
+The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
 
 ## .to 
 
-**.to** : Text<br>**.to** : Object<br>**.to** : Collection
+<!-- REF #emailObjectClass.to.Syntax -->
+**.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
+
 
 #### Descripción
 
-The `.to` property contains the primary recipient [addresse(s)](#email-addresses) of the email. 
+The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->. 
 
 <style> h2 { background: #d9ebff;}</style>

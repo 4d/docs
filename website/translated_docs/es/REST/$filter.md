@@ -77,7 +77,7 @@ El comparador debe ser uno de los siguientes valores:
 | >=         | greater than or equal to |
 | <          | menor que                |
 | <=         | less than or equal to    |
-| begin      | begins with              |
+| begin      | comienza con             |
 
 ## Ejemplos
 

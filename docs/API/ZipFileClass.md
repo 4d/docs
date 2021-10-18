@@ -7,27 +7,27 @@ The following properties and functions from the [File](FileClass.md) class are a
 
 |Available [File](FileClass.md) APIs for ZIPFile|Comment |
 |---|---|
-|[**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File](FileClass.md#copyto)||
-|[**.creationDate** : Date](FileClass.md#creationdate)||
-|[**.creationTime** : Time](FileClass.md#creationtime)||
-|[**.exists** : Boolean](FileClass.md#exists)||
-|[**.extension** : Text](FileClass.md#extension)||
-|[**.fullName** : Text](FileClass.md#fullname)||
-|[**.getContent( )** : 4D.Blob](FileClass.md#getcontent)||
-|[**.getIcon**( { *size* : Integer } ) : Picture](FileClass.md#geticon)||
-|[**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text](FileClass.md#gettext)||
-|[**.hidden** : Boolean](FileClass.md#hidden)||
-|[**.isAlias** : Boolean](FileClass.md#isalias)||
-|[**.isFile** : Boolean](FileClass.md#isfile)||
-|[**.isFolder** : Boolean](FileClass.md#isfolder)||
-|[**.isWritable** : Boolean](FileClass.md#iswritable)|Always false with ZIP archive|
-|[**.modificationDate** : Date](FileClass.md#modificationdate)||
-|[**.modificationTime** : Time](FileClass.md#modificationtime)||
-|[**.name** : Text](FileClass.md#name)||
-|[**.original** : 4D.File<br>**.original** : 4D.Folder](FileClass.md#original)||
-|[**.parent** : 4D.Folder](FileClass.md#parent)||
-|[**.path** : Text](FileClass.md#path)|Returns a path relative to the archive|
-|[**.platformPath** : Text](FileClass.md#platformpath)||
+|[<!-- INCLUDE #document.copyTo().Syntax -->](FileClass.md#copyto)||
+|[<!-- INCLUDE #document.creationDate.Syntax -->](FileClass.md#creationdate)||
+|[<!-- INCLUDE #document.creationTime.Syntax -->](FileClass.md#creationtime)||
+|[<!-- INCLUDE #document.exists.Syntax -->](FileClass.md#exists)||
+|[<!-- INCLUDE #document.extension.Syntax -->](FileClass.md#extension)||
+|[<!-- INCLUDE #document.fullName.Syntax -->](FileClass.md#fullname)||
+|[<!-- INCLUDE #document.getContent().Syntax -->](FileClass.md#getcontent)||
+|[<!-- INCLUDE #document.getIcon().Syntax -->](FileClass.md#geticon)||
+|[<!-- INCLUDE #document.getText().Syntax -->](FileClass.md#gettext)||
+|[<!-- INCLUDE #document.hidden.Syntax -->](FileClass.md#hidden)||
+|[<!-- INCLUDE #document.isAlias.Syntax -->](FileClass.md#isalias)||
+|[<!-- INCLUDE #document.isFile.Syntax -->](FileClass.md#isfile)||
+|[<!-- INCLUDE #document.isFolder.Syntax -->](FileClass.md#isfolder)||
+|[<!-- INCLUDE #document.isWritable.Syntax -->](FileClass.md#iswritable)|Always false with ZIP archive|
+|[<!-- INCLUDE #document.modificationDate.Syntax -->](FileClass.md#modificationdate)||
+|[<!-- INCLUDE #document.modificationTime.Syntax -->](FileClass.md#modificationtime)||
+|[<!-- INCLUDE #document.name.Syntax -->](FileClass.md#name)||
+|[<!-- INCLUDE #document.original.Syntax -->](FileClass.md#original)||
+|[<!-- INCLUDE #document.parent.Syntax -->](FileClass.md#parent)||
+|[<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)|Returns a path relative to the archive|
+|[<!-- INCLUDE #document.platformPath.Syntax -->](FileClass.md#platformpath)||
 
 
 <style> h2 { background: #d9ebff;}</style>

@@ -30,4 +30,4 @@ Les fichiers du projet peuvent être compilés et facilement déployés. 4D vous
 - des applications [mobile](https://developer.4d.com/4d-for-ios/),
 - des applications [desktop](Desktop/building.md) (client/serveur ou monoposte).
 
-Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.
+Les applications back-end peuvent être déployées à l'aide de 4D Server, de 4D, ou bien fusionnées avec la licence 4D Volume.

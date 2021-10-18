@@ -124,7 +124,7 @@ You can use projects to organize your licenses according to your needs:
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Síntomas                                                      | Causas posibles                                            | Solution(s)                                                                                                                                     |
+| Síntomas                                                      | Causas posibles                                            | Solución(es)                                                                                                                                    |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -137,12 +137,12 @@ If this information does not help you resolve your problem, please contact 4D or
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
-For the US:
+Para US:
 
 - Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
 - Telephone: 1-408-557-4600
 
-For the UK:
+Para UK:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
 - Teléfono: 01625 536178

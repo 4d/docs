@@ -333,7 +333,7 @@ There are several types of calculations available. The following table shows whi
 | Conteo                | X   | X     | X     | X    | X    | X        | Entero largo                        |
 | Promedio              | X   |       |       | X    |      |          | Real                                |
 | Standard deviation(*) | X   |       |       | X    |      |          | Real                                |
-| Variance(*)           | X   |       |       | X    |      |          | Real                                |
+| Varianza(*)           | X   |       |       | X    |      |          | Real                                |
 | Suma de cuadrados(*)  | X   |       |       | X    |      |          | Real                                |
 | Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 

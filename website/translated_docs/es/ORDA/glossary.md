@@ -134,7 +134,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   fecha
 *   objeto
 *   colección
-*   picture(\*)
+*   imagen(\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 

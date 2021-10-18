@@ -13,7 +13,7 @@ Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 ```
 
-Developers can not only use these functions in local datastores, but also in client/server and remote architectures:
+Les développeurs peuvent utiliser ces fonctions non seulement dans des datastores locaux, mais aussi dans des architectures client/serveur et distantes :
 
 ```4d
  //$cityManager est la référence d'un datastore distant

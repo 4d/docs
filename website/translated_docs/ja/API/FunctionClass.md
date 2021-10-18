@@ -100,9 +100,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 |                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象の `Formula` オブジェクトを実行し、その結果の値を返します|
-| [**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象の `Formula` オブジェクトを実行し、その結果の値を返します |
-| [**.source** : Text ](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;対象フォーミュラのテキスト型のソース式 |
+| [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
+| [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
+| [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
 
 
 
@@ -116,16 +116,20 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | v17 R3 | 追加                            |
 </details>
 
-**Formula** ( *formulaExp* : Expression ) : 4D.Function
+<!-- REF #_command_.Formula.Syntax -->
+**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula.Params -->
 | 引数         | タイプ         |    | 説明                                  |
 | ---------- | ----------- |:--:| ----------------------------------- |
 | formulaExp | 式           | -> | オブジェクトとして返されるフォーミュラ                 |
 | 戻り値        | 4D.Function | <- | フォーミュラを格納しているネイティブな Function オブジェクト |
+<!-- END REF -->
 
 
 #### 説明
 
-`Formula` コマンドは、 *formulaExp* の式に基づいた `4D Function` オブジェクトを作成します。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
 フォーミュラがオブジェクトとして存在することで、コマンドやメソッドに対して引数 (計算された属性) として渡したり、"コンポーネントとホストデータベース間で共有" として宣言せずとも様々なコンポーネントから実行したりできるようになります。 呼び出されたフォーミュラオブジェクトは、それを作成したデータベースあるいはコンポーネントのコンテキストにおいて評価されます。
 
@@ -247,16 +251,20 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | v17 R3 | 追加                                                    |
 </details>
 
-**Formula from string**( *formulaString* : Text ) : 4D.Function
+<!-- REF #_command_.Formula from string.Syntax -->
+**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula from string.Params -->
 | 引数            | タイプ         |    | 説明                        |
 | ------------- | ----------- |:--:| ------------------------- |
 | formulaString | テキスト        | -> | オブジェクトとして返されるフォーミュラ文字列    |
 | 戻り値           | 4D.Function | <- | フォーミュラを格納しているネイティブなオブジェクト |
+<!-- END REF -->
 
 
 #### 説明
 
-`Formula from string` コマンドは、 *formulaString* に基づいた `4D Function` オブジェクトを作成します。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->*formulaString* に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
 このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。 多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。 このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
 > ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
@@ -289,6 +297,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 
 
+<!-- REF FunctionClass.apply().Desc -->
 ## .apply()
 
 <details><summary>履歴</summary>
@@ -297,17 +306,21 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | v17 R3 | 追加 |
 </details>
 
-**.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any
+<!-- REF #FunctionClass.apply().Syntax -->
+**.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
+
+<!-- REF #FunctionClass.apply().Params -->
 | 引数            | タイプ    |    | 説明                                     |
 | ------------- | ------ |:--:| -------------------------------------- |
 | thisObj       | オブジェクト | -> | フォーミュラ内で This コマンドによって返されるオブジェクト       |
 | formulaParams | コレクション | -> | フォーミュラが実行される際に $1...$n として渡される値のコレクション |
 | 戻り値           | any    | <- | フォーミュラの実行結果                            |
+<!-- END REF -->
 
 
 #### 説明
 
-`.apply()` 関数は、 対象の `Formula` オブジェクトを実行し、その結果の値を返します。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
+`.apply()` 関数は、 <!-- REF #FunctionClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
@@ -342,8 +355,10 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $calc.apply($robot) // $robot={name:Robot,price:543,quantity:2,total:1086}
 ``` 
 
+<!-- END REF -->
 
 
+<!-- REF FunctionClass.call().Desc -->
 ## .call()
 
 <details><summary>履歴</summary>
@@ -352,17 +367,21 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | v17 R3 | 追加 |
 </details>
 
-**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any
+<!-- REF #FunctionClass.call().Syntax -->
+**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+
+<!-- REF #FunctionClass.call().Params -->
 | 引数      | タイプ    |    | 説明                               |
 | ------- | ------ | -- | -------------------------------- |
 | thisObj | オブジェクト | -> | フォーミュラ内で This コマンドによって返されるオブジェクト |
 | params  | any    | -> | フォーミュラが実行される際に $1...$n として渡される値  |
 | 戻り値     | any    | <- | フォーミュラの実行結果                      |
+<!-- END REF -->
 
 
 #### 説明
 
-`.call()` 関数は、 対象の `Formula` オブジェクトを実行し、その結果の値を返します。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
+`.call()` 関数は、 <!-- REF #FunctionClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
@@ -386,9 +405,11 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $result:=$f.call($o) // 100 を返します
 ``` 
 
+<!-- END REF -->
 
 
 
+<!-- REF FunctionClass.source.Desc -->
 ## .source
 
 <details><summary>履歴</summary>
@@ -397,11 +418,13 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | v18 R2 | 追加 |
 </details>
 
-**.source** : Text 
+<!-- REF #FunctionClass.source.Syntax -->
+**.source** : Text <!-- END REF -->
+
 
 #### 説明
 
-`.source` プロパティは、 対象フォーミュラのテキスト型のソース式を格納します。
+`.source` プロパティは、 <!-- REF #FunctionClass.source.Summary -->対象フォーミュラのテキスト型のソース式<!-- END REF -->を格納します。
 
 このプロパティは **読み取り専用** です。
 
@@ -416,5 +439,6 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 
 
+<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
