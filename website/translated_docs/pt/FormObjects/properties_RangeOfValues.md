@@ -13,7 +13,7 @@ The default value can only be used if the [data source type](properties_Object.m
 - number/integer
 - date
 - time
-- boolean
+- booleano
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
@@ -35,7 +35,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 
 

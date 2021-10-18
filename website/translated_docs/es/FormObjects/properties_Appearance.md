@@ -4,7 +4,7 @@ title: Apariencia
 ---
 
 ---
-## Default Button
+## Botón por defecto
 
 The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
 
@@ -300,7 +300,7 @@ With the Show references property on, the reference is displayed:
 [Área 4D Write Pro](writeProArea_overview.md)
 
 ---
-## Show vertical ruler
+## Mostrar regla vertical
 
 Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
 
@@ -318,7 +318,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 
 ---
-## Tab Control Direction
+## Pestañas
 
 You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
 
@@ -333,11 +333,11 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Pestañas](tabControl.md)
 
 
 ---
-## User Interface
+## Interfaz de usuario
 
 You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
 
@@ -388,7 +388,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barra de desplazamiento horizontal](#horizontal-scroll-bar)
 
 ---
 ## Modo de visualización

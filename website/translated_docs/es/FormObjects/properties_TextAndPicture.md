@@ -129,7 +129,7 @@ The following states are represented:
 
 | Nombre     | Tipos de datos | Valores posibles |
 | ---------- | -------------- | ---------------- |
-| iconFrames | number         | minimum: 1       |
+| iconFrames | number         | mínimo: 1        |
 
 #### Objetos soportados
 
@@ -162,7 +162,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 
 ---
-## Title/Picture Position
+## Posición título/imagen
 
 This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture.
 
@@ -225,7 +225,7 @@ The appearance and location of this symbol depends on the button style and the c
 
 To attach a pop-up menu symbol to a button, there are two display options available:
 
-|                        Linked                        |                        Separated                        |
+|                       Enlazado                       |                        Separado                         |
 |:----------------------------------------------------:|:-------------------------------------------------------:|
 | ![](assets/en/FormObjects/property_popup_linked.png) | ![](assets/en/FormObjects/property_popup_separated.png) |
 > The actual availability of a "separated" mode depends on the style of the button and the platform.

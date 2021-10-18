@@ -6,7 +6,7 @@ title: Instalación y activación
 ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 
-## Required configuration
+## Configuración requerida
 
 Consulte la [página de descarga del producto](https://us.4d.com/product-download) en el sitio web de 4D para conocer la configuración mínima de Mac / Windows para su serie 4D.
 
@@ -54,7 +54,7 @@ Se muestra la caja de diálogo **Gestión de licencias** (la página de Activaci
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
-### Instant Activation
+### Activación inmediata
 
 Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
 
@@ -67,7 +67,7 @@ Then enter the license number of the product you want to activate. This number i
 ![](assets/en/getStart/activ2.png)
 
 
-### Deferred Activation
+### Activación diferida
 
 If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
 
@@ -96,7 +96,7 @@ With the license file loaded, click on **Next**.
 
 Your 4D application is now activated.
 
-### Emergency Activation
+### Activación de emergencia
 
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
@@ -150,11 +150,11 @@ You can use projects to organize your licenses according to your needs:
 ![](assets/en/getStart/licens6.png)
 
 
-## Troubleshooting
+## Solución de problemas
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Síntomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Síntomas                                                      | Causas posibles                                            | Solución(es)                                                                                                                                    |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -167,15 +167,15 @@ If this information does not help you resolve your problem, please contact 4D or
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
-For the US:
+Para US:
 
 - Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
 - Telephone: 1-408-557-4600
 
-For the UK:
+Para UK:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Teléfono: 01625 536178
 
 
 Encuentre la comunidad de desarrolladores de 4D en línea aquí: [https://discuss.4d.com](https://discuss.4d.com).

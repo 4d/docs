@@ -211,7 +211,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
     6:56 AM
 
-### Examples
+### Exemplos
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
@@ -418,7 +418,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 | Name    | Data Type | Possible Values |
 | ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+| display | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -455,7 +455,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 | Name       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
+| threeState | booleano  | true, false     |
 
 #### Objects Supported
 
@@ -465,7 +465,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 
 ---
-## Title
+## Título
 
 This property is available for a list box column if:
 - the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"

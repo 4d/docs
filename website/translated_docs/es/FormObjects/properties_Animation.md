@@ -60,7 +60,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 
 ---
-## Switch every x ticks
+## Cambiar cada x ticks
 
 Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
 
@@ -79,7 +79,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 
 ---
-## Switch when roll over
+## Cambiar cuando se pasa por encima el cursor
 
 Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
 

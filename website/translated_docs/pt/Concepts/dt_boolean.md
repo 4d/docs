@@ -1,6 +1,6 @@
 ---
-id: boolean
-title: Boolean
+id: booleano
+title: Booleano
 ---
 
 A boolean field, variable or expression can be either TRUE or FALSE.
@@ -9,7 +9,7 @@ A boolean field, variable or expression can be either TRUE or FALSE.
 
 4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
 
-### Example
+### Exemplo
 
 This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
 
@@ -31,14 +31,14 @@ myBoolean:=(myButton=1)
 
 4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
 
-| Operation | Syntax                  | Returns | Expression                   | Value |
-| --------- | ----------------------- | ------- | ---------------------------- | ----- |
-| AND       | Boolean & Boolean       | Boolean | ("A" = "A") & (15 # 3)       | True  |
-|           |                         |         | ("A" = "B") & (15 # 3)       | False |
-|           |                         |         | ("A" = "B") & (15 = 3)       | False |
-| OR        | Boolean  &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3)  | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 # 3) | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 = 3) | False |
+| Operation | Sintaxe                 | Returns  | Expression                   | Value |
+| --------- | ----------------------- | -------- | ---------------------------- | ----- |
+| AND       | Boolean & Boolean       | Booleano | ("A" = "A") & (15 # 3)       | True  |
+|           |                         |          | ("A" = "B") & (15 # 3)       | False |
+|           |                         |          | ("A" = "B") & (15 = 3)       | False |
+| OR        | Boolean  &#124; Boolean | Booleano | ("A" = "A") &#124; (15 # 3)  | True  |
+|           |                         |          | ("A" = "B") &#124;  (15 # 3) | True  |
+|           |                         |          | ("A" = "B") &#124;  (15 = 3) | False |
 
 The following is the truth table for the AND logical operator:
 

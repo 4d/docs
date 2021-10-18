@@ -38,7 +38,7 @@ Muestra/Oculta las graduaciones junto a las etiquetas.
 
 
 ---
-## Graduation step
+## Paso en la graduación
 
 Scale display measurement.
 
@@ -56,7 +56,7 @@ Scale display measurement.
 
 
 ---
-## Label Location
+## Posición de la etiqueta
 
 Specifies the location of an object's displayed text.
 
@@ -123,7 +123,7 @@ Intervalo mínimo aceptado entre los valores durante el uso. For numeric stepper
 
 | Nombre | Tipos de datos | Valores posibles |
 |:------:|:--------------:| ---------------- |
-|  step  |    integer     | minimum: 1       |
+|  step  |    integer     | mínimo: 1        |
 
 
 #### Objetos soportados

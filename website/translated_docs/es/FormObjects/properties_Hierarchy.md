@@ -19,7 +19,7 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 | Nombre     | Tipos de datos | Valores posibles                                 |
 | ---------- | -------------- | ------------------------------------------------ |
-| datasource | string array   | Collection of array names defining the hierarchy |
+| datasource | array cadena   | Collection of array names defining the hierarchy |
 
 #### Objetos soportados
 

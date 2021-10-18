@@ -12,7 +12,7 @@ Sets the number of columns in a thumbnail table.
 
 | Nombre      | Tipos de datos | Valores posibles |
 |:----------- |:--------------:| ---------------- |
-| columnCount |    integer     | minimum: 1       |
+| columnCount |    integer     | mínimo: 1        |
 
 #### Objetos soportados
 
@@ -30,7 +30,7 @@ Sets the number of rows in a thumbnail table.
 
 | Nombre   | Tipos de datos | Valores posibles |
 |:-------- |:--------------:| ---------------- |
-| rowCount |    integer     | minimum: 1       |
+| rowCount |    integer     | mínimo: 1        |
 
 #### Objetos soportados
 

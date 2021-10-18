@@ -16,7 +16,7 @@ Here is an example or how to receive the response in an array.
 
  `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
-**Response**:
+**Respuesta**:
 
 ````
 [

@@ -15,7 +15,7 @@ If the entity set is no longer in 4D Server's cache, it will be recreated with a
 
 If you have used both `$savedfilter` and [`$savedorderby`]($savedorderby.md) in your call when creating an entity set and then you omit one of them, the new entity set, which will have the same reference number, will reflect that.
 
-## Example
+## Exemplo
 
 In our example, we first call ``$savedfilter` with the initial call to create an entity set as shown below:
 

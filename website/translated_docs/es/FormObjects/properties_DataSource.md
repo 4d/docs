@@ -4,7 +4,7 @@ title: Fuente de datos
 ---
 
 ---
-## Automatic Insertion
+## Inserción automática
 
 When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
@@ -34,7 +34,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 
 ---
-## Choice List
+## Lista de selección
 
 Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
@@ -65,7 +65,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Pestañas](tabControl.md)
 
 
 ---
@@ -119,7 +119,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -158,7 +158,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
-A 4D expression to be associated with a column. You can enter:
+A 4D expression to be associated with a column. Puede introducir:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
@@ -196,7 +196,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -214,7 +214,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 | Nombre | Tipos de datos | Valores posibles |
 | ------ | -------------- | ---------------- |
-| tabla  | number         | Table number     |
+| tabla  | number         | Número de tabla  |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)
@@ -277,7 +277,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 
 ---
-## Selection Name
+## Selección de nombres
 `Named selection list boxes`
 
 Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles     |
-| -------------- | -------------- | -------------------- |
-| namedSelection | cadena         | Named selection name |
+| Nombre         | Tipos de datos | Valores posibles       |
+| -------------- | -------------- | ---------------------- |
+| namedSelection | cadena         | Nombre de la selección |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview)

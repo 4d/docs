@@ -26,7 +26,7 @@ WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 
 Nas seguintes petições REST, tenha certeza de que esta cookie se inclua no **cabeçalho "Cookie"** com o fim de reutilizar a mesma sessão. Em caso contrário, se abrirá uma nova sessão e se utilizará outra licença.
 
-### Example
+### Exemplo
 
 A gestão de cookies de sessão depende de seu cliente HTTP. Este exemplo mostra como extrair e reenviar a cookie de sessão no contexto das petições gestionadas através do comando 4D `HTTP Request`.
 

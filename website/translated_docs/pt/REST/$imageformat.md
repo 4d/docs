@@ -21,7 +21,7 @@ Once you have defined the format, you must pass the image attribute to [`$expand
 
 If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be empty.
 
-## Example
+## Exemplo
 
 The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
 

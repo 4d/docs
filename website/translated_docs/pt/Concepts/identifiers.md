@@ -196,7 +196,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 Se designar um objeto de formulário passando seu nome como uma string, precedida pelo parâmetro *. Um nome de objeto de formulário pode conter até 255 caracteres.
 
-Example:
+Exemplo:
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
@@ -218,7 +218,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use maiúsculas para nomear seus métodos, entretanto, se um método for uma função, coloque em maiúsculas o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
 
-**Nota:** quando chamar a um método, só tem que escrever seu nome. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos de Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Example:
+**Nota:** quando chamar a um método, só tem que escrever seu nome. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos de Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Exemplo:
 
 Examples:
 ```4d
@@ -351,10 +351,10 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 A tabela abaixo resume as convenções de nomes em 4D.
 
-| Identificador                  | Tamanho Máx | Example                    |
+| Identificador                  | Tamanho Máx | Exemplo                    |
 | ------------------------------ | ----------- | -------------------------- |
 | Table                          | 31          | [Invoices]                 |
-| Field                          | 31          | [Employees]Last Name       |
+| Campo                          | 31          | [Employees]Last Name       |
 | Variável/array interprocesso   | <> + 31     | <>vlNextProcessID          |
 | Variável/Array processo        | 31          | vsCurrentName              |
 | Variável/Array local           | $ + 31      | $vlLocalCounter            |
@@ -382,7 +382,7 @@ Tenha certeza de usar nomes únicos para os diferentes elementos de seu banco de
 
 1. Campos
 2. Commands
-3. Methods
+3. Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
 6. Variáveis.

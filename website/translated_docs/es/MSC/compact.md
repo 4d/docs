@@ -6,7 +6,7 @@ sidebar_label: Página compactado
 
 You use this page to access the data file compacting functions.
 
-## Why compact your files?
+## ¿Por qué compactar los archivos?
 
 Compacting files meets two types of needs:
 
@@ -60,7 +60,7 @@ When this option is checked, 4D rewrites every record for each table during the 
 - When tables or fields were deleted. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
 > All the indexes are updated when this option is selected.
 
-### Compact address table
+### Compactar la tabla de direcciones
 (option only active when preceding option is checked)
 
 This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.

@@ -4,7 +4,7 @@ title: Visualización
 ---
 
 ---
-## Alpha Format
+## Formato Alfa
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
 
@@ -34,7 +34,7 @@ and the user enters "proportion", the field displays:
 
     (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No se pierde ninguna información.
 
 #### Gramática JSON
 
@@ -58,24 +58,24 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 ---
 
-## Date Format
+## Formato Fecha
 
 Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
 
 The table below shows choices available:
 
-| Format name                     | JSON String  | Example (US system)           |
-| ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (default)  | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
-| System date long                | systemLong   | Wednesday, March 25, 2020     |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
-| Internal date long              | largo        | March 25, 2020                |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
-| Internal date short             | short        | 03/25/2020                    |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
+| Nombre del formato              | Cadena JSON     | Example (US system)           |
+| ------------------------------- | --------------- | ----------------------------- |
+| System date short               | - (por defecto) | 03/25/20                      |
+| System date abbreviated *(1)*   | systemMedium    | Wed, Mar 25, 2020             |
+| System date long                | systemLong      | Wednesday, March 25, 2020     |
+| RFC 822                         | rfc822          | Tue, 25 Mar 2020 22:00:00 GMT |
+| Short Century                   | shortCentury    | 03/25/20 but 04/25/2032 *(2)* |
+| Internal date long              | largo           | March 25, 2020                |
+| Internal date abbreviated *(1)* | abbreviated     | Mar 25, 2020                  |
+| Internal date short             | short           | 03/25/2020                    |
+| ISO Date Time *(3)*             | iso8601         | 2020-03-25T00:00:00           |
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
@@ -98,7 +98,7 @@ The table below shows choices available:
 
 
 ---
-## Number Format
+## Formato de número
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
@@ -112,7 +112,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 | Placeholder | Effect for leading or trailing zero |
 | ----------- | ----------------------------------- |
 | #           | No muestra nada                     |
-| 0           | Displays 0                          |
+| 0           | Muestra 0                           |
 | ^           | Displays a space (1)                |
 | *           | Displays an asterisk                |
 
@@ -123,7 +123,7 @@ For example, if you want to display three-digit numbers, you could use the forma
 
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
+> No matter what the display format, 4D accepts and stores the number entered in the field. No se pierde ninguna información.
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
@@ -158,7 +158,7 @@ Spaces are treated as characters in number display formats.
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
-    Positive;Negative;Zero
+    Positivo;Negativo;Cero
 
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
@@ -167,15 +167,15 @@ If you use two parts, 4D uses the first part for positive numbers and zero and t
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
-    $###,##0.00;($###,##0.00);
+    ￥###,##0.00;(￥###,##0.00);
 
 Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
 
-    $###,##0.00;($###,##0.00)
+    ￥###,##0.00;(￥###,##0.00)
 
-In this case, the display for zero would be $0.00.
+En este caso, la visualización del cero sería $0.00.
 
-### Scientific notation
+### Notación científica
 
 If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
 
@@ -188,12 +188,12 @@ would display 759.62 as:
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
-### Hexadecimal formats
+### Formatos hexadecimales
 
 You can display a number in hexadecimal using the following display formats:
 
 *   `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-*   `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+*   `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
 
 ### Notación XML
 
@@ -215,7 +215,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-| Format Entered                         | Positivo         | Negativo      | Cero                         |
+| Formato introducido                    | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
 | ###                                    | <<<              | <<<           |                              |
 | ####                                   | 1234             | <<<<          |                              |
@@ -269,7 +269,7 @@ The truncation and scaling options do not affect the picture itself. The content
 
 ### Scaled to fit
 
-`JSON grammar: "scaled"`
+`Gramática JSON: "scaled"`
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
@@ -299,9 +299,9 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 ![](assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
 
-### Replicated
+### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -324,26 +324,26 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 
 ---
-## Time Format
+## Formato Hora
 
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | Cadena JSON  | Comentarios                                                                                                                                      | Example for 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 hours 30 minutes            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
+| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25         |
+| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                      |
+| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                         |
+| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
+| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos            |
+| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                     |
+| MM SS                        | mm_ss           | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
+| Min Sec                      | MM_SS           | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutos 25 Segundos       |
+| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
+| System time short            | - (por defecto) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
+| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
+| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
 
 #### Gramática JSON
 
@@ -400,14 +400,14 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
 
 
 ---
-## Not rendered
+## No renderizado
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
@@ -431,7 +431,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 
 ---
-## Three-States
+## Tres estados
 
 
 
@@ -441,7 +441,7 @@ Allows a check box object to accept a third state. La variable asociada a la cas
 #### Three-states check boxes in list box columns
 
 List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
-*   0 = unchecked box,
+*   0 = casilla no seleccionada,
 *   1 = casilla seleccionada,
 *   2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
 *   -1 = invisible check box,
@@ -481,14 +481,14 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
 
 ---
 
-## Truncate with ellipsis
+## Truncar con puntos suspensivos
 
 Controls the display of values when list box columns are too narrow to show their full contents.
 
@@ -560,7 +560,7 @@ You can handle the Visible property for most form objects. This property simplif
 Manages the display of contents when it exceeds the width of the object.
 
 #### Checked for list box/Yes for input
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 

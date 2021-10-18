@@ -4,7 +4,7 @@ title: Coordenadas y dimensiones
 ---
 
 ---
-## Automatic Row Height
+## Altura de línea automática
 `Sólo para 4D View Pro: esta funcionalidad requiere una licencia 4D View Pro.`
 
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
@@ -21,7 +21,7 @@ When this property is enabled, the height of every row is automatically calculat
     *   the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
 *   The row height calculation ignores:
-    *   hidden column contents
+    *   contenido de columna oculta
     *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
@@ -36,7 +36,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -114,7 +114,7 @@ Top coordinate of the object in the form.
 
 
 ---
-## Corner Radius
+## Radio de redondeo
 
 Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
@@ -182,7 +182,7 @@ This property designates an object's horizontal size.
 
 
 ---
-## Maximum Width
+## Ancho máximo
 
 The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
@@ -196,11 +196,11 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 ---
-## Minimum Width
+## Ancho mínimo
 
 The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
@@ -214,7 +214,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 

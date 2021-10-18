@@ -17,7 +17,7 @@ In the steps collection, there is an object with the following properties defini
 | ------------- | ---------- | --------------------------------------------------------------------------- |
 | description   | Cadena     | Actual query executed or "AND" when there are multiple steps                |
 | time          | Número     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Número     | Number of records found                                                     |
+| recordsfounds | Número     | Número de registros encontrados                                             |
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
 ## Ejemplo
@@ -30,7 +30,7 @@ And no entities were found, the following query path would be returned, if you w
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Respuesta**:
 
 ```
 __queryPath: {

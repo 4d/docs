@@ -11,7 +11,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - texto
     - null
-    - Boolean
+    - Booleano
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - objeto (os objetos podem estar aninhados em vários níveis)
@@ -34,7 +34,7 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 
 Os objetos devem ter sido inicializados, por exemplo utilizando o comando `New object`, do contrário ao tentar ler ou modificar suas propriedades se gerará um error de sintaxe.
 
-Example:
+Exemplo:
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -58,7 +58,7 @@ Com a notação de objetos, pode acessar às propriedades dos objetos de duas ma
 
 - using a "dot" symbol: > object.propertyName
 
-Example:
+Exemplo:
 ```4d
      employee.name:="Smith"
 ```
@@ -89,13 +89,13 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Example:
+- **4D commands** that return objects. Exemplo:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- **Project methods** that return objects. Exemplo:
 
 ```4d
       // MyMethod1
@@ -123,7 +123,7 @@ Usar notação de objeto com ponteiros é parecido com usar notação de objeto 
 - Access by name:
 > pointerOnObject->["propertyName"]
 
-Example:
+Exemplo:
 
 ```4d
  C_OBJECT(vObj)
@@ -227,7 +227,7 @@ As regras de nomes dos tokens (ou seja, os nomes das propriedades dos objetos ao
 - A criação de atributos de objetos mediante uma string entre colchetes permite anular as regras de ECMA Script. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. Nesse caso, entretanto, não é possível usar a notação de pontos com esse atributo.
 
 
-## Examples
+## Exemplos
 Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretanto note que a notação baseada em comandos continua sendo totalmente compatível.
 
 - Escrita e leitura das propriedades de objetos (este exemplo compara a notação de objetos e anotação de comandos):
