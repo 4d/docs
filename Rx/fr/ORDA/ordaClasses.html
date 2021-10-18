@@ -70,7 +70,7 @@
 <p>Par exemple, vous pouvez créer une fonction <code>getNextWithHigherSalary()</code> dans la classe <code>EmployeeEntity</code> pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$nextHigh</span>:=ds.<span class="hljs-function">Employee</span>(<span class="hljs-number">1</span>).<span class="hljs-function">getNextWithHigherSalary</span>()
 </code></pre>
-<p>Developers can not only use these functions in local datastores, but also in client/server and remote architectures:</p>
+<p>Les développeurs peuvent utiliser ces fonctions non seulement dans des datastores locaux, mais aussi dans des architectures client/serveur et distantes :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//$cityManager est la référence d'un datastore distant</span>
 Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class="hljs-function">getCityName</span>(Form.comp.zipcode)
 </code></pre>

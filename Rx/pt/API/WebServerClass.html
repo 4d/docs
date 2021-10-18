@@ -70,7 +70,7 @@
 <h3><a class="anchor" aria-hidden="true" id="web-server-object"></a><a href="#web-server-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web Server object</h3>
 <p>Web server objects are instantiated with the <a href="#web-server"><code>WEB Server</code></a> command.</p>
 <p>They provide the following properties and functions:</p>
-<h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
+<h3><a class="anchor" aria-hidden="true" id="resumo"></a><a href="#resumo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resumo</h3>
 <table>
 <thead>
 <tr><th></th></tr>
@@ -86,15 +86,14 @@
 <tr><td><a href="#defaulthomepage"><strong>.defaultHomepage</strong> : Text</a><p>    name of the default home page</td></tr>
 <tr><td><a href="#hstsenabled"><strong>.HSTSEnabled</strong> : Boolean</a><p>    HTTP Strict Transport Security (HSTS) status</td></tr>
 <tr><td><a href="#hstsmaxage"><strong>.HSTSMaxAge</strong> : Number</a><p>    maximum length of time (in seconds) that HSTS is active for each new client connection</td></tr>
-<tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)</td><td></td><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    size threshold (bytes) for requests below which exchanges should not be compressed</td><td></td><td><a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP protocol state</td><td></td><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    listening IP port number for HTTP</td><td></td><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activation of <code>HTTP TRACE</code></td><td></td><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    HTTPS protocol state</td><td></td><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS</td><td></td><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    life duration (in minutes) of the inactive legacy session processes</td><td></td><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    life duration (in minutes) of inactive legacy sessions (duration set in cookie)</td><td></td><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    IP address on which the 4D Web Server will receive HTTP requests</td><td></td><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    web server running state</td><td></td><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True if legacy sessions are enabled in the web server, False otherwise</td><td></td><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value</td><td></td><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    maximum number of concurrent web processes supported by the web server</td><td></td><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process</td><td></td><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    maximum number of simultaneous legacy sessions</td><td></td><td><a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    minimum TLS version accepted for connections</td><td></td><td><a href="#name"><strong>.name</strong> : Text</a><p>    name of the web server application</td><td></td><td><a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    version of the OpenSSL library used</td><td></td><td><a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS availability on the server</td><td></td><td><a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    path of web server root folder</td><td></td><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True if scalable sessions are used in the web server, and False otherwise</td><td><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; field of the session cookie</td><td></td><td><a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    name of the cookie used for storing the session ID</td><td></td><td><a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; field of the session cookie</td><td></td><td><a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot; session cookie value</td><td></td><td><a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies</td><td></td><td>[</td></tr>
-<tr><td><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object](#start)<p>    starts the web server on which it is applied</td><td></td><td><a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied</td></tr>
+<tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)</td><td></td><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    size threshold (bytes) for requests below which exchanges should not be compressed</td><td></td><td><a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP protocol state</td><td></td><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    listening IP port number for HTTP</td><td></td><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activation of <code>HTTP TRACE</code></td><td></td><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    HTTPS protocol state</td><td></td><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS</td><td></td><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    life duration (in minutes) of the inactive legacy session processes</td><td></td><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    life duration (in minutes) of inactive legacy sessions (duration set in cookie)</td><td></td><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    IP address on which the 4D Web Server will receive HTTP requests</td><td></td><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    web server running state</td><td></td><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True if legacy sessions are enabled in the web server, False otherwise</td><td></td><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value</td><td></td><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    maximum number of concurrent web processes supported by the web server</td><td></td><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process</td><td></td><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    maximum number of simultaneous legacy sessions</td><td></td><td><a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    minimum TLS version accepted for connections</td><td></td><td><a href="#name"><strong>.name</strong> : Text</a><p>    name of the web server application</td><td></td><td><a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    version of the OpenSSL library used</td><td></td><td><a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS availability on the server</td><td></td><td><a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    path of web server root folder</td><td></td><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True if scalable sessions are used in the web server, and False otherwise</td><td><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; field of the session cookie</td><td></td><td><a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    name of the cookie used for storing the session ID</td><td></td><td><a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; field of the session cookie</td><td></td><td><a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot; session cookie value</td><td></td><td><a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies</td><td></td><td><a href="#start"><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    starts the web server on which it is applied</td><td></td><td><a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="web-server"></a><a href="#web-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB Server</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
 <tr><td>v18 R3</td><td>Added</td></tr>
@@ -125,7 +124,7 @@
 </tbody>
 </table>
 <p>The returned Web server object contains the current values of the Web server properties.</p>
-<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemplo"></a><a href="#exemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>From your component, you want to know if the Web server of the host database is started:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Method of a component</span><span class="hljs-keyword">
  var</span> <span class="hljs-variable">$hostWS </span>: 4D.WebServer
@@ -135,10 +134,10 @@
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="web-server-list"></a><a href="#web-server-list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB Server list</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
 <tr><td>v18 R3</td><td>Added</td></tr>
@@ -165,7 +164,7 @@
 <p>The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the <a href="#web-server"><code>WEB Server</code></a> command.</p>
 </blockquote>
 <p>You can use the <a href="#name">.name</a> property of the Web server object to identify the project or component to which each Web server object in the list is attached.</p>
-<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>We want to know how many running web servers are available:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$wSList </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vRun </span>: Integer
@@ -369,10 +368,10 @@ The listening IP port number for HTTPS.</p>
 <p><strong>.sessionCookiePath</strong> : Text</p>
 <p>The &quot;path&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/4DACTION&quot; for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.</p>
 <h2><a class="anchor" aria-hidden="true" id="sessioncookiesamesite"></a><a href="#sessioncookiesamesite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionCookieSameSite</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
 <tr><td>v19</td><td>Added</td></tr>
@@ -399,10 +398,10 @@ The listening IP port number for HTTPS.</p>
 </blockquote>
 <p>The IP address validation for session cookies. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).</p>
 <h2><a class="anchor" aria-hidden="true" id="start"></a><a href="#start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.start()</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
 <tr><td>v18 R3</td><td>Added</td></tr>
@@ -415,8 +414,8 @@ The listening IP port number for HTTPS.</p>
 <tr><th>Parameter</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>settings</td><td>Object</td><td>-&gt;</td><td>Web server settings to set at startup</td></tr>
-<tr><td>Result</td><td>Object</td><td>&lt;-</td><td>Status of the web server startup</td></tr>
+<tr><td>settings</td><td>Objeto</td><td>-&gt;</td><td>Web server settings to set at startup</td></tr>
+<tr><td>Result</td><td>Objeto</td><td>&lt;-</td><td>Status of the web server startup</td></tr>
 </tbody>
 </table>
 <p>The <code>.start()</code> function starts the web server on which it is applied, using properties set in the optional <em>settings</em> object parameter.</p>
@@ -430,9 +429,9 @@ The listening IP port number for HTTPS.</p>
 <tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Boolean</td><td>True if the web server was correctly started, False otherwise</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True if the web server was correctly started, False otherwise</td></tr>
 <tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if the web server started successfully)</td></tr>
-<tr><td></td><td>[].errCode</td><td>Number</td><td>4D error code</td></tr>
+<tr><td></td><td>[].errCode</td><td>Número</td><td>4D error code</td></tr>
 <tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
 <tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
 </tbody>
@@ -440,7 +439,7 @@ The listening IP port number for HTTPS.</p>
 <blockquote>
 <p>If the Web server was already launched, an error is returned.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemplo-2"></a><a href="#exemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$settings</span>;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$webServer </span>: 4D.WebServer
 
@@ -453,10 +452,10 @@ The listening IP port number for HTTPS.</p>
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="stop"></a><a href="#stop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.stop()</h2>
-<p><details><summary>History</summary></p>
+<p><details><summary>Histórico</summary></p>
 <table>
 <thead>
-<tr><th>Version</th><th>Changes</th></tr>
+<tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
 <tr><td>v18 R3</td><td>Added</td></tr>
@@ -472,7 +471,7 @@ The listening IP port number for HTTPS.</p>
 <blockquote>
 <p>This function resets the customized web settings defined for the session using the <em>settings</em> parameter of the <a href="#start"><code>.start()</code></a> function, if any.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>To stop the database Web server:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$webServer </span>: 4D.WebServer
 
