@@ -736,7 +736,6 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
-
 **.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 

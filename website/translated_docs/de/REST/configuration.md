@@ -15,11 +15,11 @@ To start using the REST features, you need to start and configure the 4D REST se
 
 ## Starting the REST Server
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
+For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the **Web** > **Web Features** page of the structure settings in order for REST requests to be processed.
 
 ![alt-text](assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+> REST services use the 4D HTTP server, so you need to make sure that the 4D web server is started.
 
 The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
 
@@ -29,15 +29,15 @@ The warning message "Caution, check the access privileges" is displayed when you
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
 
 You can configuring REST accesses with one of the following means:
-- assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Structure Settings;
+- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
+> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
 
 ### Using the Structure Settings
 
-The **Read/Write** menu in the "Web/REST resource" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
 By default, the menu displays **\<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
 

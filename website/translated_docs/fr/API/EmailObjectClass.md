@@ -498,7 +498,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
@@ -584,7 +584,7 @@ $status:=$transporter.send($email)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 | v17 R5  | Modified      |
 </details>
 

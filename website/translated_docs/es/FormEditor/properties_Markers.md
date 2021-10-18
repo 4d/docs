@@ -102,11 +102,11 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-| Etiqueta | Descripción      | Prints after groups created by: |
-| -------- | ---------------- | ------------------------------- |
-| B1       | Break at level 1 | Primer campo ordenado           |
-| B2       | Break at level 2 | Segundo campo ordenado          |
-| B3       | Break at level 3 | Tercer campo ordenado           |
+| Etiqueta | Descripción        | Prints after groups created by: |
+| -------- | ------------------ | ------------------------------- |
+| B1       | Break at level 1   | Primer campo ordenado           |
+| B2       | Nivel de ruptura 2 | Segundo campo ordenado          |
+| B3       | Nivel de ruptura 3 | Tercer campo ordenado           |
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 

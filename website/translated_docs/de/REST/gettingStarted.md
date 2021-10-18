@@ -32,7 +32,7 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
 
 5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
 

@@ -72,7 +72,7 @@ An object with two properties:
 
 A collection of address objects.
 
-### Handling body part
+### Gestión del cuerpo del correo electrónico
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](SMTPTransporterClass.md#send) function to allow sending simple mails. When both property are filled, the MIME content-type multipart/alternative is used. The email client should then recognize the multipart/alternative part and display the text part or html part as necessary.
 
@@ -158,7 +158,7 @@ The `.bodyStructure` object contains the following properties:
 | charset     | Texto                 | Value of the charset parameter of the Content-Type header field                                                                                         |
 | encoding    | Texto                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
 | disposition | Texto                 | Value of the Content-Disposition header field of the part                                                                                               |
-| lenguaje    | Collection of texts   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
+| lenguaje    | Colección de textos   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
 | location    | Texto                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
 | subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
 | headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Parámetros | Tipo       |    | Descripción   |
 | ---------- | ---------- |:--:| ------------- |
 | mime       | Blob, Text | -> | Email en MIME |
-| Resultado  | Objeto     | <- | Email object  |
+| Resultado  | Objeto     | <- | Objeto Email  |
 <!-- END REF -->
 
 #### Descripción
@@ -594,7 +594,7 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parámetros | Tipo   |    | Descripción                       |
 | ---------- | ------ |:--:| --------------------------------- |
-| mail       | Objeto | -> | Email object                      |
+| mail       | Objeto | -> | Objeto Email                      |
 | options    | Objeto | -> | Charset and encoding mail options |
 | Resultado  | Texto  | <- | Email object converted to MIME    |
 <!-- END REF -->

@@ -35,7 +35,7 @@ With the exception of the [available properties](#supported-properties), many bu
 
 
 
-### Regular
+### Clássico
 
 The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
 
@@ -92,7 +92,7 @@ By default, the Flat style has a white background with a label in the center, ro
 
 Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
 
-### Toolbar
+### Barra de ferramentas
 
 The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
 

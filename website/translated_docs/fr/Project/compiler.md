@@ -143,7 +143,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:

@@ -561,32 +561,32 @@ The `This` keyword returns a reference to the currently processed object. En 4D,
 
 En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. For example:
+Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. Por ejemplo:
 
 ```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
+$o:=New object("prop";42; "f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Cuando se utiliza una función [class constructor](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` se vincula al nuevo objeto que se está construyendo.
 
 ```4d
 //Class: ob
 
 Class Constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // Crear propiedades en This como
+    // quiera asignándoles
     This.a:=42 
 ```
 
 ```4d
-// in a 4D method  
+// en un método 4D  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> Cuando se llama al constructor de la superclase en un constructor que utiliza la palabra clave [Super](#super), hay que tener en cuenta que `This` no debe llamarse antes del constructor de la superclase, de lo contrario se genera un error. See [this example](#example-1).
 
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.

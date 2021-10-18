@@ -7,7 +7,7 @@ This page contains various options to configure the general operation of your 4D
 
 ## Opciones
 
-### At startup
+### Al inicio
 
 This option allows you to configure the default 4D display at startup, when the user launches only the application.
 
@@ -28,8 +28,8 @@ Starting with macOS Sierra, Mac applications can benefit from the Automatic Wind
 
 You can benefit from this feature in the following environments (with 4D 64-bit versions only):
 
-*   Method Editor windows
-*   Form Editor windows
+*   Ventana del editor de métodos
+*   Ventana del editor de formularios
 
 All windows from these editors can be put in tab form:
 
@@ -82,7 +82,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 ## When creating a new project
 
-### Use Log File
+### Utilizar archivo historial
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
@@ -123,7 +123,7 @@ This area configures access to the 4D HTML documentation displayed in your curre
 *   When you double-click on a 4D command in the **Commands Page** of the Explorer.
 
 
-### Documentation language
+### Lenguaje de la documentación
 
 Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
 

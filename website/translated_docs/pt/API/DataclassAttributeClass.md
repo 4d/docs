@@ -16,7 +16,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,10 +40,10 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 <!-- REF DataClassAttributeClass.autoFilled.Desc -->
 ## .autoFilled
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -67,10 +67,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.exposed.Desc -->
 ## .exposed
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19 R3 | Added    |
 </details>
 
 
@@ -90,10 +90,10 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 <!-- REF DataClassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -117,10 +117,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.fieldType.Desc -->
 ## .fieldType
 
-<details><summary>History</summary>
-| Version | Changes                        |
-| ------- | ------------------------------ |
-| v19 R3  | Support of computed attributes |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                       |
+| ------ | ------------------------------ |
+| v19 R3 | Support of computed attributes |
 </details>
 
 
@@ -151,10 +151,10 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -177,10 +177,10 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- REF DataClassAttributeClass.inverseName.Desc -->
 ## .inverseName
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -203,10 +203,10 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 <!-- REF DataClassAttributeClass.keywordIndexed.Desc -->
 ## .keywordIndexed
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -228,10 +228,10 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- REF DataClassAttributeClass.kind.Desc -->
 ## .kind
 
-<details><summary>History</summary>
-| Version | Changes            |
-| ------- | ------------------ |
-| v19 R3  | Added "calculated" |
+<details><summary>Histórico</summary>
+| Versão | Mudanças           |
+| ------ | ------------------ |
+| v19 R3 | Added "calculated" |
 </details>
 
 
@@ -249,7 +249,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 *   "relatedEntities": 1 -> N relation attribute (reference to an entity selection)
 
 
-#### Example
+#### Exemplo
 
 Given the following table and relation:
 
@@ -271,10 +271,10 @@ Given the following table and relation:
 <!-- REF DataClassAttributeClass.mandatory.Desc -->
 ## .mandatory
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -298,10 +298,10 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- REF DataClassAttributeClass.name.Desc -->
 ## .name
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 
@@ -313,7 +313,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $attName : Text
@@ -327,10 +327,10 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 <!-- REF DataClassAttributeClass.readOnly.Desc -->
 ## .readOnly
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19 R3 | Added    |
 
 
 </details>
@@ -353,10 +353,10 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 <!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 
 
 </details>
@@ -371,7 +371,7 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
 
-#### Example
+#### Exemplo
 
 Given the following tables and relations:
 
@@ -391,10 +391,10 @@ Given the following tables and relations:
 <!-- REF DataClassAttributeClass.type.Desc -->
 ## .type
 
-<details><summary>History</summary>
-| Version | Changes                        |
-| ------- | ------------------------------ |
-| v19 R3  | Support of computed attributes |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                       |
+| ------ | ------------------------------ |
+| v19 R3 | Support of computed attributes |
 </details>
 
 
@@ -427,10 +427,10 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 <!-- REF DataClassAttributeClass.unique.Desc -->
 ## .unique
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 

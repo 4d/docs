@@ -135,7 +135,7 @@ Designates if the size of the column can be modified by the user.
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 
 

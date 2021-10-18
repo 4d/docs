@@ -62,11 +62,11 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 ## Class Description
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes                                                                                            |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| Versão | Mudanças                                                                                           |
+| ------ | -------------------------------------------------------------------------------------------------- |
+| v18 R5 | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
 
@@ -80,7 +80,7 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
-#### Example
+#### Exemplo
 
 ```4d  
 // cs.DataStore class
@@ -110,7 +110,7 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
 
 
-#### Example
+#### Exemplo
 
 ```4D
 // cs.Company class
@@ -186,7 +186,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 - **Example name**: cs.EmployeeSelection
 
 
-#### Example
+#### Exemplo
 
 ```4d
 // cs.EmployeeSelection class
@@ -225,7 +225,7 @@ Entity classes allow you to define **computed attributes** using specific keywor
 
 For more information, please refer to the [Computed attributes](#computed-attributes) section.
 
-#### Example
+#### Exemplo
 
 ```4d
 // cs.CityEntity class
@@ -301,7 +301,7 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 
 ### `Function get <attributeName>`
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
@@ -314,7 +314,7 @@ The *getter* function is mandatory to declare the *attributeName* computed attri
 The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
 
 - Scalar (text, boolean, date, time, number)
-- Object
+- Objeto
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
@@ -330,7 +330,7 @@ The *$event* parameter contains the following properties:
 | result        | Variant | Optional. Add this property with Null value if you want a scalar attribute to return Null |
 
 
-#### Examples
+#### Exemplos
 
 - *fullName* computed attribute:
 
@@ -370,7 +370,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ### `Function set <attributeName>`
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 {local} Function set <attributeName>($value : type {; $event : Object})
@@ -390,7 +390,7 @@ The *$event* parameter contains the following properties:
 | kind          | Texto   | "set"                                         |
 | value         | Variant | Value to be handled by the computed attribute |
 
-#### Example
+#### Exemplo
 
 ```4d
 Function set fullName($value : Text; $event : Object)
@@ -404,7 +404,7 @@ Function set fullName($value : Text; $event : Object)
 
 ### `Function query <attributeName>`
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 Function query <attributeName>($event : Object)
@@ -442,7 +442,7 @@ The *$event* parameter contains the following properties:
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
-#### Examples
+#### Exemplos
 
 - Query on the *fullName* computed attribute.
 
@@ -549,7 +549,7 @@ $twentyToday:=people.query("age === 20") // equivalent to people.query("age is 2
 
 ### `Function orderBy <attributeName>`
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 Function orderBy <attributeName>($event : Object)
@@ -564,22 +564,22 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 The *$event* parameter contains the following properties:
 
-| Property      | Type    | Description                                                                                                |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| attributeName | Texto   | Computed attribute name                                                                                    |
-| dataClassName | Texto   | Dataclass name                                                                                             |
-| kind          | Texto   | "orderBy"                                                                                                  |
-| value         | Variant | Value to be handled by the computed attribute                                                              |
-| operator      | Texto   | "desc" or "asc" (default)                                                                                  |
-| descending    | Boolean | `true` for descending order, `false` for ascending order                                                   |
-| result        | Variant | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
+| Property      | Type     | Description                                                                                                |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| attributeName | Texto    | Computed attribute name                                                                                    |
+| dataClassName | Texto    | Dataclass name                                                                                             |
+| kind          | Texto    | "orderBy"                                                                                                  |
+| value         | Variant  | Value to be handled by the computed attribute                                                              |
+| operator      | Texto    | "desc" or "asc" (default)                                                                                  |
+| descending    | Booleano | `true` for descending order, `false` for ascending order                                                   |
+| result        | Variant  | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
 
 > You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).
 
 You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
 
-#### Example
+#### Exemplo
 
 You can write conditional code:
 
@@ -636,7 +636,7 @@ exposed Function <functionName>
 
 > The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-### Example
+### Exemplo
 
 You want an exposed function to use a private function in a dataclass class:
 
@@ -703,7 +703,7 @@ local Function getYoungest
 - **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
 
 
-### Examples
+### Exemplos
 
 #### Calculating age
 

@@ -87,7 +87,7 @@ You can always define which attributes to return in the REST response after an i
 
 You can apply this filter in the following ways:
 
-| Object                 | Syntax                                              | Example                                                       |
+| Objeto                 | Sintaxe                                             | Exemplo                                                       |
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
@@ -98,7 +98,7 @@ You can apply this filter in the following ways:
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
 
-### Examples
+### Exemplos
 Here are a few examples, showing you how to specify which attributes to return depending on the technique used to retrieve entities.
 
 You can apply this technique to:

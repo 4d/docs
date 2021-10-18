@@ -62,11 +62,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF FolderClass.Folder.Params -->
 | Parámetros     | Tipo      |    | Descripción                                     |
 | -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Texto     | -> | Folder path                                     |
+| path           | Texto     | -> | Ruta de la carpeta                              |
 | folderConstant | Integer   | -> | 4D folder constant                              |
 | pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
 | *              |           | -> | * to return folder of host database             |
-| Resultado      | 4D.Folder | <- | New folder object                               |
+| Resultado      | 4D.Folder | <- | Nuevo objeto de carpeta                         |
 <!-- END REF -->
 
 
@@ -388,7 +388,7 @@ When `Delete with contents` is passed:
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | Texto     | -> | Full name for the moved folder |
-| Resultado         | 4D.Folder | <- | Moved folder                   |
+| Resultado         | 4D.Folder | <- | Carpeta movida                 |
 <!-- END REF -->
 
 

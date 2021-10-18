@@ -437,9 +437,9 @@ This property is **read-only**.
 | Parámetros        | Tipo      |    | Descripción                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
+| newName           | Texto     | -> | Nombre para la copia                        |
 | overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
-| Resultado         | 4D.Folder | <- | Copied file or folder                       |
+| Resultado         | 4D.Folder | <- | Carpeta o archivo copiado                   |
 <!-- END REF -->
 
 
@@ -532,7 +532,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.files().Params -->
 | Parámetros | Tipo       |    | Descripción                         |
 | ---------- | ---------- | -- | ----------------------------------- |
-| options    | Integer    | -> | File list options                   |
+| options    | Integer    | -> | Opciones de la lista de archivos    |
 | Resultado  | Collection | <- | Collection of children file objects |
 <!-- END REF -->
 
@@ -633,7 +633,7 @@ A `Folder` object or null if *path* is invalid.
 <!-- REF #directory.folders().Params -->
 | Parámetros | Tipo       |    | Descripción                           |
 | ---------- | ---------- | -- | ------------------------------------- |
-| options    | Integer    | -> | Folder list options                   |
+| options    | Integer    | -> | Opciones de la lista de carpetas      |
 | Resultado  | Collection | <- | Collection of children folder objects |
 <!-- END REF -->
 

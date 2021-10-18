@@ -11,12 +11,12 @@ This page allows selecting, creating, or configuring Method editor themes. A the
 
 ![](assets/en/Preferences/themes.png)
 
-### Theme list
+### Lista de temas
 
 In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
 
-*   **Default Light Theme**
-*   **Default Dark Theme**
+*   **Tema Light por defecto**
+*   **Tema oscuro por defecto**
 
 > Default themes cannot be modified or deleted.
 
@@ -26,7 +26,7 @@ A **myTheme** theme is automatically added if you already customized method edit
 
 You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
 
-### Custom theme files
+### Archivos de temas personalizados
 
 Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
 
@@ -34,7 +34,7 @@ If key values are not defined in a custom theme, they default to the values from
 
 > When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
 
-## Theme definition
+## Definir el tema
 
 Defining a theme means:
 
@@ -43,7 +43,7 @@ Defining a theme means:
 
 Combining different colors and styles is particularly useful for code maintenance purposes.
 
-### Font and Font size
+### Fuentes y tamaños de fuente
 
 The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
 
@@ -70,7 +70,7 @@ These options configure the various colors used in the Method editor and debugge
 | **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Selection back color**                          | Background color of selection.                                                                                                                                           |
+| **Color de fondo de la selección**                | Background color of selection.                                                                                                                                           |
 | **Suggested text**                                | Color of autocomplete text suggested by the Method editor.                                                                                                               |
 
 

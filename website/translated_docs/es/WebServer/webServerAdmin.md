@@ -53,7 +53,7 @@ This command lets you verify that the web server, home page display, etc. work c
 
 
 
-## Clearing the Cache
+## Borrar la caché
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
 
@@ -80,7 +80,7 @@ The **Watch** page (**Web** heading) in the Runtime Explorer displays web server
 
 
 
-## Administration URLs
+## URL para la administración
 
 Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
 
@@ -93,7 +93,7 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 
 | Elemento                  | Descripción                                                  |
 | ------------------------- | ------------------------------------------------------------ |
-| Cache Current Size        | Current size of web server cache (in bytes)                  |
+| Tamaño actual de la caché | Current size of web server cache (in bytes)                  |
 | Tamaño máximo de la caché | Maximum size of cache (in bytes)                             |
 | Cached Object Max Size    | Maximum size of each object in the cache (in bytes)          |
 | Cache Use                 | Percentage of cache used                                     |
@@ -108,7 +108,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 
 | Elemento                  | Descripción                                                            |
 | ------------------------- | ---------------------------------------------------------------------- |
-| Cache Current Size        | Current size of web server cache (in bytes)                            |
+| Tamaño actual de la caché | Current size of web server cache (in bytes)                            |
 | Tamaño máximo de la caché | Maximum size of cache (in bytes)                                       |
 | Cached Object Max Size    | Maximum size of each object in the cache (in bytes)                    |
 | Cache Use                 | Percentage of cache used                                               |

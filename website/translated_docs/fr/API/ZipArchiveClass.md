@@ -43,7 +43,7 @@ End if
 | Version | Modifications |
 | ------- | ------------- |
 | v19 R3  | Ajoutées      |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -201,7 +201,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### Exemple 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -291,7 +291,7 @@ $err:=ZIP Create archive($zip; $destination)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->

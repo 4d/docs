@@ -46,7 +46,7 @@ The `Documentation` folder architecture is the following:
     + `Forms`
         * loginDial.md
         * ...
-    + `Methods`
+    + `Métodos`
         * myMethod.md
         * ...
     + `TableForms`
@@ -196,7 +196,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 
 
-## Example
+## Exemplo
 
 In the `WP SwitchToolbar.md` file, you can write:
 

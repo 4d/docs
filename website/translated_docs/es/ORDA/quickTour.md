@@ -5,7 +5,7 @@ title: Un recorrido rápido en ORDA
 
 Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
 
-## Exploring the datastore
+## Explorar el datastore
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
@@ -46,7 +46,7 @@ ds.Company.hires //returns the list of employees
 But don't go too fast. Let's see now how to record data in ORDA dataclasses.
 
 
-## Adding data
+## Añadir datos
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.

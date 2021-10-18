@@ -69,7 +69,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | Parámetros   | Tipo    |    | Descripción                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
-| fileConstant | Integer | -> | 4D file constant                                |
+| fileConstant | Integer | -> | Constante del archivo 4D                        |
 | pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
 | Resultado    | 4D.File | <- | New file object                                 |
@@ -122,7 +122,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | User settings file for data       | 4     | settings.4DSettings file for current data file, stored in Preferences folder next to the data file.                                                                                                                                                                                                                                                                                                      |
 | Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                             |
 
-If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
+If the target *fileConstant* does not exist, a null object is returned. No se produce ningún error.
 
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
@@ -524,7 +524,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | Parámetros | Tipo    |    | Descripción                |
 | ---------- | ------- | -- | -------------------------- |
 | newName    | Texto   | -> | New full name for the file |
-| Resultado  | 4D.File | <- | Renamed file               |
+| Resultado  | 4D.File | <- | Archivo renombrado         |
 <!-- END REF -->
 
 #### Descripción
@@ -691,7 +691,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | Parámetros  | Tipo    |    | Descripción                                                |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
 | texto       | Texto   | -> | Text to store in the file                                  |
-| charSetName | Texto   | -> | Name of character set                                      |
+| charSetName | Texto   | -> | Nombre del juego de caracteres                             |
 | charSetNum  | Integer | -> | Number of character set                                    |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
@@ -705,7 +705,7 @@ If the file referenced in the `File` object does not exist on the disk, it is cr
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionally, you can designate the character set to be used for writing the contents. You can pass either:
+Optionally, you can designate the character set to be used for writing the contents. Puede pasar:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
@@ -718,7 +718,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Valor | Comentario                                                                                                                                                     |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                                  |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                   |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
 | `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
 | `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |

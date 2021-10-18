@@ -58,7 +58,7 @@ The Data Explorer supports the following web browsers:
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
 
-### Basics
+### Básicos
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 
@@ -103,7 +103,7 @@ You can reorder the displayed entity list according to attribute values. All typ
 - You can sort attributes on several levels. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
 
 
-### Query on attributes
+### Consultas basadas en atributos
 
 In this mode, you can filter entities by entering values to find (or to exclude) in the areas above the attribute list. You can filter on one or several attributes. The entity list is automatically updated when you type in.
 

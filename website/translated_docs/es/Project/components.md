@@ -7,7 +7,7 @@ title: Librería de componentes 4D
 
 ## Lista de Componentes 4D
 
-| Component Name                                                                         | Descripción                                                                                            |
+| Nombre del componente                                                                  | Descripción                                                                                            |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | [4D Mobile App Server](https://github.com/4d-go-mobile/4D-Mobile-App-Server)           | Set of utility classes and functions to authenticate, manage sessions, and develop mobile applications |
 | [4D NetKit](https://github.com/4d/4D-NetKit)                                           | Set of tools to connect to third-party APIs                                                            |

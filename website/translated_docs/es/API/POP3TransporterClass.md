@@ -231,7 +231,7 @@ The `boxInfo` object returned contains the following properties:
 | Propiedad | Tipo   | Descripción                       |
 | --------- | ------ | --------------------------------- |
 | mailCount | Número | Number of messages in the mailbox |
-| size      | Número | Message size in bytes             |
+| size      | Número | Tamaño del mensaje en bytes       |
 
 
 
@@ -271,7 +271,7 @@ The `boxInfo` object returned contains the following properties:
 | Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
 | msgNumber  | Integer | -> | Number of the message in the list                |
-| Resultado  | Objeto  | <- | [Email object](EmailObjectClass.md#email-object) |
+| Resultado  | Objeto  | <- | [Objeto Email](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
@@ -343,10 +343,10 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The `mailInfo` object returned contains the following properties:
 
-| Propiedad | Tipo   | Descripción              |
-| --------- | ------ | ------------------------ |
-| size      | Número | Message size in bytes    |
-| id        | Texto  | Unique ID of the message |
+| Propiedad | Tipo   | Descripción                 |
+| --------- | ------ | --------------------------- |
+| size      | Número | Tamaño del mensaje en bytes |
+| id        | Texto  | Unique ID of the message    |
 
 The method returns **Null** if:
 
@@ -405,7 +405,7 @@ Each `mailInfo` object in the returned collection contains the following propert
 
 | Propiedad    | Tipo   | Descripción                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
-| \[ ].size   | Número | Message size in bytes                                              |
+| \[ ].size   | Número | Tamaño del mensaje en bytes                                        |
 | \[ ].number | Número | Número del mensaje                                                 |
 | \[ ].id     | Texto  | Unique ID of the message (useful if you store the message locally) |
 

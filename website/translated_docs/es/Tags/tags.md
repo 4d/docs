@@ -1,6 +1,6 @@
 ---
 id: etiquetas
-title: Transformation tags
+title: Etiquetas de transformación
 ---
 
 4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
@@ -172,7 +172,7 @@ Here are the 4DCODE tag features:
 > The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
 
 
-## 4DEACH and 4DENDEACH
+## 4DEACH y 4DENDEACH
 
 #### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
@@ -461,7 +461,7 @@ Ejemplos:
 
 
 
-## 4DLOOP and 4DENDLOOP
+## 4DLOOP y 4DENDLOOP
 
 #### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 

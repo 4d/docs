@@ -32,7 +32,7 @@ Pour simplifier l'exemple, nous allons utiliser 4D et un navigateur qui s'exécu
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Affichez la page **ressources Web/REST** de la boîte de dialogue des Propriétés et [cochez l'option Exposer en tant que serveur REST](configuration.md#starting-the-rest-server).
+4. Open the **Web > Web Features** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
 
 5. Dans le menu **Exécuter**, sélectionnez **Démarrer le serveur Web** (si nécessaire), puis sélectionnez **Tester le serveur Web**.
 

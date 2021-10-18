@@ -337,10 +337,10 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
+The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
 
 *   a file object
-*   a folder object
+*   un objeto de la carpeta
 
 For non-alias files, the property returns the same file object as the file.
 
@@ -468,7 +468,7 @@ This property is **read-only**.
 | Parámetros        | Tipo      |    | Descripción                                 |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
+| newName           | Texto     | -> | Nombre para la copia                        |
 | overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
 | Resultado         | 4D.File   | <- | Archivo copiado                             |
 <!-- END REF -->
@@ -605,7 +605,7 @@ File icon [picture](../Concepts/picture.html).
 <!-- REF #document.getText().Params -->
 | Parámetros  | Tipo    |    | Descripción                     |
 | ----------- | ------- | -- | ------------------------------- |
-| charSetName | Texto   | -> | Name of character set           |
+| charSetName | Texto   | -> | Nombre del juego de caracteres  |
 | charSetNum  | Integer | -> | Number of character set         |
 | breakMode   | Integer | -> | Processing mode for line breaks |
 | Resultado   | Texto   | <- | Text from the document          |
@@ -615,7 +615,7 @@ File icon [picture](../Concepts/picture.html).
 #### Descripción
 The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
-Optionally, you can designate the character set to be used for reading the contents. You can pass either:
+Optionally, you can designate the character set to be used for reading the contents. Puede pasar:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
@@ -628,7 +628,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Valor | Comentario                                                                                                                                                          |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                                       |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                        |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |
 | `Document with CRLF`          | 2     | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                     |
 | `Document with CR`            | 3     | Line breaks are converted to OS X format: CR (carriage return)                                                                                                      |
@@ -638,7 +638,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **Valor devuelto**
 
-Text of the file.
+Texto del archivo.
 
 #### Ejemplo
 

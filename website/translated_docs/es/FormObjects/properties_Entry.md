@@ -24,7 +24,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 
 ---
-## Context Menu
+## Menú contextual
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
@@ -115,7 +115,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9##-##-##-##                        | Local telephone number format. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####                    | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                  |
 | !0&9###-###-###                        | Long distance telephone number. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                         | Social Security number. Display zeros in entry spaces. Permitir cualquier número.                                                                     |
+| !0&9###-##-###                         | Número de la Seguridad Social. Display zeros in entry spaces. Permitir cualquier número.                                                              |
 | ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                         |
 | &"a-z;0-9; ;,;.;-"                     | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                  |
 | &"0-9;.;-"                             | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
@@ -170,7 +170,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 
 ---
-## Keyboard Layout
+## Disposición del teclado
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 

@@ -27,7 +27,7 @@ O valor da expressão booleana deve poder ser modificado por um elemento dentro 
 
 Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. Para saber mais sobre o rastreio de um método veja a página [Error handling](error-handling.md).
 
-### Example
+### Exemplo
 
 ```4d
  CONFIRM("Add a new record?") //The user wants to add a record?
@@ -50,7 +50,7 @@ Um loop `Repeat...Until` é similar a um loop [While...End while](flow-control#w
 
 A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão seja TRUE.
 
-### Example
+### Exemplo
 
 Compare o exemplo abaixo com o exemplo para o lopp `While...End while`. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
 
@@ -291,7 +291,7 @@ A tabela abaixo compara os três tipos de `For each...End for each`:
 |                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
 | Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
+| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Objeto                      |
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
 | Support of begin / end parameters | Sim                                              | Sim                                 | No                          |
 
@@ -314,7 +314,7 @@ Em cada iteração do loop, a variável _Current_Item_ é preenchida automaticam
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
-#### Example
+#### Exemplo
 
 Se quiser computar algumas estatísticas para uma coleção de números:
 ```4d
@@ -348,7 +348,7 @@ O número de loops é baseado no número de entidades da seleção de entidades.
 
 Lembre que qualquer modificação aplicada na entidade atual deve ser guardada explicitamente utilizando `entity.save( )`.
 
-#### Example
+#### Exemplo
 
 Se quiser aumentar o salário de todos os empregados britânicos em uma seleção de entidades:
 ```4d
@@ -365,7 +365,7 @@ Quando se utiliza `For each...End for each` com uma *Expression* de tipo Object,
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
-#### Example
+#### Exemplo
 
 Se quiser trocar os nomes para maiúsculas no objeto a seguir:
 ```4d
@@ -406,7 +406,7 @@ For example:
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
 - end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
 
-#### Example
+#### Exemplo
 
 ```4d
  C_COLLECTION($col;$col2)
@@ -432,7 +432,7 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
 - The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
 - The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
 
-#### Example
+#### Exemplo
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)

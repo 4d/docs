@@ -36,7 +36,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <details><summary>Histórico</summary>
 | Versión | Modificaciones                               |
 | ------- | -------------------------------------------- |
-| v18     | New logFile property                         |
+| v18     | Nueva propiedad logFile                      |
 | v17 R5  | New bodyCharset and headerCharset properties |
 | v17 R4  | Añadidos                                     |
 </details>
@@ -251,7 +251,7 @@ The SMTP connection is automatically closed:
 | Parámetros | Tipo   |    | Descripción                                       |
 | ---------- | ------ |:--:| ------------------------------------------------- |
 | mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultado  | Objeto | <- | SMTP status                                       |
+| Resultado  | Objeto | <- | Estado SMTP                                       |
 <!-- END REF -->
 
 

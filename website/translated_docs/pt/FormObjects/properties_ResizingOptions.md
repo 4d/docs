@@ -131,7 +131,7 @@ Designates if the size of the column can be modified by the user.
 
 | Name      | Data Type | Possible Values |
 |:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| resizable | booleano  | "true", "false" |
 
 #### Objects Supported
 

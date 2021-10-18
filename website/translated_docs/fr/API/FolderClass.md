@@ -52,7 +52,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
@@ -115,7 +115,7 @@ If the command is called from a component, pass the optional * parameter to get 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
@@ -138,7 +138,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -198,7 +198,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -260,7 +260,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -376,7 +376,7 @@ When `Delete with contents` is passed:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -446,7 +446,7 @@ You want to move and rename a folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->

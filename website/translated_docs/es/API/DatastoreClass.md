@@ -115,7 +115,7 @@ Using the main datastore on the 4D database:
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
-| Resultado      | cs.DataStore | <- | Datastore object                                                          |
+| Resultado      | cs.DataStore | <- | Objeto del almacén de datos                                               |
 <!-- END REF -->
 
 
@@ -200,7 +200,7 @@ Working with several remote datastores:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Error management
+#### Gestión de errores
 
 In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
 
@@ -317,7 +317,7 @@ The returned object contains the following properties:
 | tablas      |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
 |             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
 |             |             | name          | Texto    | Nombre de la tabla                                                                 |
-|             |             | num           | Número   | Table number                                                                       |
+|             |             | num           | Número   | Número de tabla                                                                    |
 |             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
 |             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
 
@@ -368,9 +368,9 @@ You want to know the number of encrypted tables in the current data file:
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parámetros | Tipo   |    | Descripción          |
-| ---------- | ------ |:--:| -------------------- |
-| Resultado  | Objeto | <- | Datastore properties |
+| Parámetros | Tipo   |    | Descripción                      |
+| ---------- | ------ |:--:| -------------------------------- |
+| Resultado  | Objeto | <- | Propiedades del almacén de datos |
 <!-- END REF -->
 
 #### Descripción
@@ -379,12 +379,12 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Objeto devuelto**
 
-| Propiedad  | Tipo     | Descripción                                                                                                                                                     |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | cadena   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
-| networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID    | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
+| Propiedad  | Tipo     | Descripción                                                                                                                                                        |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type       | cadena   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                                 |
+| networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                                 |
+| localID    | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.               |
+| connection | objeto   | Object describing the remote datastore connection (not returned for main datastore). Propiedades disponibles:<p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -579,11 +579,11 @@ The result of the command is described in the returned object:
 | success    |                          | Booleano   | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |            | Properties below are returned only if success is *FALSE*                        |
 | status     |                          | Número     | Error code (4 if the provided encryption key is wrong)                          |
-| statusText |                          | Texto      | Error message                                                                   |
-| errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
+| statusText |                          | Texto      | Mensaje de error                                                                |
+| errors     |                          | Collection | Pila de errores. The first error has the highest index                          |
 |            | \[ ].componentSignature | Texto      | Internal component name                                                         |
 |            | \[ ].errCode            | Número     | Número de error                                                                 |
-|            | \[ ].message            | Texto      | Error message                                                                   |
+|            | \[ ].message            | Texto      | Mensaje de error                                                                |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 

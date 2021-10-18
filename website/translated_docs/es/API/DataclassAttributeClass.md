@@ -185,7 +185,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 
 <!-- REF DataClassAttributeClass.inverseName.Syntax -->
-**.inverseName** : Text<!-- END REF -->
+**.inverseName**: Texto<!-- END REF -->
 
 
 #### Descripción
@@ -251,7 +251,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 #### Ejemplo
 
-Given the following table and relation:
+Dada la siguiente tabla y relación:
 
 ![](/assets/en/API/dataclassAttribute3.png)
 
@@ -363,7 +363,7 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 
 
 <!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-**.relatedDataClass** : Text<!-- END REF -->
+**.relatedDataClass**: Text<!-- END REF -->
 
 
 #### Descripción
@@ -373,7 +373,7 @@ The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataCla
 
 #### Ejemplo
 
-Given the following tables and relations:
+Dadas las siguientes tablas y relaciones:
 
 
 ![](assets/en/API/dataclassAttribute4.png)

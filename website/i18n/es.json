@@ -211,7 +211,7 @@
         "title": "Variables"
       },
       "Debugging/basics": {
-        "title": "Basics"
+        "title": "Básicos"
       },
       "Debugging/breakpoints": {
         "title": "Breakpoints and Command Catching"
@@ -421,7 +421,7 @@
         "title": "Acerca de los formularios 4D"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "Macros del editor de formularios"
       },
       "FormEditor/objectLibrary": {
         "title": "Librerías de objetos"
@@ -677,7 +677,7 @@
         "title": "Actualizaciones de la documentación"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "Objeto del modelo de datos"
       },
       "ORDA/entities": {
         "title": "Trabajar con los datos"
@@ -830,7 +830,7 @@
         "title": "Acerca de las peticiones REST"
       },
       "Tags/tags": {
-        "title": "Transformation tags"
+        "title": "Etiquetas de transformación"
       },
       "Users/editing": {
         "title": "Gestión de usuarios y grupos 4D"
@@ -860,7 +860,7 @@
         "title": "Sesiones usuario"
       },
       "WebServer/templates": {
-        "title": "Template pages"
+        "title": "Páginas de plantillas"
       },
       "WebServer/webServer": {
         "title": "Generalidades"

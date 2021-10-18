@@ -14,7 +14,7 @@ On a remote machine, the [debugger window](debugger.md) displays a specific serv
 This feature is particularly useful when 4D Server runs in headless mode (see [Command Line Interface](../Admin/cli.md)), or when access to the server machine is not easy.
 
 
-## Attached debugger
+## Depuradores adjuntos
 
 Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. The attached debugger can be:
 
@@ -22,9 +22,9 @@ Only one debugger can debug a 4D Server application at a given time. It is calle
 * the debugger of a remote 4D client - if the remote session has access to Design mode.
 
 The attached debugger is called whenever a 4D Server encounters:
-* a break point
+* un punto de ruptura
 * a `TRACE` command
-* a caught command
+* un comando de captura
 * un error
 
 Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.

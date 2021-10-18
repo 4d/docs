@@ -92,14 +92,14 @@ Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-
 
 Ces propriétés sont définies :
 
-1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
+1. à l'aide du `paramètre` <0>settings</0> de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 
 
 ## Portée des commandes 4D Web

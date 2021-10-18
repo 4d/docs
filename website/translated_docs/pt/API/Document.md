@@ -9,10 +9,10 @@ title: Document Class
 <!-- REF document.creationDate.Desc -->
 ## .creationDate
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
@@ -31,10 +31,10 @@ This property is **read-only**.
  <!-- REF document.creationTime.Desc -->
 ## .creationTime
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
@@ -55,10 +55,10 @@ This property is **read-only**.
 <!-- REF document.exists.Desc -->
 ## .exists
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.exists.Syntax -->
@@ -81,10 +81,10 @@ This property is **read-only**.
 
 ## .extension
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.extension.Syntax -->
@@ -105,10 +105,10 @@ This property is **read-only**.
 <!-- REF document.fullName.Desc -->
 ## .fullName
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.fullName.Syntax -->
@@ -128,10 +128,10 @@ This property is **read-only**.
 <!-- REF document.hidden.Desc -->
 ## .hidden
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.hidden.Syntax -->
@@ -152,10 +152,10 @@ This property is **read-only**.
 <!-- REF document.isAlias.Desc -->
 ## .isAlias
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.isAlias.Syntax -->
@@ -175,10 +175,10 @@ This property is **read-only**.
 <!-- REF document.isFile.Desc -->
 ## .isFile
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.isFile.Syntax -->
@@ -198,10 +198,10 @@ This property is **read-only**.
 <!-- REF document.isFolder.Desc -->
 ## .isFolder
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.isFolder.Syntax -->
@@ -222,10 +222,10 @@ This property is **read-only**.
 <!-- REF document.isWritable.Desc -->
 ## .isWritable
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.isWritable.Syntax -->
@@ -239,7 +239,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 
 This property is **read-only**.
 
-**Example**
+**Exemplo**
 
 ```4d
  $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -256,10 +256,10 @@ This property is **read-only**.
 <!-- REF document.modificationDate.Desc -->
 ## .modificationDate
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->
@@ -280,10 +280,10 @@ This property is **read-only**.
 <!-- REF document.modificationTime.Desc -->
 ## .modificationTime
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->
@@ -303,10 +303,10 @@ This property is **read-only**.
 <!-- REF document.name.Desc -->
 ## .name
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.name.Syntax -->
@@ -325,10 +325,10 @@ This property is **read-only**.
 <!-- REF document.original.Desc -->
 ## .original
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.original.Syntax -->
@@ -354,10 +354,10 @@ This property is **read-only**.
 <!-- REF document.parent.Desc -->
 ## .parent
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.parent.Syntax -->
@@ -378,10 +378,10 @@ This property is **read-only**.
 <!-- REF document.path.Desc -->
 ## .path
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.path.Syntax -->
@@ -401,10 +401,10 @@ This property is **read-only**.
 <!-- REF document.platformPath.Desc -->
 ## .platformPath
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.platformPath.Syntax -->
@@ -425,10 +425,10 @@ This property is **read-only**.
 <!-- REF document.size.Desc -->
 ## .size
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.size.Syntax -->
@@ -455,10 +455,10 @@ This property is **read-only**.
 <!-- REF document.copyTo().Desc -->
 ## .copyTo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.copyTo().Syntax -->
@@ -493,7 +493,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 The copied `File` object.
 
-#### Example
+#### Exemplo
 
 You want to copy a picture *file* from the user's document folder to the application folder:
 
@@ -510,11 +510,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF document.getContent().Desc -->
 ## .getContent()
 
-<details><summary>History</summary>
-| Version | Changes         |
-| ------- | --------------- |
-| v19 R2  | Returns 4D.Blob |
-| v17 R5  | Added           |
+<details><summary>Histórico</summary>
+| Versão | Mudanças        |
+| ------ | --------------- |
+| v19 R2 | Returns 4D.Blob |
+| v17 R5 | Added           |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
@@ -535,7 +535,7 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 A `4D.Blob` object.
 
-#### Example
+#### Exemplo
 
 To save a document's contents in a `BLOB` field:
 
@@ -554,10 +554,10 @@ To save a document's contents in a `BLOB` field:
 <!-- REF document.getIcon().Desc -->
 ## .getIcon()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
@@ -567,7 +567,7 @@ To save a document's contents in a `BLOB` field:
 | Parameter | Type    |    | Description                                   |
 | --------- | ------- | -- | --------------------------------------------- |
 | size      | Integer | -> | Side length for the returned picture (pixels) |
-| Result    | Picture | <- | Icon                                          |
+| Result    | Imagem  | <- | Icon                                          |
 <!-- END REF -->
 
 
@@ -592,10 +592,10 @@ File icon [picture](../Concepts/picture.html).
 <!-- REF document.getText().Desc -->
 ## .getText()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #document.getText().Syntax -->
@@ -640,7 +640,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 Text of the file.
 
-#### Example
+#### Exemplo
 
 Given the following text document (fields are separated by tabs):
 

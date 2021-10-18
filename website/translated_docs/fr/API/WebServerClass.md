@@ -10,7 +10,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 ### Objet Serveur Web
 
-Web server objects are instantiated with the [`WEB Server`](#web-server) command.
+Les objets Web server sont installés à l'aide de la commande [`WEB Server`](#web-server).
 
 They provide the following properties and functions:
 
@@ -37,7 +37,7 @@ They provide the following properties and functions:
 <details><summary>Historique</summary>
 | Version | Modifications                      |
 | ------- | ---------------------------------- |
-| v18 R3  | Ajoutées                           |
+| v18 R3  | Ajout                              |
 | v19     | support for .sessionCookieSameSite |
 
 </details>
@@ -51,7 +51,7 @@ They provide the following properties and functions:
 | Paramètres | Type         |    | Description                                                    |
 | ---------- | ------------ | -- | -------------------------------------------------------------- |
 | option     | Entier long  | -> | Web server to get (default if omitted = `Web server database`) |
-| Résultat   | 4D.WebServer | <- | Web server object                                              |
+| Résultat   | 4D.WebServer | <- | Objet Serveur Web                                              |
 
 <!-- END REF -->
 
@@ -61,9 +61,9 @@ The web server starts with default settings defined in the settings file of the 
 
 | Constant                       | Valeur | Commentaire                                              |
 | ------------------------------ | ------ | -------------------------------------------------------- |
-| `Web server database`          | 1      | Current database Web server (default if omitted)         |
+| `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
 | `Web server host database`     | 2      | Web server of the host database of a component           |
-| `Web server receiving request` | 3      | Web server that received the request (target Web server) |
+| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
 
 The returned Web server object contains the current values of the Web server properties.
 
@@ -72,7 +72,7 @@ The returned Web server object contains the current values of the Web server pro
 From your component, you want to know if the Web server of the host database is started:
 
 ```4d
-  // Method of a component
+  // Méthode d'un composant
  var $hostWS : 4D.WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
@@ -85,7 +85,7 @@ From your component, you want to know if the Web server of the host database is 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->
@@ -94,9 +94,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Paramètres | Type       |    | Description                                    |
-| ---------- | ---------- | -- | ---------------------------------------------- |
-| Résultat   | Collection | <- | Collection of the available Web server objects |
+| Paramètres | Type       |    | Description                                  |
+| ---------- | ---------- | -- | -------------------------------------------- |
+| Résultat   | Collection | <- | Collection des objets Web server disponibles |
 
 <!-- END REF -->
 
@@ -104,12 +104,12 @@ The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->ret
 
 A 4D application can contain anywhere from one to several Web servers:
 
-- one Web server for the host database (default Web server)
-- one Web server for each component.
+- un serveur Web pour la base de données hôte (serveur Web par défaut)
+- un serveur Web pour chaque composant.
 
 All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
+> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. En revanche, chaque composant serveur Web que vous souhaitez utiliser doit être instancié à l'aide de la commande [`WEB Server`](#web-server).
 
 You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
@@ -420,7 +420,7 @@ Par défaut = 443
 <!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->
 **.inactiveProcessTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
 The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
@@ -436,7 +436,7 @@ Par défaut = 480 minutes
 <!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->
 **.inactiveSessionTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
 The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
 
@@ -553,7 +553,7 @@ Possible values: 500000 - 2147483647
 <!-- REF #WebServerClass.maxSessions.Syntax -->
 **.maxSessions** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
 The <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
 
@@ -706,7 +706,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->
@@ -748,21 +748,20 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
-
 **.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type  |    | Description                           |
-| ---------- | ----- | -- | ------------------------------------- |
-| settings   | Objet | -> | Web server settings to set at startup |
-| Résultat   | Objet | <- | Status of the web server startup      |
+| Paramètres | Type   |    | Description                            |
+| ---------- | ------ | -- | -------------------------------------- |
+| settings   | Object | -> | Paramètres du serveur web au démarrage |
+| Résultat   | Object | <- | État du démarrage du serveur web       |
 
 <!-- END REF -->
 
@@ -779,13 +778,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Propriété |                         | Type       | Description                                                          |
-| --------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
-| success   |                         | Booléen    | True if the web server was correctly started, False otherwise        |
-| errors    |                         | Collection | 4D error stack (not returned if the web server started successfully) |
-|           | \[].errCode            | Nombre     | 4D error code                                                        |
-|           | \[].message            | Texte      | Description of the 4D error                                          |
-|           | \[].componentSignature | Texte      | Signature of the internal component which returned the error         |
+| Propriété |                         | Type       | Description                                                               |
+| --------- | ----------------------- | ---------- | ------------------------------------------------------------------------- |
+| success   |                         | Boolean    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
+| errors    |                         | Collection | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
+|           | \[].errCode            | Number     | 4D error code                                                             |
+|           | \[].message            | Text       | Description of the 4D error                                               |
+|           | \[].componentSignature | Text       | Signature of the internal component which returned the error              |
 > If the Web server was already launched, an error is returned.
 
 #### Exemple
@@ -813,7 +812,7 @@ The function returns an object describing the Web server launch status. This obj
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->
@@ -821,9 +820,9 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |  | ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 
  <!-- END REF -->
 

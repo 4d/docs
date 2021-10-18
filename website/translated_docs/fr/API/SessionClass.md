@@ -29,7 +29,7 @@ For detailed information about the session implementation, please refer to the [
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
@@ -87,7 +87,7 @@ IP:port/4DACTION/action_Session
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -95,9 +95,9 @@ IP:port/4DACTION/action_Session
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 
@@ -126,7 +126,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -157,7 +157,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
@@ -197,7 +197,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -239,7 +239,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -277,7 +277,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -342,7 +342,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -384,7 +384,7 @@ End if
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 

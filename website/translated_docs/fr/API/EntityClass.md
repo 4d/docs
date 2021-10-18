@@ -44,7 +44,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
@@ -60,7 +60,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 
 *   If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
 *   If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Values of the related entity are directly available through cascading properties, for example "myEntity.employer.employees\[0].lastname".
-*   If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Duplications are removed (an unordered entity selection is returned).
+*   If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Les doublons sont supprimés (une entity selection non ordonnée est retournée).
 
 
 #### Exemple
@@ -84,7 +84,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 
@@ -129,7 +129,7 @@ This function can only be used with entities already saved in the database. It c
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
@@ -333,7 +333,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -441,7 +441,7 @@ Example with `dk force drop if stamp changed` option:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -480,7 +480,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -570,7 +570,7 @@ You could also use a related entity given as an object:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -617,7 +617,7 @@ The following generic code duplicates any entity:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -661,7 +661,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -705,7 +705,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -754,7 +754,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -804,7 +804,7 @@ The resulting value is included between 0 and the length of the entity selection
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -845,7 +845,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -886,7 +886,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -999,7 +999,7 @@ Example with `dk reload if stamp changed` option:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1041,7 +1041,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1083,7 +1083,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1146,7 +1146,7 @@ The object returned by `.reload( )` contains the following properties:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1249,7 +1249,7 @@ Updating an entity without `dk auto merge` option:
  End case
 ```
 
-#### Example 3
+#### Exemple 3
 
 Updating an entity with `dk auto merge` option:
 
@@ -1281,7 +1281,7 @@ Updating an entity with `dk auto merge` option:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1398,7 +1398,7 @@ Returns:
 }
 ```
 
-#### Example 3
+#### Exemple 3
 
 Expanding all the properties of `relatedEntities`:
 
@@ -1568,7 +1568,7 @@ Returns:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1612,7 +1612,7 @@ In this example, we check to see if it is necessary to save the entity:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1688,7 +1688,7 @@ In this case:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 

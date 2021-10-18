@@ -4,7 +4,7 @@ title: Apariencia
 ---
 
 ---
-## Default Button
+## Botón por defecto
 
 The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
 
@@ -338,7 +338,7 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 
 ---
-## User Interface
+## Interfaz de usuario
 
 You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
 

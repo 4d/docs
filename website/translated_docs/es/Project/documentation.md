@@ -24,7 +24,7 @@ It can also be partially exposed as [code editor tips](#viewing-documentation-in
 
 ## Archivos documentación
 
-### Documentation file name
+### Nombre del archivo de documentación
 
 Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 

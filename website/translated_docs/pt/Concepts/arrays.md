@@ -82,7 +82,7 @@ Here is another example: you want to initialize a form object with a text value 
 
 ## Two-dimensional Arrays
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
+Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Exemplo:
 
 ```4d
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
@@ -162,13 +162,13 @@ However, in some circumstances, you may need to work with arrays holding hundred
 | Array Type      | Formula for determining Memory Usage in Bytes                        |
 | --------------- | -------------------------------------------------------------------- |
 | Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Boolean         | (31+number of elements)\8                                           |
+| Booleano        | (31+number of elements)\8                                           |
 | Date            | (1+number of elements) * 6                                           |
 | Integer         | (1+number of elements) * 2                                           |
 | Long Integer    | (1+number of elements) * 4                                           |
-| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
+| Objeto          | (1+number of elements) * 8 + Sum of the size of each object          |
+| Imagem          | (1+number of elements) * 8 + Sum of the size of each picture         |
+| Ponteiro        | (1+number of elements) * 8 + Sum of the size of each pointer         |
 | Real            | (1+number of elements) * 8                                           |
 | Texto           | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
 | Hora            | (1+number of elements) * 4                                           |

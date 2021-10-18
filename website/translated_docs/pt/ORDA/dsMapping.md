@@ -205,7 +205,7 @@ The entity properties are however enumerable:
 
 An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
-Example:
+Exemplo:
 
 ```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type

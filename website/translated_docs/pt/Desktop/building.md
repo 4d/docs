@@ -486,7 +486,7 @@ The Licences & Certificate page can be used to:
 
 ![](assets/en/Admin/buildappCertif.png)
 
-### Licenses
+### Licenças
 
 This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 

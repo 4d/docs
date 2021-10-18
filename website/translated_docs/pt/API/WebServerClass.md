@@ -15,7 +15,7 @@ Web server objects are instantiated with the [`WEB Server`](#web-server) command
 They provide the following properties and functions:
 
 
-### Summary
+### Resumo
 |                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #WebServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.accessKeyDefined.Summary -->|
@@ -34,11 +34,11 @@ They provide the following properties and functions:
 
 ## WEB Server
 
-<details><summary>History</summary>
-| Version | Changes                            |
-| ------- | ---------------------------------- |
-| v18 R3  | Added                              |
-| v19     | support for .sessionCookieSameSite |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                           |
+| ------ | ---------------------------------- |
+| v18 R3 | Added                              |
+| v19    | support for .sessionCookieSameSite |
 
 </details>
 
@@ -67,7 +67,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 
 The returned Web server object contains the current values of the Web server properties.
 
-#### Example
+#### Exemplo
 
 From your component, you want to know if the Web server of the host database is started:
 
@@ -82,10 +82,10 @@ From your component, you want to know if the Web server of the host database is 
 
 ## WEB Server list
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R3 | Added    |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->
@@ -114,7 +114,7 @@ All available Web servers are returned by the `WEB Server list` command, whether
 You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 
-#### Example
+#### Exemplo
 
 We want to know how many running web servers are available:
 
@@ -703,10 +703,10 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 ## .sessionCookieSameSite
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19    | Added    |
 </details>
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->
@@ -745,14 +745,13 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 ## .start()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R3 | Added    |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
-
 **.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 
@@ -761,8 +760,8 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 | Parameter | Type   |    | Description                           |
 | --------- | ------ | -- | ------------------------------------- |
-| settings  | Object | -> | Web server settings to set at startup |
-| Result    | Object | <- | Status of the web server startup      |
+| settings  | Objeto | -> | Web server settings to set at startup |
+| Result    | Objeto | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
@@ -781,14 +780,14 @@ The function returns an object describing the Web server launch status. This obj
 
 | Property |                         | Type       | Description                                                          |
 | -------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
-| success  |                         | Boolean    | True if the web server was correctly started, False otherwise        |
+| success  |                         | Booleano   | True if the web server was correctly started, False otherwise        |
 | errors   |                         | Collection | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Number     | 4D error code                                                        |
+|          | \[].errCode            | Número     | 4D error code                                                        |
 |          | \[].message            | Texto      | Description of the 4D error                                          |
 |          | \[].componentSignature | Texto      | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $settings;$result : Object
@@ -810,10 +809,10 @@ The function returns an object describing the Web server launch status. This obj
 
 ## .stop()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R3 | Added    |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->
@@ -833,7 +832,7 @@ If the web server was started, all web connections and web processes are closed,
 > This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 
-#### Example
+#### Exemplo
 
 To stop the database Web server:
 

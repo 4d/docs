@@ -69,7 +69,7 @@ The web-related database methods are thread-safe and can be used in preemptive m
 Of course, the code executed by these methods must also be thread-safe.
 
 
-### Web Server URLs
+### URLs del servidor web
 
 The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
 

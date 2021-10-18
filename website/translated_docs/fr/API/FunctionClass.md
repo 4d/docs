@@ -113,7 +113,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 | Version | Modifications                    |
 | ------- | -------------------------------- |
 | v17 R6  | Renamed (New formula -> Formula) |
-| v17 R3  | Ajoutées                         |
+| v17 R3  | Ajout                            |
 </details>
 
 <!-- REF #_command_.Formula.Syntax -->
@@ -187,7 +187,7 @@ A formula using local variables:
 ```
 
 
-#### Example 3
+#### Exemple 3
 
 A simple formula using parameters:
 
@@ -248,7 +248,7 @@ Calling a formula using object notation:
 | Version | Modifications                                          |
 | ------- | ------------------------------------------------------ |
 | v17 R6  | Renamed New formula from string -> Formula from string |
-| v17 R3  | Ajoutées                                               |
+| v17 R3  | Ajout                                                  |
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->
@@ -303,7 +303,7 @@ The following code will create a dialog accepting a formula in text format:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajoutées      |
+| v17 R3  | Ajout         |
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->
@@ -364,7 +364,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajoutées      |
+| v17 R3  | Ajout         |
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->
@@ -415,7 +415,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->

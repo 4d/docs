@@ -42,7 +42,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
-| Class                       | Nombre del ejemplo   | Instantiated by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cs.DataStore                | cs.DataStore         | [`ds`](API/DataStoreClass.md#ds) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -325,7 +325,7 @@ The *$event* parameter contains the following properties:
 | Propiedad     | Tipo    | Descripción                                                                               |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                   |
-| dataClassName | Texto   | Dataclass name                                                                            |
+| dataClassName | Texto   | Nombre de la clase de datos                                                               |
 | kind          | Texto   | "get"                                                                                     |
 | result        | Variant | Opcional. Add this property with Null value if you want a scalar attribute to return Null |
 
@@ -386,7 +386,7 @@ The *$event* parameter contains the following properties:
 | Propiedad     | Tipo    | Descripción                                   |
 | ------------- | ------- | --------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                       |
-| dataClassName | Texto   | Dataclass name                                |
+| dataClassName | Texto   | Nombre de la clase de datos                   |
 | kind          | Texto   | "set"                                         |
 | value         | Variant | Value to be handled by the computed attribute |
 
@@ -434,10 +434,10 @@ The *$event* parameter contains the following properties:
 | Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                       |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                                                                                                                                                                                                                                                                                           |
-| dataClassName | Texto   | Dataclass name                                                                                                                                                                                                                                                                                                                                                    |
+| dataClassName | Texto   | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
 | kind          | Texto   | "query"                                                                                                                                                                                                                                                                                                                                                           |
 | value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                     |
-| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contiene palabra clave)</li> |
+| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
 | result        | Variant | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                          |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -567,7 +567,7 @@ The *$event* parameter contains the following properties:
 | Propiedad     | Tipo     | Descripción                                                                                                |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto    | Computed attribute name                                                                                    |
-| dataClassName | Texto    | Dataclass name                                                                                             |
+| dataClassName | Texto    | Nombre de la clase de datos                                                                                |
 | kind          | Texto    | "orderBy"                                                                                                  |
 | value         | Variant  | Value to be handled by the computed attribute                                                              |
 | operator      | Texto    | "desc" o "asc" (por defecto)                                                                               |
@@ -675,7 +675,7 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
 
-## Local functions
+## Funciones locales
 
 By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
 
@@ -705,7 +705,7 @@ local Function getYoungest
 
 ### Ejemplos
 
-#### Calculating age
+#### Cálculo de la edad
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
@@ -789,7 +789,7 @@ Class extends Entity
 Once a class is defined, its name is no longer dimmed in the Explorer.
 
 
-### Editing classes
+### Editar las clases
 
 To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 

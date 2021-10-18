@@ -21,14 +21,14 @@ To create a break point, click in the left margin of the Source Code pane in the
 
 In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
 
-![break-point](assets/en/Debugging/break.png)
+![punto de ruptura](assets/en/Debugging/break.png)
 
 In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
 
 To remove a break point, click the corresponding bullet.
 
 
-### Breakpoint Properties
+### Propiedades de los puntos de interrupción
 
 You can edit the behavior of a breakpoint using the Breakpoint Properties window:
 
@@ -77,7 +77,7 @@ Using this window, you can:
 You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Method Editor.
 
 
-## Catching Commands
+## Comandos de captura
 
 The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Unlike a break point, which is located in a particular project method (and therefore triggers a trace exception only when it is reached), the scope of catching a command includes all the processes that execute 4D code and call that command.
 

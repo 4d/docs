@@ -53,7 +53,7 @@ These examples assume that your 4D application is stored on the desktop and that
 
 > The current folder of the user is reached using the "~ " command under macOS and the "%HOMEPATH%" command under Windows.
 
-Launch application:
+Lance la aplicación:
 
 *   macOS:
 

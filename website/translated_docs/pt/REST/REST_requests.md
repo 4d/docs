@@ -31,7 +31,7 @@ With each REST request, the server returns the status and a response (with or wi
 ### Request Status
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
-| Status                    | Description                                                                |
+| Estado                    | Description                                                                |
 | ------------------------- | -------------------------------------------------------------------------- |
 | 0                         | Request not processed (server might not be started).                       |
 | 200 OK                    | Request processed without error.                                           |
@@ -40,7 +40,7 @@ With each REST request, you get the status along with the response. Below are a 
 | 404 Not Found             | The data class is not accessible via REST or the entity set doesn't exist. |
 | 500 Internal Server Error | Error processing the REST request.                                         |
 
-### Response
+### Resposta
 
 The response (in JSON format) varies depending on the request.
 

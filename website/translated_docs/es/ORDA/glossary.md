@@ -78,7 +78,7 @@ Internal name of the generic DataStore class in the `4D` class store.
 
 ## Copia profunda
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. Ver también Copia superficial.
 
 ## ds
 
@@ -128,7 +128,7 @@ For example, the `query()` method is a dataclass member function. Si ha almacena
 $myClass.query("name = smith")
 ```
 
-## Mixed data type
+## Tipo de datos mixtos
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Incluye:
 
@@ -139,11 +139,11 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   fecha
 *   objeto
 *   colección
-*   picture(\*)
+*   imagen(\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
-## Optimistic Lock
+## Bloqueo optimista
 
 In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
 
@@ -205,6 +205,6 @@ A shallow copy only duplicates the structure of elements, and keeps the same int
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
 
-## Storage attribute
+## Atributo de almacenamiento
 
 A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.

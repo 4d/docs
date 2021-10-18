@@ -73,7 +73,7 @@ Specify the folder for the built application in **Destination Folder**. If the s
 
 
 
-## Compiled structure page
+## Página de estructura compilada
 
 This tab allows you to build a standard compiled structure file and/or a compiled component:
 
@@ -95,7 +95,7 @@ A .4dz file is essentially a zipped (packed) version of the project folder. .4dz
 
 
 
-#### Include related folders
+#### Incluir las carpetas asociadas
 
 When you check this option, any folders related to the project are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
 
@@ -533,7 +533,7 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
 
-#### About Gatekeeper
+#### Sobre Gatekeeper
 
 Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
 
@@ -623,7 +623,7 @@ This mode allows you to duplicate your merged applications without breaking the 
 
 *Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
 
-You can select the data linking mode during the build application process. You can either:
+You can select the data linking mode during the build application process. Puede:
 
 - Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
 - Use the **LastDataPathLookup** XML key (single-user application or server application).

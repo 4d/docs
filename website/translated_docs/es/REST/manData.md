@@ -25,7 +25,7 @@ Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7B
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 
-## Navigating data
+## Navegación de datos
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
@@ -105,7 +105,7 @@ You can apply this technique to:
 
 - Dataclasses (all or a collection of entities in a dataclass)
 - Entidades específicas
-- Entity sets
+- Conjuntos de entidades
 
 #### Ejemplo con una dataclass
 

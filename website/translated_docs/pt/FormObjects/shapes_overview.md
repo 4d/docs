@@ -64,7 +64,7 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
         "strokeDashArray": "6 2" //dashed
         }
 ```
-Result: ![](assets/en/FormObjects/shape_line1.png)
+Resultado: ![](assets/en/FormObjects/shape_line1.png)
 
 
 ```
@@ -78,7 +78,7 @@ Result: ![](assets/en/FormObjects/shape_line1.png)
         "strokeDashArray": "6 2" //dashed
         }
 ```
-Result: ![](assets/en/FormObjects/shape_line2.png)
+Resultado: ![](assets/en/FormObjects/shape_line2.png)
 
 
 

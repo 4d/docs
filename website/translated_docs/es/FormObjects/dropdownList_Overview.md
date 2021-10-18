@@ -10,18 +10,18 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
 
-## Drop-down list types
+## Tipos de listas desplegables
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Tipo                           | Funcionalidades                                  | Expression Type | Tipos de datos               | Definición JSON                                                                                                                                               |
-| ------------------------------ | ------------------------------------------------ | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objeto                         | Built upon a collection                          | Objeto          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                          | Built upon an array                              | Array           | Numeric, Text, Date, or Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Choice list saved as value     | Built upon a choice list (standard)              | Lista           | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Choice list saved as reference | Built upon a choice list. Item position is saved | Lista           | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list       | Can display hierarchical contents                | Lista           | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Acción estándar                | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Tipo                           | Funcionalidades                                  | Tipo de expresión | Tipos de datos                  | Definición JSON                                                                                                                                               |
+| ------------------------------ | ------------------------------------------------ | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objeto                         | Built upon a collection                          | Objeto            | Numeric, Text, Date, or Time    | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                          | Basado en un array                               | Array             | Numeric, Text, Date, or Time    | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
+| Choice list saved as value     | Built upon a choice list (standard)              | Lista             | Valor del elemento seleccionado | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Choice list saved as reference | Built upon a choice list. Item position is saved | Lista             | Selected item reference         | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Hierarchical choice list       | Can display hierarchical contents                | Lista             | List reference                  | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Acción estándar                | Automatically built by the action                | *any*             | *any except List reference*     | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
 
@@ -31,11 +31,11 @@ You can create different types of drop-down lists with different features. To de
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
 
-| Propiedad      | Tipo               | Descripción                                                                                                                                                                                                                                             |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                    |
-| `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                      |
+| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                             |
+| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection           | Mandatory - Collection of scalar values. All values must be of the same type. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the drop-down list is empty |
+| `index`        | number               | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                    |
+| `currentValue` | igual que Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                      |
 
 If the object contains other properties, they are ignored.
 

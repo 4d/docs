@@ -33,7 +33,7 @@ Si pasamos la petición REST siguiente para nuestra clase de datos Company (que 
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Respuesta**:
 
 ```
 {
@@ -80,7 +80,7 @@ Si pasamos la petición REST siguiente para nuestra clase de datos Employee (que
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Respuesta**:
 
 ```
 {

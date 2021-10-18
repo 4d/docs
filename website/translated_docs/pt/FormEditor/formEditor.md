@@ -45,7 +45,7 @@ The rulers on the side and bottom help you position objects in the form. They ca
 
 Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
 
-### Toolbar
+### Barra de ferramentas
 
 The toolbar of the Form editor offers a set of tools to manipulate and modify the form. Each window has its own toolbar.
 

@@ -124,7 +124,7 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Description                          | Example                                                                                                                         |
+| HTTP Field | Description                          | Exemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |

@@ -8,7 +8,7 @@ The debugger is useful when you need to spot errors or monitor the execution of 
 ![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
 
 
-## Calling the Debugger
+## Llamada al depurador
 
 There are multiple ways to get the Debugger to display:
 
@@ -45,7 +45,7 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 > Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
 
-#### No Trace
+#### Fin del rastreo
 
 Tracing stops and normal method execution resumes.
 
@@ -87,7 +87,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Save Settings
+#### Parámetros Guardar
 
 Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
 * the size and position of the window
@@ -158,10 +158,10 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Descripción                                                  | ¿Se pueden modificar los valores? |
+| Subtema      | Descripción                                                  | ¿Se pueden modificar los valores? |
 | ------------ | ------------------------------------------------------------ | --------------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sí                                |
-| Process      | List of process variables used by the current process        | Sí                                |
+| Interproceso | List of interprocess variables being used at this point      | Sí                                |
+| Proceso      | List of process variables used by the current process        | Sí                                |
 | Local        | List of local variables used by the method being traced      | Sí                                |
 | Parámetros   | List of parameters received by the method                    | Sí                                |
 | Self         | Pointer to the current object, when tracing an Object Method | No                                |
@@ -176,7 +176,7 @@ Aquí está el resultado:
 
 ![dynamic-variable-names](assets/en/Debugging/dynamicVariableNames.png)
 
-#### Current Form Values
+#### Valores actuales del formulario
 
 This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
 
@@ -249,7 +249,7 @@ A method may call other methods or class functions, which may call other methods
 
 Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
 
-In the image above:
+En la imagen de arriba:
 
 * `thirdMethod` has not received any parameter
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
@@ -270,14 +270,14 @@ After you deploy the list of parameters, you can drag and drop parameters and fu
 
 You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
 
-## Custom Watch Pane
+## Panel de vigilancia personalizado
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
 * field
 * variable
 * puntero
-* calculation
+* cálculo
 * Comando 4D
 * method
 * and anything else that returns a value
@@ -286,7 +286,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
-### Handling expressions
+### Gestión de expresiones
 
 There are several ways to add expressions to the list:
 
@@ -324,13 +324,13 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 
-## Source Code Pane
+## Panel de código fuente
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
 
-### Tool tip
+### Tips
 
 Hover your pointer over any expression to display a tool tip that indicates:
 
@@ -419,7 +419,7 @@ This section lists all the shortcuts available in the debugger window.
 * **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
 * **Double-Click** in the Custom Watch Pane to create a new expression
 
-#### Source Code Pane
+#### Panel de código fuente
 
 * Click in the left margin to set or remove break points.
 * **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.

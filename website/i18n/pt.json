@@ -147,7 +147,7 @@
         "title": "BLOB"
       },
       "Concepts/boolean": {
-        "title": "Boolean"
+        "title": "Booleano"
       },
       "Concepts/collection": {
         "title": "Collection"
@@ -162,13 +162,13 @@
         "title": "Number (Real, Longint, Integer)"
       },
       "Concepts/object": {
-        "title": "Object"
+        "title": "Objeto"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "Imagem"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "Ponteiro"
       },
       "Concepts/string": {
         "title": "String"
@@ -192,7 +192,7 @@
         "title": "Interpreted and Compiled modes"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "Métodos"
       },
       "Concepts/parameters": {
         "title": "Parameters"
@@ -544,7 +544,7 @@
         "title": "Objects"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "Imagem"
       },
       "FormObjects/propertiesPlugIns": {
         "title": "Plug-ins"

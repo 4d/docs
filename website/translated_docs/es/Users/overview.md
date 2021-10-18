@@ -38,7 +38,7 @@ To disable the password access system, you just need to remove the Designer pass
 
 In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. The following table lists the main users and groups features and their availability:
 
-|                                                               | 4D (single-user)             | 4D Server |
+|                                                               | 4D (monopuesto)              | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
 | Adding/editing users and groups                               | sí                           | sí        |
 | Assigning user/group access to servers                        | sí                           | sí        |

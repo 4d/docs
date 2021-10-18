@@ -5,7 +5,7 @@ title: Generalidades
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
 
-## Easy Monitoring
+## Fácil de supervisar
 
 You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
 

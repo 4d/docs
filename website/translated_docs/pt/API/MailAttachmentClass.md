@@ -24,10 +24,10 @@ Attachment objects provide the following read-only properties and functions:
 
 ## MAIL New attachment
 
-<details><summary>History</summary>
-| Version | Changes                              |
-| ------- | ------------------------------------ |
-| v19 R2  | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
@@ -169,10 +169,10 @@ $transporter.send($email)
 
 ## 4D.MailAttachment.new()
 
-<details><summary>History</summary>
-| Version | Changes                              |
-| ------- | ------------------------------------ |
-| v19 R2  | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->
@@ -265,10 +265,10 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 ## .platformPath
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19    | Added    |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->

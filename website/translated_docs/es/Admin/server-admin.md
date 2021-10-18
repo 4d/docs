@@ -17,7 +17,7 @@ The **Monitor** page displays dynamic information concerning database use as wel
 
 > On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
 
-#### Graphic area
+#### Área gráfica
 
 The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
 
@@ -32,7 +32,7 @@ The graphic area lets you see the evolution in real time of several parameters: 
 Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
 
 
-#### Overview Area
+#### Visión general del área
 
 The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
 
@@ -45,7 +45,7 @@ The "Overview" area provides various information concerning the system, applicat
 
 Usually, you will need to check the [**Licences Manager**](licenses.md).
 
-#### Details Area
+#### Área de detalles
 
 The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
 
@@ -68,7 +68,7 @@ You can also sort the list of column values by clicking on its header. Click sev
 
 ![](assets/en/Admin/server-users-sort.png)
 
-### List of Users
+### Lista de usuarios
 
 For each user connected to the server, the list provides the following information:
 
@@ -94,14 +94,14 @@ The following scenario is supported: a remote user stops working for awhile, for
 > A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
 
 
-### Search/filtering Area
+### Área de búsqueda/filtrado
 
 This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
 
 The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 
-### Administration Buttons
+### Botones de administración
 
 This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
 
@@ -128,7 +128,7 @@ This button can be used to force the selected user(s) to disconnect. When you cl
 
 
 
-## Processes Page
+## Página Procesos
 
 The **Processes** page lists all the processes underway.
 
@@ -162,8 +162,8 @@ The lower area of the window is used to display the graphic representation of th
 The activity of the process is the percentage of time that 4D Server has devoted to this process (ratio). The window provides the following information for each process:
 
 - Type of process (see below),
-- Session/Info:
-    - 4D process - blank,
+- Sesión/Información:
+    - Proceso 4D - en blanco,
     - User process - 4D user name,
     - Web process - URL path,
 - Nombre del proceso,
@@ -172,7 +172,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 - Running time (in seconds) of the process since its creation,
 - Percentage of time that 4D Server has devoted to this process (ratio).
 
-### Process Type
+### Tipo del proceso
 
 Each process is identified by an icon as well as a type. The color and form of the icon indicates the type of process:
 
@@ -182,7 +182,7 @@ Each process is identified by an icon as well as a type. The color and form of t
 | ![](assets/en/Admin/server-icon-2.png)  | Servidor SQL                                                                                                                                              |
 | ![](assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                             |
 | ![](assets/en/Admin/server-icon-4.png)  | Servidor Web                                                                                                                                              |
-| ![](assets/en/Admin/server-icon-5.png)  | SOAP Server                                                                                                                                               |
+| ![](assets/en/Admin/server-icon-5.png)  | Servidor SOAP                                                                                                                                             |
 | ![](assets/en/Admin/server-icon-6.png)  | Protected 4D client process (development process of a connected 4D)                                                                                       |
 | ![](assets/en/Admin/server-icon-7.png)  | Main 4D client process (main process of a connected 4D). Collaborative process, equivalent on the server of the process created on the client machine)    |
 | ![](assets/en/Admin/server-icon-8.png)  | 4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process) |
@@ -197,8 +197,8 @@ Each process is identified by an icon as well as a type. The color and form of t
 | ![](assets/en/Admin/server-icon-17.png) | SOAP method (preemptive)                                                                                                                                  |
 | ![](assets/en/Admin/server-icon-18.png) | Logger (registrador)                                                                                                                                      |
 | ![](assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                   |
-| ![](assets/en/Admin/server-icon-20.png) | TCP session manager                                                                                                                                       |
-| ![](assets/en/Admin/server-icon-21.png) | Other process                                                                                                                                             |
+| ![](assets/en/Admin/server-icon-20.png) | Gestor de sesiones TCP                                                                                                                                    |
+| ![](assets/en/Admin/server-icon-21.png) | Otro proceso                                                                                                                                              |
 | ![](assets/en/Admin/server-icon-22.png) | Worker process (cooperative)                                                                                                                              |
 | ![](assets/en/Admin/server-icon-23.png) | 4D client process (preemptive)                                                                                                                            |
 | ![](assets/en/Admin/server-icon-24.png) | Stored procedure (preemptive process)                                                                                                                     |
@@ -207,7 +207,7 @@ Each process is identified by an icon as well as a type. The color and form of t
 > Each main 4D client process and its "twinned" 4D client base process are grouped together when the **Display processes by groups** option is checked.
 
 
-### Administration Buttons
+### Botones de administración
 
 The page also has five control buttons that act on the selected process(es). Note that only user processes can be acted upon.
 
@@ -268,7 +268,7 @@ After verification, a report file is generated in XML format on the server in th
 This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
 
 
-#### Restart server...
+#### Reiniciar el servidor...
 
 This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
 
@@ -287,7 +287,7 @@ This area indicates the date and time of the [last backup](MSC/backup.md) of the
 The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
 
 
-### Request and Debug logs
+### Historial de peticiones y depuración
 
 This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
 
@@ -310,7 +310,7 @@ The **View Report** button (named **Download report** if the operation was carri
 This button allows you to load a special server [log configuration file](debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 
 
-#### Pause logging
+#### Detener el registro
 
 This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
 
@@ -407,7 +407,7 @@ This area provides information about the SQL server configuration parameters: au
 
 These parameters can be modified via the 4D Settings.
 
-#### Connections
+#### Conecciones
 
 Number of SQL connections currently open on 4D Server.
 
@@ -415,7 +415,7 @@ Number of SQL connections currently open on 4D Server.
 
 Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.
 
-## HTTP Server Page
+## Página del servidor HTTP
 
 The HTTP Server page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. The SOAP server manages the publication of Web Services. These servers rely on the internal HTTP server of 4D Server.
 
@@ -430,7 +430,7 @@ The upper part of the page provides information about the current status of the 
 - **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
 
 
-### Start/Stop HTTP Server
+### Iniciar/detener el servidor HTTP
 
 This button toggles and can be used to control the activation of the 4D Server HTTP server.
 
@@ -448,7 +448,7 @@ This area provides specific information about the Web server of 4D Server.
 - **Web requests**: Accepted or Rejected. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
 - **Maximum connections**: Maximum number of Web connections allowed. This value depends on the license installed on the server machine.
 
-### SOAP Information
+### Información SOAP
 
 This area provides specific information about the SOAP server of 4D Server and includes a control button.
 
@@ -469,7 +469,7 @@ This area provides information about the configuration parameters and operation 
 - **Log file information**: name, format and date of the next automatic log backup of the HTTP server (logweb.txt file).
 
 
-## Real Time Monitor Page
+## Página de seguimiento en tiempo real
 
 The Real Time Monitor page monitors the progress of "long" operations performed by the application in real time. These operations are, for example, sequential queries, execution of formulas, etc.
 
@@ -494,7 +494,7 @@ The following information is provided for each line:
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
 - clicking on the **Pause** button,
-- clicking in the list,
+- haciendo clic en la lista,
 - pressing the space bar.
 
 When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.

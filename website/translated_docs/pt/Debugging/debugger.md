@@ -161,7 +161,7 @@ This theme is composed of the following subthemes:
 | Subtheme     | Description                                                  | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
 | Interprocess | List of interprocess variables being used at this point      | Sim                         |
-| Process      | List of process variables used by the current process        | Sim                         |
+| Processo     | List of process variables used by the current process        | Sim                         |
 | Local        | List of local variables used by the method being traced      | Sim                         |
 | Parameters   | List of parameters received by the method                    | Sim                         |
 | Self         | Pointer to the current object, when tracing an Object Method | No                          |

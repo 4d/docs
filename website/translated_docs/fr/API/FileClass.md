@@ -58,7 +58,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -132,7 +132,7 @@ If the command is called from a component, pass the optional * parameter to get 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
@@ -155,7 +155,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF file.create().Note -->
@@ -202,7 +202,7 @@ Creation of a preferences file in the database folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -267,7 +267,7 @@ You want to create an alias to a file in your database folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -276,9 +276,9 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |  | ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 
@@ -326,7 +326,7 @@ You want to delete a specific file in the database folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->
@@ -445,7 +445,7 @@ ALERT($info.Copyright)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -513,7 +513,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -557,7 +557,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->
@@ -641,7 +641,7 @@ $infoPlistFile.setAppInfo($info)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -679,7 +679,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 

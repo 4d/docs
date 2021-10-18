@@ -217,7 +217,7 @@ A new entity selection is **shareable** in the following cases:
 - the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
-Example:
+Exemplo:
 ```4d
 $myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
@@ -228,7 +228,7 @@ A new entity selection is **alterable** in the following cases:
 - the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
 - the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
 
-Example:
+Exemplo:
 ```4d
 $toModify:=ds.Company.all().copy() //$toModify is alterable
 ```
@@ -428,7 +428,7 @@ The following methods automatically associate the optimization context of the so
 
 
 
-**Example**
+**Exemplo**
 
 Given the following code:
 

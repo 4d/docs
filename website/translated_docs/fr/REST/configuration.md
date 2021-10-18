@@ -15,11 +15,11 @@ Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et co
 
 ## Démarrage du serveur REST
 
-Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes REST. Si vous souhaitez démarrer le serveur REST, vous devez cocher l'option **Exposer en tant que serveur REST** dans la page "Web/REST" des paramètres de la structure pour que les demandes REST soient traitées.
+Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes REST. If you want to start the REST Server, you must check the **Expose as REST server** option in the **Web** > **Web Features** page of the structure settings in order for REST requests to be processed.
 
 ![alt-text](assets/en/REST/Settings.png)
 
-> Les services REST utilisent le serveur HTTP 4D; vous devez donc vous assurer que le serveur Web 4D est lancé.
+> REST services use the 4D HTTP server, so you need to make sure that the 4D web server is started.
 
 Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
@@ -29,15 +29,15 @@ Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'aff
 Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est évidemment pas recommandé pour des raisons de sécurité et de contrôle de l'utilisation des licences clientes.
 
 Vous pouvez configurer les accès REST de l'une des manières suivantes :
-- assigner un groupe d'utilisateurs en **lecture/écriture** aux services REST dans la page "Web/REST" des paramètres de la structure;
+- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - saisir d'une méthode base `On REST Authentication`pour intercepter et gérer chaque demande REST initiale.
 
-> Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Une fois qu'une méthode base `On REST Authentication` a été définie, 4D lui donne entièrement le contrôle des requêtes REST : tout paramètre effectué à l'aide du menu "Lecture/Ecriture" de la page de ressources Web/REST des paramètres de structure est ignoré.
+> Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
 
 ### Utilisation des Paramètres de la Structure
 
-Le menu **Lecture/Écriture** de la page "Web/REST" des paramètres de la structure indique un groupe d'utilisateurs 4D autorisé à établir le lien vers l'application 4D à l'aide des requêtes REST.
+The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
 Par défaut, le menu affiche **\<Anyone>**, ce qui signifie que les accès REST sont ouverts à tous les utilisateurs. Une fois que vous avez spécifié un groupe, seul un compte utilisateur 4D appartenant à ce groupe peut être utilisé pour [accéder à 4D via une requête REST](authUsers.md). Si un compte utilisé n'appartient pas à ce groupe, 4D renvoie une erreur d'authentification à l'expéditeur de la requête.
 

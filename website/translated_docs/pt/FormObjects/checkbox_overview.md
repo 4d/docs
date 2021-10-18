@@ -83,7 +83,7 @@ With the exception of the [available properties](#supported-properties), many ch
 
 4D provides check boxes in the following predefined button styles:
 
-### Regular
+### Clássico
 
 The Regular check box button style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 

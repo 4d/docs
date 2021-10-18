@@ -42,7 +42,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
  $f.message.apply() //muestra "Hello world"
 ```
 
-#### Passing parameters
+#### Paso de parámetros
 
 You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
 

@@ -140,10 +140,10 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 #### Compilation Target
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v19    | Added    |
 </details>
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:

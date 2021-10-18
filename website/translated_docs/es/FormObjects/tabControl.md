@@ -74,7 +74,7 @@ Form.tabControl.index:=2 //start on page 3
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 
-### Using a Text array
+### Utilizar un array Text
 
 You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 

@@ -38,7 +38,7 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 > If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
 
 
-### Start and stop
+### Iniciar y detener
 
 If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
 
@@ -59,7 +59,7 @@ You can configure the `WebAdmin` component using the [Web Administration setting
 > If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
 
 
-### Settings dialog box
+### Caja de diálogo de parámetros
 
 To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
 
@@ -91,7 +91,7 @@ Port number to use for connections through HTTP to the `WebAdmin` web server whe
 
 When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked.
 
-#### HTTPS Port
+#### Puerto HTTPS
 
 Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. El valor por defecto es 7443.
 
@@ -100,7 +100,7 @@ Port number to use for connections through HTTPS to the `WebAdmin` web server wh
 
 Path of the folder where the TLS certificate files are located. By default, the certificate folder path is empty and 4D or 4D Server uses the certificate files embedded in the 4D application (custom certificates must be stored next to the project folder).
 
-#### Debug log mode
+#### Modo de registro de depuración
 
 Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
 

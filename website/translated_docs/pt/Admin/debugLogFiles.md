@@ -54,7 +54,7 @@ Este arquivo começa com os cabeçalhos abaixo:
 *   Hostname of the server that hosts the application
 *   User Login Name: login on the OS of the user that ran the 4D application on the server.
 
-#### Contents
+#### Conteúdos
 
 Para cada petição, os campos abaixo estão logados:
 
@@ -105,7 +105,7 @@ Este arquivo começa com os cabeçalhos abaixo:
 *   User Login Name: login on the OS of the user that ran the 4D application on the server.
 
 
-#### Contents
+#### Conteúdos
 
 Para cada processo, os campos abaixo são registrados:
 
@@ -194,7 +194,7 @@ Os campos abaixo estão registrados para cada evento:
 | -------- | --------------- | ------------------------------------------------------------- |
 | 1        | sequence_number | Unique and sequential operation number in the logging session |
 
-|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. Esse valor pode ser um valor absoluto:<p><ol><li>Command</li><li>Método (método de projeto, método de banco de dados, etc)</li><li>Mensagem (enviada só pelo comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarefa</li><li>Método membro (método anexado à coleção ou a um objeto)</li></ol></p>Quando fechar um nível de stack, as colunas `operation_type`, `operation` e `operation_parameters` tem o mesmo valor que o nível de stack registrado na coluna `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>A primeira e segunda linha abrem o nível de stack, a terceira e quarta linha fecham o nível de stack. Valores nas colunas 6, 7 e 8 são repetidos na linha do nível de stack ao fechar. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>uma ID de comando de linguagem (quando tipo =1)</li><li>um nome de método (quando tipo =2)</li><li>uma combinação de pluginIndex;pluginCommand (quando tipo=4, 5, 6 ou 7). Pode conter algo como '3;2'</li><li>uma UUID task connection (quando tipo = 8)</li>
+|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. Esse valor pode ser um valor absoluto:<p><ol><li>Comando</li><li>Método (método de projeto, método de banco de dados, etc)</li><li>Mensagem (enviada só pelo comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarefa</li><li>Método membro (método anexado à coleção ou a um objeto)</li></ol></p>Quando fechar um nível de stack, as colunas `operation_type`, `operation` e `operation_parameters` tem o mesmo valor que o nível de stack registrado na coluna `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>A primeira e segunda linha abrem o nível de stack, a terceira e quarta linha fecham o nível de stack. Valores nas colunas 6, 7 e 8 são repetidos na linha do nível de stack ao fechar. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>uma ID de comando de linguagem (quando tipo =1)</li><li>um nome de método (quando tipo =2)</li><li>uma combinação de pluginIndex;pluginCommand (quando tipo=4, 5, 6 ou 7). Pode conter algo como '3;2'</li><li>uma UUID task connection (quando tipo = 8)</li>
 |8|operation_parameters|Parameters passed to commands, methods, or plugins| |9|form_event|Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)| |10|stack_opening_sequence_number|Only for the closing stack levels: Sequence number of the corresponding opening stack level| |11|stack_level_execution_time|Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)|
 
 ## 4DDiagnosticLog.txt
@@ -271,7 +271,7 @@ Os arquivos de histórico podem ser produzidos em duas versões:
     $transporter:=IMAP New transporter($server)
     ```
 
-#### Contents
+#### Conteúdos
 
 Para cada petição, os campos abaixo estão logados:
 
@@ -312,7 +312,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 Os campos abaixo são registrados para cada petição:
 
-| Field name     | Description                                                   | Example                                                   |
+| Field name     | Description                                                   | Exemplo                                                   |
 | -------------- | ------------------------------------------------------------- | --------------------------------------------------------- |
 | sequenceNumber | Unique and sequential operation number in the logging session | 104                                                       |
 | url            | Client ORDA request URL                                       | "rest/Persons(30001)"                                     |
@@ -470,7 +470,7 @@ The log configuration file is a `.json` file that can contain the following prop
 }
 ```
 
-### Example
+### Exemplo
 
 Here is an example of log configuration file:
 

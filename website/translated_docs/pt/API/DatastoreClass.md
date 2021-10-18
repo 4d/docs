@@ -8,7 +8,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 *   [ds](#ds): a shortcut to the main datastore
 *   [Open datastore](#open-datastore): to open any remote datastore
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,11 +31,11 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 ## ds
 
-<details><summary>History</summary>
-| Version | Changes                      |
-| ------- | ---------------------------- |
-| v18     | Support of localID parameter |
-| v17     | Added                        |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                     |
+| ------ | ---------------------------- |
+| v18    | Support of localID parameter |
+| v17    | Added                        |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
@@ -101,10 +101,10 @@ Using the main datastore on the 4D database:
 
 ## Open datastore
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 <!-- REF #_command_.Open datastore.Syntax -->
@@ -113,7 +113,7 @@ Using the main datastore on the 4D database:
 <!-- REF #_command_.Open datastore.Params -->
 | Parameter      | Type         |    | Description                                                               |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
-| connectionInfo | Object       | -> | Connection properties used to reach the remote datastore                  |
+| connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
 | Result         | cs.DataStore | <- | Datastore object                                                          |
 <!-- END REF -->
@@ -145,14 +145,14 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Property    | Type    | Description                                                                                                                                                                                                                                                            |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Texto   | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Texto   | User name                                                                                                                                                                                                                                                              |
-| password    | Texto   | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | Longint | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Boolean | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Texto   | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| Property    | Type     | Description                                                                                                                                                                                                                                                            |
+| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | Texto    | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
+| user        | Texto    | User name                                                                                                                                                                                                                                                              |
+| password    | Texto    | User password                                                                                                                                                                                                                                                          |
+| idleTimeout | Longint  | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
+| tls         | Booleano | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
+| type        | Texto    | Must be "4D Server"                                                                                                                                                                                                                                                    |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -209,10 +209,10 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 <!-- REF DataStoreClass.dataclassName.Desc -->
 ## *.dataclassName*
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 </details>
 
 <!-- REF DataStoreClass.dataclassName.Syntax -->
@@ -224,7 +224,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $emp : cs.Employee
@@ -245,10 +245,10 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 ## .cancelTransaction()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 
@@ -271,7 +271,7 @@ The `.cancelTransaction()` function cancels any changes made to the data during 
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
 
 
-#### Example
+#### Exemplo
 
 See example for the [`.startTransaction()`](#starttransaction) function.
 
@@ -283,10 +283,10 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF DataStoreClass.encryptionStatus().Desc -->
 ## .encryptionStatus()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.encryptionStatus().Syntax -->
@@ -296,7 +296,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parameter | Type   |    | Description                                                                 |
 | --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| Result    | Object | <- | Information about the encryption of the current datastore and of each table |
+| Result    | Objeto | <- | Information about the encryption of the current datastore and of each table |
 <!-- END REF -->
 
 
@@ -310,16 +310,16 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 The returned object contains the following properties:
 
-| Property    |             |               | Type    | Description                                                                        |
-| ----------- | ----------- | ------------- | ------- | ---------------------------------------------------------------------------------- |
-| isEncrypted |             |               | Boolean | True if the data file is encrypted                                                 |
-| keyProvided |             |               | Boolean | True if the encryption key matching the encrypted data file is provided(*).        |
-| tabelas     |             |               | Object  | Object containing as many properties as there are encryptable or encrypted tables. |
-|             | *tableName* |               | Object  | Encryptable or Encrypted table                                                     |
-|             |             | name          | Texto   | Name of the table                                                                  |
-|             |             | num           | Number  | Table number                                                                       |
-|             |             | isEncryptable | Boolean | True if the table is declared encryptable in the structure file                    |
-|             |             | isEncrypted   | Boolean | True if the records of the table are encrypted in the data file                    |
+| Property    |             |               | Type     | Description                                                                        |
+| ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
+| isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
+| keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
+| tabelas     |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
+|             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
+|             |             | name          | Texto    | Name of the table                                                                  |
+|             |             | num           | Número   | Table number                                                                       |
+|             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
+|             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
 
 (*) The encryption key can be provided:
 
@@ -327,7 +327,7 @@ The returned object contains the following properties:
 *   at the root of a connected device before opening the datastore,
 *   with the `Discover data key` command.
 
-#### Example
+#### Exemplo
 
 You want to know the number of encrypted tables in the current data file:
 
@@ -357,10 +357,10 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17    | Added    |
 
 </details>
 
@@ -370,7 +370,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parameter | Type   |    | Description          |
 | --------- | ------ |:--:| -------------------- |
-| Result    | Object | <- | Datastore properties |
+| Result    | Objeto | <- | Datastore properties |
 <!-- END REF -->
 
 #### Description
@@ -379,12 +379,12 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Property   | Type    | Description                                                                                                                                                     |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
-| networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID    | text    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | object  | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| Property   | Type     | Description                                                                                                                                                     |
+| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
+| networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
+| localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
+| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
@@ -428,10 +428,10 @@ On a remote datastore:
 <!-- REF DataStoreClass.getRequestLog().Desc -->
 ## .getRequestLog()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R6 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.getRequestLog().Syntax -->
@@ -457,7 +457,7 @@ Collection of stacked request objects. The most recent request has index 0.
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
 
 
-#### Example
+#### Exemplo
 
 See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
@@ -467,19 +467,19 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- REF DataStoreClass.isAdminProtected().Desc -->
 ## .isAdminProtected()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R6 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.isAdminProtected().Syntax -->
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parameter | Type    |    | Description                                                                    |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------ |
-| Result    | Boolean | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
+| Parameter | Type     |    | Description                                                                    |
+| --------- | -------- |:--:| ------------------------------------------------------------------------------ |
+| Result    | Booleano | <- | True if the Data Explorer access is disabled, False if it is enabled (default) |
 <!-- END REF -->
 
 
@@ -501,10 +501,10 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R5 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
@@ -535,10 +535,10 @@ When this function is not called, new entity selections can be shareable, depend
 <!-- REF DataStoreClass.provideDataKey().Desc -->
 ## .provideDataKey()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R5 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.provideDataKey().Syntax -->
@@ -549,8 +549,8 @@ When this function is not called, new entity selections can be shareable, depend
 | Parameter     | Type   |    | Description                           |
 | ------------- | ------ | -- | ------------------------------------- |
 | curPassPhrase | Texto  | -> | Current encryption passphrase         |
-| curDataKey    | Object | -> | Current data encryption key           |
-| Result        | Object | <- | Result of the encryption key matching |
+| curDataKey    | Objeto | -> | Current data encryption key           |
+| Result        | Objeto | <- | Result of the encryption key matching |
 <!-- END REF -->
 
 
@@ -576,20 +576,20 @@ The result of the command is described in the returned object:
 
 | Property   |                          | Type       | Description                                                                     |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| success    |                          | Boolean    | True if the provided encryption key matches the encrypted data, False otherwise |
+| success    |                          | Booleano   | True if the provided encryption key matches the encrypted data, False otherwise |
 |            |                          |            | Properties below are returned only if success is *FALSE*                        |
-| status     |                          | Number     | Error code (4 if the provided encryption key is wrong)                          |
+| status     |                          | Número     | Error code (4 if the provided encryption key is wrong)                          |
 | statusText |                          | Texto      | Error message                                                                   |
 | errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
 |            | \[ ].componentSignature | Texto      | Internal component name                                                         |
-|            | \[ ].errCode            | Number     | Error number                                                                    |
+|            | \[ ].errCode            | Número     | Error number                                                                    |
 |            | \[ ].message            | Texto      | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $keyStatus : Object
@@ -613,19 +613,19 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF DataStoreClass.setAdminProtection().Desc -->
 ## .setAdminProtection()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18 R6 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parameter | Type    |    | Description                                                                                          |
-| --------- | ------- | -- | ---------------------------------------------------------------------------------------------------- |
-| status    | Boolean | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
+| Parameter | Type     |    | Description                                                                                          |
+| --------- | -------- | -- | ---------------------------------------------------------------------------------------------------- |
+| status    | Booleano | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
 <!-- END REF -->
 
 
@@ -638,7 +638,7 @@ By default when the function is not called, access to data is always granted on 
 In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted.
 
 
-#### Example
+#### Exemplo
 
 You create a *protectDataFile* project method to call before deployments for example:
 
@@ -656,10 +656,10 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF DataStoreClass.startRequestLog().Desc -->
 ## .startRequestLog()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R6 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.startRequestLog().Syntax -->
@@ -734,10 +734,10 @@ You want to log ORDA client requests in memory:
 <!-- REF DataStoreClass.startTransaction().Desc -->
 ## .startTransaction()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 <!-- REF #DataStoreClass.startTransaction().Syntax -->
@@ -758,7 +758,7 @@ The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().S
 You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -802,10 +802,10 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 <!-- REF DataStoreClass.stopRequestLog().Desc -->
 ## .stopRequestLog()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v17 R6 | Added    |
 </details>
 
 <!-- REF #DataStoreClass.stopRequestLog().Syntax -->
@@ -825,7 +825,7 @@ The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summa
 This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
 
 
-#### Example
+#### Exemplo
 
 See examples for [`.startRequestLog()`](#startrequestlog).
 
@@ -837,10 +837,10 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- REF DataStoreClass.validateTransaction().Desc -->
 ## .validateTransaction()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 <!-- REF #DataStoreClass.validateTransaction().Syntax -->
@@ -862,7 +862,7 @@ The function saves the changes to the data on the datastore that occurred during
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
 
 
-#### Example
+#### Exemplo
 
 See example for [`.startTransaction()`](#starttransaction).
 

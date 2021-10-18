@@ -156,7 +156,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 *   subject,
 *   attachment filename(s),
-*   email name.
+*   nombre del correo electrónico.
 
 **Valores posibles:**
 
@@ -214,7 +214,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 *   subject,
 *   attachment filename(s),
-*   email name.
+*   nombre del correo electrónico.
 
 **Valores posibles:**
 

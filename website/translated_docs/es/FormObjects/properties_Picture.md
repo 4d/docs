@@ -32,7 +32,7 @@ Two main locations can be used for static picture path:
 
 ### Scaled to fit
 
-`JSON grammar: "scaled"`
+`Gramática JSON: "scaled"`
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
@@ -40,7 +40,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 

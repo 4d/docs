@@ -38,7 +38,7 @@ Attachment objects provide the following read-only properties and functions:
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
-| zIPFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| zIPFile     | 4D.ZipFile        | -> | Archivo zip adjunto                                                  |
 | blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |
@@ -183,7 +183,7 @@ $transporter.send($email)
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
-| zIPFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
+| zIPFile     | 4D.ZipFile        | -> | Archivo zip adjunto                                                  |
 | blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
 | path        | Texto             | -> | Path of the attachment file                                          |
 | name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |

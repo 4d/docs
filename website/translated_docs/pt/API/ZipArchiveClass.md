@@ -10,7 +10,7 @@ A 4D ZIP archive is a `File` or `Folder` object containing one or more files or 
 - 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 
-### Example
+### Exemplo
 
 To retrieve and view the contents of a ZIP file object:
 
@@ -30,7 +30,7 @@ If($zipFile.extension=".txt")
 End if
 ```
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,11 +39,11 @@ End if
 
 ## ZIP Create archive
 
-<details><summary>History</summary>
-| Version | Changes                                                               |
-| ------- | --------------------------------------------------------------------- |
-| v19 R3  | Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property |
-| v18     | Added                                                                 |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                                                              |
+| ------ | --------------------------------------------------------------------- |
+| v19 R3 | Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property |
+| v18    | Added                                                                 |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -54,10 +54,10 @@ End if
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
-| zipStructure    | Object    | -> | File or Folder object to compress                    |
+| zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
 | options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Result          | Object    | <- | Status object                                        |
+| Result          | Objeto    | <- | Status object                                        |
 <!-- END REF -->
 
 
@@ -151,11 +151,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Type    | Description                                                                                                                              |
-| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| statusText | Texto   | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Integer | Status code                                                                                                                              |
-| success    | Boolean | True if archive created successfully, else false                                                                                         |
+| Property   | Type     | Description                                                                                                                              |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
+| status     | Integer  | Status code                                                                                                                              |
+| success    | Booleano | True if archive created successfully, else false                                                                                         |
 
 
 
@@ -288,10 +288,10 @@ $err:=ZIP Create archive($zip; $destination)
 
 ## ZIP Read archive
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças |
+| ------ | -------- |
+| v18    | Added    |
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->
@@ -326,7 +326,7 @@ The returned `4D.ZipArchive` object contains a single [`root`](#root) property w
 
 
 
-#### Example
+#### Exemplo
 
 To retrieve and view the contents of a ZIP file object:
 

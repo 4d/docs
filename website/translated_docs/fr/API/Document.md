@@ -12,7 +12,7 @@ title: Document Class
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
@@ -34,7 +34,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
@@ -58,7 +58,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.exists.Syntax -->
@@ -84,7 +84,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.extension.Syntax -->
@@ -99,7 +99,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.ful
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->#### Description
 
 The `.fullName` property returns<!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
@@ -109,7 +109,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.hid
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->#### Description
 
 The `.hidden` property returns<!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
@@ -119,7 +119,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.isA
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->#### Description
 
 The `.isAlias` property returns<!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
@@ -129,7 +129,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.isF
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->#### Description
 
 The `.isFile` property returns<!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
@@ -139,7 +139,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.isF
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->#### Description
 
 The `.isFolder` property returns<!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
@@ -149,7 +149,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.isW
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->#### Description
 
 The `.isWritable` property returns<!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
@@ -169,7 +169,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->#### Description
 
 The `.modificationDate` property returns<!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
@@ -179,7 +179,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.mod
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF --> ##### Description
 
 The `.modificationTime` property returns<!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF -->(expressed as a number of seconds beginning at 00:00).
@@ -189,7 +189,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.nam
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->#### Description
 
 The `.name` property returns<!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
@@ -199,7 +199,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.ori
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.original.Syntax -->**.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->#### Description
 
 The `.original` property returns<!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
@@ -214,27 +214,27 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.par
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->#### Description
 
-The `.parent` property returns<!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+The `.parent` property returns<!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.path.Desc -->## .path
 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->#### Description
 
-The `.path` property returns<!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+The `.path` property returns<!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.platformPath.Desc -->## .platformPath
 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->#### Description
 
 The `.platformPath` property returns<!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
@@ -244,7 +244,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.siz
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->#### Description
 
 The `.size` property returns<!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
@@ -254,7 +254,7 @@ Cette propriété est en **lecture seule**.<!-- END REF --><!-- REF document.cop
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | Version | Modifications   |
 | ------- | --------------- |
 | v19 R2  | Returns 4D.Blob |
-| v17 R5  | Ajoutées        |
+| v17 R5  | Ajout           |
 </details><!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D.Blob
 <!-- END REF -->
 
@@ -327,7 +327,7 @@ To save a document's contents in a `BLOB` field:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture
 <!-- END REF -->
 
@@ -350,7 +350,7 @@ File icon [picture](../Concepts/picture.html).<!-- END REF --><!-- REF document.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details><!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text
 <!-- END REF -->
 

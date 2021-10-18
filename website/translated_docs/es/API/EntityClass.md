@@ -157,7 +157,7 @@ The differences are returned as a collection of objects whose properties are:
 
 | Nombre de propiedad | Tipo                            | Descripción                                 |
 | ------------------- | ------------------------------- | ------------------------------------------- |
-| attributeName       | Cadena                          | Name of the attribute                       |
+| attributeName       | Cadena                          | Nombre del atributo                         |
 | value               | any - Depends on attribute type | Value of the attribute in the entity        |
 | otherValue          | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 
@@ -365,12 +365,12 @@ The object returned by `.drop( )` contains the following properties:
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
-| status(*)     |                     | number                | Error code, see below                                                                                                 |
+| status(*)     |                     | number                | Código de error, ver abajo                                                                                            |
 | statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
 |               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
 | LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
 | lockInfo      |                     | object                | Information about the lock origin                                                                                     |
-|               | task_id             | number                | Process id                                                                                                            |
+|               | task_id             | number                | Id del proceso                                                                                                        |
 |               | user_name           | text                  | Session user name on the machine                                                                                      |
 |               | user4d_alias        | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
 |               | host_name           | text                  | Nombre de la máquina                                                                                                  |
@@ -378,7 +378,7 @@ The object returned by `.drop( )` contains the following properties:
 |               | client_version      | text                  |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
-|               | message             | text                  | Error message                                                                                                         |
+|               | message             | text                  | Mensaje de error                                                                                                      |
 |               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
 |               | errCode             | number                | Error code                                                                                                            |
 
@@ -925,12 +925,12 @@ The object returned by `.lock( )` contains the following properties:
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
 | **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
-| status(\*)     |                     | number                | Error code, see below                                                                                               |
+| status(\*)     |                     | number                | Código de error, ver abajo                                                                                          |
 | statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
 |                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
 | lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
 | lockInfo         |                     | object                | Information about the lock origin                                                                                   |
-|                  | task_id             | number                | Process ID                                                                                                          |
+|                  | task_id             | number                | ID del Proceso                                                                                                      |
 |                  | user_name           | text                  | Session user name on the machine                                                                                    |
 |                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
 |                  | user4d_id           | number                | User id in the 4D database directory                                                                                |
@@ -939,7 +939,7 @@ The object returned by `.lock( )` contains the following properties:
 |                  | client_version      | text                  |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
-|                  | message             | text                  | Error message                                                                                                       |
+|                  | message             | text                  | Mensaje de error                                                                                                    |
 |                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
 |                  | errCode             | number                | Error code                                                                                                          |
 
@@ -1107,7 +1107,7 @@ The object returned by `.reload( )` contains the following properties:
 | Propiedad        | Tipo    | Descripción                                                                                                                                           |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
-| status(\*)     | number  | Error code, see below                                                                                                                                 |
+| status(\*)     | number  | Código de error, ver abajo                                                                                                                            |
 | statusText(\*) | text    | Description of the error, see below                                                                                                                   |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
@@ -1188,7 +1188,7 @@ The object returned by `.save()` contains the following properties:
 |              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
 | lockKindText |                    | text                  | "Locked by record"                                                                                                      |
 | lockInfo     |                    | object                | Information about the lock origin                                                                                       |
-|              | task_id            | number                | Process id                                                                                                              |
+|              | task_id            | number                | Id del proceso                                                                                                          |
 |              | user_name          | text                  | Session user name on the machine                                                                                        |
 |              | user4d_alias       | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | text                  | Nombre de la máquina                                                                                                    |
@@ -1196,7 +1196,7 @@ The object returned by `.save()` contains the following properties:
 |              | client_version     | text                  |                                                                                                                         |
 |              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                    | collection of objects |                                                                                                                         |
-|              | message            | text                  | Error message                                                                                                           |
+|              | message            | text                  | Mensaje de error                                                                                                        |
 |              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
 |              | errCode            | number                | Error code                                                                                                              |
 

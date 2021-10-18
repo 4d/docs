@@ -67,7 +67,7 @@ For each request, the following fields are logged:
 | process\_info_                           | index   Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                       |
 | request                                    | Request ID in C/S or message string for SQL requests or `LOG EVENT` messages                                                                                                                                     |
 | bytes_in                                   | Number of bytes received                                                                                                                                                                                         |
-| bytes_out                                  | Number of bytes sent                                                                                                                                                                                             |
+| bytes_out                                  | Número de bytes enviados                                                                                                                                                                                         |
 | server\_duration &#124; exec\_duration | Depends on where the log is generated:<p><li>*server\_duration* when generated on the client --Time taken in microseconds for the server to process the request and return a response. B to F in image below, OR</li><li>*exec\_duration* when generated on the server --Time taken in microseconds for the server to process the request. B to E in image below.</li>                                                                                               |
 | write\_duration                          | Time taken in microseconds for sending the:<p><li>Request (when run on the client). A to B in image below.</li><li>Response (when run on the server). E to F in image below.</li>                                                                                          |
 | task_kind                                  | Preemptive or cooperative (respectively 'p' or 'c')                                                                                                                                                              |
@@ -116,13 +116,13 @@ For each process, the following fields are logged:
 | process\_info\_index          | Unique and sequential process number                           |
 | CDB4DBaseContext                  | DB4D component database context UUID                           |
 | systemid                          | ID del sistema                                                 |
-| server\_process\_id           | Process ID on Server                                           |
-| remote\_process\_id           | Process ID on Client                                           |
+| server\_process\_id           | ID del proceso en el servidor                                  |
+| remote\_process\_id           | ID del proceso en el cliente                                   |
 | process\_name                   | Nombre del proceso                                             |
 | cID                               | Identifier of 4D Connection                                    |
 | uID                               | Identifier of 4D Client                                        |
 | IP Client                         | IPv4/IPv6 address                                              |
-| host_name                         | Client hostname                                                |
+| host_name                         | Nombre de host del cliente                                     |
 | user_name                         | User Login Name on client                                      |
 | connection\_uuid                | UUID identifier of process connection                          |
 | server\_process\_unique\_id | Unique process ID on Server                                    |
@@ -209,13 +209,13 @@ Como iniciar este historial:
 
 The following fields are logged for each event:
 
-| Field Name         | Descripción                                                   |
+| Nombre del campo   | Descripción                                                   |
 | ------------------ | ------------------------------------------------------------- |
 | sequenceNumber     | Unique and sequential operation number in the logging session |
 | timestamp          | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)    |
 | loggerID           | Opcional                                                      |
 | componentSignature | Optional - internal component signature                       |
-| messageLevel       | Info, Warning, Error                                          |
+| messageLevel       | Información, avisos, errores                                  |
 | message            | Description of the log entry                                  |
 
 Depending on the event, various other fields can also be logged, such as task, socket, etc.
@@ -230,13 +230,13 @@ These log files record each exchange between the 4D application and the mail ser
 
 The log files can be produced in two versions:
 
-*   a regular version:
+*   una versión normal:
     *   named 4DSMTPLog.txt, 4DPOP3Log.txt, or 4DIMAPLog.txt
     *   no attachments
     *   uses an automatic circular file recycling each 10 MB
     *   intended for usual debugging
 
-    To start this log:
+    Para iniciar este historial:
 
     ```4d
     SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
@@ -248,12 +248,12 @@ The log files can be produced in two versions:
 
       This log path is returned by the `Get 4D file` command.
 
-*   an extended version:
+*   una versión extendida:
     *   attachment(s) included no automatic recycling
-    *   custom name
+    *   nombre personalizado
     *   reserved for specific purposes
 
-    To start this log:
+    Para iniciar este historial:
 
     ```4d
     $server:=New object
@@ -283,7 +283,7 @@ For each request, the following fields are logged:
 | 4         | Unique process ID                                             |
 | 5         | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>                                    |
 
-## ORDA client requests
+## Peticiones cliente ORDA
 
 This log records each ORDA request sent from a remote machine. You can direct log information to memory or to a file on disk. The name and location of this log file are your choice.
 
@@ -327,7 +327,7 @@ The following fields are logged for each request:
 
 You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
 
-### How to enable the file
+### Cómo activar el archivo
 
 There are several ways to enable the log configuration file:
 
@@ -339,7 +339,7 @@ There are several ways to enable the log configuration file:
 
 > If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder: - Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server` - macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
 
-### JSON file description
+### Descripción del archivo JSON
 
 The log configuration file is a `.json` file that can contain the following properties:
 
