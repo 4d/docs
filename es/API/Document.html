@@ -228,10 +228,10 @@
 <p></details></p>
 <p><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.original</code> property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:</p>
+<p>The <code>.original</code> property returns the target element for an alias, a shortcut, or a symbolic link file. El elemento objetivo puede ser:</p>
 <ul>
 <li>a file object</li>
-<li>a folder object</li>
+<li>un objeto de la carpeta</li>
 </ul>
 <p>For non-alias files, the property returns the same file object as the file.</p>
 <p>This property is <strong>read-only</strong>.</p>
@@ -313,7 +313,7 @@
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>Destination folder</td></tr>
-<tr><td>newName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Name for the copy</td></tr>
+<tr><td>newName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre para la copia</td></tr>
 <tr><td>overwrite</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk overwrite</code> to replace existing elements</td></tr>
 <tr><td>Resultado</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>Archivo copiado</td></tr>
 </tbody>
@@ -416,7 +416,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>charSetName</td><td>Texto</td><td>-&gt;</td><td>Name of character set</td></tr>
+<tr><td>charSetName</td><td>Texto</td><td>-&gt;</td><td>Nombre del juego de caracteres</td></tr>
 <tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Number of character set</td></tr>
 <tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Processing mode for line breaks</td></tr>
 <tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Text from the document</td></tr>
@@ -424,7 +424,7 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-22"></a><a href="#descripción-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.getText()</code> function returns the contents of the file as text .</p>
-<p>Optionally, you can designate the character set to be used for reading the contents. You can pass either:</p>
+<p>Optionally, you can designate the character set to be used for reading the contents. Puede pasar:</p>
 <ul>
 <li>in <em>charSetName</em>, a string containing the standard set name (for example &quot;ISO-8859-1&quot; or &quot;&quot;UTF-8&quot;),</li>
 <li>or in <em>charSetNum</em>, the MIBEnum ID (number) of the standard set name.</li>
@@ -439,7 +439,7 @@
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Document unchanged</code></td><td>0</td><td>No processing</td></tr>
+<tr><td><code>Document unchanged</code></td><td>0</td><td>Sin procesar</td></tr>
 <tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows</td></tr>
 <tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to Windows format: CRLF (carriage return + line feed)</td></tr>
 <tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to OS X format: CR (carriage return)</td></tr>
@@ -448,7 +448,7 @@
 </table>
 <p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>
 <p><strong>Valor devuelto</strong></p>
-<p>Text of the file.</p>
+<p>Texto del archivo.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>Given the following text document (fields are separated by tabs):</p>
 <pre><code class="hljs css language-4d">id name price vat

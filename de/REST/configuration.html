@@ -76,24 +76,24 @@
 </ul>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="starting-the-rest-server"></a><a href="#starting-the-rest-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting the REST Server</h2>
-<p>For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the <strong>Expose as REST server</strong> option in the &quot;Web/REST resource&quot; page of the structure settings in order for REST requests to be processed.</p>
+<p>For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the <strong>Expose as REST server</strong> option in the <strong>Web</strong> &gt; <strong>Web Features</strong> page of the structure settings in order for REST requests to be processed.</p>
 <p><img src="/docs/assets/en/REST/Settings.png" alt="alt-text"></p>
 <blockquote>
-<p>REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.</p>
+<p>REST services use the 4D HTTP server, so you need to make sure that the 4D web server is started.</p>
 </blockquote>
 <p>The warning message &quot;Caution, check the access privileges&quot; is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.</p>
 <h2><a class="anchor" aria-hidden="true" id="configuring-rest-access"></a><a href="#configuring-rest-access" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring REST access</h2>
 <p>By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.</p>
 <p>You can configuring REST accesses with one of the following means:</p>
 <ul>
-<li>assigning a <strong>Read/Write</strong> user group to REST services in the &quot;Web/REST resource&quot; page of the Structure Settings;</li>
+<li>assigning a <strong>Read/Write</strong> user group to REST services in the &quot;<strong>Web</strong> &gt; <strong>Web Features</strong>&quot; page of the Structure Settings;</li>
 <li>writing an <code>On REST Authentication</code> database method to intercept and handle every initial REST request.</li>
 </ul>
 <blockquote>
-<p>You cannot use both features simultaneously. Once an <code>On REST Authentication</code> database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the &quot;Read/Write&quot; menu on the Web/REST resource page of the Structure Settings is ignored.</p>
+<p>You cannot use both features simultaneously. Once an <code>On REST Authentication</code> database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the &quot;Read/Write&quot; menu on the <strong>Web</strong> &gt; <strong>Web Features</strong> page of the Structure Settings is ignored.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="using-the-structure-settings"></a><a href="#using-the-structure-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the Structure Settings</h3>
-<p>The <strong>Read/Write</strong> menu in the &quot;Web/REST resource&quot; page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.</p>
+<p>The <strong>Read/Write</strong> menu in the &quot;<strong>Web</strong> &gt; <strong>Web Features</strong>&quot; page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.</p>
 <p>By default, the menu displays <strong>&lt;Anyone&gt;</strong>, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to <a href="/docs/de/REST/authUsers.html">access 4D by means of a REST request</a>. If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.</p>
 <blockquote>
 <p>In order for this setting to take effect, the <code>On REST Authentication</code> database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.</p>
