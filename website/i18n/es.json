@@ -18,7 +18,7 @@
         "title": "Gestión de licencias 4D"
       },
       "Admin/server-admin": {
-        "title": "4D Server Administration Window"
+        "title": "Ventana de administración de 4D Server"
       },
       "Admin/tls": {
         "title": "Protocolo TLS (HTTPS)"
@@ -33,7 +33,7 @@
         "title": "Class"
       },
       "API/CollectionClass": {
-        "title": "Colección"
+        "title": "Collection"
       },
       "API/CryptoKeyClass": {
         "title": "CryptoKey"
@@ -876,7 +876,8 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -887,9 +888,9 @@
       "ORDA": "ORDA",
       "Class API Reference": "Clases API",
       "Debugging": "Depuración",
-      "Access Rights": "Derechos de acceso",
       "Preferences": "Preferencias",
       "Administration": "Administración",
+      "Access Rights": "Derechos de acceso",
       "MSC": "CSM",
       "Backup and Restore": "Copia de seguridad y restauración",
       "Web Server": "Servidor Web",
@@ -926,7 +927,7 @@
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
     "Web Administration|no description given": "Administración Web",
-    "4D Server Administration Window|no description given": "4D Server Administration Window",
+    "4D Server Administration Window|no description given": "Ventana de administración de 4D Server",
     "4D Components Library|no description given": "Librería de componentes 4D",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",

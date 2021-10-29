@@ -120,10 +120,10 @@
         "title": "Restaurar"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "Parâmetros da cópia de segurança"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "Sobre a linguagem 4D"
       },
       "Concepts/arrays": {
         "title": "Arrays"
@@ -869,14 +869,15 @@
         "title": "Administration"
       },
       "WebServer/webServerConfig": {
-        "title": "Configuration"
+        "title": "Configuração"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -887,9 +888,9 @@
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Debugging": "Debugging",
-      "Access Rights": "Access Rights",
       "Preferences": "Preferences",
       "Administration": "Administration",
+      "Access Rights": "Access Rights",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",

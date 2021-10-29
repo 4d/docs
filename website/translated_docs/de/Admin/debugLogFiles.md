@@ -258,8 +258,6 @@ The log files can be produced in two versions:
     ```4d
     $server:=New object
     ...
-    $server:=New object
-    ...
     //SMTP
     $server.logFile:="MySMTPAuthLog.txt"
     $transporter:=SMTP New transporter($server)

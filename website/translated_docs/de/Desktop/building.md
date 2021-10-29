@@ -46,7 +46,7 @@ Each build application parameter is stored as an XML key in the application proj
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command.
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. XML keys provide additional options besides those displayed in the Build Application dialog box.
+XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
 
 ### Logbuch
 
@@ -539,7 +539,7 @@ Gatekeeper is a security feature of OS X that controls the execution of applicat
 
 > On Apple Silicon machines, 4D [components](#components) need to be actually signed. An unsigned component will generate an error at application startup ("lib4d-arm64.dylib can't be opened...").
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+The **Sign application** option of the 4D application builder lets you generate applications and components that are compatible with this option by default.
 
 
 #### About Notarization

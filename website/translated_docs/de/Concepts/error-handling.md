@@ -21,7 +21,7 @@ Andere Fehler, wie Fehler beim Schreiben auf die Festplatte, Netzwerkfehler oder
 
 ## Fehlerverwaltungsmethode installieren
 
-In 4D werden alle Fehler über eine spezifische Projektmethode ausfindig gemacht und verwaltet. Das ist die **Fehlerverwaltungs- oder Fehlerauffindmethode**.
+In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
 Diese Projektmethode wird für den aktuellen Prozess installiert und automatisch für jeden Fehler aufgerufen, der im Prozess auftritt, sei es im interpretierten oder im kompilierten Modus. Um sie zu *installieren*, rufen Sie den Befehl `ON ERR CALL` auf und setzen den Namen der Projektmethode als Parameter. Beispiel:
 
@@ -34,7 +34,7 @@ Wollen Sie das Auffinden von Fehlern abbrechen und wieder an 4D übergeben, rufe
 ON ERR CALL("") //gives back control to 4D
 ```
 
-Mit dem Befehl `Method called on error` erfahren Sie den Namen der Methode, die über den Befehl `ON ERR CALL` für den aktuellen Prozess installiert wurde. Er ist besonders hilfreich bei generischem Code, da Sie damit die Fehlerverwaltungsmethode zeitweise ändern und dann wiederherstellen können:
+The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Er ist besonders hilfreich bei generischem Code, da Sie damit die Fehlerverwaltungsmethode zeitweise ändern und dann wiederherstellen können:
 
 ```4d
  $methCurrent:=Method called on error
@@ -55,7 +55,7 @@ Eine Fehlerverwaltungsmethode, die über den Befehl `ON ERR CALL` eingerichtet w
 
 ### Fehlerverwaltung in der Methode
 
-In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identifizieren des Fehlers dienen:
+Within the custom error method, you have access to several pieces of information that will help you identifying the error:
 
 - Spezifische Systemvariablen (*):
 

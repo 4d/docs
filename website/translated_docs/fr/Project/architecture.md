@@ -28,7 +28,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
 
 La hiérarchie du dossier Project se présente généralement comme suit :
 
-- `<applicationName>.4DProject` file
+- fichier `<applicationName>.4DProject`
 - `Sources`
     + `Classes`
     + `DatabaseMethods`
@@ -37,10 +37,10 @@ La hiérarchie du dossier Project se présente généralement comme suit :
     + `TableForms`
     + `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (le cas échéant)
 
 
-### `<applicationName>.4DProject` file
+### fichier `<applicationName>.4DProject`
 
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
@@ -133,9 +133,9 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 ## `Libraries`
 
-> This folder is used on macOS only.
+> Ce dossier n'est utilisé que sur macOS.
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+Le dossier Librairies contient le fichier résultant d'une compilation avec le [compilateur Silicon](compiler.md#silicon-compiler) sur macOS.
 
 ## `Resources`
 
@@ -201,7 +201,7 @@ Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour 
 
 ## `userPreferences.<userName>`
 
-This folder contains files that memorize user configurations, e.g. break point or window positions. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
+Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture ou de la fenêtre. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
 
 | Contenu                    | Description                                                           | Format |
 | -------------------------- | --------------------------------------------------------------------- | ------ |
@@ -212,7 +212,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 | debuggerCatches.json       | Appels vers commandes                                                 | JSON   |
 | recentTables.json          | Liste ordonée de tables                                               | JSON   |
 | preferences.4DPreferences  | Current data path and main window positions                           | XML    |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation           | Folder |
+| CompilerIntermediateFiles  | Fichiers intermédiaires résultant de la compilation Apple Silicon     | Folder |
 
 
 ## `Composants`
@@ -237,6 +237,6 @@ Pour plus d'informations, reportez-vous à [Documenter un projet](Project/docume
 
 Il s'agit du dossier racine par défaut du serveur Web 4D pour les pages, les images, etc. Il est automatiquement créé lors du premier lancement du serveur Web.
 
-## `.gitignore` file (optional)
+## Fichier `.gitignore` (optionnel)
 
-File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+Fichier qui spécifie les fichiers qui seront ignorés par git. Vous pouvez inclure un fichier gitignore dans vos projets en utilisant l'option **Créer un fichier .gitignore** sur la page **Général** des préférences. Pour configurer le contenu de ce fichier, voir [Créer un fichier `.gitignore`](Preferences/general.md#create-gitignore-file).

@@ -88,6 +88,37 @@ $employees:=Create entity selection([Employee])
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
+
+## USE ENTITY SELECTION
+
+<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->
+**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
+
+<!-- REF #_command_.USE ENTITY SELECTION.Params -->
+| Parámetros      | Tipo            |    | Descripción         |
+| --------------- | --------------- |:--:| ------------------- |
+| entitySelection | EntitySelection | -> | An entity selection |
+<!-- END REF -->
+
+#### Descripción
+
+The `USE ENTITY SELECTION` command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
+
+This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
+
+> After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
+
+#### Ejemplo
+
+```4d
+var $entitySel : Object
+
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
+REDUCE SELECTION([Employee];0)
+USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
+```
+
+
 <!-- REF EntitySelectionClass.index.Desc -->
 ## &#91;*index*&#93;
 
@@ -112,7 +143,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> > > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Ejemplos:
+> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Ejemplos:
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -547,7 +578,7 @@ Then this entity selection is updated with products and you want to share the pr
 
 ```4d
  ...
-  // The Form.products entity selection is updated
+  // La selección de entidades de Form.products se actualiza
  Form.products.add(Form.selectedProduct)
 
  Use(Storage)
@@ -580,18 +611,18 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- REF #EntitySelectionClass.distinct().Params -->
 | Parámetros    | Tipo       |    | Descripción                                                      |
 | ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Texto      | -> | Path of attribute whose distinct values you want to get          |
+| attributePath | Texto      | -> | Ruta del atributo cuyos valores distintos desea obtener          |
 | option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Resultado     | Collection | <- | Collection with only distinct values                             |
+| Resultado     | Collection | <- | Colección con sólo valores distintos                             |
 <!-- END REF -->
 
 #### Descripción
 
 The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
-In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Los tipos se devuelven en el siguiente orden:
 
 1.  booleanos
 2.  strings
@@ -600,7 +631,7 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 
 You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+Por defecto, se realiza una evaluación no diacrítica. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
 An error is returned if:
 
@@ -877,7 +908,7 @@ This function is mainly useful in the context of generic code.
 The following generic code duplicates all entities of the entity selection:
 
 ```4d
-  //duplicate_entities method
+  //método duplicate_entities 
   //duplicate_entities($entity_selection)
 
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
@@ -888,7 +919,7 @@ The following generic code duplicates all entities of the entity selection:
  For each($entity;$entitySelection)
     $duplicate:=$dataClass.new()
     $duplicate.fromObject($entity.toObject())
-    $duplicate[$dataClass.getInfo().primaryKey]:=Null //reset the primary key
+    $duplicate[$dataClass.getInfo().primaryKey]:=Null //restablecer la llave primaria
     $status:=$duplicate.save()
  End for each
 ```
@@ -1525,7 +1556,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### Descripción
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
 > This function does not modify the original entity selection.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
@@ -1704,13 +1735,13 @@ A list box displays the Form.students entity selection and several clients work 
 #### Descripción
 
 La función `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->devuelve un objeto que describe la(s) posición(es) de *selectedEntities* en la selección de entidades original<!-- END REF -->.
-> Esta función no modifica la selección de entidades original.
+> This function does not modify the original entity selection.
 
 Pase en el parámetro *selectedEntities* una selección de entidades que contenga entidades de las que desee conocer la posición en la selección de entidades original. *selectedEntities* debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - "La selección de entidades procede de una clase de datos incompatible".
 
 #### Resultado
 
-El objeto devuelto contiene las siguientes propiedades:
+The returned object contains the following properties:
 
 | Propiedad      | Tipo       | Descripción                             |
 | -------------- | ---------- | --------------------------------------- |
@@ -1766,7 +1797,7 @@ $result2:=$invoices.selected($creditSel)
 | Parámetros | Tipo               |    | Descripción                                                    |
 | ---------- | ------------------ |:--:| -------------------------------------------------------------- |
 | startFrom  | Integer            | -> | Index to start the operation at (included)                     |
-| end        | Integer            | -> | End index (not included)                                       |
+| end        | Integer            | -> | Índice final (no incluido)                                     |
 | Resultado  | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy) |
 <!-- END REF -->
 
@@ -2119,7 +2150,7 @@ devuelve:
 
 #### Ejemplo 5
 
-Ejemplo con el parámetro *filterCol*:
+Example with *filterCol* parameter:
 
 ```4d
 var $employeesCollection; $coll : Collection

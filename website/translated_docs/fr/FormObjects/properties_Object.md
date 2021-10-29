@@ -78,7 +78,7 @@ Here is the list of objects whose value can be saved:
 ---
 ## Variable ou expression
 
-> See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
+> Voir également **[Expression](properties_DataSource.md#expression)** pour les colonnes de list box de type sélection et collection.
 
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
@@ -91,15 +91,15 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 #### Grammaire JSON
 
-| Nom        | Type de données         | Valeurs possibles                                                                                                                                                                                                                                                                                              |
-| ---------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | string, or string array | <li>4D variable, field name, or any expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
+| Nom        | Type de données         | Valeurs possibles                                                                                                                                                                                                                                                                                                  |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataSource | string, or string array | <li>Variable, nom de champ, ou toute expression 4D. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
 
 
 ### Expressions
 
-You can use an [expression](Concepts/quick-tour.md#expressions) as data source for an object. Any valid 4D expression is allowed: simple expression, object property, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
+Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
 

@@ -42,10 +42,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
-| Parámetros | Tipo         |    | Descripción                                |
-| ---------- | ------------ | -- | ------------------------------------------ |
-| localID    | Texto        | -> | Local ID of the remote datastore to return |
-| Resultado  | cs.DataStore | <- | Reference to the datastore                 |
+| Parámetros | Tipo         |    | Descripción                                     |
+| ---------- | ------------ | -- | ----------------------------------------------- |
+| localID    | Texto        | -> | ID local del almacén de datos remoto a devolver |
+| Resultado  | cs.DataStore | <- | Referencia al almacén de datos                  |
 <!-- END REF -->
 
 
@@ -375,7 +375,7 @@ You want to know the number of encrypted tables in the current data file:
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. This function is useful for setting up generic code.
+The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -864,7 +864,7 @@ You can nest several transactions (sub-transactions). If the main transaction is
 
 #### Ejemplo
 
-See example for [`.startTransaction()`](#starttransaction).
+Ver el ejemplo de [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 

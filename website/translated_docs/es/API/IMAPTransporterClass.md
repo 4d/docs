@@ -70,7 +70,7 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Default value (if omitted)                                          |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor por defecto (si se omite)                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
 | .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | ninguno                                                             |
@@ -87,7 +87,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultado
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > The IMAP connection is automatically closed when the transporter object is destroyed.
 
 #### Ejemplo
@@ -370,7 +370,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Puede pasar:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
@@ -396,7 +396,7 @@ The function returns an object describing the IMAP status:
 
 #### Ejemplo 1
 
-To copy a selection of messages:
+Para copiar una selección de mensajes:
 
 
 ```4d
@@ -465,7 +465,7 @@ To copy all messages in the current mailbox:
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ |:--:| ---------------------------------------- |
-| name       | Texto  | -> | Name of the new mailbox                  |
+| name       | Texto  | -> | Nombre del nuevo buzón                   |
 | Resultado  | Objeto | <- | Status of the mailbox creation operation |
 <!-- END REF -->
 
@@ -505,29 +505,27 @@ To create a new “Invoices” mailbox:
 
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
+If(OK=1)
+$options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+$transporter:=IMAP New transporter($options)
 
-  If($boxInfo.mailCount>0)
-        // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-        New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-        // ...
-End for each
- End if
+$status:=$transporter.createBox("Invoices")
+
+If ($status.success)
+ALERT("Mailbox creation successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 ```
 
 <!-- END REF -->
@@ -562,7 +560,7 @@ End for each
 
 The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
-You can pass:
+Puede pasar:
 
 - in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
@@ -589,7 +587,7 @@ The function returns an object describing the IMAP status:
 
 #### Ejemplo 1
 
-To delete a selection of messages:
+Para eliminar una selección de mensajes:
 
 
 ```4d
@@ -693,29 +691,29 @@ The function returns an object describing the IMAP status:
 To delete the "Nova Orion Industries" child mailbox from the "Bills" mailbox hierarchy:
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw; $name : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
 
-  If($boxInfo.mailCount>0)
-        // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-        New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-        // ...
-    End for each
- End if
+$transporter:=IMAP New transporter($options)
+
+// delete mailbox
+$name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
+$status:=$transporter.deleteBox($name)
+
+If ($status.success)
+    ALERT("Mailbox deletion successful!")
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
 ```
 
 <!-- END REF -->
@@ -795,10 +793,10 @@ $status:=$transporter.expunge()
 ## .getBoxInfo()
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones   |
-| ------- | ---------------- |
-| v18 R5  | name es opcional |
-| v18 R4  | Añadidos         |
+| Versión | Modificaciones     |
+| ------- | ------------------ |
+| v18 R5  | *name* is optional |
+| v18 R4  | Añadidos           |
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
@@ -814,10 +812,11 @@ $status:=$transporter.expunge()
 
 #### Descripción
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
+The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
+If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
 **Objeto devuelto**
 
@@ -871,7 +870,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Puede pasar:
 
 | Propiedad    | Tipo     | Descripción                                          |
 | ------------ | -------- | ---------------------------------------------------- |
@@ -1188,7 +1187,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
+The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Puede pasar:
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - para dejar intacto el estado "visto" del mensaje
@@ -1266,7 +1265,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Puede pasar:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
@@ -1294,7 +1293,7 @@ The function returns an object describing the IMAP status:
 
 #### Ejemplo 1
 
-To move a selection of messages:
+Para mover una selección de mensajes:
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -1321,7 +1320,7 @@ To move a selection of messages:
 
 #### Ejemplo 2
 
-To move all messages in the current mailbox:
+Para mover todos los mensajes del buzón actual:
 
 
 ```4d
@@ -1500,6 +1499,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 
+
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
 
@@ -1571,14 +1571,6 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
  End if
 End if
-   Else
-   ALERT("Error: "+$status.statusText)
- End if
-End if
-   Else
-   ALERT("Error: "+$status.statusText)
- End if
-End if
 ```
 
 <!-- END REF -->
@@ -1607,7 +1599,7 @@ End if
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 | Parámetros     | Tipo       |    | Descripción                   |
 | -------------- | ---------- |:--:| ----------------------------- |
-| searchCriteria | Texto      | -> | Search criteria               |
+| searchCriteria | Texto      | -> | Criterio de búsqueda          |
 | Resultado      | Collection | <- | Collection of message numbers |
 <!-- END REF -->
 
@@ -1747,18 +1739,18 @@ Search-keys may request the value to search for:
 
 #### Descripción
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the `name` mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the `name` parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional `state` parameter defines the type of access to the mailbox. The possible values are:
+The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
 | Constante             | Valor | Comentario                                                                                                                                                                |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                     |
 | IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor por defecto) |
-> * The function generates an error and returns **Null** if name designates a non-existing mailbox.
+> * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 

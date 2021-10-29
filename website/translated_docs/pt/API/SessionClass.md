@@ -27,9 +27,9 @@ For detailed information about the session implementation, please refer to the [
 ## Session
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
@@ -85,9 +85,9 @@ IP:port/4DACTION/action_Session
 ## .clearPrivileges()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -124,9 +124,9 @@ $isGuest:=Session.isGuest() //$isGuest is True
 ## .expirationDate
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -137,7 +137,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Essa propriedade é**apenas leitura**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Exemplo
 
@@ -155,9 +155,9 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 ## .hasPrivilege()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
@@ -195,9 +195,9 @@ End if
 ## .idleTimeout
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -237,9 +237,9 @@ End if
 ## .isGuest()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -275,9 +275,9 @@ End if
 ## .setPrivileges()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -340,9 +340,9 @@ End if
 ## .storage
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 
@@ -382,9 +382,9 @@ End if
 ## .userName
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 
 </details>
 

@@ -68,5 +68,5 @@ Ce fichier peut être stocké dans les emplacements suivants :
 - dans le dossier de propriétés utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans l'application.
 - dans le dossier de propriétés des données, c'est-à-dire dans le dossier "Settings" du dossier "Data". Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette fonctionnalité vous permet de définir des configurations Utilisateurs et Groupes personnalisées/locales. La configuration personnalisée ne sera pas affectée par des mises à niveau de l'application.
 
-> If 4D password access control is not enabled, the **directory.json** is not created.
+> Si la gestion de l'accès au mot de passe 4D est inactive, le fichier **directory.json** n'est pas créé.
 

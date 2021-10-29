@@ -10,9 +10,9 @@ Permet de définir une couleur d'arrière-plan différente pour les lignes / col
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                                               |
-| ------------- | --------------- | --------------------------------------------------------------- |
-| alternateFill | string          | any css value; "transparent"; "automatic"; "automaticAlternate" |
+| Nom           | Type de données | Valeurs possibles                                                        |
+| ------------- | --------------- | ------------------------------------------------------------------------ |
+| alternateFill | string          | toutes les valeurs css; "transparent"; "automatic"; "automaticAlternate" |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)

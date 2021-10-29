@@ -94,11 +94,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constantes
 
-4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Par exemple, `XML DATA` est une constante (valeur 6). Par défaut, les constantes prédéfinies sont soulignées dans l'éditeur de méthodes 4D. Elles permettent d'écrire un code plus lisible.
+4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Elles permettent d'écrire un code plus lisible. Par exemple, `XML DATA` est une constante (valeur 6).
 
 ```4d
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
+
+> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
 
 ## Méthodes
 

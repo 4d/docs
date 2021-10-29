@@ -29,9 +29,9 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 ## .*attributeName*
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -78,7 +78,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
   //42=Is collection
 ```
 
-#### Example 3
+#### Exemplo 3
 
 Considering the following table properties:
 
@@ -103,7 +103,7 @@ Considering the following table properties:
 | Versão | Mudanças                            |
 | ------ | ----------------------------------- |
 | v17 R5 | Support of the *settings* parameter |
-| v17    | Added                               |
+| v17    | Adicionado                          |
 </details>
 
 
@@ -151,9 +151,9 @@ In the optional *settings* parameter, you can pass an object containing addition
 ## .exposed
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R3 | Adicionado |
 </details>
 
 
@@ -175,7 +175,7 @@ The `.exposed` property is <!-- REF DataClassClass.exposed.Summary -->true if th
 | Versão | Mudanças                            |
 | ------ | ----------------------------------- |
 | v17 R5 | Support of the *settings* parameter |
-| v17    | Added                               |
+| v17    | Adicionado                          |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -273,7 +273,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 3
+#### Exemplo 3
 
 We want to simply create a new entity from a collection:
 
@@ -290,7 +290,7 @@ We want to simply create a new entity from a collection:
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 4
+#### Exemplo 4
 
 We want to create an entity. The \_\_NEW property is True, the employee primary key is not given:
 
@@ -315,7 +315,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 ```
 
-#### Example 5
+#### Exemplo 5
 
 We want to create an entity. The \_\_NEW property is omitted, the employee primary key is given and does not exist:
 
@@ -333,7 +333,7 @@ We want to create an entity. The \_\_NEW property is omitted, the employee prima
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 6
+#### Exemplo 6
 
 In this example, the first entity will be created and saved but the second will fail since they both use the same primary key:
 
@@ -372,9 +372,9 @@ In this example, the first entity will be created and saved but the second will 
 ## .get()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -451,9 +451,9 @@ This example illustrates the use of the *context* property:
 ## .getDataStore()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -505,9 +505,9 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ## .getInfo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -560,7 +560,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  $es:=ds.Clients.query(":pk in :receivedIds";$settings)
 ```
 
-#### Example 3
+#### Exemplo 3
 
 ```4d 
  var $pk : Text
@@ -578,9 +578,9 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 ## .new()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -625,9 +625,9 @@ This example creates a new entity in the "Log" Dataclass and records information
 ## .newSelection()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -675,7 +675,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 | ------ | ---------------------------------- |
 | v17 R6 | Support of Formula parameters      |
 | v17 R5 | Support of placeholders for values |
-| v17    | Added                              |
+| v17    | Adicionado                         |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
@@ -700,7 +700,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 
 **queryString parameter**
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
 attributePath|formula comparator value   
@@ -1156,7 +1156,7 @@ Query with named placeholders for attributes and values:
  End if
 ```
 
-#### Example 3
+#### Exemplo 3
 
 These examples illustrate the various ways to use formulas with or without parameters in your queries.
 

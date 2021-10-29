@@ -544,7 +544,7 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. The column sort itself is not modified in this case; it is up to the developer to handle it.
 
-> Seules les [list box de type tableau](#array-list-boxes) peuvent être hiérarchiques.
+> La commande [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) permet une prise en charge spécifique des icônes dans les en-têtes de listbox, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
 
 
 ## Managing row colors, styles, and display

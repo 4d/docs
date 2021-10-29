@@ -60,7 +60,7 @@ You can also get a reference on an open remote datastore by passing its local id
 
 If no *localID* datastore is found, the command returns **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales d'ORDA](Concepts/dsMapping.md#general-rules).
 
 #### Exemple 1
 
@@ -133,7 +133,7 @@ If no matching database is found, `Open datastore` returns **Null**.
 
 *localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales d'ORDA](Concepts/dsMapping.md#general-rules).
 
 Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
 
@@ -345,9 +345,6 @@ You want to know the number of encrypted tables in the current data file:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
- Else
-    ALERT("This database is not encrypted.")
- End if
  Else
     ALERT("This database is not encrypted.")
  End if
@@ -672,7 +669,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | Paramètres | Type    |    | Description                          |
 | ---------- | ------- | -- | ------------------------------------ |
-| file       | 4D.File | -> | File object                          |
+| file       | 4D.File | -> | Objet File                           |
 | reqNum     | Integer | -> | Number of requests to keep in memory |
 <!-- END REF -->
 

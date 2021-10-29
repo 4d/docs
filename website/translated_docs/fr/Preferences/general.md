@@ -1,53 +1,53 @@
 ---
 id: general
-title: General Page
+title: Page Général
 ---
 
-This page contains various options to configure the general operation of your 4D application.
+Cette page regroupe diverses options permettant de paramétrer le fonctionnement général de votre application 4D.
 
 ## Options
 
-### At startup
+### Au démarrage
 
-This option allows you to configure the default 4D display at startup, when the user launches only the application.
+Cette option permet de configurer l’affichage proposé par défaut par 4D au démarrage, lorsque l’utilisateur lance uniquement l’application.
 
-*   **Do nothing**: Only the application window appears, empty.
-*   **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-*   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-*   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+*   **Ne rien faire** : seule la fenêtre de l’application apparaît, vide.
+*   **Dialogue d’ouverture de base de données locale** : 4D affiche une boîte de dialogue standard d’ouverture de documents, permettant de désigner un projet local.
+*   **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît. >Pour forcer l’affichage de la boîte de dialogue d’ouverture lorsque cette option est sélectionnée, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant le lancement du projet.
+*   **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
+*   **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
+> **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
-### Automatic form creation
+### Création de formulaire automatique
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> Cette option n'est utilisée que dans les bases de données binaires ; elle est ignorée dans l'architecture projets. Voir doc.4d.com.
 
 ### Window tabbing (macOS only)
 
-Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
+Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques facilitant l'organisation de l'écran lors de l'ouverture de fenêtres multiples : les fenêtres documents sont regroupées dans une seule fenêtre parente et sont accessibles via des onglets. Cette fonctionnalité est particulièrement utile avec les écrans de taille réduite ou lorsqu'un trackpad est utilisé.
 
-You can benefit from this feature in the following environments (with 4D 64-bit versions only):
+Vous pouvez bénéficier de cette fonctionnalité dans les environnements de 4D suivants (versions 64 bits uniquement) :
 
-*   Method Editor windows
-*   Form Editor windows
+*   Fenêtres de l'éditeur de méthodes
+*   Fenêtres de l'éditeur de formulaires
 
-All windows from these editors can be put in tab form:
+Toutes les fenêtres de ces éditeurs peuvent être ouvertes sous forme d'onglets :
 
 ![](assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+Un ensemble de commandes du menu **Fenêtre** permet de gérer les onglets :
 
 ![](assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+Dans la boîte de dialogue des Préférences de 4D, l'option **Fenêtre à onglets** vous permet de contrôler ce fonctionnement :
 
 ![](assets/en/Preferences/general4.png)
 
 Trois options sont disponibles :
 
-*   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
-*   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+*   **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
+*   **Jamais** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
+*   **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
 ### Appearance (macOS only)
 
@@ -80,7 +80,7 @@ If you check this option, two items are added in the **File > New** menu and the
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 
-## When creating a new project
+## Lors de la création d'un nouveau projet
 
 ### Use Log File
 
@@ -115,7 +115,7 @@ A 4D database can thus operate in a language different from that of the system. 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
-## Documentation Location
+## Emplacement de la documentation
 
 This area configures access to the 4D HTML documentation displayed in your current browser:
 

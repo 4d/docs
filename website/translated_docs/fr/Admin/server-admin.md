@@ -6,224 +6,224 @@ title: Fenêtre d'administration de 4D Server
 
 When 4D Server is launched with interface under Windows or macOS, a graphical administration window is available, providing many analysis and control tools for the published 4D application. To display the 4D Server Administration window for the opened project, select the **Window > Administration** menu item, or press **Ctrl+U**.
 
-> The 4D Server administration window can be accessed from a remote 4D. For more information about this point, please refer to Administration from Remote Machines.
+> L'accès à la fenêtre d'administration de 4D Server s'effectue par un 4D distant. For more information about this point, please refer to Administration from Remote Machines.
 
 
-## Monitor Page
+## Page Moniteur
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+La Page **Moniteur** affiche des informations dynamiques relatives à l’exploitation de la base de données ainsi que des informations sur le système et l’application 4D Server.
 
 ![](assets/en/Admin/server-admin.png)
 
 > On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
 
-#### Graphic area
+#### Zone graphique
 
-The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
+La zone graphique permet de visualiser l’évolution en temps réel de plusieurs paramètres : le taux d’utilisation des processeurs, le trafic réseau et l'état de la mémoire. Vous sélectionnez le paramètre à afficher via le menu situé au centre la fenêtre :
 
 ![](assets/en/Admin/server-graphic.png)
 
-- **CPU Usage**: Overall CPU usage of the machine, for all applications taken together. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
-- **Network**: Number of bytes received per second by the machine (server or client). The number of bytes sent is provided in the "Network" information area.
-- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
-- **Virtual memory**: Quantity of virtual memory used by the 4D Server application. This memory is allocated by the system according to the application needs. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
-- **Cache**: Quantity of cache memory used by the 4D Server application. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the total size of the cache memory, as set via the Settings.
+- **Utilisation processeurs** : Taux d’utilisation globale du ou des processeur(s) de la machine, toutes applications confondues. La part spécifique de 4D Server dans ce taux d’utilisation est fournie dans la zone d’informations "Processeurs".
+- **Réseau** : Nombre d’octets reçus par seconde par la machine (serveur ou client). Le nombre d’octets envoyés est fourni dans la zone d’informations "Réseau".
+- **Mémoire physique** : Quantité de mémoire RAM de la machine utilisée par 4D Server. Une vue plus détaillée de l’utilisation de la mémoire est fournie dans la zone d’informations "Mémoire".
+- **Mémoire virtuelle** : Affiche dans la zone graphique la quantité de mémoire virtuelle utilisée par l’application 4D Server. Cette mémoire est allouée par le système en fonction des besoins de l’application. La valeur située en bas à droite de la zone indique la quantité de mémoire en cours d’utilisation. La valeur située en haut à gauche indique la quantité maximale de mémoire virtuelle utilisable. La valeur maximale est calculée dynamiquement en fonction des paramètres mémoire généraux de l’application.
+- **Cache** : Affiche dans la zone graphique la quantité de mémoire cache utilisée par l’application 4D Server. La valeur située en bas à droite de la zone indique la quantité de mémoire en cours d’utilisation. La valeur située en haut à gauche indique la taille totale de la mémoire cache, telle que définie via les Propriétés de la base.
 
-Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
+A noter que lorsque cette option est sélectionnée, le défilement de la zone graphique est ralenti car une analyse efficace du cache s’effectue généralement sur une période d’observation assez longue.
 
 
-#### Overview Area
+#### Zone Vue d’ensemble
 
-The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
+La zone "Vue d’ensemble" fournit diverses informations relatives au système, à l’application et aux licences installées sur la machine de 4D Server.
 
-- **System Information**: Computer, system and IP address of server
-- **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
-- **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **License**: Description of license. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **Informations système** : Ordinateur, système et adresse IP du serveur
+- **Informations application** : Numéro de version interne de 4D Server et statut du Volume Shadow Copy
+- **Connexions maximum** : Nombre de connexions simultanées autorisées par type de serveur
+- **Licence** : Description de la licence. Lorsque la licence produit ou l'une de ses expansions expire dans moins de 10 jours, dans le cas d'un abonnement, 4D Server tente de renouveler automatiquement la licence depuis le compte de l'utilisateur 4D. Dans ce cas, si le renouvellement automatique échoue pour une raison quelconque (erreur de connexion, statut du compte invalide, contrat non prolongé...), une icône d'avertissement est affichée à côté de la licence afin d'alerter l'administrateur du serveur. Des informations supplémentaires relatives au statut du renouvellement de la licence peuvent être affichées dans une info-bulle lorsque vous survolez la zone avec la souris :
 
 ![](assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licences Manager**](licenses.md).
+Généralement, vous devrez vérifier le [**Gestionnaire de licences**](licenses.md).
 
-#### Details Area
+#### Zone Détails
 
-The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
+La zone "Détails" reprend une partie des informations affichées dans la zone graphique et propose des informations complémentaires.
 
-- **Hard drive**: Overall capacity of the hard disk and distribution of the space used by the database data (data file + data index), the space used by other files and the free space available.
-- **Memory**: RAM memory installed on the machine and amount of memory used by 4D Server, by other applications or that is free. The memory used by 4D Server can also be displayed dynamically in the graphic area.
-- **Processors**: Instant occupancy rate for processor(s) of the machine by 4D Server and by other applications. This rate is constantly recalculated. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
-- **Network**: Instantaneous number of bytes sent and received by the machine (server or client). This value is updated constantly. The number of bytes received by can also be displayed dynamically in the graphic area.
+- **Disque dur** : Capacité globale du disque dur et répartition entre l’espace occupé par les données de la base (fichier de données + index des données), l’espace occupé par les autres fichiers et l’espace disponible.
+- **Mémoire** : Mémoire RAM installée sur la machine et quantité de mémoire occupée par 4D Server, par les autres applications ainsi que mémoire disponible. La mémoire occupée par 4D Server peut également être affichée dynamiquement dans la zone graphique.
+- **Processeurs** : Taux instantané d’occupation du ou des processeurs(s) de la machine par 4D Server et par les autres applications. Ce taux est recalculé en permanence. Le taux d’occupation par 4D Server peut également être affiché dynamiquement dans la zone graphique.
+- **Réseau** : Nombre instantané d’octets envoyés et reçus par la machine (serveur ou client). Cette valeur est réactualisée en permanence. Le nombre d’octets reçus peut également être affiché dynamiquement dans la zone graphique.
 
 
-## Users Page
+## Page Utilisateurs
 
-The **Users** page lists the 4D users connected to the server.
+La page **Utilisateurs** liste les utilisateurs 4D connectés au serveur.
 
 
 ![](assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+Le bouton "Utilisateurs" indique entre parenthèses le nombre total d’utilisateurs connectés au serveur (ce nombre ne tient pas compte des éventuels filtres d’affichage appliqués à la fenêtre). La page contient également une zone de recherche dynamique et des boutons de commande. Vous pouvez modifier l’ordre des colonnes par simple glisser-déposer de la zone d’en-tête des colonnes.
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquant sur son en-tête. Cliquez plusieurs fois pour définir alternativement un ordre croissant/décroissant.
 
 ![](assets/en/Admin/server-users-sort.png)
 
-### List of Users
+### Liste des utilisateurs
 
-For each user connected to the server, the list provides the following information:
+Pour chaque utilisateur connecté à la base, la liste fournit les informations suivantes :
 
-- System of the client machine (macOS or Windows) as an icon.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- Système de la machine cliente (macOS ou Windows) sous forme d’icône.
+- **Utilisateur 4D** : Nom d’utilisateur 4D ou alias s'il est défini avec la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) sur le poste de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
+- **Nom de machine** : Nom de la machine distante.
+- **Nom de session** : Nom de la session ouverte sur la machine distante.
+- **Adresse IP** : Adresse IP de la machine distante.
+- **Connexion** : Date et heure de la connexion de la machine distante.
+- **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
+- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
-#### Managing sleeping users
+#### Gestion des utilisateurs endormis
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut d'activité **Endormi** :
 
 ![](assets/en/Admin/server-sleeping.png)
 
-This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+Ce statut libère les ressources sur le serveur. En outre, l'application 4D distante se reconnecte automatiquement à 4D Server après la sortie du mode veille.
 
-The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
+Le scénario suivant est pris en charge : un utilisateur distant cesse de travailler durant un certain laps de temps, par exemple durant la pause déjeuner, mais garde ouverte la connexion au serveur. La machine passe en mode veille. Au retour de l'utilisateur, la machine sort du mode veille et l'application 4D distante récupère automatiquement sa connexion au serveur ainsi que son contexte de session.
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
-
-
-### Search/filtering Area
-
-This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
-
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce timeout par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) avec le sélecteur `Remote connection sleep timeout`.
 
 
-### Administration Buttons
+### Zone de recherche/filtrage
 
-This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Cette fonction permet de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de recherche. La zone indique les colonnes dans lesquelles la recherche/le filtrage sera effectué(e). Dans la page Utilisateurs, il s’agit des colonnes Utilisateur 4D, Nom de machine et Nom de session.
 
-#### Send message
+La mise à jour de la liste est effectuée en temps réel à mesure que vous saisissez du texte dans la zone. Il est possible de saisir plus d’une valeur à chercher. Utilisez un point-virgule pour séparer les valeurs. L’opérateur utilisé dans ce cas est du type `OU`. Par exemple, si vous saisissez "Jean;Marie;Pierre", seules les lignes comportant Jean OU Marie OU Pierre dans l’une des colonnes cibles seront conservées.
 
-This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+
+### Boutons d’administration
+
+La page comporte trois boutons de commande. Ces boutons sont actifs si au moins une ligne est sélectionnée. Vous pouvez sélectionner plusieurs lignes en appuyant sur la touche **Maj** pour une sélection continue ou **Ctrl** (Windows) / **Commande** (macOS) pour une sélection discontinue.
+
+#### Envoyer message
+
+Ce bouton permet d’envoyer un message aux utilisateurs 4D sélectionnés dans la fenêtre. Si aucun utilisateur 4D n’est sélectionné, le bouton est désactivé. Lorsque vous cliquez sur le bouton, une boîte de dialogue apparaît, vous permettant saisir le message. La boîte de dialogue indique le nombre d’utilisateurs qui recevront le message :
 
 ![](assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+Le message sera affiché sous forme d’alerte sur les postes distants.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
-
-
-#### Watch Processes
-
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](#process-page) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
-
-#### Drop user
-
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
-
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 
+#### Visualiser process
 
-## Processes Page
+Ce bouton permet de visualiser directement les process du ou des utilisateur(s) sélectionné(s) dans la Page [**Process**](#process-page) de la fenêtre d’administration. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
 
-The **Processes** page lists all the processes underway.
+#### Déconnecter
+
+Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération (appuyez sur la touche **Alt** avant de cliquer sur le bouton **Déconnecter** pour déconnecter directement les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
+
+> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
+
+
+
+## Page Process
+
+La page **Process** liste les process en cours d’exécution.
 
 ![](assets/en/Admin/server-admin-process-page.png)
 
 
-The "Processes" button indicates, in parentheses, the total number of processes running in the server (this number does not take into account any display filters applied to the window nor the state of the **Display processes by groups** option).
+Le bouton "Process" indique entre parenthèses le nombre total de process en cours d’exécution sur le serveur (ce nombre ne tient pas compte des éventuels filtres d’affichage appliqués à la fenêtre ni de l’état de l’option **Afficher les process par groupes**).
 
-You can change the order of the columns by simply dragging and dropping the column header areas. You can also sort the list of column values by clicking on its header.
+Vous pouvez modifier l’ordre des colonnes par simple glisser-déposer de la zone d’en-tête des colonnes. Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquant sur son en-tête.
 
-Like the Users page, this page contains a dynamic [search/filtering area](#searchfiltering-area) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The search/filtering is carried out in the Session and Process name columns.
+Tout comme la Page Utilisateurs, cette page contient une [zone de recherche/filtrage](#searchfiltering-area) dynamique, permettant de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de recherche. La recherche/le filtrage est effectué(e) dans les colonnes Session et Nom de process.
 
-There are also three shortcut buttons that can be used to filter by the type of process displayed in the window:
+Vous disposez également de trois boutons-raccourcis permettant de filtrer par famille les process affichés dans la fenêtre :
 
 ![](assets/en/Admin/server-process-buttons.png)
 
-- **Users processes**: Processes generated by and for the user sessions. These processes are preceded by an icon in the form of a figure.
-- **4D Processes**: Processes generated by the 4D Server engine. These processes are preceded by an icon in the form of a notched wheel.
-- **Spare processes**: Processes that are inactive but kept temporarily and that can be reused at any time. This mechanism optimizes the reactivity of 4D Server. These processes are preceded by an icon in the form of a dimmed figure.
+- **Process utilisateurs** : Process générés par et pour les sessions utilisateurs. Ces process sont précédés d’une icône en forme de personnage.
+- **Process 4D** : Process générés par le moteur de 4D Server. Ces process sont précédés d’une icône en forme de roue crantée.
+- **Process en attente** : Process inactifs mais conservés temporairement et pouvant être réutilisés à tout moment. Ce mécanisme permet d’optimiser la réactivité de 4D Server. Ces process sont précédés d’une icône grisée en forme de personnage.
 
-The **Display processes by groups** option lets you group together the internal processes of 4D Server as well as the client processes, for better readability. When you check this option:
+L’option **Afficher les process par groupes** vous permet de regrouper les process internes de 4D Server ainsi que les process clients, pour plus de lisibilité. Lorsque vous cochez cette option :
 
-- the "twinned" 4D client processes (main 4D client process and 4D client base process, see [Process Type](#process-type)) are grouped as one,
-- a "Task managers" group is created; it includes the internal processes dedicated to dividing up tasks (Shared balancer, Net session manager, Exclusive pool worker),
-- a "Client managers" group is created; it includes various client internal processes.
+- les process clients 4D "jumeaux" (Process client 4D principal et Process base 4D client, cf. paragraphe [Type du process](#process-type)) sont groupés en un seul,
+- le groupe "Gestionnaires de tâches" est créé ; il inclut les process internes dédiés à la répartition des tâches (Shared balancer, Net session manager, Exclusive pool worker),
+- le groupe "Gestionnaires clients" est créé ; il inclut les différents process internes clients.
 
-The lower area of the window is used to display the graphic representation of the activity of the selected process(es).
+La zone inférieure de la fenêtre permet d’afficher la représentation graphique de l’activité du ou des process sélectionné(s).
 
-> You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) for a non-adjacent selection.
+> Vous pouvez sélectionner plusieurs lignes en appuyant sur la touche **Maj** pour une sélection continue ou **Ctrl** (Windows) / **Commande** (macOS) pour une sélection discontinue.
 
-The activity of the process is the percentage of time that 4D Server has devoted to this process (ratio). The window provides the following information for each process:
+L’activité du process est le pourcentage du temps que 4D Server a consacré à ce process (ratio). La fenêtre fournit les informations suivantes pour chaque process :
 
-- Type of process (see below),
-- Session/Info:
+- Type du process (cf. ci-dessous),
+- Session:
     - 4D process - blank,
     - User process - 4D user name,
     - Web process - URL path,
 - Name of the process,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
-- Current state of the process,
-- Running time (in seconds) of the process since its creation,
-- Percentage of time that 4D Server has devoted to this process (ratio).
+- Numéro du process (tel que retourné par la fonction [`Nouveau process`](https://doc.4d.com/4dv19/help/command/en/page317.html) par exemple). Le numéro du process est le numéro attribué sur le serveur. Dans le cas d’un process global, ce numéro peut être différent de celui attribué sur le poste client.
+- Etat courant du process,
+- Temps (en secondes) d'exécution du process depuis sa création,
+- Pourcentage du temps que 4D Server a consacré à ce process (ratio).
 
-### Process Type
+### Type du process
 
-Each process is identified by an icon as well as a type. The color and form of the icon indicates the type of process:
+Chaque process est identifié par une icône et un type. La couleur et la forme de l’icône indiquent la famille du process :
 
-| icon                                    | type                                                                                                                                                      |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](assets/en/Admin/server-icon-1.png)  | Application server                                                                                                                                        |
-| ![](assets/en/Admin/server-icon-2.png)  | SQL Server                                                                                                                                                |
-| ![](assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                             |
-| ![](assets/en/Admin/server-icon-4.png)  | Serveur Web                                                                                                                                               |
-| ![](assets/en/Admin/server-icon-5.png)  | SOAP Server                                                                                                                                               |
-| ![](assets/en/Admin/server-icon-6.png)  | Protected 4D client process (development process of a connected 4D)                                                                                       |
-| ![](assets/en/Admin/server-icon-7.png)  | Main 4D client process (main process of a connected 4D). Collaborative process, equivalent on the server of the process created on the client machine)    |
-| ![](assets/en/Admin/server-icon-8.png)  | 4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process) |
-| ![](assets/en/Admin/server-icon-9.png)  | Spare process (former or future "4D client database process")                                                                                             |
-| ![](assets/en/Admin/server-icon-10.png) | SQL server worker process                                                                                                                                 |
-| ![](assets/en/Admin/server-icon-11.png) | HTTP server worker process                                                                                                                                |
-| ![](assets/en/Admin/server-icon-12.png) | 4D client process (process running on the connected 4D)                                                                                                   |
-| ![](assets/en/Admin/server-icon-13.png) | Stored procedure (process launched by a connected 4D and running on the server)                                                                           |
-| ![](assets/en/Admin/server-icon-14.png) | Web method (launched by a 4DACTION for example)                                                                                                           |
-| ![](assets/en/Admin/server-icon-15.png) | Web method (preemptive)                                                                                                                                   |
-| ![](assets/en/Admin/server-icon-16.png) | SOAP method (launched by a Web Service)                                                                                                                   |
-| ![](assets/en/Admin/server-icon-17.png) | SOAP method (preemptive)                                                                                                                                  |
-| ![](assets/en/Admin/server-icon-18.png) | Logger                                                                                                                                                    |
-| ![](assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                   |
-| ![](assets/en/Admin/server-icon-20.png) | TCP session manager                                                                                                                                       |
-| ![](assets/en/Admin/server-icon-21.png) | Other process                                                                                                                                             |
-| ![](assets/en/Admin/server-icon-22.png) | Worker process (cooperative)                                                                                                                              |
-| ![](assets/en/Admin/server-icon-23.png) | 4D client process (preemptive)                                                                                                                            |
-| ![](assets/en/Admin/server-icon-24.png) | Stored procedure (preemptive process)                                                                                                                     |
-| ![](assets/en/Admin/server-icon-25.png) | Worker process (preemptive)                                                                                                                               |
+| icône                                   | type                                                                                                                                                                                                                                                 |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/Admin/server-icon-1.png)  | Serveur d’application                                                                                                                                                                                                                                |
+| ![](assets/en/Admin/server-icon-2.png)  | Serveur SQL                                                                                                                                                                                                                                          |
+| ![](assets/en/Admin/server-icon-3.png)  | Serveur DB4D (moteur de base de données)                                                                                                                                                                                                             |
+| ![](assets/en/Admin/server-icon-4.png)  | Serveur Web                                                                                                                                                                                                                                          |
+| ![](assets/en/Admin/server-icon-5.png)  | Serveur SOAP                                                                                                                                                                                                                                         |
+| ![](assets/en/Admin/server-icon-6.png)  | Process client 4D protégé (process développement d’un 4D connecté)                                                                                                                                                                                   |
+| ![](assets/en/Admin/server-icon-7.png)  | Process client 4D principal (process principal d’un 4D connecté. Process collaboratif, équivalent sur le serveur du process créé sur le poste client). Collaborative process, equivalent on the server of the process created on the client machine) |
+| ![](assets/en/Admin/server-icon-8.png)  | 4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process)                                                                                            |
+| ![](assets/en/Admin/server-icon-9.png)  | Spare process (former or future "4D client database process")                                                                                                                                                                                        |
+| ![](assets/en/Admin/server-icon-10.png) | SQL server worker process                                                                                                                                                                                                                            |
+| ![](assets/en/Admin/server-icon-11.png) | HTTP server worker process                                                                                                                                                                                                                           |
+| ![](assets/en/Admin/server-icon-12.png) | 4D client process (process running on the connected 4D)                                                                                                                                                                                              |
+| ![](assets/en/Admin/server-icon-13.png) | Stored procedure (process launched by a connected 4D and running on the server)                                                                                                                                                                      |
+| ![](assets/en/Admin/server-icon-14.png) | Web method (launched by a 4DACTION for example)                                                                                                                                                                                                      |
+| ![](assets/en/Admin/server-icon-15.png) | Web method (preemptive)                                                                                                                                                                                                                              |
+| ![](assets/en/Admin/server-icon-16.png) | SOAP method (launched by a Web Service)                                                                                                                                                                                                              |
+| ![](assets/en/Admin/server-icon-17.png) | SOAP method (preemptive)                                                                                                                                                                                                                             |
+| ![](assets/en/Admin/server-icon-18.png) | Logger                                                                                                                                                                                                                                               |
+| ![](assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                                                                                                              |
+| ![](assets/en/Admin/server-icon-20.png) | TCP session manager                                                                                                                                                                                                                                  |
+| ![](assets/en/Admin/server-icon-21.png) | Other process                                                                                                                                                                                                                                        |
+| ![](assets/en/Admin/server-icon-22.png) | Worker process (cooperative)                                                                                                                                                                                                                         |
+| ![](assets/en/Admin/server-icon-23.png) | 4D client process (preemptive)                                                                                                                                                                                                                       |
+| ![](assets/en/Admin/server-icon-24.png) | Stored procedure (preemptive process)                                                                                                                                                                                                                |
+| ![](assets/en/Admin/server-icon-25.png) | Worker process (preemptive)                                                                                                                                                                                                                          |
 
 > Each main 4D client process and its "twinned" 4D client base process are grouped together when the **Display processes by groups** option is checked.
 
 
-### Administration Buttons
+### Boutons d’administration
 
-The page also has five control buttons that act on the selected process(es). Note that only user processes can be acted upon.
+La page comporte cinq boutons de commande permettant d’agir sur le ou les process sélectionné(s). A noter que vous ne pouvez agir que sur les process utilisateurs.
 
 ![](assets/en/Admin/server-process-actions.png)
 
-- **Abort Process**: can be used to abort the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation.
+- **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> Vous pouvez tuer directement les process sélectionnés sans afficher la boîte de dialogue de confirmation, en appuyant sur la touche **Alt** avant de cliquer sur le bouton, ou en utilisant la commande [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html).
 
-- **Pause Process**: can be used to pause the selected process(es).
-- **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.
-- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
+- **Endormir process** : permet d’endormir le ou les process sélectionné(s).
+- **Réactiver process** : permet de réactiver le ou les process sélectionné(s). Les process doivent avoir été auparavant endormis (via le bouton précédent ou par programmation) sinon le bouton est sans effet.
+- **Tracer process** : permet d’ouvrir sur le poste serveur une ou plusieurs fenêtre(s) du débogueur pour le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération. A noter que la fenêtre du débogueur ne s’affiche que lorsque du code 4D est effectivement exécuté sur le poste serveur (par exemple dans le cadre d’un trigger ou de l’exécution d’une méthode ayant l’attribut "Exécuter sur serveur").
 
-> You can also debug a process directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button.
+> Vous pouvez déboguer un process directement, sans afficher la boîte de dialogue de confirmation : pour cela, appuyez sur la touche **Alt** avant de cliquer sur le bouton.
 
-- **Watch users**: used to display, on the [Users page](#users-page), all the processes of the selected user(s). This button is active when at least one user process is selected.
+- **Voir utilisateurs** : permet d’afficher dans la [page Utilisateurs](#users-page) tous les process du ou des utilisateur(s) sélectionné(s). Le bouton est actif lorsqu’un process utilisateur au moins est sélectionné.
 
 
 ## Maintenance Page
@@ -366,7 +366,7 @@ The **Mode** field indicates the current execution mode of the application: comp
 
 The lower part of the area indicates the server configuration parameters (launched as service, port and IP address) and the enabling of TLS for client-server connections (does not concern SQL nor HTTP connections).
 
-#### Memory
+#### Mémoire
 
 This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
 

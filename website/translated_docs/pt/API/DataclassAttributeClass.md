@@ -41,9 +41,9 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 ## .autoFilled
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -68,9 +68,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .exposed
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R3 | Adicionado |
 </details>
 
 
@@ -91,9 +91,9 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 ## .fieldNumber
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -152,9 +152,9 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 ## .indexed
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -178,9 +178,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .inverseName
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -204,9 +204,9 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 ## .keywordIndexed
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -272,9 +272,9 @@ Given the following table and relation:
 ## .mandatory
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -299,9 +299,9 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .name
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -328,9 +328,9 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 ## .readOnly
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R3 | Adicionado |
 
 
 </details>
@@ -354,9 +354,9 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 ## .relatedDataClass
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 
 
 </details>
@@ -428,9 +428,9 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 ## .unique
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 

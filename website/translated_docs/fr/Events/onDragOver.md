@@ -15,7 +15,7 @@ L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de des
 - Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
 -  En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
 
-Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`. Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=-1`. Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
+Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`. Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner -1 (moins un), vous devez donc écrire `$0:=-1`. Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
 
 Si vous acceptez le glissement, l'objet de destination est mis en surbrillance. Si vous refusez le glissement, la destination n'est pas mise en surbrillance. Accepter le glissement ne signifie pas que les données déplacées vont être insérées dans l'objet de destination. Cela signifie seulement que si le bouton de la souris était relâché à ce stade, l'objet de destination accepterait les données glissées et l'événement [`On Drop`](onDrop.md) serait déclenché.
 

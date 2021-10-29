@@ -876,7 +876,8 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -887,9 +888,9 @@
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Debugging": "Debugging",
-      "Access Rights": "Access Rights",
       "Preferences": "Preferences",
       "Administration": "Administration",
+      "Access Rights": "Access Rights",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",

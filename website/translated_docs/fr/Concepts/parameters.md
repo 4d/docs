@@ -50,7 +50,7 @@ Les valeurs d'entrée et de sortie sont [évaluées](#values-or-references) au m
 - [sequentially numbered variables](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. Par exemple :
+Les syntaxes nommées et séquentielles peuvent être combinées sans restriction pour déclarer des paramètres. Par exemple :
 
 ```4d
 Function add($x : Integer)
@@ -104,7 +104,7 @@ In the class function code, the value of each parameter is copied into the corre
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-> If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
+> Si le type n'est pas défini, le paramètre sera défini comme [`Variant`](dt_variant.md).
 
 All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
 
@@ -210,17 +210,17 @@ You can use any [expression](quick-tour.md#expression-types) as sequential param
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
-## Parameter indirection (${N})
+## Indirections sur les paramètres (${N})
 
-4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
+Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouvez adresser ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) et **la syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique. On qualifie `${N}` de **paramètre générique**.
 
 
 
-### Using generic parameters
+### Utilisation des paramètres génériques
 
-For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.
+Par un exemple, considérons une méthode qui calcule une somme de valeurs retournée suivant un format passé comme paramètre. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.
 
-Here is the method, named `MySum`:
+Voici la méthode nommée `MySum` :
 
 ```4d
  #DECLARE($format : Text) -> $result : Text
@@ -231,7 +231,7 @@ Here is the method, named `MySum`:
  $result:=String($sum;$format)
 ```
 
-The method's parameters must be passed in the correct order, first the format and then a variable number of values:
+Les paramètres de la méthode doivent être passés dans le bon ordre : le format d’abord et ensuite les valeurs, dont le nombre peut varier :
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24) //"182.70"
@@ -248,7 +248,7 @@ For($i;1;Count parameters)
 End for
 ```
 
-This method can be called:
+Cette méthode peut être appelée :
 
 ```4d
 foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
@@ -259,17 +259,17 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 
 ### Déclaration des paramètres génériques
 
-De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
+De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Les paramètres génériques non déclarés obtiennent automatiquement le type [Variant](dt_variant.md).
 
-To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+Pour déclarer des paramètres génériques, utilisez une directive du compilateur à laquelle vous passez ${N} comme paramètre, où N spécifie le premier paramètre générique.
 
 ```4d
  C_TEXT(${4})
 ```
 
-> Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
+> La déclaration de paramètres génériques ne peut se faire qu'avec [la syntaxe séquentielle](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Les types de $1, $2 et $3 pourront être quelconques.
+La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type text. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
 
 > The number in the declaration has to be a constant and not a variable.
 
@@ -289,7 +289,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 
-When using the [sequential variable syntax](#sequential-parameters), you need to make sure all parameters are properly declared. Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
+Lorsque vous utilisez [la syntaxe de variable séquentielle](#sequential-parameters), vous devez vous assurer que tous les paramètres sont correctement déclarés. Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
 
 ```4d
   // Méthode projet ajoutCapitale
@@ -356,9 +356,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 
 
-## Wrong parameter type
+## Type de paramètre erroné
 
-Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
+L'appel d'un paramètre de type incorrect est une [erreur](error-handling.md) qui empêche une exécution correcte. Par exemple, si vous écrivez les méthodes suivantes :
 
 ```4d
 // method1
@@ -367,15 +367,15 @@ Calling a parameter with an wrong type is an [error](error-handling.md) that pre
 
 ```4d
 // method2
-method1(42) //wrong type, text expected
+method1(42) //mauvais type, texte attendu
 ```
 
-This case is handled by 4D depending on the context:
+Ce cas est traité par 4D en fonction du contexte :
 
-- in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
-- in interpreted projects:
-    + if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-    + if the parameter was declared using the [sequential syntax](#sequential-parameters) (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+- dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
+- dans les projets interprétés :
+    + si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
+    + si le paramètre a été déclaré en utilisant [la syntaxe séquentielle](#sequential-parameters) (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 
 
@@ -458,21 +458,21 @@ ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
 ALERT("Temps écoulé") //1 paramètre
 ```
 
-4D methods and functions also accept such optional parameters. Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). Par exemple :
+Les méthodes et les fonctions 4D acceptent également de ces paramètres optionnels. Vous pouvez déclarer un nombre quelconque de paramètres. Si vous appelez une méthode ou une fonction avec moins de paramètres que ceux déclarés, les paramètres manquants sont traités comme des valeurs par défaut dans le code appelé, [en fonction de leur type](data-types.md#default-values). Par exemple :
 
 ```4d
-// "concate" function of myClass
+// fonction "concate" de myClass
 Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
 ```4d
-  // Calling method
+  // Méthode appelante
  $class:=cs.myClass.new()
  $class.concate("Hello") // "Hello "
- $class.concate() // Displays " "
+ $class.concate() // Affiche " "
 ```
 
-> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+> Vous pouvez également appeler une méthode ou une fonction avec plus de paramètres que ceux déclarés. Ils seront disponibles dans le code appelé grâce à la [syntaxe ${N}](#parameter-indirection-n).
 
 A l'aide de la commande `Count parameters` contenue dans la méthode appelée, vous pouvez détecter le nombre de paramètres et effectuer des opérations différentes en fonction de ce nombre.
 

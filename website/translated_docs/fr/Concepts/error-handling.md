@@ -21,7 +21,7 @@ D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le
 
 ## Installer une méthode de gestion des erreurs
 
-Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
+In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
 Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple :
 
@@ -34,7 +34,7 @@ Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la mét
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
-La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
+The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error
@@ -55,7 +55,7 @@ Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERRE
 
 ### Gérer les erreurs dans une méthode
 
-Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
+Within the custom error method, you have access to several pieces of information that will help you identifying the error:
 
 - Variables système (*) :
 

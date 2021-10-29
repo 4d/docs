@@ -4,7 +4,7 @@ title: CryptoKey
 ---
 
 
-La classe `CryptoKey` du langage 4D contient une paire de clés de chiffrement asymétrique.
+The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption key pair.
 
 Cette classe est disponible depuis le "class store" de `4D`.
 

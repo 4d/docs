@@ -455,7 +455,7 @@ ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
 
-4D methods and functions also accept such optional parameters. Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). Beispiel:
+4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). Beispiel:
 
 ```4d
 // "concate" function of myClass

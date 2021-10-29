@@ -136,10 +136,10 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 | dataClassAttribute.kind | fieldType                                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| storage                 | Corresponding 4D field type                                                                                        |
-| relatedEntity           | 38 (Is object)                                                                                                     |
-| relatedEntities         | 42 (Is collection)                                                                                                 |
-| calculated              | <li>See <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
+| storage                 | Corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)            |
+| relatedEntity           | 38 (`Is object`)                                                                                                   |
+| relatedEntities         | 42 (`Is collection`)                                                                                               |
+| calculated              | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
 
 
 <!-- END REF -->

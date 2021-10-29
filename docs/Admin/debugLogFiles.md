@@ -195,7 +195,6 @@ The following fields are logged for each event:
 |Column #|Field name|Description|
 |---|---|---|
 |1| sequence_number| Unique and sequential operation number in the logging session |
-
 |2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) |
 |3|	ProcessID|Process ID|
 |4|	unique_processID|Unique process ID|

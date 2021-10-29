@@ -3,12 +3,12 @@ id: dsmapping
 title: Data Model Objects
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying database structure. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
+La technologie ORDA est fondée sur une cartographie automatique d'une structure de base sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
 
 
 ## Cartographie de la structure
 
-When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Lorsque vous appelez un datastore à l'aide de la commande [`ds`](API/DataStoreClass.md#ds) ou [`Open datastore`](API/DataStoreClass.md#open-datastore), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) retourné :
 
 *   Les tables sont mappées aux classes de données (dataclasses).
 *   Les champs sont mappés aux attributs de stockage.
@@ -25,7 +25,7 @@ Les règles suivantes s'appliquent à toutes les conversions :
 *   Un datastore ne référence que les tables avec une seule clé primaire. Les tables suivantes ne sont pas référencées :
     *   Tables sans clé primaire
     *   Tables avec clés primaires composites.
-*   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
+*   Les champs BLOB sont automatiquement disponibles comme attributs de type [objet Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
@@ -129,7 +129,7 @@ Les propriétés de la dataclass sont toutefois énumérables :
 ```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contains the names of all the dataclass attributes
+//$prop contient les noms de tous les attributs de dataclass
 ```
 
 
@@ -144,12 +144,12 @@ Les propriétés de dataclass sont des objets attribut décrivant les champs ou 
 
 Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Pour gérer les valeurs, vous devez passer par les [Entités](#entity).
 
-All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
+Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs de leur [dataclass](#dataclass) parente. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
 
 
 #### Attributs de stockage et relationnels
 
-Les attributs de la Dataclass sont de plusieurs types : storage, relatedEntity et relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support all the standard 4D data types (integer, text, object, etc.).
+Les attributs de la Dataclass sont de plusieurs types : storage, relatedEntity et relatedEntities. Les attributs scalaires (c'est-à-dire qui ne fournissent qu'une seule valeur) prennent en charge tous les types de données standard 4D (Entier, texte, objet, etc.).
 
 *   Un **attribut de stockage** (storage) est équivalent à un champ dans la base de données 4D et peut être indexé. Les valeurs affectées à un attribut de stockage sont stockées en tant que partie de l'entité lors de son enregistrement. Lorsqu'on accède à un attribut de stockage, sa valeur provient directement du datastore. Les attributs de stockage sont le bloc de construction le plus élémentaire d'une entité et sont définis par un nom et un type de données.
 *   Un **attribut relationnel** (relatedEntity et relatedEntities) donne accès à d'autres entités. Les attributs relationnels peuvent aboutir soit à une entité unique (ou à aucune entité), soit à une sélection d'entité (0 à N entités). Les attributs relationnels s'appuient sur les relations "classiques" dans la structure relationnelle pour fournir un accès direct à une entité ou à des entités reliées. Tous les attributs relationnels sont directement disponibles dans ORDA si vous utilisez leurs noms.
@@ -175,9 +175,9 @@ Tous les attributs de la dataclass sont exposés en tant que propriétés de la 
 
 Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas accès aux données. La lecture ou l'écriture des données se fait à travers des [objets entité](entities.md#using-entity-attributes).
 
-#### Computed attributes
+#### Champs calculés
 
-[Computed attributes](ordaClasses.md#computed-attributes) are declared using a `get <attributeName>` function in the [Entity class definition](ordaClasses.md#entity-class). Their value is not stored but evaluated each time they are accessed. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+Les [champs calculés](ordaClasses.md#computed-attributes) sont déclarés à l'aide d'une fonction `get<attributeName>` <attributeName> dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
 
 
 ### Entity
@@ -212,9 +212,9 @@ var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe
 $e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
+Les entity selections peuvent être "triées" ou "non triées" ([voir ci-dessous](#ordered-or-unordered-entity-selection)).
 
-> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
+> Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 

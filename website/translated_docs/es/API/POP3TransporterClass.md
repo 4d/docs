@@ -58,7 +58,7 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 In the *server* parameter, pass an object containing the following properties:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                | Default value (if omitted)                                          |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                | Valor por defecto (si se omite)                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
 | .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                             |
@@ -73,7 +73,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultado
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
+The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > The POP3 connection is automatically closed when the transporter object is destroyed.
 
 #### Ejemplo
@@ -270,7 +270,7 @@ The `boxInfo` object returned contains the following properties:
 <!-- REF #POP3TransporterClass.getMail().Params -->
 | Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| msgNumber  | Integer | -> | Number of the message in the list                |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                   |
 | Resultado  | Objeto  | <- | [Objeto Email](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
@@ -328,10 +328,10 @@ You want to know the sender of the first mail of the mailbox:
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- |:--:| --------------------------------- |
-| msgNumber  | Integer | -> | Number of the message in the list |
-| Resultado  | Objeto  | <- | mailInfo object                   |
+| Parámetros | Tipo    |    | Descripción                    |
+| ---------- | ------- |:--:| ------------------------------ |
+| msgNumber  | Integer | -> | Número del mensaje en la lista |
+| Resultado  | Objeto  | <- | mailInfo object                |
 <!-- END REF -->
 
 
@@ -462,7 +462,7 @@ You want to know the total number and size of emails in the mailbox:
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 | Parámetros | Tipo    |    | Descripción                                           |
 | ---------- | ------- |:--:| ----------------------------------------------------- |
-| msgNumber  | Integer | -> | Number of the message in the list                     |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                        |
 | Resultado  | Blob    | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 

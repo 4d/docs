@@ -6,11 +6,11 @@ title: Source de données
 ---
 ## Insertion automatique
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+Lorsque cette option est sélectionnée, si un utilisateur saisit une valeur introuvable dans la liste associée à l'objet, cette valeur est automatiquement ajoutée à la liste stockée en mémoire.
 
-When the **automatic insertion** option is not set (default), the value entered is stored in the form object but not in the list in memory.
+Lorsque l'option d'**insertion automatique** n'est pas définie (par défaut), la valeur saisie est stockée dans l'objet formulaire mais pas dans la liste en mémoire.
 
-This property is supported by:
+Cette propriété est prise en charge par :
 
 - [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
 - [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
@@ -19,7 +19,7 @@ Par exemple, pour une liste de choix contenant "France, Allemagne, Italie" assoc
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the choice list was created from a list defined in Design mode, the original list is not modified.
+> Si la liste déroulante a été créée à partir d'une liste définie en mode Développement, la liste d'origine n'est pas modifiée.
 
 
 
@@ -173,7 +173,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### Objets pris en charge
 
-[Drop-down Lists](dropdownList_Overview.md) associated to lists
+[Listes déroulantes](dropdownList_Overview.md) associées aux listes
 
 
 ---
@@ -300,7 +300,7 @@ Using this property requires compliance with the following principles:
 | saveAs | string          | "value", "reference" |
 
 #### Objets pris en charge
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Zone de saisie](input_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 

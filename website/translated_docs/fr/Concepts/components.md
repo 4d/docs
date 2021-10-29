@@ -5,24 +5,24 @@ title: Composants
 
 Un composant 4D est un ensemble d’objets 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer dans différentes applications. Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des applications 4D.
 
-## Presentation
+## Présentation
 
 ### Définitions
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component.
-- **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project, compiled or not, copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
+- **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
+- **Projet hôte :** projet dans lequel un composant est installé et utilisé.
+- **Composant** : Projet utilisé comme matrice, compilé ou non, copié dans le dossier [`Components`](Project/architecture.md) de l'application hôte et dont le contenu est utilisé dans l'application hôte.
 
-### Principles
+### Principes
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D. Schématiquement, les composants sont gérés comme des [plug-ins](Concepts/plug-ins.md). Les principes sont les suivants :
 
-- A component consists of a regular 4D project file.
-- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
-- A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, and so on. Il ne peut pas appeler des méthodes base et des triggers.
+- Un composant consiste en un fichier de projet 4D classique.
+- Pour installer un composant, il suffit de le copier dans le dossier [`Components` du projet](Project/architecture.md). Vous pouvez utiliser des alias ou des raccourcis.
+- Un projet peut être à la fois une "matrice" et un "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, une base utilisée comme composant ne peut pas elle-même utiliser un composant : un seul niveau de composant est chargé.
+- Un composant peut appeler la plupart des éléments 4D : des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
-- A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
+- Un projet hôte fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés. Un projet hôte fonctionnant en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
 
 
@@ -31,7 +31,7 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+Lorsqu’elles sont appelées depuis un composant, les commandes s’exécutent dans le contexte du composant, à l’exception de la commande `EXECUTE METHOD` ou `EXECUTE FORMULA` qui utilise le contexte de la méthode désignée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
 Les commandes `EXECUTE METHOD` et `Get database parameter` constituent aussi une exception à ce principe : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
@@ -71,18 +71,18 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 ## Partage des méthodes projet
 
-All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
+Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.
 
-On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. Ces méthodes constituent les **points d’entrée** dans le composant.
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. Vous devez explicitement désigner, dans le projet utilisé comme matrice, les méthodes que vous souhaitez partager avec le projet hôte. Ces méthodes projet peuvent être appelées dans le code de le projet hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de le projet hôte). Ces méthodes constituent les **points d’entrée** dans le composant.
 
-Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. In certain cases, you may need to allow a component to access the project methods of your host project.
+A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. In certain cases, you may need to allow a component to access the project methods of your host project.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Par exemple :
+Une fois que les méthodes projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode hôte depuis l'intérieur d'un composant à l'aide des commandes `EXECUTE FORMULA` ou `EXECUTE METHOD`. Par exemple :
 
 ```4d 
-// Host Method
+// Méthode hôte
 component_method("host_method_name")
 ```
 
@@ -93,23 +93,23 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
-> An interpreted host database that contains interpreted components can be compiled or syntax checked if it does not call methods of the interpreted component. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.   
-> Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il ne sera pas possible d'effectuer l'opération.   
+> A noter qu'une méthode interprétée peut appeler une méthode compilée, mais pas l'inverse, sauf si vous utilisez les commandes `EXECUTE METHOD` et `EXECUTE FORMULA`.
 
 
 
 ## Passage de variables
 
-The local, process and interprocess variables are not shared between components and host projects. The local, process and interprocess variables are not shared between components and host projects.
+Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. The local, process and interprocess variables are not shared between components and host projects.
 
 Exemple utilisant un tableau :
 
 ```4d
-//In the host project:
-     ARRAY INTEGER(MyArray;10)
-     AMethod(->MyArray)
+//Dans le projet hôte :
+    ARRAY INTEGER(MyArray;10)
+    AMethod(->MyArray)
 
-//In the component, the AMethod project method contains:
+//Dans le composant, la méthode projet UneMéthode contient : 
      APPEND TO ARRAY($1->;2)
 ```
 
@@ -125,18 +125,18 @@ C_POINTER($p)
 $p:=component_method2(...)
 ```
 
-Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+Sans pointeur, un composant peut toujours accéder à la valeur d'une variable de base hôte (mais pas à la variable elle-même) et vice versa :
 
 ```4d
-//In the host database
+//Dans la base hôte
 C_TEXT($input_t)
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method gets "DoSomething" in $1 (but not the $input_t variable)
+// component_method obtient "DoSomething" in $1 (mais pas la variable $input_t)
 ```
 
 
-When you use pointers to allow components and the host project to communicate, you need to take the following specificities into account:
+L’utilisation de pointeurs pour faire communiquer les composants et le projet hôte nécessite de prendre en compte les spécificités suivantes :
 
 - The `Get pointer` command will not return a pointer to a variable of the host project if it is called from a component and vice versa.
 
@@ -164,7 +164,7 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 
 ## Accès aux tables du projet hôte
 
-Although components cannot use tables, pointers can allow host projects and components to communicate with each other. Par exemple, voici une méthode pouvant être appelée depuis un composant :
+Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent au projet hôte et au composant de communiquer. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
 ```4d
 // appeler une méthode composant
@@ -186,11 +186,11 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
-> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+> Dans le contexte d'un composant, 4D suppose qu'une référence à un formulaire table est une référence au formulaire table hôte (car les composants ne peuvent pas avoir de tables)
 
 ## Utilisation de tables et de champs
 
-Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
+Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet utilisé comme matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. Une base externe est un projet 4D indépendant du projet 4D principal, mais qui est manipulée depuis le projet 4D principal. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
 ### Exemple
 
@@ -270,45 +270,45 @@ Lecture dans une base de données externe :
 
 ## Utilisation de formulaires
 
-- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Un composant peut faire appel à des formulaires table du projet hôte.
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Les formulaires projet contenus dans le projet utilisé comme matrice peuvent être exploités par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
-> If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
+> Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant du projet hôte sera affiché, dans le contexte du projet hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
 - Vous pouvez publier des formulaires de composants comme sous-formulaires dans les projets hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
 
-> In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
+> Dans le contexte d'un composant, tout formulaire projet référencé doit appartenir au composant. Par exemple, à l'intérieur d'un composant, le fait de référencer un formulaire projet hôte à l'aide de `DIALOG` ou de `Open form window` déclenchera une erreur.
 
 
 ## Utilisation de ressources
 
-Components can use resources located in the Resources folder of the component.
+Les composants peuvent utiliser des ressources situées dans le dossier Ressources du composant.
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis le projet hôte.
+Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis le projet hôte.
 
 
-## Executing initialization code
+## Exécution du code d'initialisation
 
-A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database.
+Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de la fermeture de la base hôte, par exemple pour charger et/ou sauvegarder les préférences ou les états utilisateur liés au fonctionnement de la base hôte.
 
-Executing initialization or closing code is done by means of the `On Host Database Event` database method.
+L'exécution du code d'initialisation ou de fermeture se fait au moyen de la méthode base `On Host Database Event`.
 
-> For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the **Execute "On Host Database Event" method of the components** option on the Security page the Settings.
+> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base`On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option **Exécuter la méthode "Sur événement base hôte" des composants** dans la page Sécurité des Paramètres.
 
 
 ## Protection des composants : la compilation
 
-By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. En particulier :
+Par défaut, toutes les méthodes projet d’un projet utilisé comme matrice et installé comme composant sont virtuellement visibles depuis le projet hôte. En particulier :
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. However, it's not possible to open them in the Method editor or modify them.
-- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
+- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.
+- Les autres méthodes projet du projet utilisé comme matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur du projet hôte.
 
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
+Pour protéger efficacement les méthodes projet d'un composant, il suffit de compiler le projet utilisé comme matrice et de le fournir sous la forme d'un fichier .4dz. Lorsqu’un projet compilé utilisé comme matrice est installé comme composant :
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
-- The other project methods of the matrix project will never appear. 
+- Les méthodes projet partagées se trouvent dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
+- Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais. 
 
 
 

@@ -36,7 +36,7 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 La propiedad `.name` <!-- REF #ClassClass.name.Summary -->contiene el nombre del objeto `4D.Class` object<!-- END REF -->. Los nombres de clases son sensibles a las mayúsculas y minúsculas.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -123,7 +123,7 @@ La propiedad `.superclass` <!-- REF #ClassClass.superclass.Summary -->devuelve l
 
 Una superclase de clase usuario se declara en una clase utilizando la palabra clave the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 
-This property is **read-only**.
+Esta propiedad es **de sólo lectura**.
 
 #### Ejemplos
 

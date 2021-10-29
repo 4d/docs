@@ -527,12 +527,12 @@ Email オブジェクト。
 テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。
 
 ```4d
-C_BLOB($mime)
-C_OBJECT($mail;$server;$transporter;$status)
+var $mime: Blob
+var $mail;$server;$transporter;$status: Object
 
 $mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
 
-$mail:=[#current_title_incode]($mime)
+$mail:=MAIL Convert from MIME($mime)
 $mail.to:="smith@mail.com"
 $mail.subject:="Hello world"
 
@@ -551,16 +551,16 @@ $status:=$transporter.send($mail)
 この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:
 
 ```4d
-C_TEXT($mime)
-C_OBJECT($email;$server;$transporter;$status)
+var $mime: Blob
+var $email;$server;$transporter;$status: Object
 
-// 4D Write Pro ドキュメントを MIME に書き出します
+// Mime export of the 4D Write Pro document
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
 
-// 4D Write Pro MIME 変数をメールオブジェクトに変換します
+// convert 4D Write Pro Mime variable in mail object
 $email:=MAIL Convert from MIME($mime)
 
-// Email オブジェクトのヘッダーを設定します
+// Fill your mail object headers
 $email.subject:="4D Write Pro HTML body"
 $email.from:="YourEmail@gmail.com"
 $email.to:="RecipientEmail@mail.com"
@@ -619,11 +619,11 @@ $status:=$transporter.send($email)
 #### 例題
 
 ```4d
-C_OBJECT($mail)
-C_TEXT($mime)
+var $mail: Object
+var $mime: Text
 $mail:=New object
 
-// メール作成
+// Creation of a mail
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -632,10 +632,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// Email オブジェクトを MIME に変換します
-$mime:=[#current_title_incode]($mail)
+// transform the mail object in MIME
+$mime:=MAIL Convert to MIME($mail)
 
-// $mime の中身:
+// Contents of $mime:
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

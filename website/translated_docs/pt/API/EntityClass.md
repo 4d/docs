@@ -42,9 +42,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 ## .*attributeName*
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
@@ -82,9 +82,9 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 ## .clone()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 
@@ -127,9 +127,9 @@ This function can only be used with entities already saved in the database. It c
 ## .diff()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
@@ -331,9 +331,9 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 ## .drop()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -439,9 +439,9 @@ Example with `dk force drop if stamp changed` option:
 ## .first()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -478,9 +478,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .fromObject()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -568,9 +568,9 @@ You could also use a related entity given as an object:
 ## .getDataClass()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 
 </details>
 
@@ -615,9 +615,9 @@ The following generic code duplicates any entity:
 ## .getKey()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -659,9 +659,9 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 ## .getSelection()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -703,9 +703,9 @@ If the entity does not belong to an entity selection, the function returns Null.
 ## .getStamp()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -752,9 +752,9 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 ## .indexOf()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -802,9 +802,9 @@ The resulting value is included between 0 and the length of the entity selection
 ## .isNew()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -843,9 +843,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 ## .last()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -884,9 +884,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .lock()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -997,9 +997,9 @@ Example with `dk reload if stamp changed` option:
 ## .next()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1039,9 +1039,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 ## .previous()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1081,9 +1081,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 ## .reload( )
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1144,9 +1144,9 @@ The object returned by `.reload( )` contains the following properties:
 ## .save()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1249,7 +1249,7 @@ Updating an entity without `dk auto merge` option:
  End case
 ```
 
-#### Example 3
+#### Exemplo 3
 
 Updating an entity with `dk auto merge` option:
 
@@ -1279,9 +1279,9 @@ Updating an entity with `dk auto merge` option:
 ## .toObject()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1308,7 +1308,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 *   attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
 
 
-In the first parameter, you pass the entity attribute(s) to extract. You can pass:
+In the first parameter, you pass the entity attribute(s) to extract. Pode passar:
 
 *   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
@@ -1398,7 +1398,7 @@ Returns:
 }
 ```
 
-#### Example 3
+#### Exemplo 3
 
 Expanding all the properties of `relatedEntities`:
 
@@ -1467,7 +1467,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 }
 ```
 
-#### Example 4
+#### Exemplo 4
 
 Extracting some properties of `relatedEntities`:
 
@@ -1494,7 +1494,7 @@ Returns:
 }
 ```
 
-#### Example 5
+#### Exemplo 5
 
 Extracting a `relatedEntity` with simple form:
 
@@ -1514,7 +1514,7 @@ Returns:
 }
 ```
 
-#### Example 6
+#### Exemplo 6
 
 Extracting all the properties of a `relatedEntity`:
 
@@ -1566,9 +1566,9 @@ Returns:
 ## .touched( )
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1610,9 +1610,9 @@ In this example, we check to see if it is necessary to save the entity:
 ## .touchedAttributes( )
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1686,9 +1686,9 @@ In this case:
 ## .unlock()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 

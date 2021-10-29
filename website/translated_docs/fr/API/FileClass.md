@@ -3,18 +3,18 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Les objets `File` sont créés avec la commande [`File`](#file). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `File` pour créer un nouveau fichier, un objet `File` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`file.create( )`](#create).
 
 ### Exemple
 
-The following example creates a preferences file in the project folder:
+L'exemple suivant crée un fichier de préférences dans le dossier du projet :
 
 ```code4d
 var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### File object
+### Objet File
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -84,7 +84,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command.
+> Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> Il est recommandé d'utiliser la commande raccourci [`File`](#file) au lieu de `4D.File.new()`.
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -179,8 +179,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valeur retournée**
 
-*   **True** if the file is created successfully;
-*   **False** if a file with the same name already exists or if an error occured.
+*   **Vrai** si le fichier est créé avec succès ;
+*   **Faux** si un fichier du même nom existe déjà ou si une erreur s'est produite.
 
 #### Exemple
 
@@ -289,7 +289,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+> **ATTENTION** : `.delete( )` peut supprimer n'importe quel fichier sur un disque, y compris les documents créés avec d'autres applications ainsi que les applications elles-mêmes. `.delete( )` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
 
 #### Exemple
 
@@ -345,24 +345,24 @@ The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
 **Returned object with a .exe or .dll file**
 
-> Reading a .exe or .dll is only possible on Windows.
+> La lecture d'un fichier .exe ou .dll est possible uniquement sous Windows.
 
 All property values are Text.
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 **Returned object with a .plist file**
 
@@ -564,9 +564,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Paramètres | Type  |    | Description                                                      |
-| ---------- | ----- | -- | ---------------------------------------------------------------- |
-| info       | Objet | -> | Properties to write in .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                                      |
+| ---------- | ------ | -- | ---------------------------------------------------------------- |
+| info       | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -576,7 +576,7 @@ The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes 
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
 ***info* parameter object with a .exe or .dll file**
 
@@ -584,16 +584,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
@@ -707,26 +707,26 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou ""UTF-8"),
+- ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
+Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). Si vous ne spécifiez pas de jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8".
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Les constantes suivantes du thème **Documents système** sont disponibles :
 
-| Constant                      | Valeur | Commentaire                                                                                                                                                    |
-| ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0      | No processing                                                                                                                                                  |
-| `Document with native format` | 1      | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Document with CRLF`          | 2      | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
-| `Document with CR`            | 3      | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
-| `Document with LF`            | 4      | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
+| Constant                      | Valeur | Commentaire                                                                                                                                                                |
+| ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0      | No processing                                                                                                                                                              |
+| `Document with native format` | 1      | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (carriage return) sous MACos, CRLF (carriage return + line feed) sous Windows |
+| `Document with CRLF`          | 2      | Les sauts de ligne sont convertis en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                                |
+| `Document with CR`            | 3      | Les sauts de ligne sont convertis en CR (retour chariot), le format MacOS classique par défaut                                                                             |
+| `Document with LF`            | 4      | Les sauts de ligne sont convertis en LF (line feed), le format Unix et macOS par défaut                                                                                    |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Note de compatibilité** : des options de compatibilité sont disponibles pour la gestion de EOL et de BOM. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
 
 #### Exemple
 

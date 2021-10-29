@@ -270,7 +270,7 @@ Lors de la création ou de la modification de classes de modèles de données, v
 - Vous ne pouvez pas remplacer une fonction de classe ORDA native du [class store](Concepts/classes.md#class-stores) **`4D`** par une fonction de classe utilisateur de modèle de données.
 
 
-## Computed attributes
+## Champs calculés
 
 
 ### Aperçu
@@ -564,24 +564,24 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 The *$event* parameter contains the following properties:
 
-| Propriété     | Type    | Description                                                                                                |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Computed attribute name                                                                                    |
-| dataClassName | Texte   | Dataclass name                                                                                             |
-| kind          | Texte   | "orderBy"                                                                                                  |
-| value         | Variant | Value to be handled by the computed attribute                                                              |
-| operator      | Texte   | "desc" or "asc" (default)                                                                                  |
-| descending    | Booléen | `true` for descending order, `false` for ascending order                                                   |
-| result        | Variant | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
+| Propriété     | Type    | Description                                                                                                        |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| attributeName | Texte   | Computed attribute name                                                                                            |
+| dataClassName | Texte   | Dataclass name                                                                                                     |
+| kind          | Texte   | "orderBy"                                                                                                          |
+| value         | Variant | Value to be handled by the computed attribute                                                                      |
+| operator      | Texte   | "desc" or "asc" (default)                                                                                          |
+| descending    | Booléen | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
+| result        | Variant | Value to be handled by the computed attribute. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
 
-> You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).
+> Vous pouvez utiliser soit `l'opérateur`, soit la propriété `descending`. C'est essentiellement une question de style de programmation (voir les exemples).
 
-You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+Vous pouvez retourner la chaîne `orderBy` soit dans la propriété de l'objet `$event.result`, soit dans le résultat de la fonction *$result*. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
 
 #### Exemple
 
-You can write conditional code:
+Vous pouvez saisir du code conditionnel :
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
@@ -592,7 +592,7 @@ Function orderBy fullName($event : Object)-> $result : Text
     End if
 ```
 
-You can also write compact code:
+Vous pouvez également saisir du code compact :
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
@@ -600,7 +600,7 @@ Function orderBy fullName($event : Object)-> $result : Text
 
 ```
 
-Conditional code is necessary in some cases:
+Le code conditionnel est nécessaire dans certains cas :
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text

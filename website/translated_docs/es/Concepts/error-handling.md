@@ -21,7 +21,7 @@ Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de
 
 ## Instalación de un método de gestión de errores
 
-En 4D, todos los errores pueden ser capturados y manejados en un método proyecto específico, el método **gestión de errores** (o **captura de errores**).
+In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
 Este método proyecto se instala para el proceso actual y será llamado automáticamente para cualquier error que se produzca en el proceso, en modo interpretado o compilado. Para *instalar* este método proyecto, basta con llamar al comando `ON ERR CALL` con el nombre del método proyecto como parámetro. Por ejemplo:
 
@@ -34,7 +34,7 @@ Para dejar de detectar errores y devolver el control a 4D, llame a `ON ERR CALL`
 ON ERR CALL("") //devuelve el control a 4D
 ```
 
-El comando `Method called on error` permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
  $methCurrent:=Method called on error
@@ -55,7 +55,7 @@ Un método de gestión de errores instalado por el comando `ON ERR CALL` sólo s
 
 ### Manejo de errores dentro del método
 
-Dentro del método de error personalizado, tiene acceso a varias informaciones que le ayudarán a identificar el error:
+Within the custom error method, you have access to several pieces of information that will help you identifying the error:
 
 - variables sistema (*):
 

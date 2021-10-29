@@ -214,13 +214,13 @@
         "title": "Basics"
       },
       "Debugging/breakpoints": {
-        "title": "Breakpoints and Command Catching"
+        "title": "Points d'arrêt et points d'arrêt sur commande"
       },
       "Debugging/debugger": {
-        "title": "Debugger"
+        "title": "Débogueur"
       },
       "Debugging/debugging-remote": {
-        "title": "Debugging from remote machines"
+        "title": "Débogage depuis des machines distantes"
       },
       "Desktop/building": {
         "title": "Générateur d'application"
@@ -698,22 +698,22 @@
         "title": "Utiliser un datastore distant"
       },
       "Preferences/forms": {
-        "title": "Forms Page"
+        "title": "Page Formulaires"
       },
       "Preferences/general": {
-        "title": "General Page"
+        "title": "Page Général"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "Page Méthodes"
       },
       "Preferences/overview": {
         "title": "Aperçu"
       },
       "Preferences/shortcuts": {
-        "title": "Shortcuts Page"
+        "title": "Page Raccourcis"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "Page Structure"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
@@ -722,7 +722,7 @@
         "title": "Compilation"
       },
       "Project/components": {
-        "title": "4D Components Library"
+        "title": "Bibliothèque des composants 4D"
       },
       "Project/creating": {
         "title": "Working with a project"
@@ -830,7 +830,7 @@
         "title": "A propos des requêtes REST"
       },
       "Tags/tags": {
-        "title": "Transformation tags"
+        "title": "Balises de transformation"
       },
       "Users/editing": {
         "title": "Gestion des groupes et utilisateurs 4D"
@@ -876,7 +876,8 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -887,9 +888,9 @@
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
       "Debugging": "Débogage",
-      "Access Rights": "Droits d'accès",
       "Preferences": "Préférences",
       "Administration": "Administration",
+      "Access Rights": "Droits d'accès",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
@@ -927,7 +928,7 @@
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
     "4D Server Administration Window|no description given": "Fenêtre d'administration de 4D Server",
-    "4D Components Library|no description given": "4D Components Library",
+    "4D Components Library|no description given": "Bibliothèque des composants 4D",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Debugging|no description given": "Débogage",

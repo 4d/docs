@@ -91,16 +91,4 @@ $myNewBlob:=$myBlob.slice(0; 5)
 
 $myString:=Convert to text($myNewBlob; "UTF-8")
 // $myString contains "Hello"
-
-// Create a new 4D.Blob from $myBlob
-$myNewBlob:=$myBlob.slice(0; 5)
-
-$myString:=Convert to text($myNewBlob; "UTF-8")
-// $myString contains "Hello"
-
-// Create a new 4D.Blob from $myBlob
-$myNewBlob:=$myBlob.slice(0; 5)
-
-$myString:=Convert to text($myNewBlob; "UTF-8")
-// $myString contains "Hello"
 ```

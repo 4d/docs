@@ -191,7 +191,7 @@ _イタリック_
 ```
 [![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D ブログロゴ")](https://blog.4d.com)
 
-> 詳細については [GitHug Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
+> 詳細については [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
 
 
 

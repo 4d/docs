@@ -23,9 +23,9 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 ## .name
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R3 | Adicionado |
 
 </details>
 
@@ -36,7 +36,7 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 A propriedade `.name` property <!-- REF #ClassClass.name.Summary -->contém o nome do objeto `4D.Class`<!-- END REF -->. Class names are case sensitive.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -46,9 +46,9 @@ This property is **read-only**.
 ## .new()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R3 | Adicionado |
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
@@ -108,9 +108,9 @@ $person:=cs.Person.new("John";"Doe";40)
 ## .superclass
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R3 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R3 | Adicionado |
 
 </details>
 
@@ -123,7 +123,7 @@ A propriedade `.superclass` <!-- REF #ClassClass.superclass.Summary -->retorna a
 
 Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra chave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 #### Exemplos
 

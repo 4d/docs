@@ -128,7 +128,7 @@ You must select each event that you test for in your Case statement. Los arrays 
 If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Esto facilita la gestión de los campos/variables listados.
 
 For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
-> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar.
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 > It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.

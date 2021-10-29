@@ -36,7 +36,7 @@ To open an existing project from 4D:
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
     - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
-    - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+    - *Fichiers de raccourcis* : extension `.4DLink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
     - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D hérités
 
 ### Options
@@ -51,7 +51,7 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 
 ## Raccourcis d’ouverture des projets
 
-4D offers several ways to open projects directly and bypass the Open dialog:
+4D propose plusieurs façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
 - via les options du menu :
     -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
@@ -60,40 +60,40 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 - via les préférences :
     -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
 
-- using a `.4DLink` file.
+- via un fichier `.4DLink`.
 
-### Opening a Project with a 4DLink file
+### Ouvrir un projet avec un fichier 4DLink
 
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. There are two ways to do this:
+Vous pouvez utiliser un [fichier `.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. Il existe deux façons de procéder :
 
-- double-click or drag and drop the `.4DLink` file onto the 4D application
-- go to **File** > **Open Recent Projects** and select a project
+- double-cliquez ou faites glisser et déposez le fichier `.4DLink` sur l'application 4D
+- allez dans **Fichier** > **Ouvrir des projets récents** et sélectionnez un projet
 
 ![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
 
-A .4DLink file of "remote project" type can be copied and used on several machines.
-> It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
+Un fichier .4DLink de type "projet distant" peut être copié et utilisé sur plusieurs machines.
+> Il est également possible de sélectionner un fichier 4DLink dans la boîte de dialogue d'ouverture de 4D et 4D Server (ouverture de projet local uniquement).
 
-## About 4DLink Files
+## À propos des fichiers 4DLink
 
-Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
+Les fichiers portant l'extension `.4DLink` sont des fichiers XML qui contiennent des paramètres destinés à automatiser et à simplifier l'ouverture de projets 4D locaux ou distants.
 
-`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
+Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que ses identifiants de connexion et son mode d'ouverture, afin de vous faire gagner du temps lors de l'ouverture des projets.
 
-4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
+4D génère automatiquement un fichier `.4DLink` lorsqu'un projet local est ouvert pour la première fois ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
-- Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- Windows 7 et versions plus récentes : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- OS X : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
+XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
-That folder is divided into two subfolders:
-- the **Local** folder contains the `.4DLink` files that can be used to open local projects
-- the **Remote** folder contains the `.4DLink` files of recent remote projects
+Ce dossier est composé de deux sous-dossiers :
+- le dossier **Local** contient les fichiers `.4DLink` qui peuvent être utilisés pour ouvrir des projets locaux
+- le dossier **Remote** contient les fichiers `.4DLink` des projets distants récents
 
-`.4DLink` files can also be created with an XML editor.
+Les fichiers `.4DLink` peuvent également être créés avec un éditeur XML.
 
-4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
+4D fournit un DTD décrivant les clés XML qui peuvent être utilisées pour créer un fichier `.4DLink`. Ce DTD est nommé database_link.dtd et se trouve dans le sous-dossier \Resources\DTD\ de l'application 4D.
 
 
 ## Enregistrement des fichiers

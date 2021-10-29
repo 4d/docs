@@ -426,7 +426,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-This property is **read-only**.
+Esta propiedad es **de sólo lectura**.
 
 #### Ejemplo
 

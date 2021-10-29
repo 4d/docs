@@ -35,7 +35,7 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
  End if
 ``` 
 
-he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+The expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
 
 ```4d
  If(MethodA)

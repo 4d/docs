@@ -50,9 +50,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ## Folder
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
@@ -113,9 +113,9 @@ If the command is called from a component, pass the optional * parameter to get 
 ## 4D.Folder.new()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
@@ -136,9 +136,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 ## .create()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -196,9 +196,9 @@ End if
 ## .createAlias()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -258,9 +258,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ## .delete()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -374,9 +374,9 @@ When `Delete with contents` is passed:
 ## .moveTo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -444,9 +444,9 @@ You want to move and rename a folder:
 ## .rename()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
