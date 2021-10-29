@@ -23,6 +23,8 @@ Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes RES
 
 Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
+> You must restart the 4D application for your changes to take effect.
+
 
 ## Configuration de l'accès REST
 

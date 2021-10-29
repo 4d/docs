@@ -5,8 +5,14 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
+      "Admin/cli": {
+        "title": "Interface de ligne de commande"
+      },
       "Admin/dataExplorer": {
         "title": "Explorateur de données Web"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description des fichiers historiques"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -17,79 +23,85 @@
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
-      "API/classClass": {
+      "API/BlobClass": {
+        "title": "Blob"
+      },
+      "API/ClassClass": {
         "title": "Class"
       },
-      "API/collectionClass": {
+      "API/CollectionClass": {
         "title": "Collection"
       },
-      "API/cryptoClass": {
+      "API/CryptoKeyClass": {
         "title": "CryptoKey"
       },
-      "API/dataclassAttributeClass": {
+      "API/DataClassAttributeClass": {
         "title": "DataClassAttribute"
       },
-      "API/dataclassClass": {
+      "API/DataClassClass": {
         "title": "DataClass"
       },
-      "API/datastoreClass": {
+      "API/DataStoreClass": {
         "title": "DataStore"
       },
-      "API/directory": {
+      "API/Directory": {
         "title": "Classe Directory"
       },
-      "API/document": {
+      "API/Document": {
         "title": "Document Class"
       },
-      "API/emails": {
-        "title": "Emails"
+      "API/EmailObjectClass": {
+        "title": "Email"
       },
-      "API/entityClass": {
+      "API/EntityClass": {
         "title": "Entity"
       },
-      "API/entitySelectionClass": {
+      "API/EntitySelectionClass": {
         "title": "EntitySelection"
       },
-      "API/fileClass": {
+      "API/FileClass": {
         "title": "File"
       },
-      "API/folderClass": {
+      "API/FolderClass": {
         "title": "Folder"
       },
-      "API/formulaClass": {
+      "API/FunctionClass": {
         "title": "Formula"
       },
-      "API/imapTransporterClass": {
+      "API/IMAPTransporterClass": {
         "title": "IMAPTransporter"
+      },
+      "API/MailAttachmentClass": {
+        "title": "MailAttachment"
       },
       "API/overview": {
         "title": "Aperçu - API des classes"
       },
-      "API/pop3TransporterClass": {
+      "API/POP3TransporterClass": {
         "title": "POP3Transporter"
       },
-      "API/sessionClass": {
+      "API/SessionClass": {
         "title": "Session"
       },
-      "API/signalClass": {
+      "API/SignalClass": {
         "title": "Signal"
       },
-      "API/smtpTransporterClass": {
+      "API/SMTPTransporterClass": {
         "title": "SMTPTransporter"
       },
-      "API/transporter": {
+      "API/Transporter": {
         "title": "Classe Transporter"
       },
-      "API/webServerClass": {
+      "API/WebServerClass": {
         "title": "WebServer"
       },
-      "API/zipArchiveClass": {
+      "API/ZipArchiveClass": {
         "title": "ZIPArchive"
       },
-      "API/zipFileClass": {
+      "API/ZipFileClass": {
         "title": "ZIPFile"
       },
-      "API/zipFolderClass": {
+      "API/ZipFolderClass": {
         "title": "ZIPFolder"
       },
       "Backup/backup": {
@@ -194,6 +206,18 @@
       },
       "Concepts/variables": {
         "title": "Variables"
+      },
+      "Debugging/basics": {
+        "title": "Basics"
+      },
+      "Debugging/breakpoints": {
+        "title": "Points d'arrêt et points d'arrêt sur commande"
+      },
+      "Debugging/debugger": {
+        "title": "Débogueur"
+      },
+      "Debugging/debugging-remote": {
+        "title": "Débogage depuis des machines distantes"
       },
       "Desktop/building": {
         "title": "Générer un package projet"
@@ -646,6 +670,9 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
@@ -667,8 +694,29 @@
       "ORDA/datastores": {
         "title": "Utiliser un datastore distant"
       },
+      "Preferences/forms": {
+        "title": "Page Formulaires"
+      },
+      "Preferences/general": {
+        "title": "Page Général"
+      },
+      "Preferences/methods": {
+        "title": "Page Méthodes"
+      },
+      "Preferences/overview": {
+        "title": "Aperçu"
+      },
+      "Preferences/shortcuts": {
+        "title": "Page Raccourcis"
+      },
+      "Preferences/structure": {
+        "title": "Page Structure"
+      },
       "Project/architecture": {
         "title": "Architecture of a project"
+      },
+      "Project/compiler": {
+        "title": "Compilation"
       },
       "Project/creating": {
         "title": "Working with a project"
@@ -678,9 +726,6 @@
       },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "ReleaseNotes/whatsNew": {
-        "title": "Les nouveautés"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -778,6 +823,9 @@
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
       },
+      "Tags/tags": {
+        "title": "Balises de transformation"
+      },
       "Users/editing": {
         "title": "Gestion des groupes et utilisateurs 4D"
       },
@@ -822,9 +870,9 @@
       }
     },
     "links": {
-      "What's New": "Les nouveautés",
-      "v19 BETA": "v19 BETA",
-      "v18 R6": "v18 R6",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
+      "v19": "v19",
       "v18": "v18"
     },
     "categories": {
@@ -833,8 +881,10 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
-      "Access Rights": "Droits d'accès",
+      "Debugging": "Débogage",
+      "Preferences": "Préférences",
       "Administration": "Administration",
+      "Access Rights": "Droits d'accès",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
@@ -873,9 +923,12 @@
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Debugging|no description given": "Débogage",
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
+    "Description of log files|no description given": "Description des fichiers historiques",
+    "Command Line Interface|no description given": "Interface de ligne de commande",
     "Preferences|no description given": "Préférences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",

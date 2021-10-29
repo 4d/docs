@@ -37,24 +37,24 @@ Tous les fichiers de documentation sont stockés dans le dossier `Documentation`
 
 L'architecture du dossier `Documentation` est la suivante :
 
-- **Documentation**
-    + **Classes**
+- `Documentation`
+    + `Classes`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **Formulaires**
+    + `Formulaires`
         * loginDial.md
         * ...
-    + **Méthodes**
+    + `Méthodes`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + `Triggers`
         * table1.md
         * ...
 
@@ -191,7 +191,7 @@ The [documentation](https://doc.4d.com) of the command ....
 ```
 [![logo blog 4D avec lien](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> Pour plus d'informations, consultez le [guide Markdown GitHug](https://guides.github.com/features/mastering-markdown/).
+> Pour plus d'informations, consultez le [guide Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
 
 

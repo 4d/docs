@@ -236,7 +236,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mailObj        | Objekt | -> | Email object                    |
 | destinationBox | Text   | -> | Mailbox to receive Email object |
 | options        | Objekt | -> | Object containing charset info  |
-| Ergebnis       | Objekt | <- | Status of the delete operation  |
+| Ergebnis       | Objekt | <- | Status of the append operation  |
 <!-- END REF -->
 
 
@@ -526,10 +526,6 @@ Else
 ALERT("Error: "+$status.statusText)
 End if
 End if
-Else
-ALERT("Error: "+$status.statusText)
-End if
-End if
 ```
 
 <!-- END REF -->
@@ -718,10 +714,6 @@ If ($status.success)
     ALERT("Error: "+$status.statusText)
     End if
 End if
-    Else
-    ALERT("Error: "+$status.statusText)
-    End if
-End if
 ```
 
 <!-- END REF -->
@@ -801,10 +793,10 @@ $status:=$transporter.expunge()
 ## .getBoxInfo()
 
 <details><summary>History</summary>
-| Version | Changes          |
-| ------- | ---------------- |
-| v18 R5  | name is optional |
-| v18 R4  | Added            |
+| Version | Changes            |
+| ------- | ------------------ |
+| v18 R5  | *name* is optional |
+| v18 R4  | Added              |
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
@@ -820,10 +812,11 @@ $status:=$transporter.expunge()
 
 #### Beschreibung
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
+The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
+If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
 **Returned object**
 
@@ -1152,8 +1145,6 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
         New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
         // ...
-    End for each
- End if
     End for each
  End if
 ```
@@ -1578,10 +1569,6 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
  End if
 End if
-   Else
-   ALERT("Error: "+$status.statusText)
- End if
-End if
 ```
 
 <!-- END REF -->
@@ -1750,18 +1737,18 @@ Search-keys may request the value to search for:
 
 #### Beschreibung
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the `name` mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the `name` parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional `state` parameter defines the type of access to the mailbox. The possible values are:
+The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
 | Constant              | Wert | Kommentar                                                                                                                                                             |
 | --------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1    | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                 |
 | IMAP read write state | 0    | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value) |
-> * The function generates an error and returns **Null** if name designates a non-existing mailbox.
+> * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 

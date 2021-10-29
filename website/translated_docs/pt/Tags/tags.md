@@ -7,7 +7,7 @@ title: Transformation tags
 
 This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
 
-These tags are generally be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
 
 It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
 
@@ -70,7 +70,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Sintaxe: `<!--#4DBASE folderPath-->`
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
@@ -132,7 +132,7 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### Sintaxe: `<!--#4DCODE codeLines-->`
 
 The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
@@ -315,7 +315,7 @@ The properties of the object are processed according to their creation order. Du
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
+#### Sintaxe: `<!--#4DEVAL expression-->`
 #### Alternative syntax: `$4DEVAL(expression)`
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
@@ -595,7 +595,7 @@ In this case, the `4DLOOP` tag works like it does with an array: it makes a loop
 
 This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
 
-Example:
+Exemplo:
 
 ```4d
  ARRAY TEXT($array;2)

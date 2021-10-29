@@ -92,8 +92,8 @@ class Index extends React.Component {
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
 				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
-				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)<br>
+				  [${subContents.components}](${siteConfig.baseUrl}${this.props.language}/Project/components.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Core',
@@ -106,6 +106,7 @@ class Index extends React.Component {
 				[${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)<br>
 	            [${subContents.cli}](${siteConfig.baseUrl}${this.props.language}/Admin/cli.html)<br>
 				[${subContents.debugLogFiles}](${siteConfig.baseUrl}${this.props.language}/Admin/debugLogFiles.html)<br>
+                [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
 				[${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
                 [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,

@@ -1,13 +1,13 @@
 ---
 id: etiquetas
-title: Transformation tags
+title: Etiquetas de transformación
 ---
 
 4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
 
 This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
 
-These tags are generally be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
 
 It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
 
@@ -43,7 +43,7 @@ Parsing the contents of a *template* source is done in two contexts:
 
 - Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
 
-- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed.
+- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
 
 
 ### Recursive processing
@@ -61,7 +61,7 @@ This powerful principle meets most needs related to text transformation. Note, h
 
 ### Identifiers with tokens
 
-To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time: C178`.
+To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
 
 ### Using the "." as decimal separator
 
@@ -89,7 +89,7 @@ The following code, which must specify a relative path for each call:
 <!--#4DINCLUDE folder/subpage3.html-->
 <!--#4DINCLUDE ../folder/subpage.html-->
 ```
-... is equivalent to:
+... es equivalente a:
 
 ```html
 <!--#4DINCLUDE subpage.html--> 
@@ -144,15 +144,15 @@ For example, you can write in a template:
 <!--#4DCODE
 //PARAMETERS initialization
 C_OBJECT:C1216($graphParameters)
-OB SET: C1220($graphParameters;"graphType";1)
+OB SET:C1220($graphParameters;"graphType";1)
 $graphType:=1
 //...your code here
-If(OB Is defined: C1231($graphParameters;"graphType"))
-    $graphType:=OB GET: C1224($graphParameters;"graphType")
+If(OB Is defined:C1231($graphParameters;"graphType"))
+    $graphType:=OB GET:C1224($graphParameters;"graphType")
     If($graphType=7)
         $nbSeries:=1
         If($nbValues>8)
-            DELETE FROM ARRAY: C228 ($yValuesArrPtr{1}->;9;100000)
+            DELETE FROM ARRAY:C228 ($yValuesArrPtr{1}->;9;100000)
             $nbValues:=8
         End if
     End if
@@ -172,7 +172,7 @@ Here are the 4DCODE tag features:
 > The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
 
 
-## 4DEACH and 4DENDEACH
+## 4DEACH y 4DENDEACH
 
 #### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
@@ -257,7 +257,7 @@ The number of loops is based on the number of entities of the entity selection. 
 
         <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr>
 
-          <!--#4DEACH $customer in ds. Customers.all()-->
+          <!--#4DEACH $customer in ds.Customers.all()-->
         <tr>
             <td><!--#4DTEXT $customer.ID--></td>
             <td><!--#4DTEXT $customer.name--></td>
@@ -340,11 +340,11 @@ In case of an error during interpretation, the text inserted will be in the form
 #### Alternative syntax: `$4DHTML(expression)`
 
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| myvar Value          | Etiquetas                    | Resultado           |
+| Valor myvar          | Etiquetas                    | Resultado           |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
@@ -362,11 +362,11 @@ Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!
 
 The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
 
+The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
+
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
-
-Using the ` <!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final ` <!--#4DELSE--> `). You can use a<!--#4DELSE-->tag after the last<!--#4DELSEIF-->. If all the conditions are false, the statements following the<!--#4DELSE-->are executed.
+Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.
 
 The two following codes are equivalent.
 
@@ -461,7 +461,7 @@ Ejemplos:
 
 
 
-## 4DLOOP and 4DENDLOOP
+## 4DLOOP y 4DENDLOOP
 
 #### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
@@ -477,7 +477,7 @@ This syntax makes a loop for each record from the table current selection in the
 
 > When the `4DLOOP` tag is used with a table, records are loaded in "Read only" mode.
 
-The following code:
+El código siguiente:
 
 ```html
 <!--#4DLOOP [People]-->
@@ -524,7 +524,7 @@ This syntax makes a loop as long as the method returns `True`. The method takes 
 
 For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
 
-`C_BOOLEAN($0)` and `C_LONGINT($1)` MUST be declared within the method for compilation purposes.
+`C_BOOLEAN($0)` y `C_LONGINT($1)` DEBE declararse dentro del método a efectos de compilación.
 
 The following code example:
 
@@ -561,7 +561,7 @@ The `my_method` method can be as follows:
        var:=...
        $0:=True
     Else
-       $0:=False `Stops the loop
+       $0:=False `Detiene el bucle
     End if
  End if
 ```
@@ -629,15 +629,15 @@ The `4DSCRIPT` tag allows you to execute 4D methods when processing the template
 
 > If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
 
-The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
+El método debe devolver el texto en `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
-For example, let’s say that you insert the following comment `“Today is<!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
 The `MYMETH` method is as follows:
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) //These parameters must always be declared
+ C_TEXT($0;$1) //Estos parámetros deben declararse siempre
  $0:=String(Current date)
 ```
 
@@ -659,17 +659,17 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
 You can also insert 4D expressions. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
-In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar-->: ## error # error code`.
+In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
 - You must use process variables.
 - You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
-- It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get: C1224([Rect]Desc;\"color\")-->`.
+- It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - You will usually work with Text variables. However, you can also use BLOB variables. You just need to generate BLOBs in `Text without length` mode.
 
 
@@ -682,7 +682,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 Several existing 4D transformation tags can be expressed using a $-based syntax:
 
 #### $4dtag (expression)
-can be used instead of
+puede utilizarse en lugar de
 #### `<!--#4dtag expression-->`
 
 This alternative syntax is available only for tags used to return processed values:
@@ -699,7 +699,7 @@ For example, you can write:
 $4DEVAL(UserName)
 ```
 
-instead of:
+en lugar de:
 
 ```html
 <!--#4DEVAL(UserName)-->
@@ -713,13 +713,13 @@ For example, the following code would cause an XML parsing error because of the 
 <line x1="<!--#4DEVAL $x-->" y1="<!--#4DEVAL $graphY1-->"/>
 ```
 
-Using the $ syntax, the following code is validated by the parser:
+Utilizando la sintaxis $, el siguiente código es validado por el analizador:
 
 ```xml
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
+Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). Las etiquetas `$` siempre se evalúan una vez y el resultado se considera texto plano.
 
 The reason for this difference is to prevent malicious code injection. As [explained below](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
 
@@ -753,7 +753,7 @@ Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or pare
 String(1) + "\"(hello)\""
 ```
 
-You can write:
+Puede escribir:
 
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"

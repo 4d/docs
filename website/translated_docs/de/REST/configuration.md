@@ -23,6 +23,8 @@ For security reasons, by default, 4D does not respond to REST requests. If you w
 
 The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
 
+> You must restart the 4D application for your changes to take effect.
+
 
 ## Configuring REST access
 

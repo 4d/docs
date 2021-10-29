@@ -37,24 +37,24 @@ title: ドキュメンテーション
 
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
-- **Documentation**
-    + **Classes**
+- `Documentation`
+    + `クラス`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **Forms**
+    + `フォーム`
         * loginDial.md
         * ...
-    + **Methods**
+    + `メソッド`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + `Triggers`
         * table1.md
         * ...
 
@@ -191,7 +191,7 @@ _イタリック_
 ```
 [![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D ブログロゴ")](https://blog.4d.com)
 
-> 詳細については [GitHug Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
+> 詳細については [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
 
 
 

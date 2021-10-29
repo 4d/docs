@@ -7,7 +7,7 @@ title: Transformation tags
 
 This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
 
-These tags are generally be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them. 
+These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them. 
 
 It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
 

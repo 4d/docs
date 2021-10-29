@@ -23,6 +23,8 @@ For security reasons, by default, 4D does not respond to REST requests. If you w
 
 The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
 
+> You must restart the 4D application for your changes to take effect.
+
 
 ## Configuring REST access
 
@@ -32,7 +34,7 @@ You can configuring REST accesses with one of the following means:
 - assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Structure Settings;
 - writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
+> Não pode usar as duas funcionalidades ao mesmo tempo. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
 
 
 ### Using the Structure Settings
@@ -41,7 +43,7 @@ The **Read/Write** menu in the "Web/REST resource" page of the structure setting
 
 By default, the menu displays **\<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.
+> Para essa configuração funcionar, o método de database `On REST Authentication` não deve ser definido. If it exists, 4D ignores access settings defined in the Structure Settings.
 
 ### Using the On REST Authentication database method
 The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D application or you can use your own table of identifiers. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
@@ -58,7 +60,7 @@ http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 ```
 This request will return all employees whose salary field is higher than 10000.
 
-> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default.
+> As tabelas ou campos 4D que tenham o atributo "Invisível" também são expostas em REST por padrão.
 
 If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
 
@@ -87,4 +89,4 @@ To remove the REST exposure for a field:
 
 2. Uncheck the **Expose as REST resource** for the field. ![alt-text](assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> Para que um campo seja accessível a través de REST, a tabela pai também deve ser. Se a tabela pai não estiver exposta, nenhum dos campos estará, independente de seu estado.
