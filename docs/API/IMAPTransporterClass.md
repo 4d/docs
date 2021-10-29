@@ -801,7 +801,7 @@ $status:=$transporter.expunge()
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R5|name is optional|
+|v18 R5|*name* is optional|
 |v18 R4|Added|
 </details>
 
@@ -818,10 +818,11 @@ $status:=$transporter.expunge()
 
 #### Description
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
+The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
+If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
 **Returned object**
 
@@ -1759,13 +1760,13 @@ Examples:
 
 #### Description
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the `name` mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 
 >To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the `name` parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional `state` parameter defines the type of access to the mailbox. The possible values are:
+The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
 |Constant|	Value|	Comment|
 |---|---|---|
@@ -1773,8 +1774,7 @@ The optional `state` parameter defines the type of access to the mailbox. The po
 |IMAP read write state|0|The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value)|
 
 
->*	The function generates an error and returns **Null** if name designates a non-existing mailbox.
-
+>*	The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
 >*	If there is no open connection, `.selectBox()` will open a connection.
 >*	If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 

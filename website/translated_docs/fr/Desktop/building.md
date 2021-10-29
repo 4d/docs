@@ -14,7 +14,7 @@ Le générateur d'applications vous permet de :
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
 *   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. Vous pouvez néanmoins créer des applications spécifiques qui prennent en charge les modifications locales en utilisant la clé XML du `PackProject` (voir [doc.4d.com](https://doc.4d.com)).
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. A noter que l'utilisation de commandes ou de fonctions qui modifient les fichiers sources (telles que `CREATE INDEX` ou `CREATE TABLE` (SQL)) n'est pas possible par défaut dans les applications compilées. Vous pouvez néanmoins créer des applications spécifiques qui prennent en charge les modifications locales en utilisant la clé XML du `PackProject` (voir [doc.4d.com](https://doc.4d.com)).
 
 
 ## Aperçu du générateur d'application
@@ -38,34 +38,31 @@ Générer un package de projet peut être réalisée à l'aide de :
 
 <h3 spaces-before="0">Paramètres du générateur d'application</h3>
 
-<p spaces-before="0">Dans le fichier <em x-id="3">buildApp.4DSettings</em> de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :</p>
-
-<p spaces-before="0">Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur <strong x-id="1">Construire</strong> ou <strong x-id="1">Enregistrer les paramètres</strong>. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande <a href="https://doc.4d.com/4dv19/help/command/en/page871.html">BUILD APPLICATION</a>.</p>
-
-<p spaces-before="2">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
-
-<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.</p>
-
-<p spaces-before="0">Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel <a href="https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html">4D Clés XML BuildApplication</a>.</p>
-
-<h3 spaces-before="0">Fichier d'historique</h3>
-
-<p spaces-before="0">Lorsqu'une application est créée, 4D génère un fichier journal nommé <em x-id="3">BuildApp.log.xml</em> dans le dossier <strong x-id="1">Logs</strong> du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :</p>
-
-<ul>
-<li>Le début et la fin de la génération des cibles,</li>
-<li>Le nom et le chemin d'accès complet des fichiers générés,</li>
-<li>La date et l'heure de la génération,</li>
-<li>Toutes les erreurs qui se sont produites,</li>
-<li>Tout problème de signature (par exemple, un plug-in non signé).</li>
-</ul>
-
-<p spaces-before="0">La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. </p>
-
-<blockquote spaces-before="0">
-  <p spaces-before="0">Utilisez la commande <code>Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. </p> </blockquote> 
+<p spaces-before="0">Chaque paramètre de générateur d'application est stocké en tant que clé XML dans le fichier de l'application nommé <code>buildApp.4DSettings`, situé dans le dossier `Settings` du projet.</p> 
+  
+  Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
+  
+  Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
   
   
+
+### Fichier d'historique
+
+Lorsqu'une application est créée, 4D génère un fichier journal nommé *BuildApp.log.xml* dans le dossier **Logs** du projet. Le fichier d'historique stocke les informations suivantes pour chaque génération :
+
+- Le début et la fin de la génération des cibles,
+- Le nom et le chemin d'accès complet des fichiers générés,
+- La date et l'heure de la génération,
+- Toutes les erreurs qui se sont produites,
+- Tout problème de signature (par exemple, un plug-in non signé).
+
+La vérification de ce fichier peut vous aider à gagner du temps lors des prochaines étapes de déploiement, si vous avez l'intention, par exemple, de notariser votre application. 
+
+
+
+> Utilisez la commande `Get 4D file (Build application log file)` pour obtenir l'emplacement du fichier journal. 
+
+
 
 
 
@@ -364,15 +361,15 @@ The `.4darchive` is copied at the following location:
 
 You can check the **Allow automatic update...** option for client applications running on the concurrent platform. This option is only enabled if:
 
-- the **Build server application** option is checked,
-- the **Allow automatic update...** option for client applications running on the current platform is checked.
+- l'option **Build server application** est cochée,
+- l'option **Autoriser la mise à jour automatique...** pour les applications clientes exécutées sur la plate-forme actuelle est cochée.
 
 This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-| Current server platform | Required file                                                | Détails                                                                                                                                                                    |
-| ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Sous Windows            | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| Plateforme du serveur courant | Fichier requis                                               | Détails                                                                                                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Par défaut, sélectionnez l'application `4D Volume Desktop` pour Windows. Pour sélectionner un fichier `.4darchive` précédemment créé sur Windows, appuyez sur la touche **Shift** tout en cliquant sur [...] |
+| Sous Windows                  | macOS client update archive                                  | Sélectionnez un fichier `.4darchive` signé, précédemment créé sur macOS                                                                                                                                      |
 
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option. 

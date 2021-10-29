@@ -35,7 +35,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 Au moment de leur typage via une directive de compilation, les variables reçoivent une valeur par défaut, qu'elles conserveront au cours de la session tant qu'elles n'auront pas été affectées.
 
-The default value depends on the variable type:
+La valeur par défaut dépend du type de variable :
 
 | Type        | Valeur par défaut |
 | ----------- | ----------------- |

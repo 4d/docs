@@ -496,9 +496,9 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 ## MAIL Convert from MIME
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18    | Adicionado |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
@@ -582,10 +582,10 @@ $status:=$transporter.send($email)
 ## MAIL Convert to MIME
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
-| v17 R5 | Modified |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
+| v17 R5 | Modified   |
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->

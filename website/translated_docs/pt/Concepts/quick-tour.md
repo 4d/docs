@@ -94,11 +94,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constants
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. For example, `Read Mode` is a constant (value 2). Predefined constants appear underlined by default in the 4D Method editor. They allow writing more readable code.
+4D proposes an extensed set of predefined constants, whose values are accessible by name. They allow writing more readable code. For example, `Read Mode` is a constant (value 2).
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
+
+> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
 
 ## Métodos
 

@@ -38,7 +38,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 | ------ | -------------------------------------------- |
 | v18    | New logFile property                         |
 | v17 R5 | New bodyCharset and headerCharset properties |
-| v17 R4 | Added                                        |
+| v17 R4 | Adicionado                                   |
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -202,9 +202,9 @@ For information about SMTP status codes, please refer to [this page](https://www
 ## .keepAlive
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
@@ -241,7 +241,7 @@ The SMTP connection is automatically closed:
 | Versão | Mudanças                 |
 | ------ | ------------------------ |
 | v17 R5 | Support of mime contents |
-| v17 R4 | Added                    |
+| v17 R4 | Adicionado               |
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->

@@ -35,7 +35,7 @@ Beachten Sie, dass der Boolean Ausdruck immer voll gewertet wird. Siehe hierzu f
  End if
 ```
 
-Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn _MethodA_ FALSE zurückgibt, bewertet 4D weiter _MethodB_, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
+The expression is TRUE only if both methods are TRUE. Jedoch, selbst wenn _MethodA_ FALSE zurückgibt, bewertet 4D weiter _MethodB_, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
 
 ```4d
  If(MethodA)

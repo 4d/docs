@@ -50,10 +50,10 @@
 	"API/ZipFileClass",
 	"API/ZipFolderClass"
 	],
-  "Access Rights":["Users/overview","Users/editing"],
   "Preferences":["Preferences/overview","Preferences/general","Preferences/structure","Preferences/forms","Preferences/methods","Preferences/shortcuts"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/debugLogFiles","Admin/cli"],
-	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/cli","Admin/debugLogFiles"],
+	  "Access Rights":["Users/overview","Users/editing"],
+"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServer",
 	"WebServer/webServerConfig",

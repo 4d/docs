@@ -680,22 +680,22 @@
         "title": "Utiliser un datastore distant"
       },
       "Preferences/forms": {
-        "title": "Forms Page"
+        "title": "Page Formulaires"
       },
       "Preferences/general": {
-        "title": "General Page"
+        "title": "Page Général"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "Page Méthodes"
       },
       "Preferences/overview": {
         "title": "Aperçu"
       },
       "Preferences/shortcuts": {
-        "title": "Shortcuts Page"
+        "title": "Page Raccourcis"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "Page Structure"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
@@ -809,7 +809,7 @@
         "title": "A propos des requêtes REST"
       },
       "Tags/tags": {
-        "title": "Transformation tags"
+        "title": "Balises de transformation"
       },
       "Users/editing": {
         "title": "Gestion des groupes et utilisateurs 4D"

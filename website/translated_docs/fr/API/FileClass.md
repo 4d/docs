@@ -3,18 +3,18 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Les objets `File` sont créés avec la commande [`File`](#file). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `File` pour créer un nouveau fichier, un objet `File` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`file.create( )`](#create).
 
 ### Exemple
 
-The following example creates a preferences file in the project folder:
+L'exemple suivant crée un fichier de préférences dans le dossier du projet :
 
 ```code4d
 var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### File object
+### Objet File
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -84,7 +84,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command.
+> Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> Il est recommandé d'utiliser la commande raccourci [`File`](#file) au lieu de `4D.File.new()`.
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -179,8 +179,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valeur retournée**
 
-*   **True** if the file is created successfully;
-*   **False** if a file with the same name already exists or if an error occured.
+*   **Vrai** si le fichier est créé avec succès ;
+*   **Faux** si un fichier du même nom existe déjà ou si une erreur s'est produite.
 
 #### Exemple
 
@@ -288,7 +288,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+> **ATTENTION** : `.delete( )` peut supprimer n'importe quel fichier sur un disque, y compris les documents créés avec d'autres applications ainsi que les applications elles-mêmes. `.delete( )` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
 
 #### Exemple
 
@@ -344,11 +344,11 @@ The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
 **Returned object with a .exe or .dll file**
 
-> Reading a .exe or .dll is only possible on Windows.
+> La lecture d'un fichier .exe ou .dll est possible uniquement sous Windows.
 
 All property values are Text.
 
@@ -575,7 +575,7 @@ The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes 
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
 ***info* parameter object with a .exe or .dll file**
 
@@ -706,10 +706,10 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou ""UTF-8"),
+- ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
 If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 

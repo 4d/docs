@@ -1,11 +1,11 @@
 ---
 id: methods
-title: Methods Page
+title: Page Méthodes
 ---
 
-This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+Cette page contient des paramètres permettant de définir l’interface, l’affichage par défaut et les options de l’éditeur de méthodes. Elle est divisée en deux parties, accessibles via les onglets Thèmes et Options.
 
-## Themes
+## Thèmes
 
 This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
 
@@ -97,9 +97,9 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 #### Indentation
 
-Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).
+Modifie la valeur d’indentation du code 4D dans l’éditeur de méthodes. La largeur doit être définie en points (10 par défaut).
 
-4D code is automatically indented in order to reveal its structure:
+Le code 4D est automatiquement indenté afin de faire apparaître sa structure :
 
 ![](assets/en/Preferences/optionsIndent.png)
 

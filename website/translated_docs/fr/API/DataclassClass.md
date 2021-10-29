@@ -191,7 +191,7 @@ For each object of *objectCol*:
     *   If the primary key is given (as is) and exists, an error is sent
     *   If the primary key is given (as is) and does not exist, the entity is created
     *   If the primary is not given, the entity is created and the primary key value is assigned with respect to standard database rules.
-> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> The "\_\_KEY" property containing a value is taken into account only when the "\_\_NEW" property is set to **false** (or is omitted) and a corresponding entity exists. In all other cases, the "\_\_KEY" property value is ignored, primary key value must be passed "as is".
 
 **Related entities**
 
@@ -867,7 +867,7 @@ The formula must have been created using the `Formula` or `Formula from string` 
 *   the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 *   within the *formula*, the entity is available through the `This` object.
 *   if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
-> > For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
+> For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
 
 **Passing parameters to formulas**
 

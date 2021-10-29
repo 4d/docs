@@ -44,7 +44,7 @@ Entity selections can be created from existing selections using various function
 
 
 
-## Create entity selection
+## Crear una selección de entidades (entity selection)
 
 <!-- REF #_command_.Create entity selection.Syntax -->
 **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
@@ -111,7 +111,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> > > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Ejemplos:
+> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Ejemplos:
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -546,7 +546,7 @@ Then this entity selection is updated with products and you want to share the pr
 
 ```4d
  ...
-  // The Form.products entity selection is updated
+  // La selección de entidades de Form.products se actualiza
  Form.products.add(Form.selectedProduct)
 
  Use(Storage)
@@ -579,27 +579,27 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- REF #EntitySelectionClass.distinct().Params -->
 | Parámetros    | Tipo       |    | Descripción                                                      |
 | ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Path of attribute whose distinct values you want to get          |
+| attributePath | Text       | -> | Ruta del atributo cuyos valores distintos desea obtener          |
 | option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Resultado     | Collection | <- | Collection with only distinct values                             |
+| Resultado     | Collection | <- | Colección con sólo valores distintos                             |
 <!-- END REF -->
 
 #### Descripción
 
 The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
-In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Los tipos se devuelven en el siguiente orden:
 
-1.  booleanos
+1.  booleans
 2.  strings
 3.  numbers
 4.  fechas
 
 You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+Por defecto, se realiza una evaluación no diacrítica. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
 An error is returned if:
 
@@ -876,7 +876,7 @@ This function is mainly useful in the context of generic code.
 The following generic code duplicates all entities of the entity selection:
 
 ```4d
-  //duplicate_entities method
+  //método duplicate_entities 
   //duplicate_entities($entity_selection)
 
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
@@ -887,7 +887,7 @@ The following generic code duplicates all entities of the entity selection:
  For each($entity;$entitySelection)
     $duplicate:=$dataClass.new()
     $duplicate.fromObject($entity.toObject())
-    $duplicate[$dataClass.getInfo().primaryKey]:=Null //reset the primary key
+    $duplicate[$dataClass.getInfo().primaryKey]:=Null //restablecer la llave primaria
     $status:=$duplicate.save()
  End for each
 ```
@@ -1524,7 +1524,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### Descripción
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
 > This function does not modify the original entity selection.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
@@ -1698,7 +1698,7 @@ A list box displays the Form.students entity selection and several clients work 
 | Parámetros | Tipo               |    | Descripción                                                    |
 | ---------- | ------------------ |:--:| -------------------------------------------------------------- |
 | startFrom  | Integer            | -> | Index to start the operation at (included)                     |
-| end        | Integer            | -> | End index (not included)                                       |
+| end        | Integer            | -> | Índice final (no incluido)                                     |
 | Resultado  | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy) |
 <!-- END REF -->
 

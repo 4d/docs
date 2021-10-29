@@ -3,13 +3,13 @@ id: SMTPTransporterClass
 title: SMTPTransporter
 ---
 
-The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
+La clase `SMTPTransporter` permite configurar conexiones SMTP y enviar correos electrónicos a través de objetos *SMTP transporter*.
 
 
 
-### SMTP Transporter object
+### Objeto SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-new-transporter) command. They provide the following properties and functions:
+Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter](#smtp-new-transporter). Ofrecen las siguientes propiedades y funciones:
 
 
 |                                                                                                                                                                                                                                |
@@ -48,7 +48,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Objeto             | -> | Información del servidor de correo                  |
-| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultado  | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 
@@ -65,7 +65,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                          | Default value (if omitted)                                          |
+| *server*                                                                                                                                                                                                                                                                                                                                                          | Valor por defecto (si se omite)                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
 | .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object. | ninguno                                                             |
@@ -85,7 +85,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultado
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
+The function returns a [**SMTP transporter object**](#smtp-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 
 
 #### Ejemplo
@@ -128,7 +128,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 | Parámetros | Tipo               |    | Descripción                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Objeto             | -> | Información del servidor de correo                  |
-| Resultado  | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultado  | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Descripción

@@ -40,9 +40,9 @@ End if
 ## ZIP Create archive
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18    | Adicionado |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -142,7 +142,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
   </tr></tbody> 
 </table>
 
-In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). It is advised to use the ".zip" extension if you want the ZIP archive to be processed automatically by any software. 
+In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). It is advised to use the ".zip" extension if you want the ZIP archive to be processed automatically by any software.
 
 Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
 
@@ -150,11 +150,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Property   | Type     | Description                                                                                                                             |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Property   | Type     | Description                                                                                                                              |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Texto    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption |
-| status     | Integer  | Status code                                                                                                                             |
-| success    | Booleano | True if archive created successfully, else false                                                                                        |
+| status     | Integer  | Status code                                                                                                                              |
+| success    | Booleano | True if archive created successfully, else false                                                                                         |
 
 
 
@@ -200,7 +200,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### Exemplo 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -239,7 +239,7 @@ To compress a ZIP archive structure with a password and progress bar:
 
 
 
-#### Example 4
+#### Exemplo 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
 
@@ -267,9 +267,9 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 ## ZIP Read archive
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18    | Adicionado |
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->
@@ -292,13 +292,13 @@ The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->r
 
 > This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
 
-Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically. 
+Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. If a password is required but not passed when trying to read the contents of the archive, an error is generated.
 
 **Archive object**
 
-The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive. 
+The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive.
 
 
 
@@ -372,7 +372,7 @@ The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtua
 
 The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 
 <style> h2 { background: #d9ebff;}</style>

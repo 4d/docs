@@ -133,9 +133,9 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 ## Libraries folder
 
-> This folder is used on macOS only.
+> Ce dossier n'est utilisé que sur macOS.
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+Le dossier Librairies contient le fichier résultant d'une compilation avec le [compilateur Silicon](compiler.md#silicon-compiler) sur macOS.
 
 ## Dossier Resources
 
@@ -212,7 +212,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 | debuggerCatches.json       | Appels vers commandes                                                 | JSON   |
 | recentTables.json          | Liste ordonée de tables                                               | JSON   |
 | preferences.4DPreferences  | Current data path and main window positions                           | XML    |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation           | Folder |
+| CompilerIntermediateFiles  | Fichiers intermédiaires résultant de la compilation Apple Silicon     | Folder |
 
 
 ## Dossier Components

@@ -1,6 +1,6 @@
 ---
 id: webServerConfig
-title: Configuration
+title: Configuração
 ---
 
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.

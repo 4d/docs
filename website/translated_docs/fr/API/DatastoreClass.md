@@ -351,9 +351,6 @@ You want to know the number of encrypted tables in the current data file:
  Else
     ALERT("This database is not encrypted.")
  End if
- Else
-    ALERT("This database is not encrypted.")
- End if
 ```
 
 <!-- END REF -->
@@ -675,7 +672,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | Paramètres | Type        |    | Description                          |
 | ---------- | ----------- | -- | ------------------------------------ |
-| file       | 4D.File     | -> | File object                          |
+| file       | 4D.File     | -> | Objet File                           |
 | reqNum     | Entier long | -> | Number of requests to keep in memory |
 <!-- END REF -->
 

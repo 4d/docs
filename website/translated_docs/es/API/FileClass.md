@@ -3,18 +3,18 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Los objetos `File` se crean con el comando [`File`](#file). Contienen referencias a archivos de disco que pueden o no existir realmente en el disco. Por ejemplo, cuando se ejecuta el comando `File` para crear un nuevo archivo, se crea un objeto `File` válido, pero en realidad no se almacena nada en el disco hasta que se llama a la función [`file.create( )`](#create).
 
 ### Ejemplo
 
-The following example creates a preferences file in the project folder:
+El siguiente ejemplo crea un archivo de preferencias en la carpeta del proyecto:
 
 ```code4d
 var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### File object
+### Objeto File
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -66,13 +66,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parámetros   | Tipo    |    | Descripción                                     |
-| ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | Texto   | -> | File path                                       |
-| fileConstant | Integer | -> | Constante del archivo 4D                        |
-| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
-| *            |         | -> | * to return file of host database               |
-| Resultado    | 4D.File | <- | New file object                                 |
+| Parámetros   | Tipo    |    | Descripción                                        |
+| ------------ | ------- |:--:| -------------------------------------------------- |
+| path         | Texto   | -> | Ruta del archivo                                   |
+| fileConstant | Integer | -> | Constante del archivo 4D                           |
+| pathType     | Integer | -> | `fk posix path` (por defecto) o `fk platform path` |
+| *            |         | -> | * to return file of host database                  |
+| Resultado    | 4D.File | <- | New file object                                    |
 <!-- END REF -->
 
 
@@ -159,7 +159,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 </details>
 
 <!--REF file.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
+**No disponible para archivos ZIP**<!-- END REF -->
 
 
 <!--REF #FileClass.create().Syntax -->
@@ -226,10 +226,10 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constante          | Valor | Comentario                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Valor | Comentario                    |
+| ------------------ | ----- | ----------------------------- |
+| `fk alias link`    | 0     | Enlace de alias (por defecto) |
+| `fk symbolic link` | 1     | Symbolic link (macOS only)    |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
@@ -298,7 +298,7 @@ You want to delete a specific file in the database folder:
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
  If($tempo.exists)
     $tempo.delete()
-    ALERT("User preference file deleted.")
+    ALERT("Archivo de preferencias del usuario borrado.")
  End if
 ```
 <!-- END REF -->
@@ -454,7 +454,7 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Params -->
 | Parámetros        | Tipo      |    | Descripción                  |
 | ----------------- | --------- | -- | ---------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder           |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino           |
 | newName           | Texto     | -> | Full name for the moved file |
 | Resultado         | 4D.File   | <- | Archivo movido               |
 <!-- END REF -->
@@ -471,7 +471,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 **Objeto devuelto**
 
-The moved `File` object.
+El objeto `File` movido.
 
 #### Ejemplo
 
@@ -520,10 +520,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Tipo    |    | Descripción                |
-| ---------- | ------- | -- | -------------------------- |
-| newName    | Texto   | -> | New full name for the file |
-| Resultado  | 4D.File | <- | Archivo renombrado         |
+| Parámetros | Tipo    |    | Descripción                           |
+| ---------- | ------- | -- | ------------------------------------- |
+| newName    | Texto   | -> | Nuevo nombre completo para el archivo |
+| Resultado  | 4D.File | <- | Archivo renombrado                    |
 <!-- END REF -->
 
 #### Descripción
@@ -537,7 +537,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 **Objeto devuelto**
 
-The renamed `File` object.
+El objeto `File` renombrado.
 
 #### Ejemplo
 
@@ -648,9 +648,9 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parámetros | Tipo |    | Descripción               |
-| ---------- | ---- | -- | ------------------------- |
-| content    | BLOB | -> | New contents for the file |
+| Parámetros | Tipo |    | Descripción                       |
+| ---------- | ---- | -- | --------------------------------- |
+| content    | BLOB | -> | Nuevos contenidos para el archivo |
 <!-- END REF -->
 
 
@@ -687,12 +687,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parámetros  | Tipo    |    | Descripción                                                |
-| ----------- | ------- | -- | ---------------------------------------------------------- |
-| texto       | Texto   | -> | Text to store in the file                                  |
-| charSetName | Texto   | -> | Nombre del juego de caracteres                             |
-| charSetNum  | Integer | -> | Number of character set                                    |
-| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
+| Parámetros  | Tipo    |    | Descripción                                                           |
+| ----------- | ------- | -- | --------------------------------------------------------------------- |
+| texto       | Texto   | -> | Texto a almacenar en el archivo                                       |
+| charSetName | Texto   | -> | Nombre del juego de caracteres                                        |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres                                     |
+| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea|<!-- END REF -->
 
 |
 

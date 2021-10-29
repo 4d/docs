@@ -623,7 +623,7 @@ C_OBJECT($mail)
 C_TEXT($mime)
 $mail:=New object
 
-// Creation of a mail
+// Création d'un mail
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -632,10 +632,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// transform the mail object in MIME
+// transformer l'objet mail en MIME
 $mime:=[#current_title_incode]($mail)
 
-// Contents of $mime:
+// Contenu de $mime :
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

@@ -15,7 +15,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getContent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
@@ -231,9 +231,9 @@ A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary --
 **.name** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](#mail-new-attachment) command.
+A propriedade`.name` contém <!-- REF #MailAttachmentClass.name.Summary -->o nome e extensão do anexo<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 
@@ -241,26 +241,26 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 **.path** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->.
+A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->a rota POSIX do arquivo anexo, se existir<!-- END REF -->.
 
 
 ## .platformPath
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->
 **.platformPath** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.Summary -->a rota do arquivo anexo expresso na sintaxe da plataforma atual<!-- END REF -->.
 
 
 ## .type
@@ -271,7 +271,7 @@ The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.
 
 #### Description
 
-The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](#mail-new-attachment) command, the `content-type` is based on its file extension.
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se o tipo não for passado explicitamente ao comando [`MAIL New attachment`](#mail-new-attachment), o `content-type` é baseado na sua extensão de arquivo.
 
 
 

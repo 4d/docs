@@ -1,15 +1,15 @@
 ---
 id: about
-title: About the 4D Language
+title: Sobre a linguagem 4D
 ---
 
-The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for web, mobile, or desktop applications. You can use the 4D language for many different tasks—from performing simple calculations to creating complex custom user interfaces. For example, you can:
+A linguagem integrada 4D, que conta com mais de 1300 comandos, faz com que 4D seja uma ferramenta de desenvolvimento poderosa para aplicações web, móveis ou em computadores desktop. Pode usar a linguagem 4D para muitas tarefas diferentes, desde a realização de cálculos simples até a criação de interfaces complexas de usuário personalizadas. Por exemplo é possível:
 
-- Programmatically access any of the record management editors (order by, query, and so on),
-- Create and print complex reports and labels with the information from the database,
-- Communicate with other devices,
-- Send emails,
-- Manage documents and web pages,
+- Acessar por programação qualquer dos editores de gestão de registros (ordenar por, pesquisar, etc),
+- Criar e imprimir relatórios complexos ou etiquetas com a informação do banco de dados,
+- Comunicar-se com outros aparelhos,
+- Enviar emails,
+- Gerenciar documentos e páginas web,
 - Import and export data between 4D applications and other applications,
 - Incorporate procedures written in other languages into the 4D programming language.
 
@@ -51,12 +51,12 @@ The 4D language accomplishes even the most sophisticated tasks with relative sim
 
 ## Is it a “Traditional” Computer Language?
 
-If you are familiar with traditional computer languages, this section may be of interest. If not, you may want to skip it.
+Se estiver familiarizado com as linguagens tradicionais de programação, essa seção será de seu interesse. Se não, também pode pular o próximo parágrafo.
 
-The 4D language is not a traditional computer language. It is one of the most innovative and flexible languages available on a computer today. It is designed to work the way you do, and not the other way around.
+A linguagem 4D não é uma linguagem de programação tradicional. É uma das linguagens mais inovadoras e flexíveis do momento. Foi criada para adaptar-se a você e não o contrário.
 
-To use traditional languages, you must do extensive planning. In fact, planning is one of the major steps in development. 4D allows you to start using the language at any time and in any part of your project. You may start by adding a method to a form, then later add a few more methods. As your application becomes more sophisticated, you might add a project method controlled by a menu. You can use as little or as much of the language as you want. It is not “all or nothing,” as is the case with many other databases.
+Para usar linguagens tradicionais, é preciso preparação ampla. De fato, planejamento é um dos principais passos de desenvolvimento. 4D deixa que você comece a usar a linguagem a qualquer momento e em qualquer parte de seu projeto. Pode começar adicionando um método para um formulário depois adicionar um ou mais métodos. Conforme sua aplicação se torna mais sofisticada, pode adicionar um método de projeto controlado por um menu. Pode usar o quanto quiser da linguagem. Não é algo "tudo ou nada", como é o caso em vários bancos de dados.
 
-Traditional languages force you to define and pre-declare interface objects in formal syntactic terms. In 4D, you simply create an object, such as a button, and use it. 4D automatically manages the object for you. For example, to use a button, you draw it on a form and name it. When the user clicks the button, the language automatically notifies your methods.
+As linguagens tradicionais forçam você a definir e pré-declarar objetos de interface em termos sintáticos formais. Em 4D simplesmente se pode criar um objeto, como um botão, e usá-lo. 4D automaticamente gerencia o objeto para você. Por exemplo, para usar um botão, o desenha em um formulário e lhe dá um nome. Quando o usuário clicar no botão, a linguagem notifica automaticamente a seus métodos.
 
-Traditional languages are often rigid and inflexible, requiring commands to be entered in a very formal and restrictive style. The 4D language breaks with tradition, and the benefits are yours.
+Linguagens tradicionais geralmente são rígidas e inflexíveis, exigindo que comandos sejam digitados de modo formal e em estilo restritivo. A linguagem 4D rompe com essa tradição para o benefício do usuário.

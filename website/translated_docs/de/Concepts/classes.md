@@ -286,13 +286,13 @@ Class Constructor({$parameterName : type; ...})
 
 Eine Function Class Constructor, die [Parameter](#parameter) zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Rufen Sie die Function [`new()`](API/ClassClass.md#new) auf, wird der Class Constructor mit den Parametern aufgerufen, die optional in `new()` übergeben wurden.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
+Für eine Function Class Constructor gibt der Befehl `Current method name` : "*\<ClassName>:constructor*"zurück, z.B. "MyClass:constructor".
 
 
 
-#### Example:
+#### Beispiel:
 
 ```4d
 // Class: MyClass
@@ -321,7 +321,7 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. Die Unterklasse erbt alle Functions der übergeordneten Klasse.
+Das Schlüsselwort `Class extends` dient beim Deklarieren einer Klasse zum Erstellen einer Benutzerklasse, die ein Kind einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Functions der übergeordneten Klasse.
 
 Für Class Extension gelten folgende Regeln:
 

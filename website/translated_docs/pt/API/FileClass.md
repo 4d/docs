@@ -56,9 +56,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ## File
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -130,9 +130,9 @@ If the command is called from a component, pass the optional * parameter to get 
 ## 4D.File.new()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
@@ -153,9 +153,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 ## .create()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!--REF file.create().Note -->
@@ -200,9 +200,9 @@ Creation of a preferences file in the database folder:
 ## .createAlias()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->
@@ -264,9 +264,9 @@ You want to create an alias to a file in your database folder:
 ## .delete()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -323,9 +323,9 @@ You want to delete a specific file in the database folder:
 ## .getAppInfo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->
@@ -442,9 +442,9 @@ ALERT($info.Copyright)
 ## .moveTo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -510,9 +510,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ## .rename()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -554,9 +554,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 ## .setAppInfo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->
@@ -638,9 +638,9 @@ $infoPlistFile.setAppInfo($info)
 ## .setContent()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -676,9 +676,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 

@@ -274,9 +274,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 ## .clear()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.clear().Syntax -->
@@ -313,9 +313,9 @@ $vSize:=$col.length //$vSize=0
 ## .combine()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.combine().Syntax -->
@@ -363,9 +363,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 ## .concat()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.concat().Syntax -->
@@ -410,7 +410,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | Versão | Mudanças                                           |
 | ------ | -------------------------------------------------- |
 | v18 R3 | New *ck shared* option. New *groupWith* parameters |
-| v16 R6 | Added                                              |
+| v16 R6 | Adicionado                                         |
 </details>
 
 <!-- REF #collection.copy().Syntax -->
@@ -533,9 +533,9 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 ## .count()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.count().Syntax -->
@@ -581,9 +581,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 ## .countValues()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.countValues().Syntax -->
@@ -662,9 +662,9 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 ## .distinct()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.distinct().Syntax -->
@@ -717,9 +717,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 ## .equal()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.equal().Syntax -->
@@ -773,9 +773,9 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 ## .every()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.every().Syntax -->
@@ -869,9 +869,9 @@ End if
 ## .extract()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.extract().Syntax -->
@@ -944,9 +944,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 ## .fill()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.fill().Syntax -->
@@ -1001,9 +1001,9 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 ## .filter()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.filter().Syntax -->
@@ -1034,13 +1034,13 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 
 *methodName* estabelece os parâmetros abaixo:
 
-*   *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (boolean): **true** se o valor elemento corresponder à condição de filtro e tiver que ser mantido.
+*   *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 
-#### Example 1
+#### Exemplo 1
 
-You want to get the collection of text elements whose length is smaller than 6:
+Se quiser obter a coleção de elementos textos cujo tamanho for menor que 6:
 
 ```4d
  var $col;$colNew : Collection
@@ -1049,7 +1049,7 @@ You want to get the collection of text elements whose length is smaller than 6:
   //$colNew=["hello","world","tim","miami"]
 ```
 
-The code for ***LengthLessThan*** method is:
+O código para o método ***LengthLessThan*** é:
 
 ```4d
  C_OBJECT($1)
@@ -1059,9 +1059,9 @@ The code for ***LengthLessThan*** method is:
  End if
 ```
 
-#### Example 2
+#### Exemplo 2
 
-You want to filter elements according to their value type:
+Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 ```4d
  var $c;$c2;$c3 : Collection
@@ -1073,7 +1073,7 @@ You want to filter elements according to their value type:
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
 ```
 
-The code for ***TypeLookUp*** is:
+O código para ***TypeLookUp*** é:
 
 ```4d
  C_OBJECT($1)
@@ -1095,9 +1095,9 @@ The code for ***TypeLookUp*** is:
 ## .find()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.find().Syntax -->
@@ -1105,43 +1105,43 @@ The code for ***TypeLookUp*** is:
 
 
 <!-- REF #collection.find().Params -->
-| Parameter  | Type    |    | Description                                  |
-| ---------- | ------- |:--:| -------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the search at                 |
-| methodName | Texto   | -> | Name of the function to call for the find    |
-| param      | any     | -> | Parâmetros a passar para *methodName*        |
-| Result     | any     | <- | First value found, or Undefined if not found |
+| Parâmetros | Tipo    |    | Descrição                                                |
+| ---------- | ------- |:--:| -------------------------------------------------------- |
+| startFrom  | Integer | -> | Índice onde inicia a pesquisa                            |
+| methodName | Texto   | -> | Nome da função a chamar para o find                      |
+| param      | any     | -> | Parâmetros a passar para *methodName*                    |
+| Resultado  | any     | <- | Primeiro valor encontrado ou Undefined se não encontrado |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
-> This function does not modify the original collection.
+A função `.find()` <!-- REF #collection.find().Summary -->retorna o primeiro valor na coleção para o qual *methodName*, aplicado para cada elemento, retorna **true**<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. can perform any test, with or without the parameter(s). Esse método recebe um `Objeto` no primeiro parâmetro ($1) e deve estabelecer *$1.result* como **true** para o primeiro elemento que preenche a condição.
 
 *methodName* recebe os parâmetros abaixo:
 
-*   in *$1.value:* element value to be evaluated
+*   em *$1.value:* valor do elemento a avaliar
 *   in *$2: param*
 *   *$N...*: param2...paramN
 
 *methodName* estabelece os parâmetros abaixo:
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (boolean): **true** se o valor elemento corresponder à condição de pesquisa.
+*   *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-By default, `.find()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+Como padrão, `.every()` testa a coleção completa. Opcionalmente pode passar em *startFrom* o índice do elemento a partir do qual vai começar a pesquisa.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Se *startFrom* >= tamanho da coleção, é retornado false, o que significa que a coleção não é pesquisada.
+*   Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*). **Nota**: Mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+*   Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 
-#### Example 1
+#### Exemplo 1
 
-You want to get the first element with a length smaller than 5:
+Se quiser obter o primeiro elemento com um tamanho menor que 5:
 
 ```4d
  var $col : Collection
@@ -1149,7 +1149,7 @@ You want to get the first element with a length smaller than 5:
  $value:=$col.find("LengthLessThan";5) //$value="tim"
 ```
 
-The code for ***LengthLessThan*** method is:
+O código para o método ***LengthLessThan*** é:
 
 ```4d
  var $1 : Object
@@ -1159,9 +1159,9 @@ The code for ***LengthLessThan*** method is:
  End if
 ```
 
-#### Example 2
+#### Exemplo 2
 
-You want to find a city name within a collection:
+Se quiser encontrar o nome da cidade dentro da coleção:
 
 ```4d
  var $c; $c2 : Collection
@@ -1174,12 +1174,12 @@ You want to find a city name within a collection:
  $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
 ```
 
-The code for ***FindCity*** is:
+O código para ***TypeLookUp*** é:
 
 ```4d
  var $1 : Object
  var $2 : Text
- $1.result:=$1.value.name=$2 //name is a property name of objects in the collection
+ $1.result:=$1.value.name=$2 //nome  é um nome de propriedade de objetos na coleção
 ``` 
 
 <!-- END REF -->
@@ -1192,9 +1192,9 @@ The code for ***FindCity*** is:
 ## .findIndex()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 
@@ -1204,42 +1204,42 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parameter  | Type    |    | Description                                    |
-| ---------- | ------- |:--:| ---------------------------------------------- |
-| startFrom  | Integer | -> | Index to start the search at                   |
-| methodName | Texto   | -> | Name of the function to call for the find      |
-| param      | any     | -> | Parâmetros a passar para *methodName*          |
-| Result     | Integer | <- | Index of first value found, or -1 if not found |
+| Parâmetros | Tipo    |    | Descrição                                                   |
+| ---------- | ------- |:--:| ----------------------------------------------------------- |
+| startFrom  | Integer | -> | Índice onde inicia a pesquisa                               |
+| methodName | Texto   | -> | Nome da função a chamar para o find                         |
+| param      | any     | -> | Parâmetros a passar para *methodName*                       |
+| Result     | Integer | <- | Indice do primeiro valor encontrado ou -1 se não encontrado |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
-> This function does not modify the original collection.
+The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->retorna o índice na coleção do primeiro valor para o qual *methodName*, aplicado em cada elemento, retorna **true**<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. Este método recebe um `Object` como primeiro parâmetro ($1) e deve estabelecer *$1.result* para **true** para o primeiro elemento que cumprir a condição.
 
 *methodName* recebe os parâmetros abaixo:
 
-*   in *$1.value*: element value to be evaluated
+*   em *$1.value*: valor elemento a ser avaliado
 *   in *$2: param*
 *   *$N...*: param2...paramN
 
 *methodName* estabelece os parâmetros abaixo:
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (boolean): **true** se o valor elemento corresponder à condição de pesquisa.
+*   *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-By default, `.findIndex()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+Como padrão, `.findIndex()` testa a coleção completa. Opcionalmente pode passar em *startFrom* o índice do elemento a partir do qual vai começar a pesquisa.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Se *startFrom* >= tamanho da coleção, é retornado false, o que significa que a coleção não é pesquisada.
+*   Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*). **Nota**: Mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+*   Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
-You want to find the position of the first city name within a collection:
+Se quiser encontrar a posição do primeiro nome de cidade dentro da coleção:
 
 ```4d
  var $c : Collection
@@ -1254,7 +1254,7 @@ You want to find the position of the first city name within a collection:
  $val3:=$c.findIndex($val2+1;"FindCity";"Clanton") //$val3=4
 ```
 
-The code for ***FindCity*** method is:
+O código para o método ***FindCity*** é:
 
 ```4d
  var $1 : Object
@@ -1273,41 +1273,41 @@ The code for ***FindCity*** method is:
 ## .indexOf()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.indexOf().Syntax -->
 **.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
-| Parameter | Type       |    | Description                                                                  |
-| --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
-| toSearch  | expression | -> | Expression to search in the collection                                       |
-| startFrom | Integer    | -> | Index to start the search at                                                 |
-| Result    | Integer    | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| Parâmetros | Tipo      |    | Descrição                                                                  |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------- |
+| toSearch   | expressão | -> | Expressão a pesquisar na coleção                                           |
+| startFrom  | Integer   | -> | Índice onde inicia a pesquisa                                              |
+| Resultados | Integer   | <- | Índice da primeira ocorrência de toSearch na coleção, -1 se não encontrado |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
-> This function does not modify the original collection.
+A função`.indexOf()` <!-- REF #collection.indexOf().Summary -->pesquisa a expressão *toSearch* entre os elementos da coleção e retorna o índice da primeira ocorrência encontrada, ou -1 se não for encontrado<!-- END REF -->.
+> Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
-*   a scalar value (text, number, boolean, date),
-*   the null value,
-*   an object or a collection reference.
+*   um valor escalar (texto, número, booleano, data),
+*   o valor null,
+*   um objeto ou uma referência de coleção.
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+*toSearch* deve corresponder exatamente com o elemento a encontrar (as mesmas regras que para o operador de igualdade do tipo dados é aplicado).
 
-Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa em*startFrom*.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Se *startFrom* >= tamanho da coleção, é retornado false, o que significa que a coleção não é pesquisada.
+*   Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*). **Nota**: Mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
+*   Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1333,9 +1333,9 @@ Optionally, you can pass the index of collection from which to start the search 
 ## .indices()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.indices().Syntax -->
@@ -1343,26 +1343,26 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
-| Parameter   | Type       |    | Description                                              |
-| ----------- | ---------- |:--:| -------------------------------------------------------- |
-| queryString | Texto      | -> | Search criteria                                          |
-| value       | any        | -> | Value(s) to compare when using placeholder(s)            |
-| Result      | Collection | <- | Element index(es) matching queryString in the collection |
+| Parâmetros  | Tipo       |    | Descrição                                                         |
+| ----------- | ---------- |:--:| ----------------------------------------------------------------- |
+| queryString | Texto      | -> | Critérios de pesquisa                                             |
+| value       | any        | -> | Valores a comparar quando usar placeholders (valores temporários) |
+| Resultado   | Collection | <- | Índices elemento correspondendo a queryString na coleção          |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
-> This function does not modify the original collection.
+A função `.indices()` trabalha exatamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->retorna indices na coleção original, de elementos coleção objeto que correspondem às *queryString* condições de pesquisa<!-- END REF -->, e não os elementos em si mesmo. Indices são retornados em ordem ascendente.
+> Essa função não modifica a coleção original.
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
 ```
 
-For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
+Para uma descrição detalhada dos parâmetros *queryString* e *value*, veja a função `dataClass.query()`.
 
 #### Exemplo
 
@@ -1389,36 +1389,36 @@ For a detailed description of the *queryString* and *value* parameters, please r
 ## .insert()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.insert().Syntax -->
 **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
-| Parameter | Type       |    | Description                                     |
-| --------- | ---------- |:--:| ----------------------------------------------- |
-| index     | Integer    | -> | Where to insert the element                     |
-| element   | any        | -> | Element to insert in the collection             |
-| Result    | Collection | <- | Original collection containing inserted element |
+| Parâmetros | Tipo       |    | Descrição                                        |
+| ---------- | ---------- |:--:| ------------------------------------------------ |
+| index      | Integer    | -> | Onde inserir os elementos                        |
+| element    | any        | -> | Elemento a inserir na coleção                    |
+| Resultado  | Collection | <- | Collection original contendo elementos inseridos |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
-> This function modifies the original collection.
+A função `.insert()` <!-- REF #collection.insert().Summary --> insere *element* na posição especificada *index* na instância da coleção e retorna a coleção editada<!-- END REF -->.
+> Essa função modifica a coleção original.
 
-In *index*, pass the position where you want the element to be inserted in the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+In *index*, passe a posição onde quiser que o elemento seja inserido na coleção.
+> **Aviso**: Lembre que elementos coleção são numerados a partir de 0.
 
-*   If *index* > the length of the collection, actual starting index will be set to the length of the collection.
-*   If *index* <0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, index is set to 0.
+*   Se *index* > o tamanho da coleção, o índice de início é estabelecido como o tamanho da coleção.
+*   Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
+*   Se o valor calculado for negativo, index será estabelecido como 0.
 
-Any type of element accepted by a collection can be inserted, even another collection.
+Qualquer tipo de elemento aceito por uma coleção pode ser inserido, mesmo outra coleção.
 
 #### Exemplo
 
@@ -1440,29 +1440,29 @@ Any type of element accepted by a collection can be inserted, even another colle
 ## .join()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.join().Syntax -->
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| Parameter | Type    |    | Description                                                              |
-| --------- | ------- |:--:| ------------------------------------------------------------------------ |
-| delimiter | Texto   | -> | Separator to use between elements                                        |
-| option    | Integer | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
-| Result    | Texto   | <- | String containing all elements of the collection, separated by delimiter |
+| Parâmetros | Tipo    |    | Descrição                                                                   |
+| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
+| delimiter  | Texto   | -> | Separador a usar entre os elementos                                         |
+| option     | Integer | -> | `ck ignore null or empty`: ignora strings vazias ou nulls no resultado      |
+| Resultados | Texto   | <- | String contendo todos os elementos da coleção, separados por um delimitador |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified *delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
-> This function does not modify the original collection.
+a função `.join()` <!-- REF #collection.join().Summary -->converte todos os elementos da coleção para strings e concatena-os usando a string especificada *delimiter* como um separador<!-- END REF -->.  A função retorna a string resultado.
+> Essa função não modifica a coleção original.
 
-By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
+Como padrão, elementos null ou vazios da coleção são retornados na string resultante. Passe a constante `ck ignore null or empty` na opção *option* parâmetro se quiser removê-las da string resultado.
 
 #### Exemplo
 
@@ -1484,41 +1484,41 @@ By default, null or empty elements of the collection are returned in the resulti
 ## .lastIndexOf()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.lastIndexOf().Syntax -->
 **.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
-| Parameter | Type       |    | Description                                                             |
-| --------- | ---------- |:--:| ----------------------------------------------------------------------- |
-| toSearch  | expression | -> | The element that is to be searched for within the collection            |
-| startFrom | Integer    | -> | Index to start the search at                                            |
-| Result    | Integer    | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| Parâmetros | Tipo      |    | Descrição                                                                |
+| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
+| toSearch   | expressão | -> | O elemento que é pesquisado dentro da coleção                            |
+| startFrom  | Integer   | -> | Índice onde inicia a pesquisa                                            |
+| Resultados | Integer   | <- | Índice da última ocorrência de toSearch na coleção, -1 se não encontrado |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
-> This function does not modify the original collection.
+A função`.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->pesquisa a expressão *toSearch* entre os elementos da coleção e retorna o índice da primeira ocorrência<!-- END REF -->, ou -1 se não for encontrado
+> Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
-*   a scalar value (text, number, boolean, date),
-*   the null value,
-*   an object or a collection reference.
+*   um valor escalar (texto, número, booleano, data),
+*   o valor null,
+*   um objeto ou uma referência de coleção.
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator are applied).
+*toSearch* deve corresponder exatamente com o elemento a encontrar (as mesmas regras que para o operador de igualdade é aplicado).
 
-Optionally, you can pass the index of collection from which to start a reverse search in *startFrom*.
+Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa reversa em *startFrom*.
 
-*   If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
-*   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
+*   Se *startFrom* >= o tamanho da coleção menos um (coll.length-1), a coleção inteira é pesquisada (padrão).
+*   Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada). **Nota**: Mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da direita para esquerda.
+*   Se *startFrom* = 0, é retornado -1, o que significa que a coleção não é pesquisada.
 
 #### Exemplo
 
@@ -1543,9 +1543,9 @@ Optionally, you can pass the index of collection from which to start a reverse s
 ## .length
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R5 | Adicionado |
 </details>
 
 <!-- REF #collection.length.Syntax -->
@@ -1553,11 +1553,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 
 
-#### Description
+#### Descrição
 
-The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+A propriedade `.length` <!-- REF #collection.length.Summary -->retorna o número de elementos na coleção<!-- END REF -->.
 
-The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
+A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. Essa propriedade é **read-only** /apenas leitura (não pode usá-la para estabelecer o tamanho da coleção).
 
 #### Exemplo
 
@@ -1578,9 +1578,9 @@ The `.length` property is initialized when the collection is created. Adding or 
 ## .map()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.map().Syntax -->
@@ -1588,32 +1588,32 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 <!-- REF #collection.map().Params -->
-| Parameter  | Type       |    | Description                                              |
-| ---------- | ---------- |:--:| -------------------------------------------------------- |
-| methodName | Texto      | -> | Name of method used to transform the collection elements |
-| param      | any        | -> | Parameter(s) for the method                              |
-| Result     | Collection | <- | Collection of transformed values                         |
+| Parâmetros | Tipo       |    | Descrição                                                     |
+| ---------- | ---------- |:--:| ------------------------------------------------------------- |
+| methodName | Texto      | -> | Nome do método usado para transformar os elementos da coleção |
+| param      | any        | -> | Parâmetros para o método                                      |
+| Resultado  | Collection | <- | Collection de valores transformados                           |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
-> This function does not modify the original collection.
+A função `.map()` <!-- REF #collection.map().Summary -->cria uma nova coleção baseada no resultado da chamada do método *methodName* de cada elemento da coleção original<!-- END REF -->. Opcionalmente pode passar parâmetros a*methodName* usando os parâmetros *param*. `.map()` sempre retorna uma coleção com o mesmo tamanho que a coleção original.
+> Essa função não modifica a coleção original.
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* can perform any operation, with or without the parameter(s).
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer operação, com ou sem os parâmetros.
 
 *methodName* recebe os parâmetros abaixo:
 
-*   in *$1.value* (any type): element value to be mapped
-*   in *$2* (any type): *param*
-*   in *$N...* (any type): *paramN...*
+*   em *$1.value* (qualquer tipo): valor elemento a ser avaliado
+*   em *$2*(qualquer tipo): *param*
+*   em *$N...*(qualquer tipo): *paramN...*
 
 *methodName* estabelece os parâmetros abaixo:
 
 
-*   *$1.result* (any type): new transformed value to add to the resulting collection
-*   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (qualquer tipo): novo valor transformado para adicionar à coleção resultante
+*   *$1.stop* (boolean): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo
 
@@ -1625,7 +1625,7 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
   //$c2=[2.27,9.09,20.45,22.73,45.45]
 ```
 
-Here is the ***Percentage*** method:
+Aqui está o método ***Percentage***:
 
 ```4d
  var $1 : Object
@@ -1644,25 +1644,25 @@ Here is the ***Percentage*** method:
 ## .max()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.max().Syntax -->
 **.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
-| Parameter    | Type                                            |    | Description                                    |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
+| Parâmetros   | Tipo                                            |    | Descrição                                             |
+| ------------ | ----------------------------------------------- |:--:| ----------------------------------------------------- |
+| propertyPath | Texto                                           | -> | Rota de propriedade objeto a ser usado para avaliação |
+| Resultado    | Boolean, Text, Number, Collection, Object, Date | <- | Valor máximo na coleção                               |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+A função `.max()` <!-- REF #collection.max().Summary -->retorna o elemento com o maior valor na coleção<!-- END REF --> (o último elemento da coleção como seria ordenado de forma ascendente usando a função [`.sort()`](#sort)).
 > This function does not modify the original collection.
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
@@ -1694,19 +1694,19 @@ If the collection is empty, `.max()` returns *Undefined*.
 ## .min()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.min().Syntax -->
 **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
-| Parameter    | Type                                            |    | Description                                    |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | Texto                                           | -> | Object property path to be used for evaluation |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
+| Parameter    | Type                                            |    | Description                                           |
+| ------------ | ----------------------------------------------- |:--:| ----------------------------------------------------- |
+| propertyPath | Texto                                           | -> | Rota de propriedade objeto a ser usado para avaliação |
+| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                       |
 <!-- END REF -->
 
 
@@ -1744,9 +1744,9 @@ If the collection is empty, `.min()` returns *Undefined*.
 ## .orderBy()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.orderBy().Syntax -->
@@ -1845,7 +1845,7 @@ Ordering a collection of objects with a property path:
 ```
 
 
-#### Example 3
+#### Exemplo 3
 
 Ordering a collection of objects using a collection of criteria objects:
 
@@ -1883,9 +1883,9 @@ Ordering with a property path:
 ## .orderByMethod()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
@@ -1896,7 +1896,7 @@ Ordering with a property path:
 | Parameter  | Type       |    | Description                                      |
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | methodName | Texto      | -> | Name of method used to specify the sorting order |
-| extraParam | expression | -> | Parameter(s) for the method                      |
+| extraParam | expressão  | -> | Parâmetros para o método                         |
 | Result     | Collection | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
@@ -1956,7 +1956,7 @@ Here is the code for ***WordLength***:
  $1.result:=Length(String($1.value))>Length(String($1.value2))
 ```
 
-#### Example 3
+#### Exemplo 3
 
 You want to sort a collection by character code or language:
 
@@ -1992,9 +1992,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ## .pop()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 
@@ -2040,9 +2040,9 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 ## .push()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.push().Syntax -->
@@ -2101,7 +2101,7 @@ You want to sort the resutling collection:
 | Versão | Mudanças                 |
 | ------ | ------------------------ |
 | v17 R5 | Support of querySettings |
-| v16 R6 | Added                    |
+| v16 R6 | Adicionado               |
 </details>
 
 <!-- REF #collection.query().Syntax -->
@@ -2109,12 +2109,12 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
-| Parameter     | Type       |    | Description                                       |
-| ------------- | ---------- |:--:| ------------------------------------------------- |
-| queryString   | Texto      | -> | Search criteria                                   |
-| value         | Mixed      | -> | Value(s) to compare when using placeholder(s)     |
-| querySettings | Objeto     | -> | Query options: parameters, attributes             |
-| Result        | Collection | <- | Element(s) matching queryString in the collection |
+| Parameter     | Type       |    | Description                                                       |
+| ------------- | ---------- |:--:| ----------------------------------------------------------------- |
+| queryString   | Texto      | -> | Critérios de pesquisa                                             |
+| value         | Mixed      | -> | Valores a comparar quando usar placeholders (valores temporários) |
+| querySettings | Objeto     | -> | Query options: parameters, attributes                             |
+| Result        | Collection | <- | Element(s) matching queryString in the collection                 |
 <!-- END REF -->
 
 
@@ -2123,7 +2123,7 @@ You want to sort the resutling collection:
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
@@ -2192,7 +2192,7 @@ This example returns persons hired more than 90 days ago:
 ```
 
 
-#### Example 3
+#### Exemplo 3
 
 More examples of queries can be found in the `dataClass.query()` page. 
 
@@ -2206,9 +2206,9 @@ More examples of queries can be found in the `dataClass.query()` page.
 ## .reduce()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.reduce().Syntax -->
@@ -2220,7 +2220,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | Texto                                           | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expression                                      | -> | Parâmetros a passar para *methodName*                                |
+| param      | expressão                                       | -> | Parâmetros a passar para *methodName*                                |
 | Result     | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
 <!-- END REF -->
 
@@ -2296,9 +2296,9 @@ With the following ***Flatten*** method:
 ## .remove()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.remove().Syntax -->
@@ -2357,9 +2357,9 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 
@@ -2416,9 +2416,9 @@ By default, new elements are filled will **null** values. You can specify the va
 ## .reverse()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.reverse().Syntax -->
@@ -2455,9 +2455,9 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 ## .shift()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.shift().Syntax -->
@@ -2499,9 +2499,9 @@ If the collection is empty, this method does nothing.
 ## .slice()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.slice().Syntax -->
@@ -2550,9 +2550,9 @@ The returned collection contains the element specified by *startFrom* and all su
 ## .some()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.some().Syntax -->
@@ -2631,9 +2631,9 @@ With the following *NumberGreaterThan0* method:
 ## .sort()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.sort().Syntax -->
@@ -2644,7 +2644,7 @@ With the following *NumberGreaterThan0* method:
 | Parameter  | Type       |    | Description                                      |
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | methodName | Texto      | -> | Name of method used to specify the sorting order |
-| extraParam | any        | -> | Parameter(s) for the method                      |
+| extraParam | any        | -> | Parâmetros para o método                         |
 | Result     | Collection | <- | Original collection sorted                       |
 <!-- END REF -->
 
@@ -2695,7 +2695,7 @@ If the collection contains elements of different types, they are first grouped b
  $col2:=$col.push(5;3;1;4;6;2).sort() //$col2=[1,2,3,4,5,6,10,20]
 ```
 
-#### Example 3
+#### Exemplo 3
 
 ```4d
  var $col; $col2; $col3 : Collection
@@ -2719,9 +2719,9 @@ If the collection contains elements of different types, they are first grouped b
 ## .sum()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.sum().Syntax -->
@@ -2781,9 +2781,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 ## .unshift()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v16 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
 </details>
 
 <!-- REF #collection.unshift().Syntax -->

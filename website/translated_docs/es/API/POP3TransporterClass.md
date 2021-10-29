@@ -3,12 +3,12 @@ id: POP3TransporterClass
 title: POP3Transporter
 ---
 
-The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
+La clase `POP3Transporter` permite recuperar mensajes de un servidor de correo electrónico POP3.
 
 
-### POP3 Transporter object
+### Objeto POP3 Transporter
 
-POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. They provide the following properties and functions:
+Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter](#pop3-new-transporter). Ofrecen las siguientes propiedades y funciones:
 
 
 |                                                                                                                                                                                                                                |
@@ -58,22 +58,22 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 In the *server* parameter, pass an object containing the following properties:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                        | Default value (if omitted)                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                             |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                       |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
-| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | ninguno                                                             |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
+| *server*                                                                                                                                                                                                                                                                                                                                                        | Valor por defecto (si se omite)                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
+| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                            |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
+| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                      |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 
 
 #### Resultado
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
+The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > The POP3 connection is automatically closed when the transporter object is destroyed.
 
 #### Ejemplo
@@ -228,10 +228,10 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
 The `boxInfo` object returned contains the following properties:
 
-| Propiedad | Tipo   | Descripción                       |
-| --------- | ------ | --------------------------------- |
-| mailCount | Número | Number of messages in the mailbox |
-| size      | Número | Tamaño del mensaje en bytes       |
+| Propiedad | Tipo   | Descripción                    |
+| --------- | ------ | ------------------------------ |
+| mailCount | Número | Número de mensajes en el buzón |
+| size      | Número | Tamaño del mensaje en bytes    |
 
 
 
@@ -241,7 +241,7 @@ The `boxInfo` object returned contains the following properties:
  var $server; $boxinfo : Object
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatorio
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -270,7 +270,7 @@ The `boxInfo` object returned contains the following properties:
 <!-- REF #POP3TransporterClass.getMail().Params -->
 | Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| msgNumber  | Integer | -> | Number of the message in the list                |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                   |
 | Resultado  | Objeto  | <- | [Objeto Email](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
@@ -302,7 +302,7 @@ You want to know the sender of the first mail of the mailbox:
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatorio
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -328,10 +328,10 @@ You want to know the sender of the first mail of the mailbox:
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- |:--:| --------------------------------- |
-| msgNumber  | Integer | -> | Number of the message in the list |
-| Resultado  | Objeto  | <- | mailInfo object                   |
+| Parámetros | Tipo    |    | Descripción                    |
+| ---------- | ------- |:--:| ------------------------------ |
+| msgNumber  | Integer | -> | Número del mensaje en la lista |
+| Resultado  | Objeto  | <- | mailInfo object                |
 <!-- END REF -->
 
 
@@ -361,7 +361,7 @@ The method returns **Null** if:
  var $server; $mailInfo : Object
  var $mailNumber : Integer
 
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatorio
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -370,7 +370,7 @@ The method returns **Null** if:
  $transporter:=POP3 New transporter($server)
 
   //message info
- $mailInfo:=$transporter.getMailInfo(1) //get the first mail
+ $mailInfo:=$transporter.getMailInfo(1) //obtener el primer e-mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
  End if
@@ -427,7 +427,7 @@ You want to know the total number and size of emails in the mailbox:
 ```4d
  var $server : Object
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatorio
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -462,7 +462,7 @@ You want to know the total number and size of emails in the mailbox:
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 | Parámetros | Tipo    |    | Descripción                                           |
 | ---------- | ------- |:--:| ----------------------------------------------------- |
-| msgNumber  | Integer | -> | Number of the message in the list                     |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                        |
 | Resultado  | Blob    | <- | Blob of the MIME string returned from the mail server |
 <!-- END REF -->
 

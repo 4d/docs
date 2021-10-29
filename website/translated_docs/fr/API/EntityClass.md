@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
+Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
 
 
 ### Sommaire
@@ -54,23 +54,23 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 #### Description
 
 Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
-> Dataclass attributes can also be reached using the alternate syntax with \[ ].
+> Les attributs de dataclass peuvent également être obtenus en utilisant la syntaxe alternative avec \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
+Le type de valeur de l'attribut dépend du type ([kind](DataClassAttributeClass.md#kind)) d'attribut (relation ou stockage) :
 
-*   If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
-*   If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Values of the related entity are directly available through cascading properties, for example "myEntity.employer.employees\[0].lastname".
-*   If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Les doublons sont supprimés (une entity selection non ordonnée est retournée).
+*   Si le type de *attributeName* est **storage** : `.attributeName` retourne une valeur du même type que *attributeName*.
+*   Si le type de *attributeName* est **relatedEntity** : `.attributeName` retourne une entité reliée. Les valeurs de l'entité liée sont directement disponibles par le biais des propriétés en cascade, par exemple "myEntity.employer.employees\[0].lastname".
+*   Si le type de *attributName* est **relatedEntities** : `.attributeName` retourne une nouvelle entity selection d'entités liées. Les doublons sont supprimés (une entity selection non ordonnée est retournée).
 
 
 #### Exemple
 
 ```4d
  var $myEntity : cs.EmployeeEntity
- $myEntity:=ds.Employee.new() //Create a new entity
- $myEntity.name:="Dupont" // assign 'Dupont' to the 'name' attribute
- $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
- $myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() //Créer une nouvelle entity
+$myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
+$myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
+$myEntity.save() //sauvegarder l'entity
 ```
 
 <!-- END REF -->
@@ -101,7 +101,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 #### Description
 
 The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
+> A noter que toute modification apportée aux entités ne sera enregistrée dans l'enregistrement référencé que lorsque la fonction [`.save( )`](#save) est exécutée.
 
 This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
 
@@ -113,7 +113,7 @@ This function can only be used with entities already saved in the database. It c
  $emp:=ds.Employee.get(672)
  $empCloned:=$emp.clone()
 
- $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+ $emp.lastName:="Smith" //Les mises à jour effectuées sur $emp ne le sont pas sur $empCloned
 
 ```
 
@@ -177,9 +177,9 @@ If one of the compared entities is **Null**, an error is raised.
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
+ $diff1:=$clone.diff(employee) // Toutes les différences sont retournées
  $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+  // Seules les différences relevées sur firstName et lastName sont retournées
 ```
 
 $diff1:
@@ -271,8 +271,8 @@ vCompareResult1 (all differences are returned):
     },
   {
         "attributeName": "employer",
-        "value": "[object Entity]",// Entity 117 from Company
-        "otherValue": "[object Entity]"// Entity 118 from Company
+        "value": "[object Entity]",// Entity 117 de Company
+        "otherValue": "[object Entity]"// Entity 118 de Company
     }
 ]
 ```
@@ -315,8 +315,8 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
     },
      {
         "attributeName": "employer",
-        "value": "[object Entity]",// Entity 117 from Company
-        "otherValue": "[object Entity]"// Entity 118 from Company
+        "value": "[object Entity]",// Entity 117 de Company
+        "otherValue": "[object Entity]"// Entity 118 de Company
 
     }
 ]
@@ -374,7 +374,7 @@ The object returned by `.drop( )` contains the following properties:
 |               | user_name           | text                  | Session user name on the machine                                                                                      |
 |               | user4d_alias        | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                    |
 |               | host_name           | text                  | Machine name                                                                                                          |
-|               | task_name           | text                  | Process name                                                                                                          |
+|               | task_name           | text                  | Nom du process                                                                                                        |
 |               | client_version      | text                  |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
@@ -405,7 +405,7 @@ Example without `dk force drop if stamp changed` option:
  $status:=$employee.drop()
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //L'entité déposée reste en mémoire
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -424,7 +424,7 @@ Example with `dk force drop if stamp changed` option:
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //L'entité déposée reste en mémoire
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
@@ -465,9 +465,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $firstEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Cette entity selection contient 3 entités
  $employee:=$employees[2]
- $firstEmployee:=$employee.first() //$firstEmployee is the first entity of the $employees entity selection
+ $firstEmployee:=$employee.first() //$firstEmployee est la première entité de l'entity selection $employees
 ```
 
 <!-- END REF -->
@@ -496,12 +496,12 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 #### Description
 
 The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
-> This function modifies the original entity.
+> Cette fonction modifie l'entity d'origine.
 
 The mapping between the object and the entity is done on the attribute names:
 
-*   If a property of the object does not exist in the dataclass, it is ignored.
-*   Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
+*   Si une propriété de l'objet n'existe pas dans la dataclass, elle est ignorée.
+*   Les types de données doivent être équivalents. S'il existe une différence de type entre l'objet et la dataclass, 4D essaie de convertir les données lorsque cela est possible (voir [`Conversion des types de données`](Concepts/data-types.md#converting-data-types)), sinon l'attribut demeure intact.
 *   La clé primaire peut être donnée telle quelle ou avec une propriété "__KEY" (remplie avec la valeur de la clé primaire). Si elle n'existe pas déjà dans la dataclass, l'entité est créée avec la valeur donnée lorsque [.save()](#save) est appelé. Si la clé primaire n'est pas fournie, l'entité est créée et la valeur de la clé primaire est affectée en fonction des règles de la base de données. L'auto-incrémentation n'est calculée que si la clé primaire est nulle.
 
 *filler* can handle a related entity under the following conditions:
@@ -521,8 +521,8 @@ With the following $o object:
     "salary": 36500,
     "birthDate": "1958-10-27T00:00:00.000Z",
     "woman": true,
-    "managerID": 411,// relatedEntity given with PK
-    "employerID": 20 // relatedEntity given with PK
+    "managerID": 411,// relatedEntity donné avec PK
+    "employerID": 20 // relatedEntity donné avec PK
 }
 ```
 
@@ -549,10 +549,10 @@ You could also use a related entity given as an object:
     "salary": 68400,
     "birthDate": "1971-09-03T00:00:00.000Z",
     "woman": false,
-    "employer": {// relatedEntity given as an object
+    "employer": {// relatedEntity donné sous forme d'objet
         "__KEY": "21"
     },
-    "manager": {// relatedEntity given as an object
+    "manager": {// relatedEntity donné sous forme d'objet
         "__KEY": "411"
     }
 }
@@ -723,7 +723,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
-> For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
+> Pour une nouvelle entité (jamais enregistrée), la fonction retourne 0. Pour savoir si une entité vient d'être créée, il est recommandé d'utiliser [.isNew()](#isnew).
 
 
 #### Exemple
@@ -776,8 +776,8 @@ By default if the *entitySelection* parameter is omitted, the function returns t
 
 The resulting value is included between 0 and the length of the entity selection -1.
 
-*   If the entity does not have an entity selection or does not belong to *entitySelection*, the function returns -1.
-*   If *entitySelection* is Null or does not belong to the same dataclass as the entity, an error is raised.
+*   Si l'entité n'a pas d'entity selection ou n'appartient pas à *entitySelection*, la fonction retourne -1.
+*   Si *entitySelection* est Null ou n'appartient pas à la même dataclass que l'entité, une erreur est générée.
 
 #### Exemple
 
@@ -908,8 +908,8 @@ Other processes will see this record as locked (the `result.success` property wi
 
 A locked record is unlocked:
 
-*   when the [`unlock()`](#unlock) function is called on a matching entity in the same process
-*   automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
+*   lorsque la fonction [`unlock()`](#unlock) est appelée sur une entité correspondante dans le même process
+*   automatiquement, lorsqu'elle n'est plus référencée par aucune entité en mémoire. Par exemple, si le verrou n'est posé que sur une référence locale d'une entité, celle-ci est déverrouillée à la fin de la fonction. Tant qu'il existe des références à l'entité en mémoire, l'enregistrement reste verrouillé.
 
 By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
@@ -935,7 +935,7 @@ The object returned by `.lock( )` contains the following properties:
 |                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
 |                  | user4d_id           | number                | User id in the 4D database directory                                                                                |
 |                  | host_name           | text                  | Machine name                                                                                                        |
-|                  | task_name           | text                  | Process name                                                                                                        |
+|                  | task_name           | text                  | Nom du process                                                                                                      |
 |                  | client_version      | text                  |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
@@ -1026,9 +1026,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $nextEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Cette entity selection contient 3 entités
  $employee:=$employees[0]
- $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+ $nextEmployee:=$employee.next() //$nextEmployee est la deuxième entité de l'entity selection $employees
 
 ```
 
@@ -1068,9 +1068,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $previousEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Cette entity selection contient 3 entités
  $employee:=$employees[1]
- $previousEmployee:=$employee.previous() //$previousEmployee is the first entity of the $employees entity selection
+ $previousEmployee:=$employee.previous() //$previousEmployee est la première entité de l'entity selection $employees
 ```
 
 <!-- END REF -->
@@ -1171,7 +1171,7 @@ In a multi-user or multi-process application, the `.save()` function is executed
 By default, if the *mode* parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).
 
 Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. The resulting data saved in the entity will be the combination (the "merge") of all non-concurrent modifications (if modifications were applied to the same attribute, the save fails and an error is returned, even with the auto merge mode).
-> The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
+> Le mode de fusion automatique n'est pas disponible pour les attributs de type Image, Objet et Texte lorsqu'ils sont stockés en dehors de l'enregistrement. Des modifications simultanées de ces attributs entraîneront une erreur "`dk status stamp has changed`".
 
 **Résultat**
 
@@ -1192,7 +1192,7 @@ The object returned by `.save()` contains the following properties:
 |              | user_name          | text                  | Session user name on the machine                                                                                        |
 |              | user4d_alias       | text                  | User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory                                      |
 |              | host_name          | text                  | Machine name                                                                                                            |
-|              | task_name          | text                  | Process name                                                                                                            |
+|              | task_name          | text                  | Nom du process                                                                                                          |
 |              | client_version     | text                  |                                                                                                                         |
 |              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                    | collection of objects |                                                                                                                         |
@@ -1200,7 +1200,7 @@ The object returned by `.save()` contains the following properties:
 |              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
 |              | errCode            | number                | Error code                                                                                                              |
 
-##### status and statusText
+##### status et statusText
 
 The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
@@ -1675,9 +1675,9 @@ If no entity attribute has been touched, the method returns an empty collection.
 
 In this case:
 
-*   firstName and lastName have a `storage` kind
-*   employer has a `relatedEntity` kind
-*   employerID is the foreign key of the employer related entity
+*   firstName et lastName ont un type `storage`
+*   employer a un type `relatedEntity`
+*   employerID est la clé étrangère de l'entité reliée employer
 
 <!-- END REF -->
 

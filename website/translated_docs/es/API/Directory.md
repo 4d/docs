@@ -21,9 +21,9 @@ title: Clase Directory
 
 #### Descripción
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #directory.creationDate.Summary -->la fecha de creación de la carpeta<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
  
@@ -45,9 +45,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.creationTime` devuelve <!-- REF #directory.creationTime.Summary -->la hora de creación de la carpeta<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -69,9 +69,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+La propiedad `.exists` devuelve <!-- REF #directory.exists.Summary -->true si la carpeta existe en el disco<!-- END REF -->, y false en caso contrario.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -94,9 +94,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+La propiedad `.extension` <!-- REF #directory.extension.Summary -->devuelve la extensión del nombre de la carpeta (si la hay)<!-- END REF -->. Una extensión siempre comienza con ".". La propiedad devuelve una cadena vacía si el nombre de la carpeta no tiene extensión.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -118,9 +118,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+La propiedad `.fullName` <!-- REF #directory.fullName.Summary -->devuelve el nombre completo de la carpeta, incluyendo su extensión (si la hay)<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -142,9 +142,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propiedad `.hidden` devuelve <!-- REF #directory.hidden.Summary --> true si la carpeta está configurada como "oculta" a nivel de sistema<!-- END REF -->, y false en caso contrario.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -167,9 +167,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+La propiedad `.isAlias` devuelve <!-- REF #directory.isAlias.Summary -->siempre **false** para un objeto `Folder`<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -190,9 +190,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #directory.isFile.Summary -->siempre **false** para una carpeta<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -213,9 +213,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #directory.isFolder.Summary -->siempre **true** para una carpeta<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -236,11 +236,11 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. Otherwise, it returns false.
+La propiedad `.isPackage` devuelve <!-- REF #directory.isPackage.Summary -->true si la carpeta es un paquete en macOS (y existe en el disco)<!-- END REF -->. En caso contrario, devuelve false.
 
-On Windows, `.isPackage` always returns **false**.
+En Windows, `.isPackage` siempre devuelve **false**.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -262,9 +262,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #directory.modificationDate.Summary --> la fecha de la última modificación de la carpeta<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -286,9 +286,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.modificationTime` devuelve <!-- REF #directory.modificationTime.Summary -->la hora de la última modificación de la carpeta<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -311,9 +311,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+La propiedad `.name` devuelve <!-- REF #directory.name.Summary --> el nombre de la carpeta, sin extensión (si la hay)<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -334,10 +334,10 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+La propiedad `.original` devuelve <!-- REF #directory.original.Summary -->el mismo objeto Folder que la carpeta<!-- END REF -->.
 
-This property is **read-only**.
-> This property is available on folders to allow generic code to process folders or files.
+Esta propiedad es **de sólo lectura**.
+> Esta propiedad está disponible en las carpetas para permitir que el código genérico procese carpetas o archivos.
 
 <!-- END REF -->
 
@@ -359,11 +359,11 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+La propiedad `.parent` devuelve <!-- REF #directory.parent.Summary -->el objeto carpeta padre de la carpeta<!-- END REF -->. Si la ruta representa una ruta del sistema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
-If the folder does not have a parent (root), the null value is returned.
+Si la carpeta no tiene un padre (raíz), se devuelve el valor null.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -385,9 +385,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+La propiedad `.path` devuelve <!-- REF #directory.path.Summary -->la ruta POSIX de la carpeta<!-- END REF -->. Si la ruta representa un sistema de archivos (por ejemplo, "/DATA/"), se devuelve el sistema de archivos.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -408,9 +408,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #directory.platformPath.Summary -->la ruta de la carpeta expresada con la sintaxis de la plataforma actual<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -434,12 +434,12 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                                 |
-| ----------------- | --------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Nombre para la copia                        |
-| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
-| Resultado         | 4D.Folder | <- | Carpeta o archivo copiado                   |
+| Parámetros        | Tipo      |    | Descripción                                            |
+| ----------------- | --------- |:--:| ------------------------------------------------------ |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
+| newName           | Texto     | -> | Nombre para la copia                                   |
+| overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
+| Resultado         | 4D.Folder | <- | Carpeta o archivo copiado                              |
 <!-- END REF -->
 
 
@@ -453,14 +453,14 @@ By default, the folder is copied with the name of the original folder. If you wa
 
 If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constante      | Valor | Comentario                          |
-| -------------- | ----- | ----------------------------------- |
-| `fk overwrite` | 4     | Overwrite existing elements, if any |
+| Constante      | Valor | Comentario                                        |
+| -------------- | ----- | ------------------------------------------------- |
+| `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
 
 **Valor devuelto**
 
-The copied `Folder` object.
+El objeto `Folder` copiado.
 
 #### Ejemplo
 

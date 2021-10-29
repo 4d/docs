@@ -2163,10 +2163,6 @@ For detailed information on how to build a query using *queryString*, *value* an
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
- $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
-
- $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
- $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 Cet exemple retourne les personnes dont le nom contient "in" :
@@ -2327,7 +2323,7 @@ La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou 
 > Cette fonction modifie la collection d'origine.
 
 Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
+> **Attention** : A noter que la numérotation des éléments de collection débute à 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
 *   Si l'*indice* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
 *   If the calculated value < 0, *index* is set to 0.
@@ -2388,7 +2384,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 La fonction `.resize()` <!-- REF #collection.resize().Summary -->définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée<!-- END REF -->.
 > Cette fonction modifie la collection d'origine.
 
-*   If *size* < collection length, exceeding elements are removed from the collection.
+*   Si *size* est inférieure à la longueur de la collection, les éléments excédentaires sont retirés de la collection.
 *   If *size* > collection length, the collection length is increased to size.
 
 Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre *defaultValue*.

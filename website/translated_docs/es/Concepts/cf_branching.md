@@ -35,7 +35,7 @@ Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Con
  End if
 ```
 
-la expresión es TRUE sólo si ambos métodos son TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:
+The expression is TRUE only if both methods are TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)

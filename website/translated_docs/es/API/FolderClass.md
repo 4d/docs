@@ -5,18 +5,18 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
+Los objetos `Folder` se crean con el comando [`Folder`](#folder). Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando se ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que se llama a la función [`folder.create( )`](#create-).
 
 ### Ejemplo
 
-The following example creates a "JohnSmith" folder:
+El siguiente ejemplo crea una carpeta "JohnSmith":
 
 ```code4d
 Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-### Folder object
+### Objeto Folder
 
 |                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,13 +60,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parámetros     | Tipo      |    | Descripción                                     |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Texto     | -> | Ruta de la carpeta                              |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| Resultado      | 4D.Folder | <- | Nuevo objeto de carpeta                         |
+| Parámetros     | Tipo      |    | Descripción                                        |
+| -------------- | --------- |:--:| -------------------------------------------------- |
+| path           | Texto     | -> | Ruta de la carpeta                                 |
+| folderConstant | Integer   | -> | Constante de la carpeta 4D                         |
+| pathType       | Integer   | -> | `fk posix path` (por defecto) o `fk platform path` |
+| *              |           | -> | * para devolver la carpeta de la base local        |
+| Resultado      | 4D.Folder | <- | Nuevo objeto de carpeta                            |
 <!-- END REF -->
 
 
@@ -147,9 +147,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parámetros | Tipo     |    | Descripción                                                  |
-| ---------- | -------- | -- | ------------------------------------------------------------ |
-| Resultado  | Booleano | <- | True if the folder was created successfully, false otherwise |
+| Parámetros | Tipo     |    | Descripción                                                        |
+| ---------- | -------- | -- | ------------------------------------------------------------------ |
+| Resultado  | Booleano | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
 <!-- END REF -->
 
 
@@ -181,7 +181,7 @@ Creation of the "/Archives2019/January/" folder in the database folder:
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
-    ALERT("The "+$newFolder.name+" folder was created.")
+    ALERT("La"+$newFolder.name+" carpeta fue creada.")
 Else
     ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
@@ -225,10 +225,10 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constante          | Valor | Comentario                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Valor | Comentario                         |
+| ------------------ | ----- | ---------------------------------- |
+| `fk alias link`    | 0     | Enlace de alias (por defecto)      |
+| `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parámetros | Tipo    |    | Descripción            |
-| ---------- | ------- | -- | ---------------------- |
-| option     | Integer | -> | Folder deletion option |
+| Parámetros | Tipo    |    | Descripción                      |
+| ---------- | ------- | -- | -------------------------------- |
+| option     | Integer | -> | Opción de eliminación de carpeta |
 <!-- END REF -->
 
 
@@ -384,11 +384,11 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                    |
-| ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | Texto     | -> | Full name for the moved folder |
-| Resultado         | 4D.Folder | <- | Carpeta movida                 |
+| Parámetros        | Tipo      |    | Descripción                              |
+| ----------------- | --------- | -- | ---------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                       |
+| newName           | Texto     | -> | Nombre completo de la carpeta trasladada |
+| Resultado         | 4D.Folder | <- | Carpeta movida                           |
 <!-- END REF -->
 
 
@@ -402,11 +402,11 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 **Objeto devuelto**
 
-The moved `Folder` object.
+El objeto `Folder` movido.
 
 #### Ejemplo
 
-You want to move and rename a folder:
+Quiere mover y renombrar una carpeta:
 
 ```4d
  var $tomove; $moved : Object
@@ -454,10 +454,10 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parámetros | Tipo      |    | Descripción                  |
-| ---------- | --------- | -- | ---------------------------- |
-| newName    | Texto     | -> | New full name for the folder |
-| Resultado  | 4D.Folder | <- | Renamed folder               |
+| Parámetros | Tipo      |    | Descripción                           |
+| ---------- | --------- | -- | ------------------------------------- |
+| newName    | Texto     | -> | Nuevo nombre completo para la carpeta |
+| Resultado  | 4D.Folder | <- | Carpeta renombrada                    |
 <!-- END REF -->
 
 
@@ -471,7 +471,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 **Objeto devuelto**
 
-The renamed `Folder` object.
+El objeto `Folder` renombrado.
 
 #### Ejemplo
 

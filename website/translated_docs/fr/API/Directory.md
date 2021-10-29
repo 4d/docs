@@ -453,9 +453,9 @@ By default, the folder is copied with the name of the original folder. If you wa
 
 If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constant       | Valeur | Commentaire                         |
-| -------------- | ------ | ----------------------------------- |
-| `fk overwrite` | 4      | Overwrite existing elements, if any |
+| Constant       | Valeur | Commentaire                                   |
+| -------------- | ------ | --------------------------------------------- |
+| `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
 
 **Valeur retournée**
@@ -539,14 +539,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 #### Description
 
 The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
-> Aliases or symbolic links are not resolved.
+> Les alias ou les liens symboliques ne sont pas résolus.
 
 By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Valeur | Commentaire                                                                         |
-| --------------------- | ------ | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8      | Invisible files or folders are not listed                                           |
+| Constant              | Valeur | Commentaire                                                                                 |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
 
 **Valeur retournée**
 
@@ -562,7 +562,6 @@ You want to know if there are invisible files in the Database folder:
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
- End if
  End if
 ```
 
@@ -644,10 +643,10 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Valeur | Commentaire                                                                         |
-| --------------------- | ------ | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8      | Invisible files or folders are not listed                                           |
+| Constant              | Valeur | Commentaire                                                                                 |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
 
 **Valeur retournée**
 

@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
+Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA/dsMapping.md#dataclass), como un registro de la tabla que coincide con la dataclass en su datastore asociado. Contiene los mismos atributos que la clase de datos, así como los valores de los datos y las propiedades y funciones específicas.
 
 
 ### Resumen
@@ -405,7 +405,7 @@ Example without `dk force drop if stamp changed` option:
  $status:=$employee.drop()
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //La entidad soltada permanece en la memoria
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -521,8 +521,8 @@ With the following $o object:
     "salary": 36500,
     "birthDate": "1958-10-27T00:00:00.000Z",
     "woman": true,
-    "managerID": 411,// relatedEntity given with PK
-    "employerID": 20 // relatedEntity given with PK
+    "managerID": 411,// relatedEntity dada con PK
+    "employerID": 20 // relatedEntity dada con PK
 }
 ```
 
@@ -1308,7 +1308,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 *   attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
 
 
-In the first parameter, you pass the entity attribute(s) to extract. You can pass:
+In the first parameter, you pass the entity attribute(s) to extract. Puede pasar:
 
 *   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
@@ -1516,7 +1516,7 @@ Devuelve:
 
 #### Ejemplo 6
 
-Extracting all the properties of a `relatedEntity`:
+Extracción de todas las propiedades de una `Entidad relacionada`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("employer.*")
@@ -1538,7 +1538,7 @@ Devuelve:
 
 #### Ejemplo 7
 
-Extracting some properties of a `relatedEntity`:
+Extracción de algunas propiedades de una `Entidad relacionada`:
 
 ```4d
  $col:=New collection
@@ -1644,7 +1644,7 @@ If no entity attribute has been touched, the method returns an empty collection.
 
  $touchedAttributes:=New collection
  $emp:=ds.Employee.get(725)
- $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
+ $emp.firstName:=$emp.firstName //Aunque se actualice con el mismo valor, el atributo se marca como tocado
  $emp.lastName:="Martin"
  $touchedAttributes:=$emp.touchedAttributes()
   //$touchedAttributes: ["firstName","lastName"]
@@ -1673,7 +1673,7 @@ If no entity attribute has been touched, the method returns an empty collection.
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
-In this case:
+En este caso:
 
 *   firstName and lastName have a `storage` kind
 *   employer has a `relatedEntity` kind

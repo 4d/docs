@@ -21,9 +21,9 @@ title: Document Class
 
 #### Descripción
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->la fecha de creación del archivo<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
  
@@ -43,9 +43,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.creationTime` devuelve <!-- REF #document.creationTime.Summary -->la hora de creación del archivo<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -67,9 +67,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+La propiedad `.exists` devuelve <!-- REF #document.exists.Summary -->true si el archivo existe en el disco<!-- END REF -->, y false en caso contrario.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -92,9 +92,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza con ".". La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -116,9 +116,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+La propiedad `.fullName` devuelve <!-- REF #document.fullName.Summary -->el nombre completo del archivo, incluyendo su extensión (si la hay)<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -140,9 +140,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propiedad `.hidden` devuelve <!-- REF #document.hidden.Summary -->true si el archivo está configurado como "oculto" a nivel de sistema<!-- END REF -->, y false en caso contrario.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -166,7 +166,7 @@ This property is **read-only**.
 
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ This property is **read-only**.
 
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -210,9 +210,9 @@ This property is **read-only**.
 
 #### Descripción
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->siempre false para un archivo<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -237,7 +237,7 @@ This property is **read-only**.
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
-This property is **read-only**.
+Esta propiedad es **de sólo lectura**.
 
 **Ejemplo**
 
@@ -270,7 +270,7 @@ This property is **read-only**.
 
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ This property is **read-only**.
 
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -317,7 +317,7 @@ This property is **read-only**.
 
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -344,7 +344,7 @@ The `.original` property returns <!-- REF #document.original.Summary -->the targ
 
 For non-alias files, the property returns the same file object as the file.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -368,7 +368,7 @@ This property is **read-only**.
 
 The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -392,7 +392,7 @@ This property is **read-only**.
 
 The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -415,7 +415,7 @@ This property is **read-only**.
 
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -439,7 +439,7 @@ This property is **read-only**.
 
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
 
-This property is **read-only**. 
+Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
 
@@ -465,12 +465,12 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                                 |
-| ----------------- | --------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Nombre para la copia                        |
-| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
-| Resultado         | 4D.File   | <- | Archivo copiado                             |
+| Parámetros        | Tipo      |    | Descripción                                            |
+| ----------------- | --------- |:--:| ------------------------------------------------------ |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
+| newName           | Texto     | -> | Nombre para la copia                                   |
+| overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
+| Resultado         | 4D.File   | <- | Archivo copiado                                        |
 <!-- END REF -->
 
 
@@ -484,14 +484,14 @@ By default, the file is copied with the name of the original file. If you want t
 
 If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constante      | Valor | Comentario                          |
-| -------------- | ----- | ----------------------------------- |
-| `fk overwrite` | 4     | Overwrite existing elements, if any |
+| Constante      | Valor | Comentario                                        |
+| -------------- | ----- | ------------------------------------------------- |
+| `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
 
 **Valor devuelto**
 
-The copied `File` object.
+El objeto `File` copiado.
 
 #### Ejemplo
 
@@ -541,7 +541,7 @@ To save a document's contents in a `BLOB` field:
 ```4d
  var $vPath : Text
  $vPath:=Select document("";"*";"Select a document";0)
- If(OK=1) //If a document has been chosen
+ If(OK=1) //Si se ha elegido un documento
     [aTable]aBlobField:=File($vPath;fk platform path).getContent()
  End if
 ```
@@ -649,7 +649,7 @@ id name price vat
 2 café 1.05€ 19.6
 ```
 
-When you execute this code:
+Cuando se ejecuta este código:
 
 
 ```4d

@@ -5,18 +5,18 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
+Les objets `Folder` sont créés avec la commande [`Folder`](#folder). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create( )`](#create-).
 
 ### Exemple
 
-The following example creates a "JohnSmith" folder:
+L'exemple suivant crée un dossier "JohnSmith" :
 
 ```code4d
 Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-### Folder object
+### Objet Folder
 
 |                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,7 +78,7 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
@@ -125,7 +125,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
+> Il est recommandé d'utiliser la commande raccourci [`Folder`](#folder) au lieu de `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
@@ -162,8 +162,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valeur retournée**
 
-*   **True** if the folder is created successfully;
-*   **False** if a folder with the same name already exists or if an error occured.
+*   **Vrai** si le dossier est créé avec succès ;
+*   **Faux** si un dossier du même nom existe déjà ou si une erreur s'est produite.
 
 #### Exemple 1
 
@@ -290,14 +290,14 @@ By default, for security reasons, if you omit the option parameter, `.delete( )`
 
 When `Delete only if empty` is passed or if you omit the option parameter:
 
-*   The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-*   If the folder does not exist, the error -120 is generated.
+*   Le dossier n'est supprimé que s'il est vide ; sinon, la commande ne fait rien et une erreur -47 est générée.
+*   Si le dossier n'existe pas, l'erreur -120 est générée.
 
 When `Delete with contents` is passed:
 
-*   The folder, along with all of its contents, is deleted. **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-*   If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-*   If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+*   Le dossier, ainsi que tout son contenu, est supprimé. **Attention** : Même si ce dossier et/ou son contenu sont verrouillés ou définis comme étant en lecture seule, si l'utilisateur dispose des droits d'accès appropriés, le dossier (et son contenu) est supprimé malgré tout.
+*   Si ce dossier, ou l'un des fichiers qu'il contient, ne peut être supprimé, la suppression est interrompue dès que le premier élément inaccessible est détecté, et une erreur(*) est retournée. Dans ce cas, le dossier ne peut être que partiellement supprimé. Lorsque la suppression est interrompue, vous pouvez utiliser la commande `GET LAST ERROR STACK` pour récupérer le nom et le chemin d'accès du dossier incriminé.
+*   Si le dossier n'existe pas, la commande ne fait rien et aucune erreur n'est retournée. (*) Windows : -54 (Tentative d'ouverture en écriture d'un fichier verrouillé) macOS : -45 (Le fichier est verrouillé ou le chemin d'accès n'est pas correct)
 
 <!-- END REF -->
  

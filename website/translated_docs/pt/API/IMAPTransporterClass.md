@@ -48,9 +48,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 ## IMAP New transporter
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #_command_.IMAP New transporter.Syntax -->
@@ -134,9 +134,9 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 ## .addFlags()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.addFlags().Syntax -->
@@ -222,9 +222,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 ## .append()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.append().Syntax -->
@@ -324,9 +324,9 @@ $status:=$imap.append($msg; "Drafts")
 ## .checkConnectionDelay
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->
@@ -348,9 +348,9 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 ## .copy()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.copy().Syntax -->
@@ -370,7 +370,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Pode passar:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
@@ -454,9 +454,9 @@ To copy all messages in the current mailbox:
 ## .createBox()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.createBox().Syntax -->
@@ -539,9 +539,9 @@ End if
 ## .delete()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.delete().Syntax -->
@@ -560,7 +560,7 @@ End if
 
 The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
-You can pass:
+Pode passar:
 
 - in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
@@ -644,9 +644,9 @@ To delete all messages in the current mailbox:
 ## .deleteBox()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.deleteBox().Syntax -->
@@ -728,9 +728,9 @@ End if
 ## .expunge()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.expunge().Syntax -->
@@ -793,10 +793,10 @@ $status:=$transporter.expunge()
 ## .getBoxInfo()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças         |
-| ------ | ---------------- |
-| v18 R5 | name is optional |
-| v18 R4 | Added            |
+| Versão | Mudanças           |
+| ------ | ------------------ |
+| v18 R5 | *name* is optional |
+| v18 R4 | Adicionado         |
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
@@ -812,14 +812,15 @@ $status:=$transporter.expunge()
 
 #### Description
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
+The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
+If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
 **Returned object**
 
-The `boxInfo` object returned contains the following properties:
+O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 | Property   | Type   | Description                                                         |
 | ---------- | ------ | ------------------------------------------------------------------- |
@@ -850,7 +851,7 @@ The `boxInfo` object returned contains the following properties:
 <details><summary>Histórico</summary>
 | Versão | Mudanças                     |
 | ------ | ---------------------------- |
-| v18 R4 | Added                        |
+| v18 R4 | Adicionado                   |
 | v19    | Add `isSubscribed` parameter |
 </details>
 
@@ -869,7 +870,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Pode passar:
 
 | Property     | Type     | Description                                          |
 | ------------ | -------- | ---------------------------------------------------- |
@@ -917,9 +918,9 @@ If the account does not contain any mailboxes, an empty collection is returned.
 ## .getDelimiter()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->
@@ -975,9 +976,9 @@ Mailbox name delimiter character.
 ## .getMail()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.getMail().Syntax -->
@@ -1051,9 +1052,9 @@ You want to get the message with ID = 1:
 ## .getMails()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.getMails().Syntax -->
@@ -1156,9 +1157,9 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 ## .getMIMEAsBlob()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->
@@ -1186,7 +1187,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
+The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched
@@ -1242,9 +1243,9 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 ## .move()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.move().Syntax -->
@@ -1265,7 +1266,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Pode passar:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
@@ -1350,9 +1351,9 @@ To move all messages in the current mailbox:
 ## .numToID()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.numToID().Syntax -->
@@ -1413,9 +1414,9 @@ The function returns a collection of strings (unique IDs).
 ## .removeFlags()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R6 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R6 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.removeFlags().Syntax -->
@@ -1501,9 +1502,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 ## .renameBox()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.renameBox().Syntax -->
@@ -1585,9 +1586,9 @@ End if
 ## .searchMails()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R5 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.searchMails().Syntax -->
@@ -1596,7 +1597,7 @@ End if
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 | Parameter      | Type       |    | Description                   |
 | -------------- | ---------- |:--:| ----------------------------- |
-| searchCriteria | Texto      | -> | Search criteria               |
+| searchCriteria | Texto      | -> | Critérios de pesquisa         |
 | Result         | Collection | <- | Collection of message numbers |
 <!-- END REF -->
 
@@ -1717,9 +1718,9 @@ Search-keys may request the value to search for:
 ## .selectBox()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v18 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v18 R4 | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.selectBox().Syntax -->
@@ -1736,24 +1737,24 @@ Search-keys may request the value to search for:
 
 #### Description
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the `name` mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the `name` parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional `state` parameter defines the type of access to the mailbox. The possible values are:
+The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
 | Constant              | Value | Comment                                                                                                                                                               |
 | --------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                 |
 | IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value) |
-> * The function generates an error and returns **Null** if name designates a non-existing mailbox.
+> * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
 **Returned object**
 
-The `boxInfo` object returned contains the following properties:
+O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 | Property   | Type   | Description                               |
 | ---------- | ------ | ----------------------------------------- |
@@ -1785,9 +1786,9 @@ The `boxInfo` object returned contains the following properties:
 ## .subscribe()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.subscribe().Syntax -->
@@ -1858,9 +1859,9 @@ End if
 ## .unsubscribe()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v19    | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 </details>
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->

@@ -10,9 +10,9 @@ title: Transporter Class
 ## .acceptUnsecureConnection
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->
@@ -46,9 +46,9 @@ Available secured ports are:
 ## .authenticationMode
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
@@ -77,9 +77,9 @@ Possible values are:
 ## .authenticationMode
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 
@@ -109,9 +109,9 @@ Possible values are:
 ## .authenticationMode
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 
@@ -143,7 +143,7 @@ Possible values are:
 | Versão | Mudanças                |
 | ------ | ----------------------- |
 | v18    | Support for UTF8 base64 |
-| v17 R5 | Added                   |
+| v17 R5 | Adicionado              |
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
@@ -176,9 +176,9 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 ## .connectionTimeOut
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
@@ -199,9 +199,9 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 ## .headerCharset
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
@@ -234,9 +234,9 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 ## .host
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.host.Syntax -->
@@ -255,9 +255,9 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 ## .logFile
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R5 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
@@ -286,9 +286,9 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 ## .port
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.port.Syntax -->
@@ -314,9 +314,9 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 ## .sendTimeOut
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->
@@ -335,9 +335,9 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 ## .user
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.user.Syntax -->
@@ -355,9 +355,9 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 ## .checkConnection()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->

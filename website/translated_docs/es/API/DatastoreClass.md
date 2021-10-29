@@ -3,10 +3,10 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
+Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos `Datastore` son devueltos por los siguientes comandos:
 
-*   [ds](#ds): a shortcut to the main datastore
-*   [Open datastore](#open-datastore): to open any remote datastore
+*   [ds](#ds): un acceso directo al almacén de datos principal
+*   [Open datastore](#open-datastore): para abrir todo almacén de datos remoto
 
 ### Resumen
 
@@ -42,10 +42,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
-| Parámetros | Tipo         |    | Descripción                                |
-| ---------- | ------------ | -- | ------------------------------------------ |
-| localID    | Texto        | -> | Local ID of the remote datastore to return |
-| Resultado  | cs.DataStore | <- | Reference to the datastore                 |
+| Parámetros | Tipo         |    | Descripción                                     |
+| ---------- | ------------ | -- | ----------------------------------------------- |
+| localID    | Texto        | -> | ID local del almacén de datos remoto a devolver |
+| Resultado  | cs.DataStore | <- | Referencia al almacén de datos                  |
 <!-- END REF -->
 
 
@@ -378,7 +378,7 @@ You want to know the number of encrypted tables in the current data file:
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. This function is useful for setting up generic code.
+The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -830,7 +830,7 @@ This function must be called on a remote 4D, otherwise it does nothing. It is de
 
 #### Ejemplo
 
-See examples for [`.startRequestLog()`](#startrequestlog).
+Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
@@ -867,7 +867,7 @@ You can nest several transactions (sub-transactions). If the main transaction is
 
 #### Ejemplo
 
-See example for [`.startTransaction()`](#starttransaction).
+Ver el ejemplo de [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 

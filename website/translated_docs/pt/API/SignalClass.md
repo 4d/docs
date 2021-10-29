@@ -98,9 +98,9 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
@@ -170,9 +170,9 @@ The ***doSomething*** method could be like:
 ## .description
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #SignalClass.description.Syntax -->
@@ -194,9 +194,9 @@ This property is **read-write**.
 ## .signaled
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 
 </details>
 
@@ -207,7 +207,7 @@ This property is **read-write**.
 
 The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -217,9 +217,9 @@ This property is **read-only**.
 ## .trigger()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #SignalClass.trigger().Syntax -->
@@ -246,9 +246,9 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 ## .wait()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças |
-| ------ | -------- |
-| v17 R4 | Added    |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #SignalClass.wait().Syntax -->

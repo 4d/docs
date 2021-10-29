@@ -21,7 +21,7 @@ Formula objects can be encapsulated in object properties:
 This property is an "object function", i.e. a function which is bound to its parent object. To execute a function stored in an object property, use the **()** operator after the property name, such as:
 
 ```4d
- $f.message() //displays "Hello world"
+ $f.message() //muestra "Hello world"
 ```
 
 También se admite la sintaxis con paréntesis:
@@ -58,8 +58,8 @@ Or using the [.call()](#call) function:
 ```4d
  var $f : Object
  $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
+ $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //devuelve "Welcome to 2019" (por ejemplo)
 ```
 
 #### Parameters to a single method
@@ -85,7 +85,7 @@ For more convenience, when the formula is made of a single project method, param
 
 Parameters are received within the method, in the order they are specified in the call.
 
-### About 4D.Function objects
+### Sobre los objetos 4D.Function
 
 A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of Function objects:
 
@@ -143,10 +143,10 @@ The returned formula can be called with:
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
 
-  //three different ways to call the formula
- $f.call($o) //returns 3
- $f.apply($o) //returns 3
- $o.myFormula() //returns 3
+  //tres formas diferentes de llamar a la fórmula
+ $f.call($o) //devuelve 3
+ $f.apply($o) //devuelve 3
+ $o.myFormula() //devuelve 3
 ```
 
 You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
@@ -160,7 +160,7 @@ The object created by `Formula` can be saved, for example, in a database field o
 
 #### Ejemplo 1
 
-A simple formula:
+Una fórmula simple:
 
 ```4d
  var $f : 4D.Function
@@ -174,7 +174,7 @@ A simple formula:
 
 #### Ejemplo 2
 
-A formula using local variables:
+Una fórmula utilizando variables locales:
 
 ```4d
 
@@ -189,7 +189,7 @@ A formula using local variables:
 
 #### Ejemplo 3
 
-A simple formula using parameters:
+Una fórmula sencilla que utiliza parámetros:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -199,28 +199,28 @@ A simple formula using parameters:
 
 #### Ejemplo 4
 
-A formula using a project method with parameters:
+Una fórmula utilizando un método proyecto con parámetros:
 
 ```4d
  $o:=New object("f";Formula(myMethod))
- $result:=$o.f("param1";"param2") // equivalent to $result:=myMethod("param1";"param2")
+ $result:=$o.f("param1";"param2") // equivalente a $result:=myMethod("param1";"param2")
 ```
 
 
 #### Ejemplo 5
 
-Using `This`:
+Utilizando `This`:
 
 ```4d
  $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
  $o.firstName:="John"
  $o.lastName:="Smith"
- $result:=$o.fullName() //returns "John Smith"
+ $result:=$o.fullName() //devuelve "John Smith"
 ```
 
 #### Ejemplo 6
 
-Calling a formula using object notation:
+Llamar a una fórmula utilizando la notación de objetos:
 
 ```4d
  var $feta; $robot : Object
@@ -230,11 +230,11 @@ Calling a formula using object notation:
 
  $calc:=Formula(This.total:=This.price*This.quantity)
 
-  //sets the formula to object properties
+  //define la fórmula de las propiedades del objeto
  $feta.calc:=$calc
  $robot.calc:=$calc
 
-  //call the formula
+  //llama la fórmula
  $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
@@ -277,7 +277,7 @@ The following code will create a dialog accepting a formula in text format:
 ```4d
  var $textFormula : Text
  var $f : 4D.Function
- $textFormula:=Request("Please type a formula")
+ $textFormula:=Request("Por favor, escriba una fórmula")
  If(ok=1)
     $f:=Formula from string($textFormula)
     ALERT("Result = "+String($f.call()))
@@ -287,7 +287,7 @@ The following code will create a dialog accepting a formula in text format:
 ![](assets/en/API/formulaDialog.png)
 
 
-...and execute the formula:
+...y ejecuta la fórmula:
 
 
 ![](assets/en/API/formulaAlert.png)
@@ -394,7 +394,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  var $f : 4D.Function
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // devuelve "HELLO"
 ```
 
 #### Ejemplo 2
@@ -426,7 +426,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-This property is **read-only**.
+Esta propiedad es **de sólo lectura**.
 
 #### Ejemplo
 

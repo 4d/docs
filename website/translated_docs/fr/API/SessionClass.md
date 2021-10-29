@@ -3,9 +3,9 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.
+Les objets Session sont retournés par la commande [`Session`](#session) lorsque [les sessions évolutives sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). L'objet Session est automatiquement créé et maintenu par le serveur web 4D pour contrôler la session d'un client web (par exemple, un navigateur). Cet objet fournit au développeur web une interface avec la session de l'utilisateur, permettant de gérer les privilèges, de stocker des données contextuelles, de partager des informations entre les process et de lancer des processus préemptifs liés à la session.
 
-For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
+Pour des informations détaillées sur l'implémentation de la session, veuillez consulter la section [Sessions du serveur web](WebServer/sessions.md).
 
 ### Sommaire
 
@@ -51,10 +51,10 @@ This command only works when [scalable sessions are enabled](WebServer/sessions.
 
 When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
 
-- `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
-- ORDA [Data Model Class functions](ORDA/ordaClasses.md) called with REST requests,
-- code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls.
+- Méthodes base `On Web Authentication`, `On Web Connection`, et `On REST Authentication`,
+- Les [fonctions Data Model Class](ORDA/ordaClasses.md) ORDA appelées par des requêtes REST,
+- le code traité par les balises 4D dans les pages semi-dynamiques (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
+- les méthodes projet avec l'attribut "Available through 4D tags and URLs (4DACTION...)" et appelées via les urls 4DACTION/.
 
 
 #### Exemple
@@ -66,10 +66,10 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //méthode action_Session
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
+       If(Session.hasPrivilege("WebAdmin")) //appel de la fonction hasPrivilege
           WEB SEND TEXT("4DACTION --> Session is WebAdmin")
        Else
           WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
@@ -109,11 +109,11 @@ The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summa
 #### Exemple
 
 ```4d
-//Invalidate a session
+//Invalider une session
 var $isGuest : Boolean  
 
 Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() //$isGuest est mis à True
 ```
 
 <!-- END REF -->
@@ -143,7 +143,7 @@ Cette propriété est en **lecture seule**. It is automatically recomputed if th
 
 ```4d
 var $expiration : Text
-$expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
+$expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 ```
 
 <!-- END REF -->
@@ -182,9 +182,9 @@ You want to check if the "WebAdmin" privilege is associated to the session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-    //Access is granted, do nothing
+    //Accès accordé, ne rien faire
 Else
-    //Display an authentication page
+    //Afficher une page d'authentification
 
 End if
 ```
@@ -212,7 +212,7 @@ If this property is not set, the default value is 60 (1h).
 
 When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly.
 
-> The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
+> La valeur ne peut pas être < 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
 
 
 This property is **read write**.
@@ -221,10 +221,10 @@ This property is **read write**.
 
 ```4d
 If (Session.isGuest())
-        // A Guest session will close after 60 minutes of inactivity
+        // La session d'un invité se ferme après 60 minutes d'inactivité.
     Session.idleTimeout:=60
 Else
-        // Other sessions will close after 120 minutes of inactivity
+        //D'autres sessions se fermeront après 60 minutes d'inactivité.
     Session.idleTimeout:=120
 End if
 
@@ -263,7 +263,7 @@ In the `On Web Connection` database method:
 
 ```4d
 If (Session.isGuest())
-    //Do something for Guest user
+    //Faire quelque chose pour l'utilisateur invité
 End if
 ```
 
@@ -296,11 +296,11 @@ End if
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
 
-- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
-- In the *privileges* parameter, pass a collection of strings containing privilege names.
+- Dans le paramètre *privileges*, passez une collection de chaînes contenant des noms de privilèges.
 
-- In the *settings* parameter, pass an object containing the following properties:
+- Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 
 | Propriété  | Type               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
@@ -322,9 +322,9 @@ In a custom authentication method, you set the "WebAdmin" privilege to the user:
 ```4d
 var $userOK : Boolean
 
-... //Authenticate the user
+... //Authentifier l'utilisateur
 
-If ($userOK) //The user has been approved
+If ($userOK) //L'utilisateur a été approuvé
   var $info : Object
   $info:=New object()
   $info.privileges:=New collection("WebAdmin")
@@ -364,7 +364,7 @@ This property is **read only** itself but it returns a read-write object.
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
 
 ```4d
-If (Session.storage.clientIP=Null) //first access
+If (Session.storage.clientIP=Null) //premier accès
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
     End use 
