@@ -68,7 +68,7 @@ Por ejemplo, la siguiente línea es una sentencia que utiliza la función integr
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. El valor a devolver se pone en la variable local `$0`.
+Toda subrutina puede devolver un valor. El valor a devolver se pone en la variable local `$0`.
 
 Por ejemplo, la siguiente función, llamada `Uppercase4`, devuelve una cadena con los cuatro primeros caracteres de la cadena que se han pasado en mayúsculas:
 
