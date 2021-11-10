@@ -5,7 +5,7 @@ title: Webエリア
 
 ## 概要
 
-Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Webエリアの描画エンジンは、アプリケーションの実行プラットフォームおよび [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) オプションの設定状態により異なります。
+Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Webエリアの描画エンジンは、アプリケーションの実行プラットフォームおよび [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) オプションの設定状態により異なります。
 
 同じフォーム内に複数の Webエリアを配置できます。 しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
 
@@ -23,18 +23,18 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 
 ### Webレンダリングエンジン
 
-Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) うちから使用するものを選択することができます。
+Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) うちから使用するものを選択することができます。
 
 "埋め込みWebレンダリングエンジンを使用" プロパティを選択している場合、"4Dメソッドコールを許可" プロパティが選択可能になります。
 
 ### 4Dメソッドコールを許可
-[4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
+[4Dメソッドコールを許可](properties_WebArea.md#4dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
 ### $4dオブジェクトの使用
 
-[4Dの埋め込みWebレンダリングエンジン](#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+[4Dの埋め込みWebレンダリングエンジン](#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
@@ -179,7 +179,7 @@ macOS 上の Webエリアで、プログラムにより処理される URL は�
 ### Webインスペクターの表示
 Webエリア内に Webインスペクターを表示するには、次の条件を満たしていなければなりません:
 
-- エリアに対して [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) が選択されている (Webインスペクターはこの設定でのみ利用可能です)。
+- エリアに対して [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) が選択されている (Webインスペクターはこの設定でのみ利用可能です)。
 - エリアに対して [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている (インスペクターを呼び出すのにこのメニューを使用します)。
 - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
 
@@ -197,7 +197,7 @@ Webエリア内に Webインスペクターを表示するには、次の条件�
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#CSSクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド) - [進捗状況変数](properties_WebArea.md#進捗状況変数) - [URL](properties_WebArea.md#url) - [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) 
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド) - [進捗状況変数](properties_WebArea.md#進捗状況変数) - [URL](properties_WebArea.md#url) - [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) 
 
 
 
