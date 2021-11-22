@@ -44,6 +44,6 @@ Se não tiver marcado a opção de integração automática de arquivo de histó
 
 ![](assets/en/Backup/backup08.png)
 
-> In order for this mechanism to work, 4D must be able to access the log file in its current location.
+> Para que esse mecanismo funcione, 4D deve poder acessar o arquivo de histórico em seu local atual.
 
-You can choose whether or not to integrate the current log file. Not integrating the current log file allows you to avoid reproducing errors made in the data.
+Pode escolher se quer ou não integrar o arquivo de histórico atual. Não integrar o arquivo de histórico atual permite evitar reproduzir erros feitos nos dados.
