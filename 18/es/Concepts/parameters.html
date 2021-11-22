@@ -104,7 +104,7 @@
 <p>Por ejemplo, la siguiente línea es una sentencia que utiliza la función integrada, <code>Length</code>, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por <code>Length</code> en una variable llamada <em>MyLength</em>. Esta es la instrucción:</p>
 <pre><code class="hljs css language-4d">MyLength:=<span class="hljs-function">Length</span>(<span class="hljs-string">"How did I get here?"</span>)
 </code></pre>
-<p>Any subroutine can return a value. El valor a devolver se pone en la variable local <code>$0</code>.</p>
+<p>Toda subrutina puede devolver un valor. El valor a devolver se pone en la variable local <code>$0</code>.</p>
 <p>Por ejemplo, la siguiente función, llamada <code>Uppercase4</code>, devuelve una cadena con los cuatro primeros caracteres de la cadena que se han pasado en mayúsculas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$0</span>:=<span class="hljs-function">Uppercase</span>(<span class="hljs-function">Substring</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">4</span>))+<span class="hljs-function">Substring</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">5</span>)
 </code></pre>

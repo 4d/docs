@@ -72,66 +72,66 @@
 <li>Um valor de Hora pode ser tratado como um número. O número retornado de uma Hora será o número de segundos desde a maia noite (00:00:00) contidos nesse valor de hora.</li>
 </ul>
 <p><strong>Nota:</strong> no manual de referência da linguagem 4D, os parâmetros de tipo Hora nas descrições dos comandos são chamados Hora, exceto quando for indicado o contrário.</p>
-<h2><a class="anchor" aria-hidden="true" id="time-literals"></a><a href="#time-literals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time literals</h2>
+<h2><a class="anchor" aria-hidden="true" id="constantes-literais-de-tipo-hora"></a><a href="#constantes-literais-de-tipo-hora" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constantes literais de tipo hora</h2>
 <p>Uma constante hora está rodeada por sinais de interrogação (?....?).</p>
 <p>Uma constante hora se ordena hora:minuto:segundo, com dois pontos (:) para separar cada parte. As horas são especificadas no formato de 24 horas.</p>
 <p>Aqui são exemplos de constantes de tipo hora:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-literal">?00:00:00?</span> `<span class="hljs-function"> midnight</span>
+<pre><code class="hljs css language-4d"><span class="hljs-literal">?00:00:00?</span> `<span class="hljs-function"> meia noite</span>
 <span class="hljs-literal">?09:30:00?</span> ` <span class="hljs-number">9</span>:<span class="hljs-number">30</span><span class="hljs-function"> am</span>
-<span class="hljs-literal">?13:01:59?</span> ` <span class="hljs-number">1</span> pm, <span class="hljs-number">1</span> minute,<span class="hljs-function"> and 59 seconds</span>
+<span class="hljs-literal">?13:01:59?</span> ` <span class="hljs-number">1</span> pm, <span class="hljs-number">1</span> minuto,<span class="hljs-function"> e 59 segundos</span>
 </code></pre>
 <p>Uma hora nula se escreve ?00:00:00?</p>
 <p><strong>Dica:</strong> o Editor de métodos inclui um acesso direto para introduzir uma hora nula. Para escrever uma hora nula, introduza o sinal de interrogação (?) e aperte Enter.</p>
-<h2><a class="anchor" aria-hidden="true" id="time-operators"></a><a href="#time-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time operators</h2>
+<h2><a class="anchor" aria-hidden="true" id="operadores-de-horas"></a><a href="#operadores-de-horas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operadores de horas</h2>
 <table>
 <thead>
-<tr><th>Operation</th><th>Sintaxe</th><th>Returns</th><th>Expression</th><th>Value</th></tr>
+<tr><th>Operação</th><th>Sintaxe</th><th>Retorna</th><th>Expressão</th><th>Valor</th></tr>
 </thead>
 <tbody>
-<tr><td>Addition</td><td>Time + Time</td><td>Hora</td><td>?02:03:04? + ?01:02:03?</td><td>?03:05:07?</td></tr>
-<tr><td>Subtraction</td><td>Time – Time</td><td>Hora</td><td>?02:03:04? – ?01:02:03?</td><td>?01:01:01?</td></tr>
-<tr><td>Addition</td><td>Time + Number</td><td>Número</td><td>?02:03:04? + 65</td><td>7449</td></tr>
-<tr><td>Subtraction</td><td>Time – Number</td><td>Número</td><td>?02:03:04? – 65</td><td>7319</td></tr>
-<tr><td>Multiplication</td><td>Time * Number</td><td>Número</td><td>?02:03:04? * 2</td><td>14768</td></tr>
-<tr><td>Division</td><td>Time / Number</td><td>Número</td><td>?02:03:04? / 2</td><td>3692</td></tr>
-<tr><td>Longint division</td><td>Time \ Number</td><td>Número</td><td>?02:03:04? \ 2</td><td>3692</td></tr>
-<tr><td>Modulo</td><td>Time % Time</td><td>Hora</td><td>?20:10:00? % ?04:20:00?</td><td>?02:50:00?</td></tr>
-<tr><td>Modulo</td><td>Time % Number</td><td>Número</td><td>?02:03:04? % 2</td><td>0</td></tr>
-<tr><td>Equality</td><td>Time = Time</td><td>Booleano</td><td>?01:02:03? = ?01:02:03?</td><td>True</td></tr>
+<tr><td>Adição</td><td>Hora + Hora</td><td>Hora</td><td>?02:03:04? + ?01:02:03?</td><td>?03:05:07?</td></tr>
+<tr><td>Subtração</td><td>Hora – Hora</td><td>Hora</td><td>?02:03:04? – ?01:02:03?</td><td>?01:01:01?</td></tr>
+<tr><td>Adição</td><td>Hora + Número</td><td>Número</td><td>?02:03:04? + 65</td><td>7449</td></tr>
+<tr><td>Subtração</td><td>Hora – Número</td><td>Número</td><td>?02:03:04? – 65</td><td>7319</td></tr>
+<tr><td>Multiplicação</td><td>Hora * Número</td><td>Número</td><td>?02:03:04? * 2</td><td>14768</td></tr>
+<tr><td>Divisão</td><td>Hora / Número</td><td>Número</td><td>?02:03:04? / 2</td><td>3692</td></tr>
+<tr><td>Divisão inteira</td><td>Hora \ Número</td><td>Número</td><td>?02:03:04? \ 2</td><td>3692</td></tr>
+<tr><td>Módulo</td><td>Hora % Hora</td><td>Hora</td><td>?20:10:00? % ?04:20:00?</td><td>?02:50:00?</td></tr>
+<tr><td>Módulo</td><td>Hora % Número</td><td>Número</td><td>?02:03:04? % 2</td><td>0</td></tr>
+<tr><td>Igual</td><td>Hora = Hora</td><td>Booleano</td><td>?01:02:03? = ?01:02:03?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? = ?01:02:04?</td><td>False</td></tr>
-<tr><td>Inequality</td><td>Time # Time</td><td>Booleano</td><td>?01:02:03? # ?01:02:04?</td><td>True</td></tr>
+<tr><td>Desigualdade</td><td>Hora # Hora</td><td>Booleano</td><td>?01:02:03? # ?01:02:04?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? # ?01:02:03?</td><td>False</td></tr>
-<tr><td>Greater than</td><td>Time &gt; Time</td><td>Booleano</td><td>?01:02:04? &gt; ?01:02:03?</td><td>True</td></tr>
+<tr><td>Maior que</td><td>Hora &gt; Hora</td><td>Booleano</td><td>?01:02:04? &gt; ?01:02:03?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &gt; ?01:02:03?</td><td>False</td></tr>
-<tr><td>Less than</td><td>Time &lt; Time</td><td>Booleano</td><td>?01:02:03? &lt; ?01:02:04?</td><td>True</td></tr>
+<tr><td>Menor que</td><td>Hora &lt; Hora</td><td>Booleano</td><td>?01:02:03? &lt; ?01:02:04?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &lt; ?01:02:03?</td><td>False</td></tr>
-<tr><td>Greater than or equal to</td><td>Time &gt;= Time</td><td>Booleano</td><td>?01:02:03? &gt;=?01:02:03?</td><td>True</td></tr>
+<tr><td>Maior ou igual que</td><td>Hora &gt;= Hora</td><td>Booleano</td><td>?01:02:03? &gt;=?01:02:03?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &gt;=?01:02:04?</td><td>False</td></tr>
-<tr><td>Less than or equal to</td><td>Time &lt;= Time</td><td>Booleano</td><td>?01:02:03? &lt;=?01:02:03?</td><td>True</td></tr>
+<tr><td>Menor ou igual que</td><td>Hora &lt;= Hora</td><td>Booleano</td><td>?01:02:03? &lt;=?01:02:03?</td><td>True</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:04? &lt;=?01:02:03?</td><td>False</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h3>
+<h3><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 1</h3>
 <p>Para obter uma expressão de tipo hora a partir de uma expressão que combina uma expressão de hora com um número, utilize os comandos <code>Time</code> e <code>Time string</code>.</p>
 <p>Pode combinar expressões dos tipos hora e número utilizando as funções <code>Time</code> ou <code>Current time</code>:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//The following line assigns to $vlSeconds the number of seconds   </span>
-    <span class="hljs-comment">//that will be elapsed between midnight and one hour from now</span>
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">//A linha abaixo atribuir a $vlSeconds o número de segundos   </span>
+    <span class="hljs-comment">//que estão entre meia noite e uma hora a partir de agora</span>
 <span class="hljs-variable">$vlSeconds</span>:=Current time+<span class="hljs-number">3600</span>
-    <span class="hljs-comment">//The following line assigns to $vHSoon the time it will be in one hour</span>
+    <span class="hljs-comment">//A linha abaixo atribui a $vHSoon a hora que será em uma hora de tempo</span>
 <span class="hljs-variable">$vhSoon</span>:=<span class="hljs-function">Time</span>(Current time+<span class="hljs-number">3600</span>)
 </code></pre>
 <p>A segunda linha pode ser escrita de forma mais simples:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// The following line assigns to $vHSoon the time it will be in one hour</span>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//A linha abaixo atribui a $vHSoon a hora que será em uma hora</span>
  <span class="hljs-variable">$vhSoon</span>:=Current time+<span class="hljs-literal">?01:00:00?</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h3>
+<h3><a class="anchor" aria-hidden="true" id="exemplo-2"></a><a href="#exemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 2</h3>
 <p>O operador Modulo pode ser usado, mais concretamente, para somar tempos que considerem o formato de 24 horas:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$t1</span>:=<span class="hljs-literal">?23:00:00?</span> <span class="hljs-comment">// It is 23:00 p.m.</span>
-  <span class="hljs-comment">// We want to add 2 and a half hours</span>
-<span class="hljs-variable">$t2</span>:=<span class="hljs-variable">$t1</span> +<span class="hljs-literal">?02:30:00?</span> <span class="hljs-comment">// With a simple addition, $t2 is ?25:30:00?</span>
-<span class="hljs-variable">$t2</span>:=(<span class="hljs-variable">$t1</span> +<span class="hljs-literal">?02:30:00?</span>)%<span class="hljs-literal">?24:00:00?</span> <span class="hljs-comment">// $t2 is ?01:30:00? and it is 1:30 a.m. the next morning</span>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$t1</span>:=<span class="hljs-literal">?23:00:00?</span> <span class="hljs-comment">// São 23:00 p.m.</span>
+  <span class="hljs-comment">// Queremos adicionar 2 horas e meia</span>
+<span class="hljs-variable">$t2</span>:=<span class="hljs-variable">$t1</span> +<span class="hljs-literal">?02:30:00?</span> <span class="hljs-comment">// Com uma simples adição, $t2 é?25:30:00?</span>
+<span class="hljs-variable">$t2</span>:=(<span class="hljs-variable">$t1</span> +<span class="hljs-literal">?02:30:00?</span>)%<span class="hljs-literal">?24:00:00?</span> <span class="hljs-comment">// $t2 é ?01:30:00? e é 1:30 a.m. a manhã seguinte</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/string.html"><span class="arrow-prev">← </span><span>String</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/variant.html"><span>Variant</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#time-literals">Time literals</a></li><li><a href="#time-operators">Time operators</a><ul class="toc-headings"><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/string.html"><span class="arrow-prev">← </span><span>String</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/variant.html"><span>Variant</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#constantes-literais-de-tipo-hora">Constantes literais de tipo hora</a></li><li><a href="#operadores-de-horas">Operadores de horas</a><ul class="toc-headings"><li><a href="#exemplo-1">Exemplo 1</a></li><li><a href="#exemplo-2">Exemplo 2</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
