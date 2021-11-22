@@ -359,12 +359,12 @@
 <p>Email オブジェクト。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1"></a><a href="#例題-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <p>テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_BLOB</span>(<span class="hljs-variable">$mime</span>)
-<span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$mail</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mime</span>: Blob<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$mail</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>: Object
 
 <span class="hljs-variable">$mime</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE/Mails/templateMail.txt"</span>).<span class="hljs-function">getContent</span>())
 
-<span class="hljs-variable">$mail</span>:=[#current_title_incode](<span class="hljs-variable">$mime</span>)
+<span class="hljs-variable">$mail</span>:=<span class="hljs-function">MAIL Convert from MIME</span>(<span class="hljs-variable">$mime</span>)
 <span class="hljs-variable">$mail</span>.to:=<span class="hljs-string">"smith@mail.com"</span>
 <span class="hljs-variable">$mail</span>.subject:=<span class="hljs-string">"Hello world"</span>
 
@@ -379,8 +379,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <p>この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$mime</span>)
-<span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$email</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mime</span>: Blob<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$email</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>: Object
 
 <span class="hljs-comment">// 4D Write Pro ドキュメントを MIME に書き出します</span>
 <span class="hljs-function">WP EXPORT VARIABLE</span>(WParea;<span class="hljs-variable">$mime</span>;wk mime html)
@@ -443,8 +443,8 @@
 </table>
 <p><em>options</em> 引数が省略された場合、ヘッダーおよび本文においては mail mode UTF8 設定が使用されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-3"></a><a href="#例題-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$mail</span>)
-<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$mime</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mail</span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$mime</span>: Text
 <span class="hljs-variable">$mail</span>:=New object
 
 <span class="hljs-comment">// メール作成</span>
@@ -457,7 +457,7 @@
 <span class="hljs-variable">$mail</span>.to.<span class="hljs-function">push</span>(<span class="hljs-function">New object </span>(<span class="hljs-string">"email"</span>;<span class="hljs-string">"test@4d.com"</span>))
 
 <span class="hljs-comment">// Email オブジェクトを MIME に変換します</span>
-<span class="hljs-variable">$mime</span>:=[#current_title_incode](<span class="hljs-variable">$mail</span>)
+<span class="hljs-variable">$mime</span>:=<span class="hljs-function">MAIL Convert to MIME</span>(<span class="hljs-variable">$mail</span>)
 
 <span class="hljs-comment">// $mime の中身:</span>
 <span class="hljs-comment">// MIME-Version: 1.0</span>
