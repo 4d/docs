@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>WebServer · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](/docs/19/es/WebServer/webServerObject.html) overview). This class is available from the `4D` class store."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="WebServer · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](/docs/19/es/WebServer/webServerObject.html) overview). This class is available from the `4D` class store."/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/API/WebServerClass.html">English</a></li><li><a href="/docs/19/ja/API/WebServerClass.html">日本語</a></li><li><a href="/docs/19/de/API/WebServerClass.html">Deutsch</a></li><li><a href="/docs/19/fr/API/WebServerClass.html">Français</a></li><li><a href="/docs/19/pt/API/WebServerClass.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>WebServer · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="La API de la clase `WebServer` permite iniciar y supervisar un servidor web para la aplicación principal (host), así como para cada componente alojado (ver la descripción general de [Objeto servidor web](/docs/19/es/WebServer/webServerObject.html)). Esta clase está disponible en el almacén de clases de `4D`."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="WebServer · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="La API de la clase `WebServer` permite iniciar y supervisar un servidor web para la aplicación principal (host), así como para cada componente alojado (ver la descripción general de [Objeto servidor web](/docs/19/es/WebServer/webServerObject.html)). Esta clase está disponible en el almacén de clases de `4D`."/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/API/WebServerClass.html">English</a></li><li><a href="/docs/19/ja/API/WebServerClass.html">日本語</a></li><li><a href="/docs/19/de/API/WebServerClass.html">Deutsch</a></li><li><a href="/docs/19/fr/API/WebServerClass.html">Français</a></li><li><a href="/docs/19/pt/API/WebServerClass.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,51 +66,51 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/API/WebServerClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">WebServer</h1></header><article><div><span><p>The <code>WebServer</code> class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the <a href="/docs/19/es/WebServer/webServerObject.html">Web Server object</a> overview). This class is available from the <code>4D</code> class store.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/API/WebServerClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">WebServer</h1></header><article><div><span><p>La API de la clase <code>WebServer</code> permite iniciar y supervisar un servidor web para la aplicación principal (host), así como para cada componente alojado (ver la descripción general de <a href="/docs/19/es/WebServer/webServerObject.html">Objeto servidor web</a>). Esta clase está disponible en el almacén de clases de <code>4D</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="objeto-servidor-web"></a><a href="#objeto-servidor-web" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto servidor web</h3>
-<p>Web server objects are instantiated with the <a href="#web-server"><code>WEB Server</code></a> command.</p>
-<p>They provide the following properties and functions:</p>
+<p>Los objetos del servidor web se instancian con el comando <a href="#web-server"><code>WEB Server</code></a>.</p>
+<p>Ofrecen las siguientes propiedades y funciones:</p>
 <h3><a class="anchor" aria-hidden="true" id="resumen"></a><a href="#resumen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resumen</h3>
 <table>
 <thead>
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#accesskeydefined"><strong>.accessKeyDefined</strong> : Boolean</a><p>    true if an access key is defined in the settings of the web server</td></tr>
-<tr><td><a href="#certificatefolder"><strong>.certificateFolder</strong> : Text</a><p>    folder where the certificate files are located</td></tr>
-<tr><td><a href="#characterset"><strong>.characterSet</strong> : Number<br><strong>.characterSet</strong> : Text</a><p>    character set that the 4D Web Server should use to communicate with browsers connecting to the application</td></tr>
-<tr><td><a href="#ciphersuite"><strong>.cipherSuite</strong> : Text</a><p>    cipher list used for the secure protocol</td></tr>
+<tr><td><a href="#accesskeydefined"><strong>.accessKeyDefined</strong> : Boolean</a><p>    true si se define una llave de acceso en la configuración del servidor web</td></tr>
+<tr><td><a href="#certificatefolder"><strong>.certificateFolder</strong> : Text</a><p>    donde se encuentran los archivos de los certificados</td></tr>
+<tr><td><a href="#characterset"><strong>.characterSet</strong> : Number<br><strong>.characterSet</strong> : Text</a><p>    conjunto de caracteres que el Servidor Web 4D debe utilizar para comunicarse con los navegadores que se conectan a la aplicación</td></tr>
+<tr><td><a href="#ciphersuite"><strong>.cipherSuite</strong> : Text</a><p>    utilizada para el protocolo seguro</td></tr>
 <tr><td><a href="#corsenabled"><strong>.CORSEnabled</strong> : Boolean</a><p>    CORS (<em>Cross-origin resource sharing</em>) service status for the web server</td></tr>
 <tr><td><a href="#corssettings"><strong>.CORSSettings</strong> : Collection</a><p>    list of allowed hosts and methods for the CORS service</td></tr>
 <tr><td><a href="#debuglog"><strong>.debugLog</strong> : Number</a><p>    status of the HTTP request log file</td></tr>
-<tr><td><a href="#defaulthomepage"><strong>.defaultHomepage</strong> : Text</a><p>    name of the default home page</td></tr>
+<tr><td><a href="#defaulthomepage"><strong>.defaultHomepage</strong> : Text</a><p>    nombre de la página de inicio por defecto</td></tr>
 <tr><td><a href="#hstsenabled"><strong>.HSTSEnabled</strong> : Boolean</a><p>    HTTP Strict Transport Security (HSTS) status</td></tr>
-<tr><td><a href="#hstsmaxage"><strong>.HSTSMaxAge</strong> : Number</a><p>    maximum length of time (in seconds) that HSTS is active for each new client connection</td></tr>
-<tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)</td></tr>
-<tr><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    size threshold (bytes) for requests below which exchanges should not be compressed</td></tr>
-<tr><td><a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP protocol state</td></tr>
-<tr><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    listening IP port number for HTTP</td></tr>
-<tr><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activation of <code>HTTP TRACE</code></td></tr>
-<tr><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    HTTPS protocol state</td></tr>
+<tr><td><a href="#hstsmaxage"><strong>.HSTSMaxAge</strong> : Number</a><p>    máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente</td></tr>
+<tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    nivel de compresión para todos los intercambios HTTP comprimidos para el servidor HTTP 4D (peticiones del cliente o respuestas del servidor)</td></tr>
+<tr><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos</td></tr>
+<tr><td><a href="#httpenabled"><strong>.HTTPEnabled</strong> : Boolean</a><p>    HTTP</td></tr>
+<tr><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    número de puerto IP de escucha para HTTP</td></tr>
+<tr><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activación de <code>HTTP TRACE</code></td></tr>
+<tr><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    </td></tr>
 <tr><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS</td></tr>
-<tr><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    life duration (in minutes) of the inactive legacy session processes</td></tr>
-<tr><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    life duration (in minutes) of inactive legacy sessions (duration set in cookie)</td></tr>
-<tr><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    IP address on which the 4D Web Server will receive HTTP requests</td></tr>
-<tr><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    web server running state</td></tr>
-<tr><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True if legacy sessions are enabled in the web server, False otherwise</td></tr>
+<tr><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    duración (en minutos) de los procesos de sesión heredados inactivos</td></tr>
+<tr><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    duración (en minutos) de las sesiones heredadas inactivas (duración establecida en la cookie)</td></tr>
+<tr><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    dirección IP en la que el servidor web 4D recibirá las peticiones HTTP</td></tr>
+<tr><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    estado de ejecución del servidor web</td></tr>
+<tr><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True si las sesiones heredadas están activadas en el servidor web, False en caso contrario</td></tr>
 <tr><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value</td></tr>
-<tr><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    maximum number of concurrent web processes supported by the web server</td></tr>
-<tr><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process</td></tr>
-<tr><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    maximum number of simultaneous legacy sessions</td></tr>
-<tr><td><a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    minimum TLS version accepted for connections</td></tr>
-<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    name of the web server application</td></tr>
-<tr><td><a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    version of the OpenSSL library used</td></tr>
-<tr><td><a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS availability on the server</td></tr>
-<tr><td><a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    path of web server root folder</td></tr>
-<tr><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True if scalable sessions are used in the web server, and False otherwise</td></tr>
+<tr><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    número máximo de procesos web concurrentes que soporta el servidor web</td></tr>
+<tr><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar</td></tr>
+<tr><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    número máximo de sesiones simultáneas legacy</td></tr>
+<tr><td><a href="#mintlsversion"><strong>.minTLSVersion</strong> : Number</a><p>    versión TLS mínima aceptada para las conexiones</td></tr>
+<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    nombre de la aplicación del servidor web</td></tr>
+<tr><td><a href="#opensslversion"><strong>.openSSLVersion</strong> : Text</a><p>    versión de la librería OpenSSL utilizada</td></tr>
+<tr><td><a href="#perfectforwardsecrecy"><strong>.perfectForwardSecrecy</strong> : Boolean</a><p>    PFS en el servidor</td></tr>
+<tr><td><a href="#rootfolder"><strong>.rootFolder</strong> : Text</a><p>    ruta de la carpeta raíz del servidor web</td></tr>
+<tr><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True si las sesiones escalables son utilizadas en el servidor web, False en caso contrario</td></tr>
 </tbody>
 </table>
-<p><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; field of the session cookie| |<a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    name of the cookie used for storing the session ID| |<a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; field of the session cookie| |<a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot; session cookie value| |<a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies| |<a href="#start"><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    starts the web server on which it is applied| |<a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied|</p>
+<p><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; de la cookie de sesión| |<a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    nombre de la cookie utilizada para almacenar el ID de sesión| |<a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; de la cookie de sesión| |<a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot;| |<a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies| |<a href="#start"><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    starts the web server on which it is applied| |<a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied|</p>
 <h2><a class="anchor" aria-hidden="true" id="web-server"></a><a href="#web-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB Server</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -129,26 +129,26 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>option</td><td>Integer</td><td>-&gt;</td><td>Web server to get (default if omitted = <code>Web server database</code>)</td></tr>
+<tr><td>option</td><td>Integer</td><td>-&gt;</td><td>Servidor web a obtener (por defecto si se omite = <code>Web server database</code>)</td></tr>
 <tr><td>Resultado</td><td>4D.WebServer</td><td>&lt;-</td><td>Objeto servidor web</td></tr>
 </tbody>
 </table>
-<p>The <code>WEB Server</code> command returns the default Web server object, or the Web server object defined through the <em>option</em> parameter.</p>
-<p>By default, if the <em>option</em> parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the <em>option</em> parameter:</p>
+<p>El comando <code>WEB Server</code> devuelve el objeto servidor web por defecto, o el objeto servidor web definido a través del parámetro <em>option</em>.</p>
+<p>Por defecto, si se omite el parámetro <em>option</em>, el comando devuelve una referencia al servidor web de la base de datos, es decir, al servidor web por defecto. Para designar el servidor web a devolver, puede pasar una de las siguientes constantes en el parámetro <em>option</em>:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Web server database</code></td><td>1</td><td>Current database Web server (default if omitted)</td></tr>
-<tr><td><code>Web server host database</code></td><td>2</td><td>Web server of the host database of a component</td></tr>
-<tr><td><code>Web server receiving request</code></td><td>3</td><td>Web server that received the request (target Web server)</td></tr>
+<tr><td><code>Web server database</code></td><td>1</td><td>Servidor web de la base actual (por defecto si se omite)</td></tr>
+<tr><td><code>Web server host database</code></td><td>2</td><td>Servidor web de la base local de un componente</td></tr>
+<tr><td><code>Web server receiving request</code></td><td>3</td><td>Servidor web que ha recibido la solicitud (servidor web objetivo)</td></tr>
 </tbody>
 </table>
-<p>The returned Web server object contains the current values of the Web server properties.</p>
+<p>El objeto servidor web devuelto contiene los valores actuales de las propiedades del servidor web.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>From your component, you want to know if the Web server of the host database is started:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// Method of a component</span><span class="hljs-keyword">
+<p>Desde su componente, quiere saber si el servidor web de la base de datos anfitriona está iniciado:</p>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// Método de un componente</span><span class="hljs-keyword">
  var</span> <span class="hljs-variable">$hostWS </span>: 4D.WebServer
  <span class="hljs-variable">$hostWS</span>:=<span class="hljs-function">WEB Server</span>(Web server host database)<span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$hostWS</span>.isRunning)
@@ -172,22 +172,22 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Collection of the available Web server objects</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Colección de los objetos del servidor web disponibles</td></tr>
 </tbody>
 </table>
 <p>El comando <code>WEB Server list</code> devuelve una colección de todos los objetos del servidor web disponibles en la aplicación 4D.</p>
-<p>A 4D application can contain anywhere from one to several Web servers:</p>
+<p>Una aplicación 4D puede contener de uno a varios servidores web:</p>
 <ul>
-<li>one Web server for the host database (default Web server)</li>
-<li>one Web server for each component.</li>
+<li>un servidor web para la base de datos del host (servidor web por defecto)</li>
+<li>un servidor web para cada componente.</li>
 </ul>
-<p>All available Web servers are returned by the <code>WEB Server list</code> command, whether they are actually running or not.</p>
+<p>El comando <code>WEB Server list</code> devuelve todos los servidores web disponibles, estén o no en funcionamiento.</p>
 <blockquote>
-<p>The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the <a href="#web-server"><code>WEB Server</code></a> command.</p>
+<p>El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. Por otro lado, cada componente servidor web que se quiera utilizar debe ser instanciado utilizando el comando <a href="#web-server"><code>WEB Server</code></a>.</p>
 </blockquote>
-<p>You can use the <a href="#name">.name</a> property of the Web server object to identify the project or component to which each Web server object in the list is attached.</p>
+<p>Puede utilizar la propiedad <a href="#nombre">.name</a> del objeto servidor web para identificar el proyecto o componente al que está unido cada objeto servidor web de la lista.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>We want to know how many running web servers are available:</p>
+<p>Queremos saber cuántos servidores web en funcionamiento hay disponibles:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$wSList </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vRun </span>: Integer
 
@@ -198,13 +198,13 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="accesskeydefined"></a><a href="#accesskeydefined" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.accessKeyDefined</h2>
 <p><strong>.accessKeyDefined</strong> : Boolean</p>
-<p>The <strong>.accessKeyDefined</strong> property contains true if an access key is defined in the settings of the web server. This property is used by the WebAdmin web server to validate the security configuration of the administration interface.</p>
+<p>La propiedad <strong>.accessKeyDefined</strong> contiene true si se define una llave de acceso en la configuración del servidor web. Esta propiedad es utilizada por el servidor web de WebAdmin para validar la configuración de seguridad de la interfaz de administración.</p>
 <h2><a class="anchor" aria-hidden="true" id="certificatefolder"></a><a href="#certificatefolder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.certificateFolder</h2>
 <p><strong>.certificateFolder</strong> : Text</p>
-<p>Path of the folder where the certificate files are located. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter of the <a href="#start"><code>.start()</code></a> function, it can be a <a href="/docs/19/es/API/FolderClass.html"><code>Folder</code> object</a>.</p>
+<p>Ruta de la carpeta donde se encuentran los archivos de los certificados. La ruta se formatea en la ruta completa POSIX utilizando filesystems. Cuando se utiliza esta propiedad en el parámetro <code>settings</code> de la función <a href="#start"><code>.start()</code></a>, puede ser un objeto <a href="/docs/19/es/API/FolderClass.html"><code>Folder</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="characterset"></a><a href="#characterset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.characterSet</h2>
 <p><strong>.characterSet</strong> : Number<br><strong>.characterSet</strong> : Text</p>
-<p>The character set that the 4D Web Server should use to communicate with browsers connecting to the application. The default value actually depends on the language of the OS. Can be a MIBEnum integer or a Name string, identifiers <a href="http://www.iana.org/assignments/character-sets/character-sets.xhtml">defined by IANA</a>. Here is the list of identifiers corresponding to the character sets supported by the 4D Web Server:</p>
+<p>El conjunto de caracteres que el Servidor Web 4D debe utilizar para comunicarse con los navegadores que se conectan a la aplicación. El valor por defecto depende del lenguaje del sistema operativo. Puede ser un entero MIBEnum o una cadena Name, identificadores <a href="http://www.iana.org/assignments/character-sets/character-sets.xhtml">definidos por IANA</a>. Aquí está la lista de identificadores correspondientes a los conjuntos de caracteres soportados por el servidor web 4D:</p>
 <ul>
 <li>4 = ISO-8859-1</li>
 <li>12 = ISO-8859-9</li>
@@ -222,7 +222,7 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="ciphersuite"></a><a href="#ciphersuite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.cipherSuite</h2>
 <p><strong>.cipherSuite</strong> : Text</p>
-<p>The cipher list used for the secure protocol. Sets the priority of ciphering algorithms implemented by the 4D web server. Can be a sequence of strings separated by colons (for example &quot;ECDHE-RSA-AES128-...&quot;). See the <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">ciphers page</a> on the OpenSSL site.</p>
+<p>La lista de cifrado utilizada para el protocolo seguro. Define la prioridad de los algoritmos de cifrado implementados por el servidor web de 4D. Puede ser una secuencia de cadenas separadas por dos puntos (por ejemplo &quot;ECDHE-RSA-AES128-...&quot;). Ver la <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">página de cifrados</a> en el sitio OpenSSL.</p>
 <h2><a class="anchor" aria-hidden="true" id="corsenabled"></a><a href="#corsenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.CORSEnabled</h2>
 <p><strong>.CORSEnabled</strong> : Boolean</p>
 <p>The CORS (<em>Cross-origin resource sharing</em>) service status for the web server. For security reasons, &quot;cross-domain&quot; requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see <code>CORSSettings</code> below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a &quot;403 - forbidden&quot; error response.</p>
@@ -252,47 +252,47 @@
 <p>The status of the HTTP request log file (HTTPDebugLog_nn.txt, stored in the &quot;Logs&quot; folder of the application -- nn is the file number).</p>
 <ul>
 <li>0 = desactivado</li>
-<li>1 = enabled without body parts (body size is provided in this case)</li>
-<li>3 = enabled with body parts in response only</li>
-<li>5 = enabled with body parts in request only</li>
-<li>7 = enabled with body parts in response and request</li>
+<li>1 = activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo)</li>
+<li>3 = activado con las partes del cuerpo en respuesta únicamente</li>
+<li>5 = activado con las partes del cuerpo en petición únicamente</li>
+<li>7 = activado con las partes del cuerpo en respuesta y petición</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="defaulthomepage"></a><a href="#defaulthomepage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.defaultHomepage</h2>
 <p><strong>.defaultHomepage</strong> : Text</p>
-<p>The name of the default home page or &quot;&quot; to not send the custom home page.</p>
+<p>El nombre de la página de inicio por defecto o &quot;&quot; para no enviar la página de inicio personalizada.</p>
 <h2><a class="anchor" aria-hidden="true" id="hstsenabled"></a><a href="#hstsenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HSTSEnabled</h2>
 <p><strong>.HSTSEnabled</strong> : Boolean</p>
-<p>The HTTP Strict Transport Security (HSTS) status. HSTS allows the Web server to declare that browsers should only interact with it via secure HTTPS connections. Browsers will record the HSTS information the first time they receive a response from the web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the <code>HSTSMaxAge</code> property. HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow initial client connections.</p>
+<p>The HTTP Strict Transport Security (HSTS) status. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad <code>HSTSMaxAge</code>. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.</p>
 <h2><a class="anchor" aria-hidden="true" id="hstsmaxage"></a><a href="#hstsmaxage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HSTSMaxAge</h2>
 <p><strong>.HSTSMaxAge</strong> : Number</p>
-<p>The maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration.</p>
-<p>Default value: 63072000 (2 years).</p>
+<p>El máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente. Esta información se almacena del lado del cliente durante el tiempo especificado.</p>
+<p>Valor por defecto: 63072000 (2 años).</p>
 <h2><a class="anchor" aria-hidden="true" id="httpcompressionlevel"></a><a href="#httpcompressionlevel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPCompressionLevel</h2>
 <p><strong>.HTTPCompressionLevel</strong> : Number</p>
-<p>The compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies). This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).</p>
+<p>El nivel de compresión para todos los intercambios HTTP comprimidos para el servidor HTTP 4D (peticiones del cliente o respuestas del servidor). Este selector permite optimizar los intercambios priorizando la velocidad de ejecución (menos compresión) o la cantidad de compresión (menos velocidad).</p>
 <p>Valores posibles:</p>
 <ul>
-<li>1 to 9 (where 1 is the fastest compression and 9 the highest).</li>
-<li>-1 = set a compromise between speed and rate of compression.</li>
+<li>1 a 9 (donde 1 es la compresión más rápida y 9 la más alta).</li>
+<li>-1 = definir un compromiso entre la velocidad y la tasa de compresión.</li>
 </ul>
-<p>Default = 1 (faster compression).</p>
+<p>Por defecto = 1 (compresión más rápida).</p>
 <h2><a class="anchor" aria-hidden="true" id="httpcompressionthreshold"></a><a href="#httpcompressionthreshold" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPCompressionThreshold</h2>
 <p><strong>.HTTPCompressionThreshold</strong> : Number</p>
-<p>The size threshold (bytes) for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.</p>
-<p>Default compression threshold = 1024 bytes</p>
+<p>El umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.</p>
+<p>Umbral de compresión por defecto = 1024 bytes</p>
 <h2><a class="anchor" aria-hidden="true" id="httpenabled"></a><a href="#httpenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPEnabled</h2>
 <p><strong>.HTTPEnabled</strong> : Boolean</p>
-<p>The HTTP protocol state.</p>
+<p>El estado del protocolo HTTP.</p>
 <h2><a class="anchor" aria-hidden="true" id="httpport"></a><a href="#httpport" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPPort</h2>
 <p><strong>.HTTPPort</strong> : Number</p>
-<p>The listening IP port number for HTTP.</p>
+<p>El número de puerto IP de escucha para HTTP.</p>
 <p>Por defecto = 80</p>
 <h2><a class="anchor" aria-hidden="true" id="httptrace"></a><a href="#httptrace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPTrace</h2>
 <p><strong>.HTTPTrace</strong> : Boolean</p>
-<p>The activation of <code>HTTP TRACE</code>. For security reasons, by default the Web server rejects <code>HTTP TRACE</code> requests with an error 405. When enabled, the web server replies to <code>HTTP TRACE</code> requests with the request line, header, and body.</p>
+<p>La activación de <code>HTTP TRACE</code>. Por razones de seguridad, por defecto el servidor web rechaza las peticiones <code>HTTP TRACE</code> con un error 405. Cuando se activa, el servidor web responde a las peticiones <code>HTTP TRACE</code> con la línea de petición, el encabezado y el cuerpo.</p>
 <h2><a class="anchor" aria-hidden="true" id="httpsenabled"></a><a href="#httpsenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPSEnabled</h2>
 <p><strong>.HTTPSEnabled</strong> : Boolean
-The HTTPS protocol state.</p>
+El estado del protocoloHTTPS.</p>
 <h2><a class="anchor" aria-hidden="true" id="httpsport"></a><a href="#httpsport" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPSPort</h2>
 <p><strong>.HTTPSPort</strong> : Number
 The listening IP port number for HTTPS.</p>
@@ -300,57 +300,57 @@ The listening IP port number for HTTPS.</p>
 <h2><a class="anchor" aria-hidden="true" id="inactiveprocesstimeout"></a><a href="#inactiveprocesstimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.inactiveProcessTimeout</h2>
 <p><strong>.inactiveProcessTimeout</strong> : Number</p>
 <blockquote>
-<p>This property is not returned in <a href="#scalablesession">scalable sessions mode</a>.</p>
+<p>Esta propiedad no se devuelve en <a href="#scalablesession">modo sesiones escalables</a>.</p>
 </blockquote>
-<p>The life duration (in minutes) of the inactive legacy session processes. At the end of the timeout, the process is killed on the server, the <code>On Web Legacy Close Session</code> database method is called, then the legacy session context is destroyed.</p>
+<p>La duración (en minutos) de los procesos de sesión heredados inactivos. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base <code>On Web Legacy Close Session</code> y se destruye el contexto de la sesión heredada.</p>
 <p>Por defecto = 480 minutos</p>
 <h2><a class="anchor" aria-hidden="true" id="inactivesessiontimeout"></a><a href="#inactivesessiontimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.inactiveSessionTimeout</h2>
 <p><strong>.inactiveSessionTimeout</strong> : Number</p>
 <blockquote>
-<p>This property is not returned in <a href="#scalablesession">scalable sessions mode</a>.</p>
+<p>Esta propiedad no se devuelve en <a href="#scalablesession">modo sesiones escalables</a>.</p>
 </blockquote>
-<p>The life duration (in minutes) of inactive legacy sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.</p>
+<p>La duración (en minutos) de las sesiones heredadas inactivas (duración establecida en la cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.</p>
 <p>Por defecto = 480 minutos</p>
 <h2><a class="anchor" aria-hidden="true" id="ipaddresstolisten"></a><a href="#ipaddresstolisten" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.IPAddressToListen</h2>
 <p><strong>.IPAddressToListen</strong> : Text</p>
-<p>The IP address on which the 4D Web Server will receive HTTP requests. By default, no specific address is defined. Both IPv6 string formats and IPv4 string formats are supported.</p>
+<p>La dirección IP en la que el servidor web 4D recibirá las peticiones HTTP. Por defecto, no se define ninguna dirección específica. Se soportan tanto los formatos de cadena IPv6 como los IPv4.</p>
 <h2><a class="anchor" aria-hidden="true" id="isrunning"></a><a href="#isrunning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isRunning</h2>
 <p><strong>.isRunning</strong> : Boolean</p>
 <p><em>Propiedad de sólo lectura</em></p>
-<p>The web server running state.</p>
+<p>El estado de ejecución del servidor web.</p>
 <h2><a class="anchor" aria-hidden="true" id="keepsession"></a><a href="#keepsession" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.keepSession</h2>
 <p><strong>.keepSession</strong> : Boolean</p>
-<p>True if legacy sessions are enabled in the web server, False otherwise.</p>
+<p>True si las sesiones heredadas están activadas en el servidor web, False en caso contrario.</p>
 <h5><a class="anchor" aria-hidden="true" id="ver-también"></a><a href="#ver-también" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también:</h5>
 <p><a href="#scalablesession">.scalableSession</a></p>
 <h2><a class="anchor" aria-hidden="true" id="logrecording"></a><a href="#logrecording" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.logRecording</h2>
 <p><strong>.logRecording</strong> : Number</p>
 <p>The log requests (logweb.txt) recording value.</p>
 <ul>
-<li>0 = Do not record (default)</li>
-<li>1 = Record in CLF format</li>
-<li>2 = Record in DLF format</li>
-<li>3 = Record in ELF format</li>
-<li>4 = Record in WLF format</li>
+<li>0 = No registrar (por defecto)</li>
+<li>1 = Registro en formato CLF</li>
+<li>2 = Registro en formato DLF</li>
+<li>3 = Registro en formato ELF</li>
+<li>4 = Registro en formato WLF</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="maxconcurrentprocesses"></a><a href="#maxconcurrentprocesses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.maxConcurrentProcesses</h2>
 <p><strong>.maxConcurrentProcesses</strong> : Number</p>
-<p>The maximum number of concurrent web processes supported by the web server. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.</p>
+<p>El número máximo de procesos web concurrentes que soporta el servidor web. Cuando se alcance este número (menos uno), 4D no creará ningún otro proceso y devolverá el estado HTTP 503 - Servicio no disponible a todas las nuevas peticiones.</p>
 <p>Valores posibles: 500000 - 2147483648</p>
 <p>Por defecto = 100</p>
 <h2><a class="anchor" aria-hidden="true" id="maxrequestsize"></a><a href="#maxrequestsize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.maxRequestSize</h2>
 <p><strong>.maxRequestSize</strong> : Number</p>
-<p>The maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process. Passing the maximum value (2147483647) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.</p>
-<p>Possible values: 500000 - 2147483647</p>
+<p>El tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.</p>
+<p>Valores posibles: 500000 - 2147483647</p>
 <h2><a class="anchor" aria-hidden="true" id="maxsessions"></a><a href="#maxsessions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.maxSessions</h2>
 <p><strong>.maxSessions</strong> : Number</p>
 <blockquote>
-<p>This property is not returned in <a href="#scalablesession">scalable sessions mode</a>.</p>
+<p>Esta propiedad no se devuelve en <a href="#scalablesession">modo sesiones escalables</a>.</p>
 </blockquote>
-<p>The maximum number of simultaneous legacy sessions. When you reach the limit, the oldest legacy session is closed (and <code>On Web Legacy Close Session</code> database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (<code>maxConcurrentProcesses</code> property, 100 by default)</p>
+<p>El número máximo de sesiones simultáneas legacy. Cuando se alcanza el límite, se cierra la sesión heredada más antigua (y se llama al método base <code>On Web Legacy Close Session</code>) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el número total de procesos web (propiedad <code>maxConcurrentProcesses</code>, 100 por defecto)</p>
 <h2><a class="anchor" aria-hidden="true" id="mintlsversion"></a><a href="#mintlsversion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.minTLSVersion</h2>
 <p><strong>.minTLSVersion</strong> : Number</p>
-<p>The minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.</p>
+<p>La versión TLS mínima aceptada para las conexiones. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.</p>
 <p>Valores posibles:</p>
 <ul>
 <li>1 = TLSv1_0</li>
@@ -358,37 +358,37 @@ The listening IP port number for HTTPS.</p>
 <li>3 = TLSv1_2 (por defecto)</li>
 <li>4 = TLSv1_3</li>
 </ul>
-<p>If modified, the server must be restarted to use the new value.</p>
+<p>Si se modifica, el servidor debe reiniciarse para utilizar el nuevo valor.</p>
 <h2><a class="anchor" aria-hidden="true" id="name"></a><a href="#name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.name</h2>
 <p><strong>.name</strong> : Text</p>
 <p><em>Propiedad de sólo lectura</em></p>
-<p>The name of the web server application.</p>
+<p>El nombre de la aplicación del servidor web.</p>
 <h2><a class="anchor" aria-hidden="true" id="opensslversion"></a><a href="#opensslversion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.openSSLVersion</h2>
 <p><strong>.openSSLVersion</strong> : Text</p>
 <p><em>Propiedad de sólo lectura</em></p>
-<p>The version of the OpenSSL library used.</p>
+<p>La versión de la librería OpenSSL utilizada.</p>
 <h2><a class="anchor" aria-hidden="true" id="perfectforwardsecrecy"></a><a href="#perfectforwardsecrecy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.perfectForwardSecrecy</h2>
 <p><strong>.perfectForwardSecrecy</strong> : Boolean</p>
 <p><em>Propiedad de sólo lectura</em></p>
-<p>The PFS availability on the server.</p>
+<p>La disponibilidad de PFS en el servidor.</p>
 <h2><a class="anchor" aria-hidden="true" id="rootfolder"></a><a href="#rootfolder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.rootFolder</h2>
 <p><strong>.rootFolder</strong> : Text</p>
-<p>The path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.</p>
+<p>La ruta de la carpeta raíz del servidor web. La ruta se formatea en la ruta completa POSIX utilizando filesystems. Cuando se utiliza esta propiedad en el parámetro <code>settings</code>, puede ser un objeto <code>Folder</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="scalablesession"></a><a href="#scalablesession" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.scalableSession</h2>
 <p><strong>.scalableSession</strong> : Boolean</p>
-<p>True if scalable sessions are used in the web server, and False otherwise.</p>
+<p>True si las sesiones escalables son utilizadas en el servidor web, False en caso contrario.</p>
 <h5><a class="anchor" aria-hidden="true" id="ver-también-1"></a><a href="#ver-también-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también:</h5>
 <p><a href="#keepsession">.keepSession</a></p>
 <h2><a class="anchor" aria-hidden="true" id="sessioncookiedomain"></a><a href="#sessioncookiedomain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionCookieDomain</h2>
 <p><strong>.sessionCookieDomain</strong> : Text</p>
-<p>The &quot;domain&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/*.4d.fr&quot; for this selector, the client will only send a cookie when the request is addressed to the domain &quot;.4d.fr&quot;, which excludes servers hosting external static data.</p>
+<p>El campo &quot;domain&quot; de la cookie de sesión. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor &quot;/*.4d.fr&quot; para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio &quot;.4d.fr&quot;, lo que excluye a los servidores que alojan datos estáticos externos.</p>
 <h2><a class="anchor" aria-hidden="true" id="sessioncookiename"></a><a href="#sessioncookiename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionCookieName</h2>
 <p><strong>.sessionCookieName</strong> : Text</p>
-<p>The name of the cookie used for storing the session ID.</p>
+<p>El nombre de la cookie utilizada para almacenar el ID de sesión.</p>
 <p><em>Propiedad de sólo lectura</em></p>
 <h2><a class="anchor" aria-hidden="true" id="sessioncookiepath"></a><a href="#sessioncookiepath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionCookiePath</h2>
 <p><strong>.sessionCookiePath</strong> : Text</p>
-<p>The &quot;path&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/4DACTION&quot; for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.</p>
+<p>El campo &quot;path&quot; de la cookie de sesión. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor &quot;/4DACTION&quot; para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.</p>
 <h2><a class="anchor" aria-hidden="true" id="sessioncookiesamesite"></a><a href="#sessioncookiesamesite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionCookieSameSite</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -401,18 +401,18 @@ The listening IP port number for HTTPS.</p>
 </table>
 <p></details></p>
 <p><strong>.sessionCookieSameSite</strong> : Text</p>
-<p>The &quot;SameSite&quot; session cookie value. Valores posibles (utilizando constantes):</p>
+<p>El valor de la cookie de sesión &quot;SameSite&quot;. Valores posibles (utilizando constantes):</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Web SameSite Strict</td><td>&quot;Strict&quot;</td><td><em>Default value</em> - Cookies are only sent in a first-party context</td></tr>
-<tr><td>Web SameSite Lax</td><td>&quot;Lax&quot;</td><td>Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link).</td></tr>
-<tr><td>Web SameSite None</td><td>&quot;None&quot;</td><td>Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.</td></tr>
+<tr><td>Web SameSite Strict</td><td>&quot;Strict&quot;</td><td><em>Valor por defecto</em> - Las cookies sólo se envían en un contexto de primera parte</td></tr>
+<tr><td>Web SameSite Lax</td><td>&quot;Lax&quot;</td><td>Las cookies también se envían en las sub-solicitudes entre sitios, pero sólo cuando un usuario está navegando hacia el sitio de origen (es decir, cuando sigue un enlace).</td></tr>
+<tr><td>Web SameSite None</td><td>&quot;None&quot;</td><td>Las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado.</td></tr>
 </tbody>
 </table>
-<p>See the <a href="/docs/19/es/WebServer/webServerConfig.html#session-cookie-samesite">Session Cookie SameSite</a> description for detailed information.</p>
+<p>Ver la descripción de <a href="/docs/19/es/WebServer/webServerConfig.html#session-cookie-samesite">Session Cookie SameSite</a> para obtener información detallada.</p>
 <h2><a class="anchor" aria-hidden="true" id="sessionipaddressvalidation"></a><a href="#sessionipaddressvalidation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionIPAddressValidation</h2>
 <p><strong>.sessionIPAddressValidation</strong> : Boolean</p>
 <blockquote>
@@ -494,7 +494,7 @@ The listening IP port number for HTTPS.</p>
 <p>This function resets the customized web settings defined for the session using the <em>settings</em> parameter of the <a href="#start"><code>.start()</code></a> function, if any.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To stop the database Web server:</p>
+<p>Para detener el servidor web de la base de datos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$webServer </span>: 4D.WebServer
 
  <span class="hljs-variable">$webServer</span>:=<span class="hljs-function">WEB Server</span>(Web server database)

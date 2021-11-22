@@ -192,16 +192,16 @@
 <tr><th>Nombre del campo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>SocketID</td><td>ID of socket used for communication</td></tr>
-<tr><td>PeerIP</td><td>IPv4 address of host (client)</td></tr>
-<tr><td>PeerPort</td><td>Port used by host (client)</td></tr>
-<tr><td>TimeStamp</td><td>Timestamp in milliseconds (since system startup)</td></tr>
-<tr><td>ConnectionID</td><td>Connection UUID (UUID of VTCPSocket used for communication)</td></tr>
-<tr><td>SequenceNumber</td><td>Unique and sequential operation number in the logging session</td></tr>
+<tr><td>SocketID</td><td>ID del socket utilizado para la comunicación</td></tr>
+<tr><td>PeerIP</td><td>Dirección IPv4 del host (cliente)</td></tr>
+<tr><td>PeerPort</td><td>Puerto utilizado por host (cliente)</td></tr>
+<tr><td>TimeStamp</td><td>Timestamp en milisegundos (desde el inicio del sistema)</td></tr>
+<tr><td>ConnectionID</td><td>Conncción UUID (UUID de VTCPSocket utilizada para comunicación)</td></tr>
+<tr><td>SequenceNumber</td><td>Número de operación único y secuencial en la sesión de historial</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="4ddebuglogtxt-standard"></a><a href="#4ddebuglogtxt-standard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DDebugLog.txt (standard)</h2>
-<p>This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.</p>
+<p>Este archivo de historial registra cada evento que se produce a nivel de programación 4D. El modo estándar ofrece una visión básica de los eventos.</p>
 <p>Como iniciar este historial:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">SET DATABASE PARAMETER</span>(Debug Log Recording;<span class="hljs-number">2</span>)  
 <span class="hljs-comment">//estándar, todos los procesos</span>
@@ -224,7 +224,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="4ddebuglogtxt-tabular"></a><a href="#4ddebuglogtxt-tabular" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DDebugLog.txt (tabular)</h2>
-<p>This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).</p>
+<p>Este archivo de historial registra cada evento que se produce a nivel de programación 4D en un formato compacto y con pestañas que incluye información adicional (en comparación con el formato estándar).</p>
 <p>Como iniciar este historial:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">SET DATABASE PARAMETER</span>(Debug Log Recording;<span class="hljs-number">2</span>+<span class="hljs-number">4</span>)  
 <span class="hljs-comment">//formato tabular extendido, todos los procesos</span>
@@ -243,16 +243,16 @@
 <tr><td>3</td><td>ProcessID</td><td>ID del Proceso</td></tr>
 <tr><td>4</td><td>unique_processID</td><td>ID único del proceso</td></tr>
 <tr><td>5</td><td>stack_level</td><td>Nivel de stack</td></tr>
-<tr><td>6</td><td>operation_type</td><td>Tipo de operación histórico. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado por el comando <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a> únicamente)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas <code>operation_type</code>, <code>operation</code> y <code>operation_parameters</code> tienen el mismo valor que el nivel de pila de apertura registrado en la columna <code>stack_opening_sequence_number</code>. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.</td></tr>
-<tr><td>7</td><td>operation</td><td>May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li></td></tr>
-<tr><td>8</td><td>operation_parameters</td><td>Parameters passed to commands, methods, or plugins</td></tr>
-<tr><td>9</td><td>form_event</td><td>Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)</td></tr>
-<tr><td>10</td><td>stack_opening_sequence_number</td><td>Only for the closing stack levels: Sequence number of the corresponding opening stack level</td></tr>
+<tr><td>6</td><td>operation_type</td><td>Tipo de operación histórico. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado por el comando <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a> únicamente)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas <code>operation_type</code>, <code>operation</code> y <code>operation_parameters</code> tienen el mismo valor que el nivel de pila de apertura registrado en la columna <code>stack_opening_sequence_number</code>. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>La primera y la segunda línea abren el nivel de la pila, la tercera y la cuarta lo cierran. Los valores de las columnas 6, 7 y 8 se repiten en la línea del nivel de pila de cierre. La columna 10 contiene los números de secuencia de apertura del nivel de pila, es decir, 122 para la tercera línea y 121 para la cuarta.</td></tr>
+<tr><td>7</td><td>operation</td><td>Puede representar (según el tipo de operación):<li>un ID de comando de lenguaje (cuando tipo=1)</li><li>un nombre de método (cuando tipo=2)</li><li>una combinación de pluginIndex;pluginCommand (cuando tipo=4, 5, 6 o 7). Puede contener algo como '3;2'</li><li>una UUID task connection (cuando tipo = 8)</li></td></tr>
+<tr><td>8</td><td>operation_parameters</td><td>Parámetros pasados a comandos, métodos o plugins</td></tr>
+<tr><td>9</td><td>form_event</td><td>Evento formulario si lo hay; vacío en otros casos (supongamos que la columna se utiliza cuando se ejecuta el código en un método formulario o en un método objeto)</td></tr>
+<tr><td>10</td><td>stack_opening_sequence_number</td><td>Sólo para los niveles de pila de cierre: número de secuencia del nivel de pila de apertura correspondiente</td></tr>
 <tr><td>11</td><td>stack_level_execution_time</td><td>Sólo cuando se cierra el nivel de la pila: el tiempo transcurrido en microsegundos de la acción registrada actualmente (ver la décima columna en las líneas 123 y 124 del registro anterior)</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="4ddiagnosticlogtxt"></a><a href="#4ddiagnosticlogtxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DDiagnosticLog.txt</h2>
-<p>This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a> command.</p>
+<p>Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. Puede incluir información personalizada en este archivo utilizando el comando <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a>.</p>
 <p>Como iniciar este historial:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> SET DATABASE PARAMETER</span>(Diagnostic log recording;<span class="hljs-number">1</span>) <span class="hljs-comment">//iniciar registro</span>
 </code></pre>
@@ -270,9 +270,9 @@
 <tr><td>message</td><td>Descripción de la entrada del historial</td></tr>
 </tbody>
 </table>
-<p>Depending on the event, various other fields can also be logged, such as task, socket, etc.</p>
+<p>Dependiendo del evento, se pueden incluir otros campos en el registro, como la tarea, socket, etc.</p>
 <h2><a class="anchor" aria-hidden="true" id="4dsmtplogtxt-4dpop3logtxt-y-4dimaplogtxt"></a><a href="#4dsmtplogtxt-4dpop3logtxt-y-4dimaplogtxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DSMTPLog.txt, 4DPOP3Log.txt y 4DIMAPLog.txt</h2>
-<p>These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:</p>
+<p>Estos archivos de registro registran cada intercambio entre la aplicación 4D y el servidor de correo (SMTP, POP3, IMAP) que ha sido iniciado por los siguientes comandos:</p>
 <ul>
 <li>SMTP - <a href="/docs/19/es/API/SMTPTransporterClass.html#smtp-new-transporter">SMTP New transporter</a></li>
 <li>POP3 - <a href="/docs/19/es/API/POP3TransporterClass.html#pop3-new-transporter">POP3 New transporter</a></li>
@@ -355,12 +355,12 @@ ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-function
 <tr><th>Nombre del campo</th><th>Descripción</th><th>Ejemplo</th></tr>
 </thead>
 <tbody>
-<tr><td>sequenceNumber</td><td>Unique and sequential operation number in the logging session</td><td>104</td></tr>
-<tr><td>url</td><td>Client ORDA request URL</td><td>&quot;rest/Persons(30001)&quot;</td></tr>
-<tr><td>startTime</td><td>Starting date and time using ISO 8601 format</td><td>&quot;2019-05-28T08:25:12.346Z&quot;</td></tr>
-<tr><td>endTime</td><td>Ending date and time using ISO 8601 format</td><td>&quot;2019-05-28T08:25:12.371Z&quot;</td></tr>
-<tr><td>duration</td><td>Client processing duration (ms)</td><td>25</td></tr>
-<tr><td>response</td><td>Server response object</td><td>{&quot;status&quot;:200,&quot;body&quot;:{&quot;__entityModel&quot;:&quot;Persons&quot;,[...]</td></tr>
+<tr><td>sequenceNumber</td><td>Número de operación único y secuencial en la sesión de historial</td><td>104</td></tr>
+<tr><td>url</td><td>URL de la petición ORDA efectuada por el cliente</td><td>&quot;rest/Persons(30001)&quot;</td></tr>
+<tr><td>startTime</td><td>Fecha y hora de inicio en formato ISO 8601</td><td>&quot;2019-05-28T08:25:12.346Z&quot;</td></tr>
+<tr><td>endTime</td><td>Fecha y hora final en formato ISO 8601</td><td>&quot;2019-05-28T08:25:12.371Z&quot;</td></tr>
+<tr><td>duration</td><td>Duración del procesamiento cliente (ms)</td><td>25</td></tr>
+<tr><td>response</td><td>Objeto respuesta del servidor</td><td>{&quot;status&quot;:200,&quot;body&quot;:{&quot;__entityModel&quot;:&quot;Persons&quot;,[...]</td></tr>
 </tbody>
 </table>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/es/Admin/cli.html"><span class="arrow-prev">← </span><span>Interfaz de línea de comando</span></a><a class="docs-next button" href="/docs/19/es/Users/overview.html"><span>Generalidades</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#4drequestslogtxt">4DRequestsLog.txt</a></li><li><a href="#4drequestslog_processinfotxt">4DRequestsLog_ProcessInfo.txt</a></li><li><a href="#httpdebuglogtxt">HTTPDebugLog.txt</a></li><li><a href="#4ddebuglogtxt-standard">4DDebugLog.txt (standard)</a></li><li><a href="#4ddebuglogtxt-tabular">4DDebugLog.txt (tabular)</a></li><li><a href="#4ddiagnosticlogtxt">4DDiagnosticLog.txt</a></li><li><a href="#4dsmtplogtxt-4dpop3logtxt-y-4dimaplogtxt">4DSMTPLog.txt, 4DPOP3Log.txt y 4DIMAPLog.txt</a></li><li><a href="#peticiones-cliente-orda">Peticiones cliente ORDA</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

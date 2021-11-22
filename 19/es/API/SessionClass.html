@@ -79,9 +79,9 @@
 <tr><td><a href="#hasprivilege"><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</a><p>    devuelve True si el privilegio está asociado a la sesión, y False en caso contrario</td></tr>
 <tr><td><a href="#idletimeout"><strong>.idleTimeout</strong> : Integer</a><p>    el tiempo de inactividad de la sesión (en minutos), después del cual la sesión es cerrada automáticamente por 4D</td></tr>
 <tr><td><a href="#isguest"><strong>.isGuest()</strong> : Boolean</a><p>    devuelve True si la sesión es una sesión Guest (es decir, no tiene privilegios)</td></tr>
-<tr><td><a href="#setprivileges"><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</a><p>    associates the privilege(s) defined in the parameter to the session</td></tr>
-<tr><td><a href="#storage"><strong>.storage</strong> : Object</a><p>    a shared object that can be used to store information available to all requests of the web client</td></tr>
-<tr><td><a href="#username"><strong>.userName</strong> : Text</a><p>    the user name associated to the session</td></tr>
+<tr><td><a href="#setprivileges"><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</a><p>    asocia los privilegios definidos en el parámetro a la sesión</td></tr>
+<tr><td><a href="#storage"><strong>.storage</strong> : Object</a><p>    un objeto compartido que puede ser utilizado para almacenar información disponible para todas las peticiones del cliente web</td></tr>
+<tr><td><a href="#username"><strong>.userName</strong> : Text</a><p>    el nombre de usuario asociado a la sesión</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="session"></a><a href="#session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session</h2>
@@ -281,34 +281,34 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>privilege</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nombre del privilegio</td></tr>
-<tr><td>privileges</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of privilege names</td></tr>
-<tr><td>parámetros</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Object with a &quot;privileges&quot; property (string or collection)</td></tr>
+<tr><td>privileges</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Colección de nombres de privilegios</td></tr>
+<tr><td>parámetros</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Objeto con una propiedad &quot;privilegios&quot; (cadena o colección)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.setPrivileges()</code> function associates the privilege(s) defined in the parameter to the session.</p>
+<p>La función <code>.setPrivileges()</code> asocia los privilegios definidos en el parámetro a la sesión.</p>
 <ul>
-<li><p>In the <em>privilege</em> parameter, pass a string containing a privilege name (or several comma-separated privilege names).</p></li>
-<li><p>In the <em>privileges</em> parameter, pass a collection of strings containing privilege names.</p></li>
-<li><p>In the <em>settings</em> parameter, pass an object containing the following properties:</p></li>
+<li><p>En el parámetro <em>privilege</em>, pase una cadena que contenga un nombre de privilegio (o varios nombres de privilegio separados por comas).</p></li>
+<li><p>En el parámetro <em>privileges</em>, pase una colección de cadenas que contengan nombres de privilegios.</p></li>
+<li><p>En el parámetro <em>settings</em>, pase un objeto que contenga las siguientes propiedades:</p></li>
 </ul>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>privileges</td><td>Text o Collection</td><td><li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li></td></tr>
-<tr><td>userName</td><td>Text</td><td>User name to associate to the session (optional)</td></tr>
+<tr><td>privileges</td><td>Text o Collection</td><td><li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li></td></tr>
+<tr><td>userName</td><td>Text</td><td>Nombre de usuario para asociar a la sesión (opcional)</td></tr>
 </tbody>
 </table>
-<p>If the <code>privileges</code> property contains an invalid privilege name, it is ignored.</p>
+<p>Si la propiedad <code>privileges</code> contiene un nombre de privilegio no válido, se ignora.</p>
 <blockquote>
-<p>In the current implementation, only the &quot;WebAdmin&quot; privilege is available.</p>
+<p>En la implementación actual, sólo está disponible el privilegio &quot;WebAdmin&quot;.</p>
 </blockquote>
-<p>By default when no privilege is associated to the session, the session is a <a href="#isguest">Guest session</a>.</p>
-<p>The <a href="#username"><code>userName</code></a> property is available at session object level (read-only).</p>
+<p>Por defecto, cuando no se asocia ningún privilegio a la sesión, ésta es una <a href="#isguest">sesión invitado</a>.</p>
+<p>La propiedad <a href="#username"><code>userName</code></a> está disponible a nivel de objeto de sesión (sólo lectura).</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-6"></a><a href="#ejemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>In a custom authentication method, you set the &quot;WebAdmin&quot; privilege to the user:</p>
+<p>En un método de autenticación personalizado, se establece el privilegio &quot;WebAdmin&quot; para el usuario:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$userOK </span>: Boolean
 
 ... <span class="hljs-comment">//Autenticar al usuario</span><span class="hljs-keyword">
@@ -334,14 +334,14 @@ End if</span>
 <p></details></p>
 <p><strong>.storage</strong> : Object</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.storage</code> property contains a shared object that can be used to store information available to all requests of the web client.</p>
-<p>When a <code>Session</code> object is created, the <code>.storage</code> property is empty. Since it is a shared object, this property will be available in the <code>Storage</code> object of the server.</p>
+<p>La propiedad <code>.storage</code> contiene un objeto compartido que puede ser utilizado para almacenar información disponible para todas las peticiones del cliente web.</p>
+<p>Cuando se crea un objeto <code>Session</code>, la propiedad <code>.storage</code> está vacía. Al ser un objeto compartido, esta propiedad estará disponible en el objeto <code>Storage</code> del servidor.</p>
 <blockquote>
-<p>Like the <code>Storage</code> object of the server, the <code>.storage</code> property is always &quot;single&quot;: adding a shared object or a shared collection to <code>.storage</code> does not create a shared group.</p>
+<p>Al igual que el objeto <code>Storage</code> del servidor, la propiedad <code>.storage</code> es siempre &quot;única&quot;: añadir un objeto compartido o una colección compartida a <code>.storage</code> no crea un grupo compartido.</p>
 </blockquote>
-<p>This property is <strong>read only</strong> itself but it returns a read-write object.</p>
+<p>Esta propiedad es <strong>sólo lectura</strong> en sí misma pero devuelve un objeto de lectura-escritura.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>You want to store the client IP in the <code>.storage</code> property. You can write in the <code>On Web Authentication</code> database method:</p>
+<p>Se desea almacenar la IP del cliente en la propiedad <code>.storage</code>. Puede escribir en el método de base de datos <code>On Web Authentication</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span> (Session.storage.clientIP=<span class="hljs-literal">Null</span>) <span class="hljs-comment">//primer acceso</span><span class="hljs-keyword">
     Use</span> (Session.storage)
         Session.storage.clientIP:=<span class="hljs-function">New shared object</span>(<span class="hljs-string">"value"</span>; <span class="hljs-variable">$clientIP</span>)<span class="hljs-keyword">
@@ -362,8 +362,8 @@ End if</span>
 <p></details></p>
 <p><strong>.userName</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-8"></a><a href="#descripción-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.userName</code> property contains the user name associated to the session. You can use it to identify the user within your code.</p>
-<p>This property is an empty string by default. It can be set using the <code>privileges</code> property of the <a href="#setprivileges"><code>setPrivileges()</code></a> function.</p>
+<p>La propiedad <code>.userName</code> contiene el nombre de usuario asociado a la sesión. Puede utilizarlo para identificar al usuario dentro de su código.</p>
+<p>Esta propiedad es una cadena vacía por defecto. Se puede establecer mediante la propiedad <code>privileges</code> de la función <a href="#setprivileges"><code>setPrivileges()</code></a>.</p>
 <p>Esta propiedad es<strong>de sólo lectura</strong>.</p>
 <style> h2 { background: #d9ebff;}</style>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/es/API/POP3TransporterClass.html"><span class="arrow-prev">← </span><span>POP3Transporter</span></a><a class="docs-next button" href="/docs/19/es/API/SignalClass.html"><span>Signal</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#session">Session</a></li><li><a href="#clearprivileges">.clearPrivileges()</a></li><li><a href="#expirationdate">.expirationDate</a></li><li><a href="#hasprivilege">.hasPrivilege()</a></li><li><a href="#idletimeout">.idleTimeout</a></li><li><a href="#isguest">.isGuest()</a></li><li><a href="#setprivileges">.setPrivileges()</a></li><li><a href="#storage">.storage</a></li><li><a href="#username">.userName</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

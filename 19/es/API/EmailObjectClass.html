@@ -67,20 +67,20 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/API/EmailObjectClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Email</h1></header><article><div><span><p>La creación, el envío o la recepción de correos electrónicos en 4D se realiza manejando un objeto <code>Email</code>.</p>
-<p><code>Email</code> objects are created when receiving mails through a <em>transporter</em> class function:</p>
+<p>Objetos <code>Email</code> se crean cuando se reciben correos a través de una función de clase <em>transporter</em>:</p>
 <ul>
-<li>IMAP - <a href="/docs/19/es/API/IMAPTransporterClass.html#getmail"><code>.getMail()</code></a> and <a href="/docs/19/es/API/IMAPTransporterClass.html#getmails"><code>.getMails()</code></a> functions to get emails from an IMAP server</li>
-<li>POP3 - <a href="/docs/19/es/API/POP3TransporterClass.html#getmail"><code>.getMail()</code></a> function to get an email from a POP3 server.</li>
+<li>IMAP - funciones <a href="/docs/19/es/API/IMAPTransporterClass.html#getmail"><code>.getMail()</code></a> y <a href="/docs/19/es/API/IMAPTransporterClass.html#getmails"><code>.getMails()</code></a> para obtener los correos electrónicos de un servidor IMAP</li>
+<li>POP3 - función <a href="/docs/19/es/API/POP3TransporterClass.html#getmail"><code>.getMail()</code></a> para obtener un correo electrónico de un servidor POP3.</li>
 </ul>
 <blockquote>
-<p>You can also create a new, blank <code>Email</code> object by calling the <a href="https://doc.4d.com/4dv18/help/command/en/page1471.html"><code>New object</code></a> 4D command, and then fill it with <a href="#email-object">Email object properties</a>.</p>
+<p>También puede crear un nuevo objeto <code>Email</code> en blanco llamando al comando 4D <a href="https://doc.4d.com/4dv18/help/command/en/page1471.html"><code>New object</code></a>, y luego llenarlo con <a href="#email-object">propiedades del objeto de correo electrónico</a>.</p>
 </blockquote>
-<p>You send <code>Email</code> objects using the SMTP <a href="/docs/19/es/API/SMTPTransporterClass.html#send"><code>.send()</code></a> function.</p>
-<p><a href="#mail-convert-from-mime"><code>MAIL Convert from MIME</code></a> and <a href="#mail-convert-to-mime"><code>MAIL Convert to MIME</code></a> commands can be used to convert <code>Email</code> objects to and from MIME contents.</p>
+<p>Los objetos <code>Email</code> se envían utilizando la función SMTP <a href="/docs/19/es/API/SMTPTransporterClass.html#send"><code>.send()</code></a>.</p>
+<p>Los comandos <a href="#mail-convert-from-mime"><code>MAIL Convert from MIME</code></a> y <a href="#mail-convert-to-mime"><code>MAIL Convert to MIME</code></a> pueden utilizarse para convertir objetos <code>Email</code> a y desde contenidos MIME.</p>
 <h3><a class="anchor" aria-hidden="true" id="objeto-email"></a><a href="#objeto-email" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto Email</h3>
-<p>Email objects provide the following properties:</p>
+<p>Los objetos Email ofrecen las siguientes propiedades:</p>
 <blockquote>
-<p>4D follows the <a href="https://jmap.io/spec-mail.html">JMAP specification</a> to format the Email object.</p>
+<p>4D sigue la especificación <a href="https://jmap.io/spec-mail.html">JMAP</a> para formatear el objeto Email.</p>
 </blockquote>
 <table>
 <thead>
@@ -112,7 +112,7 @@
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="direcciones-de-correo-electrónico"></a><a href="#direcciones-de-correo-electrónico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Direcciones de correo electrónico</h3>
-<p>All properties that contain email addresses (<a href="#from"><code>from</code></a>, <a href="#cc"><code>cc</code></a>, <a href="#bcc"><code>bcc</code></a>, <a href="#to"><code>to</code></a>, <a href="#sender"><code>sender</code></a>, <a href="#replyto"><code>replyTo</code></a>) accept a value of text, object, or collection type.</p>
+<p>Todas las propiedades que contienen direcciones de correo electrónico (<a href="#from"><code>from</code></a>, <a href="#cc"><code>cc</code></a>, <a href="#bcc"><code>bcc</code></a>, <a href="#to"><code>to</code></a>, <a href="#sender"><code>sender</code></a>, <a href="#replyto"><code>replyTo</code></a>) aceptan un valor de tipo texto, objeto o colección.</p>
 <h4><a class="anchor" aria-hidden="true" id="texto"></a><a href="#texto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Texto</h4>
 <ul>
 <li>single email: &quot;<a href="mailto:somebody@domain.com">somebody@domain.com</a>&quot;</li>
@@ -120,7 +120,7 @@
 <li>several emails: &quot;Somebody <a href="mailto:somebody@domain.com">somebody@domain.com</a>,<a href="mailto:me@home.org">me@home.org</a>&quot;</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="objeto"></a><a href="#objeto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto</h4>
-<p>An object with two properties:</p>
+<p>Un objeto con dos propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -171,7 +171,7 @@
 <p><strong>.bodyStructure</strong> : Object</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.bodyStructure</code> property contains the <em>EmailBodyPart</em> object, i.e. the full MIME structure of the message body (optional). See <a href="#handling-body-part">Handling body part</a> section.</p>
-<p>The <code>.bodyStructure</code> object contains the following properties:</p>
+<p>El objeto <code>.bodyStructure</code> contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Valor</th></tr>
@@ -198,7 +198,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Valor</th></tr>
 </thead>
 <tbody>
-<tr><td><em>partID</em>.value</td><td>texto</td><td>Value of the body part</td></tr>
+<tr><td><em>partID</em>.value</td><td>texto</td><td>Valor de la parte del cuerpo</td></tr>
 <tr><td><em>partID</em>.isEncodingProblem</td><td>booleano</td><td>True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. Falso por defecto</td></tr>
 </tbody>
 </table>
@@ -263,7 +263,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Valor</th></tr>
 </thead>
 <tbody>
-<tr><td>. &lt;keyword&gt;</td><td>booleano</td><td>Keyword to set (value must be true)</td></tr>
+<tr><td>. &lt;keyword&gt;</td><td>booleano</td><td>Palabra clave a definir (el valor debe ser true)</td></tr>
 </tbody>
 </table>
 <p>Palabras clave reservadas:</p>
@@ -359,12 +359,12 @@
 <p>Objeto Email.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
 <p>You want to load a mail template saved as MIME in a text document and send an email:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_BLOB</span>(<span class="hljs-variable">$mime</span>)
-<span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$mail</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mime</span>: Blob<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$mail</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>: Object
 
 <span class="hljs-variable">$mime</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE/Mails/templateMail.txt"</span>).<span class="hljs-function">getContent</span>())
 
-<span class="hljs-variable">$mail</span>:=[#current_title_incode](<span class="hljs-variable">$mime</span>)
+<span class="hljs-variable">$mail</span>:=<span class="hljs-function">MAIL Convert from MIME</span>(<span class="hljs-variable">$mime</span>)
 <span class="hljs-variable">$mail</span>.to:=<span class="hljs-string">"smith@mail.com"</span>
 <span class="hljs-variable">$mail</span>.subject:=<span class="hljs-string">"Hello world"</span>
 
@@ -379,8 +379,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
 <p>In this example, you send directly a 4D Write Pro document containing pictures:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$mime</span>)
-<span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$email</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mime</span>: Blob<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$email</span>;<span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$status</span>: Object
 
 <span class="hljs-comment">// Mime export of the 4D Write Pro document</span>
 <span class="hljs-function">WP EXPORT VARIABLE</span>(WParea;<span class="hljs-variable">$mime</span>;wk mime html)
@@ -443,11 +443,11 @@
 </table>
 <p>If the <em>options</em> parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$mail</span>)
-<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$mime</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$mail</span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$mime</span>: Text
 <span class="hljs-variable">$mail</span>:=New object
 
-<span class="hljs-comment">// Creación de un mail</span>
+<span class="hljs-comment">// Creación de un correo</span>
 <span class="hljs-variable">$mail</span>.from:=<span class="hljs-string">"tsales@massmarket.com"</span>
 <span class="hljs-variable">$mail</span>.subject:=<span class="hljs-string">"Terrific Sale! This week only!"</span>
 <span class="hljs-variable">$mail</span>.textBody:=<span class="hljs-string">"Text format email"</span>
@@ -456,10 +456,10 @@
 <span class="hljs-variable">$mail</span>.to.<span class="hljs-function">push</span>(<span class="hljs-function">New object </span>(<span class="hljs-string">"email"</span>;<span class="hljs-string">"noreply@4d.com"</span>))
 <span class="hljs-variable">$mail</span>.to.<span class="hljs-function">push</span>(<span class="hljs-function">New object </span>(<span class="hljs-string">"email"</span>;<span class="hljs-string">"test@4d.com"</span>))
 
-<span class="hljs-comment">// transform the mail object in MIME</span>
-<span class="hljs-variable">$mime</span>:=[#current_title_incode](<span class="hljs-variable">$mail</span>)
+<span class="hljs-comment">// transforma el objeto mail en MIME</span>
+<span class="hljs-variable">$mime</span>:=<span class="hljs-function">MAIL Convert to MIME</span>(<span class="hljs-variable">$mail</span>)
 
-<span class="hljs-comment">// Contents of $mime:</span>
+<span class="hljs-comment">// Contenidos de $mime:</span>
 <span class="hljs-comment">// MIME-Version: 1.0</span>
 <span class="hljs-comment">// Date: Thu, 11 Oct 2018 15:42:25 GMT</span>
 <span class="hljs-comment">// Message-ID: &lt;7CA5D25B2B5E0047A36F2E8CB30362E2&gt;</span>

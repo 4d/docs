@@ -139,10 +139,10 @@
 <h3><a class="anchor" aria-hidden="true" id="3---webクライアントの-ipアドレス"></a><a href="#3---webクライアントの-ipアドレス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$3 - Webクライアントの IPアドレス</h3>
 <p>$3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。</p>
 <blockquote>
-<p>4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、<a href="/docs/19/ja/WebServer/webServerConfig.html#IPv6-のサポートについて">IPv6 のサポートについて</a> の章を参照ください。</p>
+<p>4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、<a href="/docs/19/ja/WebServer/webServerConfig.html#ipv6-のサポートについて">IPv6 のサポートについて</a> の章を参照ください。</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="4---サーバー-ipアドレス"></a><a href="#4---サーバー-ipアドレス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$4 - サーバー IPアドレス</h3>
-<p>$4 引数は 4D Webサーバーによってリクエストされた IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は <a href="/docs/19/ja/WebServer/webServerConfig.html#リクエストを受け付ける-IPアドレス">設定ページ</a> を参照ください。</p>
+<p>$4 引数は 4D Webサーバーによってリクエストされた IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は <a href="/docs/19/ja/WebServer/webServerConfig.html#リクエストを受け付ける-ipアドレス">設定ページ</a> を参照ください。</p>
 <h3><a class="anchor" aria-hidden="true" id="5-と-6---ユーザー名とパスワード"></a><a href="#5-と-6---ユーザー名とパスワード" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$5 と $6 - ユーザー名とパスワード</h3>
 <p><code>$5</code> と <code>$6</code> 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります (入力されていれば; <a href="/docs/19/ja/WebServer/authentication.html">認証ページ</a> 参照)。</p>
 <blockquote>
@@ -199,7 +199,7 @@ var</span> <span class="hljs-variable">$BlobVar </span>: Blob
 <blockquote>
 <p>この場合、Webサーバーがポストされたフォームを受信すると、<code>On Web Authentication</code> データベースメソッドが (あれば) 呼び出されます。</p>
 </blockquote>
-<p>サーバーに投稿された HTMLページに含まれるすべてのフィールドの <a href="#HTTPリクエストから値を取得する">名前と値を取得</a> するには、このメソッド内で <code>WEB GET VARIABLES</code> コマンドを呼び出す必要があります。</p>
+<p>サーバーに投稿された HTMLページに含まれるすべてのフィールドの <a href="#httpリクエストから値を取得する">名前と値を取得</a> するには、このメソッド内で <code>WEB GET VARIABLES</code> コマンドを呼び出す必要があります。</p>
 <p>フォームのアクションを定義する例:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">FORM</span> <span class="hljs-attr">ACTION</span>=<span class="hljs-string">"/4DACTION/MethodName"</span> <span class="hljs-attr">METHOD</span>=<span class="hljs-string">POST</span>&gt;</span>
 </code></pre>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Session · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](/docs/19/pt/WebServer/sessions.html#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes."/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Session · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](/docs/19/pt/WebServer/sessions.html#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes."/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/API/SessionClass.html">English</a></li><li><a href="/docs/19/ja/API/SessionClass.html">日本語</a></li><li><a href="/docs/19/de/API/SessionClass.html">Deutsch</a></li><li><a href="/docs/19/es/API/SessionClass.html">Español</a></li><li><a href="/docs/19/fr/API/SessionClass.html">Français</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Session · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Os objetos Session são devolvidos pelo comando [`Session`](#session) quando [são habilitadas as sessões escaláveis em seu projeto](/docs/19/pt/WebServer/sessions.html#enabling-sessions). O objeto Session é criado e mantido automaticamente pelo servidor web 4D para controlar a sessão de um cliente web (por exemplo, um navegador). Esse objeto oferece ao desenvolvedor web uma interface para a sessão de usuário, permitindo gerenciar privilégios, armazenar dados contextuais, partilhar informação entre processos e lançar processos preemptivos relacionados a sessão."/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Session · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="Os objetos Session são devolvidos pelo comando [`Session`](#session) quando [são habilitadas as sessões escaláveis em seu projeto](/docs/19/pt/WebServer/sessions.html#enabling-sessions). O objeto Session é criado e mantido automaticamente pelo servidor web 4D para controlar a sessão de um cliente web (por exemplo, um navegador). Esse objeto oferece ao desenvolvedor web uma interface para a sessão de usuário, permitindo gerenciar privilégios, armazenar dados contextuais, partilhar informação entre processos e lançar processos preemptivos relacionados a sessão."/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/API/SessionClass.html">English</a></li><li><a href="/docs/19/ja/API/SessionClass.html">日本語</a></li><li><a href="/docs/19/de/API/SessionClass.html">Deutsch</a></li><li><a href="/docs/19/es/API/SessionClass.html">Español</a></li><li><a href="/docs/19/fr/API/SessionClass.html">Français</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,22 +66,22 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/API/SessionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Session</h1></header><article><div><span><p>Session objects are returned by the <a href="#session"><code>Session</code></a> command when <a href="/docs/19/pt/WebServer/sessions.html#enabling-sessions">scalable sessions are enabled in your project</a>. The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.</p>
-<p>For detailed information about the session implementation, please refer to the <a href="/docs/19/pt/WebServer/sessions.html">web server Sessions</a> section.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/API/SessionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Session</h1></header><article><div><span><p>Os objetos Session são devolvidos pelo comando <a href="#session"><code>Session</code></a> quando <a href="/docs/19/pt/WebServer/sessions.html#enabling-sessions">são habilitadas as sessões escaláveis em seu projeto</a>. O objeto Session é criado e mantido automaticamente pelo servidor web 4D para controlar a sessão de um cliente web (por exemplo, um navegador). Esse objeto oferece ao desenvolvedor web uma interface para a sessão de usuário, permitindo gerenciar privilégios, armazenar dados contextuais, partilhar informação entre processos e lançar processos preemptivos relacionados a sessão.</p>
+<p>Para obter informação detalhada sobre a implementação da sessão, consulte <a href="/docs/19/pt/WebServer/sessions.html">Sessões do servidor web</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="resumo"></a><a href="#resumo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resumo</h3>
 <table>
 <thead>
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#clearprivileges"><strong>.clearPrivileges()</strong></a><p>    removes all the privileges associated to the session</td></tr>
-<tr><td><a href="#expirationdate"><strong>.expirationDate</strong> : Text</a><p>    the expiration date and time of the session cookie</td></tr>
-<tr><td><a href="#hasprivilege"><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</a><p>    returns True if the privilege is associated to the session, and False otherwise</td></tr>
-<tr><td><a href="#idletimeout"><strong>.idleTimeout</strong> : Integer</a><p>    the inactivity session timeout (in minutes), after which the session is automatically closed by 4D</td></tr>
-<tr><td><a href="#isguest"><strong>.isGuest()</strong> : Boolean</a><p>    returns True if the session is a Guest session (i.e. it has no privileges)</td></tr>
-<tr><td><a href="#setprivileges"><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</a><p>    associates the privilege(s) defined in the parameter to the session</td></tr>
-<tr><td><a href="#storage"><strong>.storage</strong> : Object</a><p>    a shared object that can be used to store information available to all requests of the web client</td></tr>
-<tr><td><a href="#username"><strong>.userName</strong> : Text</a><p>    the user name associated to the session</td></tr>
+<tr><td><a href="#clearprivileges"><strong>.clearPrivileges()</strong></a><p>    elimina todos os privilégios associados à sessão</td></tr>
+<tr><td><a href="#expirationdate"><strong>.expirationDate</strong> : Text</a><p>    a data e hora de expiração da cookie de sessão</td></tr>
+<tr><td><a href="#hasprivilege"><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</a><p>    devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário</td></tr>
+<tr><td><a href="#idletimeout"><strong>.idleTimeout</strong> : Integer</a><p>    o tempo de inatividade da sessão (em minutos), depois da qual a sessão é fechada automaticamente por 4D</td></tr>
+<tr><td><a href="#isguest"><strong>.isGuest()</strong> : Boolean</a><p>    devolve True se a sessão for uma sessão Guest (ou seja, não tem privilégios)</td></tr>
+<tr><td><a href="#setprivileges"><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</a><p>    associa os privilégios definidos no parâmetro à sessão</td></tr>
+<tr><td><a href="#storage"><strong>.storage</strong> : Object</a><p>    um objeto partilhado que pode ser usado para armazenar informação disponível a todas as petições do cliente web</td></tr>
+<tr><td><a href="#username"><strong>.userName</strong> : Text</a><p>    o nome de usuuário associado à sessão</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="session"></a><a href="#session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session</h2>
@@ -98,30 +98,30 @@
 <p><strong>Session</strong> : 4D.Session</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+<tr><th>Parâmetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>Result</td><td>4D.Session</td><td style="text-align:center">&lt;-</td><td>Session object</td></tr>
+<tr><td>Resultados</td><td>4D.Session</td><td style="text-align:center">&lt;-</td><td>Session object</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>Session</code> command returns the <code>Session</code> object corresponding to the current scalable user web session.</p>
-<p>This command only works when <a href="/docs/19/pt/WebServer/sessions.html#enabling-sessions">scalable sessions are enabled</a>. It returns <em>Null</em> when sessions are disabled or when legacy sessions are used.</p>
-<p>When scalable sessions are enabled, the <code>Session</code> object is available from any web processes in the following contexts:</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição"></a><a href="#descrição" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>O comando <code>Session</code> devolve o objeto <code>Session</code> correspondente à sessão web atual do usuário escalável.</p>
+<p>Este comando só funciona quando <a href="/docs/19/pt/WebServer/sessions.html#enabling-sessions">estão ativadas as sessões escaláveis</a>. Devolve <em>Null</em> quando as sessões estiverem desabilitadas ou quando utilizar sessões herdadas.</p>
+<p>Quando se habilitam as sessões escaláveis, o objeto <code>Sessão</code> está disponível desde qualquer processo web nos seguintes contextos:</p>
 <ul>
-<li><code>On Web Authentication</code>, <code>On Web Connection</code>, and <code>On REST Authentication</code> database methods,</li>
-<li>ORDA <a href="/docs/19/pt/ORDA/ordaClasses.html">Data Model Class functions</a> called with REST requests,</li>
-<li>code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)</li>
-<li>project methods with the &quot;Available through 4D tags and URLs (4DACTION...)&quot; attribute and called through 4DACTION/ urls.</li>
+<li><code>On Web Authentication</code>, <code>On Web Connection</code>, e métodos database<code>On REST Authentication</code>,</li>
+<li>As <a href="/docs/19/pt/ORDA/ordaClasses.html">funções Data Model Class</a> ORDA chamadas pelas petições REST,</li>
+<li>código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)</li>
+<li>os métodos projeto com o atributo &quot;Available through 4D tags and URLs (4DACTION...)&quot; e chamados através de 4DACTION/ urls.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemplo"></a><a href="#exemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<p>You have defined the <code>action_Session</code> method with attribute &quot;Available through 4D tags and URLs&quot;. You call the method by entering the following URL in your browser:</p>
+<p>Se definiu o método <code>action_Session</code> com o atributo &quot;Available through 4D tags and URLs&quot;. Pode chamar ao método introduzindo a URL abaixo no navegador:</p>
 <pre><code class="hljs"><span class="hljs-string">IP:</span>port<span class="hljs-regexp">/4DACTION/</span>action_Session
 </code></pre>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">//action_Session method</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//método action_Session</span><span class="hljs-keyword">
  Case of</span>
     :(Session#<span class="hljs-literal">Null</span>)<span class="hljs-keyword">
-       If</span>(Session.<span class="hljs-function">hasPrivilege</span>(<span class="hljs-string">"WebAdmin"</span>)) <span class="hljs-comment">//calling the hasPrivilege function</span>
+       If</span>(Session.<span class="hljs-function">hasPrivilege</span>(<span class="hljs-string">"WebAdmin"</span>)) <span class="hljs-comment">//chamada da função hasPrivilege</span>
 <span class="hljs-function">          WEB SEND TEXT</span>(<span class="hljs-string">"4DACTION --&gt; Session is WebAdmin"</span>)<span class="hljs-keyword">
        Else</span>
 <span class="hljs-function">          WEB SEND TEXT</span>(<span class="hljs-string">"4DACTION --&gt; Session is not WebAdmin"</span>)<span class="hljs-keyword">
@@ -142,17 +142,17 @@
 </table>
 <p></details></p>
 <p><strong>.clearPrivileges()</strong>
-| Parameter | Type |  | Description                     |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |</p>
-<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.clearPrivileges()</code> function removes all the privileges associated to the session. As a result, the session automatically becomes a Guest session.</p>
+| Parâmetros | Tipo |  | Descrição                  |
+| ---------- | ---- |::| -------------------------- |
+|            |      |  | Não exige nenhum parâmetro |</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-1"></a><a href="#descrição-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A função <code>.clearPrivileges()</code> elimina todos os privilégios associados à sessão. Como resultado, a seção se converte automaticamente em uma sessão de convidado.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//Invalidate a session</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Invalidar uma sessão</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$isGuest </span>: Boolean  
 
 Session.<span class="hljs-function">clearPrivileges</span>()
-<span class="hljs-variable">$isGuest</span>:=Session.<span class="hljs-function">isGuest</span>() <span class="hljs-comment">//$isGuest is True</span>
+<span class="hljs-variable">$isGuest</span>:=Session.<span class="hljs-function">isGuest</span>() <span class="hljs-comment">//$isGuest es True</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="expirationdate"></a><a href="#expirationdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.expirationDate</h2>
 <p><details><summary>Histórico</summary></p>
@@ -166,12 +166,12 @@ Session.<span class="hljs-function">clearPrivileges</span>()
 </table>
 <p></details></p>
 <p><strong>.expirationDate</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.expirationDate</code> property contains the expiration date and time of the session cookie. The value is expressed as text in the ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SS.mmmZ</code>.</p>
-<p>Essa propriedade é<strong>apenas leitura</strong>. It is automatically recomputed if the <a href="#idletimeout"><code>.idleTimeout</code></a> property value is modified.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-2"></a><a href="#descrição-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A propriedade <code>.expirationDate</code> contém a data e hora de expiração da cookie de sessão. O valor se expressa como texto no formato ISO 8601: <code>YYYY-MM-DDTHH:MM:SS.mmmZ</code>.</p>
+<p>Essa propriedade é<strong>apenas leitura</strong>. É recalculada automaticamente se modificar o valor da propriedade <a href="#idletimeout"><code>.idleTimeout</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-2"></a><a href="#exemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$expiration </span>: Text
-<span class="hljs-variable">$expiration</span>:=Session.expirationDate <span class="hljs-comment">//eg "2021-11-05T17:10:42Z"</span>
+<span class="hljs-variable">$expiration</span>:=Session.expirationDate <span class="hljs-comment">//por exemplo "2021-11-05T17:10:42Z"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="hasprivilege"></a><a href="#hasprivilege" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.hasPrivilege()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -187,21 +187,21 @@ Session.<span class="hljs-function">clearPrivileges</span>()
 <p><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+<tr><th>Parâmetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>privilege</td><td>Texto</td><td style="text-align:center">&lt;-</td><td>Name of the privilege to verify</td></tr>
-<tr><td>Result</td><td>Booleano</td><td style="text-align:center">&lt;-</td><td>True if session has <em>privilege</em>, False otherwise</td></tr>
+<tr><td>privilege</td><td>Texto</td><td style="text-align:center">&lt;-</td><td>Nome do privilegio a verificar</td></tr>
+<tr><td>Resultados</td><td>Booleano</td><td style="text-align:center">&lt;-</td><td>True se a sessão tiver <em>privilege</em>, False caso contrário</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.hasPrivilege()</code> function returns True if the privilege is associated to the session, and False otherwise.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-3"></a><a href="#descrição-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A função <code>.hasPrivilege()</code> devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<p>You want to check if the &quot;WebAdmin&quot; privilege is associated to the session:</p>
+<p>Se quiser comprovar se o privilégio &quot;WebAdmin&quot; está associado à sessão:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span> (Session.<span class="hljs-function">hasPrivilege</span>(<span class="hljs-string">"WebAdmin"</span>))
-    <span class="hljs-comment">//Access is granted, do nothing</span><span class="hljs-keyword">
+    <span class="hljs-comment">//O acesso está concedido, não faça nada</span><span class="hljs-keyword">
 Else</span>
-    <span class="hljs-comment">//Display an authentication page</span><span class="hljs-keyword">
+    <span class="hljs-comment">//Mostrar uma página de autenticação</span><span class="hljs-keyword">
 
 End if</span>
 </code></pre>
@@ -217,20 +217,20 @@ End if</span>
 </table>
 <p></details></p>
 <p><strong>.idleTimeout</strong> : Integer</p>
-<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.idleTimeout</code> property contains the inactivity session timeout (in minutes), after which the session is automatically closed by 4D.</p>
-<p>If this property is not set, the default value is 60 (1h).</p>
-<p>When this property is set, the <a href="#expirationdate"><code>.expirationDate</code></a> property is updated accordingly.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-4"></a><a href="#descrição-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A propriedade <code>.idleTimeout</code> contiene o tempo de inatividade da sessão (em minutos), depois da qual a sessão é fechada automaticamente por 4D.</p>
+<p>Se não se definir esta propriedade, o valor padrão é 60 (1h).</p>
+<p>Quando se definir esta propriedade, a propriedade <a href="#expirationdate"><code>.expirationDate</code></a> é atualizada em consequência.</p>
 <blockquote>
-<p>The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.</p>
+<p>O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60.</p>
 </blockquote>
-<p>This property is <strong>read write</strong>.</p>
+<p>Essa propriedade é<strong>apenas escrita</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-4"></a><a href="#exemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span> (Session.<span class="hljs-function">isGuest</span>())
-        <span class="hljs-comment">// A Guest session will close after 60 minutes of inactivity</span>
+        <span class="hljs-comment">// Uma sessão de convidado se fechará depois de 60 minutos de inatividade</span>
     Session.idleTimeout:=<span class="hljs-number">60</span><span class="hljs-keyword">
 Else</span>
-        <span class="hljs-comment">// Other sessions will close after 120 minutes of inactivity</span>
+        <span class="hljs-comment">// As outras sessões se fecharão depois de 120 minutos de inatividade</span>
     Session.idleTimeout:=<span class="hljs-number">120</span><span class="hljs-keyword">
 End if</span>
 
@@ -249,18 +249,18 @@ End if</span>
 <p><strong>.isGuest()</strong> : Boolean</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+<tr><th>Parâmetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>Result</td><td>Booleano</td><td style="text-align:center">&lt;-</td><td>True if session is a Guest one, False otherwise</td></tr>
+<tr><td>Resultados</td><td>Booleano</td><td style="text-align:center">&lt;-</td><td>True se a sessão for uma sessão Guest, False caso contrário</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.isGuest()</code> function returns True if the session is a Guest session (i.e. it has no privileges).</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-5"></a><a href="#descrição-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A função <code>.isGuest()</code> devolve True se a sessão for uma sessão Guest (ou seja, não tem privilégios).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-5"></a><a href="#exemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<p>In the <code>On Web Connection</code> database method:</p>
+<p>No método base <code>On Web Connection</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span> (Session.<span class="hljs-function">isGuest</span>())
-    <span class="hljs-comment">//Do something for Guest user</span><span class="hljs-keyword">
+    <span class="hljs-comment">//Fazer algo para o usuário convidado</span><span class="hljs-keyword">
 End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setprivileges"></a><a href="#setprivileges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.setPrivileges()</h2>
@@ -277,43 +277,43 @@ End if</span>
 <p><strong>.setPrivileges</strong>( <em>privilege</em> : Text )<br><strong>.setPrivileges</strong>( <em>privileges</em> : Collection )<br><strong>.setPrivileges</strong>( <em>settings</em> : Object )</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+<tr><th>Parâmetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>privilege</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Privilege name</td></tr>
-<tr><td>privileges</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of privilege names</td></tr>
-<tr><td>settings</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Object with a &quot;privileges&quot; property (string or collection)</td></tr>
+<tr><td>privilege</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nome do privilégio</td></tr>
+<tr><td>privileges</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection de nomes de privilégios</td></tr>
+<tr><td>settings</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Objetos com as propriedades &quot;privilégios&quot; (string ou collection)</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.setPrivileges()</code> function associates the privilege(s) defined in the parameter to the session.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-6"></a><a href="#descrição-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A função <code>.setPrivileges()</code> associa os privilégios definidos no parâmetro à sessão.</p>
 <ul>
-<li><p>In the <em>privilege</em> parameter, pass a string containing a privilege name (or several comma-separated privilege names).</p></li>
-<li><p>In the <em>privileges</em> parameter, pass a collection of strings containing privilege names.</p></li>
-<li><p>In the <em>settings</em> parameter, pass an object containing the following properties:</p></li>
+<li><p>No parâmetro <em>privilege</em>, passe uma string contendo um nome de privilégio (ou vários nomes de privilégio separados por vígulas).</p></li>
+<li><p>No parâmetro <em>privileges</em>, passe uma coleção de strings contendo nomes de privilégios.</p></li>
+<li><p>No parâmetro <em>settings</em>, passe um objeto contendo as propriedades abaixo:</p></li>
 </ul>
 <table>
 <thead>
-<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+<tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>privileges</td><td>Text or Collection</td><td><li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li></td></tr>
-<tr><td>userName</td><td>Texto</td><td>User name to associate to the session (optional)</td></tr>
+<tr><td>privileges</td><td>Text ou Collection</td><td><li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li></td></tr>
+<tr><td>userName</td><td>Texto</td><td>Nome de usuário associado à sessão (opcional)</td></tr>
 </tbody>
 </table>
-<p>If the <code>privileges</code> property contains an invalid privilege name, it is ignored.</p>
+<p>Se a propriedade <code>privileges</code> conter um nome de privilégio inválido, é ignorado.</p>
 <blockquote>
-<p>In the current implementation, only the &quot;WebAdmin&quot; privilege is available.</p>
+<p>Na implementação atual, só o privilégio &quot;WebAdmin&quot; está disponível.</p>
 </blockquote>
-<p>By default when no privilege is associated to the session, the session is a <a href="#isguest">Guest session</a>.</p>
-<p>The <a href="#username"><code>userName</code></a> property is available at session object level (read-only).</p>
+<p>Como padrão quando não houver um privilégio associado à sessão, a sessão é <a href="#isguest">Guest session</a>.</p>
+<p>A propriedade <a href="#username"><code>userName</code></a> está disponível no nível do objeto da sessão (apenas leitura).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-6"></a><a href="#exemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<p>In a custom authentication method, you set the &quot;WebAdmin&quot; privilege to the user:</p>
+<p>Em um método de autenticação personalizado, deve estabecer o privilégio &quot;WebAdmin&quot; ao usuário:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$userOK </span>: Boolean
 
-... <span class="hljs-comment">//Authenticate the user</span><span class="hljs-keyword">
+... <span class="hljs-comment">//Autenticar o usuário</span><span class="hljs-keyword">
 
-If</span> (<span class="hljs-variable">$userOK</span>) <span class="hljs-comment">//The user has been approved</span><span class="hljs-keyword">
+If</span> (<span class="hljs-variable">$userOK</span>) <span class="hljs-comment">//O usuário foi aprovado</span><span class="hljs-keyword">
   var</span> <span class="hljs-variable">$info </span>: Object
   <span class="hljs-variable">$info</span>:=<span class="hljs-function">New object</span>()
   <span class="hljs-variable">$info</span>.privileges:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"WebAdmin"</span>)
@@ -333,15 +333,15 @@ End if</span>
 </table>
 <p></details></p>
 <p><strong>.storage</strong> : Object</p>
-<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.storage</code> property contains a shared object that can be used to store information available to all requests of the web client.</p>
-<p>When a <code>Session</code> object is created, the <code>.storage</code> property is empty. Since it is a shared object, this property will be available in the <code>Storage</code> object of the server.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-7"></a><a href="#descrição-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A propriedade <code>.storage</code> contém um objeto partilhado que pode ser usado para armazenar informação disponível a todas as petições do cliente web.</p>
+<p>Quando um objeto <code>Session</code> for criado, a propriedade <code>.storage</code> é vazia. Já que é um objeto partilhado, essa propriedade estará disponível no objeto <code>Storage</code> do servidor.</p>
 <blockquote>
-<p>Like the <code>Storage</code> object of the server, the <code>.storage</code> property is always &quot;single&quot;: adding a shared object or a shared collection to <code>.storage</code> does not create a shared group.</p>
+<p>Da mesma forma que o objeto <code>Storage</code> do servidor, a propriedade <code>.storage</code> sempre será &quot;single&quot;: adicionar um objeto partilhado ou uma collection partilhada a <code>.storage</code> não cria um grupo partilhado.</p>
 </blockquote>
-<p>This property is <strong>read only</strong> itself but it returns a read-write object.</p>
+<p>Esas propriedade é <strong>read only</strong> mas retorna um objeto  read-write.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-7"></a><a href="#exemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<p>You want to store the client IP in the <code>.storage</code> property. You can write in the <code>On Web Authentication</code> database method:</p>
+<p>Se quiser armazenar a IP do cliente na propriedade <code>.storage</code>. Pode escrever no método de banco de dados <code>On Web Authentication</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span> (Session.storage.clientIP=<span class="hljs-literal">Null</span>) <span class="hljs-comment">//first access</span><span class="hljs-keyword">
     Use</span> (Session.storage)
         Session.storage.clientIP:=<span class="hljs-function">New shared object</span>(<span class="hljs-string">"value"</span>; <span class="hljs-variable">$clientIP</span>)<span class="hljs-keyword">
@@ -361,10 +361,10 @@ End if</span>
 </table>
 <p></details></p>
 <p><strong>.userName</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.userName</code> property contains the user name associated to the session. You can use it to identify the user within your code.</p>
-<p>This property is an empty string by default. It can be set using the <code>privileges</code> property of the <a href="#setprivileges"><code>setPrivileges()</code></a> function.</p>
-<p>This property is <strong>read only</strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="descrição-8"></a><a href="#descrição-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
+<p>A propriedade <code>.userName</code> contém o nome de usuuário associado à sessão. Pode usá-la para identificar o usuário dentro de seu código.</p>
+<p>Essa propriedade é uma string vazia como padrão. Pode ser estabelecida usando a propriedade <code>privileges</code> da função <a href="#setprivileges"><code>setPrivileges()</code></a>.</p>
+<p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <style> h2 { background: #d9ebff;}</style>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/pt/API/POP3TransporterClass.html"><span class="arrow-prev">← </span><span>POP3Transporter</span></a><a class="docs-next button" href="/docs/19/pt/API/SignalClass.html"><span>Signal</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#session">Session</a></li><li><a href="#clearprivileges">.clearPrivileges()</a></li><li><a href="#expirationdate">.expirationDate</a></li><li><a href="#hasprivilege">.hasPrivilege()</a></li><li><a href="#idletimeout">.idleTimeout</a></li><li><a href="#isguest">.isGuest()</a></li><li><a href="#setprivileges">.setPrivileges()</a></li><li><a href="#storage">.storage</a></li><li><a href="#username">.userName</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

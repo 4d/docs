@@ -487,7 +487,7 @@ De lo contrario, puede añadir o modificar elementos posteriormente por asignaci
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R3</td><td>New <em>ck shared</em> option. New <em>groupWith</em> parameters</td></tr>
+<tr><td>v18 R3</td><td>Nueva opción <em>ck shared</em>. Nuevos parámetros <em>groupWith</em></td></tr>
 <tr><td>v16 R6</td><td>Añadidos</td></tr>
 </tbody>
 </table>
@@ -1529,7 +1529,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 <li>dates</li>
 </ol>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-9"></a><a href="#ejemplo-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>Ordering a collection of numbers in ascending and descending order:</p>
+<p>Ordenar una colección de números de forma ascendente y descendente:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$3 </span>: Collection 
  <span class="hljs-variable">$c</span>:=New collection<span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">10</span>)
@@ -1868,11 +1868,11 @@ En *index*, pase la posición donde quiere eliminar el elemento de la colección
 *   Si el valor calculado &lt; <span class="hljs-number">0</span>, *index* toma el valor <span class="hljs-number">0.</span>
 *   Si el valor calculado &gt; la longitud de la colección, *index* se establece para la longitud.
 
-En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.<span class="hljs-keyword">
+En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
 
 
-If</span> you try to remove an element from an empty collection,<span class="hljs-function"> the method does nothing </span>(no error is generated).
+Si se intenta eliminar un elemento de una colección vacía,<span class="hljs-function"> el método no hace nada </span>(no se genera ningún error).
 
 
 #### Ejemplo

@@ -118,7 +118,7 @@ End if</span>
 <tr><td>zipStructure</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>File or Folder object to compress</td></tr>
 <tr><td>destinationFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Destination file for the archive</td></tr>
 <tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><em>folderToZip</em> option: <code>ZIP Without enclosing folder</code></td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status object</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Objeto de estado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -195,7 +195,7 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
 </ul>
 <p>In the <em>destinationFile</em> parameter, pass a <code>4D.File</code> object describing the ZIP archive to create (name, location, etc.). It is advised to use the &quot;.zip&quot; extension if you want the ZIP archive to be processed automatically by any software.</p>
 <p>Once an archive is created, you can use the <a href="#zip-read-archive">ZIP Read archive</a> command to access it.</p>
-<p><strong>Status object</strong></p>
+<p><strong>Objeto de estado</strong></p>
 <p>The returned status object contains the following properties:</p>
 <table>
 <thead>
