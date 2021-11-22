@@ -27,7 +27,7 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 ![](assets/en/ORDA/sessions.png)
 
-> Pour les sessions ouvertes par des requêtes REST, veuillez consulter aux [Utilisateurs et sessions](REST/authUsers.md).
+> Pour les sessions ouvertes par des requêtes REST, veuillez consulter la page [Utilisateurs et sessions](REST/authUsers.md).
 
 ## Visionnage des sessions
 

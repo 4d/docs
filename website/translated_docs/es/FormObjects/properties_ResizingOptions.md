@@ -96,7 +96,7 @@ Three options are available:
 
 
 ---
-## Pusher
+## Pulsador
 
 When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
 

@@ -6,9 +6,9 @@ title: Plage de valeurs
 ---
 ## Valeur par défaut
 
-You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
+Vous pouvez attribuer une valeur par défaut à saisir dans un objet Zone de saisie. Cette propriété est utile par exemple lorsque la [source de données](properties_Object.md#variable-or-expression) de la zone de saisie est un champ : la valeur par défaut est saisie lors du premier affichage d'un nouvel enregistrement. Vous pouvez modifier la valeur, sauf si la zone de saisie a été définie comme [non saisissable](properties_Entry.md#enterable).
 
-The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+La valeur par défaut ne peut être utilisée que si le [type de source de données](properties_Object.md#expression-type) est :
 - text/string
 - number/integer
 - date

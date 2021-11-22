@@ -527,12 +527,12 @@ Email オブジェクト。
 テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。
 
 ```4d
-C_BLOB($mime)
-C_OBJECT($mail;$server;$transporter;$status)
+var $mime: Blob
+var $mail;$server;$transporter;$status: Object
 
 $mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
 
-$mail:=[#current_title_incode]($mime)
+$mail:=MAIL Convert from MIME($mime)
 $mail.to:="smith@mail.com"
 $mail.subject:="Hello world"
 
@@ -551,8 +551,8 @@ $status:=$transporter.send($mail)
 この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:
 
 ```4d
-C_TEXT($mime)
-C_OBJECT($email;$server;$transporter;$status)
+var $mime: Blob
+var $email;$server;$transporter;$status: Object
 
 // 4D Write Pro ドキュメントを MIME に書き出します
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
@@ -619,8 +619,8 @@ $status:=$transporter.send($email)
 #### 例題
 
 ```4d
-C_OBJECT($mail)
-C_TEXT($mime)
+var $mail: Object
+var $mime: Text
 $mail:=New object
 
 // メール作成
@@ -633,7 +633,7 @@ $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
 // Email オブジェクトを MIME に変換します
-$mime:=[#current_title_incode]($mail)
+$mime:=MAIL Convert to MIME($mail)
 
 // $mime の中身:
 // MIME-Version: 1.0

@@ -92,8 +92,7 @@ class Index extends React.Component {
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
 				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
-				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)<br>
-				  [${subContents.components}](${siteConfig.baseUrl}${this.props.language}/Project/components.html)`,
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Core',

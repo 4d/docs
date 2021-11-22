@@ -56,7 +56,7 @@ End if
 | zipStructure    | Objeto    | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File   | -> | Destination file for the archive                     |
 | options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultado       | Objeto    | <- | Status object                                        |
+| Resultado       | Objeto    | <- | Objeto de estado                                     |
 <!-- END REF -->
 
 
@@ -146,7 +146,7 @@ In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP a
 
 Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
 
-**Status object**
+**Objeto de estado**
 
 The returned status object contains the following properties:
 
