@@ -73,55 +73,112 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : any</a><p>    stores the attribute value for the entity</td></tr>
-<tr><td><a href="#clone"><strong>.clone()</strong> : 4D.Entity</a><p>    creates in memory a new entity referencing the same record as the original entity</td></tr>
-<tr><td><a href="#diff"><strong>.diff</strong>( <em>entityToCompare</em> : 4D.Entity { ; <em>attributesToCompare</em> : Collection } ) : Collection</a><p>    compares the contents of two entities and returns their differences</td></tr>
-<tr><td><a href="#drop"><strong>.drop</strong>( {<em>mode</em> : Integer} ) : Object</a><p>    deletes the data contained in the entity from the datastore</td></tr>
-<tr><td><a href="#first"><strong>.first()</strong>: 4D.Entity</a><p>    returns a reference to the entity in first position of the entity selection which the entity belongs to</td></tr>
-<tr><td><a href="#fromobject"><strong>.fromObject</strong>( <em>filler</em> : Object )</a><p>    fills an entity with the <em>filler</em> content</td></tr>
-<tr><td><a href="#getdataclass"><strong>.getDataClass()</strong> : 4D.DataClass</a><p>    returns the dataclass of the entity</td></tr>
-<tr><td><a href="#getkey"><strong>.getKey</strong>( { <em>mode</em> : Integer } ) : Text<br><strong>.getKey</strong>( { <em>mode</em> : Integer } ) : Integer</a><p>    returns the primary key value of the entity</td></tr>
-<tr><td><a href="#getselection"><strong>.getSelection()</strong>: 4D.EntitySelection</a><p>    returns the entity selection which the entity belongs to</td></tr>
-<tr><td><a href="#getstamp"><strong>.getStamp()</strong> : Integer</a><p>     returns the current value of the stamp of the entity</td></tr>
-<tr><td><a href="#indexof"><strong>.indexOf</strong>( { <em>entitySelection</em> : 4D.EntitySelection } ) : Integer</a><p>    returns the position of the entity in an entity selection</td></tr>
-<tr><td><a href="#isnew"><strong>.isNew()</strong> : Boolean</a><p>     returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore</td></tr>
-<tr><td><a href="#last"><strong>.last()</strong> : 4D.Entity</a><p>    returns a reference to the entity in last position of the entity selection which the entity belongs to</td></tr>
-<tr><td><a href="#lock"><strong>.lock</strong>( { <em>mode</em> : Integer } ) : Object</a><p>    puts a pessimistic lock on the record referenced by the entity</td></tr>
-<tr><td><a href="#next"><strong>.next()</strong> : 4D.Entity</a><p>    returns a reference to the next entity in the entity selection which the entity belongs to</td></tr>
-<tr><td><a href="#previous"><strong>.previous()</strong>  : 4D.Entity</a><p>     returns a reference to the previous entity in the entity selection which the entity belongs to</td></tr>
-<tr><td><a href="#reload"><strong>.reload()</strong> : Object</a><p>    reloads the content of the entity in memory</td></tr>
-<tr><td><a href="#save"><strong>.save</strong>( { <em>mode</em> : Integer } ) : Object</a><p>    saves the changes made to the entity</td></tr>
-<tr><td><a href="#toobject"><strong>.toObject</strong>() : Object<br><strong>.toObject</strong>( <em>filterString</em> : Text { ; <em>options</em> : Integer}  ) : Object<br><strong>.toObject</strong>( <em>filterCol</em> : Collection { ; <em>options</em> : Integer } ) : Object</a><p>    returns an object which has been built from the entity</td></tr>
-<tr><td><a href="#touched"><strong>.touched()</strong> : Boolean</a><p>    tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved</td></tr>
-<tr><td><a href="#touchedattributes"><strong>.touchedAttributes()</strong> : Collection</a><p>    returns the names of the attributes that have been modified since the entity was loaded into memory</td></tr>
-<tr><td><a href="#unlock"><strong>.unlock()</strong> : Object</a><p>    removes the pessimistic lock on the record matching the entity</td></tr>
+<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : any</a><p>    almacena el valor del atributo para la entidad</td></tr>
+<tr><td><a href="#clone"><strong>.clone()</strong> : 4D.Entity</a><p>    crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original</td></tr>
+<tr><td><a href="#diff"><strong>.diff</strong>( <em>entityToCompare</em> : 4D.Entity { ; <em>attributesToCompare</em> : Collection } ) : Collection</a><p>    compara el contenido de dos entidades y devuelve sus diferencias</td></tr>
+<tr><td><a href="#drop"><strong>.drop</strong>( {<em>mode</em> : Integer} ) : Object</a><p>    elimina los datos contenidos en la entidad del datastore</td></tr>
+<tr><td><a href="#first"><strong>.first()</strong>: 4D.Entity</a><p>    devuelve una referencia a la entidad en primera posición de la selección de entidades a la que pertenece la entidad</td></tr>
+<tr><td><a href="#fromobject"><strong>.fromObject</strong>( <em>filler</em> : Object )</a><p>    llena una entidad con el contenido <em>filler</em>.</td></tr>
 </tbody>
 </table>
-<h2><a class="anchor" aria-hidden="true" id="attributename"></a><a href="#attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.<em>attributeName</em></h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong><em>.attributeName</em></strong> : any</p>
-<h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>Any dataclass attribute is available as a property of an entity, which stores the attribute value for the entity.</p>
 <blockquote>
-<p>Dataclass attributes can also be reached using the alternate syntax with [ ].</p>
+<p>This function modifies the original entity.</p>
 </blockquote>
-<p>The attribute value type depends on the attribute <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> (relation or storage):</p>
+<p>El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atributos:</p>
 <ul>
-<li>If <em>attributeName</em> kind is <strong>storage</strong>: <code>.attributeName</code> returns a value of the same type as <em>attributeName</em>.</li>
-<li>If <em>attributeName</em> kind is <strong>relatedEntity</strong>: <code>.attributeName</code> returns the related entity. Values of the related entity are directly available through cascading properties, for example &quot;myEntity.employer.employees[0].lastname&quot;.</li>
-<li>If <em>attributeName</em> kind is <strong>relatedEntities</strong>: <code>.attributeName</code> returns a new entity selection of related entities. Duplications are removed (an unordered entity selection is returned).</li>
+<li>If a property of the object does not exist in the dataclass, it is ignored.</li>
+<li>Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see <a href="/docs/es/Concepts/data-types.html#converting-data-types"><code>Converting data types</code></a>), otherwise the attribute is left untouched.</li>
+<li>The primary key can be given as is or with a &quot;__KEY&quot; property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when <a href="#save">.save()</a> is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null.</li>
+</ul>
+<p><em>filler</em> puede manejar una entidad relacionada bajo las siguientes condiciones:</p>
+<ul>
+<li><em>filler</em> contains the foreign key itself, or</li>
+<li><em>filler</em> contains a property object with the same name as the related entity, containing a single property named &quot;__KEY&quot;.</li>
+<li>if the related entity does not exist, it is ignored.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$myEntity </span>: cs.EmployeeEntity
+<p>Con el siguiente objeto $o:</p>
+<pre><code class="hljs css language-4d">{
+    <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Mary"</span>,
+    <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Smith"</span>,
+    <span class="hljs-string">"salary"</span>: <span class="hljs-number">36500</span>,
+    <span class="hljs-string">"birthDate"</span>: <span class="hljs-string">"1958-10-27T00:00:00.000Z"</span>,
+    <span class="hljs-string">"woman"</span>: true,
+    <span class="hljs-string">"managerID"</span>: <span class="hljs-number">411</span>,<span class="hljs-comment">// relatedEntity given with PK</span>
+    <span class="hljs-string">"employerID"</span>: <span class="hljs-number">20</span> <span class="hljs-comment">// relatedEntity given with PK</span>
+}
+</code></pre>
+<p>El siguiente código creará una entidad con entidades relacionadas con el gerente y el empleador.</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$o </span>: Object<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$entity </span>: cs.EmpEntity
+ <span class="hljs-variable">$entity</span>:=ds.Emp.<span class="hljs-function">new</span>()
+ <span class="hljs-variable">$entity</span>.<span class="hljs-function">fromObject</span>(<span class="hljs-variable">$o</span>)
+ <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>()
+</code></pre>
+<p>También puede utilizar una entidad relacionada dada como objeto:</p>
+<pre><code class="hljs css language-4d">
+{
+    <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Marie"</span>,
+    <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Lechat"</span>,
+    <span class="hljs-string">"salary"</span>: <span class="hljs-number">68400</span>,
+    <span class="hljs-string">"birthDate"</span>: <span class="hljs-string">"1971-09-03T00:00:00.000Z"</span>,
+    <span class="hljs-string">"woman"</span>: false,
+    <span class="hljs-string">"employer"</span>: {<span class="hljs-comment">// relatedEntity given as an object</span>
+        <span class="hljs-string">"__KEY"</span>: <span class="hljs-string">"21"</span>
+    },
+    <span class="hljs-string">"manager"</span>: {<span class="hljs-comment">// relatedEntity given as an object</span>
+        <span class="hljs-string">"__KEY"</span>: <span class="hljs-string">"411"</span>
+    }
+}
+<span class="hljs-comment">```|</span>
+| [**.<span class="hljs-function">getDataClass</span>()** : 4D.DataClass](#getdataclass)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve la clase de datos de la entidad|
+| [**.getKey**( { *mode* : Integer } ) : Text&lt;br&gt;**.getKey**( { *mode* : Integer } ) : Integer](#getkey)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve el valor de la llave primaria|
+| [**.<span class="hljs-function">getSelection</span>()**: 4D.EntitySelection](#getselection)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve la selección de entidades a la que pertenece la entidad|
+| [**.<span class="hljs-function">getStamp</span>()** : Integer](#getstamp)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve el valor actual del sello de la entidad|
+| [**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer](#indexof)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve la posición de la entidad en una selección de entidades|
+| [**.<span class="hljs-function">isNew</span>()** : Boolean](#isnew)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve <span class="hljs-literal">True</span> si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore|
+| [**.<span class="hljs-function">last</span>()** : 4D.Entity](#last)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|
+| [**.lock**( { *mode* : Integer } ) : Object](#lock)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;pone un bloqueo pesimista en el registro referenciado por la entidad|
+| [**.<span class="hljs-function">next</span>()** : 4D.Entity](#next)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve una referencia a la siguiente entidad en la selección de entidades a la que pertenece la entidad|
+| [**.<span class="hljs-function">previous</span>()**  : 4D.Entity](#previous)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve una referencia a la entidad anterior en la selección de entidades a la que pertenece la entidad|
+| [**.<span class="hljs-function">reload</span>()** : Object](#reload)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;recarga el contenido de la entidad en memoria|
+| [**.save**( { *mode* : Integer } ) : Object](#save)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;guarda los cambios realizados en la entidad|
+| [**.toObject**() : Object&lt;br&gt;**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object&lt;br&gt;**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object](#toobject)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve un objeto que ha sido construido a partir de la entidad|
+| [**.<span class="hljs-function">touched</span>()** : Boolean](#touched)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;comprueba si un atributo de la entidad ha sido modificado o no desde que la entidad fue cargada en memoria o guardada|
+| [**.<span class="hljs-function">touchedAttributes</span>()** : Collection](#touchedattributes)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria|
+| [**.<span class="hljs-function">unlock</span>()** : Object](#unlock)&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;elimina el bloqueo pesimista del registro que coincide con la entidad|
+
+
+
+
+
+
+## .*attributeName*
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+&lt;/details&gt;
+
+***.attributeName*** : any
+
+#### Descripción
+
+Todo atributo de la dataclass está disponible como una propiedad de una entidad, que almacena el valor del atributo para la entidad.
+&gt; Dataclass attributes can also be reached using the alternate syntax with \[ ].
+
+The attribute value type depends on the attribute [kind](/docs/es/API/DataClassAttributeClass.html#kind) (relation or storage):
+
+*<span class="hljs-keyword">   If</span> *attributeName* kind is **storage**: <span class="hljs-comment">`.attributeName` returns a value of the same type as *attributeName*.</span>
+*<span class="hljs-keyword">   If</span> *attributeName* kind is **relatedEntity**: <span class="hljs-comment">`.attributeName` returns the related entity. Values of the related entity are directly available through cascading properties, for example "myEntity.employer.employees\[0].lastname".</span>
+*<span class="hljs-keyword">   If</span> *attributeName* kind is **relatedEntities**: <span class="hljs-comment">`.attributeName` returns a new entity selection of related entities. Duplications are removed (an unordered entity selection is returned).</span>
+
+
+#### Ejemplo
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$myEntity </span>: cs.EmployeeEntity
  <span class="hljs-variable">$myEntity</span>:=ds.Employee.<span class="hljs-function">new</span>() <span class="hljs-comment">//Create a new entity</span>
  <span class="hljs-variable">$myEntity</span>.name:=<span class="hljs-string">"Dupont"</span> <span class="hljs-comment">// assign 'Dupont' to the 'name' attribute</span>
  <span class="hljs-variable">$myEntity</span>.firstname:=<span class="hljs-string">"John"</span> <span class="hljs-comment">//assign 'John' to the 'firstname' attribute</span>
@@ -144,15 +201,15 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>New entity referencing the record</td></tr>
+<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Nueva entidad que hace referencia al registro</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.clone()</code> function creates in memory a new entity referencing the same record as the original entity. This function allows you to update entities separately.</p>
+<h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.clone()</code> crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original. Esta función permite actualizar las entidades por separado.</p>
 <blockquote>
 <p>Keep in mind that any modifications done to entities will be saved in the referenced record only when the <a href="#save"><code>.save( )</code></a> function is executed.</p>
 </blockquote>
-<p>This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which <a href="#isnew"><code>.isNew()</code></a> returns <strong>True</strong>).</p>
+<p>Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que <a href="#isnew"><code>.isNew()</code></a> devuelve <strong>True</strong>).</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp</span>; <span class="hljs-variable">$empCloned </span>: cs.EmployeeEntity
  <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">672</span>)
@@ -178,29 +235,29 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>entityToCompare</td><td>4D.Entity</td><td style="text-align:center">-&gt;</td><td>Entity to be compared with the original entity</td></tr>
-<tr><td>attributesToCompare</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Name of attributes to be compared</td></tr>
-<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Differences between the entities</td></tr>
+<tr><td>entityToCompare</td><td>4D.Entity</td><td style="text-align:center">-&gt;</td><td>Entidad a comparar con la entidad original</td></tr>
+<tr><td>attributesToCompare</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Nombre de los atributos a comparar</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Diferencias entre las entidades</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.diff()</code> function compares the contents of two entities and returns their differences.</p>
-<p>In <em>entityToCompare</em>, pass the entity to be compared to the original entity.</p>
-<p>In <em>attributesToCompare</em>, you can designate specific attributes to compare. If provided, the comparison is done only on the specified attributes. If not provided, all differences between the entities are returned.</p>
-<p>The differences are returned as a collection of objects whose properties are:</p>
+<h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.diff()</code> compara el contenido de dos entidades y devuelve sus diferencias.</p>
+<p>En <em>entityToCompare</em>, pase la entidad a comparar con la entidad original.</p>
+<p>En <em>attributesToCompare</em>, puede designar atributos específicos para comparar. Si se suministra, la comparación se realiza sólo en los atributos especificados. Si no se suministra, se devuelven todas las diferencias entre las entidades.</p>
+<p>Las diferencias se devuelven como una colección de objetos cuyas propiedades son:</p>
 <table>
 <thead>
 <tr><th>Nombre de propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>attributeName</td><td>Cadena</td><td>Nombre del atributo</td></tr>
-<tr><td>value</td><td>any - Depends on attribute type</td><td>Value of the attribute in the entity</td></tr>
-<tr><td>otherValue</td><td>any - Depends on attribute type</td><td>Value of the attribute in <em>entityToCompare</em></td></tr>
+<tr><td>value</td><td>cualquiera - Depende del tipo de atributo</td><td>Valor del atributo en la entidad</td></tr>
+<tr><td>otherValue</td><td>cualquiera - Depende del tipo de atributo</td><td>Valor del atributo en <em>entityToCompare</em></td></tr>
 </tbody>
 </table>
-<p>Only attributes with different values are included in the collection. If no differences are found, <code>.diff()</code> returns an empty collection.</p>
-<p>The function applies for properties whose <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> is <strong>storage</strong> or <strong>relatedEntity</strong>. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as <em>attributeName</em> properties (<em>value</em> and <em>otherValue</em> are empty for the related entity name).</p>
-<p>If one of the compared entities is <strong>Null</strong>, an error is raised.</p>
+<p>Sólo se incluyen en la colección los atributos con valores diferentes. Si no se encuentran diferencias, <code>.diff()</code> devuelve una colección vacía.</p>
+<p>La función se aplica a las propiedades cuyo <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> es <strong>storage</strong> o <strong>relatedEntity</strong>. En caso de que se haya actualizado una entidad relacionada (es decir, la llave foránea), el nombre de la entidad relacionada y su nombre de llave primaria se devuelven como propiedades <em>attributeName</em> (<em>value</em> y <em>otherValue</em> están vacíos para el nombre de la entidad relacionada).</p>
+<p>Si una de las entidades comparadas es <strong>Null</strong>, se produce un error.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-1"></a><a href="#ejemplo-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$diff1</span>; <span class="hljs-variable">$diff2 </span>: Collection
  employee:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"ID=1001"</span>).<span class="hljs-function">first</span>()
@@ -269,7 +326,7 @@
  vCompareResult2:=<span class="hljs-variable">$e1</span>.<span class="hljs-function">diff</span>(<span class="hljs-variable">$e2</span>;<span class="hljs-variable">$attributesToInspect</span>)
  vCompareResult3:=<span class="hljs-variable">$e1</span>.<span class="hljs-function">diff</span>(<span class="hljs-variable">$e2</span>;<span class="hljs-variable">$e1</span>.<span class="hljs-function">touchedAttributes</span>())
 </code></pre>
-<p>vCompareResult1 (all differences are returned):</p>
+<p>vCompareResult1 (se devuelven todas las diferencias):</p>
 <pre><code class="hljs css language-4d">[
     {
         <span class="hljs-string">"attributeName"</span>: <span class="hljs-string">"firstName"</span>,
@@ -312,7 +369,7 @@
     }
 ]
 </code></pre>
-<p>vCompareResult3 (only differences on $e1 touched attributes are returned)</p>
+<p>vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)</p>
 <pre><code class="hljs css language-4d">[
     {
         <span class="hljs-string">"attributeName"</span>: <span class="hljs-string">"firstName"</span>,
@@ -354,56 +411,56 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk force drop if stamp changed</code>: Forces the drop even if the stamp has changed</td></tr>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Result of drop operation</td></tr>
+<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk force drop if stamp changed</code>: activa el soltar incluso si el sello ha cambiado</td></tr>
+<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Resultado de la operación soltar</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.drop()</code> function deletes the data contained in the entity from the datastore, from the table related to its Dataclass. Note that the entity remains in memory.</p>
-<p>In a multi-user or multi-process application, the <code>.drop()</code> function is executed under an <a href="/docs/es/ORDA/entities.html#entity-locking">&quot;optimistic lock&quot;</a> mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.</p>
-<p>By default, if the <em>mode</em> parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.</p>
-<p>Otherwise, you can pass the <code>dk force drop if stamp changed</code> option in the <em>mode</em> parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).</p>
+<h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.drop()</code> elimina los datos contenidos en la entidad del datastore, de la tabla relacionada con su Dataclass. Tenga en cuenta que la entidad permanece en la memoria.</p>
+<p>En una aplicación multiusuario o multiproceso, la función <code>.drop()</code> se ejecuta bajo un mecanismo de <a href="/docs/es/ORDA/entities.html#entity-locking">&quot;bloqueo optimista&quot;</a>, en el que un sello de bloqueo interno se incrementa automáticamente cada vez que se guarda el registro.</p>
+<p>Por defecto, si se omite el parámetro <em>mode</em>, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.</p>
+<p>De lo contrario, puede pasar la opción <code>dk force drop if stamp changed</code> en el parámetro <em>mode</em>: en este caso, la entidad se abandona aunque el sello haya cambiado (y la llave primaria siga siendo la misma).</p>
 <p><strong>Resultado</strong></p>
-<p>The object returned by <code>.drop( )</code> contains the following properties:</p>
+<p>El objeto devuelto por <code>.drop( )</code> contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>true if the drop action is successful, false otherwise.</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of error:</em></strong></td></tr>
+<tr><td>success</td><td></td><td>boolean</td><td>true si la acción de soltar tiene éxito, false en caso contrario.</td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>Disponible sólo en caso de error:</em></strong></td></tr>
 <tr><td>status(*)</td><td></td><td>number</td><td>Código de error, ver abajo</td></tr>
-<tr><td>statusText(*)</td><td></td><td>text</td><td>Description of the error, see below</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of pessimistic lock error:</em></strong></td></tr>
+<tr><td>statusText(*)</td><td></td><td>text</td><td>Descripción del error, ver abajo</td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>Disponible sólo en caso de error de bloqueo pesimista:</em></strong></td></tr>
 <tr><td>LockKindText</td><td></td><td>text</td><td>&quot;Locked by record&quot;</td></tr>
-<tr><td>lockInfo</td><td></td><td>object</td><td>Information about the lock origin</td></tr>
+<tr><td>lockInfo</td><td></td><td>object</td><td>Información sobre el origen del bloqueo</td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>Id del proceso</td></tr>
-<tr><td></td><td>user_name</td><td>text</td><td>Session user name on the machine</td></tr>
-<tr><td></td><td>user4d_alias</td><td>text</td><td>User alias if defined by <code>SET USER ALIAS</code>, otherwise user name in the 4D directory</td></tr>
+<tr><td></td><td>user_name</td><td>text</td><td>Nombre de usuario de la sesión en la máquina</td></tr>
+<tr><td></td><td>user4d_alias</td><td>text</td><td>Alias de usuario si está definido por <code>SET USER ALIAS</code>, si no, nombre de usuario en el directorio 4D</td></tr>
 <tr><td></td><td>host_name</td><td>text</td><td>Nombre de la máquina</td></tr>
 <tr><td></td><td>task_name</td><td>text</td><td>Nombre del proceso</td></tr>
 <tr><td></td><td>client_version</td><td>text</td><td></td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):</em></strong></td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>Disponible sólo en caso de error grave (un error grave puede ser intentar duplicar una llave primaria, disco lleno...):</em></strong></td></tr>
 <tr><td>errors</td><td></td><td>collection of objects</td><td></td></tr>
 <tr><td></td><td>message</td><td>text</td><td>Mensaje de error</td></tr>
-<tr><td></td><td>component signature</td><td>text</td><td>internal component signature (e.g. &quot;dmbg&quot; stands for the database component)</td></tr>
+<tr><td></td><td>component signature</td><td>text</td><td>firma del componente interno (por ejemplo, &quot;dmbg&quot; significa el componente de la base)</td></tr>
 <tr><td></td><td>errCode</td><td>number</td><td>Error code</td></tr>
 </tbody>
 </table>
-<p>(*) The following values can be returned in the <em>status</em> and <em>statusText</em> properties of <em>Result</em> object in case of error:</p>
+<p>(*) Los siguientes valores pueden ser devueltos en las propiedadese <em>status</em> y <em>statusText</em> del objeto <em>Result</em> en caso de error:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td><code>dk status entity does not exist anymore</code></td><td>5</td><td>The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li><p><strong>Associated statusText</strong>: &quot;Entity does not exist anymore&quot;</td></tr>
-<tr><td><code>dk status locked</code></td><td>3</td><td>The entity is locked by a pessimistic lock.<br><strong>Associated statusText</strong>: &quot;Already locked&quot;</td></tr>
-<tr><td><code>dk status serious error</code></td><td>4</td><td>A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br><strong>Associated statusText</strong>: &quot;Other error&quot;</td></tr>
-<tr><td><code>dk status stamp has changed</code></td><td>2</td><td>The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br><li>with <code>.save( )</code>: error only if the <code>dk auto merge</code> option is not used</li><li>with <code>.drop( )</code>: error only if the <code>dk force drop if stamp changed</code> option is not used</li><li>with <code>.lock( )</code>: error only if the <code>dk reload if stamp changed</code> option is not used</li><li><strong>Associated statusText</strong>: &quot;Stamp has changed&quot;</li></td></tr>
+<tr><td><code>dk status entity does not exist anymore</code></td><td>5</td><td>La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br><li>la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)</li><li>la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza entity.drop( ), este error puede ser devuelto cuando se utiliza la opción dk force drop if stamp changed. Cuando se utiliza entity.lock( ), este error puede ser devuelto cuando se utiliza la opción dk reload if stamp changed</li><p><strong>statusText asociado</strong>: &quot;La entidad ya no existe&quot;</td></tr>
+<tr><td><code>dk status locked</code></td><td>3</td><td>La entidad está bloqueada por un bloqueo pesimista.<br><strong>statusText asociado</strong>: &quot;Ya está bloqueado&quot;</td></tr>
+<tr><td><code>dk status serious error</code></td><td>4</td><td>Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br><strong>statusText asociado</strong>: &quot;Otro error&quot;</td></tr>
+<tr><td><code>dk status stamp has changed</code></td><td>2</td><td>El valor del sello interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<br><li>con <code>.save( )</code>: error sólo si no se utiliza la opción <code>dk auto merge</code></li><li>con <code>.drop( )</code>: error sólo si no se utiliza la opción <code>dk force drop if stamp changed</code></li><li>con <code>.lock( )</code>: error sólo si no se utiliza la opción <code>dk reload if stamp changed</code></li><li>**statusText asociado **: &quot;El sello ha cambiado&quot;</li></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-2"></a><a href="#ejemplo-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>Example without <code>dk force drop if stamp changed</code> option:</p>
+<p>Ejemplo sin la opción <code>dk force drop if stamp changed</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
@@ -418,7 +475,7 @@
  End case</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-1"></a><a href="#ejemplo-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Example with <code>dk force drop if stamp changed</code> option:</p>
+<p>Ejemplo con la opción <code>dk force drop if stamp changed</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
@@ -449,12 +506,12 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Reference to first entity of an entity selection (Null if not found)</td></tr>
+<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Referencia a la primera entidad de una selección de entidades (Null si no se encuentra)</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.first()</code> function returns a reference to the entity in first position of the entity selection which the entity belongs to.</p>
-<p>If the entity does not belong to any existing entity selection (i.e. <a href="#getselection">.getSelection( )</a> returns Null), the function returns a Null value.</p>
+<h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.first()</code> devuelve una referencia a la entidad en primera posición de la selección de entidades a la que pertenece la entidad.</p>
+<p>Si la entidad no pertenece a ninguna selección de entidades existente (es decir, <a href="#getselection">.getSelection( )</a> devuelve Null), la función devuelve un valor Null.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee</span>; <span class="hljs-variable">$firstEmployee </span>: cs.EmployeeEntity
@@ -479,28 +536,28 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>filler</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Object from which to fill the entity</td></tr>
+<tr><td>filler</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Objeto a partir del cual se llena la entidad</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-5"></a><a href="#descripción-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.fromObject()</code> function fills an entity with the <em>filler</em> content.</p>
+<h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.fromObject()</code> llena una entidad con el contenido <em>filler</em>.</p>
 <blockquote>
 <p>This function modifies the original entity.</p>
 </blockquote>
-<p>The mapping between the object and the entity is done on the attribute names:</p>
+<p>El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atributos:</p>
 <ul>
 <li>If a property of the object does not exist in the dataclass, it is ignored.</li>
 <li>Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see <a href="/docs/es/Concepts/data-types.html#converting-data-types"><code>Converting data types</code></a>), otherwise the attribute is left untouched.</li>
 <li>The primary key can be given as is or with a &quot;__KEY&quot; property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when <a href="#save">.save()</a> is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null.</li>
 </ul>
-<p><em>filler</em> can handle a related entity under the following conditions:</p>
+<p><em>filler</em> puede manejar una entidad relacionada bajo las siguientes condiciones:</p>
 <ul>
 <li><em>filler</em> contains the foreign key itself, or</li>
 <li><em>filler</em> contains a property object with the same name as the related entity, containing a single property named &quot;__KEY&quot;.</li>
 <li>if the related entity does not exist, it is ignored.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>With the following $o object:</p>
+<p>Con el siguiente objeto $o:</p>
 <pre><code class="hljs css language-4d">{
     <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Mary"</span>,
     <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Smith"</span>,
@@ -511,14 +568,14 @@
     <span class="hljs-string">"employerID"</span>: <span class="hljs-number">20</span> <span class="hljs-comment">// relatedEntity given with PK</span>
 }
 </code></pre>
-<p>The following code will create an entity with manager and employer related entities.</p>
+<p>El siguiente código creará una entidad con entidades relacionadas con el gerente y el empleador.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$o </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$entity </span>: cs.EmpEntity
  <span class="hljs-variable">$entity</span>:=ds.Emp.<span class="hljs-function">new</span>()
  <span class="hljs-variable">$entity</span>.<span class="hljs-function">fromObject</span>(<span class="hljs-variable">$o</span>)
  <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>()
 </code></pre>
-<p>You could also use a related entity given as an object:</p>
+<p>También puede utilizar una entidad relacionada dada como objeto:</p>
 <pre><code class="hljs css language-4d">
 {
     <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Marie"</span>,
@@ -533,32 +590,26 @@
         <span class="hljs-string">"__KEY"</span>: <span class="hljs-string">"411"</span>
     }
 }
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="getdataclass"></a><a href="#getdataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getDataClass()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17 R5</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.getDataClass()</strong> : 4D.DataClass</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>4D.DataClass</td><td style="text-align:center">&lt;-</td><td>DataClass object to which the entity belongs</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getDataClass()</code> function returns the dataclass of the entity. This function is useful when writing generic code.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-5"></a><a href="#ejemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>The following generic code duplicates any entity:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">//duplicate_entity method </span>
+<span class="hljs-comment">```## .getDataClass()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17 R5  | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">getDataClass</span>()** : 4D.DataClass| Parámetros | Tipo         |    | Descripción                                  |
+| ---------- | ------------ |:--:| -------------------------------------------- |
+| Resultado  | 4D.DataClass | &lt;- | Objeto DataClass al que pertenece la entidad |#### Descripción
+
+La función <span class="hljs-comment">`.getDataClass()`devuelve la clase de datos de la entidad. Esta función es útil al escribir código genérico.</span>
+
+
+#### Ejemplo
+
+El siguiente código genérico duplica cualquier entidad:
+
+<span class="hljs-comment">```4d</span>
+  <span class="hljs-comment">//duplicate_entity method </span>
   <span class="hljs-comment">//duplicate_entity($entity) </span>
 
  #<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$entity </span>: 4D.Entity)<span class="hljs-keyword">  
@@ -569,64 +620,52 @@
  <span class="hljs-variable">$entityNew</span>.<span class="hljs-function">fromObject</span>(<span class="hljs-variable">$entity</span>.<span class="hljs-function">toObject</span>()) <span class="hljs-comment">//get all attributes</span>
  <span class="hljs-variable">$entityNew</span>[<span class="hljs-variable">$entity</span>.<span class="hljs-function">getDataClass</span>().<span class="hljs-function">getInfo</span>().primaryKey]:=<span class="hljs-literal">Null</span> <span class="hljs-comment">//reset the primary key</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$entityNew</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//save the duplicated entity</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="getkey"></a><a href="#getkey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getKey()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.getKey</strong>( { <em>mode</em> : Integer } ) : Text<br><strong>.getKey</strong>( { <em>mode</em> : Integer } ) : Integer</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk key as string</code>: primary key is returned as a string, no matter the primary key type</td></tr>
-<tr><td>Resultado</td><td>Text</td><td style="text-align:center">&lt;-</td><td>Value of the text primary key of the entity</td></tr>
-<tr><td>Resultado</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>Value of the numeric primary key of the entity</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getKey()</code> function returns the primary key value of the entity.</p>
-<p>Primary keys can be numbers (Integer) or strings. You can &quot;force&quot; the returned primary key value to be a string, no matter the actual primary key type, by passing the <code>dk key as string</code> option in the <em>mode</em> parameter.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-6"></a><a href="#ejemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .getKey()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.getKey**( { *mode* : Integer } ) : Text&lt;br&gt;**.getKey**( { *mode* : Integer } ) : Integer| Parámetros | Tipo    |    | Descripción                                                                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
+| mode       | Integer | -&gt; | <span class="hljs-comment">`dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |</span>
+| Resultado  | Text    | &lt;- | Valor de la llave primaria de texto de la entidad                                                         |
+| Resultado  | Integer | &lt;- | Valor de la llave primaria numérica de la entidad                                                         |#### Descripción
+
+La función <span class="hljs-comment">`.getKey()`devuelve el valor de la llave primaria.</span>
+
+<span class="hljs-function">Las llaves primarias pueden ser números </span>(enteros) o cadenas. Puede <span class="hljs-string">"forzar"</span> que el valor de la llave primaria devuelto sea una cadena, sin importar el tipo de llave primaria real, pasando la opción <span class="hljs-comment">`dk key as string` en el parámetro *mode*.</span>
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName=:1"</span>;<span class="hljs-string">"Smith"</span>)
  <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">0</span>]
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"The primary key is "</span>+<span class="hljs-variable">$employee</span>.<span class="hljs-function">getKey</span>(dk key as string))
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="getselection"></a><a href="#getselection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getSelection()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.getSelection()</strong>: 4D.EntitySelection</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Entity selection to which the entity belongs (Null if not found)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-8"></a><a href="#descripción-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getSelection()</code> function returns the entity selection which the entity belongs to.</p>
-<p>If the entity does not belong to an entity selection, the function returns Null.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity<span class="hljs-keyword">
+<span class="hljs-comment">```## .getSelection()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">getSelection</span>()**: 4D.EntitySelection| Parámetros | Tipo               |    | Descripción                                                              |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------ |
+| Resultado  | 4D.EntitySelection | &lt;- |<span class="hljs-function"> Entity selection a la que pertenece la entidad </span>(nula si no se encuentra) |#### Descripción
+
+La función <span class="hljs-comment">`.getSelection()`devuelve la selección de entidades a la que pertenece la entidad.</span>
+
+Si la entidad no pertenece a una selección de entidades, la función devuelve <span class="hljs-literal">Null</span>.
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employees</span>; <span class="hljs-variable">$employees2 </span>: cs.EmployeeSelection
  <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">672</span>) <span class="hljs-comment">// This entity does not belong to any entity selection</span>
  <span class="hljs-variable">$employees</span>:=<span class="hljs-variable">$emp</span>.<span class="hljs-function">getSelection</span>() <span class="hljs-comment">// $employees is Null</span>
@@ -635,35 +674,28 @@
  <span class="hljs-variable">$emp</span>:=<span class="hljs-variable">$employees2</span>[<span class="hljs-number">0</span>]  <span class="hljs-comment">// This entity belongs to an entity selection</span>
 
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"The entity selection contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$emp</span>.<span class="hljs-function">getSelection</span>().length)+<span class="hljs-string">" entities"</span>)
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="getstamp"></a><a href="#getstamp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getStamp()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.getStamp()</strong> : Integer</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>Stamp of the entity (0 if entity has just been created)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-9"></a><a href="#descripción-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getStamp()</code> function  returns the current value of the stamp of the entity.</p>
-<p>The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see <a href="/docs/es/ORDA/entities.html#entity-locking"><strong>Entity locking</strong></a>).</p>
-<blockquote>
-<p>For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use <a href="#isnew">.isNew()</a>.</p>
-</blockquote>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity<span class="hljs-keyword">
+<span class="hljs-comment">```## .getStamp()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">getStamp</span>()** : Integer| Parámetros | Tipo    |    | Descripción                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------- |
+| Resultado  | Integer | &lt;- |<span class="hljs-function"> Sello de la entidad </span>(<span class="hljs-number">0</span> si la entidad acaba de ser creada) |#### Descripción
+
+La función <span class="hljs-comment">`.getStamp()`devuelve el valor actual del sello de la entidad.</span>
+
+El sello interno se incrementa automáticamente en 4D cada vez que se guarda la entidad.<span class="hljs-function"> Gestiona los accesos y modificaciones concurrentes de los usuarios a las mismas entidades </span>(ver [**Bloqueo de entidades**](/docs/es/ORDA/entities.html#entity-locking)).
+&gt;<span class="hljs-keyword"> For</span><span class="hljs-function"> a new entity </span>(never saved), the function returns <span class="hljs-number">0.</span> To know if an entity has just been created, it is recommended to use [.<span class="hljs-function">isNew</span>()](#isnew).
+
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$stamp </span>: Integer
 
  <span class="hljs-variable">$entity</span>:=ds.Employee.<span class="hljs-function">new</span>()
@@ -674,38 +706,32 @@
  <span class="hljs-variable">$entity</span>.lastname:=<span class="hljs-string">"Wesson"</span>
  <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>()
  <span class="hljs-variable">$stamp</span>:=<span class="hljs-variable">$entity</span>.<span class="hljs-function">getStamp</span>() <span class="hljs-comment">//$stamp=2</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="indexof"></a><a href="#indexof" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.indexOf()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.indexOf</strong>( { <em>entitySelection</em> : 4D.EntitySelection } ) : Integer</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>entitySelection</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>Position of the entity is given according to this entity selection</td></tr>
-<tr><td>Resultado</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>Position of the entity in an entity selection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.indexOf()</code> function returns the position of the entity in an entity selection.</p>
-<p>By default if the <em>entitySelection</em> parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified <em>entitySelection</em>.</p>
-<p>The resulting value is included between 0 and the length of the entity selection -1.</p>
-<ul>
-<li>If the entity does not have an entity selection or does not belong to <em>entitySelection</em>, the function returns -1.</li>
-<li>If <em>entitySelection</em> is Null or does not belong to the same dataclass as the entity, an error is raised.</li>
-</ul>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-9"></a><a href="#ejemplo-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .indexOf()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer| Parámetros      | Tipo               |    | Descripción                                                               |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------- |
+| entitySelection | 4D.EntitySelection | -&gt; | La posición de la entidad se da en función de esta selección de entidades |
+| Resultado       | Integer            | &lt;- | Posición de la entidad en una selección de entidades                      |#### Descripción
+
+La función <span class="hljs-comment">`.indexOf()`devuelve la posición de la entidad en una selección de entidades.</span>
+
+Por defecto, si se omite el parámetro *entitySelection*, la función devuelve la posición de la entidad dentro de su propia selección de entidades. En caso contrario, devuelve la posición de la entidad dentro de la *entitySelection* especificada.
+
+El valor resultante se incluye entre <span class="hljs-number">0</span> y la longitud de la selección de entidades <span class="hljs-number">-1.</span>
+
+*<span class="hljs-keyword">   If</span> the entity does not have an entity selection or does not belong to *entitySelection*, the function returns <span class="hljs-number">-1.</span>
+*<span class="hljs-keyword">   If</span> *entitySelection* is <span class="hljs-literal">Null</span> or does not belong to the same dataclass as the entity, an error is raised.
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>) <span class="hljs-comment">//This entity selection contains 3 entities</span>
  <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">1</span>] <span class="hljs-comment">//This entity belongs to an entity selection</span>
@@ -713,144 +739,126 @@
 
  <span class="hljs-variable">$employee</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">725</span>) <span class="hljs-comment">//This entity does not belong to an entity selection</span>
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"The index of the entity is "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$employee</span>.<span class="hljs-function">indexOf</span>())) <span class="hljs-comment">// -1</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="isnew"></a><a href="#isnew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isNew()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.isNew()</strong> : Boolean</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>True if entity has just been created and not yet saved. En caso contrario, False.</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.isNew()</code> function  returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore. Otherwise, it returns False.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-10"></a><a href="#ejemplo-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
+<span class="hljs-comment">```## .isNew()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">isNew</span>()** : Boolean| Parámetros | Tipo    |    | Descripción                                                                               |
+| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------- |
+| Resultado  | Boolean | &lt;- | <span class="hljs-literal">True</span> si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, <span class="hljs-literal">False</span>. |#### Descripción
+
+La función <span class="hljs-comment">`.isNew()`devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore. En caso contrario, devuelve False.</span>
+
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
 
  <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">new</span>()<span class="hljs-keyword">
 
  If</span>(<span class="hljs-variable">$emp</span>.<span class="hljs-function">isNew</span>())
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"This is a new entity"</span>)<span class="hljs-keyword">
  End if</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="last"></a><a href="#last" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.last()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.last()</strong> : 4D.Entity</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Reference to last entity of an entity selection (Null if not found)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.last()</code> function returns a reference to the entity in last position of the entity selection which the entity belongs to.</p>
-<p>If the entity does not belong to any existing entity selection (i.e. <a href="#getselection">.getSelection( )</a> returns Null), the function returns a Null value.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-11"></a><a href="#ejemplo-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .last()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">last</span>()** : 4D.Entity| Parámetros | Tipo      |    | Descripción                                                                            |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | &lt;- |<span class="hljs-function"> Referencia a la última entidad de una selección de entidades </span>(<span class="hljs-literal">Null</span> si no se encuentra) |#### Descripción
+
+La función <span class="hljs-comment">`.last()`devuelve una referencia a la entidad en la última posición de la selección de entidades a la que pertenece la entidad.</span>
+
+<span class="hljs-function">Si la entidad no pertenece a ninguna selección de entidades existente </span>(es decir, [.<span class="hljs-function">getSelection</span>( )](#getselection) devuelve <span class="hljs-literal">Null</span>), la función devuelve un valor <span class="hljs-literal">Null</span>.
+
+
+#### Ejemplo
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee</span>; <span class="hljs-variable">$lastEmployee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>) <span class="hljs-comment">//This entity selection contains 3 entities</span>
  <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">0</span>]
  <span class="hljs-variable">$lastEmployee</span>:=<span class="hljs-variable">$employee</span>.<span class="hljs-function">last</span>() <span class="hljs-comment">//$lastEmployee is the last entity of the $employees entity selection</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="lock"></a><a href="#lock" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.lock()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.lock</strong>( { <em>mode</em> : Integer } ) : Object</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk reload if stamp changed</code>: Reload before locking if stamp changed</td></tr>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Result of lock operation</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.lock()</code> function puts a pessimistic lock on the record referenced by the entity. The <a href="/docs/es/ORDA/entities.html#entity-locking">lock is set</a> for a record and all the references of the entity in the current process.</p>
-<p>Other processes will see this record as locked (the <code>result.success</code> property will contain False if they try to lock the same entity using this function). Only functions executed in the &quot;locking&quot; session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.</p>
-<p>A locked record is unlocked:</p>
-<ul>
-<li>when the <a href="#unlock"><code>unlock()</code></a> function is called on a matching entity in the same process</li>
-<li>automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.</li>
-</ul>
-<p>By default, if the <em>mode</em> parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.</p>
-<p>Otherwise, you can pass the <code>dk reload if stamp changed</code> option in the <em>mode</em> parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).</p>
-<p><strong>Resultado</strong></p>
-<p>The object returned by <code>.lock( )</code> contains the following properties:</p>
-<table>
-<thead>
-<tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>true if the lock action is successful (or if the entity is already locked in the current process), false otherwise.</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only if <code>dk reload if stamp changed</code> option is used:</em></strong></td></tr>
-<tr><td><strong>wasReloaded</strong></td><td></td><td>boolean</td><td>true if the entity was reloaded with success, false otherwise.</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of error:</em></strong></td></tr>
-<tr><td>status(*)</td><td></td><td>number</td><td>Código de error, ver abajo</td></tr>
-<tr><td>statusText(*)</td><td></td><td>text</td><td>Description of the error, see below</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of pessimistic lock error:</em></strong></td></tr>
-<tr><td>lockKindText</td><td></td><td>text</td><td>&quot;Locked by record&quot;</td></tr>
-<tr><td>lockInfo</td><td></td><td>object</td><td>Information about the lock origin</td></tr>
-<tr><td></td><td>task_id</td><td>number</td><td>ID del Proceso</td></tr>
-<tr><td></td><td>user_name</td><td>text</td><td>Session user name on the machine</td></tr>
-<tr><td></td><td>user4d_alias</td><td>text</td><td>Name or alias of the 4D user</td></tr>
-<tr><td></td><td>user4d_id</td><td>number</td><td>User id in the 4D database directory</td></tr>
-<tr><td></td><td>host_name</td><td>text</td><td>Nombre de la máquina</td></tr>
-<tr><td></td><td>task_name</td><td>text</td><td>Nombre del proceso</td></tr>
-<tr><td></td><td>client_version</td><td>text</td><td></td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of serious error</em></strong> (primary key already exists, disk full...):</td></tr>
-<tr><td>errors</td><td></td><td>collection of objects</td><td></td></tr>
-<tr><td></td><td>message</td><td>text</td><td>Mensaje de error</td></tr>
-<tr><td></td><td>component signature</td><td>text</td><td>internal component signature (e.g. &quot;dmbg&quot; stands for the database component)</td></tr>
-<tr><td></td><td>errCode</td><td>number</td><td>Error code</td></tr>
-</tbody>
-</table>
-<p>(*) The following values can be returned in the <em>status</em> and <em>statusText</em> properties of the <em>Result</em> object in case of error:</p>
-<table>
-<thead>
-<tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
-</thead>
-<tbody>
-<tr><td><code>dk status entity does not exist anymore</code></td><td>5</td><td>The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using <code>.drop( )</code>, this error can be returned when dk force drop if stamp changed option is used. When using <code>.lock( )</code>, this error can be returned when <code>dk reload if stamp changed</code> option is used</li><br><strong>Associated statusText</strong>: &quot;Entity does not exist anymore&quot;</td></tr>
-<tr><td><code>dk status locked</code></td><td>3</td><td>The entity is locked by a pessimistic lock.<p><p><strong>Associated statusText</strong>: &quot;Already locked&quot;</td></tr>
-<tr><td><code>dk status serious error</code></td><td>4</td><td>A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<p><p><strong>Associated statusText</strong>: &quot;Other error&quot;</td></tr>
-<tr><td><code>dk status stamp has changed</code></td><td>2</td><td>The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with <code>.save( )</code>: error only if the <code>dk auto merge</code> option is not used</li><li>with <code>.drop( )</code>: error only if the <code>dk force drop if stamp changed</code> option is not used</li><li>with <code>.lock( )</code>: error only if the <code>dk reload if stamp changed</code> option is not used</li><br><strong>Associated statusText</strong>: &quot;Stamp has changed&quot;</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-1-3"></a><a href="#ejemplo-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>Ejemplo con error:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
+<span class="hljs-comment">```## .lock()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.lock**( { *mode* : Integer } ) : Object| Parámetros | Tipo    |    | Descripción                                                                      |
+| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
+| mode       | Integer | -&gt; | <span class="hljs-comment">`dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |</span>
+| Resultado  | Object  | &lt;- | Resultado de la operación de bloqueo                                             |#### Descripción
+
+La función <span class="hljs-comment">`.lock()`pone un bloqueo pesimista en el registro referenciado por la entidad. El [bloqueo se establece](/docs/es/ORDA/entities.html#entity-locking) para un registro y todas las referencias de la entidad en el proceso actual.</span>
+
+<span class="hljs-function">Otros procesos verán este registro como bloqueado </span>(la propiedad <span class="hljs-comment">`result.success` contendrá False si intentan bloquear la misma entidad usando esta función). Sólo las funciones ejecutadas en la sesión de "bloqueo" pueden editar y guardar los atributos de la entidad. La entidad puede ser cargada como de sólo lectura por otras sesiones, pero no podrán introducir y guardar valores.</span>
+
+Un registro bloqueado se desbloquea:
+
+*   when the [<span class="hljs-comment">`unlock()`](#unlock) function is called on a matching entity in the same process</span>
+*   automatically, when it is no longer referenced by any entities in memory.<span class="hljs-keyword"> For</span> example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
+
+Por defecto, si se omite el parámetro *mode*,<span class="hljs-function"> la función devolverá un error </span>(ver más abajo)<span class="hljs-function"> si la misma entidad fue modificada </span>(es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
+
+De lo contrario, puede pasar la opción <span class="hljs-comment">`dk reload if stamp changed` en el parámetro *mode*: en este caso, no se devuelve error y la entidad se recarga cuando el sello cambia (si la entidad aún existe y la llave primaria sigue siendo la misma).</span>
+
+**Resultado**
+
+El objeto devuelto por <span class="hljs-comment">`.lock( )` contiene las siguientes propiedades:</span>
+
+| Propiedad        |                     | Tipo                  | Descripción                                                                                                                 |
+| ---------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean               |<span class="hljs-function"> true si la acción de bloqueo tiene éxito </span>(o si la entidad ya está bloqueada en el proceso actual), false en caso contrario. |
+|                  |                     |                       | ***Disponible sólo si se utiliza la opción <span class="hljs-comment">`dk reload if stamp changed`:***                                                 |</span>
+| **wasReloaded**  |                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                        |
+|                  |                     |                       | ***Disponible sólo en caso de error:***                                                                                     |
+|<span class="hljs-function"> status</span>(\*)     |                     | number                | Código de error, ver abajo                                                                                                  |
+|<span class="hljs-function"> statusText</span>(\*) |                     | text                  | Descripción del error, ver abajo                                                                                            |
+|                  |                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                |
+| lockKindText     |                     | text                  | <span class="hljs-string">"Locked by record"</span>                                                                                                          |
+| lockInfo         |                     | object                | Información sobre el origen del bloqueo                                                                                     |
+|                  | task_id             | number                | ID del Proceso                                                                                                              |
+|                  | user_name           | text                  | Nombre de usuario de la sesión en la máquina                                                                                |
+|                  | user4d_alias        | text                  | Nombre o alias del usuario 4D                                                                                               |
+|                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                      |
+|                  | host_name           | text                  | Nombre de la máquina                                                                                                        |
+|                  | task_name           | text                  | Nombre del proceso                                                                                                          |
+|                  | client_version      | text                  |                                                                                                                             |
+|                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                         |
+| errors           |                     | collection of objects |                                                                                                                             |
+|                  | message             | text                  | Mensaje de error                                                                                                            |
+|                  | component signature | text                  |<span class="hljs-function"> firma del componente interno </span>(por ejemplo, <span class="hljs-string">"dmbg"</span> significa el componente de la base)                                       |
+|                  | errCode             | number                | Error code                                                                                                                  |
+
+
+(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
+
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                    |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span class="hljs-comment">`dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:&lt;li&gt;la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)&lt;/li&gt;&lt;li&gt;la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza `.drop( )`, este error puede devolverse cuando se utiliza la opción dk force drop if stamp changed. Cuando se utiliza `.lock( )`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`&lt;/li&gt;&lt;br&gt;**statusText asociado**: "La entidad ya no existe"                                                       |</span>
+| <span class="hljs-comment">`dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista.&lt;p&gt;&lt;p&gt;**statusText asociado**: "Ya bloqueado"                                                                                                              |</span>
+| <span class="hljs-comment">`dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.&lt;p&gt;&lt;p&gt;**statusText asociado**: "Otro error"                                           |</span>
+| <span class="hljs-comment">`dk status stamp has changed`             | 2     | El valor del sello interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).&lt;li&gt;con `.save( )`: error sólo si no se utiliza la opción `dk auto merge`&lt;/li&gt;&lt;li&gt;con `.drop( )`: error sólo si no se utiliza la opción `dk force drop if stamp changed`&lt;/li&gt;&lt;li&gt;con `.lock( )`: error sólo si no se utiliza la opción `dk reload if stamp changed`&lt;/li&gt;&lt;br&gt;**statusText asociado**: "El sello ha cambiado" |</span>
+
+
+#### Ejemplo <span class="hljs-number">1</span>
+
+Ejemplo con error:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
  <span class="hljs-variable">$employee</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">716</span>)
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$employee</span>.<span class="hljs-function">lock</span>()<span class="hljs-keyword">
@@ -862,7 +870,7 @@
  End case</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-2"></a><a href="#ejemplo-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Example with <code>dk reload if stamp changed</code> option:</p>
+<p>Ejemplo con la opción <code>dk reload if stamp changed</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
  <span class="hljs-variable">$employee</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">717</span>)
@@ -873,116 +881,94 @@
     :(<span class="hljs-variable">$status</span>.status=dk status entity does not exist anymore)
 <span class="hljs-function">       ALERT</span>(<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
  End case</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="next"></a><a href="#next" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.next()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.next()</strong> : 4D.Entity</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Reference to next entity in the entity selection (Null if not found)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.next()</code> function returns a reference to the next entity in the entity selection which the entity belongs to.</p>
-<p>If the entity does not belong to any existing entity selection (i.e. <a href="#getselection">.getSelection()</a> returns Null), the function returns a Null value.</p>
-<p>If there is no valid next entity in the entity selection (i.e. you are on the last entity of the selection), the function returns Null. If the next entity has been dropped, the function returns the next valid entity (and eventually Null).</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-12"></a><a href="#ejemplo-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .next()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">next</span>()** : 4D.Entity| Parámetros | Tipo      |    | Descripción                                                                              |
+| ---------- | --------- |:--:| ---------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | &lt;- |<span class="hljs-function"> Referencia a la siguiente entidad en la selección de entidades </span>(<span class="hljs-literal">Null</span> si no se encuentra) |#### Descripción
+
+La función <span class="hljs-comment">`.next()`devuelve una referencia a la siguiente entidad en la selección de entidades a la que pertenece la entidad.</span>
+
+<span class="hljs-function">Si la entidad no pertenece a ninguna selección de entidades existente </span>(es decir, [.<span class="hljs-function">getSelection</span>()](#getselection) devuelve <span class="hljs-literal">Null</span>), la función devuelve un valor <span class="hljs-literal">Null</span>.
+
+<span class="hljs-function">Si no hay una entidad siguiente válida en la selección de entidades </span>(es decir, se encuentra en la última entidad de la selección), la función devuelve <span class="hljs-literal">Null</span>. Si la siguiente entidad ha sido descartada,<span class="hljs-function"> la función devuelve la siguiente entidad válida </span>(y eventualmente <span class="hljs-literal">Null</span>).
+
+
+#### Ejemplo
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee</span>; <span class="hljs-variable">$nextEmployee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>) <span class="hljs-comment">//This entity selection contains 3 entities</span>
  <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">0</span>]
  <span class="hljs-variable">$nextEmployee</span>:=<span class="hljs-variable">$employee</span>.<span class="hljs-function">next</span>() <span class="hljs-comment">//$nextEmployee is the second entity of the $employees entity selection</span>
 
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="previous"></a><a href="#previous" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.previous()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.previous()</strong>  : 4D.Entity</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Reference to previous entity in the entity selection (Null if not found)</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.previous()</code> function  returns a reference to the previous entity in the entity selection which the entity belongs to.</p>
-<p>If the entity does not belong to any existing entity selection (i.e. <a href="#getselection">.getSelection()</a> returns Null), the function returns a Null value.</p>
-<p>If there is no valid previous entity in the entity selection (i.e. you are on the first entity of the selection), the function returns Null. If the previous entity has been dropped, the function returns the previous valid entity (and eventually Null).</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-13"></a><a href="#ejemplo-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
+<span class="hljs-comment">```## .previous()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">previous</span>()**  : 4D.Entity| Parámetros | Tipo      |    | Descripción                                                                             |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | &lt;- |<span class="hljs-function"> Referencia a la entidad anterior en la selección de entidades </span>(<span class="hljs-literal">Null</span> si no se encuentra) |#### Descripción
+
+La función <span class="hljs-comment">`.previous()`devuelve una referencia a la entidad anterior en la selección de entidades a la que pertenece la entidad.</span>
+
+<span class="hljs-function">Si la entidad no pertenece a ninguna selección de entidades existente </span>(es decir, [.<span class="hljs-function">getSelection</span>()](#getselection) devuelve <span class="hljs-literal">Null</span>), la función devuelve un valor <span class="hljs-literal">Null</span>.
+
+<span class="hljs-function">Si no hay una entidad anterior válida en la selección de entidades </span>(es decir, se encuentra en la primera entidad de la selección), la función devuelve <span class="hljs-literal">Null</span>. Si la entidad anterior ha sido soltada,<span class="hljs-function"> la función devuelve la entidad válida anterior </span>(y eventualmente <span class="hljs-literal">Null</span>).
+
+
+#### Ejemplo
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee</span>; <span class="hljs-variable">$previousEmployee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>) <span class="hljs-comment">//This entity selection contains 3 entities</span>
  <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">1</span>]
  <span class="hljs-variable">$previousEmployee</span>:=<span class="hljs-variable">$employee</span>.<span class="hljs-function">previous</span>() <span class="hljs-comment">//$previousEmployee is the first entity of the $employees entity selection</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="reload-"></a><a href="#reload-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reload( )</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.reload()</strong> : Object</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status object</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-16"></a><a href="#descripción-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.reload()</code> function reloads the content of the entity in memory, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.</p>
-<p><strong>Resultado</strong></p>
-<p>The object returned by <code>.reload( )</code> contains the following properties:</p>
-<table>
-<thead>
-<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>success</td><td>boolean</td><td>True if the reload action is successful, False otherwise.<p><p><strong><em>Available only in case of error</em></strong>:</td></tr>
-<tr><td>status(*)</td><td>number</td><td>Código de error, ver abajo</td></tr>
-<tr><td>statusText(*)</td><td>text</td><td>Description of the error, see below</td></tr>
-</tbody>
-</table>
-<p>(*) The following values can be returned in the <em>status</em> and <em>statusText</em> properties of <em>Result</em> object in case of error:</p>
-<table>
-<thead>
-<tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
-</thead>
-<tbody>
-<tr><td><code>dk status entity does not exist anymore</code></td><td>5</td><td>The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using <code>.drop( )</code>, this error can be returned when <code>dk force drop if stamp changed</code> option is used. When using <code>.lock( )</code>, this error can be returned when <code>dk reload if stamp changed</code> option is used</li><br><strong><em>Associated statusText</em></strong>: &quot;Entity does not exist anymore&quot;</td></tr>
-<tr><td><code>dk status serious error</code></td><td>4</td><td>A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br><strong><em>Associated statusText</em></strong>: &quot;Other error&quot;</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-14"></a><a href="#ejemplo-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
+<span class="hljs-comment">```## .reload( )</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">reload</span>()** : Object| Parámetros | Tipo   |    | Descripción      |
+| ---------- | ------ |:--:| ---------------- |
+| Resultado  | Object | &lt;- | Objeto de estado |#### Descripción
+
+La función <span class="hljs-comment">`.reload()`recarga el contenido de la entidad en memoria, según la información almacenada en la tabla relacionada con la dataclass en el datastore. La recarga se realiza sólo si la entidad sigue existiendo con la misma llave primaria.</span>
+
+**Resultado**
+
+El objeto devuelto por <span class="hljs-comment">`.reload( )` contiene las siguientes propiedades:</span>
+
+| Propiedad        | Tipo    | Descripción                                                                                                                                                      |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          | boolean | <span class="hljs-literal">True</span> si la acción de recargar tiene éxito, <span class="hljs-literal">False</span> en caso contrario.&lt;p&gt;&lt;p&gt;***Disponible sólo en caso de error***: |
+|<span class="hljs-function"> status</span>(\*)     | number  | Código de error, ver abajo                                                                                                                                       |
+|<span class="hljs-function"> statusText</span>(\*) | text    | Descripción del error, ver abajo                                                                                                                                 |
+
+(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
+
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                          |
+| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span class="hljs-comment">`dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:&lt;br&gt;&lt;li&gt;la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)&lt;/li&gt;&lt;li&gt;la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza `.drop( )`, este error puede devolverse cuando se utiliza la opción `dk force drop if stamp changed`. Cuando se utiliza `.lock( )`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`&lt;/li&gt;&lt;br&gt;***statusText asociado***: "La entidad ya no existe" |</span>
+| <span class="hljs-comment">`dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.&lt;br&gt;***statusText asociado***: "Otro error"                                           |</span>
+
+
+#### Ejemplo
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$result </span>: Object
 
@@ -996,83 +982,75 @@
     :(<span class="hljs-variable">$result</span>.status=dk status entity does not exist anymore)
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"The entity has been dropped"</span>)<span class="hljs-keyword">
  End case</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="save"></a><a href="#save" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.save()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.save</strong>( { <em>mode</em> : Integer } ) : Object</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk auto merge</code>: Enables the automatic merge mode</td></tr>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Result of save operation</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-17"></a><a href="#descripción-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.save()</code> function saves the changes made to the entity in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.</p>
-<p>The save operation is executed only if at least one entity attribute has been &quot;touched&quot; (see the <a href="#touched"><code>.touched()</code></a> and <a href="#touchedattributes"><code>.touchedAttributes()</code></a> functions). Otherwise, the function does nothing (the trigger is not called).</p>
-<p>In a multi-user or multi-process application, the <code>.save()</code> function is executed under an <a href="/docs/es/ORDA/entities.html#entity-locking">&quot;optimistic lock&quot;</a> mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.</p>
-<p>By default, if the <em>mode</em> parameter is omitted, the method will return an error (see below) whenever the same entity has been modified by another process or user in the meantime, no matter the modified attribute(s).</p>
-<p>Otherwise, you can pass the <code>dk auto merge</code> option in the <em>mode</em> parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. The resulting data saved in the entity will be the combination (the &quot;merge&quot;) of all non-concurrent modifications (if modifications were applied to the same attribute, the save fails and an error is returned, even with the auto merge mode).</p>
-<blockquote>
-<p>The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a <code>dk status stamp has changed</code> error.</p>
-</blockquote>
-<p><strong>Resultado</strong></p>
-<p>The object returned by <code>.save()</code> contains the following properties:</p>
-<table>
-<thead>
-<tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>True if the save action is successful, False otherwise.</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only if <code>dk auto merge</code> option is used</em></strong>:</td></tr>
-<tr><td>autoMerged</td><td></td><td>boolean</td><td>True if an auto merge was done, False otherwise.</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of error</em></strong>:</td></tr>
-<tr><td>status</td><td></td><td>number</td><td>Error code, <a href="#status-and-statustext">see below</a></td></tr>
-<tr><td>statusText</td><td></td><td>text</td><td>Description of the error, <a href="#status-and-statustext">see below</a></td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of pessimistic lock error</em></strong>:</td></tr>
-<tr><td>lockKindText</td><td></td><td>text</td><td>&quot;Locked by record&quot;</td></tr>
-<tr><td>lockInfo</td><td></td><td>object</td><td>Information about the lock origin</td></tr>
-<tr><td></td><td>task_id</td><td>number</td><td>Id del proceso</td></tr>
-<tr><td></td><td>user_name</td><td>text</td><td>Session user name on the machine</td></tr>
-<tr><td></td><td>user4d_alias</td><td>text</td><td>User alias if defined by <code>SET USER ALIAS</code>, otherwise user name in the 4D directory</td></tr>
-<tr><td></td><td>host_name</td><td>text</td><td>Nombre de la máquina</td></tr>
-<tr><td></td><td>task_name</td><td>texto</td><td>Nombre del proceso</td></tr>
-<tr><td></td><td>client_version</td><td>text</td><td></td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of serious error</em></strong> (serious error - can be trying to duplicate a primary key, disk full...):</td></tr>
-<tr><td>errors</td><td></td><td>collection of objects</td><td></td></tr>
-<tr><td></td><td>message</td><td>text</td><td>Mensaje de error</td></tr>
-<tr><td></td><td>componentSignature</td><td>text</td><td>Internal component signature (e.g. &quot;dmbg&quot; stands for the database component)</td></tr>
-<tr><td></td><td>errCode</td><td>number</td><td>Error code</td></tr>
-</tbody>
-</table>
-<h5><a class="anchor" aria-hidden="true" id="status-and-statustext"></a><a href="#status-and-statustext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>status and statusText</h5>
-<p>The following values can be returned in the <code>status</code> and <code>statusText</code> properties of Result object in case of error:</p>
-<table>
-<thead>
-<tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
-</thead>
-<tbody>
-<tr><td><code>dk status automerge failed</code></td><td>6</td><td>(Only if the <code>dk auto merge</code> option is used) The automatic merge option failed when saving the entity.<p><p><strong>Associated statusText</strong>: &quot;Auto merge failed&quot;</td></tr>
-<tr><td><code>dk status entity does not exist anymore</code></td><td>5</td><td>The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using <code>.drop( )</code>, this error can be returned when <code>dk force drop if stamp changed</code> option is used. When using <code>.lock( )</code>, this error can be returned when <code>dk reload if stamp changed</code> option is used</li><br><strong>Associated statusText</strong>: &quot;Entity doesnot exist anymore&quot;</td></tr>
-<tr><td><code>dk status locked</code></td><td>3</td><td>The entity is locked by a pessimistic lock.<p><p><strong>Associated statusText</strong>: &quot;Already locked&quot;</td></tr>
-<tr><td><code>dk status serious error</code></td><td>4</td><td>A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<p><p><strong>Associated statusText</strong>: &quot;Other error&quot;</td></tr>
-<tr><td><code>dk status stamp has changed</code></td><td>2</td><td>The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br><li>with <code>.save( )</code>: error only if the <code>dk auto merge</code> option is not used</li><li>with <code>.drop( )</code>: error only if the <code>dk force drop if stamp changed</code> option is not used</li><li>with <code>.lock( )</code>: error only if the <code>dk reload if stamp changed</code> option is not used</li><br><strong>Associated statusText</strong>: &quot;Stamp has changed&quot;</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-1-4"></a><a href="#ejemplo-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>Creating a new entity:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
+<span class="hljs-comment">```## .save()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.save**( { *mode* : Integer } ) : Object| Parámetros | Tipo    |    | Descripción                                          |
+| ---------- | ------- |:--:| ---------------------------------------------------- |
+| mode       | Integer | -&gt; | <span class="hljs-comment">`dk auto merge`: activa el modo de fusión automática |</span>
+| Resultado  | Object  | &lt;- | Resultado de la operación guardar                    |#### Descripción
+
+La función <span class="hljs-comment">`.save()`guarda los cambios realizados en la entidaden la tabla relacionada con su dataClass. Debe llamar a este método después de crear o modificar una entidad si quiere guardar los cambios realizados en ella.</span>
+
+La operación de guardar se ejecuta sólo si se ha <span class="hljs-string">"tocado"</span><span class="hljs-function"> al menos un atributo de la entidad </span>(ver las funciones [<span class="hljs-comment">`.touched()`](#touched) y [`.touchedAttributes()`](#touchedattributes)). En caso contrario, la función no hace nada (no se llama al activador).</span>
+
+En una aplicación multiusuario o multiproceso, la función <span class="hljs-comment">`.save()` se ejecuta bajo un mecanismo de ["bloqueo optimista"](/docs/es/ORDA/entities.html#entity-locking), en el que un sello de bloqueo interno se incrementa automáticamente cada vez que se guarda el registro.</span>
+
+Por defecto, si se omite el parámetro *mode*,<span class="hljs-function"> el método devolverá un error </span>(ver más abajo) siempre que la misma entidad haya sido modificada por otro proceso o usuario mientras tanto, sin importar el atributo o atributos modificados.
+
+En caso contrario, se puede pasar la opción <span class="hljs-comment">`dk auto merge` en el parámetro *mode*: cuando el modo de fusión automática está activado, una modificación realizada simultáneamente por otro proceso/usuario en la misma entidad pero en un atributo diferente no dará lugar a un error. Los datos resultantes guardados en la entidad serán la combinación (la "fusión") de todas las modificaciones no concurrentes (si se aplicaron modificaciones al mismo atributo, el guardado falla y se devuelve un error, incluso con el modo de fusión automática).</span>
+&gt; The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a <span class="hljs-comment">`dk status stamp has changed` error.</span>
+
+**Resultado**
+
+El objeto devuelto por <span class="hljs-comment">`.save()` contiene las siguientes propiedades:</span>
+
+| Propiedad    |                    | Tipo                  | Descripción                                                                                                                  |
+| ------------ | ------------------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean               | <span class="hljs-literal">True</span> si la acción guardar tiene éxito, false en caso contrario.                                                              |
+|              |                    |                       | ***Disponible sólo si se utiliza la opción <span class="hljs-comment">`dk auto merge`***:                                                               |</span>
+| autoMerged   |                    | boolean               | <span class="hljs-literal">True</span> si se ha realizado una fusión automática, <span class="hljs-literal">False</span> en caso contrario.                                                      |
+|              |                    |                       | ***Disponible sólo en caso de error***:                                                                                      |
+| status       |                    | number                | Código de error, [ver abajo](#status-and-statustext)                                                                         |
+| statusText   |                    | text                  | Descripción del error, [ver más abajo](#status-and-statustext)                                                               |
+|              |                    |                       | ***Disponible sólo en caso de bloqueo pesimista***:                                                                          |
+| lockKindText |                    | text                  | <span class="hljs-string">"Locked by record"</span>                                                                                                           |
+| lockInfo     |                    | object                | Información sobre el origen del bloqueo                                                                                      |
+|              | task_id            | number                | Id del proceso                                                                                                               |
+|              | user_name          | text                  | Nombre de usuario de la sesión en la máquina                                                                                 |
+|              | user4d_alias       | text                  | Alias de usuario si está definido por <span class="hljs-comment">`SET USER ALIAS`, si no, nombre de usuario en el directorio 4D                         |</span>
+|              | host_name          | text                  | Nombre de la máquina                                                                                                         |
+|              | task_name          | texto                 | Nombre del proceso                                                                                                           |
+|              | client_version     | text                  |                                                                                                                              |
+|              |                    |                       | ***Disponible sólo en caso de error grave*** (error grave - puede ser intentar duplicar una llave primaria, disco lleno...): |
+| errors       |                    | collection of objects |                                                                                                                              |
+|              | message            | text                  | Mensaje de error                                                                                                             |
+|              | componentSignature | text                  |<span class="hljs-function"> Firma del componente interno </span>(por ejemplo, <span class="hljs-string">"dmbg"</span> significa el componente de la base)                                        |
+|              | errCode            | number                | Error code                                                                                                                   |
+
+##### status and statusText
+
+Los siguientes valores pueden ser devueltos en las propiedades <span class="hljs-comment">`status` y `statusText` del objeto Result en caso de error:</span>
+
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                              |
+| ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span class="hljs-comment">`dk status automerge failed`              | 6     | (Sólo si se utiliza la opción `dk auto merge`) La opción de fusión automática falló al guardar la entidad.&lt;p&gt;&lt;p&gt;**statusText asociado**: "Fallo de la fusión automática"                                                |</span>
+| <span class="hljs-comment">`dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:&lt;br&gt;&lt;li&gt;la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)&lt;/li&gt;&lt;li&gt;la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza `.drop( )`, este error puede devolverse cuando se utiliza la opción `dk force drop if stamp changed`. Cuando se utiliza `.lock( )`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`&lt;/li&gt;&lt;br&gt;**statusText asociado**: "La entidad ya no existe"                                                       |</span>
+| <span class="hljs-comment">`dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista.&lt;p&gt;&lt;p&gt;**statusText asociado**: "Ya bloqueado"                                                                                                                        |</span>
+| <span class="hljs-comment">`dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.&lt;p&gt;&lt;p&gt;**statusText asociado**: "Otro error"                                                     |</span>
+| <span class="hljs-comment">`dk status stamp has changed`             | 2     | El valor del sello interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).&lt;br&gt;&lt;li&gt;con `.save( )`: error sólo si no se utiliza la opción `dk auto merge`&lt;/li&gt;&lt;li&gt;con `.drop( )`: error sólo si no se utiliza la opción `dk force drop if stamp changed`&lt;/li&gt;&lt;li&gt;con `.lock( )`: error sólo si no se utiliza la opción `dk reload if stamp changed`&lt;/li&gt;&lt;br&gt;**statusText asociado**: "El sello ha cambiado" |</span>
+
+
+#### Ejemplo <span class="hljs-number">1</span>
+
+Crear una nueva entidad:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employee</span>:=ds.Employee.<span class="hljs-function">new</span>()
  <span class="hljs-variable">$employee</span>.firstName:=<span class="hljs-string">"Mary"</span>
@@ -1083,7 +1061,7 @@
  End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-3"></a><a href="#ejemplo-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Updating an entity without <code>dk auto merge</code> option:</p>
+<p>Actualización de una entidad sin la opción <code>dk auto merge</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
@@ -1099,7 +1077,7 @@
  End case</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3-1"></a><a href="#ejemplo-3-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 3</h4>
-<p>Updating an entity with <code>dk auto merge</code> option:</p>
+<p>Actualización de una entidad con la opción <code>dk auto merge</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
 
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
@@ -1115,60 +1093,59 @@
     :(<span class="hljs-variable">$status</span>.status=dk status automerge failed)
 <span class="hljs-function">       ALERT</span>(<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
  End case</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="toobject"></a><a href="#toobject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.toObject()</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.toObject</strong>() : Object<br><strong>.toObject</strong>( <em>filterString</em> : Text { ; <em>options</em> : Integer}  ) : Object<br><strong>.toObject</strong>( <em>filterCol</em> : Collection { ; <em>options</em> : Integer } ) : Object</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>filterString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Attribute(s) to extract (comma-separated string)</td></tr>
-<tr><td>filterCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of attribute(s) to extract</td></tr>
-<tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: adds the _KEY property;<br><code>dk with stamp</code>: adds the _STAMP property</td></tr>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Object built from the entity</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-18"></a><a href="#descripción-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.toObject()</code> function returns an object which has been built from the entity. Property names in the object match attribute names of the entity.</p>
-<p>If no filter is specified, or if the <em>filterString</em> parameter contains an empty string or &quot;*&quot;, the returned object will contain:</p>
-<ul>
-<li>all storage entity attributes</li>
-<li>attributes of the <code>relatedEntity</code> <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a>: you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.</li>
-<li>attributes of the <code>relatedEntities</code> <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a>: attribute is not returned.</li>
-</ul>
-<p>In the first parameter, you pass the entity attribute(s) to extract. Puede pasar:</p>
-<ul>
-<li><em>filterString</em>: a string with property paths separated with commas: &quot;propertyPath1, propertyPath2, ...&quot;, or</li>
-<li><em>filterCol</em>: a collection of strings: [&quot;propertyPath1&quot;,&quot;propertyPath2&quot;;...]</li>
-</ul>
-<p>If a filter is specified for attributes of the relatedEntity <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a>:</p>
-<ul>
-<li>propertyPath = &quot;relatedEntity&quot; -&gt; it is extracted with simple form: an object with property __KEY (primary key).</li>
-<li>propertyPath = &quot;relatedEntity.*&quot; -&gt; all the properties are extracted</li>
-<li>propertyPath = &quot;relatedEntity.propertyName1; relatedEntity.propertyName2; ...&quot; -&gt; only those properties are extracted</li>
-</ul>
-<p>If a filter is specified for attributes of the relatedEntities <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a>:</p>
-<ul>
-<li>propertyPath = &quot;relatedEntities.*&quot; -&gt; all the properties are extracted</li>
-<li>propertyPath = &quot;relatedEntities.propertyName1; relatedEntities.propertyName2; ...&quot; -&gt; only those properties are extracted</li>
-</ul>
-<p>In the <em>options</em> parameter, you can pass the <code>dk with primary key</code> and/or<code>dk with stamp</code> selector(s) to add the entity's primary keys and/or stamps in extracted objects.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-1-5"></a><a href="#ejemplo-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>The following structure will be used throughout all examples of this section:</p>
-<p><img src="/docs/assets/en/API/dataclassAttribute4.png" alt=""></p>
-<p>Without filter parameter:</p>
-<pre><code class="hljs css language-4d">employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>()
+<span class="hljs-comment">``` ## .toObject()</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.toObject**() : Object&lt;br&gt;**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object&lt;br&gt;**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object| Parámetros   | Tipo       |    | Descripción                                                                                               |
+| ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -&gt; |<span class="hljs-function"> Atributo</span>(s)<span class="hljs-function"> a extraer </span>(cadena separada por comas)                                                         |
+| filterCol    | Collection | -&gt; | Colección de atributos a extraer                                                                          |
+| options      | Integer    | -&gt; | <span class="hljs-comment">`dk with primary key`: añade la propiedad \_KEY;&lt;br&gt;`dk with stamp`: añade la propiedad \_STAMP |</span>
+| Resultado    | Object     | &lt;- | Objeto creado a partir de la entidad                                                                      |#### Descripción
+
+La función <span class="hljs-comment">`.toObject()`devuelve un objeto que ha sido construido a partir de la entidad. Los nombres de las propiedades en el objeto coinciden con los nombres de los atributos de la entidad.</span>
+
+Si no se especifica ningún filtro, o si el parámetro *filterString* contiene una cadena vacía o <span class="hljs-string">"*"</span>, el objeto devuelto contendrá:
+
+*   all storage entity attributes
+*   attributes of the <span class="hljs-comment">`relatedEntity` [kind](/docs/es/API/DataClassAttributeClass.html#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.</span>
+*   attributes of the <span class="hljs-comment">`relatedEntities` [kind](/docs/es/API/DataClassAttributeClass.html#kind): attribute is not returned.</span>
+
+
+En el primer parámetro, se pasa el atributo o atributos de la entidad a extraer. Puede pasar:
+
+*   *filterString*: a string with property paths separated with commas: <span class="hljs-string">"propertyPath1, propertyPath2, ..."</span>, or
+*   *filterCol*: a collection of strings: \[<span class="hljs-string">"propertyPath1"</span>,<span class="hljs-string">"propertyPath2"</span>;...]
+
+Si se especifica un filtro para los atributos de la relatedEntity [kind](/docs/es/API/DataClassAttributeClass.html#kind):
+
+*   propertyPath = <span class="hljs-string">"relatedEntity"</span> -&gt; it is extracted with simple form:<span class="hljs-function"> an object with property \_\_KEY </span>(primary key).
+*   propertyPath = <span class="hljs-string">"relatedEntity.*"</span> -&gt; all the properties are extracted
+*   propertyPath = <span class="hljs-string">"relatedEntity.propertyName1; relatedEntity.propertyName2; ..."</span> -&gt; only those properties are extracted
+
+Si se especifica un filtro para los atributos de las relatedEntities [kind](/docs/es/API/DataClassAttributeClass.html#kind):
+
+*   propertyPath = <span class="hljs-string">"relatedEntities.*"</span> -&gt; all the properties are extracted
+*   propertyPath = <span class="hljs-string">"relatedEntities.propertyName1; relatedEntities.propertyName2; ..."</span> -&gt; only those properties are extracted
+
+En el parámetro *options* se puede pasar el selector <span class="hljs-comment">`ddk with primary key` y/o`dk with stamp` para añadir las llaves primarias de la entidad y/o los sellos en los objetos extraídos.</span>
+
+
+#### Ejemplo <span class="hljs-number">1</span>
+
+En todos los ejemplos de esta sección se utilizará la siguiente estructura:
+
+![](/docs/assets/en/API/dataclassAttribute4.png)
+
+
+Sin parámetro de filtro:
+
+<span class="hljs-comment">```4d</span>
+employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>()
 </code></pre>
 <p>Devuelve:</p>
 <pre><code class="hljs css language-4d">{
@@ -1191,7 +1168,7 @@
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-4"></a><a href="#ejemplo-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Extracting the primary key and the stamp:</p>
+<p>Extraer la llave primaria y el sello:</p>
 <pre><code class="hljs css language-4d">employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>(<span class="hljs-string">""</span>;dk with primary key+dk with stamp)
 </code></pre>
 <p>Devuelve:</p>
@@ -1217,7 +1194,7 @@
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3-2"></a><a href="#ejemplo-3-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 3</h4>
-<p>Expanding all the properties of <code>relatedEntities</code>:</p>
+<p>Desplegando todas las propiedades de <code>relatedEntities</code>:</p>
 <pre><code class="hljs css language-4d">employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>(<span class="hljs-string">"directReports.*"</span>)
 </code></pre>
 <pre><code class="hljs css language-4d">{
@@ -1280,7 +1257,7 @@
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4-1"></a><a href="#ejemplo-4-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 4</h4>
-<p>Extracting some properties of <code>relatedEntities</code>:</p>
+<p>Extracción de algunas propiedades de <code>relatedEntities</code>:</p>
 <pre><code class="hljs css language-4d"> employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>(<span class="hljs-string">"firstName, directReports.lastName"</span>)
 </code></pre>
 <p>Devuelve:</p>
@@ -1299,8 +1276,8 @@
     ]
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-5-1"></a><a href="#ejemplo-5-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 5</h4>
-<p>Extracting a <code>relatedEntity</code> with simple form:</p>
+<h4><a class="anchor" aria-hidden="true" id="ejemplo-5"></a><a href="#ejemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 5</h4>
+<p>Obtenga una <code>relatedEntity</code> en un formulario simple:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$coll</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"employer"</span>)
  employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>(<span class="hljs-variable">$coll</span>)
 </code></pre>
@@ -1312,7 +1289,7 @@
     }
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-6-1"></a><a href="#ejemplo-6-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 6</h4>
+<h4><a class="anchor" aria-hidden="true" id="ejemplo-6"></a><a href="#ejemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 6</h4>
 <p>Extracción de todas las propiedades de una <code>Entidad relacionada</code>:</p>
 <pre><code class="hljs css language-4d"> employeeObject:=employeeSelected.<span class="hljs-function">toObject</span>(<span class="hljs-string">"employer.*"</span>)
 </code></pre>
@@ -1327,7 +1304,7 @@
     }
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-7-1"></a><a href="#ejemplo-7-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 7</h4>
+<h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 7</h4>
 <p>Extracción de algunas propiedades de una <code>Entidad relacionada</code>:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$col</span>:=New collection
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-string">"employer.name"</span>)
@@ -1341,68 +1318,59 @@
         <span class="hljs-string">"revenues"</span>: <span class="hljs-number">12000000</span>
     }
 }
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="touched-"></a><a href="#touched-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.touched( )</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.touched()</strong> : Boolean</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>True if at least one entity attribute has been modified and not yet saved, else False</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-19"></a><a href="#descripción-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.touched()</code> function tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved.</p>
-<p>If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.</p>
-<p>This function returns False for a new entity that has just been created (with <a href="/docs/es/API/DataClassClass.html#new"><code>.new( )</code></a>). Note however that if you use a function which calculates an attribute of the entity, the <code>.touched()</code> function will then return True. For example, if you call <a href="#getkey"><code>.getKey()</code></a> to calculate the primary key, <code>.touched()</code> returns True.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-15"></a><a href="#ejemplo-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>In this example, we check to see if it is necessary to save the entity:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
+<span class="hljs-comment">```## .touched( )</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">touched</span>()** : Boolean| Parámetros | Tipo    |    | Descripción                                                                                       |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------- |
+| Resultado  | Boolean | &lt;- | <span class="hljs-literal">True</span> si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, <span class="hljs-literal">False</span> |#### Descripción
+
+La función <span class="hljs-comment">`.touched()`comprueba si un atributo de la entidad ha sido modificado o no desde que la entidad fue cargada en memoria o guardada.</span>
+
+Si un atributo ha sido modificado o calculado, la función devuelve <span class="hljs-literal">True</span>, en caso contrario devuelve <span class="hljs-literal">False</span>. Puede utilizar esta función para determinar si necesita guardar la entidad.
+
+<span class="hljs-function">Esta función devuelve False para una nueva entidad que acaba de ser creada </span>(con [<span class="hljs-comment">`.new( )`](/docs/es/API/DataClassClass.html#new)). Tenga en cuenta, sin embargo, que si utiliza una función que calcula un atributo de la entidad, la función `.touched()` devolverá entonces True. Por ejemplo, si se llama a [`.getKey()`](#getkey) para calcular la llave primaria, `.touched()` devuelve True.</span>
+
+#### Ejemplo
+
+En este ejemplo, comprobamos si es necesario guardar la entidad:
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
  <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">672</span>)
  <span class="hljs-variable">$emp</span>.firstName:=<span class="hljs-variable">$emp</span>.firstName <span class="hljs-comment">//Even if updated with the same value, the attribute is marked as touched</span><span class="hljs-keyword">
 
  If</span>(<span class="hljs-variable">$emp</span>.<span class="hljs-function">touched</span>()) <span class="hljs-comment">//if at least one of the attributes has been changed</span>
     <span class="hljs-variable">$emp</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
  End if</span> <span class="hljs-comment">// otherwise, no need to save the entity</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="touchedattributes-"></a><a href="#touchedattributes-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.touchedAttributes( )</h2>
-<p><details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v17</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details></p>
-<p><strong>.touchedAttributes()</strong> : Collection</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Names of touched attributes, or empty collection</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.touchedAttributes()</code> function returns the names of the attributes that have been modified since the entity was loaded into memory.</p>
-<p>This applies for attributes of the <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> <code>storage</code> or <code>relatedEntity</code>.</p>
-<p>In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.</p>
-<p>If no entity attribute has been touched, the method returns an empty collection.</p>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-1-6"></a><a href="#ejemplo-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$touchedAttributes </span>: Collection<span class="hljs-keyword">
+<span class="hljs-comment">```## .touchedAttributes( )</span>
+
+&lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v17     | Añadidos       |
+
+&lt;/details&gt;**.<span class="hljs-function">touchedAttributes</span>()** : Collection| Parámetros | Tipo       |    | Descripción                                     |
+| ---------- | ---------- |:--:| ----------------------------------------------- |
+| Resultado  | Collection | &lt;- | Nombres de atributos tocados, o colección vacía |#### Descripción
+
+La función <span class="hljs-comment">`.touchedAttributes()`devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria.</span>
+
+Esto se aplica a los atributos [kind](/docs/es/API/DataClassAttributeClass.html#kind) <span class="hljs-comment">`storage` o `relatedEntity`.</span>
+
+<span class="hljs-function">En el caso de que se haya tocado una entidad relacionada </span>(es decir, la llave externa), se devuelve el nombre de la entidad relacionada y el nombre de su llave primaria.
+
+Si no se ha tocado ningún atributo de entidad, el método devuelve una colección vacía.
+
+#### Ejemplo <span class="hljs-number">1</span>
+
+
+<span class="hljs-comment">```4d</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$touchedAttributes </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
 
  <span class="hljs-variable">$touchedAttributes</span>:=New collection
@@ -1434,9 +1402,8 @@
 <ul>
 <li>firstName and lastName have a <code>storage</code> kind</li>
 <li>employer has a <code>relatedEntity</code> kind</li>
-<li>employerID is the foreign key of the employer related entity</li>
+<li>employerID is the foreign key of the employer related entity## .unlock()</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="unlock"></a><a href="#unlock" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.unlock()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
 <thead>
@@ -1446,22 +1413,14 @@
 <tr><td>v17</td><td>Añadidos</td></tr>
 </tbody>
 </table>
-<p></details></p>
-<p><strong>.unlock()</strong> : Object</p>
-<table>
-<thead>
-<tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
-</thead>
-<tbody>
-<tr><td>Resultado</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status object</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="descripción-21"></a><a href="#descripción-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.unlock()</code> function removes the pessimistic lock on the record matching the entity in the datastore and table related to its dataclass.</p>
+<p></details><strong>.unlock()</strong> : Object| Parámetros | Tipo   |    | Descripción      |
+| ---------- | ------ |:--:| ---------------- |
+| Resultado  | Object | &lt;- | Objeto de estado |#### Descripción</p>
+<p>La función <code>.unlock()</code>elimina el bloqueo pesimista del registro que coincide con la entidaden el datastore y la tabla relacionada con su dataclass.</p>
 <blockquote>
 <p>For more information, please refer to <a href="/docs/es/ORDA/entities.html#entity-locking">Entity locking</a> section.</p>
 </blockquote>
-<p>A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).</p>
+<p>Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).</p>
 <blockquote>
 <p>When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Por ejemplo:</p>
 </blockquote>
@@ -1472,16 +1431,16 @@
  <span class="hljs-variable">$res</span>:=<span class="hljs-variable">$e1</span>.<span class="hljs-function">unlock</span>() <span class="hljs-comment">//$res.success=true</span>
 </code></pre>
 <p><strong>Resultado</strong></p>
-<p>The object returned by <code>.unlock()</code> contains the following property:</p>
+<p>El objeto devuelto por &lt;<code>.unlock()&lt;</code> contiene la siguiente propiedad:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td>Boolean</td><td>True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False.</td></tr>
+<tr><td>success</td><td>Boolean</td><td>True si la acción de desbloquear tiene éxito, False en caso contrario. Si el desbloqueo se realiza en una entidad abandonada, en un registro no bloqueado o en un registro bloqueado por otro proceso o entidad, el éxito es False.</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="ejemplo-16"></a><a href="#ejemplo-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
+<h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
 
@@ -1494,7 +1453,7 @@
  End if</span>
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/API/EmailObjectClass.html"><span class="arrow-prev">← </span><span>Email</span></a><a class="docs-next button" href="/docs/es/API/EntitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#getkey">.getKey()</a></li><li><a href="#getselection">.getSelection()</a></li><li><a href="#getstamp">.getStamp()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#isnew">.isNew()</a></li><li><a href="#last">.last()</a></li><li><a href="#lock">.lock()</a></li><li><a href="#next">.next()</a></li><li><a href="#previous">.previous()</a></li><li><a href="#reload-">.reload( )</a></li><li><a href="#save">.save()</a></li><li><a href="#toobject">.toObject()</a></li><li><a href="#touched-">.touched( )</a></li><li><a href="#touchedattributes-">.touchedAttributes( )</a></li><li><a href="#unlock">.unlock()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/API/EmailObjectClass.html"><span class="arrow-prev">← </span><span>Email</span></a><a class="docs-next button" href="/docs/es/API/EntitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

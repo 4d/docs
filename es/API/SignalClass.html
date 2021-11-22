@@ -131,12 +131,21 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#description"><strong>.description</strong> : Text</a><p>    contains a custom description for the <code>Signal</code> object.</td></tr>
-<tr><td><a href="#signaled"><strong>.signaled</strong>: Boolean</a><p>    contains the current state of the <code>Signal</code> object</td></tr>
-<tr><td><a href="#trigger"><strong>.trigger( )</strong></a><p>    sets the <code>signaled</code> property of the signal object to <strong>true</strong></td></tr>
-<tr><td><a href="#wait"><strong>.wait</strong>( { <em>timeout</em> : Real } ) : Boolean </a><p>    makes the current process wait until the <code>.signaled</code> property of the signal object to become <strong>true</strong> or the optional <em>timeout</em> to expire</td></tr>
+<tr><td><a href="#description"><strong>.description</strong> : Text</a><p>    contiene una descripción personalizada para el objeto <code>Signal</code>.</td></tr>
+<tr><td><a href="#signaled"><strong>.signaled</strong>: Boolean</a><p>    contiene el estado actual del objeto <code>Signal</code></td></tr>
+<tr><td><a href="#trigger"><strong>.trigger( )</strong></a><p>    pone la propiedad <code>signaled</code> del objeto signal como <strong>true</strong></td></tr>
+<tr><td><a href="#wait"><strong>.wait</strong>( { <em>timeout</em> : Real } ) : Boolean </a><p>    hace que el proceso actual espere hasta que la propiedad <code>.signaled</code> del objeto signal se convierta en <strong>true</strong> o expire el <em>timeout</em> opcional.</td></tr>
 </tbody>
 </table>
+<p>Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro <em>timeout</em> (se aceptan decimales).</p>
+<blockquote>
+<p><strong>Warning</strong>: Calling <code>.wait( )</code> without a <em>timeout</em> in the 4D main process is not recommended because it could freeze the whole 4D application.</p>
+</blockquote>
+<p>Si signal ya está en el estado de señalización (es decir, la propiedad <code>.signaled</code> ya es <strong>true</strong>), la función devuelve inmediatamente, sin esperar.</p>
+<p>La función devuelve el valor de la propiedad <code>.signaled</code>. La evaluación de este valor permite saber si la función devuelta porque el <code>.trigger( )</code> se ha llamado (<code>.signaled</code> es <strong>true</strong>) o si el <em>timeout</em> vencido (<code>.signaled</code> es <strong>false</strong>).</p>
+<blockquote>
+<p>The state of a process that waits for a signal is <code>Waiting for internal flag</code>. |</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="new-signal"></a><a href="#new-signal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New signal</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -154,23 +163,23 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>description</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Description for the signal</td></tr>
-<tr><td>Resultado</td><td>4D.Signal</td><td style="text-align:center">&lt;-</td><td>Native object encapsulating the signal</td></tr>
+<tr><td>description</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Descripción para la señal</td></tr>
+<tr><td>Resultado</td><td>4D.Signal</td><td style="text-align:center">&lt;-</td><td>Objeto nativo que encapsula la señal</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>New signal</code> command creates a <code>4D.Signal</code> object.</p>
-<p>A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:</p>
+<p>El comando <code>New signal</code> crea un objeto <code>4D.Signal</code>.</p>
+<p>Una señal es un objeto compartido que puede ser pasado como parámetro de un worker o proceso a otro worker o proceso, de manera que:</p>
 <ul>
 <li>the called worker/process can update the signal object after specific processing has completed</li>
 <li>the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources.</li>
 </ul>
-<p>Optionally, in the <em>description</em> parameter you can pass a custom text describing the signal. This text can also be defined after signal creation.</p>
-<p>Since the signal object is a shared object, it can also be used to maintain user properties, including the <a href="#description"><code>.description</code></a> property, by calling the <code>Use...End use</code> structure.</p>
+<p>Opcionalmente, en el parámetro <em>description</em> puede pasar un texto personalizado que describa la señal. Este texto también puede definirse después de la creación de la señal.</p>
+<p>Dado que el objeto señal es un objeto compartido, también se puede utilizar para mantener las propiedades del usuario, incluyendo la propiedad <a href="#description"><code>.description</code></a>, llamando a la estructura <code>Use...End use</code>.</p>
 <p><strong>Valor devuelto</strong></p>
-<p>A new <a href="#signal-object"><code>4D.Signal</code> object</a>.</p>
+<p>Un nuevo objeto <a href="#signal-object"><code>4D.Signal</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Here is a typical example of a worker that sets a signal:</p>
+<p>Este es un ejemplo típico de un worker que fija una señal:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$signal </span>: 4D.Signal
  <span class="hljs-variable">$signal</span>:=<span class="hljs-function">New signal</span>(<span class="hljs-string">"This is my first signal"</span>)
 
@@ -183,7 +192,7 @@
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"myworker no ha terminado en menos de 1s"</span>)<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>The <strong><em>doSomething</em></strong> method could be like:</p>
+<p>El método <strong><em>doSomething</em></strong> puede ser:</p>
 <pre><code class="hljs css language-4d"> #<span class="hljs-function">DECLARE </span>(<span class="hljs-variable">$signal </span>: 4D.Signal)
   <span class="hljs-comment">//any processing</span>
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
@@ -205,9 +214,9 @@
 <p></details></p>
 <p><strong>.description</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.description</code> property contains a custom description for the <code>Signal</code> object..</p>
-<p><code>.description</code> can be set at the creation of the signal object or at any moment. Note that since the <code>Signal</code> object is a shared object, any write-mode access to the <code>.description</code> property must be surrounded by a <code>Use...End use</code> structure.</p>
-<p>This property is <strong>read-write</strong>.</p>
+<p>La propiedad <code>.description</code> contiene una descripción personalizada para el objeto <code>Signal</code>..</p>
+<p><code>.description</code> puede definirse al crear el objeto signal o en cualquier momento. Tenga en cuenta que, dado que el objeto <code>Signal</code> es un objeto compartido, cualquier acceso en modo de escritura a la propiedad <code>.description</code> debe estar rodeado por una estructura <code>Use...End use</code>.</p>
+<p>Esta propiedad es <strong>lectura-escritura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="signaled"></a><a href="#signaled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.signaled</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -221,7 +230,7 @@
 <p></details></p>
 <p><strong>.signaled</strong>: Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.signaled</code> property contains the current state of the <code>Signal</code> object. When the signal is created, <code>.signaled</code> is <strong>False</strong>. It becomes <strong>True</strong> when the <code>.trigger( )</code> is called on the object.</p>
+<p>La propiedad <code>.signaled</code> contiene el estado actual del objeto <code>Signal</code>. Cuando se crea signal, <code>.signaled</code> es <strong>False</strong>. Se convierte en <strong>True</strong> cuando se llama al objeto <code>.trigger( )</code>.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="trigger"></a><a href="#trigger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.trigger()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -239,8 +248,8 @@
 | ---------- | ---- |::| ---------------------------- |
 |            |      |  | No requiere ningún parámetro |</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.trigger( )</code> function sets the <code>signaled</code> property of the signal object to <strong>true</strong> and awakens all workers or processes waiting for this signal.</p>
-<p>If the signal is already in the signaled state (i.e., the <code>signaled</code> property is already <strong>true</strong>), the function does nothing.</p>
+<p>La función <code>.trigger( )</code> pone la propiedad <code>signaled</code> del objeto signal como <strong>true</strong> y despierta a todos los workers o procesos que esperan esta señal.</p>
+<p>Si la señal ya está en el estado de señalización (es decir, la propiedad <code>signaled</code> ya es <strong>true</strong>), la función no hace nada.</p>
 <h2><a class="anchor" aria-hidden="true" id="wait"></a><a href="#wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.wait()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -258,18 +267,18 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>timeout</td><td>Real</td><td>-&gt;</td><td>Maximum waiting time for the signal in seconds</td></tr>
-<tr><td>Resultado</td><td>Booleano</td><td>&lt;-</td><td>State of the <code>.signaled</code> property</td></tr>
+<tr><td>timeout</td><td>Real</td><td>-&gt;</td><td>Tiempo máximo de espera de la señal en segundos</td></tr>
+<tr><td>Resultado</td><td>Booleano</td><td>&lt;-</td><td>Estado de la propiedad <code>.signaled</code></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.wait( )</code> function makes the current process wait until the <code>.signaled</code> property of the signal object to become <strong>true</strong> or the optional <em>timeout</em> to expire.</p>
-<p>To prevent blocking code, you can pass a maximum waiting time in seconds in the <em>timeout</em> parameter (decimals are accepted).</p>
+<p>La función <code>.wait( )</code> hace que el proceso actual espere hasta que la propiedad <code>.signaled</code> del objeto signal se convierta en <strong>true</strong> o expire el <em>timeout</em> opcional.</p>
+<p>Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro <em>timeout</em> (se aceptan decimales).</p>
 <blockquote>
 <p><strong>Warning</strong>: Calling <code>.wait( )</code> without a <em>timeout</em> in the 4D main process is not recommended because it could freeze the whole 4D application.</p>
 </blockquote>
-<p>If the signal is already in the signaled state (i.e. the <code>.signaled</code> property is already <strong>true</strong>), the function returns immediately, without waiting.</p>
-<p>The function returns the value of the <code>.signaled</code> property. Evaluating this value allows knowing if the function returned because the <code>.trigger( )</code> has been called (<code>.signaled</code> is <strong>true</strong>) or if the <em>timeout</em> expired (<code>.signaled</code> is <strong>false</strong>).</p>
+<p>Si signal ya está en el estado de señalización (es decir, la propiedad <code>.signaled</code> ya es <strong>true</strong>), la función devuelve inmediatamente, sin esperar.</p>
+<p>La función devuelve el valor de la propiedad <code>.signaled</code>. La evaluación de este valor permite saber si la función devuelta porque el <code>.trigger( )</code> se ha llamado (<code>.signaled</code> es <strong>true</strong>) o si el <em>timeout</em> vencido (<code>.signaled</code> es <strong>false</strong>).</p>
 <blockquote>
 <p>The state of a process that waits for a signal is <code>Waiting for internal flag</code>.</p>
 </blockquote>

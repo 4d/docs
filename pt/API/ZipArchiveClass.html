@@ -114,17 +114,17 @@ End if</span>
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>fileToZip</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>File or Folder object to compress</td></tr>
-<tr><td>folderToZip</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>File or Folder object to compress</td></tr>
-<tr><td>zipStructure</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>File or Folder object to compress</td></tr>
-<tr><td>destinationFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Destination file for the archive</td></tr>
+<tr><td>fileToZip</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Objeto File ou Folder a comprimir</td></tr>
+<tr><td>folderToZip</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>Objeto File ou Folder a comprimir</td></tr>
+<tr><td>zipStructure</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Objeto File ou Folder a comprimir</td></tr>
+<tr><td>destinationFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Arquivo destino para o arquivo</td></tr>
 <tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><em>folderToZip</em> option: <code>ZIP Without enclosing folder</code></td></tr>
 <tr><td>Result</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status object</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>ZIP Create archive</code> command creates a compressed ZIP archive object and returns the status of the operation.</p>
-<p>You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:</p>
+<p>O comando <code>ZIP Create archive</code> cria um arquivo compactado ZIP e retorna o estado da operação.</p>
+<p>Pode passar um objeto 4D.File,  4D.Folder, ou um objeto de estrutura zip como primeiro parâmetro:</p>
 <ul>
 <li><p><em>fileToZip</em>: You simply pass a <code>4D.File</code> to compress.</p></li>
 <li><p><em>folderToZip</em>: You pass a <code>4D.Folder</code> to compress. In this case, the <em>options</em> parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, <code>ZIP Create archive</code> will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the <code>ZIP Without enclosing folder</code> constant in the <em>options</em> parameter.</p></li>

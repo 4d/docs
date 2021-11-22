@@ -78,16 +78,16 @@
 <tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    the authentication mode used to open the session on the mail server</td></tr>
 <tr><td><a href="#checkconnection"><strong>.checkConnection()</strong> : Object</a><p>     checks the connection using information stored in the transporter object</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    the maximum wait time (in seconds) allowed to establish a connection to the server</td></tr>
-<tr><td><a href="#delete"><strong>.delete</strong>( <em>msgNumber</em> : Integer )</a><p>    flags the <em>msgNumber</em> email for deletion from the POP3 server</td></tr>
+<tr><td><a href="#delete"><strong>.delete</strong>( <em>msgNumber</em> : Integer )</a><p>    marca o email <em>msgNumber</em> para ser apagado do servidor POP3</td></tr>
 <tr><td><a href="#getboxinfo"><strong>.getBoxInfo()</strong> : Object</a><p>    retorna um objeto <code>boxInfo</code> correspondente ao mailbox determinado pelo <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
 <tr><td><a href="#getmail"><strong>.getMail</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    retorna o objeto<code>Email</code> correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmailinfo"><strong>.getMailInfo</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    returns a <code>mailInfo</code> object corresponding  corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmailinfolist"><strong>.getMailInfoList()</strong> : Collection</a><p>    returns a collection of <code>mailInfo</code> objects describing all messages in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmimeasblob"><strong>.getMIMEAsBlob</strong>( <em>msgNumber</em> : Integer ) : Blob</a><p>    returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
+<tr><td><a href="#getmailinfo"><strong>.getMailInfo</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    </td></tr>
+<tr><td><a href="#getmailinfolist"><strong>.getMailInfoList()</strong> : Collection</a><p>    retorna uma coleção de objetos <code>mailInfo</code> descrevendo todas as mensagens na mailbox determinada para o <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
+<tr><td><a href="#getmimeasblob"><strong>.getMIMEAsBlob</strong>( <em>msgNumber</em> : Integer ) : Blob</a><p>    retorna uma BLOB contendo os conteúdos MIME para a mensagem correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td></tr>
-<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
+<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    remove todas as marcações para apagar nos emails no <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td></tr>
 </tbody>
 </table>
@@ -322,7 +322,7 @@
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.delete( )</code> function flags the <em>msgNumber</em> email for deletion from the POP3 server.</p>
+<p>A função <code>.delete( )</code> function marca o email <em>msgNumber</em> para ser apagado do servidor POP3.</p>
 <p>No parâmetro <em>msgNumber</em>, passe o número do email a apagar. O número é retornado na propriedade número pelo método <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
 <p>Executar esse método não remove de verdade qualquer email. O email marcado será apagado do servidor POP3 apenas quando o objeto<code>POP3_transporter</code> (criado com <code>POP3 New transporter</code>) for destruído. A marcação pode ser removida com o método <code>.undeleteAll()</code>.</p>
 <blockquote>
@@ -371,7 +371,7 @@
 </thead>
 <tbody>
 <tr><td>mailCount</td><td>Número</td><td>Number of messages in the mailbox</td></tr>
-<tr><td>size</td><td>Número</td><td>Message size in bytes</td></tr>
+<tr><td>size</td><td>Número</td><td>Tamanho da mensagem em bytes</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h5>
@@ -411,9 +411,9 @@
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>A função <code>.getMail()</code> retorna o objeto<code>Email</code> correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to locally handle the email contents.</p>
-<p>Pass in <em>msgNumber</em> the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> function.</p>
-<p>The method returns Null if:</p>
+<p>A função <code>.getMail()</code> retorna o objeto<code>Email</code> correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Essa função permite manejar localmente os conteúdos de email.</p>
+<p>Passe em <em>msgNumber</em> o número da mensagem a recuperar. O número é retornado na propriedade número pela função <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
+<p>O método retorna Null se:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
 <li>the message was marked for deletion using <code>.delete( )</code>.</li>
@@ -421,7 +421,7 @@
 <p><strong>Returned object</strong></p>
 <p><code>.getMail()</code> returns an <a href="/docs/pt/API/EmailObjectClass.html#email-object"><code>Email</code> object</a>.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemplo-4"></a><a href="#exemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h5>
-<p>You want to know the sender of the first mail of the mailbox:</p>
+<p>Se quiser saber o emissário do primeiro email da mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>; <span class="hljs-variable">$transporter </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailInfo </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$sender </span>: Variant
@@ -459,19 +459,19 @@
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMailInfo()</code> function returns a <code>mailInfo</code> object corresponding  corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to retrieve information about the email.</p>
-<p>In <em>msgNumber</em>, pass the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfo"><code>.getMailInfoList()</code></a> method.</p>
-<p>The <code>mailInfo</code> object returned contains the following properties:</p>
+<p>A função <code>.getMail()</code>retorna o objeto<code>mailInfo</code> correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Essa função permite que recupere informação sobre o email.</p>
+<p>Passe em <em>msgNumber</em> o número da mensagem a recuperar. O número é retornado na propriedade número pelo método <a href="#getmailinfo"><code>.getMailInfoList()</code></a>.</p>
+<p>O objeto <code>mailInfo</code> retornado contém as funcionalidades abaixo:</p>
 <table>
 <thead>
 <tr><th>Property</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>size</td><td>Número</td><td>Message size in bytes</td></tr>
-<tr><td>id</td><td>Texto</td><td>Unique ID of the message</td></tr>
+<tr><td>size</td><td>Número</td><td>Tamanho da mensagem em bytes</td></tr>
+<tr><td>id</td><td>Texto</td><td>ID única da mensagem</td></tr>
 </tbody>
 </table>
-<p>The method returns <strong>Null</strong> if:</p>
+<p>O método retorna <strong>Null</strong> se:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
 <li>the message was marked for deletion using <code>.delete( )</code>.</li>
@@ -515,24 +515,24 @@
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMailInfoList()</code> function returns a collection of <code>mailInfo</code> objects describing all messages in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to locally manage the list of messages located on the POP3 mail server.</p>
-<p>Each <code>mailInfo</code> object in the returned collection contains the following properties:</p>
+<p>A função<code>.getMailInfoList()</code> retorna uma coleção de objetos <code>mailInfo</code> descrevendo todas as mensagens na mailbox determinada para o <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Essa função permite gerenciar localmente a lista de mensagens localizadas no servidor POP3.</p>
+<p>Cada objeto <code>mailInfo</code> na coleção retornada contém as propriedades abaixo:</p>
 <table>
 <thead>
 <tr><th>Property</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>[ ].size</td><td>Número</td><td>Message size in bytes</td></tr>
-<tr><td>[ ].number</td><td>Número</td><td>Message number</td></tr>
-<tr><td>[ ].id</td><td>Texto</td><td>Unique ID of the message (useful if you store the message locally)</td></tr>
+<tr><td>[ ].size</td><td>Número</td><td>Tamanho da mensagem em bytes</td></tr>
+<tr><td>[ ].number</td><td>Número</td><td>Número da mensagem</td></tr>
+<tr><td>[ ].id</td><td>Texto</td><td>ID único da mensagem (útil se armazenar a mensagem localmente)</td></tr>
 </tbody>
 </table>
-<p>If the mailbox does not contain a message, an empty collection is returned.</p>
-<h4><a class="anchor" aria-hidden="true" id="number-and-id-properties"></a><a href="#number-and-id-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>number and ID properties</h4>
-<p><em>number</em> is the number of a message in the mailbox at the time the <code>POP3_transporter</code> was created. The <em>number</em> property is not a static value in relation to any specific message and will change from session to session dependent on its relation to other messages in the mailbox at the time the session was opened. The numbers assigned to the messages are only valid during the lifetime of the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>. At the time the <code>POP3_transporter</code> is deleted any message marked for deletion will be removed. When the user logs back into the server, the current messages in the mailbox will be renumbered from 1 to x.</p>
-<p>The <em>id</em> however is a unique number assigned to the message when it was received by the server. This number is calculated using the time and date that the message is received and is a value assigned by your POP3 server. Unfortunately, POP3 servers do not use the <em>id</em> as the primary reference to their messages. Throughout the POP3 sessions you will need to specify the <em>number</em> as the reference to messages on the server. Developers may need to take some care if developing solutions which bring references to messages into a database but leave the body of the message on the server.</p>
+<p>Se a mailbox não conter uma mensagem, uma coleção vazia é retornada.</p>
+<h4><a class="anchor" aria-hidden="true" id="número-e-propriedades-id"></a><a href="#número-e-propriedades-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>número e propriedades ID</h4>
+<p><em>number</em> é o número de uma mensagem no mailbox no momento em que <code>POP3_transporter</code> for criado. A propriedade <em>number</em> não é um valor estático em relação a qualquer mensagem específica e vai mudar de sessão a sessão dependendo de sua relação com outras mensagens no mailibox na hora em que a sessão for aberta. Os números atribuídos às mensagens só são válidos durante a duração do <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>. No momento em que <code>POP3_transporter</code> for apagado qualquer mensagem marcada para ser apagada será removida. Quando o usuário se registrar de volta no servidor, as mensagens atuais no mailbox serão numeradas de 1 a x.</p>
+<p>Entretanto, <em>id</em> é um número único atribuído à mensagem quando for recebida pelo servidor. Esse número é calculado usando a hora e data que a mensagem for recebida e é um valor atribuído ao seu servidor POP3. Infelizmente, servidores POP3 não usam a referência primária <em>id</em> para suas mensagens. Através das sessões POP3 precisa especificar o <em>number</em> como a referência às mensagens no servidor. Desenvolvedores podem precisar ter cuirdado se desenvolverem soluções que trazem referências às mensagens na database mas deixam o corpo da mensagem no servidor.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemplo-6"></a><a href="#exemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h5>
-<p>You want to know the total number and size of emails in the mailbox:</p>
+<p>Se quiser saber o número total e tamanho dos emails nas mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"pop.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
@@ -570,21 +570,21 @@
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Número da mensagem que na lista</td></tr>
-<tr><td>Result</td><td>Blob</td><td style="text-align:center">&lt;-</td><td>Blob of the MIME string returned from the mail server</td></tr>
+<tr><td>Result</td><td>Blob</td><td style="text-align:center">&lt;-</td><td>Blob da string MIME retornado do servidor mail</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMIMEAsBlob()</code> function returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
-<p>In <em>msgNumber</em>, pass the number of the message to retrieve. O número é retornado na propriedade número pelo método <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
-<p>The method returns an empty BLOB if:</p>
+<p>A função <code>.getMIMEAsBlob()</code> retorna uma BLOB contendo os conteúdos MIME para a mensagem correspondente a <em>msgNumber</em> na mailbox determinada pelo <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
+<p>Passe em <em>msgNumber</em> o número da mensagem a recuperar. O número é retornado na propriedade número pelo método <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
+<p>O método retorna uma BLOB vazia se:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
-<li>the message was marked for deletion using <code>.delete()</code>.</li>
+<li>a mensagem foi marcada para apagar usando <code>.delete()</code>.</li>
 </ul>
-<p><strong>Returned BLOB</strong></p>
-<p><code>.getMIMEAsBlob()</code> returns a <code>BLOB</code> which can be archived in a database or converted to an <a href="/docs/pt/API/EmailObjectClass.html#email-object"><code>Email</code> object</a> with the <code>MAIL Convert from MIME</code> command.</p>
+<p><strong>BLOB devolvido</strong></p>
+<p><code>.getMIMEAsBlob()</code> retorna um <code>BLOB</code> que pode ser arquivado em um banco de dados ou convertido a um objeto <a href="/docs/pt/API/EmailObjectClass.html#email-object"><code>Email</code> </a> com o comando <code>MAIL Convert from MIME</code>.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemplo-7"></a><a href="#exemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h5>
-<p>You want to know the total number and size of emails in the mailbox:</p>
+<p>Se quiser saber o número total e tamanho dos emails nas mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailInfo </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$blob </span>: Blob<span class="hljs-keyword">
@@ -670,7 +670,7 @@
 | --------- | ---- |::| ------------------------------- |
 |           |      |  | Does not require any parameters |</p>
 <h5><a class="anchor" aria-hidden="true" id="description-15"></a><a href="#description-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.undeleteAll()</code> function removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
+<p>A função <code>.undeleteAll()</code> remove todas as marcações para apagar nos emails no <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.user</h2>
 <p><details><summary>Histórico</summary></p>
 <table>

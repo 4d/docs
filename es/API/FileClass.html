@@ -78,7 +78,7 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copies the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
+<tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copia el objeto <code>File</code> en el <em>destinationFolder</em> especificado&gt;</td></tr>
 <tr><td><a href="#create"><strong>.create()</strong> : Boolean </a><p>    creates a file on disk according to the properties of the <code>File</code> object</td></tr>
 <tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    creates an alias (macOS) or a shortcut (Windows)</td></tr>
 <tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    la fecha de creación del archivo</td></tr>
@@ -89,27 +89,27 @@
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    el nombre completo del archivo, incluyendo su extensión (si la hay)</td></tr>
 <tr><td><a href="#getappinfo"><strong>.getAppInfo</strong>() : Object</a><p>    returns the contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file information as an object</td></tr>
 <tr><td><a href="#getContent"><strong>.getContent( )</strong> : 4D.Blob</a><p>returns a <code>4D.Blob</code> object containing the entire content of a file</td></tr>
-<tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    the icon of the file</td></tr>
-<tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text } { ; } { <em>breakMode</em> : integer} ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : integer } { ; } { <em>breakMode</em> : integer} ) : Text</a><p>    returns the contents of the file as text</td></tr>
+<tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    el icono del archivo</td></tr>
+<tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text } { ; } { <em>breakMode</em> : integer} ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : integer } { ; } { <em>breakMode</em> : integer} ) : Text</a><p>    devuelve el contenido del archivo como texto</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    true si el archivo está configurado como &quot;oculto&quot; a nivel de sistema</td></tr>
-<tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    true if the file is an alias, a shortcut, or a symbolic link</td></tr>
+<tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    true si el archivo es un alias, un acceso directo o un enlace simbólico</td></tr>
 <tr><td></td></tr>
-<tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    always true for a file</td></tr>
+<tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    siempre verdadero para un archivo</td></tr>
 <tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    siempre false para un archivo</td></tr>
-<tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    true if the file exists on disk and is writable</td></tr>
-<tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    the date of the file's last modification</td></tr>
-<tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    the time of the file's last modification</td></tr>
+<tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    true si el archivo existe en el disco y es escribible</td></tr>
+<tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    la fecha de la última modificación del archivo</td></tr>
+<tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    la hora de la última modificación del archivo</td></tr>
 <tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>    moves or renames the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
-<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    the name of the file without extension (if any)</td></tr>
-<tr><td><a href="#original"><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    the target element for an alias, a shortcut, or a symbolic link file</td></tr>
-<tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    the parent folder object of the file</td></tr>
-<tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    the POSIX path of the file</td></tr>
-<tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    the path of the file expressed with the current platform syntax</td></tr>
+<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    el nombre del archivo, sin extensión (si la hay)</td></tr>
+<tr><td><a href="#original"><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    </td></tr>
+<tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    el objeto carpeta padre del archivo</td></tr>
+<tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    la ruta POSIX del archivo</td></tr>
+<tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    la ruta del archivo expresada con la sintaxis de la plataforma actual</td></tr>
 <tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renames the file with the name you passed in <em>newName</em> and returns the renamed <code>File</code> object</td></tr>
 <tr><td><a href="#setappinfo"><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file</td></tr>
 <tr><td><a href="#setcontent"><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    rewrites the entire content of the file using the data stored in the <em>content</em> BLOB</td></tr>
 <tr><td><a href="#settext"><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    writes <em>text</em> as the new contents of the file</td></tr>
-<tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    the size of the file expressed in bytes</td></tr>
+<tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    el tamaño del archivo expresado en bytes</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="file"></a><a href="#file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File</h2>
@@ -227,10 +227,10 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.copyTo()</code> function copies the <code>File</code> object into the specified <em>destinationFolder</em> .</p>
-<p>The <em>destinationFolder</em> must exist on disk, otherwise an error is generated.</p>
-<p>By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the <em>newName</em> parameter. The new name must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned.</p>
-<p>If a file with the same name already exists in the <em>destinationFolder</em>, by default 4D generates an error. You can pass the <code>fk overwrite</code> constant in the <em>overwrite</em> parameter to ignore and overwrite the existing file</p>
+<p>La función <code>.copyTo()</code> copia el objeto <code>File</code> en el <em>destinationFolder</em> especificado&gt; .</p>
+<p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
+<p>Por defecto, el archivo se copia con el nombre del archivo original. If you want to rename the copy, pass the new name in the <em>newName</em> parameter. The new name must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned.</p>
+<p>Si ya existe un archivo con el mismo nombre en la <em>destinationFolder</em>, por defecto 4D genera un error. You can pass the <code>fk overwrite</code> constant in the <em>overwrite</em> parameter to ignore and overwrite the existing file</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -242,7 +242,7 @@
 <p><strong>Valor devuelto</strong></p>
 <p>El objeto <code>File</code> copiado.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>You want to copy a picture <em>file</em> from the user's document folder to the application folder:</p>
+<p>Desea copiar un <em>archivo</em> imagen de la carpeta de documentos del usuario a la carpeta de la aplicación:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$source</span>; <span class="hljs-variable">$copy </span>: Object
 <span class="hljs-variable">$source</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Pictures/photo.png"</span>)
 <span class="hljs-variable">$copy</span>:=<span class="hljs-variable">$source</span>.<span class="hljs-function">copyTo</span>(<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE"</span>);fk overwrite)
@@ -517,11 +517,11 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getContent()</code> function  returns a <code>4D.Blob</code> object containing the entire content of a file. For information on BLOBs, please refer to the <a href="/docs/es/Concepts/blob.html">BLOB</a> section.</p>
+<p>The <code>.getContent()</code> function  returns a <code>4D.Blob</code> object containing the entire content of a file. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
 <p><strong>Valor devuelto</strong></p>
 <p>A <code>4D.Blob</code> object.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-6"></a><a href="#ejemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To save a document's contents in a <code>BLOB</code> field:</p>
+<p>Para guardar el contenido de un documento en un campo <code>BLOB</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vPath </span>: Text
  <span class="hljs-variable">$vPath</span>:=<span class="hljs-function">Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//If a document has been chosen</span>
@@ -545,16 +545,16 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>size</td><td>Integer</td><td>-&gt;</td><td>Side length for the returned picture (pixels)</td></tr>
+<tr><td>size</td><td>Integer</td><td>-&gt;</td><td>Longitud del lado de la imagen devuelta (píxeles)</td></tr>
 <tr><td>Resultado</td><td>Imagen</td><td>&lt;-</td><td>Icono</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getIcon()</code> function returns the icon of the file.</p>
-<p>The optional <em>size</em> parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the &quot;large icon&quot; version is returned.</p>
-<p>If the file does not exist on disk, a default blank icon is returned.</p>
+<p>La función <code>.getIcon()</code> devuelve el icono del archivo.</p>
+<p>The optional <em>size</em> parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Los iconos suelen definirse en 32x32 píxeles (&quot;iconos grandes&quot;) o 16x16 píxeles (&quot;iconos pequeños&quot;). If you pass 0 or omit this parameter, the &quot;large icon&quot; version is returned.</p>
+<p>Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.</p>
 <p><strong>Valor devuelto</strong></p>
-<p>File icon <a href="../Concepts/picture.html">picture</a>.</p>
+<p>Icono de archivo <a href="../Concepts/picture.html">picture</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="gettext"></a><a href="#gettext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getText()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -573,14 +573,14 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </thead>
 <tbody>
 <tr><td>charSetName</td><td>Texto</td><td>-&gt;</td><td>Nombre del juego de caracteres</td></tr>
-<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Number of character set</td></tr>
-<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Processing mode for line breaks</td></tr>
-<tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Text from the document</td></tr>
+<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Número del conjunto de caracteres</td></tr>
+<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Modo de tratamiento de los saltos de línea</td></tr>
+<tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Texto del documento</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getText()</code> function returns the contents of the file as text .</p>
-<p>Optionally, you can designate the character set to be used for reading the contents. Puede pasar:</p>
+<p>La función <code>.getText()</code> devuelve el contenido del archivo como texto .</p>
+<p>Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:</p>
 <ul>
 <li>in <em>charSetName</em>, a string containing the standard set name (for example &quot;ISO-8859-1&quot; or &quot;&quot;UTF-8&quot;),</li>
 <li>or in <em>charSetNum</em>, the MIBEnum ID (number) of the standard set name.</li>
@@ -588,25 +588,25 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <blockquote>
 <p>For the list of character sets supported by 4D, refer to the description of the <code>CONVERT FROM TEXT</code> command.</p>
 </blockquote>
-<p>If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in <em>charSetName</em> or <em>charSetNum</em> (this parameter is then ignored). If the document does not contain a BOM and if <em>charSetName</em> or <em>charSetNum</em> is omitted, by default 4D uses the &quot;UTF-8&quot; character set.</p>
-<p>In <em>breakMode</em>, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the &quot;System Documents&quot; theme are available:</p>
+<p>Si el documento contiene una marca de orden de bytes (BOM), 4D utiliza el conjunto de caracteres que ha establecido en lugar del especificado en <em>charSetName</em> o <em>charSetNum</em> (este parámetro se ignora entonces). Si el documento no contiene una BOM y si <em>charSetName</em> o <em>charSetNum</em> se omite, por defecto 4D utiliza el conjunto de caracteres &quot;UTF-8&quot;.</p>
+<p>En <em>breakMode</em>, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea en el documento. Las siguientes constantes del tema &quot;Documentos del sistema&quot; están disponibles:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
 <tr><td><code>Document unchanged</code></td><td>0</td><td>Sin procesar</td></tr>
-<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows</td></tr>
-<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to Windows format: CRLF (carriage return + line feed)</td></tr>
-<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to OS X format: CR (carriage return)</td></tr>
-<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to Unix format: LF (line feed)</td></tr>
+<tr><td><code>Document with native format</code></td><td>1</td><td>(Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: CR (retorno de carro) en OS X, CRLF (retorno de carro + salto de línea) en Windows</td></tr>
+<tr><td><code>Document with CRLF</code></td><td>2</td><td>Los saltos de línea se convierten al formato de Windows: CRLF (retorno de carro + salto de línea)</td></tr>
+<tr><td><code>Document with CR</code></td><td>3</td><td>Los saltos de línea se convierten al formato OS X: CR (retorno de carro)</td></tr>
+<tr><td><code>Document with LF</code></td><td>4</td><td>Los saltos de línea se convierten al formato Unix: LF (salto de línea)</td></tr>
 </tbody>
 </table>
-<p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>
+<p>Por defecto, cuando se omite el parámetro <em>breakMode</em>, los saltos de línea se procesan en modo nativo (1).</p>
 <p><strong>Valor devuelto</strong></p>
 <p>Texto del archivo.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Given the following text document (fields are separated by tabs):</p>
+<p>Dado el siguiente documento de texto (los campos están separados por tabulaciones):</p>
 <pre><code class="hljs css language-4d">id name price vat
 <span class="hljs-number">3</span> thé <span class="hljs-number">1.06</span>€ <span class="hljs-number">19.6</span>
 <span class="hljs-number">2</span> café <span class="hljs-number">1.05</span>€ <span class="hljs-number">19.6</span>
@@ -648,7 +648,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.isAlias</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-16"></a><a href="#descripción-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.isAlias</code> property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise.</p>
+<p>La propiedad <code>.isAlias</code> devuelve true si el archivo es un alias, un acceso directo o un enlace simbólico, y false en caso contrario.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="isfile"></a><a href="#isfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isFile</h2>
 <p><details><summary>Histórico</summary></p>
@@ -663,7 +663,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.isFile</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-17"></a><a href="#descripción-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.isFile</code> property returns always true for a file.</p>
+<p>La propiedad <code>.isFile</code> devuelve siempre verdadero para un archivo.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="isfolder"></a><a href="#isfolder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isFolder</h2>
 <p><details><summary>Histórico</summary></p>
@@ -693,7 +693,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.isWritable</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-19"></a><a href="#descripción-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.isWritable</code> property returns true if the file exists on disk and is writable.</p>
+<p>La propiedad <code>.isWritable</code> devuelve true si el archivo existe en el disco y es escribible.</p>
 <blockquote>
 <p>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the <em>writable</em> attribute of the file.</p>
 </blockquote>
@@ -717,7 +717,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.modificationDate</strong> : Date</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.modificationDate</code> property returns the date of the file's last modification.</p>
+<p>La propiedad <code>.modificationDate</code> devuelve la fecha de la última modificación del archivo.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="modificationtime"></a><a href="#modificationtime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.modificationTime</h2>
 <p><details><summary>Histórico</summary></p>
@@ -732,7 +732,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.modificationTime</strong> : Time</p>
 <h5><a class="anchor" aria-hidden="true" id="descripción-21"></a><a href="#descripción-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
-<p>The <code>.modificationTime</code> property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00).</p>
+<p>La propiedad <code>.modificationTime</code> devuelve la hora de la última modificación del archivo (expresada como un número de segundos que comienza en 00:00).</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="moveto"></a><a href="#moveto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.moveTo()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -758,7 +758,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-22"></a><a href="#descripción-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.moveTo()</code> function moves or renames the <code>File</code> object into the specified <em>destinationFolder</em>.</p>
-<p>The <em>destinationFolder</em> must exist on disk, otherwise an error is generated.</p>
+<p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
 <p>By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the <em>newName</em> parameter. The new name must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>File</code> movido.</p>
@@ -780,7 +780,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.name</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-23"></a><a href="#descripción-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.name</code> property returns the name of the file without extension (if any).</p>
+<p>La propiedad <code>.name</code> devuelve el nombre del archivo, sin extensión (si la hay).</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="original"></a><a href="#original" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.original</h2>
 <p><details><summary>Histórico</summary></p>
@@ -795,7 +795,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-24"></a><a href="#descripción-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.original</code> property returns the target element for an alias, a shortcut, or a symbolic link file. El elemento objetivo puede ser:</p>
+<p>La propiedad <code>.original</code> devuelveel elemento de destino para un alias, un acceso directo o un archivo de enlace simbólico. El elemento objetivo puede ser:</p>
 <ul>
 <li>a file object</li>
 <li>un objeto de la carpeta</li>
@@ -815,7 +815,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.parent</strong> : 4D.Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-25"></a><a href="#descripción-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.parent</code> property returns the parent folder object of the file. If the path represents a system path (e.g., &quot;/DATA/&quot;), the system path is returned.</p>
+<p>La propiedad <code>.parent</code> devuelve el objeto carpeta padre del archivo. If the path represents a system path (e.g., &quot;/DATA/&quot;), the system path is returned.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="path"></a><a href="#path" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.path</h2>
 <p><details><summary>Histórico</summary></p>
@@ -830,7 +830,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.path</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-26"></a><a href="#descripción-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.path</code> property returns the POSIX path of the file. If the path represents a filesystem (e.g., &quot;/DATA/&quot;), the filesystem is returned.</p>
+<p>La propiedad <code>.path</code> devuelve la ruta POSIX del archivo. If the path represents a filesystem (e.g., &quot;/DATA/&quot;), the filesystem is returned.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="platformpath"></a><a href="#platformpath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.platformPath</h2>
 <p><details><summary>Histórico</summary></p>
@@ -845,7 +845,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.platformPath</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-27"></a><a href="#descripción-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.platformPath</code> property returns the path of the file expressed with the current platform syntax.</p>
+<p>La propiedad <code>.platformPath</code> devuelve la ruta del archivo expresada con la sintaxis de la plataforma actual.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="rename"></a><a href="#rename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.rename()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -975,7 +975,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-30"></a><a href="#descripción-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.setContent( )</code> function rewrites the entire content of the file using the data stored in the <em>content</em> BLOB. For information on BLOBs, please refer to the <a href="/docs/es/Concepts/blob.html">BLOB</a> section.</p>
+<p>The <code>.setContent( )</code> function rewrites the entire content of the file using the data stored in the <em>content</em> BLOB. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-11"></a><a href="#ejemplo-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Archives/data.txt"</span>)
  <span class="hljs-variable">$myFile</span>.<span class="hljs-function">setContent</span>([aTable]aBlobField)
@@ -999,7 +999,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tbody>
 <tr><td>texto</td><td>Texto</td><td>-&gt;</td><td>Texto a almacenar en el archivo</td></tr>
 <tr><td>charSetName</td><td>Texto</td><td>-&gt;</td><td>Nombre del juego de caracteres</td></tr>
-<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Number of character set</td></tr>
+<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Número del conjunto de caracteres</td></tr>
 <tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Modo de tratamiento de los saltos de línea</td></tr>
 <tr><td></td></tr>
 </tbody>
@@ -1030,7 +1030,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to LF (line feed), the default Unix and macOS format</td></tr>
 </tbody>
 </table>
-<p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>
+<p>Por defecto, cuando se omite el parámetro <em>breakMode</em>, los saltos de línea se procesan en modo nativo (1).</p>
 <blockquote>
 <p><strong>Compatibility Note</strong>: compatibility options are available for EOL and BOM management. See <a href="https://doc.4d.com/4dv19R/help/title/en/page3239.html">Compatibility page</a> on doc.4d.com.</p>
 </blockquote>
@@ -1051,7 +1051,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p></details></p>
 <p><strong>.size</strong> : Real</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-32"></a><a href="#descripción-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.size</code> property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.</p>
+<p>La propiedad <code>.size</code> devuelve el tamaño del archivo expresado en bytes. If the file does not exist on disk, the size is 0.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <style> h2 { background: #d9ebff;}</style>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/API/EntitySelectionClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">EntitySelection</span></a><a class="docs-next button" href="/docs/es/API/FolderClass.html"><span>Folder</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#file">File</a></li><li><a href="#4dfilenew">4D.File.new()</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#create">.create()</a></li><li><a href="#createalias">.createAlias()</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#delete">.delete()</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#getappinfo">.getAppInfo()</a></li><li><a href="#getcontent">.getContent()</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#gettext">.getText()</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#iswritable">.isWritable</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#moveto">.moveTo()</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#rename">.rename()</a></li><li><a href="#setappinfo">.setAppInfo()</a></li><li><a href="#setcontent">.setContent()</a></li><li><a href="#settext">.setText()</a></li><li><a href="#size">.size</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

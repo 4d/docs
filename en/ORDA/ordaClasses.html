@@ -178,7 +178,7 @@ Function</span><span class="hljs-function"> getCityName</span>()<span class="hlj
 
     <span class="hljs-variable">$zipcode</span>:=<span class="hljs-variable">$1</span>
     <span class="hljs-variable">$zip</span>:=ds.ZipCode.<span class="hljs-function">get</span>(<span class="hljs-variable">$zipcode</span>)
-    <span class="hljs-variable">$0</span>:=<span class="hljs-string">""</span><span class="hljs-keyword"> 
+    <span class="hljs-variable">$0</span>:=<span class="hljs-string">""</span><span class="hljs-keyword">
 
     If</span> (<span class="hljs-variable">$zip</span>#<span class="hljs-literal">Null</span>)
         <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$zip</span>.city.name<span class="hljs-keyword">
@@ -204,7 +204,7 @@ Function</span><span class="hljs-function"> getCityName</span>()<span class="hlj
 
 Class extends</span> EntitySelection
 
-<span class="hljs-comment">//Extract the employees with a salary greater than the average from this entity selection </span><span class="hljs-keyword">
+<span class="hljs-comment">//Extract the employees with a salary greater than the average from this entity selection</span><span class="hljs-keyword">
 
 Function</span> withSalaryGreaterThanAverage
 <span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$0</span>)
@@ -265,6 +265,13 @@ End if</span>
 <li><p>You cannot instantiate a data model class object with the <code>new()</code> keyword (an error is returned). You must use a regular method as listed in the <a href="#architecture"><code>Instantiated by</code> column of the ORDA class table</a>.</p></li>
 <li><p>You cannot override a native ORDA class function from the <strong><code>4D</code></strong> <a href="/docs/en/Concepts/classes.html#class-stores">class store</a> with a data model user class function.</p></li>
 </ul>
+<h3><a class="anchor" aria-hidden="true" id="preemptive-execution"></a><a href="#preemptive-execution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preemptive execution</h3>
+<p>When compiled, data model class functions are executed:</p>
+<ul>
+<li>in <strong>preemptive or cooperative processes</strong> (depending on the calling process) in single-user applications,</li>
+<li>in <strong>preemptive processes</strong> in client/server applications (except if the <a href="#local-functions"><code>local</code></a> keyword is used, in which case it depends on the calling process like in single-user).</li>
+</ul>
+<p>If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).</p>
 <h2><a class="anchor" aria-hidden="true" id="computed-attributes"></a><a href="#computed-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Computed attributes</h2>
 <h3><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h3>
 <p>A computed attribute is a dataclass attribute with a data type that masks a calculation. <a href="/docs/en/Concepts/classes.html">Standard 4D classes</a> implement the concept of computed properties with <code>get</code> (<em>getter</em>) and <code>set</code> (<em>setter</em>) <a href="/docs/en/Concepts/classes.html#function-get-and-function-set">accessor functions</a>. ORDA dataclass attributes benefit from this feature and extend it with two additional functions: <code>query</code> and <code>orderBy</code>.</p>
@@ -325,16 +332,16 @@ End if</span>
         <span class="hljs-variable">$fullName</span>:=<span class="hljs-literal">This</span>.lastName
     : (<span class="hljs-literal">This</span>.lastName=<span class="hljs-literal">Null</span>)
         <span class="hljs-variable">$fullName</span>:=<span class="hljs-literal">This</span>.firstName<span class="hljs-keyword">
-    Else</span> 
+    Else</span>
         <span class="hljs-variable">$fullName</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.lastName<span class="hljs-keyword">
-    End case</span> 
+    End case</span>
 </code></pre>
 <ul>
 <li>A computed attribute can be based upon an entity related attribute:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get bigBoss</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs.EmployeeEntity
     <span class="hljs-variable">$result</span>:=<span class="hljs-literal">This</span>.manager.manager
-    
+
 </code></pre>
 <ul>
 <li>A computed attribute can be based upon an entity selection related attribute:</li>
@@ -342,7 +349,7 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get coWorkers</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs.EmployeeSelection<span class="hljs-keyword">
     If</span> (<span class="hljs-literal">This</span>.manager.manager=<span class="hljs-literal">Null</span>)
         <span class="hljs-variable">$result</span>:=ds.Employee.<span class="hljs-function">newSelection</span>()<span class="hljs-keyword">
-    Else</span> 
+    Else</span>
         <span class="hljs-variable">$result</span>:=<span class="hljs-literal">This</span>.manager.directReports.<span class="hljs-function">minus</span>(this)<span class="hljs-keyword">
     End if</span>
 </code></pre>
@@ -437,30 +444,30 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
     <span class="hljs-variable">$operator</span>:=<span class="hljs-variable">$event</span>.operator
     <span class="hljs-variable">$fullname</span>:=<span class="hljs-variable">$event</span>.value
 
-    <span class="hljs-variable">$p</span>:=<span class="hljs-function">Position</span>(<span class="hljs-string">" "</span>; <span class="hljs-variable">$fullname</span>)<span class="hljs-keyword"> 
+    <span class="hljs-variable">$p</span>:=<span class="hljs-function">Position</span>(<span class="hljs-string">" "</span>; <span class="hljs-variable">$fullname</span>)<span class="hljs-keyword">
     If</span> (<span class="hljs-variable">$p</span>&gt;<span class="hljs-number">0</span>)
         <span class="hljs-variable">$firstname</span>:=<span class="hljs-function">Substring</span>(<span class="hljs-variable">$fullname</span>; <span class="hljs-number">1</span>; <span class="hljs-variable">$p</span><span class="hljs-number">-1</span>)+<span class="hljs-string">"@"</span>
         <span class="hljs-variable">$lastname</span>:=<span class="hljs-function">Substring</span>(<span class="hljs-variable">$fullname</span>; <span class="hljs-variable">$p</span>+<span class="hljs-number">1</span>)+<span class="hljs-string">"@"</span>
         <span class="hljs-variable">$parameters</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-variable">$firstname</span>; <span class="hljs-variable">$lastname</span>) <span class="hljs-comment">// two items collection</span><span class="hljs-keyword">
-    Else</span> 
+    Else</span>
         <span class="hljs-variable">$fullname</span>:=<span class="hljs-variable">$fullname</span>+<span class="hljs-string">"@"</span>
         <span class="hljs-variable">$parameters</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-variable">$fullname</span>) <span class="hljs-comment">// single item collection</span><span class="hljs-keyword">
-    End if</span><span class="hljs-keyword"> 
+    End if</span><span class="hljs-keyword">
 
-    Case of</span> 
+    Case of</span>
     : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"=="</span>) | (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"==="</span>)<span class="hljs-keyword">
         If</span> (<span class="hljs-variable">$p</span>&gt;<span class="hljs-number">0</span>)
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"</span><span class="hljs-keyword">
-        Else</span> 
+        Else</span>
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"firstName = :1 or lastName = :1"</span><span class="hljs-keyword">
-        End if</span> 
+        End if</span>
     : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"!="</span>)<span class="hljs-keyword">
         If</span> (<span class="hljs-variable">$p</span>&gt;<span class="hljs-number">0</span>)
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"</span><span class="hljs-keyword">
-        Else</span> 
+        Else</span>
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"firstName != :1 and lastName != :1"</span><span class="hljs-keyword">
-        End if</span><span class="hljs-keyword"> 
-    End case</span> 
+        End if</span><span class="hljs-keyword">
+    End case</span>
 
     <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"query"</span>; <span class="hljs-variable">$query</span>; <span class="hljs-string">"parameters"</span>; <span class="hljs-variable">$parameters</span>)
 </code></pre>
@@ -474,36 +481,36 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
 <li>This function handles queries on the <em>age</em> computed attribute and returns an object with parameters:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> query age</span>(<span class="hljs-variable">$event </span>: Object)-&gt;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
-    
+
     var</span> <span class="hljs-variable">$operator </span>: Text<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$age </span>: Integer<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$_ages </span>: Collection
-    
+
     <span class="hljs-variable">$operator</span>:=<span class="hljs-variable">$event</span>.operator
-            
+
     <span class="hljs-variable">$age</span>:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$event</span>.value)  <span class="hljs-comment">// integer</span>
     <span class="hljs-variable">$d1</span>:=<span class="hljs-function">Add to date</span>(Current date; -<span class="hljs-variable">$age</span><span class="hljs-number">-1</span>; <span class="hljs-number">0</span>; <span class="hljs-number">0</span>)
     <span class="hljs-variable">$d2</span>:=<span class="hljs-function">Add to date</span>(<span class="hljs-variable">$d1</span>; <span class="hljs-number">1</span>; <span class="hljs-number">0</span>; <span class="hljs-number">0</span>)
     <span class="hljs-variable">$parameters</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-variable">$d1</span>; <span class="hljs-variable">$d2</span>)<span class="hljs-keyword">
-    
-    Case of</span> 
-            
+
+    Case of</span>
+
         : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"=="</span>)
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday &gt; :1 and birthday &lt;= :2"</span>  <span class="hljs-comment">// after d1 and before or egal d2</span>
-            
-        : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"==="</span>) 
+
+        : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"==="</span>)
 
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday = :2"</span>  <span class="hljs-comment">// d2 = second calculated date (= birthday date)</span>
 
         : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"&gt;="</span>)
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday &lt;= :2"</span>
-            
+
             <span class="hljs-comment">//... other operators           </span><span class="hljs-keyword">
-            
-            
-    End case</span><span class="hljs-keyword"> 
-    
-    
+
+
+    End case</span><span class="hljs-keyword">
+
+
     If</span> (<span class="hljs-literal">Undefined</span>(<span class="hljs-variable">$event</span>.result))
         <span class="hljs-variable">$result</span>:=New object
         <span class="hljs-variable">$result</span>.query:=<span class="hljs-variable">$query</span>
@@ -516,7 +523,7 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
 <span class="hljs-variable">$twenty</span>:=people.<span class="hljs-function">query</span>(<span class="hljs-string">"age = 20"</span>)  <span class="hljs-comment">// calls the "==" case</span>
 
 <span class="hljs-comment">// people aged 20 years today</span>
-<span class="hljs-variable">$twentyToday</span>:=people.<span class="hljs-function">query</span>(<span class="hljs-string">"age === 20"</span>) <span class="hljs-comment">// equivalent to people.query("age is 20") </span>
+<span class="hljs-variable">$twentyToday</span>:=people.<span class="hljs-function">query</span>(<span class="hljs-string">"age === 20"</span>) <span class="hljs-comment">// equivalent to people.query("age is 20")</span>
 
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="function-orderby-attributename"></a><a href="#function-orderby-attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Function orderBy &lt;attributeName&gt;</code></h3>
@@ -554,9 +561,9 @@ When the <code>orderBy</code> function is not implemented for a computed attribu
 <p>You can write conditional code:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> orderBy fullName</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result </span>: Text<span class="hljs-keyword">
     If</span> (<span class="hljs-variable">$event</span>.descending=<span class="hljs-literal">True</span>)
-        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"firstName desc, lastName desc"</span><span class="hljs-keyword"> 
-    Else</span> 
-        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"firstName, lastName"</span><span class="hljs-keyword"> 
+        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"firstName desc, lastName desc"</span><span class="hljs-keyword">
+    Else</span>
+        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"firstName, lastName"</span><span class="hljs-keyword">
     End if</span>
 </code></pre>
 <p>You can also write compact code:</p>
@@ -567,9 +574,9 @@ When the <code>orderBy</code> function is not implemented for a computed attribu
 <p>Conditional code is necessary in some cases:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> orderBy age</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result </span>: Text<span class="hljs-keyword">
     If</span> (<span class="hljs-variable">$event</span>.descending=<span class="hljs-literal">True</span>)
-        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"birthday asc"</span><span class="hljs-keyword"> 
-    Else</span> 
-        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"birthday desc"</span><span class="hljs-keyword"> 
+        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"birthday asc"</span><span class="hljs-keyword">
+    Else</span>
+        <span class="hljs-variable">$result</span>:=<span class="hljs-string">"birthday desc"</span><span class="hljs-keyword">
     End if</span>
 
 </code></pre>
@@ -620,7 +627,7 @@ var</span> <span class="hljs-variable">$id </span>: Integer
 <span class="hljs-variable">$student</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"firstname"</span>; <span class="hljs-string">"Mary"</span>; <span class="hljs-string">"lastname"</span>; <span class="hljs-string">"Smith"</span>; <span class="hljs-string">"schoolName"</span>; <span class="hljs-string">"Math school"</span>)
 
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$remoteDS</span>.Schools.<span class="hljs-function">registerNewStudent</span>(<span class="hljs-variable">$student</span>) <span class="hljs-comment">// OK</span>
-<span class="hljs-variable">$id</span>:=<span class="hljs-variable">$remoteDS</span>.Schools.<span class="hljs-function">computeIDNumber</span>() <span class="hljs-comment">// Error "Unknown member method" </span>
+<span class="hljs-variable">$id</span>:=<span class="hljs-variable">$remoteDS</span>.Schools.<span class="hljs-function">computeIDNumber</span>() <span class="hljs-comment">// Error "Unknown member method"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="local-functions"></a><a href="#local-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local functions</h2>
 <p>By default in client/server architecture, ORDA data model functions are executed <strong>on the server</strong>. It usually provides the best performance since only the function request and the result are sent over the network.</p>
@@ -653,7 +660,7 @@ local<span class="hljs-keyword"> Function</span> getYoungest<span class="hljs-ke
 
 If</span> (<span class="hljs-literal">This</span>.birthDate#<span class="hljs-literal">!00-00-00!</span>)
     <span class="hljs-variable">$age</span>:=<span class="hljs-function">Year of</span>(Current date)-<span class="hljs-function">Year of</span>(<span class="hljs-literal">This</span>.birthDate)<span class="hljs-keyword">
-Else</span> 
+Else</span>
     <span class="hljs-variable">$age</span>:=<span class="hljs-literal">Null</span><span class="hljs-keyword">
 End if</span>
 </code></pre>
@@ -668,7 +675,7 @@ End if</span>
 Case of</span>
     : (<span class="hljs-literal">This</span>.<span class="hljs-function">age</span>()=<span class="hljs-literal">Null</span>)
         <span class="hljs-variable">$status</span>.success:=<span class="hljs-literal">False</span>
-        <span class="hljs-variable">$status</span>.statusText:=<span class="hljs-string">"The birthdate is missing"</span> 
+        <span class="hljs-variable">$status</span>.statusText:=<span class="hljs-string">"The birthdate is missing"</span>
 
     :((<span class="hljs-literal">This</span>.<span class="hljs-function">age</span>() &lt;<span class="hljs-number">15</span>) | (<span class="hljs-literal">This</span>.<span class="hljs-function">age</span>()&gt;<span class="hljs-number">30</span>) )
         <span class="hljs-variable">$status</span>.success:=<span class="hljs-literal">False</span>
@@ -708,7 +715,7 @@ End if</span>
 <h3><a class="anchor" aria-hidden="true" id="method-editor"></a><a href="#method-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Method editor</h3>
 <p>In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:</p>
 <p><img src="/docs/assets/en/ORDA/AutoCompletionEntity.png" alt=""></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/ORDA/dsmapping.html"><span class="arrow-prev">← </span><span>Data Model Objects</span></a><a class="docs-next button" href="/docs/en/ORDA/entities.html"><span>Working with data</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#architecture">Architecture</a></li><li><a href="#class-description">Class Description</a><ul class="toc-headings"><li><a href="#datastore-class">DataStore Class</a></li><li><a href="#dataclass-class">DataClass Class</a></li><li><a href="#entityselection-class">EntitySelection Class</a></li><li><a href="#entity-class">Entity Class</a></li><li><a href="#specific-rules">Specific rules</a></li></ul></li><li><a href="#computed-attributes">Computed attributes</a><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#how-to-define-computed-attributes">How to define computed attributes</a></li><li><a href="#function-get-attributename"><code>Function get &lt;attributeName&gt;</code></a></li><li><a href="#function-set-attributename"><code>Function set &lt;attributeName&gt;</code></a></li><li><a href="#function-query-attributename"><code>Function query &lt;attributeName&gt;</code></a></li><li><a href="#function-orderby-attributename"><code>Function orderBy &lt;attributeName&gt;</code></a></li></ul></li><li><a href="#exposed-vs-non-exposed-functions">Exposed vs non-exposed functions</a><ul class="toc-headings"><li><a href="#example-6">Example</a></li></ul></li><li><a href="#local-functions">Local functions</a><ul class="toc-headings"><li><a href="#examples-2">Examples</a></li></ul></li><li><a href="#support-in-4d-projects">Support in 4D projects</a><ul class="toc-headings"><li><a href="#class-files">Class files</a></li><li><a href="#creating-classes">Creating classes</a></li><li><a href="#editing-classes">Editing classes</a></li><li><a href="#method-editor">Method editor</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/ORDA/dsmapping.html"><span class="arrow-prev">← </span><span>Data Model Objects</span></a><a class="docs-next button" href="/docs/en/ORDA/entities.html"><span>Working with data</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#architecture">Architecture</a></li><li><a href="#class-description">Class Description</a><ul class="toc-headings"><li><a href="#datastore-class">DataStore Class</a></li><li><a href="#dataclass-class">DataClass Class</a></li><li><a href="#entityselection-class">EntitySelection Class</a></li><li><a href="#entity-class">Entity Class</a></li><li><a href="#specific-rules">Specific rules</a></li><li><a href="#preemptive-execution">Preemptive execution</a></li></ul></li><li><a href="#computed-attributes">Computed attributes</a><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#how-to-define-computed-attributes">How to define computed attributes</a></li><li><a href="#function-get-attributename"><code>Function get &lt;attributeName&gt;</code></a></li><li><a href="#function-set-attributename"><code>Function set &lt;attributeName&gt;</code></a></li><li><a href="#function-query-attributename"><code>Function query &lt;attributeName&gt;</code></a></li><li><a href="#function-orderby-attributename"><code>Function orderBy &lt;attributeName&gt;</code></a></li></ul></li><li><a href="#exposed-vs-non-exposed-functions">Exposed vs non-exposed functions</a><ul class="toc-headings"><li><a href="#example-6">Example</a></li></ul></li><li><a href="#local-functions">Local functions</a><ul class="toc-headings"><li><a href="#examples-2">Examples</a></li></ul></li><li><a href="#support-in-4d-projects">Support in 4D projects</a><ul class="toc-headings"><li><a href="#class-files">Class files</a></li><li><a href="#creating-classes">Creating classes</a></li><li><a href="#editing-classes">Editing classes</a></li><li><a href="#method-editor">Method editor</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

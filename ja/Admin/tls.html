@@ -89,7 +89,7 @@
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="最低バージョン"></a><a href="#最低バージョン" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最低バージョン</h2>
 <p>デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。 この値は <code>SET DATABASE PARAMETER</code> コマンドで <code>Min TLS version</code> セレクターを使用することで変更可能です。</p>
-<p>接続時に受け入れる <a href="/docs/ja/WebServer/webServerConfig.html#最低TLSバージョン">最低TLSバージョン</a> を定義することで、Webサーバーのセキュリティレベルを制御することができます。</p>
+<p>接続時に受け入れる <a href="/docs/ja/WebServer/webServerConfig.html#最低tlsバージョン">最低TLSバージョン</a> を定義することで、Webサーバーのセキュリティレベルを制御することができます。</p>
 <h2><a class="anchor" aria-hidden="true" id="証明書の取得方法"></a><a href="#証明書の取得方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>証明書の取得方法</h2>
 <p>サーバーを保護モードで起動させるには、認証機関の電子証明書が必要です。 この証明書には、サイトID や、サーバーとの通信に使用する公開鍵など、様々な情報が格納されます。 そのサーバーに接続した際に、証明書がクライアント (例: Webブラウザー) へ送られます。 証明書が識別され受け入れられると、保護モードで通信が開始されます。</p>
 <blockquote>
@@ -140,12 +140,12 @@
 <h3><a class="anchor" aria-hidden="true" id="tlsを有効にする"></a><a href="#tlsを有効にする" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TLSを有効にする</h3>
 <p><strong>key.pem</strong> と <strong>cert.pem</strong> ファイルをインストールすることにより、4Dサーバーにおける TLS の使用を可能にします。 ただし、サーバーによって受け入れられるようにするには、TLS接続を有効化しなければなりません:</p>
 <ul>
-<li>4D Webサーバーの場合、<a href="/docs/ja/WebServer/webServerConfig.html#HTTPSを有効にする">HTTPSを有効</a> にする必要があります。 <a href="/docs/ja/WebServer/webServerConfig.html#HSTSを有効にする">HSTSオプション</a> を設定して、HTTPモードで接続しようとするブラウザーをリダイレクトすることができます。</li>
+<li>4D Webサーバーの場合、<a href="/docs/ja/WebServer/webServerConfig.html#httpsを有効にする">HTTPSを有効</a> にする必要があります。 <a href="/docs/ja/WebServer/webServerConfig.html#hstsを有効にする">HSTSオプション</a> を設定して、HTTPモードで接続しようとするブラウザーをリダイレクトすることができます。</li>
 <li>アプリケーションサーバーでは、ストラクチャー設定ダイアログボックスの &quot;C/S (クライアントサーバー)&quot; ページで <strong>クライアント-サーバー通信の暗号化</strong> オプションを選択する必要があります。</li>
 <li>SQLサーバーの場合は、ストラクチャー設定ダイアログボックスの &quot;SQL&quot; ページで <strong>TLSを有効にする</strong> オプションを選択する必要があります。</li>
 </ul>
 <blockquote>
-<p>4D Webサーバーは、セキュアな HTTPS接続のみを許可するとブラウザーに対して宣言するための <a href="/docs/ja/WebServer/webServerConfig.html#HSTSを有効にする">HSTSオプション</a> をサポートしています。</p>
+<p>4D Webサーバーは、セキュアな HTTPS接続のみを許可するとブラウザーに対して宣言するための <a href="/docs/ja/WebServer/webServerConfig.html#hstsを有効にする">HSTSオプション</a> をサポートしています。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="perfect-forward-secrecy-pfs"></a><a href="#perfect-forward-secrecy-pfs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Perfect Forward Secrecy (PFS)</h2>
 <p><a href="https://ja.wikipedia.org/wiki/Forward_secrecy">PFS</a> は通信の中に新たなレイヤーのセキュリティを追加します。 事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。 このように協同で鍵を作成することで &quot;共有の秘密&quot; が作成され、外部への漏洩を防ぐことができます。</p>
