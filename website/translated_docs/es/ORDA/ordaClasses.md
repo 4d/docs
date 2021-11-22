@@ -156,7 +156,7 @@ Function getCityName()
 
     $zipcode:=$1
     $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+    $0:=""
 
     If ($zip#Null)
         $0:=$zip.city.name
@@ -194,7 +194,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extract the employees with a salary greater than the average from this entity selection
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -268,6 +268,16 @@ When creating or editing data model classes, you must pay attention to the follo
 - You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+
+
+### Preemptive execution
+
+When compiled, data model class functions are executed:
+
+- in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
+- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+
+If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
 
 
 ## Atributos calculados
@@ -344,9 +354,9 @@ Function get fullName($event : Object)-> $fullName : Text
         $fullName:=This.lastName
     : (This.lastName=Null)
         $fullName:=This.firstName
-    Else 
+    Else
         $fullName:=This.firstName+" "+This.lastName
-    End case 
+    End case
 ```
 
 - A computed attribute can be based upon an entity related attribute:
@@ -363,7 +373,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else 
+    Else
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -457,30 +467,30 @@ Function query fullName($event : Object)->$result : Object
     $operator:=$event.operator
     $fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
+    $p:=Position(" "; $fullname)
     If ($p>0)
         $firstname:=Substring($fullname; 1; $p-1)+"@"
         $lastname:=Substring($fullname; $p+1)+"@"
         $parameters:=New collection($firstname; $lastname) // two items collection
-    Else 
+    Else
         $fullname:=$fullname+"@"
         $parameters:=New collection($fullname) // single item collection
-    End if 
+    End if
 
-    Case of 
+    Case of
     : ($operator="==") | ($operator="===")
         If ($p>0)
             $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
+        Else
             $query:="firstName = :1 or lastName = :1"
-        End if 
+        End if
     : ($operator="!=")
         If ($p>0)
             $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
+        Else
             $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+        End if
+    End case
 
     $result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -509,12 +519,12 @@ Function query age($event : Object)->$result : Object
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
 
-    Case of 
+    Case of
 
         : ($operator="==")
             $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
 
-        : ($operator="===") 
+        : ($operator="===")
 
             $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
 
@@ -524,7 +534,7 @@ Function query age($event : Object)->$result : Object
             //... other operators           
 
 
-    End case 
+    End case
 
 
     If (Undefined($event.result))
@@ -542,7 +552,7 @@ Calling code, for example:
 $twenty:=people.query("age = 20")  // calls the "==" case
 
 // people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
 
 ```
 
@@ -586,9 +596,9 @@ You can write conditional code:
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc" 
-    Else 
-        $result:="firstName, lastName" 
+        $result:="firstName desc, lastName desc"
+    Else
+        $result:="firstName, lastName"
     End if
 ```
 
@@ -605,9 +615,9 @@ Conditional code is necessary in some cases:
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc" 
-    Else 
-        $result:="birthday desc" 
+        $result:="birthday asc"
+    Else
+        $result:="birthday desc"
     End if
 
 ```
@@ -671,7 +681,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
 
@@ -718,7 +728,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
+Else
     $age:=Null
 End if
 ```
@@ -738,7 +748,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="The birthdate is missing"
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -805,4 +815,3 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
-

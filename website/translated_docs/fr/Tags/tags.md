@@ -7,7 +7,7 @@ title: Balises de transformation
 
 Ce principe est notamment utilisé par le serveur Web 4D pour créer [des pages de template Web](WebServer/templates.md).
 
-These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+Ces balises sont généralement insérées sous forme de commentaires de type HTML (`<!--#Tag Contents-->`) mais [une syntaxe alternative conforme à la norme xml](#alternative-syntax-for-4dtext-4dhtml-4deval) est disponible pour certaines d'entre elles.
 
 Il est possible de combiner plusieurs types de balises. Par exemple, la structure HTML suivante est tout à fait envisageable :
 

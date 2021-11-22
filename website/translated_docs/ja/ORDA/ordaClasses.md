@@ -156,7 +156,7 @@ Function getCityName()
 
     $zipcode:=$1
     $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+    $0:=""
 
     If ($zip#Null)
         $0:=$zip.city.name
@@ -270,6 +270,16 @@ End if
 - **`4D`** [クラスストア](Concepts/classes.md#クラスストア) のネイティブな ORDA クラス関数を、データモデルユーザークラス関数でオーバーライドすることはできません。
 
 
+### プリエンプティブ実行
+
+When compiled, data model class functions are executed:
+
+- in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
+- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+
+If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
+
+
 ## 計算属性
 
 
@@ -344,9 +354,9 @@ Function get fullName($event : Object)-> $fullName : Text
         $fullName:=This.lastName
     : (This.lastName=Null)
         $fullName:=This.firstName
-    Else 
+    Else
         $fullName:=This.firstName+" "+This.lastName
-    End case 
+    End case
 ```
 
 - 計算属性は、エンティティにリレートされた属性に基づいて定義することができます。
@@ -363,7 +373,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else 
+    Else
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -457,30 +467,30 @@ Function query fullName($event : Object)->$result : Object
     $operator:=$event.operator
     $fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
+    $p:=Position(" "; $fullname)
     If ($p>0)
         $firstname:=Substring($fullname; 1; $p-1)+"@"
         $lastname:=Substring($fullname; $p+1)+"@"
         $parameters:=New collection($firstname; $lastname) // 2要素のコレクション
-    Else 
+    Else
         $fullname:=$fullname+"@"
         $parameters:=New collection($fullname) // 1要素のコレクション
-    End if 
+    End if
 
-    Case of 
+    Case of
     : ($operator="==") | ($operator="===")
         If ($p>0)
             $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
+        Else
             $query:="firstName = :1 or lastName = :1"
-        End if 
+        End if
     : ($operator="!=")
         If ($p>0)
             $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
+        Else
             $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+        End if
+    End case
 
     $result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -509,12 +519,12 @@ Function query age($event : Object)->$result : Object
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
 
-    Case of 
+    Case of
 
         : ($operator="==")
             $query:="birthday > :1 and birthday <= :2"  // d1 より大きい、かつ d2 以下
 
-        : ($operator="===") 
+        : ($operator="===")
 
             $query:="birthday = :2"  // d2 = 2つ目の算出値 (= 誕生日)
 
@@ -524,7 +534,7 @@ Function query age($event : Object)->$result : Object
             //... その他の演算子           
 
 
-    End case 
+    End case
 
 
     If (Undefined($event.result))
@@ -542,7 +552,7 @@ Function query age($event : Object)->$result : Object
 $twenty:=people.query("age = 20")  // "==" のケースを呼び出します
 
 // 本日満 20歳になった人
-$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ 
+$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ
 
 ```
 
@@ -586,9 +596,9 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc" 
-    Else 
-        $result:="firstName, lastName" 
+        $result:="firstName desc, lastName desc"
+    Else
+        $result:="firstName, lastName"
     End if
 ```
 
@@ -605,9 +615,9 @@ Function orderBy fullName($event : Object)-> $result : Text
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc" 
-    Else 
-        $result:="birthday desc" 
+        $result:="birthday asc"
+    Else
+        $result:="birthday desc"
     End if
 
 ```
@@ -671,7 +681,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です) 
+$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
 
@@ -718,7 +728,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
+Else
     $age:=Null
 End if
 ```
@@ -738,7 +748,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="生年月日が入力されていません。" 
+        $status.statusText:="生年月日が入力されていません。"
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -805,4 +815,3 @@ Class extends Entity
 4D メソッドエディターにおいて、ORDA クラス型として定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
-

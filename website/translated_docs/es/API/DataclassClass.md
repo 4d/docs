@@ -682,21 +682,21 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
-| Parámetros    | Tipo               |    | Descripción                                                                                                                 |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texto              | -> | Search criteria as string                                                                                                   |
-| formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
-| Resultado     | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
+| Parámetros    | Tipo               |    | Descripción                                                                                                                                                  |
+| ------------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| queryString   | Texto              | -> | Criterios de búsqueda como cadena                                                                                                                            |
+| formula       | Objeto             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                    |
+| value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                               |
+| querySettings | Objeto             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                             |
+| Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
+La función `.query( )`<!-- REF #DataClass.query().Summary -->busca entidades que cumplan con los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *value*(s)<!-- END REF -->, para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
 **parámetro queryString**
 
@@ -765,7 +765,7 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 ```
 > Single quotes (') are not supported in searched values since they would break the query string. For example "comp.name = 'John's pizza' " will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).
 
-**Using parenthesis**
+**Uso del paréntesis**
 
 You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
@@ -819,7 +819,7 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
     $result2:=$col.query("company.name = :1";"John's Pizzas")
     ```
 
-**Looking for null values**
+**Búsqueda de valores null**
 
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
@@ -838,7 +838,7 @@ You will not get the expected result because the null value will be evaluated by
 
 When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
 
-For example, with the following two entities:
+Por ejemplo, con las dos entidades siguientes:
 
 ```
 Entity 1:
@@ -1239,7 +1239,7 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### Ver también
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para selecciones de entidades
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -52,10 +52,10 @@ End if
 <!-- REF #_command_.ZIP Create archive.Params -->
 | Parameter       | Type      |    | Description                                          |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
-| folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
-| zipStructure    | Objeto    | -> | File or Folder object to compress                    |
-| destinationFile | 4D.File   | -> | Destination file for the archive                     |
+| fileToZip       | 4D.File   | -> | Objeto File ou Folder a comprimir                    |
+| folderToZip     | 4D.Folder | -> | Objeto File ou Folder a comprimir                    |
+| zipStructure    | Objeto    | -> | Objeto File ou Folder a comprimir                    |
+| destinationFile | 4D.File   | -> | Arquivo destino para o arquivo                       |
 | options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Result          | Objeto    | <- | Status object                                        |
 <!-- END REF -->
@@ -63,9 +63,9 @@ End if
 
 #### Description
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary -->cria um arquivo compactado ZIP e retorna o estado da operação<!-- END REF -->.
 
-You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
+Pode passar um objeto 4D.File,  4D.Folder, ou um objeto de estrutura zip como primeiro parâmetro:
 
 - *fileToZip*: You simply pass a `4D.File` to compress.
 

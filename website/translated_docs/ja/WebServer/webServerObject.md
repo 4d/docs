@@ -64,7 +64,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Webサーバー関数
 
-[Webサーバークラスのオブジェクト](API/webServerClass.md#Webサーバーオブジェクト) には、以下の機能があります。
+[Webサーバークラスのオブジェクト](API/webServerClass.md#webサーバーオブジェクト) には、以下の機能があります。
 
 | 関数                                       | 引数                | 戻り値             | 説明            |
 | ---------------------------------------- | ----------------- | --------------- | ------------- |

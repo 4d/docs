@@ -453,7 +453,7 @@ By default, the folder is copied with the name of the original folder. If you wa
 
 If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constant       | Valeur | Commentaire                                   |
+| Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
 | `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
@@ -543,7 +543,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Valeur | Commentaire                                                                                 |
+| Constante             | Valeur | Commentaire                                                                                 |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------- |
 | `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
 | `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
@@ -643,7 +643,7 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Valeur | Commentaire                                                                                 |
+| Constante             | Valeur | Commentaire                                                                                 |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------- |
 | `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
 | `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |

@@ -151,7 +151,7 @@ The following fields are logged for both Request and Response:
 
 ## 4DDebugLog.txt (standard)
 
-This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.
+Este archivo de historial registra cada evento que se produce a nivel de programación 4D. El modo estándar ofrece una visión básica de los eventos.
 
 Como iniciar este historial:
 
@@ -176,7 +176,7 @@ Los siguientes campos se registran para cada evento:
 
 ## 4DDebugLog.txt (tabular)
 
-This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).
+Este archivo de historial registra cada evento que se produce a nivel de programación 4D en un formato compacto y con pestañas que incluye información adicional (en comparación con el formato estándar).
 
 Como iniciar este historial:
 
@@ -194,12 +194,12 @@ Los siguientes campos se registran para cada evento:
 | --------- | ---------------- | ------------------------------------------------------------- |
 | 1         | sequence_number  | Unique and sequential operation number in the logging session |
 
-|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado por el comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) únicamente)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas `operation_type`, `operation` y `operation_parameters` tienen el mismo valor que el nivel de pila de apertura registrado en la columna `stack_opening_sequence_number`. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>
+|2| time| Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm) | |3| ProcessID|Process ID| |4| unique_processID|Unique process ID| |5| stack_level|Stack level |6| operation_type| Log operation type. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado por el comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) únicamente)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas `operation_type`, `operation` y `operation_parameters` tienen el mismo valor que el nivel de pila de apertura registrado en la columna `stack_opening_sequence_number`. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>La primera y la segunda línea abren el nivel de la pila, la tercera y la cuarta lo cierran. Los valores de las columnas 6, 7 y 8 se repiten en la línea del nivel de pila de cierre. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.| |7|operation|May represent (depending on operation type):<li>un ID de comando de lenguaje (cuando tipo=1)</li><li>un nombre de método (cuando tipo=2)</li><li>una combinación de pluginIndex;pluginCommand (cuando tipo=4, 5, 6 o 7). Puede contener algo como '3;2'</li><li>una UUID task connection (cuando tipo = 8)</li>
 |8|operation_parameters|Parameters passed to commands, methods, or plugins| |9|form_event|Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)| |10|stack_opening_sequence_number|Only for the closing stack levels: Sequence number of the corresponding opening stack level| |11|stack_level_execution_time|Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)|
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. Puede incluir información personalizada en este archivo utilizando el comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html).
 
 Como iniciar este historial:
 
@@ -218,11 +218,11 @@ Los siguientes campos se registran para cada evento:
 | messageLevel       | Información, avisos, errores                                  |
 | message            | Description of the log entry                                  |
 
-Depending on the event, various other fields can also be logged, such as task, socket, etc.
+Dependiendo del evento, se pueden incluir otros campos en el registro, como la tarea, socket, etc.
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt
 
-These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
+Estos archivos de registro registran cada intercambio entre la aplicación 4D y el servidor de correo (SMTP, POP3, IMAP) que ha sido iniciado por los siguientes comandos:
 
 *   SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
 *   POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)

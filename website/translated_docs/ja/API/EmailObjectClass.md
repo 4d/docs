@@ -554,13 +554,13 @@ $status:=$transporter.send($mail)
 var $mime: Blob
 var $email;$server;$transporter;$status: Object
 
-// Mime export of the 4D Write Pro document
+// 4D Write Pro ドキュメントを MIME に書き出します
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
 
-// convert 4D Write Pro Mime variable in mail object
+// 4D Write Pro MIME 変数をメールオブジェクトに変換します
 $email:=MAIL Convert from MIME($mime)
 
-// Fill your mail object headers
+// Email オブジェクトのヘッダーを設定します
 $email.subject:="4D Write Pro HTML body"
 $email.from:="YourEmail@gmail.com"
 $email.to:="RecipientEmail@mail.com"
@@ -623,7 +623,7 @@ var $mail: Object
 var $mime: Text
 $mail:=New object
 
-// Creation of a mail
+// メール作成
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -632,10 +632,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// transform the mail object in MIME
+// Email オブジェクトを MIME に変換します
 $mime:=MAIL Convert to MIME($mail)
 
-// Contents of $mime:
+// $mime の中身:
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

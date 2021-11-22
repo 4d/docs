@@ -67,7 +67,7 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Abort
+#### Abortar
 
 Stops method execution, and returns to the state before the method started executing:
 * When tracing a form or object method executing in response to an event: Stops and returns to the form.
@@ -274,7 +274,7 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field
+* campo
 * variable
 * puntero
 * cálculo

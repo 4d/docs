@@ -83,7 +83,7 @@ The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the d
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-| Constant                       | Valeur | Commentaire                                              |
+| Constante                      | Valeur | Commentaire                                              |
 | ------------------------------ | ------ | -------------------------------------------------------- |
 | `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
 | `Web server host database`     | 2      | Web server of the host database of a component           |
@@ -251,7 +251,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
 
-*   **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Several syntaxes are supported:
+*   **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
     -   192.168.5.17:8081
     -   192.168.5.17
     -   192.168.*
@@ -739,7 +739,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
-| Constant            | Valeur   | Description                                                                                                                         |
+| Constante           | Valeur   | Description                                                                                                                         |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
 | Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
@@ -798,7 +798,7 @@ Tous les paramètres des [objets Web server](#web-server-object) peuvent être p
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
-#### Returned object
+#### Objet retourné
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 

@@ -105,7 +105,7 @@ For example, to set a storage attribute:
  $entity.save() //save the modifications
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
+> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
 

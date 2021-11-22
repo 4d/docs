@@ -35,7 +35,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  End if
 ```
 
-The expression is TRUE only if both methods are TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
+L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```4d
  If(MethodA)

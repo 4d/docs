@@ -484,7 +484,7 @@ By default, the file is copied with the name of the original file. If you want t
 
 If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| Constant       | Valeur | Commentaire                                   |
+| Constante      | Valeur | Commentaire                                   |
 | -------------- | ------ | --------------------------------------------- |
 | `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
@@ -626,7 +626,7 @@ If the document contains a Byte Order Mark (BOM), 4D uses the character set that
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
 
-| Constant                      | Valeur | Commentaire                                                                                                                                                         |
+| Constante                     | Valeur | Commentaire                                                                                                                                                         |
 | ----------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0      | No processing                                                                                                                                                       |
 | `Document with native format` | 1      | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |

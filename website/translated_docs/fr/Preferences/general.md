@@ -49,7 +49,7 @@ Trois options sont disponibles :
 *   **Jamais** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
 *   **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
-### Appearance (macOS only)
+### Apparence (macOS uniquement)
 
 This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
 
@@ -92,7 +92,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Create `.gitignore` file
+### Créer le fichier `.gitignore`
 
 You might need or want git to ignore some files in your new projects.
 
@@ -117,7 +117,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 ## Emplacement de la documentation
 
-This area configures access to the 4D HTML documentation displayed in your current browser:
+Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
 *   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
 *   When you double-click on a 4D command in the **Commands Page** of the Explorer.
@@ -142,4 +142,4 @@ Sets where 4D will look for documentation pages.
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. Pour désigner un autre emplacement, cliquez sur le bouton **[...]** à côté de la zone de saisie et choisissez un dossier racine de documentation (dossier correspondant à la langue : `fr`, `en`, `es`, `de` ou `ja`). 

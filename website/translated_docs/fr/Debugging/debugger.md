@@ -45,59 +45,59 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 > Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
 
-#### No Trace
+#### Bouton 'Reprendre exécution'
 
-Tracing stops and normal method execution resumes.
+Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
+> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
-#### Step Over
+#### Bouton 'Exécuter pas à pas'
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+La ligne courante de la méthode (indiquée par la flèche jaune — cette flèche s’appelle le compteur de programme) est exécuté et le débogueur passe à la ligne suivante.
 
-The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
-In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
 
-#### Step Into
+#### Bouton 'Exécuter pas à pas détaillé'
 
-When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
+Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtre Fenêtre de [chaîne d'appel](#call-chain-pane) de la fenêtre du débogueur.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
 
-#### Abort
+#### Bouton 'Exécuter et sortir'
 
-Stops method execution, and returns to the state before the method started executing:
-* When tracing a form or object method executing in response to an event: Stops and returns to the form.
-* When tracing a method executing from within the Application environment: Stops and returns to the environment.
+La méthode s’arrête et vous retournez là où vous étiez avant son exécution :
+* Si vous tracez une méthode formulaire ou une méthode objet s’exécutant en réponse à un événement, elle s’arrête et vous retournez au formulaire.
+* Si vous tracez une méthode s’exécutant à partir du mode Application, vous retournez à ce mode.
 
-#### Abort and Edit
+#### Bouton 'Stopper et éditer'
 
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
+La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
+> **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Modifier
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Method Editor.
+La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing at the time you click the Edit button opens in the Method Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Save Settings
+#### Bouton 'Enregistrer paramètres'
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. This includes:
 * the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
 
-These parameters are stored in the project.
+Ces paramétrages sont stockés dans le projet.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines]()).
+Cette action n'est pas disponible en mode débogueur distant (voir [Débogage depuis des machines distantes]()).
 
-## Watch Pane
+## Fenêtre d'expression
 
 The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Voici un exemple :
 
@@ -226,20 +226,20 @@ This theme displays information regarding the main Web server of the application
 
 The expressions contained within this theme cannot be modified.
 
-### Contextual Menu
+### Menu contextuel de la fenêtre d’expression
 
-Additional options are available from the contextual menu of the Watch pane.
+Le menu contextuel de la fenêtre d’expression vous propose des options supplémentaires.
 
 ![context-menu](assets/en/Debugging/contextual-menu.png)
 
-* **Collapse All**: Collapses all levels of the hierarchical list.
-* **Expand All**: Expand all levels of the hierarchical list.
-* **Show Types**: Displays the type of each item (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field. Useful if you work with table or field numbers, or with pointers using commands such as `Table` or `Field`.
-* **Show Icons**: Displays an icon denoting the object type for each object. You can turn this option off in order to speed up the display, or just because you prefer to use only the **Show Types** option.
-* **Sorted Tables and Fields**: Sorts the tables and fields in alphabetical order within their respective lists.
-* **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. This option displays them in hexadecimal notation. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
-* **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
+* **Contracter** : Contracte tous les niveaux de la liste hiérarchique des expressions.
+* **Déployer** : Déploie tous les niveaux de la liste hiérarchique des expressions.
+* **Montrer les types** : Lorsque vous sélectionnez cette option, le type de l’objet s’affiche (lorsque cela est pertinent).
+* **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec des numéros de table ou de champs, ou avec des pointeurs utilisant les commandes `Table` ou `Champ`.
+* **Montrer les icônes** : Chaque objet est précédé d'une icône qui indique son type. Vous pouvez désactiver cette option pour accélérer l’affichage, ou tout simplement parce que l’option **Montrer les types** vous convient.
+* **Tables et champs triés** : Cette option force les tables et les champs à s’afficher par ordre alphabétique (dans leurs listes respectives).
+* **Afficher les entiers en hexadécimal** : Les nombres s’affichent en notation décimale. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
+* **Activer le suivi d'activité** : Active le suivi d'activité (contrôle avancé de l'activité interne de l'application) et affiche les informations collectées dans des thèmes supplémentaires : **Séquenceur**, **Web** et **Réseau**.
 
 ## Call Chain Pane
 
@@ -301,7 +301,7 @@ To edit an expression, click on it to select it, then click again or press **Ent
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 > **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
-### Contextual Menu
+### Menu contextuel de la fenêtre d’expression
 
 The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
 
@@ -379,25 +379,25 @@ Par exemple :
 
 Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
-### Contextual menu
+### Menu contexuel de la fenêtre d'évaluation des méthodes
 
-The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
+Le menu contextuel de la Fenêtre d'évaluation des méthodes donne accès à plusieurs fonctions utiles en phase d’exécution des méthodes en mode Trace :
 
 ![source-code-pane-context-window](assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. This command is available for:
-  * *Project methods:* displays method contents in a new window of the Method editor
-  * *Fields:* Displays field properties in the inspector of the Structure window
-  * *Tables:* Displays table properties in the inspector of the Structure window
-  * *Forms:* Displays form in the Form editor
-  * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
-* **Search References** (also available in Method editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. This can be the name of a field, variable, command, string, and so on. Search results are displayed in a new standard results window.
-* **Copy**: Standard copy of the selected expression to the pasteboard.
-* **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
-* **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
-* **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
-* **Toggle Breakpoint** (also available in Method editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Method editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
+* **Aller à définition** : permet d’accéder à la définition de l’objet sélectionné. Cette commande est disponible avec les objets suivants :
+  * *méthode projet* : affiche le contenu de la méthode dans une nouvelle fenêtre de l’éditeur de méthodes
+  * *Champ* : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
+  * *table* : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
+  * *formulaire* : affiche le formulaire dans l’éditeur de formulaires
+  * *variable* (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
+* **Chercher les références** (cette fonction est également accessible depuis l’éditeur de méthodes) : rechercher tous les objets du projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
+* **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
+* **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.
+* **Exécuter jusqu’au curseur** : provoque l’exécution des instructions situées entre le compteur de programme (flèche jaune) et la ligne sélectionnée de la méthode (dans laquelle se trouve le curseur).
+* **Fixer prochaine instruction** : déplace le compteur de programme jusqu’à la ligne sélectionnée sans l’exécuter et sans exécuter les lignes intermédiaires. La ligne désignée ne sera exécutée que si l’utilisateur clique sur l’un des boutons d’exécution.
+* **Permuter point d’arrêt** (également accessible depuis l’éditeur de méthodes) : Elle permet alternativement d’insérer ou de supprimer le point d’arrêt correspondant la ligne sélectionnée. Cette fonction modifie le point d’arrêt de façon permanente : par exemple, un point d’arrêt supprimé dans le débogueur n’apparaît plus dans la méthode d’origine.
+* **Modifier point d’arrêt... ** (également accessible depuis l’éditeur de méthodes) : Elle permet d’afficher la boîte de dialogue de définition des Propriétés du point d’arrêt. Cette fonction modifie le point d’arrêt de façon permanente.
 
 ### Find Next/Previous
 
@@ -408,31 +408,31 @@ Specific shortcuts allow you to find strings identical to the one selected:
 
 The search is carried out only if you select at least one character in the Source code pane.
 
-## Shortcuts
+## Raccourcis
 
-This section lists all the shortcuts available in the debugger window.
+Cette section répertorie tous les raccourcis disponibles dans la fenêtre du débogueur.
 
-> The tool bar also has [shortcuts](#tool-bar-buttons).
+> La barre d'outils comporte également des [raccourcis](#tool-bar-buttons).
 
-#### Watch Pane & Custom Watch Pane
+#### Fenêtre d'évaluation & Sous-fenêtre d’évaluation
 
-* **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
-* **Double-Click** in the Custom Watch Pane to create a new expression
+* Un **double-clic** sur un article de la fenêtre d’expression copie cet article dans la fenêtre d’évaluation
+* Un **double-clic** dans la sous-fenêtre d’évaluation crée une nouvelle expression
 
 #### Source Code Pane
 
-* Click in the left margin to set or remove break points.
-* **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
-* **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
-* A selected expression or object can be copied to the Custom Watch Pane by simple drag and drop.
-* **Ctrl+D** (Windows) or **Cmd+D** (macOS) key combinations copy the selected text to the Custom Watch Pane.
-* **Ctrl+E** (Windows) or **Cmd+E** (macOS) key combinations find the next strings identical to the one selected.
-* **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) key combinations find the previous strings identical to the one selected.
+* Un clic dans la marge gauche place ou supprime un point d’arrêt.
+* **Alt+Majuscule+clic** (Windows) ou **Option+Majuscule+clic** (macOS) pose un point d’arrêt provisoire.
+* **Alt+clic** (Windows) ou **Option+clic** (macOS) affiche la fenêtre des propriétés du point d’arrêt pour un point d’arrêt nouveau ou existant.
+* Une expression ou un objet sélectionné(e) peut être copié(e) dans la Fenêtre d'évaluation par glisser-déposer.
+* **Ctrl+D** (Windows) ou **Commande+D** (macOS) sur un texte sélectionné le copie dans la Fenêtre d'évaluation.
+* **Ctrl+E** (Windows) ou **Commande+E** (macOS) identifie les chaînes suivantes qui sont identiques à la chaîne sélectionnée.
+* **Ctrl+Majuscule+E** (Windows) ou **Commande+Majuscule+E** (macOS) identifie les chaînes précédentes qui sont identiques à la chaîne sélectionnée.
 
-#### All Panes
+#### Toutes les fenêtres
 
-- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Method editor and is stored in the Preferences.
-- **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
-- When no item is selected in any pane, press **Enter** to step over.
-- When an item value is selected, use the arrows keys to navigate through the list.
-- When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+- **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. La taille de la police modifiée s'applique également à l'Editeur de méthodes et est stockée dans les Préférences.
+- **Ctrl+***(Windows) ou **Commande+*** (macOS) force la réactualisation de la Fenêtre d'expression.
+- Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
+- Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.
+- Lorsque vous êtes en train d’éditer un élément, utilisez les touches directionnelles pour déplacer le curseur. Utilisez Ctrl+A/X/C/V (Windows) ou Commande+A/X/C/V (macOS) en raccourci des commandes du menu Edition : Tout Sélectionner/Couper/Copier/Coller.

@@ -82,7 +82,7 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Valeur | Commentaire                                                                             |
+| Constante        | Valeur | Commentaire                                                                             |
 | ---------------- | ------ | --------------------------------------------------------------------------------------- |
 | fk platform path | 1      | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0      | Path expressed with POSIX syntax (default)                                              |
@@ -91,7 +91,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Constant                   | Valeur | Commentaire                                                                                         |
+| Constante                  | Valeur | Commentaire                                                                                         |
 | -------------------------- | ------ | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116    |                                                                                                     |
 | fk data folder             | 9      | Associated filesystem: "/DATA"                                                                      |
@@ -225,14 +225,14 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Valeur | Commentaire                |
+| Constante          | Valeur | Commentaire                |
 | ------------------ | ------ | -------------------------- |
 | `fk alias link`    | 0      | Alias link (default)       |
 | `fk symbolic link` | 1      | Symbolic link (macOS only) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-**Returned object**
+**Objet retourné**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -283,7 +283,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constant               | Valeur | Commentaire                                      |
+| Constante              | Valeur | Commentaire                                      |
 | ---------------------- | ------ | ------------------------------------------------ |
 | `Delete only if empty` | 0      | Deletes folder only when it is empty             |
 | `Delete with contents` | 1      | Deletes folder along with everything it contains |
@@ -400,7 +400,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
-**Returned object**
+**Objet retourné**
 
 The moved `Folder` object.
 
@@ -469,7 +469,7 @@ The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the f
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 
-**Returned object**
+**Objet retourné**
 
 The renamed `Folder` object.
 

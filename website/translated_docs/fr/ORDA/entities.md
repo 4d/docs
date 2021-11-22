@@ -102,7 +102,7 @@ $entity.lastname:="Jones" //définir le nom de l'employé
 $entity.save() //sauvegarder les modifications
 ```
 
-> Les champs Blob des bases de données (les [blobs scalaires](Concepts/blob.md) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
+> Les champs Blob des bases de données (les [blobs scalaires](Concepts/dt_blob.md) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
 
 L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
@@ -186,7 +186,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
-### Shareable or alterable entity selections
+### Entity selections partageables ou modifiables
 
 Une "entity selection" peut être **partageable** (lisible par plusieurs processus, mais non modifiable après sa création) ou **modifiable** (supporte la fonction [`.add()`](API/EntitySelectionClass.md#add), mais utilisable uniquement par le processus actuel).
 

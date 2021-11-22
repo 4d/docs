@@ -42,7 +42,7 @@ Los datos también pueden ser **devueltos**desde métodos y funciones de clase. 
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. Sólo se puede declarar un único parámetro de salida por método o función de clase.
+Toda subrutina puede devolver un valor. Sólo se puede declarar un único parámetro de salida por método o función de clase.
 
 Los valores de entrada y salida son [evaluados](#values-or-references) en el momento de la llamada y copiados en variables locales dentro de la función o método de la clase llamada. Se proponen dos sintaxis para declarar los parámetros de las variables en el código llamado:
 

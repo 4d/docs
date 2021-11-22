@@ -265,7 +265,7 @@ The method creates the SMTP connection if it is not already alive. If the `.keep
 In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
 
-#### Returned object
+#### Objet retourné
 
 The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
 

@@ -1,6 +1,6 @@
 ---
 id: dsmapping
-title: Data Model Objects
+title: Objets Data Model
 ---
 
 La technologie ORDA est fondée sur une cartographie automatique d'une structure de base sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
@@ -232,7 +232,7 @@ Les propriétés des sélections d'entités sont toutefois énumérables :
 ```
 
 
-#### Sélections d'entités triées vs Sélections d'entités non-triées
+#### Entity selections triées vs Entity selections non-triées
 
 Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des sélections d'entités non-ordonnées, sauf lorsque vous utilisez la méthode `orderBy( )` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "sélection d'entités" fait généralement référence à une "sélection d'entités non-ordonnée".
 

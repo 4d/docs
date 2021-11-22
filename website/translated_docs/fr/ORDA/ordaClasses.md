@@ -26,7 +26,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 - Si la structure phySique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) are **not exposed** to remote applications and cannot be called from REST requests. Vous devez déclarer explicitement chaque fonction publique avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
+- Par défaut, toutes les fonctions de classe de votre modèle de données (y compris [les fonctions des champs calculés](#computed-attributes)) ne sont pas exposées (**exposed**) aux applications distantes et ne peuvent pas être appelées à partir de requêtes REST. Vous devez déclarer explicitement chaque fonction publique avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](assets/en/ORDA/api.png)
 
@@ -133,7 +133,7 @@ Vous pouvez ensuite obtenir une sélection d'entité des "meilleures" entreprise
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class).
+> [Les champs calculés](#computed-attributes) sont définis dans [la classe Entity](#entity-class).
 
 
 #### Exemple avec un datastore distant
@@ -156,7 +156,7 @@ Function getCityName()
 
     $zipcode:=$1
     $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+    $0:=""
 
     If ($zip#Null)
         $0:=$zip.city.name
@@ -189,12 +189,12 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// Classe cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Classe extends EntitySelection
+Class extends EntitySelection
 
-//Extrait, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne
+//Extract the employees with a salary greater than the average from this entity selection
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -216,14 +216,14 @@ Chaque table exposée avec ORDA affiche une classe Entity dans le class store `c
 - **Nom de classe **: *DataClassName*Entity (où *DataClassName* est le nom de la table)
 - **Exemple ** : cs.CityEntity
 
-Entity classes allow you to define **computed attributes** using specific keywords:
+Les classes Entity vous permettent de définir des **champs calculés** à l'aide de mots-clés spécifiques :
 
 - `Function get` *attributeName*
 - `Function set` *attributeName*
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-For more information, please refer to the [Computed attributes](#computed-attributes) section.
+Pour plus d'informations, reportez-vous à la section [Champs calculés](#computed-attributes).
 
 #### Exemple
 
@@ -270,33 +270,43 @@ Lors de la création ou de la modification de classes de modèles de données, v
 - Vous ne pouvez pas remplacer une fonction de classe ORDA native du [class store](Concepts/classes.md#class-stores) **`4D`** par une fonction de classe utilisateur de modèle de données.
 
 
+### Exécution préemptive
+
+Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :
+
+- in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
+- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+
+Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
+
+
 ## Champs calculés
 
 
 ### Aperçu
 
-A computed attribute is a dataclass attribute with a data type that masks a calculation. [Standard 4D classes](Concepts/classes.md) implement the concept of computed properties with `get` (*getter*) and `set` (*setter*) [accessor functions](Concepts/classes.md#function-get-and-function-set). ORDA dataclass attributes benefit from this feature and extend it with two additional functions: `query` and `orderBy`.
+Un champ calculé est un attribut de dataclass avec un type de données qui masque un calcul. [Les classes 4D standard](Concepts/classes.md) implémentent le concept de propriétés calculées avec des [fonctions d'accès](Concepts/classes.md#function-get-and-function-set) telles que `get` (*getter*) et `set` (*setter*). Les attributs de dataclass ORDA bénéficient de cette fonctionnalité et l'étendent avec deux fonctions supplémentaires : `query` et `orderBy`.
 
-At the very minimum, a computed attribute requires a `get` function that describes how its value will be calculated. When a *getter* function is supplied for an attribute, 4D does not create the underlying storage space in the datastore but instead substitutes the function's code each time the attribute is accessed. If the attribute is not accessed, the code never executes.
+Un champ calculé nécessite au minimum une fonction `get` qui décrit comment sa valeur sera calculée. Lorsqu'une fonction *getter* est fournie à un attribut, 4D ne crée pas l'espace de stockage sous-jacent dans le datastore mais substitue le code de la fonction chaque fois que l'attribut est accédé. Si l'attribut n'est pas consulté, le code ne s'exécute jamais.
 
-A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
+Un champ calculé peut également mettre en œuvre une fonction `set`, qui s'exécute chaque fois qu'une valeur est attribuée à l'attribut. La fonction *setter* décrit ce qui est à faire avec la valeur attribuée, généralement en la redirigeant vers un ou plusieurs attributs de stockage ou, dans certains cas, vers d'autres entités.
 
-Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In some cases this is sufficient. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
+Tout comme les champs de stockage, les champs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un champ calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. . Cependant, pour de meilleures performances, notamment en client/serveur, les champs calculés peuvent implémenter une fonction de requête `query` qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
 
-Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
+De même, les champs calculés peuvent être inclus dans des **tris**. Lorsqu'un champ calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les champs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
 
 
-### How to define computed attributes
+### Comment définir les champs calculés
 
-You create a computed attribute by defining a `get` accessor in the [**entity class**](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
+Créez un champ calculé en définissant un accesseur `get` dans la [**classe entity**](#entity-class) de la dataclass. Le champ calculé sera automatiquement disponible dans les attributs de la dataclass et dans les attributs de l'entité.
 
-Other computed attribute functions (`set`, `query`, and `orderBy`) can also be defined in the entity class. They are optional.
+D'autres fonctions de champs calculés (`set`, `query` et `orderBy`) peuvent également être définies dans la classe entity. Elles sont facultatives.
 
-Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions.
+Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) désigne l'entité. Les champs calculés peuvent être utilisés et traités comme n'importe quel champ de dataclass, c'est-à-dire qu'ils seront traités par les fonctions de [classe entity](API/EntityClass.md) ou de [classe entity selection](API/EntitySelectionClass.md).
 
-> ORDA computed attributes are not [**exposed**](#exposed-vs-non-exposed-functions) by default. You expose a computed attribute by adding the `exposed` keyword to the **get function** definition.
+> Les champs calculés d'ORDA ne sont pas exposés ([**exposed**](#exposed-vs-non-exposed-functions)) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
 
-> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing.
+> **Les fonctions get et set** peuvent avoir la propriété [**local**](#local-functions) pour optimiser le traitement client/serveur.
 
 
 ### `Function get <attributeName>`
@@ -307,11 +317,11 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
-The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
+La fonction *getter* est obligatoire pour déclarer le champ calculé *attributeName*. Chaque fois que l'on accède à l'*attributeName*, 4D évalue le code de la fonction `getter` et retourne la valeur *$result*.
 
-> A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors.
+> Un champ calculé peut utiliser la valeur d'un ou plusieurs autres champs calculés. Les appels récursifs génèrent des erreurs.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
+La fonction *getter* définit le type de données du champ calculé grâce au paramètre *$result*. Les types de résultats suivants sont autorisés :
 
 - Scalar (text, boolean, date, time, number)
 - Objet
@@ -320,19 +330,19 @@ The *getter* function defines the data type of the computed attribute thanks to 
 - Entity (i.e. cs.EmployeeEntity)
 - Entity selection (i.e. cs.EmployeeSelection)
 
-The *$event* parameter contains the following properties:
+Les propriétés du paramètre *$event* sont les suivantes :
 
-| Propriété     | Type    | Description                                                                               |
-| ------------- | ------- | ----------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Computed attribute name                                                                   |
-| dataClassName | Texte   | Dataclass name                                                                            |
-| kind          | Texte   | "get"                                                                                     |
-| result        | Variant | Optional. Add this property with Null value if you want a scalar attribute to return Null |
+| Propriété     | Type    | Description                                                                                                   |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| attributeName | Texte   | Nom du champ calculé                                                                                          |
+| dataClassName | Texte   | Nom de la dataclass                                                                                           |
+| kind          | Texte   | "get"                                                                                                         |
+| result        | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
 
 
 #### Exemples
 
-- *fullName* computed attribute:
+- Le champ calculé *fullName* :
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
@@ -344,12 +354,12 @@ Function get fullName($event : Object)-> $fullName : Text
         $fullName:=This.lastName
     : (This.lastName=Null)
         $fullName:=This.firstName
-    Else 
+    Else
         $fullName:=This.firstName+" "+This.lastName
-    End case 
+    End case
 ```
 
-- A computed attribute can be based upon an entity related attribute:
+- Un champ calculé peut être basé sur un attribut relatif à une entité :
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
@@ -357,13 +367,13 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 
 ```
 
-- A computed attribute can be based upon an entity selection related attribute:
+- Un champ calculé peut être basé sur un attribut relatif à une entity selection :
 
 ```4d
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else 
+    Else
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -377,18 +387,18 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 // code
 ```
 
-The *setter* function executes whenever a value is assigned to the attribute. This function usually processes the input value(s) and the result is dispatched between one or more other attributes.
+La fonction *setter* s'exécute chaque fois qu'une valeur est attribuée à l'attribut. Cette fonction traite généralement la ou les valeurs d'entrée et le résultat est réparti entre un ou plusieurs autres attributs.
 
-The *$value* parameter receives the value assigned to the attribute.
+Le paramètre *$value* reçoit la valeur attribuée à l'attribut.
 
-The *$event* parameter contains the following properties:
+Les propriétés du paramètre *$event* sont les suivantes :
 
-| Propriété     | Type    | Description                                   |
-| ------------- | ------- | --------------------------------------------- |
-| attributeName | Texte   | Computed attribute name                       |
-| dataClassName | Texte   | Dataclass name                                |
-| kind          | Texte   | "set"                                         |
-| value         | Variant | Value to be handled by the computed attribute |
+| Propriété     | Type    | Description                         |
+| ------------- | ------- | ----------------------------------- |
+| attributeName | Texte   | Nom du champ calculé                |
+| dataClassName | Texte   | Nom de la dataclass                 |
+| kind          | Texte   | "set"                               |
+| value         | Variant | Valeur à gérer par le champ calculé |
 
 #### Exemple
 
@@ -413,38 +423,38 @@ Function query <attributeName>($event : Object) -> $result : Object
 // code
 ```
 
-This function supports three syntaxes:
+Cette fonction prend en charge trois syntaxes :
 
-- With the first syntax, you handle the whole query through the `$event.result` object property.
-- With the second and third syntaxes, the function returns a value in *$result*:
-    - If *$result* is a Text, it must be a valid query string
-    - If *$result* is an Object, it must contain two properties:
+- Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
+- Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
+    - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
+    - Si *$result* est Object, il doit contenir deux propriétés :
 
-    | Propriété          | Type       | Description                                         |
-    | ------------------ | ---------- | --------------------------------------------------- |
-    | $result.query      | Texte      | Valid query string with placeholders (:1, :2, etc.) |
-    | $result.parameters | Collection | values for placeholders                             |
+    | Propriété          | Type       | Description                                               |
+    | ------------------ | ---------- | --------------------------------------------------------- |
+    | $result.query      | Texte      | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+    | $result.parameters | Collection | valeurs pour placeholders                                 |
 
-The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
 > The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
 
-The *$event* parameter contains the following properties:
+Les propriétés du paramètre *$event* sont les suivantes :
 
-| Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                         |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Computed attribute name                                                                                                                                                                                                                                                                                                                                             |
-| dataClassName | Texte   | Dataclass name                                                                                                                                                                                                                                                                                                                                                      |
-| kind          | Texte   | "query"                                                                                                                                                                                                                                                                                                                                                             |
-| value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                       |
-| operator      | Texte   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valeurs possibles :<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li> |
-| result        | Variant | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                            |
+| Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Texte   | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
+| dataClassName | Texte   | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
+| kind          | Texte   | "query"                                                                                                                                                                                                                                                                                                                                                                            |
+| value         | Variant | Valeur à gérer par le champ calculé                                                                                                                                                                                                                                                                                                                                                |
+| operator      | Texte   | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
+| result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
 
-> If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+> Si la fonction retourne une valeur dans *$result* et qu'une autre valeur est attribuée à la propriété `$event.result`, la priorité est donnée à `$event.result`.
 
 #### Exemples
 
-- Query on the *fullName* computed attribute.
+- Requête sur le champ calculé *fullName*.
 
 ```4d
 Function query fullName($event : Object)->$result : Object
@@ -457,43 +467,43 @@ Function query fullName($event : Object)->$result : Object
     $operator:=$event.operator
     $fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
+    $p:=Position(" "; $fullname)
     If ($p>0)
         $firstname:=Substring($fullname; 1; $p-1)+"@"
         $lastname:=Substring($fullname; $p+1)+"@"
         $parameters:=New collection($firstname; $lastname) // two items collection
-    Else 
+    Else
         $fullname:=$fullname+"@"
         $parameters:=New collection($fullname) // single item collection
-    End if 
+    End if
 
-    Case of 
+    Case of
     : ($operator="==") | ($operator="===")
         If ($p>0)
             $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
+        Else
             $query:="firstName = :1 or lastName = :1"
-        End if 
+        End if
     : ($operator="!=")
         If ($p>0)
             $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
+        Else
             $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+        End if
+    End case
 
     $result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
-> Keep in mind that using placeholders in queries based upon user text input is recommended for security reasons (see [`query()` description](API/DataClassClass.md#query)).
+> A noter que l'utilisation de placeholders dans les requêtes basées sur la saisie de texte par l'utilisateur est recommandée pour des raisons de sécurité (voir la description de [`query()`](API/DataClassClass.md#query)).
 
-Calling code, for example:
+Code d'appel, par exemple :
 
 ```4d
 $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 ```
 
-- This function handles queries on the *age* computed attribute and returns an object with parameters:
+- Cette fonction gère les requêtes sur le champ calculé *age* et retourne un objet avec des paramètres :
 
 ```4d
 Function query age($event : Object)->$result : Object
@@ -509,12 +519,12 @@ Function query age($event : Object)->$result : Object
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
 
-    Case of 
+    Case of
 
         : ($operator="==")
             $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
 
-        : ($operator="===") 
+        : ($operator="===")
 
             $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
 
@@ -524,7 +534,7 @@ Function query age($event : Object)->$result : Object
             //... other operators           
 
 
-    End case 
+    End case
 
 
     If (Undefined($event.result))
@@ -535,14 +545,14 @@ Function query age($event : Object)->$result : Object
 
 ```
 
-Calling code, for example:
+Code d'appel, par exemple :
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// personnes âgées de 20 à 21 ans (-1 jour)
+$twenty:=people.query("age = 20")  // appelle le cas "=="
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+// personnes âgées de 20 ans aujourd'hui
+$twentyToday:=people.query("age === 20") // équivalent à people.query("age is 20")
 
 ```
 
@@ -558,25 +568,25 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // code
 ```
 
-The `orderBy` function executes whenever the computed attribute needs to be ordered. It allows sorting the computed attribute. For example, you can sort *fullName* on first names then last names, or conversely. When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+La fonction `orderBy` s'exécute chaque fois que le champ calculé doit être ordonné. Elle permet de trier le champ calculé. Par exemple, vous pouvez trier *fullName* sur les prénoms puis les noms, ou inversement. Lorsque la fonction `orderBy` n'est pas implémentée pour un champ calculé, le tri est toujours séquentiel (basé sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
-> Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
+> L'appel d'une fonction `orderBy` sur des champs calculés de type Entity class ou Entity selection class **n'est pas pris en charge**.
 
-The *$event* parameter contains the following properties:
+Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                        |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Texte   | Computed attribute name                                                                                            |
-| dataClassName | Texte   | Dataclass name                                                                                                     |
+| attributeName | Texte   | Nom du champ calculé                                                                                               |
+| dataClassName | Texte   | Nom de la dataclass                                                                                                |
 | kind          | Texte   | "orderBy"                                                                                                          |
-| value         | Variant | Value to be handled by the computed attribute                                                                      |
+| value         | Variant | Valeur à gérer par le champ calculé                                                                                |
 | operator      | Texte   | "desc" or "asc" (default)                                                                                          |
 | descending    | Booléen | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
-| result        | Variant | Value to be handled by the computed attribute. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
+| result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
 
 > Vous pouvez utiliser soit `l'opérateur`, soit la propriété `descending`. C'est essentiellement une question de style de programmation (voir les exemples).
 
-Vous pouvez retourner la chaîne `orderBy` soit dans la propriété de l'objet `$event.result`, soit dans le résultat de la fonction *$result*. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+Vous pouvez retourner la chaîne `orderBy` soit dans la propriété de l'objet `$event.result`, soit dans le résultat de la fonction *$result*. Si la fonction retourne une valeur dans *$result* et qu'une autre valeur est attribuée à la propriété `$event.result`, la priorité est donnée à `$event.result`.
 
 
 #### Exemple
@@ -586,9 +596,9 @@ Vous pouvez saisir du code conditionnel :
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc" 
-    Else 
-        $result:="firstName, lastName" 
+        $result:="firstName desc, lastName desc"
+    Else
+        $result:="firstName, lastName"
     End if
 ```
 
@@ -605,9 +615,9 @@ Le code conditionnel est nécessaire dans certains cas :
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc" 
-    Else 
-        $result:="birthday desc" 
+        $result:="birthday asc"
+    Else
+        $result:="birthday desc"
     End if
 
 ```
@@ -671,7 +681,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 ```
 
 
@@ -718,7 +728,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
+Else
     $age:=Null
 End if
 ```
@@ -738,7 +748,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="The birthdate is missing"
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -805,4 +815,3 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 Dans l'éditeur de méthode de 4D, les variables saisies comme une classe ORDA bénéficient automatiquement des fonctionnalités d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
-

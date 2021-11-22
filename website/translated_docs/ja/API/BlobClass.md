@@ -3,7 +3,7 @@ id: BlobClass
 title: BLOB
 ---
 
-Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLOB-の種類) (`4D.Blob`) を操作することができます。
+Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#blob-の種類) (`4D.Blob`) を操作することができます。
 
 ### 概要
 

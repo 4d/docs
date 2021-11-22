@@ -285,16 +285,16 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parámetros | Tipo       |    | Descripción                                                |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| privilege  | Text       | -> | Nombre del privilegio                                      |
-| privileges | Collection | -> | Collection of privilege names                              |
-| parámetros | Object     | -> | Object with a "privileges" property (string or collection) |
+| Parámetros | Tipo       |    | Descripción                                                 |
+| ---------- | ---------- |:--:| ----------------------------------------------------------- |
+| privilege  | Text       | -> | Nombre del privilegio                                       |
+| privileges | Collection | -> | Colección de nombres de privilegios                         |
+| parámetros | Object     | -> | Objeto con una propiedad "privilegios" (cadena o colección) |
 <!-- END REF -->
 
 #### Descripción
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->asocia los privilegios definidos en el parámetro a la sesión<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
@@ -302,22 +302,22 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 - In the *settings* parameter, pass an object containing the following properties:
 
-| Propiedad  | Tipo              | Descripción                                        |
-| ---------- | ----------------- | -------------------------------------------------- |
-| privileges | Text o Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
-| userName   | Texto             | User name to associate to the session (optional)   |
+| Propiedad  | Tipo              | Descripción                                           |
+| ---------- | ----------------- | ----------------------------------------------------- |
+| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>    |
+| userName   | Texto             | Nombre de usuario para asociar a la sesión (opcional) |
 
-If the `privileges` property contains an invalid privilege name, it is ignored.
+Si la propiedad `privileges` contiene un nombre de privilegio no válido, se ignora.
 
 > In the current implementation, only the "WebAdmin" privilege is available.
 
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+Por defecto, cuando no se asocia ningún privilegio a la sesión, ésta es una [sesión invitado](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only).
+La propiedad [`userName`](#username) está disponible a nivel de objeto de sesión (sólo lectura).
 
 #### Ejemplo
 
-In a custom authentication method, you set the "WebAdmin" privilege to the user:
+En un método de autenticación personalizado, se establece el privilegio "WebAdmin" para el usuario:
 
 ```4d
 var $userOK : Boolean
@@ -351,17 +351,17 @@ End if
 
 #### Descripción
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+La propiedad `.storage` contiene <!-- REF #SessionClass.storage.Summary -->un objeto compartido que puede ser utilizado para almacenar información disponible para todas las peticiones del cliente web<!-- END REF -->.
 
-When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
+Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Al ser un objeto compartido, esta propiedad estará disponible en el objeto `Storage` del servidor.
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+> Al igual que el objeto `Storage` del servidor, la propiedad `.storage` es siempre "única": añadir un objeto compartido o una colección compartida a `.storage` no crea un grupo compartido.
 
-This property is **read only** itself but it returns a read-write object.
+Esta propiedad es **sólo lectura** en sí misma pero devuelve un objeto de lectura-escritura.
 
 #### Ejemplo
 
-You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
+Se desea almacenar la IP del cliente en la propiedad `.storage`. Puede escribir en el método de base de datos `On Web Authentication`:
 
 ```4d
 If (Session.storage.clientIP=Null) //first access
@@ -393,9 +393,9 @@ End if
 
 #### Descripción
 
-The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. You can use it to identify the user within your code.
+La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el nombre de usuario asociado a la sesión<!-- END REF -->. Puede utilizarlo para identificar al usuario dentro de su código.
 
-This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
+Esta propiedad es una cadena vacía por defecto. Se puede establecer mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
 
 Esta propiedad es**de sólo lectura**. 
 

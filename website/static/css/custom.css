@@ -255,3 +255,18 @@ background-color:#E02626;
 padding: 1px;
 border-radius: 0.50em;
 }
+
+body {
+  font-size: 14px;
+}
+blockquote {
+  font-size: 14px;
+}
+code {
+  font-size: 95%;
+}
+pre code {
+  font-size: 95%;
+}
+
+

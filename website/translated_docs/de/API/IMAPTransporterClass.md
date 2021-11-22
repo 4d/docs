@@ -1017,6 +1017,7 @@ The optional *options* parameter allows you pass an object defining additional i
 
 #### Ergebnis
 
+
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
 
 #### Beispiel
@@ -1115,8 +1116,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | Property | Typ        | Beschreibung                                                                                                                       |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | list     | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-
-|notFound |Collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.|
+| notFound | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                       |
 
 
 #### Beispiel

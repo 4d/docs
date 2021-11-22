@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Params -->
 | Paramètres   | Type        |    | Description                                     |
 | ------------ | ----------- |:--:| ----------------------------------------------- |
-| path         | Texte       | -> | File path                                       |
+| path         | Texte       | -> | Chemin de fichier                               |
 | fileConstant | Entier long | -> | 4D file constant                                |
 | pathType     | Entier long | -> | `fk posix path` (default) or `fk platform path` |
 | *            |             | -> | * to return file of host database               |
@@ -88,7 +88,7 @@ In the *path* parameter, pass a file path string. You can use a custom string or
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Valeur | Commentaire                                                                             |
+| Constante        | Valeur | Commentaire                                                                             |
 | ---------------- | ------ | --------------------------------------------------------------------------------------- |
 | fk platform path | 1      | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0      | Path expressed with POSIX syntax (default)                                              |
@@ -97,7 +97,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
 
-| Constant                          | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                              |
+| Constante                         | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19     | Backup history file (see Configuration and trace files). Stored in the backup destination folder.                                                                                                                                                                                                                                                                                                        |
 | Backup log file                   | 13     | Current backup journal file. Stored in the application Logs folder.                                                                                                                                                                                                                                                                                                                                      |
@@ -227,7 +227,7 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Valeur | Commentaire                |
+| Constante          | Valeur | Commentaire                |
 | ------------------ | ------ | -------------------------- |
 | `fk alias link`    | 0      | Alias link (default)       |
 | `fk symbolic link` | 1      | Symbolic link (macOS only) |
@@ -235,7 +235,7 @@ By default on macOS, the function creates a standard alias. You can also create 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 
-**Returned object**
+**Objet retourné**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -470,7 +470,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
 
-**Returned object**
+**Objet retourné**
 
 The moved `File` object.
 
@@ -536,7 +536,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 
-**Returned object**
+**Objet retourné**
 
 The renamed `File` object.
 
@@ -716,7 +716,7 @@ Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'ins�
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Les constantes suivantes du thème **Documents système** sont disponibles :
 
-| Constant                      | Valeur | Commentaire                                                                                                                                                                |
+| Constante                     | Valeur | Commentaire                                                                                                                                                                |
 | ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0      | No processing                                                                                                                                                              |
 | `Document with native format` | 1      | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (carriage return) sous MACos, CRLF (carriage return + line feed) sous Windows |

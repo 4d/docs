@@ -21,7 +21,7 @@ title: Clase Transporter
 
 #### Descripción
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+La propiedad `.acceptUnsecureConnection` contiene <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** si se permite a 4D establecer una conexión no cifrada<!-- END REF --> cuando la conexión cifrada no es posible.
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
@@ -37,7 +37,7 @@ Available secured ports are:
 
 - POP3
     - 110: POP3 non-encrypted port
-    - 995: POP3 with STARTTLS upgrade if supported by the server.
+    - 995: POP3 con actualización STARTTLS si lo soporta el servidor.
 <!-- END REF -->
 
 --- 
@@ -56,7 +56,7 @@ Available secured ports are:
 
 #### Descripción
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+La propiedad `.authenticationMode` contiene <!-- REF #transporter.authenticationMode.Summary -->el modo de autenticación utilizado para abrir la sesión en el servidor de correo<!-- END REF -->.
 
 By default, the most secured mode supported by the server is used.
 
@@ -152,7 +152,7 @@ Los valores posibles son:
 
 #### Descripción
 
-The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
+La propiedad `.bodyCharset` contiene <!-- REF #transporter.bodyCharset.Summary -->  el conjunto de caracteres y la codificación utilizados para la parte del cuerpo del correo electrónico<!-- END REF -->.
 
 *   subject,
 *   attachment filename(s),
@@ -188,7 +188,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 #### Descripción
 
-The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
+La propiedad `.connectionTimeOut` contiene <!-- REF #transporter.connectionTimeOut.Summary -->el tiempo máximo de espera (en segundos) permitido para establecer una conexión con el servidor<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
 <!-- END REF -->
 
@@ -210,7 +210,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### Descripción
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
+La propiedad `.headerCharset` contiene <!-- REF #transporter.headerCharset.Summary --> el conjunto de caracteres y la codificación utilizados para el encabezado del correo electrónico<!-- END REF -->. The header includes the following parts of the email:
 
 *   subject,
 *   attachment filename(s),
@@ -245,7 +245,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Descripción
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
+La propiedad `.host` contiene <!-- REF #transporter.host.Summary -->el nombre o la dirección IP del servidor local<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
@@ -266,7 +266,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 #### Descripción
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
+La propiedad `.logFile` contiene <!-- REF #transporter.logFile.Summary -->la ruta del archivo de registro extendido definido (si existe) para la conexión de correo<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
 
 Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
 
@@ -297,7 +297,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### Descripción
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+La propiedad `.port` contiene <!-- REF #transporter.port.Summary --> el número de puerto utilizado para las transacciones de correo<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 *   **SMTP** - 587
 *   **POP3** - 995
@@ -324,7 +324,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 
 #### Descripción
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
+La propiedad `.sendTimeOut` contiene <!-- REF #transporter.sendTimeOut.Summary --> el tiempo máximo de espera (en segundos) de una llamada a `.send( )` antes de que se produzca un timeout<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
 
 <!-- END REF -->
 
@@ -345,7 +345,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 
 #### Descripción
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->. 
+La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre de usuario utilizado para la autenticación en el servidor de correo<!-- END REF -->. 
 
 <!-- END REF -->
 
@@ -364,20 +364,20 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parámetros | Tipo   |    | Descripción                                 |
-| ---------- | ------ |:--:| ------------------------------------------- |
-| Resultado  | Objeto | <- | Status of the transporter object connection |
+| Parámetros | Tipo   |    | Descripción                                    |
+| ---------- | ------ |:--:| ---------------------------------------------- |
+| Resultado  | Objeto | <- | Estado de la conexión del objeto transportador |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
+La función `.checkConnection()` <!-- REF #transporter.checkConnection().Summary --> comprueba la conexión utilizando la información almacenada en el objeto transporter<!-- END REF -->, recrea la conexión si es necesario y devuelve el estado. Esta función permite verificar que los valores proporcionados por el usuario son válidos y coherentes.
 
 
 #### Objeto devuelto
 
-The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
+La función envía una solicitud al servidor de correo y devuelve un objeto que describe el estado del correo. This object can contain the following properties:
 
 | Propiedad  |                          | Tipo      | Descripción                                                                                                  |
 | ---------- | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------ |

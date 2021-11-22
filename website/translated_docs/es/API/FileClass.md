@@ -465,7 +465,7 @@ ALERT($info.Copyright)
 
 The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
@@ -657,7 +657,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
 
 
 #### Ejemplo
@@ -692,7 +692,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | ----------- | ------- | -- | --------------------------------------------------------------------- |
 | texto       | Texto   | -> | Texto a almacenar en el archivo                                       |
 | charSetName | Texto   | -> | Nombre del juego de caracteres                                        |
-| charSetNum  | Integer | -> | Number of character set                                               |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres                                     |
 | breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea|<!-- END REF -->
 
 |
@@ -724,7 +724,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
 | `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
 > **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
