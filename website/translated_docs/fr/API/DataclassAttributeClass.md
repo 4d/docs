@@ -224,7 +224,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 #### Exemple
 
-Given the following table and relation:
+Considérons les tables et relations suivantes :
 
 ![](/assets/en/API/dataclassAttribute3.png)
 

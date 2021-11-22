@@ -248,10 +248,10 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Parámetros | Tipo   |    | Descripción                                       |
-| ---------- | ------ |:--:| ------------------------------------------------- |
-| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultado  | Objeto | <- | Estado SMTP                                       |
+| Parámetros | Tipo   |    | Descripción                                        |
+| ---------- | ------ |:--:| -------------------------------------------------- |
+| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) a enviar |
+| Resultado  | Objeto | <- | Estado SMTP                                        |
 <!-- END REF -->
 
 
@@ -271,7 +271,7 @@ The function returns an object describing the SMTP status of the operation. This
 
 | Propiedad  | Tipo     | Descripción                                                                                      |
 | ---------- | -------- | ------------------------------------------------------------------------------------------------ |
-| success    | booleano | True if the send is successful, False otherwise                                                  |
+| success    | booleano | True si el envío tiene éxito, false en caso contrario                                            |
 | status     | number   | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
 | statusText | texto    | Status message returned by the SMTP server                                                       |
 

@@ -56,7 +56,7 @@ End if
 | zipStructure    | Objet       | -> | File or Folder object to compress                    |
 | destinationFile | 4D.File     | -> | Destination file for the archive                     |
 | options         | Entier long | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Résultat        | Objet       | <- | Status object                                        |
+| Résultat        | Objet       | <- | Objet statut                                         |
 <!-- END REF -->
 
 
@@ -146,7 +146,7 @@ In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP a
 
 Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
 
-**Status object**
+**Objet statut**
 
 The returned status object contains the following properties:
 
@@ -239,7 +239,7 @@ To compress a ZIP archive structure with a password and progress bar:
 
 
 
-#### Example 4
+#### Exemple 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
 

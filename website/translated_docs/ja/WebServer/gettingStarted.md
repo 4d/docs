@@ -218,7 +218,7 @@ $webUser.save()
 
 ### ユーザー認証
 
-> 通信が安全であるためには、接続は [https](webServerConfig.md#HTTPSを有効にする) で確立されている必要があります。
+> 通信が安全であるためには、接続は [https](webServerConfig.md#httpsを有効にする) で確立されている必要があります。
 
 1. エクスプローラーを開き、"login" というプロジェクトメソッドを作成します。
 

@@ -226,3 +226,45 @@ font-style: italic;
 
 }
 }
+
+/* custom interface numbers */
+ol.interface-numbers {
+counter-reset: orderedlist;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: .5rem;
+}
+
+li.interface-item {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    grid-gap: 1.5em;
+    align-items: start;
+    line-height: 1;
+}
+
+ol.interface-numbers li::before {
+counter-increment: orderedlist;
+content: counter(orderedlist);
+width:1rem;
+text-align: center;
+color: #fff;
+background-color:#E02626;
+padding: 1px;
+border-radius: 0.50em;
+}
+
+body {
+  font-size: 14px;
+}
+blockquote {
+  font-size: 14px;
+}
+code {
+  font-size: 95%;
+}
+pre code {
+  font-size: 95%;
+}

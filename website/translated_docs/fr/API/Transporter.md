@@ -160,7 +160,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 **Valeurs possibles :**
 
-| Constant                 | Valeur                         | Commentaire                                                                                                    |
+| Constante                | Valeur                         | Commentaire                                                                                                    |
 | ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                      |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                      |
@@ -218,7 +218,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 **Valeurs possibles :**
 
-| Constant                 | Valeur                         | Commentaire                                                                                                |
+| Constante                | Valeur                         | Commentaire                                                                                                |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                  |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                 |
@@ -375,7 +375,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 
-#### Returned object
+#### Objet retourné
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 

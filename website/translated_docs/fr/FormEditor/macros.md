@@ -305,7 +305,7 @@ Function onInvoke($editor : Object)->$result : Object
 | $editor      |                       | Objet      | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | Objet      | Object returned by [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Error stack                              |
-|              | [].errCode            | Nombre     | Error code                               |
+|              | [].errCode            | Nombre     | Code d'erreur                            |
 |              | [].message            | Texte      | Description of the error                 |
 |              | [].componentSignature | Texte      | Internal component signature             |
 

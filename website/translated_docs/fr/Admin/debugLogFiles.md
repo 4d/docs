@@ -58,9 +58,9 @@ This file starts with the following headers:
 
 For each request, the following fields are logged:
 
-| Field name                                 | Description                                                                                                                                                                                                                                                                  |
+| Noms des champs                            | Description                                                                                                                                                                                                                                                                  |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sequence_number                            | Unique and sequential operation number in the logging session                                                                                                                                                                                                                |
+| sequence_number                            | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                         |
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                 |
 | systemid                                   | ID système                                                                                                                                                                                                                                                                   |
 | component                                  | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                       |
@@ -109,27 +109,27 @@ This file starts with the following headers:
 
 For each process, the following fields are logged:
 
-| Field name                        | Description                                                   |
-| --------------------------------- | ------------------------------------------------------------- |
-| sequence_number                   | Unique and sequential operation number in the logging session |
-| time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"  |
-| process\_info_index             | Numéro de process séquentiel et unique                        |
-| CDB4DBaseContext                  | UUID du contexte de base du composant DB4D                    |
-| systemid                          | ID système                                                    |
-| server\_process\_id           | ID du process sur le serveur                                  |
-| remote\_process\_id           | ID du process sur le client                                   |
-| process\_name                   | Nom du process                                                |
-| cID                               | Identifiant de la connexion 4D                                |
-| uID                               | Identifiant du client 4D                                      |
-| IP Client                         | Addresse IPv4/IPv6 du client                                  |
-| host_name                         | Nom d'hôte du client                                          |
-| user_name                         | Nom de connexion utilisateur sur le client                    |
-| connection\_uuid                | Identifiant UUID de process de connexion                      |
-| server\_process\_unique\_id | ID unique du process sur le serveur                           |
+| Noms des champs                   | Description                                                          |
+| --------------------------------- | -------------------------------------------------------------------- |
+| sequence_number                   | Numéro d'opération séquentiel et unique dans la session d'historique |
+| time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"         |
+| process\_info_index             | Numéro de process séquentiel et unique                               |
+| CDB4DBaseContext                  | UUID du contexte de base du composant DB4D                           |
+| systemid                          | ID système                                                           |
+| server\_process\_id           | ID du process sur le serveur                                         |
+| remote\_process\_id           | ID du process sur le client                                          |
+| process\_name                   | Nom du process                                                       |
+| cID                               | Identifiant de la connexion 4D                                       |
+| uID                               | Identifiant du client 4D                                             |
+| IP Client                         | Addresse IPv4/IPv6 du client                                         |
+| host_name                         | Nom d'hôte du client                                                 |
+| user_name                         | Nom de connexion utilisateur sur le client                           |
+| connection\_uuid                | Identifiant UUID de process de connexion                             |
+| server\_process\_unique\_id | ID unique du process sur le serveur                                  |
 
 ## HTTPDebugLog.txt
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent optionellement être enregistrées.
 
 How to start this log:
 
@@ -138,16 +138,16 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 //d'autres valeurs sont disponibles
 ```
 
-The following fields are logged for both Request and Response:
+Les champs suivants sont enregistrés pour chaque requête et réponse :
 
-| Field name     | Description                                                   |
-| -------------- | ------------------------------------------------------------- |
-| SocketID       | ID of socket used for communication                           |
-| PeerIP         | IPv4 address of host (client)                                 |
-| PeerPort       | Port used by host (client)                                    |
-| TimeStamp      | Timestamp in milliseconds (since system startup)              |
-| ConnectionID   | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber | Unique and sequential operation number in the logging session |
+| Noms des champs | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| SocketID        | ID du socket utilisé pour la communication                           |
+| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
+| PeerPort        | Port utilisé par l'hôte (client)                                     |
+| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
+| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
+| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
 
 ## 4DDebugLog.txt (standard)
 
@@ -167,7 +167,7 @@ The following fields are logged for each event:
 
 | Colonne # | Description                                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | Unique and sequential operation number in the logging session                                                                    |
+| 1         | Numéro d'opération séquentiel et unique dans la session d'historique                                                             |
 | 2         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                       |
 | 3         | ID process (p=xx) et ID unique process (puid=xx)                                                                                 |
 | 4         | Niveau de stack                                                                                                                  |
@@ -190,11 +190,11 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Colonne # | Field name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Colonne # | Noms des champs                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | sequence_number                 | Unique and sequential operation number in the logging session                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| 3         | ProcessID                       | Process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 3         | ProcessID                       | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | 4         | unique_processID                | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 5         | stack_level                     | Niveau de stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | 6         | operation_type                  | Log operation type. This value may be an absolute value:<p><ol><li>Commande</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th. |
@@ -216,14 +216,14 @@ How to start this log:
 
 The following fields are logged for each event:
 
-| Nom des champs     | Description                                                   |
-| ------------------ | ------------------------------------------------------------- |
-| sequenceNumber     | Unique and sequential operation number in the logging session |
-| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)    |
-| loggerID           | Optionnel                                                     |
-| componentSignature | Optionnel - signature de composant interne                    |
-| messageLevel       | Info, Attention, Erreur                                       |
-| message            | Description de la saisie de journal                           |
+| Nom des champs     | Description                                                          |
+| ------------------ | -------------------------------------------------------------------- |
+| sequenceNumber     | Numéro d'opération séquentiel et unique dans la session d'historique |
+| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)           |
+| loggerID           | Optionnel                                                            |
+| componentSignature | Optionnel - signature de composant interne                           |
+| messageLevel       | Info, Attention, Erreur                                              |
+| message            | Description de la saisie de journal                                  |
 
 Depending on the event, various other fields can also be logged, such as task, socket, etc.
 
@@ -282,13 +282,13 @@ The log files can be produced in two versions:
 
 For each request, the following fields are logged:
 
-| Colonne # | Description                                                   |
-| --------- | ------------------------------------------------------------- |
-| 1         | Unique and sequential operation number in the logging session |
-| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)      |
-| 3         | ID du Process 4D                                              |
-| 4         | ID unique du process                                          |
-| 5         | <ul><li>Informations sur le lancement d'une session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et l'état TLS, ou</li><li>données échangées entre le serveur et le client, en commençant par "S <" (données reçues depuis le serveur SMTP, POP3 ou IMAP) ou "C>" (données envoyées par le client IMAP) : liste des modes d'authentification envoyés par le serveur et mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3 ou IMAP, les informations sur l'en-tête de l'e-mail envoyé (version standard uniquement) et si l'e-mail est sauvegardé sur le serveur, ou</li><li>Les informations sur la clôture de la session IMAP.</li></ul>                                    |
+| Colonne # | Description                                                          |
+| --------- | -------------------------------------------------------------------- |
+| 1         | Numéro d'opération séquentiel et unique dans la session d'historique |
+| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             |
+| 3         | ID du Process 4D                                                     |
+| 4         | ID unique du process                                                 |
+| 5         | <ul><li>Informations sur le lancement d'une session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et l'état TLS, ou</li><li>données échangées entre le serveur et le client, en commençant par "S <" (données reçues depuis le serveur SMTP, POP3 ou IMAP) ou "C>" (données envoyées par le client IMAP) : liste des modes d'authentification envoyés par le serveur et mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3 ou IMAP, les informations sur l'en-tête de l'e-mail envoyé (version standard uniquement) et si l'e-mail est sauvegardé sur le serveur, ou</li><li>Les informations sur la clôture de la session IMAP.</li></ul>                                           |
 
 ## Requêtes client ORDA
 
@@ -319,11 +319,11 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Field name     | Description                                                   | Exemple                                                 |
-| -------------- | ------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber | Unique and sequential operation number in the logging session | 104                                                     |
-| url            | URL de la requête ORDA effectuée par le poste client          | "rest/Persons(30001)"                                   |
-| startTime      | Date et heure de début au format ISO 8601                     | "2019-05-28T08:25:12.346Z"                              |
-| endTime        | Date et heure de fin au format ISO 8601                       | "2019-05-28T08:25:12.371Z"                              |
-| duration       | Durée de traitement client (ms)                               | 25                                                      |
-| response       | Objet réponse du serveur                                      | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| Noms des champs | Description                                                          | Exemple                                                 |
+| --------------- | -------------------------------------------------------------------- | ------------------------------------------------------- |
+| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                     |
+| url             | URL de la requête ORDA effectuée par le poste client                 | "rest/Persons(30001)"                                   |
+| startTime       | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                              |
+| endTime         | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                              |
+| duration        | Durée de traitement client (ms)                                      | 25                                                      |
+| response        | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...] |

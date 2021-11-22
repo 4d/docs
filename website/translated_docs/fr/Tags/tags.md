@@ -7,7 +7,7 @@ title: Balises de transformation
 
 Ce principe est notamment utilisé par le serveur Web 4D pour créer [des pages de template Web](WebServer/templates.md).
 
-These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+Ces balises sont généralement insérées sous forme de commentaires de type HTML (`<!--#Tag Contents-->`) mais [une syntaxe alternative conforme à la norme xml](#alternative-syntax-for-4dtext-4dhtml-4deval) est disponible pour certaines d'entre elles.
 
 Il est possible de combiner plusieurs types de balises. Par exemple, la structure HTML suivante est tout à fait envisageable :
 
@@ -199,9 +199,9 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. À c
 
 - The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - If the *item* variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
-- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
+- Si la collection contient des éléments de valeur Null, une erreur sera générée si le type de la variable ne prend pas en charge la valeur *Null* (comme par exemple les variables entier long).
 
-#### Example with a collection of scalar values
+#### Exemple avec une collection de valeurs scalaires
 
 *getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
 
@@ -243,14 +243,14 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. À c
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+Cette syntaxe permet d'effectuer une itération sur chaque *entity* de l'*entitySelection*. La portion de code située entre `<!--#4DEACH -->` et `<!--#4DENDEACH-->` est répétée pour chaque entity de l'entity selection.
 
-The *entity* parameter is an object variable of the entity selection class.
+Le paramètre *entity* est une variable objet de la classe entity selection.
 
 
-The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. À chaque itération, la variable de l'objet *entity* correspond automatiquement à l'entity de l'entity selection.
 
-#### Example with a html table
+#### Exemple avec un tableau html
 
 ```html
     <table class="table">     
@@ -267,7 +267,7 @@ The number of loops is based on the number of entities of the entity selection. 
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Exemple avec des `BALISES 4D PROCESS`
 
 ```4d
 var customers : cs.CustomersSelection

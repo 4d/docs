@@ -161,9 +161,9 @@ In the `msgIDs` parameter, you can pass either:
 *   the unique ID (*text*) of a single message or
 *   the following constant (*longint*) for all messages in the selected mailbox:
 
-    | Constant | Valeur | Commentaire                                 |
-    | -------- | ------ | ------------------------------------------- |
-    | IMAP all | 1      | Select all messages in the selected mailbox |
+    | Constante | Valeur | Commentaire                                 |
+    | --------- | ------ | ------------------------------------------- |
+    | IMAP all  | 1      | Select all messages in the selected mailbox |
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
 
@@ -178,7 +178,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 > * L'interprétation des indicateurs de mots-clés peut varier selon le client de messagerie.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -257,7 +257,7 @@ In the optional `options` parameter, you can pass an object to define the charse
 
 Possible charsets:
 
-| Constant                 | Valeur                         | Commentaire                                                                                                |
+| Constante                | Valeur                         | Commentaire                                                                                                |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>bodyCharset : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                  |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                  |
@@ -265,7 +265,7 @@ Possible charsets:
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | headerCharset & bodyCharset : US-ASCII si possible, sinon UTF-8 & base64                                   |
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -370,7 +370,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Vous pouvez passer :
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
@@ -378,7 +378,7 @@ You can pass:
 The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -483,7 +483,7 @@ In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/
 In the `name` parameter, pass the name of the new mailbox.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -558,7 +558,7 @@ End for each
 
 The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
-You can pass:
+Vous pouvez passer :
 
 - in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
@@ -567,7 +567,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -668,7 +668,7 @@ In the `name` parameter, pass the name of the mailbox to delete.
 > * The ability to delete a mailbox depends on the mail server.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -748,7 +748,7 @@ End if
 
 The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -820,7 +820,7 @@ In the optional *name* parameter, pass the name of the mailbox to access. The na
 
 If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
-**Returned object**
+**Objet retourné**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -872,7 +872,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Vous pouvez passer :
 
 | Propriété    | Type    | Description                                          |
 | ------------ | ------- | ---------------------------------------------------- |
@@ -1189,7 +1189,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
+The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Vous pouvez passer :
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox( )`.
@@ -1268,7 +1268,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+Vous pouvez passer :
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
@@ -1278,7 +1278,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 > Cette fonction est uniquement prise en charge par les serveurs IMAP compatibles avec RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1443,9 +1443,9 @@ In the `msgIDs` parameter, you can pass either:
 *   the unique ID (*text*) of a single message or
 *   the following constant (*longint*) for all messages in the selected mailbox:
 
-    | Constant | Valeur | Commentaire                                 |
-    | -------- | ------ | ------------------------------------------- |
-    | IMAP all | 1      | Select all messages in the selected mailbox |
+    | Constante | Valeur | Commentaire                                 |
+    | --------- | ------ | ------------------------------------------- |
+    | IMAP all  | 1      | Select all messages in the selected mailbox |
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
 
@@ -1460,7 +1460,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 Note that False values are ignored.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1530,7 +1530,7 @@ In the `currentName` parameter, pass the name of the mailbox to be renamed.
 Pass the new name for the mailbox in the `newName` parameter.
 
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1746,7 +1746,7 @@ In the *name* parameter, pass the name of the mailbox to access. The name repres
 
 The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
-| Constant              | Valeur | Commentaire                                                                                                                                                           |
+| Constante             | Valeur | Commentaire                                                                                                                                                           |
 | --------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1      | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                 |
 | IMAP read write state | 0      | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value) |
@@ -1754,7 +1754,7 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
-**Returned object**
+**Objet retourné**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -1810,7 +1810,7 @@ The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -
 
 In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 
@@ -1887,7 +1887,7 @@ The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summa
 
 In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
 
-**Returned object**
+**Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
 

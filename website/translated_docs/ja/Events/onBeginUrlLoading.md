@@ -12,4 +12,4 @@ title: On Begin URL Loading
 
 このイベントは、Webエリアに新しい URL のロードを開始した時に生成されます。 Webエリアに関連付けられた `URL` 変数を使用してロード中の URL を知ることができます。
 
-> ロード中の URL は [カレントURL](FormObjects/properties_WebArea.md#URL変数と-WA-OPEN-URL-コマンド) とは異なります (`WA Get current URL` コマンドの説明参照)。
+> ロード中の URL は [カレントURL](FormObjects/properties_WebArea.md#url変数と-wa-open-url-コマンド) とは異なります (`WA Get current URL` コマンドの説明参照)。

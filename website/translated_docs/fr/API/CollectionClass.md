@@ -499,7 +499,7 @@ Use(Storage)
 End use
 ```
 
-#### Example 4
+#### Exemple 4
 
 This example illustrates the use of the `ck resolve pointers` option:
 
@@ -671,11 +671,11 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| Paramètres   | Type       |    | Description                                                      |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------- |
-| option       | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| propertyPath | Text       | -> | Path of attribute whose distinct values you want to get          |
-| Résultat     | Collection | <- | New collection with only distinct values                         |
+| Paramètres   | Type       |    | Description                                                             |
+| ------------ | ---------- |:--:| ----------------------------------------------------------------------- |
+| option       | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example)        |
+| propertyPath | Text       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
+| Résultat     | Collection | <- | New collection with only distinct values                                |
 <!-- END REF -->
 
 
@@ -684,9 +684,9 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas renvoyées.
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
+Par défaut, une évaluation non diacritique est effectuée. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
 
 If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
@@ -737,7 +737,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
+Par défaut, une évaluation non diacritique est effectuée. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 > Les éléments contenant valeurs **Null** ne sont pas équivalents aux éléments Undefined.
 
 #### Exemple
@@ -899,7 +899,7 @@ The contents of the returned collection depends on the *targetPath* parameter:
     By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
 
 
-*   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+*   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
 
 #### Exemple 1
@@ -958,7 +958,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------- |
 | value      | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
 | startFrom  | Integer                                         | -> | Start index (included)                 |
-| end        | Integer                                         | -> | End index (not included)               |
+| end        | Integer                                         | -> | Position de fin (non incluse)          |
 | Résultat   | collection                                      | <- | Original collection with filled values |
 <!-- END REF -->
 
@@ -1294,7 +1294,7 @@ The code for ***FindCity*** method is:
 The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+In *toSearch*, pass the expression to find in the collection. Vous pouvez passer :
 
 *   une valeur scalaire (texte, numérique, booléen, date),
 *   the null value,
@@ -1355,7 +1355,7 @@ Optionally, you can pass the index of collection from which to start the search 
 The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
 > Cette fonction ne modifie pas la collection d'origine.
 
-The *queryString* parameter uses the following syntax:
+Le paramètre *queryString* doit respecter la syntaxe suivante :
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
@@ -1505,7 +1505,7 @@ By default, null or empty elements of the collection are returned in the resulti
 The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
 > Cette fonction ne modifie pas la collection d'origine.
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+In *toSearch*, pass the expression to find in the collection. Vous pouvez passer :
 
 *   une valeur scalaire (texte, numérique, booléen, date),
 *   the null value,
@@ -1772,7 +1772,7 @@ If you pass no parameter, the function orders scalar values in the collection in
 
 You can also pass a criteria parameter to define how the collection elements must be sorted. Three syntaxes are supported for this parameter:
 
-*   *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. The order in which the properties are passed determines the sorting priority of the collection elements. By default, properties are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+*   *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. The order in which the properties are passed determines the sorting priority of the collection elements. By default, properties are sorted in ascending order. Vous pouvez définir l'ordre de tri d'une propriété dans la chaîne des critères, séparée du chemin de propriété par un seul espace : passez "asc" pour trier par ordre croissant ou "desc" pour trier par ordre décroissant.
 
 *   *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
 
@@ -1785,19 +1785,19 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
 
-    | Constant      | Type    | Valeur | Commentaire                                       |
+    | Constante     | Type    | Valeur | Commentaire                                       |
     | ------------- | ------- | ------ | ------------------------------------------------- |
     | ck ascending  | Longint | 0      | Elements are ordered in ascending order (default) |
     | ck descending | Longint | 1      | Elements are ordered in descending order          |
 
     This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Les types sont renvoyés dans l'ordre suivant :
 
 1.  null
-2.  booleans
-3.  strings
-4.  numbers
+2.  booléens
+3.  chaînes
+4.  nombres
 5.  objects
 6.  collections
 7.  dates
@@ -2122,7 +2122,7 @@ Vous souhaitez trier la collection résultante :
 La fonction `.query()` <!-- REF #collection.query().Summary -->retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche <!-- END REF -->définis par *queryString* et (éventuellement) *value* ou *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 > Cette fonction ne modifie pas la collection d'origine.
 
-The *queryString* parameter uses the following syntax:
+Le paramètre *queryString* doit respecter la syntaxe suivante :
 
 ```4d
 propertyPath comparator value {logicalOperator propertyPath comparator value}
@@ -2514,7 +2514,7 @@ Si la collection est vide, cette méthode ne fait rien.
 | Paramètres | Type       |    | Description                                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Index pour démarrer la recherche (inclus)                                 |
-| end        | Integer    | -> | End index (not included)                                                  |
+| end        | Integer    | -> | Position de fin (non incluse)                                             |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |
 <!-- END REF -->
 
@@ -2527,9 +2527,9 @@ La fonction `.slice()` <!-- REF #collection.slice().Summary -->retourne une part
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
 
 *   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value < 0, *startFrom* is set to 0.
+*   Si la valeur calculée est négative, *startFrom* prend la valeur 0.
 *   If *end* < 0 , it is recalculated as *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *end < startFrom* (valeurs passées ou recalculées), la fonction ne fait rien.
 
 #### Exemple
 
@@ -2670,12 +2670,12 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 *methodName* sets the following parameter:
     *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Les types sont renvoyés dans l'ordre suivant :
 
 1.  null
-2.  booleans
-3.  strings
-4.  numbers
+2.  booléens
+3.  chaînes
+4.  nombres
 5.  objects
 6.  collections
 7.  dates

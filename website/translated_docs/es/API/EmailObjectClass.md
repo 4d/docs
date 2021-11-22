@@ -5,23 +5,23 @@ title: Email
 
 La creación, el envío o la recepción de correos electrónicos en 4D se realiza manejando un objeto `Email`.
 
-`Email` objects are created when receiving mails through a *transporter* class function:
+Objetos `Email` se crean cuando se reciben correos a través de una función de clase *transporter*:
 
-- IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
-- POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) function to get an email from a POP3 server.
+- IMAP - funciones [`.getMail()`](IMAPTransporterClass.md#getmail) y [`.getMails()`](IMAPTransporterClass.md#getmails) para obtener los correos electrónicos de un servidor IMAP
+- POP3 - función [`.getMail()`](POP3TransporterClass.md#getmail) para obtener un correo electrónico de un servidor POP3.
 
-> You can also create a new, blank `Email` object by calling the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object).
+> También puede crear un nuevo objeto `Email` en blanco llamando al comando 4D [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html), y luego llenarlo con [propiedades del objeto de correo electrónico](#email-object).
 
-You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
+Los objetos `Email` se envían utilizando la función SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
+Los comandos [`MAIL Convert from MIME`](#mail-convert-from-mime) y [`MAIL Convert to MIME`](#mail-convert-to-mime) pueden utilizarse para convertir objetos `Email` a y desde contenidos MIME.
 
 
 ### Objeto Email
 
-Email objects provide the following properties:
+Los objetos Email ofrecen las siguientes propiedades:
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the Email object.
+> 4D sigue la especificación [JMAP](https://jmap.io/spec-mail.html) para formatear el objeto Email.
 
 |                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Email objects provide the following properties:
 
 ### Direcciones de correo electrónico
 
-All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) accept a value of text, object, or collection type.
+Todas las propiedades que contienen direcciones de correo electrónico ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) aceptan un valor de tipo texto, objeto o colección.
 
 #### Texto
 
@@ -61,7 +61,7 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 
 #### Objeto
 
-An object with two properties:
+Un objeto con dos propiedades:
 
 | Propiedad | Tipo  | Descripción                |
 | --------- | ----- | -------------------------- |
@@ -149,7 +149,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyStructure` object contains the following properties:
+El objeto `.bodyStructure` contiene las siguientes propiedades:
 
 | Propiedad   | Tipo                  | Valor                                                                                                                                                   |
 | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ The `.bodyValues` object contains the following properties:
 
 | Propiedad                  | Tipo     | Valor                                                                                                                                        |
 | -------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | texto    | Value of the body part                                                                                                                       |
+| *partID*.value             | texto    | Valor de la parte del cuerpo                                                                                                                 |
 | *partID*.isEncodingProblem | booleano | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. Falso por defecto |
 
 
@@ -326,9 +326,9 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propiedad       | Tipo     | Valor                               |
-| --------------- | -------- | ----------------------------------- |
-| . \<keyword\> | booleano | Keyword to set (value must be true) |
+| Propiedad       | Tipo     | Valor                                            |
+| --------------- | -------- | ------------------------------------------------ |
+| . \<keyword\> | booleano | Palabra clave a definir (el valor debe ser true) |
 
 Palabras clave reservadas:
 * $draft - Indica que un mensaje es un borrador
@@ -527,12 +527,12 @@ Objeto Email.
 You want to load a mail template saved as MIME in a text document and send an email:
 
 ```4d
-C_BLOB($mime)
-C_OBJECT($mail;$server;$transporter;$status)
+var $mime: Blob
+var $mail;$server;$transporter;$status: Object
 
 $mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
 
-$mail:=[#current_title_incode]($mime)
+$mail:=MAIL Convert from MIME($mime)
 $mail.to:="smith@mail.com"
 $mail.subject:="Hello world"
 
@@ -551,8 +551,8 @@ $status:=$transporter.send($mail)
 In this example, you send directly a 4D Write Pro document containing pictures:
 
 ```4d
-C_TEXT($mime)
-C_OBJECT($email;$server;$transporter;$status)
+var $mime: Blob
+var $email;$server;$transporter;$status: Object
 
 // Mime export of the 4D Write Pro document
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
@@ -619,11 +619,11 @@ If the *options* parameter is omitted, the mail mode UTF8 configuration is used 
 #### Ejemplo
 
 ```4d
-C_OBJECT($mail)
-C_TEXT($mime)
+var $mail: Object
+var $mime: Text
 $mail:=New object
 
-// Creación de un mail
+// Creación de un correo
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -632,10 +632,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// transform the mail object in MIME
-$mime:=[#current_title_incode]($mail)
+// transforma el objeto mail en MIME
+$mime:=MAIL Convert to MIME($mail)
 
-// Contents of $mime:
+// Contenidos de $mime:
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

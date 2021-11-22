@@ -94,7 +94,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constants
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. They allow writing more readable code. For example, `Read Mode` is a constant (value 2).
+4D proposes an extensed set of predefined constants, whose values are accessible by name. Isso permite escrever código mais legível. Por exemplo, `Read Mode` é uma constante (valor 2).
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode

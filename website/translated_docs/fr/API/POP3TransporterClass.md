@@ -287,7 +287,7 @@ The method returns Null if:
 *   le message a été marqué pour suppression à l'aide de `.delete()`.
 
 
-**Returned object**
+**Objet retourné**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
 

@@ -107,41 +107,41 @@ Método ***OpenForm***:
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
-| Parámetros  | Tipo      |    | Descripción                            |
-| ----------- | --------- |:--:| -------------------------------------- |
-| description | Texto     | -> | Description for the signal             |
-| Resultado   | 4D.Signal | <- | Native object encapsulating the signal |
+| Parámetros  | Tipo      |    | Descripción                          |
+| ----------- | --------- |:--:| ------------------------------------ |
+| description | Texto     | -> | Descripción para la señal            |
+| Resultado   | 4D.Signal | <- | Objeto nativo que encapsula la señal |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
+El comando `New signal` <!-- REF #_command_.New signal.Summary -->crea un objeto `4D.Signal`<!-- END REF -->.
 
-A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
+Una señal es un objeto compartido que puede ser pasado como parámetro de un worker o proceso a otro worker o proceso, de manera que:
 
-*   the called worker/process can update the signal object after specific processing has completed
-*   the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources.
+*   el worker/proceso llamado puede actualizar el objeto de la señal después de que se haya completado el procesamiento específico
+*   el worker/proceso que llama puede detener su ejecución y esperar hasta que se actualice la señal, sin consumir recursos de la CPU.
 
-Optionally, in the *description* parameter you can pass a custom text describing the signal. This text can also be defined after signal creation.
+Opcionalmente, en el parámetro *description* puede pasar un texto personalizado que describa la señal. Este texto también puede definirse después de la creación de la señal.
 
-Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
+Dado que el objeto señal es un objeto compartido, también se puede utilizar para mantener las propiedades del usuario, incluyendo la propiedad [`.description`](#description), llamando a la estructura `Use...End use`.
 
 
 **Valor devuelto**
 
-A new [`4D.Signal` object](#signal-object).
+Un nuevo objeto [`4D.Signal`](#signal-object).
 
 #### Ejemplo
 
-Here is a typical example of a worker that sets a signal:
+Este es un ejemplo típico de un worker que fija una señal:
 
 ```4d
  var $signal : 4D.Signal
  $signal:=New signal("This is my first signal")
 
  CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //wait for 1 second max
+ $signaled:=$signal.wait(1) //espera 1 segundo como máximo
 
  If($signaled)
     ALERT("myworker finished the work. Result: "+$signal.myresult)
@@ -151,16 +151,16 @@ Here is a typical example of a worker that sets a signal:
 ```
 
 
-The ***doSomething*** method could be like:
+El método ***doSomething*** puede ser:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
-  //any processing
+  //todo proceso
   //...
  Use($signal)
-    $signal.myresult:=$processingResult  //return the result
+    $signal.myresult:=$processingResult  //devolver el resultado
  End use
- $signal.trigger() // The work is finished
+ $signal.trigger() //La operación se ha terminado
 ```
 
 <!-- END REF -->
@@ -180,11 +180,11 @@ The ***doSomething*** method could be like:
 
 #### Descripción
 
-The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
+La propiedad `.description` <!-- REF #SignalClass.description.Summary -->contiene una descripción personalizada para el objeto `Signal`.<!-- END REF -->.
 
-`.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
+`.description` puede definirse al crear el objeto signal o en cualquier momento. Tenga en cuenta que, dado que el objeto `Signal` es un objeto compartido, cualquier acceso en modo de escritura a la propiedad `.description` debe estar rodeado por una estructura `Use...End use`.
 
-This property is **read-write**. 
+Esta propiedad es **lectura-escritura**. 
 
 <!-- END REF -->
 
@@ -205,7 +205,7 @@ This property is **read-write**.
 
 #### Descripción
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Cuando se crea signal, `.signaled` es **False**. Se convierte en **True** cuando se llama al objeto `.trigger( )`.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -234,9 +234,9 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->pone la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta señal.
 
-If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
+Si la señal ya está en el estado de señalización (es decir, la propiedad `signaled` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 
@@ -255,26 +255,23 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
-| Parámetros | Tipo     |    | Descripción                                    |
-| ---------- | -------- | -- | ---------------------------------------------- |
-| timeout    | Real     | -> | Maximum waiting time for the signal in seconds |
-| Resultado  | Booleano | <- | State of the `.signaled` property              |
+| Parámetros | Tipo     |    | Descripción                                     |
+| ---------- | -------- | -- | ----------------------------------------------- |
+| timeout    | Real     | -> | Tiempo máximo de espera de la señal en segundos |
+| Resultado  | Booleano | <- | Estado de la propiedad `.signaled`              |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proceso actual espere hasta que la propiedad `.signaled` del objeto signal se convierta en **true** o expire el *timeout* opcional.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
-> **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
+Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales).
+> **Atención**: La llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Si signal ya está en el estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función devuelve inmediatamente, sin esperar.
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
-> The state of a process that waits for a signal is `Waiting for internal flag`.
-
-
-<!-- END REF -->
+La función devuelve el valor de la propiedad `.signaled`. La evaluación de este valor permite saber si la función devuelta porque el `.trigger( )` se ha llamado (`.signaled` es **true**) o si el *timeout* vencido (`.signaled` es **false**).
+> El estado de un proceso que espera un signal es `Waiting for internal flag`.<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -624,7 +624,7 @@ La función `.newSelection( )` <!-- REF #DataClassClass.newSelection().Summary -
 
 Si quieres crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Para más información, consulte [Selecciones de entidades ordenadas y desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
+Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelection.length` devuelve 0). Este método le permite crear selecciones de entidades gradualmente haciendo llamadas posteriores a la función [`add()`](EntitySelectionClass.md#add).
 
 
 #### Ejemplo
@@ -632,8 +632,8 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 ```4d 
  var $USelection; $OSelection : cs.EmployeeSelection
- $USelection:=ds.Employee.newSelection() //create an unordered empty entity selection
- $OSelection:=ds.Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
+ $USelection:=ds.Employee.newSelection() //crea una selección de entidades vacía y desordenada
+ $OSelection:=ds.Employee.newSelection(dk keep ordered) //crea una selección de entidades vacía y ordenada
 ```
  
 
@@ -656,21 +656,21 @@ When created, the entity selection does not contain any entities (`mySelection.l
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
-| Parámetros    | Tipo               |    | Descripción                                                                                                                 |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texto              | -> | Search criteria as string                                                                                                   |
-| formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
-| Resultado     | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
+| Parámetros    | Tipo               |    | Descripción                                                                                                                                                  |
+| ------------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| queryString   | Texto              | -> | Criterios de búsqueda como cadena                                                                                                                            |
+| formula       | Objeto             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                    |
+| value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                               |
+| querySettings | Objeto             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                             |
+| Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
+La función `.query( )`<!-- REF #DataClass.query().Summary -->busca entidades que cumplan con los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *value*(s)<!-- END REF -->, para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
 **parámetro queryString**
 
@@ -700,19 +700,19 @@ donde:
 
 *   **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
-    | Comparison                           | Symbol(s)   | Comentario                                                                                                     |
-    | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
-    | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
-    |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
-    | Diferente de                         | #, !=       | Supports the wildcard (@)                                                                                      |
-    |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
-    | Menor que                            | <           |                                                                                                                |
-    | Mayor que                            | >           |                                                                                                                |
-    | Menor o igual que                    | <=          |                                                                                                                |
-    | Mayor o igual que                    | >=          |                                                                                                                |
-    | Incluído en                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
-    | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
-    | Contiene palabra clave               | %           | Keywords can be used in attributes of string or picture type                                                   |
+    | Comparación                                | Símbolo(s)  | Comentario                                                                                                     |
+    | ------------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
+    | Igual a                                    | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
+    |                                            | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
+    | Diferente de                               | #, !=       | Supports the wildcard (@)                                                                                      |
+    |                                            | !==, IS NOT | Considers the @ as a standard character                                                                        |
+    | Menor que                                  | <           |                                                                                                                |
+    | Mayor que                                  | >           |                                                                                                                |
+    | Menor o igual que                          | <=          |                                                                                                                |
+    | Mayor o igual que                          | >=          |                                                                                                                |
+    | Incluído en                                | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
+    | No se aplica la condición de una sentencia | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
+    | Contiene palabra clave                     | %           | Keywords can be used in attributes of string or picture type                                                   |
 
 *   **value**: the value to compare to the current value of the property of each entity in the entity selection or element in the collection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property.<p><p> When using a constant value, the following rules must be respected:
     *   **text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
@@ -722,10 +722,10 @@ donde:
     *   in case of a query with an IN comparator, value must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, " characters must be escaped with "\").
 *   **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
-    | Conjunction | Symbol(s)               |
-    | ----------- | ----------------------- |
-    | AND         | &, &&, and              |
-    | O           | &#124;,&#124;&#124;, or |
+    | Conjunción | Símbolo(s)              |
+    | ---------- | ----------------------- |
+    | AND        | &, &&, and              |
+    | O          | &#124;,&#124;&#124;, or |
 
 *   **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
@@ -739,7 +739,7 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 ```
 > Single quotes (') are not supported in searched values since they would break the query string. For example "comp.name = 'John's pizza' " will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).
 
-**Using parenthesis**
+**Uso del paréntesis**
 
 You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
@@ -793,7 +793,7 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
     $result2:=$col.query("company.name = :1";"John's Pizzas")
     ```
 
-**Looking for null values**
+**Búsqueda de valores null**
 
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
@@ -812,7 +812,7 @@ You will not get the expected result because the null value will be evaluated by
 
 When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
 
-For example, with the following two entities:
+Por ejemplo, con las dos entidades siguientes:
 
 ```
 Entity 1:
@@ -907,7 +907,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 
 The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
 
-For example, if you execute the following query:
+Por ejemplo, si ejecuta la siguiente búsqueda:
 
 ```4d
  $sel:=ds.Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
@@ -999,7 +999,7 @@ Query with queryPlan and queryPath objects:
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
 
-  //you can then get these properties in the resulting entity selection
+  //puede obtener estas propiedades en la selección de entidades resultante
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
@@ -1048,7 +1048,7 @@ Query with indexed placeholders for attributes:
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
-  //salesperson is a related entity
+  //salesperson es una entidad relacionada
 ```
 
 Query with indexed placeholders for attributes and named placeholders for values:
@@ -1059,7 +1059,7 @@ var $querySettings : Object
 $querySettings:=New object
 $querySettings.parameters:=New object("customerName";"Smith")
 $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"name";$querySettings)
-  //salesperson is a related entity
+  //salesperson es una entidad relacionada
 ```
 
 Query with indexed placeholders for attributes and values:
@@ -1119,12 +1119,12 @@ Query with named placeholders for attributes and values:
  var $es : cs.EmployeeSelection
  var $name : Text
  $querySettings:=New object
-  //Named placeholders for values
-  //The user is asked for a name
- $name:=Request("Please enter the name to search:")
+  //Placeholders para los valores
+  //Se pide al usuario un nombre
+ $name:=Request("Por favor, introduzca el nombre a buscar:")
  If(OK=1)
     $querySettings.parameters:=New object("givenName";$name)
-  //Named placeholders for attribute paths
+  //Placeholders para las rutas de atributos
     $querySettings.attributes:=New object("attName";"name")
     $es:=ds.Employee.query(":attName= :givenName";$querySettings)
  End if
@@ -1194,7 +1194,7 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $settings:=New object()
  $settings.args:=New object("filter";"-")
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
- $settings.args.filter:="*" // change the parameters without updating the $formula object
+ $settings.args.filter:="*" // cambiar los parámetros sin actualizar el objeto $formula
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
@@ -1207,13 +1207,13 @@ We want to disallow formulas, for example when the user enters their query:
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) //Se produce un error si $queryString contiene una fórmula
  End if
 ```
 
 #### Ver también
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para selecciones de entidades
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -518,7 +518,7 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
-#### Returned object
+#### Objet retourné
 
 Email object.
 
@@ -527,12 +527,12 @@ Email object.
 You want to load a mail template saved as MIME in a text document and send an email:
 
 ```4d
-C_BLOB($mime)
-C_OBJECT($mail;$server;$transporter;$status)
+var $mime: Blob
+var $mail;$server;$transporter;$status: Object
 
 $mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
 
-$mail:=[#current_title_incode]($mime)
+$mail:=MAIL Convert from MIME($mime)
 $mail.to:="smith@mail.com"
 $mail.subject:="Hello world"
 
@@ -551,8 +551,8 @@ $status:=$transporter.send($mail)
 In this example, you send directly a 4D Write Pro document containing pictures:
 
 ```4d
-C_TEXT($mime)
-C_OBJECT($email;$server;$transporter;$status)
+var $mime: Blob
+var $email;$server;$transporter;$status: Object
 
 // Mime export of the 4D Write Pro document
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
@@ -610,7 +610,7 @@ In *options*, you can set a specific charset and encoding configuration for the 
 
 | Propriété     | Type  | Description                                                                                                                                                                                                                  |
 | ------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Texte | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valeurs possibles :<p><p><table><tr><th>Constant</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
+| headerCharset | Texte | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valeurs possibles :<p><p><table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
 | bodyCharset   | Texte | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                           |
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
@@ -619,11 +619,11 @@ If the *options* parameter is omitted, the mail mode UTF8 configuration is used 
 #### Exemple
 
 ```4d
-C_OBJECT($mail)
-C_TEXT($mime)
+var $mail: Object
+var $mime: Text
 $mail:=New object
 
-// Création d'un mail
+// Creation of a mail
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
 $mail.textBody:="Text format email"
@@ -632,10 +632,10 @@ $mail.to:=New collection
 $mail.to.push(New object ("email";"noreply@4d.com"))
 $mail.to.push(New object ("email";"test@4d.com"))
 
-// transformer l'objet mail en MIME
-$mime:=[#current_title_incode]($mail)
+// transform the mail object in MIME
+$mime:=MAIL Convert to MIME($mail)
 
-// Contenu de $mime :
+// Contents of $mime:
 // MIME-Version: 1.0
 // Date: Thu, 11 Oct 2018 15:42:25 GMT
 // Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>

@@ -269,7 +269,7 @@ A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.
 **.type** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se o tipo não for passado explicitamente ao comando [`MAIL New attachment`](#mail-new-attachment), o `content-type` é baseado na sua extensão de arquivo.
 

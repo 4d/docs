@@ -407,10 +407,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 ## .copy()
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                                     |
-| ------- | -------------------------------------------------- |
-| v18 R3  | New *ck shared* option. New *groupWith* parameters |
-| v16 R6  | Añadidos                                           |
+| Versión | Modificaciones                                          |
+| ------- | ------------------------------------------------------- |
+| v18 R3  | Nueva opción *ck shared*. Nuevos parámetros *groupWith* |
+| v16 R6  | Añadidos                                                |
 </details>
 
 <!-- REF #collection.copy().Syntax -->
@@ -1659,7 +1659,7 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 
 #### Ejemplo 1
 
-Ordering a collection of numbers in ascending and descending order:
+Ordenar una colección de números de forma ascendente y descendente:
 
 ```4d
  var $c; $c2; $3 : Collection 
@@ -2095,7 +2095,7 @@ En *howMany*, pase el número de elementos a eliminar de *index*. Si no se espec
 
 
 
-If you try to remove an element from an empty collection, the method does nothing (no error is generated).
+Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 
 #### Ejemplo

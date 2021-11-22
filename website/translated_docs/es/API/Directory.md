@@ -445,9 +445,9 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+La función `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia el objeto `Folder` en el *destinationFolder* especificado><!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
 By default, the folder is copied with the name of the original folder. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
@@ -504,7 +504,7 @@ In *path*, pass a relative POSIX path to designate the file to return. The path 
 
 **Valor devuelto**
 
-A `File` object or null if *path* is invalid.
+Un objeto `File` o null si *path* no es válido.
 
 #### Ejemplo
 
@@ -530,27 +530,27 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Parámetros | Tipo       |    | Descripción                         |
-| ---------- | ---------- | -- | ----------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de archivos    |
-| Resultado  | Collection | <- | Collection of children file objects |
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de archivos     |
+| Resultado  | Collection | <- | Colección de objetos de archivo hijo |
 <!-- END REF -->
 
 #### Descripción
 
 The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
-> Aliases or symbolic links are not resolved.
+> Los alias o enlaces simbólicos no se resuelven.
 
 By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constante             | Valor | Comentario                                                                          |
-| --------------------- | ----- | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1     | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8     | Invisible files or folders are not listed                                           |
+| Constante             | Valor | Comentario                                                                             |
+| --------------------- | ----- | -------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1     | La colección contiene archivos o carpetas de la carpeta especificada y sus subcarpetas |
+| `fk ignore invisible` | 8     | Los archivos o carpetas invisibles no aparecen en la lista                             |
 
 **Valor devuelto**
 
-Collection of `File` objects.
+Colección de objetos `File`.
 
 #### Ejemplo 1
 
@@ -605,7 +605,7 @@ In *path*, pass a relative POSIX path to designate the folder to return. The pat
 
 **Valor devuelto**
 
-A `Folder` object or null if *path* is invalid.
+Un objeto `Folder` o null si *path* no es válido.
 
 #### Ejemplo
 
@@ -631,10 +631,10 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Parámetros | Tipo       |    | Descripción                           |
-| ---------- | ---------- | -- | ------------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de carpetas      |
-| Resultado  | Collection | <- | Collection of children folder objects |
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de carpetas     |
+| Resultado  | Collection | <- | Colección de objetos de carpeta hijo |
 <!-- END REF -->
 
 #### Descripción
@@ -643,14 +643,14 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constante             | Valor | Comentario                                                                          |
-| --------------------- | ----- | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1     | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8     | Invisible files or folders are not listed                                           |
+| Constante             | Valor | Comentario                                                                             |
+| --------------------- | ----- | -------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1     | La colección contiene archivos o carpetas de la carpeta especificada y sus subcarpetas |
+| `fk ignore invisible` | 8     | Los archivos o carpetas invisibles no aparecen en la lista                             |
 
 **Valor devuelto**
 
-Collection of `Folder` objects.
+Colección de objetos `Folder`.
 
 #### Ejemplo
 
@@ -678,10 +678,10 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| size       | Integer | -> | Side length for the returned picture (pixels) |
-| Resultado  | Imagen  | <- | Icono                                         |
+| Parámetros | Tipo    |    | Descripción                                       |
+| ---------- | ------- | -- | ------------------------------------------------- |
+| size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
+| Resultado  | Imagen  | <- | Icono                                             |
 <!-- END REF -->
 
 

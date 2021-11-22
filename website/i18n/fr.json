@@ -18,10 +18,10 @@
         "title": "Gestion des licences 4D"
       },
       "Admin/tls": {
-        "title": "TLS Protocol (HTTPS)"
+        "title": "Protocole TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Web Administration"
+        "title": "Administration Web"
       },
       "API/ClassClass": {
         "title": "Class"
@@ -659,7 +659,7 @@
         "title": "Documentation updates"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "Objets Data Model"
       },
       "ORDA/entities": {
         "title": "Travailler avec des données"
@@ -903,9 +903,9 @@
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
-    "Web Administration|no description given": "Web Administration",
+    "Web Administration|no description given": "Administration Web",
     "Client/Server|no description given": "Client/Server",
-    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "TLS Protocol (HTTPS)|no description given": "Protocole TLS (HTTPS)",
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",

@@ -164,7 +164,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+La propiedad `.isAlias` devuelve <!-- REF #document.isAlias.Summary -->true si el archivo es un alias, un acceso directo o un enlace simbólico<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -187,7 +187,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->siempre verdadero para un archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -234,8 +234,8 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
+La propiedad `.isWritable` devuelve <!-- REF #document.isWritable.Summary -->true si el archivo existe en el disco y es escribible<!-- END REF -->.
+> La propiedad comprueba la capacidad de la aplicación 4D para escribir en el disco (derechos de acceso), no se basa únicamente en el atributo *writable* del archivo.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -268,7 +268,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->la fecha de la última modificación del archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -292,7 +292,7 @@ Esta propiedad es **de sólo lectura**.
 
 ##### Descripción
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->la hora de la última modificación del archivo<!-- END REF --> (expresada como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -315,7 +315,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+La propiedad `.name` devuelve <!-- REF #document.name.Summary -->el nombre del archivo, sin extensión (si la hay)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -337,12 +337,12 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
+La propiedad `.original` devuelve<!-- REF #documento.original.Resumen -->el elemento de destino para un alias, un acceso directo o un archivo de enlace simbólico<!-- END REF -->. El elemento objetivo puede ser:
 
-*   a file object
+*   un objeto File
 *   un objeto de la carpeta
 
-For non-alias files, the property returns the same file object as the file.
+Para los archivos sin alias, la propiedad devuelve el mismo objeto de archivo que el archivo.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -366,7 +366,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto carpeta padre del archivo<!-- END REF -->. Si la ruta representa una filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -390,7 +390,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -413,7 +413,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->la ruta del archivo expresada con la sintaxis de la plataforma actual<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -437,7 +437,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
+La propiedad `.size` devuelve <!-- REF #document.size.Summary -->el tamaño del archivo expresado en bytes<!-- END REF -->. Si el archivo no existe en el disco, el tamaño es 0.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -476,13 +476,13 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
+La función `.copyTo()` <!-- REF #document.copyTo().Summary -->copia el objeto `File` en el *destinationFolder* especificado> <!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+Por defecto, el archivo se copia con el nombre del archivo original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Si ya existe un archivo con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
 | Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
@@ -495,7 +495,7 @@ El objeto `File` copiado.
 
 #### Ejemplo
 
-You want to copy a picture *file* from the user's document folder to the application folder:
+Desea copiar un *archivo* imagen de la carpeta de documentos del usuario a la carpeta de la aplicación:
 
 ```4d
 var $source; $copy : Object
@@ -528,7 +528,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descripción
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un `BLOB` que contiene todo el contenido de un archivo<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
 
 **Valor devuelto**
 
@@ -536,7 +536,7 @@ Un `Blob`.
 
 #### Ejemplo
 
-To save a document's contents in a `BLOB` field:
+Para guardar el contenido de un documento en un campo `BLOB`:
 
 ```4d
  var $vPath : Text
@@ -563,24 +563,24 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| size       | Integer | -> | Side length for the returned picture (pixels) |
-| Resultado  | Imagen  | <- | Icono                                         |
+| Parámetros | Tipo    |    | Descripción                                       |
+| ---------- | ------- | -- | ------------------------------------------------- |
+| size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
+| Resultado  | Imagen  | <- | Icono                                             |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+La función `.getIcon()` devuelve <!-- REF #document.getIcon().Summary -->el icono del archivo<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
+El parámetro opcional *size* especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
-If the file does not exist on disk, a default blank icon is returned.
+Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 
 **Valor devuelto**
 
-File icon [picture](../Concepts/picture.html).
+Icono de archivo [picture](../Concepts/picture.html).
 
 
 
@@ -602,38 +602,38 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parámetros  | Tipo    |    | Descripción                     |
-| ----------- | ------- | -- | ------------------------------- |
-| charSetName | Texto   | -> | Nombre del juego de caracteres  |
-| charSetNum  | Integer | -> | Number of character set         |
-| breakMode   | Integer | -> | Processing mode for line breaks |
-| Resultado   | Texto   | <- | Text from the document          |
+| Parámetros  | Tipo    |    | Descripción                                |
+| ----------- | ------- | -- | ------------------------------------------ |
+| charSetName | Texto   | -> | Nombre del juego de caracteres             |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres          |
+| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
+| Resultado   | Texto   | <- | Texto del documento                        |
 <!-- END REF -->
 
 
 #### Descripción
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+La función `.getText()` <!-- REF #document.getText().Summary -->devuelve el contenido del archivo como texto <!-- END REF -->.
 
-Optionally, you can designate the character set to be used for reading the contents. Puede pasar:
+Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o ""UTF-8"),
+- o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored). If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
+Si el documento contiene una marca de orden de bytes (BOM), 4D utiliza el conjunto de caracteres que ha establecido en lugar del especificado en *charSetName* o *charSetNum* (este parámetro se ignora entonces). Si el documento no contiene una BOM y si *charSetName* o *charSetNum* se omite, por defecto 4D utiliza el conjunto de caracteres "UTF-8".
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
+En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea en el documento. Las siguientes constantes del tema "Documentos del sistema" están disponibles:
 
-| Constante                     | Valor | Comentario                                                                                                                                                          |
-| ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                        |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                     |
-| `Document with CR`            | 3     | Line breaks are converted to OS X format: CR (carriage return)                                                                                                      |
-| `Document with LF`            | 4     | Line breaks are converted to Unix format: LF (line feed)                                                                                                            |
+| Constante                     | Valor | Comentario                                                                                                                                                                  |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                                |
+| `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: CR (retorno de carro) en OS X, CRLF (retorno de carro + salto de línea) en Windows |
+| `Document with CRLF`          | 2     | Los saltos de línea se convierten al formato de Windows: CRLF (retorno de carro + salto de línea)                                                                           |
+| `Document with CR`            | 3     | Los saltos de línea se convierten al formato OS X: CR (retorno de carro)                                                                                                    |
+| `Document with LF`            | 4     | Los saltos de línea se convierten al formato Unix: LF (salto de línea)                                                                                                      |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
 **Valor devuelto**
 
@@ -641,7 +641,7 @@ Texto del archivo.
 
 #### Ejemplo
 
-Given the following text document (fields are separated by tabs):
+Dado el siguiente documento de texto (los campos están separados por tabulaciones):
 
 ```4d
 id name price vat
