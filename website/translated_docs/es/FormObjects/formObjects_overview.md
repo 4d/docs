@@ -25,4 +25,3 @@ Puede añadir o modificar objetos formulario 4D de las siguientes maneras:
 *   **Código JSON en formularios dinámicos:** define las propiedades utilizando JSON. Utilice la propiedad [tipo](propiedades_Objeto.md#tipo) para definir el tipo de objeto y, a continuación, indique sus propiedades disponibles.  Consulte la página [Formularios dinámicos](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) para obtener información.  
   Ejemplo para un objeto botón:  
   ```
-  { "type": "botón", "style": "bevel", "texto": "OK", "acción": "Cancelar", "izquierda": 60, "arriba": 160, "anchura": 100, "altura": 20 }

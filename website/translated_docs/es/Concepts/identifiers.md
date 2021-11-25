@@ -12,7 +12,7 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 
 - Un nombre debe comenzar por un carácter alfabético, un guión bajo o un dólar ("$") (tenga en cuenta que un signo de dólar puede denotar un elemento local, ver).
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
-- Puntos (".") y corchetes ("[ ]") no están permitidos en los nombres de tablas, campos, métodos o variables.
+- Puntos (".") Puntos (".") y corchetes ("[ ]") no están permitidos en los nombres de tablas, campos, métodos o variables.
 - No se permiten comas, barras inclinadas, comillas ni dos puntos.
 - Los caracteres reservados para su uso como operadores, como * y +, no están permitidos.
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc.), palabras clave (If, For, etc.) y constantes.
@@ -20,7 +20,7 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 
 ### Reglas adicionales para las propiedades de los objetos y los nombres ORDA
 - Los caracteres de espacio no están permitidos.
-- Puntos (".") y los corchetes ("[ ]") no están permitidos.
+- Puntos (".") Puntos (".") y los corchetes ("[ ]") no están permitidos.
 - Los nombres son sensibles a las mayúsculas y minúsculas.
 
 ### Reglas adicionales para SQL
@@ -132,8 +132,7 @@ La referencia a un elemento de un array local, proceso o interproceso se realiza
 
 Ejemplos:
 ```4d  
-    //El elemento al que se hace referencia se indica con una expresión numérica.
-If(<>asKeywords{1}="Stop")
+    If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
@@ -149,7 +148,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### Elementos de arrays de dos dimensiones
-La referencia a un elemento de un array de dos dimensiones se realiza utilizando las llaves ({…}) dos veces. El elemento al que se hace referencia se denota mediante dos expresiones numéricas en dos pares de llaves.
+La referencia a un elemento de un array de dos dimensiones se realiza utilizando las llaves ({…}) dos veces. dos veces. El elemento al que se hace referencia se denota mediante dos expresiones numéricas en dos pares de llaves.
 
 Ejemplos:
 ```4d
@@ -171,7 +170,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 ## Atributos de objetos
 
-Cuando la notación objeto está activada, se designa un atributo de objeto (también llamado propiedad de objeto) colocando un punto (".") entre el nombre del objeto (o del atributo) y el nombre del atributo. Un nombre de atributo puede contener hasta 255 caracteres y es sensible a las mayúsculas y minúsculas.
+Cuando la notación objeto está activada, se designa un atributo de objeto (también llamado propiedad de objeto) colocando un punto (".") entre el nombre del objeto (o del atributo) y el nombre del atributo. entre el nombre del objeto (o del atributo) y el nombre del atributo. Un nombre de atributo puede contener hasta 255 caracteres y es sensible a las mayúsculas y minúsculas.
 
 Ejemplos:
 ```4d
@@ -351,26 +350,26 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 La siguiente tabla resume las convenciones de denominación de 4D.
 
-| Identificador                   | Longitud Max. | Ejemplo                    |
-| ------------------------------- | ------------- | -------------------------- |
-| Tabla                           | 31            | [Invoices]                 |
-| Campo                           | 31            | [Employees]Last Name       |
-| Variable/array interproceso     | <> + 31       | <>vlNextProcessID          |
-| Variable/Array proceso          | 31            | vsCurrentName              |
-| Variable/Array local            | $ + 31        | $vlLocalCounter            |
-| Propiedades de objetos          | 255           | $o.myAttribute             |
-| Formulario                      | 31            | "My Custom Web Input"      |
-| Objetos de formulario           | 255           | "MyButton"                 |
-| Métodos proyecto                | 31            | M_ADD_CUSTOMERS          |
-| Comando de plug-in              | 31            | PDF SET ROTATION           |
-| Conjuntos interproceso          | <> + 255      | "<>Records to be Archived" |
-| Conjuntos proceso               | 255           | "Current selected records" |
-| Conjunto cliente                | $ + 255       | "$Previous Subjects"       |
-| Selección temporal              | 255           | "Employees A to Z"         |
-| Selección temporal interproceso | <> + 255      | "<>Employees Z to A"       |
-| Proceso local                   | $ + 255       | "$Follow Events"           |
-| Proceso global                  | 255           | "*P_INVOICES_MODULE*"    |
-| Semáforo                        | 255           | "mysemaphore"              |
+| Identificador                   | Longitud Max. Max. | Ejemplo                    |
+| ------------------------------- | ------------------ | -------------------------- |
+| Tabla                           | 31                 | [Invoices]                 |
+| Campo                           | 31                 | [Employees]Last Name       |
+| Variable/array interproceso     | <> + 31            | <>vlNextProcessID          |
+| Variable/Array proceso          | 31                 | vsCurrentName              |
+| Variable/Array local            | $ + 31             | $vlLocalCounter            |
+| Propiedades de objetos          | 255                | $o.myAttribute             |
+| Formulario                      | 31                 | "My Custom Web Input"      |
+| Objetos de formulario           | 255                | "MyButton"                 |
+| Métodos proyecto                | 31                 | M_ADD_CUSTOMERS          |
+| Comando de plug-in              | 31                 | PDF SET ROTATION           |
+| Conjuntos interproceso          | <> + 255           | "<>Records to be Archived" |
+| Conjuntos proceso               | 255                | "Current selected records" |
+| Conjunto cliente                | $ + 255            | "$Previous Subjects"       |
+| Selección temporal              | 255                | "Employees A to Z"         |
+| Selección temporal interproceso | <> + 255           | "<>Employees Z to A"       |
+| Proceso local                   | $ + 255            | "$Follow Events"           |
+| Proceso global                  | 255                | "*P_INVOICES_MODULE*"    |
+| Semáforo                        | 255                | "mysemaphore"              |
 
 **Nota:** si se utilizan caracteres no romanos en los nombres de los identificadores, su longitud máxima puede ser menor.
 

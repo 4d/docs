@@ -13,13 +13,13 @@ This page is used to repair the data file when it has been damaged. Generalmente
 ## Archivos
 
 ### Data file to be repaired
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Si realiza una [reparación estándar](#standard_repair), debe seleccionar un archivo de datos que sea compatible con el archivo de estructura abierto. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Pathname of the current data file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
 
 ### Original files backup folder
-By default, the original data file will be duplicated before the repair operation. Se colocará en una subcarpeta llamada "Archivos reemplazados (reparando)" en la carpeta de la base. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+By default, the original data file will be duplicated before the repair operation. By default, the original data file will be duplicated before the repair operation. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
 
 ### Archivos reparados
-4D creates a new blank data file at the location of the original file. El archivo original se traslada a la carpeta llamada "\Replaced Files (Repairing) fecha hora" cuya ubicación se establece en el área de "Carpeta de copia de seguridad de los archivos originales" (carpeta de la base por defecto). The blank file is filled with the recovered data.
+4D creates a new blank data file at the location of the original file. 4D creates a new blank data file at the location of the original file. The blank file is filled with the recovered data.
 
 
 ## Reparación estándar

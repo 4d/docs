@@ -13,7 +13,7 @@ Un método es básicamente un trozo de código que ejecuta una o varias acciones
 
     Los métodos integrados se detallan en el manual *Lenguaje 4D* o en los manuales dedicados a los plug-ins o componentes.
 
-- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas). El tamaño máximo de un método proyecto está limitado a 2 GB de texto o 32.000 líneas de instrucciones.
+- Los **métodos proyecto**, donde puede escribir su propio código para ejecutar toda acción personalizada. Una vez creado un método proyecto, pasa a formar parte del lenguaje de la base en la que se crea. Un método proyecto se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas). Una línea de instrucción realiza una acción, y puede ser simple o compleja.
 
 **Nota:** 4D también ofrece métodos específicos que se ejecutan automáticamente en función de los eventos de la base o de los eventos formulario. Ver [Métodos especializados](#specialized-methods).
 
@@ -51,7 +51,7 @@ Por ejemplo, supongamos que tiene una base de clientes. Al personalizar la base,
  MODIFY RECORD([Customers])
 ```
 
-Si no utiliza subrutinas, tendrá que escribir el código cada vez que quiera modificar el registro de un cliente. Si hay diez lugares en su base personalizada donde necesita hacer esto, tendrá que escribir el código diez veces. Si utiliza subrutinas, sólo tendrá que escribirlas una vez. Esta es la primera ventaja de las subrutinas: reducir la cantidad de código.
+Si no utiliza subrutinas, tendrá que escribir el código cada vez que quiera modificar el registro de un cliente. Si no utiliza subrutinas, tendrá que escribir el código cada vez que quiera modificar el registro de un cliente. Si utiliza subrutinas, sólo tendrá que escribirlas una vez. Esta es la primera ventaja de las subrutinas: reducir la cantidad de código.
 
 Si el código descrito anteriormente fuera un método llamado `MODIFICAR CLIENTE`, se ejecutaría simplemente utilizando el nombre del método en otro método. Por ejemplo, para modificar el registro de un cliente y luego imprimir el registro, se escribiría este método:
 

@@ -146,7 +146,7 @@ Devuelve los datos de la entidad específica definida por la llave primaria de l
 
 ### Descripción
 
-Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. La llave es el valor del atributo definido como llave primaria para su clase de datos. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
+Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
 Para más información sobre los datos devueltos, consulte [{datastoreClass}](#datastoreclass).
 
