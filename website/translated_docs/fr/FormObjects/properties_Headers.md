@@ -64,6 +64,6 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 [List Box](listbox_overview.md)
 
 
-#### Voir également
+#### Voir aussi
 
 [Pieds](properties_Footers.md) - [En-têtes List box](listbox_overview.md#list-box-headers)
