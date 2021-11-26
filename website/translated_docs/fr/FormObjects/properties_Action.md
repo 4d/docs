@@ -33,7 +33,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 
 
-#### Voir également
+#### Voir aussi
 [Déposable](#droppable)
 
 
@@ -66,7 +66,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 
 
-#### Voir également
+#### Voir aussi
 
 [Glissable](#draggable)
 
