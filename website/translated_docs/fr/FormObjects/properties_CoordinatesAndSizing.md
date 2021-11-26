@@ -241,7 +241,7 @@ Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Pa
 [List Box](listbox_overview.md#overview)
 
 
-#### Voir également
+#### Voir aussi
 [Tableau hauteurs des lignes](#row-height-array)
 
 
@@ -276,5 +276,5 @@ En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne 
 [List Box](listbox_overview.md#overview)
 
 
-#### Voir également
+#### Voir aussi
 [Hauteur des lignes](#row-height)
