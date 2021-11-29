@@ -128,7 +128,7 @@ Vous pouvez également définir cette propriété à l'aide des commandes [OBJEC
 
 | Nom          | Type de données | Valeurs possibles |
 | ------------ | --------------- | ----------------- |
-| borderRadius | integer         | minimum : 0       |
+| borderRadius | entier          | minimum : 0       |
 
 #### Objets pris en charge
 

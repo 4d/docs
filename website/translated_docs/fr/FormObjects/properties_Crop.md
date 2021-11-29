@@ -12,7 +12,7 @@ Définit le nombre de colonnes dans un tableau d'imagettes.
 
 | Nom         | Type de données | Valeurs possibles |
 |:----------- |:---------------:| ----------------- |
-| columnCount |     integer     | minimum: 1        |
+| columnCount |     entier      | minimum: 1        |
 
 #### Objets pris en charge
 
@@ -30,7 +30,7 @@ Définit le nombre de lignes dans un tableau d'imagettes.
 
 | Nom      | Type de données | Valeurs possibles |
 |:-------- |:---------------:| ----------------- |
-| rowCount |     integer     | minimum: 1        |
+| rowCount |     entier      | minimum: 1        |
 
 #### Objets pris en charge
 
