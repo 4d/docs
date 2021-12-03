@@ -22,7 +22,7 @@ El administrador puede:
 
 The Administrator cannot:
 - modificar el usuario Diseñador
-- por defecto, el acceso a las partes protegidas de la base. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador debe formar parte de uno o varios grupos para tener privilegios de acceso en la base. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- por defecto, el acceso a las partes protegidas de la base. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Tanto el Diseñador como el Administrador están disponibles por defecto en todas las bases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 

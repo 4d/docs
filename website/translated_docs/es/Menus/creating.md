@@ -13,7 +13,7 @@ You can combine both features and use menus created in structure as templates to
 
 ## Barra de menús por defecto
 
-A custom application must contain at least one menu bar with one menu. Por defecto, cuando se crea una nueva base, 4D crea automáticamente una barra de menú por defecto (Barra de nº 1) para que pueda acceder al modo Aplicación. The default menu bar includes standard menus and a command for returning to the Design mode.
+A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea la base. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
 

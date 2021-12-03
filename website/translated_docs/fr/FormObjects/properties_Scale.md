@@ -46,7 +46,7 @@ Mesure de l'affichage de l'échelle.
 
 |      Nom       | Type de données | Valeurs possibles |
 |:--------------:|:---------------:| ----------------- |
-| graduationStep |     integer     | minimum : 0       |
+| graduationStep |     entier      | minimum : 0       |
 
 
 #### Objets pris en charge
@@ -123,7 +123,7 @@ Intervalle minimum accepté entre les valeurs pendant l'utilisation. Pour les st
 
 | Nom  | Type de données | Valeurs possibles |
 |:----:|:---------------:| ----------------- |
-| step |     integer     | minimum: 1        |
+| step |     entier      | minimum: 1        |
 
 
 #### Objets pris en charge

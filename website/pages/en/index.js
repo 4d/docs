@@ -50,7 +50,8 @@ class Index extends React.Component {
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
 	  langRef: <translate>Language Reference (4D Doc Center)</translate>,
-	  users: <translate>Users and Groups</translate>
+	  users: <translate>Users and Groups</translate>,
+	  langUrl: <translate>https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html</translate>
     };
 
 
@@ -66,7 +67,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>
 				  [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-				  [${subContents.langRef}](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.en.html)<br>
+				  [${subContents.langRef}](${subContents.langUrl})<br>
 				  [${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',

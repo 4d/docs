@@ -128,7 +128,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 | Nom               | Type de données | Valeurs possibles |
 | ----------------- | --------------- | ----------------- |
-| lockedColumnCount | integer         | minimum : 0       |
+| lockedColumnCount | entier          | minimum : 0       |
 
 #### Objets pris en charge
 
@@ -143,7 +143,7 @@ Number of columns that cannot be moved during execution.
 
 | Nom               | Type de données | Valeurs possibles |
 | ----------------- | --------------- | ----------------- |
-| staticColumnCount | integer         | minimum : 0       |
+| staticColumnCount | entier          | minimum : 0       |
 
 #### Objets pris en charge
 
@@ -164,7 +164,7 @@ Sets the number of columns of the list box.
 
 | Nom         | Type de données | Valeurs possibles |
 | ----------- | --------------- | ----------------- |
-| columnCount | integer         | minimum: 1        |
+| columnCount | entier          | minimum: 1        |
 
 #### Objets pris en charge
 
@@ -184,7 +184,7 @@ You can set the "hidden", "disabled" and "selectable" interface properties for e
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
-| Constant                 | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Constante                | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2      | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | lk row is hidden         | 1      | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |

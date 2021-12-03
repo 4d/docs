@@ -324,8 +324,7 @@ En el método proyecto *Color*, escribe el siguiente código:
 
 ```4d
 //Método Color
-//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica:
-C_OBJECT($0)
+//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica: C_OBJECT($0)
 Form.meta:=New object
 If(This.ID>5) //ID es un atributo de objetos/entidades de una colección
   Form.meta.stroke:="purple"

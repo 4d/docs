@@ -53,8 +53,7 @@ Las variables locales, proceso e interproceso no se comparten entre los componen
 Ejemplo utilizando un array:
 
 ```4d
-//En la base local:
-     ARRAY INTEGER( MyArray;10)
+//En la base local: ARRAY INTEGER( MyArray;10)
      AMethod(-> MyArray)
 
 //En el componente, el método proyecto AMethod contiene:
