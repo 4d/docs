@@ -133,7 +133,7 @@ Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/pro
 | ---------------- | --------------- | ----------------- |
 | memorizeGeometry | boolean         | true, false       |
 
-#### Voir également
+#### Voir aussi
 [**Mémoriser valeur**](FormObjects/properties_Object.md#save-value)
 
 

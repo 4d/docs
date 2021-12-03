@@ -350,6 +350,8 @@ Then, the *Color* method would contain:
 ```4d
   //Color method
  ...
+ //Color method
+ ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle //reuse the same object for better performance

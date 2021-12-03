@@ -14,5 +14,5 @@ Cet événement est généré lorsque le chargement d'une URL est bloqué par la
 
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
-### Voir également
+### Voir aussi
 [`On Open External Link`](onOpenExternalLink.md)

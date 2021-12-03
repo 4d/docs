@@ -78,9 +78,9 @@ o:
 
 ## Case of...Else...End case
 
-La sintaxis de la estructura condicional `Case of...Else...End case` es:
-```4d
- Case of
+A diferencia de la estructura `If...Else...End`, la estructura `Case of...</p>
+
+<pre><code class="4d"> Case of
     :(Boolean_Expression)
        statement(s)
     :(Boolean_Expression)
@@ -94,7 +94,7 @@ La sintaxis de la estructura condicional `Case of...Else...End case` es:
     Else
        statement(s)
  End case
-```
+`</pre>
 
 Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 ```4d
@@ -111,7 +111,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
        statement(s)
  End case
 ```
-Al igual que la estructura `If...Else...End if`, la estructura `Case of...Else...End case` también permite a su método elegir entre acciones alternativas. A diferencia de la estructura `If...Else...End`, la estructura `Case of...Else...End case` puede probar un número razonablemente ilimitado de expresiones booleanas y realizar una acción dependiendo de cuál sea TRUE.
+La sintaxis de la estructura condicional `Case of... Else...End case` es:
 
 Cada expresión booleana va precedida de dos puntos (`:`). Esta combinación de los dos puntos y la expresión booleana se llama un caso. Por ejemplo, la siguiente línea es un caso:
 
@@ -158,7 +158,7 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
  End if
 ```
 
-Recuerde que con una estructura `Case of...Else...End case`, sólo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
+Recuerde que con una estructura `Case of... Else...End case`, sólo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
 
 En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse de que las declaraciones de condición que están más abajo en el esquema jerárquico aparezcan primero en la secuencia de pruebas. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por ejemplo, el siguiente código nunca verá detectada su última condición:
 

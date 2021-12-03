@@ -103,7 +103,7 @@ Valeurs disponibles :
 
 [Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
-#### Voir également
+#### Voir aussi
 [Barre de défilement verticale](#vertical-scroll-bar)
 
 ---
@@ -354,7 +354,7 @@ Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utili
 [Zone 4D View Pro](viewProArea_overview.md)
 
 
-#### Voir également
+#### Voir aussi
 
 [guide de référence 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
@@ -387,7 +387,7 @@ Valeurs disponibles :
 
 [Liste hiérarchique](list_overview.md#overview) - [Sous-formulaire](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
-#### Voir également
+#### Voir aussi
 
 [Barre de défilement horizontale](#horizontal-scroll-bar)
 

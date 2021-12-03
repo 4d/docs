@@ -40,6 +40,6 @@ Lorsqu'une entrée nécessite une séquence de frappes clavier, les événements
 - lorsqu'un IME (Input method editor) affiche une boîte de dialogue intermédiaire où l'utilisateur peut saisir une combinaison de caractères : les événements sont générés uniquement lorsque la boîte de dialogue IME est validée.
 
 
-### Voir également
+### Voir aussi
 
 [On After Keystroke](onAfterKeystroke.md).

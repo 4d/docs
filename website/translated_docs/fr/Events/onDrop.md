@@ -16,5 +16,5 @@ Cet événement n'est pas envoyé à l'objet si le glissement n'a pas été acce
 
 
 
-#### Voir également
+#### Voir aussi
 [`Sur début survol`](onBeginDragOver.md)

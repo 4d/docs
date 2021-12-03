@@ -1313,6 +1313,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1754,11 +1755,12 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |::| ------------ |
-|           |     |  |              |
-
-|pathStrings|Text|->|Property path(s) on which to order the collection| |pathObjects|Collection|->|Collection of criteria objects| |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)| |Result|Collection |<-|Ordered copy of the collection (shallow copy)|
+| Parameter   | Typ        |    | Beschreibung                                      |
+| ----------- | ---------- |:--:| ------------------------------------------------- |
+| pathStrings | Text       | -> | Property path(s) on which to order the collection |
+| pathObjects | Collection | -> | Collection of criteria objects                    |
+| ascOrDesc   | Ganzzahl   | -> | `ck ascending` or `ck descending` (scalar values) |
+| Ergebnis    | Collection | <- | Ordered copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2135,6 +2137,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 #### Beispiel 1
 
+
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2490,6 +2493,7 @@ If the collection is empty, this method does nothing.
 ```
 
 <!-- END REF -->
+
 
 
 

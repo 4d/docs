@@ -59,7 +59,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 [Sous-formulaire](subform_overview.md)
 
-#### Voir également
+#### Voir aussi
 [Double-clic sur ligne](#double-click-on-row)
 
 ---
@@ -88,7 +88,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Sous-formulaire](subform_overview.md)
 
 
-#### Voir également
+#### Voir aussi
 [Double-clic sur ligne vide](#double-click-on-empty-row)
 
 ---

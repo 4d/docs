@@ -14,5 +14,5 @@ title: Sur déployer
 - [List box hiérarchiques](FormObjects/listbox_overview.md#hierarchical-list-boxes) : Cet événement est généré lorsqu'une ligne de la list box hiérarchique est étendue.
 
 
-### Voir également
+### Voir aussi
 [Sur contracter](onCollapse.md)

@@ -26,7 +26,7 @@ Les objets rendus invisibles à l'aide de la commande `OBJECT SET VISIBLE` ou de
 
 Si l'événement `On Mouse Move` a été coché pour le formulaire, il est généré pour chaque objet de formulaire. S'il est vérifié pour un objet, il n'est généré que pour cet objet. Lorsqu'il existe des objets superposés, l'événement est généré par le premier objet capable de le gérer qui se trouve en allant de haut en bas.
 
-### Voir également
+### Voir aussi
 
 - [`Sur début survol`](onMouseEnter.md)
 - [`Sur fin survol`](onMouseLeave.md)

@@ -1,5 +1,5 @@
 ---
-id: collectionClass
+id: CollectionClass
 title: コレクション
 ---
 
@@ -76,10 +76,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明        |
-| ----- | ----------------------------------------------------------------------- |:--:| --------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値  |
-| 戻り値   | コレクション                                                                  | <- | 新しいコレクション |
+| 引数    | タイプ                                                                     |    | 説明             |
+| ----- | ----------------------------------------------------------------------- |:--:| -------------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値       |
+| 戻り値   | コレクション                                                                  | <- | New collection |
 <!-- END REF -->
 
 
@@ -160,10 +160,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明          |
-| ----- | ------------------------------------------------------------------- |:--:| ----------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値  |
-| 戻り値   | コレクション                                                              | <- | 新規の共有コレクション |
+| 引数    | タイプ                                                                 |    | 説明                    |
+| ----- | ------------------------------------------------------------------- |:--:| --------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値            |
+| 戻り値   | コレクション                                                              | <- | New shared collection |
 <!-- END REF -->
 
 
@@ -186,9 +186,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 以下のサポートされる型であれば、いくつでも値を渡すことができます:
 
 *   数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
-*   テキスト
-*   ブール
-*   日付
+*   text
+*   boolean
+*   date
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
 *   共有オブジェクト(*)
@@ -434,7 +434,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 任意の *option* パラメーターには、以下のどちらか (あるいは両方) の定数を渡すことができます:
 
-| オプション                 | 説明                                                                                                                                                                            |
+| option                | 説明                                                                                                                                                                            |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ck resolve pointers` | オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、`ck resolve pointers` 定数を渡すことで、コピー時にポインターを解決することができます。 この場合、コレクション内の各ポインターはコピー時に解決され、解決済みの値が使用されます。     |
 | `ck shared`           | 共有コレクションに対して適用された場合でも、`copy()` はデフォルトで通常の (非共有の) コレクションを返します。 共有コレクションを作成するには、`ck shared` 定数を渡します。 この場合には、`groupWith` パラメーターに引数を渡して他の共有オブジェクトまたは共有コレクションに関連づけることもできます (以下参照)。 |
@@ -1313,6 +1313,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1754,11 +1755,12 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderBy().Params -->
-| 引数 | タイプ |  | 説明 |
-| -- | --- |::| -- |
-|    |     |  |    |
-
-|pathStrings|Text|->|コレクションの並べ替え基準とするプロパティパス| |pathObjects|Collection|->|条件オブジェクトのコレクション| |ascOrDesc|Interger|->|`ck ascending` または `ck descending` (スカラー値)| |戻り値|Collection |<-|並べ替えられたコレクションのコピー (シャロウ・コピー)|
+| 引数          | タイプ    |    | 説明                                         |
+| ----------- | ------ |:--:| ------------------------------------------ |
+| pathStrings | テキスト   | -> | コレクションの並べ替え基準とするプロパティパス                    |
+| pathObjects | コレクション | -> | 条件オブジェクトのコレクション                            |
+| ascOrDesc   | 整数     | -> | `ck ascending` または `ck descending` (スカラー値) |
+| 戻り値         | コレクション | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)               |
 <!-- END REF -->
 
 
@@ -2135,6 +2137,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 例題 1
 
+
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2495,6 +2498,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 
+
 <!-- REF collection.slice().Desc -->
 ## .slice()
 
@@ -2560,12 +2564,12 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.some().Params -->
-| 引数         | タイプ     |    | 説明                        |
-| ---------- | ------- |:--:| ------------------------- |
-| startFrom  | Integer | -> | テストを開始するインデックス            |
-| methodName | テキスト    | -> | テストに呼び出すメソッド名             |
-| param      | Mixed   | -> | *methodName* に渡す引数        |
-| 戻り値        | ブール     | <- | 少なくとも一つの要素がテストをパスすれば true |
+| 引数         | タイプ   |    | 説明                        |
+| ---------- | ----- |:--:| ------------------------- |
+| startFrom  | 整数    | -> | テストを開始するインデックス            |
+| methodName | テキスト  | -> | テストに呼び出すメソッド名             |
+| param      | Mixed | -> | *methodName* に渡す引数        |
+| 戻り値        | ブール   | <- | 少なくとも一つの要素がテストをパスすれば true |
 <!-- END REF -->
 
 

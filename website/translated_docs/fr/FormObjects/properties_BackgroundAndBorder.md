@@ -37,7 +37,7 @@ Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la col
 
 [Liste Hiérarchique](list_overview.md) - [List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Zone de texte](text.md)
 
-#### Voir également
+#### Voir aussi
 [Transparent](#transparent)
 
 
@@ -227,5 +227,5 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview)
 
-#### Voir également
+#### Voir aussi
 [Couleur de fond / Couleur de remplissage](#background-color-fill-color)

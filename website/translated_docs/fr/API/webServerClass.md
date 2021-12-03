@@ -83,7 +83,7 @@ The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the d
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-| Constant                       | Valeur | Commentaire                                              |
+| Constante                      | Valeur | Commentaire                                              |
 | ------------------------------ | ------ | -------------------------------------------------------- |
 | `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
 | `Web server host database`     | 2      | Web server of the host database of a component           |
@@ -739,7 +739,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
-| Constant            | Valeur   | Description                                                                                                                         |
+| Constante           | Valeur   | Description                                                                                                                         |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
 | Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
@@ -758,7 +758,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->
 **.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
-> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
+> Cette propriété n'est pas utilisée dans le [mode de sessions évolutives](#scalablesession) (il n'existe pas de validation d'adresse IP).
 
 The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
 
@@ -798,7 +798,7 @@ All settings of [Web Server objects](#web-server-object) can be customized, exce
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
-#### Returned object
+#### Objet retourné
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
@@ -806,10 +806,10 @@ The function returns an object describing the Web server launch status. This obj
 | --------- | ----------------------- | ---------- | ------------------------------------------------------------------------- |
 | success   |                         | Booléen    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
 | errors    |                         | Collection | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
-|           | \[].errCode            | Nombre     | 4D error code                                                             |
-|           | \[].message            | Texte      | Description of the 4D error                                               |
-|           | \[].componentSignature | Texte      | Signature of the internal component which returned the error              |
-> If the Web server was already launched, an error is returned.
+|           | \[].errCode            | Nombre     | Code d'erreur 4D                                                          |
+|           | \[].message            | Texte      | Description de l'erreur 4D                                                |
+|           | \[].componentSignature | Texte      | Signature du composant interne qui a retourné l'erreur                    |
+> Si le serveur Web a déjà été lancé, une erreur est générée.
 
 #### Exemple
 
@@ -853,7 +853,7 @@ The function returns an object describing the Web server launch status. This obj
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
 If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+> Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre *settings* de la fonction [`.start()`](#start), le cas échéant.
 
 
 #### Exemple
