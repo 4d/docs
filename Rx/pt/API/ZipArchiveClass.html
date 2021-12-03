@@ -93,7 +93,7 @@ End if</span>
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#root"><strong>.root</strong> : 4D.ZipFolder</a><p>    a virtual folder providing access to the contents of the ZIP archive</td></tr>
+<tr><td><a href="#root"><strong>.root</strong> : 4D.ZipFolder</a><p>    uma pasta virtual que oferece acesso aos conteúdos do arquivo ZIP</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="zip-create-archive"></a><a href="#zip-create-archive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ZIP Create archive</h2>
@@ -193,10 +193,10 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
 </table>
 </li>
 </ul>
-<p>In the <em>destinationFile</em> parameter, pass a <code>4D.File</code> object describing the ZIP archive to create (name, location, etc.). It is advised to use the &quot;.zip&quot; extension if you want the ZIP archive to be processed automatically by any software.</p>
-<p>Once an archive is created, you can use the <a href="#zip-read-archive">ZIP Read archive</a> command to access it.</p>
+<p>No parâmetro <em>destinationFile</em> passe um <code>4D.File</code> objeto descrevendo o arquivo ZIP a criar (nome, local, etc.). É recomendado usar a extensão &quot;.zip&quot; se quiser que o arquivo ZIP seja processado automaticamente por um software.</p>
+<p>Quando um arquivo for criado, pode usar o comando <a href="#zip-read-archive">ZIP Read archive</a> para acessá-lo.</p>
 <p><strong>Status object</strong></p>
-<p>The returned status object contains the following properties:</p>
+<p>O estado do objeto retornado contém as propriedades abaixo:</p>
 <table>
 <thead>
 <tr><th>Property</th><th>Type</th><th>Description</th></tr>
@@ -208,7 +208,7 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
-<p>To compress a <code>4D.File</code>:</p>
+<p>Para comprimir um <code>4D.File</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$file</span>; <span class="hljs-variable">$destination </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
 
@@ -218,7 +218,7 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
  <span class="hljs-variable">$status</span>:=<span class="hljs-function">ZIP Create archive</span>(<span class="hljs-variable">$file</span>;<span class="hljs-variable">$destination</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
-<p>To compress a <code>4D.Folder</code> without the folder itself:</p>
+<p>Para comprimir uma <code>4D.Folder</code> sem a pasta em si:</p>
 <pre><code class="hljs css language-4D"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$folder </span>: 4D.Folder<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$destination </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$status </span>: Object
@@ -229,7 +229,7 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
  <span class="hljs-variable">$status</span>:=<span class="hljs-function">ZIP Create archive</span>(<span class="hljs-variable">$folder</span>;<span class="hljs-variable">$destination</span>;ZIP Without enclosing folder)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 3</h4>
-<p>To compress a ZIP archive structure with a password and progress bar:</p>
+<p>Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$destination </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$zip</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> progID : Integer
@@ -252,7 +252,7 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
 <span class="hljs-function"> Progress SET PROGRESS</span>(progID;<span class="hljs-function">Num</span>(<span class="hljs-variable">$1</span>/<span class="hljs-number">100</span>))
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-4"></a><a href="#exemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 4</h4>
-<p>You want to pass a collection of folders and files to compress to the <em>zipStructure</em> object:</p>
+<p>Pode passar uma coleção de pastas e arquivos para compactar ao objeto <em>zipStructure</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$destination </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$zip</span>;<span class="hljs-variable">$err </span>: Object
  <span class="hljs-variable">$zip</span>:=New object
@@ -281,20 +281,20 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>zipFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Zip archive file</td></tr>
-<tr><td>password</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>ZIP archive password if any</td></tr>
-<tr><td>Result</td><td>4D.ZipArchive</td><td style="text-align:center">&lt;-</td><td>Archive object</td></tr>
+<tr><td>zipFile</td><td>4D.File</td><td style="text-align:center">-&gt;</td><td>Arquivos Zip</td></tr>
+<tr><td>password</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Senha do arquivo ZIP, se houver</td></tr>
+<tr><td>Result</td><td>4D.ZipArchive</td><td style="text-align:center">&lt;-</td><td>Objeto arquivo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>ZIP Read archive</code> command retrieves the contents of <em>zipFile</em> and returns it as a <code>4D.ZipArchive</code> object.</p>
+<p>O comando <code>ZIP Read archive</code> recupera os conteúdos de <em>zipFile</em> e retorna como um objeto <code>4D.ZipArchive</code>.</p>
 <blockquote>
 <p>This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as <a href="/docs/Rx/pt/API/Document.html#copyto">file.copyTo()</a> or <a href="/docs/Rx/pt/API/Directory.html#copyto">folder.copyTo()</a>.</p>
 </blockquote>
-<p>Pass a <code>4D.File</code> object referencing the compressed ZIP archive in the <em>zipFile</em> parameter. The target archive file will be opened until the <code>ZIP Read archive</code> has finished executing and all contents/references have been extracted/released, then it will be closed automatically.</p>
-<p>If the <em>zipFile</em> is password protected, you need to use the optional <em>password</em> parameter to provide a password. If a password is required but not passed when trying to read the contents of the archive, an error is generated.</p>
-<p><strong>Archive object</strong></p>
-<p>The returned <code>4D.ZipArchive</code> object contains a single <a href="#root"><code>root</code></a> property whose value is a <code>4D.ZipFolder</code> object. This folder describes the whole contents of the ZIP archive.</p>
+<p>Passe um objeto <code>4D.File</code> referenciando o arquivo ZIP compactado no parâmetro <em>zipFile</em>. O arquivo alvo ficará aberto quando <code>ZIP Read archive</code> tenha terminado sua execução e todos os conteúdos/referências tenham sido extraídos e então fechará automaticamente.</p>
+<p>Se <em>zipFile</em> for protegido por uma senha, precisa usar o parâmetro opcional <em>password</em> ´para fornecer uma senha. Se uma senha for exigida mas não for passada, quando tentar ler os conteúdos do arquivo um erro será gerado.</p>
+<p><strong>Objeto arquivo</strong></p>
+<p>O objeto retornado <code>4D.ZipArchive</code> contém apenas uma propriedade <a href="#root"><code>root</code></a> cujo valor é um objeto <code>4D.ZipFolder</code>. Essa pasta descreve os conteúdos completos do arquivo ZIP.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>To retrieve and view the contents of a ZIP file object:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$archive </span>: 4D.ZipArchive<span class="hljs-keyword">
@@ -303,11 +303,11 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
  <span class="hljs-variable">$path</span>:=<span class="hljs-function">Folder</span>(fk desktop folder).<span class="hljs-function">file</span>(<span class="hljs-string">"MyDocs/Archive.zip"</span>)
  <span class="hljs-variable">$archive</span>:=<span class="hljs-function">ZIP Read archive</span>(<span class="hljs-variable">$path</span>)
 </code></pre>
-<p>To retrieve the list of the files and folders in the archive:</p>
+<p>Para recuperar a lista dos arquivos e pastas no arquivo:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$folders</span>:=<span class="hljs-variable">$archive</span>.root.<span class="hljs-function">folders</span>()
  <span class="hljs-variable">$files</span>:=<span class="hljs-variable">$archive</span>.root.<span class="hljs-function">files</span>()
 </code></pre>
-<p>To read the contents of a file without extracting it from the root folder:</p>
+<p>Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta raiz:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$files</span>[<span class="hljs-variable">$i</span>].extension=<span class="hljs-string">".txt"</span>)
     <span class="hljs-variable">$txt</span>:=<span class="hljs-variable">$files</span>[<span class="hljs-variable">$i</span>].<span class="hljs-function">getText</span>()<span class="hljs-keyword">
@@ -315,18 +315,18 @@ A callback formula that will receive the compression progress (0 - 100) in $1.
     <span class="hljs-variable">$blob</span>:=<span class="hljs-variable">$files</span>[<span class="hljs-variable">$i</span>].<span class="hljs-function">getContent</span>()<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<p>To extract from the root folder:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">//extract a file</span>
+<p>Para extrair da pasta raiz:</p>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//extrair um arquivo</span>
  <span class="hljs-variable">$folderResult</span>:=<span class="hljs-variable">$files</span>[<span class="hljs-variable">$i</span>].<span class="hljs-function">copyTo</span>(<span class="hljs-function">Folder</span>(fk desktop folder).<span class="hljs-function">folder</span>(<span class="hljs-string">"MyDocs"</span>))
 
-  <span class="hljs-comment">//extract all files</span>
+  <span class="hljs-comment">//extrair todos os arquivos</span>
  <span class="hljs-variable">$folderResult</span>:=<span class="hljs-variable">$archive</span>.root.<span class="hljs-function">copyTo</span>(<span class="hljs-function">Folder</span>(fk desktop folder).<span class="hljs-function">folder</span>(<span class="hljs-string">"MyDocs"</span>))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="root"></a><a href="#root" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.root</h2>
 <p><strong>.root</strong> : 4D.ZipFolder</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.root</code> property contains a virtual folder providing access to the contents of the ZIP archive.</p>
-<p>The <code>root</code> folder and its contents can be manipulated with the <a href="/docs/Rx/pt/API/ZipFileClass.html">ZipFile</a> and <a href="/docs/Rx/pt/API/ZipFolderClass.html">ZipFolder</a> functions and properties.</p>
+<p>A propriedade <code>.root</code> contém uma pasta virtual que oferece acesso aos conteúdos do arquivo ZIP.</p>
+<p>A pasta <code>root</code> e seus conteúdos podem ser manipulados com as funções e propriedades <a href="/docs/Rx/pt/API/ZipFileClass.html">ZipFile</a> e <a href="/docs/Rx/pt/API/ZipFolderClass.html">ZipFolder</a>.</p>
 <p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <style> h2 { background: #d9ebff;}</style>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/pt/API/WebServerClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">WebServer</span></a><a class="docs-next button" href="/docs/Rx/pt/API/ZipFileClass.html"><span>ZIPFile</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#zip-create-archive">ZIP Create archive</a></li><li><a href="#zip-read-archive">ZIP Read archive</a></li><li><a href="#root">.root</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

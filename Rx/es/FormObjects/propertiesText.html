@@ -335,8 +335,7 @@ Foreground color;Dark shadow color)
 <p><strong>Ejemplo</strong></p>
 <p>En el método proyecto <em>Color</em>, escribe el siguiente código:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Método Color</span>
-<span class="hljs-comment">//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica:</span>
-<span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$0</span>)
+<span class="hljs-comment">//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica: C_OBJECT($0)</span>
 Form.meta:=New object<span class="hljs-keyword">
 If</span>(<span class="hljs-literal">This</span>.ID&gt;<span class="hljs-number">5</span>) <span class="hljs-comment">//ID es un atributo de objetos/entidades de una colección</span>
   Form.meta.stroke:=<span class="hljs-string">"purple"</span>

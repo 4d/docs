@@ -137,7 +137,7 @@
 <p>The web server starts with default settings defined in the settings file of the project or (host database only) using the <code>WEB SET OPTION</code> command. However, using the <em>settings</em> parameter, you can define customized properties for the web server session.</p>
 <table>
 <thead>
-<tr><th>Constant</th><th>Valeur</th><th>Commentaire</th></tr>
+<tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
 <tr><td><code>Web server database</code></td><td>1</td><td>Le serveur Web de la base courante (par défaut si omis)</td></tr>
@@ -404,7 +404,7 @@ The listening IP port number for HTTPS.</p>
 <p>The &quot;SameSite&quot; session cookie value. Possible values (using constants):</p>
 <table>
 <thead>
-<tr><th>Constant</th><th>Valeur</th><th>Description</th></tr>
+<tr><th>Constante</th><th>Valeur</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>Web SameSite Strict</td><td>&quot;Strict&quot;</td><td><em>Default value</em> - Cookies are only sent in a first-party context</td></tr>
@@ -416,7 +416,7 @@ The listening IP port number for HTTPS.</p>
 <h2><a class="anchor" aria-hidden="true" id="sessionipaddressvalidation"></a><a href="#sessionipaddressvalidation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sessionIPAddressValidation</h2>
 <p><strong>.sessionIPAddressValidation</strong> : Boolean</p>
 <blockquote>
-<p>This property is not used in <a href="#scalablesession">scalable sessions mode</a> (there is no IP address validation).</p>
+<p>Cette propriété n'est pas utilisée dans le <a href="#scalablesession">mode de sessions évolutives</a> (il n'existe pas de validation d'adresse IP).</p>
 </blockquote>
 <p>The IP address validation for session cookies. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).</p>
 <h2><a class="anchor" aria-hidden="true" id="start"></a><a href="#start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.start()</h2>
@@ -444,7 +444,7 @@ The listening IP port number for HTTPS.</p>
 <p>The web server starts with default settings defined in the settings file of the project or (host database only) using the <code>WEB SET OPTION</code> command. However, using the <em>settings</em> parameter, you can define customized properties for the web server session.</p>
 <p>All settings of <a href="#web-server-object">Web Server objects</a> can be customized, except read-only properties (<a href="#isrunning">.isRunning</a>, <a href="#name">.name</a>, <a href="#opensslversion">.openSSLVersion</a>, <a href="#perfectforwardsecrecy">.perfectForwardSecrecy</a>, and <a href="#sessioncookiename">.sessionCookieName</a>).</p>
 <p>Customized session settings will be reset when the <a href="#stop"><code>.stop()</code></a> function is called.</p>
-<h4><a class="anchor" aria-hidden="true" id="returned-object"></a><a href="#returned-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returned object</h4>
+<h4><a class="anchor" aria-hidden="true" id="objet-retourné"></a><a href="#objet-retourné" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet retourné</h4>
 <p>The function returns an object describing the Web server launch status. This object can contain the following properties:</p>
 <table>
 <thead>
@@ -453,13 +453,13 @@ The listening IP port number for HTTPS.</p>
 <tbody>
 <tr><td>success</td><td></td><td>Booléen</td><td>Vrai si le serveur web a été correctement démarré, sinon Faux</td></tr>
 <tr><td>errors</td><td></td><td>Collection</td><td>Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès)</td></tr>
-<tr><td></td><td>[].errCode</td><td>Nombre</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texte</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texte</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td></td><td>[].errCode</td><td>Nombre</td><td>Code d'erreur 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texte</td><td>Description de l'erreur 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texte</td><td>Signature du composant interne qui a retourné l'erreur</td></tr>
 </tbody>
 </table>
 <blockquote>
-<p>If the Web server was already launched, an error is returned.</p>
+<p>Si le serveur Web a déjà été lancé, une erreur est générée.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$settings</span>;<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
@@ -491,7 +491,7 @@ The listening IP port number for HTTPS.</p>
 <p>The <code>.stop()</code> function stops the web server on which it is applied.</p>
 <p>If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.</p>
 <blockquote>
-<p>This function resets the customized web settings defined for the session using the <em>settings</em> parameter of the <a href="#start"><code>.start()</code></a> function, if any.</p>
+<p>Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre <em>settings</em> de la fonction <a href="#start"><code>.start()</code></a>, le cas échéant.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-3"></a><a href="#exemple-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>To stop the database Web server:</p>

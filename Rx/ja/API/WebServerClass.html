@@ -434,7 +434,7 @@ HTTPS のリッスンIPポート番号。</p>
 </table>
 <p><code>.start()</code> 関数は、任意の <em>settings</em> オブジェクト引数に設定したプロパティを使用して、 対象の Webサーバーを開始させます。</p>
 <p>プロジェクトの設定ファイルに定義されているデフォルトの設定、または <code>WEB SET OPTION</code> コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、<em>settings</em> 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。</p>
-<p>All settings of <a href="#web-server-object">Web Server objects</a> can be customized, except read-only properties (<a href="#isrunning">.isRunning</a>, <a href="#name">.name</a>, <a href="#opensslversion">.openSSLVersion</a>, <a href="#perfectforwardsecrecy">.perfectForwardSecrecy</a>, and <a href="#sessioncookiename">.sessionCookieName</a>).</p>
+<p><a href="#webサーバーオブジェクト">Web Server オブジェクト</a> の設定は、読み取り専用プロパティ (<a href="#isrunning">.isRunning</a>、<a href="#name">.name</a>、<a href="#opensslversion">.openSSLVersion</a>、<a href="#perfectforwardsecrecy">.perfectForwardSecrecy</a>、<a href="#sessioncookiename">.sessionCookieName</a>) を除いて、すべてカスタマイズ可能です。</p>
 <p>カスタマイズされた設定は <a href="#stop"><code>.stop()</code></a> が呼び出されたときにリセットされます。</p>
 <h4><a class="anchor" aria-hidden="true" id="返されるオブジェクト"></a><a href="#返されるオブジェクト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>返されるオブジェクト</h4>
 <p>関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:</p>

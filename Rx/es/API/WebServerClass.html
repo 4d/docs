@@ -80,11 +80,11 @@
 <tr><td><a href="#certificatefolder"><strong>.certificateFolder</strong> : Text</a><p>    donde se encuentran los archivos de los certificados</td></tr>
 <tr><td><a href="#characterset"><strong>.characterSet</strong> : Number<br><strong>.characterSet</strong> : Text</a><p>    conjunto de caracteres que el Servidor Web 4D debe utilizar para comunicarse con los navegadores que se conectan a la aplicación</td></tr>
 <tr><td><a href="#ciphersuite"><strong>.cipherSuite</strong> : Text</a><p>    utilizada para el protocolo seguro</td></tr>
-<tr><td><a href="#corsenabled"><strong>.CORSEnabled</strong> : Boolean</a><p>    CORS (<em>Cross-origin resource sharing</em>) service status for the web server</td></tr>
-<tr><td><a href="#corssettings"><strong>.CORSSettings</strong> : Collection</a><p>    list of allowed hosts and methods for the CORS service</td></tr>
-<tr><td><a href="#debuglog"><strong>.debugLog</strong> : Number</a><p>    status of the HTTP request log file</td></tr>
+<tr><td><a href="#corsenabled"><strong>.CORSEnabled</strong> : Boolean</a><p>    CORS (<em>Cross-origin resource sharing</em>) para el servidor web</td></tr>
+<tr><td><a href="#corssettings"><strong>.CORSSettings</strong> : Collection</a><p>    lista de hosts y métodos permitidos para el servicio CORS</td></tr>
+<tr><td><a href="#debuglog"><strong>.debugLog</strong> : Number</a><p>    estado del archivo de registro de peticiones HTTP</td></tr>
 <tr><td><a href="#defaulthomepage"><strong>.defaultHomepage</strong> : Text</a><p>    nombre de la página de inicio por defecto</td></tr>
-<tr><td><a href="#hstsenabled"><strong>.HSTSEnabled</strong> : Boolean</a><p>    HTTP Strict Transport Security (HSTS) status</td></tr>
+<tr><td><a href="#hstsenabled"><strong>.HSTSEnabled</strong> : Boolean</a><p>    HTTP Strict Transport Security (HSTS)</td></tr>
 <tr><td><a href="#hstsmaxage"><strong>.HSTSMaxAge</strong> : Number</a><p>    máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente</td></tr>
 <tr><td><a href="#httpcompressionlevel"><strong>.HTTPCompressionLevel</strong> : Number</a><p>    nivel de compresión para todos los intercambios HTTP comprimidos para el servidor HTTP 4D (peticiones del cliente o respuestas del servidor)</td></tr>
 <tr><td><a href="#httpcompressionthreshold"><strong>.HTTPCompressionThreshold</strong> : Number</a><p>    umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos</td></tr>
@@ -92,13 +92,13 @@
 <tr><td><a href="#httpport"><strong>.HTTPPort</strong> : Number</a><p>    número de puerto IP de escucha para HTTP</td></tr>
 <tr><td><a href="#httptrace"><strong>.HTTPTrace</strong> : Boolean</a><p>    activación de <code>HTTP TRACE</code></td></tr>
 <tr><td><a href="#httpsenabled"><strong>.HTTPSEnabled</strong> : Boolean</a><p>    </td></tr>
-<tr><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    listening IP port number for HTTPS</td></tr>
+<tr><td><a href="#httpsport"><strong>.HTTPSPort</strong> : Number</a><p>    número de puerto IP de escucha para HTTPS</td></tr>
 <tr><td><a href="#inactiveprocesstimeout"><strong>.inactiveProcessTimeout</strong> : Number</a><p>    duración (en minutos) de los procesos de sesión heredados inactivos</td></tr>
 <tr><td><a href="#inactivesessiontimeout"><strong>.inactiveSessionTimeout</strong> : Number</a><p>    duración (en minutos) de las sesiones heredadas inactivas (duración establecida en la cookie)</td></tr>
 <tr><td><a href="#ipaddresstolisten"><strong>.IPAddressToListen</strong> : Text</a><p>    dirección IP en la que el servidor web 4D recibirá las peticiones HTTP</td></tr>
 <tr><td><a href="#isrunning"><strong>.isRunning</strong> : Boolean</a><p>    estado de ejecución del servidor web</td></tr>
 <tr><td><a href="#keepsession"><strong>.keepSession</strong> : Boolean</a><p>    True si las sesiones heredadas están activadas en el servidor web, False en caso contrario</td></tr>
-<tr><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log requests (logweb.txt) recording value</td></tr>
+<tr><td><a href="#logrecording"><strong>.logRecording</strong> : Number</a><p>    log (logweb.txt)</td></tr>
 <tr><td><a href="#maxconcurrentprocesses"><strong>.maxConcurrentProcesses</strong> : Number</a><p>    número máximo de procesos web concurrentes que soporta el servidor web</td></tr>
 <tr><td><a href="#maxrequestsize"><strong>.maxRequestSize</strong> : Number</a><p>    tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar</td></tr>
 <tr><td><a href="#maxsessions"><strong>.maxSessions</strong> : Number</a><p>    número máximo de sesiones simultáneas legacy</td></tr>
@@ -110,7 +110,7 @@
 <tr><td><a href="#scalablesession"><strong>.scalableSession</strong> : Boolean</a><p>    True si las sesiones escalables son utilizadas en el servidor web, False en caso contrario</td></tr>
 </tbody>
 </table>
-<p><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; de la cookie de sesión| |<a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    nombre de la cookie utilizada para almacenar el ID de sesión| |<a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; de la cookie de sesión| |<a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot;| |<a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    IP address validation for session cookies| |<a href="#start"><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    starts the web server on which it is applied| |<a href="#stop"><strong>.stop()</strong> </a><p>    stops the web server on which it is applied|</p>
+<p><a href="#sessioncookiedomain"><strong>.sessionCookieDomain</strong> : Text</a><p>    &quot;domain&quot; de la cookie de sesión| |<a href="#sessioncookiename"><strong>.sessionCookieName</strong> : Text</a><p>    nombre de la cookie utilizada para almacenar el ID de sesión| |<a href="#sessioncookiepath"><strong>.sessionCookiePath</strong> : Text</a><p>    &quot;path&quot; de la cookie de sesión| |<a href="#sessioncookiesamesite"><strong>.sessionCookieSameSite</strong> : Text</a><p>    &quot;SameSite&quot;| |<a href="#sessionipaddressvalidation"><strong>.sessionIPAddressValidation</strong> : Boolean</a><p>    validación de la dirección IP para las cookies de sesión| |<a href="#start"><strong>.start</strong>() : Object<br><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><p>    inicia el servidor web sobre el que se aplica| |<a href="#stop"><strong>.stop()</strong> </a><p>    detiene el servidor web sobre el que se aplica|</p>
 <h2><a class="anchor" aria-hidden="true" id="web-server"></a><a href="#web-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB Server</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -119,7 +119,7 @@
 </thead>
 <tbody>
 <tr><td>v18 R3</td><td>Añadidos</td></tr>
-<tr><td>v19</td><td>support for .sessionCookieSameSite</td></tr>
+<tr><td>v19</td><td>soporte de .sessionCookieSameSite</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -225,12 +225,12 @@
 <p>La lista de cifrado utilizada para el protocolo seguro. Define la prioridad de los algoritmos de cifrado implementados por el servidor web de 4D. Can be a sequence of strings separated by colons (for example &quot;ECDHE-RSA-AES128-...&quot;). See the <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">ciphers page</a> on the OpenSSL site.</p>
 <h2><a class="anchor" aria-hidden="true" id="corsenabled"></a><a href="#corsenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.CORSEnabled</h2>
 <p><strong>.CORSEnabled</strong> : Boolean</p>
-<p>The CORS (<em>Cross-origin resource sharing</em>) service status for the web server. For security reasons, &quot;cross-domain&quot; requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see <code>CORSSettings</code> below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a &quot;403 - forbidden&quot; error response.</p>
-<p>Default: False (disabled)</p>
-<p>For more information about CORS, please refer to the <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing page</a> on Wikipedia.</p>
+<p>El estado del servicio CORS (<em>Cross-origin resource sharing</em>) para el servidor web. For security reasons, &quot;cross-domain&quot; requests are forbidden at the browser level by default. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver <code>CORSSettings</code> abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error &quot;403 - prohibido&quot;.</p>
+<p>Por defecto: False (desactivado)</p>
+<p>Para más información sobre CORS, consulte la página <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing page</a> en Wikipedia.</p>
 <h2><a class="anchor" aria-hidden="true" id="corssettings"></a><a href="#corssettings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.CORSSettings</h2>
 <p><strong>.CORSSettings</strong> : Collection</p>
-<p>A list of allowed hosts and methods for the CORS service (see <a href="#corsenabled"><code>CORSEnabled</code></a> property). Each object must contain a <strong>host</strong> property and, optionally, a <strong>methods</strong> property:</p>
+<p>Una lista de hosts y métodos permitidos para el servicio CORS (ver la propiedad <a href="#corsenabled"><code>CORSEnabled</code></a>). Cada objeto debe contener una propiedad <strong>host</strong> y, opcionalmente, una propiedad <strong>methods</strong>:</p>
 <ul>
 <li><p><strong>host</strong> (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If <em>host</em> is not present or empty, the object is ignored. Several syntaxes are supported:</p>
 <ul>
@@ -249,7 +249,7 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="debuglog"></a><a href="#debuglog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.debugLog</h2>
 <p><strong>.debugLog</strong> : Number</p>
-<p>The status of the HTTP request log file (HTTPDebugLog_nn.txt, stored in the &quot;Logs&quot; folder of the application -- nn is the file number).</p>
+<p>El estado del archivo de registro de peticiones HTTP (HTTPDebugLog_nn.txt, almacenado en la carpeta &quot;Logs&quot; de la aplicación -- nn es el número de archivo).</p>
 <ul>
 <li>0 = desactivado</li>
 <li>1 = enabled without body parts (body size is provided in this case)</li>
@@ -262,7 +262,7 @@
 <p>El nombre de la página de inicio por defecto o &quot;&quot; para no enviar la página de inicio personalizada.</p>
 <h2><a class="anchor" aria-hidden="true" id="hstsenabled"></a><a href="#hstsenabled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HSTSEnabled</h2>
 <p><strong>.HSTSEnabled</strong> : Boolean</p>
-<p>The HTTP Strict Transport Security (HSTS) status. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad <code>HSTSMaxAge</code>. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.</p>
+<p>El estado HTTP Strict Transport Security (HSTS). HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad <code>HSTSMaxAge</code>. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.</p>
 <h2><a class="anchor" aria-hidden="true" id="hstsmaxage"></a><a href="#hstsmaxage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HSTSMaxAge</h2>
 <p><strong>.HSTSMaxAge</strong> : Number</p>
 <p>El máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente. This information is stored on the client side for the specified duration.</p>
@@ -295,7 +295,7 @@
 El estado del protocoloHTTPS.</p>
 <h2><a class="anchor" aria-hidden="true" id="httpsport"></a><a href="#httpsport" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.HTTPSPort</h2>
 <p><strong>.HTTPSPort</strong> : Number
-The listening IP port number for HTTPS.</p>
+El número de puerto IP de escucha para HTTPS.</p>
 <p>Por defecto = 443</p>
 <h2><a class="anchor" aria-hidden="true" id="inactiveprocesstimeout"></a><a href="#inactiveprocesstimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.inactiveProcessTimeout</h2>
 <p><strong>.inactiveProcessTimeout</strong> : Number</p>
@@ -325,7 +325,7 @@ The listening IP port number for HTTPS.</p>
 <p><a href="#scalablesession">.scalableSession</a></p>
 <h2><a class="anchor" aria-hidden="true" id="logrecording"></a><a href="#logrecording" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.logRecording</h2>
 <p><strong>.logRecording</strong> : Number</p>
-<p>The log requests (logweb.txt) recording value.</p>
+<p>El valor de registro log (logweb.txt).</p>
 <ul>
 <li>0 = Do not record (default)</li>
 <li>1 = Record in CLF format</li>
@@ -418,7 +418,7 @@ The listening IP port number for HTTPS.</p>
 <blockquote>
 <p>This property is not used in <a href="#scalablesession">scalable sessions mode</a> (there is no IP address validation).</p>
 </blockquote>
-<p>The IP address validation for session cookies. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).</p>
+<p>La validación de la dirección IP para las cookies de sesión. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).</p>
 <h2><a class="anchor" aria-hidden="true" id="start"></a><a href="#start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.start()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -440,12 +440,12 @@ The listening IP port number for HTTPS.</p>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Status of the web server startup</td></tr>
 </tbody>
 </table>
-<p>The <code>.start()</code> function starts the web server on which it is applied, using properties set in the optional <em>settings</em> object parameter.</p>
-<p>The web server starts with default settings defined in the settings file of the project or (host database only) using the <code>WEB SET OPTION</code> command. However, using the <em>settings</em> parameter, you can define customized properties for the web server session.</p>
-<p>All settings of <a href="#web-server-object">Web Server objects</a> can be customized, except read-only properties (<a href="#isrunning">.isRunning</a>, <a href="#name">.name</a>, <a href="#opensslversion">.openSSLVersion</a>, <a href="#perfectforwardsecrecy">.perfectForwardSecrecy</a>, and <a href="#sessioncookiename">.sessionCookieName</a>).</p>
-<p>Customized session settings will be reset when the <a href="#stop"><code>.stop()</code></a> function is called.</p>
+<p>La función <code>.start()</code> inicia el servidor web sobre el que se aplica, utilizando las propiedades establecidas en el parámetro opcional del objeto <em>settings</em>.</p>
+<p>El servidor web se inicia con la configuración por defecto definida en el archivo de configuración del proyecto o (sólo en la base host) utilizando el comando <code>WEB SET OPTION</code>. Sin embargo, utilizando el parámetro <em>settings</em>, se pueden definir propiedades personalizadas para la sesión del servidor web.</p>
+<p>Todas las configuraciones de los <a href="#web-server-object">objetos del Servidor Web</a> pueden personalizarse, excepto las propiedades de sólo lectura (<a href="#isrunning">.isRunning</a>, <a href="#name">.name</a>, <a href="#opensslversion">.openSSLVersion</a>, <a href="#perfectforwardsecrecy">.perfectForwardSecrecy</a> y <a href="#sessioncookiename">.sessionCookieName</a>).</p>
+<p>La configuración de la sesión personalizada se restablecerá cuando se llame a la función <a href="#stop"><code>.stop()</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="objeto-devuelto"></a><a href="#objeto-devuelto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto devuelto</h4>
-<p>The function returns an object describing the Web server launch status. This object can contain the following properties:</p>
+<p>La función devuelve un objeto que describe el estado de lanzamiento del servidor web. This object can contain the following properties:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
@@ -488,8 +488,8 @@ The listening IP port number for HTTPS.</p>
 <p>| Parámetros | Tipo |  | Descripción                  |
 | ---------- | ---- |  | ---------------------------- |
 |            |      |  | No requiere ningún parámetro |</p>
-<p>The <code>.stop()</code> function stops the web server on which it is applied.</p>
-<p>If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.</p>
+<p>La función <code>.stop()</code> detiene el servidor web sobre el que se aplica.</p>
+<p>Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.</p>
 <blockquote>
 <p>This function resets the customized web settings defined for the session using the <em>settings</em> parameter of the <a href="#start"><code>.start()</code></a> function, if any.</p>
 </blockquote>

@@ -136,7 +136,7 @@
 </thead>
 <tbody>
 <tr><td>value</td><td>Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer</td><td style="text-align:center">-&gt;</td><td>コレクションの値</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>新しいコレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>New collection</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -197,7 +197,7 @@
 </thead>
 <tbody>
 <tr><td>value</td><td>Number, Text, Date, Time, Boolean, Shared object, Shared collection</td><td style="text-align:center">-&gt;</td><td>共有コレクションの値</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>新規の共有コレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>New shared collection</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-1"></a><a href="#説明-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -216,9 +216,9 @@
 <p>以下のサポートされる型であれば、いくつでも値を渡すことができます:</p>
 <ul>
 <li>数値 (実数、倍長整数...)。 数値は常に実数として保存されます。</li>
-<li>テキスト</li>
-<li>ブール</li>
-<li>日付</li>
+<li>text</li>
+<li>boolean</li>
+<li>date</li>
 <li>時間 (ミリ秒の数 (実数) として保存されます)。</li>
 <li>null</li>
 <li>共有オブジェクト(*)</li>
@@ -418,7 +418,7 @@
 <p>任意の <em>option</em> パラメーターには、以下のどちらか (あるいは両方) の定数を渡すことができます:</p>
 <table>
 <thead>
-<tr><th>オプション</th><th>説明</th></tr>
+<tr><th>option</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td><code>ck resolve pointers</code></td><td>オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、<code>ck resolve pointers</code> 定数を渡すことで、コピー時にポインターを解決することができます。 この場合、コレクション内の各ポインターはコピー時に解決され、解決済みの値が使用されます。</td></tr>
@@ -1446,10 +1446,17 @@ End if</span>
 </table>
 <p></details></p>
 <p><strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection</p>
-<p>| 引数 | タイプ |  | 説明 |
-| -- | --- |::| -- |
-|    |     |  |    |</p>
-<p>|pathStrings|Text|-&gt;|コレクションの並べ替え基準とするプロパティパス| |pathObjects|Collection|-&gt;|条件オブジェクトのコレクション| |ascOrDesc|Interger|-&gt;|<code>ck ascending</code> または <code>ck descending</code> (スカラー値)| |戻り値|Collection |&lt;-|並べ替えられたコレクションのコピー (シャロウ・コピー)|</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>pathStrings</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>コレクションの並べ替え基準とするプロパティパス</td></tr>
+<tr><td>pathObjects</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>条件オブジェクトのコレクション</td></tr>
+<tr><td>ascOrDesc</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>ck ascending</code> または <code>ck descending</code> (スカラー値)</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>並べ替えられたコレクションのコピー (シャロウ・コピー)</td></tr>
+</tbody>
+</table>
 <h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.orderBy()</code> 関数は、 コレクションの要素を指定順に並べ替えた新しいコレクションを返します。</p>
 <p>この関数は <em>シャロウ・コピー</em> を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
@@ -2059,7 +2066,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>テストを開始するインデックス</td></tr>
+<tr><td>startFrom</td><td>整数</td><td style="text-align:center">-&gt;</td><td>テストを開始するインデックス</td></tr>
 <tr><td>methodName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>テストに呼び出すメソッド名</td></tr>
 <tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td><em>methodName</em> に渡す引数</td></tr>
 <tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>少なくとも一つの要素がテストをパスすれば true</td></tr>
