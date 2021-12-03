@@ -257,7 +257,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 [Combo Box](comboBox_overview.md) - [Zone de saisie](input_overview.md)
 
 
-#### Voir également
+#### Voir aussi
 
 [Message d'aide](properties_Help.md)
 

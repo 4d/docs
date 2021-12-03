@@ -205,7 +205,7 @@
         "title": "変数"
       },
       "Desktop/building": {
-        "title": "アプリケーションビルド"
+        "title": "プロジェクトパッケージのビルド"
       },
       "Desktop/clientServer": {
         "title": "クライアント/サーバー管理"
@@ -855,7 +855,8 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -865,9 +866,9 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
-      "Access Rights": "アクセス権限",
       "Preferences": "環境設定",
       "Administration": "管理",
+      "Access Rights": "アクセス権限",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
@@ -880,7 +881,7 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build Application": "アプリケーションビルド"
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -912,6 +913,7 @@
     "Description of log files|no description given": "ログファイルの詳細",
     "Command Line Interface|no description given": "コマンドライン・インターフェース",
     "Preferences|no description given": "環境設定",
+    "https://doc.4d.com/4Dv19/4D/19.1/4D-Language-Reference.100-5652626.en.html|no description given": "https://doc.4d.com/4Dv19/4D/19.1/4D-Language-Reference.100-5652626.ja.html",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "管理",

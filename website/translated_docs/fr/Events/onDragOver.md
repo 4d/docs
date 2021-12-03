@@ -26,5 +26,5 @@ L'événement `On Drag Over` est le moyen par lequel vous contrôlez la premièr
 Le code gérant un événement `On Drag Over` doit être court et s'exécuter rapidement, car cet événement est envoyé à plusieurs reprises à l'objet de destination courant, en raison des mouvements de la souris.
 
 
-#### Voir également
+#### Voir aussi
 [`Sur début survol`](onBeginDragOver.md)

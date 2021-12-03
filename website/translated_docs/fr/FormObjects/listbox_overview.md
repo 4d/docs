@@ -867,7 +867,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Texte     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | réel      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
+| entier    | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | Texte                                                                                          |
 | event     | button with label                              |                                                                                                |
@@ -884,7 +884,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 | Texte      | same as defined in object                                  | any (no control)        |
 | réel       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" and "-"           |
+| entier     | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
 | Booléen    | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
@@ -896,25 +896,25 @@ Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusie
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | Texte | réel | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ----- | ---- | ------- | ------- | ----- | ----- |
-| *Attributs*           | *Description*                           |       |      |         |         |       |       |
-| value                 | cell value (input or output)            | x     | x    | x       |         |       |       |
-| min                   | minimum value                           |       | x    | x       |         |       |       |
-| max                   | maximum value                           |       | x    | x       |         |       |       |
-| behavior              | "threeStates" value                     |       |      | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x     | x    | x       |         |       |       |
-| choiceList            | combo box defined in object             | x     | x    | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x     | x    | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x     | x    | x       |         |       |       |
-| unitList              | array of X elements                     | x     | x    | x       |         |       |       |
-| unitReference         | index of selected element               | x     | x    | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x     | x    | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x     | x    | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x     | x    | x       | x       | x     |       |
+|                       | valueType                               | Texte | réel | entier | boolean | color | event |
+| --------------------- | --------------------------------------- | ----- | ---- | ------ | ------- | ----- | ----- |
+| *Attributs*           | *Description*                           |       |      |        |         |       |       |
+| value                 | cell value (input or output)            | x     | x    | x      |         |       |       |
+| min                   | minimum value                           |       | x    | x      |         |       |       |
+| max                   | maximum value                           |       | x    | x      |         |       |       |
+| behavior              | "threeStates" value                     |       |      | x      |         |       |       |
+| requiredList          | drop-down list defined in object        | x     | x    | x      |         |       |       |
+| choiceList            | combo box defined in object             | x     | x    | x      |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x      |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x      |         |       |       |
+| saveAs                | "reference" or "value"                  | x     | x    | x      |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x     | x    | x      |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x     | x    | x      |         |       |       |
+| unitList              | array of X elements                     | x     | x    | x      |         |       |       |
+| unitReference         | index of selected element               | x     | x    | x      |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x     | x    | x      |         |       |       |
+| unitsListName         | 4D list name for units                  | x     | x    | x      |         |       |       |
+| alternateButton       | add an alternate button                 | x     | x    | x      | x       | x     |       |
 
 #### value
 
@@ -964,7 +964,7 @@ L'attribut behavior propose des variations de la représentation standard des va
 
 | Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                             |
 | -------- | ----------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates             | integer      | Représente une valeur numérique sous forme de case à cocher à trois états. <br>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
+| behavior | threeStates             | entier       | Représente une valeur numérique sous forme de case à cocher à trois états. <br>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
 
 ```4d
  C_OBJECT($ob3)

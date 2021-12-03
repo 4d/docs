@@ -51,7 +51,7 @@ Les objets `DataClassAttribut` ont des propriétés que vous pouvez lire pour ob
 
 #### Description
 
-The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. Cette propriété correspond aux propriétés de champ 4D suivantes :
+La propriété `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contient Vrai si la valeur de l'attribut est automatiquement renseignée par 4D<!-- END REF -->. Cette propriété correspond aux propriétés de champ 4D suivantes :
 
 *   "Autoincrement", for les champs de type numérique
 *   "Auto UUID", pour les champs UUID (de type alpha).
@@ -81,7 +81,7 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 
 #### Description
 
-The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
+La propriété `.fieldNumber` <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contient le numéro interne du champ 4D de l'attribut<!-- END REF -->.
 
 Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **Num** (dataClassAttribute.fieldNumber) pour obtenir une valeur valide (0) même si `.fieldNumber` n'est pas retourné.
@@ -108,15 +108,15 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 
 #### Description
 
-The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see [`.kind`](#kind)).
+La propriété `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->contient le type 4D de l'attribut dans la base<!-- END REF -->. Elle dépend du [`.kind`](#kind) de l'attribut.
 
 **Valeurs possibles :**
 
-| dataClassAttribute.kind | fieldType                   | Commentaire             |
-| ----------------------- | --------------------------- | ----------------------- |
-| storage                 | Corresponding 4D field type | Voir la commande `Type` |
-| relatedEntity           | 38 (Is object)              |                         |
-| relatedEntities         | 42 (Is collection)          |                         |
+| dataClassAttribute.kind | fieldType                      | Commentaire             |
+| ----------------------- | ------------------------------ | ----------------------- |
+| storage                 | Type de champ 4D correspondant | Voir la commande `Type` |
+| relatedEntity           | 38 (Is object)                 |                         |
+| relatedEntities         | 42 (Is collection)             |                         |
 
 <!-- END REF -->
 
@@ -138,7 +138,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 #### Description
 
-The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
+La propriété `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contient Vrai s'il existe un index B-tree ou Cluster B-tree dans l'attribut<!-- END REF -->.
 
 Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.indexed) pour obtenir une valeur valide (false) même si `.indexed` n'est pas retourné.
@@ -164,9 +164,9 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 
 #### Description
 
-The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
+La propriété `.inverseName` <!-- REF DataClassAttributeClass.inverseName.Summary -->retourne le nom de l'attribut qui est à l'autre extrémité du lien<!-- END REF -->.
 
-This property is not returned if `.kind` = "storage". It must be of the "relatedEntity" or "relatedEntities" kind.
+Cette propriété n'est pas retournée si `.kind` = "storage". Elle doit être du type "relatedEntities" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **String** (dataClassAttribute.inverseName) pour obtenir une valeur valide ("") même si `.inverseName` n'est pas retourné.  
 
 <!-- END REF -->
@@ -192,7 +192,7 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 La propriété `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contient **True** s'il existe un index de mot-clé sur l'attribut<!-- END REF -->.
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
+Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.keywordIndexed) pour obtenir une valeur valide (false) même si `.keywordIndexed` n'est pas retourné.
 
 <!-- END REF -->
@@ -215,11 +215,11 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 #### Description
 
-The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
+La propriété `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->retourne la catégorie de l'attribut<!-- END REF -->. La valeur retournée peut être l'une des chaînes suivantes :
 
 *   "storage" : attribut de stockage (ou scalaire), c'est-à-dire un attribut stockant une valeur, et non une référence à un autre attribut
-*   "relatedEntity": N -> 1 relation attribute (reference to an entity)
-*   "relatedEntities": 1 -> N relation attribute (reference to an entity selection)
+*   "relatedEntity" : attribut relationnel N -> (référence vers une entité)
+*   "relatedEntities" : attribut relationnel 1 -> N (référence vers une entity selection)
 
 
 #### Exemple
@@ -257,9 +257,9 @@ Considérons les tables et relations suivantes :
 
 #### Description
 
-The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
+La propriété `.mandatory` <!-- REF DataClassAttributeClass.mandatory.Summary -->contient Vrai si une saisie de valeur Null pour l'attribut est rejetée<!-- END REF -->.
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
+Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.mandatory) pour obtenir une valeur valide (false) même si `.mandatory` n'est pas retourné.
 > **Attention** : Cette propriété correspond à la propriété du champ "Reject NULL value input" au niveau de la base de données 4D. Elle n'est pas liée à la propriété "Mandatory" existante qui est une option de contrôle de la saisie de données pour une table.
 
@@ -284,7 +284,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 #### Description
 
-The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
+La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->retourne le nom de l'objet `dataClassAttribute` sous forme de chaîne<!-- END REF -->.
 
 #### Exemple
 
@@ -315,7 +315,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 #### Description
 > Cette propriété n'est disponible qu'avec les attributs de la propriété "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
 
-The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
+La propriété `.relatedDataClass` <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->retourne le nom de la dataclass liée à l'attribut<!-- END REF -->.
 
 #### Exemple
 
@@ -350,7 +350,7 @@ Considérons les tableaux et relations suivants :
 
 #### Description
 
-The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
+La propriété `.type` <!-- REF DataClassAttributeClass.type.Summary -->contient le type conceptuel de la valeur de l'attribut<!-- END REF -->, utile pour de la programmation générique.
 
 Le type de valeur conceptuelle dépend de l'attribut [`.kind`](#kind).
 
@@ -383,9 +383,9 @@ Le type de valeur conceptuelle dépend de l'attribut [`.kind`](#kind).
 
 #### Description
 
-The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Cette propriété correspond à la propriété de champ 4D "Unique".
+La propriété `.unique` <!-- REF DataClassAttributeClass.unique.Summary -->contient Vrai si la valeur de l'attribut doit être unique<!-- END REF -->. Cette propriété correspond à la propriété de champ 4D "Unique".
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
+Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné.
 
 <!-- END REF -->

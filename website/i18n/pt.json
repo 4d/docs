@@ -205,7 +205,7 @@
         "title": "Variables"
       },
       "Desktop/building": {
-        "title": "Build Application"
+        "title": "Building a project package"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -855,7 +855,8 @@
       }
     },
     "links": {
-      "v19 R2 BETA": "v19 R2 BETA",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
       "v19": "v19",
       "v18": "v18"
     },
@@ -865,9 +866,9 @@
       "4D Language Concepts": "4D Language Concepts",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
-      "Access Rights": "Access Rights",
       "Preferences": "Preferences",
       "Administration": "Administration",
+      "Access Rights": "Access Rights",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
@@ -880,7 +881,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build Application": "Build Application"
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -912,6 +913,7 @@
     "Description of log files|no description given": "Description of log files",
     "Command Line Interface|no description given": "Command Line Interface",
     "Preferences|no description given": "Preferences",
+    "https://doc.4d.com/4Dv19/4D/19.1/4D-Language-Reference.100-5652626.en.html|no description given": "https://doc.4d.com/4Dv19/4D/19.1/4D-Language-Reference.100-5652626.en.html",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",

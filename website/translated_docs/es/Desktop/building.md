@@ -14,36 +14,36 @@ El generador de aplicaciones le permite:
 *   Generar aplicaciones cliente-servidor con actualización automática de los componentes del cliente y del servidor.
 *   Guardar sus parámetros de generación para su uso futuro (botón *Guardar los parámetros*).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. Sin embargo, puede crear aplicaciones específicas que soporten modificaciones locales utilizando la llave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
+> Las aplicaciones compiladas se basan en archivos [.4dz](#build-compiled-structure) que son **de sólo lectura**. Tenga en cuenta que el uso de comandos o funciones que modifican los archivos fuente (como `CREATE INDEX` o `CREATE TABLE` (SQL)) no es posible por defecto en las aplicaciones compiladas. Sin embargo, puede crear aplicaciones específicas que soporten modificaciones locales utilizando la llave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
 
-## Build application overview
+## Vista general del generador de aplicaciones
 
-Building a project package can be carried out using:
+Generar un paquete de proyecto puede realizarse utilizando:
 
-- either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command,
-- or the [Build Application window](#application-builder).
+- el comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
+- o la [Ventana Generador de aplicaciones](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+Para mostrar la caja de diálogo Generar la aplicación, seleccione **Diseño** > **Generar la aplicación...** en la barra de menús.
 
 ![](assets/en/Project/buildappProj.png)
 
-The Build Application dialog includes several pages that can be accessed using tabs:
+La caja de diálogo del generador de aplicaciones incluye varias páginas a las que se puede acceder mediante pestañas:
 
 ![](assets/en/Project/appbuilderProj.png)
 
 
-Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.
+La generación de la base sólo puede efectuarse una vez compilado el proyecto. Si selecciona este comando sin haber compilado previamente el proyecto, o si el código compilado no se corresponde con el código interpretado, aparece una caja de diálogo de advertencia que indica que el proyecto debe ser (re)compilado.
 
 
-### Build application settings
+### Parámetros del generador de aplicaciones
 
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
+Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo proyecto de la aplicación llamada `"buildApp.4DSettings"`, ubicado en la carpeta `Settings` del proyecto.
 
-Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command.
+Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
+Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
 
 ### Archivo de historial
 

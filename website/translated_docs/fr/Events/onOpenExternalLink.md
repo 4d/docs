@@ -15,5 +15,5 @@ Cet événement est généré lorsque le chargement d'une URL a été bloqué pa
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 
-### Voir également
+### Voir aussi
 [`On URL Filtering`](onUrlFiltering.md)

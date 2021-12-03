@@ -559,18 +559,18 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 #### Descripción
 
-The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. This function can be used when opening an encrypted database, or when executing any encryption operation that requires the encryption key, such as re-encrypting the data file.
-> * The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
-> * The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
+La función `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->permite suministrar una llave de cifrado de datos para el archivo de datos actual del datastore y detecta si la llave coincide con los datos cifrados<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
+> * La función `.provideDataKey()` debe ser llamada en una base de datos encriptada. Si se llama en una base no cifrada, se devuelve el error 2003 (la llave de cifrado no coincide con los datos.). Utilice el comando `Estado de cifrado del archivo de datos` para determinar si la base de datos está cifrada.
+> * La función `.provideDataKey()` no puede ser llamada desde un 4D remoto o un datastore remoto encriptado.
 
-If you use the *curPassPhrase* parameter, pass the string used to generate the data encryption key. When you use this parameter, an encryption key is generated.
+Si utiliza el parámetro *curPassPhrase*, pase la cadena utilizada para generar la llave de cifrado de datos. Cuando se utiliza este parámetro, se genera una llave de encriptación.
 
-If you use the *curDataKey* parameter, pass an object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the `New data key` command.
+Si utiliza el parámetro *curDataKey*, pase un objeto (con la propiedad *encodedKey*) que contenga la llave de cifrado de los datos. Esta llave puede haber sido generada con el comando `New data key`.
 
-If a valid data encryption key is provided, it is added to the *keyChain* in memory and the encryption mode is enabled:
+Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de la memoria y se activa el modo de cifrado:
 
-*   all data modifications in encryptable tables are encrypted on disk (.4DD, .journal. 4Dindx files)
-*   all data loaded from encryptable tables is decrypted in memory
+*   todas las modificaciones de datos en las tablas encriptadas se cifran en el disco (.4DD, .journal. 4Dindx)
+*   todos los datos cargados desde tablas encriptadas se descifran en memoria
 
 
 **Resultado**
@@ -580,15 +580,15 @@ El resultado de la orden se describe en el objeto devuelto:
 | Propiedad  |                          | Tipo       | Descripción                                                                                                |
 | ---------- | ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                          | Booleano   | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
-|            |                          |            | Properties below are returned only if success is *FALSE*                                                   |
-| status     |                          | Número     | Error code (4 if the provided encryption key is wrong)                                                     |
+|            |                          |            | Las siguientes propiedades se devuelven sólo si success es *FALSE*                                         |
+| status     |                          | Número     | Código de error (4 si la llave de encriptación suministrada es errónea)                                    |
 | statusText |                          | Texto      | Mensaje de error                                                                                           |
-| errors     |                          | Collection | Pila de errores. The first error has the highest index                                                     |
-|            | \[ ].componentSignature | Texto      | Internal component name                                                                                    |
+| errors     |                          | Collection | Pila de errores. El primer error tiene el índice más alto                                                  |
+|            | \[ ].componentSignature | Texto      | Nombre del componente interno                                                                              |
 |            | \[ ].errCode            | Número     | Número de error                                                                                            |
 |            | \[ ].message            | Texto      | Mensaje de error                                                                                           |
 
-If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
+Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null** (no se genera ningún error).
 
 
 
@@ -626,24 +626,24 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parámetros | Tipo     |    | Descripción                                                                                          |
-| ---------- | -------- | -- | ---------------------------------------------------------------------------------------------------- |
-| status     | Booleano | -> | True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access |
+| Parámetros | Tipo     |    | Descripción                                                                                                                |
+| ---------- | -------- | -- | -------------------------------------------------------------------------------------------------------------------------- |
+| status     | Booleano | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->.
+La función `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->permite deshabilitar cualquier acceso a datos en el [puerto de administración web](Admin/webAdmin.md#http-port), incluso para el [Explorador de datos](Admin/dataExplorer.md) en las sesiones de `WebAdmin`<!-- END REF -->.
 
-By default when the function is not called, access to data is always granted on the web administration port for a session with `WebAdmin` privilege using the Data Explorer. In some configurations, for example when the application server is hosted on a third-party machine, you might not want the administrator to be able to view your data, although they can edit the server configuration, including the [access key](Admin/webAdmin.md#access-key) settings.
+Por defecto, cuando no se llama a la función, el acceso a los datos se concede siempre en el puerto de administración web para una sesión con privilegio `WebAdmin` utilizando el Explorador de Datos. En algunas configuraciones, por ejemplo, cuando el servidor de aplicaciones está alojado en una máquina de terceros, es posible que no desee que el administrador pueda ver sus datos, aunque puede editar la configuración del servidor, incluyendo la configuración de la [access key](Admin/webAdmin.md#access-key).
 
-In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted.
+En este caso, puede llamar a esta función para deshabilitar el acceso a los datos del Explorador de Datos en el puerto de administración web de la máquina, incluso si la sesión de usuario tiene el privilegio `WebAdmin`. Cuando se ejecuta esta función, el archivo de datos se protege inmediatamente y el estado se almacena en el disco: el archivo de datos estará protegido incluso si se reinicia la aplicación.
 
 
 #### Ejemplo
 
-You create a *protectDataFile* project method to call before deployments for example:
+Se crea un método proyecto *protectDataFile* para llamar antes de los despliegues, por ejemplo:
 
 ```4d
  ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de Datos
@@ -679,18 +679,18 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 #### Descripción
 
-The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de las peticiones ORDA del lado del cliente<!-- END REF -->.
 
-This function must be called on a remote 4D, otherwise it does nothing. Está diseñado para fines de depuración en configuraciones cliente/servidor.
+Esta función debe ser llamada en un 4D remoto, de lo contrario no hace nada. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
-The ORDA request log can be sent to a file or to memory, depending on the parameter type:
+El registro de peticiones ORDA puede ser enviado a un archivo o a la memoria, dependiendo del tipo de parámetro:
 
-*   If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it. If `.startRequestLog( )` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
-> A \] character must be manually appended at the end of the file to perform a JSON validation
+*   Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él. Si se llama a `.startRequestLog( )` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
+> Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
-*   If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+*   Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. Mantendrá *reqNum* peticiones en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br>Si se llama a `.startRequestLog()` con un *reqNum* mientras se ha iniciado previamente un registro en un archivo, se detiene el registro del archivo.
 
-*   If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
+*   Si no ha pasado ningún parámetro, el registro se inicia en la memoria. Si se llamó previamente a `.startRequestLog()` con un *reqNum* (antes de un `.stopRequestLog()`), los datos del registro se apilan en memoria hasta la próxima vez que se vacíe el registro o se llame a `.stopRequestLog()`.
 
 Para una descripción del formato del registro de peticiones de ORDA, consulte la sección [**Preguntas cliente ORDA**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373).
 
@@ -713,7 +713,7 @@ Desea registrar las solicitudes de los clientes ORDA en un archivo y utilizar el
 
 #### Ejemplo 2
 
-You want to log ORDA client requests in memory:
+Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 ```4d
  var $es : cs.PersonsSelection
@@ -755,10 +755,10 @@ You want to log ORDA client requests in memory:
 
 #### Descripción
 
-The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.
+La función `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia una transacción en el proceso actual en la base de datos que coincide con el datastore al que se aplica<!-- END REF -->. Todos los cambios realizados en las entidades del almacén de datos en el proceso de la transacción se almacenan temporalmente hasta que la transacción se valida o se cancela.
 > If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
 
-Puede anidar varias transacciones (subtransacciones). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
+Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-transacción debe ser eventualmente cancelada o validada. Note que si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función `.validateTransaction()`.
 
 
 #### Ejemplo
@@ -823,7 +823,7 @@ Puede anidar varias transacciones (subtransacciones). Each transaction or sub-tr
 
 #### Descripción
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk.
+La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->detiene cualquier registro de peticiones ORDA del lado del cliente<!-- END REF --> (en archivo o en memoria). Es particularmente útil cuando se registra un archivo, ya que realmente cierra el documento abierto en el disco.
 
 Esta función debe ser llamada en un 4D remoto, de lo contrario no hace nada. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
@@ -858,9 +858,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 #### Descripción
 
-The `.validateTransaction()` function <!-- REF #DataStoreClass.validateTransaction().Summary -->accepts the transaction <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
+La función `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->acepta la transacción <!-- END REF -->que se inició con [`.startTransaction()`](#starttransaction) en el nivel correspondiente del datastore especificado.
 
-The function saves the changes to the data on the datastore that occurred during the transaction.
+La función guarda los cambios en los datos del almacén de datos que se produjeron durante la transacción.
 
 Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente utilizando esta función.
 

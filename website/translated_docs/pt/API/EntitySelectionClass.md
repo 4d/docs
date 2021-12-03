@@ -4,9 +4,9 @@ title: EntitySelection
 ---
 
 
-An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+Uma seleção de entidades é um objeto que contém uma ou mais referencias a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Também pode criar seleções de entidades em branco utilizando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
 
 ### Resumo
 
@@ -44,33 +44,33 @@ Entity selections can be created from existing selections using various function
 
 
 
-## Create entity selection
+## Criar uma seleção de entidades (entity selection)
 
 <!-- REF #_command_.Create entity selection.Syntax -->
 **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
-| Parameter | Type               |    | Description                                                                                 |
-| --------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| dsTable   | Table              | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings  | Objeto             | -> | Build option: context                                                                       |
-| Result    | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
+| Parâmetros | Tipo               |    | Descrição                                                                                         |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------- |
+| dsTable    | Tabela             | -> | Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades |
+| settings   | Objeto             | -> | Build option: context                                                                             |
+| Resultados | 4D.EntitySelection | <- | Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada            |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+O comando `Create entity selection` constrói e devolve uma nova, [alterável](ORDA/entities.md#shareable-or-alterable-entity-selections) seleção de entidade relacionada com a classe de dados que coincide com a tabela *dsTable* dada, segundo a seleção atual desta tabela.
 
-If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
+Se a seleção atual for ordenada, é criada uma seleção de entidades [ordenada](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) (se mantém a ordem da seleção atual). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
-If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is returned. This command cannot be used with a Remote datastore.
+Se a tabela *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), se devolve um erro. Esse comando não pode usado com uma datastore remota.
 
-In the optional *settings* parameter, you can pass an object containing the following property:
+No parâmetro opcional*settings* pode passar um objeto contendo as propriedades abaixo:
 
-| Property | Type  | Description                                                                                                       |
-| -------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Propriedade | Tipo  | Descrição                                                                                                         |
+| ----------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| context     | Texto | Etiqueta para  [contexto de optimização](ORDA/entities.md#clientserver-optimization) aplicado a entity selection. |
 
 
 #### Exemplo
@@ -79,11 +79,11 @@ In the optional *settings* parameter, you can pass an object containing the foll
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
 $employees:=Create entity selection([Employee]) 
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
+// A entity selection $employees agora contém um conjunto de referências
+// em todas as entidades relacionadas com a classe de dados Employee
 ```
 
-#### See also
+#### Veja também
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
@@ -101,24 +101,24 @@ $employees:=Create entity selection([Employee])
 ***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `EntitySelection[index]` notation <!-- REF EntitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+A notação `EntitySelection[index]` <!-- REF EntitySelectionClass.index.Summary -->permite acessar as entidades dentro da seleção de entidades utilizando a sintaxe de coleção padrão<!-- END REF -->: passe a posição da entidade que quiser obter no parâmetro *index*.
 
-Note that the corresponding entity is reloaded from the datastore.
+Lembre que a entidade correspondente é recarregada a partir da datastore.
 
-*index* can be any number between 0 and `.length`-1.
+*index* pode ser qualquer número entre 0 e `.length`-1.
 
-*   If *index* is out of range, an error is returned.
-*   If *index* corresponds to a dropped entity, a Null value is returned.
-> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Examples:
+*   Se *index* está fora do intervalo, se devolve um erro.
+*   Se *index* corresponde a uma entidade descartada, se devolve um valor Null.
+> **Atenção**: `EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode utilizar-se como referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) o [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
- $sel:=ds.Employee.all() //create the entity selection
-  //invalid statements:
- $result:=$sel[0].lock() //will NOT work
- $sel[0].lastName:="Smith" //will NOT work
- $result:=$sel[0].save() //will NOT work
+ $sel:=ds.Employee.all() //criação da entity selection
+  //declarações não válidas:
+ $result:=$sel[0].lock() //NÃO funcionará
+ $sel[0].lastName:="Smith" //NÃO funcionará
+ $result:=$sel[0].save() //NÃO funcionará
   //valid code:
  $entity:=$sel[0]  //OK
  $entity.lastName:="Smith" //OK
@@ -132,7 +132,7 @@ Note that the corresponding entity is reloaded from the datastore.
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
  $employees:=ds.Employee.query("lastName = :1";"H@")
- $employee:=$employees[2]  // The 3rd entity of the $employees entity selection is reloaded from the database
+ $employee:=$employees[2]  // A terceira entidade da seleção de entidades $employees se recarrega do banco de dados
 ```
 
 <!-- END REF -->
@@ -153,11 +153,11 @@ Note that the corresponding entity is reloaded from the datastore.
 ***.attributeName*** : Collection<br>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
+Todo atributo de dataclass pode ser utilizado como uma propriedade de uma entity selection para devolver <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" dos valores do atributo na entity selection<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidades, dependendo de [kind](DataClassAttributeClass.md#kind) (`storage` ou `relation`) do atributo.
 
-*   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
+*   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
 *   If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
 

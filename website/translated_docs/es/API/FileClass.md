@@ -466,7 +466,7 @@ The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or rename
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 
 **Objeto devuelto**

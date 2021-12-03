@@ -385,7 +385,7 @@ $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
 ```
 
-#### Voir également
+#### Voir aussi
 
 [.setAppInfo()](#setappinfo)
 
@@ -630,7 +630,7 @@ $info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
 $infoPlistFile.setAppInfo($info)
 ```
 
-#### Voir également
+#### Voir aussi
 
 [.getAppInfo()](#getappinfo)
 

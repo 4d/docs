@@ -449,9 +449,9 @@ La función `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia el objeto 
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the folder is copied with the name of the original folder. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+Por defecto, la carpeta se copia con el nombre de la carpeta original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
 | Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
@@ -464,7 +464,7 @@ El objeto `Folder` copiado.
 
 #### Ejemplo
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
+Desea copiar una *carpeta* Imágenes de la carpeta de documentos del usuario a la carpeta de la base:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder

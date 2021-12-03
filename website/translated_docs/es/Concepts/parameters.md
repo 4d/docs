@@ -533,7 +533,7 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dent
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" Se describe en el párrafo [Valores devueltos](#returning-values).
+Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" Se describe en el párrafo [Funciones](#functions). Se describe en el párrafo [Valores devueltos](#returning-values).
 
 
 ### Casos particulares: objetos y colecciones

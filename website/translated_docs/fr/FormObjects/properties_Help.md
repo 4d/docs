@@ -45,7 +45,7 @@ Lorsque différentes astuces sont associées au même objet à plusieurs emplace
 3. Commande **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (haute priorité)
 
 
-#### Voir également
+#### Voir aussi
 
 [Placeholder](properties_Entry.md#placeholder)
 

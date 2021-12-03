@@ -83,7 +83,7 @@ $employees:=Create entity selection([Employee])
 // références vers toutes les entités de la dataclass Employee
 ```
 
-#### Voir également
+#### Voir aussi
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
@@ -1335,7 +1335,7 @@ Vous devez utiliser un paramètre de critère pour définir la manière dont les
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-L'ordre dans lequel les attributs sont passés détermine la priorité de tri des entités. Par défaut, les attributs sont triés par ordre croissant. Vous pouvez définir l'ordre de tri d'une propriété dans la chaîne des critères, séparée du chemin de propriété par un seul espace : passez "asc" pour trier par ordre croissant ou "desc" pour trier par ordre décroissant.
+L'ordre dans lequel les attributs sont passés détermine la priorité de tri des entités. Par défaut, les attributs sont triés par ordre croissant. Vous pouvez définir l'ordre de tri de chaque propriété dans la formule de critère, séparée du chemin de propriété par un simple espace : passez "asc" pour trier par ordre croissant ou "desc" pour un ordre décroissant.
 
 *   *pathObjects* (collection) : chaque élément de la collection contient un objet structuré de la façon suivante :
 
@@ -1546,7 +1546,7 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
 Vous trouverez plus d'exemples de requêtes dans la page [`.query()`](DataClassClass.md#query) .
 
-#### Voir également
+#### Voir aussi
 
 [`.query()`](DataClassClass.md#query) pour dataclass
 

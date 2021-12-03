@@ -1313,6 +1313,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1754,11 +1755,12 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parâmetros | Tipo |  | Descrição |
-| ---------- | ---- |::| --------- |
-|            |      |  |           |
-
-|pathStrings|Text|->|Rota(s) da propriedade na que ordenar a coleção| |pathObjects|Collection|->|Coleção de objetos de critério| |ascOrDesc|Integer|->|`ck ascending` ou `ck descending` (valores escalares)| |Result|Collection |<-|Cópia ordenada da coleção (cópia superficial)|
+| Parâmetros  | Tipo       |    | Descrição                                         |
+| ----------- | ---------- |:--:| ------------------------------------------------- |
+| pathStrings | Texto      | -> | Property path(s) on which to order the collection |
+| pathObjects | Collection | -> | Collection of criteria objects                    |
+| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values) |
+| Result      | Collection | <- | Ordered copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -1893,11 +1895,11 @@ Ordenar com uma rota de propriedade:
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                         |
+| Parameter  | Type       |    | Description                                                       |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------- |
 | methodName | Texto      | -> | Nome do método utilizado para especificar a ordem de clasificação |
 | extraParam | expressão  | -> | Parâmetros para o método                                          |
-| Resultados | Collection | <- | Cópia ordenada da coleção (cópia superficial)                     |
+| Result     | Collection | <- | Cópia ordenada da coleção (cópia superficial)                     |
 <!-- END REF -->
 
 
@@ -1986,9 +1988,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v16 R6 | Adicionado |
-</details><!-- REF #collection.pop().Syntax -->**.pop()** : any<!-- END REF --><!-- REF #collection.pop().Params -->| Parâmetros | Tipo |    | Descrição                  |
-| ---------- | ---- |:--:| -------------------------- |
-| Resultados | any  | <- | Último elemento da coleção |<!-- END REF -->#### Descrição
+</details><!-- REF #collection.pop().Syntax -->**.pop()** : any<!-- END REF --><!-- REF #collection.pop().Params -->| Parameter | Type |    | Description                |
+| --------- | ---- |:--:| -------------------------- |
+| Result    | any  | <- | Último elemento da coleção |<!-- END REF -->#### Descrição
 
 A função `.pop()`<!-- REF #colección.pop().Resumen -->elimina o último elemento da coleção e o devolve como resultado da função<!-- END REF -->.
 > Essa função modifica a collection original.
@@ -2013,10 +2015,10 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v16 R6 | Adicionado |
-</details><!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection<!-- END REF --><!-- REF #collection.push().Params -->| Parâmetros | Tipo       |    | Descrição                                        |
-| ---------- | ---------- |:--:| ------------------------------------------------ |
-| element    | Mixed      | -> | Elementos a adicionar à coleção                  |
-| Resultados | Collection | <- | Collection original contendo elementos inseridos |<!-- END REF -->#### Descrição
+</details><!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection<!-- END REF --><!-- REF #collection.push().Params -->| Parameter | Type       |    | Description                                      |
+| --------- | ---------- |:--:| ------------------------------------------------ |
+| element   | Mixed      | -> | Elementos a adicionar à coleção                  |
+| Result    | Collection | <- | Collection original contendo elementos inseridos |<!-- END REF -->#### Descrição
 
 A função `.push()`<!-- REF #collection.push().Summary -->adiciona um ou mais *elementos* ao final da instância da coleção e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a collection original.
@@ -2051,12 +2053,12 @@ Se quiser ordenar a coleção resultante:
 | ------ | ---------------------------- |
 | v17 R5 | Assistência de querySettings |
 | v16 R6 | Adicionado                   |
-</details><!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection<!-- END REF --><!-- REF #collection.query().Params -->| Parâmetros    | Tipo       |    | Descrição                                                         |
+</details><!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection<!-- END REF --><!-- REF #collection.query().Params -->| Parameter     | Type       |    | Description                                                       |
 | ------------- | ---------- |:--:| ----------------------------------------------------------------- |
 | queryString   | Texto      | -> | Critérios de pesquisa                                             |
 | value         | Mixed      | -> | Valores a comparar quando usar placeholders (valores temporários) |
 | querySettings | Objeto     | -> | Opções de pesquisa: parâmetros, atributos                         |
-| Resultados    | Collection | <- | Elementos que correspondem com queryString na coleção             |<!-- END REF -->#### Descrição
+| Result        | Collection | <- | Elementos que correspondem com queryString na coleção             |<!-- END REF -->#### Descrição
 
 A função `.query()`<!-- REF #collection.query().Summary -->devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa<!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
@@ -2072,6 +2074,7 @@ Para obter informação detalhada sobre como construir uma consulta utilizando o
 > As fórmulas não tem compatibilidade com a função `collection.query()`, nem com o parâmetro *queryString* nem como parâmetro do objeto *fórmula*.
 
 #### Exemplo 1
+
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2138,12 +2141,12 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v16 R6 | Adicionado |
-</details><!-- REF #collection.reduce().Syntax -->**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any<!-- END REF --><!-- REF #collection.reduce().Params -->| Parâmetros | Tipo                                            |    | Descrição                                                                    |
+</details><!-- REF #collection.reduce().Syntax -->**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any<!-- END REF --><!-- REF #collection.reduce().Params -->| Parameter  | Type                                            |    | Description                                                                  |
 | ---------- | ----------------------------------------------- |:--:| ---------------------------------------------------------------------------- |
 | methodName | Texto                                           | -> | Nome da função a qual se chama para processar os elementos da coleção        |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valor a utilizar como primeiro argumento da primeira chamada de *methodName* |
 | param      | expressão                                       | -> | Parâmetros a passar para *methodName*                                        |
-| Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                             |<!-- END REF -->#### Descrição
+| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                             |<!-- END REF -->#### Descrição
 
 
 A função `.reduce()`<!-- REF #collection.reduce().Summar -->aplica o método de retrochamada *methodName* contra um acumulador e cada elemento da coleção (de esquerda a direita) para reduzi-lo a um único valor<!-- END REF -->.
@@ -2209,11 +2212,11 @@ Com o método ***Flatten***:
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v16 R6 | Adicionado |
-</details><!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.remove().Params -->| Parâmetros | Tipo       |    | Descrição                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------------- |
-| index      | Integer    | -> | Elemento no qual que se inicia a eliminação             |
-| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir |
-| Resultados | Collection | <- | Colección original sem elementos eliminados             |<!-- END REF -->#### Descrição
+</details><!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.remove().Params -->| Parameter | Type       |    | Description                                             |
+| --------- | ---------- |:--:| ------------------------------------------------------- |
+| index     | Integer    | -> | Elemento no qual que se inicia a eliminação             |
+| howMany   | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir |
+| Result    | Collection | <- | Colección original sem elementos eliminados             |<!-- END REF -->#### Descrição
 
 The `.remove()` function<!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
