@@ -59,10 +59,10 @@ They provide the following properties and functions:
 ## WEB Server
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                     |
-| ------- | ---------------------------------- |
-| v18 R3  | Añadidos                           |
-| v19     | support for .sessionCookieSameSite |
+| Versión | Modificaciones                    |
+| ------- | --------------------------------- |
+| v18 R3  | Añadidos                          |
+| v19     | soporte de .sessionCookieSameSite |
 
 </details>
 
@@ -231,11 +231,11 @@ La lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada pa
 **.CORSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+El estado del servicio <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) para el servidor web<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver `CORSSettings` abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
 
-Default: False (disabled)
+Por defecto: False (desactivado)
 
-For more information about CORS, please refer to the [Cross-origin resource sharing page](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
+Para más información sobre CORS, consulte la página [Cross-origin resource sharing page](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) en Wikipedia.
 
 <!-- END REF -->
 
@@ -249,7 +249,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 **.CORSSettings** : Collection<!-- END REF -->
 
 
-A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
+Una <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y métodos permitidos para el servicio CORS<!-- END REF --> (ver la propiedad [`CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
 
 *   **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If *host* is not present or empty, the object is ignored. Several syntaxes are supported:
     -   192.168.5.17:8081
@@ -277,7 +277,7 @@ A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and met
 **.debugLog** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
+El <!-- REF #WebServerClass.debugLog.Summary -->estado del archivo de registro de peticiones HTTP<!-- END REF --> (HTTPDebugLog_nn.txt, almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo).
 
 *   0 = desactivado
 *   1 = enabled without body parts (body size is provided in this case)
@@ -310,7 +310,7 @@ El <!-- REF #WebServerClass.defaultHomepage.Summary -->nombre de la página de i
 **.HSTSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad `HSTSMaxAge`. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.
+El estado <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad `HSTSMaxAge`. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.
 
 <!-- END REF -->
 
@@ -430,7 +430,7 @@ El estado del protocolo<!-- REF #WebServerClass.HTTPnabled.Summary -->HTTPS<!-- 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->
 **.HTTPSPort** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPSPort.Summary -->número de puerto IP de escucha para HTTPS<!-- END REF -->.
 
 Por defecto = 443
 
@@ -525,7 +525,7 @@ El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servid
 **.logRecording** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
+El valor de registro <!-- REF #WebServerClass.logRecording.Summary -->log (logweb.txt)<!-- END REF -->.
 
 *   0 = Do not record (default)
 *   1 = Record in CLF format
@@ -760,7 +760,7 @@ Ver la descripción de [Session Cookie SameSite](WebServer/webServerConfig.md#se
 
 > This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
 
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
+La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de la dirección IP para las cookies de sesión<!-- END REF -->. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).
 
 <!-- END REF -->
 
@@ -789,18 +789,18 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+La función `.start()` <!-- REF #WebServerClass.start().Summary -->inicia el servidor web sobre el que se aplica<!-- END REF -->, utilizando las propiedades establecidas en el parámetro opcional del objeto *settings*.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
+El servidor web se inicia con la configuración por defecto definida en el archivo de configuración del proyecto o (sólo en la base host) utilizando el comando `WEB SET OPTION`. Sin embargo, utilizando el parámetro *settings*, se pueden definir propiedades personalizadas para la sesión del servidor web.
 
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
+La configuración de la sesión personalizada se restablecerá cuando se llame a la función [`.stop()`](#stop).
 
 
 #### Objeto devuelto
 
-The function returns an object describing the Web server launch status. This object can contain the following properties:
+La función devuelve un objeto que describe el estado de lanzamiento del servidor web. This object can contain the following properties:
 
 | Propiedad |                         | Tipo       | Descripción                                                          |
 | --------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
@@ -850,9 +850,9 @@ The function returns an object describing the Web server launch status. This obj
 
  <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+La función `.stop()` <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web sobre el que se aplica<!-- END REF -->.
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
+Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
 > This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 

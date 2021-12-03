@@ -480,9 +480,9 @@ La función `.copyTo()` <!-- REF #document.copyTo().Summary -->copia el objeto `
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, el archivo se copia con el nombre del archivo original. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+Por defecto, el archivo se copia con el nombre del archivo original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-Si ya existe un archivo con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Si ya existe un archivo con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
 | Constante      | Valor | Comentario                          |
 | -------------- | ----- | ----------------------------------- |

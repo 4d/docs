@@ -22,6 +22,6 @@ Tous les objets du formulaire (de n'importe quelle page) dont la propriété d'�
 L'événement `On Load` est généré à l'ouverture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. A noter également que, conformément aux principes de fonctionnement des événements de formulaire, si le sous-formulaire est placé sur une page autre que la page 0 ou 1, cet événement ne sera généré que lorsque cette page sera affichée (et non lorsque le formulaire sera affiché).
 
 
-### Voir également
+### Voir aussi
 
 [`On Unload`](onUnload.md)

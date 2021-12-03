@@ -14,5 +14,5 @@ title: Sur contracter
 - [List box hiérarchiques](FormObjects/listbox_overview.md#hierarchical-list-boxes) : Cet événement est généré lorsqu'une ligne de la list box hiérarchique est réduite.
 
 
-### Voir également
+### Voir aussi
 [Sur déployer](onExpand.md)

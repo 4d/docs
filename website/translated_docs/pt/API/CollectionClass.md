@@ -1313,6 +1313,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1754,11 +1755,12 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parameter | Type |  | Description |
-| --------- | ---- |::| ----------- |
-|           |      |  |             |
-
-|pathStrings|Text|->|Rota(s) da propriedade na que ordenar a coleção| |pathObjects|Collection|->|Coleção de objetos de critério| |ascOrDesc|Integer|->|`ck ascending` ou `ck descending` (valores escalares)| |Result|Collection |<-|Cópia ordenada da coleção (cópia superficial)|
+| Parameter   | Type       |    | Description                                       |
+| ----------- | ---------- |:--:| ------------------------------------------------- |
+| pathStrings | Texto      | -> | Property path(s) on which to order the collection |
+| pathObjects | Collection | -> | Collection of criteria objects                    |
+| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values) |
+| Result      | Collection | <- | Ordered copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2072,6 +2074,7 @@ Para obter informação detalhada sobre como construir uma consulta utilizando o
 > Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Example 1
+
 
 ```4d
  var $c; $c2; $c3 : Collection

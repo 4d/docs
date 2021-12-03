@@ -15,5 +15,5 @@ Cet événement est généré chaque fois qu'une nouvelle ressource (image, cadr
 La variable [Progression](FormObjects/properties_WebArea.md#progression) associée à la zone vous permet de connaître l'état du chargement.
 
 
-### Voir également
+### Voir aussi
 [`On Open External Link`](onOpenExternalLink.md)

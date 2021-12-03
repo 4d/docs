@@ -26,5 +26,5 @@ Cet événement peut être généré pour les styles de boutons suivants :
 
 Cet événement est généralement utilisé pour afficher des pop-up menus en cas de longs clics sur les boutons. Si l'événement [`On Clicked`](onClicked.md) est activé, il est généré si l'utilisateur relâche le bouton de la souris avant la limite de temps du "long clic".
 
-### Voir également
+### Voir aussi
 [`Sur clic alternatif`](onAlternativeClick.md)

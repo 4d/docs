@@ -57,7 +57,7 @@ Cette propriété est en **lecture seule**.
 <!-- REF #ClassClass.new().Params -->
 | Paramètres | Type     |    | Description                                      |
 | ---------- | -------- |:--:| ------------------------------------------------ |
-| param      | any      | -> | Parameter(s) to pass to the constructor function |
+| param      | any      | -> | Paramètre(s) à passer à la fonction constructeur |
 | Résultat   | 4D.Class | <- | Nouvel objet de la classe                        |
 <!-- END REF -->
 
@@ -66,9 +66,9 @@ Cette propriété est en **lecture seule**.
 
 La fonction `.new()` <!-- REF #ClassClass.new().Summary -->crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé<!-- END REF -->. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
+Vous pouvez passer un ou plusieurs paramètre(s) optionnel(s) *param*, qui seront passés à la fonction [class constructor](Concepts/classes.md#class-constructor) (le cas échéant) dans la définition de la classe className. A l'intérieur de la fonction constructor, [`This`](Concepts/classes.md#this) est lié au nouvel objet en cours de construction.
 
-If `.new()` is called on a non-existing class, an error is returned.
+Si `.new()` si appelé sur une classe qui n'existe pas, une erreur est retournée.
 
 #### Exemples
 

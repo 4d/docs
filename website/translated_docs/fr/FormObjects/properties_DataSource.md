@@ -262,9 +262,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles |
-| ----- | --------------- | ----------------- |
-| table | number          | Table number      |
+| Nom   | Type de données | Valeurs possibles  |
+| ----- | --------------- | ------------------ |
+| table | number          | Numéro de la table |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview)

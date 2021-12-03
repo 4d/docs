@@ -189,12 +189,12 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// cs.EmployeeSelection class
+// Classe cs.EmployeeSelection 
 
 
-Class extends EntitySelection
+Classe extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraire, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -274,10 +274,10 @@ Lors de la création ou de la modification de classes de modèles de données, v
 
 Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :
 
-- in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
-- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+- dans **des process préemptifs ou coopératifs** (en fonction du process appelant) dans des applications monoposte,
+- dans **des process préemptifs** dans des applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas il dépend du process appelant comme dans le cas d'un monoposte).
 
-Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
+Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).
 
 
 ## Champs calculés
@@ -349,7 +349,7 @@ Function get fullName($event : Object)-> $fullName : Text
 
   Case of   
     : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null //use result to return Null
+        $event.result:=Null //utiliser le résultat pour retourner Null
     : (This.firstName=Null)
         $fullName:=This.lastName
     : (This.lastName=Null)
@@ -437,7 +437,7 @@ Cette fonction prend en charge trois syntaxes :
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
-> The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
+> Les fonctionnalités suivantes ne sont pas prises en charge : - l'appel d'une fonction de requête `query` sur des champs calculés de type Entity ou Entity Selection - l'utilisation du mot clé `order by` dans la chaîne de requête résultante.
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
@@ -514,7 +514,7 @@ Function query age($event : Object)->$result : Object
 
     $operator:=$event.operator
 
-    $age:=Num($event.value)  // integer
+    $age:=Num($event.value)  // entier
     $d1:=Add to date(Current date; -$age-1; 0; 0)
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
@@ -522,16 +522,16 @@ Function query age($event : Object)->$result : Object
     Case of
 
         : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+            $query:="birthday > :1 and birthday <= :2"  // après d1 et avant ou égal à d2
 
         : ($operator="===")
 
-            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+            $query:="birthday = :2"  // d2 = seconde date calculée (= date d'anniversaire)
 
         : ($operator=">=")
             $query:="birthday <= :2"
 
-            //... other operators           
+            //... autres opérateurs           
 
 
     End case

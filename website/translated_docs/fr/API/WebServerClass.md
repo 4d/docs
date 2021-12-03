@@ -598,7 +598,7 @@ Valeurs possibles :
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1
-*   3 = TLSv1_2 (default)
+*   3 = TLSv1_2 (par défaut)
 *   4 = TLSv1_3
 
 En cas de modification, le serveur doit être redémarré pour utiliser la nouvelle valeur.

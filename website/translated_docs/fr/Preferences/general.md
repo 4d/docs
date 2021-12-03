@@ -51,7 +51,7 @@ Trois options sont disponibles :
 
 ### Apparence (macOS uniquement)
 
-This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
+Ce menu vous permet de sélectionner la palette de couleurs à utiliser pour l'environnement de **développement 4D**. Le schéma spécifié sera appliqué à tous les éditeurs et fenêtres du mode Développement.
 
 > You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
 

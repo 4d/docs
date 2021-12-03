@@ -15,5 +15,5 @@ Cet événement est généré lorsqu'une erreur est détectée lors du chargemen
 Vous pouvez appeler la commande `WA GET LAST URL ERROR` afin d'obtenir des informations sur l'erreur.
 
 
-### Voir également
+### Voir aussi
 [`On Open External Link`](onOpenExternalLink.md)

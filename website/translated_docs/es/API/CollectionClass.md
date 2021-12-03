@@ -1313,6 +1313,7 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1612,11 +1613,12 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v16 R6  | Añadidos       |
-</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |::| ----------- |
-|            |      |  |             |
-
-|pathStrings|Text|->|Ruta(s) de la propiedad en la que ordenar la colección| |pathObjects|Collection|->|Colección de objetos de criterio| |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (valores escalares)| |Result|Collection |<-|Copia ordenada de la colección (copia superficial)|<!-- END REF -->#### Descripción
+</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros  | Tipo       |    | Descripción                                       |
+| ----------- | ---------- |:--:| ------------------------------------------------- |
+| pathStrings | Texto      | -> | Property path(s) on which to order the collection |
+| pathObjects | Collection | -> | Colección de objetos criterio                     |
+| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values) |
+| Resultado   | Collection | <- | Ordered copy of the collection (shallow copy)     |<!-- END REF -->#### Descripción
 
 La función `.orderBy()`<!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
@@ -1894,7 +1896,7 @@ Quiere ordenar la colección resultante:
 <details><summary>Histórico</summary>
 | Versión | Modificaciones           |
 | ------- | ------------------------ |
-| v17 R5  | Support of querySettings |
+| v17 R5  | Soporte de querySettings |
 | v16 R6  | Añadidos                 |
 </details><!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection<!-- END REF --><!-- REF #collection.query().Params -->| Parámetros    | Tipo       |    | Descripción                                                        |
 | ------------- | ---------- |:--:| ------------------------------------------------------------------ |
@@ -1924,6 +1926,7 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 > Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
 #### Ejemplo 1
+
 
 ```4d
  var $c; $c2; $c3 : Collection

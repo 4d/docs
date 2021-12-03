@@ -119,7 +119,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 
 
-The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
+La propiedad `.attachments` contiene una <!-- REF #EmailObjectClass.attachments.Summary -->colección de objeto(s)`4D.MailAttachment`<!-- END REF -->.
 
 Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
 
@@ -134,7 +134,7 @@ Attachment objects are defined through the [`MAIL New attachment`](MailAttachmen
 
 #### Descripción
 
-The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propiedad `.bcc` contiene la <!-- REF #EmailObjectClass.bcc.Summary -->copia carbón invisible (BCC) de las [dirección(es) ](#email-addresses)de los destinatarios del correo electrónico<!-- END REF -->.
 
 
 
@@ -147,7 +147,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 #### Descripción
 
-The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+La propiedad `.bodyStructure` contiene el objeto <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart*, es decir, la estructura MIME completa del cuerpo del mensaje (opcional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyStructure` object contains the following properties:
 
@@ -174,7 +174,7 @@ The `.bodyStructure` object contains the following properties:
 
 #### Descripción
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+La propiedad `.bodyValues` contiene el objeto <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue*, que contiene un objeto para cada \<partID\> de `bodyStructure` (opcional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyValues` object contains the following properties:
 
@@ -194,7 +194,7 @@ The `.bodyValues` object contains the following properties:
 
 #### Descripción
 
-The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propiedad `.cc` contiene la <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) adicional del destinatario del correo electrónico [addresse(s)](#email-addresses) del correo electrónico<!-- END REF -->.
 
 
 
@@ -209,7 +209,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### Descripción
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+La propiedad `.comments` contiene un <!-- REF #EmailObjectClass.comments.Summary -->encabezado de comentarios adicionales<!-- END REF -->.
 
 Comments only appear within the header section of the message (keeping the message's body untouched).
 
@@ -226,7 +226,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 #### Descripción
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+La propiedad `.from` contiene las <!-- REF #EmailObjectClass.from.Summary -->[Dirección(es)](#email-addresses) de origen del correo electrónico<!-- END REF -->.
 
 
 Each email you send out has both the [sender](#sender) and **from** addresses:

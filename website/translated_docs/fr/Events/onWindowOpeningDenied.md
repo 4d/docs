@@ -15,5 +15,5 @@ Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloq
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 
-### Voir également
+### Voir aussi
 [`On Open External Link`](onOpenExternalLink.md)
