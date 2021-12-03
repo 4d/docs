@@ -77,18 +77,18 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#canceltransaction"><strong>.cancelTransaction()</strong></a><p>    cancels the transaction</td></tr>
-<tr><td><a href="#dataclassname"><strong><em>.dataclassName</em></strong> : 4D.DataClass</a><p>    contains a description of the dataclass</td></tr>
-<tr><td><a href="#encryptionstatus"><strong>.encryptionStatus()</strong>: Object</a><p>    returns an object providing the encryption status for the current data file</td></tr>
-<tr><td><a href="#getinfo"><strong>.getInfo()</strong>: Object</a><p>    returns an object providing information about the datastore</td></tr>
-<tr><td><a href="#getrequestlog"><strong>.getRequestLog()</strong> : Collection</a><p>    returns the ORDA requests logged in memory on the client side</td></tr>
-<tr><td><a href="#makeselectionsalterable"><strong>.makeSelectionsAlterable()</strong></a><p>    sets all entity selections as alterable by default in the current application datastores</td></tr>
-<tr><td><a href="#providedatakey"><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a><p>    allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data</td></tr>
-<tr><td><a href="#setadminprotection"><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</a><p>    allows disabling any data access on the <a href="/docs/fr/Admin/webAdmin.html#http-port">web admin port</a>, including for the <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> in <code>WebAdmin</code> sessions</td></tr>
-<tr><td><a href="#startrequestlog"><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a><p>    starts the logging of ORDA requests on the client side</td></tr>
-<tr><td><a href="#starttransaction"><strong>.startTransaction()</strong></a><p>    starts a transaction in the current process on the database matching the datastore to which it applies</td></tr>
-<tr><td><a href="#stoprequestlog"><strong>.stopRequestLog()</strong>  </a><p>    stops any logging of ORDA requests on the client side</td></tr>
-<tr><td><a href="#validatetransaction"><strong>.validateTransaction()</strong>  </a><p>    accepts the transaction</td></tr>
+<tr><td><a href="#canceltransaction"><strong>.cancelTransaction()</strong></a><p>    annule la transaction</td></tr>
+<tr><td><a href="#dataclassname"><strong><em>.dataclassName</em></strong> : 4D.DataClass</a><p>    contient la description de la dataclass</td></tr>
+<tr><td><a href="#encryptionstatus"><strong>.encryptionStatus()</strong>: Object</a><p>    retourne un objet qui fournit le statut de chiffrement du fichier de données courant</td></tr>
+<tr><td><a href="#getinfo"><strong>.getInfo()</strong>: Object</a><p>    retourne un objet qui fournit des informations sur le datastore</td></tr>
+<tr><td><a href="#getrequestlog"><strong>.getRequestLog()</strong> : Collection</a><p>    retourne les requêtes ORDA enregistrées en mémoire sur le poste client</td></tr>
+<tr><td><a href="#makeselectionsalterable"><strong>.makeSelectionsAlterable()</strong></a><p>    définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application</td></tr>
+<tr><td><a href="#providedatakey"><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a><p>    permet de fournir une clé de chiffrement des données pour le fichier de données courant du datastore et détecte si la clé correspond aux données chiffrées</td></tr>
+<tr><td><a href="#setadminprotection"><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</a><p>    permet de désactiver tout accès aux données sur le <a href="/docs/fr/Admin/webAdmin.html#http-port">port web admin</a>, y compris via le <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> dans les sessions <code>WebAdmin</code></td></tr>
+<tr><td><a href="#startrequestlog"><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a><p>    lance l'enregistrement des requêtes ORDA sur le poste client</td></tr>
+<tr><td><a href="#starttransaction"><strong>.startTransaction()</strong></a><p>    démarre une transaction dans le process courant sur la base de données du datastore</td></tr>
+<tr><td><a href="#stoprequestlog"><strong>.stopRequestLog()</strong>  </a><p>    stoppe tout enregistrement des requêtes ORDA sur le poste client</td></tr>
+<tr><td><a href="#validatetransaction"><strong>.validateTransaction()</strong>  </a><p>    valide la transaction</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="ds"></a><a href="#ds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ds</h2>
@@ -98,7 +98,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18</td><td>Support of localID parameter</td></tr>
+<tr><td>v18</td><td>Prise en charge du paramètre localID</td></tr>
 <tr><td>v17</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -109,21 +109,21 @@
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>localID</td><td>Text</td><td>-&gt;</td><td>Local ID of the remote datastore to return</td></tr>
-<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Reference to the datastore</td></tr>
+<tr><td>localID</td><td>Text</td><td>-&gt;</td><td>Identifiant local du datastore distant</td></tr>
+<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Nouvelle référence de datastore</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>ds</code> command returns a reference to the datastore matching the current 4D database or the database designated by <em>localID</em>.</p>
-<p>If you omit the <em>localID</em> parameter (or pass an empty string &quot;&quot;), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through <code>ds</code>.</p>
-<p>You can also get a reference on an open remote datastore by passing its local id in the <em>localID</em> parameter. The datastore must have been previously opened with the <a href="#open-datastore"><code>Open datastore</code></a> command by the current database (host or component). The local id is defined when using this command.</p>
+<p>La commande<code>ds</code> retourne une nouvelle référence vers le datastore correspondant à la base de données 4D courante ou à la base désignée par <em>localID</em>.</p>
+<p>Si vous omettez le paramètre <em>localID</em> (ou si vous passez une chaîne vide &quot;&quot;), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Server). Le datastore est ouvert automatiquement et est disponible directement via <code>ds</code>.</p>
+<p>Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre <em>localID</em>. Le datastore doit avoir été préalablement ouvert avec la commande <a href="#open-datastore"><code>Open datastore</code></a> par la base de données courante (hôte ou composant). L'identifiant local est défini lors de l'utilisation de cette commande.</p>
 <blockquote>
 <p>La portée de l'identifiant local est la base de données dans laquelle le datastore a été ouvert.</p>
 </blockquote>
-<p>If no <em>localID</em> datastore is found, the command returns <strong>Null</strong>.</p>
+<p>Si aucun datastore nommé <em>localID</em> n'est trouvé, la commande renvoie <strong>Null</strong>.</p>
 <p>Les objets disponibles dans le <code>cs.Datastore</code> sont mappés à partir de la base de données cible en respectant les <a href="Concepts/dsMapping.md#general-rules">règles générales d'ORDA</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>Using the main datastore on the 4D database:</p>
+<p>Utilisation du datastore principal de la base 4D :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$result</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName = :1"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
@@ -164,49 +164,49 @@
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>connectionInfo</td><td>Objet</td><td>-&gt;</td><td>Connection properties used to reach the remote datastore</td></tr>
-<tr><td>localID</td><td>Texte</td><td>-&gt;</td><td>Id to assign to the opened datastore on the local application (mandatory)</td></tr>
-<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Datastore object</td></tr>
+<tr><td>connectionInfo</td><td>Objet</td><td>-&gt;</td><td>Propriétés de connexion utilisées pour joindre le datastore distant</td></tr>
+<tr><td>localID</td><td>Texte</td><td>-&gt;</td><td>Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire)</td></tr>
+<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Objet datastore</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>Open datastore</code> command connects the application to the 4D database identified by the <em>connectionInfo</em> parameter and returns a matching <code>cs.DataStore</code> object associated with the <em>localID</em> local alias.</p>
-<p>The <em>connectionInfo</em> 4D database must be available as a remote datastore, i.e.:</p>
+<p>La commande <code>Open datastore</code> connecte l'application à la base de données 4D identifiée par le paramètre <em>connectionInfo</em> et retourne un objet <code>cs.DataStore</code> associé à l'alias local <em>localID</em>.</p>
+<p>La base de données <em>connectionInfo</em> 4D doit être disponible en tant que datastore distant, c'est-à-dire :</p>
 <ul>
-<li>its web server must be launched with http and/or https enabled,</li>
-<li>its <a href="/docs/fr/REST/configuration.html#starting-the-rest-server"><strong>Expose as REST server</strong></a> option must be checked,</li>
-<li>at least one client license is available.</li>
+<li>son serveur Web doit être lancé avec http et/ou https activé,</li>
+<li>son option <a href="/docs/fr/REST/configuration.html#starting-the-rest-server"><strong>Activer le service REST</strong></a> doit être cochée,</li>
+<li>au moins une licence client est disponible.</li>
 </ul>
-<p>If no matching database is found, <code>Open datastore</code> returns <strong>Null</strong>.</p>
-<p><em>localID</em> is a local alias for the session opened on remote datastore. If <em>localID</em> already exists on the application, it is used. Otherwise, a new <em>localID</em> session is created when the datastore object is used.</p>
+<p>Si aucune base de données correspondante n'est trouvée, <code>Open datastore</code> retourne <strong>Null</strong>.</p>
+<p><em>localID</em> est un alias local de la session ouverte sur le datastore distant. Si <em>localID</em> existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session <em>localID</em> est créée lors de l’utilisation de l’objet datastore.</p>
 <p>Les objets disponibles dans le <code>cs.Datastore</code> sont mappés à partir de la base de données cible en respectant les <a href="Concepts/dsMapping.md#general-rules">règles générales d'ORDA</a>.</p>
-<p>Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:</p>
+<p>Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myds</span>:=<span class="hljs-function">Open datastore</span>(connectionInfo;<span class="hljs-string">"myLocalId"</span>)
  <span class="hljs-variable">$myds2</span>:=ds(<span class="hljs-string">"myLocalId"</span>)
   <span class="hljs-comment">//$myds et $myds2 sont équivalents</span>
 </code></pre>
-<p>Pass in <em>connectionInfo</em> an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except <em>hostname</em>):</p>
+<p>Passez dans <em>connectionInfo</em> un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de <em>hostname</em>) :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>hostname</td><td>Text</td><td>Nom ou adresse IP de la base de données distante + &quot; :&quot; + numéro de port (le numéro de port est obligatoire)</td></tr>
-<tr><td>user</td><td>Text</td><td>User name</td></tr>
+<tr><td>user</td><td>Text</td><td>Nom d'utilisateur</td></tr>
 <tr><td>password</td><td>Text</td><td>Mot de passe de l'utilisateur</td></tr>
 <tr><td>idleTimeout</td><td>Longint</td><td>Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être &lt; 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir <strong>Fermeture des sessions</strong>.</td></tr>
 <tr><td>tls</td><td>Boolean</td><td>Utilisez une connexion sécurisée(*). Si cette propriété est omise, &quot;false&quot; par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.</td></tr>
 <tr><td>type</td><td>Text</td><td>Doit être &quot;4D Server&quot;</td></tr>
 </tbody>
 </table>
-<p>(*) If tls is true, the HTTPS protocol is used if:</p>
+<p>(*) Si tls est vrai, le protocole HTTPS est utilisé si :</p>
 <ul>
-<li>HTTPS is enabled on the remote datastore</li>
-<li>the given port is the right HTTPS port configured in the database settings</li>
-<li>a valid certificate and private encryption key are installed in the database. Otherwise, error &quot;1610 - A remote request to host xxx has failed&quot; is raised</li>
+<li>HTTPS est activé sur le datastore distant</li>
+<li>Le port donné correspond au port HTTPS configuré dans les propriétés</li>
+<li>Un certificat valide et une clé de chiffrement privée sont installés dans la base. Sinon, l'erreur &quot;1610 - Une requête vers l’hôte: &quot;{xxx}&quot; a échoué&quot; est générée</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>Connection to a remote datastore without user / password:</p>
+<p>Connexion à un datastore distant sans utilisateur/mot de passe :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
@@ -214,7 +214,7 @@
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"This remote datastore contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" students"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-1"></a><a href="#exemple-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
-<p>Connection to a remote datastore with user / password / timeout / tls:</p>
+<p>Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;\<span class="hljs-string">"192.168.18.11:4443"</span>;\  
@@ -223,7 +223,7 @@
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"This remote datastore contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" students"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-3"></a><a href="#exemple-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 3</h4>
-<p>Working with several remote datastores:</p>
+<p>Travailler avec plusieurs datastores distants :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$frenchStudents</span>; <span class="hljs-variable">$foreignStudents </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
@@ -234,7 +234,7 @@
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"They are "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$foreignStudents</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" foreign students"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="gestion-des-erreurs"></a><a href="#gestion-des-erreurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestion des erreurs</h4>
-<p>In case of error, the command returns <strong>Null</strong>. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 &quot;A remote request to host XXX has failed&quot; is raised. You can intercept this error with a method installed by <code>ON ERR CALL</code>.</p>
+<p>En cas d'erreur, la commande retourne <strong>Null</strong>. Si le datastore distant ne peut pas être joint (adresse incorrecte, web serveur non lancé, http et https non activés, etc.), l'erreur 1610 &quot;Une requête vers l’hôte: {xxx} a échoué&quot; est générée. Vous pouvez intercepter cette erreur avec une méthode installée par <code>ON ERR CALL</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="dataclassname"></a><a href="#dataclassname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>.dataclassName</em></h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -248,7 +248,7 @@
 <p></details></p>
 <p><strong><em>.dataclassName</em></strong> : 4D.DataClass</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>Each dataclass in a datastore is available as a property of the <a href="/docs/fr/ORDA/dsmapping.html#datastore">DataStore object</a>data. The returned object contains a description of the dataclass.</p>
+<p>Chaque dataclass d'un datastore est disponible en tant que propriété de l'objet <a href="/docs/fr/ORDA/dsmapping.html#datastore">DataStore</a>. L'objet retourné contient la description de la dataclass.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.Employee<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$sel </span>: cs.EmployeeSelection
@@ -274,11 +274,11 @@
 | ---------- | ---- |::| --------------------------- |
 |            |      |  | Ne requiert aucun paramètre |</p>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.cancelTransaction()</code> function cancels the transaction opened by the <a href="#starttransaction"><code>.startTransaction()</code></a> function at the corresponding level in the current process for the specified datastore.</p>
-<p>The <code>.cancelTransaction()</code> function cancels any changes made to the data during the transaction.</p>
-<p>You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the <a href="#validatetransactions"><code>.validateTransaction()</code></a> function.</p>
+<p>La fonction <code>.cancelTransaction()</code> annule la transaction ouverte par la fonction <a href="#starttransaction"><code>.startTransaction()</code></a> au niveau correspondant dans le process courant du datastore spécifié.</p>
+<p>La fonction <code>.cancelTransaction()</code> annule toutes les modifications apportées aux données durant la transaction.</p>
+<p>Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction <a href="#validatetransactions"><code>.validateTransaction()</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>See example for the <a href="#starttransaction"><code>.startTransaction()</code></a> function.</p>
+<p>Voir l'exemple de la fonction <a href="#starttransaction"><code>.startTransaction()</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="encryptionstatus"></a><a href="#encryptionstatus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.encryptionStatus()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -296,39 +296,39 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Information about the encryption of the current datastore and of each table</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Informations sur le chiffrement du datastore courant et de chaque table</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.encryptionStatus()</code> function returns an object providing the encryption status for the current data file (i.e., the data file of the <code>ds</code> datastore). The status for each table is also provided.</p>
+<p>La fonction <code>.encryptionStatus()</code> retourne un objet qui fournit le statut de chiffrement du fichier de données courant (i.e., le fichier de données du datastore <code>ds</code>). Le statut de chiffrement pour chaque table est également fourni.</p>
 <blockquote>
 <p>Utilisez la commande <code>Data file encryption status</code> pour déterminer l'état de cryptage de tout autre fichier de données.</p>
 </blockquote>
 <p><strong>Valeur retournée</strong></p>
-<p>The returned object contains the following properties:</p>
+<p>L'objet retourné contient les propriétés suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th></th><th></th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>isEncrypted</td><td></td><td></td><td>Boolean</td><td>True if the data file is encrypted</td></tr>
-<tr><td>keyProvided</td><td></td><td></td><td>Boolean</td><td>True if the encryption key matching the encrypted data file is provided(*).</td></tr>
-<tr><td>tables</td><td></td><td></td><td>Object</td><td>Object containing as many properties as there are encryptable or encrypted tables.</td></tr>
-<tr><td></td><td><em>tableName</em></td><td></td><td>Object</td><td>Encryptable or Encrypted table</td></tr>
-<tr><td></td><td></td><td>name</td><td>Text</td><td>Name of the table</td></tr>
-<tr><td></td><td></td><td>num</td><td>Number</td><td>Table number</td></tr>
-<tr><td></td><td></td><td>isEncryptable</td><td>Boolean</td><td>True if the table is declared encryptable in the structure file</td></tr>
-<tr><td></td><td></td><td>isEncrypted</td><td>Boolean</td><td>True if the records of the table are encrypted in the data file</td></tr>
+<tr><td>isEncrypted</td><td></td><td></td><td>Boolean</td><td>Vrai si le fichier de données est chiffré</td></tr>
+<tr><td>keyProvided</td><td></td><td></td><td>Boolean</td><td>Vrai si la clé de chiffrement correspondant au fichier de données chiffré est fournie(*).</td></tr>
+<tr><td>tables</td><td></td><td></td><td>Object</td><td>Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.</td></tr>
+<tr><td></td><td><em>tableName</em></td><td></td><td>Object</td><td>Table chiffrable ou chiffrée</td></tr>
+<tr><td></td><td></td><td>name</td><td>Text</td><td>Nom de la table</td></tr>
+<tr><td></td><td></td><td>num</td><td>Number</td><td>Numéro de la table</td></tr>
+<tr><td></td><td></td><td>isEncryptable</td><td>Boolean</td><td>Vrai si la table est déclarée chiffrable dans le fichier de structure</td></tr>
+<tr><td></td><td></td><td>isEncrypted</td><td>Boolean</td><td>Vrai si les enregistrements de la table sont chiffrés dans le fichier de données</td></tr>
 </tbody>
 </table>
-<p>(*) The encryption key can be provided:</p>
+<p>(*) La clé de chiffrement peut être fournie :</p>
 <ul>
-<li>with the <code>.provideDataKey()</code> command,</li>
-<li>at the root of a connected device before opening the datastore,</li>
-<li>with the <code>Discover data key</code> command.</li>
+<li>via la fonction <code>.provideDataKey()</code>,</li>
+<li>à la racine d'un appareil connecté avant l'ouverture du datastore,</li>
+<li>via la commande <code>Discover data key</code>.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-5"></a><a href="#exemple-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>You want to know the number of encrypted tables in the current data file:</p>
+<p>Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de données courant :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object
 
  <span class="hljs-variable">$status</span>:=dataStore.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
@@ -341,7 +341,7 @@
           <span class="hljs-variable">$vcount</span>:=<span class="hljs-variable">$vcount</span>+<span class="hljs-number">1</span><span class="hljs-keyword">
        End if</span><span class="hljs-keyword">
     End for each</span>
-<span class="hljs-function">    ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$vcount</span>)+<span class="hljs-string">" encrypted table(s) in this datastore."</span>)<span class="hljs-keyword">
+<span class="hljs-function">    ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$vcount</span>)+<span class="hljs-string">" table(s) chiffrée(s) dans ce datastore."</span>)<span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"This database is not encrypted."</span>)<span class="hljs-keyword">
  End if</span>
@@ -363,26 +363,26 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Datastore properties</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Propriétés du datastore</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.getInfo()</code> function returns an object providing information about the datastore. Cette fonction est utile pour l'écriture de code générique.</p>
+<p>La fonction <code>.getInfo()</code> function retourne un objet qui fournit des informations sur le datastore. Cette fonction est utile pour l'écriture de code générique.</p>
 <p><strong>Objet retourné</strong></p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>type</td><td>string</td><td><li>&quot;4D&quot;: main datastore, available through ds </li><li>&quot;4D Server&quot;: remote datastore, open with Open datastore</li></td></tr>
-<tr><td>networked</td><td>boolean</td><td><li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li></td></tr>
-<tr><td>localID</td><td>text</td><td>ID of the datastore on the machine. Corresponds to the localId string given with the <code>Open datastore</code> command. Empty string (&quot;&quot;) for main datastore.</td></tr>
-<tr><td>connection</td><td>object</td><td>Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + &quot;:&quot; + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table></td></tr>
+<tr><td>type</td><td>string</td><td><li>&quot;4D&quot; : datastore principal, disponible via ds </li><li>&quot;4D Server&quot; : datastore distant ouvert avec Open datastore</li></td></tr>
+<tr><td>networked</td><td>boolean</td><td><li>Vrai : le datastore est accessible via une connexion réseau.</li><li>Faux : le datastore n'est pas accessible via une connexion réseau (base locale)</li></td></tr>
+<tr><td>localID</td><td>text</td><td>Identifiant du datastore sur la machine. Correspond à la chaîne localID donnée avec la commande <code>Open datastore</code>. Chaîne vide (&quot;&quot;) pour le datastore principal.</td></tr>
+<tr><td>connection</td><td>object</td><td>Objet décrivant la connexion au datastore distant (non retourné pour le datastore principal). Propriétés disponibles :<p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>Adresse IP ou nom du datastore distant + &quot;:&quot; + numéro de port</td></tr><tr><td>tls</td><td>boolean</td><td>Vrai si une connexion sécurisée est utilisée avec le datastore distant</td></tr><tr><td>idleTimeout</td><td>number</td><td>Delai d'inactivité autorisé de la session (en minutes)</td></tr><tr><td>user</td><td>text</td><td>Utilisateur authentifié sur le datastore distant</td></tr></table></td></tr>
 </tbody>
 </table>
 <ul>
-<li>If the <code>.getInfo()</code> function is executed on a 4D Server or 4D single-user, <code>networked</code> is False.</li>
-<li>If the <code>.getInfo()</code> function is executed on a remote 4D, <code>networked</code> is True</li>
+<li>Si la fonction <code>.getInfo()</code> est exécutée sur un 4D Server ou un 4D monoposte, <code>networked</code> est Faux.</li>
+<li>Si la fonction <code>.getInfo()</code> est exécutée sur un 4D distant, <code>networked</code> est Vrai</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$info </span>: Object
@@ -394,7 +394,7 @@
   <span class="hljs-comment">//{"type":"4D","networked":true,"localID":""}</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-2"></a><a href="#exemple-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
-<p>On a remote datastore:</p>
+<p>Sur un datastore distant :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore<span class="hljs-keyword">
   var</span> <span class="hljs-variable">$info</span>; <span class="hljs-variable">$connectTo </span>: Object
 
@@ -424,17 +424,17 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of objects, where each object describes a request</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'objets décrivant les requêtes</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.getRequestLog()</code> function returns the ORDA requests logged in memory on the client side. The ORDA request logging must have previously been enabled using the <a href="#startrequestlog"><code>.startRequestLog()</code></a> function.</p>
-<p>This function must be called on a remote 4D, otherwise it returns an empty collection. It is designed for debugging purposes in client/server configurations.</p>
+<p>La fonction <code>.getRequestLog()</code> retourne les requêtes ORDA enregistrées en mémoire sur le poste client. L'enregistrement des requêtes ORDA doit avoir été préalablement activé à l'aide de la fonction <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
+<p>Cette fonction doit être appelée sur un client 4D distant, sinon elle retourne une collection vide. Elle est conçue à des fins de débogage dans les configurations client/serveur.</p>
 <p><strong>Valeur retournée</strong></p>
-<p>Collection of stacked request objects. The most recent request has index 0.</p>
-<p>For a description of the ORDA request log format, please refer to the <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a> section.</p>
+<p>Collection d'objets requête empilés. La requête la plus récente porte l'indice 0.</p>
+<p>Pour plus de détails sur le format d'enregistrement des requêtes ORDA, veuillez consulter la section <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-6"></a><a href="#exemple-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>See Example 2 of <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
+<p>Voir l'exemple 2 de <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="isadminprotected"></a><a href="#isadminprotected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isAdminProtected()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -452,13 +452,13 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>True if the Data Explorer access is disabled, False if it is enabled (default)</td></tr>
+<tr><td>Résultat</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>Vrai si l'accès au Data Explorer est désactivé, Faux s'il est activé (défaut)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.isAdminProtected()</code> function returns <code>True</code> if <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> access has been disabled for the working session.</p>
-<p>By default, the Data Explorer access is granted for <code>webAdmin</code> sessions, but it can be disabled to prevent any data access from administrators (see the <a href="#setadminprotection"><code>.setAdminProtection()</code></a> function).</p>
-<h4><a class="anchor" aria-hidden="true" id="voir-également"></a><a href="#voir-également" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir également</h4>
+<p>La fonction <code>.isAdminProtected()</code> retourne <code>Vrai</code> si l'accès au <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> est désactivé pour la session courante.</p>
+<p>Par défaut, l'accès au Data Explorer est autorisé pour les sessions <code>webAdmin</code>, mais il peut être désactivé pour empêcher que les administrateurs puissent accéder aux données (cf. fonction <a href="#setadminprotection"><code>.setAdminProtection()</code></a>).</p>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi"></a><a href="#voir-aussi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="#setadminprotection"><code>.setAdminProtection()</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="makeselectionsalterable"></a><a href="#makeselectionsalterable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.makeSelectionsAlterable()</h2>
 <p><details><summary>Historique</summary></p>
@@ -476,8 +476,8 @@
 | ---------- | ---- |::| --------------------------- |
 |            |      |  | Ne requiert aucun paramètre |</p>
 <h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.makeSelectionsAlterable()</code> function sets all entity selections as alterable by default in the current application datastores (including <a href="/docs/fr/ORDA/datastores.html">remote datastores</a>). It is intended to be used once, for example in the <code>On Startup</code> database method.</p>
-<p>When this function is not called, new entity selections can be shareable, depending on the nature of their &quot;parent&quot;, or <a href="/docs/fr/ORDA/entities.html#shareable-or-non-shareable-entity-selections">how they are created</a>.</p>
+<p>La fonction <code>.makeSelectionsAlterable()</code> définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application (y compris les <a href="/docs/fr/ORDA/datastores.html">datastores distants</a>). Elle est destinée à être appelée une fois, par exemple dans la méthode base <code>On Startup</code>.</p>
+<p>Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités peuvent être partageables, selon la nature de leur &quot;parent&quot; ou la façon dont elles sont créées (voir la section <a href="/docs/fr/ORDA/entities.html#entity-selections-partageables-et-non-partageables">Entity selections partageables et non partageables</a>).</p>
 <blockquote>
 <p>Cette fonction ne modifie pas les sélections d'entités créées par <a href="#copy"><code>.copy(</code></a>) ou <code>OB Copy</code> lorsque l'option explicite <code>ck shared</code> est utilisée.</p>
 </blockquote>
@@ -501,44 +501,44 @@
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>curPassPhrase</td><td>Text</td><td>-&gt;</td><td>Current encryption passphrase</td></tr>
-<tr><td>curDataKey</td><td>Object</td><td>-&gt;</td><td>Current data encryption key</td></tr>
-<tr><td>Résultat</td><td>Object</td><td>&lt;-</td><td>Result of the encryption key matching</td></tr>
+<tr><td>curPassPhrase</td><td>Text</td><td>-&gt;</td><td>Phrase secrète courante</td></tr>
+<tr><td>curDataKey</td><td>Object</td><td>-&gt;</td><td>Clé de chiffrement des données courante</td></tr>
+<tr><td>Résultat</td><td>Object</td><td>&lt;-</td><td>Résultat de la mise en correspondance de la clé de chiffrement</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.provideDataKey()</code> function allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data. This function can be used when opening an encrypted database, or when executing any encryption operation that requires the encryption key, such as re-encrypting the data file.</p>
+<p>La fonction <code>.provideDataKey()</code> permet de fournir une clé de chiffrement des données pour le fichier de données courant du datastore et détecte si la clé correspond aux données chiffrées. Cette fonction peut être utilisée à l'ouverture d'une base chiffrée, ou à l'exécution de n'importe quelle opération de chiffrement qui nécessite la clé de chiffrement, telle que le re-chiffrement du fichier de données.</p>
 <blockquote>
 <ul>
 <li>La fonction <code>.provideDataKey()</code> doit être appelée dans une base de données chiffrée. Si elle est appelée dans une base de données non chiffrée, l'erreur 2003 (la clé de cryptage ne correspond pas aux données.) est retournée. Utilisez la commande <code>Data file encryption status</code> pour déterminer si la base de données est chiffrée.</li>
 <li>La fonction <code>.provideDataKey()</code> ne peut pas être appelée depuis un 4D distant ou un datastore distant chiffré.</li>
 </ul>
 </blockquote>
-<p>If you use the <em>curPassPhrase</em> parameter, pass the string used to generate the data encryption key. When you use this parameter, an encryption key is generated.</p>
-<p>If you use the <em>curDataKey</em> parameter, pass an object (with <em>encodedKey</em> property) that contains the data encryption key. This key may have been generated with the <code>New data key</code> command.</p>
-<p>If a valid data encryption key is provided, it is added to the <em>keyChain</em> in memory and the encryption mode is enabled:</p>
+<p>Si vous utilisez le paramètre <em>curPassPhrase</em>, passez la chaîne utilisée pour générer la clé de chiffrement des données. Lorsque vous utilisez ce paramètre, une clé de chiffrement est générée.</p>
+<p>Si vous utilisez le paramètre <em>curDataKey</em>, passez un objet (avec la propriété <em>encodedKey</em>) contenant la clé de chiffrement des données. Cette clé peut avoir été générée à l'aide de la commande <code>New data key</code>.</p>
+<p>Si une clé de chiffrement des données valide est fournie, elle est ajoutée à la <em>keyChain</em> dans la mémoire et le mode chiffrement est activé :</p>
 <ul>
-<li>all data modifications in encryptable tables are encrypted on disk (.4DD, .journal. 4Dindx files)</li>
-<li>all data loaded from encryptable tables is decrypted in memory</li>
+<li>toutes les modifications de données apportées dans les tables chiffrables sont chiffrées sur le disque (fichiers .4DD, .journal,  . 4Dindx).</li>
+<li>toutes les données chargées à partir de tables chiffrables sont déchiffrées dans la mémoire</li>
 </ul>
 <p><strong>Résultat</strong></p>
-<p>The result of the command is described in the returned object:</p>
+<p>Le résultat de la commande est décrit dans l'objet retourné :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th></th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Boolean</td><td>True if the provided encryption key matches the encrypted data, False otherwise</td></tr>
-<tr><td></td><td></td><td></td><td>Properties below are returned only if success is <em>FALSE</em></td></tr>
-<tr><td>status</td><td></td><td>Number</td><td>Error code (4 if the provided encryption key is wrong)</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>Vrai si la clé de chiffrement fournie correspond aux données chiffrées, sinon Faux</td></tr>
+<tr><td></td><td></td><td></td><td>Les propriétés ci-dessous sont retournées uniquement si success est à <em>Faux</em></td></tr>
+<tr><td>status</td><td></td><td>Number</td><td>Code d'erreur (4 si la clé de chiffrement fournie est erronée)</td></tr>
 <tr><td>statusText</td><td></td><td>Text</td><td>Message d'erreur</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>Stack of errors. The first error has the highest index</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>Text</td><td>Internal component name</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>Number</td><td>Error number</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pile d'erreurs. La première erreur possède l'indice le plus élevé.</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>Text</td><td>Nom du composant interne</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>Number</td><td>Numéro de l'erreur</td></tr>
 <tr><td></td><td>[ ].message</td><td>Text</td><td>Message d'erreur</td></tr>
 </tbody>
 </table>
-<p>If no <em>curPassphrase</em> or <em>curDataKey</em> is given, <code>.provideDataKey()</code> returns <strong>null</strong> (no error is generated).</p>
+<p>Si aucun paramètre <em>curPassphrase</em> ou <em>curDataKey</em> n'est fourni, <code>.provideDataKey()</code> retourne <strong>null</strong> (aucune erreur n'est générée).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$keyStatus </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$passphrase </span>: Text
@@ -570,15 +570,15 @@
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>status</td><td>Boolean</td><td>-&gt;</td><td>True to disable Data Explorer access to data on the <code>webAdmin</code> port, False (default) to grant access</td></tr>
+<tr><td>status</td><td>Boolean</td><td>-&gt;</td><td>Vrai pour désactiver l'accès au Data Explorer sur le port <code>webAdmin</code>, Faux (défaut) pour permettre l'accès</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.setAdminProtection()</code> function allows disabling any data access on the <a href="/docs/fr/Admin/webAdmin.html#http-port">web admin port</a>, including for the <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> in <code>WebAdmin</code> sessions.</p>
-<p>By default when the function is not called, access to data is always granted on the web administration port for a session with <code>WebAdmin</code> privilege using the Data Explorer. In some configurations, for example when the application server is hosted on a third-party machine, you might not want the administrator to be able to view your data, although they can edit the server configuration, including the <a href="/docs/fr/Admin/webAdmin.html#access-key">access key</a> settings.</p>
-<p>In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the <code>WebAdmin</code> privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted.</p>
+<p>La fonction <code>.setAdminProtection()</code> permet de désactiver tout accès aux données sur le <a href="/docs/fr/Admin/webAdmin.html#http-port">port web admin</a>, y compris via le <a href="/docs/fr/Admin/dataExplorer.html">Data Explorer</a> dans les sessions <code>WebAdmin</code>.</p>
+<p>Par défaut lorsque la fonction n'est pas appelée, l'accès aux données est possible via le Data Explorer sur le port d'administration web pour une session avec le privilège <code>WebAdmin</code> . Dans certaines configurations, par exemple lorsque le serveur d'application est hébergé sur la machine d'un prestataire de service, vous pouvez souhaiter que l'administrateur ne puisse pas visualiser vos données, même s'il peut accéder à la configuration du serveur, y compris au paramétrage de l'<a href="/docs/fr/Admin/webAdmin.html#access-key">access key</a>.</p>
+<p>Dans ce cas, vous pouvez appeler cette fonction pour désactiver l'accès aux données depuis le Data Explorer sur le port web admin de la machine, même pour les sessions utilisateurs ayant le privilège <code>WebAdmin</code>. Lorsque cette fonction est exécutée, le fichier de données est immédiatement protégé et le statut est sauvegardé sur disque : le fichier de données sera protégé même si l'application est redémarrée.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-8"></a><a href="#exemple-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>You create a <em>protectDataFile</em> project method to call before deployments for example:</p>
+<p>Vous créez une méthode projet <em>protectDataFile</em> à appeler par exemple avant le déploiement :</p>
 <pre><code class="hljs css language-4d"> ds.<span class="hljs-function">setAdminProtection</span>(<span class="hljs-literal">True</span>) <span class="hljs-comment">//Désactive l'accès aux données de l'Explorateur de données</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also"></a><a href="#see-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -601,26 +601,26 @@
 </thead>
 <tbody>
 <tr><td>file</td><td>4D.File</td><td>-&gt;</td><td>Objet File</td></tr>
-<tr><td>reqNum</td><td>Integer</td><td>-&gt;</td><td>Number of requests to keep in memory</td></tr>
+<tr><td>reqNum</td><td>Integer</td><td>-&gt;</td><td>Nombre de requêtes à conserver en mémoire</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.startRequestLog()</code> function starts the logging of ORDA requests on the client side.</p>
-<p>This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.</p>
-<p>The ORDA request log can be sent to a file or to memory, depending on the parameter type:</p>
+<p>La fonction <code>.startRequestLog()</code> function lance l'enregistrement des requêtes ORDA sur le poste client.</p>
+<p>Cette fonction doit être appelée sur un 4D distant, sinon elle ne fait rien. Elle est conçue à des fins de débogage dans les configurations client/serveur.</p>
+<p>L'enregistrement des requêtes ORDA peut être effectué dans un fichier ou dans la mémoire, en fonction du type de paramètre :</p>
 <ul>
-<li>If you passed a <em>file</em> object created with the <code>File</code> command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it. If <code>.startRequestLog( )</code> is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.</li>
+<li>Si vous avez passé un objet <em>file</em> créé à l'aide de la commande <code>File</code>, les données de l'enregistrement sont écrites dans ce fichier sous forme de collection d'objets (format JSON). Chaque objet représente une requête.<br>Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées. Si la fonction <code>.startRequestLog( )</code> est appelée avec un fichier alors qu'un enregistrement des requêtes est déjà en cours en mémoire, l'enregistrement en mémoire est stoppé et vidé.</li>
 </ul>
 <blockquote>
-<p>A ] character must be manually appended at the end of the file to perform a JSON validation</p>
+<p>Un caractère ] doit être ajouté manuellement à la fin du fichier pour effectuer une validation JSON</p>
 </blockquote>
 <ul>
-<li><p>If you passed a <em>reqNum</em> integer, the log in memory is emptied (if any) and a new log is initialized. It will keep <em>reqNum</em> requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br>If <code>.startRequestLog()</code> is called with a <em>reqNum</em> while a logging was previously started in a file, the file logging is stopped.</p></li>
-<li><p>If you did not pass any parameter, the log is started in memory. If <code>.startRequestLog()</code> was previously called with a <em>reqNum</em> (before a <code>.stopRequestLog()</code>), the log data is stacked in memory until the next time the log is emptied or <code>.stopRequestLog()</code> is called.</p></li>
+<li><p>Si vous avez passé un numéro <em>reqNum</em>, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Il gardera en mémoire les requêtes jusqu'à atteindre le nombre <em>reqNum</em>, auquel cas les entrées précédentes sont vidées (pile FIFO).<br>Si la fonction <code>.startRequestLog()</code> est appelée avec un <em>reqNum</em> alors qu'un enregistrement des requêtes dans un fichier est déjà en cours, l'enregistrement dans le fichier est stoppé.</p></li>
+<li><p>Si vous n'avez passé aucun paramètre, l'enregistrement est lancé dans la mémoire. Si <code>.startRequestLog()</code> a été préalablement appelée avec un <em>reqNum</em> (avant un <code>.stopRequestLog()</code>), les données enregistrées sont empilées dans la mémoire jusqu'au prochain vidage ou appel de <code>.stopRequestLog()</code>.</p></li>
 </ul>
-<p>For a description of the ORDA request log format, please refer to the <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a> section.</p>
+<p>Pour plus de détails sur le format d'enregistrement des requêtes ORDA, veuillez consulter la section <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>You want to log ORDA client requests in a file and use the log sequence number:</p>
+<p>Vous souhaitez enregistrer des requêtes ORDA clientes dans un fichier et utiliser le numéro de séquence de l'enregistrement :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$file </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$e </span>: cs.PersonsEntity
 
@@ -633,7 +633,7 @@
 <span class="hljs-function"> SET DATABASE PARAMETER</span>(Client Log Recording;<span class="hljs-number">0</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-3"></a><a href="#exemple-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
-<p>You want to log ORDA client requests in memory:</p>
+<p>Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.PersonsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$log </span>: Collection
 
@@ -662,11 +662,11 @@
 | ---------- | ---- |  | --------------------------- |
 |            |      |  | Ne requiert aucun paramètre |</p>
 <h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.startTransaction()</code> function starts a transaction in the current process on the database matching the datastore to which it applies. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.</p>
+<p>La fonction <code>.startTransaction()</code> démarre une transaction dans le process courant sur la base de données du datastore. Toute modification apportée aux entités du datastore dans le process de la transaction est temporairement stockée jusqu'à ce que la transaction soit validée ou annulée.</p>
 <blockquote>
 <p>Si cette méthode est appelée sur le datastore principal (c'est-à-dire le datastore retourné par la commande <code>ds</code>), la transaction est appliquée à toutes les opérations effectuées sur le datastore principal et sur la base de données sous-jacente, incluant donc le langage ORDA et le langage classique.</p>
 </blockquote>
-<p>You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the <code>.validateTransaction()</code> function.</p>
+<p>Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transaction ou sous-transaction doit être annulée ou validée. A noter que si la transaction principale est annulée, toutes ses sous-transactions le sont également, même si elles avaient été validées individuellement à l'aide de la fonction <code>.validateTransaction()</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connect</span>; <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$person </span>: cs.PersonsEntity<span class="hljs-keyword">
@@ -713,10 +713,10 @@
 | ---------- | ---- |  | --------------------------- |
 |            |      |  | Ne requiert aucun paramètre |</p>
 <h4><a class="anchor" aria-hidden="true" id="description-13"></a><a href="#description-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.stopRequestLog()</code> function stops any logging of ORDA requests on the client side (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk.</p>
-<p>This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.</p>
+<p>La fonction <code>.stopRequestLog()</code> stoppe tout enregistrement des requêtes ORDA sur le poste client (dans un fichier ou dans la mémoire). Elle est particulièrement utile en cas d'enregistrement dans un fichier, étant donné qu'elle ferme le document ouvert sur le disque.</p>
+<p>Cette fonction doit être appelée sur un 4D distant, sinon elle ne fait rien. Elle est conçue à des fins de débogage dans les configurations client/serveur.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-10"></a><a href="#exemple-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>See examples for <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
+<p>Voir les exemples de <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="validatetransaction"></a><a href="#validatetransaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.validateTransaction()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -733,11 +733,11 @@
 | ---------- | ---- |  | --------------------------- |
 |            |      |  | Ne requiert aucun paramètre |</p>
 <h4><a class="anchor" aria-hidden="true" id="description-14"></a><a href="#description-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.validateTransaction()</code> function accepts the transaction that was started with <a href="#starttransaction"><code>.startTransaction()</code></a> at the corresponding level on the specified datastore.</p>
-<p>The function saves the changes to the data on the datastore that occurred during the transaction.</p>
-<p>You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.</p>
+<p>La fonction <code>.validateTransaction()</code> valide la transaction démarrée avec <a href="#starttransaction"><code>.startTransaction()</code></a>au niveau correspondant dans le datastore.</p>
+<p>La fonction sauvegarde les modifications apportées aux données sur le datastore durant la transaction.</p>
+<p>Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de cette fonction.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-11"></a><a href="#exemple-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>See example for <a href="#starttransaction"><code>.startTransaction()</code></a>.</p>
+<p>Voir l'exemple de <a href="#starttransaction"><code>.startTransaction()</code></a>.</p>
 <style> h2 { background: #d9ebff;}</style>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/DataClassAttributeClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClassAttribute</span></a><a class="docs-next button" href="/docs/fr/API/EmailObjectClass.html"><span>Email</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ds">ds</a></li><li><a href="#open-datastore">Open datastore</a></li><li><a href="#dataclassname"><em>.dataclassName</em></a></li><li><a href="#canceltransaction">.cancelTransaction()</a></li><li><a href="#encryptionstatus">.encryptionStatus()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#getrequestlog">.getRequestLog()</a></li><li><a href="#isadminprotected">.isAdminProtected()</a></li><li><a href="#makeselectionsalterable">.makeSelectionsAlterable()</a></li><li><a href="#providedatakey">.provideDataKey()</a></li><li><a href="#setadminprotection">.setAdminProtection()</a></li><li><a href="#startrequestlog">.startRequestLog()</a></li><li><a href="#starttransaction">.startTransaction()</a></li><li><a href="#stoprequestlog">.stopRequestLog()</a></li><li><a href="#validatetransaction">.validateTransaction()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

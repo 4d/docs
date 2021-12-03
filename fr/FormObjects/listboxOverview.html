@@ -733,7 +733,7 @@
 <tbody>
 <tr><td>Texte</td><td>text input</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
 <tr><td>réel</td><td>controlled text input (numbers and separators)</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
-<tr><td>integer</td><td>controlled text input (numbers only)</td><td>drop-down menu (required list) or combo box (choice list) or three-states check box</td></tr>
+<tr><td>entier</td><td>controlled text input (numbers only)</td><td>drop-down menu (required list) or combo box (choice list) or three-states check box</td></tr>
 <tr><td>boolean</td><td>check box</td><td>drop-down menu (required list)</td></tr>
 <tr><td>color</td><td>background color</td><td>Texte</td></tr>
 <tr><td>event</td><td>button with label</td><td></td></tr>
@@ -751,7 +751,7 @@
 <tr><td>Texte</td><td>same as defined in object</td><td>any (no control)</td></tr>
 <tr><td>réel</td><td>same as defined in object (using system decimal separator)</td><td>&quot;0-9&quot; and &quot;.&quot; and &quot;-&quot;</td></tr>
 <tr><td></td><td></td><td>&quot;0-9&quot; and &quot;.&quot; if min&gt;=0</td></tr>
-<tr><td>integer</td><td>same as defined in object</td><td>&quot;0-9&quot; and &quot;-&quot;</td></tr>
+<tr><td>entier</td><td>same as defined in object</td><td>&quot;0-9&quot; and &quot;-&quot;</td></tr>
 <tr><td></td><td></td><td>&quot;0-9&quot; if min&gt;=0</td></tr>
 <tr><td>Booléen</td><td>check box</td><td>N/A</td></tr>
 <tr><td>color</td><td>N/A</td><td>N/A</td></tr>
@@ -763,7 +763,7 @@
 <p>The only mandatory attribute is &quot;valueType&quot; and its supported values are &quot;text&quot;, &quot;real&quot;, &quot;integer&quot;, &quot;boolean&quot;, &quot;color&quot;, and &quot;event&quot;. The following table lists all the attributes supported in list box object arrays, depending on the &quot;valueType&quot; value (any other attributes are ignored). Display formats are detailed and examples are provided below.</p>
 <table>
 <thead>
-<tr><th></th><th>valueType</th><th>Texte</th><th>réel</th><th>integer</th><th>boolean</th><th>color</th><th>event</th></tr>
+<tr><th></th><th>valueType</th><th>Texte</th><th>réel</th><th>entier</th><th>boolean</th><th>color</th><th>event</th></tr>
 </thead>
 <tbody>
 <tr><td><em>Attributs</em></td><td><em>Description</em></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -825,7 +825,7 @@
 <tr><th>Attribut</th><th>Valeur(s) disponible(s)</th><th>valueType(s)</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>behavior</td><td>threeStates</td><td>integer</td><td>Représente une valeur numérique sous forme de case à cocher à trois états. <br>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée</td></tr>
+<tr><td>behavior</td><td>threeStates</td><td>entier</td><td>Représente une valeur numérique sous forme de case à cocher à trois états. <br>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée</td></tr>
 </tbody>
 </table>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)

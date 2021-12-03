@@ -599,8 +599,8 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R6</td><td>Support of Formula parameters</td></tr>
-<tr><td>v17 R5</td><td>Support of placeholders for values</td></tr>
+<tr><td>v17 R6</td><td>Soporte de los parámetros Formula</td></tr>
+<tr><td>v17 R5</td><td>Soporte de los marcadores para los valores</td></tr>
 <tr><td>v17</td><td>Añadidos</td></tr>
 </tbody>
 </table>
@@ -701,34 +701,34 @@
 <p>*If you use this statement, the returned entity selection is ordered (for more information, please refer to <a href="/docs/es/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">Ordered vs Unordered entity selections</a>).</p>
 </blockquote>
 <p><strong>Utilizar comillas</strong></p>
-<p>When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes &quot; &quot; to enclose the whole query, otherwise an error is returned. Por ejemplo:</p>
+<p>Cuando utilice comillas dentro de las consultas, debe utilizar comillas simples ' ' dentro de la consulta y comillas dobles &quot; &quot; para encerrar toda la consulta, de lo contrario se devuelve un error. Por ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-string">"employee.name = 'smith' AND employee.firstname = 'john'"</span>
 </code></pre>
 <blockquote>
-<p>Single quotes (') are not supported in searched values since they would break the query string. For example &quot;comp.name = 'John's pizza' &quot; will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).</p>
+<p>Las comillas simples (') no se admiten en los valores buscados, ya que romperían la cadena de búsqueda. Por ejemplo, &quot;comp.name = 'John's pizza' &quot; generará un error. Si necesita buscar en valores con comillas simples, puede considerar el uso de marcadores de posición (ver más abajo).</p>
 </blockquote>
 <p><strong>Uso del paréntesis</strong></p>
-<p>You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:</p>
+<p>Puede utilizar paréntesis en la búsqueda para dar prioridad al cálculo. Por ejemplo, puede organizar una búsqueda de la siguiente manera:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-string">"(employee.age &gt;= 30 OR employee.age &lt;= 65) AND (employee.salary &lt;= 10000 OR employee.status = 'Manager')"</span>
 </code></pre>
 <p><strong>Uso de marcadores de posición</strong></p>
-<p>4D allows you to use placeholders for <em>attributePath</em>, <em>formula</em> and <em>value</em> arguments within the <em>queryString</em> parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.</p>
-<p>Two types of placeholders can be used: <strong>indexed placeholders</strong> and <strong>named placeholders</strong>:</p>
+<p>4D le permite utilizar marcadores para los argumentos <em>attributePath</em>, <em>formula</em> y <em>value</em> dentro del parámetro <em>queryString</em>. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda consulta. El valor de los marcadores se evalúa una vez al principio de la búsqueda; no se evalúa para cada elemento.</p>
+<p>Se pueden utilizar dos tipos de marcadores: <strong>indexed placeholders</strong> y los <strong>named placeholders</strong>:</p>
 <table>
 <thead>
 <tr><th>-</th><th>Marcadores de posición indexados</th><th>Nombre del marcador de posición</th></tr>
 </thead>
 <tbody>
-<tr><td>Definición</td><td>Parameters are inserted as :paramIndex (for example :1, :2...) in queryString and their corresponding values are provided by the sequence of value parameter(s). You can use up to 128 value parameters</td><td>Parameters are inserted as :paramName (for example :myparam) and their values are provided in the attributes and/or parameters objects in the querySettings parameter</td></tr>
+<tr><td>Definición</td><td>Los parámetros se insertan como :paramIndex (por ejemplo :1, :2...) en queryString y sus valores correspondientes son suministrados por la secuencia de parámetros value. Puede utilizar hasta 128 parámetros de valor</td><td>Los parámetros se insertan como: paramName (por ejemplo :myparam) y sus valores se proporcionan en los atributos y/o objetos de parámetros en el parámetro querySettings</td></tr>
 <tr><td>Ejemplo</td><td>$r:=class.query(&quot;:1=:2&quot;;&quot;city&quot;;&quot;Chicago&quot;)</td><td>$o.attributes:=New object(&quot;att&quot;;&quot;city&quot;)<br> $o.parameters:=New object(&quot;name&quot;;&quot;Chicago&quot;)<br> $r:=class.query(&quot;:att=:name&quot;;$o)</td></tr>
 </tbody>
 </table>
-<p>You can mix all argument kinds in <em>queryString</em>. A <em>queryString</em> can contain, for <em>attributePath</em>, <em>formula</em> and <em>value</em> parameters:</p>
+<p>Puede mezclar todos los tipos de argumentos en <em>queryString</em>. Una <em>queryString</em> puede contener, para los parámetros <em>attributePath</em>, <em>formula</em> y <em>value</em>:</p>
 <ul>
 <li>direct values (no placeholders),</li>
 <li>indexed placeholders and/or named placeholders.</li>
 </ul>
-<p><strong>Using placeholders in queries is recommended</strong> for the following reasons:</p>
+<p><strong>Se recomienda utilizar marcadores de posición en las consultas</strong> por las siguientes razones:</p>
 <ol>
 <li><p>It prevents malicious code insertion: if you directly use user-filled variables within the query string, a user could modifiy the query conditions by entering additional query arguments. For example, imagine a query string like:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vquery</span>:=<span class="hljs-string">"status = 'public' &amp; name = "</span>+myname <span class="hljs-comment">//user enters their name</span>
@@ -746,14 +746,14 @@
 </code></pre></li>
 </ol>
 <p><strong>Búsqueda de valores null</strong></p>
-<p>When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:</p>
+<p>Cuando se buscan valores null, no se puede utilizar la sintaxis de marcador de posición porque el motor de búsqueda considera null como un valor de comparación invalido. Por ejemplo, si ejecuta la siguiente búsqueda:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vSingles</span>:=ds.Person.<span class="hljs-function">query</span>(<span class="hljs-string">"spouse = :1"</span>;<span class="hljs-literal">Null</span>) <span class="hljs-comment">// NO funcionará</span>
 </code></pre>
-<p>You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:</p>
+<p>No obtendrá el resultado esperado porque el valor null será evaluado por 4D como un error resultante de la evaluación del parámetro (por ejemplo, un atributo procedente de otra búsqueda). Para este tipo de búsquedas, debe utilizar la sintaxis de búsqueda directa:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vSingles</span>:=ds.Person.<span class="hljs-function">query</span>(<span class="hljs-string">"spouse = null"</span>) <span class="hljs-comment">// Sintaxis correcta</span>
 </code></pre>
-<p><strong>Linking collection attribute query arguments</strong></p>
-<p>When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.</p>
+<p><strong>Vinculación de los argumentos de búsqueda y los atributos de colección</strong></p>
+<p>Al buscar en colecciones dentro de los atributos de los objetos utilizando múltiples argumentos de búsqueda unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelven las entidades que contienen elementos que coinciden con todos los argumentos, y no las entidades en las que los argumentos pueden encontrarse en diferentes elementos. Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados.</p>
 <p>Por ejemplo, con las dos entidades siguientes:</p>
 <pre><code class="hljs">Entity <span class="hljs-number">1</span>:
 ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.name</span>: <span class="hljs-string">"martin"</span>
@@ -774,22 +774,22 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
                 <span class="hljs-string">"city"</span>:<span class="hljs-string">"paris"</span> 
             } ] }
 </code></pre>
-<p>You want to find people with a &quot;home&quot; location kind in the city &quot;paris&quot;. If you write:</p>
+<p>Quiere encontrar personas con un tipo de ubicación &quot;home&quot; en la ciudad &quot;paris&quot;. Si escribe:</p>
 <pre><code class="hljs css language-4d">ds.People.<span class="hljs-function">query</span>(<span class="hljs-string">"places.locations[].kind= :1 and places.locations[].city= :2"</span>;<span class="hljs-string">"home"</span>;<span class="hljs-string">"paris"</span>)
 </code></pre>
-<p>... the query will return &quot;martin&quot; <strong>and</strong> &quot;smith&quot; because &quot;smith&quot; has a &quot;locations&quot; element whose &quot;kind&quot; is &quot;home&quot; and a &quot;locations&quot; element whose &quot;city&quot; is &quot;paris&quot;, even though they are different elements.</p>
-<p>If you want to only get entities where matching arguments are in the same collection element, you need to <strong>link arguments</strong>. To link query arguments:</p>
+<p>... la búsqueda devolverá &quot;martin&quot; <strong>y</strong> &quot;smith&quot; porque &quot;smith&quot; tiene un elemento &quot;locations&quot; cuyo &quot;tipo&quot; es &quot;home&quot; y un elemento &quot;locations&quot; cuya &quot;ciudad&quot; es &quot;paris&quot;, aunque sean elementos diferentes.</p>
+<p>Si quiere obtener sólo las entidades en las que los argumentos correspondientes están en el mismo elemento de colección, necesita <strong>enlazar los argumentos</strong>. Para enlazar los argumentos de búsqueda:</p>
 <ul>
 <li>Add a letter between the [] in the first path to link and repeat the same letter in all linked arguments. For example: <code>locations[a].city and locations[a].kind</code>. You can use any letter of the Latin alphabet (not case sensitive).</li>
 <li>To add different linked criteria in the same query, use another letter. You can create up to 26 combinations of criteria in a single query.</li>
 </ul>
-<p>With the above entities, if you write:</p>
+<p>Con las entidades anteriores, si escribe:</p>
 <pre><code class="hljs css language-4d">ds.People.<span class="hljs-function">query</span>(<span class="hljs-string">"places.locations[a].kind= :1 and places.locations[a].city= :2"</span>;<span class="hljs-string">"home"</span>;<span class="hljs-string">"paris"</span>)
 </code></pre>
-<p>... the query will only return &quot;martin&quot; because it has a &quot;locations&quot; element whose &quot;kind&quot; is &quot;home&quot; and whose &quot;city&quot; is &quot;paris&quot;. The query will not return &quot;smith&quot; because the values &quot;home&quot; and &quot;paris&quot; are not in the same collection element.</p>
+<p>... la búsqueda sólo devolverá &quot;martin&quot; porque tiene un elemento &quot;locations&quot; cuyo &quot;kind&quot; es &quot;home&quot; y cuyo &quot;city&quot; es &quot;paris&quot;. La búsqueda no devolverá &quot;smith&quot; porque los valores &quot;home&quot; y &quot;paris&quot; no están en el mismo elemento de colección.</p>
 <p><strong>parámetro formula</strong></p>
-<p>As an alternative to formula insertion within the <em>queryString</em> parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is <strong>recommended</strong> since you benefit from tokenization, and code is easier to search/read.</p>
-<p>The formula must have been created using the <code>Formula</code> or <code>Formula from string</code> command. En este caso:</p>
+<p>Como alternativa a la inserción de fórmulas dentro del parámetro <em>queryString</em> (ver arriba), puede pasar directamente un objeto fórmula como criterio de búsqueda booleano. La utilización de un objeto fórmula para las búsquedas es <strong>recomendada</strong> ya que se beneficia de la tokenización, y el código es más fácil de buscar/leer.</p>
+<p>La fórmula debe haber sido creada con el comando <code>Formula</code> o <code>Formula from string</code>. En este caso:</p>
 <ul>
 <li>the <em>formula</em> is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.</li>
 <li>within the <em>formula</em>, the entity is available through the <code>This</code> object.</li>
@@ -798,37 +798,37 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 <blockquote>
 <p>For security reasons, formula calls within <code>query(</code>) member methods can be disallowed. See <em>querySettings</em> parameter description.</p>
 </blockquote>
-<p><strong>Passing parameters to formulas</strong></p>
-<p>Any <em>formula</em> called by the <code>query()</code> class function can receive parameters:</p>
+<p><strong>Pasar parámetros a las fórmulas</strong></p>
+<p>Todo parámetro <em>formula</em> llamado por la función <code>query()</code> puede recibir parámetros:</p>
 <ul>
 <li>Parameters must be passed through the <strong>args</strong> property (object) of the <em>querySettings</em> parameter.</li>
 <li>The formula receives this <strong>args</strong> object as a <strong>$1</strong> parameter.</li>
 </ul>
-<p>This small code shows the principles of how parameter are passed to methods:</p>
+<p>Este pequeño código muestra los principios de cómo se pasan los parámetros a los métodos:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"args"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"exclude"</span>;<span class="hljs-string">"-"</span>)) <span class="hljs-comment">//args object to pass parameters</span>
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"eval(checkName($1.exclude))"</span>;<span class="hljs-variable">$settings</span>) <span class="hljs-comment">//args is received in $1</span>
 </code></pre>
-<p>Additional examples are provided in example 3.</p>
-<p><strong>4D Server</strong>: In client/server, formulas are executed on the server. In this context, only the <code>querySettings.args</code> object is sent to the formulas.</p>
-<p><strong>querySettings parameter</strong></p>
-<p>In the <em>querySettings</em> parameter, you can pass an object containing additional options. The following properties are supported:</p>
+<p>En el ejemplo 3 se ofrecen más ejemplos.</p>
+<p><strong>4D Server</strong>: en cliente/servidor, las fórmulas se ejecutan en el servidor. En este contexto, sólo se envía a las fórmulas el objeto <code>querySettings.args</code>.</p>
+<p><strong>Parámetro querySettings</strong></p>
+<p>En el parámetro <em>querySettings</em> se puede pasar un objeto que contenga opciones adicionales. The following properties are supported:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>parameters</td><td>Objeto</td><td><strong>Named placeholders for values</strong> used in the <em>queryString</em> or <em>formula</em>. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the <em>queryString</em> or <em>formula</em> (&quot;:placeholder&quot;) and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.</td></tr>
-<tr><td>attributes</td><td>Objeto</td><td><strong>Named placeholders for attribute paths</strong> used in the <em>queryString</em> or <em>formula</em>. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the <em>queryString</em> or <em>formula</em> (&quot;:placeholder&quot;), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expressed using the dot notation, e.g. &quot;name&quot; or &quot;user.address.zipCode&quot;</td></tr><tr><td>Colección de cadenas</td><td>Each string of the collection represents a level of attributePath, e.g. [&quot;name&quot;] or [&quot;user&quot;,&quot;address&quot;,&quot;zipCode&quot;]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. [&quot;4Dv17.1&quot;,&quot;en/fr&quot;]</td></tr></table>You can mix indexed placeholders (values directly passed in <em>value</em> parameters) and named placeholder values in the same query.</td></tr>
-<tr><td>args</td><td>Objeto</td><td>Parameter(s) to pass to formulas, if any. The <strong>args</strong> object will be received in $1 within formulas and thus its values will be available through <em>$1.property</em> (see example 3).</td></tr>
-<tr><td>allowFormulas</td><td>Booleano</td><td>True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and <code>query()</code> is given a formula, an error is sent (1278 - Formula not allowed in this member method).</td></tr>
-<tr><td>context</td><td>Texto</td><td>Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the <strong>Client/server optimization</strong> section.</td></tr>
-<tr><td>queryPlan</td><td>Booleano</td><td>In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. <strong>Note</strong>: This property is supported only by the <code>entitySelection.query( )</code> and <code>dataClass.query( )</code> functions.</td></tr>
-<tr><td>queryPath</td><td>Booleano</td><td>In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. <strong>Note</strong>: This property is supported only by the <code>entitySelection.query( )</code> and <code>dataClass.query( )</code> functions.</td></tr>
+<tr><td>parameters</td><td>Objeto</td><td><strong>Marcadores nombrados para los valores</strong> utilizados en <em>queryString</em> o <em>formula</em>. Los valores se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para un valor en <em>queryString</em> o <em>formula</em> (&quot;:placeholder&quot;) y valor es el valor a comparar. Puede combinar marcadores de posición indexados (valores pasados directamente en parámetros de valor) y valores de marcadores de posición con nombre en la misma búsqueda.</td></tr>
+<tr><td>attributes</td><td>Objeto</td><td><strong>Marcadores nombrados para las rutas de atributos</strong> utilizados en <em>queryString</em> o <em>formula</em>. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en <em>queryString</em> o <em>formula</em> (&quot;:placeholder&quot;) y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar un escalar o un atributo relacionado de la dataclass o una propiedad en un campo de objeto de la dataclass<p><table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>Cadena</td><td>attributePath expresado con la notación de puntos, por ejemplo: &quot;name&quot; o &quot;user.address.zipCode&quot;</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo: [&quot;name&quot;] o [&quot;user&quot;,&quot;address&quot;,&quot;zipCode&quot;]. El uso de una colección permite consultar atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, [&quot;4Dv17.1&quot;, &quot;en/fr&quot;]</td></tr></table>Puede combinar marcadores de posición indexados (valores pasados directamente en los parámetros <em>value</em>) y los valores de marcadores de posición con nombre en la misma búsqueda.</td></tr>
+<tr><td>args</td><td>Objeto</td><td>Parámetro(s) a pasar a las fórmulas, si las hay. El objeto <strong>args</strong> se recibirá en $1 dentro de las fórmulas y, por tanto, sus valores estarán disponibles a través de <em>$1.property</em> (ver ejemplo 3).</td></tr>
+<tr><td>allowFormulas</td><td>Booleano</td><td>True para permitir las llamadas de fórmulas en la búsqueda (por defecto). Pase false para desautorizar la ejecución de fórmulas. Si se establece como false y <code>query()</code> recibe una fórmula, se envía un error (1278 - Fórmula no permitida en este método miembro).</td></tr>
+<tr><td>context</td><td>Texto</td><td>Etiqueta para el contexto de optimización automática aplicado a la entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. Esta función está diseñada para el procesamiento cliente/servidor; para más información, consulte la sección <strong>Optimización cliente/servidor</strong>.</td></tr>
+<tr><td>queryPlan</td><td>Booleano</td><td>En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda justo antes de que se ejecute, es decir, la búsqueda planificada. La propiedad devuelta es un objeto que incluye cada búsqueda y sub búsqueda prevista (en el caso de una búsqueda compleja). Esta opción es útil durante la fase de desarrollo de una aplicación. Suele utilizarse junto con queryPath. Por defecto si se omite: false. <strong>Nota</strong>: esta propiedad sólo la soportan las funciones<code>entitySelection.query( )</code> y <code>dataClass.query( )</code>.</td></tr>
+<tr><td>queryPath</td><td>Booleano</td><td>En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda tal cual es realizada. La propiedad devuelta es un objeto que contiene la ruta utilizada para la búsqueda (normalmente idéntica a la de queryPlan, pero puede diferir si el motor consigue optimizar la búsqueda), así como el tiempo de procesamiento y el número de registros encontrados. Esta opción es útil durante la fase de desarrollo de una aplicación. Por defecto si se omite: false. <strong>Nota</strong>: esta propiedad sólo la soportan las funciones<code>entitySelection.query( )</code> y <code>dataClass.query( )</code>.</td></tr>
 </tbody>
 </table>
-<p><strong>About queryPlan and queryPath</strong></p>
-<p>The information recorded in <code>queryPlan</code>/<code>queryPath</code> include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.</p>
-<p>For example, if you execute the following query:</p>
+<p><strong>Sobre queryPlan y queryPath</strong></p>
+<p>La información registrada en <code>queryPlan</code>/<code>queryPath</code> incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Query paths also contain the number of entities found and the time required to execute each search criterion. Puede resultarle útil analizar esta información mientras desarrolla sus aplicaciones. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.</p>
+<p>Por ejemplo, si ejecuta la siguiente búsqueda:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt; :1 and employer.name = :2 or employer.revenues &gt; :3"</span>;\  
  <span class="hljs-number">50000</span>;<span class="hljs-string">"Lima West Kilo"</span>;<span class="hljs-number">10000000</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"queryPath"</span>;<span class="hljs-literal">True</span>;<span class="hljs-string">"queryPlan"</span>;<span class="hljs-literal">True</span>))
 </code></pre>
@@ -847,40 +847,40 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
     steps:[{steps:[{description:[index : Company.revenues ] &gt; <span class="hljs-number">10000000</span>,time:<span class="hljs-number">0</span>,recordsfounds:<span class="hljs-number">933</span>}]}]}]}]}
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-4"></a><a href="#ejemplo-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>This section provides various examples of queries.</p>
+<p>Esta sección ofrece varios ejemplos de búsquedas.</p>
 <p>Consultas en una cadena:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName = 'S@'"</span>)
 </code></pre>
-<p>Query with a NOT statement:</p>
+<p>Búsqueda con una instrucción NOT:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"not(firstName=Kim)"</span>)
 </code></pre>
 <p>Búsquedas con fechas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"birthDate &gt; :1"</span>;<span class="hljs-string">"1970-01-01"</span>)
 <span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"birthDate &lt;= :1"</span>;Current date<span class="hljs-number">-10950</span>)
 </code></pre>
-<p>Query with indexed placeholders for values:</p>
+<p>Búsqueda con marcadores de posición indexados para los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)"</span>;<span class="hljs-string">"D@"</span>;<span class="hljs-string">"R@"</span>;<span class="hljs-string">"S@"</span>;<span class="hljs-string">"K@"</span>)
 </code></pre>
-<p>Query with indexed placeholders for values on a related dataclass:</p>
+<p>Búsqueda con marcadores de posición indexados para valores en una dataclass relacionada:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1 and manager.lastName = :2"</span>;<span class="hljs-string">"M@"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
-<p>Query with indexed placeholder including a descending order by statement:</p>
+<p>Búsqueda con marcador de posición indexado que incluye una instrucción de orden descendente:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Student.<span class="hljs-function">query</span>(<span class="hljs-string">"nationality = :1 order by campus.name desc, lastname"</span>;<span class="hljs-string">"French"</span>)
 </code></pre>
-<p>Query with named placeholders for values:</p>
+<p>Búsqueda con marcadores de posición con nombre para los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$managedCustomers </span>: cs.CustomerSelection
 <span class="hljs-variable">$querySettings</span>:=New object
 <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"userId"</span>;<span class="hljs-number">1234</span>;<span class="hljs-string">"extraInfo"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>))
 <span class="hljs-variable">$managedCustomers</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"salesperson.userId = :userId and name = :extraInfo.name"</span>;<span class="hljs-variable">$querySettings</span>)
 </code></pre>
-<p>Query that uses both named and indexed placeholders for values:</p>
+<p>Búsqueda que utiliza marcadores de posición con nombre e indexados para los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$managedCustomers </span>: cs.CustomerSelection
 <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"userId"</span>;<span class="hljs-number">1234</span>)
 <span class="hljs-variable">$managedCustomers</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"salesperson.userId = :userId and name=:1"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-variable">$querySettings</span>)
 </code></pre>
-<p>Query with queryPlan and queryPath objects:</p>
+<p>Búsqueda con objetos queryPlan y queryPath:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)"</span>;<span class="hljs-string">"D@"</span>;<span class="hljs-string">"R@"</span>;<span class="hljs-string">"S@"</span>;<span class="hljs-string">"K@"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"queryPlan"</span>;<span class="hljs-literal">True</span>;<span class="hljs-string">"queryPath"</span>;<span class="hljs-literal">True</span>))
 
   <span class="hljs-comment">//you can then get these properties in the resulting entity selection</span><span class="hljs-keyword">
@@ -888,32 +888,32 @@ var</span> <span class="hljs-variable">$queryPlan</span>; <span class="hljs-vari
 <span class="hljs-variable">$queryPlan</span>:=<span class="hljs-variable">$entitySelection</span>.queryPlan
 <span class="hljs-variable">$queryPath</span>:=<span class="hljs-variable">$entitySelection</span>.queryPath
 </code></pre>
-<p>Query with an attribute path of Collection type:</p>
+<p>Búsqueda con una ruta de atributo de tipo Collection:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extraInfo.hobbies[].name = :1"</span>;<span class="hljs-string">"horsebackriding"</span>)
 </code></pre>
-<p>Query with an attribute path of Collection type and linked attributes:</p>
+<p>Búsqueda con una ruta de atributos de tipo Collection y atributos vinculados:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2"</span>;<span class="hljs-string">"horsebackriding"</span>;<span class="hljs-number">2</span>)
 </code></pre>
-<p>Query with an attribute path of Collection type and multiple linked attributes:</p>
+<p>Búsqueda con una ruta de atributos de tipo Collection y múltiples atributos vinculados:</p>
 <pre><code class="hljs css language-4d">$entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
     extraInfo.hobbies[a].level = :2 and extraInfo.hobbies[b].name = :3 and
     extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 </code></pre>
-<p>Query with an attribute path of Object type:</p>
+<p>Búsqueda con una ruta de atributo de tipo Objeto:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extra.eyeColor = :1"</span>;<span class="hljs-string">"blue"</span>)
 </code></pre>
-<p>Query with an IN statement:</p>
+<p>Búsqueda con una instrucción IN:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName in :1"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"Kim"</span>;<span class="hljs-string">"Dixie"</span>))
 </code></pre>
-<p>Query with a NOT (IN) statement:</p>
+<p>Búsqueda con instrucción NOT (IN):</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"not (firstName in :1)"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Jane"</span>))
 </code></pre>
-<p>Query with indexed placeholders for attributes:</p>
+<p>Búsqueda con marcadores de posición indexados para los atributos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
 <span class="hljs-variable">$es</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = 'Smith'"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>)
   <span class="hljs-comment">//salesperson is a related entity</span>
 </code></pre>
-<p>Query with indexed placeholders for attributes and named placeholders for values:</p>
+<p>Búsqueda con marcadores de posición indexados para los atributos y marcadores de posición con nombre para los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$querySettings </span>: Object
 <span class="hljs-variable">$querySettings</span>:=New object
@@ -921,14 +921,14 @@ var</span> <span class="hljs-variable">$querySettings </span>: Object
 <span class="hljs-variable">$es</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = :customerName"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>;<span class="hljs-variable">$querySettings</span>)
   <span class="hljs-comment">//salesperson is a related entity</span>
 </code></pre>
-<p>Query with indexed placeholders for attributes and values:</p>
+<p>Búsqueda con marcadores de posición indexados para los atributos y los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
 <span class="hljs-variable">$es</span>:=ds.Clients.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = :3"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>)
   <span class="hljs-comment">//salesperson is a related entity</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-4"></a><a href="#ejemplo-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>This section illustrates queries with named placeholders for attributes.</p>
-<p>Given an Employee dataclass with 2 entities:</p>
+<p>Esta sección ilustra las búsquedas con marcadores de posición con nombre para los atributos.</p>
+<p>Dada una dataclass Employee con 2 entidades:</p>
 <p>Entidad 1:</p>
 <pre><code class="hljs css language-4d">name: <span class="hljs-string">"Marie"</span>
 number: <span class="hljs-number">46</span>
@@ -947,7 +947,7 @@ softwares:{
 <span class="hljs-string">"Powerpoint 12.4"</span>: <span class="hljs-string">"Not installed"</span>
 }
 </code></pre>
-<p>Query with named placeholders for attributes:</p>
+<p>Búsqueda con marcadores de posición con nombre para los atributos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
  <span class="hljs-variable">$querySettings</span>:=New object
@@ -955,7 +955,7 @@ softwares:{
  <span class="hljs-variable">$es</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">":attName = 'Marie' and :attWord = 'Installed'"</span>;<span class="hljs-variable">$querySettings</span>)
   <span class="hljs-comment">//$es.length=1 (Employee Marie)</span>
 </code></pre>
-<p>Query with named placeholders for attributes and values:</p>
+<p>Búsqueda con marcadores de posición con nombre para los atributos y los valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$name </span>: Text
@@ -971,12 +971,12 @@ softwares:{
  End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3-3"></a><a href="#ejemplo-3-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 3</h4>
-<p>These examples illustrate the various ways to use formulas with or without parameters in your queries.</p>
-<p>The formula is given as text with <code>eval()</code> in the <em>queryString</em> parameter:</p>
+<p>Estos ejemplos ilustran las distintas formas de utilizar fórmulas con o sin parámetros en sus búsquedas.</p>
+<p>La fórmula se da como texto con <code>eval()</code> en el parámetro <em>queryString</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"eval(length(This.lastname) &gt;=30) and nationality='French'"</span>)
 </code></pre>
-<p>The formula is given as a <code>Formula</code> object through a placeholder:</p>
+<p>La fórmula se da como un objeto <code>Formula</code> a través de un marcador de posición:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$formula </span>: Object
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.lastname)&gt;=<span class="hljs-number">30</span>)
@@ -988,13 +988,13 @@ softwares:{
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.lastname)&gt;=<span class="hljs-number">30</span>)
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-variable">$formula</span>)
 </code></pre>
-<p>Several formulas can be applied:</p>
+<p>Se pueden aplicar varias fórmulas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$formula1</span>; <span class="hljs-variable">$1</span>; <span class="hljs-variable">$formula2 </span>;<span class="hljs-variable">$0 </span>: Object
  <span class="hljs-variable">$formula1</span>:=<span class="hljs-variable">$1</span>
  <span class="hljs-variable">$formula2</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.firstname)&gt;=<span class="hljs-number">30</span>)
  <span class="hljs-variable">$0</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and :2 and nationality='French'"</span>;<span class="hljs-variable">$formula1</span>;<span class="hljs-variable">$formula2</span>)
 </code></pre>
-<p>A text formula in <em>queryString</em> receives a parameter:</p>
+<p>Una fórmula texto en <em>queryString</em> recibe un parámetro:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings </span>: Object
  <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>()
@@ -1005,7 +1005,7 @@ softwares:{
  #<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$exclude </span>: Text) -&gt; <span class="hljs-variable">$result </span>: Boolean
  <span class="hljs-variable">$result</span>:=(<span class="hljs-function">Position</span>(<span class="hljs-variable">$exclude</span>;<span class="hljs-literal">This</span>.lastname)=<span class="hljs-number">0</span>)
 </code></pre>
-<p>Using the same <strong><em>checkName</em></strong> method, a <code>Formula</code> object as placeholder receives a parameter:</p>
+<p>Utilizando el mismo método <strong><em>checkName</em></strong>, un objeto <code>Formula</code> como marcador de posición recibe un parámetro:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings</span>; <span class="hljs-variable">$formula </span>: Object
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">checkName</span>(<span class="hljs-variable">$1</span>.filter))
@@ -1015,7 +1015,7 @@ softwares:{
  <span class="hljs-variable">$settings</span>.args.filter:=<span class="hljs-string">"*"</span> <span class="hljs-comment">// change the parameters without updating the $formula object</span>
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and nationality=:2"</span>;<span class="hljs-variable">$formula</span>;<span class="hljs-string">"French"</span>;<span class="hljs-variable">$settings</span>)
 </code></pre>
-<p>We want to disallow formulas, for example when the user enters their query:</p>
+<p>Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su consulta:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$queryString </span>: Text

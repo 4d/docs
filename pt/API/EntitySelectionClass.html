@@ -74,8 +74,8 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#91index93"><strong><em>[index]</em></strong> : 4D.Entity</a><p>    allows you to access entities within the entity selection using the standard collection syntax</td></tr>
-<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>    a &quot;projection&quot; of values for the attribute in the entity selection</td></tr>
+<tr><td><a href="#91index93"><strong><em>[index]</em></strong> : 4D.Entity</a><p>    permite acessar as entidades dentro da seleção de entidades utilizando a sintaxe de coleção padrão</td></tr>
+<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>    uma &quot;projeção&quot; dos valores do atributo na entity selection</td></tr>
 <tr><td><a href="#add"><strong>.add</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection</a><p>    adds the specified <em>entity</em> to the entity selection and returns the modified entity selection</td></tr>
 <tr><td><a href="#and"><strong>.and</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.and</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combines the entity selection with an <em>entity</em> or <em>entitySelection</em> parameter using the logical AND operator</td></tr>
 <tr><td><a href="#average"><strong>.average</strong>( <em>attributePath</em> : Text ) : Real</a><p>    returns the arithmetic mean (average) of all the non-null values of <em>attributePath</em> in the entity selection</td></tr>
@@ -113,16 +113,16 @@
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>dsTable</td><td>Table</td><td style="text-align:center">-&gt;</td><td>Table in the 4D database whose current selection will be used to build the entity selection</td></tr>
+<tr><td>dsTable</td><td>Table</td><td style="text-align:center">-&gt;</td><td>Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades</td></tr>
 <tr><td>settings</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Build option: context</td></tr>
-<tr><td>Result</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Entity selection matching the dataclass related to the given table</td></tr>
+<tr><td>Result</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>Create entity selection</code> command builds and returns a new, <a href="/docs/pt/ORDA/entities.html#shareable-or-alterable-entity-selections">alterable</a> entity selection related to the dataclass matching the given <em>dsTable</em>, according to the current selection of this table.</p>
-<p>If the current selection is sorted, an <a href="/docs/pt/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordered</a> entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.</p>
-<p>If the <em>dsTable</em> is not exposed in <a href="/docs/pt/API/DataStoreClass.html#ds"><code>ds</code></a>, an error is returned. This command cannot be used with a Remote datastore.</p>
-<p>In the optional <em>settings</em> parameter, you can pass an object containing the following property:</p>
+<p>O comando <code>Create entity selection</code> constrói e devolve uma nova, <a href="/docs/pt/ORDA/entities.html#shareable-or-alterable-entity-selections">alterável</a> seleção de entidade relacionada com a classe de dados que coincide com a tabela <em>dsTable</em> dada, segundo a seleção atual desta tabela.</p>
+<p>Se a seleção atual for ordenada, é criada uma seleção de entidades <a href="/docs/pt/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">ordenada</a> (se mantém a ordem da seleção atual). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.</p>
+<p>Se a tabela <em>dsTable</em> não estiver exposta em <a href="/docs/pt/API/DataStoreClass.html#ds"><code>ds</code></a>, se devolve um erro. Esse comando não pode usado com uma datastore remota.</p>
+<p>No parâmetro opcional<em>settings</em> pode passar um objeto contendo as propriedades abaixo:</p>
 <table>
 <thead>
 <tr><th>Property</th><th>Type</th><th>Description</th></tr>
@@ -176,21 +176,21 @@
 <p></details></p>
 <p><strong><em>[index]</em></strong> : 4D.Entity</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>EntitySelection[index]</code> notation allows you to access entities within the entity selection using the standard collection syntax: pass the position of the entity you want to get in the <em>index</em> parameter.</p>
-<p>Note that the corresponding entity is reloaded from the datastore.</p>
-<p><em>index</em> can be any number between 0 and <code>.length</code>-1.</p>
+<p>A notação <code>EntitySelection[index]</code> permite acessar as entidades dentro da seleção de entidades utilizando a sintaxe de coleção padrão: passe a posição da entidade que quiser obter no parâmetro <em>index</em>.</p>
+<p>Lembre que a entidade correspondente é recarregada a partir da datastore.</p>
+<p><em>index</em> pode ser qualquer número entre 0 e <code>.length</code>-1.</p>
 <ul>
 <li>If <em>index</em> is out of range, an error is returned.</li>
 <li>If <em>index</em> corresponds to a dropped entity, a Null value is returned.</li>
 </ul>
 <blockquote>
-<p><strong>Warning</strong>: <code>EntitySelection[index]</code> is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like <a href="/docs/pt/API/EntityClass.html#lock"><code>.lock()</code></a> or <a href="/docs/pt/API/EntityClass.html#save"><code>.save()</code></a>. To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Examples:</p>
+<p><strong>Atenção</strong>: <code>EntitySelection[index]</code> é uma expressão não atribuível, o que significa que não pode utilizar-se como referência editável da entidade com métodos como <a href="/docs/pt/API/EntityClass.html#lock"><code>.lock()</code></a> o <a href="/docs/pt/API/EntityClass.html#save"><code>.save()</code></a>. Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Examples:</p>
 </blockquote>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">//create the entity selection</span>
-  <span class="hljs-comment">//invalid statements:</span>
- <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].<span class="hljs-function">lock</span>() <span class="hljs-comment">//will NOT work</span>
- <span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].lastName:=<span class="hljs-string">"Smith"</span> <span class="hljs-comment">//will NOT work</span>
- <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].<span class="hljs-function">save</span>() <span class="hljs-comment">//will NOT work</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">//criação da entity selection</span>
+  <span class="hljs-comment">//declarações não válidas:</span>
+ <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].<span class="hljs-function">lock</span>() <span class="hljs-comment">//NÃO funcionará</span>
+ <span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].lastName:=<span class="hljs-string">"Smith"</span> <span class="hljs-comment">//NÃO funcionará</span>
+ <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>].<span class="hljs-function">save</span>() <span class="hljs-comment">//NÃO funcionará</span>
   <span class="hljs-comment">//valid code:</span>
  <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$sel</span>[<span class="hljs-number">0</span>]  <span class="hljs-comment">//OK</span>
  <span class="hljs-variable">$entity</span>.lastName:=<span class="hljs-string">"Smith"</span> <span class="hljs-comment">//OK</span>
@@ -200,7 +200,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$employee </span>: cs.EmployeeEntity
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1"</span>;<span class="hljs-string">"H@"</span>)
- <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">2</span>]  <span class="hljs-comment">// The 3rd entity of the $employees entity selection is reloaded from the database</span>
+ <span class="hljs-variable">$employee</span>:=<span class="hljs-variable">$employees</span>[<span class="hljs-number">2</span>]  <span class="hljs-comment">// A terceira entidade da seleção de entidades $employees se recarrega do banco de dados</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="attributename"></a><a href="#attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.<em>attributeName</em></h2>
 <p><details><summary>Histórico</summary></p>
@@ -215,7 +215,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</p>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>Any dataclass attribute can be used as a property of an entity selection to return a &quot;projection&quot; of values for the attribute in the entity selection. Projected values can be a collection or a new entity selection, depending on the <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> (<code>storage</code> or <code>relation</code>) of the attribute.</p>
+<p>Todo atributo de dataclass pode ser utilizado como uma propriedade de uma entity selection para devolver uma &quot;projeção&quot; dos valores do atributo na entity selection. Os valores projetados podem ser uma coleção ou uma nova seleção de entidades, dependendo de <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> (<code>storage</code> ou <code>relation</code>) do atributo.</p>
 <ul>
 <li>If <em>attributeName</em> kind is <code>storage</code>: <code>.attributeName</code> returns a collection of values of the same type as <em>attributeName</em>.</li>
 <li>If <em>attributeName</em> kind is <code>relatedEntity</code>: <code>.attributeName</code> returns a new entity selection of related values of the same type as <em>attributeName</em>. Duplications are removed (an unordered entity selection is returned).</li>

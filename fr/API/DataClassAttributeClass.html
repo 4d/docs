@@ -81,20 +81,20 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#autofilled"><strong>.autoFilled</strong> : Booléen</a><p>    contains True if the attribute value is automatically filled by 4D</td></tr>
+<tr><td><a href="#autofilled"><strong>.autoFilled</strong> : Booléen</a><p>    contient Vrai si la valeur de l'attribut est automatiquement renseignée par 4D</td></tr>
 <tr><td><a href="#exposed"><strong>.exposed</strong> : Boolean</a><p>    mise à &quot;true&quot; si l'attribut est &quot;exposed&quot; dans REST</td></tr>
-<tr><td><a href="#fieldnumber"><strong>.fieldNumber</strong> : Integer</a><p>    contains the internal 4D field number of the attribute</td></tr>
-<tr><td><a href="#fieldtype"><strong>.fieldType</strong> : Integer</a><p>    contains the 4D database type of the attribute</td></tr>
-<tr><td><a href="#indexed"><strong>.indexed</strong> : Booléen</a><p>    contains <strong>True</strong> if there is a B-tree or a Cluster B-tree index on the attribute</td></tr>
-<tr><td><a href="#inversename"><strong>.inverseName</strong> : Text</a><p>    returns the name of the attribute which is at the other side of the relation</td></tr>
+<tr><td><a href="#fieldnumber"><strong>.fieldNumber</strong> : Integer</a><p>    contient le numéro interne du champ 4D de l'attribut</td></tr>
+<tr><td><a href="#fieldtype"><strong>.fieldType</strong> : Integer</a><p>    contient le type 4D de l'attribut dans la base</td></tr>
+<tr><td><a href="#indexed"><strong>.indexed</strong> : Booléen</a><p>    contient Vrai s'il existe un index B-tree ou Cluster B-tree dans l'attribut</td></tr>
+<tr><td><a href="#inversename"><strong>.inverseName</strong> : Text</a><p>    retourne le nom de l'attribut qui est à l'autre extrémité du lien</td></tr>
 <tr><td><a href="#keywordindexed"><strong>.keywordIndexed</strong> : Boolean</a><p>    contient <strong>True</strong> s'il existe un index de mot-clé sur l'attribut</td></tr>
-<tr><td><a href="#kind"><strong>.kind</strong> : Text</a><p>    returns the category of the attribute</td></tr>
-<tr><td><a href="#mandatory"><strong>.mandatory</strong> : Boolean</a><p>    contains True if Null value input is rejected for the attribute</td></tr>
-<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    returns the name of the <code>dataClassAttribute</code> object as string</td></tr>
+<tr><td><a href="#kind"><strong>.kind</strong> : Text</a><p>    retourne la catégorie de l'attribut</td></tr>
+<tr><td><a href="#mandatory"><strong>.mandatory</strong> : Boolean</a><p>    contient Vrai si une saisie de valeur Null pour l'attribut est rejetée</td></tr>
+<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    retourne le nom de l'objet <code>dataClassAttribute</code> sous forme de chaîne</td></tr>
 <tr><td><a href="#readonly"><strong>.readOnly</strong> : Boolean</a><p>    mise à &quot;true&quot; si l'attribut est en lecture seule</td></tr>
-<tr><td><a href="#relateddataclass"><strong>.relatedDataClass</strong> : Text</a><p>    returns the name of the dataclass related to the attribute</td></tr>
-<tr><td><a href="#type"><strong>.type</strong> : Texte</a><p>    contains the conceptual value type of the attribute</td></tr>
-<tr><td><a href="#unique"><strong>.unique</strong> : Booléen</a><p>    contains True if the attribute value must be unique</td></tr>
+<tr><td><a href="#relateddataclass"><strong>.relatedDataClass</strong> : Text</a><p>    retourne le nom de la dataclass liée à l'attribut</td></tr>
+<tr><td><a href="#type"><strong>.type</strong> : Texte</a><p>    contient le type conceptuel de la valeur de l'attribut</td></tr>
+<tr><td><a href="#unique"><strong>.unique</strong> : Booléen</a><p>    contient Vrai si la valeur de l'attribut doit être unique</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="autofilled"></a><a href="#autofilled" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.autoFilled</h2>
@@ -110,7 +110,7 @@
 <p></details></p>
 <p><strong>.autoFilled</strong> : Booléen</p>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.autoFilled</code> property contains True if the attribute value is automatically filled by 4D. Cette propriété correspond aux propriétés de champ 4D suivantes :</p>
+<p>La propriété <code>.autoFilled</code> contient Vrai si la valeur de l'attribut est automatiquement renseignée par 4D. Cette propriété correspond aux propriétés de champ 4D suivantes :</p>
 <ul>
 <li>&quot;Autoincrement&quot;, for les champs de type numérique</li>
 <li>&quot;Auto UUID&quot;, pour les champs UUID (de type alpha).</li>
@@ -146,7 +146,7 @@
 <p></details></p>
 <p><strong>.fieldNumber</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.fieldNumber</code> property contains the internal 4D field number of the attribute.</p>
+<p>La propriété <code>.fieldNumber</code> contient le numéro interne du champ 4D de l'attribut.</p>
 <p>Cette propriété n'est pas retournée si <code>.kind</code> = &quot;relatedEntity&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>Num</strong> (dataClassAttribute.fieldNumber) pour obtenir une valeur valide (0) même si <code>.fieldNumber</code> n'est pas retourné.</p>
@@ -164,7 +164,7 @@
 <p></details></p>
 <p><strong>.fieldType</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.fieldType</code> property contains the 4D database type of the attribute. It depends on the attribute kind (see <a href="#kind"><code>.kind</code></a>).</p>
+<p>La propriété <code>.fieldType</code> contient le type 4D de l'attribut dans la base. Elle dépend du <a href="#kind"><code>.kind</code></a> de l'attribut.</p>
 <p><strong>Valeurs possibles :</strong></p>
 <table>
 <thead>
@@ -177,7 +177,7 @@
 <tr><td>calculated</td><td><li>scalaire : type de champ 4D correspondant, voir <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="voir-également"></a><a href="#voir-également" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir également</h4>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi"></a><a href="#voir-aussi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="#type"><code>.type</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="indexed"></a><a href="#indexed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.indexed</h2>
 <p><details><summary>Historique</summary></p>
@@ -192,7 +192,7 @@
 <p></details></p>
 <p><strong>.indexed</strong> : Booléen</p>
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.indexed</code> property contains <strong>True</strong> if there is a B-tree or a Cluster B-tree index on the attribute.</p>
+<p>La propriété <code>.indexed</code> contient Vrai s'il existe un index B-tree ou Cluster B-tree dans l'attribut.</p>
 <p>Cette propriété n'est pas retournée si <code>.kind</code> = &quot;relatedEntity&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>Bool</strong> (dataClassAttribute.indexed) pour obtenir une valeur valide (false) même si <code>.indexed</code> n'est pas retourné.</p>
@@ -210,8 +210,8 @@
 <p></details></p>
 <p><strong>.inverseName</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.inverseName</code> property returns the name of the attribute which is at the other side of the relation.</p>
-<p>This property is not returned if <code>.kind</code> = &quot;storage&quot;. It must be of the &quot;relatedEntity&quot; or &quot;relatedEntities&quot; kind.</p>
+<p>La propriété <code>.inverseName</code> retourne le nom de l'attribut qui est à l'autre extrémité du lien.</p>
+<p>Cette propriété n'est pas retournée si <code>.kind</code> = &quot;storage&quot;. Elle doit être du type &quot;relatedEntities&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>String</strong> (dataClassAttribute.inverseName) pour obtenir une valeur valide (&quot;&quot;) même si <code>.inverseName</code> n'est pas retourné.</p>
 </blockquote>
@@ -229,7 +229,7 @@
 <p><strong>.keywordIndexed</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La propriété <code>.keywordIndexed</code> contient <strong>True</strong> s'il existe un index de mot-clé sur l'attribut.</p>
-<p>This property is not returned if <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; or &quot;relatedEntities&quot;.</p>
+<p>Cette propriété n'est pas retournée si <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>Bool</strong> (dataClassAttribute.keywordIndexed) pour obtenir une valeur valide (false) même si <code>.keywordIndexed</code> n'est pas retourné.</p>
 </blockquote>
@@ -246,12 +246,12 @@
 <p></details></p>
 <p><strong>.kind</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.kind</code> property returns the category of the attribute. Returned value can be one of the following:</p>
+<p>La propriété <code>.kind</code> retourne la catégorie de l'attribut. La valeur retournée peut être l'une des chaînes suivantes :</p>
 <ul>
 <li>&quot;storage&quot; : attribut de stockage (ou scalaire), c'est-à-dire un attribut stockant une valeur, et non une référence à un autre attribut</li>
 <li>&quot;calculated&quot;: champ calculé, c'est-à-dire défini par <a href="/docs/fr/ORDA/ordaClasses.html#function-get-attributename">la fonction <code>get</code></a>.</li>
-<li>&quot;relatedEntity&quot;: N -&gt; 1 relation attribute (reference to an entity)</li>
-<li>&quot;relatedEntities&quot;: 1 -&gt; N relation attribute (reference to an entity selection)</li>
+<li>&quot;relatedEntity&quot; : attribut relationnel N -&gt; (référence vers une entité)</li>
+<li>&quot;relatedEntities&quot; : attribut relationnel 1 -&gt; N (référence vers une entity selection)</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Considérons les tables et relations suivantes :</p>
@@ -274,8 +274,8 @@
 <p></details></p>
 <p><strong>.mandatory</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.mandatory</code> property contains True if Null value input is rejected for the attribute.</p>
-<p>This property is not returned if <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; or &quot;relatedEntities&quot;.</p>
+<p>La propriété <code>.mandatory</code> contient Vrai si une saisie de valeur Null pour l'attribut est rejetée.</p>
+<p>Cette propriété n'est pas retournée si <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>Bool</strong> (dataClassAttribute.mandatory) pour obtenir une valeur valide (false) même si <code>.mandatory</code> n'est pas retourné.
 <strong>Attention</strong> : Cette propriété correspond à la propriété du champ &quot;Reject NULL value input&quot; au niveau de la base de données 4D. Elle n'est pas liée à la propriété &quot;Mandatory&quot; existante qui est une option de contrôle de la saisie de données pour une table.</p>
@@ -293,7 +293,7 @@
 <p></details></p>
 <p><strong>.name</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.name</code> property returns the name of the <code>dataClassAttribute</code> object as string.</p>
+<p>La propriété <code>.name</code> retourne le nom de l'objet <code>dataClassAttribute</code> sous forme de chaîne.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$attName </span>: Text
  <span class="hljs-variable">$attName</span>:=ds.Employee.lastname.name <span class="hljs-comment">//$attName="lastname"</span>
@@ -329,7 +329,7 @@
 <blockquote>
 <p>Cette propriété n'est disponible qu'avec les attributs de la propriété &quot;relatedEntity&quot; ou &quot;relatedEntities&quot; <a href="#kind"><code>.kind</code></a>.</p>
 </blockquote>
-<p>The <code>.relatedDataClass</code> property returns the name of the dataclass related to the attribute.</p>
+<p>La propriété <code>.relatedDataClass</code> retourne le nom de la dataclass liée à l'attribut.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Considérons les tableaux et relations suivants :</p>
 <p><img src="/docs/assets/en/API/dataclassAttribute4.png" alt=""></p>
@@ -350,7 +350,7 @@
 <p></details></p>
 <p><strong>.type</strong> : Texte</p>
 <h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.type</code> property contains the conceptual value type of the attribute, useful for generic programming.</p>
+<p>La propriété <code>.type</code> contient le type conceptuel de la valeur de l'attribut, utile pour de la programmation générique.</p>
 <p>Le type de valeur conceptuelle dépend de l'attribut <a href="#kind"><code>.kind</code></a>.</p>
 <p><strong>Valeurs possibles :</strong></p>
 <table>
@@ -364,7 +364,7 @@
 <tr><td>calculated</td><td><li>storage: type (&quot;blob&quot;, &quot;number&quot;, etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + &quot;Selection&quot;</td><td></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="voir-également-1"></a><a href="#voir-également-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir également</h4>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi-1"></a><a href="#voir-aussi-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="#fieldtype"><code>.fieldType</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="unique"></a><a href="#unique" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.unique</h2>
 <p><details><summary>Historique</summary></p>
@@ -379,8 +379,8 @@
 <p></details></p>
 <p><strong>.unique</strong> : Booléen</p>
 <h4><a class="anchor" aria-hidden="true" id="description-13"></a><a href="#description-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.unique</code> property contains True if the attribute value must be unique. Cette propriété correspond à la propriété de champ 4D &quot;Unique&quot;.</p>
-<p>This property is not returned if <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; or &quot;relatedEntities&quot;.</p>
+<p>La propriété <code>.unique</code> contient Vrai si la valeur de l'attribut doit être unique. Cette propriété correspond à la propriété de champ 4D &quot;Unique&quot;.</p>
+<p>Cette propriété n'est pas retournée si <a href="#kind"><code>.kind</code></a> = &quot;relatedEntity&quot; ou &quot;relatedEntities&quot;.</p>
 <blockquote>
 <p>Pour la programmation générique, vous pouvez utiliser <strong>Bool</strong> (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si <code>.unique</code> n'est pas retourné.</p>
 </blockquote>

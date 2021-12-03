@@ -199,12 +199,12 @@ Function</span><span class="hljs-function"> getCityName</span>()<span class="hlj
 <li>**Exemple ** : cs.EmployeeSelection</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.EmployeeSelection class</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Classe cs.EmployeeSelection </span>
 
 
-Class extends</span> EntitySelection
+Classe extends EntitySelection
 
-<span class="hljs-comment">//Extract the employees with a salary greater than the average from this entity selection</span><span class="hljs-keyword">
+<span class="hljs-comment">//Extraire, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne</span><span class="hljs-keyword">
 
 Function</span> withSalaryGreaterThanAverage
 <span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$0</span>)
@@ -268,10 +268,10 @@ End if</span>
 <h3><a class="anchor" aria-hidden="true" id="exécution-préemptive"></a><a href="#exécution-préemptive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exécution préemptive</h3>
 <p>Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :</p>
 <ul>
-<li>in <strong>preemptive or cooperative processes</strong> (depending on the calling process) in single-user applications,</li>
-<li>in <strong>preemptive processes</strong> in client/server applications (except if the <a href="#local-functions"><code>local</code></a> keyword is used, in which case it depends on the calling process like in single-user).</li>
+<li>dans <strong>des process préemptifs ou coopératifs</strong> (en fonction du process appelant) dans des applications monoposte,</li>
+<li>dans <strong>des process préemptifs</strong> dans des applications client/serveur (sauf si le mot-clé <a href="#local-functions"><code>local</code></a> est utilisé, auquel cas il dépend du process appelant comme dans le cas d'un monoposte).</li>
 </ul>
-<p>Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).</p>
+<p>Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).</p>
 <h2><a class="anchor" aria-hidden="true" id="champs-calculés"></a><a href="#champs-calculés" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Champs calculés</h2>
 <h3><a class="anchor" aria-hidden="true" id="aperçu"></a><a href="#aperçu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aperçu</h3>
 <p>Un champ calculé est un attribut de dataclass avec un type de données qui masque un calcul. <a href="/docs/fr/Concepts/classes.html">Les classes 4D standard</a> implémentent le concept de propriétés calculées avec des <a href="/docs/fr/Concepts/classes.html#function-get-and-function-set">fonctions d'accès</a> telles que <code>get</code> (<em>getter</em>) et <code>set</code> (<em>setter</em>). Les attributs de dataclass ORDA bénéficient de cette fonctionnalité et l'étendent avec deux fonctions supplémentaires : <code>query</code> et <code>orderBy</code>.</p>
@@ -327,7 +327,7 @@ End if</span>
 
   Case of</span>   
     : (<span class="hljs-literal">This</span>.firstName=<span class="hljs-literal">Null</span>) &amp; (<span class="hljs-literal">This</span>.lastName=<span class="hljs-literal">Null</span>)
-        <span class="hljs-variable">$event</span>.result:=<span class="hljs-literal">Null</span> <span class="hljs-comment">//use result to return Null</span>
+        <span class="hljs-variable">$event</span>.result:=<span class="hljs-literal">Null</span> <span class="hljs-comment">//utiliser le résultat pour retourner Null</span>
     : (<span class="hljs-literal">This</span>.firstName=<span class="hljs-literal">Null</span>)
         <span class="hljs-variable">$fullName</span>:=<span class="hljs-literal">This</span>.lastName
     : (<span class="hljs-literal">This</span>.lastName=<span class="hljs-literal">Null</span>)
@@ -407,7 +407,7 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
 </ul>
 <p>La fonction <code>query</code> s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction <code>query</code> n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction <code>get &lt;AttributeName&gt;</code>).</p>
 <blockquote>
-<p>The following features are not supported: - calling a <code>query</code> function on computed attributes of type Entity or Entity selection, - using the <code>order by</code> keyword in the resulting query string.</p>
+<p>Les fonctionnalités suivantes ne sont pas prises en charge : - l'appel d'une fonction de requête <code>query</code> sur des champs calculés de type Entity ou Entity Selection - l'utilisation du mot clé <code>order by</code> dans la chaîne de requête résultante.</p>
 </blockquote>
 <p>Les propriétés du paramètre <em>$event</em> sont les suivantes :</p>
 <table>
@@ -484,7 +484,7 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
 
     <span class="hljs-variable">$operator</span>:=<span class="hljs-variable">$event</span>.operator
 
-    <span class="hljs-variable">$age</span>:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$event</span>.value)  <span class="hljs-comment">// integer</span>
+    <span class="hljs-variable">$age</span>:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$event</span>.value)  <span class="hljs-comment">// entier</span>
     <span class="hljs-variable">$d1</span>:=<span class="hljs-function">Add to date</span>(Current date; -<span class="hljs-variable">$age</span><span class="hljs-number">-1</span>; <span class="hljs-number">0</span>; <span class="hljs-number">0</span>)
     <span class="hljs-variable">$d2</span>:=<span class="hljs-function">Add to date</span>(<span class="hljs-variable">$d1</span>; <span class="hljs-number">1</span>; <span class="hljs-number">0</span>; <span class="hljs-number">0</span>)
     <span class="hljs-variable">$parameters</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-variable">$d1</span>; <span class="hljs-variable">$d2</span>)<span class="hljs-keyword">
@@ -492,16 +492,16 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
     Case of</span>
 
         : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"=="</span>)
-            <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday &gt; :1 and birthday &lt;= :2"</span>  <span class="hljs-comment">// after d1 and before or egal d2</span>
+            <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday &gt; :1 and birthday &lt;= :2"</span>  <span class="hljs-comment">// après d1 et avant ou égal à d2</span>
 
         : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"==="</span>)
 
-            <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday = :2"</span>  <span class="hljs-comment">// d2 = second calculated date (= birthday date)</span>
+            <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday = :2"</span>  <span class="hljs-comment">// d2 = seconde date calculée (= date d'anniversaire)</span>
 
         : (<span class="hljs-variable">$operator</span>=<span class="hljs-string">"&gt;="</span>)
             <span class="hljs-variable">$query</span>:=<span class="hljs-string">"birthday &lt;= :2"</span>
 
-            <span class="hljs-comment">//... other operators           </span><span class="hljs-keyword">
+            <span class="hljs-comment">//... autres opérateurs           </span><span class="hljs-keyword">
 
 
     End case</span><span class="hljs-keyword">

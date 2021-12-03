@@ -110,14 +110,14 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to the constructor function</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à la fonction constructeur</td></tr>
 <tr><td>Résultat</td><td>4D.Class</td><td style="text-align:center">&lt;-</td><td>Nouvel objet de la classe</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.new()</code> crée et retourne un objet <code>cs.className</code> qui est une nouvelle instance de la classe sur laquelle il est appelé. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store <a href="/docs/fr/Concepts/classes.html#cs"><code>cs</code></a>.</p>
-<p>You can pass one or more optional <em>param</em> parameters, which will be passed to the <a href="/docs/fr/Concepts/classes.html#class-constructor">class constructor</a> function (if any) in the className class definition. Within the constructor function, the <a href="/docs/fr/Concepts/classes.html#this"><code>This</code></a> is bound to the new object being constructed.</p>
-<p>If <code>.new()</code> is called on a non-existing class, an error is returned.</p>
+<p>Vous pouvez passer un ou plusieurs paramètre(s) optionnel(s) <em>param</em>, qui seront passés à la fonction <a href="/docs/fr/Concepts/classes.html#class-constructor">class constructor</a> (le cas échéant) dans la définition de la classe className. A l'intérieur de la fonction constructor, <a href="/docs/fr/Concepts/classes.html#this"><code>This</code></a> est lié au nouvel objet en cours de construction.</p>
+<p>Si <code>.new()</code> si appelé sur une classe qui n'existe pas, une erreur est retournée.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemples"></a><a href="#exemples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples</h4>
 <p>Pour créer une nouvelle instance de la classe Person :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$person </span>: cs.Person  

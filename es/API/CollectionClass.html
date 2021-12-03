@@ -1480,11 +1480,12 @@ Si la colección está vacía, <span class="hljs-comment">`.min()` devuelve *Und
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v16 R6  | Añadidos       |
-&lt;/details&gt;**.orderBy**( ) : Collection&lt;br&gt;**.orderBy**( *pathStrings* : Text ) : Collection&lt;br&gt;**.orderBy**( *pathObjects* : Collection ) : Collection&lt;br&gt;**.orderBy**( *ascOrDesc* : Integer ) : Collection| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |::| ----------- |
-|            |      |  |             |
-
-|pathStrings|Text|-&gt;|<span class="hljs-function">Ruta</span>(s) de la propiedad en la que ordenar la colección| |pathObjects|Collection|-&gt;|Colección de objetos de criterio| |ascOrDesc|Integer|-&gt;|<span class="hljs-comment">`ck ascending` or `ck descending` (valores escalares)| |Result|Collection |&lt;-|Copia ordenada de la colección (copia superficial)|#### Descripción</span>
+&lt;/details&gt;**.orderBy**( ) : Collection&lt;br&gt;**.orderBy**( *pathStrings* : Text ) : Collection&lt;br&gt;**.orderBy**( *pathObjects* : Collection ) : Collection&lt;br&gt;**.orderBy**( *ascOrDesc* : Integer ) : Collection| Parámetros  | Tipo       |    | Descripción                                       |
+| ----------- | ---------- |:--:| ------------------------------------------------- |
+| pathStrings | Texto      | -&gt; |<span class="hljs-function"> Property path</span>(s) on which to order the collection |
+| pathObjects | Collection | -&gt; | Colección de objetos criterio                     |
+| ascOrDesc   | Integer    | -&gt; |<span class="hljs-function"> `ck ascending` or `ck descending` </span>(scalar values) |
+| Resultado   | Collection | &lt;- |<span class="hljs-function"> Ordered copy of the collection </span>(shallow copy)     |#### Descripción
 
 La función <span class="hljs-comment">`.orderBy()`devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado.</span>
 
@@ -1716,7 +1717,7 @@ La función <span class="hljs-comment">`.push()`añade uno o más *elementos* al
 &lt;details&gt;&lt;summary&gt;Histórico&lt;/summary&gt;
 | Versión | Modificaciones           |
 | ------- | ------------------------ |
-| v17 R5  | Support of querySettings |
+| v17 R5  | Soporte de querySettings |
 | v16 R6  | Añadidos                 |
 &lt;/details&gt;**.query**( *queryString* : Text ; *...value* : any ) : Collection&lt;br&gt;**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection| Parámetros    | Tipo       |    | Descripción                                                        |
 | ------------- | ---------- |:--:| ------------------------------------------------------------------ |
