@@ -450,8 +450,9 @@
       }
     },
     "links": {
-      "v18 R3 BETA": "v18 R3 BETA",
-      "v18 R2": "v18 R2",
+      "v19 R3 BETA": "v19 R3 BETA",
+      "v19 R2": "v19 R2",
+      "v19": "v19",
       "v18": "v18"
     },
     "categories": {
@@ -480,9 +481,10 @@
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
-    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Backup and Restore|no description given": "Backup and Restore",
+    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Users and Groups|no description given": "Users and Groups",
+    "https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html|no description given": "https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",
     "Developing a Web application|no description given": "Developing a Web application",
