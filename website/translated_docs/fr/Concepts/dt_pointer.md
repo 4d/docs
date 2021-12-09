@@ -20,7 +20,7 @@ Vous pouvez utiliser des pointeurs pour référencer des tables, des champs, des
 | Variable    | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Tableau     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Elém. tabl. | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Objet       | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object      | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## Utiliser des pointeurs : un exemple
