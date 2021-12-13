@@ -57,4 +57,4 @@ The choice of location depends on how you want to use the plug-in.
 
 If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Então abra seu banco de dados com 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. If any plug-in requires a specific license for use, it will be loaded but not available for use.
