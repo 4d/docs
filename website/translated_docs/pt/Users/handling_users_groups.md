@@ -22,7 +22,7 @@ O administrador pode:
 
 O Administrador não pode:
 - editar o usuário Designer
-- como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. O Administrador deve ser parte de um ou mais grupos para ter privilégios de acesso no banco de dados. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
+- como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. O Administrador não pode acessar o modo Design se for restringido. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
 Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 
