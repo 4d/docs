@@ -81,5 +81,5 @@ L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du fo
 $t1:=?23:00:00? // Il est 23 heures.
   //On souhaite ajouter 2 heures 30
  $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant le matin suivant le matin suivant
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant le matin suivant le matin suivant le matin suivant
 ```
