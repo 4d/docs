@@ -151,7 +151,7 @@ Os comandos abaixo nãoo são compatíveis para seu uso dentro de um componente 
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notas:**
 
 - O comando `Current form table` devolve `Nil` quando chamado no contexto de um formulário projeto. Por isso não pode ser usado em um componente.
 - Os comandos SQL de definição de dados (`CREATE TABLE`, `DROP TABLE`, etc.) não podem ser utilizados no banco de dados do componente. Entretanto são compatíveis com bancos de dados externos (ver o comando SQL`CREATE DATABASE`).
