@@ -83,5 +83,6 @@ $t1:=?23:00:00? // Son las 23:00 p.m.
   // Queremos añadir 2 horas y media
 $t2:=$t1 +?02:30:00? // Con una simple adición, $t2 es ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? y es 1:30 a.m. a la mañana siguiente // Con una simple adición, $t2 es ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? y es 1:30 a.m. a la mañana siguiente // Con una simple adición, $t2 es ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? y es 1:30 a.m. a la mañana siguiente
 ```
