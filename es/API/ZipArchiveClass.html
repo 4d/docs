@@ -128,72 +128,21 @@ End if</span>
 <ul>
 <li><p><em>fileToZip</em>: You simply pass a <code>4D.File</code> to compress.</p></li>
 <li><p><em>folderToZip</em>: You pass a <code>4D.Folder</code> to compress. In this case, the <em>options</em> parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, <code>ZIP Create archive</code> will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the <code>ZIP Without enclosing folder</code> constant in the <em>options</em> parameter.</p></li>
-<li><p><em>zipStructure</em>: You pass an object describing the ZIP archive object. The following properties are available to define the structure:<li>a collection of <code>4D.File</code> or <code>4D.Folder</code> objects or</li><li>a collection of objects with the following properties:</li><table></p>
-  <tr>
-    <td>
-      Propiedad
-    </td>
-<p><td>
-Tipo
-</td></p>
-<p><td>
-Descripción
-</td></p>
-  </tr>
-  <tr>
-    <td>
-      source
-    </td>
-<p><td>
-4D.File o 4D.Folder</p>
-<pre><code class="hljs">&lt;td&gt;
-  File o Folder
-&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;
-    destination
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    Texto
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    (optional) - Specify a relative filepath to change the organization of the contents of the archive
-  &lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;
-    option
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    number
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    (optional) - `ZIP Ignore invisible files` or 0 to compress all of the file
-  &lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;&lt;/html&gt;
-</code></pre>
-<p></td></p>
-  </tr>
-  <tr>
-    <td>
-      retrollamada
-    </td>
-<p><td>
-4D.Function
-</td></p>
-<p><td>
-A callback formula that will receive the compression progress (0 - 100) in $1.
-</td></p>
-  </tr></tbody> 
-</table>
-</li>
+<li><p><em>zipStructure</em>: You pass an object describing the ZIP archive object. The following properties are available to define the structure:</p></li>
 </ul>
+<table>
+<thead>
+<tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
+</thead>
+<tbody>
+<tr><td>compression</td><td>Texto</td><td><p><li><code>ZIP Compression standard</code>: Deflate compression (default)</li></p><p><li><code>ZIP Compression LZMA</code>: LZMA compression</li></p><p><li><code>ZIP Compression XZ</code>: XZ compression</li></p><p><li><code>ZIP Compression none</code>: No compression</li></p></td></tr>
+<tr><td>level</td><td>Integer</td><td>Nivel de compresión. Possible values: 1 to 10. A lower value will produce a larger file, while a higher value will produce a smaller file. Compression level has however an impact on performance. Default values if omitted: <p><li><code>ZIP Compression standard</code>: 6</li></p><p><li><code>ZIP Compression LZMA</code>: 4</li></p><p><li><code>ZIP Compression XZ</code>: 4</li></p></td></tr>
+<tr><td>encryption</td><td>Texto</td><td>The encryption to use if a password is set:<p><li><code>ZIP Encryption AES128</code>: AES encryption using 128-bit key.</li></p><p><li><code>ZIP Encryption AES192</code>: AES encryption using 192-bit key.</li></p><p><li><code>ZIP Encryption AES256</code>: AES encryption using 256-bit key (default if password is set).</li></p><p><li><code>ZIP Encryption none</code>: Data is not encrypted (default if no password is set)</li></p></td></tr>
+<tr><td>contraseña</td><td>Texto</td><td>A password to use if encryption is required.</td></tr>
+<tr><td>Histórico</td><td>Collection</td><td><p><li>a collection of <code>4D.File</code> or <code>4D.Folder</code> objects or</li></p><p><li>a collection of objects with the following properties:</li></p><table><tr><td>Propiedad</td><td>Tipo</td><td>Descripción</td></tr><tr><td>source</td><td>4D.File o 4D.Folder<td>File o Folder</td></tr><tr><td>destination</td><td>Texto</td><td>(optional) - Specify a relative filepath to change the organization of the contents of the archive</td></tr><tr><td>option</td><td>number</td><td>(optional) - <code>ZIP Ignore invisible files</code> or 0 to compress all of the file</td></tr></table></td></tr>
+<tr><td>retrollamada</td><td>4D.Function</td><td>A callback formula that will receive the compression progress (0 - 100) in $1.</td></tr>
+</tbody>
+</table>
 <p>In the <em>destinationFile</em> parameter, pass a <code>4D.File</code> object describing the ZIP archive to create (name, location, etc.). It is advised to use the &quot;.zip&quot; extension if you want the ZIP archive to be processed automatically by any software.</p>
 <p>Once an archive is created, you can use the <a href="#zip-read-archive">ZIP Read archive</a> command to access it.</p>
 <p><strong>Objeto de estado</strong></p>

@@ -88,7 +88,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#4dcryptokeynew"><strong>4D.CryptoKey.new</strong>( <em>settings</em> : Object ) : 4D.CryptoKey</a><p>    creates a new <code>4D.CryptoKey</code> object encapsulating an encryption key pair</p></td></tr>
-<tr><td><a href="#curve"><strong>.curve</strong> : Text</a><p>    normalised curve name of the key.  </p></td></tr>
+<tr><td><a href="#curve"><strong>.curve</strong> : Text</a><p>    normalised curve name of the key </p></td></tr>
 <tr><td><a href="#decrypt"><strong>.decrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Object</a><p>    decrypts the <em>message</em> parameter using the <strong>private</strong> key</p></td></tr>
 <tr><td><a href="#encrypt"><strong>.encrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Text</a><p>    encrypts the <em>message</em> parameter using the <strong>public</strong> key</p></td></tr>
 <tr><td><a href="#getprivatekey"><strong>.getPrivateKey()</strong> : Text</a><p>    returns the private key of the <code>CryptoKey</code> object</p></td></tr>
@@ -148,7 +148,8 @@
 </table>
 <p></details></p>
 <p><strong>.curve</strong> : Text</p>
-<p>Defined only for ECDSA keys: the normalised curve name of the key.  Usually &quot;prime256v1&quot; for ES256 (default), &quot;secp384r1&quot; for ES384, &quot;secp521r1&quot; for ES512.</p>
+<p>Defined only for ECDSA keys: the normalised curve name of the key.</p>
+<p>Usually &quot;prime256v1&quot; for ES256 (default), &quot;secp384r1&quot; for ES384, &quot;secp521r1&quot; for ES512.</p>
 <h2><a class="anchor" aria-hidden="true" id="decrypt"></a><a href="#decrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.decrypt()</h2>
 <p><details><summary>History</summary></p>
 <table>

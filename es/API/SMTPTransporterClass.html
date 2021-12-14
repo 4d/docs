@@ -118,7 +118,7 @@
 <p>This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the <a href="#send"><code>.send()</code></a> function is executed.</p>
 <p>The SMTP connection is automatically closed: * when the transporter object is destroyed if the <a href="#keepalive"><code>keepAlive</code></a> property is true (default), * after each  <a href="#send"><code>.send( )</code></a> function execution if the <a href="#keepalive"><code>keepAlive</code></a> property is set to false.</p>
 </blockquote>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p>En el parámetro <em>server</em>, pase un objeto que contenga las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th><em>server</em></th><th>Valor por defecto (si se omite)</th></tr>
@@ -133,14 +133,14 @@
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    el nombre o la dirección IP del servidor local</td><td><em>obligatorio</em></td></tr>
 <tr><td><a href="#keepalive"><strong>.keepAlive</strong> : Boolean</a><p>    <strong>True</strong> if the SMTP connection must be kept alive until the <code>transporter</code> object is destroyed</td><td>True</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    la ruta del archivo de registro extendido definido (si existe) para la conexión de correo</td><td>ninguno</td></tr>
-<tr><td><strong>password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
+<tr><td><strong>password</strong> : Text<p>Contraseña del usuario para la autenticación en el servidor. Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     el número de puerto utilizado para las transacciones de correo</td><td>587</td></tr>
 <tr><td><a href="#sendtimeout"><strong>.sendTimeOut</strong> : Integer</a><p>     el tiempo máximo de espera (en segundos) de una llamada a <code>.send( )</code> antes de que se produzca un timeout</td><td>100</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     el nombre de usuario utilizado para la autenticación en el servidor de correo</td><td>ninguno</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The function returns a <a href="#smtp-transporter-object"><strong>SMTP transporter object</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
+<p>La función devuelve un <a href="#smtp-transporter-object"><strong>SMTP transporter</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"smtp.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
@@ -304,9 +304,9 @@
 <tr><td>status</td><td></td><td>number</td><td>(SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing)</td></tr>
 <tr><td>statusText</td><td></td><td>texto</td><td>Status message returned by the mail server, or last error returned in the 4D error stack</td></tr>
 <tr><td>errors</td><td></td><td>colección</td><td>4D error stack (not returned if a mail server response is received)</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>number</td><td>4D error code</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>number</td><td>Código de error 4D</td></tr>
 <tr><td></td><td>[ ].message</td><td>texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <p>For information about SMTP status codes, please refer to <a href="https://www.usps.org/info/smtp_status.html">this page</a>.</p>

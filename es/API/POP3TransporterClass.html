@@ -87,7 +87,7 @@
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    el nombre o la dirección IP del servidor local</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    la ruta del archivo de registro extendido definido (si existe) para la conexión de correo</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     el número de puerto utilizado para las transacciones de correo</td></tr>
-<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
+<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    elimina todas las banderas de borrado definidas en los correos electrónicos en el <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     el nombre de usuario utilizado para la autenticación en el servidor de correo</td></tr>
 </tbody>
 </table>
@@ -109,12 +109,12 @@
 </thead>
 <tbody>
 <tr><td>server</td><td>objeto</td><td style="text-align:center">-&gt;</td><td>Información del servidor de correo</td></tr>
-<tr><td>Resultado</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">POP3 transporter object</a></td></tr>
+<tr><td>Resultado</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">Objeto POP3 transporter</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>POP3 New transporter</code> command configures a new POP3 connectionaccording to the <em>server</em> parameter and returns a new <em><a href="#pop3-transporter-object">POP3 transporter</a></em> object. The returned transporter object will then usually be used to receive emails.</p>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p>El comando <code>POP3 New transporter</code> configura una nueva conexión POP3en función del parámetro <em>servidor</em> y devuelve un nuevo objeto <em><a href="#pop3-transporter-object">POP3 transporter</a></em>. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.</p>
+<p>En el parámetro <em>server</em>, pase un objeto que contenga las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th><em>server</em></th><th>Valor por defecto (si se omite)</th></tr>
@@ -126,13 +126,13 @@
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    el tiempo máximo de espera (en segundos) permitido para establecer una conexión con el servidor</td><td>30</td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    el nombre o la dirección IP del servidor local</td><td><em>obligatorio</em></td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    la ruta del archivo de registro extendido definido (si existe) para la conexión de correo</td><td>ninguno</td></tr>
-<tr><td><strong>.password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
+<tr><td><strong>.password</strong> : Text<p>Contraseña del usuario para la autenticación en el servidor. Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     el número de puerto utilizado para las transacciones de correo</td><td>995</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     el nombre de usuario utilizado para la autenticación en el servidor de correo</td><td>ninguno</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The function returns a <a href="#pop3-transporter-object"><strong>POP3 transporter object</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
+<p>La función devuelve un <a href="#pop3-transporter-object"><strong>objeto POP3 transporter</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
 <blockquote>
 <p>The POP3 connection is automatically closed when the transporter object is destroyed.</p>
 </blockquote>
@@ -161,11 +161,11 @@
 </thead>
 <tbody>
 <tr><td>server</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Información del servidor de correo</td></tr>
-<tr><td>Resultado</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">POP3 transporter object</a></td></tr>
+<tr><td>Resultado</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">Objeto POP3 transporter</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>4D.POP3Transporter.new()</code> function creates and returns a new object of the <code>4D.POP3Transporter</code> type. It is identical to the <a href="#pop3-new-transporter"><code>POP3 New transporter</code></a> command (shortcut).</p>
+<p>La función <code>4D.POP3Transporter.new()</code> crea y devuelve un nuevo objeto del tipo <code>4D.POP3Transporter</code>. Es idéntico al comando <a href="#pop3-new-transporter"><code>POP3 New transporter</code></a> (acceso directo).</p>
 <h2><a class="anchor" aria-hidden="true" id="acceptunsecureconnection"></a><a href="#acceptunsecureconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.acceptUnsecureConnection</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -260,9 +260,9 @@
 <tr><td>status</td><td></td><td>number</td><td>(SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing)</td></tr>
 <tr><td>statusText</td><td></td><td>texto</td><td>Status message returned by the mail server, or last error returned in the 4D error stack</td></tr>
 <tr><td>errors</td><td></td><td>colección</td><td>4D error stack (not returned if a mail server response is received)</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>number</td><td>4D error code</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>number</td><td>Código de error 4D</td></tr>
 <tr><td></td><td>[ ].message</td><td>texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -318,7 +318,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Number of the message to delete</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Número del mensaje a eliminar</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
@@ -359,7 +359,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>boxInfo object</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>objeto boxInfo</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
@@ -370,7 +370,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>mailCount</td><td>Número</td><td>Number of messages in the mailbox</td></tr>
+<tr><td>mailCount</td><td>Número</td><td>Número de mensajes en el buzón</td></tr>
 <tr><td>size</td><td>Número</td><td>Tamaño del mensaje en bytes</td></tr>
 </tbody>
 </table>
@@ -413,13 +413,13 @@
 <h5><a class="anchor" aria-hidden="true" id="descripción-8"></a><a href="#descripción-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
 <p>The <code>.getMail()</code> function returns the <code>Email</code> object corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to locally handle the email contents.</p>
 <p>Pass in <em>msgNumber</em> the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> function.</p>
-<p>The method returns Null if:</p>
+<p>El método devuelve Null si:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
 <li>the message was marked for deletion using <code>.delete( )</code>.</li>
 </ul>
 <p><strong>Objeto devuelto</strong></p>
-<p><code>.getMail()</code> returns an <a href="/docs/es/API/EmailObjectClass.html#email-object"><code>Email</code> object</a>.</p>
+<p><code>.getMail()</code> devuelve un objeto <a href="/docs/es/API/EmailObjectClass.html#email-object"><code>Email</code></a>.</p>
 <h5><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h5>
 <p>You want to know the sender of the first mail of the mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>; <span class="hljs-variable">$transporter </span>: Object<span class="hljs-keyword">
@@ -455,23 +455,23 @@
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Número del mensaje en la lista</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>mailInfo object</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>objeto mailInfo</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="descripción-9"></a><a href="#descripción-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
 <p>The <code>.getMailInfo()</code> function returns a <code>mailInfo</code> object corresponding  corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to retrieve information about the email.</p>
 <p>In <em>msgNumber</em>, pass the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfo"><code>.getMailInfoList()</code></a> method.</p>
-<p>The <code>mailInfo</code> object returned contains the following properties:</p>
+<p>El objeto <code>mailInfo</code> devuelto contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>size</td><td>Número</td><td>Tamaño del mensaje en bytes</td></tr>
-<tr><td>id</td><td>Texto</td><td>Unique ID of the message</td></tr>
+<tr><td>id</td><td>Texto</td><td>ID único del mensaje</td></tr>
 </tbody>
 </table>
-<p>The method returns <strong>Null</strong> if:</p>
+<p>El método devuelve <strong>Null</strong> si:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
 <li>the message was marked for deletion using <code>.delete( )</code>.</li>
@@ -511,7 +511,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of <code>mailInfo</code> objects</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Colección de objetos <code>mailInfo</code></td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
@@ -524,7 +524,7 @@
 <tbody>
 <tr><td>[ ].size</td><td>Número</td><td>Tamaño del mensaje en bytes</td></tr>
 <tr><td>[ ].number</td><td>Número</td><td>Número del mensaje</td></tr>
-<tr><td>[ ].id</td><td>Texto</td><td>Unique ID of the message (useful if you store the message locally)</td></tr>
+<tr><td>[ ].id</td><td>Texto</td><td>ID único del mensaje (útil si almacena el mensaje localmente)</td></tr>
 </tbody>
 </table>
 <p>If the mailbox does not contain a message, an empty collection is returned.</p>
@@ -576,10 +576,10 @@
 <h5><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
 <p>The <code>.getMIMEAsBlob()</code> function returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
 <p>In <em>msgNumber</em>, pass the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> method.</p>
-<p>The method returns an empty BLOB if:</p>
+<p>El método devuelve un BLOB vacío si:</p>
 <ul>
 <li><em>msgNumber</em> designates a non-existing message,</li>
-<li>the message was marked for deletion using <code>.delete()</code>.</li>
+<li>el mensaje se marcó para su eliminación utilizando <code>.delete()</code>.</li>
 </ul>
 <p><strong>BLOB devuelto</strong></p>
 <p><code>.getMIMEAsBlob()</code> returns a <code>BLOB</code> which can be archived in a database or converted to an <a href="/docs/es/API/EmailObjectClass.html#email-object"><code>Email</code> object</a> with the <code>MAIL Convert from MIME</code> command.</p>
@@ -670,7 +670,7 @@
 | ---------- | ---- |::| ---------------------------- |
 |            |      |  | No requiere ningún parámetro |</p>
 <h5><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h5>
-<p>The <code>.undeleteAll()</code> function removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
+<p>La función <code>.undeleteAll()</code> elimina todas las banderas de borrado definidas en los correos electrónicos en el <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.user</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
