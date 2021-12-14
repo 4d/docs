@@ -244,7 +244,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
 
-In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](emails.html#email-object).  The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
 
 The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. If omitted, the current mailbox is used.
 
@@ -1017,6 +1017,8 @@ The optional *options* parameter allows you pass an object defining additional i
 
 #### Result
 
+
+
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
 
 #### Exemplo
@@ -1115,8 +1117,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | Property | Type       | Description                                                                                                                        |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | list     | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-
-|notFound |Collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.|
+| notFound | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                       |
 
 
 #### Exemplo

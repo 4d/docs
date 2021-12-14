@@ -148,7 +148,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 ### Beschreibung
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+By passing the dataclass and a key, you can retrieve all the public information for that entity. By passing the dataclass and a key, you can retrieve all the public information for that entity. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 

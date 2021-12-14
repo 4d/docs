@@ -62,7 +62,7 @@ Os comandos abaixo nãoo são compatíveis para seu uso dentro de um componente 
 - `BLOB TO USERS`
 - `SET PLUGIN ACCESS`
 
-**Notes:**
+**Notas:**
 
 - O comando `Current form table` devolve `Nil` quando chamado no contexto de um formulário projeto. Por isso não pode ser usado em um componente.
 - SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. Entretanto são compatíveis com bancos de dados externos (ver o comando SQL`CREATE DATABASE`).
@@ -275,7 +275,7 @@ Lendo de um banco externo:
 
 > If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Por isso se o formulário incluir variáveis, o componente não terá acesso ao formulário.
 
-- You can publish component forms as subforms in the host projects. Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
+- You can publish component forms as subforms in the host projects. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
 
 > In the context of a component, any referenced project form must belong to the component. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
 

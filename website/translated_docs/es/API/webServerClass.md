@@ -806,9 +806,9 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 | --------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
 | success   |                         | Booleano   | True if the web server was correctly started, False otherwise        |
 | errors    |                         | Collection | 4D error stack (not returned if the web server started successfully) |
-|           | \[].errCode            | Número     | 4D error code                                                        |
+|           | \[].errCode            | Número     | Código de error 4D                                                   |
 |           | \[].message            | Texto      | Description of the 4D error                                          |
-|           | \[].componentSignature | Texto      | Signature of the internal component which returned the error         |
+|           | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                |
 > If the Web server was already launched, an error is returned.
 
 #### Ejemplo

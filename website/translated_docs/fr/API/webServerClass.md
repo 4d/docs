@@ -598,7 +598,7 @@ Valeurs possibles :
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1
-*   3 = TLSv1_2 (default)
+*   3 = TLSv1_2 (par défaut)
 *   4 = TLSv1_3
 
 En cas de modification, le serveur doit être redémarré pour utiliser la nouvelle valeur.
@@ -782,10 +782,10 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type  |    | Description                            |
-| ---------- | ----- | -- | -------------------------------------- |
-| settings   | Objet | -> | Paramètres du serveur web au démarrage |
-| Résultat   | Objet | <- | État du démarrage du serveur web       |
+| Paramètres | Type   |    | Description                            |
+| ---------- | ------ | -- | -------------------------------------- |
+| settings   | Object | -> | Paramètres du serveur web au démarrage |
+| Résultat   | Object | <- | État du démarrage du serveur web       |
 
 <!-- END REF -->
 

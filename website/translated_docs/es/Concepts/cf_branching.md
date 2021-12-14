@@ -78,9 +78,9 @@ o:
 
 ## Case of...Else...End case
 
-A diferencia de la estructura `If...Else...End`, la estructura `Case of...</p>
-
-<pre><code class="4d"> Case of
+A diferencia de la estructura `If...Else...End`, la estructura `Case of...
+```4d
+ Case of
     :(Boolean_Expression)
        statement(s)
     :(Boolean_Expression)
@@ -94,7 +94,7 @@ A diferencia de la estructura `If...Else...End`, la estructura `Case of...</p>
     Else
        statement(s)
  End case
-`</pre>
+```
 
 Tenga en cuenta que la parte `Else` es opcional; puede escribir:
 ```4d

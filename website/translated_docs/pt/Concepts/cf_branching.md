@@ -1,14 +1,14 @@
 ---
 id: branching
-title: Branching structures
+title: Estruturas condicionais
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Uma estrutura de ramificação permite que os métodos testem uma condição e tomem caminhos alternativos, em função do resultado.
 
 
 ## If...Else...End if
 
-A sintaxe formal da estrutura condicional `If...Else...End if` é:
+A sintaxe formal da estrutura condicional `If... Else... End if` é:
 
 ```4d
  If(Boolean_Expression)
@@ -25,7 +25,7 @@ Note que a parte `Else` é opcional; pode escrever:
  End if
 ```
 
-A estrutura  `If...Else...End if` permite a seu método escolher entre duas ações, dependendo de se um teste (uma expressão Booleana) for TRUE ou FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
+A estrutura  `If... Else... End if` permite a seu método escolher entre duas ações, dependendo de se um teste (uma expressão Booleana) for TRUE ou FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -50,12 +50,12 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 ### Exemplo
 
 ```4d
-  // Ask the user to enter a name
+  // Pedir ao usuário que introduza um nome
  $Find:=Request(Type a name)
- If(OK=1)
+ Si(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("You did not enter a name.")
+    ALERT("Não introduciu um nome.")
  End if 
 ```
 
@@ -67,7 +67,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     statement(s)
  End if
 ```
-or:
+ou :
 
 ```4d
  If(Boolean_Expression)
@@ -78,7 +78,7 @@ or:
 
 ## Case of...Else...End case
 
-A sintaxe da estrutura condicional  `Case of...Else...End case` é:
+A sintaxe da estrutura condicional  `Case of... Else... End case` é:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -111,7 +111,7 @@ Note que a parte `Else` é opcional; pode escrever:
        statement(s)
  End case
 ```
-Da mesma forma que a estrutura `If...Else...End if`, a estrutura `Case of...Else...End case` também deixa seu método escolher entre ações alternativas. Diferente da estrutura `If...Else...End` a estrutura  `Case of...Else...End case` pode testar um número razoavelmente ilimitado de expressões Booleanas e realizar ações dependendo de qual delas for TRUE.
+Da mesma forma que a estrutura `If... End if`, a estrutura `Case of... End case` também deixa seu método escolher entre ações alternativas. Diferente da estrutura `If... End` a estrutura  `Case of... End case` pode testar um número razoavelmente ilimitado de expressões Booleanas e realizar ações dependendo de qual delas for TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -129,45 +129,45 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
+    :(vResult=1) //Testa se o número é 1
+       ALERT("One.") //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
        ALERT("It was not one, two, or three.")
  End case
 ```
 
-Por comparação, aqui está a versão `If...Else...End if` do mesmo método:
+Por comparação, aqui está a versão `If... Else... End if` do mesmo método:
 
 ```4d
- If(vResult=1) //Test if the number is 1
+ If(vResult=1) //Teste se o número é 1
     ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Teste se o número é  2
+       ALERT("Two.") //Se for 2, exibe um alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
           ALERT("It was not one, two, or three.")
        End if
     End if
  End if
 ```
 
-Lembre que com uma estrutura `Case of...Else...End case`, só é executado o primeiro caso TRUE. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Lembre que com uma estrutura `Case of... Else... End case`, só é executado o primeiro caso TRUE. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
 Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a preença de condition1&condition2 e portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
     :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+       ... //declarações
+    :((vResult=1) & (vCondition#2)) //Esse caso nunca será detectado
+       ... //declarações
  End case
 ```
 
@@ -175,16 +175,16 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //esse caso será detectado primeiro
+       ... //declarações
     :(vResult=1)
-       ... //statement(s)
+       ... //declarações
  End case
 ```
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -198,10 +198,11 @@ Além disso, se quiser implementar teste hierárquico, pode considerar usar um c
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     :(Boolean_Expression)
+       statement(s)
     :(Boolean_Expression)
        statement(s)
        ...
@@ -212,7 +213,7 @@ or:
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     Else
